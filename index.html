@@ -1257,12 +1257,4 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  function openSlide(filename) {
-    // When deployed on GitHub Pages, files will be relative to the portal
-    // For now, alert with the filename so the structure is clear
-    alert('📖 Open: ' + filename + '\n\nWhen deployed to GitHub Pages, this will open the slide directly.');
-  }
-</script>
-
-</body>
-</html>
+  function openSlide(filename) { window.open(filename, '_blank'); }
