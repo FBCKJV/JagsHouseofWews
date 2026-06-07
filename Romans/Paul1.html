@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romans: Who is Paul? - Week 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary-dark': '#003366',
+            'primary-medium': '#005fB2',
+            'primary-light': '#00A1E4',
+            'accent-gold': '#FFB700',
+            'accent-light': '#FFD700',
+            'base-bg': '#F0F4F8',
+            'base-text': '#1f2937',
+            'card-bg': '#ffffff',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+    </script>
+    
+    <style type="text/tailwindcss">
+      @layer components {
+        .chart-container {
+          @apply relative w-full max-w-lg mx-auto h-72 sm:h-80 md:h-96 max-h-[400px];
+        }
+        .big-number {
+          @apply text-6xl md:text-8xl font-bold text-accent-gold;
+        }
+        .card {
+          @apply bg-card-bg rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl;
+        }
+        .timeline-item {
+          @apply relative pl-10 sm:pl-12 py-4;
+        }
+        .timeline-dot {
+          @apply absolute left-0 sm:left-4 top-5 w-5 h-5 rounded-full bg-primary-medium border-4 border-card-bg;
+        }
+        .timeline-line {
+          @apply absolute left-[9px] sm:left-[25px] top-5 w-0.5 h-full bg-primary-light;
+        }
+        .timeline-item:last-child .timeline-line {
+          @apply hidden;
+        }
+        .timeline-date {
+          @apply text-sm font-semibold text-primary-dark mb-1;
+        }
+        .timeline-content {
+          @apply text-base text-base-text;
+        }
+      }
+    </style>
+</head>
+<body class="bg-base-bg font-sans text-base-text">
+
+    <header class="bg-primary-dark text-white py-8 shadow-xl">
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-2">ROMANS: Who is Paul?</h1>
+        <p class="text-xl md:text-2xl text-accent-light">Week 1 - A Visual Study Guide</p>
+      </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-10">
+
+        <section id="epistle" class="mb-12">
+            <h2 class="text-3xl font-bold text-primary-dark mb-6 text-center">The Epistle to the Romans</h2>
+            <p class="text-lg text-base-text mb-8 max-w-3xl mx-auto text-center">
+                The Book of Romans is the longest and most doctrinally significant of Paul's letters. It serves as a systematic explanation of the gospel of grace, written to a church Paul had not yet visited.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="card">
+                    <h3 class="text-xl font-bold text-primary-medium mb-4">Who, When & Where?</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-accent-gold font-bold mr-2">&#9998;</span>
+                            <div><strong>Author:</strong> Paul (Scribe: Tertius)</div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent-gold font-bold mr-2">&#9200;</span>
+                            <div><strong>When:</strong> AD 57–58 (3rd Journey)</div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent-gold font-bold mr-2">&#127968;</span>
+                            <div><strong>Where:</strong> Written from Corinth</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 class="text-xl font-bold text-primary-medium mb-4">Why Did Paul Write It?</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li>To systematically explain the gospel of grace.</li>
+                        <li>To unify Jewish & Gentile believers in Rome.</li>
+                        <li>To prepare for his upcoming visit.</li>
+                        <li>To gain support for missions to Jerusalem & Spain.</li>
+                    </ol>
+                </div>
+                
+                <div class="card md:col-span-2 lg:col-span-1">
+                    <h3 class="text-xl font-bold text-primary-medium mb-4">Quick Facts</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-accent-gold font-bold mr-2">&#11088;</span>
+                            <div><strong>Longest Epistle:</strong> 16 chapters, 7,111 words.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent-gold font-bold mr-2">&#11088;</span>
+                            <div>Only letter to a church Paul didn't plant.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-accent-gold font-bold mr-2">&#11088;</span>
+                            <div>Quotes the Old Testament ~60 times.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card mt-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-primary-dark mb-4">A Letter Steeped in Scripture</h3>
+                        <p class="text-base-text mb-4">
+                            Romans is deeply connected to the Old Testament, with ~60 quotes. Paul draws heavily from foundational texts to build his theological argument for the gospel.
+                        </p>
+                        <p class="text-base-text">
+                            This chart shows an estimated breakdown of the primary sources for these quotes, demonstrating Paul's reliance on the Psalms, Isaiah, and Deuteronomy to explain how Jesus is the fulfillment of God's promises.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="chart-container">
+                            <canvas id="otQuotesChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="paul" class="mb-12">
+            <h2 class="text-3xl font-bold text-primary-dark mb-6 text-center">Who is Paul & Why Does He Matter?</h2>
+            <p class="text-lg text-base-text mb-8 max-w-3xl mx-auto text-center">
+                The author of Romans is one of the most pivotal figures in history. His life was defined by a dramatic transformation, from a zealous persecutor of the church to its most influential apostle.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card">
+                    <h3 class="text-xl font-bold text-primary-medium mb-4">Saul of Tarsus: The Persecutor</h3>
+                    <ul class="space-y-3">
+                        <li>A Pharisee from the Tribe of Benjamin.</li>
+                        <li>Zealously persecuted the early church in Jerusalem.</li>
+                        <li>Was present at the martyrdom of Stephen (Acts 7).</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold text-primary-medium mb-4">The Conversion: The Damascus Road</h3>
+                    <ul class="space-y-3">
+                        <li>Occurred around AD 35.</li>
+                        <li>A great light from heaven and the voice of Jesus.</li>
+                        <li>Christ's words: "Saul, Saul, why persecutest thou me?"</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="ministry" class="mb-12">
+            <h2 class="text-3xl font-bold text-primary-dark mb-6 text-center">Paul's Ministry & Legacy</h2>
+             <p class="text-lg text-base-text mb-8 max-w-3xl mx-auto text-center">
+                Following his conversion, Paul spent years in preparation before embarking on a ministry that would establish the theological foundations of Christianity and spread the gospel across the Roman Empire.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card text-center">
+                    <h3 class="text-xl font-bold text-primary-medium mb-2">Epistles Written</h3>
+                    <div class="big-number">13</div>
+                    <p class="text-lg">books of the New Testament establishing Christian theology.</p>
+                </div>
+                <div class="card text-center">
+                    <h3 class="text-xl font-bold text-primary-medium mb-2">Role</h3>
+                    <div class="text-6xl my-4">&#127758;</div>
+                    <p class="text-lg font-semibold">The Apostle to the Gentiles</p>
+                    <p>(Romans 11:13)</p>
+                </div>
+                <div class="card text-center">
+                    <h3 class="text-xl font-bold text-primary-medium mb-2">Preparation</h3>
+                    <div class="big-number">3</div>
+                    <p class="text-lg">years spent in Arabia, likely receiving teaching directly from Christ.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="timeline">
+            <h2 class="text-3xl font-bold text-primary-dark mb-8 text-center">A Life in Motion: Paul's Timeline</h2>
+            
+            <div class="card">
+                <div class="relative">
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-date">~ AD 35</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold">Conversion</h4>
+                            <p>Encounters Christ on the Damascus Road.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-date">AD 35–38</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold">Preparation in Arabia</h4>
+                            <p>Spends 3 years in preparation.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-date">AD 38</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold">Begins Ministry</h4>
+                            <p>Returns to Damascus and begins to evangelize.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-date">AD 46–47</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold">1st Missionary Journey</h4>
+                            <p>Travels with Barnabas to Cyprus and Galatia.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-date">AD 49</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold">Jerusalem Council</h4>
+                            <p>Defends the gospel of grace (Acts 15).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-date">AD 50–52</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold">2nd Missionary Journey</h4>
+                            <p>Travels to Philippi and Corinth.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-date">AD 53–57</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold">3rd Missionary Journey</h4>
+                            <p>Spends 3 years in Ephesus.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-date">AD 57–58</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold text-accent-gold">Writes Romans</h4>
+                            <p>Writes the epistle from Corinth.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-date">AD 58</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold">Arrested in Jerusalem</h4>
+                            <p>Imprisoned after delivering the offering.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-date">AD 60–62</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold">House Arrest in Rome</h4>
+                            <p>Preaches for 2 years; writes Prison Epistles.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-date">~ AD 67</div>
+                        <div class="timeline-content">
+                            <h4 class="font-bold">Martyrdom</h4>
+                            <p>Martyred in Rome under Nero.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-6 mt-12 text-gray-500 text-sm">
+        <p>Infographic created from the "ROMANS Who is Paul - Week 1" study notes.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            function wrapLabels(labels, maxWidth) {
+              return labels.map(label => {
+                if (Array.isArray(label)) return label; 
+                if (label.length <= maxWidth) return label;
+                
+                let words = label.split(' ');
+                let lines = [];
+                let currentLine = '';
+                
+                words.forEach(word => {
+                  if ((currentLine + word).length > maxWidth) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                  }
+                  currentLine += word + ' ';
+                });
+                lines.push(currentLine.trim());
+                return lines.filter(line => line.length > 0);
+              });
+            }
+
+            const rawLabels = ['Psalms', 'Isaiah', 'Deuteronomy', 'Other Old Testament Books'];
+            const wrappedLabels = wrapLabels(rawLabels, 16);
+            
+            const ctx = document.getElementById('otQuotesChart');
+            if (ctx) {
+                new Chart(ctx.getContext('2d'), {
+                  type: 'doughnut',
+                  data: {
+                    labels: wrappedLabels,
+                    datasets: [{
+                      label: '# of Quotes',
+                      data: [20, 15, 10, 15],
+                      backgroundColor: [
+                        '#003366', 
+                        '#005fB2', 
+                        '#00A1E4', 
+                        '#FFB700'
+                      ],
+                      borderColor: '#F0F4F8',
+                      borderWidth: 2
+                    }]
+                  },
+                  options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                      legend: {
+                        position: 'bottom',
+                      },
+                      tooltip: {
+                        callbacks: {
+                          title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            } else {
+                              return label;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
