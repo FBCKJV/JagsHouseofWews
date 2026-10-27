@@ -6,6 +6,8 @@
   'use strict';
 
   const KJV_APP = 'https://fbckjv.app/KJVBible/';
+  // Shown on the About page. Started at v1.17 (after 17 merged updates); each merged update adds one.
+  const APP_VERSION = '1.17', APP_DATE = '2026-10-27';
   const view = document.getElementById('view');
   const crumbs = document.getElementById('crumbs');
   let INDEX = null;
@@ -327,7 +329,8 @@
       <div class="section-header"><h2>Getting around</h2></div>
       ${installCard()}
       <dl class="tips">${TIPS.map(([t, d]) => `<dt>${esc(t)}</dt><dd>${esc(d)}</dd>`).join('')}</dl>
-      <p class="fineprint"><a href="../">The older teaching portal</a> still has the Romans and Genesis class series.</p>`;
+      <p class="fineprint"><a href="../">The older teaching portal</a> still has the Romans and Genesis class series.</p>
+      <p class="fineprint version">Version ${APP_VERSION} · ${esc(fmtDate(APP_DATE))}</p>`;
     wireInstall();
   }
 
