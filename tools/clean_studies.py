@@ -9,10 +9,14 @@ Reads (never edits):
   telegram_chapter_studies/chapter_studies.json   output of extract_studies.py
   review/decisions.json                            your keep/drop choices (created if missing)
   review/corrections.json                          approved fixes: wrong verse labels, typos
+  review/topics.json                               doctrine topics and the teachings filed under each
 Writes (regenerated on every run, don't hand-edit):
   studies/data/books.json          small index: every book and chapter with its status
   studies/data/books/<Book>.json   one cleaned file per book, loaded by the app on demand
   review/flagged.md                study posts that may not be teaching on the chapter
+  studies/data/topics.json         doctrine topics with counts and themes
+  studies/data/topics/<id>.json    the teachings filed under one topic
+  review/topics_unsorted.md        teachings (verses chained from several books) not filed yet
 
 Choosing a chapter's study:
   series study   the primary pass of a series, with commentary
@@ -40,6 +44,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, 'telegram_chapter_studies', 'chapter_studies.json')
 DECISIONS = os.path.join(ROOT, 'review', 'decisions.json')
 CORRECTIONS = os.path.join(ROOT, 'review', 'corrections.json')
+TOPICS = os.path.join(ROOT, 'review', 'topics.json')
+UNSORTED = os.path.join(ROOT, 'review', 'topics_unsorted.md')
 FLAGGED = os.path.join(ROOT, 'review', 'flagged.md')
 OUT = os.path.join(ROOT, 'studies', 'data')
 MIN_CHARS = 500
@@ -194,6 +200,80 @@ def apply_corrections(src, corrections):
     return applied, missed
 
 
+def load_topics():
+    if not os.path.exists(TOPICS):
+        return {'topics': [], 'posts': {}}
+    with open(TOPICS, encoding='utf-8') as f:
+        t = json.load(f)
+    t.setdefault('topics', [])
+    t['posts'] = {str(k): v for k, v in t.get('posts', {}).items()}
+    return t
+
+
+REF_BOOK = re.compile(r'^\s*\*\*\s*((?:[1-3]\s*)?[A-Za-z][A-Za-z ]+?)\.?\s+\d+\s*[:.]\s*\d+[^*]*\*\*\s*$')
+
+
+def references(text):
+    """The "**Book 1:2**" reference lines in a post, in order."""
+    return [m.group(0).strip().strip('*').strip() for m in map(REF_BOOK.match, text.split('\n')) if m]
+
+
+def is_teaching(text, book):
+    """Verses chained from several books to build a point: 3+ references from 2+ other books,
+    with at least 300 characters of the author's own words."""
+    refs = [REF_BOOK.match(l).group(1).strip().lower() for l in text.split('\n') if REF_BOOK.match(l)]
+    others = {r for r in refs if r.rstrip('s') != book.lower().rstrip('s')}
+    return len(refs) >= 3 and len(others) >= 2 and own_words(text) >= 300
+
+
+def write_topics(topics, posts_by_id):
+    """Doctrine pages: one data file per topic, plus the list of teachings not filed yet."""
+    os.makedirs(os.path.join(OUT, 'topics'), exist_ok=True)
+    names = {t['id']: t['name'] for t in topics['topics']}
+    filed = defaultdict(list)
+    for pid, a in topics['posts'].items():
+        hit = posts_by_id.get(pid)
+        if not hit or a.get('teaching') is False:
+            continue
+        book, ch, study, p = hit
+        for i, tid in enumerate(a.get('topics', [])):
+            if tid in names:
+                filed[tid].append({
+                    'id': p['id'], 'title': a.get('title', ''), 'theme': a.get('theme', '') if i == 0 else '',
+                    'summary': a.get('summary', ''), 'date': p['date'][:10], 'book': book, 'slug': slug(book),
+                    'ch': ch, 'link': study['link'].rsplit('/', 1)[0] + '/' + str(p['id']),
+                    'refs': references(p['text']), 'also': [t for t in a['topics'] if t != tid and t in names],
+                    'text': p['text']})
+    index = []
+    for t in topics['topics']:
+        items = filed.get(t['id'], [])
+        # group by theme (the topic's main teachings first), then oldest first within a theme
+        themes = Counter(x['theme'] for x in items if x['theme'])
+        order = {th: i for i, (th, _) in enumerate(themes.most_common())}
+        items.sort(key=lambda x: (x['theme'] == '', order.get(x['theme'], 999), x['date']))
+        with open(os.path.join(OUT, 'topics', t['id'] + '.json'), 'w', encoding='utf-8') as f:
+            json.dump({'id': t['id'], 'name': t['name'], 'about': t.get('about', ''), 'teachings': items},
+                      f, ensure_ascii=False, separators=(',', ':'))
+        index.append({'id': t['id'], 'name': t['name'], 'about': t.get('about', ''), 'count': len(items),
+                      'themes': [th for th, _ in themes.most_common()]})
+    with open(os.path.join(OUT, 'topics.json'), 'w', encoding='utf-8') as f:
+        json.dump({'topics': index}, f, ensure_ascii=False, separators=(',', ':'))
+
+    unsorted = [(book, ch, study, p) for pid, (book, ch, study, p) in posts_by_id.items()
+                if p['kind'] == 'study' and pid not in topics['posts'] and is_teaching(p['text'], book)]
+    L = ['# Teachings not filed under a topic yet\n',
+         f'\n{len(unsorted)} posts chain verses from several books to build a point but aren\'t in '
+         '`review/topics.json` yet. Add each under `"posts"` with its topics, theme, title and summary '
+         '(or `"teaching": false` to leave it out), then rerun `python3 tools/clean_studies.py`.\n',
+         '\nRegenerated on every run; don\'t edit it.\n\n']
+    for book, ch, study, p in sorted(unsorted, key=lambda x: x[3]['date']):
+        first = re.sub(r'\s+', ' ', re.sub(r'[*#]', '', p['text'])).strip()[:150]
+        L.append(f"- `{p['id']}` · {p['date'][:10]} · {book} {ch} · {', '.join(references(p['text'])[:4])}\n  > {first}\n")
+    with open(UNSORTED, 'w', encoding='utf-8') as f:
+        f.write(''.join(L))
+    return sum(len(v) for v in filed.values()), len(unsorted)
+
+
 def start_id(study):
     return study['link'].rstrip('/').rsplit('/', 1)[-1]
 
@@ -212,6 +292,8 @@ def main():
     with open(SRC, encoding='utf-8') as f:
         src = json.load(f)
     fixed, missed = apply_corrections(src, load_corrections())
+    topics = load_topics()
+    posts_by_id = {}                     # every post shown in the app: id -> (book, chapter, study, post)
     dec = load_decisions()
     post_dec = {str(k): v for k, v in dec['posts'].items()}
     study_dec = {str(k): v for k, v in dec['studies'].items()}
@@ -249,7 +331,11 @@ def main():
                 out = {'id': p['id'], 'date': p['date'][:16], 'kind': p['kind'], 'text': text}
                 if p.get('media'):
                     out['media'] = p['media']
+                filed = topics['posts'].get(pid)
+                if filed and filed.get('teaching') is not False and filed.get('topics'):
+                    out['topics'] = filed['topics']
                 posts.append(out)
+                posts_by_id.setdefault(pid, (book, ch, study, out))
             chars = sum(own_words(p['text']) for p in posts if p['kind'] == 'study')
             res = {'date': study['date'], 'series': study['series'], 'link': study['link'], 'chars': chars, 'posts': posts}
             r = verse_range(study)
@@ -314,6 +400,7 @@ def main():
         json.dump({'min_chars': MIN_CHARS, 'latest': latest, 'books': index}, f, ensure_ascii=False, separators=(',', ':'))
 
     write_review(flagged, dec)
+    n_filed, n_unsorted = write_topics(topics, posts_by_id)
     print(f"Books written to {os.path.relpath(OUT, ROOT)}/")
     print(f"Chapters: series {stats['chapters_series']}, with neighbor {stats['chapters_with']}, "
           f"earlier study {stats['chapters_earlier']}, not yet studied {stats['chapters_none']}")
@@ -321,6 +408,8 @@ def main():
           f"hidden in the app: {stats['posts_hidden']}")
     print(f"Review list: {os.path.relpath(FLAGGED, ROOT)}")
     print(f"Corrections applied: {fixed}" + (f"; no longer matching (check these): {missed}" if missed else ''))
+    print(f"Doctrine topics: {len(topics['topics'])}, teachings filed: {n_filed}; "
+          f"not filed yet: {n_unsorted} (see {os.path.relpath(UNSORTED, ROOT)})")
 
 
 def write_review(flagged, dec):
