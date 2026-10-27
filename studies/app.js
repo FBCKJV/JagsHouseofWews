@@ -185,7 +185,7 @@
   // ---------- views ----------
   function home() {
     document.title = 'Chapter Studies — Jag\'s House of Wews';
-    setCrumbs([['Home', '#']], [['Doctrines & Teachings', '#doctrines'], ['About & tips', '#about']]);
+    setCrumbs([['Home', '#']]);
     view.classList.add('wide');
     const total = INDEX.books.reduce((n, b) => n + b.chapters, 0);
     const done = INDEX.books.reduce((n, b) => n + studiedCount(b), 0);
@@ -202,7 +202,6 @@
     view.innerHTML = `
       <div class="hero">
         <h1>Chapter Studies</h1>
-        <div class="hero-rule"><div class="hero-rule-line"></div><div class="hero-rule-diamond"></div><div class="hero-rule-line r"></div></div>
         <p>${done.toLocaleString()} of ${total.toLocaleString()} chapters studied, Genesis to Revelation. Pick a book, then a chapter.</p>
       </div>
       <div class="continue-row">
@@ -240,7 +239,6 @@
     view.innerHTML = `
       <div class="hero">
         <h1>${esc(b.book)}</h1>
-        <div class="hero-rule"><div class="hero-rule-line"></div><div class="hero-rule-diamond"></div><div class="hero-rule-line r"></div></div>
         <p>${n === b.chapters ? `All ${b.chapters} chapters studied` : `${n} of ${b.chapters} chapters studied`}</p>
       </div>
       <div class="section-header"><h2>Chapters</h2></div>
@@ -275,7 +273,6 @@
     view.innerHTML = `
       <div class="hero">
         <h1>About &amp; Tips</h1>
-        <div class="hero-rule"><div class="hero-rule-line"></div><div class="hero-rule-diamond"></div><div class="hero-rule-line r"></div></div>
       </div>
       <div class="post about">${render(text)}</div>
       <div class="section-header"><h2>Getting around</h2></div>
@@ -324,7 +321,6 @@
     view.innerHTML = `
       <div class="hero">
         <h1>Doctrines &amp; Teachings</h1>
-        <div class="hero-rule"><div class="hero-rule-line"></div><div class="hero-rule-diamond"></div><div class="hero-rule-line r"></div></div>
         <p>Teachings where scripture is compared with scripture to set out one truth, gathered from the chapter studies and sorted by topic.</p>
       </div>
       <div class="topic-grid">${t.topics.filter(x => x.count).map(x => `
@@ -374,7 +370,6 @@
     view.innerHTML = `
       <div class="hero">
         <h1>${esc(topic.name)}</h1>
-        <div class="hero-rule"><div class="hero-rule-line"></div><div class="hero-rule-diamond"></div><div class="hero-rule-line r"></div></div>
         <p>${esc(topic.about)}</p>
       </div>
       ${groups.length > 1 ? `<nav class="theme-chips" aria-label="Themes">${groups.map(g =>
@@ -391,7 +386,8 @@
   function kjvBlock(kjv, ch, fallbackStudy) {
     const chapter = kjv && kjv.chapters && kjv.chapters[ch - 1];
     if (chapter) {
-      return chapter.verses.map(v => `<p class="v"><sup>${esc(v.verse)}</sup>${esc(v.text)}</p>`).join('');
+      return chapter.verses.map(v =>
+        `<div class="v"><span class="vnum">${esc(v.verse)}</span><span class="vtxt">${esc(v.text)}</span></div>`).join('');
     }
     const posts = fallbackStudy ? fallbackStudy.posts.filter(p => p.kind === 'scripture') : [];
     if (!posts.length) return '';
@@ -706,9 +702,40 @@
     a.addEventListener('click', e => { if (held) e.preventDefault(); });
   });
 
+  // ---------- theme: shared with the KJV Bible app (kjv_theme on this site) ----------
+  const THEMES = ['dark', 'light', 'sepia'];
+  const THEME_BG = { dark: '#1a1005', light: '#ede5d5', sepia: '#e7d9be' };
+  function currentTheme() {
+    try { const t = JSON.parse(localStorage.getItem('kjv_theme') || '"dark"'); return THEMES.includes(t) ? t : 'dark'; }
+    catch (e) { return 'dark'; }
+  }
+  function applyTheme(t) {
+    document.documentElement.className = t === 'dark' ? '' : t;
+    document.getElementById('theme-color-meta').content = THEME_BG[t];
+    document.getElementById('theme-btn').setAttribute('aria-label', 'Theme: ' + t + '. Tap for ' + THEMES[(THEMES.indexOf(t) + 1) % 3]);
+  }
+  let theme = currentTheme();
+  applyTheme(theme);
+  document.getElementById('theme-btn').addEventListener('click', () => {
+    theme = THEMES[(THEMES.indexOf(theme) + 1) % THEMES.length];
+    try { localStorage.setItem('kjv_theme', JSON.stringify(theme)); } catch (e) { /* storage blocked: this visit only */ }
+    applyTheme(theme);
+  });
+  // Changing the theme in the Bible app (another tab) changes it here too.
+  window.addEventListener('storage', e => { if (e.key === 'kjv_theme') applyTheme(theme = currentTheme()); });
+
+  function markTab(h) {
+    const tab = h === 'about' ? 'about' : (h === 'doctrines' || h.startsWith('doctrine-')) ? 'doctrines' : 'books';
+    document.querySelectorAll('#tabbar .tab[data-tab]').forEach(a => {
+      a.classList.toggle('on', a.dataset.tab === tab);
+      if (a.dataset.tab === tab) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
+  }
+
   // ---------- router: (empty)  #Psalms  #Psalms-23 ----------
   async function route() {
     const h = decodeURIComponent(location.hash.slice(1));
+    markTab(h);
     try {
       if (!INDEX) INDEX = await getJSON('data/books.json');
       if (!sheet.hidden) hideSheet();

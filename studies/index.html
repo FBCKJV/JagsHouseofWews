@@ -2,28 +2,26 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Chapter Studies — Jag's House of Wews</title>
 <meta name="description" content="Chapter-by-chapter KJV Bible studies from the House of Wews channel.">
-<meta name="theme-color" content="#1a1816">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<meta name="theme-color" id="theme-color-meta" content="#1a1005">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="app.css">
+<!-- Same theme as the KJV Bible app (it stores the choice as kjv_theme on this site) -->
+<script>try{var t=JSON.parse(localStorage.getItem('kjv_theme')||'"dark"');if(t==='light'||t==='sepia')document.documentElement.className=t;}catch(e){}</script>
 </head>
 <body>
 
-<header class="site-header">
-  <a class="logo-heart" href="#" aria-label="All books">
-    <svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M50 80 C50 80 10 52 10 28 C10 14 22 5 35 10 C41 13 47 18 50 23 C53 18 59 13 65 10 C78 5 90 14 90 28 C90 52 50 80 50 80Z" fill="none" stroke="#c0271f" stroke-width="6"/>
-    </svg>
-    <span class="logo-rooster">🐓</span>
+<header id="header">
+  <a id="logo" href="#" aria-label="Chapter Studies home"><span class="rooster" aria-hidden="true">🐓</span> House of Wews <span class="logo-sub">Studies</span></a>
+  <button class="hbtn" id="theme-btn" type="button" aria-label="Theme" title="Theme: dark, light or sepia">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18" /><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+  </button>
+  <a class="hbtn" href="../" aria-label="Portal" title="Back to the portal">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>
   </a>
-  <a class="site-title" href="#">
-    <span class="jags">JAG'S</span>
-    <span class="h1">HOUSE <span>OF</span> WEWS</span>
-    <span class="site-tagline">Chapter Studies · King James Bible</span>
-  </a>
-  <a class="header-kjv" href="../">Portal</a>
 </header>
 
 <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"></nav>
@@ -33,8 +31,23 @@
 </main>
 
 <footer class="site-footer">
-  <span>JAG'S HOUSE OF WEWS</span> · Chapter Studies · All scripture from the King James Bible · <a href="#about">About these studies</a>
+  Jag's House of Wews · All scripture from the King James Bible · <a href="#about">About these studies</a>
 </footer>
+
+<nav id="tabbar" aria-label="Sections">
+  <a class="tab" data-tab="books" href="#">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    <span>Books</span></a>
+  <a class="tab" data-tab="doctrines" href="#doctrines">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><path d="M12 7.5V21"/><path d="M5 13a7 7 0 0 0 14 0"/><path d="M8 11h8"/></svg>
+    <span>Doctrines</span></a>
+  <a class="tab" data-tab="about" href="#about">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6"/><circle cx="12" cy="7.5" r="0.6" fill="currentColor"/></svg>
+    <span>About</span></a>
+  <a class="tab" href="https://fbckjv.app/KJVBible/" target="_blank" rel="noopener">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 6v14"/><path d="M8 10h8"/><path d="M4 4h16v16H4z"/></svg>
+    <span>Bible ↗</span></a>
+</nav>
 
 <script src="app.js"></script>
 </body>
