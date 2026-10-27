@@ -6,8 +6,10 @@ Usage (from the repo root):
     python3 tools/find_corrections.py
 
 It only proposes. Nothing changes until a fix is copied into review/corrections.json, which
-clean_studies.py applies on every run. Scripture wording is never proposed for change:
-a quote stays exactly as posted, only the reference line above or below it is checked.
+clean_studies.py applies on every run. Checks:
+  - reference lines whose quote is a different passage
+  - quoted blocks whose wording isn't the KJV (a modern version pasted by mistake)
+  - likely spelling mistakes in the commentary (never inside scripture)
 
 Reads:
   telegram_chapter_studies/chapter_studies.json
@@ -26,7 +28,7 @@ from difflib import SequenceMatcher
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from clean_studies import BOOKS, slug, load_corrections  # noqa: E402
+from clean_studies import BOOKS, slug, load_corrections, apply_corrections  # noqa: E402
 
 SRC = os.path.join(ROOT, 'telegram_chapter_studies', 'chapter_studies.json')
 OUT = os.path.join(ROOT, 'review', 'proposed_corrections.md')
@@ -166,6 +168,39 @@ def check_references(src, kjv, approved):
     return wrong, not_kjv
 
 
+WHOLE_LINE = re.compile(r'^\s*(?:\.\.\.|…)?\s*(\*\*?)(?!\s)[^*]+(?<!\s)\1[\s.,;:…]*$')
+
+
+def check_wording(src, kjv):
+    """Quoted blocks (lines wholly in italics or bold) whose wording isn't found in the KJV:
+    a modern version pasted by mistake, or a quote from a non-scripture source."""
+    grams = set()
+    for t in kjv.values():
+        w = words(t)
+        grams.update(' '.join(w[i:i + 4]) for i in range(max(1, len(w) - 3)))
+    out, seen = [], set()
+    for book, chs in src.items():
+        for ch, passes in chs.items():
+            for s in passes:
+                for p in s['posts']:
+                    if p['id'] in seen or p['kind'] == 'scripture':
+                        continue
+                    seen.add(p['id'])
+                    for block in re.split(r'\n\s*\n', p['text']):
+                        lines = [l for l in block.split('\n') if l.strip()]
+                        quote = [l for l in lines if WHOLE_LINE.match(l) and not REF_LINE.match(l)]
+                        w = words(' '.join(quote))
+                        if len(w) < 10:
+                            continue
+                        g = [' '.join(w[i:i + 4]) for i in range(len(w) - 3)]
+                        if sum(x in grams for x in g) / len(g) < 0.5:
+                            label = next((l.strip() for l in lines if REF_LINE.match(l)), '(no reference)')
+                            out.append({'book': book, 'chapter': ch, 'id': p['id'], 'label': label,
+                                        'link': s['link'].rsplit('/', 1)[0] + '/' + str(p['id']),
+                                        'quote': ' '.join(quote).replace('*', '').strip()})
+    return out
+
+
 def check_typos(src, kjv):
     try:
         from spellchecker import SpellChecker
@@ -203,8 +238,10 @@ def main():
     with open(SRC, encoding='utf-8') as f:
         src = json.load(f)
     approved = load_corrections()
+    apply_corrections(src, approved)            # only look at what's still wrong
     kjv = load_kjv()
-    wrong, not_kjv = check_references(src, kjv, approved)
+    wrong, _ = check_references(src, kjv, approved)
+    not_kjv = check_wording(src, kjv)
     typos = check_typos(src, kjv)
 
     L = ['# Proposed corrections\n',
@@ -218,8 +255,8 @@ def main():
                  f"  > {w['quote'][:160]}\n\n"
                  f"  `\"{w['id']}\": [{{\"find\": {json.dumps(w['find'])}, \"replace\": {json.dumps(w['replace'])}}}]`\n")
     L.append(f'\n## Quotes that aren\'t KJV wording ({len(not_kjv)})\n\n'
-             'Left exactly as posted. Listed so you can confirm each was quoted on purpose, '
-             'for example to compare a modern version with the KJV.\n')
+             'Scripture pasted from a modern version should be replaced with the KJV text in corrections.json. '
+             'Quotes from other writers (historians, hymns, commentaries) belong here and stay as they are.\n')
     for w in not_kjv:
         L.append(f"\n- {w['book']} {w['chapter']} · [post {w['id']}]({w['link']}) · `{w['label']}`\n"
                  f"  > {w['quote'][:160]}\n")
