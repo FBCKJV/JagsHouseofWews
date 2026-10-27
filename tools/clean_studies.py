@@ -8,6 +8,7 @@ Usage (from the repo root):
 Reads (never edits):
   telegram_chapter_studies/chapter_studies.json   output of extract_studies.py
   review/decisions.json                            your keep/drop choices (created if missing)
+  review/corrections.json                          approved fixes: wrong verse labels, typos
 Writes (regenerated on every run, don't hand-edit):
   studies/data/books.json          small index: every book and chapter with its status
   studies/data/books/<Book>.json   one cleaned file per book, loaded by the app on demand
@@ -24,6 +25,11 @@ decisions.json:
   "posts":   {"<post id>": "keep" | "drop"}    applies to any post, flagged or not
   "studies": {"<first post id>": "show" | "hide"}   overrides the MIN_CHARS rule for one pass
   "flagged_default": "drop" | "keep"           what happens to flagged posts you haven't decided yet
+
+corrections.json:
+  {"<post id>": [{"find": "**Isaiah 51:1**", "replace": "**Isaiah 58:1**"}, ...]}
+  Exact text replacements, applied before anything else. A fix whose text is no longer in the
+  post (after a re-export) is skipped and reported. tools/find_corrections.py proposes them.
 No third-party packages needed.
 """
 import json, os, re, sys
@@ -32,6 +38,7 @@ from collections import Counter, defaultdict
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, 'telegram_chapter_studies', 'chapter_studies.json')
 DECISIONS = os.path.join(ROOT, 'review', 'decisions.json')
+CORRECTIONS = os.path.join(ROOT, 'review', 'corrections.json')
 FLAGGED = os.path.join(ROOT, 'review', 'flagged.md')
 OUT = os.path.join(ROOT, 'studies', 'data')
 MIN_CHARS = 500
@@ -154,6 +161,28 @@ def load_decisions():
     return d
 
 
+def load_corrections():
+    if not os.path.exists(CORRECTIONS):
+        return {}
+    with open(CORRECTIONS, encoding='utf-8') as f:
+        return {str(k): v for k, v in json.load(f).items() if not k.startswith('_')}
+
+
+def apply_corrections(src, corrections):
+    """Apply approved find/replace fixes to post text in memory. Returns the fixes that no longer match."""
+    posts = {str(p['id']): p for chs in src.values() for passes in chs.values() for s in passes for p in s['posts']}
+    applied, missed = 0, []
+    for pid, fixes in corrections.items():
+        p = posts.get(pid)
+        for fx in fixes:
+            if p and fx['find'] in p['text']:
+                p['text'] = p['text'].replace(fx['find'], fx['replace'])
+                applied += 1
+            else:
+                missed.append((pid, fx['find']))
+    return applied, missed
+
+
 def start_id(study):
     return study['link'].rstrip('/').rsplit('/', 1)[-1]
 
@@ -171,6 +200,7 @@ def verse_range(study):
 def main():
     with open(SRC, encoding='utf-8') as f:
         src = json.load(f)
+    fixed, missed = apply_corrections(src, load_corrections())
     dec = load_decisions()
     post_dec = {str(k): v for k, v in dec['posts'].items()}
     study_dec = {str(k): v for k, v in dec['studies'].items()}
@@ -278,6 +308,7 @@ def main():
     print(f"Flagged posts: {stats['flagged']} (2022-23: {stats['flagged_2022-23']}, 2024+: {stats['flagged_2024+']}); "
           f"hidden in the app: {stats['posts_hidden']}")
     print(f"Review list: {os.path.relpath(FLAGGED, ROOT)}")
+    print(f"Corrections applied: {fixed}" + (f"; no longer matching (check these): {missed}" if missed else ''))
 
 
 def write_review(flagged, dec):
