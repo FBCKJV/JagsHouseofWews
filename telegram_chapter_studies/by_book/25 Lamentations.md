@@ -1,0 +1,608 @@
+# Lamentations
+
+## Lamentations 1  ·  Primary study  ·  2023-10-12
+
+Source: https://t.me/HouseOfWews2/12229
+
+<!-- post 12229 · 2023-10-12 05:34 · scripture -->
+
+**Lamentations 1**
+*How doth the city sit solitary, that was full of people! how is she become as a widow! she that was great among the nations, and princess among the provinces, how is she become tributary!*
+
+*2 She weepeth sore in the night, and her tears are on her cheeks: among all her lovers she hath none to comfort her: all her friends have dealt treacherously with her, they are become her enemies.*
+
+*3 Judah is gone into captivity because of affliction, and because of great servitude: she dwelleth among the heathen, she findeth no rest: all her persecutors overtook her between the straits.*
+
+*4 The ways of Zion do mourn, because none come to the solemn feasts: all her gates are desolate: her priests sigh, her virgins are afflicted, and she is in bitterness.*
+
+*5 Her adversaries are the chief, her enemies prosper; for the Lord hath afflicted her for the multitude of her transgressions: her children are gone into captivity before the enemy.*
+
+*6 And from the daughter of Zion all her beauty is departed: her princes are become like harts that find no pasture, and they are gone without strength before the pursuer.*
+
+*7 Jerusalem remembered in the days of her affliction and of her miseries all her pleasant things that she had in the days of old, when her people fell into the hand of the enemy, and none did help her: the adversaries saw her, and did mock at her sabbaths.*
+
+*8 Jerusalem hath grievously sinned; therefore she is removed: all that honoured her despise her, because they have seen her nakedness: yea, she sigheth, and turneth backward.*
+
+*9 Her filthiness is in her skirts; she remembereth not her last end; therefore she came down wonderfully: she had no comforter. O Lord, behold my affliction: for the enemy hath magnified himself.*
+
+*10 The adversary hath spread out his hand upon all her pleasant things: for she hath seen that the heathen entered into her sanctuary, whom thou didst command that they should not enter into thy congregation.*
+
+*11 All her people sigh, they seek bread; they have given their pleasant things for meat to relieve the soul: see, O Lord, and consider; for I am become vile.*
+
+*12 Is it nothing to you, all ye that pass by? behold, and see if there be any sorrow like unto my sorrow, which is done unto me, wherewith the Lord hath afflicted me in the day of his fierce anger.*
+
+*13 From above hath he sent fire into my bones, and it prevaileth against them: he hath spread a net for my feet, he hath turned me back: he hath made me desolate and faint all the day.*
+
+*14 The yoke of my transgressions is bound by his hand: they are wreathed, and come up upon my neck: he hath made my strength to fall, the Lord hath delivered me into their hands, from whom I am not able to rise up.*
+
+*15 The Lord hath trodden under foot all my mighty men in the midst of me: he hath called an assembly against me to crush my young men: the Lord hath trodden the virgin, the daughter of Judah, as in a winepress.*
+
+*16 For these things I weep; mine eye, mine eye runneth down with water, because the comforter that should relieve my soul is far from me: my children are desolate, because the enemy prevailed.*
+
+*17 Zion spreadeth forth her hands, and there is none to comfort her: the Lord hath commanded concerning Jacob, that his adversaries should be round about him: Jerusalem is as a menstruous woman among them.*
+
+*18 The Lord is righteous; for I have rebelled against his commandment: hear, I pray you, all people, and behold my sorrow: my virgins and my young men are gone into captivity.*
+
+*19 I called for my lovers, but they deceived me: my priests and mine elders gave up the ghost in the city, while they sought their meat to relieve their souls.*
+
+*20 Behold, O Lord; for I am in distress: my bowels are troubled; mine heart is turned within me; for I have grievously rebelled: abroad the sword bereaveth, at home there is as death.*
+
+*21 They have heard that I sigh: there is none to comfort me: all mine enemies have heard of my trouble; they are glad that thou hast done it: thou wilt bring the day that thou hast called, and they shall be like unto me.*
+
+<!-- post 12230 · 2023-10-12 05:34 · scripture -->
+
+*22 Let all their wickedness come before thee; and do unto them, as thou hast done unto me for all my transgressions: for my sighs are many, and my heart is faint.*
+
+<!-- post 12231 · 2023-10-12 05:43 · study -->
+
+The book of **Lamentations** is the poetic book of Jeremiah the "weeping prophet." In it, the desolation of Jerusalem and the sins of the people of Judah, as well as the goodness of God, are described in poetic language. The passages progress from this dismal and dismayed beginning to a bitter understanding of their predicament. 
+
+Much like the progression Jeremiah has in the early chapters of his main book, where he goes from protest and prayer for the salvation of his people, to grave acceptance and faith in the right judgments of the Lord. 
+
+The psalms contained in the 4 short chapters are a comfort in themselves to me when facing tribulation. Things could be much worse. And also a reminder of God's wrath against the ungodly.
+
+<!-- post 12232 · 2023-10-12 05:50 · study -->
+
+How often could we say that our signs are many and hearts faint? 
+
+But unlike Judah, we have a comforter that's with us at all times; the holy Spirit. To know we've never been abandoned or left to our enemies, for the presence of the Lord, the living God, dwells within us. 
+
+As Jesus tells us in **John 14**:
+
+*Let not your heart be troubled: ye believe in God, believe also in me. In my Father's house are many mansions: if it were not so, I would have told you. I go to prepare a place for you. And if I go and prepare a place for you, I will come again, and receive you unto myself; that where I am, there ye may be also.*
+
+*Verily, verily, I say unto you, He that believeth on me, the works that I do shall he do also; and greater works than these shall he do; because I go unto my Father. And whatsoever ye shall ask in my name, that will I do, that the Father may be glorified in the Son. If ye shall ask any thing in my name, I will do it. If ye love me, keep my commandments. And I will pray the Father, and he shall give you another Comforter, that he may abide with you for ever; Even the Spirit of truth; whom the world cannot receive, because it seeth him not, neither knoweth him: but ye know him; for he dwelleth with you, and shall be in you. I will not leave you comfortless: I will come to you.*
+
+So in tribulation, rejoice. We have not been left as Jerusalem. We have a comforter, if we believe on Jesus, trusting His word. And as we walk in Him, so too does the Spirit indwelling us. Jesus promises us He will not leave us comfortless.
+
+<!-- post 12233 · 2023-10-12 06:00 · study -->
+
+One of the major themes of the prophets, aside from the promise of deliverance in the promise of the Lord, is the judgment of God upon those who chase after other gods. Who commit fornication with them, metaphorically. The whoredoms of the people, who He consistently compares to a woman caught in adultery, whose lovers have abandoned her in her downfall. That she is like a woman exposed, naked to the world, ashamed.
+
+The Lord is longsuffering and merciful, His patience and grace are abundant and His love for us who are His is unending. But those who fall away to apostasy, Idolatry, faith in strange gods, while still calling themselves His, provokes Him to wrath. God's name is jealousy. 
+
+So, in our times where the largest sects calling themselves "Christian," are decked in scarlet and purple, clad in gold and jewels, and bowing and serving idols, putting faith in the creation over the Creator, lighting candles and incense to the "queen of heaven," it stirs God to wrath. 
+
+The abominations of the heathen, the shedding of innocent blood, violence, sexual perversions...all of these the Lord hates, but it is that adultery of those harlots that really stirs Him to wrath.
+
+<!-- post 12234 · 2023-10-12 06:12 · study -->
+
+With this perspective, the woman taken in adultery story from the Gospels, takes on added context: 
+
+**John 8:3-11**
+*And the scribes and Pharisees brought unto him a woman taken in adultery; and when they had set her in the midst, They say unto him, Master, this woman was taken in adultery, in the very act. Now Moses in the law commanded us, that such should be stoned: but what sayest thou?* 
+
+*This they said, tempting him, that they might have to accuse him. But Jesus stooped down, and with his finger wrote on the ground, as though he heard them not. So when they continued asking him, he lifted up himself, and said unto them, He that is without sin among you, let him first cast a stone at her. And again he stooped down, and wrote on the ground. And they which heard it, being convicted by their own conscience, went out one by one, beginning at the eldest, even unto the last: and Jesus was left alone, and the woman standing in the midst. When Jesus had lifted up himself, and saw none but the woman, he said unto her, Woman, where are those thine accusers? hath no man condemned thee? She said, No man, Lord. And Jesus said unto her, Neither do I condemn thee: go, and sin no more.*
+
+Now the scribes sought to test Jesus and make Him choose; either keep the law as they saw it, and stone the woman angering the Romans, or speak against the law, angering the Jews. 
+
+But as we know, Jesus simply said *'He that is without sin among you, cast the first stone.*" 
+
+The truth was they didn't bring her before Him in good faith, they didn't bring the man she had supposedly committed this crime unto death with, that he may face the same justice. But their real sin was their own adultery against God. The hypocrisy wasn't so much in their judgement of the woman, but in their unfaithfulness to the Lord. 
+
+And then Jesus, having shown them their own adulterous hearts, tells the woman to go and sin no more. Which spiritually, in that context of whoredoms against God, is a call to repentance towards Christ. (not a call to sinless perfection and works salvation)
+
+## Lamentations 2  ·  Primary study  ·  2023-10-14
+
+Source: https://t.me/HouseOfWews2/12245
+
+<!-- post 12245 · 2023-10-14 07:52 · scripture -->
+
+**Lamentations 2**
+*How hath the Lord covered the daughter of Zion with a cloud in his anger, and cast down from heaven unto the earth the beauty of Israel, and remembered not his footstool in the day of his anger!*
+
+*2 The Lord hath swallowed up all the habitations of Jacob, and hath not pitied: he hath thrown down in his wrath the strong holds of the daughter of Judah; he hath brought them down to the ground: he hath polluted the kingdom and the princes thereof.*
+
+*3 He hath cut off in his fierce anger all the horn of Israel: he hath drawn back his right hand from before the enemy, and he burned against Jacob like a flaming fire, which devoureth round about.*
+
+*4 He hath bent his bow like an enemy: he stood with his right hand as an adversary, and slew all that were pleasant to the eye in the tabernacle of the daughter of Zion: he poured out his fury like fire.*
+
+*5 The Lord was as an enemy: he hath swallowed up Israel, he hath swallowed up all her palaces: he hath destroyed his strong holds, and hath increased in the daughter of Judah mourning and lamentation.*
+
+*6 And he hath violently taken away his tabernacle, as if it were of a garden: he hath destroyed his places of the assembly: the Lord hath caused the solemn feasts and sabbaths to be forgotten in Zion, and hath despised in the indignation of his anger the king and the priest.*
+
+*7 The Lord hath cast off his altar, he hath abhorred his sanctuary, he hath given up into the hand of the enemy the walls of her palaces; they have made a noise in the house of the Lord, as in the day of a solemn feast.*
+
+*8 The Lord hath purposed to destroy the wall of the daughter of Zion: he hath stretched out a line, he hath not withdrawn his hand from destroying: therefore he made the rampart and the wall to lament; they languished together.*
+
+*9 Her gates are sunk into the ground; he hath destroyed and broken her bars: her king and her princes are among the Gentiles: the law is no more; her prophets also find no vision from the Lord.*
+
+*10 The elders of the daughter of Zion sit upon the ground, and keep silence: they have cast up dust upon their heads; they have girded themselves with sackcloth: the virgins of Jerusalem hang down their heads to the ground.*
+
+*11 Mine eyes do fail with tears, my bowels are troubled, my liver is poured upon the earth, for the destruction of the daughter of my people; because the children and the sucklings swoon in the streets of the city.*
+*12 They say to their mothers, Where is corn and wine? when they swooned as the wounded in the streets of the city, when their soul was poured out into their mothers' bosom.*
+
+*13 What thing shall I take to witness for thee? what thing shall I liken to thee, O daughter of Jerusalem? what shall I equal to thee, that I may comfort thee, O virgin daughter of Zion? for thy breach is great like the sea: who can heal thee?*
+
+*14 Thy prophets have seen vain and foolish things for thee: and they have not discovered thine iniquity, to turn away thy captivity; but have seen for thee false burdens and causes of banishment.*
+
+*15 All that pass by clap their hands at thee; they hiss and wag their head at the daughter of Jerusalem, saying, Is this the city that men call The perfection of beauty, The joy of the whole earth?*
+
+*16 All thine enemies have opened their mouth against thee: they hiss and gnash the teeth: they say, We have swallowed her up: certainly this is the day that we looked for; we have found, we have seen it.*
+
+*17 The Lord hath done that which he had devised; he hath fulfilled his word that he had commanded in the days of old: he hath thrown down, and hath not pitied: and he hath caused thine enemy to rejoice over thee, he hath set up the horn of thine adversaries.*
+
+*18 Their heart cried unto the Lord, O wall of the daughter of Zion, let tears run down like a river day and night: give thyself no rest; let not the apple of thine eye cease.*
+
+<!-- post 12246 · 2023-10-14 07:52 · scripture -->
+
+*19 Arise, cry out in the night: in the beginning of the watches pour out thine heart like water before the face of the Lord: lift up thy hands toward him for the life of thy young children, that faint for hunger in the top of every street.*
+
+*20 Behold, O Lord, and consider to whom thou hast done this. Shall the women eat their fruit, and children of a span long? shall the priest and the prophet be slain in the sanctuary of the Lord?*
+
+*21 The young and the old lie on the ground in the streets: my virgins and my young men are fallen by the sword; thou hast slain them in the day of thine anger; thou hast killed, and not pitied.*
+
+*22 Thou hast called as in a solemn day my terrors round about, so that in the day of the Lord's anger none escaped nor remained: those that I have swaddled and brought up hath mine enemy consumed.*
+
+<!-- post 12247 · 2023-10-14 08:18 · study -->
+
+**Lamentations** chapter 2, like chapter 1 and 4, is 22 verses, because these poems are written in an acrostic format, where each verse is started by a letter in the alphabet, in this case the 22 letters of the Hebrew language. Verse 3, as we will see, is 66 verses, because it uses the same format, but repeats 3 lines per letter. 
+
+It is interesting that God's poetry loses nothing in their beauty being translated to English, the poems and Psalms not relying on a meter or rhyme. 
+
+And of course, these poems of lamentation are Jeremiah's weeping over the destruction of Judah by the Babylonians, but clearly by the hand of God. 
+
+The first chapter describing Jerusalem as a widow and an adulterous, left desolate and friendless. The second, a daughter left without hope, covered in a cloud in his anger, and cast down from previous highs, brought low by His wrath. 
+
+The prophet describes how the Lord has torn down their habitations, their walls and strongholds, their temple and altars, kings and princes, priests and prophets. Taken everything from them. That their children beg for wine (juice) and bread in hunger. 
+
+*The Lord was as an enemy*, He bent his bow against them as an enemy. His wrath was upon them as He violently took away their Tabernacle, cast off the altar, ended the law, the sacrifices...taken from them everything. Only a remnant saved, carried away to a far kingdom. All by the hand of God. 
+
+*The young and the old lie on the ground in the streets: my virgins and my young men are fallen by the sword; thou hast slain them in the day of thine anger; thou hast killed, and not pitied. Thou hast called as in a solemn day my terrors round about, so that in the day of the Lord's anger none escaped nor remained: those that I have swaddled and brought up hath mine enemy consumed.*
+
+This it will be in the day of the Lord. The same will happen to the nations of the world. Their temples and kings will be cut off. Their strongholds, even the very mountains they flee to, will be struck down. And the streets will be littered with the bodies of the young and old. None will escape the anger of the Lord except those carried away to His kingdom, His servants, on that great and terrible day.
+
+## Lamentations 3  ·  Primary study  ·  2023-10-15
+
+Source: https://t.me/HouseOfWews2/12250
+
+<!-- post 12250 · 2023-10-15 07:11 · scripture -->
+
+**Lamentations 3**
+*I Am the man that hath seen affliction by the rod of his wrath.*
+
+*2 He hath led me, and brought me into darkness, but not into light.*
+
+*3 Surely against me is he turned; he turneth his hand against me all the day.*
+
+*4 My flesh and my skin hath he made old; he hath broken my bones.*
+
+*5 He hath builded against me, and compassed me with gall and travail.*
+
+*6 He hath set me in dark places, as they that be dead of old.*
+
+*7 He hath hedged me about, that I cannot get out: he hath made my chain heavy.*
+
+*8 Also when I cry and shout, he shutteth out my prayer.*
+
+*9 He hath inclosed my ways with hewn stone, he hath made my paths crooked.*
+
+*10 He was unto me as a bear lying in wait, and as a lion in secret places.*
+
+*11 He hath turned aside my ways, and pulled me in pieces: he hath made me desolate.*
+
+*12 He hath bent his bow, and set me as a mark for the arrow.*
+
+*13 He hath caused the arrows of his quiver to enter into my reins.*
+
+*14 I was a derision to all my people; and their song all the day.*
+
+*15 He hath filled me with bitterness, he hath made me drunken with wormwood.*
+
+*16 He hath also broken my teeth with gravel stones, he hath covered me with ashes.*
+
+*17 And thou hast removed my soul far off from peace: I forgat prosperity.*
+
+*18 And I said, My strength and my hope is perished from the Lord:*
+
+*19 Remembering mine affliction and my misery, the wormwood and the gall.*
+
+*20 My soul hath them still in remembrance, and is humbled in me.*
+
+*21 This I recall to my mind, therefore have I hope.*
+
+*22 It is of the Lord's mercies that we are not consumed, because his compassions fail not.*
+
+*23 They are new every morning: great is thy faithfulness.*
+
+*24 The Lord is my portion, saith my soul; therefore will I hope in him.*
+
+*25 The Lord is good unto them that wait for him, to the soul that seeketh him.*
+
+*26 It is good that a man should both hope and quietly wait for the salvation of the Lord.*
+
+*27 It is good for a man that he bear the yoke in his youth.*
+
+*28 He sitteth alone and keepeth silence, because he hath borne it upon him.*
+
+*29 He putteth his mouth in the dust; if so be there may be hope.*
+
+*30 He giveth his cheek to him that smiteth him: he is filled full with reproach.*
+
+*31 For the Lord will not cast off for ever:*
+
+*32 But though he cause grief, yet will he have compassion according to the multitude of his mercies.*
+
+*33 For he doth not afflict willingly nor grieve the children of men.*
+
+*34 To crush under his feet all the prisoners of the earth.*
+
+*35 To turn aside the right of a man before the face of the most High,*
+
+*36 To subvert a man in his cause, the Lord approveth not.*
+
+*37 Who is he that saith, and it cometh to pass, when the Lord commandeth it not?*
+
+*38 Out of the mouth of the most High proceedeth not evil and good?*
+
+*39 Wherefore doth a living man complain, a man for the punishment of his sins?*
+
+*40 Let us search and try our ways, and turn again to the Lord.*
+
+*41 Let us lift up our heart with our hands unto God in the heavens.*
+
+*42 We have transgressed and have rebelled: thou hast not pardoned.*
+
+*43 Thou hast covered with anger, and persecuted us: thou hast slain, thou hast not pitied.*
+
+*44 Thou hast covered thyself with a cloud, that our prayer should not pass through.*
+
+*45 Thou hast made us as the offscouring and refuse in the midst of the people.*
+
+*46 All our enemies have opened their mouths against us.*
+
+*47 Fear and a snare is come upon us, desolation and destruction.*
+
+*48 Mine eye runneth down with rivers of water for the destruction of the daughter of my people.*
+
+*49 Mine eye trickleth down, and ceaseth not, without any intermission.*
+
+*50 Till the Lord look down, and behold from heaven.*
+
+*51 Mine eye affecteth mine heart because of all the daughters of my city.*
+
+*52 Mine enemies chased me sore, like a bird, without cause.*
+
+*53 They have cut off my life in the dungeon, and cast a stone upon me.*
+
+*54 Waters flowed over mine head; then I said, I am cut off.*
+
+*55 I called upon thy name, O Lord, out of the low dungeon.*
+
+*56 Thou hast heard my voice: hide not thine ear at my breathing, at my cry.*
+
+<!-- post 12251 · 2023-10-15 07:11 · scripture -->
+
+*57 Thou drewest near in the day that I called upon thee: thou saidst, Fear not.*
+
+*58 O Lord, thou hast pleaded the causes of my soul; thou hast redeemed my life.*
+
+*59 O Lord, thou hast seen my wrong: judge thou my cause.*
+
+*60 Thou hast seen all their vengeance and all their imaginations against me.*
+
+*61 Thou hast heard their reproach, O Lord, and all their imaginations against me;*
+
+*62 The lips of those that rose up against me, and their device against me all the day.*
+
+*63 Behold their sitting down, and their rising up; I am their musick.*
+
+*64 Render unto them a recompence, O Lord, according to the work of their hands.*
+
+*65 Give them sorrow of heart, thy curse unto them.*
+
+*66 Persecute and destroy them in anger from under the heavens of the Lord.*
+
+<!-- post 12252 · 2023-10-15 07:26 · study -->
+
+**Lamentations 3** is one of the most beautiful and heartfelt poetic works of the Bible, which is saying a lot considering the beauty of the Psalms. 
+
+But in the Spirit Jeremiah captures so many things relevant to the life of a believer; the misery of being mired in sin, having God against us, as His enemy, pictures of the suffering of Christ for our sins, salvation by calling upon His name, the humility and faith gained in tribulation, and the imprecatory prayer against those who rise against us, and the prayers for our deliverance from their hands. 
+
+It is an emotional rollercoaster, where for 20 verses we are left in the worst state of man, with images of Jesus' suffering used to describe this lowly state. The gall, the derision, the turning of the other cheek when struck. Bearing the yoke. Being cut off, prayers unheard;
+
+*Eli, Eli, lama sabachthani? that is to say, My God, my God, why hast thou forsaken me?*
+
+It echos **Psalm 22**:
+
+<!-- post 12253 · 2023-10-15 07:27 · study -->
+
+**Psalm 22**
+*My God, my God, why hast thou forsaken me? why art thou so far from helping me, and from the words of my roaring?*
+
+*2 O my God, I cry in the day time, but thou hearest not; and in the night season, and am not silent.*
+
+*3 But thou art holy, O thou that inhabitest the praises of Israel.*
+
+*4 Our fathers trusted in thee: they trusted, and thou didst deliver them.*
+
+*5 They cried unto thee, and were delivered: they trusted in thee, and were not confounded.*
+
+*6 But I am a worm, and no man; a reproach of men, and despised of the people.*
+
+*7 All they that see me laugh me to scorn: they shoot out the lip, they shake the head, saying,*
+
+*8 He trusted on the Lord that he would deliver him: let him deliver him, seeing he delighted in him.*
+
+*9 But thou art he that took me out of the womb: thou didst make me hope when I was upon my mother's breasts.*
+
+*10 I was cast upon thee from the womb: thou art my God from my mother's belly.*
+
+*11 Be not far from me; for trouble is near; for there is none to help.*
+
+*12 Many bulls have compassed me: strong bulls of Bashan have beset me round.*
+
+*13 They gaped upon me with their mouths, as a ravening and a roaring lion.*
+
+*14 I am poured out like water, and all my bones are out of joint: my heart is like wax; it is melted in the midst of my bowels.*
+
+*15 My strength is dried up like a potsherd; and my tongue cleaveth to my jaws; and thou hast brought me into the dust of death.*
+
+*16 For dogs have compassed me: the assembly of the wicked have inclosed me: they pierced my hands and my feet.*
+
+*17 I may tell all my bones: they look and stare upon me.*
+
+*18 They part my garments among them, and cast lots upon my vesture.*
+
+*19 But be not thou far from me, O Lord: O my strength, haste thee to help me.*
+
+*20 Deliver my soul from the sword; my darling from the power of the dog.*
+
+*21 Save me from the lion's mouth: for thou hast heard me from the horns of the unicorns.*
+
+*22 I will declare thy name unto my brethren: in the midst of the congregation will I praise thee.*
+
+*23 Ye that fear the Lord, praise him; all ye the seed of Jacob, glorify him; and fear him, all ye the seed of Israel.*
+
+*24 For he hath not despised nor abhorred the affliction of the afflicted; neither hath he hid his face from him; but when he cried unto him, he heard.*
+
+*25 My praise shall be of thee in the great congregation: I will pay my vows before them that fear him.*
+
+*26 The meek shall eat and be satisfied: they shall praise the Lord that seek him: your heart shall live for ever.*
+
+*27 All the ends of the world shall remember and turn unto the Lord: and all the kindreds of the nations shall worship before thee.*
+
+*28 For the kingdom is the Lord's: and he is the governor among the nations.*
+
+*29 All they that be fat upon earth shall eat and worship: all they that go down to the dust shall bow before him: and none can keep alive his own soul.*
+
+*30 A seed shall serve him; it shall be accounted to the Lord for a generation.*
+
+*31 They shall come, and shall declare his righteousness unto a people that shall be born, that he hath done this.*
+
+<!-- post 12254 · 2023-10-15 07:37 · study -->
+
+Powerful understanding that as we were, (or are yet) unregenerate sinners, we have the rod against us, being provoked by the Spirit towards repentance, and as low as we feel, Christ Jesus paid a far worse penalty, for our sins not His. And in this remembrance, is our blessed hope:
+
+*My soul hath them still in remembrance, and is humbled in me. This I recall to my mind, therefore have I hope. It is of the Lord's mercies that we are not consumed, because his compassions fail not. They are new every morning: great is thy faithfulness. The Lord is my portion, saith my soul; therefore will I hope in him. The Lord is good unto them that wait for him, to the soul that seeketh him. It is good that a man should both hope and quietly wait for the salvation of the Lord.*
+
+And in this hope, we call upon the name of the Lord, and are filled with the Spirit of His promises. We are assured of our lives being redeemed in Him. His mercies and compassion new every morning. We are called to pick up our cross every day, so if we stumble and backslide, if we turn to the left or the right, God is merciful in calling us back to the straight paths. Regardless of the temptations and tribulations that beset us. 
+
+Even though, as the weeping prophet progresses through the verse; we remember our pain and our adversaries. We have been humbled and understand our own iniquities. We know we are only redeemed in His name. By the blood of Christ. But still, we tearfully know the suffering of life and the cares of the world. And yet our hope remains because God is steadfast and faithful. 
+
+And so, knowing His love for us, we call out to Him for deliverance. We ask our enemies face His justice. Some may repent towards God. Some may be destroyed utterly, reprobate and cast off. But God's will be done, and our deliverance assured.
+
+<!-- post 12255 · 2023-10-15 07:46 · study -->
+
+*I called upon thy name, O Lord, out of the low dungeon. Thou hast heard my voice: hide not thine ear at my breathing, at my cry.*
+
+*Thou drewest near in the day that I called upon thee: thou saidst, Fear not. O Lord, thou hast pleaded the causes of my soul; thou hast redeemed my life.* 
+
+*O Lord, thou hast seen my wrong: judge thou my cause.*
+
+Remember, Jeremiah was literally thrown in a pit of mire, the depths of a prison, for the cause of his faith. And here, again echoing Christ's decent onto Hell for our transgressions, a burnt offering for our sin, we in our lowest points as believers likewise call out for our deliverance. And the Lord says; *Fear not*.
+
+Jesus pleads our case, redeems our soul in His blood, by His sacrifice. Drawing near to us. And so we ask Him to judge our cause. That His will be done. 
+
+When you have believed, there is no calamity or trials that the Lord will not help us overcome. We simply must ask and He will plead our cause and judge those who are against us, and deliverance is assured. Nothing will come between us and His mercies. So be not afraid. 
+
+Amen
+
+## Lamentations 4  ·  Primary study  ·  2023-10-16
+
+Source: https://t.me/HouseOfWews2/12263
+
+<!-- post 12263 · 2023-10-16 06:05 · scripture -->
+
+**Lamentations 4**
+ *How is the gold become dim! how is the most fine gold changed! the stones of the sanctuary are poured out in the top of every street.*
+
+*2 The precious sons of Zion, comparable to fine gold, how are they esteemed as earthen pitchers, the work of the hands of the potter!*
+
+*3 Even the sea monsters draw out the breast, they give suck to their young ones: the daughter of my people is become cruel, like the ostriches in the wilderness.*
+
+*4 The tongue of the sucking child cleaveth to the roof of his mouth for thirst: the young children ask bread, and no man breaketh it unto them.*
+
+*5 They that did feed delicately are desolate in the streets: they that were brought up in scarlet embrace dunghills.*
+
+*6 For the punishment of the iniquity of the daughter of my people is greater than the punishment of the sin of Sodom, that was overthrown as in a moment, and no hands stayed on her.*
+
+*7 Her Nazarites were purer than snow, they were whiter than milk, they were more ruddy in body than rubies, their polishing was of sapphire:*
+
+*8 Their visage is blacker than a coal; they are not known in the streets: their skin cleaveth to their bones; it is withered, it is become like a stick.*
+
+*9 They that be slain with the sword are better than they that be slain with hunger: for these pine away, stricken through for want of the fruits of the field.*
+
+*10 The hands of the pitiful women have sodden their own children: they were their meat in the destruction of the daughter of my people.*
+
+*11 The Lord hath accomplished his fury; he hath poured out his fierce anger, and hath kindled a fire in Zion, and it hath devoured the foundations thereof.*
+
+*12 The kings of the earth, and all the inhabitants of the world, would not have believed that the adversary and the enemy should have entered into the gates of Jerusalem.*
+
+*13 For the sins of her prophets, and the iniquities of her priests, that have shed the blood of the just in the midst of her,*
+
+*14 They have wandered as blind men in the streets, they have polluted themselves with blood, so that men could not touch their garments.*
+
+*15 They cried unto them, Depart ye; it is unclean; depart, depart, touch not: when they fled away and wandered, they said among the heathen, They shall no more sojourn there.*
+
+*16 The anger of the Lord hath divided them; he will no more regard them: they respected not the persons of the priests, they favoured not the elders.*
+
+*17 As for us, our eyes as yet failed for our vain help: in our watching we have watched for a nation that could not save us.*
+
+*18 They hunt our steps, that we cannot go in our streets: our end is near, our days are fulfilled; for our end is come.*
+
+*19 Our persecutors are swifter than the eagles of the heaven: they pursued us upon the mountains, they laid wait for us in the wilderness.*
+
+*20 The breath of our nostrils, the anointed of the Lord, was taken in their pits, of whom we said, Under his shadow we shall live among the heathen.*
+
+*21 Rejoice and be glad, O daughter of Edom, that dwellest in the land of Uz; the cup also shall pass through unto thee: thou shalt be drunken, and shalt make thyself naked.*
+
+*22 The punishment of thine iniquity is accomplished, O daughter of Zion; he will no more carry thee away into captivity: he will visit thine iniquity, O daughter of Edom; he will discover thy sins.*
+
+<!-- post 12264 · 2023-10-16 06:50 · study -->
+
+**Lamentations** chapter 4 continues the series of acrostic poems by the prophet Jeremiah, lamenting or mourning the desolation of Judah and destruction of Jerusalem by the Babylonians physically, but under the wrath of God. 
+
+And as we have seen, the weeping prophet uses allegory to paint a picture of the evil he has witnessed. The horrors he prophesied come to pass. 
+
+The sons of Zion are like the spoiled gold if the temple, turned to earthen clay pots. Basically worthless. 
+
+The mammals of the sea, likely seals or small whales, that give suck to their pups, but the daughters of Jerusalem have become like ostriches that abandon their eggs in the wilderness. The babies' tongues are stuck to the roof of their mouths for hunger. There is no bread for the children. Rich men who fared sumptuously are eating dung. 
+
+Jeremiah writes that the destruction of Sodom wasn't as brutal and horrific as Jerusalem, because at least it was quick and complete. Here the starving draws out their suffering.
+
+This under the vow of the Nazarites, who would be by clean living for a short period, be considered the peak of good health, now are sunken and gaunt. 
+
+The women have cooked the flesh of their own children for want of food. 
+
+And this is all because of the wrath of God, who is long suffering and merciful and quick to repent of evil against His people when they repent towards Him. And yet, they were left destroyed and desolate. Spoiled and carried away to captivity. 
+
+Jeremiah calls out the false prophets who shed the blood of the innocent to defend their heresies. Blind guides, as Christ called them, here wandering the streets, polluted in blood of the dead. Unclean. 
+
+The Lord no longer regarding them, just as He no longer regarded Israel after the flesh in **Hebrews 8:9**;
+
+*Not according to the covenant that I made with their fathers In the day when I took them by the hand to lead them out of the land of Egypt; Because they continued not in my covenant, And I regarded them not, saith the Lord.*
+
+And the prophet is left weeping at the dismay that has come upon the daughter of Zion.
+
+<!-- post 12265 · 2023-10-16 07:00 · study -->
+
+The final stanzas of lamentations for includes a prophecy against Edom. As we will see in Ezekiel and Obadiah, Eden was destroyed because they rejoiced and mocked the destruction of Israel. We can develop that further later when it comes, but it is something to keep in mind that the brother of Israel faced God's wrath, Just as the final chapters of Jeremiah detailed the destruction of Egypt and the surrounding nations and ultimately Babylon. 
+
+God judges nations based on their works. Even as he judges individuals based on their faith. It's an important distinction to keep in mind as we rightly divide the word of God.
+
+<!-- post 12266 · 2023-10-16 07:26 · study -->
+
+**Genesis 1:11**
+*And God said, Let the earth bring forth grass, the herb yielding seed, and the fruit tree yielding fruit after his kind, whose seed is in itself, upon the earth: and it was so.*
+
+**Matthew 21:43** 
+*Therefore say I unto you, The kingdom of God shall be taken from you, and given to a nation bringing forth the fruits thereof.*
+
+Matthew 7:16-18 
+*Ye shall know them by their fruits. Do men gather grapes of thorns, or figs of thistles? Even so every good tree bringeth forth good fruit; but a corrupt tree bringeth forth evil fruit. A good tree cannot bring forth evil fruit, neither can a corrupt tree bring forth good fruit.*
+
+**Philippians 1**:**4-11**
+*Always in every prayer of mine for you all making request with joy, For your fellowship in the gospel from the first day until now; Being confident of this very thing, that he which hath begun a good work in you will perform it until the day of Jesus Christ: Even as it is meet for me to think this of you all, because I have you in my heart; inasmuch as both in my bonds, and in the defence and confirmation of the gospel, ye all are partakers of my grace. For God is my record, how greatly I long after you all in the bowels of Jesus Christ. And this I pray, that your love may abound yet more and more in knowledge and in all judgment; That ye may approve things that are excellent; that ye may be sincere and without offence till the day of Christ. Being filled with the fruits of righteousness, which are by Jesus Christ, unto the glory and praise of God.*
+
+**Romans 1:16-17**
+*For I am not ashamed of the gospel of Christ: for it is the power of God unto salvation to every one that believeth; to the Jew first, and also to the Greek. For therein is the righteousness of God revealed from faith to faith: as it is written, The just shall live by faith.*
+
+
+I am a saved Christian. Born again by the faith that was shared to me by another saved Christian, who in turn believed and was converted by yet another saved. Christian. A line of succession going back to the beginning of the world. That the just live by faith and bear fruit after its own kind.
+
+A line of believers stretching back to Adam. To Abel. To Seth and Enos. 
+
+The same faith of Abraham who believed the Lord and it was counted upon him for righteousness. The same faith that makes up the record of the "Hall of faith," in Hebrews chapter 11.
+
+The same faith preached by John, the Baptist in the wilderness, taught by Christ Himself during His earthly ministry, given to the apostles as the keys to overcome death and hell. Preached on the day of Pentecost. Given to the Jews and to the Greek. The salvation that is by calling upon the name of the Lord. By believing on the finished work of Christ Jesus as the propitiation of our sin. 
+
+And, like the blood of the prophets from Abel to Zechariah, and of Jesus and the Apostles, and of the believers persecuted by the Jews and the Romans, a trail of blood that links believing Christians today to those that were martyred for the same faith in the same Gospel of grace and reconciliation. A trail of blood that continued through the persecution by Constantine's cult, through the dark ages, during the Reformation, under Bloody Mary, and that will mark the great tribulation to come.
+
+<!-- post 12267 · 2023-10-16 07:27 · study -->
+
+It is an unbroken chain of believers saved by faith. And sadly, the world hates us for it and there is a similar line, paved in blood.
+
+## Lamentations 5  ·  Primary study  ·  2023-10-17
+
+Source: https://t.me/HouseOfWews2/12278
+
+<!-- post 12278 · 2023-10-17 05:12 · scripture -->
+
+**Lamentations 5**
+*Remember, O Lord, what is come upon us: consider, and behold our reproach.*
+
+*2 Our inheritance is turned to strangers, our houses to aliens.*
+
+*3 We are orphans and fatherless, our mothers are as widows.*
+
+*4 We have drunken our water for money; our wood is sold unto us.*
+
+*5 Our necks are under persecution: we labour, and have no rest.*
+
+*6 We have given the hand to the Egyptians, and to the Assyrians, to be satisfied with bread.*
+
+*7 Our fathers have sinned, and are not; and we have borne their iniquities.*
+
+*8 Servants have ruled over us: there is none that doth deliver us out of their hand.*
+
+*9 We gat our bread with the peril of our lives because of the sword of the wilderness.*
+
+*10 Our skin was black like an oven because of the terrible famine.*
+
+*11 They ravished the women in Zion, and the maids in the cities of Judah.*
+
+*12 Princes are hanged up by their hand: the faces of elders were not honoured.*
+
+*13 They took the young men to grind, and the children fell under the wood.*
+
+*14 The elders have ceased from the gate, the young men from their musick.*
+
+*15 The joy of our heart is ceased; our dance is turned into mourning.*
+
+*16 The crown is fallen from our head: woe unto us, that we have sinned!*
+
+*17 For this our heart is faint; for these things our eyes are dim.*
+
+*18 Because of the mountain of Zion, which is desolate, the foxes walk upon it.*
+
+*19 Thou, O Lord, remainest for ever; thy throne from generation to generation.*
+
+*20 Wherefore dost thou forget us for ever, and forsake us so long time?*
+
+*21 Turn thou us unto thee, O Lord, and we shall be turned; renew our days as of old.*
+
+*22 But thou hast utterly rejected us; thou art very wroth against us.*
+
+<!-- post 12279 · 2023-10-17 05:17 · study -->
+
+The final chapter of Lamentations, a summary of the famine and devastation that comes from God rejecting a nation. His wrath upon them. 
+
+But the prophet ends with the promise of the coming Christ. The truth that the Lord is forever upon the throne. Even as the reprobate nation is destroyed. 
+
+*Turn thou us unto thee, O Lord, and we shall be turned; renew our days as of old.*
+
+This is a prayer for our people today, who have fallen so far away. Who became wise in their own conceits thinking America would continue to have the blessings of liberty without a Christian people. That a nation of idolators and abominations would remain one nation, under God, for all time. 
+
+But it too is cut off and burned, for the turning away from the Lord.
+
+<!-- post 12280 · 2023-10-17 05:20 · study -->
+
+So we should remember that there is no political solution to a spiritual problem. 
+
+That it is the believers of a nation that determine if God's judgment comes upon it. There is only one way to turn around the collapse of a nation, and it is by revival. 
+
+**2 Chronicles 7:14**
+*If my people, which are called by my name, shall humble themselves, and pray, and seek my face, and turn from their wicked ways; then will I hear from heaven, and will forgive their sin, and will heal their land.*
+
+This is the promise of God.
