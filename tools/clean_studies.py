@@ -10,6 +10,7 @@ Reads (never edits):
   review/decisions.json                            your keep/drop choices (created if missing)
   review/corrections.json                          approved fixes: wrong verse labels, typos
   review/topics.json                               doctrine topics and the teachings filed under each
+  review/worldly.json                              posts marked as mostly politics/news/argument/harsh words
 Writes (regenerated on every run, don't hand-edit):
   studies/data/books.json          small index: every book and chapter with its status
   studies/data/books/<Book>.json   one cleaned file per book, loaded by the app on demand
@@ -17,6 +18,7 @@ Writes (regenerated on every run, don't hand-edit):
   studies/data/topics.json         doctrine topics with counts and themes
   studies/data/topics/<id>.json    the teachings filed under one topic
   review/topics_unsorted.md        teachings (verses chained from several books) not filed yet
+  review/worldly.md                the worldly posts, by book, with your keep/drop choice so far
 
 Choosing a chapter's study:
   series study   the primary pass of a series, with commentary
@@ -46,6 +48,8 @@ DECISIONS = os.path.join(ROOT, 'review', 'decisions.json')
 CORRECTIONS = os.path.join(ROOT, 'review', 'corrections.json')
 TOPICS = os.path.join(ROOT, 'review', 'topics.json')
 UNSORTED = os.path.join(ROOT, 'review', 'topics_unsorted.md')
+WORLDLY = os.path.join(ROOT, 'review', 'worldly.json')
+WORLDLY_MD = os.path.join(ROOT, 'review', 'worldly.md')
 FLAGGED = os.path.join(ROOT, 'review', 'flagged.md')
 OUT = os.path.join(ROOT, 'studies', 'data')
 MIN_CHARS = 500
@@ -274,6 +278,38 @@ def write_topics(topics, posts_by_id):
     return sum(len(v) for v in filed.values()), len(unsorted)
 
 
+def write_worldly(posts_by_id, dec):
+    """A review list of posts marked worldly. Nothing is hidden by being on it; mark each post
+    keep or drop under "posts" in decisions.json, as with flagged posts."""
+    if not os.path.exists(WORLDLY):
+        return 0
+    with open(WORLDLY, encoding='utf-8') as f:
+        marks = {str(k): v for k, v in json.load(f).items() if not k.startswith('_')}
+    choice = {str(k): v for k, v in dec['posts'].items()}
+    rows = defaultdict(list)
+    for pid, note in marks.items():
+        hit = posts_by_id.get(pid)
+        if hit:
+            rows[hit[0]].append((hit, note))
+    L = ['# Worldly posts to review\n',
+         f'\n{sum(len(v) for v in rows.values())} study posts are mostly politics, news, an argument with someone, '
+         'or harsh words. They are still shown in the app. To hide one, add its id to `review/decisions.json` '
+         'under `"posts"` as `"drop"` (or `"keep"` to mark it reviewed), then rerun `python3 tools/clean_studies.py`.\n',
+         '\nRegenerated on every run; edit `review/worldly.json` to change what is on it.\n']
+    for book in BOOKS:
+        if not rows.get(book):
+            continue
+        L.append(f'\n## {book}\n\n')
+        for (b, ch, study, p), note in sorted(rows[book], key=lambda x: (int(x[0][1]), x[0][3]['date'])):
+            link = study['link'].rsplit('/', 1)[0] + '/' + str(p['id'])
+            excerpt = re.sub(r'\s+', ' ', p['text'].replace('*', '')).strip()[:150]
+            L.append(f"- `{p['id']}` · {b} {ch} · {p['date'][:10]} · [post]({link}) · {note} · "
+                     f"{('**' + choice[str(p['id'])] + '**') if str(p['id']) in choice else 'undecided'}\n  > {excerpt}\n")
+    with open(WORLDLY_MD, 'w', encoding='utf-8') as f:
+        f.write(''.join(L))
+    return len(marks)
+
+
 def start_id(study):
     return study['link'].rstrip('/').rsplit('/', 1)[-1]
 
@@ -401,6 +437,7 @@ def main():
 
     write_review(flagged, dec)
     n_filed, n_unsorted = write_topics(topics, posts_by_id)
+    n_worldly = write_worldly(posts_by_id, dec)
     print(f"Books written to {os.path.relpath(OUT, ROOT)}/")
     print(f"Chapters: series {stats['chapters_series']}, with neighbor {stats['chapters_with']}, "
           f"earlier study {stats['chapters_earlier']}, not yet studied {stats['chapters_none']}")
@@ -410,6 +447,8 @@ def main():
     print(f"Corrections applied: {fixed}" + (f"; no longer matching (check these): {missed}" if missed else ''))
     print(f"Doctrine topics: {len(topics['topics'])}, teachings filed: {n_filed}; "
           f"not filed yet: {n_unsorted} (see {os.path.relpath(UNSORTED, ROOT)})")
+    if n_worldly:
+        print(f"Worldly posts to review: {n_worldly} (see {os.path.relpath(WORLDLY_MD, ROOT)})")
 
 
 def write_review(flagged, dec):
