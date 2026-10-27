@@ -273,9 +273,45 @@
     ['Where you left off', 'The home page remembers the last study you opened on this device.'],
     ['Read in the KJV app', 'Opens that chapter in the KJV Bible app in a new tab, so your place here stays put.'],
     ['Doctrines & Teachings', 'Teachings that compare scripture with scripture, sorted by topic. Tap a verse to open it in the KJV Bible app, or open the chapter study it came from.'],
+    ['Install the app', 'On Android choose Install app from the browser menu; on iPhone use Share, then Add to Home Screen. It then opens full screen like the KJV Bible app.'],
     ['Lessons & Classes', 'Slides, notes and handouts from the classes. Slides open in a new tab; notes open right on the page. Tap a picture to see it full size.'],
     ['The chapter grid', 'Solid squares are series studies, dashed squares are earlier one-off studies, and dim squares are chapters not yet studied.']
   ];
+
+  // ---------- install as an app (Android/desktop prompt; iPhone has no prompt, so say how) ----------
+  let installPrompt = null;
+  const standalone = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+  window.addEventListener('beforeinstallprompt', e => {
+    e.preventDefault();
+    installPrompt = e;
+    const btn = document.getElementById('install-btn'), hint = document.getElementById('install-hint');
+    if (btn) btn.hidden = false;
+    if (hint) hint.hidden = true;
+  });
+  window.addEventListener('appinstalled', () => { installPrompt = null; if (location.hash === '#about') route(); });
+
+  function installCard() {
+    if (standalone()) return '';
+    const ios = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    return `<div class="notice install">
+      <strong>Install the app</strong>
+      ${ios ? 'On iPhone or iPad, open this page in Safari, tap the Share button, then <b>Add to Home Screen</b>. It opens full screen, like the KJV Bible app.'
+            : 'Put Chapter Studies on your home screen as its own app. It opens full screen, like the KJV Bible app, and keeps what you have read for when you are offline.'}
+      ${ios ? '' : `<div class="actions"><button class="btn primary" type="button" id="install-btn"${installPrompt ? '' : ' hidden'}>Install the app</button></div>
+      <p class="fineprint" id="install-hint"${installPrompt ? ' hidden' : ''}>If there's no button, use your browser's menu: <b>Install app</b> or <b>Add to Home screen</b>.</p>`}
+    </div>`;
+  }
+
+  function wireInstall() {
+    const btn = document.getElementById('install-btn');
+    if (btn) btn.onclick = async () => {
+      if (!installPrompt) return;
+      installPrompt.prompt();
+      await installPrompt.userChoice.catch(() => null);
+      installPrompt = null;
+      btn.hidden = true;
+    };
+  }
 
   async function aboutView() {
     document.title = 'About these studies — Jag\'s House of Wews';
@@ -289,8 +325,10 @@
       </div>
       <div class="post about">${render(text)}</div>
       <div class="section-header"><h2>Getting around</h2></div>
+      ${installCard()}
       <dl class="tips">${TIPS.map(([t, d]) => `<dt>${esc(t)}</dt><dd>${esc(d)}</dd>`).join('')}</dl>
       <p class="fineprint"><a href="../">The older teaching portal</a> still has the Romans and Genesis class series.</p>`;
+    wireInstall();
   }
 
   // First visit on this device: show the statement once. If the browser won't remember, don't nag.

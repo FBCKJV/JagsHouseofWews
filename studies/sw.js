@@ -1,8 +1,9 @@
 /* Chapter Studies offline support. Network first, so a new export shows up on the next
    load; whatever was opened before is kept for when there's no connection.
    Only touches caches named "wews-studies-*" (other apps on this site have their own). */
-const CACHE = 'wews-studies-v1';
-const SHELL = ['./', 'index.html', 'app.css', 'app.js', 'data/books.json'];
+const CACHE = 'wews-studies-v2';
+const SHELL = ['./', 'index.html', 'app.css', 'app.js', 'manifest.json', 'data/books.json',
+  '../img/logo-96.jpg', '../img/logo-256.jpg', '../img/icon-192.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
