@@ -11,6 +11,8 @@ Reads (never edits):
   review/corrections.json                          approved fixes: wrong verse labels, typos
   review/topics.json                               doctrine topics and the teachings filed under each
   review/worldly.json                              posts marked as mostly politics/news/argument/harsh words
+  review/refile.json                               posts the export filed under the wrong chapter, and
+                                                   commentary missing from the export (pasted in)
 Writes (regenerated on every run, don't hand-edit):
   studies/data/books.json          small index: every book and chapter with its status
   studies/data/books/<Book>.json   one cleaned file per book, loaded by the app on demand
@@ -49,6 +51,7 @@ CORRECTIONS = os.path.join(ROOT, 'review', 'corrections.json')
 TOPICS = os.path.join(ROOT, 'review', 'topics.json')
 UNSORTED = os.path.join(ROOT, 'review', 'topics_unsorted.md')
 WORLDLY = os.path.join(ROOT, 'review', 'worldly.json')
+REFILE = os.path.join(ROOT, 'review', 'refile.json')
 WORLDLY_MD = os.path.join(ROOT, 'review', 'worldly.md')
 FLAGGED = os.path.join(ROOT, 'review', 'flagged.md')
 OUT = os.path.join(ROOT, 'studies', 'data')
@@ -246,7 +249,8 @@ def write_topics(topics, posts_by_id):
                 filed[tid].append({
                     'id': p['id'], 'title': a.get('title', ''), 'theme': a.get('theme', '') if i == 0 else '',
                     'summary': a.get('summary', ''), 'date': p['date'][:10], 'book': book, 'slug': slug(book),
-                    'ch': ch, 'link': study['link'].rsplit('/', 1)[0] + '/' + str(p['id']),
+                    'ch': ch, 'link': study['link'] if str(p['id']).startswith('added-')   # pasted in: no post of its own
+                    else study['link'].rsplit('/', 1)[0] + '/' + str(p['id']),
                     'refs': references(p['text']), 'also': [t for t in a['topics'] if t != tid and t in names],
                     'text': p['text']})
     index = []
@@ -336,10 +340,64 @@ def verse_range(study):
     return None
 
 
+def apply_refile(src):
+    """Put posts where they belong (review/refile.json). Works on the loaded copy, never the export."""
+    if not os.path.exists(REFILE):
+        return 0
+    with open(REFILE, encoding='utf-8') as f:
+        rf = json.load(f)
+
+    def split(ref):
+        m = re.match(r'^(.*\S)\s+(\d+)$', ref)
+        return m.group(1), m.group(2)
+
+    def primary(ref, like=None):
+        book, ch = split(ref)
+        passes = src.setdefault(book, {}).setdefault(ch, [])
+        s = next((x for x in passes if x.get('primary')), None)
+        if s is None:                    # the chapter had no study at all: start one
+            s = {'date': like['date'], 'series': like['series'], 'link': like['link'], 'study_chars': 0,
+                 'posts': [], 'primary': True}
+            passes.insert(0, s)
+        return s
+
+    def recount(s):
+        s['study_chars'] = sum(own_words(p['text']) for p in s['posts'] if p['kind'] == 'study')
+
+    n = 0
+    for ref, target in rf.get('with', {}).items():
+        primary(ref)['commentary_with'] = target
+        n += 1
+    for kind in ('copy', 'move'):
+        for job in rf.get(kind, []):
+            book, ch = split(job['from'])
+            ids = set(job['posts'])
+            for s in src.get(book, {}).get(ch, []):
+                hits = [p for p in s['posts'] if p['id'] in ids]
+                if not hits:
+                    continue
+                dest = primary(job['to'], like=s)
+                dest['posts'] += [dict(p, kind='study') for p in hits if p['id'] not in {q['id'] for q in dest['posts']}]
+                recount(dest)
+                if kind == 'move':
+                    s['posts'] = [p for p in s['posts'] if p['id'] not in ids]
+                    recount(s)
+                n += len(hits)
+    for i, job in enumerate(rf.get('add', [])):
+        dest = primary(job['to'])
+        pid = 'added-' + re.sub(r'\W+', '-', job['to'].lower()) + f'-{i}'
+        if pid not in {str(p['id']) for p in dest['posts']}:
+            dest['posts'].append({'id': pid, 'date': job['date'], 'kind': 'study', 'text': job['text'], 'added': True})
+            recount(dest)
+            n += 1
+    return n
+
+
 def main():
     with open(SRC, encoding='utf-8') as f:
         src = json.load(f)
     fixed, missed = apply_corrections(src, load_corrections())
+    refiled = apply_refile(src)
     topics = load_topics()
     posts_by_id = {}                     # every post shown in the app: id -> (book, chapter, study, post)
     dec = load_decisions()
@@ -365,7 +423,7 @@ def main():
                 text = p['text']
                 if p['kind'] == 'study':
                     text = strip_links(text)
-                    reason = flag_reason(p, text)
+                    reason = None if p.get('added') else flag_reason(p, text)
                     choice = post_dec.get(pid)
                     if reason:
                         flagged[(book, ch)].append((p, reason, choice, study))
@@ -461,6 +519,7 @@ def main():
           f"hidden in the app: {stats['posts_hidden']}")
     print(f"Review list: {os.path.relpath(FLAGGED, ROOT)}")
     print(f"Corrections applied: {fixed}" + (f"; no longer matching (check these): {missed}" if missed else ''))
+    print(f"Posts refiled or added (review/refile.json): {refiled}")
     print(f"Doctrine topics: {len(topics['topics'])}, teachings filed: {n_filed}; "
           f"not filed yet: {n_unsorted} (see {os.path.relpath(UNSORTED, ROOT)})")
     if n_worldly:
