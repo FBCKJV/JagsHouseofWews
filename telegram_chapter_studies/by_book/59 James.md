@@ -1,0 +1,423 @@
+# James
+
+## James 1  ·  Primary study  ·  2022-07-08
+
+Source: https://t.me/HouseOfWews2/3547
+
+_Commentary for this chapter was posted with James 2._
+
+<!-- post 3547 · 2022-07-08 07:39 · scripture -->
+
+**James 1**
+
+*James, a servant of God and of the Lord Jesus Christ, to the twelve tribes which are scattered abroad, greeting.*
+
+*2 My brethren, count it all joy when ye fall into divers temptations;*
+
+*3 Knowing this, that the trying of your faith worketh patience.*
+
+*4 But let patience have her perfect work, that ye may be perfect and entire, wanting nothing.*
+
+*5 If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.*
+
+*6 But let him ask in faith, nothing wavering. For he that wavereth is like a wave of the sea driven with the wind and tossed.*
+
+*7 For let not that man think that he shall receive any thing of the Lord.*
+
+*8 A double minded man is unstable in all his ways.*
+
+*9 Let the brother of low degree rejoice in that he is exalted:*
+
+*10 But the rich, in that he is made low: because as the flower of the grass he shall pass away.*
+
+*11 For the sun is no sooner risen with a burning heat, but it withereth the grass, and the flower thereof falleth, and the grace of the fashion of it perisheth: so also shall the rich man fade away in his ways.*
+
+*12 Blessed is the man that endureth temptation: for when he is tried, he shall receive the crown of life, which the Lord hath promised to them that love him.*
+
+*13 Let no man say when he is tempted, I am tempted of God: for God cannot be tempted with evil, neither tempteth he any man:*
+
+*14 But every man is tempted, when he is drawn away of his own lust, and enticed.*
+
+*15 Then when lust hath conceived, it bringeth forth sin: and sin, when it is finished, bringeth forth death.*
+
+*16 Do not err, my beloved brethren.*
+
+*17 Every good gift and every perfect gift is from above, and cometh down from the Father of lights, with whom is no variableness, neither shadow of turning.*
+
+*18 Of his own will begat he us with the word of truth, that we should be a kind of firstfruits of his creatures.*
+
+*19 Wherefore, my beloved brethren, let every man be swift to hear, slow to speak, slow to wrath:*
+
+*20 For the wrath of man worketh not the righteousness of God.*
+
+*21 Wherefore lay apart all filthiness and superfluity of naughtiness, and receive with meekness the engrafted word, which is able to save your souls.*
+
+*22 But be ye doers of the word, and not hearers only, deceiving your own selves.*
+
+*23 For if any be a hearer of the word, and not a doer, he is like unto a man beholding his natural face in a glass:*
+
+*24 For he beholdeth himself, and goeth his way, and straightway forgetteth what manner of man he was.*
+
+*25 But whoso looketh into the perfect law of liberty, and continueth therein, he being not a forgetful hearer, but a doer of the work, this man shall be blessed in his deed.*
+
+*26 If any man among you seem to be religious, and bridleth not his tongue, but deceiveth his own heart, this man's religion is vain.*
+
+*27 Pure religion and undefiled before God and the Father is this, To visit the fatherless and widows in their affliction, and to keep himself unspotted from the world.*
+
+## James 2  ·  Primary study  ·  2022-07-08
+
+Source: https://t.me/HouseOfWews2/3548
+
+<!-- post 3548 · 2022-07-08 07:41 · scripture -->
+
+**James 2**
+
+*2 My brethren, have not the faith of our Lord Jesus Christ, the Lord of glory, with respect of persons.*
+
+*2 For if there come unto your assembly a man with a gold ring, in goodly apparel, and there come in also a poor man in vile raiment;*
+
+*3 And ye have respect to him that weareth the gay clothing, and say unto him, Sit thou here in a good place; and say to the poor, Stand thou there, or sit here under my footstool:*
+
+*4 Are ye not then partial in yourselves, and are become judges of evil thoughts?*
+
+*5 Hearken, my beloved brethren, Hath not God chosen the poor of this world rich in faith, and heirs of the kingdom which he hath promised to them that love him?*
+
+*6 But ye have despised the poor. Do not rich men oppress you, and draw you before the judgment seats?*
+
+*7 Do not they blaspheme that worthy name by the which ye are called?*
+
+*8 If ye fulfil the royal law according to the scripture, Thou shalt love thy neighbour as thyself, ye do well:*
+
+*9 But if ye have respect to persons, ye commit sin, and are convinced of the law as transgressors.*
+
+*10 For whosoever shall keep the whole law, and yet offend in one point, he is guilty of all.*
+
+*11 For he that said, Do not commit adultery, said also, Do not kill. Now if thou commit no adultery, yet if thou kill, thou art become a transgressor of the law.*
+
+*12 So speak ye, and so do, as they that shall be judged by the law of liberty.*
+
+*13 For he shall have judgment without mercy, that hath shewed no mercy; and mercy rejoiceth against judgment.*
+
+*14 What doth it profit, my brethren, though a man say he hath faith, and have not works? can faith save him?*
+
+*15 If a brother or sister be naked, and destitute of daily food,*
+
+*16 And one of you say unto them, Depart in peace, be ye warmed and filled; notwithstanding ye give them not those things which are needful to the body; what doth it profit?*
+
+*17 Even so faith, if it hath not works, is dead, being alone.*
+
+*18 Yea, a man may say, Thou hast faith, and I have works: shew me thy faith without thy works, and I will shew thee my faith by my works.*
+
+*19 Thou believest that there is one God; thou doest well: the devils also believe, and tremble.*
+
+*20 But wilt thou know, O vain man, that faith without works is dead?*
+
+*21 Was not Abraham our father justified by works, when he had offered Isaac his son upon the altar?*
+
+*22 Seest thou how faith wrought with his works, and by works was faith made perfect?*
+
+*23 And the scripture was fulfilled which saith, Abraham believed God, and it was imputed unto him for righteousness: and he was called the Friend of God.*
+
+*24 Ye see then how that by works a man is justified, and not by faith only.*
+
+*25 Likewise also was not Rahab the harlot justified by works, when she had received the messengers, and had sent them out another way?*
+
+*26 For as the body without the spirit is dead, so faith without works is dead also.*
+
+<!-- post 3549 · 2022-07-08 08:11 · study -->
+
+As we begin the epistle of James, written to saved, believing Christians of the Jews, in the various churches throughout Asia Minor, scattered abroad. In our reading of Acts 15, that James determined from Paul and in agreement with Peter, to write concerning edification of the churches forming, and to denounce the works-based salvation that was creeping back in from "certain Jews," specifically of circumcision. 
+
+*And when there had been much disputing, Peter rose up, and said unto them, Men and brethren, ye know how that a good while ago God made choice among us, that the Gentiles by my mouth should hear the word of the gospel, and believe. And God, which knoweth the hearts, bare them witness, giving them the Holy Ghost, even as he did unto us; And put no difference between us and them, purifying their hearts by faith. Now therefore why tempt ye God, to put a yoke upon the neck of the disciples, which neither our fathers nor we were able to bear? But we believe that through the grace of the Lord Jesus Christ we shall be saved, even as they.Then all the multitude kept silence, and gave audience to Barnabas and Paul, declaring what miracles and wonders God had wrought among the Gentiles by them. And after they had held their peace, James answered, saying, Men and brethren, hearken unto me: Simeon hath declared how God at the first did visit the Gentiles, to take out of them a people for his name. And to this agree.*..
+
+So, at the outset we understand the context, the reason for the epistles and the dispensation of doctrine which they agreed upon; salvation by faith. 
+
+After his greeting James wastes no time. He praises them for keeping faith through troubles and testing, that this grows patience in the believer. We see this in our own lives, that where we are tried, and maintain our trust in God, our spirit grows stronger and we become more complete as Christians. "Perfect" in the Bible means complete, or whole. Not sinless, or without any flaw, but as spiritually complete as one can be while still in the flesh. A more perfect Christian life is the theme James hammers throughout.
+
+<!-- post 3550 · 2022-07-08 08:38 · study -->
+
+James teaches the lesson that in faith, we may ask God for knowledge and understanding. That all wisdom comes from God is established in **Proverbs 2:6**
+ 
+*For the LORD giveth wisdom: out of his mouth cometh knowledge and understanding.*
+
+He cautions that we ask in faith, unwavering. Not half in, half out as some Christians are, believing the truth of the Gospel, but hedging their bets in the world. That a double minded man is unstable in all his ways. To be perfect and gain understanding we must commit to building up, faith on faith, while remaining humble, to not thinking you deserve God to just hand it to you. 
+
+That lesson in humility carries on, that the poor should rejoice in gratitude for their salvation in God's grace, while the rich, in understanding that they are but dust, and with the same meekness and humility. 
+
+He says again that the temptations and tests of this life are a blessing, that we are rewarded with the crown of life for our efforts. As Paul says in **Romans 4**, when we do His work, it is reckoned of debt, and we are paid for it by God, as His laborers. We rejoice in the free gift given by Him in grace, but receive rewards for our patience in temptation.
+
+He warns against blaming God for our affliction, even as God blesses, He tempts no man with evil. 
+
+James tells us that it is our lusts that lead to sin, and sin to death and tribulations come from this cycle. But the gifts that come from God are blessings, given in His grace. 
+
+That we have the word of Truth, that is Christ Jesus, was beget of God's own will, that we may be His first fruits of the harvest. Amen 
+
+And so, we should avoid wrath and be patient. Avoid temptation of lust for the things of this world, and receive the word, "*engrafted*" in our hearts, *which is able to save your souls.* This is not just the Gospel and spiritual righteousness, but living in the word, obeying His law written in our hearts, saves us in the physical sense from the temptations and trials James is warning against. 
+
+Salvation, or being saved, is not always referring to the righteousness imputed on us by Jesus' blood, through faith. It often means being saved in a literal sense, as we'd use it today. 
+
+We are admonished *to be doers of the word, and not hearers only*. Many Christians go to church, sit through Bible study, and simply never grow because they are hearers only. They think they are complete Christians for their idle listening, while doing no soul winning, no charity, having no grace for others, being respecters of persons, esteeming those with power, wealth, credentials, etc, over the poor, the ignorant, those of low estate. This theme of not being a respecter of persons is another that James is hammering home in this epistle. 
+
+We are blessed in our deeds, being doers of the word. 
+
+We are called to not just be loudmouth Holy Rollers, judging everyone without grace, and puffing ourselves up for attending church, listening to preaching, and the other trappings of religion, without doing that which we are called to do. To visit the fatherless and the widow in their affliction and to keep ourselves unspotted from the world. To be a perfect, a more complete Christian, we should do the good works we are made for, as those justified by faith.
+
+<!-- post 3551 · 2022-07-08 08:42 · study -->
+
+So we have the themes of James' epistle; to edify the saved to do more than just accept the word, but to live it. To be humble in our own status, regardless of what it may be for we are all but grass that withers and dies. That by living in the word, we save ourselves from the temptations of the world. Avoiding wrath and lusts. That by practicing the pure religion, undefiled, we become more complete in our Christian life. And that we shouldn't hold any in higher esteem for worldly reasons, not being a respecter of persons. (That's the meaning of that, if you weren't sure)
+
+<!-- post 3552 · 2022-07-08 09:01 · study -->
+
+Now in the second chapter, James builds on this theme. That how we present ourselves in favoring one man over another for earthly things, we sin. In this favoritism and judgement based on the outward appearance and status the way the unsaved do, we begin to fool ourselves about our own temptations and sin in the same way. 
+
+He reminds that the poor of this world are often the most faithful, and are joint heirs of the kingdom with us, and just as damned without faith and God's grace as we are. That it's the rich of this world who often are our oppressors and enemies of God.
+
+<!-- post 3553 · 2022-07-08 09:06 · study -->
+
+James then reasons with us, that those who keep the law for righteousness, if they offend in one point they are guilty of all. And that being a respecter of persons is sin, as it violates the "royal law," the golden rule, that we do unto others as we would do for ourselves. But we who are judged by the law of liberty, that is saved by faith in Jesus and so, our sins being covered, should not engage in this at all, but live the word that we have heard and believed. To judge with the same mercy and grace He has shown us.
+
+<!-- post 3554 · 2022-07-08 09:19 · study -->
+
+Now we come to the verses that are a snare to so many, where they justify works based righteousness, despite all of the mountain of scripture that assures us we are made righteous by faith alone, through grace alone, in the perfect work of Christ Jesus. 
+
+But, comparing scripture with scripture, and the verses in context, it's not difficult to understand, unless you're a natural man seeking to force the Bible to fit your preconceived notion, rather than letting it tell you God's. 
+
+First, what follows is a series of rhetorical questions and reasoning logic, designed to give example to what James has already preached. And again, it is written to the brethren, the author assumes it is to those already saved, to exhort and edify, not to get them to believe. Not to save them spiritually, but to those already saved, become more complete in their Christian life. 
+
+We do not receive doctrine from rhetorical questions or "a man may say..." reasoning, stripped of context. We get them from clear statements that do not contradict others. 
+
+For brevity sake I have already given argument above, with verses as to why this interpretation that we must do works to be able to go to heaven and have eternal life is damnable heresy. Scroll up. I may add to it as we study through this section, but if that's not sufficient for you, your argument is with God, the Gospel as given by Jesus and then shared by the Apostles, and clear, consistent verses, given again and again from Genesis to Revelation. 
+
+If you are trusting in your own works to get righteous or to maintain the righteousness given by God in Christ, you are damning yourself and being made debtor to the whole of the law which no one can keep perfectly. For there are none righteous no not one. Repent, and obey the Gospel.
+
+<!-- post 3555 · 2022-07-08 09:34 · study -->
+
+What does it profit a man who says he has faith but doesn't do anything with it? Being a hearer of the word only, not a doer. James is continuing this theme, and as in the earlier verses, he is referring to being saved from the temptations and trials that arise from our lusts and sins. Remember, his goal is to educate believers into becoming more perfect, complete, Christians. Not to get people saved in the born again sense. Knowing the context answers the rhetorical question. Further, the example of this rhetorical question *says* he has faith. This is important. James is tying in the lesson that people generally are respecters of persons with the concept that we are to be doers of the word, as befits those who will be judged by the law of liberty. We aren't judged by our works and sin, as the debtors are. We are free in Christ. This is the context of the entire epistle. James has already told us that we earn crowns of life for our deeds. But salvation is a gift, unmerited. Grace-mixing isn't how any of it works. 
+
+The next hypothetical in James reasoning, if someone is needy and you basically just say "thoughts and prayers!" it doesn't profit them anything. It's useless. Dead. It doesn't do anyone any good. 
+
+Dead faith doesn't mean it doesn't exist, but that there's no life in it. Nothing to indicate it, outwardly. It's alone, profiting no one else. A dead body exists, but it just lays there. The same is the faith of a Christian who doesn't exercise it to help the fatherless and widows and the poor. See the theme? Understand the larger context?
+
+<!-- post 3556 · 2022-07-08 09:53 · study -->
+
+You'll have to forgive me, as I do this, I am preparing to leave for a weekend camping trip and getting everything in the garden, the chickens, and stuff we need to pack ready as I do this Bible study. I'm going to finish off the chapter in a minute, but I have to shower
+
+<!-- post 3557 · 2022-07-08 10:55 · study -->
+
+Getting back to it; next we see James continue to use rhetorical hypotheticals to reason with the believer, in this case, "a man may say..."
+
+*Yea, a man may say, Thou hast faith, and I have works: shew me thy faith without thy works, and I will shew thee my faith by my works.Thou believest that there is one God; thou doest well: the devils also believe, and tremble. But wilt thou know, O vain man, that faith without works is dead?*
+
+A man may say this. What kind of man? Saved? Unsaved? A respecter of persons? Someone who could reasonably or unfairly doubt your profession of faith by your lack of visible works? You see that this is a device by which to show what someone *could say*, in order to get at the larger point. It is not directly stated doctrine. A man may say all manner of things. For example, we know devil's are not capable of coming to saving belief in Christ. Yet here it says, in this hypothetical man's argument, that they believe and tremble! 
+
+It would take an extreme case of Nicodemus-level Asperger's to draw a doctrine that devils believe on God, as saved Christians do. And yet many draw doctrine from the very same verse! Amazing. 
+
+James continues the argument: *Was not Abraham our father justified by works, when he had offered Isaac his son upon the altar?*
+
+Was Abraham justified by his works before God when he was prepared to sacrifice Isaac? Well, no. In fact we know that's not the case. A fact James makes clear in the summation following;
+
+*Abraham believed God, and it was imputed unto him for righteousness: and he was called the Friend of God.*
+
+James says, you see how Abraham's works shut up the hypothetical man, judging Abraham? That his faith was made complete by his works, in regards to being justified by men. 
+
+We know this is true, because again in Romans 4, Paul cites the same scripture James does: 
+
+*1 What shall we say then that Abraham our father, as pertaining to the flesh, hath found?*
+
+*2 For if Abraham were justified by works, he hath whereof to glory; but not before God.*
+
+*3 For what saith the scripture? Abraham believed God, and it was counted unto him for righteousness.*
+
+*4 Now to him that worketh is the reward not reckoned of grace, but of debt.*
+
+*5 But to him that worketh not, but believeth on him that justifieth the ungodly, his faith is counted for righteousness.*
+
+*6 Even as David also describeth the blessedness of the man, unto whom God imputeth righteousness without works,*
+
+*7 Saying, Blessed are they whose iniquities are forgiven, and whose sins are covered.*
+
+*8 Blessed is the man to whom the Lord will not impute sin.*
+
+*9 Cometh this blessedness then upon the circumcision only, or upon the uncircumcision also? for we say that faith was reckoned to Abraham for righteousness.*
+
+*10 How was it then reckoned? when he was in circumcision, or in uncircumcision? Not in circumcision, but in uncircumcision.*
+
+*11 And he received the sign of circumcision, a seal of the righteousness of the faith which he had yet being uncircumcised: that he might be the father of all them that believe, though they be not circumcised; that righteousness might be imputed unto them also:*
+
+Abraham was saved spiritually, justified before God, by his faith alone. Decades before his circumcision. Decades before bringing Issac to the altar on the same mountain in Jerusalem where Jesus would later be crucified. 
+
+But to be justified before man, that outward sign of his faith, made his faith more perfect. There was a visible tangible act of faith, works that a man may say that they've been shown his faith.
+
+<!-- post 3558 · 2022-07-08 10:58 · study -->
+
+*Likewise also was not Rahab the harlot justified by works, when she had received the messengers, and had sent them out another way?*
+
+Rahab was justified to Joshua and the Hebrews by her aid of the spies, but it was her faith in leaving out that crimson thread, representing the blood of Christ, that actually saved her and her household. Her deeds help others. They profited others. She very well could have said yeah yeah I believe you, and done nothing to help them, and her faith in them would be dead, profiting others nothing.
+
+<!-- post 3559 · 2022-07-08 11:02 · study -->
+
+I'll continue through the rest of James during this weekend if I have a chance, if not I will finish it up on Monday. I do these studies live, as we read I write. You can probably tell because they're not very polished all the time, but I do it off the dome for a reason. When you study the word of God, and stay in it reading it daily, you gain understanding and familiarity with the concepts of the totality of scripture. Any saved Christian can do this. All it takes is daily Bible reading, being in prayer, and turning towards God and away from the cares of this world as much as possible. As we see in James chapter 1, wisdom comes from God and all knowledge and understanding is His to give, but we can't just assume that he'll give it to us without our seeking it first, humbly and in prayer and in faith. By being doers of the word, and not hearers only. 
+
+I hope this has helped some of you gain a deeper understanding. Don't be a respecter of persons and understand that the average man may judge your faith by your works, the use you actually have to others. Don't have dead faith, but be profitable for those in need and in service to God.
+
+## James 3  ·  Primary study  ·  2022-07-09
+
+Source: https://t.me/HouseOfWews2/3566
+
+<!-- post 3566 · 2022-07-09 06:07 · scripture -->
+
+**James 3**
+
+*My brethren, be not many masters, knowing that we shall receive the greater condemnation.*
+
+*2 For in many things we offend all. If any man offend not in word, the same is a perfect man, and able also to bridle the whole body.*
+
+*3 Behold, we put bits in the horses' mouths, that they may obey us; and we turn about their whole body.*
+
+*4 Behold also the ships, which though they be so great, and are driven of fierce winds, yet are they turned about with a very small helm, whithersoever the governor listeth.*
+
+*5 Even so the tongue is a little member, and boasteth great things. Behold, how great a matter a little fire kindleth!*
+
+*6 And the tongue is a fire, a world of iniquity: so is the tongue among our members, that it defileth the whole body, and setteth on fire the course of nature; and it is set on fire of hell.*
+
+*7 For every kind of beasts, and of birds, and of serpents, and of things in the sea, is tamed, and hath been tamed of mankind:*
+
+*8 But the tongue can no man tame; it is an unruly evil, full of deadly poison.*
+
+*9 Therewith bless we God, even the Father; and therewith curse we men, which are made after the similitude of God.*
+
+*10 Out of the same mouth proceedeth blessing and cursing. My brethren, these things ought not so to be.*
+
+*11 Doth a fountain send forth at the same place sweet water and bitter?*
+
+*12 Can the fig tree, my brethren, bear olive berries? either a vine, figs? so can no fountain both yield salt water and fresh.*
+
+*13 Who is a wise man and endued with knowledge among you? let him shew out of a good conversation his works with meekness of wisdom.*
+
+*14 But if ye have bitter envying and strife in your hearts, glory not, and lie not against the truth.*
+
+*15 This wisdom descendeth not from above, but is earthly, sensual, devilish.*
+
+*16 For where envying and strife is, there is confusion and every evil work.*
+
+*17 But the wisdom that is from above is first pure, then peaceable, gentle, and easy to be intreated, full of mercy and good fruits, without partiality, and without hypocrisy.*
+
+*18 And the fruit of righteousness is sown in peace of them that make peace.*
+
+<!-- post 3567 · 2022-07-09 06:14 · study -->
+
+Watch what you say. Get control of your own tongue. Speak meekly, in God's given wisdom, and show the world through your good conversation that new man that lives inside you. 
+
+Don't be full of envy, coveting, wrath and strife. 
+
+*O generation of vipers, how can ye, being evil, speak good things? for out of the abundance of the heart the mouth speaketh*
+
+And
+
+*A good man out of the good treasure of his heart bringeth forth that which is good; and an evil man out of the evil treasure of his heart bringeth forth that which is evil: for of the abundance of the heart his mouth speaketh.*
+
+We can bring others to righteousness by our own display in our words, not just our works. 
+
+*Likewise, ye wives, be in subjection to your own husbands; that, if any obey not the word, they also may without the word be won by the conversation of the wives.*
+
+As Jesus tells the disciples;  *Not that which goeth into the mouth defileth a man; but that which cometh out of the mouth, this defileth a man*.
+
+## James 4  ·  Primary study  ·  2022-07-09
+
+Source: https://t.me/HouseOfWews2/3568
+
+<!-- post 3568 · 2022-07-09 06:23 · scripture -->
+
+**James 4**
+
+*From whence come wars and fightings among you? come they not hence, even of your lusts that war in your members?*
+
+*2 Ye lust, and have not: ye kill, and desire to have, and cannot obtain: ye fight and war, yet ye have not, because ye ask not.*
+
+*3 Ye ask, and receive not, because ye ask amiss, that ye may consume it upon your lusts.*
+
+*4 Ye adulterers and adulteresses, know ye not that the friendship of the world is enmity with God? whosoever therefore will be a friend of the world is the enemy of God.*
+
+*5 Do ye think that the scripture saith in vain, The spirit that dwelleth in us lusteth to envy?*
+
+*6 But he giveth more grace. Wherefore he saith, God resisteth the proud, but giveth grace unto the humble.*
+
+*7 Submit yourselves therefore to God. Resist the devil, and he will flee from you.*
+
+*8 Draw nigh to God, and he will draw nigh to you. Cleanse your hands, ye sinners; and purify your hearts, ye double minded.*
+
+*9 Be afflicted, and mourn, and weep: let your laughter be turned to mourning, and your joy to heaviness.*
+
+*10 Humble yourselves in the sight of the Lord, and he shall lift you up.*
+
+*11 Speak not evil one of another, brethren. He that speaketh evil of his brother, and judgeth his brother, speaketh evil of the law, and judgeth the law: but if thou judge the law, thou art not a doer of the law, but a judge.*
+
+*12 There is one lawgiver, who is able to save and to destroy: who art thou that judgest another?*
+
+*13 Go to now, ye that say, To day or to morrow we will go into such a city, and continue there a year, and buy and sell, and get gain:*
+
+*14 Whereas ye know not what shall be on the morrow. For what is your life? It is even a vapour, that appeareth for a little time, and then vanisheth away.*
+
+*15 For that ye ought to say, If the Lord will, we shall live, and do this, or that.*
+
+*16 But now ye rejoice in your boastings: all such rejoicing is evil.*
+
+*17 Therefore to him that knoweth to do good, and doeth it not, to him it is sin.*
+
+<!-- post 3569 · 2022-07-09 06:28 · study -->
+
+James continues to instruct how to be more complete, and by education of the faults in the faithful, we see that we have no excuse. Hard preaching is edifying, it builds up the hearer. But it pricks the hearts of the guilty, and is repellent to the hypocrite.
+
+## James 5  ·  Primary study  ·  2022-07-09
+
+Source: https://t.me/HouseOfWews2/3570
+
+<!-- post 3570 · 2022-07-09 06:32 · scripture -->
+
+**James 5**
+
+*Go to now, ye rich men, weep and howl for your miseries that shall come upon you.*
+
+*2 Your riches are corrupted, and your garments are motheaten.*
+
+*3 Your gold and silver is cankered; and the rust of them shall be a witness against you, and shall eat your flesh as it were fire. Ye have heaped treasure together for the last days.*
+
+*4 Behold, the hire of the labourers who have reaped down your fields, which is of you kept back by fraud, crieth: and the cries of them which have reaped are entered into the ears of the Lord of sabaoth.*
+
+*5 Ye have lived in pleasure on the earth, and been wanton; ye have nourished your hearts, as in a day of slaughter.*
+
+*6 Ye have condemned and killed the just; and he doth not resist you.*
+
+*7 Be patient therefore, brethren, unto the coming of the Lord. Behold, the husbandman waiteth for the precious fruit of the earth, and hath long patience for it, until he receive the early and latter rain.*
+
+*8 Be ye also patient; stablish your hearts: for the coming of the Lord draweth nigh.*
+
+*9 Grudge not one against another, brethren, lest ye be condemned: behold, the judge standeth before the door.*
+
+*10 Take, my brethren, the prophets, who have spoken in the name of the Lord, for an example of suffering affliction, and of patience.*
+
+*11 Behold, we count them happy which endure. Ye have heard of the patience of Job, and have seen the end of the Lord; that the Lord is very pitiful, and of tender mercy.*
+
+*12 But above all things, my brethren, swear not, neither by heaven, neither by the earth, neither by any other oath: but let your yea be yea; and your nay, nay; lest ye fall into condemnation.*
+
+*13 Is any among you afflicted? let him pray. Is any merry? let him sing psalms.*
+
+*14 Is any sick among you? let him call for the elders of the church; and let them pray over him, anointing him with oil in the name of the Lord:*
+
+*15 And the prayer of faith shall save the sick, and the Lord shall raise him up; and if he have committed sins, they shall be forgiven him.*
+
+*16 Confess your faults one to another, and pray one for another, that ye may be healed. The effectual fervent prayer of a righteous man availeth much.*
+
+*17 Elias was a man subject to like passions as we are, and he prayed earnestly that it might not rain: and it rained not on the earth by the space of three years and six months.*
+
+*18 And he prayed again, and the heaven gave rain, and the earth brought forth her fruit.*
+
+*19 Brethren, if any of you do err from the truth, and one convert him;*
+
+*20 Let him know, that he which converteth the sinner from the error of his way shall save a soul from death, and shall hide a multitude of sins.*
+
+<!-- post 3571 · 2022-07-09 06:39 · study -->
+
+James breathing fire. Condemning the wicked who are rich by deceit and who afflict the faithful. He calls on us to be patient, that the harvest will come and the world be reaped, but that we have the patience, like Job, to endure and be blessed as his long suffering was blessed by God, with abundance. 
+
+Don't get angry. Don't take oaths. But be honest in your communication and endure, in constant fervent prayer. Have faith. Be humble. Understand your place in God's work. Confess your sins against brethren, correct one another with love, in mercy and grace, and pray for one another as we await the end.

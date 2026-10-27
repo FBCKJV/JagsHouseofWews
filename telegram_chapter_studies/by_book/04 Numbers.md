@@ -1,0 +1,4536 @@
+# Numbers
+
+## Numbers 1  ·  Primary study  ·  2023-10-28
+
+Source: https://t.me/HouseOfWews2/12388
+
+<!-- post 12388 · 2023-10-28 07:47 · scripture -->
+
+**Numbers 1**
+*And the Lord spake unto Moses in the wilderness of Sinai, in the tabernacle of the congregation, on the first day of the second month, in the second year after they were come out of the land of Egypt, saying,*
+
+*2 Take ye the sum of all the congregation of the children of Israel, after their families, by the house of their fathers, with the number of their names, every male by their polls;*
+
+*3 From twenty years old and upward, all that are able to go forth to war in Israel: thou and Aaron shall number them by their armies.*
+
+*4 And with you there shall be a man of every tribe; every one head of the house of his fathers.*
+
+*5 And these are the names of the men that shall stand with you: of the tribe of Reuben; Elizur the son of Shedeur.*
+
+*6 Of Simeon; Shelumiel the son of Zurishaddai.*
+
+*7 Of Judah; Nahshon the son of Amminadab.*
+
+*8 Of Issachar; Nethaneel the son of Zuar.*
+
+*9 Of Zebulun; Eliab the son of Helon.*
+
+*10 Of the children of Joseph: of Ephraim; Elishama the son of Ammihud: of Manasseh; Gamaliel the son of Pedahzur.*
+
+*11 Of Benjamin; Abidan the son of Gideoni.*
+
+*12 Of Dan; Ahiezer the son of Ammishaddai.*
+
+*13 Of Asher; Pagiel the son of Ocran.*
+
+*14 Of Gad; Eliasaph the son of Deuel.*
+
+*15 Of Naphtali; Ahira the son of Enan.*
+
+*16 These were the renowned of the congregation, princes of the tribes of their fathers, heads of thousands in Israel.*
+
+*17 And Moses and Aaron took these men which are expressed by their names:*
+
+*18 And they assembled all the congregation together on the first day of the second month, and they declared their pedigrees after their families, by the house of their fathers, according to the number of the names, from twenty years old and upward, by their polls.*
+
+*19 As the Lord commanded Moses, so he numbered them in the wilderness of Sinai.*
+
+*20 And the children of Reuben, Israel's eldest son, by their generations, after their families, by the house of their fathers, according to the number of the names, by their polls, every male from twenty years old and upward, all that were able to go forth to war;*
+
+*21 Those that were numbered of them, even of the tribe of Reuben, were forty and six thousand and five hundred.*
+
+*22 Of the children of Simeon, by their generations, after their families, by the house of their fathers, those that were numbered of them, according to the number of the names, by their polls, every male from twenty years old and upward, all that were able to go forth to war;*
+
+*23 Those that were numbered of them, even of the tribe of Simeon, were fifty and nine thousand and three hundred.*
+
+*24 Of the children of Gad, by their generations, after their families, by the house of their fathers, according to the number of the names, from twenty years old and upward, all that were able to go forth to war;*
+
+*25 Those that were numbered of them, even of the tribe of Gad, were forty and five thousand six hundred and fifty.*
+
+*26 Of the children of Judah, by their generations, after their families, by the house of their fathers, according to the number of the names, from twenty years old and upward, all that were able to go forth to war;*
+
+*27 Those that were numbered of them, even of the tribe of Judah, were threescore and fourteen thousand and six hundred.*
+
+*28 Of the children of Issachar, by their generations, after their families, by the house of their fathers, according to the number of the names, from twenty years old and upward, all that were able to go forth to war;*
+
+*29 Those that were numbered of them, even of the tribe of Issachar, were fifty and four thousand and four hundred.*
+
+*30 Of the children of Zebulun, by their generations, after their families, by the house of their fathers, according to the number of the names, from twenty years old and upward, all that were able to go forth to war;*
+
+*31 Those that were numbered of them, even of the tribe of Zebulun, were fifty and seven thousand and four hundred.*
+
+<!-- post 12389 · 2023-10-28 07:47 · scripture -->
+
+*32 Of the children of Joseph, namely, of the children of Ephraim, by their generations, after their families, by the house of their fathers, according to the number of the names, from twenty years old and upward, all that were able to go forth to war;*
+
+*33 Those that were numbered of them, even of the tribe of Ephraim, were forty thousand and five hundred.*
+
+*34 Of the children of Manasseh, by their generations, after their families, by the house of their fathers, according to the number of the names, from twenty years old and upward, all that were able to go forth to war;*
+
+*35 Those that were numbered of them, even of the tribe of Manasseh, were thirty and two thousand and two hundred.*
+
+*36 Of the children of Benjamin, by their generations, after their families, by the house of their fathers, according to the number of the names, from twenty years old and upward, all that were able to go forth to war;*
+
+*37 Those that were numbered of them, even of the tribe of Benjamin, were thirty and five thousand and four hundred.*
+
+*38 Of the children of Dan, by their generations, after their families, by the house of their fathers, according to the number of the names, from twenty years old and upward, all that were able to go forth to war;*
+
+*39 Those that were numbered of them, even of the tribe of Dan, were threescore and two thousand and seven hundred.*
+
+*40 Of the children of Asher, by their generations, after their families, by the house of their fathers, according to the number of the names, from twenty years old and upward, all that were able to go forth to war;*
+
+*41 Those that were numbered of them, even of the tribe of Asher, were forty and one thousand and five hundred.*
+
+*42 Of the children of Naphtali, throughout their generations, after their families, by the house of their fathers, according to the number of the names, from twenty years old and upward, all that were able to go forth to war;*
+
+*43 Those that were numbered of them, even of the tribe of Naphtali, were fifty and three thousand and four hundred.*
+
+*44 These are those that were numbered, which Moses and Aaron numbered, and the princes of Israel, being twelve men: each one was for the house of his fathers.*
+
+*45 So were all those that were numbered of the children of Israel, by the house of their fathers, from twenty years old and upward, all that were able to go forth to war in Israel;*
+
+*46 Even all they that were numbered were six hundred thousand and three thousand and five hundred and fifty.*
+
+*47 But the Levites after the tribe of their fathers were not numbered among them.*
+
+*48 For the Lord had spoken unto Moses, saying,*
+
+*49 Only thou shalt not number the tribe of Levi, neither take the sum of them among the children of Israel:*
+
+*50 But thou shalt appoint the Levites over the tabernacle of testimony, and over all the vessels thereof, and over all things that belong to it: they shall bear the tabernacle, and all the vessels thereof; and they shall minister unto it, and shall encamp round about the tabernacle.*
+
+*51 And when the tabernacle setteth forward, the Levites shall take it down: and when the tabernacle is to be pitched, the Levites shall set it up: and the stranger that cometh nigh shall be put to death.*
+
+*52 And the children of Israel shall pitch their tents, every man by his own camp, and every man by his own standard, throughout their hosts.*
+
+*53 But the Levites shall pitch round about the tabernacle of testimony, that there be no wrath upon the congregation of the children of Israel: and the Levites shall keep the charge of the tabernacle of testimony.*
+
+*54 And the children of Israel did according to all that the Lord commanded Moses, so did they.*
+
+<!-- post 12390 · 2023-10-28 08:03 · study -->
+
+Here we go. 
+
+God is a God of separation. The Bible has example after example of division, separating one thing from another. Day from night. The creatures after their own kind. Woman from man. Man from the Garden. Cain and Abel. The descendents of Seth, the sons of God that called upon the name of the Lord and the children of men who did not. Noah and his perfect generations from fallen man. The animals of the ark. The nations of Noah's sons. The people of Babel and their languages. The habitations of the nations. Abraham out of Ur. Ishmael and Isaac. Jacob and Esau. Joseph and his brothers. Hebrews out of their land and into Egypt. Out of Egypt and back in the land. The covenant with Moses that they would be a holy people. Separated from other nations. 
+
+Even here, in Numbers, each tribe separated and counted. And the Levites separated even further. 
+
+**Luke 12:51**
+*Suppose ye that I am come to give peace on earth? I tell you, Nay; but rather division:*
+
+The division. The separation. Making holy a people of God. Separating Israel from Judah. And Jesus from the root of Jesse. Believing Israel from the non-believing Jews. The tares from the wheat. Sheep from goats. Israel after the flesh and Israel after the Spirit. Unfruitful branches cut off and cast into the fire. The election in Christ chosen to be graft in. 
+
+**Deuteronomy 7:6**
+*For thou art an holy people unto the LORD thy God: the LORD thy God hath chosen thee to be a special people unto himself, above all people that are upon the face of the earth.*
+
+**Isaiah 62:12**
+*And they shall call them, The holy people, The redeemed of the LORD: and thou shalt be called, Sought out, A city not forsaken.*
+
+**1 Peter 2:9**
+*But ye are a chosen generation, a royal priesthood, an holy nation, a peculiar people; that ye should shew forth the praises of him who hath called you out of darkness into his marvellous light;*
+
+Winnowing the chaff from the wheat. The earth is His threshing floor. The harvest is ongoing. We are in the last days, and have been since the first fruit of Christ, and the harvest of 5,000 made by the disciples on Pentecost. We shall bring in the sheaves for the Lord. To Him the increase. Until the fullness of the harvest comes in. 
+
+Amen
+
+<!-- post 12391 · 2023-10-28 08:06 · study -->
+
+*Even all they that were numbered were six hundred thousand and three thousand and five hundred and fifty*.
+
+This is an accounting of the men of fighting age, men 20 and older, taken in the second year of the Hebrews time in the wilderness. The children of Israel led of God under Moses. And we know that none of these men will live to see the promised land. But good or bad. they will fight to secure that future for God's people, and their children.
+
+## Numbers 2  ·  Primary study  ·  2023-10-29
+
+Source: https://t.me/HouseOfWews2/12396
+
+<!-- post 12396 · 2023-10-29 06:01 · scripture -->
+
+**Numbers 2**
+ *And the Lord spake unto Moses and unto Aaron, saying,*
+
+*2 Every man of the children of Israel shall pitch by his own standard, with the ensign of their father's house: far off about the tabernacle of the congregation shall they pitch.*
+
+*3 And on the east side toward the rising of the sun shall they of the standard of the camp of Judah pitch throughout their armies: and Nahshon the son of Amminadab shall be captain of the children of Judah.*
+
+*4 And his host, and those that were numbered of them, were threescore and fourteen thousand and six hundred.*
+
+*5 And those that do pitch next unto him shall be the tribe of Issachar: and Nethaneel the son of Zuar shall be captain of the children of Issachar.*
+
+*6 And his host, and those that were numbered thereof, were fifty and four thousand and four hundred.*
+
+*7 Then the tribe of Zebulun: and Eliab the son of Helon shall be captain of the children of Zebulun.*
+
+*8 And his host, and those that were numbered thereof, were fifty and seven thousand and four hundred.*
+
+*9 All that were numbered in the camp of Judah were an hundred thousand and fourscore thousand and six thousand and four hundred, throughout their armies. These shall first set forth.*
+
+*10 On the south side shall be the standard of the camp of Reuben according to their armies: and the captain of the children of Reuben shall be Elizur the son of Shedeur.*
+
+*11 And his host, and those that were numbered thereof, were forty and six thousand and five hundred.*
+
+*12 And those which pitch by him shall be the tribe of Simeon: and the captain of the children of Simeon shall be Shelumiel the son of Zurishaddai.*
+
+*13 And his host, and those that were numbered of them, were fifty and nine thousand and three hundred.*
+
+*14 Then the tribe of Gad: and the captain of the sons of Gad shall be Eliasaph the son of Reuel.*
+
+*15 And his host, and those that were numbered of them, were forty and five thousand and six hundred and fifty.*
+
+*16 All that were numbered in the camp of Reuben were an hundred thousand and fifty and one thousand and four hundred and fifty, throughout their armies. And they shall set forth in the second rank.*
+
+*17 Then the tabernacle of the congregation shall set forward with the camp of the Levites in the midst of the camp: as they encamp, so shall they set forward, every man in his place by their standards.*
+
+*18 On the west side shall be the standard of the camp of Ephraim according to their armies: and the captain of the sons of Ephraim shall be Elishama the son of Ammihud.*
+
+*19 And his host, and those that were numbered of them, were forty thousand and five hundred.*
+
+*20 And by him shall be the tribe of Manasseh: and the captain of the children of Manasseh shall be Gamaliel the son of Pedahzur.*
+
+*21 And his host, and those that were numbered of them, were thirty and two thousand and two hundred.*
+
+*22 Then the tribe of Benjamin: and the captain of the sons of Benjamin shall be Abidan the son of Gideoni.*
+
+*23 And his host, and those that were numbered of them, were thirty and five thousand and four hundred.*
+
+*24 All that were numbered of the camp of Ephraim were an hundred thousand and eight thousand and an hundred, throughout their armies. And they shall go forward in the third rank.*
+
+*25 The standard of the camp of Dan shall be on the north side by their armies: and the captain of the children of Dan shall be Ahiezer the son of Ammishaddai.*
+
+*26 And his host, and those that were numbered of them, were threescore and two thousand and seven hundred.*
+
+*27 And those that encamp by him shall be the tribe of Asher: and the captain of the children of Asher shall be Pagiel the son of Ocran.*
+
+*28 And his host, and those that were numbered of them, were forty and one thousand and five hundred.*
+
+*29 Then the tribe of Naphtali: and the captain of the children of Naphtali shall be Ahira the son of Enan.*
+
+*30 And his host, and those that were numbered of them, were fifty and three thousand and four hundred.*
+
+<!-- post 12397 · 2023-10-29 06:01 · scripture -->
+
+*31 All they that were numbered in the camp of Dan were an hundred thousand and fifty and seven thousand and six hundred. They shall go hindmost with their standards.*
+
+*32 These are those which were numbered of the children of Israel by the house of their fathers: all those that were numbered of the camps throughout their hosts were six hundred thousand and three thousand and five hundred and fifty.*
+
+*33 But the Levites were not numbered among the children of Israel; as the Lord commanded Moses.*
+
+*34 And the children of Israel did according to all that the Lord commanded Moses: so they pitched by their standards, and so they set forward, every one after their families, according to the house of their fathers.*
+
+<!-- post 12398 · 2023-10-29 06:20 · study -->
+
+In **Numbers 2**, the Lord commands Moses to organize the camp of Israel around the Tabernacle. First the Levites divided into four smaller camps, to the South, West, North and East of the Tabernacle. With the tent of worship at its heart, the entrance facing East, that the morning sun would shine into it. 
+
+God then told them to make four camps; to the East, the standard of Judah. To the South, the standard of Reuben. To the West, the standard of Ephraim. To the North, the standard of Dan. Each banner with the ensign, the emblem of that tribe. 
+
+And within each camp, the other tribes would muster. In the East, first camped Judah, then next to them the tribe of Issachar, then the tribe of Zebulun. 186,400 of the armies total of the three tribes. 
+
+And when the camp would go out and move, they would fall in ranks in that order. Leading the march. 
+
+Next, to the South, first came Ruben. And those that pitched by them, Simeon. Then next to Simeon, Gad. 151,450 men. 
+
+And when they marched, the camp of Ruben would fall in behind the camp of Judah. And the disassembled Tabernacle and the Levites, behind them, in the midst of the march. 
+
+On the West, in the camp of Ephraim camped according to their armies, with Manasseh camped next to them, with Benjamin then next. 108,100 men. 
+
+On the North, under the standard of Dan fell their tribe, then by him was the tribe of Asher, followed next by Naphtali. 157,600. 
+
+The camps of Ephraim and Dan following in line when the camp of the children of Israel were on the move.
+
+<!-- post 12399 · 2023-10-29 06:29 · study · has photo -->
+
+Now, to the point. What **Numbers 2** lays out is a picture of the camp, surrounding the Tabernacle, the heart of the camp where the Spirit of God appears as a cloud by day and a pillar of fire by night. The Levites to each direction, serving the 4 camps. 
+
+The rectangular tent of the Tabernacle facing East would see the camp of Judah. Larger than the others. West, a bit smaller. North and South, almost equal. 
+
+There are two schools of thought on this, presented above. One school teaches that each camp surrounded the Tabernacle in a square, the tribes each side by side. 
+
+The other sees the camp laid out in a nearly perfect cross. With the camps laid out by one tribe, next to them another, and then another. 
+
+A cross with the heart being the holy place of God. Where the blood was shed for sacrifice, a picture of Christ. Facing East, looking towards Judah. Jesus being the morning star.
+
+<!-- post 12400 · 2023-10-29 06:29 · study · has photo -->
+
+
+
+<!-- post 12401 · 2023-10-29 06:36 · study -->
+
+**Revelation 22:16**
+*I Jesus have sent mine angel to testify unto you these things in the churches. I am the root and the offspring of David, and the bright and morning star.*
+
+While we cannot know with 100% certainty that the layout was a cross, it certainly is what is described in my opinion. I cannot see it any other way, and Numbers has many references to Jesus, as we will see. The idea it would just be an uneven box-shaped camp seems absurd. 
+
+Not to get to any spoilers, consider this passage from **Numbers 24;**
+
+*And Balaam lifted up his eyes, and he saw Israel abiding in his tents according to their tribes; and the spirit of God came upon him. And he took up his parable, and said, Balaam the son of Beor hath said, and the man whose eyes are open hath said: He hath said, which heard the words of God, which saw the vision of the Almighty, falling into a trance, but having his eyes open: How goodly are thy tents, O Jacob, and thy tabernacles, O Israel!*
+
+Balaam, a character we shall encounter soon enough, is looking down at the camp of Israel and the Spirit of God came upon him and he marveled at the layout of the camp. 
+
+I don't believe that he was viewing a rough square. I believe he was looking towards the cross.
+
+<!-- post 12402 · 2023-10-29 06:43 · study · has photo -->
+
+The debate over this is definitely tertiary doctrine. No one has to believe one way or another about it. But the picture of Christ should inform everything we read in the Old Testament. God's promise of His Son is found in every book. Moses wrote of Him. To Jesus did all the prophets give witness. We've already covered the pictures of Christ and His sacrifice found throughout Exodus and Leviticus. Numbers, as we will see God willing, has much more, and touches heavily on the theme that we are all sinners and all have fallen short. That we all need God to deliver us. Themes Numbers teaches throughout. 
+
+The next few chapters can be rough. But all scripture is given for our profit. It was written for our edification and to build faith in us. Things like the layout of the camp builds faith that God's plan was always, from everlasting. Jesus the same yesterday today and forever. Amen
+
+<!-- post 12403 · 2023-10-29 09:38 · study · has animation -->
+
+
+
+<!-- post 12404 · 2023-10-29 10:06 · study -->
+
+**Revelation 4:1-9**
+*After this I looked, and, behold, a door was opened in heaven: and the first voice which I heard was as it were of a trumpet talking with me; which said, Come up hither, and I will shew thee things which must be hereafter. And immediately I was in the spirit: and, behold, a throne was set in heaven, and one sat on the throne. And he that sat was to look upon like a jasper and a sardine stone: and there was a rainbow round about the throne, in sight like unto an emerald. And round about the throne were four and twenty seats: and upon the seats I saw four and twenty elders sitting, clothed in white raiment; and they had on their heads crowns of gold. And out of the throne proceeded lightnings and thunderings and voices: and there were seven lamps of fire burning before the throne, which are the seven Spirits of God. And before the throne there was a sea of glass like unto crystal: and in the midst of the throne, and round about the throne, were four beasts full of eyes before and behind.*
+
+*And the first beast was like a lion, and the second beast like a calf, and the third beast had a face as a man, and the fourth beast was like a flying eagle.*
+
+*And the four beasts had each of them six wings about him; and they were full of eyes within: and they rest not day and night, saying, Holy, holy, holy, Lord God Almighty, which was, and is, and is to come. And when those beasts give glory and honour and thanks to him that sat on the throne, who liveth for ever and ever...*
+
+**Ezekiel 1:3-10**
+*The word of the Lord came expressly unto Ezekiel the priest, the son of Buzi, in the land of the Chaldeans by the river Chebar; and the hand of the Lord was there upon him. And I looked, and, behold, a whirlwind came out of the north, a great cloud, and a fire infolding itself, and a brightness was about it, and out of the midst thereof as the colour of amber, out of the midst of the fire.Also out of the midst thereof came the likeness of four living creatures. And this was their appearance; they had the likeness of a man. And every one had four faces, and every one had four wings. And their feet were straight feet; and the sole of their feet was like the sole of a calf's foot: and they sparkled like the colour of burnished brass. And they had the hands of a man under their wings on their four sides; and they four had their faces and their wings. Their wings were joined one to another; they turned not when they went; they went every one straight forward.* 
+
+*As for the likeness of their faces, they four had the face of a man, and the face of a lion, on the right side: and they four had the face of an ox on the left side; they four also had the face of an eagle.*
+
+**Ezekiel 10:14**
+**Each one had four faces: the first face was that of a cherub, the second that of a man, the third that of a lion, and the fourth that of an eagle.**
+
+**Numbers 2:1-2**
+ *And the Lord spake unto Moses and unto Aaron, saying, Every man of the children of Israel shall pitch by his own standard, with the ensign of their father's house: far off about the tabernacle of the congregation shall they pitch.*
+
+Each camp, Judah, Ruben, Ephraim and Dan had a banner. And each banner, and ensign; also called a symbol or crest. 
+
+The camps surrounding the Tabernacle containing the Ark of the Covenant, the throne of God. His mercy seat. The creation of which was a pattern shown Moses, reflecting the things in Heaven. 
+
+**Hebrews 8:1-5**
+*Now of the things which we have spoken this is the sum: We have such an high priest, who is set on the right hand of the throne of the Majesty in the heavens; A minister of the sanctuary, and of the true tabernacle, which the Lord pitched, and not man. For every high priest is ordained to offer gifts and sacrifices: wherefore it is of necessity that this man have somewhat also to offer.*
+
+<!-- post 12405 · 2023-10-29 10:06 · study -->
+
+*For if he were on earth, he should not be a priest, seeing that there are priests that offer gifts according to the law: Who serve unto the example and shadow of heavenly things, as Moses was admonished of God when he was about to make the tabernacle: for, See, saith he, that thou make all things according to the pattern shewed to thee in the mount.*
+
+**Exodus 25:40**
+*And look that thou make them after their pattern, which was shewed thee in the mount*...
+
+The visions and revelations given John and Ezekiel, which show their witness to the things in Heaven, include creatures, Cherubim, with 4 faces; a lion, a calf/ox/cherubim (a cow like face for all three), a man and an eagle, surrounding the throne of God. 
+
+Nothing in the Bible is incidental, accidental or coincidental. 
+
+Christian tradition has even placed the 4 Gospels as being symbolized by these same figures. In his Commentary on the Gospel of Matthew, Jerome associated each Evangelist with one of the living creatures: Matthew is the Man; Mark is the Lion; Luke is the Calf and John is the Eagle. Of course we know that Jesus is the Lion of Judah. 
+
+**Revelation 5:5** 
+*And one of the elders saith unto me, Weep not: behold, the Lion of the tribe of Juda, the Root of David, hath prevailed to open the book, and to loose the seven seals thereof.*
+
+Whe know that the Lion of Judah is opposed by the fallen cherubim, Lucifer, who is worshipped as an idol of a calf, or an oxen-headed furnace to Moloch. Jesus becomes man, and then after His triumph, ascends like an eagle. And at His return, gathers the elect like eagles in the clouds. 
+
+Were the 4 banners with their sigils, their ensigns, displaying these symbols? Were each camp represented of some aspect of Christ and the Gospel of God? And thus the pattern of Heaven pictured among the camp of Israel?
+
+The Bible doesn't say. Not definitively. 
+
+But this is how it seems to me.
+
+<!-- post 12406 · 2023-10-29 10:09 · study -->
+
+Generally, I like to keep dogma to the clear word of God. Indisputable meaning of statements made in scripture. I think there are too many people who get caught up in the numerology and symbology and lose sight of the spiritual things of God. But it is very cool when you see through that glass darkly, and get a glimpse of the glory and richness of His word.
+
+## Numbers 3  ·  Primary study  ·  2023-10-30
+
+Source: https://t.me/HouseOfWews2/12412
+
+<!-- post 12412 · 2023-10-30 08:18 · scripture -->
+
+**Numbers 3**
+*These also are the generations of Aaron and Moses in the day that the Lord spake with Moses in mount Sinai.*
+
+*2 And these are the names of the sons of Aaron; Nadab the firstborn, and Abihu, Eleazar, and Ithamar.*
+
+*3 These are the names of the sons of Aaron, the priests which were anointed, whom he consecrated to minister in the priest's office.*
+
+*4 And Nadab and Abihu died before the Lord, when they offered strange fire before the Lord, in the wilderness of Sinai, and they had no children: and Eleazar and Ithamar ministered in the priest's office in the sight of Aaron their father.*
+
+*5 And the Lord spake unto Moses, saying,*
+
+*6 Bring the tribe of Levi near, and present them before Aaron the priest, that they may minister unto him.*
+
+*7 And they shall keep his charge, and the charge of the whole congregation before the tabernacle of the congregation, to do the service of the tabernacle.*
+
+*8 And they shall keep all the instruments of the tabernacle of the congregation, and the charge of the children of Israel, to do the service of the tabernacle.*
+
+*9 And thou shalt give the Levites unto Aaron and to his sons: they are wholly given unto him out of the children of Israel.*
+
+*10 And thou shalt appoint Aaron and his sons, and they shall wait on their priest's office: and the stranger that cometh nigh shall be put to death.*
+
+*11 And the Lord spake unto Moses, saying,*
+
+*12 And I, behold, I have taken the Levites from among the children of Israel instead of all the firstborn that openeth the matrix among the children of Israel: therefore the Levites shall be mine;*
+
+*13 Because all the firstborn are mine; for on the day that I smote all the firstborn in the land of Egypt I hallowed unto me all the firstborn in Israel, both man and beast: mine shall they be: I am the Lord.*
+
+*14 And the Lord spake unto Moses in the wilderness of Sinai, saying,*
+
+*15 Number the children of Levi after the house of their fathers, by their families: every male from a month old and upward shalt thou number them.*
+
+*16 And Moses numbered them according to the word of the Lord, as he was commanded.*
+
+*17 And these were the sons of Levi by their names; Gershon, and Kohath, and Merari.*
+
+*18 And these are the names of the sons of Gershon by their families; Libni, and Shimei.*
+
+*19 And the sons of Kohath by their families; Amram, and Izehar, Hebron, and Uzziel.*
+
+*20 And the sons of Merari by their families; Mahli, and Mushi. These are the families of the Levites according to the house of their fathers.*
+
+*21 Of Gershon was the family of the Libnites, and the family of the Shimites: these are the families of the Gershonites.*
+
+*22 Those that were numbered of them, according to the number of all the males, from a month old and upward, even those that were numbered of them were seven thousand and five hundred.*
+
+*23 The families of the Gershonites shall pitch behind the tabernacle westward.*
+
+*24 And the chief of the house of the father of the Gershonites shall be Eliasaph the son of Lael.*
+
+*25 And the charge of the sons of Gershon in the tabernacle of the congregation shall be the tabernacle, and the tent, the covering thereof, and the hanging for the door of the tabernacle of the congregation,*
+
+*26 And the hangings of the court, and the curtain for the door of the court, which is by the tabernacle, and by the altar round about, and the cords of it for all the service thereof.*
+
+*27 And of Kohath was the family of the Amramites, and the family of the Izeharites, and the family of the Hebronites, and the family of the Uzzielites: these are the families of the Kohathites.*
+
+*28 In the number of all the males, from a month old and upward, were eight thousand and six hundred, keeping the charge of the sanctuary.*
+
+*29 The families of the sons of Kohath shall pitch on the side of the tabernacle southward.*
+
+*30 And the chief of the house of the father of the families of the Kohathites shall be Elizaphan the son of Uzziel.*
+
+<!-- post 12413 · 2023-10-30 08:18 · scripture -->
+
+*31 And their charge shall be the ark, and the table, and the candlestick, and the altars, and the vessels of the sanctuary wherewith they minister, and the hanging, and all the service thereof.*
+
+*32 And Eleazar the son of Aaron the priest shall be chief over the chief of the Levites, and have the oversight of them that keep the charge of the sanctuary.*
+
+*33 Of Merari was the family of the Mahlites, and the family of the Mushites: these are the families of Merari.*
+
+*34 And those that were numbered of them, according to the number of all the males, from a month old and upward, were six thousand and two hundred.*
+
+*35 And the chief of the house of the father of the families of Merari was Zuriel the son of Abihail: these shall pitch on the side of the tabernacle northward.*
+
+*36 And under the custody and charge of the sons of Merari shall be the boards of the tabernacle, and the bars thereof, and the pillars thereof, and the sockets thereof, and all the vessels thereof, and all that serveth thereto,*
+
+*37 And the pillars of the court round about, and their sockets, and their pins, and their cords.*
+
+*38 But those that encamp before the tabernacle toward the east, even before the tabernacle of the congregation eastward, shall be Moses, and Aaron and his sons, keeping the charge of the sanctuary for the charge of the children of Israel; and the stranger that cometh nigh shall be put to death.*
+
+*39 All that were numbered of the Levites, which Moses and Aaron numbered at the commandment of the Lord, throughout their families, all the males from a month old and upward, were twenty and two thousand.*
+
+*40 And the Lord said unto Moses, Number all the firstborn of the males of the children of Israel from a month old and upward, and take the number of their names.*
+
+*41 And thou shalt take the Levites for me (I am the Lord) instead of all the firstborn among the children of Israel; and the cattle of the Levites instead of all the firstlings among the cattle of the children of Israel.*
+
+*42 And Moses numbered, as the Lord commanded him, all the firstborn among the children of Israel.*
+
+*43 And all the firstborn males by the number of names, from a month old and upward, of those that were numbered of them, were twenty and two thousand two hundred and threescore and thirteen.*
+
+*44 And the Lord spake unto Moses, saying,*
+
+*45 Take the Levites instead of all the firstborn among the children of Israel, and the cattle of the Levites instead of their cattle; and the Levites shall be mine: I am the Lord.*
+
+*46 And for those that are to be redeemed of the two hundred and threescore and thirteen of the firstborn of the children of Israel, which are more than the Levites;*
+
+*47 Thou shalt even take five shekels apiece by the poll, after the shekel of the sanctuary shalt thou take them: (the shekel is twenty gerahs:)*
+
+*48 And thou shalt give the money, wherewith the odd number of them is to be redeemed, unto Aaron and to his sons.*
+
+*49 And Moses took the redemption money of them that were over and above them that were redeemed by the Levites:*
+
+*50 Of the firstborn of the children of Israel took he the money; a thousand three hundred and threescore and five shekels, after the shekel of the sanctuary:*
+
+*51 And Moses gave the money of them that were redeemed unto Aaron and to his sons, according to the word of the Lord, as the Lord commanded Moses.*
+
+<!-- post 12414 · 2023-10-30 08:19 · study -->
+
+**Leviticus 10:1-2**
+*And Nadab and Abihu, the sons of Aaron, took either of them his censer, and put fire therein, and put incense thereon, and offered strange fire before the LORD, which he commanded them not. And there went out fire from the LORD, and devoured them, and they died before the LORD.*
+
+**Exodus 13:2**
+*Sanctify unto me all the firstborn, whatsoever openeth the womb among the children of Israel, both of man and of beast: it is mine.*
+
+<!-- post 12415 · 2023-10-30 08:28 · study -->
+
+God's original plan for the children of Israel was that their firstborn sons would be given to Him in service to the Lord, and the firstborn cattle as sacrifice, thus a picture of Christ Jesus. But the children of Israel failed almost immediately after being led from Egypt, worshipping the golden calf;
+
+**Exodus 32:25-29**
+*And when Moses saw that the people were naked; (for Aaron had made them naked unto their shame among their enemies:) Then Moses stood in the gate of the camp, and said, Who is on the Lord's side? let him come unto me. And all the sons of Levi gathered themselves together unto him. And he said unto them, Thus saith the Lord God of Israel, Put every man his sword by his side, and go in and out from gate to gate throughout the camp, and slay every man his brother, and every man his companion, and every man his neighbour. And the children of Levi did according to the word of Moses: and there fell of the people that day about three thousand men. For Moses had said, Consecrate yourselves today to the Lord, even every man upon his son, and upon his brother; that he may bestow upon you a blessing this day.*
+
+This incident changed the plan, and instead a generational priesthood was created from the Levites, under the charge of Aaron. 
+
+And so this left an accounting due the Lord. 
+
+Here we see at the poll of men, numbering them by tribe, that the Levites were fewer in number than the firstborn sons of Israel, and so a reckoning was due. And to offset the difference, a collection of 5 shekels was made for each son. God will always receive His due. 
+
+The redemption of this time is a picture of the redemption in Christ of believers. The cost, His life and death and blood. The burnt offering of His firstborn Son. And the resurrection the promise made in Him. 
+
+There is always a price for redemption. And the price for righteousness is Christ, His imputed righteousness on all who believe.
+
+<!-- post 12416 · 2023-10-30 08:35 · study -->
+
+This is why we should take heart, that even in our sins, God's plan and purpose will go forward. And if we choose to stand with Him, we can be better used to the fulfilment of that purpose.
+
+<!-- post 12418 · 2023-10-30 08:49 · study -->
+
+The reason the King James Bible and several others “add” the words “the brother of” Goliath in 2 Samuel 21:19, is because those words are found in the parallel passage of 1 Chronicles 20:5 where it says: “and Elhanan the son of Jair slew Lahmi the brother of Goliath the Gittite." 
+
+I think the error in modern translations is a great point to raise but the "correction" of the Hebrew in the KJV isn't like it is a second inspiration making it better, but the single inspiration gives clarity. But that's none of my business
+
+## Numbers 4  ·  Primary study  ·  2023-10-31
+
+Source: https://t.me/HouseOfWews2/12421
+
+<!-- post 12421 · 2023-10-31 06:40 · scripture -->
+
+**Numbers 4**
+*And the Lord spake unto Moses and unto Aaron, saying,*
+
+*2 Take the sum of the sons of Kohath from among the sons of Levi, after their families, by the house of their fathers,*
+
+*3 From thirty years old and upward even until fifty years old, all that enter into the host, to do the work in the tabernacle of the congregation.*
+
+*4 This shall be the service of the sons of Kohath in the tabernacle of the congregation, about the most holy things:*
+
+*5 And when the camp setteth forward, Aaron shall come, and his sons, and they shall take down the covering vail, and cover the ark of testimony with it:*
+
+*6 And shall put thereon the covering of badgers' skins, and shall spread over it a cloth wholly of blue, and shall put in the staves thereof.*
+
+*7 And upon the table of shewbread they shall spread a cloth of blue, and put thereon the dishes, and the spoons, and the bowls, and covers to cover withal: and the continual bread shall be thereon:*
+
+*8 And they shall spread upon them a cloth of scarlet, and cover the same with a covering of badgers' skins, and shall put in the staves thereof.*
+
+*9 And they shall take a cloth of blue, and cover the candlestick of the light, and his lamps, and his tongs, and his snuffdishes, and all the oil vessels thereof, wherewith they minister unto it:*
+
+*10 And they shall put it and all the vessels thereof within a covering of badgers' skins, and shall put it upon a bar.*
+
+*11 And upon the golden altar they shall spread a cloth of blue, and cover it with a covering of badgers' skins, and shall put to the staves thereof:*
+
+*12 And they shall take all the instruments of ministry, wherewith they minister in the sanctuary, and put them in a cloth of blue, and cover them with a covering of badgers' skins, and shall put them on a bar:*
+
+*13 And they shall take away the ashes from the altar, and spread a purple cloth thereon:*
+
+*14 And they shall put upon it all the vessels thereof, wherewith they minister about it, even the censers, the fleshhooks, and the shovels, and the basons, all the vessels of the altar; and they shall spread upon it a covering of badgers' skins, and put to the staves of it.*
+
+*15 And when Aaron and his sons have made an end of covering the sanctuary, and all the vessels of the sanctuary, as the camp is to set forward; after that, the sons of Kohath shall come to bear it: but they shall not touch any holy thing, lest they die. These things are the burden of the sons of Kohath in the tabernacle of the congregation.*
+
+*16 And to the office of Eleazar the son of Aaron the priest pertaineth the oil for the light, and the sweet incense, and the daily meat offering, and the anointing oil, and the oversight of all the tabernacle, and of all that therein is, in the sanctuary, and in the vessels thereof.*
+
+*17 And the Lord spake unto Moses and unto Aaron saying,*
+
+*18 Cut ye not off the tribe of the families of the Kohathites from among the Levites:*
+
+*19 But thus do unto them, that they may live, and not die, when they approach unto the most holy things: Aaron and his sons shall go in, and appoint them every one to his service and to his burden:*
+
+*20 But they shall not go in to see when the holy things are covered, lest they die.*
+
+*21 And the Lord spake unto Moses, saying,*
+
+*22 Take also the sum of the sons of Gershon, throughout the houses of their fathers, by their families;*
+
+*23 From thirty years old and upward until fifty years old shalt thou number them; all that enter in to perform the service, to do the work in the tabernacle of the congregation.*
+
+*24 This is the service of the families of the Gershonites, to serve, and for burdens:*
+
+*25 And they shall bear the curtains of the tabernacle, and the tabernacle of the congregation, his covering, and the covering of the badgers' skins that is above upon it, and the hanging for the door of the tabernacle of the congregation,*
+
+<!-- post 12422 · 2023-10-31 06:40 · scripture -->
+
+*26 And the hangings of the court, and the hanging for the door of the gate of the court, which is by the tabernacle and by the altar round about, and their cords, and all the instruments of their service, and all that is made for them: so shall they serve.*
+
+*27 At the appointment of Aaron and his sons shall be all the service of the sons of the Gershonites, in all their burdens, and in all their service: and ye shall appoint unto them in charge all their burdens.*
+
+*28 This is the service of the families of the sons of Gershon in the tabernacle of the congregation: and their charge shall be under the hand of Ithamar the son of Aaron the priest.*
+
+*29 As for the sons of Merari, thou shalt number them after their families, by the house of their fathers;*
+
+*30 From thirty years old and upward even unto fifty years old shalt thou number them, every one that entereth into the service, to do the work of the tabernacle of the congregation.*
+
+*31 And this is the charge of their burden, according to all their service in the tabernacle of the congregation; the boards of the tabernacle, and the bars thereof, and the pillars thereof, and sockets thereof,*
+
+*32 And the pillars of the court round about, and their sockets, and their pins, and their cords, with all their instruments, and with all their service: and by name ye shall reckon the instruments of the charge of their burden.*
+
+*33 This is the service of the families of the sons of Merari, according to all their service, in the tabernacle of the congregation, under the hand of Ithamar the son of Aaron the priest.*
+
+*34 And Moses and Aaron and the chief of the congregation numbered the sons of the Kohathites after their families, and after the house of their fathers,*
+
+*35 From thirty years old and upward even unto fifty years old, every one that entereth into the service, for the work in the tabernacle of the congregation:*
+
+*36 And those that were numbered of them by their families were two thousand seven hundred and fifty.*
+
+*37 These were they that were numbered of the families of the Kohathites, all that might do service in the tabernacle of the congregation, which Moses and Aaron did number according to the commandment of the Lord by the hand of Moses.*
+
+*38 And those that were numbered of the sons of Gershon, throughout their families, and by the house of their fathers,*
+
+*39 From thirty years old and upward even unto fifty years old, every one that entereth into the service, for the work in the tabernacle of the congregation,*
+
+*40 Even those that were numbered of them, throughout their families, by the house of their fathers, were two thousand and six hundred and thirty.*
+
+*41 These are they that were numbered of the families of the sons of Gershon, of all that might do service in the tabernacle of the congregation, whom Moses and Aaron did number according to the commandment of the Lord.*
+
+*42 And those that were numbered of the families of the sons of Merari, throughout their families, by the house of their fathers,*
+
+*43 From thirty years old and upward even unto fifty years old, every one that entereth into the service, for the work in the tabernacle of the congregation,*
+
+*44 Even those that were numbered of them after their families, were three thousand and two hundred.*
+
+*45 These be those that were numbered of the families of the sons of Merari, whom Moses and Aaron numbered according to the word of the Lord by the hand of Moses.*
+
+*46 All those that were numbered of the Levites, whom Moses and Aaron and the chief of Israel numbered, after their families, and after the house of their fathers,*
+
+*47 From thirty years old and upward even unto fifty years old, every one that came to do the service of the ministry, and the service of the burden in the tabernacle of the congregation.*
+
+*48 Even those that were numbered of them, were eight thousand and five hundred and fourscore,*
+
+*49 According to the commandment of the Lord they were numbered by the hand of Moses, every one according to his service, and according to his burden: thus were they numbered of him, as the Lord commanded Moses*.
+
+<!-- post 12423 · 2023-10-31 06:41 · study -->
+
+**1 Corinthians 12**
+ *Now concerning spiritual gifts, brethren, I would not have you ignorant.*
+
+*2 Ye know that ye were Gentiles, carried away unto these dumb idols, even as ye were led.*
+
+*3 Wherefore I give you to understand, that no man speaking by the Spirit of God calleth Jesus accursed: and that no man can say that Jesus is the Lord, but by the Holy Ghost.*
+
+*4 Now there are diversities of gifts, but the same Spirit.*
+
+*5 And there are differences of administrations, but the same Lord.*
+
+*6 And there are diversities of operations, but it is the same God which worketh all in all.*
+
+*7 But the manifestation of the Spirit is given to every man to profit withal.*
+
+*8 For to one is given by the Spirit the word of wisdom; to another the word of knowledge by the same Spirit;*
+
+*9 To another faith by the same Spirit; to another the gifts of healing by the same Spirit;*
+
+*10 To another the working of miracles; to another prophecy; to another discerning of spirits; to another divers kinds of tongues; to another the interpretation of tongues:*
+
+*11 But all these worketh that one and the selfsame Spirit, dividing to every man severally as he will.*
+
+*12 For as the body is one, and hath many members, and all the members of that one body, being many, are one body: so also is Christ.*
+
+*13 For by one Spirit are we all baptized into one body, whether we be Jews or Gentiles, whether we be bond or free; and have been all made to drink into one Spirit.*
+
+*14 For the body is not one member, but many.*
+
+*15 If the foot shall say, Because I am not the hand, I am not of the body; is it therefore not of the body?*
+
+*16 And if the ear shall say, Because I am not the eye, I am not of the body; is it therefore not of the body?*
+
+*17 If the whole body were an eye, where were the hearing? If the whole were hearing, where were the smelling?*
+
+*18 But now hath God set the members every one of them in the body, as it hath pleased him.*
+
+*19 And if they were all one member, where were the body?*
+
+*20 But now are they many members, yet but one body.*
+
+*21 And the eye cannot say unto the hand, I have no need of thee: nor again the head to the feet, I have no need of you.*
+
+*22 Nay, much more those members of the body, which seem to be more feeble, are necessary:*
+
+*23 And those members of the body, which we think to be less honourable, upon these we bestow more abundant honour; and our uncomely parts have more abundant comeliness.*
+
+*24 For our comely parts have no need: but God hath tempered the body together, having given more abundant honour to that part which lacked.*
+
+*25 That there should be no schism in the body; but that the members should have the same care one for another.*
+
+*26 And whether one member suffer, all the members suffer with it; or one member be honoured, all the members rejoice with it.*
+
+*27 Now ye are the body of Christ, and members in particular.*
+
+*28 And God hath set some in the church, first apostles, secondarily prophets, thirdly teachers, after that miracles, then gifts of healings, helps, governments, diversities of tongues.*
+
+*29 Are all apostles? are all prophets? are all teachers? are all workers of miracles?*
+
+*30 Have all the gifts of healing? do all speak with tongues? do all interpret?*
+
+*31 But covet earnestly the best gifts: and yet shew I unto you a more excellent way.*
+
+<!-- post 12424 · 2023-10-31 06:46 · study -->
+
+**Numbers 4** sees God lay out the calling to each family of the Levites for ministering to the Tabernacle concerning the movement of the camp, the storage and transport of those holy things. And each man of each clan given a role, specific to them. With the whole given to the purpose of God. 
+
+Just as today, we who are saved are given different ways to be ministers of the faith and to edify the church, carrying that which is holy forth, into the world. 
+
+Never boast of your calling or think it beneath you. Never covet another's as better than yours. If you are apt to teach, teach well with longsuffering. Preachers, prophesying with truth to the edification of the church. Whatever you are called to contribute, do with cheer that the church may grow, and move out into the wilderness bringing others to Christ.
+
+<!-- post 12425 · 2023-10-31 06:52 · study -->
+
+The first few chapters of the book of Numbers can be difficult for some to get through. The names and repetitions and numbers given can cause even the most avid Bible enjoyer to have their eyes glaze over. But if you stick it out you will be rewarded, with fresh insights and knowledge and doctrine. Throughly furnished unto all good works. 
+
+I don't really care about the stats on posts, especially these Bible studies. I do them as much for myself as for others, but the sad truth is the view numbers on the posts with scripture are often way lower than my walls of text that follow, and significantly lower than the other random one off posts and memes. 
+
+Take the time to slow down and read the scripture posted here, and elsewhere. God's word is powerful, and you will be surprised what you take from it.
+
+## Numbers 5  ·  Primary study  ·  2023-11-01
+
+Source: https://t.me/HouseOfWews2/12430
+
+<!-- post 12430 · 2023-11-01 06:10 · scripture -->
+
+**Numbers 5**
+*And the Lord spake unto Moses, saying,*
+
+*2 Command the children of Israel, that they put out of the camp every leper, and every one that hath an issue, and whosoever is defiled by the dead:*
+
+*3 Both male and female shall ye put out, without the camp shall ye put them; that they defile not their camps, in the midst whereof I dwell.*
+
+*4 And the children of Israel did so, and put them out without the camp: as the Lord spake unto Moses, so did the children of Israel.*
+
+*5 And the Lord spake unto Moses, saying,*
+
+*6 Speak unto the children of Israel, When a man or woman shall commit any sin that men commit, to do a trespass against the Lord, and that person be guilty;*
+
+*7 Then they shall confess their sin which they have done: and he shall recompense his trespass with the principal thereof, and add unto it the fifth part thereof, and give it unto him against whom he hath trespassed.*
+
+*8 But if the man have no kinsman to recompense the trespass unto, let the trespass be recompensed unto the Lord, even to the priest; beside the ram of the atonement, whereby an atonement shall be made for him.*
+
+*9 And every offering of all the holy things of the children of Israel, which they bring unto the priest, shall be his.*
+
+*10 And every man's hallowed things shall be his: whatsoever any man giveth the priest, it shall be his.*
+
+*11 And the Lord spake unto Moses, saying,*
+
+*12 Speak unto the children of Israel, and say unto them, If any man's wife go aside, and commit a trespass against him,*
+
+*13 And a man lie with her carnally, and it be hid from the eyes of her husband, and be kept close, and she be defiled, and there be no witness against her, neither she be taken with the manner;*
+
+*14 And the spirit of jealousy come upon him, and he be jealous of his wife, and she be defiled: or if the spirit of jealousy come upon him, and he be jealous of his wife, and she be not defiled:*
+
+*15 Then shall the man bring his wife unto the priest, and he shall bring her offering for her, the tenth part of an ephah of barley meal; he shall pour no oil upon it, nor put frankincense thereon; for it is an offering of jealousy, an offering of memorial, bringing iniquity to remembrance.*
+
+*16 And the priest shall bring her near, and set her before the Lord:*
+
+*17 And the priest shall take holy water in an earthen vessel; and of the dust that is in the floor of the tabernacle the priest shall take, and put it into the water:*
+
+*18 And the priest shall set the woman before the Lord, and uncover the woman's head, and put the offering of memorial in her hands, which is the jealousy offering: and the priest shall have in his hand the bitter water that causeth the curse:*
+
+*19 And the priest shall charge her by an oath, and say unto the woman, If no man have lain with thee, and if thou hast not gone aside to uncleanness with another instead of thy husband, be thou free from this bitter water that causeth the curse:*
+
+*20 But if thou hast gone aside to another instead of thy husband, and if thou be defiled, and some man have lain with thee beside thine husband:*
+
+*21 Then the priest shall charge the woman with an oath of cursing, and the priest shall say unto the woman, The Lord make thee a curse and an oath among thy people, when the Lord doth make thy thigh to rot, and thy belly to swell;*
+
+*22 And this water that causeth the curse shall go into thy bowels, to make thy belly to swell, and thy thigh to rot: And the woman shall say, Amen, amen.*
+
+*23 And the priest shall write these curses in a book, and he shall blot them out with the bitter water:*
+
+*24 And he shall cause the woman to drink the bitter water that causeth the curse: and the water that causeth the curse shall enter into her, and become bitter.*
+
+*25 Then the priest shall take the jealousy offering out of the woman's hand, and shall wave the offering before the Lord, and offer it upon the altar:*
+
+*26 And the priest shall take an handful of the offering, even the memorial thereof, and burn it upon the altar, and afterward shall cause the woman to drink the water.*
+
+<!-- post 12431 · 2023-11-01 06:10 · scripture -->
+
+*27 And when he hath made her to drink the water, then it shall come to pass, that, if she be defiled, and have done trespass against her husband, that the water that causeth the curse shall enter into her, and become bitter, and her belly shall swell, and her thigh shall rot: and the woman shall be a curse among her people.*
+
+*28 And if the woman be not defiled, but be clean; then she shall be free, and shall conceive seed.*
+
+*29 This is the law of jealousies, when a wife goeth aside to another instead of her husband, and is defiled;*
+
+*30 Or when the spirit of jealousy cometh upon him, and he be jealous over his wife, and shall set the woman before the Lord, and the priest shall execute upon her all this law.*
+
+*31 Then shall the man be guiltless from iniquity, and this woman shall bear her iniquity.*
+
+<!-- post 12432 · 2023-11-01 06:35 · study -->
+
+Chapter 5 of Numbers is divided into three sections, highlighted by God restating or clarifying previous commands given in Exodus and Leviticus, and adding another, the law of jealousy. 
+
+First, God reiterates the law of the unclean, those with leprosy, issues which means blood issues, sores or boils, or other kinds of sickness that causes the body to release fluids, and those unclean having come in contact with the dead. That these people be put without the camp that their uncleanliness doesn't affect others. 
+
+We have already read these things and the timing of the exile. Leprosy being contagious and generally incurable, the person would be permanently removed, although a ritual with the Levites and a method for determining they be clean if healed was laid out in **Leviticus 14:1-9** (covered [here](https://t.me/HouseOfWews2/9168) and [here](https://t.me/HouseOfWews2/11251))
+
+Issues potentially carrying some kind of contagious disease, withdrawn until it has cleared or they are healed. We see a woman with blood issues her whole life healed by simply touching the hem of Jesus' cloak in **Luke 8:43-48**.
+
+The law about being unclean by the touching of a carcase was given against the Levites with general instructions and is mentioned here, with mose specific rules given in **Numbers 19:11**;
+*The one who touches the corpse of any person shall be unclean for seven days.*...With purification rituals attached. 
+
+Physically they are instructions to keep diseases from spreading. To stop outbreaks of illness that could spread from person to person. Spiritually, all are a picture of sin, and the exile similar to church discipline, the removal of leaven that can spoil a whole lump. 
+
+It also pictures the removal of our own sin in our lives, that can grow and metastasize until we are castaway in our backslidden state. Useless to the Lord. 
+
+You can also see how it pictures separation from the world, keeping the unclean from that which is holy, the temple of God within us, where the holy Spirit dwells; that *shall ye put out, without the camp shall ye put them; that they defile not their camps, in the midst whereof I dwell.*
+
+We should be mindful of these applications, understanding that the physical revelation of the Old Testament carries with them the spiritual applications for our lives as Christians today.
+
+<!-- post 12433 · 2023-11-01 06:39 · study -->
+
+I'm am always struck by the very nature of creation and the things we experience and witness, all serve as a parable to bring us understanding of the spiritual things of God. 
+
+Even death and disease serve as a method for God to teach His people about the nature of sin, or the need for cleansing in Christ. The world is the way it is for our benefit. God is revealed from Heaven that we may better understand Him. That it is all to His purpose. Amen
+
+<!-- post 12434 · 2023-11-01 06:48 · study -->
+
+Next is the law of recompense for trespasses against another. That when a man or woman commit any sin (which is transgression of the law), they trespass against the Lord, and if guilty, they must confess the trespass and pay the person it was against whatever it cost them in damages, plus 20% for their trouble. And if it could not be paid to the person, then paid to their kin. And without kin, brought to the priest and offered to the service of God that atonement may be made for them. 
+
+Note the recompense is due God, and for every sin. God demands payment plus the fifth, which when you consider the sins of man in a given day, if all were to be covered, even a righteous and godly man could be bankrupt by the end of a few days. 
+
+But the redemption is covered in Christ. God's recompense for our sin paid for by the blood of Jesus, a propitiation for our sin, atonement given that we may be justified in that reckoning. 
+
+The concept of the ledger and the debt incurred by sin is given that we may know we can never do enough to offset it. Our only hope is in Christ.
+
+<!-- post 12435 · 2023-11-01 07:03 · study -->
+
+**Numbers 5:9-10** touches on that which a man reserves for the priests, a holy gift given independently of a sin or trespass offering. For the holy service of God. Also called 'corban.'
+
+Given the context here, I think it was an understanding that the offered thing, money or wealth, or animal, which would be given the Levites at an appointed time or in death or when an animal reached age to be sacrificed, was set aside and belonged to the priest and not to be used as recompense. I could be wrong.
+
+But the concept of this being abused, appears in the Gospels. 
+
+**Mark 7:6-13**
+*He answered and said unto them, Well hath Esaias prophesied of you hypocrites, as it is written, This people honoureth me with their lips, but their heart is far from me. Howbeit in vain do they worship me, teaching for doctrines the commandments of men. For laying aside the commandment of God, ye hold the tradition of men, as the washing of pots and cups: and many other such like things ye do.*
+
+*And he said unto them, Full well ye reject the commandment of God, that ye may keep your own tradition. For Moses said, Honour thy father and thy mother; and, Whoso curseth father or mother, let him die the death: But ye say, If a man shall say to his father or mother, It is Corban, that is to say, a gift, by whatsoever thou mightest be profited by me; he shall be free. And ye suffer him no more to do ought for his father or his mother; Making the word of God of none effect through your tradition, which ye have delivered: and many such like things do ye.*
+
+People used the Corban to get out of honoring, that is financially supporting, their parents in their later years. The obligation nullified by the promise of wealth to the temple, and thus being exempt from paying for their needs. 
+
+The letter of the law being used to justify corruption, while ignoring the weightier things of the Spirit of the law. The intentions of God subverted by the Pharisses loopholes and reasoning, which Jesus calls out.
+
+<!-- post 12436 · 2023-11-01 07:12 · study -->
+
+The law of jealousy takes up the remaining half of **Numbers 5**, and I may need to split this study and address it tomorrow because there is a lot going on there and I don't think I can do it justice this morning.
+
+<!-- post 12443 · 2023-11-02 07:43 · scripture -->
+
+**Numbers 5**
+*11 And the Lord spake unto Moses, saying,*
+
+*12 Speak unto the children of Israel, and say unto them, If any man's wife go aside, and commit a trespass against him,*
+
+*13 And a man lie with her carnally, and it be hid from the eyes of her husband, and be kept close, and she be defiled, and there be no witness against her, neither she be taken with the manner;*
+
+*14 And the spirit of jealousy come upon him, and he be jealous of his wife, and she be defiled: or if the spirit of jealousy come upon him, and he be jealous of his wife, and she be not defiled:*
+
+*15 Then shall the man bring his wife unto the priest, and he shall bring her offering for her, the tenth part of an ephah of barley meal; he shall pour no oil upon it, nor put frankincense thereon; for it is an offering of jealousy, an offering of memorial, bringing iniquity to remembrance.*
+
+*16 And the priest shall bring her near, and set her before the Lord:*
+
+*17 And the priest shall take holy water in an earthen vessel; and of the dust that is in the floor of the tabernacle the priest shall take, and put it into the water:*
+
+*18 And the priest shall set the woman before the Lord, and uncover the woman's head, and put the offering of memorial in her hands, which is the jealousy offering: and the priest shall have in his hand the bitter water that causeth the curse:*
+
+*19 And the priest shall charge her by an oath, and say unto the woman, If no man have lain with thee, and if thou hast not gone aside to uncleanness with another instead of thy husband, be thou free from this bitter water that causeth the curse:*
+
+*20 But if thou hast gone aside to another instead of thy husband, and if thou be defiled, and some man have lain with thee beside thine husband:*
+
+*21 Then the priest shall charge the woman with an oath of cursing, and the priest shall say unto the woman, The Lord make thee a curse and an oath among thy people, when the Lord doth make thy thigh to rot, and thy belly to swell;*
+
+*22 And this water that causeth the curse shall go into thy bowels, to make thy belly to swell, and thy thigh to rot: And the woman shall say, Amen, amen.*
+
+*23 And the priest shall write these curses in a book, and he shall blot them out with the bitter water:*
+
+*24 And he shall cause the woman to drink the bitter water that causeth the curse: and the water that causeth the curse shall enter into her, and become bitter.*
+
+*25 Then the priest shall take the jealousy offering out of the woman's hand, and shall wave the offering before the Lord, and offer it upon the altar:*
+
+*26 And the priest shall take an handful of the offering, even the memorial thereof, and burn it upon the altar, and afterward shall cause the woman to drink the water.*
+
+*27 And when he hath made her to drink the water, then it shall come to pass, that, if she be defiled, and have done trespass against her husband, that the water that causeth the curse shall enter into her, and become bitter, and her belly shall swell, and her thigh shall rot: and the woman shall be a curse among her people.*
+
+*28 And if the woman be not defiled, but be clean; then she shall be free, and shall conceive seed.*
+
+*29 This is the law of jealousies, when a wife goeth aside to another instead of her husband, and is defiled;*
+
+*30 Or when the spirit of jealousy cometh upon him, and he be jealous over his wife, and shall set the woman before the Lord, and the priest shall execute upon her all this law.*
+
+*31 Then shall the man be guiltless from iniquity, and this woman shall bear her iniquity.*
+
+<!-- post 12444 · 2023-11-02 07:44 · study -->
+
+**Exodus 34:13-14**
+*But ye shall destroy their altars, break their images, and cut down their groves: For thou shalt worship no other god: for the Lord, whose name is Jealous, is a jealous God*...
+
+<!-- post 12445 · 2023-11-02 08:05 · study -->
+
+The law of jealousy, outlined here in chapter 5 of Numbers, refers to the Biblical meaning of holding that which is yours as precious and sacred. Loving that which is yours. 
+
+A name of God is Jealous, and in and of itself it is good and holy. And the infidelity of the Israelites with false gods and idols demonstrated that they did not regard God's jealousy, and instead held it in contempt.
+
+It is not the same as envy, which our modern vernacular has added to the word, and the negative connotations that come with it, which is covetousness. It also is not the obsessive overprotection of something that isn't rightly yours, like some use it. 
+
+But it is a godly emotion, which all of us can have. And like wrath and love itself, it is a good thing when appropriate, but that can be made toxic and lead us to sin because we are flesh. 
+
+ And so, in seeking to give man the perfect law, God instituted a way for a husband who may be jealous for his wife, to determine if that were warranted, and for women dealing with an obsessive husband to have protection. 
+
+God says that if a woman has a secret affair and is defiled by adultery, and the husband doesn't have any actual proof, but suspicion, he is to take her to the priest with an offering of plain barley. The priest will then prepare water set aside for the altar and dust of the ground of the Tabernacle, and mix it. Then he shall shave the woman's head, give her the barley to hold, with the water in his hand, have her swear an oath that she has been faithful. 
+
+But if she lies and is guilty the water will be bitter, causing her thighs to rot and her belly to swell. And the woman was to say amen, amen to this and drink. 
+
+The curse written down and blotted out with the water. It was left for God to judge. The priest offered the offering upon the altat. And the water was left to either curse or clear. 
+
+Verse 28 indicates to me that the lying unfaithful woman may have been left barren by the experience, as the cleared wife "shall conceive seed." 
+
+So we can see that by having an outlet for this gave both spouses a form of protection and an incentive to be both chaste in their dealings, never leading their husbands to jealousy, even falsely as a manipulation, and to keep husbands from inordinately accusing their wives. 
+
+The wife's head was shorn and uncovered regardless of the outcome. The shame of it would be for both to bear. The woman would become a curse and a warning to others. The man, a cuckold, or potentially one, bringing him shame as well. 
+
+Thus the perfect law of God always sought to discourage wrong doing, even as it punished those that did transgress the law.
+
+<!-- post 12446 · 2023-11-02 08:19 · study -->
+
+**1 Corinthians 11:1-16**
+ *Be ye followers of me, even as I also am of Christ. Now I praise you, brethren, that ye remember me in all things, and keep the ordinances, as I delivered them to you. But I would have you know, that the head of every man is Christ; and the head of the woman is the man; and the head of Christ is God. Every man praying or prophesying, having his head covered, dishonoureth his head. But every woman that prayeth or prophesieth with her head uncovered dishonoureth her head: for that is even all one as if she were shaven. For if the woman be not covered, let her also be shorn: but if it be a shame for a woman to be shorn or shaven, let her be covered.*
+
+*For a man indeed ought not to cover his head, forasmuch as he is the image and glory of God: but the woman is the glory of the man.* 
+
+*For the man is not of the woman: but the woman of the man. Neither was the man created for the woman; but the woman for the man. For this cause ought the woman to have power on her head because of the angels.*
+
+ *Nevertheless neither is the man without the woman, neither the woman without the man, in the Lord. For as the woman is of the man, even so is the man also by the woman; but all things of God.*
+
+*Judge in yourselves: is it comely that a woman pray unto God uncovered? Doth not even nature itself teach you, that, if a man have long hair, it is a shame unto him? But if a woman have long hair, it is a glory to her: for her hair is given her for a covering.* 
+
+*But if any man seem to be contentious, we have no such custom, neither the churches of God.*
+
+Just to be clear, the woman being uncovered means shorn, her hair cut short to the scalp with a razor. Some take it to mean a hat or veil, but the context here is a man with long hair in the church being a dishonorable thing, just as a woman shorn or shaven. 
+
+People get hung up in the slight diversion Paul takes to establish the order of "heads," the hierarchy that the woman is of the man and the man of Christ's, that we are all under God. The "head" in this regard is not the physical body part but the ruler. The higher power each submits to. And the "because of the angels" line seems like a non sequitur, or an instruction that if a woman doesn't put a hat on when praying the angels have a problem with it. It is a line that is open to some interpretation, but the larger point is hair length, and that can be discerned by the surrounding text. 
+
+My thoughts are that in giving the hierarchy, a woman is subject unto the man because of Eve and the temptation of Satan, an angel, and the curse put upon Eve in the garden. 
+
+**Genesis 3:16**
+*Unto the woman he said, I will greatly multiply thy sorrow and thy conception; in sorrow thou shalt bring forth children; and thy desire shall be to thy husband, and he shall rule over thee.*
+
+But that's just my opinion.
+
+<!-- post 12447 · 2023-11-02 08:22 · study -->
+
+Before leaving 1 Corinthians though, take note of the warning against bringing God to jealousy
+
+**1 Corinthians 11:21-22**
+*Ye cannot drink the cup of the Lord, and the cup of devils: ye cannot be partakers of the Lord's table, and of the table of devils. Do we provoke the Lord to jealousy? are we stronger than he?*
+
+
+Rather than hold jealousy in our hearts in a relationship, turning trust toxic, we should instead seek to not being God to jealousy by the things of this world. Especially by not separating ourselves from idolatry and the wicked beliefs of the unsaved who worship the created more than the Creator who is blessed forever amen.
+
+## Numbers 6  ·  Primary study  ·  2023-11-04
+
+Source: https://t.me/HouseOfWews2/12462
+
+<!-- post 12462 · 2023-11-04 06:20 · scripture -->
+
+**Numbers 6**
+*And the Lord spake unto Moses, saying,*
+
+*2 Speak unto the children of Israel, and say unto them, When either man or woman shall separate themselves to vow a vow of a Nazarite, to separate themselves unto the Lord:*
+
+*3 He shall separate himself from wine and strong drink, and shall drink no vinegar of wine, or vinegar of strong drink, neither shall he drink any liquor of grapes, nor eat moist grapes, or dried.*
+
+*4 All the days of his separation shall he eat nothing that is made of the vine tree, from the kernels even to the husk.*
+
+*5 All the days of the vow of his separation there shall no razor come upon his head: until the days be fulfilled, in the which he separateth himself unto the Lord, he shall be holy, and shall let the locks of the hair of his head grow.*
+
+*6 All the days that he separateth himself unto the Lord he shall come at no dead body.*
+
+*7 He shall not make himself unclean for his father, or for his mother, for his brother, or for his sister, when they die: because the consecration of his God is upon his head.*
+
+*8 All the days of his separation he is holy unto the Lord.*
+
+*9 And if any man die very suddenly by him, and he hath defiled the head of his consecration; then he shall shave his head in the day of his cleansing, on the seventh day shall he shave it.*
+
+*10 And on the eighth day he shall bring two turtles, or two young pigeons, to the priest, to the door of the tabernacle of the congregation:*
+
+*11 And the priest shall offer the one for a sin offering, and the other for a burnt offering, and make an atonement for him, for that he sinned by the dead, and shall hallow his head that same day.*
+
+*12 And he shall consecrate unto the Lord the days of his separation, and shall bring a lamb of the first year for a trespass offering: but the days that were before shall be lost, because his separation was defiled.*
+
+*13 And this is the law of the Nazarite, when the days of his separation are fulfilled: he shall be brought unto the door of the tabernacle of the congregation:*
+
+*14 And he shall offer his offering unto the Lord, one he lamb of the first year without blemish for a burnt offering, and one ewe lamb of the first year without blemish for a sin offering, and one ram without blemish for peace offerings,*
+
+*15 And a basket of unleavened bread, cakes of fine flour mingled with oil, and wafers of unleavened bread anointed with oil, and their meat offering, and their drink offerings.*
+
+*16 And the priest shall bring them before the Lord, and shall offer his sin offering, and his burnt offering:*
+
+*17 And he shall offer the ram for a sacrifice of peace offerings unto the Lord, with the basket of unleavened bread: the priest shall offer also his meat offering, and his drink offering.*
+
+*18 And the Nazarite shall shave the head of his separation at the door of the tabernacle of the congregation, and shall take the hair of the head of his separation, and put it in the fire which is under the sacrifice of the peace offerings.*
+
+*19 And the priest shall take the sodden shoulder of the ram, and one unleavened cake out of the basket, and one unleavened wafer, and shall put them upon the hands of the Nazarite, after the hair of his separation is shaven:*
+
+*20 And the priest shall wave them for a wave offering before the Lord: this is holy for the priest, with the wave breast and heave shoulder: and after that the Nazarite may drink wine.*
+
+*21 This is the law of the Nazarite who hath vowed, and of his offering unto the Lord for his separation, beside that that his hand shall get: according to the vow which he vowed, so he must do after the law of his separation.*
+
+*22 And the Lord spake unto Moses, saying,*
+
+*23 Speak unto Aaron and unto his sons, saying, On this wise ye shall bless the children of Israel, saying unto them,*
+
+*24 The Lord bless thee, and keep thee:*
+
+*25 The Lord make his face shine upon thee, and be gracious unto thee:*
+
+*26 The Lord lift up his countenance upon thee, and give thee peace.*
+
+*27 And they shall put my name upon the children of Israel, and I will bless them.*
+
+<!-- post 12463 · 2023-11-04 06:23 · study -->
+
+**Judges 13:5**
+*for, lo, thou shalt conceive, and bear a son; and no razor shall come on his head: for the child shall be a Nazarite unto God from the womb: and he shall begin to deliver Israel out of the hand of the Philistines.*
+
+**1 Samuel 1:11**
+*And she vowed a vow, and said, O LORD of hosts, if thou wilt indeed look on the affliction of thine handmaid, and remember me, and not forget thine handmaid, but wilt give unto thine handmaid a man child, then I will give him unto the LORD all the days of his life, and there shall no razor come upon his head.*
+
+**Luke 1:11-17**
+*And there appeared unto him an angel of the Lord standing on the right side of the altar of incense. And when Zacharias saw him, he was troubled, and fear fell upon him. But the angel said unto him, Fear not, Zacharias: for thy prayer is heard; and thy wife Elisabeth shall bear thee a son, and thou shalt call his name John. And thou shalt have joy and gladness; and many shall rejoice at his birth.*
+
+*For he shall be great in the sight of the Lord, and shall drink neither wine nor strong drink; and he shall be filled with the Holy Ghost, even from his mother's womb. And many of the children of Israel shall he turn to the Lord their God. And he shall go before him in the spirit and power of Elias, to turn the hearts of the fathers to the children, and the disobedient to the wisdom of the just; to make ready a people prepared for the Lord.*
+
+<!-- post 12464 · 2023-11-04 06:43 · study -->
+
+**Numbers 6** gives the vow of the Nazarite, the law of the vow and the consecration into service unto the Lord. 
+
+Not to be confused with Nazarene, someone from Nazareth as Christ Jesus was, the Nazarite was someone, male or female, who took a vow for a time to dedicate themselves to special service for the Lord. The rules laid out are simple, no wine or fermented wine, "strong drink," nor vinegar or wine vinegar, or grape or seed or skin. Nothing from the vine. (This is the clearest indication in scripture that "wine" means unfermented juice, as the distinction with wine vs strong drink or liquors indicates)
+
+They were not to take a razor to their hair, but let it grow out during the period of service. 
+
+They had to avoid being unclean, especially the uncleanliness of being near or touching the dead. 
+
+We get very little in scripture by way of the why someone would take the vow, the specific time it would last, if any, or the details of that service. 
+
+What we do know from the special cases of Samson, Samuel and John the Baptist, who were dedicated at infancy to this vow that the separation was made to be in great service to the people and to God. 
+
+Were the lifelong Nazarites long-haired or just simply not shorn with a razor? Did Sampson have to offer numerous sacrifices for the dead he had slain? Why was his gift great strength when Samuel and John were not? While they showed great fear of God and meekness, Samson was bold and given to women and wrath. I don't know.
+
+<!-- post 12465 · 2023-11-04 07:01 · study -->
+
+Vows were made for various purposes and reasons, just as the Nazarites. People vowed special offerings, gifts to the priests of money and items, fasting was often accomplished by vow. And vows to God should always be taken seriously and not haphazardly. 
+
+**Ecclesiastes 5:4-6**
+*When thou vowest a vow unto God, defer not to pay it; for he hath no pleasure in fools: pay that which thou hast vowed. Better is it that thou shouldest not vow, than that thou shouldest vow and not pay.*
+
+**Numbers 30:2**
+*If a man vow a vow unto the LORD, or swear an oath to bind his soul with a bond; he shall not break his word, he shall do according to all that proceedeth out of his mouth.*
+
+Even in the New Testament, there were some who swore vows, and the expectations of the grave nature of it was the same. 
+
+We see in **Acts 5** the vow made by Ananias and his wife to offer the price of a sold property to the church at Jerusalem, only to withhold a portion for themselves. 
+
+*But a certain man named Ananias, with Sapphira his wife, sold a possession, And kept back part of the price, his wife also being privy to it, and brought a certain part, and laid it at the apostles' feet. But Peter said, Ananias, why hath Satan filled thine heart to lie to the Holy Ghost, and to keep back part of the price of the land? Whiles it remained, was it not thine own? and after it was sold, was it not in thine own power? why hast thou conceived this thing in thine heart? thou hast not lied unto men, but unto God. And Ananias hearing these words fell down, and gave up the ghost: and great fear came on all them that heard these things. And the young men arose, wound him up, and carried him out, and buried him.*
+
+The Bible says 3 hours later, Sapphira was confronted with the same dereliction of their vow, and suffered the same fate as her husband. 
+
+The Bible shows Paul taking various vows, as in **Acts 18:18** which appears to be Nazarite;
+ 
+*And Paul after this tarried there yet a good while, and then took his leave of the brethren, and sailed thence into Syria, and with him Priscilla and Aquila; having shorn his head in Cenchrea: for he had a vow.*
+
+And Paul takes a vow in **Acts 21** at the behest of James, the brother of Jesus, that results in his arrest at Jerusalem. 
+
+As we see throughout Acts and the early epistles, Paul sought to bridge the gap between the believing Jews and Gentiles, with the Gospel of grace, because of his love for his brothers after the flesh, and his disentanglement from the practices of the Jews came over time, mainly through his opposition to Judaizers.
+
+<!-- post 12466 · 2023-11-04 07:12 · study -->
+
+But should we as New Testament Christians take vows? 
+
+**Matthew 5:33-37**
+*Again, ye have heard that it hath been said by them of old time, Thou shalt not forswear thyself, but shalt perform unto the Lord thine oaths: But I say unto you, Swear not at all; neither by heaven; for it is God's throne: Nor by the earth; for it is his footstool: neither by Jerusalem; for it is the city of the great King. Neither shalt thou swear by thy head, because thou canst not make one hair white or black. But let your communication be, Yea, yea; Nay, nay: for whatsoever is more than these cometh of evil.*
+
+**James 5:12**
+*But above all things, my brethren, swear not, neither by heaven, neither by the earth, neither by any other oath: but let your yea be yea; and your nay, nay; lest ye fall into condemnation.*
+
+We are already called to live consecrated lives in service of the Lord. Separated unto the Gospel. And as such, are supposed to be dedicated to the purposes of God without vow, but as His. 
+
+And in doing so, we see that the more important thing is that our testimony be without question or ill repute. Blameless. Honest in our dealings that when we say to someone the reason for our hope, we are a good witness for the Gospel that they might be saved. 
+
+And while times of fasting or dedication to a specific task for God may be something we do for specific favor, or time offered in service for thanksgiving, we should live separated lives daily, with joy and thanksgiving. 
+
+**Psalms 61:8** 
+*So will I sing praise unto thy name for ever, that I may daily perform my vows.*
+
+<!-- post 12467 · 2023-11-04 07:18 · study -->
+
+**Numbers 6**
+*22 And the Lord spake unto Moses, saying,*
+
+*23 Speak unto Aaron and unto his sons, saying, On this wise ye shall bless the children of Israel, saying unto them,*
+
+*24 The Lord bless thee, and keep thee:*
+
+*25 The Lord make his face shine upon thee, and be gracious unto thee:*
+
+*26 The Lord lift up his countenance upon thee, and give thee peace.*
+
+*27 And they shall put my name upon the children of Israel, and I will bless them.*
+
+I don't want this law of blessings to be lost in all the vow talk, because it is important. 
+
+The Lord instructs the priests to bless the children of Israel in His name, giving various examples. The purpose is to out His name upon them. That they understand where and Who the blessings are from. That it is His name upon them that brings these glad tidings. That they may understand and appreciate Him in their daily lives. 
+
+We should do the same, as a priesthood of believers, especially with our family, but everywhere in our lives. People need to be reminded that the blessings that come to them are of God.
+
+## Numbers 7  ·  Primary study  ·  2023-11-05
+
+Source: https://t.me/HouseOfWews2/12481
+
+<!-- post 12481 · 2023-11-05 07:16 · scripture -->
+
+**Numbers 7**
+*And it came to pass on the day that Moses had fully set up the tabernacle, and had anointed it, and sanctified it, and all the instruments thereof, both the altar and all the vessels thereof, and had anointed them, and sanctified them;*
+
+*2 That the princes of Israel, heads of the house of their fathers, who were the princes of the tribes, and were over them that were numbered, offered:*
+
+*3 And they brought their offering before the Lord, six covered wagons, and twelve oxen; a wagon for two of the princes, and for each one an ox: and they brought them before the tabernacle.*
+
+*4 And the Lord spake unto Moses, saying,*
+
+*5 Take it of them, that they may be to do the service of the tabernacle of the congregation; and thou shalt give them unto the Levites, to every man according to his service.*
+
+*6 And Moses took the wagons and the oxen, and gave them unto the Levites.*
+
+*7 Two wagons and four oxen he gave unto the sons of Gershon, according to their service:*
+
+*8 And four wagons and eight oxen he gave unto the sons of Merari, according unto their service, under the hand of Ithamar the son of Aaron the priest.*
+
+*9 But unto the sons of Kohath he gave none: because the service of the sanctuary belonging unto them was that they should bear upon their shoulders.*
+
+*10 And the princes offered for dedicating of the altar in the day that it was anointed, even the princes offered their offering before the altar.*
+
+*11 And the Lord said unto Moses, They shall offer their offering, each prince on his day, for the dedicating of the altar.*
+
+*12 And he that offered his offering the first day was Nahshon the son of Amminadab, of the tribe of Judah:*
+
+*13 And his offering was one silver charger, the weight thereof was an hundred and thirty shekels, one silver bowl of seventy shekels, after the shekel of the sanctuary; both of them were full of fine flour mingled with oil for a meat offering:*
+
+*14 One spoon of ten shekels of gold, full of incense:*
+
+*15 One young bullock, one ram, one lamb of the first year, for a burnt offering:*
+
+*16 One kid of the goats for a sin offering:*
+
+*17 And for a sacrifice of peace offerings, two oxen, five rams, five he goats, five lambs of the first year: this was the offering of Nahshon the son of Amminadab.*
+
+*18 On the second day Nethaneel the son of Zuar, prince of Issachar, did offer:*
+
+*19 He offered for his offering one silver charger, the weight whereof was an hundred and thirty shekels, one silver bowl of seventy shekels, after the shekel of the sanctuary; both of them full of fine flour mingled with oil for a meat offering:*
+
+*20 One spoon of gold of ten shekels, full of incense:*
+
+*21 One young bullock, one ram, one lamb of the first year, for a burnt offering:*
+
+*22 One kid of the goats for a sin offering:*
+
+*23 And for a sacrifice of peace offerings, two oxen, five rams, five he goats, five lambs of the first year: this was the offering of Nethaneel the son of Zuar.*
+
+*24 On the third day Eliab the son of Helon, prince of the children of Zebulun, did offer:*
+
+*25 His offering was one silver charger, the weight whereof was an hundred and thirty shekels, one silver bowl of seventy shekels, after the shekel of the sanctuary; both of them full of fine flour mingled with oil for a meat offering:*
+
+*26 One golden spoon of ten shekels, full of incense:*
+
+*27 One young bullock, one ram, one lamb of the first year, for a burnt offering:*
+
+*28 One kid of the goats for a sin offering:*
+
+*29 And for a sacrifice of peace offerings, two oxen, five rams, five he goats, five lambs of the first year: this was the offering of Eliab the son of Helon.*
+
+*30 On the fourth day Elizur the son of Shedeur, prince of the children of Reuben, did offer:*
+
+*31 His offering was one silver charger of the weight of an hundred and thirty shekels, one silver bowl of seventy shekels, after the shekel of the sanctuary; both of them full of fine flour mingled with oil for a meat offering:*
+
+*32 One golden spoon of ten shekels, full of incense:*
+
+*33 One young bullock, one ram, one lamb of the first year, for a burnt offering:*
+
+*34 One kid of the goats for a sin offering:*
+
+<!-- post 12482 · 2023-11-05 07:16 · scripture -->
+
+*35 And for a sacrifice of peace offerings, two oxen, five rams, five he goats, five lambs of the first year: this was the offering of Elizur the son of Shedeur.*
+
+*36 On the fifth day Shelumiel the son of Zurishaddai, prince of the children of Simeon, did offer:*
+
+*37 His offering was one silver charger, the weight whereof was an hundred and thirty shekels, one silver bowl of seventy shekels, after the shekel of the sanctuary; both of them full of fine flour mingled with oil for a meat offering:*
+
+*38 One golden spoon of ten shekels, full of incense:*
+
+*39 One young bullock, one ram, one lamb of the first year, for a burnt offering:*
+
+*40 One kid of the goats for a sin offering:*
+
+*41 And for a sacrifice of peace offerings, two oxen, five rams, five he goats, five lambs of the first year: this was the offering of Shelumiel the son of Zurishaddai.*
+
+*42 On the sixth day Eliasaph the son of Deuel, prince of the children of Gad, offered:*
+
+*43 His offering was one silver charger of the weight of an hundred and thirty shekels, a silver bowl of seventy shekels, after the shekel of the sanctuary; both of them full of fine flour mingled with oil for a meat offering:*
+
+*44 One golden spoon of ten shekels, full of incense:*
+
+*45 One young bullock, one ram, one lamb of the first year, for a burnt offering:*
+
+*46 One kid of the goats for a sin offering:*
+
+*47 And for a sacrifice of peace offerings, two oxen, five rams, five he goats, five lambs of the first year: this was the offering of Eliasaph the son of Deuel.*
+
+*48 On the seventh day Elishama the son of Ammihud, prince of the children of Ephraim, offered:*
+
+*49 His offering was one silver charger, the weight whereof was an hundred and thirty shekels, one silver bowl of seventy shekels, after the shekel of the sanctuary; both of them full of fine flour mingled with oil for a meat offering:*
+
+*50 One golden spoon of ten shekels, full of incense:*
+
+*51 One young bullock, one ram, one lamb of the first year, for a burnt offering:*
+
+*52 One kid of the goats for a sin offering:*
+
+*53 And for a sacrifice of peace offerings, two oxen, five rams, five he goats, five lambs of the first year: this was the offering of Elishama the son of Ammihud.*
+
+*54 On the eighth day offered Gamaliel the son of Pedahzur, prince of the children of Manasseh:*
+
+*55 His offering was one silver charger of the weight of an hundred and thirty shekels, one silver bowl of seventy shekels, after the shekel of the sanctuary; both of them full of fine flour mingled with oil for a meat offering:*
+
+*56 One golden spoon of ten shekels, full of incense:*
+
+*57 One young bullock, one ram, one lamb of the first year, for a burnt offering:*
+
+*58 One kid of the goats for a sin offering:*
+
+*59 And for a sacrifice of peace offerings, two oxen, five rams, five he goats, five lambs of the first year: this was the offering of Gamaliel the son of Pedahzur.*
+
+*60 On the ninth day Abidan the son of Gideoni, prince of the children of Benjamin, offered:*
+
+*61 His offering was one silver charger, the weight whereof was an hundred and thirty shekels, one silver bowl of seventy shekels, after the shekel of the sanctuary; both of them full of fine flour mingled with oil for a meat offering:*
+
+*62 One golden spoon of ten shekels, full of incense:*
+
+*63 One young bullock, one ram, one lamb of the first year, for a burnt offering:*
+
+*64 One kid of the goats for a sin offering:*
+
+*65 And for a sacrifice of peace offerings, two oxen, five rams, five he goats, five lambs of the first year: this was the offering of Abidan the son of Gideoni.*
+
+*66 On the tenth day Ahiezer the son of Ammishaddai, prince of the children of Dan, offered:*
+
+*67 His offering was one silver charger, the weight whereof was an hundred and thirty shekels, one silver bowl of seventy shekels, after the shekel of the sanctuary; both of them full of fine flour mingled with oil for a meat offering:*
+
+*68 One golden spoon of ten shekels, full of incense:*
+
+*69 One young bullock, one ram, one lamb of the first year, for a burnt offering:*
+
+*70 One kid of the goats for a sin offering:*
+
+<!-- post 12483 · 2023-11-05 07:16 · scripture -->
+
+*71 And for a sacrifice of peace offerings, two oxen, five rams, five he goats, five lambs of the first year: this was the offering of Ahiezer the son of Ammishaddai.*
+
+*72 On the eleventh day Pagiel the son of Ocran, prince of the children of Asher, offered:*
+
+*73 His offering was one silver charger, the weight whereof was an hundred and thirty shekels, one silver bowl of seventy shekels, after the shekel of the sanctuary; both of them full of fine flour mingled with oil for a meat offering:*
+
+*74 One golden spoon of ten shekels, full of incense:*
+
+*75 One young bullock, one ram, one lamb of the first year, for a burnt offering:*
+
+*76 One kid of the goats for a sin offering:*
+
+*77 And for a sacrifice of peace offerings, two oxen, five rams, five he goats, five lambs of the first year: this was the offering of Pagiel the son of Ocran.*
+
+*78 On the twelfth day Ahira the son of Enan, prince of the children of Naphtali, offered:*
+
+*79 His offering was one silver charger, the weight whereof was an hundred and thirty shekels, one silver bowl of seventy shekels, after the shekel of the sanctuary; both of them full of fine flour mingled with oil for a meat offering:*
+
+*80 One golden spoon of ten shekels, full of incense:*
+
+*81 One young bullock, one ram, one lamb of the first year, for a burnt offering:*
+
+*82 One kid of the goats for a sin offering:*
+
+*83 And for a sacrifice of peace offerings, two oxen, five rams, five he goats, five lambs of the first year: this was the offering of Ahira the son of Enan.*
+
+*84 This was the dedication of the altar, in the day when it was anointed, by the princes of Israel: twelve chargers of silver, twelve silver bowls, twelve spoons of gold:*
+
+*85 Each charger of silver weighing an hundred and thirty shekels, each bowl seventy: all the silver vessels weighed two thousand and four hundred shekels, after the shekel of the sanctuary:*
+
+*86 The golden spoons were twelve, full of incense, weighing ten shekels apiece, after the shekel of the sanctuary: all the gold of the spoons was an hundred and twenty shekels.*
+
+*87 All the oxen for the burnt offering were twelve bullocks, the rams twelve, the lambs of the first year twelve, with their meat offering: and the kids of the goats for sin offering twelve.*
+
+*88 And all the oxen for the sacrifice of the peace offerings were twenty and four bullocks, the rams sixty, the he goats sixty, the lambs of the first year sixty. This was the dedication of the altar, after that it was anointed.*
+
+*89 And when Moses was gone into the tabernacle of the congregation to speak with him, then he heard the voice of one speaking unto him from off the mercy seat that was upon the ark of testimony, from between the two cherubims: and he spake unto him.*
+
+<!-- post 12484 · 2023-11-05 07:23 · study -->
+
+This is tough. It is the same offering given 12 times, and described in detail each time, with names that are difficult to pronounce. 
+
+*His offering was one silver charger, the weight whereof was an hundred and thirty shekels, one silver bowl of seventy shekels, after the shekel of the sanctuary; both of them full of fine flour mingled with oil for a meat offering: One golden spoon of ten shekels, full of incense: One young bullock, one ram, one lamb of the first year, for a burnt offering: One kid of the goats for a sin offering: And for a sacrifice of peace offerings, two oxen, five rams, five he goats, five lambs of the first year: this was the offering*...
+
+Again and again. 
+
+**Numbers 7** has derailed more "read the Bible in a year" plans of young and old for centuries. I confess I really struggle with this type of verse. But there's a cliff hanger payoff at the end. 
+
+To touch on this, we see the distribution of oxen for the purpose of carrying forth the Tabernacle, given to the camps of the priests. Then the consecration of the Tabernacle by the gifts and sacrifices, given of each tribe. 
+
+A burnt offering, a sin offering, a peace offering. Precious vessels of silver and gold. Fine flour and incense, mingled with oil. The pictures of the sacrifice and life of Christ Jesus.
+
+<!-- post 12488 · 2023-11-05 13:49 · study · has photo -->
+
+RETVRN!
+
+## Numbers 8  ·  Primary study  ·  2023-11-06
+
+Source: https://t.me/HouseOfWews2/12496
+
+<!-- post 12496 · 2023-11-06 04:50 · scripture -->
+
+**Numbers 8**
+*And the Lord spake unto Moses, saying,*
+
+*2 Speak unto Aaron and say unto him, When thou lightest the lamps, the seven lamps shall give light over against the candlestick.*
+
+*3 And Aaron did so; he lighted the lamps thereof over against the candlestick, as the Lord commanded Moses.*
+
+*4 And this work of the candlestick was of beaten gold, unto the shaft thereof, unto the flowers thereof, was beaten work: according unto the pattern which the Lord had shewed Moses, so he made the candlestick.*
+
+*5 And the Lord spake unto Moses, saying,*
+
+*6 Take the Levites from among the children of Israel, and cleanse them.*
+
+*7 And thus shalt thou do unto them, to cleanse them: Sprinkle water of purifying upon them, and let them shave all their flesh, and let them wash their clothes, and so make themselves clean.*
+
+*8 Then let them take a young bullock with his meat offering, even fine flour mingled with oil, and another young bullock shalt thou take for a sin offering.*
+
+*9 And thou shalt bring the Levites before the tabernacle of the congregation: and thou shalt gather the whole assembly of the children of Israel together:*
+
+*10 And thou shalt bring the Levites before the Lord: and the children of Israel shall put their hands upon the Levites:*
+
+*11 And Aaron shall offer the Levites before the Lord for an offering of the children of Israel, that they may execute the service of the Lord.*
+
+*12 And the Levites shall lay their hands upon the heads of the bullocks: and thou shalt offer the one for a sin offering, and the other for a burnt offering, unto the Lord, to make an atonement for the Levites.*
+
+*13 And thou shalt set the Levites before Aaron, and before his sons, and offer them for an offering unto the Lord.*
+
+*14 Thus shalt thou separate the Levites from among the children of Israel: and the Levites shall be mine.*
+
+*15 And after that shall the Levites go in to do the service of the tabernacle of the congregation: and thou shalt cleanse them, and offer them for an offering.*
+
+*16 For they are wholly given unto me from among the children of Israel; instead of such as open every womb, even instead of the firstborn of all the children of Israel, have I taken them unto me.*
+
+*17 For all the firstborn of the children of Israel are mine, both man and beast: on the day that I smote every firstborn in the land of Egypt I sanctified them for myself.*
+
+*18 And I have taken the Levites for all the firstborn of the children of Israel.*
+
+*19 And I have given the Levites as a gift to Aaron and to his sons from among the children of Israel, to do the service of the children of Israel in the tabernacle of the congregation, and to make an atonement for the children of Israel: that there be no plague among the children of Israel, when the children of Israel come nigh unto the sanctuary.*
+
+*20 And Moses, and Aaron, and all the congregation of the children of Israel, did to the Levites according unto all that the Lord commanded Moses concerning the Levites, so did the children of Israel unto them.*
+
+*21 And the Levites were purified, and they washed their clothes; and Aaron offered them as an offering before the Lord; and Aaron made an atonement for them to cleanse them.*
+
+*22 And after that went the Levites in to do their service in the tabernacle of the congregation before Aaron, and before his sons: as the Lord had commanded Moses concerning the Levites, so did they unto them.*
+
+*23 And the Lord spake unto Moses, saying,*
+
+*24 This is it that belongeth unto the Levites: from twenty and five years old and upward they shall go in to wait upon the service of the tabernacle of the congregation:*
+
+*25 And from the age of fifty years they shall cease waiting upon the service thereof, and shall serve no more:*
+
+*26 But shall minister with their brethren in the tabernacle of the congregation, to keep the charge, and shall do no service. Thus shalt thou do unto the Levites touching their charge.*
+
+<!-- post 12497 · 2023-11-06 04:54 · study -->
+
+And so the detailed separation of the Levites unto the service of God continues, and the offerings of sanctification and atonement given. A shadow of what is to come. 
+
+**Hebrews 9**
+*Then verily the first covenant had also ordinances of divine service, and a worldly sanctuary.*
+
+*2 For there was a tabernacle made; the first, wherein was the candlestick, and the table, and the shewbread; which is called the sanctuary.*
+
+*3 And after the second veil, the tabernacle which is called the Holiest of all;*
+
+*4 Which had the golden censer, and the ark of the covenant overlaid round about with gold, wherein was the golden pot that had manna, and Aaron's rod that budded, and the tables of the covenant;*
+
+*5 And over it the cherubims of glory shadowing the mercyseat; of which we cannot now speak particularly.*
+
+*6 Now when these things were thus ordained, the priests went always into the first tabernacle, accomplishing the service of God.*
+
+*7 But into the second went the high priest alone once every year, not without blood, which he offered for himself, and for the errors of the people:*
+
+*8 The Holy Ghost this signifying, that the way into the holiest of all was not yet made manifest, while as the first tabernacle was yet standing:*
+
+*9 Which was a figure for the time then present, in which were offered both gifts and sacrifices, that could not make him that did the service perfect, as pertaining to the conscience;*
+
+*10 Which stood only in meats and drinks, and divers washings, and carnal ordinances, imposed on them until the time of reformation.*
+
+*11 But Christ being come an high priest of good things to come, by a greater and more perfect tabernacle, not made with hands, that is to say, not of this building;*
+
+*12 Neither by the blood of goats and calves, but by his own blood he entered in once into the holy place, having obtained eternal redemption for us.*
+
+*13 For if the blood of bulls and of goats, and the ashes of an heifer sprinkling the unclean, sanctifieth to the purifying of the flesh:*
+
+*14 How much more shall the blood of Christ, who through the eternal Spirit offered himself without spot to God, purge your conscience from dead works to serve the living God?*
+
+*15 And for this cause he is the mediator of the new testament, that by means of death, for the redemption of the transgressions that were under the first testament, they which are called might receive the promise of eternal inheritance.*
+
+*16 For where a testament is, there must also of necessity be the death of the testator.*
+
+*17 For a testament is of force after men are dead: otherwise it is of no strength at all while the testator liveth.*
+
+*18 Whereupon neither the first testament was dedicated without blood.*
+
+*19 For when Moses had spoken every precept to all the people according to the law, he took the blood of calves and of goats, with water, and scarlet wool, and hyssop, and sprinkled both the book, and all the people,*
+
+*20 Saying, This is the blood of the testament which God hath enjoined unto you.*
+
+*21 Moreover he sprinkled with blood both the tabernacle, and all the vessels of the ministry.*
+
+*22 And almost all things are by the law purged with blood; and without shedding of blood is no remission.*
+
+*23 It was therefore necessary that the patterns of things in the heavens should be purified with these; but the heavenly things themselves with better sacrifices than these.*
+
+*24 For Christ is not entered into the holy places made with hands, which are the figures of the true; but into heaven itself, now to appear in the presence of God for us:*
+
+*25 Nor yet that he should offer himself often, as the high priest entereth into the holy place every year with blood of others;*
+
+*26 For then must he often have suffered since the foundation of the world: but now once in the end of the world hath he appeared to put away sin by the sacrifice of himself.*
+
+*27 And as it is appointed unto men once to die, but after this the judgment:*
+
+*28 So Christ was once offered to bear the sins of many; and unto them that look for him shall he appear the second time without sin unto salvation.*
+
+## Numbers 9  ·  Primary study  ·  2023-11-07
+
+Source: https://t.me/HouseOfWews2/12501
+
+<!-- post 12501 · 2023-11-07 05:45 · scripture -->
+
+**Numbers 9**
+*And the Lord spake unto Moses in the wilderness of Sinai, in the first month of the second year after they were come out of the land of Egypt, saying,*
+
+*2 Let the children of Israel also keep the passover at his appointed season.*
+
+*3 In the fourteenth day of this month, at even, ye shall keep it in his appointed season: according to all the rites of it, and according to all the ceremonies thereof, shall ye keep it.*
+
+*4 And Moses spake unto the children of Israel, that they should keep the passover.*
+
+*5 And they kept the passover on the fourteenth day of the first month at even in the wilderness of Sinai: according to all that the Lord commanded Moses, so did the children of Israel.*
+
+*6 And there were certain men, who were defiled by the dead body of a man, that they could not keep the passover on that day: and they came before Moses and before Aaron on that day:*
+
+*7 And those men said unto him, We are defiled by the dead body of a man: wherefore are we kept back, that we may not offer an offering of the Lord in his appointed season among the children of Israel?*
+
+*8 And Moses said unto them, Stand still, and I will hear what the Lord will command concerning you.*
+
+*9 And the Lord spake unto Moses, saying,*
+
+*10 Speak unto the children of Israel, saying, If any man of you or of your posterity shall be unclean by reason of a dead body, or be in a journey afar off, yet he shall keep the passover unto the Lord.*
+
+*11 The fourteenth day of the second month at even they shall keep it, and eat it with unleavened bread and bitter herbs.*
+
+*12 They shall leave none of it unto the morning, nor break any bone of it: according to all the ordinances of the passover they shall keep it.*
+
+*13 But the man that is clean, and is not in a journey, and forbeareth to keep the passover, even the same soul shall be cut off from among his people: because he brought not the offering of the Lord in his appointed season, that man shall bear his sin.*
+
+*14 And if a stranger shall sojourn among you, and will keep the passover unto the Lord; according to the ordinance of the passover, and according to the manner thereof, so shall he do: ye shall have one ordinance, both for the stranger, and for him that was born in the land.*
+
+*15 And on the day that the tabernacle was reared up the cloud covered the tabernacle, namely, the tent of the testimony: and at even there was upon the tabernacle as it were the appearance of fire, until the morning.*
+
+*16 So it was alway: the cloud covered it by day, and the appearance of fire by night.*
+
+*17 And when the cloud was taken up from the tabernacle, then after that the children of Israel journeyed: and in the place where the cloud abode, there the children of Israel pitched their tents.*
+
+*18 At the commandment of the Lord the children of Israel journeyed, and at the commandment of the Lord they pitched: as long as the cloud abode upon the tabernacle they rested in their tents.*
+
+*19 And when the cloud tarried long upon the tabernacle many days, then the children of Israel kept the charge of the Lord, and journeyed not.*
+
+*20 And so it was, when the cloud was a few days upon the tabernacle; according to the commandment of the Lord they abode in their tents, and according to the commandment of the Lord they journeyed.*
+
+*21 And so it was, when the cloud abode from even unto the morning, and that the cloud was taken up in the morning, then they journeyed: whether it was by day or by night that the cloud was taken up, they journeyed.*
+
+*22 Or whether it were two days, or a month, or a year, that the cloud tarried upon the tabernacle, remaining thereon, the children of Israel abode in their tents, and journeyed not: but when it was taken up, they journeyed.*
+
+*23 At the commandment of the Lord they rested in the tents, and at the commandment of the Lord they journeyed: they kept the charge of the Lord, at the commandment of the Lord by the hand of Moses.*
+
+<!-- post 12502 · 2023-11-07 06:03 · study -->
+
+We are in **Numbers 9**, and we see this the 3rd Passover, held in the wilderness and the Lord tells Moses not to forget the ordinance that He has established, using the Passover in Egypt and the physical salvation of Israel as a picture of Christ and the individual salvation of man. I've done larger studies on the parallels and processes [before](https://t.me/HouseOfWews2/9752). But it is always good to note that it was a reminder of Christ to come, just as the Lord's supper is a reminder of Christ for us now. 
+
+Here, God provides Moses with a few guidelines given circumstance. That the ceremonially unclean and those sojourning participate in Passover just the same, that strangers among them that wish to are invited, and those that don't participate are cut off and bear their own sin. 
+
+The parallels are pretty clear as to how this corresponds to individual salvation in Jesus. Anyone. Even the unclean. Even those afar off from God, get to participate in the sacrifice and the blood. Even the stranger among them. The sinner, the worldly, the Gentile...all are invited to take part in the salvation by the blood, in the faith of Jesus Christ. 
+
+And those who don't are cut off and made to pay for their sin. 
+
+It is that simple. People try to overcomplicate salvation because they want to make it about themselves or to make it a sensual experience that they can "feel," or see. Because they lack faith, which is the evidence of things unseen. 
+
+And then we are called to follow Him. 
+
+Just as the movement of the Tabernacle and the camps was dictated by the movement of God upon them, the pillars of smoke and fire. At the commandment of the Lord they moved. At His command they rested. 
+
+And so it is to be in our lives, that after salvation we follow the Lord.
+
+<!-- post 12503 · 2023-11-07 06:09 · study -->
+
+It is right and good to follow the Lord, moving to His commandments. And accepting His will for our lives. 
+
+But again, people conflate or confuse the order of things. The salvation out of sin of Egypt had already taken place, with the shedding of blood of the Passover lamb. The baptism of the waters of the sea followed. The understanding of the law given. The sanctification of the people. The continuous atonement with burnt offerings and blood of the sacrifices. The command to follow where God takes us after that. Being led into the promised land. 
+
+The order of things is given that there can be no misunderstanding. God is not the author of confusion. People want to add and mix things based on their own ideas, not the word of God.
+
+## Numbers 10  ·  Primary study  ·  2023-11-08
+
+Source: https://t.me/HouseOfWews2/12507
+
+<!-- post 12507 · 2023-11-08 05:27 · scripture -->
+
+**Numbers 10**
+*And the Lord spake unto Moses, saying,*
+
+*2 Make thee two trumpets of silver; of a whole piece shalt thou make them: that thou mayest use them for the calling of the assembly, and for the journeying of the camps.*
+
+*3 And when they shall blow with them, all the assembly shall assemble themselves to thee at the door of the tabernacle of the congregation.*
+
+*4 And if they blow but with one trumpet, then the princes, which are heads of the thousands of Israel, shall gather themselves unto thee.*
+
+*5 When ye blow an alarm, then the camps that lie on the east parts shall go forward.*
+
+*6 When ye blow an alarm the second time, then the camps that lie on the south side shall take their journey: they shall blow an alarm for their journeys.*
+
+*7 But when the congregation is to be gathered together, ye shall blow, but ye shall not sound an alarm.*
+
+*8 And the sons of Aaron, the priests, shall blow with the trumpets; and they shall be to you for an ordinance for ever throughout your generations.*
+
+*9 And if ye go to war in your land against the enemy that oppresseth you, then ye shall blow an alarm with the trumpets; and ye shall be remembered before the Lord your God, and ye shall be saved from your enemies.*
+
+*10 Also in the day of your gladness, and in your solemn days, and in the beginnings of your months, ye shall blow with the trumpets over your burnt offerings, and over the sacrifices of your peace offerings; that they may be to you for a memorial before your God: I am the Lord your God.*
+
+*11 And it came to pass on the twentieth day of the second month, in the second year, that the cloud was taken up from off the tabernacle of the testimony.*
+
+*12 And the children of Israel took their journeys out of the wilderness of Sinai; and the cloud rested in the wilderness of Paran.*
+
+*13 And they first took their journey according to the commandment of the Lord by the hand of Moses.*
+
+*14 In the first place went the standard of the camp of the children of Judah according to their armies: and over his host was Nahshon the son of Amminadab.*
+
+*15 And over the host of the tribe of the children of Issachar was Nethaneel the son of Zuar.*
+
+*16 And over the host of the tribe of the children of Zebulun was Eliab the son of Helon.*
+
+*17 And the tabernacle was taken down; and the sons of Gershon and the sons of Merari set forward, bearing the tabernacle.*
+
+*18 And the standard of the camp of Reuben set forward according to their armies: and over his host was Elizur the son of Shedeur.*
+
+*19 And over the host of the tribe of the children of Simeon was Shelumiel the son of Zurishaddai.*
+
+*20 And over the host of the tribe of the children of Gad was Eliasaph the son of Deuel.*
+
+*21 And the Kohathites set forward, bearing the sanctuary: and the other did set up the tabernacle against they came.*
+
+*22 And the standard of the camp of the children of Ephraim set forward according to their armies: and over his host was Elishama the son of Ammihud.*
+
+*23 And over the host of the tribe of the children of Manasseh was Gamaliel the son of Pedahzur.*
+
+*24 And over the host of the tribe of the children of Benjamin was Abidan the son of Gideoni.*
+
+*25 And the standard of the camp of the children of Dan set forward, which was the rereward of all the camps throughout their hosts: and over his host was Ahiezer the son of Ammishaddai.*
+
+*26 And over the host of the tribe of the children of Asher was Pagiel the son of Ocran.*
+
+*27 And over the host of the tribe of the children of Naphtali was Ahira the son of Enan.*
+
+*28 Thus were the journeyings of the children of Israel according to their armies, when they set forward.*
+
+*29 And Moses said unto Hobab, the son of Raguel the Midianite, Moses' father in law, We are journeying unto the place of which the Lord said, I will give it you: come thou with us, and we will do thee good: for the Lord hath spoken good concerning Israel.*
+
+*30 And he said unto him, I will not go; but I will depart to mine own land, and to my kindred.*
+
+<!-- post 12508 · 2023-11-08 05:27 · scripture -->
+
+*31 And he said, Leave us not, I pray thee; forasmuch as thou knowest how we are to encamp in the wilderness, and thou mayest be to us instead of eyes.*
+
+*32 And it shall be, if thou go with us, yea, it shall be, that what goodness the Lord shall do unto us, the same will we do unto thee.*
+
+*33 And they departed from the mount of the Lord three days' journey: and the ark of the covenant of the Lord went before them in the three days' journey, to search out a resting place for them.*
+
+*34 And the cloud of the Lord was upon them by day, when they went out of the camp.*
+
+*35 And it came to pass, when the ark set forward, that Moses said, Rise up, Lord, and let thine enemies be scattered; and let them that hate thee flee before thee.*
+
+*36 And when it rested, he said, Return, O Lord, unto the many thousands of Israel.*
+
+<!-- post 12509 · 2023-11-08 05:31 · study -->
+
+**Isaiah 51:1**
+*Cry aloud, spare not, lift up thy voice like a trumpet, and shew my people their transgression, and the house of Jacob their sins.*
+
+
+**1 Corinthians 15:52**
+*In a moment, in the twinkling of an eye, at the last trump: for the trumpet shall sound, and the dead shall be raised incorruptible, and we shall be changed.”*
+
+**Revelation 11:15** 
+*And the seventh angel sounded; and there were great voices in heaven, saying, The kingdoms of this world are become the kingdoms of our Lord, and of his Christ; and he shall reign for ever and ever.*
+
+<!-- post 12510 · 2023-11-08 05:34 · study -->
+
+A trumpet to gather the Israel of God.
+A trumpet to move them. A trumpet to sound the alarm. A trumpet to go to war. 
+
+There will be a trumpet. He will return with a shout and gather the elect, the dead in Christ and they that are alive and remain. Changed into incorruptible bodies, redeemed as promised of God. 
+
+And the nations of the earth and the kingdoms of this world will be given unto Him. Amen
+
+## Numbers 11  ·  Primary study  ·  2023-11-09
+
+Source: https://t.me/HouseOfWews2/12517
+
+<!-- post 12517 · 2023-11-09 05:41 · scripture -->
+
+**Numbers 11**
+*And when the people complained, it displeased the Lord: and the Lord heard it; and his anger was kindled; and the fire of the Lord burnt among them, and consumed them that were in the uttermost parts of the camp.*
+
+*2 And the people cried unto Moses; and when Moses prayed unto the Lord, the fire was quenched.*
+
+*3 And he called the name of the place Taberah: because the fire of the Lord burnt among them.*
+
+*4 And the mixt multitude that was among them fell a lusting: and the children of Israel also wept again, and said, Who shall give us flesh to eat?*
+
+*5 We remember the fish, which we did eat in Egypt freely; the cucumbers, and the melons, and the leeks, and the onions, and the garlick:*
+
+*6 But now our soul is dried away: there is nothing at all, beside this manna, before our eyes.*
+
+*7 And the manna was as coriander seed, and the colour thereof as the colour of bdellium.*
+
+*8 And the people went about, and gathered it, and ground it in mills, or beat it in a mortar, and baked it in pans, and made cakes of it: and the taste of it was as the taste of fresh oil.*
+
+*9 And when the dew fell upon the camp in the night, the manna fell upon it.*
+
+*10 Then Moses heard the people weep throughout their families, every man in the door of his tent: and the anger of the Lord was kindled greatly; Moses also was displeased.*
+
+*11 And Moses said unto the Lord, Wherefore hast thou afflicted thy servant? and wherefore have I not found favour in thy sight, that thou layest the burden of all this people upon me?*
+
+*12 Have I conceived all this people? have I begotten them, that thou shouldest say unto me, Carry them in thy bosom, as a nursing father beareth the sucking child, unto the land which thou swarest unto their fathers?*
+
+*13 Whence should I have flesh to give unto all this people? for they weep unto me, saying, Give us flesh, that we may eat.*
+
+*14 I am not able to bear all this people alone, because it is too heavy for me.*
+
+*15 And if thou deal thus with me, kill me, I pray thee, out of hand, if I have found favour in thy sight; and let me not see my wretchedness.*
+
+*16 And the Lord said unto Moses, Gather unto me seventy men of the elders of Israel, whom thou knowest to be the elders of the people, and officers over them; and bring them unto the tabernacle of the congregation, that they may stand there with thee.*
+
+*17 And I will come down and talk with thee there: and I will take of the spirit which is upon thee, and will put it upon them; and they shall bear the burden of the people with thee, that thou bear it not thyself alone.*
+
+*18 And say thou unto the people, Sanctify yourselves against to morrow, and ye shall eat flesh: for ye have wept in the ears of the Lord, saying, Who shall give us flesh to eat? for it was well with us in Egypt: therefore the Lord will give you flesh, and ye shall eat.*
+
+*19 Ye shall not eat one day, nor two days, nor five days, neither ten days, nor twenty days;*
+
+*20 But even a whole month, until it come out at your nostrils, and it be loathsome unto you: because that ye have despised the Lord which is among you, and have wept before him, saying, Why came we forth out of Egypt?*
+
+*21 And Moses said, The people, among whom I am, are six hundred thousand footmen; and thou hast said, I will give them flesh, that they may eat a whole month.*
+
+*22 Shall the flocks and the herds be slain for them, to suffice them? or shall all the fish of the sea be gathered together for them, to suffice them?*
+
+*23 And the Lord said unto Moses, Is the Lord'S hand waxed short? thou shalt see now whether my word shall come to pass unto thee or not.*
+
+*24 And Moses went out, and told the people the words of the Lord, and gathered the seventy men of the elders of the people, and set them round about the tabernacle.*
+
+*25 And the Lord came down in a cloud, and spake unto him, and took of the spirit that was upon him, and gave it unto the seventy elders: and it came to pass, that, when the spirit rested upon them, they prophesied, and did not cease.*
+
+<!-- post 12518 · 2023-11-09 05:41 · scripture -->
+
+*26 But there remained two of the men in the camp, the name of the one was Eldad, and the name of the other Medad: and the spirit rested upon them; and they were of them that were written, but went not out unto the tabernacle: and they prophesied in the camp.*
+
+*27 And there ran a young man, and told Moses, and said, Eldad and Medad do prophesy in the camp.*
+
+*28 And Joshua the son of Nun, the servant of Moses, one of his young men, answered and said, My lord Moses, forbid them.*
+
+*29 And Moses said unto him, Enviest thou for my sake? would God that all the Lord'S people were prophets, and that the Lord would put his spirit upon them!*
+
+*30 And Moses gat him into the camp, he and the elders of Israel.*
+
+*31 And there went forth a wind from the Lord, and brought quails from the sea, and let them fall by the camp, as it were a day's journey on this side, and as it were a day's journey on the other side, round about the camp, and as it were two cubits high upon the face of the earth.*
+
+*32 And the people stood up all that day, and all that night, and all the next day, and they gathered the quails: he that gathered least gathered ten homers: and they spread them all abroad for themselves round about the camp.*
+
+*33 And while the flesh was yet between their teeth, ere it was chewed, the wrath of the Lord was kindled against the people, and the Lord smote the people with a very great plague.*
+
+*34 And he called the name of that place Kibrothhattaavah: because there they buried the people that lusted.*
+
+*35 And the people journeyed from Kibrothhattaavah unto Hazeroth; and abode at Hazeroth.*
+
+<!-- post 12519 · 2023-11-09 05:57 · study -->
+
+...*would God that all the Lord'S people were prophets, and that the Lord would put his spirit upon them!*
+
+Amen. 
+
+With **Numbers 11**, we enter into the more narrative-driven portion of the book. Less difficult to get through, no less full of doctrine. 
+
+Here we see the children of Israel as they are typically shown throughout the exodus and wandering in the wilderness, complaining and in disfavor of the Lord. 
+
+They and the mixed multitudes among them, begin to lust. To put their carnal desires above their love of God. To look back to Egypt as better than their miraculous salvation. To miss the life they had and the things of the world they fared on, and resenting the heavenly bread which God provided. 
+
+The like picture of our salvation today, the longing for the old ways of our sinful lives. Nostalgia for the wickedness of the world and the various temptations available in it. 
+
+The separation and sanctified life of the Christian can often feel like this. Working, reading scripture, praying, church...a routine that sees little variance, and if we aren't careful, can become stale and boring. 
+
+When I first read through Exodus and Numbers, as a younger babe in Christ, I would be angry at the Israelites and look down on them, saying "no wonder God is so angry with them. He's providing them food from heaven and they still complain!" Now, as a more mature Christian, I feel more sympathetic, and see how my own walk with God has likely angered Him, as I have gone after lusts of the world. It has strengthened my walk to see myself in them, and made me more understanding for those struggling. 
+
+Give us this day our daily bread...live by every word of God. Be hungry for the manna. Don't be distracted from the word with the temptations of the worldly. Appreciate that God has inspired and preserved His word for all generations. The privilege we have to study it day and night. 
+
+And that we are called to prophesy, preaching His word to every creature. That the Spirit is upon our hearts. It isn't just manna to feed us, but to feed others.
+
+<!-- post 12520 · 2023-11-09 06:09 · study -->
+
+In that spirit, we can appreciate God's chastisement of the Hebrews, giving them the meat they crave, in abundance. 
+
+*Ye shall not eat one day, nor two days, nor five days, neither ten days, nor twenty days; But even a whole month, until it come out at your nostrils, and it be loathsome unto you: because that ye have despised the Lord which is among you, and have wept before him, saying, Why came we forth out of Egypt?*
+
+If you have experienced this, where you backslide and fall away from walking in the spirit, longing for the old life you left behind when you were born again, and starve the new man to feed the old, you've witnessed this same thing. 
+
+Phonecalls or texts from an old drinking buddy. A woman at work suddenly seems interested in you. The gang from high school wants to get together. The dealer you used to score from you run into unexpectedly. It is more than a test. It's often a lesson of excess in the thing you were lusting after, and you find if you should stumble back into sin, that it doesn't hold the same appeal. That you can't enjoy it. Even if you run greedily after whatever it is you missed about spiritual Egypt, your time in bondage, in short order you'll see it as repulsive and gross. You will have it coming out of your nostrils. 
+
+Some prefer that misery. Even eating the metaphorical quail long after it has spoiled and sickened them. But for many Christians it is a wakeup call and a reminder of how good we have it walking with the Lord. 
+
+*For whom the Lord loveth he chasteneth, and scourgeth every son whom he receiveth.*
+
+Thank God for His love and correction.
+
+<!-- post 12521 · 2023-11-09 06:48 · study -->
+
+If dispensationalists tried reading the New Testament I would ask them why they think the Jews were so angry at Paul and the other apostles and evangelists. 
+
+If they still have the kingdom because "All Israel shall be saved" then why would they care if Gentiles were grafted in, to the point where they persecuted and murdered people in multiple countries across half a continent? 
+
+Why are the Jews the villain?
+
+## Numbers 12  ·  Primary study  ·  2023-11-10
+
+Source: https://t.me/HouseOfWews2/12531
+
+<!-- post 12531 · 2023-11-10 07:29 · scripture -->
+
+**Numbers 12**
+*And Miriam and Aaron spake against Moses because of the Ethiopian woman whom he had married: for he had married an Ethiopian woman.*
+
+*2 And they said, Hath the Lord indeed spoken only by Moses? hath he not spoken also by us? And the Lord heard it.*
+
+*3 (Now the man Moses was very meek, above all the men which were upon the face of the earth.)*
+
+*4 And the Lord spake suddenly unto Moses, and unto Aaron, and unto Miriam, Come out ye three unto the tabernacle of the congregation. And they three came out.*
+
+*5 And the Lord came down in the pillar of the cloud, and stood in the door of the tabernacle, and called Aaron and Miriam: and they both came forth.*
+
+*6 And he said, Hear now my words: If there be a prophet among you, I the Lord will make myself known unto him in a vision, and will speak unto him in a dream.*
+
+*7 My servant Moses is not so, who is faithful in all mine house.*
+
+*8 With him will I speak mouth to mouth, even apparently, and not in dark speeches; and the similitude of the Lord shall he behold: wherefore then were ye not afraid to speak against my servant Moses?*
+
+*9 And the anger of the Lord was kindled against them; and he departed.*
+
+*10 And the cloud departed from off the tabernacle; and, behold, Miriam became leprous, white as snow: and Aaron looked upon Miriam, and, behold, she was leprous.*
+
+*11 And Aaron said unto Moses, Alas, my lord, I beseech thee, lay not the sin upon us, wherein we have done foolishly, and wherein we have sinned.*
+
+*12 Let her not be as one dead, of whom the flesh is half consumed when he cometh out of his mother's womb.*
+
+*13 And Moses cried unto the Lord, saying, Heal her now, O God, I beseech thee.*
+
+*14 And the Lord said unto Moses, If her father had but spit in her face, should she not be ashamed seven days? let her be shut out from the camp seven days, and after that let her be received in again.*
+
+*15 And Miriam was shut out from the camp seven days: and the people journeyed not till Miriam was brought in again.*
+
+*16 And afterward the people removed from Hazeroth, and pitched in the wilderness of Paran.*
+
+<!-- post 12532 · 2023-11-10 07:53 · study -->
+
+So, we are here in **Numbers** chapter 12, and we have a story of the brother and sister of Moses, Aaron and Miriam, and their sedition against Moses because of his marriage to an outlandish woman, an Ethiopian. 
+
+Claiming they were on par with Moses, having had the Spirit of the Lord upon them and having then preached His word through them, they presumed to speak with authority over the appointed man of God. 
+
+Moses in his meekness didn't speak against them, but the Lord in His anger did, saying that His inspiration to prophecy given men in visions and dreams wasn't the same thing as His relationship with Moses which was direct and personal, speaking mouth to mouth. Not in "dark speeches," or dark sayings as parables and metaphors used to teach doctrine are called in the New Testament. But directly. Frankly. In person. God asks why they are not afraid to speak out against Moses given that obvious position of favor and authority that had been granted him. 
+
+And His wrath was kindled, and Miriam became leprous, skin as white as snow. Aaron seeing this begged for forgiveness to Moses, who then intercedes on Miriam's behalf. But the Lord, to show Miriam and others who might rise in sedition a lesson, has her put without the camp for 7 days of shame. 
+
+This chapter has been used to justify or argue something about mixed marriages with other nations, races, kindred, religion...to justify miscegenation, and to condemn those who oppose taking a stranger as a spouse. The "Ethiopian wife" and the "white as snow" punishment of Miriam, has added to this debate. 
+
+But it's not what the chapter is about. 
+
+It is literally about sedition and setting yourself up as better than or worthier than the man of God that He has placed over you in His hierarchy. 
+
+That even if you disagree with their own life choices and resent them for whatever reason, you still must respect God's choice, giving honor to those who should be honored. Tribute to those due tribute. 
+
+**1 Samuel 15:23**
+*For rebellion is as the sin of witchcraft, and stubbornness is as iniquity and idolatry. Because thou hast rejected the word of the Lord, he hath also rejected thee from being king.*
+
+The reason behind their rebellion is incidental. They used a flaw in Moses to seek to undermine him. That's the essence of the story. If that's who God puts in place of power, given the spirit of leadership over the people, then that's who God chose. Render honor to them, and fear the Lord. 
+
+
+It doesn't change the fact that there are several prohibitions and warnings against taking outlandish women as wives. That taking a stranger for a wife leads to children who fall away from the faith of their fathers and chase idols. It is a punishment on a nation to be bred out of existence, and it begins by the acceptance of mixed marriage. It was especially true in the idea that Israel was a means of getting from Abraham to David to Christ Jesus. And it remains true in a spiritual sense today, and being unequally yoked, and the judgment against nations being ethnically erased still exists, and will unto the day of redemption. 
+
+God sets the boundaries and habitations thereof. The nations will rejoice in that day. And we will be one people in the resurrection. Until then, it isn't prudent to be accepting culturally of miscegenation.
+
+<!-- post 12533 · 2023-11-10 08:01 · study -->
+
+We have to be very careful in letting the Bible tell us what's being discussed, to understand the context and not wrestle something else out of it. And it angers a lot of people who have settled into one side or another on a secondary or tertiary doctrine, and seek justification from scripture for it, to make dogmatic statements. 
+
+I have noticed that so many of these dogmas, and the binaries that form from them, are carnal and incidental to the larger point being made. And so people miss the forest for the trees. 
+
+When I have applied this form of exegesis to pet theories in scripture, even when I agree with the theory in whole or in part, people get angry. "Both sides" foam at the mouth over this. Labels of heresy and compromise abound. But in my view the Bible is very clear on doctrine and things that have to be forced out of the text aren't worthy of being dogmatic. Simple as. 
+
+The Bible is not for our eisegesis to win fights online. Especially about carnal things. It is for the winning of souls.
+
+## Numbers 13  ·  Primary study  ·  2023-11-11
+
+Source: https://t.me/HouseOfWews2/12541
+
+<!-- post 12541 · 2023-11-11 07:17 · scripture -->
+
+**Numbers 13**
+*And the Lord spake unto Moses, saying,*
+
+*2 Send thou men, that they may search the land of Canaan, which I give unto the children of Israel: of every tribe of their fathers shall ye send a man, every one a ruler among them.*
+
+*3 And Moses by the commandment of the Lord sent them from the wilderness of Paran: all those men were heads of the children of Israel.*
+
+*4 And these were their names: of the tribe of Reuben, Shammua the son of Zaccur.*
+
+*5 Of the tribe of Simeon, Shaphat the son of Hori.*
+
+*6 Of the tribe of Judah, Caleb the son of Jephunneh.*
+
+*7 Of the tribe of Issachar, Igal the son of Joseph.*
+
+*8 Of the tribe of Ephraim, Oshea the son of Nun.*
+
+*9 Of the tribe of Benjamin, Palti the son of Raphu.*
+
+*10 Of the tribe of Zebulun, Gaddiel the son of Sodi.*
+
+*11 Of the tribe of Joseph, namely, of the tribe of Manasseh, Gaddi the son of Susi.*
+
+*12 Of the tribe of Dan, Ammiel the son of Gemalli.*
+
+*13 Of the tribe of Asher, Sethur the son of Michael.*
+
+*14 Of the tribe of Naphtali, Nahbi the son of Vophsi.*
+
+*15 Of the tribe of Gad, Geuel the son of Machi.*
+
+*16 These are the names of the men which Moses sent to spy out the land. And Moses called Oshea the son of Nun Jehoshua.*
+
+*17 And Moses sent them to spy out the land of Canaan, and said unto them, Get you up this way southward, and go up into the mountain:*
+
+*18 And see the land, what it is, and the people that dwelleth therein, whether they be strong or weak, few or many;*
+
+*19 And what the land is that they dwell in, whether it be good or bad; and what cities they be that they dwell in, whether in tents, or in strong holds;*
+
+*20 And what the land is, whether it be fat or lean, whether there be wood therein, or not. And be ye of good courage, and bring of the fruit of the land. Now the time was the time of the firstripe grapes.*
+
+*21 So they went up, and searched the land from the wilderness of Zin unto Rehob, as men come to Hamath.*
+
+*22 And they ascended by the south, and came unto Hebron; where Ahiman, Sheshai, and Talmai, the children of Anak, were. (Now Hebron was built seven years before Zoan in Egypt.)*
+
+*23 And they came unto the brook of Eshcol, and cut down from thence a branch with one cluster of grapes, and they bare it between two upon a staff; and they brought of the pomegranates, and of the figs.*
+
+*24 The place was called the brook Eshcol, because of the cluster of grapes which the children of Israel cut down from thence.*
+
+*25 And they returned from searching of the land after forty days.*
+
+*26 And they went and came to Moses, and to Aaron, and to all the congregation of the children of Israel, unto the wilderness of Paran, to Kadesh; and brought back word unto them, and unto all the congregation, and shewed them the fruit of the land.*
+
+*27 And they told him, and said, We came unto the land whither thou sentest us, and surely it floweth with milk and honey; and this is the fruit of it.*
+
+*28 Nevertheless the people be strong that dwell in the land, and the cities are walled, and very great: and moreover we saw the children of Anak there.*
+
+*29 The Amalekites dwell in the land of the south: and the Hittites, and the Jebusites, and the Amorites, dwell in the mountains: and the Canaanites dwell by the sea, and by the coast of Jordan.*
+
+*30 And Caleb stilled the people before Moses, and said, Let us go up at once, and possess it; for we are well able to overcome it.*
+
+*31 But the men that went up with him said, We be not able to go up against the people; for they are stronger than we.*
+
+*32 And they brought up an evil report of the land which they had searched unto the children of Israel, saying, The land, through which we have gone to search it, is a land that eateth up the inhabitants thereof; and all the people that we saw in it are men of a great stature.*
+
+*33 And there we saw the giants, the sons of Anak, which come of the giants: and we were in our own sight as grasshoppers, and so we were in their sight.*
+
+<!-- post 12542 · 2023-11-11 07:19 · study -->
+
+**Deuteronomy 1**
+
+*19 And when we departed from Horeb, we went through all that great and terrible wilderness, which ye saw by the way of the mountain of the Amorites, as the Lord our God commanded us; and we came to Kadeshbarnea.*
+
+*20 And I said unto you, Ye are come unto the mountain of the Amorites, which the Lord our God doth give unto us.*
+
+*21 Behold, the Lord thy God hath set the land before thee: go up and possess it, as the Lord God of thy fathers hath said unto thee; fear not, neither be discouraged.*
+
+*22 And ye came near unto me every one of you, and said, We will send men before us, and they shall search us out the land, and bring us word again by what way we must go up, and into what cities we shall come.*
+
+*23 And the saying pleased me well: and I took twelve men of you, one of a tribe:*
+
+*24 And they turned and went up into the mountain, and came unto the valley of Eshcol, and searched it out.*
+
+*25 And they took of the fruit of the land in their hands, and brought it down unto us, and brought us word again, and said, It is a good land which the Lord our God doth give us.*
+
+*26 Notwithstanding ye would not go up, but rebelled against the commandment of the Lord your God:*
+
+*27 And ye murmured in your tents, and said, Because the Lord hated us, he hath brought us forth out of the land of Egypt, to deliver us into the hand of the Amorites, to destroy us.*
+
+*28 Whither shall we go up? our brethren have discouraged our heart, saying, The people is greater and taller than we; the cities are great and walled up to heaven; and moreover we have seen the sons of the Anakims there.*
+
+*29 Then I said unto you, Dread not, neither be afraid of them.*
+
+*30 The Lord your God which goeth before you, he shall fight for you, according to all that he did for you in Egypt before your eyes;*
+
+*31 And in the wilderness, where thou hast seen how that the Lord thy God bare thee, as a man doth bear his son, in all the way that ye went, until ye came into this place.*
+
+*32 Yet in this thing ye did not believe the Lord your God,*
+
+*33 Who went in the way before you, to search you out a place to pitch your tents in, in fire by night, to shew you by what way ye should go, and in a cloud by day.*
+
+*34 And the Lord heard the voice of your words, and was wroth, and sware, saying,*
+
+*35 Surely there shall not one of these men of this evil generation see that good land, which I sware to give unto your fathers.*
+
+*36 Save Caleb the son of Jephunneh; he shall see it, and to him will I give the land that he hath trodden upon, and to his children, because he hath wholly followed the Lord.*
+
+*37 Also the Lord was angry with me for your sakes, saying, Thou also shalt not go in thither.*
+
+*38 But Joshua the son of Nun, which standeth before thee, he shall go in thither: encourage him: for he shall cause Israel to inherit it.*
+
+<!-- post 12543 · 2023-11-11 07:43 · study -->
+
+**Numbers 13** presents the turning point in the children of Israel under Moses. They had been camped at Mt Sinai, Horeb in the south of the Arabian Peninsula for over a year. There God had communed with Moses, the Law given, the Tabernacle built. The camps made, and their order given. The sanctification of the people performed. 
+
+So now was their time to enter into the promised land. 
+
+We read in the account in Numbers that God authorized the sending of 12 spies, one of each tribe, into the land to report back what the Israelites would be encountering there. But we see in **Deuteronomy 1** that the initial idea to send someone wasn't God's, but the people's. 
+
+Though God promised them He would scatter and destroy the inhabitants before them, and promised that the land was full of richness, a land of milk and honey. And God said to Moses go in to possess it, yet the people said "We will send men before us and bring us word." 
+
+Moses agreed and God allowed it and told Moses the makeup of the spies, authorizing them to go into Canaan. 
+
+The Bible tells us that among the 12 men chosen were Oshea the son of Nun, of the tribe of Ephraim, who is also known as Joshua, a key figure, as well as bold Caleb, son of Jephunneth of the tribe of Judah. 
+
+Moses instructs them to simply go and report back; of the people there be few or many, strong or weak, walled cities or tents. And the nature of the land, if it be fat or lean. And to return with examples of the fruit of the land, as it was Spring and the first fruits of the vine would be ripe. 
+
+And so the men spied out the land and returned after 40 days with the famous grapes of Eshcol, a cluster so large two men had to carry it. 
+
+Reporting to Moses and Aaron and the assembly of the people, they confirm what God had promised, a land flowing with milk and honey. 
+
+Then the men reported of the people who dwelt in the land and it dismayed the children of Israel. 
+
+*Nevertheless the people be strong that dwell in the land, and the cities are walled, and very great: and moreover we saw the children of Anak there. The Amalekites dwell in the land of the south: and the Hittites, and the Jebusites, and the Amorites, dwell in the mountains: and the Canaanites dwell by the sea, and by the coast of Jordan*.
+
+Caleb, apparently seeing the fear come on the people immediately tried to calm them down before Moses, saying Let us go up at once, and possess it; for we are well able to overcome it. 
+
+Caleb showed faith in God's promise. 
+
+But the other men answered in doubt and fear. 
+
+*We be not able to go up against the people; for they are stronger than we. And they brought up an evil report of the land which they had searched unto the children of Israel, saying, The land, through which we have gone to search it, is a land that eateth up the inhabitants thereof; and all the people that we saw in it are men of a great stature. And there we saw the giants, the sons of Anak, which come of the giants: and we were in our own sight as grasshoppers, and so we were in their sight.*
+
+Their fear spread to all the people, and the faith in the God who had led them from Egypt and promised to deliver them, faded. And God's anger was kindled. 
+
+*Yet in this thing ye did not believe the Lord your God...And the Lord heard the voice of your words, and was wroth, and sware, saying, Surely there shall not one of these men of this evil generation see that good land, which I sware to give unto your fathers.*
+
+The exceptions to this curse were Caleb and Joshua. The lack of faith and questioning the word of God led to having the Israelites shut out for a generation. Left to wander 40 years in the wilderness.
+
+<!-- post 12544 · 2023-11-11 07:59 · study -->
+
+There are lessons in these stories that are for our benefit as  Christians. Here we see how doubt can lead to disputations, and even when assurances of the bold in faith come, many people cling to fear and would rather believe a bad report than trust in the Lord and His word. For this cause, many who seek salvation turn away. 
+
+Probably the biggest stumbling block people get caught on is the idea of eternal security. That once we are saved, we are always saved. That our faith in Christ is unto redemption. Not only that He exists. Not only that He is the Son of God. Not only that He lived, died for us and was raised again from the dead, but that the earnest of our redemption is given us, the Spirit that indwells and quickens us, sealing us, and that in no way shall we be cast out. That we may know we have eternal life. 
+
+*And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand. My Father, which gave them me, is greater than all; and no man is able to pluck them out of my Father's hand. I and my Father are one.*
+
+This is the promise made by Jesus. That we are given the Kingdom of Heaven by faith in Him. The promised land. 
+
+Speaking in the spirit of Caleb, Paul boldly testifies;
+
+*For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come, Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.*
+
+Yet, those seeking the truth may need our testimony. They may need us to spy out the land and confirm to them from scripture exactly what God said that they may believe. To boldly proclaim His Gospel. 
+
+But there will be many, including those who claim to be of God, who give a bad report. Who tell people that their problems are insurmountable. That their sins are like giants and they are as grasshoppers. That to enter the promised land would be death. 
+
+And so fear and doubt spread and keep people from accepting the truth. From trusting in the Lord to deliver them. 
+
+This is the spirit of fear and doubt that uses the lie that eternal security doesn't exist. That you can lose your salvation. That because you are small and weak, you won't make it. You won't "persevere to the end." That you must "Repent-of-your-sins!" That if you fail to produce "fruit" by the judgment of men that you cannot make it to Heaven. 
+
+But we see here, God was providing the fruit, in a size and abundance that they could not even imagine. Joshua and Caleb showed them the fruit that comes from trusting in the Lord. 
+
+And yet they saw their fears as bigger than their God.
+
+<!-- post 12545 · 2023-11-11 08:10 · study -->
+
+We should be reminded by these Old Testament stories that God was going to deliver all of the children of Israel to the promised land, that He would do all the work. Going out before them. They merely had to trust in Him and He would do the rest. The picture of individual salvation is the same. 
+
+Never let others tell you you need to do works of your own to be saved, that it isn't a free gift paid for by Jesus, that grace isn't grace. Never make your sins or tribulations and problems to be a cause not to trust God. Never let your shame or fear keep you from turning towards Him. 
+
+When you do, you will see your faith grow. You will witness miracles. You will be led of God to places you can't imagine, and be given the opportunity to do great things for the Lord. To harvest fruit more abundantly. To have your faith quiet other people's fears. To counter those who give a bad report with the peace that passes all understanding. Be bold in Christ.
+
+<!-- post 12548 · 2023-11-12 07:07 · study -->
+
+Go read yesterday's study on **Numbers 13**, especially the Bible passages. Too many seemed to have skipped past and it's sad because what I wrote about them has far more views than the word of God. I promise you, you'll get more from reading scripture than my retarded takes on it.
+
+<!-- post 12549 · 2023-11-12 07:26 · study -->
+
+**Mark 6:7-13**
+*And he called unto him the twelve, and began to send them forth by two and two; and gave them power over unclean spirits; and commanded them that they should take nothing for their journey, save a staff only; no scrip, no bread, no money in their purse: but be shod with sandals; and not put on two coats. And he said unto them, In what place soever ye enter into an house, there abide till ye depart from that place. And whosoever shall not receive you, nor hear you, when ye depart thence, shake off the dust under your feet for a testimony against them. Verily I say unto you, It shall be more tolerable for Sodom and Gomorrha in the day of judgment, than for that city. And they went out, and preached that men should repent. And they cast out many devils, and anointed with oil many that were sick, and healed them.*
+
+I was rereading [Numbers 13](https://t.me/HouseOfWews2/12541) and it occurred to me the like picture of sending out the 12 spies to the 12 Apostles. 
+
+*And be ye of good courage, and bring of the fruit of the land. Now the time was the time of the firstripe grapes*.
+
+The pairs of Apostles sent out to spy out the land and to return with fruits of the Spring harvest. The first ripe grapes. In the area of Judea, in what are subtropical zones, the grapes set their first fruit in April and May. The Bible compares Christ's first coming as being pictured in the Spring feasts. The fruit being those that repented unto the truth. Like the grapes of Eshcol, so were the lost sheep of Israel, gathered by the Apostles, and later the 72 disciples, and of course those who came to believe on Pentecost. 
+
+And the message to the soul winners to be of good courage remains true in this time of gleaning, before the fall harvest, bringing in the sheaves at Christ's return. 
+
+The agricultural symbolism of the parables and pictures in the Bible provide us a greater understanding to the spiritual things of God. The nature of the seasons and the sowing and planting and harvesting, existing as a means to teach us His ways. All creation exists to reveal God unto us. Amen
+
+## Numbers 14  ·  Primary study  ·  2023-11-12
+
+Source: https://t.me/HouseOfWews2/12551
+
+<!-- post 12551 · 2023-11-12 09:51 · scripture -->
+
+**Numbers 14**
+*And all the congregation lifted up their voice, and cried; and the people wept that night.*
+
+*2 And all the children of Israel murmured against Moses and against Aaron: and the whole congregation said unto them, Would God that we had died in the land of Egypt! or would God we had died in this wilderness!*
+
+*3 And wherefore hath the Lord brought us unto this land, to fall by the sword, that our wives and our children should be a prey? were it not better for us to return into Egypt?*
+
+*4 And they said one to another, Let us make a captain, and let us return into Egypt.*
+
+*5 Then Moses and Aaron fell on their faces before all the assembly of the congregation of the children of Israel.*
+
+*6 And Joshua the son of Nun, and Caleb the son of Jephunneh, which were of them that searched the land, rent their clothes:*
+
+*7 And they spake unto all the company of the children of Israel, saying, The land, which we passed through to search it, is an exceeding good land.*
+
+*8 If the Lord delight in us, then he will bring us into this land, and give it us; a land which floweth with milk and honey.*
+
+*9 Only rebel not ye against the Lord, neither fear ye the people of the land; for they are bread for us: their defence is departed from them, and the Lord is with us: fear them not.*
+
+*10 But all the congregation bade stone them with stones. And the glory of the Lord appeared in the tabernacle of the congregation before all the children of Israel.*
+
+*11 And the Lord said unto Moses, How long will this people provoke me? and how long will it be ere they believe me, for all the signs which I have shewed among them?*
+
+*12 I will smite them with the pestilence, and disinherit them, and will make of thee a greater nation and mightier than they.*
+
+*13 And Moses said unto the Lord, Then the Egyptians shall hear it, (for thou broughtest up this people in thy might from among them;)*
+
+*14 And they will tell it to the inhabitants of this land: for they have heard that thou Lord art among this people, that thou Lord art seen face to face, and that thy cloud standeth over them, and that thou goest before them, by day time in a pillar of a cloud, and in a pillar of fire by night.*
+
+*15 Now if thou shalt kill all this people as one man, then the nations which have heard the fame of thee will speak, saying,*
+
+*16 Because the Lord was not able to bring this people into the land which he sware unto them, therefore he hath slain them in the wilderness.*
+
+*17 And now, I beseech thee, let the power of my lord be great, according as thou hast spoken, saying,*
+
+*18 The Lord is longsuffering, and of great mercy, forgiving iniquity and transgression, and by no means clearing the guilty, visiting the iniquity of the fathers upon the children unto the third and fourth generation.*
+
+*19 Pardon, I beseech thee, the iniquity of this people according unto the greatness of thy mercy, and as thou hast forgiven this people, from Egypt even until now.*
+
+*20 And the Lord said, I have pardoned according to thy word:*
+
+*21 But as truly as I live, all the earth shall be filled with the glory of the Lord.*
+
+*22 Because all those men which have seen my glory, and my miracles, which I did in Egypt and in the wilderness, and have tempted me now these ten times, and have not hearkened to my voice;*
+
+*23 Surely they shall not see the land which I sware unto their fathers, neither shall any of them that provoked me see it:*
+
+*24 But my servant Caleb, because he had another spirit with him, and hath followed me fully, him will I bring into the land whereinto he went; and his seed shall possess it.*
+
+*25 (Now the Amalekites and the Canaanites dwelt in the valley.) Tomorrow turn you, and get you into the wilderness by the way of the Red sea.*
+
+*26 And the Lord spake unto Moses and unto Aaron, saying,*
+
+*27 How long shall I bear with this evil congregation, which murmur against me? I have heard the murmurings of the children of Israel, which they murmur against me.*
+
+*28 Say unto them, As truly as I live, saith the Lord, as ye have spoken in mine ears, so will I do to you:*
+
+<!-- post 12552 · 2023-11-12 09:51 · scripture -->
+
+*29 Your carcases shall fall in this wilderness; and all that were numbered of you, according to your whole number, from twenty years old and upward which have murmured against me.*
+
+*30 Doubtless ye shall not come into the land, concerning which I sware to make you dwell therein, save Caleb the son of Jephunneh, and Joshua the son of Nun.*
+
+*31 But your little ones, which ye said should be a prey, them will I bring in, and they shall know the land which ye have despised.*
+
+*32 But as for you, your carcases, they shall fall in this wilderness.*
+
+*33 And your children shall wander in the wilderness forty years, and bear your whoredoms, until your carcases be wasted in the wilderness.*
+
+*34 After the number of the days in which ye searched the land, even forty days, each day for a year, shall ye bear your iniquities, even forty years, and ye shall know my breach of promise.*
+
+*35 I the Lord have said, I will surely do it unto all this evil congregation, that are gathered together against me: in this wilderness they shall be consumed, and there they shall die.*
+
+*36 And the men, which Moses sent to search the land, who returned, and made all the congregation to murmur against him, by bringing up a slander upon the land,*
+
+*37 Even those men that did bring up the evil report upon the land, died by the plague before the Lord.*
+
+*38 But Joshua the son of Nun, and Caleb the son of Jephunneh, which were of the men that went to search the land, lived still.*
+
+*39 And Moses told these sayings unto all the children of Israel: and the people mourned greatly.*
+
+*40 And they rose up early in the morning, and gat them up into the top of the mountain, saying, Lo, we be here, and will go up unto the place which the Lord hath promised: for we have sinned.*
+
+*41 And Moses said, Wherefore now do ye transgress the commandment of the Lord? but it shall not prosper.*
+
+*42 Go not up, for the Lord is not among you; that ye be not smitten before your enemies.*
+
+*43 For the Amalekites and the Canaanites are there before you, and ye shall fall by the sword: because ye are turned away from the Lord, therefore the Lord will not be with you.*
+
+*44 But they presumed to go up unto the hill top: nevertheless the ark of the covenant of the Lord, and Moses, departed not out of the camp.*
+
+*45 Then the Amalekites came down, and the Canaanites which dwelt in that hill, and smote them, and discomfited them, even unto Hormah.*
+
+<!-- post 12553 · 2023-11-12 10:04 · study -->
+
+We are in **Numbers 14**, and the narrative really begins to heat up. The 12 spies went out for 40 days into the promised land. And despite their returning with massive fruit, the grapes of Eshcol, and Caleb's faithful cheer that they will easily take the land from those living there, a land flowing with milk and honey, the evil report of the ten spies who feared the Canaanites more than the Lord had turned the Israelites to rebellion. 
+
+God HATES rebellion and He abhors those who sow discord among the brethren. 
+
+**Proverbs 6:16-19**
+*These six things doth the Lord hate: yea, seven are an abomination unto him: A proud look, a lying tongue, and hands that shed innocent blood, An heart that deviseth wicked imaginations, feet that be swift in running to mischief, A false witness that speaketh lies, and he that soweth discord among brethren.*
+
+Even today, in our churches, there are those that give a bad report, who sow discord among the brethren. Who seek to spread fear and doubt rather than edifying one another. Gossips. Backbiters. Naysayers. Those who call others back to spiritual Egypt. Who lead others to sin. 
+
+God hates this. And like the 10 bad spies, He will destroy them. Maybe not by plague in front of the congregation, but He will surely let them know His judgment. 
+
+We should reject and rebuke those who sow discord. Who, like Aaron and Miriam, question the man of God to bring the people to sedition. Who act like gainsaying Corah (who we meet soon). 
+
+Fear is contagious. Sin is like yeast, and a little leavens the whole lump. We are called to a different spirit, like Caleb. To only fear the Lord. To accept His paths and judgments as true by faith. Without seeing the promised land, and yet to know unquestionably that it's there. 
+
+Falling in to fear and doubt, rejecting faith, doomed this generation to fall in the wilderness. It nearly led to their utter destruction, but for Moses' plea and appeal to the Lord. Even as we who are saved have an advocate in Christ, we won't be utterly destroyed but God will judge our fear and rebellion, our sowing discord, and He will judge us in this life. 
+
+Don't be a burden or a stumbling block for others in church. Be a blessing. Seek to build. Be like Caleb.
+
+<!-- post 12554 · 2023-11-12 10:17 · study -->
+
+*I will smite them with the pestilence, and disinherit them, and will make of thee a greater nation and mightier than they.*
+...
+*How long shall I bear with this evil congregation, which murmur against me? I have heard the murmurings of the children of Israel, which they murmur against me. Say unto them, As truly as I live, saith the Lord, as ye have spoken in mine ears, so will I do to you: Your carcases shall fall in this wilderness; and all that were numbered of you, according to your whole number, from twenty years old and upward which have murmured against me. Doubtless ye shall not come into the land, concerning which I sware to make you dwell therein, save Caleb the son of Jephunneh, and Joshua the son of Nun. But your little ones, which ye said should be a prey, them will I bring in, and they shall know the land which ye have despised. But as for you, your carcases, they shall fall in this wilderness.*
+
+This story is also a picture of the casting out of the unbelieving Jews in Christ's time and the early church. Of their being cut off and denied the Kingdom. 
+
+Dispensationalists cannot see that the so-called Jews are like this generation, that despised the land promised to them. And only a believing remnant, like Caleb and Joshua, would be allowed to enter therein. 
+
+*After the number of the days in which ye searched the land, even forty days, each day for a year, shall ye bear your iniquities, even forty years, and ye shall know my breach of promise.*
+
+Jesus was crucified in 30AD by the reckoning of the Passover and 3 sabbaths in a row before His resurrection. 40yrs later was 70AD and the Romans destroying Jerusalem, the Temple and killing and scattering the remaining Jews. 
+
+The passing of a generation, left to die in the wilderness, never to enter into the Kingdom, the promised land. The breach of God's promise made known to that wicked and gainsaying generation. 
+
+Amen
+
+## Numbers 15  ·  Primary study  ·  2023-11-13
+
+Source: https://t.me/HouseOfWews2/12559
+
+<!-- post 12559 · 2023-11-13 05:31 · scripture -->
+
+**Numbers 15**
+*And the Lord spake unto Moses, saying,*
+
+*2 Speak unto the children of Israel, and say unto them, When ye be come into the land of your habitations, which I give unto you,*
+
+*3 And will make an offering by fire unto the Lord, a burnt offering, or a sacrifice in performing a vow, or in a freewill offering, or in your solemn feasts, to make a sweet savour unto the Lord, of the herd or of the flock:*
+
+*4 Then shall he that offereth his offering unto the Lord bring a meat offering of a tenth deal of flour mingled with the fourth part of an hin of oil.*
+
+*5 And the fourth part of an hin of wine for a drink offering shalt thou prepare with the burnt offering or sacrifice, for one lamb.*
+
+*6 Or for a ram, thou shalt prepare for a meat offering two tenth deals of flour mingled with the third part of an hin of oil.*
+
+*7 And for a drink offering thou shalt offer the third part of an hin of wine, for a sweet savour unto the Lord.*
+
+*8 And when thou preparest a bullock for a burnt offering, or for a sacrifice in performing a vow, or peace offerings unto the Lord:*
+
+*9 Then shall he bring with a bullock a meat offering of three tenth deals of flour mingled with half an hin of oil.*
+
+*10 And thou shalt bring for a drink offering half an hin of wine, for an offering made by fire, of a sweet savour unto the Lord.*
+
+*11 Thus shall it be done for one bullock, or for one ram, or for a lamb, or a kid.*
+
+*12 According to the number that ye shall prepare, so shall ye do to every one according to their number.*
+
+*13 All that are born of the country shall do these things after this manner, in offering an offering made by fire, of a sweet savour unto the Lord.*
+
+*14 And if a stranger sojourn with you, or whosoever be among you in your generations, and will offer an offering made by fire, of a sweet savour unto the Lord; as ye do, so he shall do.*
+
+*15 One ordinance shall be both for you of the congregation, and also for the stranger that sojourneth with you, an ordinance for ever in your generations: as ye are, so shall the stranger be before the Lord.*
+
+*16 One law and one manner shall be for you, and for the stranger that sojourneth with you.*
+
+*17 And the Lord spake unto Moses, saying,*
+
+*18 Speak unto the children of Israel, and say unto them, When ye come into the land whither I bring you,*
+
+*19 Then it shall be, that, when ye eat of the bread of the land, ye shall offer up an heave offering unto the Lord.*
+
+*20 Ye shall offer up a cake of the first of your dough for an heave offering: as ye do the heave offering of the threshingfloor, so shall ye heave it.*
+
+*21 Of the first of your dough ye shall give unto the Lord an heave offering in your generations.*
+
+*22 And if ye have erred, and not observed all these commandments, which the Lord hath spoken unto Moses,*
+
+*23 Even all that the Lord hath commanded you by the hand of Moses, from the day that the Lord commanded Moses, and henceforward among your generations;*
+
+*24 Then it shall be, if ought be committed by ignorance without the knowledge of the congregation, that all the congregation shall offer one young bullock for a burnt offering, for a sweet savour unto the Lord, with his meat offering, and his drink offering, according to the manner, and one kid of the goats for a sin offering.*
+
+*25 And the priest shall make an atonement for all the congregation of the children of Israel, and it shall be forgiven them; for it is ignorance: and they shall bring their offering, a sacrifice made by fire unto the Lord, and their sin offering before the Lord, for their ignorance:*
+
+*26 And it shall be forgiven all the congregation of the children of Israel, and the stranger that sojourneth among them; seeing all the people were in ignorance.*
+
+*27 And if any soul sin through ignorance, then he shall bring a she goat of the first year for a sin offering.*
+
+*28 And the priest shall make an atonement for the soul that sinneth ignorantly, when he sinneth by ignorance before the Lord, to make an atonement for him; and it shall be forgiven him.*
+
+<!-- post 12560 · 2023-11-13 05:31 · scripture -->
+
+*29 Ye shall have one law for him that sinneth through ignorance, both for him that is born among the children of Israel, and for the stranger that sojourneth among them.*
+
+*30 But the soul that doeth ought presumptuously, whether he be born in the land, or a stranger, the same reproacheth the Lord; and that soul shall be cut off from among his people.*
+
+*31 Because he hath despised the word of the Lord, and hath broken his commandment, that soul shall utterly be cut off; his iniquity shall be upon him.*
+
+*32 And while the children of Israel were in the wilderness, they found a man that gathered sticks upon the sabbath day.*
+
+*33 And they that found him gathering sticks brought him unto Moses and Aaron, and unto all the congregation.*
+
+*34 And they put him in ward, because it was not declared what should be done to him.*
+
+*35 And the Lord said unto Moses, The man shall be surely put to death: all the congregation shall stone him with stones without the camp.*
+
+*36 And all the congregation brought him without the camp, and stoned him with stones, and he died; as the Lord commanded Moses.*
+
+*37 And the Lord spake unto Moses, saying,*
+
+*38 Speak unto the children of Israel, and bid them that they make them fringes in the borders of their garments throughout their generations, and that they put upon the fringe of the borders a ribband of blue:*
+
+*39 And it shall be unto you for a fringe, that ye may look upon it, and remember all the commandments of the Lord, and do them ; and that ye seek not after your own heart and your own eyes, after which ye use to go a whoring:*
+
+*40 That ye may remember, and do all my commandments, and be holy unto your God.*
+
+*41 I am the Lord your God, which brought you out of the land of Egypt, to be your God: I am the Lord your God*.
+
+<!-- post 12561 · 2023-11-13 05:38 · study -->
+
+**Luke 22:14-20**
+*And when the hour was come, he sat down, and the twelve apostles with him. And he said unto them, With desire I have desired to eat this passover with you before I suffer: For I say unto you, I will not any more eat thereof, until it be fulfilled in the kingdom of God. And he took the cup, and gave thanks, and said, Take this, and divide it among yourselves: For I say unto you, I will not drink of the fruit of the vine, until the kingdom of God shall come. And he took bread, and gave thanks, and brake it, and gave unto them, saying, This is my body which is given for you: this do in remembrance of me. Likewise also the cup after supper, saying, This cup is the new testament in my blood, which is shed for you.*
+
+**1 Corinthians 11:24-26**
+*And when he had given thanks, he brake it, and said, Take, eat: this is my body, which is broken for you: this do in remembrance of me. After the same manner also he took the cup, when he had supped, saying, this cup is the new testament in my blood: this do ye, as oft as ye drink it, in remembrance of me. For as often as ye eat this bread, and drink this cup, ye do shew the Lord's death till he come.*
+
+**Galatians 3:28** 
+*There is neither Jew nor Greek, there is neither bond nor free, there is neither male nor female: for ye are all one in Christ Jesus.*
+
+<!-- post 12562 · 2023-11-13 05:54 · study -->
+
+**Numbers 15** veers back to the clarification of the law, in this chapter, the ordinances of sacrifice, the meat offerings which includes the lambs or goats, which contain the blood of the testament between God and the Israelites, but also the flour and oil, which is made bread and wine, the juice of the vine. 
+
+Just as Jesus is the lamb slain for our sins, and His body broken like bread for our transgressions, and the cup offered as the blood of the new and better testament between God and man. 
+
+Ordinances are a memorial. They themselves have no power, and aren't the thing itself, but a picture of that thing, so too are the sacrifices given Moses a picture of Christ to come. Given us, as the Lord's supper, in remembrance of the risen Christ Jesus. That whenever it is done, we memorialize His work and the promise of God, until Jesus returns. 
+
+And we see that the stranger among the Israelites would be given the same ordinance, for the same memorial, of the same faith. There is no Jew or Greek. 
+
+God is not a respecter of persons. The salvation offered by faith was always available to whosoever will. To those that call upon the name of the Lord. Before there was Abraham. Before the circumcision. Before Jacob birthed Israel. Before the giving of the law at Sinai. The promise of salvation was given to all who called upon the name of the Lord, and they were made sons of God. 
+
+Israel was meant to be a beacon, to draw all men to repentance that they could participate in the supper table of the Lamb. But in their failing, God lifted up Jesus that all men be called that some might be saved. Amen.
+
+## Numbers 16  ·  Primary study  ·  2023-11-14
+
+Source: https://t.me/HouseOfWews2/12567
+
+<!-- post 12567 · 2023-11-14 05:55 · scripture -->
+
+**Numbers 16**
+*Now Korah, the son of Izhar, the son of Kohath, the son of Levi, and Dathan and Abiram, the sons of Eliab, and On, the son of Peleth, sons of Reuben, took men:*
+
+*2 And they rose up before Moses, with certain of the children of Israel, two hundred and fifty princes of the assembly, famous in the congregation, men of renown:*
+
+*3 And they gathered themselves together against Moses and against Aaron, and said unto them, Ye take too much upon you, seeing all the congregation are holy, every one of them, and the Lord is among them: wherefore then lift ye up yourselves above the congregation of the Lord?*
+
+*4 And when Moses heard it, he fell upon his face:*
+
+*5 And he spake unto Korah and unto all his company, saying, Even to morrow the Lord will shew who are his, and who is holy; and will cause him to come near unto him: even him whom he hath chosen will he cause to come near unto him.*
+
+*6 This do; Take you censers, Korah, and all his company;*
+
+*7 And put fire therein, and put incense in them before the Lord to morrow: and it shall be that the man whom the Lord doth choose, he shall be holy: ye take too much upon you, ye sons of Levi.*
+
+*8 And Moses said unto Korah, Hear, I pray you, ye sons of Levi:*
+
+*9 Seemeth it but a small thing unto you, that the God of Israel hath separated you from the congregation of Israel, to bring you near to himself to do the service of the tabernacle of the Lord, and to stand before the congregation to minister unto them?*
+
+*10 And he hath brought thee near to him, and all thy brethren the sons of Levi with thee: and seek ye the priesthood also?*
+
+*11 For which cause both thou and all thy company are gathered together against the Lord: and what is Aaron, that ye murmur against him?*
+
+*12 And Moses sent to call Dathan and Abiram, the sons of Eliab: which said, We will not come up:*
+
+*13 Is it a small thing that thou hast brought us up out of a land that floweth with milk and honey, to kill us in the wilderness, except thou make thyself altogether a prince over us?*
+
+*14 Moreover thou hast not brought us into a land that floweth with milk and honey, or given us inheritance of fields and vineyards: wilt thou put out the eyes of these men? we will not come up.*
+
+*15 And Moses was very wroth, and said unto the Lord, Respect not thou their offering: I have not taken one ass from them, neither have I hurt one of them.*
+
+*16 And Moses said unto Korah, Be thou and all thy company before the Lord, thou, and they, and Aaron, to morrow:*
+
+*17 And take every man his censer, and put incense in them, and bring ye before the Lord every man his censer, two hundred and fifty censers; thou also, and Aaron, each of you his censer.*
+
+*18 And they took every man his censer, and put fire in them, and laid incense thereon, and stood in the door of the tabernacle of the congregation with Moses and Aaron.*
+
+*19 And Korah gathered all the congregation against them unto the door of the tabernacle of the congregation: and the glory of the Lord appeared unto all the congregation.*
+
+*20 And the Lord spake unto Moses and unto Aaron, saying,*
+
+*21 Separate yourselves from among this congregation, that I may consume them in a moment.*
+
+*22 And they fell upon their faces, and said, O God, the God of the spirits of all flesh, shall one man sin, and wilt thou be wroth with all the congregation?*
+
+*23 And the Lord spake unto Moses, saying,*
+
+*24 Speak unto the congregation, saying, Get you up from about the tabernacle of Korah, Dathan, and Abiram.*
+
+*25 And Moses rose up and went unto Dathan and Abiram; and the elders of Israel followed him.*
+
+*26 And he spake unto the congregation, saying, Depart, I pray you, from the tents of these wicked men, and touch nothing of their's, lest ye be consumed in all their sins.*
+
+*27 So they gat up from the tabernacle of Korah, Dathan, and Abiram, on every side: and Dathan and Abiram came out, and stood in the door of their tents, and their wives, and their sons, and their little children.*
+
+*28 And Moses said, Hereby ye shall know that the Lord hath sent me to do all these works; for I have not done them of mine own mind.*
+
+<!-- post 12568 · 2023-11-14 05:55 · scripture -->
+
+*29 If these men die the common death of all men, or if they be visited after the visitation of all men; then the Lord hath not sent me.*
+
+*30 But if the Lord make a new thing, and the earth open her mouth, and swallow them up, with all that appertain unto them, and they go down quick into the pit; then ye shall understand that these men have provoked the Lord.*
+
+*31 And it came to pass, as he had made an end of speaking all these words, that the ground clave asunder that was under them:*
+
+*32 And the earth opened her mouth, and swallowed them up, and their houses, and all the men that appertained unto Korah, and all their goods.*
+
+*33 They, and all that appertained to them, went down alive into the pit, and the earth closed upon them: and they perished from among the congregation.*
+
+*34 And all Israel that were round about them fled at the cry of them: for they said, Lest the earth swallow us up also.*
+
+*35 And there came out a fire from the Lord, and consumed the two hundred and fifty men that offered incense.*
+
+*36 And the Lord spake unto Moses, saying,*
+
+*37 Speak unto Eleazar the son of Aaron the priest, that he take up the censers out of the burning, and scatter thou the fire yonder; for they are hallowed.*
+
+*38 The censers of these sinners against their own souls, let them make them broad plates for a covering of the altar: for they offered them before the Lord, therefore they are hallowed: and they shall be a sign unto the children of Israel.*
+
+*39 And Eleazar the priest took the brasen censers, wherewith they that were burnt had offered; and they were made broad plates for a covering of the altar:*
+
+*40 To be a memorial unto the children of Israel, that no stranger, which is not of the seed of Aaron, come near to offer incense before the Lord; that he be not as Korah, and as his company: as the Lord said to him by the hand of Moses.*
+
+*41 But on the morrow all the congregation of the children of Israel murmured against Moses and against Aaron, saying, Ye have killed the people of the Lord.*
+
+*42 And it came to pass, when the congregation was gathered against Moses and against Aaron, that they looked toward the tabernacle of the congregation: and, behold, the cloud covered it, and the glory of the Lord appeared.*
+
+*43 And Moses and Aaron came before the tabernacle of the congregation.*
+
+*44 And the Lord spake unto Moses, saying,*
+
+*45 Get you up from among this congregation, that I may consume them as in a moment. And they fell upon their faces.*
+
+*46 And Moses said unto Aaron, Take a censer, and put fire therein from off the altar, and put on incense, and go quickly unto the congregation, and make an atonement for them: for there is wrath gone out from the Lord; the plague is begun.*
+
+*47 And Aaron took as Moses commanded, and ran into the midst of the congregation; and, behold, the plague was begun among the people: and he put on incense, and made an atonement for the people.*
+
+*48 And he stood between the dead and the living; and the plague was stayed.*
+
+*49 Now they that died in the plague were fourteen thousand and seven hundred, beside them that died about the matter of Korah.*
+
+*50 And Aaron returned unto Moses unto the door of the tabernacle of the congregation: and the plague was stayed.*
+
+<!-- post 12569 · 2023-11-14 05:58 · study -->
+
+**Jude**
+*3 Beloved, when I gave all diligence to write unto you of the common salvation, it was needful for me to write unto you, and exhort you that ye should earnestly contend for the faith which was once delivered unto the saints.*
+
+*4 For there are certain men crept in unawares, who were before of old ordained to this condemnation, ungodly men, turning the grace of our God into lasciviousness, and denying the only Lord God, and our Lord Jesus Christ.*
+
+*5 I will therefore put you in remembrance, though ye once knew this, how that the Lord, having saved the people out of the land of Egypt, afterward destroyed them that believed not.*
+
+*6 And the angels which kept not their first estate, but left their own habitation, he hath reserved in everlasting chains under darkness unto the judgment of the great day.*
+
+*7 Even as Sodom and Gomorrha, and the cities about them in like manner, giving themselves over to fornication, and going after strange flesh, are set forth for an example, suffering the vengeance of eternal fire.*
+
+*8 Likewise also these filthy dreamers defile the flesh, despise dominion, and speak evil of dignities.*
+
+*9 Yet Michael the archangel, when contending with the devil he disputed about the body of Moses, durst not bring against him a railing accusation, but said, The Lord rebuke thee.*
+
+*10 But these speak evil of those things which they know not: but what they know naturally, as brute beasts, in those things they corrupt themselves.*
+
+*11 Woe unto them! for they have gone in the way of Cain, and ran greedily after the error of Balaam for reward, and perished in the gainsaying of Core.*
+
+*12 These are spots in your feasts of charity, when they feast with you, feeding themselves without fear: clouds they are without water, carried about of winds; trees whose fruit withereth, without fruit, twice dead, plucked up by the roots;*
+
+*13 Raging waves of the sea, foaming out their own shame; wandering stars, to whom is reserved the blackness of darkness for ever.*
+
+<!-- post 12570 · 2023-11-14 05:59 · study -->
+
+**Leviticus 10:1-2**
+*And Nadab and Abihu, the sons of Aaron, took either of them his censer, and put fire therein, and put incense thereon, and offered strange fire before the LORD, which he commanded them not. And there went out fire from the LORD, and devoured them, and they died before the LORD.*
+
+<!-- post 12571 · 2023-11-14 06:44 · study -->
+
+*I will therefore put you in remembrance, though ye once knew this, how that the Lord, having saved the people out of the land of Egypt, afterward destroyed them that believed not....*
+
+The Lord killed 14, 700 by plague, the households of Korah the Levite (Core in the NT), Dathan and Abiram's households, swallowed up by the earth. And the 250 men offering strange fire before the Tabernacle, burnt up by fire from Heaven. 
+
+All for the sin of rebellion against the man of God. And ultimately for determining their way as being correct, despite what God had said. 
+
+They sought to take over priestly duties that weren't theirs, to speak out against the man of God. Moses and Aaron, the high priest. And even after God's judgment came down on the 250, The Israelites themselves rose up and were smitten with a plague. God would have wiped them all out there. And as Jude tells us, It was for for unbelief. Because ultimately it's a lack of faith in the things of God that destroyed them. 
+
+We see here too that despite the claims of dispensationalists, there was no hesitation by God to cut off those in the congregation of the children of Israel from not only their promises but casting them into hell. 
+
+Moses, Who has the power to bind and loose, condemns these men that their sin be not forgiven. So when they die they were going to hell. They were made reprobate by their lack of faith. Apostates. Clouds without water twice dead. And they were plucked up by the roots and cast into the fire.
+
+<!-- post 12573 · 2023-11-14 08:18 · study -->
+
+Oh, one more thing regarding **Numbers 16** and the rebellion of Koreh and the 250 priests and their plan to usurp the order established by the word of God. This could be considered the first ecumenical council, like those of the Catholic Church. And like those councils of men, who added to or distorted the doctrines of faith given in scripture - heresies like "baptismal regeneration," infant baptism, the allowance of images and idols, Mariology and the worship of saints...These heresies fly in the face of clear Biblical fundamentalism, and instead lean on *the gainsaying of Core*. The ideas and traditions of men.
+
+It is impossible to not see how God views these wicked men and their false doctrines of devils.
+
+## Numbers 17  ·  Primary study  ·  2023-11-15
+
+Source: https://t.me/HouseOfWews2/12579
+
+<!-- post 12579 · 2023-11-15 05:32 · scripture -->
+
+**Numbers 17**
+*And the Lord spake unto Moses, saying,*
+
+*2 Speak unto the children of Israel, and take of every one of them a rod according to the house of their fathers, of all their princes according to the house of their fathers twelve rods: write thou every man's name upon his rod.*
+
+*3 And thou shalt write Aaron's name upon the rod of Levi: for one rod shall be for the head of the house of their fathers.*
+
+*4 And thou shalt lay them up in the tabernacle of the congregation before the testimony, where I will meet with you.*
+
+*5 And it shall come to pass, that the man's rod, whom I shall choose, shall blossom: and I will make to cease from me the murmurings of the children of Israel, whereby they murmur against you.*
+
+*6 And Moses spake unto the children of Israel, and every one of their princes gave him a rod apiece, for each prince one, according to their fathers' houses, even twelve rods: and the rod of Aaron was among their rods.*
+
+*7 And Moses laid up the rods before the Lord in the tabernacle of witness.*
+
+*8 And it came to pass, that on the morrow Moses went into the tabernacle of witness; and, behold, the rod of Aaron for the house of Levi was budded, and brought forth buds, and bloomed blossoms, and yielded almonds.*
+
+*9 And Moses brought out all the rods from before the Lord unto all the children of Israel: and they looked, and took every man his rod.*
+
+*10 And the Lord said unto Moses, Bring Aaron's rod again before the testimony, to be kept for a token against the rebels; and thou shalt quite take away their murmurings from me, that they die not.*
+
+*11 And Moses did so: as the Lord commanded him, so did he.*
+
+*12 And the children of Israel spake unto Moses, saying, Behold, we die, we perish, we all perish.*
+
+*13 Whosoever cometh any thing near unto the tabernacle of the Lord shall die: shall we be consumed with dying?*
+
+<!-- post 12580 · 2023-11-15 05:35 · study -->
+
+**Hebrews 9:3-4**
+*And after the second veil, the tabernacle which is called the Holiest of all; which had the golden censer, and the ark of the covenant overlaid round about with gold, wherein was the golden pot that had manna, and Aaron's rod that budded, and the tables of the covenant*...
+
+**Isaiah 11:1-4**
+*And there shall come forth a rod out of the stem of Jesse, and a Branch shall grow out of his roots: And the spirit of the Lord shall rest upon him, the spirit of wisdom and understanding, the spirit of counsel and might, the spirit of knowledge and of the fear of the Lord; And shall make him of quick understanding in the fear of the Lord: and he shall not judge after the sight of his eyes, neither reprove after the hearing of his ears: But with righteousness shall he judge the poor, and reprove with equity for the meek of the earth: and he shall smite the earth: with the rod of his mouth, and with the breath of his lips shall he slay the wicked.*
+
+<!-- post 12581 · 2023-11-15 06:00 · study -->
+
+The budding of Aaron's rod, a dead branch, brought to life, as an image of the chosen High Priest of the people is a clear and obvious picture of Christ Jesus. A rod out of the stem of Jesse, a Branch that grew out of his roots. Who was dead and was risen, and, like the almonds that Aaron's rod brought forth, Jesus gave forth fruit for all time, those that believe on His holy name. 
+
+Aaron's rod is added to the Ark with the manna and the tablets, in the Tabernacle of testimony. They literally were carrying God's word made manifest, in the heart of their camp. The testimony that His word was true. 
+
+This method of quelling rebellion amongst the children of Israel, allowing the will of God to be made clear by way of miracle, seems to us perfectly decisive. Aaron would be the high priest. The Levites would serve the Tabernacle. A gift to the Lord, given to bear the iniquity of the people. And to redeem them. As the next chapter tells us;
+
+*And ye shall keep the charge of the sanctuary, and the charge of the altar: that there be no wrath any more upon the children of Israel.*
+
+And Moses did as the Lord commanded him. 
+
+But did the anointing of Aaron and his sons and the Levites cease the murmerings of the children of Israel? 
+
+*And the children of Israel spake unto Moses, saying, Behold, we die, we perish, we all perish. Whosoever cometh any thing near unto the tabernacle of the Lord shall die: shall we be consumed with dying?*
+
+They acknowledged that they would perish if they came near the Tabernacle. That there would be only the Levitical priesthood as God commands, but their fear of dying makes them seem bitter. 
+
+Their understanding that they shall all perish without accepting the rod that God had chosen to bear their iniquity, who would redeem them, coupled with fear, carries with it a resentment that mirrors that of people today, reacting to the truth of Christ Jesus as our high priest. A resentment that in many hearts leads to rebellion and reprobation. 
+
+God's word doesn't just provide us the model of faith and sanctification that we see in men like Moses, or Caleb. Or as we will see in Joshua. Scripture seems to show us more glimpses of unbelief in stiff-necked and gainsaying people. And the destruction they suffer as a result of their pride. 
+
+But we are those who hear God's word, see the budding of the rod and know His will, and delight in it. Or we should if we walk in the Spirit, reading His word. That we gain understanding and acceptance of it. Amen
+
+## Numbers 18  ·  Primary study  ·  2023-11-17
+
+Source: https://t.me/HouseOfWews2/12597
+
+<!-- post 12597 · 2023-11-17 04:58 · scripture -->
+
+**Numbers 18**
+*And the Lord said unto Aaron, Thou and thy sons and thy father's house with thee shall bear the iniquity of the sanctuary: and thou and thy sons with thee shall bear the iniquity of your priesthood.*
+
+*2 And thy brethren also of the tribe of Levi, the tribe of thy father, bring thou with thee, that they may be joined unto thee, and minister unto thee: but thou and thy sons with thee shall minister before the tabernacle of witness.*
+
+*3 And they shall keep thy charge, and the charge of all the tabernacle: only they shall not come nigh the vessels of the sanctuary and the altar, that neither they, nor ye also, die.*
+
+*4 And they shall be joined unto thee, and keep the charge of the tabernacle of the congregation, for all the service of the tabernacle: and a stranger shall not come nigh unto you.*
+
+*5 And ye shall keep the charge of the sanctuary, and the charge of the altar: that there be no wrath any more upon the children of Israel.*
+
+*6 And I, behold, I have taken your brethren the Levites from among the children of Israel: to you they are given as a gift for the Lord, to do the service of the tabernacle of the congregation.*
+
+*7 Therefore thou and thy sons with thee shall keep your priest's office for everything of the altar, and within the vail; and ye shall serve: I have given your priest's office unto you as a service of gift: and the stranger that cometh nigh shall be put to death.*
+
+*8 And the Lord spake unto Aaron, Behold, I also have given thee the charge of mine heave offerings of all the hallowed things of the children of Israel; unto thee have I given them by reason of the anointing, and to thy sons, by an ordinance for ever.*
+
+*9 This shall be thine of the most holy things, reserved from the fire: every oblation of their's, every meat offering of their's, and every sin offering of their's, and every trespass offering of their's which they shall render unto me, shall be most holy for thee and for thy sons.*
+
+*10 In the most holy place shalt thou eat it; every male shall eat it: it shall be holy unto thee.*
+
+*11 And this is thine; the heave offering of their gift, with all the wave offerings of the children of Israel: I have given them unto thee, and to thy sons and to thy daughters with thee, by a statute for ever: every one that is clean in thy house shall eat of it.*
+
+*12 All the best of the oil, and all the best of the wine, and of the wheat, the firstfruits of them which they shall offer unto the Lord, them have I given thee.*
+
+*13 And whatsoever is first ripe in the land, which they shall bring unto the Lord, shall be thine; every one that is clean in thine house shall eat of it.*
+
+*14 Every thing devoted in Israel shall be thine.*
+
+*15 Every thing that openeth the matrix in all flesh, which they bring unto the Lord, whether it be of men or beasts, shall be thine: nevertheless the firstborn of man shalt thou surely redeem, and the firstling of unclean beasts shalt thou redeem.*
+
+*16 And those that are to be redeemed from a month old shalt thou redeem, according to thine estimation, for the money of five shekels, after the shekel of the sanctuary, which is twenty gerahs.*
+
+*17 But the firstling of a cow, or the firstling of a sheep, or the firstling of a goat, thou shalt not redeem; they are holy: thou shalt sprinkle their blood upon the altar, and shalt burn their fat for an offering made by fire, for a sweet savour unto the Lord.*
+
+*18 And the flesh of them shall be thine, as the wave breast and as the right shoulder are thine.*
+
+*19 All the heave offerings of the holy things, which the children of Israel offer unto the Lord, have I given thee, and thy sons and thy daughters with thee, by a statute for ever: it is a covenant of salt for ever before the Lord unto thee and to thy seed with thee.*
+
+*20 And the Lord spake unto Aaron, Thou shalt have no inheritance in their land, neither shalt thou have any part among them: I am thy part and thine inheritance among the children of Israel.*
+
+<!-- post 12598 · 2023-11-17 04:58 · scripture -->
+
+*21 And, behold, I have given the children of Levi all the tenth in Israel for an inheritance, for their service which they serve, even the service of the tabernacle of the congregation.*
+
+*22 Neither must the children of Israel henceforth come nigh the tabernacle of the congregation, lest they bear sin, and die.*
+
+*23 But the Levites shall do the service of the tabernacle of the congregation, and they shall bear their iniquity: it shall be a statute for ever throughout your generations, that among the children of Israel they have no inheritance.*
+
+*24 But the tithes of the children of Israel, which they offer as an heave offering unto the Lord, I have given to the Levites to inherit: therefore I have said unto them, Among the children of Israel they shall have no inheritance.*
+
+*25 And the Lord spake unto Moses, saying,*
+
+*26 Thus speak unto the Levites, and say unto them, When ye take of the children of Israel the tithes which I have given you from them for your inheritance, then ye shall offer up an heave offering of it for the Lord, even a tenth part of the tithe.*
+
+*27 And this your heave offering shall be reckoned unto you, as though it were the corn of the threshingfloor, and as the fulness of the winepress.*
+
+*28 Thus ye also shall offer an heave offering unto the Lord of all your tithes, which ye receive of the children of Israel; and ye shall give thereof the Lord'S heave offering to Aaron the priest.*
+
+*29 Out of all your gifts ye shall offer every heave offering of the Lord, of all the best thereof, even the hallowed part thereof out of it.*
+
+*30 Therefore thou shalt say unto them, When ye have heaved the best thereof from it, then it shall be counted unto the Levites as the increase of the threshingfloor, and as the increase of the winepress.*
+
+*31 And ye shall eat it in every place, ye and your households: for it is your reward for your service in the tabernacle of the congregation.*
+
+*32 And ye shall bear no sin by reason of it, when ye have heaved from it the best of it: neither shall ye pollute the holy things of the children of Israel, lest ye die.*
+
+<!-- post 12599 · 2023-11-17 05:16 · study -->
+
+Here in **Numbers 18**, following the budding of Aaron's rod in the previous chapter, we have God's covenant with the Levites and Aaron and his sons, and their portion. The Levitical priesthood is given to them the service of the Tabernacle, and the iniquity of the people to be cleansed in offerings as an ordinance of the faith. And Aaron and his sons to take their iniquity and those of the Levites, and make offerings unto the Lord. 
+
+The Lord gives them the gift of service and in exchange they will live off their portion of the meats given to the Lord, the tithes taken, which the priests offer up a tenth themselves. And they are set to redeem the firstborn with the shekels commanded of God after the deaths of the firstborn of Egypt, at Passover. 
+
+These Levitical laws are given as a picture of Christ to come and the service of the Lord that Christians today are called to. To offer redemption and forgiveness to the people. 
+
+It is funny that of all the talk of covenants by dispensationalists, they never bring this one up. As so-called Jews have no priesthood. No offerings. No cleansing of the iniquity and trespass and sin of the people. No redemption of the first born. No heave offering. No sacrifice for their atonement. 
+
+The admonishments against allowing non-Levites into the Tabernacle, and even against Levites entering behind the veil which was for Aaron and his sons, that those who offended would surely die, is again showing there is only one way to please God, by following His word. It echoes the commandment given Adam in the garden. It is repeated in Christ's preaching that He is the only way to the Father. Our High Priest. 
+
+The lack of an inheritance in the land, among the children of Israel, other than service, is a like picture of the separation we as Christians should have with this world. We look towards a better country. A heavenly Kingdom. We are a holy nation. A peculiar people. A royal priesthood. The cares of this world are not ours. But the service of the Lord, and the blessings that come from it are our portion. As the increase of the threshing floor. As the increase of the winepress. Amen
+
+## Numbers 19  ·  Primary study  ·  2023-11-17
+
+Source: https://t.me/HouseOfWews2/12600
+
+<!-- post 12600 · 2023-11-17 05:28 · scripture -->
+
+**Numbers 19**
+*And the Lord spake unto Moses and unto Aaron, saying,*
+
+*2 This is the ordinance of the law which the Lord hath commanded, saying, Speak unto the children of Israel, that they bring thee a red heifer without spot, wherein is no blemish, and upon which never came yoke:*
+
+*3 And ye shall give her unto Eleazar the priest, that he may bring her forth without the camp, and one shall slay her before his face:*
+
+*4 And Eleazar the priest shall take of her blood with his finger, and sprinkle of her blood directly before the tabernacle of the congregation seven times:*
+
+*5 And one shall burn the heifer in his sight; her skin, and her flesh, and her blood, with her dung, shall he burn:*
+
+*6 And the priest shall take cedar wood, and hyssop, and scarlet, and cast it into the midst of the burning of the heifer.*
+
+*7 Then the priest shall wash his clothes, and he shall bathe his flesh in water, and afterward he shall come into the camp, and the priest shall be unclean until the even.*
+
+*8 And he that burneth her shall wash his clothes in water, and bathe his flesh in water, and shall be unclean until the even.*
+
+*9 And a man that is clean shall gather up the ashes of the heifer, and lay them up without the camp in a clean place, and it shall be kept for the congregation of the children of Israel for a water of separation: it is a purification for sin.*
+
+*10 And he that gathereth the ashes of the heifer shall wash his clothes, and be unclean until the even: and it shall be unto the children of Israel, and unto the stranger that sojourneth among them, for a statute for ever.*
+
+*11 He that toucheth the dead body of any man shall be unclean seven days.*
+
+*12 He shall purify himself with it on the third day, and on the seventh day he shall be clean: but if he purify not himself the third day, then the seventh day he shall not be clean.*
+
+*13 Whosoever toucheth the dead body of any man that is dead, and purifieth not himself, defileth the tabernacle of the Lord; and that soul shall be cut off from Israel: because the water of separation was not sprinkled upon him, he shall be unclean; his uncleanness is yet upon him.*
+
+*14 This is the law, when a man dieth in a tent: all that come into the tent, and all that is in the tent, shall be unclean seven days.*
+
+*15 And every open vessel, which hath no covering bound upon it, is unclean.*
+
+*16 And whosoever toucheth one that is slain with a sword in the open fields, or a dead body, or a bone of a man, or a grave, shall be unclean seven days.*
+
+*17 And for an unclean person they shall take of the ashes of the burnt heifer of purification for sin, and running water shall be put thereto in a vessel:*
+
+*18 And a clean person shall take hyssop, and dip it in the water, and sprinkle it upon the tent, and upon all the vessels, and upon the persons that were there, and upon him that touched a bone, or one slain, or one dead, or a grave:*
+
+*19 And the clean person shall sprinkle upon the unclean on the third day, and on the seventh day: and on the seventh day he shall purify himself, and wash his clothes, and bathe himself in water, and shall be clean at even.*
+
+*20 But the man that shall be unclean, and shall not purify himself, that soul shall be cut off from among the congregation, because he hath defiled the sanctuary of the Lord: the water of separation hath not been sprinkled upon him; he is unclean.*
+
+*21 And it shall be a perpetual statute unto them, that he that sprinkleth the water of separation shall wash his clothes; and he that toucheth the water of separation shall be unclean until even.*
+
+*22 And whatsoever the unclean person toucheth shall be unclean; and the soul that toucheth it shall be unclean until even.*
+
+<!-- post 12601 · 2023-11-17 05:40 · study -->
+
+The law of the water of separation is given by the Lord. That those that become unclean by contact with a dead person could be purified, and the things of the tent where in the person died, and their sin be covered, a purification ritual. 
+
+The law requires a red heifer, without blemish, be brought without the camp and slain and burned. In the fire was required cedar, hyssop and scarlet. This is a holocaust, a burnt offering, that is an explicit picture of Christ. The cedar wood of the cross, the hyssop dipped in vinegar, the scarlet of His blood. 
+
+The ash mixed with water to be used on the 3rd day for purification, that on the 7th day the unclean may be clean. The parallel with Jesus 3 days and nights, and our redemption at his eventual return. 
+
+Note, this is not a "prophecy of a red heifer," which has been in the news lately. Where they claim that "Israel" needs a red heifer to build the third temple, a "prophecy" some American cow farmer invented in the 1990s. 
+
+Whatever prophecy this ritual foresaw was filled in Christ. The burnt offering for our sin, and the water of life given us to purify ourselves.
+
+<!-- post 12602 · 2023-11-17 05:54 · study -->
+
+Also, I wanted to circle back to **Numbers 18:19**, and the "covenant of salt," made by God with Aaron;
+
+*All the heave offerings of the holy things, which the children of Israel offer unto the Lord, have I given thee, and thy sons and thy daughters with thee, by a statute for ever: it is a covenant of salt for ever before the Lord unto thee and to thy seed with thee.*
+
+The same phrase is used in **2 Chronicles 13:5,** given to David;
+
+*Ought ye not to know that the Lord God of Israel gave the kingdom over Israel to David for ever, even to him and to his sons by a covenant of salt?*
+
+Thus the covenant of salt is bestowed on a priesthood and kingdom. Both fulfilled in Christ Jesus who is our High Priest and our King. 
+
+Salt is a preservative, a thing that keeps decay away, protecting it. Just as we who believe are the salt of the earth;
+
+**Matthew 5:13**
+*Ye are the salt of the earth: but if the salt have lost his savour, wherewith shall it be salted? it is thenceforth good for nothing, but to be cast out, and to be trodden under foot of men.*
+
+ The preservation of the world is given us, just as the preservation of God's priesthood and kingdom are kept forever in Christ. 
+
+And when that salt is taken out of the world, it will be destroyed.
+
+## Numbers 20  ·  Primary study  ·  2023-11-18
+
+Source: https://t.me/HouseOfWews2/12616
+
+<!-- post 12616 · 2023-11-18 06:34 · scripture -->
+
+**Numbers 20**
+*Then came the children of Israel, even the whole congregation, into the desert of Zin in the first month: and the people abode in Kadesh; and Miriam died there, and was buried there.*
+
+*2 And there was no water for the congregation: and they gathered themselves together against Moses and against Aaron.*
+
+*3 And the people chode with Moses, and spake, saying, Would God that we had died when our brethren died before the Lord!*
+
+*4 And why have ye brought up the congregation of the Lord into this wilderness, that we and our cattle should die there?*
+
+*5 And wherefore have ye made us to come up out of Egypt, to bring us in unto this evil place? it is no place of seed, or of figs, or of vines, or of pomegranates; neither is there any water to drink.*
+
+*6 And Moses and Aaron went from the presence of the assembly unto the door of the tabernacle of the congregation, and they fell upon their faces: and the glory of the Lord appeared unto them.*
+
+*7 And the Lord spake unto Moses, saying,*
+
+*8 Take the rod, and gather thou the assembly together, thou, and Aaron thy brother, and speak ye unto the rock before their eyes; and it shall give forth his water, and thou shalt bring forth to them water out of the rock: so thou shalt give the congregation and their beasts drink.*
+
+*9 And Moses took the rod from before the Lord, as he commanded him.*
+
+*10 And Moses and Aaron gathered the congregation together before the rock, and he said unto them, Hear now, ye rebels; must we fetch you water out of this rock?*
+
+*11 And Moses lifted up his hand, and with his rod he smote the rock twice: and the water came out abundantly, and the congregation drank, and their beasts also.*
+
+*12 And the Lord spake unto Moses and Aaron, Because ye believed me not, to sanctify me in the eyes of the children of Israel, therefore ye shall not bring this congregation into the land which I have given them.*
+
+*13 This is the water of Meribah; because the children of Israel strove with the Lord, and he was sanctified in them.*
+
+*14 And Moses sent messengers from Kadesh unto the king of Edom, Thus saith thy brother Israel, Thou knowest all the travail that hath befallen us:*
+
+*15 How our fathers went down into Egypt, and we have dwelt in Egypt a long time; and the Egyptians vexed us, and our fathers:*
+
+*16 And when we cried unto the Lord, he heard our voice, and sent an angel, and hath brought us forth out of Egypt: and, behold, we are in Kadesh, a city in the uttermost of thy border:*
+
+*17 Let us pass, I pray thee, through thy country: we will not pass through the fields, or through the vineyards, neither will we drink of the water of the wells: we will go by the king's high way, we will not turn to the right hand nor to the left, until we have passed thy borders.*
+
+*18 And Edom said unto him, Thou shalt not pass by me, lest I come out against thee with the sword.*
+
+*19 And the children of Israel said unto him, We will go by the high way: and if I and my cattle drink of thy water, then I will pay for it: I will only, without doing anything else, go through on my feet.*
+
+*20 And he said, Thou shalt not go through. And Edom came out against him with much people, and with a strong hand.*
+
+*21 Thus Edom refused to give Israel passage through his border: wherefore Israel turned away from him.*
+
+*22 And the children of Israel, even the whole congregation, journeyed from Kadesh, and came unto mount Hor.*
+
+*23 And the Lord spake unto Moses and Aaron in mount Hor, by the coast of the land of Edom, saying,*
+
+*24 Aaron shall be gathered unto his people: for he shall not enter into the land which I have given unto the children of Israel, because ye rebelled against my word at the water of Meribah.*
+
+*25 Take Aaron and Eleazar his son, and bring them up unto mount Hor:*
+
+*26 And strip Aaron of his garments, and put them upon Eleazar his son: and Aaron shall be gathered unto his people, and shall die there.*
+
+*27 And Moses did as the Lord commanded: and they went up into mount Hor in the sight of all the congregation.*
+
+<!-- post 12617 · 2023-11-18 06:34 · scripture -->
+
+*28 And Moses stripped Aaron of his garments, and put them upon Eleazar his son; and Aaron died there in the top of the mount: and Moses and Eleazar came down from the mount.*
+
+*29 And when all the congregation saw that Aaron was dead, they mourned for Aaron thirty days, even all the house of Israel.*
+
+<!-- post 12618 · 2023-11-18 06:35 · study -->
+
+**Exodus 17:6** 
+*Behold, I will stand before thee there upon the rock in Horeb; and thou shalt smite the rock, and there shall come water out of it, that the people may drink. And Moses did so in the sight of the elders of Israel.*
+
+<!-- post 12619 · 2023-11-18 07:10 · study -->
+
+**Numbers 20** begins like most stories about the children of Israel, complaining and carrying on with a lack of faith or fear of the Lord. 
+
+They have witnessed triumphant miracles, seen the hand of the Lord strike down their enemies by the sea they passed through. Been guided through the desert by a pillar of flame. Had their bellies filled with bread made from manna of heaven. And have had water come from out from a rock to drink. 
+
+They have seen punishment of the Lord, His wrath revealed from Heaven, taking out thousands of their people. By fire. Plague. Venom. The earth swallowing up those that rebelled against the Lord. 
+
+His mercy and His wrath, the same revelations which Paul writes about in Romans, that no man has an excuse to not know and fear the Lord. 
+
+And yet they complain. 
+
+And so here, having been condemned for a generation to wander the wilderness for their unbelief in the promise of God to deliver them into the promised land, and fresh off of the rebellion that had the Lord had slain so many by plague, they once again complained to Moses. "Wherefore have ye made us to come up out of Egypt?" Lacking faith that God would provide.
+
+Moses and Aaron go to the Lord in prayer with their problem. The correct thing to do, of course. 
+
+*And the Lord spake unto Moses, saying, Take the rod, and gather thou the assembly together, thou, and Aaron thy brother, and speak ye unto the rock before their eyes; and it shall give forth his water, and thou shalt bring forth to them water out of the rock: so thou shalt give the congregation and their beasts drink.*
+
+Similar to the event that happened earlier in Exodus, the people murmering in complaint, and God had Moses strike the rock and brought forth water. So the people knew it was possible and Moses knew to follow the word of the Lord. And yet, in his anger or frustration, Moses disobeyed the word of God, and instead of speaking to the rock, he struck it with his rod. Not once, as at *Meribah* in Exodus, but twice. 
+
+Speaking to the rock is a picture of calling upon Christ for salvation; *If thou knewest the gift of God, and who it is that saith to thee, Give me to drink; thou wouldest have asked of him, and he would have given thee living water.* God wishes to be sanctified by the people from this miracle. (Not that He needs man to make him holy, in this use it means to acknowledge that He is holy.)
+
+And because Moses disobeyed His word, God keeps Him and Aaron from ever stepping foot in the land He had promised them. 
+
+But the water came forth and the people and their cattle drank, and they sanctified the Lord anyway, despite that great cost.
+
+<!-- post 12620 · 2023-11-18 07:18 · study -->
+
+Now the people wandering came to the boundaries of Edom, their brothers after the flesh, and not wishing to battle, Moses sent word that they would pass along the king's highway, and not take of the fields of vineyards. Only asking for safe passage through in the name of the God their mutual fathers knew. 
+
+And the Edomites denied them passage, and threatened to come put them to the sword. 
+
+And again, Moses entreated them to allow them passage, even offering to pay for any incidental water their cattle may drink. And again Edom said no, coming down to war against the Israelites. A contentious relationship that would ultimately see Edom destroyed and her people scattered, as they'd no longer followed the Lord. 
+
+And so to avoid war, Moses turned his people back into the wilderness.
+
+<!-- post 12621 · 2023-11-18 07:26 · study -->
+
+You can see comparing this story to the incident in **Exodus 17**, where Moses sent Joshua against the Amalek shortly after bringing forth the water from the rock, and they were victorious against their oppressors. 
+
+Obedience to the word of God, and they received the water and later victory against their enemies by the power of the Lord. 
+
+And here, in disobedience, slinking away in fear. 
+
+In the Christian life, we may go through phases like this. Where despite being delivered for so much early in our salvation, and despite seeing the blessings that come from obeying God, we may backslide. Become disillusioned. No longer listen to what His says, and do our own thing. Striking the rock, twice even. And when it comes time for battles against the world, turning in fear, unsure without faith. 
+
+It can be difficult to get back on track. To turn to God in humility and ask forgiveness. But if we do, He is merciful to forgive and forget. He wants to do things for His children that we may sanctify His holy name.
+
+<!-- post 12622 · 2023-11-18 07:29 · study -->
+
+Finally, we are told of the death of Aaron and the Lord passing the mantle of High Priest to his son, Eleazar.
+
+Moses' sister Miriam passes earlier in the chapter, but to little notice. Aaron however is given 30 days of honor in mourning by all Israel. Worth noticing.
+
+## Numbers 21  ·  Primary study  ·  2023-11-20
+
+Source: https://t.me/HouseOfWews2/12634
+
+<!-- post 12634 · 2023-11-20 05:47 · scripture -->
+
+**Numbers 21**
+*And when king Arad the Canaanite, which dwelt in the south, heard tell that Israel came by the way of the spies; then he fought against Israel, and took some of them prisoners.*
+
+*2 And Israel vowed a vow unto the Lord, and said, If thou wilt indeed deliver this people into my hand, then I will utterly destroy their cities.*
+
+*3 And the Lord hearkened to the voice of Israel, and delivered up the Canaanites; and they utterly destroyed them and their cities: and he called the name of the place Hormah.*
+
+*4 And they journeyed from mount Hor by the way of the Red sea, to compass the land of Edom: and the soul of the people was much discouraged because of the way.*
+
+*5 And the people spake against God, and against Moses, Wherefore have ye brought us up out of Egypt to die in the wilderness? for there is no bread, neither is there any water; and our soul loatheth this light bread.*
+
+*6 And the Lord sent fiery serpents among the people, and they bit the people; and much people of Israel died.*
+
+*7 Therefore the people came to Moses, and said, We have sinned, for we have spoken against the Lord, and against thee; pray unto the Lord, that he take away the serpents from us. And Moses prayed for the people.*
+
+*8 And the Lord said unto Moses, Make thee a fiery serpent, and set it upon a pole: and it shall come to pass, that every one that is bitten, when he looketh upon it, shall live.*
+
+*9 And Moses made a serpent of brass, and put it upon a pole, and it came to pass, that if a serpent had bitten any man, when he beheld the serpent of brass, he lived.*
+
+*10 And the children of Israel set forward, and pitched in Oboth.*
+
+*11 And they journeyed from Oboth, and pitched at Ijeabarim, in the wilderness which is before Moab, toward the sunrising.*
+
+*12 From thence they removed, and pitched in the valley of Zared.*
+
+*13 From thence they removed, and pitched on the other side of Arnon, which is in the wilderness that cometh out of the coasts of the Amorites: for Arnon is the border of Moab, between Moab and the Amorites.*
+
+*14 Wherefore it is said in the book of the wars of the Lord, What he did in the Red sea, and in the brooks of Arnon,*
+
+*15 And at the stream of the brooks that goeth down to the dwelling of Ar, and lieth upon the border of Moab.*
+
+*16 And from thence they went to Beer: that is the well whereof the Lord spake unto Moses, Gather the people together, and I will give them water.*
+
+*17 Then Israel sang this song, Spring up, O well; sing ye unto it:*
+
+*18 The princes digged the well, the nobles of the people digged it, by the direction of the lawgiver, with their staves. And from the wilderness they went to Mattanah:*
+
+*19 And from Mattanah to Nahaliel: and from Nahaliel to Bamoth:*
+
+*20 And from Bamoth in the valley, that is in the country of Moab, to the top of Pisgah, which looketh toward Jeshimon.*
+
+*21 And Israel sent messengers unto Sihon king of the Amorites, saying,*
+
+*22 Let me pass through thy land: we will not turn into the fields, or into the vineyards; we will not drink of the waters of the well: but we will go along by the king's high way, until we be past thy borders.*
+
+*23 And Sihon would not suffer Israel to pass through his border: but Sihon gathered all his people together, and went out against Israel into the wilderness: and he came to Jahaz, and fought against Israel.*
+
+*24 And Israel smote him with the edge of the sword, and possessed his land from Arnon unto Jabbok, even unto the children of Ammon: for the border of the children of Ammon was strong.*
+
+*25 And Israel took all these cities: and Israel dwelt in all the cities of the Amorites, in Heshbon, and in all the villages thereof.*
+
+*26 For Heshbon was the city of Sihon the king of the Amorites, who had fought against the former king of Moab, and taken all his land out of his hand, even unto Arnon.*
+
+*27 Wherefore they that speak in proverbs say, Come into Heshbon, let the city of Sihon be built and prepared:*
+
+*28 For there is a fire gone out of Heshbon, a flame from the city of Sihon: it hath consumed ar of Moab, and the lords of the high places of Arnon.*
+
+<!-- post 12635 · 2023-11-20 05:47 · scripture -->
+
+*29 Woe to thee, Moab! thou art undone, O people of Chemosh: he hath given his sons that escaped, and his daughters, into captivity unto Sihon king of the Amorites.*
+
+*30 We have shot at them; Heshbon is perished even unto Dibon, and we have laid them waste even unto Nophah, which reacheth unto Medeba.*
+
+*31 Thus Israel dwelt in the land of the Amorites.*
+
+*32 And Moses sent to spy out Jaazer, and they took the villages thereof, and drove out the Amorites that were there.*
+
+*33 And they turned and went up by the way of Bashan: and og the king of bashan went out against them, he, and all his people, to the battle at edrei.*
+
+*34 And the Lord said unto Moses, Fear him not: for I have delivered him into thy hand, and all his people, and his land; and thou shalt do to him as thou didst unto Sihon king of the Amorites, which dwelt at Heshbon.*
+
+*35 So they smote him, and his sons, and all his people, until there was none left him alive: and they possessed his land.*
+
+<!-- post 12636 · 2023-11-20 06:04 · study -->
+
+*And the people spake against God, and against Moses, Wherefore have ye brought us up out of Egypt to die in the wilderness? for there is no bread, neither is there any water; and our soul loatheth this light bread*.
+
+Chapter 21 of Numbers begins with a military victory, God delivering their enemies into their hands, and it ends with military victories. And yet in the midst of it, we see this familiar complaint of the Israelites. 
+
+"If God be real, why bad stuff happen?" They are spoiled by their own lack of faith and gratitude. 
+
+They begin during their journey having spies captured in the land of Arad king of the Canaanites, and so the people bowing a vow to the Lord that they will utterly destroy the cities of their foes, if He delivers them into their hands. 
+
+And the Lord hears them and does just that, and they destroy the cities of the Canaanites. But this faith in Him is short lived. As they sought a way around Edom to avoid their borders, they become discouraged again. And complain again. 
+
+They say they have no water, despite being given water multiple times. They say they have no bread, despite even admitting it is the "light bread" of Manna that they are sick of. 
+
+And so the Lord sends fiery serpents among them to torment and slay the people of Israel. You would think they'd have learned this lesson, but people can be stubborn. Have short memories of what God has done for them. Don't appreciate blessings and come to despise the spiritual bread. A like picture of the word come down from Heaven. Daily reading of scripture is for the NT Christian the same as gathering the Manna, to grind into bread. They have backslidden and we tend to as well when we neglect that daily bread. 
+
+And so, His wrath revealed against them, they come to Moses to beg forgiveness. And the Lord tells him to make a brazen snake, that the people may look upon it lifted up, and live. A picture of Christ;
+
+**John 3:14-16**
+ *And as Moses lifted up the serpent in the wilderness, even so must the Son of man be lifted up: That whosoever believeth in him should not perish, but have eternal life. For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.*
+
+<!-- post 12637 · 2023-11-20 06:15 · study -->
+
+After this short story, we are given an account of the victory against the Amorites, through the power of the Lord delivering them. And the king of Bashan, who went against them and perished. 
+
+And the children of Israel took their cities and killed everyone of the people. 
+
+*Thus Israel dwelt in the land of the Amorites.*
+
+There appears reference of a book of the wars of the Israelites, and it is mentioned in Exodus and may be refered to in some of the prophets. Tales or songs sung of the victories the children of Israel had in this time. But that it's lost to us means it ultimately wasn't important to us. There are similar mentions in Kings and Chronicles to other accounts recorded. 
+
+But we get the gist from the canonical books. 
+
+There is an itch some have where they desperately want to know these things, and seek out extrabiblical sources and are prone to believing Jewish fables offered as truth. It is a fine line to walk and discernment is a must. But for most seeking truth outside of the Bible, it becomes a trap and a snare. 
+
+Just look at the weight some give to apocrypha. And to clear forgeries like the "Gospel" of Andrew and the "Book of Enoch." People get derailed, even saved Christians, by studying things that had they been important, would have been inspired and preserved by God in His word. 
+
+Until someone has read the Bible multiple times, I really suggest staying away from histories and extrabiblical accounts and sources. Build up the knowledge of the Lord and the Spirit will provide discernment.
+
+<!-- post 12638 · 2023-11-20 08:15 · study -->
+
+**2 Kings 18** 
+*Now it came to pass in the third year of Hoshea son of Elah king of Israel, that Hezekiah the son of Ahaz king of Judah began to reign.*
+
+*2 Twenty and five years old was he when he began to reign; and he reigned twenty and nine years in Jerusalem. His mother's name also was Abi, the daughter of Zachariah.*
+
+*3 And he did that which was right in the sight of the Lord, according to all that David his father did.*
+
+*4 He removed the high places, and brake the images, and cut down the groves, and brake in pieces the brasen serpent that Moses had made: for unto those days the children of Israel did burn incense to it: and he called it Nehushtan.*
+
+*5 He trusted in the Lord God of Israel; so that after him was none like him among all the kings of Judah, nor any that were before him.*
+
+*6 For he clave to the Lord, and departed not from following him, but kept his commandments, which the Lord commanded Moses.*
+
+Just to add this postscript to the study on **Numbers 2**, this chapter and the story of the brazen serpent, is often cited by Catholics and Orthodox to justify their wicked pagan Idolatry. 
+
+To a man, those who have brought it up to me don't know or ever heard of "Nehushtan." Nehushtan means a thing of bronze, and it was not meant to be prayed to, to be bowed before or served. It wasn't meant to have incense burned to it, or candles lit in devotion. It has a singular purpose and it was to serve as a picture of Christ, who was lifted up on the cross, and became sin that we may look to Him and live. 
+
+Hezekiah, who did what was right in the sight of the Lord destroyed idols and temples and high places of the false gods, and he brake apart the brazen serpent. It was being worshipped in the same way crucifixes are in these apostate churches today. A picture for our benefit to understand the concept of salvation and eternal life in Christ, whose literal purpose was simply to heal Israelites bitten by the fiery snakes God had sent among them.  
+
+The physical application and spiritual are given us. And it is not a license to Idolatry.
+
+## Numbers 22  ·  Primary study  ·  2023-11-21
+
+Source: https://t.me/HouseOfWews2/12644
+
+_Commentary for this chapter was posted with Numbers 24._
+
+<!-- post 12644 · 2023-11-21 05:15 · scripture -->
+
+**Numbers 22** 
+*And the children of Israel set forward, and pitched in the plains of Moab on this side Jordan by Jericho.*
+
+*2 And Balak the son of Zippor saw all that Israel had done to the Amorites.*
+
+*3 And Moab was sore afraid of the people, because they were many: and Moab was distressed because of the children of Israel.*
+
+*4 And Moab said unto the elders of Midian, Now shall this company lick up all that are round about us, as the ox licketh up the grass of the field. And Balak the son of Zippor was king of the Moabites at that time.*
+
+*5 He sent messengers therefore unto Balaam the son of Beor to Pethor, which is by the river of the land of the children of his people, to call him, saying, Behold, there is a people come out from Egypt: behold, they cover the face of the earth, and they abide over against me:*
+
+*6 Come now therefore, I pray thee, curse me this people; for they are too mighty for me: peradventure I shall prevail, that we may smite them, and that I may drive them out of the land: for I wot that he whom thou blessest is blessed, and he whom thou cursest is cursed.*
+
+*7 And the elders of Moab and the elders of Midian departed with the rewards of divination in their hand; and they came unto Balaam, and spake unto him the words of Balak.*
+
+*8 And he said unto them, Lodge here this night, and I will bring you word again, as the Lord shall speak unto me: and the princes of Moab abode with Balaam.*
+
+*9 And God came unto Balaam, and said, What men are these with thee?*
+
+*10 And Balaam said unto God, Balak the son of Zippor, king of Moab, hath sent unto me, saying,*
+
+*11 Behold, there is a people come out of Egypt, which covereth the face of the earth: come now, curse me them; peradventure I shall be able to overcome them, and drive them out.*
+
+*12 And God said unto Balaam, Thou shalt not go with them; thou shalt not curse the people: for they are blessed.*
+
+*13 And Balaam rose up in the morning, and said unto the princes of Balak, Get you into your land: for the Lord refuseth to give me leave to go with you.*
+
+*14 And the princes of Moab rose up, and they went unto Balak, and said, Balaam refuseth to come with us.*
+
+*15 And Balak sent yet again princes, more, and more honourable than they.*
+
+*16 And they came to Balaam, and said to him, Thus saith Balak the son of Zippor, Let nothing, I pray thee, hinder thee from coming unto me:*
+
+*17 For I will promote thee unto very great honour, and I will do whatsoever thou sayest unto me: come therefore, I pray thee, curse me this people.*
+
+*18 And Balaam answered and said unto the servants of Balak, If Balak would give me his house full of silver and gold, I cannot go beyond the word of the Lord my God, to do less or more.*
+
+*19 Now therefore, I pray you, tarry ye also here this night, that I may know what the Lord will say unto me more.*
+
+*20 And God came unto Balaam at night, and said unto him, If the men come to call thee, rise up, and go with them; but yet the word which I shall say unto thee, that shalt thou do.*
+
+*21 And Balaam rose up in the morning, and saddled his ass, and went with the princes of Moab.*
+
+*22 And God's anger was kindled because he went: and the angel of the Lord stood in the way for an adversary against him. Now he was riding upon his ass, and his two servants were with him.*
+
+*23 And the ass saw the angel of the Lord standing in the way, and his sword drawn in his hand: and the ass turned aside out of the way, and went into the field: and Balaam smote the ass, to turn her into the way.*
+
+*24 But the angel of the Lord stood in a path of the vineyards, a wall being on this side, and a wall on that side.*
+
+*25 And when the ass saw the angel of the Lord, she thrust herself unto the wall, and crushed Balaam's foot against the wall: and he smote her again.*
+
+*26 And the angel of the Lord went further, and stood in a narrow place, where was no way to turn either to the right hand or to the left.*
+
+*27 And when the ass saw the angel of the Lord, she fell down under Balaam: and Balaam's anger was kindled, and he smote the ass with a staff.*
+
+<!-- post 12645 · 2023-11-21 05:15 · scripture -->
+
+*28 And the Lord opened the mouth of the ass, and she said unto Balaam, What have I done unto thee, that thou hast smitten me these three times?*
+
+*29 And Balaam said unto the ass, Because thou hast mocked me: I would there were a sword in mine hand, for now would I kill thee.*
+
+*30 And the ass said unto Balaam, Am not I thine ass, upon which thou hast ridden ever since I was thine unto this day? was I ever wont to do so unto thee? and he said, Nay.*
+
+*31 Then the Lord opened the eyes of Balaam, and he saw the angel of the Lord standing in the way, and his sword drawn in his hand: and he bowed down his head, and fell flat on his face.*
+
+*32 And the angel of the Lord said unto him, Wherefore hast thou smitten thine ass these three times? behold, I went out to withstand thee, because thy way is perverse before me:*
+
+*33 And the ass saw me, and turned from me these three times: unless she had turned from me, surely now also I had slain thee, and saved her alive.*
+
+*34 And Balaam said unto the angel of the Lord, I have sinned; for I knew not that thou stoodest in the way against me: now therefore, if it displease thee, I will get me back again.*
+
+*35 And the angel of the Lord said unto Balaam, Go with the men: but only the word that I shall speak unto thee, that thou shalt speak. So Balaam went with the princes of Balak.*
+
+*36 And when Balak heard that Balaam was come, he went out to meet him unto a city of Moab, which is in the border of Arnon, which is in the utmost coast.*
+
+*37 And Balak said unto Balaam, Did I not earnestly send unto thee to call thee? wherefore camest thou not unto me? am I not able indeed to promote thee to honour?*
+
+*38 And Balaam said unto Balak, Lo, I am come unto thee: have I now any power at all to say any thing? the word that God putteth in my mouth, that shall I speak.*
+
+*39 And Balaam went with Balak, and they came unto Kirjathhuzoth.*
+
+*40 And Balak offered oxen and sheep, and sent to Balaam, and to the princes that were with him.*
+
+*41 And it came to pass on the morrow, that Balak took Balaam, and brought him up into the high places of Baal, that thence he might see the utmost part of the people.*
+
+## Numbers 23  ·  Primary study  ·  2023-11-21
+
+Source: https://t.me/HouseOfWews2/12646
+
+_Commentary for this chapter was posted with Numbers 24._
+
+<!-- post 12646 · 2023-11-21 05:19 · scripture -->
+
+**Numbers 23**
+*And Balaam said unto Balak, Build me here seven altars, and prepare me here seven oxen and seven rams.*
+
+*2 And Balak did as Balaam had spoken; and Balak and Balaam offered on every altar a bullock and a ram.*
+
+*3 And Balaam said unto Balak, Stand by thy burnt offering, and I will go: peradventure the Lord will come to meet me: and whatsoever he sheweth me I will tell thee. And he went to an high place.*
+
+*4 And God met Balaam: and he said unto him, I have prepared seven altars, and I have offered upon every altar a bullock and a ram.*
+
+*5 And the Lord put a word in Balaam's mouth, and said, Return unto Balak, and thus thou shalt speak.*
+
+*6 And he returned unto him, and, lo, he stood by his burnt sacrifice, he, and all the princes of Moab.*
+
+*7 And he took up his parable, and said, Balak the king of Moab hath brought me from Aram, out of the mountains of the east, saying, Come, curse me Jacob, and come, defy Israel.*
+
+*8 How shall I curse, whom God hath not cursed? or how shall I defy, whom the Lord hath not defied?*
+
+*9 For from the top of the rocks I see him, and from the hills I behold him: lo, the people shall dwell alone, and shall not be reckoned among the nations.*
+
+*10 Who can count the dust of Jacob, and the number of the fourth part of Israel? Let me die the death of the righteous, and let my last end be like his!*
+
+*11 And Balak said unto Balaam, What hast thou done unto me? I took thee to curse mine enemies, and, behold, thou hast blessed them altogether.*
+
+*12 And he answered and said, Must I not take heed to speak that which the Lord hath put in my mouth?*
+
+*13 And Balak said unto him, Come, I pray thee, with me unto another place, from whence thou mayest see them: thou shalt see but the utmost part of them, and shalt not see them all: and curse me them from thence.*
+
+*14 And he brought him into the field of Zophim, to the top of Pisgah, and built seven altars, and offered a bullock and a ram on every altar.*
+
+*15 And he said unto Balak, Stand here by thy burnt offering, while I meet the Lord yonder.*
+
+*16 And the Lord met Balaam, and put a word in his mouth, and said, Go again unto Balak, and say thus.*
+
+*17 And when he came to him, behold, he stood by his burnt offering, and the princes of Moab with him. And Balak said unto him, What hath the Lord spoken?*
+
+*18 And he took up his parable, and said, Rise up, Balak, and hear; hearken unto me, thou son of Zippor:*
+
+*19 God is not a man, that he should lie; neither the son of man, that he should repent: hath he said, and shall he not do it? or hath he spoken, and shall he not make it good?*
+
+*20 Behold, I have received commandment to bless: and he hath blessed; and I cannot reverse it.*
+
+*21 He hath not beheld iniquity in Jacob, neither hath he seen perverseness in Israel: the Lord his God is with him, and the shout of a king is among them.*
+
+*22 God brought them out of Egypt; he hath as it were the strength of an unicorn.*
+
+*23 Surely there is no enchantment against Jacob, neither is there any divination against Israel: according to this time it shall be said of Jacob and of Israel, What hath God wrought!*
+
+*24 Behold, the people shall rise up as a great lion, and lift up himself as a young lion: he shall not lie down until he eat of the prey, and drink the blood of the slain.*
+
+*25 And Balak said unto Balaam, Neither curse them at all, nor bless them at all.*
+
+*26 But Balaam answered and said unto Balak, Told not I thee, saying, All that the Lord speaketh, that I must do?*
+
+*27 And Balak said unto Balaam, Come, I pray thee, I will bring thee unto another place; peradventure it will please God that thou mayest curse me them from thence.*
+
+*28 And Balak brought Balaam unto the top of Peor, that looketh toward jeshimon.*
+
+*29 And Balaam said unto Balak, Build me here seven altars, and prepare me here seven bullocks and seven rams.*
+
+*30 And Balak did as Balaam had said, and offered a bullock and a ram on every altar.*
+
+## Numbers 24  ·  Primary study  ·  2023-11-21
+
+Source: https://t.me/HouseOfWews2/12647
+
+<!-- post 12647 · 2023-11-21 05:22 · scripture -->
+
+**Numbers 24**
+ *And when Balaam saw that it pleased the Lord to bless Israel, he went not, as at other times, to seek for enchantments, but he set his face toward the wilderness.*
+
+*2 And Balaam lifted up his eyes, and he saw Israel abiding in his tents according to their tribes; and the spirit of God came upon him.*
+
+*3 And he took up his parable, and said, Balaam the son of Beor hath said, and the man whose eyes are open hath said:*
+
+*4 He hath said, which heard the words of God, which saw the vision of the Almighty, falling into a trance, but having his eyes open:*
+
+*5 How goodly are thy tents, O Jacob, and thy tabernacles, O Israel!*
+
+*6 As the valleys are they spread forth, as gardens by the river's side, as the trees of lign aloes which the Lord hath planted, and as cedar trees beside the waters.*
+
+*7 He shall pour the water out of his buckets, and his seed shall be in many waters, and his king shall be higher than Agag, and his kingdom shall be exalted.*
+
+*8 God brought him forth out of Egypt; he hath as it were the strength of an unicorn: he shall eat up the nations his enemies, and shall break their bones, and pierce them through with his arrows.*
+
+*9 He couched, he lay down as a lion, and as a great lion: who shall stir him up? Blessed is he that blesseth thee, and cursed is he that curseth thee.*
+
+*10 And Balak's anger was kindled against Balaam, and he smote his hands together: and Balak said unto Balaam, I called thee to curse mine enemies, and, behold, thou hast altogether blessed them these three times.*
+
+*11 Therefore now flee thou to thy place: I thought to promote thee unto great honour; but, lo, the Lord hath kept thee back from honour.*
+
+*12 And Balaam said unto Balak, Spake I not also to thy messengers which thou sentest unto me, saying,*
+
+*13 If Balak would give me his house full of silver and gold, I cannot go beyond the commandment of the Lord, to do either good or bad of mine own mind; but what the Lord saith, that will I speak?*
+
+*14 And now, behold, I go unto my people: come therefore, and I will advertise thee what this people shall do to thy people in the latter days.*
+
+*15 And he took up his parable, and said, Balaam the son of Beor hath said, and the man whose eyes are open hath said:*
+
+*16 He hath said, which heard the words of God, and knew the knowledge of the most High, which saw the vision of the Almighty, falling into a trance, but having his eyes open:*
+
+*17 I shall see him, but not now: I shall behold him, but not nigh: there shall come a Star out of Jacob, and a Sceptre shall rise out of Israel, and shall smite the corners of Moab, and destroy all the children of Sheth.*
+
+*18 And Edom shall be a possession, Seir also shall be a possession for his enemies; and Israel shall do valiantly.*
+
+*19 Out of Jacob shall come he that shall have dominion, and shall destroy him that remaineth of the city.*
+
+*20 And when he looked on Amalek, he took up his parable, and said, Amalek was the first of the nations; but his latter end shall be that he perish for ever.*
+
+*21 And he looked on the Kenites, and took up his parable, and said, Strong is thy dwellingplace, and thou puttest thy nest in a rock.*
+
+*22 Nevertheless the Kenite shall be wasted, until Asshur shall carry thee away captive.*
+
+*23 And he took up his parable, and said, Alas, who shall live when God doeth this!*
+
+*24 And ships shall come from the coast of Chittim, and shall afflict Asshur, and shall afflict Eber, and he also shall perish for ever.*
+
+*25 And Balaam rose up, and went and returned to his place: and Balak also went his way.*
+
+<!-- post 12648 · 2023-11-21 05:29 · study -->
+
+**Deuteronomy 23:3-6** 
+*An Ammonite or Moabite shall not enter into the congregation of the Lord; even to their tenth generation shall they not enter into the congregation of the Lord for ever: Because they met you not with bread and with water in the way, when ye came forth out of Egypt; and because they hired against thee Balaam the son of Beor of Pethor of Mesopotamia, to curse thee. Nevertheless the Lord thy God would not hearken unto Balaam; but the Lord thy God turned the curse into a blessing unto thee, because the Lord thy God loved thee.Thou shalt not seek their peace nor their prosperity all thy days for ever.*
+
+<!-- post 12649 · 2023-11-21 05:29 · study -->
+
+**Joshua 13**
+*15 And Moses gave unto the tribe of the children of Reuben inheritance according to their families.*
+
+*16 And their coast was from Aroer, that is on the bank of the river Arnon, and the city that is in the midst of the river, and all the plain by Medeba;*
+
+*17 Heshbon, and all her cities that are in the plain; Dibon, and Bamothbaal, and Bethbaalmeon,*
+
+*18 And Jahaza, and Kedemoth, and Mephaath,*
+
+*19 And Kirjathaim, and Sibmah, and Zarethshahar in the mount of the valley,*
+
+*20 And Bethpeor, and Ashdothpisgah, and Bethjeshimoth,*
+
+*21 And all the cities of the plain, and all the kingdom of Sihon king of the Amorites, which reigned in Heshbon, whom Moses smote with the princes of Midian, Evi, and Rekem, and Zur, and Hur, and Reba, which were dukes of Sihon, dwelling in the country.*
+
+*22 Balaam also the son of Beor, the soothsayer, did the children of Israel slay with the sword among them that were slain by them.*
+
+*23 And the border of the children of Reuben was Jordan, and the border thereof. This was the inheritance of the children of Reuben after their families, the cities and the villages thereof.*
+
+<!-- post 12650 · 2023-11-21 05:32 · study -->
+
+**Micah 6:5**
+*O my people, remember now what Balak king of Moab consulted, and what Balaam the son of Beor answered him from Shittim unto Gilgal; that ye may know the righteousness of the LORD.*
+
+**Revelation 2:14**
+*But I have a few things against thee, because thou hast there them that hold the doctrine of Balaam, who taught Balac to cast a stumblingblock before the children of Israel, to eat things sacrificed unto idols, and to commit fornication.*
+
+**Jude 1:11**
+*Woe unto them! for they have gone in the way of Cain, and ran greedily after the error of Balaam for reward, and perished in the gainsaying of Core*.
+
+**2 Peter 2:15**
+*Which have forsaken the right way, and are gone astray, following the way of Balaam the son of Bosor, who loved the wages of unrighteousness*.
+
+<!-- post 12651 · 2023-11-21 05:47 · study -->
+
+The presentation of the story of Balaam in **Numbers 22-24** shows the glory and truth of the Lord will be spoken, even if through a priest of Baal, offering sacrifices on high places, including the altars on the mount of Peor. 
+
+Balaam knew to fear the Lord, and knew not to go against God because it would end poorly for him. And when God knew he would go, He allowed it, that He could show Balaam his folly from the mouth of an ass. 
+
+And by the Spirit of the Lord, Balaam was unable to curse Israel. Despite the burnt offerings to Baal. Despite the bribes and threats of the king. Like the donkey, the Lord put words in the mouth of a false prophet, that we may know the righteousness of the Lord.
+
+Balaam, under God's word, gives a wonderful prophecy to Christ Jesus;
+
+*How goodly are thy tents, O Jacob, and thy tabernacles, O Israel!*
+
+*As the valleys are they spread forth, as gardens by the river's side, as the trees of lign aloes which the Lord hath planted, and as cedar trees beside the waters. He shall pour the water out of his buckets, and his seed shall be in many waters, and his king shall be higher than Agag, and his kingdom shall be exalted.*
+
+*God brought him forth out of Egypt; he hath as it were the strength of an unicorn: he shall eat up the nations his enemies, and shall break their bones, and pierce them through with his arrows. He couched, he lay down as a lion, and as a great lion: who shall stir him up? Blessed is he that blesseth thee, and cursed is he that curseth thee.*
+
+*I shall see him, but not now: I shall behold him, but not nigh: there shall come a Star out of Jacob, and a Sceptre shall rise out of Israel, and shall smite the corners of Moab, and destroy all the children of Sheth. And Edom shall be a possession, Seir also shall be a possession for his enemies; and Israel shall do valiantly. Out of Jacob shall come he that shall have dominion, and shall destroy him that remaineth of the city.*
+
+Balak the king was angry at Balaam, but as Balaam had told them;
+
+*If Balak would give me his house full of silver and gold, I cannot go beyond the commandment of the Lord, to do either good or bad of mine own mind; but what the Lord saith, that will I speak?*
+
+Balaam knew he had no control over what the Lord would put in his mouth to say. He tried to warn the princess who came for him. He reminds the king of Moab. 
+
+And in the remaining appearances of the prophet of Baal, we see his true nature revealed and his fate, slain at the hands of Israel.
+
+## Numbers 25  ·  Primary study  ·  2023-11-22
+
+Source: https://t.me/HouseOfWews2/12659
+
+<!-- post 12659 · 2023-11-22 05:33 · scripture -->
+
+**Numbers 25**
+*And Israel abode in Shittim, and the people began to commit whoredom with the daughters of Moab.*
+
+*2 And they called the people unto the sacrifices of their gods: and the people did eat, and bowed down to their gods.*
+
+*3 And Israel joined himself unto Baalpeor: and the anger of the Lord was kindled against Israel.*
+
+*4 And the Lord said unto Moses, Take all the heads of the people, and hang them up before the Lord against the sun, that the fierce anger of the Lord may be turned away from Israel.*
+
+*5 And Moses said unto the judges of Israel, Slay ye every one his men that were joined unto Baalpeor.*
+
+*6 And, behold, one of the children of Israel came and brought unto his brethren a Midianitish woman in the sight of Moses, and in the sight of all the congregation of the children of Israel, who were weeping before the door of the tabernacle of the congregation.*
+
+*7 And when Phinehas, the son of Eleazar, the son of Aaron the priest, saw it, he rose up from among the congregation, and took a javelin in his hand;*
+
+*8 And he went after the man of Israel into the tent, and thrust both of them through, the man of Israel, and the woman through her belly. So the plague was stayed from the children of Israel.*
+
+*9 And those that died in the plague were twenty and four thousand.*
+
+*10 And the Lord spake unto Moses, saying,*
+
+*11 Phinehas, the son of Eleazar, the son of Aaron the priest, hath turned my wrath away from the children of Israel, while he was zealous for my sake among them, that I consumed not the children of Israel in my jealousy.*
+
+*12 Wherefore say, Behold, I give unto him my covenant of peace:*
+
+*13 And he shall have it, and his seed after him, even the covenant of an everlasting priesthood; because he was zealous for his God, and made an atonement for the children of Israel.*
+
+*14 Now the name of the Israelite that was slain, even that was slain with the Midianitish woman, was Zimri, the son of Salu, a prince of a chief house among the Simeonites.*
+
+*15 And the name of the Midianitish woman that was slain was Cozbi, the daughter of Zur; he was head over a people, and of a chief house in Midian.*
+
+*16 And the Lord spake unto Moses, saying,*
+
+*17 Vex the Midianites, and smite them:*
+
+*18 For they vex you with their wiles, wherewith they have beguiled you in the matter of Peor, and in the matter of Cozbi, the daughter of a prince of Midian, their sister, which was slain in the day of the plague for Peor's sake.*
+
+<!-- post 12660 · 2023-11-22 05:48 · study -->
+
+The aftermath of the story of Balaam, a priest of Baal, who was called up by the king of Moab to curse the Israelites, especially after sacrifices made to Baal on the mountain of Peor. We see that having failed, because the word of God was made to come out of Balaam and bless the people, that the Israelites fell to whoredoms with the woman of Moab. Not only in the sense of fornication, but worshiping their false god at the very altar of Peor used by Balaam. 
+
+This is the matter of Peor. One of the men brought a Midianite woman to his tent, in the sight of Moses and the assembly. And God sent a plaque again among the Israelites. 
+
+But as the children gathered to God at the Tabernacle, the son of Eleazar, grandson of Aaron, Phinehas, took a spear and killed the man and the Midianite. And the Lord stops the plague for his zeal. 24,000 had died. 
+
+The Lord confirms the covenant of peace with Aaron and the Levites, in Phinehas, and instructs Moses to vex the Midianites and to smite them for they vexed the people with their wiles. They used their women to lead Israel after Baal. To eat the sacrifices and vow before their altars. 
+
+This will be a common theme. Outlandish women bringing the men of Israel to whoredoms, the worship of their false gods.
+
+<!-- post 12661 · 2023-11-22 05:55 · study -->
+
+We see a pattern forming. That as God blessed Israel, freeing them from bondage, making covenants with them, giving them the perfect law, feeding them in the wilderness, bringing forth water from the rock, defeating their enemies, driving them out before them, even unbeknownst to them preventing Balaam from cursing them from afar, that despite all that the Lord does for them, they either fall into complaint and lack of gratitude, or into sexual sin and chasing after false gods. 
+
+And they are struck down by the Lord in His wrath. 
+
+And still they complain. And still they go whoring. 
+
+And though their number is great, the matter of Peor is one in a string of plagues and pestilence, fiery serpents and fire from heaven, that have consumed thousands and thousands of the children of Israel. A winnowing has taken place. 
+
+God is sorting out the chaff. Just as He told Moses, the generation that would die in the wilderness.
+
+## Numbers 26  ·  Primary study  ·  2023-11-22
+
+Source: https://t.me/HouseOfWews2/12662
+
+<!-- post 12662 · 2023-11-22 05:56 · scripture -->
+
+**Numbers 26**
+*And it came to pass after the plague, that the Lord spake unto Moses and unto Eleazar the son of Aaron the priest, saying,*
+
+*2 Take the sum of all the congregation of the children of Israel, from twenty years old and upward, throughout their fathers' house, all that are able to go to war in Israel.*
+
+*3 And Moses and Eleazar the priest spake with them in the plains of Moab by Jordan near Jericho, saying,*
+
+*4 Take the sum of the people, from twenty years old and upward; as the Lord commanded Moses and the children of Israel, which went forth out of the land of Egypt.*
+
+*5 Reuben, the eldest son of Israel: the children of Reuben; Hanoch, of whom cometh the family of the Hanochites: of Pallu, the family of the Palluites:*
+
+*6 Of Hezron, the family of the Hezronites: of Carmi, the family of the Carmites.*
+
+*7 These are the families of the Reubenites: and they that were numbered of them were forty and three thousand and seven hundred and thirty.*
+
+*8 And the sons of Pallu; Eliab.*
+
+*9 And the sons of Eliab; Nemuel, and Dathan, and Abiram. This is that Dathan and Abiram, which were famous in the congregation, who strove against Moses and against Aaron in the company of Korah, when they strove against the Lord:*
+
+*10 And the earth opened her mouth, and swallowed them up together with Korah, when that company died, what time the fire devoured two hundred and fifty men: and they became a sign.*
+
+*11 Notwithstanding the children of Korah died not.*
+
+*12 The sons of Simeon after their families: of Nemuel, the family of the Nemuelites: of Jamin, the family of the Jaminites: of Jachin, the family of the Jachinites:*
+
+*13 Of Zerah, the family of the Zarhites: of Shaul, the family of the Shaulites.*
+
+*14 These are the families of the Simeonites, twenty and two thousand and two hundred.*
+
+*15 The children of Gad after their families: of Zephon, the family of the Zephonites: of Haggi, the family of the Haggites: of Shuni, the family of the Shunites:*
+
+*16 Of Ozni, the family of the Oznites: of Eri, the family of the Erites:*
+
+*17 Of Arod, the family of the Arodites: of Areli, the family of the Arelites.*
+
+*18 These are the families of the children of Gad according to those that were numbered of them, forty thousand and five hundred.*
+
+*19 The sons of Judah were Er and Onan: and Er and Onan died in the land of Canaan.*
+
+*20 And the sons of Judah after their families were; of Shelah, the family of the Shelanites: of Pharez, the family of the Pharzites: of Zerah, the family of the Zarhites.*
+
+*21 And the sons of Pharez were; of Hezron, the family of the Hezronites: of Hamul, the family of the Hamulites.*
+
+*22 These are the families of Judah according to those that were numbered of them, threescore and sixteen thousand and five hundred.*
+
+*23 Of the sons of Issachar after their families: of Tola, the family of the Tolaites: of Pua, the family of the Punites:*
+
+*24 Of Jashub, the family of the Jashubites: of Shimron, the family of the Shimronites.*
+
+*25 These are the families of Issachar according to those that were numbered of them, threescore and four thousand and three hundred.*
+
+*26 Of the sons of Zebulun after their families: of Sered, the family of the Sardites: of Elon, the family of the Elonites: of Jahleel, the family of the Jahleelites.*
+
+*27 These are the families of the Zebulunites according to those that were numbered of them, threescore thousand and five hundred.*
+
+*28 The sons of Joseph after their families were Manasseh and Ephraim.*
+
+*29 Of the sons of Manasseh: of Machir, the family of the Machirites: and Machir begat Gilead: of Gilead come the family of the Gileadites.*
+
+*30 These are the sons of Gilead: of Jeezer, the family of the Jeezerites: of Helek, the family of the Helekites:*
+
+*31 And of Asriel, the family of the Asrielites: and of Shechem, the family of the Shechemites:*
+
+*32 And of Shemida, the family of the Shemidaites: and of Hepher, the family of the Hepherites.*
+
+*33 And Zelophehad the son of Hepher had no sons, but daughters: and the names of the daughters of Zelophehad were Mahlah, and Noah, Hoglah, Milcah, and Tirzah.*
+
+<!-- post 12663 · 2023-11-22 05:56 · scripture -->
+
+*34 These are the families of Manasseh, and those that were numbered of them, fifty and two thousand and seven hundred.*
+
+*35 These are the sons of Ephraim after their families: of Shuthelah, the family of the Shuthalhites: of Becher, the family of the Bachrites: of Tahan, the family of the Tahanites.*
+
+*36 And these are the sons of Shuthelah: of Eran, the family of the Eranites.*
+
+*37 These are the families of the sons of Ephraim according to those that were numbered of them, thirty and two thousand and five hundred. These are the sons of Joseph after their families.*
+
+*38 The sons of Benjamin after their families: of Bela, the family of the Belaites: of Ashbel, the family of the Ashbelites: of Ahiram, the family of the Ahiramites:*
+
+*39 Of Shupham, the family of the Shuphamites: of Hupham, the family of the Huphamites.*
+
+*40 And the sons of Bela were ard and Naaman: of Ard, the family of the Ardites: and of Naaman, the family of the Naamites.*
+
+*41 These are the sons of Benjamin after their families: and they that were numbered of them were forty and five thousand and six hundred.*
+
+*42 These are the sons of Dan after their families: of Shuham, the family of the Shuhamites. These are the families of Dan after their families.*
+
+*43 All the families of the Shuhamites, according to those that were numbered of them, were threescore and four thousand and four hundred.*
+
+*44 Of the children of Asher after their families: of Jimna, the family of the Jimnites: of Jesui, the family of the Jesuites: of Beriah, the family of the Beriites.*
+
+*45 Of the sons of Beriah: of Heber, the family of the Heberites: of Malchiel, the family of the Malchielites.*
+
+*46 And the name of the daughter of Asher was Sarah.*
+
+*47 These are the families of the sons of Asher according to those that were numbered of them; who were fifty and three thousand and four hundred.*
+
+*48 Of the sons of Naphtali after their families: of Jahzeel, the family of the Jahzeelites: of Guni, the family of the Gunites:*
+
+*49 Of Jezer, the family of the Jezerites: of Shillem, the family of the Shillemites.*
+
+*50 These are the families of Naphtali according to their families: and they that were numbered of them were forty and five thousand and four hundred.*
+
+*51 These were the numbered of the children of Israel, six hundred thousand and a thousand seven hundred and thirty.*
+
+*52 And the Lord spake unto Moses, saying,*
+
+*53 Unto these the land shall be divided for an inheritance according to the number of names.*
+
+*54 To many thou shalt give the more inheritance, and to few thou shalt give the less inheritance: to every one shall his inheritance be given according to those that were numbered of him.*
+
+*55 Notwithstanding the land shall be divided by lot: according to the names of the tribes of their fathers they shall inherit.*
+
+*56 According to the lot shall the possession thereof be divided between many and few.*
+
+*57 And these are they that were numbered of the Levites after their families: of Gershon, the family of the Gershonites: of Kohath, the family of the Kohathites: of Merari, the family of the Merarites.*
+
+*58 These are the families of the Levites: the family of the Libnites, the family of the Hebronites, the family of the Mahlites, the family of the Mushites, the family of the Korathites. And Kohath begat Amram.*
+
+*59 And the name of Amram's wife was Jochebed, the daughter of Levi, whom her mother bare to Levi in Egypt: and she bare unto Amram Aaron and Moses, and Miriam their sister.*
+
+*60 And unto Aaron was born Nadab, and Abihu, Eleazar, and Ithamar.*
+
+*61 And Nadab and Abihu died, when they offered strange fire before the Lord.*
+
+*62 And those that were numbered of them were twenty and three thousand, all males from a month old and upward: for they were not numbered among the children of Israel, because there was no inheritance given them among the children of Israel.*
+
+*63 These are they that were numbered by Moses and Eleazar the priest, who numbered the children of Israel in the plains of Moab by Jordan near Jericho.*
+
+<!-- post 12664 · 2023-11-22 05:56 · scripture -->
+
+*64 But among these there was not a man of them whom Moses and Aaron the priest numbered, when they numbered the children of Israel in the wilderness of Sinai.*
+
+*65 For the Lord had said of them, They shall surely die in the wilderness. And there was not left a man of them, save Caleb the son of Jephunneh, and Joshua the son of Nun.*
+
+<!-- post 12665 · 2023-11-22 06:03 · study -->
+
+After the latest plague that befell Israel, the Lord tells Moses to again count the tribes and get the number of them there are. 
+
+And again, by camp and tribe Moses counts the men, over 20. Fighting age. And receives their number. 
+
+I will note that what was 12 tribes has become many nations already. The sons of the sons, their own people. Clans forming, as they would inherit the land of their fathers, given in the promise. It is a subtle thing but it seems important that they are listed this way at this time. 
+
+And after the polling, and the count is made, that among them numbered was not a man left alive who were counted before in the wilderness of Sinai, way back at the beginning of Numbers, except for Caleb and Joshua. Just as God said. They would all die in the wilderness.
+
+## Numbers 27  ·  Primary study  ·  2023-11-24
+
+Source: https://t.me/HouseOfWews2/12677
+
+<!-- post 12677 · 2023-11-24 06:05 · scripture -->
+
+**Numbers 27**
+*Then came the daughters of Zelophehad, the son of Hepher, the son of Gilead, the son of Machir, the son of Manasseh, of the families of Manasseh the son of Joseph: and these are the names of his daughters; Mahlah, Noah, and Hoglah, and Milcah, and Tirzah.*
+
+*2 And they stood before Moses, and before Eleazar the priest, and before the princes and all the congregation, by the door of the tabernacle of the congregation, saying,*
+
+*3 Our father died in the wilderness, and he was not in the company of them that gathered themselves together against the Lord in the company of Korah; but died in his own sin, and had no sons.*
+
+*4 Why should the name of our father be done away from among his family, because he hath no son? Give unto us therefore a possession among the brethren of our father.*
+
+*5 And Moses brought their cause before the Lord.*
+
+*6 And the Lord spake unto Moses, saying,*
+
+*7 The daughters of Zelophehad speak right: thou shalt surely give them a possession of an inheritance among their father's brethren; and thou shalt cause the inheritance of their father to pass unto them.*
+
+*8 And thou shalt speak unto the children of Israel, saying, If a man die, and have no son, then ye shall cause his inheritance to pass unto his daughter.*
+
+*9 And if he have no daughter, then ye shall give his inheritance unto his brethren.*
+
+*10 And if he have no brethren, then ye shall give his inheritance unto his father's brethren.*
+
+*11 And if his father have no brethren, then ye shall give his inheritance unto his kinsman that is next to him of his family, and he shall possess it: and it shall be unto the children of Israel a statute of judgment, as the Lord commanded Moses.*
+
+*12 And the Lord said unto Moses, Get thee up into this mount Abarim, and see the land which I have given unto the children of Israel.*
+
+*13 And when thou hast seen it, thou also shalt be gathered unto thy people, as Aaron thy brother was gathered.*
+
+*14 For ye rebelled against my commandment in the desert of Zin, in the strife of the congregation, to sanctify me at the water before their eyes: that is the water of Meribah in Kadesh in the wilderness of Zin.*
+
+*15 And Moses spake unto the Lord, saying,*
+
+*16 Let the Lord, the God of the spirits of all flesh, set a man over the congregation,*
+
+*17 Which may go out before them, and which may go in before them, and which may lead them out, and which may bring them in; that the congregation of the Lord be not as sheep which have no shepherd.*
+
+*18 And the Lord said unto Moses, Take thee Joshua the son of Nun, a man in whom is the spirit, and lay thine hand upon him;*
+
+*19 And set him before Eleazar the priest, and before all the congregation; and give him a charge in their sight.*
+
+*20 And thou shalt put some of thine honour upon him, that all the congregation of the children of Israel may be obedient.*
+
+*21 And he shall stand before Eleazar the priest, who shall ask counsel for him after the judgment of Urim before the Lord: at his word shall they go out, and at his word they shall come in, both he, and all the children of Israel with him, even all the congregation.*
+
+*22 And Moses did as the Lord commanded him: and he took Joshua, and set him before Eleazar the priest, and before all the congregation:*
+
+*23 And he laid his hands upon him, and gave him a charge, as the Lord commanded by the hand of Moses.*
+
+<!-- post 12678 · 2023-11-24 06:21 · study -->
+
+Chapter 27 of **Numbers** covers two cases of inheritance, one by the law and one by election. 
+
+When the daughters of Zelophehad come to ask that their father's portion fall on them, as he had no sons, Moses seeks the council of the Lord. 
+
+The establishment of the law of inheritance, the idea that each family have its place, and the generational wealth of the land God gave them to possess being passed down by the law, is set as a statute of judgement, a precedent set by the Lord. 
+
+Of course this idea always was, that the eldest inherits by law. But, as we see played out with Ishmael and Isaac, Esau and Jacob, even with Israel and Joseph, giving the second youngest of 12 the double portion usually reserved  for the eldest, that some are elect, or chosen, to receive that inheritance over the one legally entitled to it. 
+
+We see that as Moses is commanded by God to climb one last mountain, Abarim, to see the promised land, his thoughts are with who shall inherit his role as leader of the people. And it doesn't fall on his own sons, Gershom and Eliezer, who by law it could be expected, but to Joshua, the son of Nun. God chooses to elect Joshua in place of the children after the law.
+
+<!-- post 12679 · 2023-11-24 06:22 · study -->
+
+**Galatians 4** 
+*Now I say, That the heir, as long as he is a child, differeth nothing from a servant, though he be lord of all;*
+
+*2 But is under tutors and governors until the time appointed of the father.*
+
+*3 Even so we, when we were children, were in bondage under the elements of the world:*
+
+*4 But when the fulness of the time was come, God sent forth his Son, made of a woman, made under the law,*
+
+*5 To redeem them that were under the law, that we might receive the adoption of sons.*
+
+*6 And because ye are sons, God hath sent forth the Spirit of his Son into your hearts, crying, Abba, Father.*
+
+*7 Wherefore thou art no more a servant, but a son; and if a son, then an heir of God through Christ.*
+
+*8 Howbeit then, when ye knew not God, ye did service unto them which by nature are no gods.*
+
+*9 But now, after that ye have known God, or rather are known of God, how turn ye again to the weak and beggarly elements, whereunto ye desire again to be in bondage?*
+
+*10 Ye observe days, and months, and times, and years.*
+
+*11 I am afraid of you, lest I have bestowed upon you labour in vain.*
+
+*12 Brethren, I beseech you, be as I am; for I am as ye are: ye have not injured me at all.*
+
+*13 Ye know how through infirmity of the flesh I preached the gospel unto you at the first.*
+
+*14 And my temptation which was in my flesh ye despised not, nor rejected; but received me as an angel of God, even as Christ Jesus.*
+
+*15 Where is then the blessedness ye spake of? for I bear you record, that, if it had been possible, ye would have plucked out your own eyes, and have given them to me.*
+
+*16 Am I therefore become your enemy, because I tell you the truth?*
+
+*17 They zealously affect you, but not well; yea, they would exclude you, that ye might affect them.*
+
+*18 But it is good to be zealously affected always in a good thing, and not only when I am present with you.*
+
+*19 My little children, of whom I travail in birth again until Christ be formed in you,*
+
+*20 I desire to be present with you now, and to change my voice; for I stand in doubt of you.*
+
+*21 Tell me, ye that desire to be under the law, do ye not hear the law?*
+
+*22 For it is written, that Abraham had two sons, the one by a bondmaid, the other by a freewoman.*
+
+*23 But he who was of the bondwoman was born after the flesh; but he of the freewoman was by promise.*
+
+*24 Which things are an allegory: for these are the two covenants; the one from the mount Sinai, which gendereth to bondage, which is Agar.*
+
+*25 For this Agar is mount Sinai in Arabia, and answereth to Jerusalem which now is, and is in bondage with her children.*
+
+*26 But Jerusalem which is above is free, which is the mother of us all.*
+
+*27 For it is written, Rejoice, thou barren that bearest not; break forth and cry, thou that travailest not: for the desolate hath many more children than she which hath an husband.*
+
+*28 Now we, brethren, as Isaac was, are the children of promise.*
+
+*29 But as then he that was born after the flesh persecuted him that was born after the Spirit, even so it is now.*
+
+*30 Nevertheless what saith the scripture? Cast out the bondwoman and her son: for the son of the bondwoman shall not be heir with the son of the freewoman.*
+
+*31 So then, brethren, we are not children of the bondwoman, but of the free.*
+
+<!-- post 12680 · 2023-11-24 06:29 · study -->
+
+**Romans 4**
+*12 And the father of circumcision to them who are not of the circumcision only, but who also walk in the steps of that faith of our father Abraham, which he had being yet uncircumcised.*
+
+*13 For the promise, that he should be the heir of the world, was not to Abraham, or to his seed, through the law, but through the righteousness of faith.*
+
+*14 For if they which are of the law be heirs, faith is made void, and the promise made of none effect:*
+
+*15 Because the law worketh wrath: for where no law is, there is no transgression.*
+
+*16 Therefore it is of faith, that it might be by grace; to the end the promise might be sure to all the seed; not to that only which is of the law, but to that also which is of the faith of Abraham; who is the father of us all,*
+
+*17 (As it is written, I have made thee a father of many nations,) before him whom he believed, even God, who quickeneth the dead, and calleth those things which be not as though they were.*
+
+**Romans 8**
+*14 For as many as are led by the Spirit of God, they are the sons of God.*
+
+*15 For ye have not received the spirit of bondage again to fear; but ye have received the Spirit of adoption, whereby we cry, Abba, Father.*
+
+*16 The Spirit itself beareth witness with our spirit, that we are the children of God:*
+
+*17 And if children, then heirs; heirs of God, and joint-heirs with Christ; if so be that we suffer with him, that we may be also glorified together.*
+
+**Romans 9**
+*6 Not as though the word of God hath taken none effect. For they are not all Israel, which are of Israel:*
+
+*7 Neither, because they are the seed of Abraham, are they all children: but, In Isaac shall thy seed be called.*
+
+*8 That is, They which are the children of the flesh, these are not the children of God: but the children of the promise are counted for the seed.*
+
+*9 For this is the word of promise, At this time will I come, and Sarah shall have a son.*
+
+*10 And not only this; but when Rebecca also had conceived by one, even by our father Isaac;*
+
+*11 (For the children being not yet born, neither having done any good or evil, that the purpose of God according to election might stand, not of works, but of him that calleth;)*
+
+*12 It was said unto her, The elder shall serve the younger.*
+
+*13 As it is written, Jacob have I loved, but Esau have I hated.*
+
+*14 What shall we say then? Is there unrighteousness with God? God forbid.*
+
+*15 For he saith to Moses, I will have mercy on whom I will have mercy, and I will have compassion on whom I will have compassion.*
+
+*16 So then it is not of him that willeth, nor of him that runneth, but of God that sheweth mercy.*
+
+<!-- post 12681 · 2023-11-24 06:35 · study -->
+
+The idea that there is a legal inheritance, for earthly matters and yet an inheritance and blessing of election for spiritual things of God, is found continuously in scripture, starting with Cain the elder, and Abel the younger. And it all pictures the adoption of the Gentiles in the seed of Abraham, who is Christ Jesus over Abraham's children after the flesh. The first children of God, circumcised of the flesh, rejected, reorobate, for the adoption of children of God, circumcised of the heart. 
+
+The entire Bible teaches this. What is derisively called "replacement theology," is simply the understanding that the eldest may receive the inheritance of earthly things, but the Kingdom of Heaven is only inherited by faith. 
+
+Just as the daughters of Manasseh were given the land promised their father in the absence of brothers by law, and Joshua was given leadership of the children of Israel by the election of faith.
+
+## Numbers 28  ·  Primary study  ·  2023-11-25
+
+Source: https://t.me/HouseOfWews2/12691
+
+<!-- post 12691 · 2023-11-25 07:19 · scripture -->
+
+**Numbers 28**
+*And the Lord spake unto Moses, saying,*
+
+*2 Command the children of Israel, and say unto them, My offering, and my bread for my sacrifices made by fire, for a sweet savour unto me, shall ye observe to offer unto me in their due season.*
+
+*3 And thou shalt say unto them, This is the offering made by fire which ye shall offer unto the Lord; two lambs of the first year without spot day by day, for a continual burnt offering.*
+
+*4 The one lamb shalt thou offer in the morning, and the other lamb shalt thou offer at even;*
+
+*5 And a tenth part of an ephah of flour for a meat offering, mingled with the fourth part of an hin of beaten oil.*
+
+*6 It is a continual burnt offering, which was ordained in mount Sinai for a sweet savour, a sacrifice made by fire unto the Lord.*
+
+*7 And the drink offering thereof shall be the fourth part of an hin for the one lamb: in the holy place shalt thou cause the strong wine to be poured unto the Lord for a drink offering.*
+
+*8 And the other lamb shalt thou offer at even: as the meat offering of the morning, and as the drink offering thereof, thou shalt offer it, a sacrifice made by fire, of a sweet savour unto the Lord.*
+
+*9 And on the sabbath day two lambs of the first year without spot, and two tenth deals of flour for a meat offering, mingled with oil, and the drink offering thereof:*
+
+*10 This is the burnt offering of every sabbath, beside the continual burnt offering, and his drink offering.*
+
+*11 And in the beginnings of your months ye shall offer a burnt offering unto the Lord; two young bullocks, and one ram, seven lambs of the first year without spot;*
+
+*12 And three tenth deals of flour for a meat offering, mingled with oil, for one bullock; and two tenth deals of flour for a meat offering, mingled with oil, for one ram;*
+
+*13 And a several tenth deal of flour mingled with oil for a meat offering unto one lamb; for a burnt offering of a sweet savour, a sacrifice made by fire unto the Lord.*
+
+*14 And their drink offerings shall be half an hin of wine unto a bullock, and the third part of an hin unto a ram, and a fourth part of an hin unto a lamb: this is the burnt offering of every month throughout the months of the year.*
+
+*15 And one kid of the goats for a sin offering unto the Lord shall be offered, beside the continual burnt offering, and his drink offering.*
+
+*16 And in the fourteenth day of the first month is the passover of the Lord.*
+
+*17 And in the fifteenth day of this month is the feast: seven days shall unleavened bread be eaten.*
+
+*18 In the first day shall be an holy convocation; ye shall do no manner of servile work therein:*
+
+*19 But ye shall offer a sacrifice made by fire for a burnt offering unto the Lord; two young bullocks, and one ram, and seven lambs of the first year: they shall be unto you without blemish:*
+
+*20 And their meat offering shall be of flour mingled with oil: three tenth deals shall ye offer for a bullock, and two tenth deals for a ram;*
+
+*21 A several tenth deal shalt thou offer for every lamb, throughout the seven lambs:*
+
+*22 And one goat for a sin offering, to make an atonement for you.*
+
+*23 Ye shall offer these beside the burnt offering in the morning, which is for a continual burnt offering.*
+
+*24 After this manner ye shall offer daily, throughout the seven days, the meat of the sacrifice made by fire, of a sweet savour unto the Lord: it shall be offered beside the continual burnt offering, and his drink offering.*
+
+*25 And on the seventh day ye shall have an holy convocation; ye shall do no servile work.*
+
+*26 Also in the day of the firstfruits, when ye bring a new meat offering unto the Lord, after your weeks be out, ye shall have an holy convocation; ye shall do no servile work:*
+
+*27 But ye shall offer the burnt offering for a sweet savour unto the Lord; two young bullocks, one ram, seven lambs of the first year;*
+
+*28 And their meat offering of flour mingled with oil, three tenth deals unto one bullock, two tenth deals unto one ram,*
+
+*29 A several tenth deal unto one lamb, throughout the seven lambs;*
+
+*30 And one kid of the goats, to make an atonement for you.*
+
+## Numbers 29  ·  Primary study  ·  2023-11-26
+
+Source: https://t.me/HouseOfWews2/12699
+
+_Commentary for this chapter was posted with Numbers 30._
+
+<!-- post 12699 · 2023-11-26 06:59 · scripture -->
+
+**Numbers 29**
+*And in the seventh month, on the first day of the month, ye shall have an holy convocation; ye shall do no servile work: it is a day of blowing the trumpets unto you.*
+
+*2 And ye shall offer a burnt offering for a sweet savour unto the Lord; one young bullock, one ram, and seven lambs of the first year without blemish:*
+
+*3 And their meat offering shall be of flour mingled with oil, three tenth deals for a bullock, and two tenth deals for a ram,*
+
+*4 And one tenth deal for one lamb, throughout the seven lambs:*
+
+*5 And one kid of the goats for a sin offering, to make an atonement for you:*
+
+*6 Beside the burnt offering of the month, and his meat offering, and the daily burnt offering, and his meat offering, and their drink offerings, according unto their manner, for a sweet savour, a sacrifice made by fire unto the Lord.*
+
+*7 And ye shall have on the tenth day of this seventh month an holy convocation; and ye shall afflict your souls: ye shall not do any work therein:*
+
+*8 But ye shall offer a burnt offering unto the Lord for a sweet savour; one young bullock, one ram, and seven lambs of the first year; they shall be unto you without blemish:*
+
+*9 And their meat offering shall be of flour mingled with oil, three tenth deals to a bullock, and two tenth deals to one ram,*
+
+*10 A several tenth deal for one lamb, throughout the seven lambs:*
+
+*11 One kid of the goats for a sin offering; beside the sin offering of atonement, and the continual burnt offering, and the meat offering of it, and their drink offerings.*
+
+*12 And on the fifteenth day of the seventh month ye shall have an holy convocation; ye shall do no servile work, and ye shall keep a feast unto the Lord seven days:*
+
+*13 And ye shall offer a burnt offering, a sacrifice made by fire, of a sweet savour unto the Lord; thirteen young bullocks, two rams, and fourteen lambs of the first year; they shall be without blemish:*
+
+*14 And their meat offering shall be of flour mingled with oil, three tenth deals unto every bullock of the thirteen bullocks, two tenth deals to each ram of the two rams,*
+
+*15 And a several tenth deal to each lamb of the fourteen lambs:*
+
+*16 And one kid of the goats for a sin offering; beside the continual burnt offering, his meat offering, and his drink offering.*
+
+*17 And on the second day ye shall offer twelve young bullocks, two rams, fourteen lambs of the first year without spot:*
+
+*18 And their meat offering and their drink offerings for the bullocks, for the rams, and for the lambs, shall be according to their number, after the manner:*
+
+*19 And one kid of the goats for a sin offering; beside the continual burnt offering, and the meat offering thereof, and their drink offerings.*
+
+*20 And on the third day eleven bullocks, two rams, fourteen lambs of the first year without blemish;*
+
+*21 And their meat offering and their drink offerings for the bullocks, for the rams, and for the lambs, shall be according to their number, after the manner:*
+
+*22 And one goat for a sin offering; beside the continual burnt offering, and his meat offering, and his drink offering.*
+
+*23 And on the fourth day ten bullocks, two rams, and fourteen lambs of the first year without blemish:*
+
+*24 Their meat offering and their drink offerings for the bullocks, for the rams, and for the lambs, shall be according to their number, after the manner:*
+
+*25 And one kid of the goats for a sin offering; beside the continual burnt offering, his meat offering, and his drink offering.*
+
+*26 And on the fifth day nine bullocks, two rams, and fourteen lambs of the first year without spot:*
+
+*27 And their meat offering and their drink offerings for the bullocks, for the rams, and for the lambs, shall be according to their number, after the manner:*
+
+*28 And one goat for a sin offering; beside the continual burnt offering, and his meat offering, and his drink offering.*
+
+*29 And on the sixth day eight bullocks, two rams, and fourteen lambs of the first year without blemish:*
+
+<!-- post 12700 · 2023-11-26 06:59 · scripture -->
+
+*30 And their meat offering and their drink offerings for the bullocks, for the rams, and for the lambs, shall be according to their number, after the manner:*
+
+*31 And one goat for a sin offering; beside the continual burnt offering, his meat offering, and his drink offering.*
+
+*32 And on the seventh day seven bullocks, two rams, and fourteen lambs of the first year without blemish:*
+
+*33 And their meat offering and their drink offerings for the bullocks, for the rams, and for the lambs, shall be according to their number, after the manner:*
+
+*34 And one goat for a sin offering; beside the continual burnt offering, his meat offering, and his drink offering.*
+
+*35 On the eighth day ye shall have a solemn assembly: ye shall do no servile work therein:*
+
+*36 But ye shall offer a burnt offering, a sacrifice made by fire, of a sweet savour unto the Lord: one bullock, one ram, seven lambs of the first year without blemish:*
+
+*37 Their meat offering and their drink offerings for the bullock, for the ram, and for the lambs, shall be according to their number, after the manner:*
+
+*38 And one goat for a sin offering; beside the continual burnt offering, and his meat offering, and his drink offering.*
+
+*39 These things ye shall do unto the Lord in your set feasts, beside your vows, and your freewill offerings, for your burnt offerings, and for your meat offerings, and for your drink offerings, and for your peace offerings.*
+
+*40 And Moses told the children of Israel according to all that the Lord commanded Moses.*
+
+## Numbers 30  ·  Primary study  ·  2023-11-26
+
+Source: https://t.me/HouseOfWews2/12701
+
+<!-- post 12701 · 2023-11-26 07:02 · scripture -->
+
+**Numbers 30**
+*And Moses spake unto the heads of the tribes concerning the children of Israel, saying, This is the thing which the Lord hath commanded.*
+
+*2 If a man vow a vow unto the Lord, or swear an oath to bind his soul with a bond; he shall not break his word, he shall do according to all that proceedeth out of his mouth.*
+
+*3 If a woman also vow a vow unto the Lord, and bind herself by a bond, being in her father's house in her youth;*
+
+*4 And her father hear her vow, and her bond wherewith she hath bound her soul, and her father shall hold his peace at her; then all her vows shall stand, and every bond wherewith she hath bound her soul shall stand.*
+
+*5 But if her father disallow her in the day that he heareth; not any of her vows, or of her bonds wherewith she hath bound her soul, shall stand: and the Lord shall forgive her, because her father disallowed her.*
+
+*6 And if she had at all an husband, when she vowed, or uttered ought out of her lips, wherewith she bound her soul;*
+
+*7 And her husband heard it, and held his peace at her in the day that he heard it: then her vows shall stand, and her bonds wherewith she bound her soul shall stand.*
+
+*8 But if her husband disallowed her on the day that he heard it; then he shall make her vow which she vowed, and that which she uttered with her lips, wherewith she bound her soul, of none effect: and the Lord shall forgive her.*
+
+*9 But every vow of a widow, and of her that is divorced, wherewith they have bound their souls, shall stand against her.*
+
+*10 And if she vowed in her husband's house, or bound her soul by a bond with an oath;*
+
+*11 And her husband heard it, and held his peace at her, and disallowed her not: then all her vows shall stand, and every bond wherewith she bound her soul shall stand.*
+
+*12 But if her husband hath utterly made them void on the day he heard them; then whatsoever proceeded out of her lips concerning her vows, or concerning the bond of her soul, shall not stand: her husband hath made them void; and the Lord shall forgive her.*
+
+*13 Every vow, and every binding oath to afflict the soul, her husband may establish it, or her husband may make it void.*
+
+*14 But if her husband altogether hold his peace at her from day to day; then he establisheth all her vows, or all her bonds, which are upon her: he confirmeth them, because he held his peace at her in the day that he heard them.*
+
+*15 But if he shall any ways make them void after that he hath heard them; then he shall bear her iniquity.*
+
+*16 These are the statutes, which the Lord commanded Moses, between a man and his wife, between the father and his daughter, being yet in her youth in her father's house.*
+
+<!-- post 12702 · 2023-11-26 07:12 · study -->
+
+Here in **Numbers 29** and **30**, we have the Lord again reestablishing commandments and ordinances of the law. We will have a second giving of the law when we go through the book of Deuteronomy as well. God repeats each thing as important, for the edification of the children of Israel, and to our own edifying as Christians in our life and as judges in the Millennium to come. 
+
+The fall feasts, as we have covered elsewhere, signifying the second coming of Christ. The feast of trumpets, as in Revelation. 
+
+The law of vows, especially concerning fathers and husbands, over their women, reflecting the order of hierarchy given by the Lord. It makes what is often done flippantly and in vain today, seem far more grave and serious. But as Jesus said, better to not vow at all. 
+
+We are nearing the end of **Numbers**, God willing by the end of this week. These recaps are necessary as constant reminders that the Israelites were not left to rely on tradition, but on the word of God given them. Generational reestablishing of the Law by the word of God marks the time in the wilderness. The books of Moses kept to be read by the priests and the sacrifices made continually that they may not forget what they are a picture of.
+
+## Numbers 31  ·  Primary study  ·  2023-11-27
+
+Source: https://t.me/HouseOfWews2/12708
+
+<!-- post 12708 · 2023-11-27 05:43 · scripture -->
+
+**Numbers 31**
+*And the Lord spake unto Moses, saying,*
+
+*2 Avenge the children of Israel of the Midianites: afterward shalt thou be gathered unto thy people.*
+
+*3 And Moses spake unto the people, saying, Arm some of yourselves unto the war, and let them go against the Midianites, and avenge the Lord of Midian.*
+
+*4 Of every tribe a thousand, throughout all the tribes of Israel, shall ye send to the war.*
+
+*5 So there were delivered out of the thousands of Israel, a thousand of every tribe, twelve thousand armed for war.*
+
+*6 And Moses sent them to the war, a thousand of every tribe, them and Phinehas the son of Eleazar the priest, to the war, with the holy instruments, and the trumpets to blow in his hand.*
+
+*7 And they warred against the Midianites, as the Lord commanded Moses; and they slew all the males.*
+
+*8 And they slew the kings of Midian, beside the rest of them that were slain; namely, Evi, and Rekem, and Zur, and Hur, and Reba, five kings of Midian: Balaam also the son of Beor they slew with the sword.*
+
+*9 And the children of Israel took all the women of Midian captives, and their little ones, and took the spoil of all their cattle, and all their flocks, and all their goods.*
+
+*10 And they burnt all their cities wherein they dwelt, and all their goodly castles, with fire.*
+
+*11 And they took all the spoil, and all the prey, both of men and of beasts.*
+
+*12 And they brought the captives, and the prey, and the spoil, unto Moses, and Eleazar the priest, and unto the congregation of the children of Israel, unto the camp at the plains of Moab, which are by Jordan near Jericho.*
+
+*13 And Moses, and Eleazar the priest, and all the princes of the congregation, went forth to meet them without the camp.*
+
+*14 And Moses was wroth with the officers of the host, with the captains over thousands, and captains over hundreds, which came from the battle.*
+
+*15 And Moses said unto them, Have ye saved all the women alive?*
+
+*16 Behold, these caused the children of Israel, through the counsel of Balaam, to commit trespass against the Lord in the matter of Peor, and there was a plague among the congregation of the Lord.*
+
+*17 Now therefore kill every male among the little ones, and kill every woman that hath known man by lying with him.*
+
+*18 But all the women children, that have not known a man by lying with him, keep alive for yourselves.*
+
+*19 And do ye abide without the camp seven days: whosoever hath killed any person, and whosoever hath touched any slain, purify both yourselves and your captives on the third day, and on the seventh day.*
+
+*20 And purify all your raiment, and all that is made of skins, and all work of goats' hair, and all things made of wood.*
+
+*21 And Eleazar the priest said unto the men of war which went to the battle, This is the ordinance of the law which the Lord commanded Moses;*
+
+*22 Only the gold, and the silver, the brass, the iron, the tin, and the lead,*
+
+*23 Every thing that may abide the fire, ye shall make it go through the fire, and it shall be clean: nevertheless it shall be purified with the water of separation: and all that abideth not the fire ye shall make go through the water.*
+
+*24 And ye shall wash your clothes on the seventh day, and ye shall be clean, and afterward ye shall come into the camp.*
+
+*25 And the Lord spake unto Moses, saying,*
+
+*26 Take the sum of the prey that was taken, both of man and of beast, thou, and Eleazar the priest, and the chief fathers of the congregation:*
+
+*27 And divide the prey into two parts; between them that took the war upon them, who went out to battle, and between all the congregation:*
+
+*28 And levy a tribute unto the Lord of the men of war which went out to battle: one soul of five hundred, both of the persons, and of the beeves, and of the asses, and of the sheep:*
+
+*29 Take it of their half, and give it unto Eleazar the priest, for an heave offering of the Lord.*
+
+<!-- post 12709 · 2023-11-27 05:43 · scripture -->
+
+*30 And of the children of Israel's half, thou shalt take one portion of fifty, of the persons, of the beeves, of the asses, and of the flocks, of all manner of beasts, and give them unto the Levites, which keep the charge of the tabernacle of the Lord.*
+
+*31 And Moses and Eleazar the priest did as the Lord commanded Moses.*
+
+*32 And the booty, being the rest of the prey which the men of war had caught, was six hundred thousand and seventy thousand and five thousand sheep,*
+
+*33 And threescore and twelve thousand beeves,*
+
+*34 And threescore and one thousand asses,*
+
+*35 And thirty and two thousand persons in all, of women that had not known man by lying with him.*
+
+*36 And the half, which was the portion of them that went out to war, was in number three hundred thousand and seven and thirty thousand and five hundred sheep:*
+
+*37 And the Lord'S tribute of the sheep was six hundred and threescore and fifteen.*
+
+*38 And the beeves were thirty and six thousand; of which the Lord'S tribute was threescore and twelve.*
+
+*39 And the asses were thirty thousand and five hundred; of which the Lord'S tribute was threescore and one.*
+
+*40 And the persons were sixteen thousand; of which the Lord'S tribute was thirty and two persons.*
+
+*41 And Moses gave the tribute, which was the Lord'S heave offering, unto Eleazar the priest, as the Lord commanded Moses.*
+
+*42 And of the children of Israel's half, which Moses divided from the men that warred,*
+
+*43 (Now the half that pertained unto the congregation was three hundred thousand and thirty thousand and seven thousand and five hundred sheep,*
+
+*44 And thirty and six thousand beeves,*
+
+*45 And thirty thousand asses and five hundred,*
+
+*46 And sixteen thousand persons;)*
+
+*47 Even of the children of Israel's half, Moses took one portion of fifty, both of man and of beast, and gave them unto the Levites, which kept the charge of the tabernacle of the Lord; as the Lord commanded Moses.*
+
+*48 And the officers which were over thousands of the host, the captains of thousands, and captains of hundreds, came near unto Moses:*
+
+*49 And they said unto Moses, Thy servants have taken the sum of the men of war which are under our charge, and there lacketh not one man of us.*
+
+*50 We have therefore brought an oblation for the Lord, what every man hath gotten, of jewels of gold, chains, and bracelets, rings, earrings, and tablets, to make an atonement for our souls before the Lord.*
+
+*51 And Moses and Eleazar the priest took the gold of them, even all wrought jewels.*
+
+*52 And all the gold of the offering that they offered up to the Lord, of the captains of thousands, and of the captains of hundreds, was sixteen thousand seven hundred and fifty shekels.*
+
+*53 (For the men of war had taken spoil, every man for himself.)*
+
+*54 And Moses and Eleazar the priest took the gold of the captains of thousands and of hundreds, and brought it into the tabernacle of the congregation, for a memorial for the children of Israel before the Lord.*
+
+<!-- post 12710 · 2023-11-27 05:55 · study -->
+
+Another straight narrative in **Numbers 31**, a telling of the slaughter of the Midianites, who had tried to curse the Israelites through Balaam, and who had managed through whoredoms to bring many to worship Baal. We see the deaths of their kings and of Balaam, their priest. The spoil taken, which included male children and adult women, whom Moses insists be put to the sword, least they lead men astray again and another plague is sent by God in judgment. 
+
+The spoils then left are divided up, each man of war his own, and the people their own, and to the Levites a share, and to God, His. Further the men of war offer of their own share a portion to honor God, as a memorial.
+
+We see that the law of the unclean being purified by the manner laid out in **Numbers 19** is applied here. Each man who had slain or touched a body, their captives and the spoil, all things that could not be purified by fire were taken without the camp for 7 days, with the washings done on the 3rd day. 
+
+When you consider all the pestilence that had been brought against them in the wilderness, adherence to this practice makes sense, pleasing God and also isolating any contaminated person or item. 
+
+The things that could be purified by fire were passed through the fire. Gold and silver and other metals. It reminds me of 1 Corinthians 3:12-15;
+
+*Now if any man build upon this foundation gold, silver, precious stones, wood, hay, stubble; Every man's work shall be made manifest: for the day shall declare it, because it shall be revealed by fire; and the fire shall try every man's work of what sort it is. If any man's work abide which he hath built thereupon, he shall receive a reward. If any man's work shall be burned, he shall suffer loss: but he himself shall be saved; yet so as by fire.*
+
+The spoil, the treasure, that we store up in Heaven that is given of the works we build upon the foundation that is Christ. And the crowns we earn which are thrown at the feet of Christ, as the men of war who give of their share a tribute to God;
+
+**Revelation 4:10-11**
+*The four and twenty elders fall down before him that sat on the throne, and worship him that liveth for ever and ever, and cast their crowns before the throne, saying, Thou art worthy, O Lord, to receive glory and honour and power: for thou hast created all things, and for thy pleasure they are and were created.*
+
+## Numbers 32  ·  Primary study  ·  2023-11-28
+
+Source: https://t.me/HouseOfWews2/12718
+
+<!-- post 12718 · 2023-11-28 05:34 · scripture -->
+
+**Numbers 32**
+*Now the children of Reuben and the children of Gad had a very great multitude of cattle: and when they saw the land of Jazer, and the land of Gilead, that, behold, the place was a place for cattle;*
+
+*2 The children of Gad and the children of Reuben came and spake unto Moses, and to Eleazar the priest, and unto the princes of the congregation, saying,*
+
+*3 Ataroth, and Dibon, and Jazer, and Nimrah, and Heshbon, and Elealeh, and Shebam, and Nebo, and Beon,*
+
+*4 Even the country which the Lord smote before the congregation of Israel, is a land for cattle, and thy servants have cattle:*
+
+*5 Wherefore, said they, if we have found grace in thy sight, let this land be given unto thy servants for a possession, and bring us not over Jordan.*
+
+*6 And Moses said unto the children of Gad and to the children of Reuben, Shall your brethren go to war, and shall ye sit here?*
+
+*7 And wherefore discourage ye the heart of the children of Israel from going over into the land which the Lord hath given them?*
+
+*8 Thus did your fathers, when I sent them from Kadeshbarnea to see the land.*
+
+*9 For when they went up unto the valley of Eshcol, and saw the land, they discouraged the heart of the children of Israel, that they should not go into the land which the Lord had given them.*
+
+*10 And the Lord'S anger was kindled the same time, and he sware, saying,*
+
+*11 Surely none of the men that came up out of Egypt, from twenty years old and upward, shall see the land which I sware unto Abraham, unto Isaac, and unto Jacob; because they have not wholly followed me:*
+
+*12 Save Caleb the son of Jephunneh the Kenezite, and Joshua the son of Nun: for they have wholly followed the Lord.*
+
+*13 And the Lord'S anger was kindled against Israel, and he made them wander in the wilderness forty years, until all the generation, that had done evil in the sight of the Lord, was consumed.*
+
+*14 And, behold, ye are risen up in your fathers' stead, an increase of sinful men, to augment yet the fierce anger of the Lord toward Israel.*
+
+*15 For if ye turn away from after him, he will yet again leave them in the wilderness; and ye shall destroy all this people.*
+
+*16 And they came near unto him, and said, We will build sheepfolds here for our cattle, and cities for our little ones:*
+
+*17 But we ourselves will go ready armed before the children of Israel, until we have brought them unto their place: and our little ones shall dwell in the fenced cities because of the inhabitants of the land.*
+
+*18 We will not return unto our houses, until the children of Israel have inherited every man his inheritance.*
+
+*19 For we will not inherit with them on yonder side Jordan, or forward; because our inheritance is fallen to us on this side Jordan eastward.*
+
+*20 And Moses said unto them, If ye will do this thing, if ye will go armed before the Lord to war,*
+
+*21 And will go all of you armed over Jordan before the Lord, until he hath driven out his enemies from before him,*
+
+*22 And the land be subdued before the Lord: then afterward ye shall return, and be guiltless before the Lord, and before Israel; and this land shall be your possession before the Lord.*
+
+*23 But if ye will not do so, behold, ye have sinned against the Lord: and be sure your sin will find you out.*
+
+*24 Build you cities for your little ones, and folds for your sheep; and do that which hath proceeded out of your mouth.*
+
+*25 And the children of Gad and the children of Reuben spake unto Moses, saying, Thy servants will do as my lord commandeth.*
+
+*26 Our little ones, our wives, our flocks, and all our cattle, shall be there in the cities of Gilead:*
+
+*27 But thy servants will pass over, every man armed for war, before the Lord to battle, as my lord saith.*
+
+*28 So concerning them Moses commanded Eleazar the priest, and Joshua the son of Nun, and the chief fathers of the tribes of the children of Israel:*
+
+*29 And Moses said unto them, If the children of Gad and the children of Reuben will pass with you over Jordan, every man armed to battle, before the Lord, and the land shall be subdued before you; then ye shall give them the land of Gilead for a possession:*
+
+<!-- post 12719 · 2023-11-28 05:34 · scripture -->
+
+*30 But if they will not pass over with you armed, they shall have possessions among you in the land of Canaan.*
+
+*31 And the children of Gad and the children of Reuben answered, saying, As the Lord hath said unto thy servants, so will we do.*
+
+*32 We will pass over armed before the Lord into the land of Canaan, that the possession of our inheritance on this side Jordan may be our's.*
+
+*33 And Moses gave unto them, even to the children of Gad, and to the children of Reuben, and unto half the tribe of Manasseh the son of Joseph, the kingdom of Sihon king of the Amorites, and the kingdom of Og king of Bashan, the land, with the cities thereof in the coasts, even the cities of the country round about.*
+
+*34 And the children of Gad built Dibon, and Ataroth, and Aroer,*
+
+*35 And Atroth, Shophan, and Jaazer, and Jogbehah,*
+
+*36 And Bethnimrah, and Bethharan, fenced cities: and folds for sheep.*
+
+*37 And the children of Reuben built Heshbon, and Elealeh, and Kirjathaim,*
+
+*38 And Nebo, and Baalmeon, (their names being changed,) and Shibmah: and gave other names unto the cities which they builded.*
+
+*39 And the children of Machir the son of Manasseh went to Gilead, and took it, and dispossessed the Amorite which was in it.*
+
+*40 And Moses gave Gilead unto Machir the son of Manasseh; and he dwelt therein.*
+
+*41 And Jair the son of Manasseh went and took the small towns thereof, and called them Havothjair.*
+
+*42 And Nobah went and took Kenath, and the villages thereof, and called it Nobah, after his own name.*
+
+<!-- post 12720 · 2023-11-28 05:43 · study -->
+
+**Genesis 49:3-4**
+*Reuben, thou art my firstborn, my might, and the beginning of my strength, The excellency of dignity, and the excellency of power: Unstable as water, thou shalt not excel; Because thou wentest up to thy father's bed; Then defiledst thou it: he went up to my couch.*
+
+**49:18-19**
+*I have waited for thy salvation, O LORD. Gad, a troop shall overcome him: but he shall overcome at the last.*
+
+**Genesis 48:13-18**
+*And Joseph took them both, Ephraim in his right hand toward Israel's left hand, and Manasseh in his left hand toward Israel's right hand, and brought them near unto him. And Israel stretched out his right hand, and laid it upon Ephraim's head, who was the younger, and his left hand upon Manasseh's head, guiding his hands wittingly; for Manasseh was the firstborn. And he blessed Joseph, and said, God, before whom my fathers Abraham and Isaac did walk, the God which fed me all my life long unto this day, The Angel which redeemed me from all evil, bless the lads; and let my name be named on them, and the name of my fathers Abraham and Isaac; and let them grow into a multitude in the midst of the earth. And when Joseph saw that his father laid his right hand upon the head of Ephraim, it displeased him: and he held up his father's hand, to remove it from Ephraim's head unto Manasseh's head. And Joseph said unto his father, Not so, my father: for this is the firstborn; put thy right hand upon his head. And his father refused, and said, I know it, my son, I know it: he also shall become a people, and he also shall be great: but truly his younger brother shall be greater than he, and his seed shall become a multitude of nations.*
+*And he blessed them that day, saying, In thee shall Israel bless, saying, God make thee as Ephraim and as Manasseh: and he set Ephraim before Manasseh.*
+
+<!-- post 12721 · 2023-11-28 06:09 · study -->
+
+Here in **Numbers 32**, we find the tribes of Ruben, Gad and Manasseh, entreating Moses that they be allowed to set their tribes homelands east of the Jordan, rather than cross over into Canaan. 
+
+They had much cattle, especially after the spoil of the nations God had driven out before them, and those He had them put down by the edge of the sword. This land was good for cattle, they argued. A familiar theme of those choosing the easier path in this world;
+
+**Genesis 13:8-11**
+*And Abram said unto Lot, Let there be no strife, I pray thee, between me and thee, and between my herdmen and thy herdmen; for we be brethren. Is not the whole land before thee? separate thyself, I pray thee, from me: if thou wilt take the left hand, then I will go to the right; or if thou depart to the right hand, then I will go to the left.*
+
+*And Lot lifted up his eyes, and beheld all the plain of Jordan, that it was well watered every where, before the Lord destroyed Sodom and Gomorrah, even as the garden of the Lord, like the land of Egypt, as thou comest unto Zoar.*
+
+*Then Lot chose him all the plain of Jordan; and Lot journeyed east: and they separated themselves the one from the other.*
+
+Settling for the land, east of the Jordan because of having much cattle and the land being good for the herds, ended poorly for just Lot.
+
+For the sons of Ruben, the first born who was denied his inheritance by law, and told his people should not excel, perhaps the idea of the bird in the hand appealed to them more than their lesser status and inheritance would be in the promised land. 
+
+Gad as well, of Jacob and his first wife Zipporah, were not favored among the tribes, but were warriors. They sought the frontier surrounded by enemies of Israel. 
+
+Manasseh, also the eldest of Joseph, like Ruben to Israel. Like Edom to Jacob, who was destined to be great, but Ephraim the younger was the elect, given the greater blessing. 
+
+These tribes sought to receive what they felt was good enough, rather than seek that which the Lord had allotted them. 
+
+And Moses, afraid of a repeat of the 12 spies and the sowing of fear among the people by their bad report, which cursed the children of Israel with 40yr wandering in the wilderness, tells them no, least their not crossing over brings a similar fear to the people, and kindles God's wrath. 
+
+But they agree to lead their armies of fighting men, armed for war, over with the rest of the tribes and fight for them, and Moses accepts the offer. 
+
+*And Moses said unto them, If ye will do this thing, if ye will go armed before the Lord to war, And will go all of you armed over Jordan before the Lord, until he hath driven out his enemies from before him, And the land be subdued before the Lord: then afterward ye shall return, and be guiltless before the Lord, and before Israel; and this land shall be your possession before the Lord. But if ye will not do so, behold, ye have sinned against the Lord: and be sure your sin will find you out.*
+
+Commanding Joshua and Eleazar the priest that this would be acceptable terms unto the Lord.
+
+## Numbers 33  ·  Primary study  ·  2023-11-29
+
+Source: https://t.me/HouseOfWews2/12729
+
+<!-- post 12729 · 2023-11-29 05:51 · scripture -->
+
+**Numbers 33**
+*These are the journeys of the children of Israel, which went forth out of the land of Egypt with their armies under the hand of Moses and Aaron.*
+
+*2 And Moses wrote their goings out according to their journeys by the commandment of the Lord: and these are their journeys according to their goings out.*
+
+*3 And they departed from Rameses in the first month, on the fifteenth day of the first month; on the morrow after the passover the children of Israel went out with an high hand in the sight of all the Egyptians.*
+
+*4 For the Egyptians buried all their firstborn, which the Lord had smitten among them: upon their gods also the Lord executed judgments.*
+
+*5 And the children of Israel removed from Rameses, and pitched in Succoth.*
+
+*6 And they departed from Succoth, and pitched in Etham, which is in the edge of the wilderness.*
+
+*7 And they removed from Etham, and turned again unto Pihahiroth, which is before Baalzephon: and they pitched before Migdol.*
+
+*8 And they departed from before Pihahiroth, and passed through the midst of the sea into the wilderness, and went three days'journey in the wilderness of Etham, and pitched in Marah.*
+
+*9 And they removed from Marah, and came unto Elim: and in Elim were twelve fountains of water, and threescore and ten palm trees; and they pitched there.*
+
+*10 And they removed from Elim, and encamped by the Red sea.*
+
+*11 And they removed from the Red sea, and encamped in the wilderness of Sin.*
+
+*12 And they took their journey out of the wilderness of Sin, and encamped in Dophkah.*
+
+*13 And they departed from Dophkah, and encamped in Alush.*
+
+*14 And they removed from Alush, and encamped at Rephidim, where was no water for the people to drink.*
+
+*15 And they departed from Rephidim, and pitched in the wilderness of Sinai.*
+
+*16 And they removed from the desert of Sinai, and pitched at Kibrothhattaavah.*
+
+*17 And they departed from Kibrothhattaavah, and encamped at Hazeroth.*
+
+*18 And they departed from Hazeroth, and pitched in Rithmah.*
+
+*19 And they departed from Rithmah, and pitched at Rimmonparez.*
+
+*20 And they departed from Rimmonparez, and pitched in Libnah.*
+
+*21 And they removed from Libnah, and pitched at Rissah.*
+
+*22 And they journeyed from Rissah, and pitched in Kehelathah.*
+
+*23 And they went from Kehelathah, and pitched in mount Shapher.*
+
+*24 And they removed from mount Shapher, and encamped in Haradah.*
+
+*25 And they removed from Haradah, and pitched in Makheloth.*
+
+*26 And they removed from Makheloth, and encamped at Tahath.*
+
+*27 And they departed from Tahath, and pitched at Tarah.*
+
+*28 And they removed from Tarah, and pitched in Mithcah.*
+
+*29 And they went from Mithcah, and pitched in Hashmonah.*
+
+*30 And they departed from Hashmonah, and encamped at Moseroth.*
+
+*31 And they departed from Moseroth, and pitched in Benejaakan.*
+
+*32 And they removed from Benejaakan, and encamped at Horhagidgad.*
+
+*33 And they went from Horhagidgad, and pitched in Jotbathah.*
+
+*34 And they removed from Jotbathah, and encamped at Ebronah.*
+
+*35 And they departed from Ebronah, and encamped at Eziongaber.*
+
+*36 And they removed from Eziongaber, and pitched in the wilderness of Zin, which is Kadesh.*
+
+*37 And they removed from Kadesh, and pitched in mount Hor, in the edge of the land of Edom.*
+
+*38 And Aaron the priest went up into mount Hor at the commandment of the Lord, and died there, in the fortieth year after the children of Israel were come out of the land of Egypt, in the first day of the fifth month.*
+
+*39 And Aaron was an hundred and twenty and three years old when he died in mount Hor.*
+
+*40 And king Arad the Canaanite, which dwelt in the south in the land of Canaan, heard of the coming of the children of Israel.*
+
+*41 And they departed from mount Hor, and pitched in Zalmonah.*
+
+*42 And they departed from Zalmonah, and pitched in Punon.*
+
+*43 And they departed from Punon, and pitched in Oboth.*
+
+*44 And they departed from Oboth, and pitched in Ijeabarim, in the border of Moab.*
+
+*45 And they departed from Iim, and pitched in Dibongad.*
+
+*46 And they removed from Dibongad, and encamped in Almondiblathaim.*
+
+<!-- post 12730 · 2023-11-29 05:51 · scripture -->
+
+*47 And they removed from Almondiblathaim, and pitched in the mountains of Abarim, before Nebo.*
+
+*48 And they departed from the mountains of Abarim, and pitched in the plains of Moab by Jordan near Jericho.*
+
+*49 And they pitched by Jordan, from Bethjesimoth even unto Abelshittim in the plains of Moab.*
+
+*50 And the Lord spake unto Moses in the plains of Moab by Jordan near Jericho, saying,*
+
+*51 Speak unto the children of Israel, and say unto them, When ye are passed over Jordan into the land of Canaan;*
+
+*52 Then ye shall drive out all the inhabitants of the land from before you, and destroy all their pictures, and destroy all their molten images, and quite pluck down all their high places:*
+
+*53 And ye shall dispossess the inhabitants of the land, and dwell therein: for I have given you the land to possess it.*
+
+*54 And ye shall divide the land by lot for an inheritance among your families: and to the more ye shall give the more inheritance, and to the fewer ye shall give the less inheritance: every man's inheritance shall be in the place where his lot falleth; according to the tribes of your fathers ye shall inherit.*
+
+*55 But if ye will not drive out the inhabitants of the land from before you; then it shall come to pass, that those which ye let remain of them shall be pricks in your eyes, and thorns in your sides, and shall vex you in the land wherein ye dwell.*
+
+*56 Moreover it shall come to pass, that I shall do unto you, as I thought to do unto them.*
+
+<!-- post 12731 · 2023-11-29 05:57 · study -->
+
+The retelling of all the movements of the camp of Israel. The places they'd been for 40 years. Wandering in the wilderness as God moved them. 
+
+It is often said they wandered aimlessly. That they were lost and unable to find the promised land. But their every movement was by the Spirit of God. The pillar of smoke and fire. Following the Lord. 
+
+As they prepared to enter the land of Canaan, the Lord instructs them to drive the inhabitants out before them, and to destroy all their images and idols. To tear down their altars in the high places. And God warns Israel if they fail to do this, all that remain will be a vexation to their people. 
+
+And He warns again about the conditional nature of their covenant (which dispensationalists deny). He says He will do unto them as He thought to do unto the Canaanites. Destroy them. Drive them from the land. To be cut off.
+
+## Numbers 34  ·  Primary study  ·  2023-11-30
+
+Source: https://t.me/HouseOfWews2/12737
+
+<!-- post 12737 · 2023-11-30 05:55 · scripture -->
+
+**Numbers 34**
+*And the Lord spake unto Moses, saying,*
+
+*2 Command the children of Israel, and say unto them, When ye come into the land of Canaan; (this is the land that shall fall unto you for an inheritance, even the land of Canaan with the coasts thereof:)*
+
+*3 Then your south quarter shall be from the wilderness of Zin along by the coast of Edom, and your south border shall be the outmost coast of the salt sea eastward:*
+
+*4 And your border shall turn from the south to the ascent of Akrabbim, and pass on to Zin: and the going forth thereof shall be from the south to Kadeshbarnea, and shall go on to Hazaraddar, and pass on to Azmon:*
+
+*5 And the border shall fetch a compass from Azmon unto the river of Egypt, and the goings out of it shall be at the sea.*
+
+*6 And as for the western border, ye shall even have the great sea for a border: this shall be your west border.*
+
+*7 And this shall be your north border: from the great sea ye shall point out for you mount Hor:*
+
+*8 From mount Hor ye shall point out your border unto the entrance of Hamath; and the goings forth of the border shall be to Zedad:*
+
+*9 And the border shall go on to Ziphron, and the goings out of it shall be at Hazarenan: this shall be your north border.*
+
+*10 And ye shall point out your east border from Hazarenan to Shepham:*
+
+*11 And the coast shall go down from Shepham to Riblah, on the east side of Ain; and the border shall descend, and shall reach unto the side of the sea of Chinnereth eastward:*
+
+*12 And the border shall go down to Jordan, and the goings out of it shall be at the salt sea: this shall be your land with the coasts thereof round about.*
+
+*13 And Moses commanded the children of Israel, saying, This is the land which ye shall inherit by lot, which the Lord commanded to give unto the nine tribes, and to the half tribe:*
+
+*14 For the tribe of the children of Reuben according to the house of their fathers, and the tribe of the children of Gad according to the house of their fathers, have received their inheritance; and half the tribe of Manasseh have received their inheritance:*
+
+*15 The two tribes and the half tribe have received their inheritance on this side Jordan near Jericho eastward, toward the sunrising.*
+
+*16 And the Lord spake unto Moses, saying,*
+
+*17 These are the names of the men which shall divide the land unto you: Eleazar the priest, and Joshua the son of Nun.*
+
+*18 And ye shall take one prince of every tribe, to divide the land by inheritance.*
+
+*19 And the names of the men are these: Of the tribe of Judah, Caleb the son of Jephunneh.*
+
+*20 And of the tribe of the children of Simeon, Shemuel the son of Ammihud.*
+
+*21 Of the tribe of Benjamin, Elidad the son of Chislon.*
+
+*22 And the prince of the tribe of the children of Dan, Bukki the son of Jogli.*
+
+*23 The prince of the children of Joseph, for the tribe of the children of Manasseh, Hanniel the son of Ephod.*
+
+*24 And the prince of the tribe of the children of Ephraim, Kemuel the son of Shiphtan.*
+
+*25 And the prince of the tribe of the children of Zebulun, Elizaphan the son of Parnach.*
+
+*26 And the prince of the tribe of the children of Issachar, Paltiel the son of Azzan.*
+
+*27 And the prince of the tribe of the children of Asher, Ahihud the son of Shelomi.*
+
+*28 And the prince of the tribe of the children of Naphtali, Pedahel the son of Ammihud.*
+
+*29 These are they whom the Lord commanded to divide the inheritance unto the children of Israel in the land of Canaan.*
+
+<!-- post 12738 · 2023-11-30 05:56 · study · has photo -->
+
+Basically.
+
+<!-- post 12739 · 2023-11-30 06:03 · study -->
+
+I will say that while the gift of the promised land was given as an inheritance to those children of Israel, by tribe and by lot, this inheritance was always not only conditional, but by the election of grace, given of God. 
+
+God elected that they would receive this land, by covenant of their keeping Him as their God, which they failed to do, the fault being with the people. 
+
+The Bible is a book of winnowing, narrowing down and casting off. Of God choosing to bless the lesser. The younger. Not by law or entitlement, but by His purpose and need. Inheritance, but with caveats to His purpose. A continuous replacement. If the study of **Numbers** has taught us anything, God has no problem casting off into the fire any branches He wishes. Reprobation in the Wilderness meant not only being damned, but destroyed in the most painful awful ways. Plague and fire and being swallowed up by the ground itself.
+
+## Numbers 35  ·  Primary study  ·  2023-12-02
+
+Source: https://t.me/HouseOfWews2/12746
+
+<!-- post 12746 · 2023-12-02 07:25 · scripture -->
+
+**Numbers 35**
+*And the Lord spake unto Moses in the plains of Moab by Jordan near Jericho, saying,*
+
+*2 Command the children of Israel, that they give unto the Levites of the inheritance of their possession cities to dwell in; and ye shall give also unto the Levites suburbs for the cities round about them.*
+
+*3 And the cities shall they have to dwell in; and the suburbs of them shall be for their cattle, and for their goods, and for all their beasts.*
+
+*4 And the suburbs of the cities, which ye shall give unto the Levites, shall reach from the wall of the city and outward a thousand cubits round about.*
+
+*5 And ye shall measure from without the city on the east side two thousand cubits, and on the south side two thousand cubits, and on the west side two thousand cubits, and on the north side two thousand cubits; and the city shall be in the midst: this shall be to them the suburbs of the cities.*
+
+*6 And among the cities which ye shall give unto the Levites there shall be six cities for refuge, which ye shall appoint for the manslayer, that he may flee thither: and to them ye shall add forty and two cities.*
+
+*7 So all the cities which ye shall give to the Levites shall be forty and eight cities: them shall ye give with their suburbs.*
+
+*8 And the cities which ye shall give shall be of the possession of the children of Israel: from them that have many ye shall give many; but from them that have few ye shall give few: every one shall give of his cities unto the Levites according to his inheritance which he inheriteth.*
+
+*9 And the Lord spake unto Moses, saying,*
+
+*10 Speak unto the children of Israel, and say unto them, When ye be come over Jordan into the land of Canaan;*
+
+*11 Then ye shall appoint you cities to be cities of refuge for you; that the slayer may flee thither, which killeth any person at unawares.*
+
+*12 And they shall be unto you cities for refuge from the avenger; that the manslayer die not, until he stand before the congregation in judgment.*
+
+*13 And of these cities which ye shall give six cities shall ye have for refuge.*
+
+*14 Ye shall give three cities on this side Jordan, and three cities shall ye give in the land of Canaan, which shall be cities of refuge.*
+
+*15 These six cities shall be a refuge, both for the children of Israel, and for the stranger, and for the sojourner among them: that every one that killeth any person unawares may flee thither.*
+
+*16 And if he smite him with an instrument of iron, so that he die, he is a murderer: the murderer shall surely be put to death.*
+
+*17 And if he smite him with throwing a stone, wherewith he may die, and he die, he is a murderer: the murderer shall surely be put to death.*
+
+*18 Or if he smite him with an hand weapon of wood, wherewith he may die, and he die, he is a murderer: the murderer shall surely be put to death.*
+
+*19 The revenger of blood himself shall slay the murderer: when he meeteth him, he shall slay him.*
+
+*20 But if he thrust him of hatred, or hurl at him by laying of wait, that he die;*
+
+*21 Or in enmity smite him with his hand, that he die: he that smote him shall surely be put to death; for he is a murderer: the revenger of blood shall slay the murderer, when he meeteth him.*
+
+*22 But if he thrust him suddenly without enmity, or have cast upon him any thing without laying of wait,*
+
+*23 Or with any stone, wherewith a man may die, seeing him not, and cast it upon him, that he die, and was not his enemy, neither sought his harm:*
+
+*24 Then the congregation shall judge between the slayer and the revenger of blood according to these judgments:*
+
+*25 And the congregation shall deliver the slayer out of the hand of the revenger of blood, and the congregation shall restore him to the city of his refuge, whither he was fled: and he shall abide in it unto the death of the high priest, which was anointed with the holy oil.*
+
+*26 But if the slayer shall at any time come without the border of the city of his refuge, whither he was fled;*
+
+*27 And the revenger of blood find him without the borders of the city of his refuge, and the revenger of blood kill the slayer; he shall not be guilty of blood:*
+
+<!-- post 12747 · 2023-12-02 07:25 · scripture -->
+
+*28 Because he should have remained in the city of his refuge until the death of the high priest: but after the death of the high priest the slayer shall return into the land of his possession.*
+
+*29 So these things shall be for a statute of judgment unto you throughout your generations in all your dwellings.*
+
+*30 Whoso killeth any person, the murderer shall be put to death by the mouth of witnesses: but one witness shall not testify against any person to cause him to die.*
+
+*31 Moreover ye shall take no satisfaction for the life of a murderer, which is guilty of death: but he shall be surely put to death.*
+
+*32 And ye shall take no satisfaction for him that is fled to the city of his refuge, that he should come again to dwell in the land, until the death of the priest.*
+
+*33 So ye shall not pollute the land wherein ye are: for blood it defileth the land: and the land cannot be cleansed of the blood that is shed therein, but by the blood of him that shed it.*
+
+*34 Defile not therefore the land which ye shall inhabit, wherein I dwell: for I the Lord dwell among the children of Israel.*
+
+<!-- post 12748 · 2023-12-02 08:02 · study -->
+
+In **Numbers 35**, God gives the law of sanctuary cities and the judgments against murderers and the allowance for cases of manslaughter. Read through it and you really can appreciate how perfect God's law is. 
+
+With the granting of the land to the tribes of Israel, given by lot, the Levites who have no inheritance are to be given land within the tribes, cites and suburbs for living among them. To minister and serve. 
+
+And on top of that, given cities to serve as refuge for those that accidentally slay a man, that someone seeking revenge not slay them in return. 
+
+All to minimize the blood shed in the land, which cannot be cleansed. Multiple times in **Numbers**, the laws for cleansing those who were exposed to death or bloodshed. But the land itself cries out over bloodshed, as we saw in the murder of Abel;
+
+**Genesis 4:8-10**
+*And Cain talked with Abel his brother: and it came to pass, when they were in the field, that Cain rose up against Abel his brother, and slew him. And the Lord said unto Cain, Where is Abel thy brother? And he said, I know not: Am I my brother's keeper?*
+
+*And he said, What hast thou done? the voice of thy brother's blood crieth unto me from the ground.*
+
+It was this curse of Canaan, made by Noah when Ham had uncovered his father's nakedness, and so by the time of **Exodus**, the Canaanites land was polluted by the blood shed and offerings to idols. God's judgment upon them that they be dispossessed and slain to give the land to Israel. 
+
+But it was polluted again, even by the wickedness of the Israelites who turned to whoredoms and killed their own children to idols as the people there before them;
+
+**Psalm 106:37-40**
+*Yea, they sacrificed their sons and their daughters unto devils, And shed innocent blood, Even the blood of their sons and of their daughters, Whom they sacrificed unto the idols of Canaan: And the land was polluted with blood. Thus were they defiled with their own works, And went a whoring with their own inventions. Therefore was the wrath of the LORD kindled against his people, Insomuch that he abhorred his own inheritance.*
+
+And so the idea of having a city of refuge, where the innocent of murder could flee and live, so long as they were found to have done it by accident, until the death of the high priest. 
+
+That the revenger catching them outside the city was innocent of the blood. And that the murderer be put down upon the testimony of witnesses, their own blood being upon them. It's an elegant system that prevents the people from falling into tribal warfare, especially given the Levitical priests being among all the tribes.
+
+<!-- post 12749 · 2023-12-02 08:03 · study · has photo -->
+
+Artist's rendition of the Levitical walled cities and suburbs
+
+## Numbers 36  ·  Primary study  ·  2023-12-03
+
+Source: https://t.me/HouseOfWews2/12751
+
+<!-- post 12751 · 2023-12-03 07:00 · scripture -->
+
+**Numbers 36**
+*And the chief fathers of the families of the children of Gilead, the son of Machir, the son of Manasseh, of the families of the sons of Joseph, came near, and spake before Moses, and before the princes, the chief fathers of the children of Israel:*
+
+*2 And they said, The Lord commanded my lord to give the land for an inheritance by lot to the children of Israel: and my lord was commanded by the Lord to give the inheritance of Zelophehad our brother unto his daughters.*
+
+*3 And if they be married to any of the sons of the other tribes of the children of Israel, then shall their inheritance be taken from the inheritance of our fathers, and shall be put to the inheritance of the tribe whereunto they are received: so shall it be taken from the lot of our inheritance.*
+
+*4 And when the jubile of the children of Israel shall be, then shall their inheritance be put unto the inheritance of the tribe whereunto they are received: so shall their inheritance be taken away from the inheritance of the tribe of our fathers.*
+
+*5 And Moses commanded the children of Israel according to the word of the Lord, saying, The tribe of the sons of Joseph hath said well.*
+
+*6 This is the thing which the Lord doth command concerning the daughters of Zelophehad, saying, Let them marry to whom they think best; only to the family of the tribe of their father shall they marry.*
+
+*7 So shall not the inheritance of the children of Israel remove from tribe to tribe: for every one of the children of Israel shall keep himself to the inheritance of the tribe of his fathers.*
+
+*8 And every daughter, that possesseth an inheritance in any tribe of the children of Israel, shall be wife unto one of the family of the tribe of her father, that the children of Israel may enjoy every man the inheritance of his fathers.*
+
+*9 Neither shall the inheritance remove from one tribe to another tribe; but every one of the tribes of the children of Israel shall keep himself to his own inheritance.*
+
+*10 Even as the Lord commanded Moses, so did the daughters of Zelophehad:*
+
+*11 For Mahlah, Tirzah, and Hoglah, and Milcah, and Noah, the daughters of Zelophehad, were married unto their fathers brothers' sons:*
+
+*12 And they were married into the families of the sons of Manasseh the son of Joseph, and their inheritance remained in the tribe of the family of their father.*
+
+*13 These are the commandments and the judgments, which the Lord commanded by the hand of Moses unto the children of Israel in the plains of Moab by Jordan near Jericho.*
+
+<!-- post 12752 · 2023-12-03 07:07 · study -->
+
+The final chapter of **Numbers**, and one last bit of housekeeping for Moses and the law, revisiting the command of God that land inheritance in a family that has no sons should go to the daughters. The worry being that their daughters marry of another tribe and this dilutes the inheritance when those sons take possession of the land. Moses gives the command of the Lord that the inheritance remains in the tribe, so as the daughter must marry those of her father's family. 
+
+Recall that at jubilee, there is a right of return, that any land sold or let to outsiders is returned to the family that had owned it, keeping the boundaries and habitations thereof as given by God. Now daughters could marry outside the tribe, but not carry with them rights to property inherited. The Lord had need that the tribes remain separated as much as possible, leading to the birth of Christ.
+
+And with that commandment, we come to the end of the study of **Numbers**. Difficult in some places, wonderful picture of Jesus in others, and wisdom and doctrine throughout, well worth the effort.
+
+<!-- post 12753 · 2023-12-03 07:13 · study -->
+
+**Psalm 106**
+*Praise ye the Lord. O give thanks unto the Lord; for he is good: for his mercy endureth for ever.*
+
+*2 Who can utter the mighty acts of the Lord? who can shew forth all his praise?*
+
+*3 Blessed are they that keep judgment, and he that doeth righteousness at all times.*
+
+*4 Remember me, O Lord, with the favour that thou bearest unto thy people: O visit me with thy salvation;*
+
+*5 That I may see the good of thy chosen, that I may rejoice in the gladness of thy nation, that I may glory with thine inheritance.*
+
+*6 We have sinned with our fathers, we have committed iniquity, we have done wickedly.*
+
+*7 Our fathers understood not thy wonders in Egypt; they remembered not the multitude of thy mercies; but provoked him at the sea, even at the Red sea.*
+
+*8 Nevertheless he saved them for his name's sake, that he might make his mighty power to be known.*
+
+*9 He rebuked the Red sea also, and it was dried up: so he led them through the depths, as through the wilderness.*
+
+*10 And he saved them from the hand of him that hated them, and redeemed them from the hand of the enemy.*
+
+*11 And the waters covered their enemies: there was not one of them left.*
+
+*12 Then believed they his words; they sang his praise.*
+
+*13 They soon forgat his works; they waited not for his counsel:*
+
+*14 But lusted exceedingly in the wilderness, and tempted God in the desert.*
+
+*15 And he gave them their request; but sent leanness into their soul.*
+
+*16 They envied Moses also in the camp, and Aaron the saint of the Lord.*
+
+*17 The earth opened and swallowed up Dathan and covered the company of Abiram.*
+
+*18 And a fire was kindled in their company; the flame burned up the wicked.*
+
+*19 They made a calf in Horeb, and worshipped the molten image.*
+
+*20 Thus they changed their glory into the similitude of an ox that eateth grass.*
+
+*21 They forgat God their saviour, which had done great things in Egypt;*
+
+*22 Wondrous works in the land of Ham, and terrible things by the Red sea.*
+
+*23 Therefore he said that he would destroy them, had not Moses his chosen stood before him in the breach, to turn away his wrath, lest he should destroy them.*
+
+*24 Yea, they despised the pleasant land, they believed not his word:*
+
+*25 But murmured in their tents, and hearkened not unto the voice of the Lord.*
+
+*26 Therefore he lifted up his hand against them, to overthrow them in the wilderness:*
+
+*27 To overthrow their seed also among the nations, and to scatter them in the lands.*
+
+*28 They joined themselves also unto Baalpeor, and ate the sacrifices of the dead.*
+
+*29 Thus they provoked him to anger with their inventions: and the plague brake in upon them.*
+
+*30 Then stood up Phinehas, and executed judgment: and so the plague was stayed.*
+
+*31 And that was counted unto him for righteousness unto all generations for evermore.*
+
+*32 They angered him also at the waters of strife, so that it went ill with Moses for their sakes:*
+
+*33 Because they provoked his spirit, so that he spake unadvisedly with his lips.*
+
+*34 They did not destroy the nations, concerning whom the Lord commanded them:*
+
+*35 But were mingled among the heathen, and learned their works.*
+
+*36 And they served their idols: which were a snare unto them.*
+
+*37 Yea, they sacrificed their sons and their daughters unto devils,*
+
+*38 And shed innocent blood, even the blood of their sons and of their daughters, whom they sacrificed unto the idols of Canaan: and the land was polluted with blood.*
+
+*39 Thus were they defiled with their own works, and went a whoring with their own inventions.*
+
+*40 Therefore was the wrath of the Lord kindled against his people, insomuch that he abhorred his own inheritance.*
+
+*41 And he gave them into the hand of the heathen; and they that hated them ruled over them.*
+
+*42 Their enemies also oppressed them, and they were brought into subjection under their hand.*
+
+*43 Many times did he deliver them; but they provoked him with their counsel, and were brought low for their iniquity.*
+
+*44 Nevertheless he regarded their affliction, when he heard their cry:*
+
+*45 And he remembered for them his covenant, and repented according to the multitude of his mercies.*
+
+<!-- post 12754 · 2023-12-03 07:13 · study -->
+
+*46 He made them also to be pitied of all those that carried them captives.*
+
+*47 Save us, O Lord our God, and gather us from among the heathen, to give thanks unto thy holy name, and to triumph in thy praise.*
+
+*48 Blessed be the Lord God of Israel from everlasting to everlasting: and let all the people say, Amen. Praise ye the Lord.*
+
+<!-- post 12755 · 2023-12-03 07:15 · study -->
+
+**Psalm 106** is a sort of reader's digest version of **Exodus** and **Numbers**, and the prophecy of the coming of His holy name, in Christ Jesus. A prayer in triumph and praise. Amen

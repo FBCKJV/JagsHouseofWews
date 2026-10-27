@@ -1,0 +1,998 @@
+# Hosea
+
+## Hosea 1  ·  Primary study  ·  2024-11-18
+
+Source: https://t.me/HouseOfWews2/15271
+
+<!-- post 15271 · 2024-11-18 05:16 · scripture -->
+
+**Hosea 1**
+*The word of the Lord that came unto Hosea, the son of Beeri, in the days of Uzziah, Jotham, Ahaz, and Hezekiah, kings of Judah, and in the days of Jeroboam the son of Joash, king of Israel.*
+
+*2 The beginning of the word of the Lord by Hosea. And the Lord said to Hosea, Go, take unto thee a wife of whoredoms and children of whoredoms: for the land hath committed great whoredom, departing from the Lord.*
+
+*3 So he went and took Gomer the daughter of Diblaim; which conceived, and bare him a son.*
+
+*4 And the Lord said unto him, Call his name Jezreel; for yet a little while, and I will avenge the blood of Jezreel upon the house of Jehu, and will cause to cease the kingdom of the house of Israel.*
+
+*5 And it shall come to pass at that day, that I will break the bow of Israel, in the valley of Jezreel.*
+
+*6 And she conceived again, and bare a daughter. And God said unto him, Call her name Loruhamah: for I will no more have mercy upon the house of Israel; but I will utterly take them away.*
+
+*7 But I will have mercy upon the house of Judah, and will save them by the Lord their God, and will not save them by bow, nor by sword, nor by battle, by horses, nor by horsemen.*
+
+*8 Now when she had weaned Loruhamah, she conceived, and bare a son.*
+
+*9 Then said God, Call his name Loammi: for ye are not my people, and I will not be your God.*
+
+*10 Yet the number of the children of Israel shall be as the sand of the sea, which cannot be measured nor numbered; and it shall come to pass, that in the place where it was said unto them, Ye are not my people, there it shall be said unto them, Ye are the sons of the living God.*
+
+*11 Then shall the children of Judah and the children of Israel be gathered together, and appoint themselves one head, and they shall come up out of the land: for great shall be the day of Jezreel.*
+
+<!-- post 15272 · 2024-11-18 05:32 · study -->
+
+Poor Hosea, the prophet with the burden of the Lord to make his very life a living parable against Israel. To marry a whore, representing the whoredoms of Israel, chasing after false gods. 
+
+To have a son, named after the place, Jezreel, where Jehu slew the house of Ahab. Where blood would be avenged by the Lord to end the kingdom of Israel. 
+
+Then to have a daughter, Loruhamah, meaning that God's mercy was no longer upon the northern kingdom. That God would destroy them utterly. 
+
+The word of the Lord does make an exception for the southern kingdom of Judah, prophetically telling of Jesus Christ. That there would come up on them salvation, not physically. Not as by armies and horses. 
+
+Then a son, Loammi, *for ye are not my people, and I will not be your God.* This judgment is devastating, and another nail in the coffin of dispensationalism. 
+
+But even in this prophecy of destruction, the promise of the Israel of God found in Christ. That it would be said to the innumerable saints in Christ, *Ye are the sons of the living God.*
+
+*Then shall the children of Judah and the children of Israel be gathered together, and appoint themselves one head, and they shall come up out of the land*.
+
+<!-- post 15273 · 2024-11-18 05:35 · study -->
+
+Great shall be the day of Jezreel. 
+
+Jezreel means "He sows" in Hebrew. It was also the most fertile valley in the land. With the gospel of Christ, and Him crucified, the word of God, the seed of salvation, has been sown throughout the world. 
+
+The time of harvest has come; 
+
+**Matthew 9:37-38**
+*Then saith he unto his disciples, The harvest truly is plenteous, but the labourers are few; Pray ye therefore the Lord of the harvest, that he will send forth labourers into his harvest.*
+
+And eventually the fullness of the Gentiles will come, and the last reaping of those in Christ. 
+
+**Revelation 14:15-16**
+*And another angel came out of the temple, crying with a loud voice to him that sat on the cloud, Thrust in thy sickle, and reap: for the time is come for thee to reap; for the harvest of the earth is ripe. And he that sat on the cloud thrust in his sickle on the earth; and the earth was reaped.*
+
+We are called to be husbandmen of God's great harvest. To sow and water and reap. Let us labor in this, as good and faithful servants. That we may not be ashamed at His coming, but rejoicing, bringing in the sheaves.
+
+## Hosea 2  ·  Primary study  ·  2024-11-19
+
+Source: https://t.me/HouseOfWews2/15275
+
+<!-- post 15275 · 2024-11-19 05:32 · scripture -->
+
+**Hosea 2**
+*Say ye unto your brethren, Ammi; and to your sisters, Ruhamah.*
+
+*2 Plead with your mother, plead: for she is not my wife, neither am I her husband: let her therefore put away her whoredoms out of her sight, and her adulteries from between her breasts;*
+
+*3 Lest I strip her naked, and set her as in the day that she was born, and make her as a wilderness, and set her like a dry land, and slay her with thirst.*
+
+*4 And I will not have mercy upon her children; for they be the children of whoredoms.*
+
+*5 For their mother hath played the harlot: she that conceived them hath done shamefully: for she said, I will go after my lovers, that give me my bread and my water, my wool and my flax, mine oil and my drink.*
+
+*6 Therefore, behold, I will hedge up thy way with thorns, and make a wall, that she shall not find her paths.*
+
+*7 And she shall follow after her lovers, but she shall not overtake them; and she shall seek them, but shall not find them: then shall she say, I will go and return to my first husband; for then was it better with me than now.*
+
+*8 For she did not know that I gave her corn, and wine, and oil, and multiplied her silver and gold, which they prepared for Baal.*
+
+*9 Therefore will I return, and take away my corn in the time thereof, and my wine in the season thereof, and will recover my wool and my flax given to cover her nakedness.*
+
+*10 And now will I discover her lewdness in the sight of her lovers, and none shall deliver her out of mine hand.*
+
+*11 I will also cause all her mirth to cease, her feast days, her new moons, and her sabbaths, and all her solemn feasts.*
+
+*12 And I will destroy her vines and her fig trees, whereof she hath said, These are my rewards that my lovers have given me: and I will make them a forest, and the beasts of the field shall eat them.*
+
+*13 And I will visit upon her the days of Baalim, wherein she burned incense to them, and she decked herself with her earrings and her jewels, and she went after her lovers, and forgat me, saith the Lord.*
+
+*14 Therefore, behold, I will allure her, and bring her into the wilderness, and speak comfortably unto her.*
+
+*15 And I will give her her vineyards from thence, and the valley of Achor for a door of hope: and she shall sing there, as in the days of her youth, and as in the day when she came up out of the land of Egypt.*
+
+*16 And it shall be at that day, saith the Lord, that thou shalt call me Ishi; and shalt call me no more Baali.*
+
+*17 For I will take away the names of Baalim out of her mouth, and they shall no more be remembered by their name.*
+
+*18 And in that day will I make a covenant for them with the beasts of the field and with the fowls of heaven, and with the creeping things of the ground: and I will break the bow and the sword and the battle out of the earth, and will make them to lie down safely.*
+
+*19 And I will betroth thee unto me for ever; yea, I will betroth thee unto me in righteousness, and in judgment, and in lovingkindness, and in mercies.*
+
+*20 I will even betroth thee unto me in faithfulness: and thou shalt know the Lord.*
+
+*21 And it shall come to pass in that day, I will hear, saith the Lord, I will hear the heavens, and they shall hear the earth;*
+
+*22 And the earth shall hear the corn, and the wine, and the oil; and they shall hear Jezreel.*
+
+*23 And I will sow her unto me in the earth; and I will have mercy upon her that had not obtained mercy; and I will say to them which were not my people, Thou art my people; and they shall say, Thou art my God.*
+
+<!-- post 15276 · 2024-11-19 05:46 · study -->
+
+*Say ye unto your brethren, Ammi; and to your sisters, Ruhamah.* **Hosea 2** opens with the word of the Lord coming to the prophet, to appeal to the men of Israel as brothers, or "my people," to the women saying "the one who is loved," those to whom God has shown mercy. God reminding them of why He feels as He does towards them; that they understand their whoredoms and the wrath that has come about because of their worship of Baalim. 
+
+The Lord compares them again to an unfaithful wife, who has run off with different lovers, who credits the wealth and plenty they have to these strange gods. And now He would strip them bare, leaving the nation desolate because of them. 
+
+The Lord then gives Hosea prophecy, that from the wilderness He will give to His people vineyards, and a door of hope in the valley of trouble. (Achor, meaning "trouble," being the valley near Jericho, where Achan was swallowed up by the Lord for disobedience). Wild vines, given as God's people, and rescued from trouble, or tribulation. Given a door of hope, Christ Jesus:
+
+**John 10:9**
+ *I am the door: by me if any man enter in, he shall be saved, and shall go in and out, and find pasture*.
+
+And in that day, says the Lord, thou (meaning His people), shall call Him "*Ishi*," that is husband, rather than "*Baali*," that is "Lord." A promise of a closer, personal relationship with God that we have in Christ. 
+
+Blotting out the names of the false lords, the gods of the heathen, that only one name under Heaven be praised. 
+
+And God promises again the peace to come, the perfect Kingdom of Heaven. Where the tools of war are broken, and even the beasts of creation live in peace. 
+
+**Isaiah 11:6-9**
+*The wolf also shall dwell with the lamb, and the leopard shall lie down with the kid; and the calf and the young lion and the fatling together; and a little child shall lead them. And the cow and the bear shall feed; their young ones shall lie down together: and the lion shall eat straw like the ox. And the sucking child shall play on the hole of the asp, and the weaned child shall put his hand on the cockatrice' den. They shall not hurt nor destroy in all my holy mountain: for the earth shall be full of the knowledge of the Lord, as the waters cover the sea.*
+
+<!-- post 15277 · 2024-11-19 05:51 · study -->
+
+*And in that day will I make a covenant for them...And I will betroth thee unto me for ever; yea, I will betroth thee unto me in righteousness, and in judgment, and in lovingkindness, and in mercies. I will even betroth thee unto me in faithfulness: and thou shalt know the Lord.*
+
+Again, the promise of Christ and everlasting life, in the Kingdom of Heaven. And with it, what Paul said was a great mystery, that the offer of mercy shall be to a people who are not His people, but to all those sown in Christ, harvested from throughout the earth;
+
+*And I will sow her unto me in the earth; and I will have mercy upon her that had not obtained mercy; and I will say to them which were not my people, Thou art my people; and they shall say, Thou art my God.*
+
+This wonderful promise, the witness of Christ given by the prophets, fufiled in these last days in us, those who are children of God through Jesus, His bride. His people. Amen
+
+## Hosea 3  ·  Primary study  ·  2024-11-20
+
+Source: https://t.me/HouseOfWews2/15278
+
+<!-- post 15278 · 2024-11-20 05:28 · scripture -->
+
+**Hosea 3**
+*Then said the Lord unto me, Go yet, love a woman beloved of her friend, yet an adulteress, according to the love of the Lord toward the children of Israel, who look to other gods, and love flagons of wine.*
+
+*2 So I bought her to me for fifteen pieces of silver, and for an homer of barley, and an half homer of barley:*
+
+*3 And I said unto her, Thou shalt abide for me many days; thou shalt not play the harlot, and thou shalt not be for another man: so will I also be for thee.*
+
+*4 For the children of Israel shall abide many days without a king, and without a prince, and without a sacrifice, and without an image, and without an ephod, and without teraphim:*
+
+*5 Afterward shall the children of Israel return, and seek the Lord their God, and David their king; and shall fear the Lord and his goodness in the latter days.*
+
+<!-- post 15279 · 2024-11-20 05:38 · study -->
+
+Here again, the Lord instructed the prophet to play the cuckold, to love a woman as a friend who is an adulteress, just as Israel played the harlot to their God. 
+
+The Lord is that man, the people wickedly left His protection and provision for wine and idols, as an unfaithful wife. 
+
+Hosea purchases the service of a whore for a pittance, (15 pieces of silver is half the 30 that is the price of a servant, a measure and a half of barley, barely enough for bread), but with the expectation of faithfulness, to represent the desolation that is to come upon Israel and Judah. A time where the plenty of God is taken away. No king, no sacrifice, no priestly duties, no image to bow to. And yet He wants them to know by this preaching that the Lord expects them to suffer through this loss and still maintain their faithfulness to Him. Something they weren't able to do in plenty, now do in tribulation. 
+
+But why? Because of the promise of the Lord, that in the latter end of things, they will seek the Lord their God and David their king, being Christ Jesus, and receive His goodness once again.
+
+<!-- post 15280 · 2024-11-20 05:41 · study -->
+
+We are all given the choice. He would rather we come to him by His mercy and gratitude for the blessings of His love upon us. But absent that, our coming to Him in hard times for the blessed promise of His goodness in Christ is worthy too. 
+
+Or we can continue in drunkenness and idolatry, and the desolation and famine that comes with sin. Continuing in death.
+
+## Hosea 4  ·  Primary study  ·  2024-11-21
+
+Source: https://t.me/HouseOfWews2/15281
+
+<!-- post 15281 · 2024-11-21 05:43 · scripture -->
+
+**Hosea 4**
+*Hear the word of the Lord, ye children of Israel: for the Lord hath a controversy with the inhabitants of the land, because there is no truth, nor mercy, nor knowledge of God in the land.*
+
+*2 By swearing, and lying, and killing, and stealing, and committing adultery, they break out, and blood toucheth blood.*
+
+*3 Therefore shall the land mourn, and every one that dwelleth therein shall languish, with the beasts of the field, and with the fowls of heaven; yea, the fishes of the sea also shall be taken away.*
+
+*4 Yet let no man strive, nor reprove another: for thy people are as they that strive with the priest.*
+
+*5 Therefore shalt thou fall in the day, and the prophet also shall fall with thee in the night, and I will destroy thy mother.*
+
+*6 My people are destroyed for lack of knowledge: because thou hast rejected knowledge, I will also reject thee, that thou shalt be no priest to me: seeing thou hast forgotten the law of thy God, I will also forget thy children.*
+
+*7 As they were increased, so they sinned against me: therefore will I change their glory into shame.*
+
+*8 They eat up the sin of my people, and they set their heart on their iniquity.*
+
+*9 And there shall be, like people, like priest: and I will punish them for their ways, and reward them their doings.*
+
+*10 For they shall eat, and not have enough: they shall commit whoredom, and shall not increase: because they have left off to take heed to the Lord.*
+
+*11 Whoredom and wine and new wine take away the heart.*
+
+*12 My people ask counsel at their stocks, and their staff declareth unto them: for the spirit of whoredoms hath caused them to err, and they have gone a whoring from under their God.*
+
+*13 They sacrifice upon the tops of the mountains, and burn incense upon the hills, under oaks and poplars and elms, because the shadow thereof is good: therefore your daughters shall commit whoredom, and your spouses shall commit adultery.*
+
+*14 I will not punish your daughters when they commit whoredom, nor your spouses when they commit adultery: for themselves are separated with whores, and they sacrifice with harlots: therefore the people that doth not understand shall fall.*
+
+*15 Though thou, Israel, play the harlot, yet let not Judah offend; and come not ye unto Gilgal, neither go ye up to Bethaven, nor swear, The Lord liveth.*
+
+*16 For Israel slideth back as a backsliding heifer: now the Lord will feed them as a lamb in a large place.*
+
+*17 Ephraim is joined to idols: let him alone.*
+
+*18 Their drink is sour: they have committed whoredom continually: her rulers with shame do love, Give ye.*
+
+*19 The wind hath bound her up in her wings, and they shall be ashamed because of their sacrifices.*
+
+<!-- post 15282 · 2024-11-21 05:55 · study -->
+
+Continuing the preaching against Israel, its people are wicked, especially even their priests, those low men that were established by Jeroboam, when he introduced idolatry to the people and caused all Israel to sin. 
+
+Hosea preaches hard against their sins; the violence and bloodshed, the drunkenness, the literal whoredoms and adultery, and spiritual; chasing after false gods. 
+
+The Lord says that if they don't wish to retain Him in their knowledge, they will perish for that lack of knowledge. If the priests won't reprove and rebuke sin, then they are in common cause with it. Let their sins consume them. God won't even scourge them for backsliding. They've been given up and given over, a reprobate nation. 
+
+They go to the stocks for advice, that is to wooden idols, sacrifices in groves, seeking favor of their dead gods. So the living God says let their daughters and wives go whoring as they have to Him. 
+
+What a wicked time, and the destruction of Israel was long past due. Only the longsuffering love of the Lord stayed their end. 
+
+The Lord does make provision to keep the evil out of Judah, that the false religion and fornications of the North, the Idolatry of Ephraim, would not spread into the Southern Kingdom, for now. 
+
+What a condemnation. And it is the same righteous judgement of God that will be passed on to the world, even as Judah, or that is saved Christians today, are spared. It may seem like the wicked prosper and go unpunished, but as we see here, that is a punishment in itself. Allowing the blood to heap against them, their own sins to make them miserable, even as they compound. And then, destruction. 
+
+Perfect is the judgment of God
+
+## Hosea 5  ·  Primary study  ·  2024-11-22
+
+Source: https://t.me/HouseOfWews2/15286
+
+<!-- post 15286 · 2024-11-22 05:54 · scripture -->
+
+**Hosea 5**
+*Hear ye this, O priests; and hearken, ye house of Israel; and give ye ear, O house of the king; for judgment is toward you, because ye have been a snare on Mizpah, and a net spread upon Tabor.*
+
+*2 And the revolters are profound to make slaughter, though I have been a rebuker of them all.*
+
+*3 I know Ephraim, and Israel is not hid from me: for now, O Ephraim, thou committest whoredom, and Israel is defiled.*
+
+*4 They will not frame their doings to turn unto their God: for the spirit of whoredoms is in the midst of them, and they have not known the Lord.*
+
+*5 And the pride of Israel doth testify to his face: therefore shall Israel and Ephraim fall in their iniquity: Judah also shall fall with them.*
+
+*6 They shall go with their flocks and with their herds to seek the Lord; but they shall not find him; he hath withdrawn himself from them.*
+
+*7 They have dealt treacherously against the Lord: for they have begotten strange children: now shall a month devour them with their portions.*
+
+*8 Blow ye the cornet in Gibeah, and the trumpet in Ramah: cry aloud at Bethaven, after thee, O Benjamin.*
+
+*9 Ephraim shall be desolate in the day of rebuke: among the tribes of Israel have I made known that which shall surely be.*
+
+*10 The princes of Judah were like them that remove the bound: therefore I will pour out my wrath upon them like water.*
+
+*11 Ephraim is oppressed and broken in judgment, because he willingly walked after the commandment.*
+
+*12 Therefore will I be unto Ephraim as a moth, and to the house of Judah as rottenness.*
+
+*13 When Ephraim saw his sickness, and Judah saw his wound, then went Ephraim to the Assyrian, and sent to king Jareb: yet could he not heal you, nor cure you of your wound.*
+
+*14 For I will be unto Ephraim as a lion, and as a young lion to the house of Judah: I, even I, will tear and go away; I will take away, and none shall rescue him.*
+
+*15 I will go and return to my place, till they acknowledge their offence, and seek my face: in their affliction they will seek me early.*
+
+<!-- post 15287 · 2024-11-22 06:05 · study -->
+
+The Lord is not happy with Israel. The priests and kings having led the people to ruin. Ephraim, Judah, Benjamin, all get named along with greater Israel for their condemnation. 
+
+Is there any judgment upon a nation as fearsome as their seeking the Lord and not being able to find Him, because He has withdrawn Himself from them? 
+
+**Jeremiah 6:30**
+*Reprobate silver shall men call them, because the Lord hath rejected them*.
+
+God is long-suffering, He is mercy that He will repent of evil He would do to a people if they turn from their wicked ways, and seek His face. But at some point, He will withdraw the offer, and allow His wrath to pour out on the wicked. 
+
+This is the same for individuals. Reprobation is real. The hour of salvation is here, now. Don't put it off. Seek Him while He can be found. 
+
+**Isaiah 55:6-7**
+*Seek ye the Lord while he may be found, call ye upon him while he is near: Let the wicked forsake his way, and the unrighteous man his thoughts: and let him return unto the Lord, and he will have mercy upon him; and to our God, for he will abundantly pardon.*
+
+**2 Corinthians 6:2**
+*For he saith, I have heard thee in a time accepted, and in the day of salvation have I succoured thee: behold, now is the accepted time; behold, now is the day of salvation.*
+
+**Matthew 13:14-15**
+*And in them is fulfilled the prophecy of Esaias, which saith, By hearing ye shall hear, and shall not understand; and seeing ye shall see, and shall not perceive: For this people's heart is waxed gross, and their ears are dull of hearing, and their eyes they have closed; lest at any time they should see with their eyes, and hear with their ears, and should understand with their heart, and should be converted, and I should heal them.*
+
+<!-- post 15288 · 2024-11-22 06:11 · study -->
+
+The false idea that it is never too late with God for people to get right and get saved, that as long as you live, there's always a chance for salvation, has led so many to Hell. They put off to tomorrow the gift of grace. They stay in the pleasures of sin for a season, rather than esteeming the reproach of Christ, or having respect for the recompense of the reward. 
+
+But rather, like Pharaoh, they harden their hearts and stiffen their necks and dull their hearing. They seek after vain jangling and smooth preaching, and those telling them "peace and safety" when there is no peace. 
+
+Like Israel, they chase after idols and put their faith in horses and chariots, turning towards Egypt spiritually. Or worse, pitching their tents towards Sodom. 
+
+God's wrath comes like a thief in the night, His judgment is righteous and true. Wake to Him and seek peace in Christ while you can. 
+
+Before it is "too late, Reprobate!"
+
+## Hosea 6  ·  Primary study  ·  2024-11-23
+
+Source: https://t.me/HouseOfWews2/15292
+
+<!-- post 15292 · 2024-11-23 06:12 · scripture -->
+
+**Hosea 6**
+*Come, and let us return unto the Lord: for he hath torn, and he will heal us; he hath smitten, and he will bind us up.*
+
+*2 After two days will he revive us: in the third day he will raise us up, and we shall live in his sight.*
+
+*3 Then shall we know, if we follow on to know the Lord: his going forth is prepared as the morning; and he shall come unto us as the rain, as the latter and former rain unto the earth.*
+
+*4 O Ephraim, what shall I do unto thee? O Judah, what shall I do unto thee? for your goodness is as a morning cloud, and as the early dew it goeth away.*
+
+*5 Therefore have I hewed them by the prophets; I have slain them by the words of my mouth: and thy judgments are as the light that goeth forth.*
+
+*6 For I desired mercy, and not sacrifice; and the knowledge of God more than burnt offerings.*
+
+*7 But they like men have transgressed the covenant: there have they dealt treacherously against me.*
+
+*8 Gilead is a city of them that work iniquity, and is polluted with blood.*
+
+*9 And as troops of robbers wait for a man, so the company of priests murder in the way by consent: for they commit lewdness.*
+
+*10 I have seen an horrible thing in the house of Israel: there is the whoredom of Ephraim, Israel is defiled.*
+
+*11 Also, O Judah, he hath set an harvest for thee, when I returned the captivity of my people.*
+
+<!-- post 15293 · 2024-11-23 06:35 · study -->
+
+Hosea continues prophesying against Israel, primarily Ephraim and here, Gilead which is a territory of Manasseh, East of the Jordan, but also the Southern Kingdom of Judah. There are false gods, idols, and worse, violence and murder among them. 
+
+The prophet begins with an appeal to repentance, turning towards the Lord to heal that which He has smitten them with in His righteous wrath. He says if they do, on the 3rd day they would be risen up, a prophetic reference to the resurrection of Christ. 
+
+He says, *Then shall we know, if we follow in to know the Lord: his going forth is prepared as the morning*; Christ's coming was preordained and as inevitable as the sunrise, the morning star. His coming as the rain, the former rains of the spring, the later rains of fall and the harvest. I believe that is prophetic of the two comings of Jesus. Just as the Spring and Fall feasts point to His first and second coming. These rains bringing life in abundance. 
+
+He follows this comparison of Jesus to the seasonal rains with a lament if the goodness of Israel, which Hosea compares to the fleeting morning cloud, or the quick to evaporate dew upon the grass. 
+
+In relation to the Christian life, I have experienced this of myself. The intents of the morning to pick up that cross, beginning the day with prayer and scripture, only to see the goodness fade with the day like the dew. Drawing the stray moisture from the air around us, rather than being soaked in the rains, and so losing steam throughout the day. 
+
+The Lord has slain them with His word, reproved by the prophets speaking in the Spirit, the law convicting them for their deeds. His judgments as a light, piercing the darkness of their sin. 
+
+*For I desired mercy, and not sacrifice; and the knowledge of God more than burnt offerings.*
+
+**Psalm 40:6-8**
+*Sacrifice and offering thou didst not desire; mine ears hast thou opened: burnt offering and sin offering hast thou not required. Then said I, Lo, I come: in the volume of the book it is written of me, I delight to do thy will, O my God: yea, thy law is within my heart*.
+
+**Hebrews 10:7-10** 
+*Then said I, Lo, I come (in the volume of the book it is written of me,) to do thy will, O God. Above when he said, Sacrifice and offering and burnt offerings and offering for sin thou wouldest not, neither hadst pleasure therein; which are offered by the law; Then said he, Lo, I come to do thy will, O God. He taketh away the first, that he may establish the second. By the which will we are sanctified through the offering of the body of Jesus Christ once for all*.
+
+God's will for us is that we show the same mercy towards others He extended to us. The sacrifices and ordinances of the OT were for their understanding, that the children of God had a means of picturing the sacrifice of Christ to come, Jesus being the only true sacrifice for sin. But the blood of the testament with God for forgiveness and eternal life exists as a gift for our benefit, that we may know we have that relationship. That we become sons of God, so that we may know love. Mercy. Charity. His will for our lives and our obedience, that it be well with us. Jesus is the door. But there is a pasture He leads us to, in rest that we can magnify His light to guide others from the darkness.
+
+<!-- post 15294 · 2024-11-23 06:44 · study -->
+
+But they have delt treacherously with God, and left the covenant with Him. The *priests murder in the way by consent.* They don't preach against the violence, and so they are accessories to it. They don't preach mercy and forgiveness, or the faith of eternal life in God, and so they murder their flock by condemnation to Hell. 
+
+As John the Baptist preached against the religious leaders of the Jews;
+
+**Matthew 3:7-8**
+*But when he saw many of the Pharisees and Sadducees come to his baptism, he said unto them, O generation of vipers, who hath warned you to flee from the wrath to come? Bring forth therefore fruits meet for repentance*
+
+And as Christ Himself does;
+
+**Matthew 23:23**
+*Woe unto you, scribes and Pharisees, hypocrites! for ye pay tithe of mint and anise and cummin, and have omitted the weightier matters of the law, judgment, mercy, and faith: these ought ye to have done, and not to leave the other undone.*
+
+Religious leaders who don't teach judgment, mercy and faith are blind guides, the Bible says. They make prostyles twofold more the child of Hell than themselves.
+
+<!-- post 15295 · 2024-11-23 06:51 · study -->
+
+Finally the word of God tells them that because of the horrors He has seen by their disobedience, violence and adultery with idols, that His judgment is coming. For Ephraim and the rest of Israel, facing total destruction. And the return of captivity for Judah, which would come roughly 200 years from this preaching. 
+
+God's judgment is sure, but He is longsuffering and would that no man perish. Repentance towards God can heal the land, and delay His wrath. But it is in the hearts of men to do wickedly.
+
+## Hosea 7  ·  Primary study  ·  2024-11-24
+
+Source: https://t.me/HouseOfWews2/15300
+
+<!-- post 15300 · 2024-11-24 06:42 · scripture -->
+
+**Hosea 7**
+*When I would have healed Israel, then the iniquity of Ephraim was discovered, and the wickedness of Samaria: for they commit falsehood; and the thief cometh in, and the troop of robbers spoileth without.*
+
+*2 And they consider not in their hearts that I remember all their wickedness: now their own doings have beset them about; they are before my face.*
+
+*3 They make the king glad with their wickedness, and the princes with their lies.*
+
+*4 They are all adulterers, as an oven heated by the baker, who ceaseth from raising after he hath kneaded the dough, until it be leavened.*
+
+*5 In the day of our king the princes have made him sick with bottles of wine; he stretched out his hand with scorners.*
+
+*6 For they have made ready their heart like an oven, whiles they lie in wait: their baker sleepeth all the night; in the morning it burneth as a flaming fire.*
+
+*7 They are all hot as an oven, and have devoured their judges; all their kings are fallen: there is none among them that calleth unto me.*
+
+*8 Ephraim, he hath mixed himself among the people; Ephraim is a cake not turned.*
+
+*9 Strangers have devoured his strength, and he knoweth it not: yea, gray hairs are here and there upon him, yet he knoweth not.*
+
+*10 And the pride of Israel testifieth to his face: and they do not return to the Lord their God, nor seek him for all this.*
+
+*11 Ephraim also is like a silly dove without heart: they call to Egypt, they go to Assyria.*
+
+*12 When they shall go, I will spread my net upon them; I will bring them down as the fowls of the heaven; I will chastise them, as their congregation hath heard.*
+
+*13 Woe unto them! for they have fled from me: destruction unto them! because they have transgressed against me: though I have redeemed them, yet they have spoken lies against me.*
+
+*14 And they have not cried unto me with their heart, when they howled upon their beds: they assemble themselves for corn and wine, and they rebel against me.*
+
+*15 Though I have bound and strengthened their arms, yet do they imagine mischief against me.*
+
+*16 They return, but not to the most High: they are like a deceitful bow: their princes shall fall by the sword for the rage of their tongue: this shall be their derision in the land of Egypt.*
+
+<!-- post 15301 · 2024-11-24 07:07 · study -->
+
+Continuing the preaching of the word of God by the prophet Hosea, chapter 7 leads from chapter 5 where the prophet tells the people that the Lord will rend them like a lion, and 6, which opened to an appeal to those with ears to hear to turn back to the Lord to be healed from those wounds. **Hosea 7** tells us why God hasn't reached out to heal them; their heart is not towards Him. 
+
+The people think God has forgotten their sin, and so their doings have become undeniably wicked. 
+
+Samaria, the Northern Kingdom of Israel, and down into Ephraim, all the people do wickedly. They are thieves and robbers. They commit violence. And their King and princes, the captains of their communities, are glad with it. Their lies please the rulers. 
+
+Lord knows, modern Christians understand what that is like, to see the wicked and ungodly defended by lies, repeated by the rulers of this world. Rejecting the judgment of God and His word. 
+
+Hosea begins an analogy, a parable of a baker who stoked the fire for the ovens at night, leaving dough to proof while he sleeps, that it is ready and roaring hot in the morning. 
+
+So to are the hearts of this adulterous generation. Their trusting in other gods and the idols that represent them has primed them to do great evil. The leaven of sin takes hold, and the fires burn hot so the opportunity for sin is ever ready. 
+
+The king is drunken with the princess, and takes his place with the scorners, those haters of God and His word. The judges God raised up are gone. No one with discernment remains among their leaders. There are no saved men among them to bring them to the truth. None have called upon the name of the Lord. 
+
+Ephraim have taken for themselves strange women, given their daughters to outlandish men. Mixed with the heathen. A cake not turned, burned on one side, and uncooked on the other. 
+
+And by allowing their people to be overrun and diluted by these mixed marriages, the strangers among them have devoured their strength, and the people don't even realize it. 
+
+Despite all the warnings and natural consequences and the reproval of God, they still won't listen. 
+
+He compares Ephraim to a silly dove, a bird calling out to Egypt, as the people would do to help them, rather than the Lord, and yet going to Assyria, scattered to their ultimate destruction. Mating calls to one nation, migrating to another. Silly. 
+
+*Woe unto them! for they have fled from me: destruction unto them! because they have transgressed against me: though I have redeemed them, yet they have spoken lies against me.*
+
+They have the sweet offer of salvation, by faith in Christ to come, their sins redeemed, but they hold the truth in unrighteousness. They do not wish to retain God in their knowledge. And so the Lord will destroy them for that lack of knowledge.
+
+## Hosea 8  ·  Primary study  ·  2024-11-25
+
+Source: https://t.me/HouseOfWews2/15302
+
+<!-- post 15302 · 2024-11-25 05:16 · scripture -->
+
+**Hosea 8**
+*Set the trumpet to thy mouth. He shall come as an eagle against the house of the Lord, because they have transgressed my covenant, and trespassed against my law.*
+
+*2 Israel shall cry unto me, My God, we know thee.*
+
+*3 Israel hath cast off the thing that is good: the enemy shall pursue him.*
+
+*4 They have set up kings, but not by me: they have made princes, and I knew it not: of their silver and their gold have they made them idols, that they may be cut off.*
+
+*5 Thy calf, O Samaria, hath cast thee off; mine anger is kindled against them: how long will it be ere they attain to innocency?*
+
+*6 For from Israel was it also: the workman made it; therefore it is not God: but the calf of Samaria shall be broken in pieces.*
+
+*7 For they have sown the wind, and they shall reap the whirlwind: it hath no stalk; the bud shall yield no meal: if so be it yield, the strangers shall swallow it up.*
+
+*8 Israel is swallowed up: now shall they be among the Gentiles as a vessel wherein is no pleasure.*
+
+*9 For they are gone up to Assyria, a wild ass alone by himself: Ephraim hath hired lovers.*
+
+*10 Yea, though they have hired among the nations, now will I gather them, and they shall sorrow a little for the burden of the king of princes.*
+
+*11 Because Ephraim hath made many altars to sin, altars shall be unto him to sin.*
+
+*12 I have written to him the great things of my law, but they were counted as a strange thing.*
+
+*13 They sacrifice flesh for the sacrifices of mine offerings, and eat it; but the Lord accepteth them not; now will he remember their iniquity, and visit their sins: they shall return to Egypt.*
+
+*14 For Israel hath forgotten his Maker, and buildeth temples; and Judah hath multiplied fenced cities: but I will send a fire upon his cities, and it shall devour the palaces thereof.*
+
+<!-- post 15303 · 2024-11-25 05:27 · study -->
+
+*For they have sown the wind, and they shall reap the whirlwind*...
+
+The destruction of Israel and the judgment of God against them comes from their own hands. Their own choices. Their rejection of reconciliation. Their trusting in strangers, foreign kings and princes, and especially their trust in dead idols.
+
+Not only the foreign gods of the heathens surrounding them and among them, but the idols they set before themselves as representation of the Lord. The golden calves Jeroboam made, and which the unqualified priests offer sacrifice to in the name of the living God. 
+
+False Christianity is the same as the religion of Samaria, of Israel. Practiced in Ephraim. Known in Dan. Jeroboam built two golden calves and placed them in the cities of Bethel, on the border of Ephraim and Benjamin and the other in the north, in Dan.
+
+Soon all of Samaria would be overrun by the Assyrians, who would carry away and slay the populations, and replace them with strangers from many nations. Made a vessel wherein is no pleasure. Desolate. Struck with famine. What little food they grew, taken by the strangers among them. 
+
+And Judah, which had remained somewhat loyal to the Lord, built up walled cities, trusting in their own works to save them, would soon after be taken captive by the Babylonians. They should have trusted in the Lord.
+
+<!-- post 15304 · 2024-11-25 05:40 · study -->
+
+*I have written to him the great things of my law, but they were counted as a strange thing.*
+
+Today, Biblical fundamentalism is seen as a strange thing, an atavistic anachronism. A throwback to a time where people weren't as "enlightened." Where the "critical text reading" of scripture didn't exist. Where common people just didn't know that the Bible "isn't literal," that it was outdated and written to the "culture at the time."  
+
+Today, we have such "wisdom," from our intellectual betters, graduates of Seminary School, who studied Greek for a few semesters, and know that the average Christian just cannot understand such archaic language and concepts. 
+
+Those thinking themselves wise became fools. The law of God became a strange thing to them, and so they lean on their own understanding. 
+
+This is why we must study to be approved by God, not men. To compare spiritual things with spiritual. To search the scriptures to see if things are so. To know God and His word, and in the Spirit come to see His wisdom and judgment, and not our own. 
+
+Israel followed man's wisdom. They added idols and icons to venerate in their worship, set their own standards for priests, set their own holy days, and feasts, their own standards. Teaching for commandments the doctrines of men. Holding scripture out as a strange thing, and instead trusting in tradition. Trading the unchanging rock of God for shifting sands. 
+
+And this sowing the wind, they reap the whirlwind.
+
+<!-- post 15305 · 2024-11-25 05:41 · study -->
+
+BTW if you notice, the sin of Israel, specifically Jeroboam, was the same as the sin of the Roman Catholic Church, and her harlot daughters. And it has led to the same destruction in our day.
+
+## Hosea 9  ·  Primary study  ·  2024-11-26
+
+Source: https://t.me/HouseOfWews2/15306
+
+<!-- post 15306 · 2024-11-26 05:27 · scripture -->
+
+**Hosea 9**
+*Rejoice not, O Israel, for joy, as other people: for thou hast gone a whoring from thy God, thou hast loved a reward upon every cornfloor.*
+
+*2 The floor and the winepress shall not feed them, and the new wine shall fail in her.*
+
+*3 They shall not dwell in the Lord's land; but Ephraim shall return to Egypt, and they shall eat unclean things in Assyria.*
+
+*4 They shall not offer wine offerings to the Lord, neither shall they be pleasing unto him: their sacrifices shall be unto them as the bread of mourners; all that eat thereof shall be polluted: for their bread for their soul shall not come into the house of the Lord.*
+
+*5 What will ye do in the solemn day, and in the day of the feast of the Lord?*
+
+*6 For, lo, they are gone because of destruction: Egypt shall gather them up, Memphis shall bury them: the pleasant places for their silver, nettles shall possess them: thorns shall be in their tabernacles.*
+
+*7 The days of visitation are come, the days of recompence are come; Israel shall know it: the prophet is a fool, the spiritual man is mad, for the multitude of thine iniquity, and the great hatred.*
+
+*8 The watchman of Ephraim was with my God: but the prophet is a snare of a fowler in all his ways, and hatred in the house of his God.*
+
+*9 They have deeply corrupted themselves, as in the days of Gibeah: therefore he will remember their iniquity, he will visit their sins.*
+
+*10 I found Israel like grapes in the wilderness; I saw your fathers as the firstripe in the fig tree at her first time: but they went to Baalpeor, and separated themselves unto that shame; and their abominations were according as they loved.*
+
+*11 As for Ephraim, their glory shall fly away like a bird, from the birth, and from the womb, and from the conception.*
+
+*12 Though they bring up their children, yet will I bereave them, that there shall not be a man left: yea, woe also to them when I depart from them!*
+
+*13 Ephraim, as I saw Tyrus, is planted in a pleasant place: but Ephraim shall bring forth his children to the murderer.*
+
+*14 Give them, O Lord: what wilt thou give? give them a miscarrying womb and dry breasts.*
+
+*15 All their wickedness is in Gilgal: for there I hated them: for the wickedness of their doings I will drive them out of mine house, I will love them no more: all their princes are revolters.*
+
+*16 Ephraim is smitten, their root is dried up, they shall bear no fruit: yea, though they bring forth, yet will I slay even the beloved fruit of their womb.*
+
+*17 My God will cast them away, because they did not hearken unto him: and they shall be wanderers among the nations.*
+
+<!-- post 15307 · 2024-11-26 05:41 · study -->
+
+The curse of Ephraim by the Lord, as spoken by the prophet Hosea in the Spirit. Their threshing floors are empty, their winepress fails them, they are scattered to Egypt and Assyria. They no longer can offer sacrifice to the Lord, but rather eat of polluted bread. 
+
+Their judgment has come. They were warned. All Israel shall see the judgment. The prophets driven mad by their inequities, hated in the house of God by the people. 
+
+*They have deeply corrupted themselves, as in the days of Gibeah*, the rape of the Levite's concubine by the sodomites in Benjamin, back in **Judges 19**. The abominations that nearly destroyed Benjamin utterly. 
+
+The Lord laments that in Abraham and Isaac and Jacob, He found a people as wild grapes in the wilderness. That they were as the first ripe figs of the early summer. 
+
+This reminds us of the comparison to wild vine of the gentiles, grafted in; 
+
+**Romans 11:11-21**
+*For if the firstfruit be holy, the lump is also holy: and if the root be holy, so are the branches. And if some of the branches be broken off, and thou, being a wild olive tree, wert grafted in among them, and with them partakest of the root and fatness of the olive tree; Boast not against the branches. But if thou boast, thou bearest not the root, but the root thee. Thou wilt say then, The branches were broken off, that I might be grafted in. Well; because of unbelief they were broken off, and thou standest by faith. Be not highminded, but fear: For if God spared not the natural branches, take heed lest he also spare not thee.*
+
+The root is Christ. He is the true vine. But if Gentiles were graft in by the gospel, so too were the original branches of the patriarchs. Wild grapes the Lord prepared a vineyard for. Here, He is about to hew off a branch in Ephraim, and cast it into the fire.
+
+<!-- post 15308 · 2024-11-26 05:54 · study -->
+
+Just as the Lord blessed Israel through Balaam for their righteousness, and so Balaam made them to sin at Baalpeor that they be cursed, so God is reminded by the evil Ephraim has done. 
+
+Balaam counseled Balak to bring whoredoms, both physical with fornication among the daughters of Midian, and to sacrifice and eat meat given to Baalpeor. And this brought destruction. 24,000 Israelites died in a plague of judgment after committing sins of idol worship and fornication at Baalpeor.
+
+Ephraim, and all Israel, had willingly chased after the same. 
+
+Their children shall die. They will bring others to be passed through the fire, to be murdered. The Lord promises they will have not a man left when He is done with them. 
+
+*Give them, O Lord: what wilt thou give? give them a miscarrying womb and dry breasts.*
+
+What a curse. 
+
+*I will drive them out of mine house, I will love them no more: all their princes are revolters.*
+
+At Gilgal, they crossed into the promised land, setting up the circle of 12 stones where the waters of the Jordan parted for them. The Lord says this place of triumph is where He began to hate them, for their turning from Him.
+
+<!-- post 15309 · 2024-11-26 05:56 · study -->
+
+*Ephraim is smitten, their root is dried up, they shall bear no fruit: yea, though they bring forth, yet will I slay even the beloved fruit of their womb.*
+
+What a curse to be of a nation under the wrath of God. Where birthrates are declining, where even those babies conceived are brought to murderers to be slain. Where even those that survive are killed. 
+
+What a wicked generation to have such evil visited upon it. 
+
+Sounds familiar.
+
+*My God will cast them away, because they did not hearken unto him: and they shall be wanderers among the nations.*
+
+The idea that those calling themselves Jews today are entitled to the promised land, that God's covenant was unconditional and forever, is put to lie throughout the Old Testament, and confirmed as not the case in the New. 
+
+Dispensationalist Zionism requires an ignorance of scripture to maintain its false doctrine.
+
+## Hosea 10  ·  Primary study  ·  2024-11-27
+
+Source: https://t.me/HouseOfWews2/15311
+
+<!-- post 15311 · 2024-11-27 05:25 · scripture -->
+
+**Hosea 10**
+*Israel is an empty vine, he bringeth forth fruit unto himself: according to the multitude of his fruit he hath increased the altars; according to the goodness of his land they have made goodly images.*
+
+*2 Their heart is divided; now shall they be found faulty: he shall break down their altars, he shall spoil their images.*
+
+*3 For now they shall say, We have no king, because we feared not the Lord; what then should a king do to us?*
+
+*4 They have spoken words, swearing falsely in making a covenant: thus judgment springeth up as hemlock in the furrows of the field.*
+
+*5 The inhabitants of Samaria shall fear because of the calves of Bethaven: for the people thereof shall mourn over it, and the priests thereof that rejoiced on it, for the glory thereof, because it is departed from it.*
+
+*6 It shall be also carried unto Assyria for a present to king Jareb: Ephraim shall receive shame, and Israel shall be ashamed of his own counsel.*
+
+*7 As for Samaria, her king is cut off as the foam upon the water.*
+
+*8 The high places also of Aven, the sin of Israel, shall be destroyed: the thorn and the thistle shall come up on their altars; and they shall say to the mountains, Cover us; and to the hills, Fall on us.*
+
+*9 O Israel, thou hast sinned from the days of Gibeah: there they stood: the battle in Gibeah against the children of iniquity did not overtake them.*
+
+*10 It is in my desire that I should chastise them; and the people shall be gathered against them, when they shall bind themselves in their two furrows.*
+
+*11 And Ephraim is as an heifer that is taught, and loveth to tread out the corn; but I passed over upon her fair neck: I will make Ephraim to ride; Judah shall plow, and Jacob shall break his clods.*
+
+*12 Sow to yourselves in righteousness, reap in mercy; break up your fallow ground: for it is time to seek the Lord, till he come and rain righteousness upon you.*
+
+*13 Ye have plowed wickedness, ye have reaped iniquity; ye have eaten the fruit of lies: because thou didst trust in thy way, in the multitude of thy mighty men.*
+
+*14 Therefore shall a tumult arise among thy people, and all thy fortresses shall be spoiled, as Shalman spoiled Betharbel in the day of battle: the mother was dashed in pieces upon her children.*
+
+*15 So shall Bethel do unto you because of your great wickedness: in a morning shall the king of Israel utterly be cut off.*
+
+<!-- post 15312 · 2024-11-27 05:31 · study -->
+
+Again, Hosea preaches against Israel. And again, brings up the fruitless vine, the vanity of their trust in idols, the golden calves they've worshiped, the priests who led them to believe lies. Their kings and mighty men failed them. 
+
+The sin of Israel and the righteous judgment that is falling on them, and their looming destruction by the Assyrians. 
+
+And again a repeal to repentance towards God. 
+
+*Sow to yourselves in righteousness, reap in mercy; break up your fallow ground: for it is time to seek the Lord, till he come and rain righteousness upon you.*
+
+God's desire is to chastise them for their iniquity. That rather than sow righteousness and gather the fruit thereof, they sowed wickedness and reaped iniquity and the fruit gathered are lies.
+
+<!-- post 15313 · 2024-11-27 05:46 · study -->
+
+*The high places also of Aven, the sin of Israel, shall be destroyed: the thorn and the thistle shall come up on their altars; and they shall say to the mountains, Cover us; and to the hills, Fall on us.*
+
+**Luke 23:29-30**
+*For, behold, the days are coming, in the which they shall say, Blessed are the barren, and the wombs that never bare, and the paps which never gave suck. Then shall they begin to say to the mountains, Fall on us; and to the hills, Cover us.*
+
+Hosea is actually quoted or prophecies referenced multiple times in the New Testament. 
+
+**Revelation 6:15-17**
+*And the kings of the earth, and the great men, and the rich men, and the chief captains, and the mighty men, and every bondman, and every free man, hid themselves in the dens and in the rocks of the mountains; And said to the mountains and rocks, Fall on us, and hide us from the face of him that sitteth on the throne, and from the wrath of the Lamb: For the great day of his wrath is come; and who shall be able to stand?*
+
+**Hosea 2:23**
+*And I will sow her unto me in the earth; and I will have mercy upon her that had not obtained mercy; and I will say to them which were not my people, Thou art my people; and they shall say, Thou art my God.*
+
+**Romans 9:25-26**
+*As he saith also in Osee, I will call them my people, which were not my people; And her beloved, which was not beloved. And it shall come to pass, that in the place where it was said unto them, Ye are not my people; There shall they be called the children of the living God.*
+
+**1 Peter 2:9-10**
+*But ye are a chosen generation, a royal priesthood, an holy nation, a peculiar people; that ye should shew forth the praises of him who hath called you out of darkness into his marvellous light; Which in time past were not a people, but are now the people of God: which had not obtained mercy, but now have obtained mercy.*
+
+**Hosea 6:6**
+*For I desired mercy, and not sacrifice; and the knowledge of God more than burnt offerings.*
+
+**Matthew 9:13**
+*But go ye and learn what that meaneth, I will have mercy, and not sacrifice: for I am not come to call the righteous, but sinners to repentance.*
+
+**Matthew 12:7**
+*But if ye had known what this meaneth, I will have mercy, and not sacrifice, ye would not have condemned the guiltless.*
+
+<!-- post 15314 · 2024-11-27 05:57 · study -->
+
+God delighting in mercy and right judgement over sacrifices is a theme of scripture. 
+
+**Psalm 51:16-17**
+*For thou desirest not sacrifice; else would I give it: thou delightest not in burnt offering. The sacrifices of God are a broken spirit: a broken and a contrite heart, O God, thou wilt not despise.*
+
+**Psalm 40:6-8**
+*Sacrifice and offering thou didst not desire; mine ears hast thou opened: burnt offering and sin offering hast thou not required. Then said I, Lo, I come: in the volume of the book it is written of me, I delight to do thy will, O my God: yea, thy law is within my heart.*
+
+**Isaiah 1:11**
+*To what purpose is the multitude of your sacrifices unto me? saith the Lord: I am full of the burnt offerings of rams, and the fat of fed beasts; and I delight not in the blood of bullocks, or of lambs, or of he goats.*
+
+**Jeremiah 7:21-23**
+*Thus saith the Lord of hosts, the God of Israel; Put your burnt offerings unto your sacrifices, and eat flesh. For I spake not unto your fathers, nor commanded them in the day that I brought them out of the land of Egypt, concerning burnt offerings or sacrifices: But this thing commanded I them, saying, Obey my voice, and I will be your God, and ye shall be my people: and walk ye in all the ways that I have commanded you, that it may be well unto you.*
+
+**Hebrews 10:4-10**
+*For it is not possible that the blood of bulls and of goats should take away sins. Wherefore when he cometh into the world, he saith, Sacrifice and offering thou wouldest not, but a body hast thou prepared me: In burnt offerings and sacrifices for sin thou hast had no pleasure. Then said I, Lo, I come (in the volume of the book it is written of me,) to do thy will, O God. Above when he said, Sacrifice and offering and burnt offerings and offering for sin thou wouldest not, neither hadst pleasure therein; which are offered by the law. Then said he, Lo, I come to do thy will, O God. He taketh away the first, that he may establish the second. By the which will we are sanctified through the offering of the body of Jesus Christ once for all.*
+
+The sacrifices were always for man, not God. Even the greatest and only true sacrifice for sin, the blood of Christ Jesus, is for our benefit, not God's. 
+
+He wishes us to seek Him. To obey, and to confess to Him when we fall short. To turn to Him continually. And to show mercy and judgement and love, one to another. Forgiving and being forgiven. Being sown in righteousness by faith, and reaping the fruit, bringing in the sheaves. Others brought to the truth, calling upon the name of the Lord. Taking care of the widow. Judging the fatherless. Esteeming the profit of others more than ourselves. 
+
+The sacrifices were to show the Israelites of Christ to come, and satisfy that itch in us that there must be blood to pay for our inequities. 
+
+Upon the unrighteous, blood is required of blood. But the purpose of Jesus' sacrifice is that we have settled that debt of sin forever, washed clean in His blood, that we may go forth in mercy and His light so shine from us.
+
+<!-- post 15317 · 2024-11-27 14:21 · study -->
+
+Honestly, top shelf study this morning. Lots of Bible.
+
+## Hosea 11  ·  Primary study  ·  2024-11-29
+
+Source: https://t.me/HouseOfWews2/15325
+
+<!-- post 15325 · 2024-11-29 08:08 · scripture -->
+
+**Hosea 11**
+*When Israel was a child, then I loved him, and called my son out of Egypt.*
+
+*2 As they called them, so they went from them: they sacrificed unto Baalim, and burned incense to graven images.*
+
+*3 I taught Ephraim also to go, taking them by their arms; but they knew not that I healed them.*
+
+*4 I drew them with cords of a man, with bands of love: and I was to them as they that take off the yoke on their jaws, and I laid meat unto them.*
+
+*5 He shall not return into the land of Egypt, and the Assyrian shall be his king, because they refused to return.*
+
+*6 And the sword shall abide on his cities, and shall consume his branches, and devour them, because of their own counsels.*
+
+*7 And my people are bent to backsliding from me: though they called them to the most High, none at all would exalt him.*
+
+*8 How shall I give thee up, Ephraim? how shall I deliver thee, Israel? how shall I make thee as Admah? how shall I set thee as Zeboim? mine heart is turned within me, my repentings are kindled together.*
+
+*9 I will not execute the fierceness of mine anger, I will not return to destroy Ephraim: for I am God, and not man; the Holy One in the midst of thee: and I will not enter into the city.*
+
+*10 They shall walk after the Lord: he shall roar like a lion: when he shall roar, then the children shall tremble from the west.*
+
+*11 They shall tremble as a bird out of Egypt, and as a dove out of the land of Assyria: and I will place them in their houses, saith the Lord.*
+
+*12 Ephraim compasseth me about with lies, and the house of Israel with deceit: but Judah yet ruleth with God, and is faithful with the saints.*
+
+<!-- post 15326 · 2024-11-29 08:25 · study -->
+
+**Matthew 2:23**
+*And when they were departed, behold, the angel of the Lord appeareth to Joseph in a dream, saying, Arise, and take the young child and his mother, and flee into Egypt, and be thou there until I bring thee word: for Herod will seek the young child to destroy him.*
+
+Truly, as God called Israel out of Egypt, so too would the Father call His Son, Christ Jesus from the West, into the promised land. 
+
+And just as He came into His own, and the received Him not, Israelites turned away from the Lord to Baalim, and Baal Peor, and images and serving idols with incense. 
+
+The word of the Lord was given them, teaching Israel how to be healed, but they knew it not. He led them like cattle and led them with love and led them with freedom and liberty in Christ and with blessings of plenty, and still they didn't harken to Him. Instead, the backslid, and so Assyria would rule them, and the sword destroy them and their cities, all because of their own counsels, all by their own choice. 
+
+The Lord says it isn't His desire to destroy them for destruction's sake, to make them as Admah and Zeboim, as they were destroyed along with Sodom. He doesn't enter into the city as men, seeking to destroy, but as the Holy One, chastening them that they turn to Him again. To come to repentance towards the gospel of grace and reconciliation in Christ. 
+
+*Ephraim compasseth me about with lies, and the house of Israel with deceit: but Judah yet ruleth with God, and is faithful with the saints.*
+
+Israel may have chosen their own destruction, by lies and deceit and their lack of knowledge. But in Judah they yet ruleth with God, faithful with the saints, again pointing to the coming Messiah.
+
+<!-- post 15327 · 2024-11-29 08:36 · study -->
+
+**2 Peter 3:9**
+*The Lord is not slack concerning his promise, as some men count slackness; but is longsuffering to us-ward, not willing that any should perish, but that all should come to repentance.*
+
+**Romans 11:1-5**
+*I say then, Hath God cast away his people? God forbid. For I also am an Israelite, of the seed of Abraham, of the tribe of Benjamin. God hath not cast away his people which he foreknew. Wot ye not what the scripture saith of Elias? how he maketh intercession to God against Israel saying, Lord, they have killed thy prophets, and digged down thine altars; and I am left alone, and they seek my life. But what saith the answer of God unto him? I have reserved to myself seven thousand men, who have not bowed the knee to the image of Baal. Even so then at this present time also there is a remnant according to the election of grace.*
+
+It is important to recognize that it isn't by ethnicity or nation that God saves or condemns, but by belief and unbelieving. 
+
+The destruction of the Northern Kingdom of Israel was for their unbelief. The eventual destruction of Judea was for rejecting Christ. At the end of the world, on that great and terrible day of the Lord, the wrath will come on the whole earth for unbelief, the righteous remnant spared, and Jesus will get rule with all His saints. 
+
+**Romans 11:15-21,30-32** 
+*For if the casting away of them be the reconciling of the world, what shall the receiving of them be, but life from the dead? For if the firstfruit be holy, the lump is also holy: and if the root be holy, so are the branches. And if some of the branches be broken off, and thou, being a wild olive tree, wert grafted in among them, and with them partakest of the root and fatness of the olive tree; Boast not against the branches. But if thou boast, thou bearest not the root, but the root thee. Thou wilt say then, The branches were broken off, that I might be grafted in. Well; because of unbelief they were broken off, and thou standest by faith. Be not highminded, but fear: For if God spared not the natural branches, take heed lest he also spare not thee.*.. *For as ye in times past have not believed God, yet have now obtained mercy through their unbelief: Even so have these also now not believed, that through your mercy they also may obtain mercy. For God hath concluded them all in unbelief, that he might have mercy upon all.*
+
+The love of God is conditional on belief in His word. The Bible says, without faith it is impossible to please God. His children are children by faith, adopted as sons of God through Christ. Heirs according to His promise, made Abraham's seed for belief. 
+
+Those that remain in unbelief are cast into the fire by their own choice. By their own counsels.
+
+## Hosea 12  ·  Primary study  ·  2024-11-30
+
+Source: https://t.me/HouseOfWews2/15328
+
+<!-- post 15328 · 2024-11-30 08:13 · scripture -->
+
+**Hosea 12**
+*Ephraim feedeth on wind, and followeth after the east wind: he daily increaseth lies and desolation; and they do make a covenant with the Assyrians, and oil is carried into Egypt.*
+
+*2 The Lord hath also a controversy with Judah, and will punish Jacob according to his ways; according to his doings will he recompense him.*
+
+*3 He took his brother by the heel in the womb, and by his strength he had power with God:*
+
+*4 Yea, he had power over the angel, and prevailed: he wept, and made supplication unto him: he found him in Bethel, and there he spake with us;*
+
+*5 Even the Lord God of hosts; the Lord is his memorial.*
+
+*6 Therefore turn thou to thy God: keep mercy and judgment and wait on thy God continually.*
+
+*7 He is a merchant, the balances of deceit are in his hand: he loveth to oppress.*
+
+*8 And Ephraim said, Yet I am become rich, I have found me out substance: in all my labours they shall find none iniquity in me that were sin.*
+
+*9 And I that am the Lord thy God from the land of Egypt will yet make thee to dwell in tabernacles, as in the days of the solemn feast.*
+
+*10 I have also spoken by the prophets, and I have multiplied visions, and used similitudes, by the ministry of the prophets.*
+
+*11 Is there iniquity in Gilead? surely they are vanity: they sacrifice bullocks in Gilgal; yea, their altars are as heaps in the furrows of the fields.*
+
+*12 And Jacob fled into the country of Syria, and Israel served for a wife, and for a wife he kept sheep.*
+
+*13 And by a prophet the Lord brought Israel out of Egypt, and by a prophet was he preserved.*
+
+*14 Ephraim provoked him to anger most bitterly: therefore shall he leave his blood upon him, and his reproach shall his Lord return unto him.*
+
+<!-- post 15329 · 2024-11-30 08:25 · study -->
+
+*Ephraim feedeth on the wind*; Israel are placing their hopes against desolation and famine on Egypt and Assyria, not God. 
+
+This reminds me of Jesus, speaking to Nicodemus in **John 3** about how the Spirit seems to man;  *The wind bloweth where it listeth, and thou hearest the sound thereof, but canst not tell whence it cometh, and whither it goeth*. And also in **2 Peter 2**, *clouds that are carried with a tempest*, *clouds without water,* in **Jude 1:12.** Carried *to and fro by winds of doctrine* from **Ephesians 4:14**. 
+
+But, God is not in the wind;
+
+**1 Kings 19:11-14** 
+*And he said, Go forth, and stand upon the mount before the Lord. And, behold, the Lord passed by, and a great and strong wind rent the mountains, and brake in pieces the rocks before the Lord; but the Lord was not in the wind: and after the wind an earthquake; but the Lord was not in the earthquake: And after the earthquake a fire; but the Lord was not in the fire: and after the fire a still small voice. And it was so, when Elijah heard it, that he wrapped his face in his mantle, and went out, and stood in the entering in of the cave. And, behold, there came a voice unto him, and said, What doest thou here, Elijah? And he said, I have been very jealous for the Lord God of hosts: because the children of Israel have forsaken thy covenant, thrown down thine altars, and slain thy prophets with the sword; and I, even I only, am left; and they seek my life, to take it away.*
+
+But even then, the Lord had reserved unto Him 7,000 men who had not bowed the knee to Baal, and God had work for Elijah to do. 
+
+Even as the world looks for answers in the wind, and seeks truth from clouds without water, and is carried about by the winds of doctrines, and even as they forsake His covenant in Christ and kill His prophets and seek our lives, yet we know God is not in the wind. He isn't in the tempest. The Lord our God is in the still small voice, heard in our spirit, and He has work for us to do.
+
+<!-- post 15330 · 2024-11-30 08:35 · study -->
+
+The Lord is wroth with Israel, listing the sins of Ephraim, faithlessness, Idolatry, wickedness. But also with Judah;
+*The Lord hath also a controversy with Judah, and will punish Jacob according to his ways*.
+
+If Israel are the unsaved and the reprobate, Judah, at this time, remained fairly faithful, and represents the saved. Keeping the legacy of the covenants with Aaron and David, the priesthood and the king. Not perfectly. As Jesus said to the churches in **Revelation 2 and 3,** *Nevertheless I have somewhat against thee*. 
+
+The Lord promises to scourge His sons. Judah and Israel, who started strong in Jacob, who fought to be first, grabbing Esau's heel, who wrestled with the angel and prevailed, who wept and made supplication in Bethel and *spoke to Us, Even the Lord God of hosts, the Lord is His memorial*, meaning Christ Jesus. 
+
+So God reminds Judah of His mercy; *Therefore turn thou to thy God: keep mercy and judgment and wait on thy God continually*. The same promise to the saved, who may backslide and be chastened. Turn back to the Lord and be forgiven.
+
+<!-- post 15331 · 2024-11-30 08:41 · study -->
+
+But Ephraim, the Northern Kingdom of Israel, declares they are blameless. Without sin. Undeserving of God's wrath, and so opposing themselves. 
+
+*And I that am the Lord thy God from the land of Egypt will yet make thee to dwell in tabernacles, as in the days of the solemn feast. I have also spoken by the prophets, and I have multiplied visions, and used similitudes, by the ministry of the prophets*.
+
+*I that am the Lord thy God*. I am Who am as God spoke to the prophet Moses, who led them out of Egypt. Even as Jesus says, *Before Abraham, I am.* 
+
+**Hebrews 1:1-2**
+*God, who at sundry times and in divers manners spake in time past unto the fathers by the prophets, Hath in these last days spoken unto us by his Son, whom he hath appointed heir of all things, by whom also he made the worlds*
+
+To Him gave all the prophets witnesses. He spoke to them with visions also, and with similitudes, or parables. And by the ministry of the prophets. 
+
+And yet they would not hear, ears dull. Eyes blind to the truth. They multiply their deceptions.
+
+<!-- post 15332 · 2024-11-30 08:43 · study -->
+
+*Ephraim provoked him to anger most bitterly: therefore shall he leave his blood upon him, and his reproach shall his Lord return unto him.*
+
+God allows Israel to suffer for their own sins. No mercy is given them, only His reproach. They were warned and chastened and blessed, and given the same oracles of God as Judah. But they sowed the wind. They will reap the whirlwind.
+
+## Hosea 13  ·  Primary study  ·  2024-12-01
+
+Source: https://t.me/HouseOfWews2/15334
+
+<!-- post 15334 · 2024-12-01 07:08 · scripture -->
+
+**Hosea 13**
+*When Ephraim spake trembling, he exalted himself in Israel; but when he offended in Baal, he died.*
+
+*2 And now they sin more and more, and have made them molten images of their silver, and idols according to their own understanding, all of it the work of the craftsmen: they say of them, Let the men that sacrifice kiss the calves.*
+
+*3 Therefore they shall be as the morning cloud and as the early dew that passeth away, as the chaff that is driven with the whirlwind out of the floor, and as the smoke out of the chimney.*
+
+*4 Yet I am the Lord thy God from the land of Egypt, and thou shalt know no god but me: for there is no saviour beside me.*
+
+*5 I did know thee in the wilderness, in the land of great drought.*
+
+*6 According to their pasture, so were they filled; they were filled, and their heart was exalted; therefore have they forgotten me.*
+
+*7 Therefore I will be unto them as a lion: as a leopard by the way will I observe them:*
+
+*8 I will meet them as a bear that is bereaved of her whelps, and will rend the caul of their heart, and there will I devour them like a lion: the wild beast shall tear them.*
+
+*9 O Israel, thou hast destroyed thyself; but in me is thine help.*
+
+*10 I will be thy king: where is any other that may save thee in all thy cities? and thy judges of whom thou saidst, Give me a king and princes?*
+
+*11 I gave thee a king in mine anger, and took him away in my wrath.*
+
+*12 The iniquity of Ephraim is bound up; his sin is hid.*
+
+*13 The sorrows of a travailing woman shall come upon him: he is an unwise son; for he should not stay long in the place of the breaking forth of children.*
+
+*14 I will ransom them from the power of the grave; I will redeem them from death: O death, I will be thy plagues; O grave, I will be thy destruction: repentance shall be hid from mine eyes.*
+
+*15 Though he be fruitful among his brethren, an east wind shall come, the wind of the Lord shall come up from the wilderness, and his spring shall become dry, and his fountain shall be dried up: he shall spoil the treasure of all pleasant vessels.*
+
+*16 Samaria shall become desolate; for she hath rebelled against her God: they shall fall by the sword: their infants shall be dashed in pieces, and their women with child shall be ripped up.*
+
+<!-- post 15335 · 2024-12-01 07:11 · study -->
+
+**1 Corinthians 15:55-58**
+*O death, where is thy sting? O grave, where is thy victory? The sting of death is sin; and the strength of sin is the law. But thanks be to God, which giveth us the victory through our Lord Jesus Christ. Therefore, my beloved brethren, be ye stedfast, unmoveable, always abounding in the work of the Lord, forasmuch as ye know that your labour is not in vain in the Lord.*
+
+*I will ransom them from the power of the grave; I will redeem them from death: O death, I will be thy plagues; O grave, I will be thy destruction: repentance shall be hid from mine eyes.*
+
+<!-- post 15336 · 2024-12-01 07:22 · study -->
+
+Again, Israel, represented by Ephraim, is preached against for their sins, and Hosea prophesying their coming destruction. The word of the Lord says that when they humbled themselves, trembling, He was merciful and gave them blessings in abundance. But that in their abundance, they turned from Him to sin. 
+
+God again compares them to a cloud without water, a morning cloud that rises up to be burned off in the heat of the day. Morning dew that evaporates as the sun rises. Chaff that blows away easily. Smoke that rises and disapates. 
+
+As James describes our own short lives on this earth; *Whereas ye know not what shall be on the morrow. For what is your life? It is even a vapour, that appeareth for a little time, and then vanisheth away.*
+
+But Hosea is preaching to a nation, and God has been longsuffering towards it, and yet they continued in a downward spiral of sin. 
+
+When we are blessed by the Lord, it should humble us. Not make us exalt ourselves. Not grow comfortable. But learn to be grateful in good times and bad, always turning towards the Lord. Humble ourselves, because it is by His good pleasure. 
+
+*O Israel, thou hast destroyed thyself; but in me is thine help.* Christ Jesus, the only begotten Son. That in Him shall there be a King.
+
+God reminds them, they demanded a human king, despite His warnings. And in His anger He gave them Saul, and now all these generations later, it has availed them not. The Lord took away their king in His wrath. 
+
+Israel is as a baby who won't leave the womb, despite their mother's travail. And so her sorrows are multiplied upon them. Samaria will become desolate, for she rebelled against her God.
+
+## Hosea 14  ·  Primary study  ·  2024-12-02
+
+Source: https://t.me/HouseOfWews2/15337
+
+<!-- post 15337 · 2024-12-02 05:48 · scripture -->
+
+**Hosea 14**
+*O israel, return unto the Lord thy God; for thou hast fallen by thine iniquity.*
+
+*2 Take with you words, and turn to the Lord: say unto him, Take away all iniquity, and receive us graciously: so will we render the calves of our lips.*
+
+*3 Asshur shall not save us; we will not ride upon horses: neither will we say any more to the work of our hands, Ye are our gods: for in thee the fatherless findeth mercy.*
+
+*4 I will heal their backsliding, I will love them freely: for mine anger is turned away from him.*
+
+*5 I will be as the dew unto Israel: he shall grow as the lily, and cast forth his roots as Lebanon.*
+
+*6 His branches shall spread, and his beauty shall be as the olive tree, and his smell as Lebanon.*
+
+*7 They that dwell under his shadow shall return; they shall revive as the corn, and grow as the vine: the scent thereof shall be as the wine of Lebanon.*
+
+*8 Ephraim shall say, What have I to do any more with idols? I have heard him, and observed him: I am like a green fir tree. From me is thy fruit found.*
+
+*9 Who is wise, and he shall understand these things? prudent, and he shall know them? for the ways of the Lord are right, and the just shall walk in them: but the transgressors shall fall therein.*
+
+<!-- post 15338 · 2024-12-02 05:51 · study -->
+
+Hebrews 13:15-16
+*By him therefore let us offer the sacrifice of praise to God continually, that is, the fruit of our lips giving thanks to his name. But to do good and to communicate forget not: for with such sacrifices God is well pleased.*
+
+<!-- post 15339 · 2024-12-02 06:06 · study -->
+
+Here, in the final chapter of **Hosea**, the Lord speaks through the prophet to make one final appeal of the gospel, that whosoever believes be saved. 
+
+He calls for Israel to repentance towards God, that they have fallen in their sin. (For all have fallen short)
+
+*Take with you words, and turn to the Lord: say unto him, Take away all iniquity, and receive us graciously*, this is a sinner's prayer. (That if thou shalt confess with thy mouth...)
+
+We are offered the free gift of eternal life in Christ, by the promise of a gracious God, Who takes away our sins, by the confession of our mouths. By the calves, the sin offering of our lips. Giving thanks to His name. 
+
+False gods shall not save us, nor the works of our hands. Note the double meaning here, both idols and literally the trust in our own works. For the Lord God is Father to the fatherless, in His mercy. 
+
+He heals our backsliding, loves us freely. We are no longer appointed to His wrath. 
+
+The Lord promises we will be watered as the lilies of the field. Taking root, spreading out like an olive tree. Growing as the vine. 
+
+And Ephraim, all Israel, will bring forth His fruit. After their kind. 
+
+*Who is wise, and he shall understand these things? prudent, and he shall know them? for the ways of the Lord are right, and the just shall walk in them: but the transgressors shall fall therein.*
+
+He that hath ears to hear, let him hear.
+
+<!-- post 15340 · 2024-12-02 06:10 · study -->
+
+There are those who don't believe the word of God, and who say that the gospel given in the New Testament is different than the dispensation of the Old. Some even believe the lie that there is yet another gospel given by Paul to the Gentiles, that somehow differs from Christ's own words. 
+
+But to Him gave all the prophets witnesses, from righteous Abel to Zachariah. And the gospel of salvation has always been this, as clearly shown in **Hosea 14**. Faith in God to deliver us from our sin, and the wages of death we have earned. By the offering of our mouth, and the praise of His holy name. Amen.

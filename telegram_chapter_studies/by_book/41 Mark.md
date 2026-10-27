@@ -1,0 +1,3063 @@
+# Mark
+
+## Mark 1  ·  Primary study  ·  2022-10-26
+
+Source: https://t.me/HouseOfWews2/6077
+
+<!-- post 6077 · 2022-10-26 05:49 · scripture -->
+
+**Mark 1**
+
+*The beginning of the gospel of Jesus Christ, the Son of God;*
+
+*2 As it is written in the prophets, Behold, I send my messenger before thy face, which shall prepare thy way before thee.*
+
+*3 The voice of one crying in the wilderness, Prepare ye the way of the Lord, make his paths straight.*
+
+*4 John did baptize in the wilderness, and preach the baptism of repentance for the remission of sins.*
+
+*5 And there went out unto him all the land of Judaea, and they of Jerusalem, and were all baptized of him in the river of Jordan, confessing their sins.*
+
+*6 And John was clothed with camel's hair, and with a girdle of a skin about his loins; and he did eat locusts and wild honey;*
+
+*7 And preached, saying, There cometh one mightier than I after me, the latchet of whose shoes I am not worthy to stoop down and unloose.*
+
+*8 I indeed have baptized you with water: but he shall baptize you with the Holy Ghost.*
+
+*9 And it came to pass in those days, that Jesus came from Nazareth of Galilee, and was baptized of John in Jordan.*
+
+*10 And straightway coming up out of the water, he saw the heavens opened, and the Spirit like a dove descending upon him:*
+
+*11 And there came a voice from heaven, saying, Thou art my beloved Son, in whom I am well pleased.*
+
+*12 And immediately the spirit driveth him into the wilderness.*
+
+*13 And he was there in the wilderness forty days, tempted of Satan; and was with the wild beasts; and the angels ministered unto him.*
+
+*14 Now after that John was put in prison, Jesus came into Galilee, preaching the gospel of the kingdom of God,*
+
+*15 And saying, The time is fulfilled, and the kingdom of God is at hand: repent ye, and believe the gospel.*
+
+*16 Now as he walked by the sea of Galilee, he saw Simon and Andrew his brother casting a net into the sea: for they were fishers.*
+
+*17 And Jesus said unto them, Come ye after me, and I will make you to become fishers of men.*
+
+*18 And straightway they forsook their nets, and followed him.*
+
+*19 And when he had gone a little farther thence, he saw James the son of Zebedee, and John his brother, who also were in the ship mending their nets.*
+
+*20 And straightway he called them: and they left their father Zebedee in the ship with the hired servants, and went after him.*
+
+*21 And they went into Capernaum; and straightway on the sabbath day he entered into the synagogue, and taught.*
+
+*22 And they were astonished at his doctrine: for he taught them as one that had authority, and not as the scribes.*
+
+*23 And there was in their synagogue a man with an unclean spirit; and he cried out,*
+
+*24 Saying, Let us alone; what have we to do with thee, thou Jesus of Nazareth? art thou come to destroy us? I know thee who thou art, the Holy One of God.*
+
+*25 And Jesus rebuked him, saying, Hold thy peace, and come out of him.*
+
+*26 And when the unclean spirit had torn him, and cried with a loud voice, he came out of him.*
+
+*27 And they were all amazed, insomuch that they questioned among themselves, saying, What thing is this? what new doctrine is this? for with authority commandeth he even the unclean spirits, and they do obey him.*
+
+*28 And immediately his fame spread abroad throughout all the region round about Galilee.*
+
+*29 And forthwith, when they were come out of the synagogue, they entered into the house of Simon and Andrew, with James and John.*
+
+*30 But Simon's wife's mother lay sick of a fever, and anon they tell him of her.*
+
+*31 And he came and took her by the hand, and lifted her up; and immediately the fever left her, and she ministered unto them.*
+
+*32 And at even, when the sun did set, they brought unto him all that were diseased, and them that were possessed with devils.*
+
+*33 And all the city was gathered together at the door.*
+
+*34 And he healed many that were sick of divers diseases, and cast out many devils; and suffered not the devils to speak, because they knew him.*
+
+*35 And in the morning, rising up a great while before day, he went out, and departed into a solitary place, and there prayed.*
+
+*36 And Simon and they that were with him followed after him.*
+
+<!-- post 6078 · 2022-10-26 05:49 · scripture -->
+
+*37 And when they had found him, they said unto him, All men seek for thee.*
+
+*38 And he said unto them, Let us go into the next towns, that I may preach there also: for therefore came I forth.*
+
+*39 And he preached in their synagogues throughout all Galilee, and cast out devils.*
+
+*40 And there came a leper to him, beseeching him, and kneeling down to him, and saying unto him, If thou wilt, thou canst make me clean.*
+
+*41 And Jesus, moved with compassion, put forth his hand, and touched him, and saith unto him, I will; be thou clean.*
+
+*42 And as soon as he had spoken, immediately the leprosy departed from him, and he was cleansed.*
+
+*43 And he straitly charged him, and forthwith sent him away;*
+
+*44 And saith unto him, See thou say nothing to any man: but go thy way, shew thyself to the priest, and offer for thy cleansing those things which Moses commanded, for a testimony unto them.*
+
+*45 But he went out, and began to publish it much, and to blaze abroad the matter, insomuch that Jesus could no more openly enter into the city, but was without in desert places: and they came to him from every quarter.*
+
+<!-- post 6079 · 2022-10-26 06:08 · study -->
+
+The Gospel of Mark begins with a speedrun of Jesus's start to His earthly ministry. 
+
+Starting with scripture prophesying John the Baptist heralding Christ's arrival with the baptism of repentance, the outward acknowledging of accepting the truth, of our being sinners, in need of salvation and the truth of Jesus being the Christ. The remission of sins through the confession of our sorry state, washed by the water in anticipation of the Spirit to come in His resurrection. The Holy Ghost. 
+
+Jesus comes and is baptized, immersed in the river Jordan, coming straightway up from the water, and the heavens and the Spirit and the Father all give witness and testimony to Jesus, anointed as the Christ. The Messiah who John and all the prophets gave witness to, finally come. 
+
+*Thou art my beloved Son, in whom I am well pleased.* 
+
+Mark gives us a very quick synopsis of the temptation in the wilderness, and Jesus calling the first Apostles, Simon Peter and Andrew his brother, sons of Jonas. James and John, sons of Zebedee, the "sons of thunder."
+
+Jesus preaches in the Synagogue, astonishing men with his doctrine, and he drives a demon out of a man, who when seeing Christ near, begins to call Him out as the Son of God. Mark notes later, as in the other Gospels, that Jesus suffers not the devil's he casts out to say who He is, that the faith of those who follow be not in the wonders but the word, and the glory of God. Turning toward God in faith, trusting on Jesus, while still under the law of Moses until His death and resurrection. This is why he admonishes the leper to simply go and offer the sacrifice after he is healed, that God may glory, and he be a testimony unto the preists.
+
+And Jesus healed many and cast out devils, and many followed. He left for Galilee, then into the wilderness, the outskirts of towns, the crowds following Him, from every quarter.
+
+<!-- post 6080 · 2022-10-26 06:14 · study -->
+
+*Jesus, moved with compassion.* The leper believes, and calls upon Jesus to heal him, and Jesus, moved with compassion does so. 
+
+This is the purest form of the Gospel. The mercy and grace of Jesus' compassion on us, who in faith call upon His name and are made whole. He being the sacrifice for atonement. He being the blood shed for remission of our sins. Now, no longer the picture of Christ to come with the blood of bulls and goats in the law of Moses, but of His precious blood, sprinkled on the Mercy Seat. 
+
+Jesus have mercy on me, a sinner. 
+
+Acknowledging we are sick in spirit as the leper was in the flesh. And in the same faith, calling out to Him, "*If thou wilt, thou canst make me clean."*
+
+If you believe that in your heart, call upon His name. Right where you are, today. Don't wait, for *The time is fulfilled, and the kingdom of God is at hand: repent ye, and believe the gospel.*
+
+<!-- post 6082 · 2022-10-26 06:58 · study -->
+
+Who is a liar but he that denies Jesus is the Christ? They are antichrists.
+
+Behind the lies of the Holohoax and the blasphemy of "judeso-christian" the lie of "jewish exceptionalism" is one of the most wicked, having led to a defacto acceptance of a false racial supremacy to explain away their disproportionate power over our people. 
+
+ https://youtu.be/stLCurXu0fc
+
+## Mark 2  ·  Primary study  ·  2022-10-27
+
+Source: https://t.me/HouseOfWews2/6094
+
+<!-- post 6094 · 2022-10-27 05:12 · scripture -->
+
+**Mark 2**
+
+*And again he entered into Capernaum after some days; and it was noised that he was in the house.*
+
+*2 And straightway many were gathered together, insomuch that there was no room to receive them, no, not so much as about the door: and he preached the word unto them.*
+
+*3 And they come unto him, bringing one sick of the palsy, which was borne of four.*
+
+*4 And when they could not come nigh unto him for the press, they uncovered the roof where he was: and when they had broken it up, they let down the bed wherein the sick of the palsy lay.*
+
+*5 When Jesus saw their faith, he said unto the sick of the palsy, Son, thy sins be forgiven thee.*
+
+*6 But there was certain of the scribes sitting there, and reasoning in their hearts,*
+
+*7 Why doth this man thus speak blasphemies? who can forgive sins but God only?*
+
+*8 And immediately when Jesus perceived in his spirit that they so reasoned within themselves, he said unto them, Why reason ye these things in your hearts?*
+
+*9 Whether is it easier to say to the sick of the palsy, Thy sins be forgiven thee; or to say, Arise, and take up thy bed, and walk?*
+
+*10 But that ye may know that the Son of man hath power on earth to forgive sins, (he saith to the sick of the palsy,)*
+
+*11 I say unto thee, Arise, and take up thy bed, and go thy way into thine house.*
+
+*12 And immediately he arose, took up the bed, and went forth before them all; insomuch that they were all amazed, and glorified God, saying, We never saw it on this fashion.*
+
+*13 And he went forth again by the sea side; and all the multitude resorted unto him, and he taught them.*
+
+*14 And as he passed by, he saw Levi the son of Alphaeus sitting at the receipt of custom, and said unto him, Follow me. And he arose and followed him.*
+
+*15 And it came to pass, that, as Jesus sat at meat in his house, many publicans and sinners sat also together with Jesus and his disciples: for there were many, and they followed him.*
+
+*16 And when the scribes and Pharisees saw him eat with publicans and sinners, they said unto his disciples, How is it that he eateth and drinketh with publicans and sinners?*
+
+*17 When Jesus heard it, he saith unto them, They that are whole have no need of the physician, but they that are sick: I came not to call the righteous, but sinners to repentance.*
+
+*18 And the disciples of John and of the Pharisees used to fast: and they come and say unto him, Why do the disciples of John and of the Pharisees fast, but thy disciples fast not?*
+
+*19 And Jesus said unto them, Can the children of the bridechamber fast, while the bridegroom is with them? as long as they have the bridegroom with them, they cannot fast.*
+
+*20 But the days will come, when the bridegroom shall be taken away from them, and then shall they fast in those days.*
+
+*21 No man also seweth a piece of new cloth on an old garment: else the new piece that filled it up taketh away from the old, and the rent is made worse.*
+
+*22 And no man putteth new wine into old bottles: else the new wine doth burst the bottles, and the wine is spilled, and the bottles will be marred: but new wine must be put into new bottles.*
+
+*23 And it came to pass, that he went through the corn fields on the sabbath day; and his disciples began, as they went, to pluck the ears of corn.*
+
+*24 And the Pharisees said unto him, Behold, why do they on the sabbath day that which is not lawful?*
+
+*25 And he said unto them, Have ye never read what David did, when he had need, and was an hungred, he, and they that were with him?*
+
+*26 How he went into the house of God in the days of Abiathar the high priest, and did eat the shewbread, which is not lawful to eat but for the priests, and gave also to them which were with him?*
+
+*27 And he said unto them, The sabbath was made for man, and not man for the sabbath:*
+
+*28 Therefore the Son of man is Lord also of the sabbath.*
+
+<!-- post 6095 · 2022-10-27 05:53 · study -->
+
+The healing of the man lowered by 4 into a full house where Jesus was preaching is a beautiful picture how many with faith may bring us to salvation. Jesus forgiving his sins, and then healing his flesh in opposition to the scribes questioning in their hearts His authority gives a definitive statement of the divinity of Christ. "Who can forgive sins but God only?" Exactly. 
+
+Notice it's the faith expressed, not only of the man with palsy, but those who bring him to Jesus that moves Christ. It is the faith that leads to His forgiveness of sin. The healing of infirmity comes after. This is such a picture of salvation and the moving of the Spirit in a saved Christian's life. And notice, all to the glory of God. "*They were all amazed, and glorified God, saying, We never saw it on this fashion.*"
+
+Next we see Jesus call upon a publican, a tax collector, identified here and in Luke as Levi, but better known as the Apostle Matthew. Jesus calls him from his position collecting tax on the goods coming into port in Capernaum and bids the publican to follow Him and he does. 
+
+A Levite publican, a double blow to the worldly Pharisees. One of their own collecting tribute for Rome. No greater sinner in their mind, and to dine with one, that would be "unclean." 
+
+Jesus's answer to their outrage, that He was here as a physician, to heal the sick, calling the sinners to repentance towards God, as the righteous have no need of a "doctor," is a backhanded insult to the Pharisees. They are not righteous. There is none righteous by the works of the law, and certainly not these hypocrites. But their own conceit would keep them from seeing His point. In matters of righteousness we are all in need of a physician, Christ Jesus. 
+
+We shouldn't lose sight of that truth, and understand it's not the sins that make us clean or unclean. 
+
+It's not our own righteousness in following the law, but our hearts and spirit of faith in Christ Jesus to impute His righteousness on us that heals. That makes us clean. Washed in the blood. 
+
+There is a natural man argument that many unsaved scoffers and reprobates make is that Jesus "hung out with the sinners" and not the "holy rollers." They take this verse and blaspheme, claiming Jesus liked to "party with sinners" to excuse their own unregenerate lifestyle. 
+
+Of course they meltdown when you correct them that He certainly preached to the sinners to bring them out of sin, but actually hung out with, was friends with, His Apostles and closest disciples. 
+
+That physicians don't "hang out" with the sick, they treat them to be well. This understanding escapes them, and I have seen more than a few Christians unable to make this distinction and get confused or browbeaten into not calling out sin. Ignoring the sickness. Enabling the worst behaviors, simply to not be seen as a "Pharisee." 
+
+Both the hypocritical fruit inspectors and degenerates are sick and in need of a physician.
+
+<!-- post 6096 · 2022-10-27 06:21 · study -->
+
+The chapter ends with two more challenges by the scribes and Pharisees to Jesus and His correction of their error. 
+
+First, they accuse Jesus and His disciples of not being pious enough to fast, and use the austere ministry of John the Baptist and his followers fasting to lend more credence to their own self-righteous fasting. To build a stronger "got ya" against Christ. And once again, Christ answers them with unassailable doctrine. How can they fast in the presence of the bridegroom? They celebrate while He is with them, and will fast once He's gone. 
+
+Jesus says one doesn't patch an old garment with new cloth, or place new wine in old skins, as a parable to what would happen. The cloth would rend from the inflexibility of the new cloth. The wine, fresh juice would ferment and tear the old skins. So to, He is saying He isn't there to "patch" the old failed ways of the Pharisees, to mend the old law. He's there to fulfill it and make it new again. 
+
+Mark shifts to another instance of the so-called holy men challenging Christ and the behavior of His disciples, as they glean corn in a field to eat on a sabbath. Jesus uses the example of David and his men when they were fleeing his enemies, eating the shew bread of the temple, despite that being reserved for the preists. That the sabbath was made for men, not men to the sabbath. 
+
+The Sabbath was designed to picture the rest we have in Jesus after salvation. It was meant to give rest to the weary. To teach as a schoolmaster the truth of Christ to the Hebrews. It wasn't meant to be a way of showing super righteousness by how closely you followed the tradition of man that sprung up around it. As a pups exercise to be seen of others. 
+
+That the rest we have in Jesus is the same. It's not our actions that sully us, but the context and spirit by which we commit them. 
+
+*All things are lawful for me, but all things are not expedient: all things are lawful for me, but all things edify not.*
+
+It is similar to the story in **Matthew 15** where the Pharisees again question Jesus and His disciples, when they don't wash their hands in the ritual way before eating. 
+
+*Do not ye yet understand, that whatsoever entereth in at the mouth goeth into the belly, and is cast out into the draught?*
+
+*But those things which proceed out of the mouth come forth from the heart; and they defile the man. For out of the heart proceed evil thoughts, murders, adulteries, fornications, thefts, false witness, blasphemies:These are the things which defile a man: but to eat with unwashen hands defileth not a man.*
+
+A common teaching of Christ is emphasis on the spirit and heart by which we sin, the same as the spirit and heart of how we have faith. That it is the thought of wrath that is murder, thought of lust that is adultery. What our intent and what is in our hearts that God judges when we are His.
+
+This is a higher standard than the Pharisees' outward displays of righteousness, while inwards they are ravenous wolves, full of sin.
+
+However it cuts both ways, where in the trappings of what man sees as outward signs of sin may well be just their idea of what righteous looks like. Who put appearance over substance. Who sin in their hearts, polishing the outside of the cup, but defile themselves inwardly by their hearts. 
+
+As Jesus said to these hypocrites “*Woe unto you, scribes and Pharisees, hypocrites! for ye make clean the outside of the cup and of the platter, but within they are full of extortion and excess."*
+
+ It is perspective we should all keep in mind.
+
+<!-- post 6097 · 2022-10-27 06:48 · study -->
+
+What many miss regarding repentance in the Gospels is that Jesus had come to lead the people trapped in the works-based, hypocritical heresy that had become the religion of the Pharisees, and the hopeless secularism of the Sadducees. The state of religion in Judea and Jews in general, turning from the faith of their fathers and the prophets, and towards the self-righteous faith of outward appearance, the circumcision of the flesh over the circumcision of the heart. 
+
+When Jesus says to repent, He isn't talking about cleaning up your life, and trying to live more in line with the law. That's the false religion of the Pharisee that He repeatedly condemns. 
+ 
+He calls sinners to repentance, towards God. Towards the salvation of faith in grace He is there to fulfill. The remission of sins that is the result of repentance unto faith. Then the healing of the body. Then the turning from sin. We go to the doctor to be healed. We don't get healed to see the doctor. 
+
+*I came not to call the righteous, but sinners to repentance.*
+
+The righteous in Christ should turn away from their sin. Put away and mortify the lusts of the flesh and the warring members of the old man. To feed the new man and walk in the spirit. But it is the sick of spirit, those dead inside that He came to heal that they could be made whole. That the Spirit could quicken ours in our faith. 
+
+*Whether is it easier to say to the sick of the palsy, Thy sins be forgiven thee; or to say, Arise, and take up thy bed, and walk? But that ye may know that the Son of man hath power on earth to forgive sins.*
+
+<!-- post 6098 · 2022-10-27 06:57 · study -->
+
+The hopelessness in hypocrisy of works-based religions, like much of what is considered modern Christianity. Like what is called Judaism. Like what is the religion of the Pharisees. This is such a snare and a trap, as it keeps people mired in their sin, unable to come to forgiveness while they're in their flesh. Because our flesh, our natural man, our old man willfully sins. It's our nature. And as long as people are trapped in a cycle of trying to justify themselves to God by turning from their sin, or engaging in ceremony and sacrament, denying themselves the healing power of Jesus, they become trapped. This stumbling block and snare keeps so many people from even attempting to get right with God. 
+
+And the faithless religion of the sadducees, which denies the power of God, the promise of Heaven, the Resurrection in Christ and forgiveness of sins, is equally a trap. 
+
+Many who rationalize their way into atheism, reform theology, Calvinism, the catechism of the Roman Catholic church, or the so-called apostolic traditions of the Orthodox, who don't take a literal view of the Bible while adopting the trappings of it, seeking to become righteous in their own wisdom and knowledge, rather than the wisdom and knowledge of the Lord.
+
+These false ways and spiritual traps are what Jesus came to call sinners to repent of that they may be healed. That their sins be forgiven, that they may sin no more.
+
+## Mark 3  ·  Primary study  ·  2022-10-28
+
+Source: https://t.me/HouseOfWews2/6118
+
+<!-- post 6118 · 2022-10-28 05:51 · scripture -->
+
+**Mark 3**
+
+*And he entered again into the synagogue; and there was a man there which had a withered hand.*
+
+*2 And they watched him, whether he would heal him on the sabbath day; that they might accuse him.*
+
+*3 And he saith unto the man which had the withered hand, Stand forth.*
+
+*4 And he saith unto them, Is it lawful to do good on the sabbath days, or to do evil? to save life, or to kill? But they held their peace.*
+
+*5 And when he had looked round about on them with anger, being grieved for the hardness of their hearts, he saith unto the man, Stretch forth thine hand. And he stretched it out: and his hand was restored whole as the other.*
+
+*6 And the Pharisees went forth, and straightway took counsel with the Herodians against him, how they might destroy him.*
+
+*7 But Jesus withdrew himself with his disciples to the sea: and a great multitude from Galilee followed him, and from Judaea,*
+
+*8 And from Jerusalem, and from Idumaea, and from beyond Jordan; and they about Tyre and Sidon, a great multitude, when they had heard what great things he did, came unto him.*
+
+*9 And he spake to his disciples, that a small ship should wait on him because of the multitude, lest they should throng him.*
+
+*10 For he had healed many; insomuch that they pressed upon him for to touch him, as many as had plagues.*
+
+*11 And unclean spirits, when they saw him, fell down before him, and cried, saying, Thou art the Son of God.*
+
+*12 And he straitly charged them that they should not make him known.*
+
+*13 And he goeth up into a mountain, and calleth unto him whom he would: and they came unto him.*
+
+*14 And he ordained twelve, that they should be with him, and that he might send them forth to preach,*
+
+*15 And to have power to heal sicknesses, and to cast out devils:*
+
+*16 And Simon he surnamed Peter;*
+
+*17 And James the son of Zebedee, and John the brother of James; and he surnamed them Boanerges, which is, The sons of thunder:*
+
+*18 And Andrew, and Philip, and Bartholomew, and Matthew, and Thomas, and James the son of Alphaeus, and Thaddaeus, and Simon the Canaanite,*
+
+*19 And Judas Iscariot, which also betrayed him: and they went into an house.*
+
+*20 And the multitude cometh together again, so that they could not so much as eat bread.*
+
+*21 And when his friends heard of it, they went out to lay hold on him: for they said, He is beside himself.*
+
+*22 And the scribes which came down from Jerusalem said, He hath Beelzebub, and by the prince of the devils casteth he out devils.*
+
+*23 And he called them unto him, and said unto them in parables, How can Satan cast out Satan?*
+
+*24 And if a kingdom be divided against itself, that kingdom cannot stand.*
+
+*25 And if a house be divided against itself, that house cannot stand.*
+
+*26 And if Satan rise up against himself, and be divided, he cannot stand, but hath an end.*
+
+*27 No man can enter into a strong man's house, and spoil his goods, except he will first bind the strong man; and then he will spoil his house.*
+
+*28 Verily I say unto you, All sins shall be forgiven unto the sons of men, and blasphemies wherewith soever they shall blaspheme:*
+
+*29 But he that shall blaspheme against the Holy Ghost hath never forgiveness, but is in danger of eternal damnation.*
+
+*30 Because they said, He hath an unclean spirit.*
+
+*31 There came then his brethren and his mother, and, standing without, sent unto him, calling him.*
+
+*32 And the multitude sat about him, and they said unto him, Behold, thy mother and thy brethren without seek for thee.*
+
+*33 And he answered them, saying, Who is my mother, or my brethren?*
+
+*34 And he looked round about on them which sat about him, and said, Behold my mother and my brethren!*
+
+*35 For whosoever shall do the will of God, the same is my brother, and my sister, and mother.*
+
+<!-- post 6119 · 2022-10-28 06:22 · study -->
+
+**Mark 3** sets the same pattern we've seen in the other Gospels, of Jesus healing or teaching and the Jews who oppose God trying to use the occasion to be rid of Him. Here, Christ heals a man's withered hand on the Sabbath. As we have just read in **Mark 2**, Jesus continues to make this point, that it is lawful to do good on a sabbath. That Sabbaths were made for men, not men for the Sabbath. He is the Sabbath. 
+
+Failing to lay hands on Him, Jesus makes His way to the sea, and multitudes came to see Him from all about the region, so much so He asks a boat be ready to help Him depart, should the crowd be too much. He heals the multitudes, and gains more who flock to see the wonders, and glory God, and some unto believing on Him as the son of God by faith. This is important, as He reprimands the unclean spirits He casts out to silence their proclamation that Jesus is Christ, the Son of God. 
+
+We see that then, after retreating to the sea, Jesus then goes to the mountains, continuing to preach to the masses following Him. He formally ordains the 12 Apostles to preach and heal in His stead, so as to minister to the crowds that have gathered. 
+
+And because people from all over Galilee, Judea, and beyond have come to see Him, and the proximity of Nazareth to Capernaum, where much of Christ's ministry had been, His family, mother and half-brothers and friends He grew up become concerned, not knowing who Jesus truly is. They thought Him crazy. But the scribes accused Him of being from Satan, and the Holy Ghost by which He cast out these demons, they label an unclean spirit. A blasphemy He warns is unforgivable, and is a way to reprobation and damnation. 
+
+As Jesus says a house divided cannot stand, as if Satan turned on his own. How can Satan cast out Satan?
+
+And all sins of men will be forgiven. This is important. A penitent believer will be forgiven all manner of sins, but the blasphemy of the Holy Ghost and deliberately changing God's word (Rev 22).
+
+These are direct causes of reprobation that most Christians will accept. The will also concede death without believing is final, and damned. But they often struggle with the idea that some, not wishing to retain God in their knowledge are turned over by Him to a reprobate mind. A rejected mind. Hearts hardened. Conscience seared. Twice-dead. **Unable** to come to the knowledge of the truth. This is the case for many of these Pharisees and scribes. Such was the case for many in the Old Testament, Cain and Pharoah for example. It continues to be the case today. 
+
+And because people confuse reprobation, a spiritual state of man, finally rejected of God, and the unnatural lusts and sins committed by reprobates, they argue, that if all sins be forgiven, then there is no such thing as "too late, reprobate." This puts the sodomite cart before the horse. 
+
+Unnatural sin is not the cause of reprobation, but a symptom that it's occured. It is important to get that right. It's never about the sin itself, but the state of a man's heart towards God. Belief unto salvation. Unbelief and vain beliefs of the unsaved which can be overcome with the word and repented of unto faith, or rejection of belief to the point God gives up, stops shining the light. The Spirit no longer calls. Three states one may be in, two final before physical death, one final at that death.
+
+<!-- post 6120 · 2022-10-28 06:49 · study -->
+
+The chapter closes out with an exchange that Catholics hate to hear; Jesus' mother Mary, and his half siblings down from Nazareth to check on Jesus thinking him "beside himself", or crazy in other words.
+
+This and the parallel passages in the other Gospels recounting the incident show that Jesus was the first born of a virgin, Mary, but that she and Joseph had other children together and so she was not some sort of perpetual virgin. This is extra biblical nonsense, and part of a cult that worships a false goddess called the Queen of Heaven.
+
+Further it shows that Jesus didn't venerate his mother over anyone else who believed. God is not a respecter of persons. We are called to love Jesus more than our own mothers and fathers, sisters and brothers. And to love our fellow believers as brothers. 
+
+*Behold, thy mother and thy brethren without seek for thee.*
+
+*And he answered them, saying, Who is my mother, or my brethren? And he looked round about on them which sat about him, and said, Behold my mother and my brethren! For whosoever shall do the will of God, the same is my brother, and my sister, and mother.*
+
+We who are saved, who are heirs to the kingdom of heaven, are adopted sons of God. The Bible says Jesus is not ashamed to call us brethren. We are a Holy Family. 
+
+And while at least two of Jesus's half Brothers and his mother Mary, were saved by faith and joint heirs with us, and given glory in heaven for their work for the Lord, they aren't of the same status and stature as God himself. They are not meant to be treated as anything more than a fellow believer. And this example in Jesus's life exemplifies this principle.
+
+Worshiping, that is kneeling in prayer and praise, before statues, graven images made of Stone and metal and wood, to call upon the names of man to petition God our Father, is one of the greatest blasphemies short of blaspheming the Holy Ghost.
+
+There is no biblical instruction that justifies this false doctrine, and there are examples such as this, that clearly show the proper relationship between Christ and us as believers, and his earthly blood relatives in Mary.
+
+The logic of man that justifies this blasphemy is undone by the wisdom of God. If you want to honor the mother of Christ on earth, then be as Jesus's mother and sisters and brothers, believing on Him for salvation alone.
+
+## Mark 4  ·  Primary study  ·  2022-10-29
+
+Source: https://t.me/HouseOfWews2/6132
+
+<!-- post 6132 · 2022-10-29 06:20 · scripture -->
+
+**Mark 4**
+
+*And he began again to teach by the sea side: and there was gathered unto him a great multitude, so that he entered into a ship, and sat in the sea; and the whole multitude was by the sea on the land.*
+
+*2 And he taught them many things by parables, and said unto them in his doctrine,*
+
+*3 Hearken; Behold, there went out a sower to sow:*
+
+*4 And it came to pass, as he sowed, some fell by the way side, and the fowls of the air came and devoured it up.*
+
+*5 And some fell on stony ground, where it had not much earth; and immediately it sprang up, because it had no depth of earth:*
+
+*6 But when the sun was up, it was scorched; and because it had no root, it withered away.*
+
+*7 And some fell among thorns, and the thorns grew up, and choked it, and it yielded no fruit.*
+
+*8 And other fell on good ground, and did yield fruit that sprang up and increased; and brought forth, some thirty, and some sixty, and some an hundred.*
+
+*9 And he said unto them, He that hath ears to hear, let him hear.*
+
+*10 And when he was alone, they that were about him with the twelve asked of him the parable.*
+
+*11 And he said unto them, Unto you it is given to know the mystery of the kingdom of God: but unto them that are without, all these things are done in parables:*
+
+*12 That seeing they may see, and not perceive; and hearing they may hear, and not understand; lest at any time they should be converted, and their sins should be forgiven them.*
+
+*13 And he said unto them, Know ye not this parable? and how then will ye know all parables?*
+
+*14 The sower soweth the word.*
+
+*15 And these are they by the way side, where the word is sown; but when they have heard, Satan cometh immediately, and taketh away the word that was sown in their hearts.*
+
+*16 And these are they likewise which are sown on stony ground; who, when they have heard the word, immediately receive it with gladness;*
+
+*17 And have no root in themselves, and so endure but for a time: afterward, when affliction or persecution ariseth for the word's sake, immediately they are offended.*
+
+*18 And these are they which are sown among thorns; such as hear the word,*
+
+*19 And the cares of this world, and the deceitfulness of riches, and the lusts of other things entering in, choke the word, and it becometh unfruitful.*
+
+*20 And these are they which are sown on good ground; such as hear the word, and receive it, and bring forth fruit, some thirtyfold, some sixty, and some an hundred.*
+
+*21 And he said unto them, Is a candle brought to be put under a bushel, or under a bed? and not to be set on a candlestick?*
+
+*22 For there is nothing hid, which shall not be manifested; neither was any thing kept secret, but that it should come abroad.*
+
+*23 If any man have ears to hear, let him hear.*
+
+*24 And he said unto them, Take heed what ye hear: with what measure ye mete, it shall be measured to you: and unto you that hear shall more be given.*
+
+*25 For he that hath, to him shall be given: and he that hath not, from him shall be taken even that which he hath.*
+
+*26 And he said, So is the kingdom of God, as if a man should cast seed into the ground;*
+
+*27 And should sleep, and rise night and day, and the seed should spring and grow up, he knoweth not how.*
+
+*28 For the earth bringeth forth fruit of herself; first the blade, then the ear, after that the full corn in the ear.*
+
+*29 But when the fruit is brought forth, immediately he putteth in the sickle, because the harvest is come.*
+
+*30 And he said, Whereunto shall we liken the kingdom of God? or with what comparison shall we compare it?*
+
+*31 It is like a grain of mustard seed, which, when it is sown in the earth, is less than all the seeds that be in the earth:*
+
+*32 But when it is sown, it groweth up, and becometh greater than all herbs, and shooteth out great branches; so that the fowls of the air may lodge under the shadow of it.*
+
+*33 And with many such parables spake he the word unto them, as they were able to hear it.*
+
+*34 But without a parable spake he not unto them: and when they were alone, he expounded all things to his disciples.*
+
+<!-- post 6133 · 2022-10-29 06:20 · scripture -->
+
+*35 And the same day, when the even was come, he saith unto them, Let us pass over unto the other side.*
+
+*36 And when they had sent away the multitude, they took him even as he was in the ship. And there were also with him other little ships.*
+
+*37 And there arose a great storm of wind, and the waves beat into the ship, so that it was now full.*
+
+*38 And he was in the hinder part of the ship, asleep on a pillow: and they awake him, and say unto him, Master, carest thou not that we perish?*
+
+*39 And he arose, and rebuked the wind, and said unto the sea, Peace, be still. And the wind ceased, and there was a great calm.*
+
+*40 And he said unto them, Why are ye so fearful? how is it that ye have no faith?*
+
+*41 And they feared exceedingly, and said one to another, What manner of man is this, that even the wind and the sea obey him?*
+
+<!-- post 6134 · 2022-10-29 06:49 · study -->
+
+In Mark 4 we see another parallel passage, this time with [Matthew 13](https://t.me/HouseOfWews2/5194) which we studied a few weeks ago. (it's repeated in **Luke 8** as well, which God willing we shall see soon)
+
+The parable of the sower is another instance of the nature of creation existing that Jesus, the word of God though whom all things were created, may use it as example to explain the heavenly things of God. The physical to understand the spiritual. 
+
+For we who are saved, the greater lesson is how we rightly divide the word, understanding that His words are spirit. That His words are eternal life, and what that means. That creation speaks the word of God for those with ears to hear and eyes to see. Who aren't without deep roots, who aren't choked out by thorns. That we may be fertile soil and bring forth fruit after our kind, 100 fold. 
+
+*And he said unto them, Unto you it is given to know the mystery of the kingdom of God: but unto them that are without, all these things are done in parables: That seeing they may see, and not perceive; and hearing they may hear, and not understand; lest at any time they should be converted, and their sins should be forgiven them*.
+
+Jesus used clearly discerned pictures of the natural, the physical, to help us understand the spiritual, the unseen, that we who are seeking God's truth or who have received the quickening of our spirit may receive faith, which the Bible says *is the substance of things hoped for, the evidence of things not seen.*
+
+He uses the seen to give us insight to the unseen. This is what I was getting at [yesterday](https://t.me/HouseOfWews2/6127). 
+
+But to the carnally minded all things are physical, literal. Materialists see Jesus parables as Nicodemus did; taken to absurd levels or autistic literalism and missing the actual spiritual application. 
+
+This is what the Bible means by "*the natural man receiveth not the things of the Spirit of God: for they are foolishness unto him: neither can he know them, because they are spiritually discerned."*
+
+The natural man is earthly. They rely on the wisdom of man. They lean unto their own understanding. They are those by the wayside where the word is sown and *Satan cometh immediately, and taketh* it away. 
+
+And as we see in the parable of the sower, as Jesus explains, there are saved Christians who are the stoney ground. They hear the word and believe, but having nothing to take hold of, being unprofitable, without a church, without reading their Bible, without seeking to learn the deeper things of God, *and so endure but for a time: afterward, when affliction or persecution ariseth for the word's sake, immediately they are offended.* 
+
+There are Christians who hear the word and are saved, but are among thorns, the cares of the world. They allow covetousness and lust to choke them out, and become unable to bear fruit. To get more people saved by their example. Unprofitable to God or to others. 
+
+We should seek to grow roots, deep in fertile soil which is God's word and His ways that we may win souls to Christ and bring in the harvest for the Lord.
+
+<!-- post 6135 · 2022-10-29 07:04 · study -->
+
+The lesson of why Jesus uses parables, and the true nature of creation to serve as that parable is given us that we may receive more. That having been given eternal life, and having been made alive in the spirit, we may be given yet more. 
+
+It's the opposite of gnosticism, where the secrets are revealed by measures, and final "enlightenment" kept hidden until one archives the ability to see. 
+
+The Bible way is that we seeking enlightenment are given it immediately, if we believe God's word. Then our knowledge grows the more we receive it, freely given. The light put on a candlestick, not hidden under a bushel. 
+
+It's not hid from those who ask. It's freely given *with what measure ye mete, it shall be measured to you: and unto you that hear shall more be given.*
+
+It's up to you if you be stoney ground. It's up to you if you allow thorns to choke you out. It's up to you if you be fertile soil. What you ask for is what you're given, to those that hear. 
+
+*For he that hath, to him shall be given: and he that hath not, from him shall be taken even that which he hath.*
+
+He that hath not, those without ears to hear, those by the wayside, they are given the chance to receive the word. The seed is sown in their hearts. But even this is taken away eventually. God doesn't shine His light on all men forever. The Spirit tries for a time, but if you don't want to hear the truth, if the seed can't spring up on your hardened heart, compacted like the well-worn soil of the pathway by the wayside, He will take His light away to shine on more fertile hearts. Then it is too late.
+
+<!-- post 6136 · 2022-10-29 07:22 · study -->
+
+*So is the kingdom of God.*
+
+Jesus uses all these things of His own creation to make simple the ways of God to us. 
+
+And a man sows seed, which grows after its kind, blade, and ear and fruit. He doesn't make it grow, it just does, and when it is ripe for the harvest he brings in the bounty. 
+
+And so is the Kingdom of Heaven. The seed is the word, Jesus tells us, and it will *spring and grow up, he knoweth not how.* Meaning God, represented as the farmer doesn't dictate to the seed that it germinate, that it sprout, when it should flower and bud, that it bear fruit. Only that it will as it will, and in due season be ready for harvest. 
+
+Obviously God knows *how,* but the point is He doesn't determine which seed sprouts, or the nature of how it grows. 
+
+It's a rebuke of Calvinism, but it is meant to give us understanding of the Kingdom and our role in it. Both as the sowers and the sheaves. How Heaven grows. 
+
+*And he said, Whereunto shall we liken the kingdom of God? or with what comparison shall we compare it?*
+
+We are privy to these lessons. We are not given the parable only, for those with ears to hear, but given their meaning. Nothing hid. And scripture gives us the meaning that we who believe may gain deeper understanding. 
+
+Heaven is like a mustard seed, tiny but that grows massive trees, with branches spanning out, each branching further. We are the branches sprung out from the seed. We can trace our lineage in terms of believers who led others to Christ, who led still others, who eventually were those who brought us to salvation. Like a family tree, stretching back to the seed that was sown. 
+
+ *For as the body is one, and hath many members, and all the members of that one body, being many, are one body: so also is Christ. For by one Spirit are we all baptized into one body, whether we be Jews or Gentiles, whether we be bond or free; and have been all made to drink into one Spirit.*
+*For the body is not one member, but many.* **(1 Corinthians 12)**
+
+The Kingdom of Heaven is *like* this. And for our understanding all of creation exists. 
+
+*And with many such parables spake he the word unto them, as they were able to hear it.*
+*But without a parable spake he not unto them: and when they were alone, he expounded all things to his disciples.*
+
+<!-- post 6137 · 2022-10-29 07:36 · study -->
+
+Last, we are given another version of the account of Jesus calming the seas. Where the disciples traveling by boat with Him across Galilee are taken by fear for the storm. They find Jesus asleep and wake Him in fear that they may perish. He rebukes the wind and tells the sea to be still, and then rebukes them for their lack of faith. 
+
+Just as we will be buffeted by storms in this life, so too should we have the peace of Jesus, without fear. Not perishing but preserved in faith. Knowing all creation serves Him, and that eternal life is ours, how can we be afraid? 
+
+*What manner of man is this, that even the wind and the sea obey him?*
+
+The creator of all things commands all things. If He be for us, who can stand against us?
+
+<!-- post 6138 · 2022-10-29 07:47 · study -->
+
+A common refrain of the worldly scoffers that God is "cruel," and "how can a just God sens us to Hell knowing we can't be perfect?" 
+
+This ignorance is the bad fruit of the damnable heresies of works-based religions that teach we must earn our way to Heaven, that our own righteousness keeps us from Hell. 
+
+There are none righteous no not one. The wages of sin is death. *But God commendeth his love toward us, in that, while we were yet sinners, Christ died for us.*
+
+*For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.*
+
+God is just. God is love. And He gave us the hope in Christ, that all who believe on Jesus are saved. Just as we are, *sealed unto the day of redemption.* Everlasting life, given as a gift, that can never be lost or taken away. Regardless of our own righteousness, which the Bible says are filthy rags. 
+
+*For by grace are ye saved through faith; and that not of yourselves: it is the GIFT OF GOD: Not of works, lest any man should boast.*
+
+Even *to him that worketh not, but believeth on him that justifieth the ungodly, his faith is counted for righteousness.*
+
+As Jesus, who cannot lie said; *And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand.*
+
+*My Father, which gave them me, is greater than all; and no man is able to pluck them out of my Father's hand.*
+
+*I and my Father are one.*
+
+If you have been one of those who felt lost and hopeless because you were told God only saves the righteous, and that if you become Christian, you have to be perfect or face Hell, understand that this is not what the Bible teaches. That there is hope. That God's grace is unto you in Christ just as you are.
+
+## Mark 5  ·  Primary study  ·  2022-10-30
+
+Source: https://t.me/HouseOfWews2/6148
+
+<!-- post 6148 · 2022-10-30 08:50 · scripture -->
+
+**Mark 5**
+
+*And they came over unto the other side of the sea, into the country of the Gadarenes.*
+
+*2 And when he was come out of the ship, immediately there met him out of the tombs a man with an unclean spirit,*
+
+*3 Who had his dwelling among the tombs; and no man could bind him, no, not with chains:*
+
+*4 Because that he had been often bound with fetters and chains, and the chains had been plucked asunder by him, and the fetters broken in pieces: neither could any man tame him.*
+
+*5 And always, night and day, he was in the mountains, and in the tombs, crying, and cutting himself with stones.*
+
+*6 But when he saw Jesus afar off, he ran and worshipped him,*
+
+*7 And cried with a loud voice, and said, What have I to do with thee, Jesus, thou Son of the most high God? I adjure thee by God, that thou torment me not.*
+
+*8 For he said unto him, Come out of the man, thou unclean spirit.*
+
+*9 And he asked him, What is thy name? And he answered, saying, My name is Legion: for we are many.*
+
+*10 And he besought him much that he would not send them away out of the country.*
+
+*11 Now there was there nigh unto the mountains a great herd of swine feeding.*
+
+*12 And all the devils besought him, saying, Send us into the swine, that we may enter into them.*
+
+*13 And forthwith Jesus gave them leave. And the unclean spirits went out, and entered into the swine: and the herd ran violently down a steep place into the sea, (they were about two thousand;) and were choked in the sea.*
+
+*14 And they that fed the swine fled, and told it in the city, and in the country. And they went out to see what it was that was done.*
+
+*15 And they come to Jesus, and see him that was possessed with the devil, and had the legion, sitting, and clothed, and in his right mind: and they were afraid.*
+
+*16 And they that saw it told them how it befell to him that was possessed with the devil, and also concerning the swine.*
+
+*17 And they began to pray him to depart out of their coasts.*
+
+*18 And when he was come into the ship, he that had been possessed with the devil prayed him that he might be with him.*
+
+*19 Howbeit Jesus suffered him not, but saith unto him, Go home to thy friends, and tell them how great things the Lord hath done for thee, and hath had compassion on thee.*
+
+*20 And he departed, and began to publish in Decapolis how great things Jesus had done for him: and all men did marvel.*
+
+*21 And when Jesus was passed over again by ship unto the other side, much people gathered unto him: and he was nigh unto the sea.*
+
+*22 And, behold, there cometh one of the rulers of the synagogue, Jairus by name; and when he saw him, he fell at his feet,*
+
+*23 And besought him greatly, saying, My little daughter lieth at the point of death: I pray thee, come and lay thy hands on her, that she may be healed; and she shall live.*
+
+*24 And Jesus went with him; and much people followed him, and thronged him.*
+
+*25 And a certain woman, which had an issue of blood twelve years,*
+
+*26 And had suffered many things of many physicians, and had spent all that she had, and was nothing bettered, but rather grew worse,*
+
+*27 When she had heard of Jesus, came in the press behind, and touched his garment.*
+
+*28 For she said, If I may touch but his clothes, I shall be whole.*
+
+*29 And straightway the fountain of her blood was dried up; and she felt in her body that she was healed of that plague.*
+
+*30 And Jesus, immediately knowing in himself that virtue had gone out of him, turned him about in the press, and said, Who touched my clothes?*
+
+*31 And his disciples said unto him, Thou seest the multitude thronging thee, and sayest thou, Who touched me?*
+
+*32 And he looked round about to see her that had done this thing.*
+
+*33 But the woman fearing and trembling, knowing what was done in her, came and fell down before him, and told him all the truth.*
+
+*34 And he said unto her, Daughter, thy faith hath made thee whole; go in peace, and be whole of thy plague.*
+
+*35 While he yet spake, there came from the ruler of the synagogue's house certain which said, Thy daughter is dead: why troublest thou the Master any further?*
+
+<!-- post 6149 · 2022-10-30 08:50 · scripture -->
+
+*36 As soon as Jesus heard the word that was spoken, he saith unto the ruler of the synagogue, Be not afraid, only believe.*
+
+*37 And he suffered no man to follow him, save Peter, and James, and John the brother of James.*
+
+*38 And he cometh to the house of the ruler of the synagogue, and seeth the tumult, and them that wept and wailed greatly.*
+
+*39 And when he was come in, he saith unto them, Why make ye this ado, and weep? the damsel is not dead, but sleepeth.*
+
+*40 And they laughed him to scorn. But when he had put them all out, he taketh the father and the mother of the damsel, and them that were with him, and entereth in where the damsel was lying.*
+
+*41 And he took the damsel by the hand, and said unto her, Talitha cumi; which is, being interpreted, Damsel, I say unto thee, arise.*
+
+*42 And straightway the damsel arose, and walked; for she was of the age of twelve years. And they were astonished with a great astonishment.*
+
+*43 And he charged them straitly that no man should know it; and commanded that something should be given her to eat.*
+
+<!-- post 6150 · 2022-10-30 09:32 · study -->
+
+As we have seen so often in the Gospel of Mark, each chapter seems to have a casting out of devils, a purging of unclean spirits, or a physical healing by faith, and here we get both. 
+
+Jesus having left the Western shores of Galilee, arrives in the east near Decropolis, the 10 cities. Here he meets the man possessed by a legion of unclean spirits, which had left him wild, among the death of the tombs in the local graveyard. Cutting himself. Unable to be restrained by normal means. A danger to himself and others. 
+
+Many such cases today. 
+
+The man possessed by legion, overtaken by the unclean spirits falls in worship, that is kneeling before Jesus, and the devils beg for mercy. 
+
+It's important to note that this is what worship means in the Bible. Not some sort of special feeling or praise, that is subtly different than veneration. It means to fall to your knees before someone or something. 
+
+The devils were obviously not worshiping Christ as believers, but because He is the Son of God, and they fear Him. 
+
+They ask that they may be cast into a herd of swine and Jesus agrees. The swine then, 2000 of them, run off the cliffs into the sea. The healed man, grateful, seeks to follow Christ but instead, Jesus calls on him to return to his friends to share the power of God that he may be glorified. 
+
+The miracle also causes consternation among the Gentiles of the city, and they beg Christ to leave them, and He does. 
+
+Returning to the other side of the sea, throngs wait on Jesus, to be healed and to hear Him preach. 
+
+A woman with a blood disease, in faith touches Jesus garment and her faith and His virtue heal her. Just as we are healed by our faith in His righteousness, spiritually. 
+
+And in one of the most touching stories of faith and the mercy of Christ, Jesus resurrects the young girl for the faith of her father, Jairus. A leader in the synagogue, knowledgeable of scripture, and desperate for his beloved daughter. Jesus takes mercy on her, and says in Aramaic, *Talitha cumi; which is, being interpreted, Damsel, I say unto thee, arise.* 
+
+The mercy of Christ and His love for us makes me cry. Especially as a father. And again faith has made her whole. It is such a wonder and a blessing to know He holds such love for us. Amen.
+
+## Mark 6  ·  Primary study  ·  2022-10-31
+
+Source: https://t.me/HouseOfWews2/6174
+
+<!-- post 6174 · 2022-10-31 05:59 · scripture -->
+
+**Mark 6**
+
+*And he went out from thence, and came into his own country; and his disciples follow him.*
+
+*2 And when the sabbath day was come, he began to teach in the synagogue: and many hearing him were astonished, saying, From whence hath this man these things? and what wisdom is this which is given unto him, that even such mighty works are wrought by his hands?*
+
+*3 Is not this the carpenter, the son of Mary, the brother of James, and Joses, and of Juda, and Simon? and are not his sisters here with us? And they were offended at him.*
+
+*4 But Jesus, said unto them, A prophet is not without honour, but in his own country, and among his own kin, and in his own house.*
+
+*5 And he could there do no mighty work, save that he laid his hands upon a few sick folk, and healed them.*
+
+*6 And he marvelled because of their unbelief. And he went round about the villages, teaching.*
+
+*7 And he called unto him the twelve, and began to send them forth by two and two; and gave them power over unclean spirits;*
+
+*8 And commanded them that they should take nothing for their journey, save a staff only; no scrip, no bread, no money in their purse:*
+
+*9 But be shod with sandals; and not put on two coats.*
+
+*10 And he said unto them, In what place soever ye enter into an house, there abide till ye depart from that place.*
+
+*11 And whosoever shall not receive you, nor hear you, when ye depart thence, shake off the dust under your feet for a testimony against them. Verily I say unto you, It shall be more tolerable for Sodom and Gomorrha in the day of judgment, than for that city.*
+
+*12 And they went out, and preached that men should repent.*
+
+*13 And they cast out many devils, and anointed with oil many that were sick, and healed them.*
+
+*14 And king Herod heard of him; (for his name was spread abroad:) and he said, That John the Baptist was risen from the dead, and therefore mighty works do shew forth themselves in him.*
+
+*15 Others said, That it is Elias. And others said, That it is a prophet, or as one of the prophets.*
+
+*16 But when Herod heard thereof, he said, It is John, whom I beheaded: he is risen from the dead.*
+
+*17 For Herod himself had sent forth and laid hold upon John, and bound him in prison for Herodias' sake, his brother Philip's wife: for he had married her.*
+
+*18 For John had said unto Herod, It is not lawful for thee to have thy brother's wife.*
+
+*19 Therefore Herodias had a quarrel against him, and would have killed him; but she could not:*
+
+*20 For Herod feared John, knowing that he was a just man and an holy, and observed him; and when he heard him, he did many things, and heard him gladly.*
+
+*21 And when a convenient day was come, that Herod on his birthday made a supper to his lords, high captains, and chief estates of Galilee;*
+
+*22 And when the daughter of the said Herodias came in, and danced, and pleased Herod and them that sat with him, the king said unto the damsel, Ask of me whatsoever thou wilt, and I will give it thee.*
+
+*23 And he sware unto her, Whatsoever thou shalt ask of me, I will give it thee, unto the half of my kingdom.*
+
+*24 And she went forth, and said unto her mother, What shall I ask? And she said, The head of John the Baptist.*
+
+*25 And she came in straightway with haste unto the king, and asked, saying, I will that thou give me by and by in a charger the head of John the Baptist.*
+
+*26 And the king was exceeding sorry; yet for his oath's sake, and for their sakes which sat with him, he would not reject her.*
+
+*27 And immediately the king sent an executioner, and commanded his head to be brought: and he went and beheaded him in the prison,*
+
+*28 And brought his head in a charger, and gave it to the damsel: and the damsel gave it to her mother.*
+
+*29 And when his disciples heard of it, they came and took up his corpse, and laid it in a tomb.*
+
+*30 And the apostles gathered themselves together unto Jesus, and told him all things, both what they had done, and what they had taught.*
+
+*31 And he said unto them, Come ye yourselves apart into a desert place, and rest a while: for there were many coming and going, and they had no leisure so much as to eat.*
+
+<!-- post 6175 · 2022-10-31 05:59 · scripture -->
+
+*32 And they departed into a desert place by ship privately.*
+
+*33 And the people saw them departing, and many knew him, and ran afoot thither out of all cities, and outwent them, and came together unto him.*
+
+*34 And Jesus, when he came out, saw much people, and was moved with compassion toward them, because they were as sheep not having a shepherd: and he began to teach them many things.*
+
+*35 And when the day was now far spent, his disciples came unto him, and said, This is a desert place, and now the time is far passed:*
+
+*36 Send them away, that they may go into the country round about, and into the villages, and buy themselves bread: for they have nothing to eat.*
+
+*37 He answered and said unto them, Give ye them to eat. And they say unto him, Shall we go and buy two hundred pennyworth of bread, and give them to eat?*
+
+*38 He saith unto them, How many loaves have ye? go and see. And when they knew, they say, Five, and two fishes.*
+
+*39 And he commanded them to make all sit down by companies upon the green grass.*
+
+*40 And they sat down in ranks, by hundreds, and by fifties.*
+
+*41 And when he had taken the five loaves and the two fishes, he looked up to heaven, and blessed, and brake the loaves, and gave them to his disciples to set before them; and the two fishes divided he among them all.*
+
+*42 And they did all eat, and were filled.*
+
+*43 And they took up twelve baskets full of the fragments, and of the fishes.*
+
+*44 And they that did eat of the loaves were about five thousand men.*
+
+*45 And straightway he constrained his disciples to get into the ship, and to go to the other side before unto Bethsaida, while he sent away the people.*
+
+*46 And when he had sent them away, he departed into a mountain to pray.*
+
+*47 And when even was come, the ship was in the midst of the sea, and he alone on the land.*
+
+*48 And he saw them toiling in rowing; for the wind was contrary unto them: and about the fourth watch of the night he cometh unto them, walking upon the sea, and would have passed by them.*
+
+*49 But when they saw him walking upon the sea, they supposed it had been a spirit, and cried out:*
+
+*50 For they all saw him, and were troubled. And immediately he talked with them, and saith unto them, Be of good cheer: it is I; be not afraid.*
+
+*51 And he went up unto them into the ship; and the wind ceased: and they were sore amazed in themselves beyond measure, and wondered.*
+
+*52 For they considered not the miracle of the loaves: for their heart was hardened.*
+
+*53 And when they had passed over, they came into the land of Gennesaret, and drew to the shore.*
+
+*54 And when they were come out of the ship, straightway they knew him,*
+
+*55 And ran through that whole region round about, and began to carry about in beds those that were sick, where they heard he was.*
+
+*56 And whithersoever he entered, into villages, or cities, or country, they laid the sick in the streets, and besought him that they might touch if it were but the border of his garment: and as many as touched him were made whole.*
+
+<!-- post 6176 · 2022-10-31 06:16 · study -->
+
+There is so much narrative packed into **Mark 6**, it really is dense with both stories of Christ and the meaning of His ministry for us as believers. 
+
+Even Jesus found it hard to testify among His own. Those who knew Him best, sinless as He is, and yet doubted. His own half brothers and sisters.
+
+For many Christians who become born again as adults, to families that aren't believers, we know this feel. A prophet is not received by his own. Not even Christ. 
+
+
+Faith that begets faith. The Lord provides. The sending out of the 12 to the highways and hedges. 
+
+The fear of Herod's guilty conscience, the fate of John the Baptist, and the surmising by the people to who Jesus is. 
+
+The feeding of the masses, the miracle of the loaves and fishes. Even His disciples had grown too hardened of heart to comprehend His power as God, yet man. Taking it for granted, so much as so they wondered at Jesus walking on water or commanding the winds, again. 
+
+How many of us take the daily blessings, the absolute miracles God works in our lives for granted. Even the salvation that Jesus provides and the Spirit within us? How often are we astonished at the work of God, when we should have the faith to expect that in Him all things are possible. Including our needs, as the Apostles out evangelizing found. 
+
+Be grateful for the smallest blessings. See everything as a gift from God, and His love will shine through you. And you will see wonders greater than this. 
+
+How many of us lack even the faith of those who flocked to see Jesus. To touch but His hem and be healed? We believe. We are saved and trusting on Christ alone. We know we have eternal life and will see Him gather is up into the clouds. And yet we struggle with fear and worry about money or food or the cares of this world. How many of us have hardened hearts? 
+
+**Psalm 51:12-14**
+*Restore unto me the joy of thy salvation; and uphold me with thy free spirit.Then will I teach transgressors thy ways; and sinners shall be converted unto thee. Deliver me from bloodguiltiness, O God, thou God of my salvation: and my tongue shall sing aloud of thy righteousness.*
+
+Like David, we need to pray that we are restored to the joy of our initial repentance unto belief. Crucifying ourselves daily, picking up that cross. Keeping the perspective of eternity in mind, as we look towards the better country, the Kingdom to come.
+
+<!-- post 6177 · 2022-10-31 07:20 · study -->
+
+**2 Kings 4**
+
+*42 And there came a man from Baalshalisha, and brought the man of God bread of the firstfruits, twenty loaves of barley, and full ears of corn in the husk thereof. And he said, Give unto the people, that they may eat.*
+
+*43 And his servitor said, What, should I set this before an hundred men? He said again, Give the people, that they may eat: for thus saith the Lord, They shall eat, and shall leave thereof.*
+
+*44 So he set it before them, and they did eat, and left thereof, according to the word of the Lord.*
+
+The Lord provides the faithful, even when to our fleshly senses it seems impossible.
+
+## Mark 7  ·  Primary study  ·  2022-11-01
+
+Source: https://t.me/HouseOfWews2/6192
+
+<!-- post 6192 · 2022-11-01 05:55 · scripture -->
+
+**Mark 7**
+
+*Then came together unto him the Pharisees, and certain of the scribes, which came from Jerusalem.*
+
+*2 And when they saw some of his disciples eat bread with defiled, that is to say, with unwashen, hands, they found fault.*
+
+*3 For the Pharisees, and all the Jews, except they wash their hands oft, eat not, holding the tradition of the elders.*
+
+*4 And when they come from the market, except they wash, they eat not. And many other things there be, which they have received to hold, as the washing of cups, and pots, brasen vessels, and of tables.*
+
+*5 Then the Pharisees and scribes asked him, Why walk not thy disciples according to the tradition of the elders, but eat bread with unwashen hands?*
+
+*6 He answered and said unto them, Well hath Esaias prophesied of you hypocrites, as it is written, This people honoureth me with their lips, but their heart is far from me.*
+
+*7 Howbeit in vain do they worship me, teaching for doctrines the commandments of men.*
+
+*8 For laying aside the commandment of God, ye hold the tradition of men, as the washing of pots and cups: and many other such like things ye do.*
+
+*9 And he said unto them, Full well ye reject the commandment of God, that ye may keep your own tradition.*
+
+*10 For Moses said, Honour thy father and thy mother; and, Whoso curseth father or mother, let him die the death:*
+
+*11 But ye say, If a man shall say to his father or mother, It is Corban, that is to say, a gift, by whatsoever thou mightest be profited by me; he shall be free.*
+
+*12 And ye suffer him no more to do ought for his father or his mother;*
+
+*13 Making the word of God of none effect through your tradition, which ye have delivered: and many such like things do ye.*
+
+*14 And when he had called all the people unto him, he said unto them, Hearken unto me every one of you, and understand:*
+
+*15 There is nothing from without a man, that entering into him can defile him: but the things which come out of him, those are they that defile the man.*
+
+*16 If any man have ears to hear, let him hear.*
+
+*17 And when he was entered into the house from the people, his disciples asked him concerning the parable.*
+
+*18 And he saith unto them, Are ye so without understanding also? Do ye not perceive, that whatsoever thing from without entereth into the man, it cannot defile him;*
+
+*19 Because it entereth not into his heart, but into the belly, and goeth out into the draught, purging all meats?*
+
+*20 And he said, That which cometh out of the man, that defileth the man.*
+
+*21 For from within, out of the heart of men, proceed evil thoughts, adulteries, fornications, murders,*
+
+*22 Thefts, covetousness, wickedness, deceit, lasciviousness, an evil eye, blasphemy, pride, foolishness:*
+
+*23 All these evil things come from within, and defile the man.*
+
+*24 And from thence he arose, and went into the borders of Tyre and Sidon, and entered into an house, and would have no man know it: but he could not be hid.*
+
+*25 For a certain woman, whose young daughter had an unclean spirit, heard of him, and came and fell at his feet:*
+
+*26 The woman was a Greek, a Syrophenician by nation; and she besought him that he would cast forth the devil out of her daughter.*
+
+*27 But Jesus said unto her, Let the children first be filled: for it is not meet to take the children's bread, and to cast it unto the dogs.*
+
+*28 And she answered and said unto him, Yes, Lord: yet the dogs under the table eat of the children's crumbs.*
+
+*29 And he said unto her, For this saying go thy way; the devil is gone out of thy daughter.*
+
+*30 And when she was come to her house, she found the devil gone out, and her daughter laid upon the bed.*
+
+*31 And again, departing from the coasts of Tyre and Sidon, he came unto the sea of Galilee, through the midst of the coasts of Decapolis.*
+
+*32 And they bring unto him one that was deaf, and had an impediment in his speech; and they beseech him to put his hand upon him.*
+
+*33 And he took him aside from the multitude, and put his fingers into his ears, and he spit, and touched his tongue;*
+
+*34 And looking up to heaven, he sighed, and saith unto him, Ephphatha, that is, Be opened.*
+
+<!-- post 6194 · 2022-11-01 05:56 · scripture -->
+
+*35 And straightway his ears were opened, and the string of his tongue was loosed, and he spake plain.*
+
+*36 And he charged them that they should tell no man: but the more he charged them, so much the more a great deal they published it;*
+
+*37 And were beyond measure astonished, saying, He hath done all things well: he maketh both the deaf to hear, and the dumb to speak.*
+
+<!-- post 6195 · 2022-11-01 06:06 · study -->
+
+The repudiation of following what is the tradition of men, worshiping God in vain, continues. Jesus Christ in condemning the hypocrisy of the Pharisees gives us insight to all who are like them, leaving the commandments of God to embrace the traditions of man, and lose their way. Such is the Catholic Church today. So to its daughters. Making their own commandments and rituals, which do nothing spiritually for them, which don't please God, and often bring His wrath. Leaving the Biblical doctrines God has given us to chase idols and false sacrament, rites and rituals of pagans. Seeking to be given grace by increments, doled out by men rather than God. 
+
+So to here, the Pharisees and scribes come to accuse the disciples for not engaging in ritual hand washing prior to eating which was their human tradition, not a command of God. Jesus calls them out on this hypocrisy. 
+
+Jesus points out that these vipers have condoned men dishonoring their parents, by declaring their own wealth to be "Corban" that is, belonging to God (despite their keeping it and using it for themselves), cutting off their parents from support which God commands us to provide. ([See Matthew 15 parallel study](https://t.me/HouseOfWews2/5226))
+
+<!-- post 6196 · 2022-11-01 06:35 · study -->
+
+In **Mark 7**'s version of this event, we get greater clarity on Jesus's preaching to the people of the hypocrisy of the Pharisees and then, further explanation to the Apostles, where He is exasperated at their lack of understanding;
+
+*Are ye so without understanding also? Do ye not perceive, that whatsoever thing from without entereth into the man, it cannot defile him; Because it entereth not into his heart, but into the belly, and goeth out into the draught, purging all meats?*
+
+*And he said, That which cometh out of the man, that defileth the man. For from within, out of the heart of men, proceed evil thoughts, adulteries, fornications, murders, Thefts, covetousness, wickedness, deceit, lasciviousness, an evil eye, blasphemy, pride, foolishness: All these evil things come from within, and defile the man.*
+
+It is what is in our hearts, our old man's mind of the flesh that wars with the new man created of the Spirit within us. When we are born again, we have the benefit of a quickened spirit, and the indwelling of the holy Ghost, but we still struggle with sin because it is in our thoughts and feelings, still taken by the flesh. By what comes out of us, what originates inside us. 
+
+And while this is also a rebuke of continuing dietary laws meant to instruct Israel on the law and the ways of Christ, or similar traditions of man today, like the silly "no meat on Fridays" thing, the important lesson is in how our nature is regarding sin. 
+
+We will have foolish thoughts our entire life on this Earth. Thoughts of envy and wrath, fear and lusts. Unbidden. And saying things of strife and contentions, *for out of the abundance of the heart the mouth speaketh.*
+
+The key is to walk with the Spirit, in God's word and in prayer, that the heart be filled with His righteousness and not our own sinful flesh. It doesn't stop us sinning but it makes it less out of our control, giving it over to Christ.
+
+<!-- post 6197 · 2022-11-01 06:52 · study -->
+
+About 12 paragraphs just simply disappeared
+
+<!-- post 6198 · 2022-11-01 07:10 · study -->
+
+I was posting commentary on the Gentile woman who comes to Jesus asking Him to cast The devil out of her daughter, and His telling her that until the children were full, the dogs shouldn't be fed. 
+
+Her clever retort that even the dogs catch crumbs as they fall to the floor moves Jesus to mercy and he heals her daughter. This showed both the faith of the woman, and her ability to hear and understand Jesus's parable. 
+
+He wasn't literally calling Gentiles dogs in a derogatory way, he was making a point that his earthly ministry was to the Lost tribes of Israel, the sheep that needed to be gathered back to their master. 
+
+By showing ears to hear, and understanding she showed that she hears her master's voice. 
+
+Many dispensationalists and Jews use these passages and their parallel in other Gospels, to promote a wicked idea that Jesus was for the Jews, and that the conversion of the Gentiles later by the Great Commission was some sort of special boy thing.  
+
+Jesus came on his earthly ministry to those who had been given the oracles of god, the words of the prophet, the law written out not just in their hearts but in stone and in parchment, published about. That they should have recognized Him for who He is, the Christ, before He was lifted up on the cross, calling all men unto redemption. 
+
+To them much was given. *What advantage then hath the Jew?* This is that advantage. 
+
+But in all things, in all ways, Jesus was sent to take away the sins of the whole world.
+
+Now there are many theories as to who represents the true tribes of Israel, and who the Jews who say they are but are not might be. I am not ignorant of them, and I have my own theories and preferences regarding this, that match what many of you believe. But the striving and debate that surround these theories often venture too close to foolish genealogies and Jewish fables. Some of which are a Kaiser Sose effort by Jews to cloud their origin and past, making them out to be more powerful or sinister than they can be. And ideas promoted by others who wish to make salvation one of blood rather than faith, of flesh rather than spirit. This is a huge mistake.
+
+We have individual soul liberty. We are freed in Christ one by one, by a free will faith. And we are also damned by that same free will when we choose not to obey the gospel. And some, not wishing to retain God in their knowledge while here on Earth make the free will choice to harden their hearts and are turned over, given up to reprobation. 
+
+Now, some are blessed to be born into a nation of peoples whose hearts are inclined to the Lord.  To us is given the oracles of God. To be born in a Christian majority nation is an advantage similar to that of the Jew in the first century compared to the Greek. 
+
+Today we have this advantage over China, India or Israel. And though many of us fail to come to saving faith in Christ, none of our nation is ignorant to his existence and the good news of His resurrection. Amen. 
+
+And just as some of us are blessed to be born into a nation inclined towards God, some are born into a nation that so utterly rejects Him, that there are few seeking to find Him. 
+
+God judges nations by their collective works, here on earth. He judges man by their faith, individually, for the Kingdom to come. 
+
+It is not by flesh and blood that we are saved, but by faith and spirit. Never lose sight of that, regardless of what theory you hold. Even the dogs received the crumbs.
+
+<!-- post 6200 · 2022-11-01 07:54 · study -->
+
+*Think not to say within yourselves, We have Abraham to our father: for I say unto you, that God is able of these stones to raise up children unto Abraham.*
+
+If you believe that the "*real"* lost tribes are the Gentiles of Europe, and the jew are resentful Edomites, antithetical by their nature to all that is good, fantastic. You might be right, who is to say? All theories of men have roots in some truth and it's as likely as anything else. I may even agree with most of it. 
+
+But if you then further surmise that, because of that lineage, because of genealogies, you are a special boy saved by genes, and others born rejected of God, then you're the same as a chosenite Jew who thought to say to themselves "we have Abraham as our father."
+
+## Mark 8  ·  Primary study  ·  2022-11-02
+
+Source: https://t.me/HouseOfWews2/6215
+
+<!-- post 6215 · 2022-11-02 05:40 · scripture -->
+
+**Mark 8**
+
+*In those days the multitude being very great, and having nothing to eat, Jesus called his disciples unto him, and saith unto them,*
+
+*2 I have compassion on the multitude, because they have now been with me three days, and have nothing to eat:*
+
+*3 And if I send them away fasting to their own houses, they will faint by the way: for divers of them came from far.*
+
+*4 And his disciples answered him, From whence can a man satisfy these men with bread here in the wilderness?*
+
+*5 And he asked them, How many loaves have ye? And they said, Seven.*
+
+*6 And he commanded the people to sit down on the ground: and he took the seven loaves, and gave thanks, and brake, and gave to his disciples to set before them; and they did set them before the people.*
+
+*7 And they had a few small fishes: and he blessed, and commanded to set them also before them.*
+
+*8 So they did eat, and were filled: and they took up of the broken meat that was left seven baskets.*
+
+*9 And they that had eaten were about four thousand: and he sent them away.*
+
+*10 And straightway he entered into a ship with his disciples, and came into the parts of Dalmanutha.*
+
+*11 And the Pharisees came forth, and began to question with him, seeking of him a sign from heaven, tempting him.*
+
+*12 And he sighed deeply in his spirit, and saith, Why doth this generation seek after a sign? verily I say unto you, There shall no sign be given unto this generation.*
+
+*13 And he left them, and entering into the ship again departed to the other side.*
+
+*14 Now the disciples had forgotten to take bread, neither had they in the ship with them more than one loaf.*
+
+*15 And he charged them, saying, Take heed, beware of the leaven of the Pharisees, and of the leaven of Herod.*
+
+*16 And they reasoned among themselves, saying, It is because we have no bread.*
+
+*17 And when Jesus knew it, he saith unto them, Why reason ye, because ye have no bread? perceive ye not yet, neither understand? have ye your heart yet hardened?*
+
+*18 Having eyes, see ye not? and having ears, hear ye not? and do ye not remember?*
+
+*19 When I brake the five loaves among five thousand, how many baskets full of fragments took ye up? They say unto him, Twelve.*
+
+*20 And when the seven among four thousand, how many baskets full of fragments took ye up? And they said, Seven.*
+
+*21 And he said unto them, How is it that ye do not understand?*
+
+*22 And he cometh to Bethsaida; and they bring a blind man unto him, and besought him to touch him.*
+
+*23 And he took the blind man by the hand, and led him out of the town; and when he had spit on his eyes, and put his hands upon him, he asked him if he saw ought.*
+
+*24 And he looked up, and said, I see men as trees, walking.*
+
+*25 After that he put his hands again upon his eyes, and made him look up: and he was restored, and saw every man clearly.*
+
+*26 And he sent him away to his house, saying, Neither go into the town, nor tell it to any in the town.*
+
+*27 And Jesus went out, and his disciples, into the towns of Caesarea Philippi: and by the way he asked his disciples, saying unto them, Whom do men say that I am?*
+
+*28 And they answered, John the Baptist; but some say, Elias; and others, One of the prophets.*
+
+*29 And he saith unto them, But whom say ye that I am? And Peter answereth and saith unto him, Thou art the Christ.*
+
+*30 And he charged them that they should tell no man of him.*
+
+*31 And he began to teach them, that the Son of man must suffer many things, and be rejected of the elders, and of the chief priests, and scribes, and be killed, and after three days rise again.*
+
+*32 And he spake that saying openly. And Peter took him, and began to rebuke him.*
+
+*33 But when he had turned about and looked on his disciples, he rebuked Peter, saying, Get thee behind me, Satan: for thou savourest not the things that be of God, but the things that be of men.*
+
+*34 And when he had called the people unto him with his disciples also, he said unto them, Whosoever will come after me, let him deny himself, and take up his cross, and follow me.*
+
+<!-- post 6216 · 2022-11-02 05:40 · scripture -->
+
+*35 For whosoever will save his life shall lose it; but whosoever shall lose his life for my sake and the gospel's, the same shall save it.*
+
+*36 For what shall it profit a man, if he shall gain the whole world, and lose his own soul?*
+
+*37 Or what shall a man give in exchange for his soul?*
+
+*38 Whosoever therefore shall be ashamed of me and of my words in this adulterous and sinful generation; of him also shall the Son of man be ashamed, when he cometh in the glory of his Father with the holy angels.*
+
+<!-- post 6217 · 2022-11-02 06:14 · study -->
+
+*I see men as trees, walking.* 
+
+*And he sighed deeply in his spirit, and saith, Why doth this generation seek after a sign?*
+
+*Perceive ye not yet, neither understand? have ye your heart yet hardened? Having eyes, see ye not? and having ears, hear ye not? and do ye not remember?*
+
+*And whom say ye that I am? And Peter answereth and saith unto him, Thou art the Christ.*
+*And he began to teach them, that the Son of man must suffer many things, and be rejected of the elders, and of the chief priests, and scribes, and be killed, and after three days rise again. And he spake that saying openly. And Peter took him, and began to rebuke him. But when he had turned about and looked on his disciples, he rebuked Peter, saying, Get thee behind me, Satan: for thou savourest not the things that be of God, but the things that be of men.*
+
+This is the theme of Mark chapter 8, isn't it? The blind, being shown the light, yet not fully seeing. Of seeking a sign and yet missing the signs all around them. Of seeing the truth, as trees, walking; blurry and not quite focused enough to understand the details and see it's true shape, like poor Peter. Or blind entirely like the Pharisees, asking for light when it's shining bright before then. 
+
+The healing of the blind man is the healing of the faithful, who at first see the light as if afar off, bringing some clarity out of the darkness. Seeing how things move, the shapes of things. But once saved, come fully into the light. Having our vision healed by the word of God, that we may see clearly. 
+
+The Apostles, deapite having understanding, witnessing the feeding of 5000, the 4000, with a handful of loaves and a couple of fishes, filling all men up, and like the grace of God, with an abundance left over, stumble like the blind man with his partial sight restored. Missing the truth of it, though knowing Jesus was Christ. 
+
+This was why Jesus cautioned those He healed to say nothing of it to others. Both to protect them that were healed from the adversaries, the Pharisees and Sadducees and scribes, and to show signs and wonders that His sheep may see and believe, but not proclaiming them to those of that wicked generation, seeking after a sign, evidence of who Jesus is, while missing the signs all around them.  
+
+*That seeing they may see, and not perceive; and hearing they may hear, and not understand; lest at any time they should be converted, and their sins should be forgiven them.*
+
+Jesus' exasperated sigh at the inability of His own closest disciples not understanding precisely who He is, and protesting what He must do on the cross that the glory of God be made manifest is something many Christians today feel when talking to those who call Jesus "Lord, Lord" and then proceed to talk of their works. Who call themselves by His name, Christians, and yet cannot see the truth when presented to them. 
+
+Who, sensing the light and seeing the movement, yet see men as trees, walking. Unable to discern the shapes of things. Missing the signs of the times. Not comprehending the wonders shown in Christ. 
+
+And as Jesus says, *Get thee behind me, Satan: for thou savourest not the things that be of God, but the things that be of men.*
+
+They savor the thing of man, not the things of God. 
+
+And so they remain blind to the full truth. Their faith is in vain. 
+
+*For I bear them record that they have a zeal of God, but not according to knowledge. For they being ignorant of God's righteousness, and going about to establish their own righteousness, have not submitted themselves unto the righteousness of God. For Christ is the end of the law for righteousness to every one that believeth.*
+
+When believers are faced with those full of zeal for the Lord, but going about to establish their own righteousness rather than the imputed righteousness of Jesus Christ, we sigh in exasperation and ask, "are ye hearts still hardened?" 
+
+If Jesus felt that way, who being God is longsuffering and patient, it is understandable that we too can reach that point when dealing with the heresies and false understanding that so many have today.
+
+<!-- post 6218 · 2022-11-02 06:14 · study -->
+
+Don't get down. Don't become bitter and wrathful. I speak to myself as much as the few who may read this. Be edified by the love Jesus showed in continuing to reveal the truth to those that genuinely were seeking it. The lost who hear His voice. 
+
+It can be frustrating, but don't give up. You may be the water that brings a seed to fruit someday.
+
+<!-- post 6219 · 2022-11-02 06:53 · study -->
+
+And if you are still savoring the things of man over God, if you're still seeing things unclearly. If you haven't put your full faith and trust in the Lord Jesus Christ to provide you with his righteousness, lacking your own and having no way for you to obtain it yourself, then believe on the Lord Jesus Christ and confess him with your mouth and be saved. Given eternal life. Becoming an heir to the kingdom of God.
+
+Because if you're trusting in your works even for a fraction of your salvation, no matter how much you say to him "Lord, Lord," He never knew you. And you will perish. Repent that He may open your eyes with His amazing Grace.
+
+## Mark 9  ·  Primary study  ·  2022-11-03
+
+Source: https://t.me/HouseOfWews2/6227
+
+<!-- post 6227 · 2022-11-03 05:50 · scripture -->
+
+**Mark 9**
+
+*And he said unto them, Verily I say unto you, That there be some of them that stand here, which shall not taste of death, till they have seen the kingdom of God come with power.*
+
+*2 And after six days Jesus taketh with him Peter, and James, and John, and leadeth them up into an high mountain apart by themselves: and he was transfigured before them.*
+
+*3 And his raiment became shining, exceeding white as snow; so as no fuller on earth can white them.*
+
+*4 And there appeared unto them Elias with Moses: and they were talking with Jesus.*
+
+*5 And Peter answered and said to Jesus, Master, it is good for us to be here: and let us make three tabernacles; one for thee, and one for Moses, and one for Elias.*
+
+*6 For he wist not what to say; for they were sore afraid.*
+
+*7 And there was a cloud that overshadowed them: and a voice came out of the cloud, saying, This is my beloved Son: hear him.*
+
+*8 And suddenly, when they had looked round about, they saw no man any more, save Jesus only with themselves.*
+
+*9 And as they came down from the mountain, he charged them that they should tell no man what things they had seen, till the Son of man were risen from the dead.*
+
+*10 And they kept that saying with themselves, questioning one with another what the rising from the dead should mean.*
+
+*11 And they asked him, saying, Why say the scribes that Elias must first come?*
+
+*12 And he answered and told them, Elias verily cometh first, and restoreth all things; and how it is written of the Son of man, that he must suffer many things, and be set at nought.*
+
+*13 But I say unto you, That Elias is indeed come, and they have done unto him whatsoever they listed, as it is written of him.*
+
+*14 And when he came to his disciples, he saw a great multitude about them, and the scribes questioning with them.*
+
+*15 And straightway all the people, when they beheld him, were greatly amazed, and running to him saluted him.*
+
+*16 And he asked the scribes, What question ye with them?*
+
+*17 And one of the multitude answered and said, Master, I have brought unto thee my son, which hath a dumb spirit;*
+
+*18 And wheresoever he taketh him, he teareth him: and he foameth, and gnasheth with his teeth, and pineth away: and I spake to thy disciples that they should cast him out; and they could not.*
+
+*19 He answereth him, and saith, O faithless generation, how long shall I be with you? how long shall I suffer you? bring him unto me.*
+
+*20 And they brought him unto him: and when he saw him, straightway the spirit tare him; and he fell on the ground, and wallowed foaming.*
+
+*21 And he asked his father, How long is it ago since this came unto him? And he said, Of a child.*
+
+*22 And ofttimes it hath cast him into the fire, and into the waters, to destroy him: but if thou canst do any thing, have compassion on us, and help us.*
+
+*23 Jesus said unto him, If thou canst believe, all things are possible to him that believeth.*
+
+*24 And straightway the father of the child cried out, and said with tears, Lord, I believe; help thou mine unbelief.*
+
+*25 When Jesus saw that the people came running together, he rebuked the foul spirit, saying unto him, Thou dumb and deaf spirit, I charge thee, come out of him, and enter no more into him.*
+
+*26 And the spirit cried, and rent him sore, and came out of him: and he was as one dead; insomuch that many said, He is dead.*
+
+*27 But Jesus took him by the hand, and lifted him up; and he arose.*
+
+*28 And when he was come into the house, his disciples asked him privately, Why could not we cast him out?*
+
+*29 And he said unto them, This kind can come forth by nothing, but by prayer and fasting.*
+
+*30 And they departed thence, and passed through Galilee; and he would not that any man should know it.*
+
+*31 For he taught his disciples, and said unto them, The Son of man is delivered into the hands of men, and they shall kill him; and after that he is killed, he shall rise the third day.*
+
+*32 But they understood not that saying, and were afraid to ask him.*
+
+*33 And he came to Capernaum: and being in the house he asked them, What was it that ye disputed among yourselves by the way?*
+
+<!-- post 6228 · 2022-11-03 05:50 · scripture -->
+
+*34 But they held their peace: for by the way they had disputed among themselves, who should be the greatest.*
+
+*35 And he sat down, and called the twelve, and saith unto them, If any man desire to be first, the same shall be last of all, and servant of all.*
+
+*36 And he took a child, and set him in the midst of them: and when he had taken him in his arms, he said unto them,*
+
+*37 Whosoever shall receive one of such children in my name, receiveth me: and whosoever shall receive me, receiveth not me, but him that sent me.*
+
+*38 And John answered him, saying, Master, we saw one casting out devils in thy name, and he followeth not us: and we forbad him, because he followeth not us.*
+
+*39 But Jesus said, Forbid him not: for there is no man which shall do a miracle in my name, that can lightly speak evil of me.*
+
+*40 For he that is not against us is on our part.*
+
+*41 For whosoever shall give you a cup of water to drink in my name, because ye belong to Christ, verily I say unto you, he shall not lose his reward.*
+
+*42 And whosoever shall offend one of these little ones that believe in me, it is better for him that a millstone were hanged about his neck, and he were cast into the sea.*
+
+*43 And if thy hand offend thee, cut it off: it is better for thee to enter into life maimed, than having two hands to go into hell, into the fire that never shall be quenched:*
+
+*44 Where their worm dieth not, and the fire is not quenched.*
+
+*45 And if thy foot offend thee, cut it off: it is better for thee to enter halt into life, than having two feet to be cast into hell, into the fire that never shall be quenched:*
+
+*46 Where their worm dieth not, and the fire is not quenched.*
+
+*47 And if thine eye offend thee, pluck it out: it is better for thee to enter into the kingdom of God with one eye, than having two eyes to be cast into hell fire:*
+
+*48 Where their worm dieth not, and the fire is not quenched.*
+
+*49 For every one shall be salted with fire, and every sacrifice shall be salted with salt.*
+
+*50 Salt is good: but if the salt have lost his saltness, wherewith will ye season it? Have salt in yourselves, and have peace one with another.*
+
+<!-- post 6230 · 2022-11-03 06:16 · study -->
+
+Jesus continues to prepare the Apostles for what is to come. His death, and by which manner, and His resurrection into power and glory. 
+
+We are given an account of the transfiguration of Christ before Peter, James and John. With the spirit of Moses and Elijah beside Him, Jesus in His full glory, and the voice of the Father from Heaven, as if from a cloud, "This is my beloved Son: hear him." Such will He be at His return. 
+
+We get another example of Peter, the stone, stumbling over what to say. 
+
+*Let us make three tabernacles; one for thee, and one for Moses, and one for Elias. For he wist not what to say; for they were sore afraid.*
+
+It's easy to mock Peter and his continual struggle for understanding, but he represents us in the Gospels. Faithful and seeking understanding. We've all be as Peter before the word of God. 
+
+Then we are privy to the Apostles asking Jesus about a contention with the scribes, who doubting Christ has come claim that "Elias must come first." That they claim to know the prophets and that the conditions have not been met for the Messiah to come. 
+
+Of course Jesus corrects them. *Elias verily cometh first, and restoreth all things; and how it is written of the Son of man, that he must suffer many things, and be set at nought. But I say unto you, That Elias is indeed come, and they have done unto him whatsoever they listed, as it is written of him.* This speaking of John the Baptist, and his manner of death, the same as the prophets of old. The scribes, not believing miss the signs, a recurring theme of Mark and the Gospels.
+
+Next we are told of the casting out of the dumb spirit. How the Apostles and disciples were unable to heal the son brought by his father who, in his pain and in need, calls upon the name of the Lord, in faith and praying for still more faith, that his son may be healed. Jesus has mercy and heals the son, who is struck dead by the departure of the devil within him. And Jesus raises him up immediately, restored. 
+
+*If thou canst believe, all things are possible to him that believeth.* 
+
+This is what we must always keep in mind. It will guide you through anything, fearlessly. In peace. 
+
+The Bible says "*Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God. And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus*."
+
+Amen.
+
+<!-- post 6234 · 2022-11-03 08:54 · study -->
+
+We come to Jesus's teaching in Capernaum to the Apostles. 
+
+He asked them what they had been swabbling about between themselves and they reply embarrassed, over which of them shall be first among them. A very human thing, stemming from pride. 
+
+And Jesus famously answers, but the first shall be last and the last shall be first. Many misunderstand this, and create confusing feel-good doctrines, but as Mark chapter 9 gives us the full teaching, we can understand that it is in service to the least that we become the first. It's serving those in Jesus name who are weaker, children, the poor, the widow. Pure religion undefiled. It is in that service that willingness to be last, to be least, to be humble servants, that elevates our status in the Kingdom of Heaven. That gives honor and Glory to God. 
+
+Jesus uses a helpless innocent, a child, as a picture of what this means. That the things we do for the least among Us elevate us.  To  do without for others, meekly abasing ourselves for others benefit. 
+
+And using the same child, Jesus transitions to those that rather than serving, offend. Offense in the Bible in this context, refers to obstacles to faith, things taking you away from the word. Stumbling blocks. 
+
+And of those who rather than serve the week, the innocent, the children rather seek to offend them, that is hurt them in a way that brings them from the faith, Jesus says it is better that they kill themselves. That they would be better off tying a millstone around their neck and throwing themselves into the ocean then to bring a fence, to place a stumbling block, to traumatize a child with their own wickedness. Groomers and pedophiles, sodomites and the wicked of this world are better off killing themselves early then racking up offenses, in its other meaning. Because the fires of hell that awaits them will burn hotter for them for this.
+
+Just as the last shall be first, elevated in the kingdom of heaven and rewarded for their service to the least among Us, so too will the punishment of eternal Hell be that much worse for those who offend the same. 
+
+There is a foolish false Doctrine out there that says there is no such thing as a fiery hell awaiting those who have died in sin, without coming to Faith in God the Father and His Son. 
+
+Rather than use the Bible they use concordances and the writings of men in an attempt to deny the concept of perdition in a lake of fire or in the Hell below us.
+
+These unsaved fools, perishing, deny the very existence of the thing that we need salvation from to teach a false gospel that it is just "the grave."
+
+These fools who deny the perfect justice of God to teach damnable heresy with pride and arrogance, are literally an offense, a stumbling block to those who are seeking the truth. 
+
+For if there is no hell then there is no punishment for our transgressions that we need to be saved from. If there is only oblivion and the grave, there's nothing to escape. 
+
+*Ye serpents, ye generation of vipers, how can ye escape the damnation of hell?*
+
+How indeed. 
+
+Like the sadducees, they deny the promise of Heaven, as well as the reality of Hell, and like them, are vipers, leading others astray. 
+
+For if there's not a Hell, what do we need salvation for. And if there is no Heaven, what then is the eternal reward? Eat drink and be merry for tomorrow you die.
+
+But we as saved Christians look forward to a better country, a Heavenly Kingdom.
+
+InB4 "the Kingdom of Heaven is on Earth" Sperg response. 
+
+That's like saying the kingdom of England isn't in England. The kingdom of France is in China. 
+
+It's pure foolishness of a natural man seeking to lean into his own understanding and private interpretation. And it's wicked as the Hell they deny.
+
+And like most false doctrine, we only have to read scripture to see what God says. And here, Jesus gives us an understanding of the nature of Hell, while giving us an understanding of sin of the flesh which damns us to it.
+
+<!-- post 6235 · 2022-11-03 08:54 · study -->
+
+Since we are condemned under the law, and sin is transgression of the law, Jesus says it is better to physically cut off a limb or pluck out our eye than enter into Hell. And lucky for us, we have liberty from that fate, through faith in Christ and His imputed righteousness, so that we aren't hobbling around half blind to avoid damnation. 
+
+But note what Jesus tells us about Hell. Christ describes Hell as a place of *fire that never shall be quenched: Where their worm dieth not, and the fire is not quenched.*
+
+He says sinners will be *cast into hell, into the fire that never shall be quenched,* *cast into hell fire.*
+
+This isn't allegory. It's not a parable. It isn't a mistranslation of the Greek, or a later doctrine cobbled together by extra-Biblical sources. 
+
+It is how Jesus Christ, the word made flesh, describes the eternal damnation of Hell. Also, outer darkness, where there is wailing and gnashing of teeth. Where the smoke of their torment rises forever. Burned of the fire that comes forth from God, and the damned are burned in Christ's presence, along with Satan and the fallen, for eternity. 
+
+We don't even need to do a full study of Hell in the Bible to arrive at this point, we can simply take Jesus' word for it here in Mark 9. 
+
+It is not just the grave. It isn't being outside the presence of God, in fact the Bible says it is in His presence this torment occurs. It isn't a place ruled by the Devil, he burns alongside those he deceived. 
+
+If you do not believe that we have a reward, a wage, due us by our sin, and applied by a just and loving God for those who loved the world more than Him, then you have no reason to believe you need saving. Repent and believe that you may be spared this fate.
+
+<!-- post 6236 · 2022-11-03 08:56 · study -->
+
+I was going to do a full study on Hell and all of its appearances in the Bible, but frankly it's answering a fool and his folly at this point, beating a dead horse. The promise of Heaven and the warning of hell is the heart of the gospel. The good news is that we are spared that by a God who so loved us He gave us His only begotten Son, that whoever believes on Him shall not perish but have everlasting life. Eternal life. They will live forever in His presence, in the Kingdom of Heaven. Amen
+
+<!-- post 6249 · 2022-11-04 05:58 · study -->
+
+On the "wE gAvE yU tHa cAnNoN" thing;
+
+*They say, “the Bible did not exist yet”. Except all those books did exist as individual scrolls rolled up in the first century. (45-96 AD)...The primitive church DID have the Scriptures in the OT (T.aN.aKh.) (Torah, Nebiim (prophets) and “Khetovim” (writings = wisdom and poetic books) and various churches had copies of some or several of the NT gospels and / or letters at a time; (it took time for all the churches to get all the 27 scrolls at their particular church), the NT writings as individual rolled up scrolls, sent to different places / different churches.*
+
+But more importantly, we know that God's word was in the beginning, always was. 
+
+*And the Word was made flesh, and dwelt among us, (and we beheld his glory, the glory as of the only begotten of the Father,) full of grace and truth.*
+
+*God, who at sundry times and in divers manners spake in time past unto the fathers by the prophets, Hath in these last days spoken unto us by his Son, whom he hath appointed heir of all things, by whom also he made the worlds;*
+
+*For the prophecy came not in old time by the will of man: but holy men of God spake as they were moved by the Holy Ghost.*
+
+
+*For the word of God is quick, and powerful, and sharper than any twoedged sword, piercing even to the dividing asunder of soul and spirit, and of the joints and marrow, and is a discerner of the thoughts and intents of the heart.*
+
+*All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness.*
+
+*The grass withereth, the flower fadeth: but the word of our God shall stand for ever*.
+
+*Heaven and earth shall pass away, but my words shall not pass away.*
+
+*The words of the Lord are pure words: as silver tried in a furnace of earth, purified seven times.*
+
+*Thou shalt keep them, O Lord, thou shalt preserve them from this generation for ever.*
+
+God spake the word, the Spirit inspired the word, Christ fufifiled the word. And God has promised to preserve His word for all time. 
+
+Men taking credit for it are blasphemous, and those that deny the Spirit moved among men to communicate it and preserve it risk the unpardonable sin.
+
+## Mark 10  ·  Primary study  ·  2022-11-04
+
+Source: https://t.me/HouseOfWews2/6250
+
+<!-- post 6250 · 2022-11-04 06:08 · scripture -->
+
+*Mark 10*
+
+*And he arose from thence, and cometh into the coasts of Judaea by the farther side of Jordan: and the people resort unto him again; and, as he was wont, he taught them again.*
+
+*2 And the Pharisees came to him, and asked him, Is it lawful for a man to put away his wife? tempting him.*
+
+*3 And he answered and said unto them, What did Moses command you?*
+
+*4 And they said, Moses suffered to write a bill of divorcement, and to put her away.*
+
+*5 And Jesus answered and said unto them, For the hardness of your heart he wrote you this precept.*
+
+*6 But from the beginning of the creation God made them male and female.*
+
+*7 For this cause shall a man leave his father and mother, and cleave to his wife;*
+
+*8 And they twain shall be one flesh: so then they are no more twain, but one flesh.*
+
+*9 What therefore God hath joined together, let not man put asunder.*
+
+*10 And in the house his disciples asked him again of the same matter.*
+
+*11 And he saith unto them, Whosoever shall put away his wife, and marry another, committeth adultery against her.*
+
+*12 And if a woman shall put away her husband, and be married to another, she committeth adultery.*
+
+*13 And they brought young children to him, that he should touch them: and his disciples rebuked those that brought them.*
+
+*14 But when Jesus saw it, he was much displeased, and said unto them, Suffer the little children to come unto me, and forbid them not: for of such is the kingdom of God.*
+
+*15 Verily I say unto you, Whosoever shall not receive the kingdom of God as a little child, he shall not enter therein.*
+
+*16 And he took them up in his arms, put his hands upon them, and blessed them.*
+
+*17 And when he was gone forth into the way, there came one running, and kneeled to him, and asked him, Good Master, what shall I do that I may inherit eternal life?*
+
+*18 And Jesus said unto him, Why callest thou me good? there is none good but one, that is, God.*
+
+*19 Thou knowest the commandments, Do not commit adultery, Do not kill, Do not steal, Do not bear false witness, Defraud not, Honour thy father and mother.*
+
+*20 And he answered and said unto him, Master, all these have I observed from my youth.*
+
+*21 Then Jesus beholding him loved him, and said unto him, One thing thou lackest: go thy way, sell whatsoever thou hast, and give to the poor, and thou shalt have treasure in heaven: and come, take up the cross, and follow me.*
+
+*22 And he was sad at that saying, and went away grieved: for he had great possessions.*
+
+*23 And Jesus looked round about, and saith unto his disciples, How hardly shall they that have riches enter into the kingdom of God!*
+
+*24 And the disciples were astonished at his words. But Jesus answereth again, and saith unto them, Children, how hard is it for them that trust in riches to enter into the kingdom of God!*
+
+*25 It is easier for a camel to go through the eye of a needle, than for a rich man to enter into the kingdom of God.*
+
+*26 And they were astonished out of measure, saying among themselves, Who then can be saved?*
+
+*27 And Jesus looking upon them saith, With men it is impossible, but not with God: for with God all things are possible.*
+
+*28 Then Peter began to say unto him, Lo, we have left all, and have followed thee.*
+
+*29 And Jesus answered and said, Verily I say unto you, There is no man that hath left house, or brethren, or sisters, or father, or mother, or wife, or children, or lands, for my sake, and the gospel's,*
+
+*30 But he shall receive an hundredfold now in this time, houses, and brethren, and sisters, and mothers, and children, and lands, with persecutions; and in the world to come eternal life.*
+
+*31 But many that are first shall be last; and the last first.*
+
+*32 And they were in the way going up to Jerusalem; and Jesus went before them: and they were amazed; and as they followed, they were afraid. And he took again the twelve, and began to tell them what things should happen unto him,*
+
+*33 Saying, Behold, we go up to Jerusalem; and the Son of man shall be delivered unto the chief priests, and unto the scribes; and they shall condemn him to death, and shall deliver him to the Gentiles:*
+
+<!-- post 6251 · 2022-11-04 06:08 · scripture -->
+
+*34 And they shall mock him, and shall scourge him, and shall spit upon him, and shall kill him: and the third day he shall rise again.*
+
+*35 And James and John, the sons of Zebedee, come unto him, saying, Master, we would that thou shouldest do for us whatsoever we shall desire.*
+
+*36 And he said unto them, What would ye that I should do for you?*
+
+*37 They said unto him, Grant unto us that we may sit, one on thy right hand, and the other on thy left hand, in thy glory.*
+
+*38 But Jesus said unto them, Ye know not what ye ask: can ye drink of the cup that I drink of? and be baptized with the baptism that I am baptized with?*
+
+*39 And they said unto him, We can. And Jesus said unto them, Ye shall indeed drink of the cup that I drink of; and with the baptism that I am baptized withal shall ye be baptized:*
+
+*40 But to sit on my right hand and on my left hand is not mine to give; but it shall be given to them for whom it is prepared.*
+
+*41 And when the ten heard it, they began to be much displeased with James and John.*
+
+*42 But Jesus called them to him, and saith unto them, Ye know that they which are accounted to rule over the Gentiles exercise lordship over them; and their great ones exercise authority upon them.*
+
+*43 But so shall it not be among you: but whosoever will be great among you, shall be your minister:*
+
+*44 And whosoever of you will be the chiefest, shall be servant of all.*
+
+*45 For even the Son of man came not to be ministered unto, but to minister, and to give his life a ransom for many.*
+
+*46 And they came to Jericho: and as he went out of Jericho with his disciples and a great number of people, blind Bartimaeus, the son of Timaeus, sat by the highway side begging.*
+
+*47 And when he heard that it was Jesus of Nazareth, he began to cry out, and say, Jesus, thou son of David, have mercy on me.*
+
+*48 And many charged him that he should hold his peace: but he cried the more a great deal, Thou son of David, have mercy on me.*
+
+*49 And Jesus stood still, and commanded him to be called. And they call the blind man, saying unto him, Be of good comfort, rise; he calleth thee.*
+
+*50 And he, casting away his garment, rose, and came to Jesus.*
+
+*51 And Jesus answered and said unto him, What wilt thou that I should do unto thee? The blind man said unto him, Lord, that I might receive my sight.*
+
+*52 And Jesus said unto him, Go thy way; thy faith hath made thee whole. And immediately he received his sight, and followed Jesus in the way.*
+
+<!-- post 6252 · 2022-11-04 06:11 · study -->
+
+Will be posting on today's chapter throughout the morning.
+
+<!-- post 6253 · 2022-11-04 07:16 · study -->
+
+The first section of **Mark 10** deals with a common theme of the Gospels, the Jews attempt to trap Jesus with gotcha questions, believing they were more clever than the Son of God. Here it is Pharisees tempting Jesus with a question regarding divorce, and again we see by its nature and their response to His question back that the myth that Pharisees we're "too strict" regarding the law, and that Christ was some liberal hippy is absurd. 
+
+The Pharisees suggest Moses' allowance for putting away a betrothed for fornication was carte blanche for divorce, and superceded the law. Jesus corrects them of that notion. 
+
+It was the hardness of your hearts, He says. That the lack of forgiveness and understanding regarding God's law led to making an exception, but that all who divorced and remarried are guilty of adultery. Both man and wife. By using the word of God, scripture, Jesus shut up the tempters. 
+
+Divorce is ugly. It destroys whole nations. It creates the idea for many that marriage is based on what's good or convenient for the individual man or woman, rather than an instrument of God. We are His. All we have is His, we are but stewards on this earth. And marriage, the blessing of a husband or wife, is no different. And the vows to God He holds us to. 
+
+But by cheapening the concept and making it culturally accepted to divorce, first for cause, which leads inevitably to no-fault divorce, Satan puts enmity between the sexes and gets us to violate God's law. 
+
+(Full disclosure, I am divorced and remarried (to a widow, so she's good) but this makes me an adulterer. It doesn't matter the circumstances. It doesn't matter the excuse. It is this because Jesus says it is and so we know it is true. But, thankfully we are forgiven in Jesus)
+
+Divorce is one of the tools Satan uses to lead us as a nation, down a dark path of sin that he can accuse us of before God. 
+
+First he gets us to justify divorce. And by this he makes a generation of us adulterers. Then fornication and living in sin, cohabitation becomes normalized because if divorce is not only allowed but considered inevitable, what's the point of marriage?
+
+And if marriage can be dissolved at any time, and we are going to be considered adulterers anyway, why wait? And so adultery becomes normalized. 
+
+And if divorce harms children, and divorces inevitable, then why have them in the first place? And if it's up to us and our convenience, marriage being just an arrangement for man, rather than a gift from God, why not treat having children the same. And so birth control, abortion become the norm.
+
+And Satan keeps accusing.
+
+And if the children feel that they are a burden rather than a blessing, and if life is so cheap and that it can be murdered in the womb, and if none of it matters and parents have no responsibility for their own children, then predators are loose upon them. And they are traumatized and groomed into sodomy and worse.
+
+And Satan has more with which to accuse. 
+
+You can draw a clear and bright line from the modern woes of trans kids being deformed and castrated straight back to the baby boom generation clamoring for divorce to be normalized. 
+
+In for a penny in for a pound, and Satan accuses us the more. 
+
+The culture that we grow up in is like the water a fish swims in and if Satan can corrupt it, through our own vice and lusts, he will poison that water so that future generations will grow up thinking that the toxins they swim in is normal.
+
+It primes the pump so to speak. And so people of my generation and younger who did think to get married, always have the distrust and temptation of divorce sown in our hearts, making it seem like a viable option and making us set against one another from the moment we say "I do." Knowing we had an out and would not be shunned or looked down upon by man, many of us failed to do the things to maintain the marriage. Many spouses have one foot out the door, looking for any cause to confirm the distrust in their hearts sown by the wicked culture that we have.
+
+<!-- post 6254 · 2022-11-04 07:16 · study -->
+
+And while it's all well and good to blame groomers, and point at sodomites, we deceive ourselves if we do not take it all the way back to prohibiting divorce and treating it as an affront to God, a sin that leavens the whole lump.
+
+*What therefore God hath joined together, let not man put asunder.*
+
+<!-- post 6255 · 2022-11-04 10:41 · study -->
+
+Next, in Mark 10 we see Jesus suffering the children to come to Him, teaching that to enter into the Kingdom of Heaven we must be as little children. Both as innocent as they are, and as humble and full of belief. We gain the innocence from Christ's imputed righteousness, by humbling ourselves to ask and understanding why we need it. Amen.
+
+<!-- post 6256 · 2022-11-04 12:03 · study -->
+
+I have a post about the bookend presented in Mark 10, between the rich young man and the poor old beggar and what we can learn from the stories concerning them. I may just hold off until tomorrow to give it justice. It's just been a hectic day at work, but productive and giving glory to God and being a good testimony to a few people who I think we're very receptive. 
+
+Not that I think anybody's hanging on bated breath, but in case one or two of you are wondering where the rest is it will be forthcoming.
+
+<!-- post 6262 · 2022-11-05 06:12 · study -->
+
+And to the story of the rich young man, presented in **Mark 10** and as we also read in parallel passage of **Matthew 19**, a few weeks ago. 
+
+In Mark we see it in slightly different light, as the young man comes off more sincere in this telling, but is identical in result and reason for it. 
+
+He begins by flattering Jesus as "good master," and tempting him, Jesus asks why he's called Him good when there is no one good but God. 
+
+This truth is important, because it is both a rhetorical question Jesus is using to give the young rich man the opportunity to understand that Jesus is God, for He is good. But also serves to set up the exchange to follow. That there is none righteous by the deeds of the law. There is none that does good. All have fallen short of the glory of God. But as we see, this young man misses both points and asks his original question, "what must I do to gain eternal life?" And he asks this sitting next to the way, the truth and the light, maintaining that he has observed all the commandments of the law since the days of his youth. 
+
+He is sitting next to the sinless perfection of Christ, claiming to be 'good.' Jesus, looking upon him with love as it says here in Mark, tells him then, if this is true, "sell all your possessions, give up everything to the poor, and follow me." 
+
+And the rich young man declined and goes his own way. 
+
+People delude themselves regarding their own righteousness. We consider ourselves more righteous than we are, especially in comparison to other people who we are certain are far worse sinners. And the more possessions we have, the more material wealth, the more we can dilute ourselves into thinking that to have such blessings God must favor us. That we must be doing something right. We develop a pride, a comfort in the material, and neglecting the spiritual, are trapped by our riches. 
+
+We have to come to Jesus as little children, who own nothing, are full of trust and wonder, innocent and fearful of God knowing that we're sinners. In contrast, the Rich Young Man comes with a pride and arrogance, and unable to come to the truth about himself or Christ Jesus.
+
+*Children, how hard is it for them that trust in riches to enter into the kingdom of God! It is easier for a camel to go through the eye of a needle, than for a rich man to enter into the kingdom of God. And they were astonished out of measure, saying among themselves, Who then can be saved? And Jesus looking upon them saith, With men it is impossible, but not with God: for with God all things are possible.*
+
+It is impossible for man to be righteous. But with God all things are possible. If you're trusting in anything of this world, you are like a camel trying to pass through the eye of a needle.
+
+Given as contrast to the rich young man, we learn of blind Bartimaeus, the son of Timaeus, who sat by the highway side begging.  
+
+A man with nothing, and further blind of sight. 
+
+The rich young man having everything, and being able to look Jesus directly in the eye and not see Him for who He was, compared to a blind beggar, Bartimaeus, who lacking sight, has faith enough to truly see, crying out repeatedly "*Thou son of David, have mercy on me*."
+
+And when Jesus showed mercy on him, asking what he'd have Him do, he replied "Lord, that I might receive my sight." And healing the blind beggar Bartimaeus, Jesus says "Go thy way, thou faith has made thee whole." 
+
+But unlike the young man earlier, Bartimaeus, having already obtained eternal life, his faith having made him whole, having called upon the name of the Lord for mercy, leaves what little he has to follow Jesus. (Which is why we know his name)
+
+One man, relying on his own righteousness, unable to see that the Son of David, the Son of man, the Son of God, the Christ, sat beside him. And unable to part with the things of this world, to be healed, to follow Christ, he departs unsaved and damned.
+
+<!-- post 6263 · 2022-11-05 06:12 · study -->
+
+The other, Bartimaeus, is a picture of salvation. Coming as beggars to call upon the Lord for mercy and to be healed, having faith that He is as He promised. And having been healed, and stripped of our cares for this world, become followers of Christ. 
+
+It is a presentation of faith vs works. Of physical sight and spiritual blindness. Of following Christ in faith vs trusting in your self, and going your own way.
+
+<!-- post 6265 · 2022-11-05 06:42 · study -->
+
+One more thing regarding **Mark 10**; There is a false doctrine claimed by works-n1gg3rs, taken from the story of the rich young man. 
+
+They will say something along the lines of, "Jesus tells him he has to leave everything pick up his cross and follow Jesus, and that he gained eternal life if he did. This means we have to do works. We have to follow all of The commandments just as this man did, and we have to sell everything we own, and be willing to give it all to the poor and follow Jesus or else you're not saved."
+
+They ignore the blind bagger Bartimaeus, and all of those Jesus heels throughout the Gospels, who having been healed by their faith in Jesus go their own way. Jesus literally tells Bartimaeus that, but the now healed man unlike most of those who are saved, who were healed, who had faith on the Lord Jesus Christ, decides to literally leave everything, and follow Christ.
+
+We should follow christ. We should care nothing for the things of this world, beyond their ability to help others. We should pick up our cross daily and be willing to suffer for the truth. We should obey the commandments to the best of our human ability. But the only requirement to be healed is faith.
+
+Would that we all leave everything we have to follow Jesus, but he doesn't expect us to. He would like us to, some of us are called to, but we are free to go on our way and still be healed. 
+
+Don't allow a natural man misunderstanding of a partial chapter and a handful of verses mislead you as to what is required for salvation. Don't be like that rich young man who trusted in his own righteousness and couldn't humble himself to Christ and ask to be healed. Who was spiritually blind, too blind to understand that the gift of eternal life was sitting there next to him if he but had faith.
+
+<!-- post 6283 · 2022-11-06 06:30 · study -->
+
+Continuing the study of Mark 10 this morning. Such a dense work, the Gospel of Mark tells less of a linear narrative, and tends to place similar themes and complimentary and contrasting stories together, as it progresses through Christ's ministry. 
+
+And so, day 3 of one chapter.
+
+<!-- post 6284 · 2022-11-06 06:55 · study -->
+
+*Then Peter began to say unto him, Lo, we have left all, and have followed thee.* 
+
+*And Jesus answered and said, Verily I say unto you, There is no man that hath left house, or brethren, or sisters, or father, or mother, or wife, or children, or lands, for my sake, and the gospel's, But he shall receive an hundredfold now in this time, houses, and brethren, and sisters, and mothers, and children, and lands, with persecutions; and in the world to come eternal life.*
+
+*But many that are first shall be last; and the last first.*
+
+This follows the rich young man, who bidden to leave his material wealth and follow Jesus, declines, even though the potential for eternal life presents itself, (for this was what he was asking on, and Jesus knowing his heart so tested him)
+
+The apostles wondered at the saying that if someone like the rich young man couldn't enter into Heaven, who then can? And Jesus replied no man can, but with God all things are possible. Amen. 
+
+But now, Peter who isn't the quickest, has it dawn on him that they all have done exactly this. They've left behind their families and trade and possessions to follow Christ.
+
+And here Jesus makes a promise, as Lord. He says those that have sacrificed of this world for His sake and the furtherance of the Gospel shall receive 100 fold on this earth.  Gaining houses, family, children and lands, and of course the gift of eternal life in the next world. 
+
+Some twisted vipers take this to a covetous and greedy place, pushing a prosperity false gospel. That God will make you a millionaire of you do good works. But this is not what Jesus says. 
+
+First, this perversion ignores the "persecutions" part. 100 fold in all these things, and persecutions. Tribulations. These false teachers claim that tribulation and persecution are signs of God's judgment against people. An answer for sin. They think they are entitled to comfort and riches, being holier than thou. It's sick.
+
+But further, Jesus isn't saying we are blessed with material wealth. He says we will have houses and lands. Those of fellow believers, those of different lands. Just as He told them when first sending them out to preach the Gospel, from Mark 6:
+
+*And he called unto him the twelve, and began to send them forth by two and two; and gave them power over unclean spirits; and commanded them that they should take nothing for their journey, save a staff only; no scrip, no bread, no money in their purse: But be shod with sandals; and not put on two coats. And he said unto them, In what place soever ye enter into an house, there abide till ye depart from that place*.
+
+They had homes and lands and their needs met, 100 fold and more. And as for family, as Jesus said when His half-brothers and sisters and mother came to see Him;
+
+W*hosoever shall do the will of my Father which is in heaven, the same is my brother, and sister, and mother.* 
+
+Just as the Apostles write in their epistles, those who they have brought to Christ are their children, sons in Jesus who they have begotten with the Gospel. 
+
+This is the blessing of wealth and family those who abandon everything and suffer for His sake receive here on earth, along with the persecution that brings them rewards in Heaven. 
+
+*Blessed are ye, when men shall hate you, and when they shall separate you from their company, and shall reproach you, and cast out your name as evil, for the Son of man's sake.*
+...
+*If ye be reproached for the name of Christ, happy are ye; for the spirit of glory and of God resteth upon you: on their part he is evil spoken of, but on your part he is glorified.*
+...
+*Lay not up for yourselves treasures upon earth, where moth and rust doth corrupt, and where thieves break through and steal:*
+
+*But lay up for yourselves treasures in heaven, where neither moth nor rust doth corrupt, and where thieves do not break through nor steal:*
+
+*For where your treasure is, there will your heart be also.*
+
+<!-- post 6285 · 2022-11-06 06:55 · study -->
+
+Prosperity false gospel is about laying up riches on earth, accumulated corruptible wealth stored up here. But Christians are called to forsake materialistic wealth and seek a better country, with incorruptible rewards of God.
+
+<!-- post 6286 · 2022-11-06 07:02 · study -->
+
+This is not to say that we are blessed in measure by material things with which we need, and a large family is also a blessing from God, but these blessings are undeserved and given by His love, as scripture says;
+
+*If ye then, being evil, know how to give good gifts unto your children, how much more shall your Father which is in heaven give good things to them that ask him?*
+...
+*Consider the ravens: for they neither sow nor reap; which neither have storehouse nor barn; and God feedeth them: how much more are ye better than the fowls?*
+...
+*But my God shall supply all your need according to his riches in glory by Christ Jesus.*
+
+God fills our needs. Not our wants, lusts and desires. Coveting has its own reward, and it isn't in blessings. But grateful and humble people who trust in the Lord will see their needs met. Of this I have no doubt, having the evidence of experience and faith. So pray for help when needed, but covet nothing in this life but the opportunity to earn riches in the next. 
+
+*But when ye pray, use not vain repetitions, as the heathen do: for they think that they shall be heard for their much speaking. Be not ye therefore like unto them: for your Father knoweth what things ye have need of, before ye ask him.*
+
+Amen
+
+<!-- post 6287 · 2022-11-06 07:29 · study -->
+
+*And they were in the way going up to Jerusalem; and Jesus went before them: and they were amazed; and as they followed, they were afraid. And he took again the twelve, and began to tell them what things should happen unto him, Saying, Behold, we go up to Jerusalem; and the Son of man shall be delivered unto the chief priests, and unto the scribes; and they shall condemn him to death, and shall deliver him to the Gentiles: And they shall mock him, and shall scourge him, and shall spit upon him, and shall kill him: and the third day he shall rise again.*
+
+Jesus spoke in parables to the masses, that only those who were truly meet for repentance could hear, but to those who believed and followed, He kept nothing from them, including the manner of His death and resurrection. 
+
+Again, there are false teachers out there that deny Jesus claimed to be God, or that He didn't preach on His death, burial and resurrection, and of course they are liars, deceiving those who don't know scripture. Like Satan tricking Eve by misquoting God's word, they can only fool those who don't know the Bible or believe it is true, who use arguments of man and are offended by scripture. 
+
+The Bible says to prove all things, comparing spiritual with spiritual, scripture to scripture. 
+
+*Study to shew thyself approved unto God, a workman that needeth not to be ashamed, rightly dividing the word of truth.*
+...
+*All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness: That the man of God may be perfect, throughly furnished unto all good works.*
+...
+*Teach me thy way, O LORD; I will walk in thy truth: unite my heart to fear thy name.*
+...
+*Thy word is true from the beginning: and every one of thy righteous judgments endureth for ever.*
+
+And so we gain wisdom and knowledge by studying God's word. Not by endless argument and debate. Not by strivings about the law. Not by answering fools in their folly. But by the word of God.
+
+<!-- post 6288 · 2022-11-06 07:47 · study -->
+
+Finally, we see the bitter rivalry and divisions among the Apostles continued, even after Jesus taught them that the first shall be last, and the last first, that great are those in the Kingdom of Heaven who abased themselves to serve others here on Earth. 
+
+*And James and John, the sons of Zebedee, come unto him, saying, Master, we would that thou shouldest do for us whatsoever we shall desire.*
+
+*And he said unto them, What would ye that I should do for you? They said unto him, Grant unto us that we may sit, one on thy right hand, and the other on thy left hand, in thy glory. But Jesus said unto them, Ye know not what ye ask: can ye drink of the cup that I drink of? and be baptized with the baptism that I am baptized with?*
+
+*And they said unto him, We can. And Jesus said unto them, Ye shall indeed drink of the cup that I drink of; and with the baptism that I am baptized withal shall ye be baptized: But to sit on my right hand and on my left hand is not mine to give; but it shall be given to them for whom it is prepared.*
+
+*And when the ten heard it, they began to be much displeased with James and John. But Jesus called them to him, and saith unto them, Ye know that they which are accounted to rule over the Gentiles exercise lordship over them; and their great ones exercise authority upon them.*
+
+*But so shall it not be among you: but whosoever will be great among you, shall be your minister: And whosoever of you will be the chiefest, shall be servant of all. For even the Son of man came not to be ministered unto, but to minister, and to give his life a ransom for many.*
+
+We know from scripture James was martyred for the Gospel, baptized with the same as Jesus, drinking that same cup, while as a mercy perhaps to their mother (**Matthew 20**), spared John the fate of all His Apostles, and allowed him to die of old age, the author of much of the New Testament. 
+
+But regardless of their design on greatness in Heaven, on earth this brought even more contentiousness among the disciples. Jesus again takes the opportunity to explain that it is not about being lifted up in greatness like the rulers of this world, who are served by many, but being a lowly servant to many. Just as He, the Son of God was for us, a sacrifice.
+
+And more, Jesus promises us, as good and trusty servants, that in His return He will again serve us;
+
+*Blessed are those servants, whom the lord when he cometh shall find watching: verily I say unto you, that he shall gird himself, and make them to sit down to meat, and will come forth and serve them.*
+ 
+What a blessing. What a God who so loves us. And if He, without sin, who cannot lie, who is Holy and True, the King of Kings, Lord of all, can humble Himself to serve us, how can we do anything less to those we meet every day? With meekness and grace, we are called to be in service to others, in Christ's name, just as He has for us. 
+
+And the last shall be first. Amen.
+
+## Mark 11  ·  Primary study  ·  2022-11-07
+
+Source: https://t.me/HouseOfWews2/6298
+
+<!-- post 6298 · 2022-11-07 05:23 · scripture -->
+
+**Mark 11**
+
+*And when they came nigh to Jerusalem, unto Bethphage and Bethany, at the mount of Olives, he sendeth forth two of his disciples,*
+
+*2 And saith unto them, Go your way into the village over against you: and as soon as ye be entered into it, ye shall find a colt tied, whereon never man sat; loose him, and bring him.*
+
+*3 And if any man say unto you, Why do ye this? say ye that the Lord hath need of him; and straightway he will send him hither.*
+
+*4 And they went their way, and found the colt tied by the door without in a place where two ways met; and they loose him.*
+
+*5 And certain of them that stood there said unto them, What do ye, loosing the colt?*
+
+*6 And they said unto them even as Jesus had commanded: and they let them go.*
+
+*7 And they brought the colt to Jesus, and cast their garments on him; and he sat upon him.*
+
+*8 And many spread their garments in the way: and others cut down branches off the trees, and strawed them in the way.*
+
+*9 And they that went before, and they that followed, cried, saying, Hosanna; Blessed is he that cometh in the name of the Lord:*
+
+*10 Blessed be the kingdom of our father David, that cometh in the name of the Lord: Hosanna in the highest.*
+
+*11 And Jesus entered into Jerusalem, and into the temple: and when he had looked round about upon all things, and now the eventide was come, he went out unto Bethany with the twelve.*
+
+*12 And on the morrow, when they were come from Bethany, he was hungry:*
+
+*13 And seeing a fig tree afar off having leaves, he came, if haply he might find any thing thereon: and when he came to it, he found nothing but leaves; for the time of figs was not yet.*
+
+*14 And Jesus answered and said unto it, No man eat fruit of thee hereafter for ever. And his disciples heard it.*
+
+*15 And they come to Jerusalem: and Jesus went into the temple, and began to cast out them that sold and bought in the temple, and overthrew the tables of the moneychangers, and the seats of them that sold doves;*
+
+*16 And would not suffer that any man should carry any vessel through the temple.*
+
+*17 And he taught, saying unto them, Is it not written, My house shall be called of all nations the house of prayer? but ye have made it a den of thieves.*
+
+*18 And the scribes and chief priests heard it, and sought how they might destroy him: for they feared him, because all the people was astonished at his doctrine.*
+
+*19 And when even was come, he went out of the city.*
+
+*20 And in the morning, as they passed by, they saw the fig tree dried up from the roots.*
+
+*21 And Peter calling to remembrance saith unto him, Master, behold, the fig tree which thou cursedst is withered away.*
+
+*22 And Jesus answering saith unto them, Have faith in God.*
+
+*23 For verily I say unto you, That whosoever shall say unto this mountain, Be thou removed, and be thou cast into the sea; and shall not doubt in his heart, but shall believe that those things which he saith shall come to pass; he shall have whatsoever he saith.*
+
+*24 Therefore I say unto you, What things soever ye desire, when ye pray, believe that ye receive them, and ye shall have them.*
+
+*25 And when ye stand praying, forgive, if ye have ought against any: that your Father also which is in heaven may forgive you your trespasses.*
+
+*26 But if ye do not forgive, neither will your Father which is in heaven forgive your trespasses.*
+
+*27 And they come again to Jerusalem: and as he was walking in the temple, there come to him the chief priests, and the scribes, and the elders,*
+
+*28 And say unto him, By what authority doest thou these things? and who gave thee this authority to do these things?*
+
+*29 And Jesus answered and said unto them, I will also ask of you one question, and answer me, and I will tell you by what authority I do these things.*
+
+*30 The baptism of John, was it from heaven, or of men? answer me.*
+
+*31 And they reasoned with themselves, saying, If we shall say, From heaven; he will say, Why then did ye not believe him?*
+
+*32 But if we shall say, Of men; they feared the people: for all men counted John, that he was a prophet indeed.*
+
+<!-- post 6299 · 2022-11-07 05:23 · scripture -->
+
+*33 And they answered and said unto Jesus, We cannot tell. And Jesus answering saith unto them, Neither do I tell you by what authority I do these things.*
+
+<!-- post 6300 · 2022-11-07 05:42 · study -->
+
+The chapter opens with Mark's telling of what is popularly known as Palm Sunday, though it occured on a Saturday. The Jerusalem crowd hailing Jesus, riding on the colt of an ass as in prophecy, as he arrives for the Passover, of which He will be the sacrifice. 
+
+The colt is there where He said, and they allow the disciples to take it, as He said. Because everything in this world is God's and His to use for His glory. 
+
+Then we have a telling of the fruitless fig tree. Jesus, seeking fruit finds none and curses the tree that it will produce no fruit forever after, and the tree is withered and destroyed from its root. 
+
+*No man eat fruit of thee hereafter for ever... And in the morning, as they passed by, they saw the fig tree dried up from the roots. And Peter calling to remembrance saith unto him, Master, behold, the fig tree which thou cursedst is withered away.*
+
+It is not "replacement theology," it is the taking away of the Kingdom for failing to provide fruit, not bringing souls meet for repentance unto salvation. For rejecting the stone, cut without hands, laid as the cornerstone before the foundation of the world. 
+
+For the "God's not done with the Jews!" false doctrine, this story is twisted, because a plain reading is perfectly understandable. We see more in **Matthew 23;**
+
+*And when he saw a fig tree in the way, he came to it, and found nothing thereon, but leaves only, and said unto it, Let no fruit grow on thee henceforward for ever. And presently the fig tree withered away.*
+
+This is a literal story that holds obvious symbolism regarding the Jews, here at the end of Christ's earthly ministry. Fruit, as always in the Gospel, means saved believers, those faithful to God and saved by His promise, in His Son, Jesus. 
+
+It's reminiscent of a parable in **Luke 13:6-9**;
+
+*He spake also this parable; A certain man had a fig tree planted in his vineyard; and he came and sought fruit thereon, and found none.Then said he unto the dresser of his vineyard, Behold, these three years I come seeking fruit on this fig tree, and find none: cut it down; why cumbereth it the ground? And he answering said unto him, Lord, let it alone this year also, till I shall dig about it, and dung it: And if it bear fruit, well: and if not, then after that thou shalt cut it down.*
+
+The tree is Judah. The Lord, God the Father, the dresser, Jesus Christ. His earthly ministry, to the lost sheep of Israel was the final attempt to produce fruit of that tree. And having no more fruit, it was cut down and destroyed. 
+
+God's word is clear, it is forever that the tree is destroyed. It is cut down. It is cast into the fire. Never to bloom again. 
+
+The dispensationalist lies are built on denying scripture.
+
+<!-- post 6301 · 2022-11-07 05:47 · study -->
+
+*Jesus went into the temple, and began to cast out them that sold and bought in the temple, and overthrew the tables of the moneychangers, and the seats of them that sold doves;*
+
+*And would not suffer that any man should carry any vessel through the temple. And he taught, saying unto them, Is it not written, My house shall be called of all nations the house of prayer? but ye have made it a den of thieves.*
+
+Mark 11 tells us of the second clearing of the moneychangers in the temple, something Jesus did at the beginning of His ministry, and here in its final week. 
+
+Eaten up by His zeal, and full of wrath at the Jews making merchandise out of His Father's house, Jesus drives them out and flips tables, and this is seen by many as the final straw for the Pharisees and scribes. They now affirm that they seek to kill Him. He has disrupted their graft. Their filthy lucre.
+
+<!-- post 6302 · 2022-11-07 06:00 · study -->
+
+*Have faith in God.*
+
+*For verily I say unto you, That whosoever shall say unto this mountain, Be thou removed, and be thou cast into the sea; and shall not doubt in his heart, but shall believe that those things which he saith shall come to pass; he shall have whatsoever he saith. Therefore I say unto you, What things soever ye desire, when ye pray, believe that ye receive them, and ye shall have them.*
+
+This is not simply an affirmation to put on Instagram. It's not just a "hang in there, God provides" pick me up for a daily inspirational devotion. 
+
+It is a promise from God. All He asks is your forgiveness for others as He has forgiven you. To not hold grudges. To let things that aren't important in this life, and keep you from earning the rewards of the next, to let them go. 
+
+*When ye stand praying, forgive, if ye have ought against any: that your Father also which is in heaven may forgive you your trespasses. But if ye do not forgive, neither will your Father which is in heaven forgive your trespasses.*
+
+Now, all our sin is forgiven and forgotten in Christ Jesus, at judgment. All believers are in the Book of Life, and so saved. 
+
+But on earth, God still punishes the disobedient believers, His chastisement falls on those He loves. 
+
+*For whom the Lord loveth he chasteneth, and scourgeth every son whom he receiveth. If ye endure chastening, God dealeth with you as with sons; for what son is he whom the father chasteneth not?*
+
+*But if ye be without chastisement, whereof all are partakers, then are ye bastards, and not sons.*
+
+And we are to confess our sins to God asking for forgiveness;
+
+*If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness*.
+
+But how can we humble ourselves to ask for forgiveness for disobeying God when we hold back forgiveness from those who've wronged us? Forgive our trespasses as we forgive others is part of the model for prayer Jesus provides. 
+
+Lack of forgiveness is a burden. In the same measure we give mercy and extend grace, the Bible says, is what we receive. 
+
+Be mindful of this, and in faith unfeigned, without the burdens of hate and a lack of grace, go boldly before God with your needs. And the Lord God, who cannot lie, promises He will provide.
+
+<!-- post 6303 · 2022-11-07 06:06 · study -->
+
+Finally we see the murderous Jews attempting to tempt Jesus into saying something they may use to justify His death, and once again, Jesus silences them by their own hypocrisy. 
+
+This is the proper way to deal with such matters. Not reacting and railing, but trusting in God, being blameless and allowing their own internal contradictions and corruption to hamstring your enemies. Using scripture when needed. Forcing them to persecute you directly for His name's sake and for the word. 
+
+When we spiral in anger and get drawn into debate, all we do is give them the hook to hang us with. Instead, Jesus shows us how petty and foolish they are, exposing them. 
+
+This lesson in meekness as strength is often lost by believers. It's good to be constantly reminded of throughout the Gospels.
+
+## Mark 12  ·  Primary study  ·  2022-11-08
+
+Source: https://t.me/HouseOfWews2/6315
+
+<!-- post 6315 · 2022-11-08 05:35 · scripture -->
+
+**Mark 12**
+
+*And he began to speak unto them by parables. A certain man planted a vineyard, and set an hedge about it, and digged a place for the winefat, and built a tower, and let it out to husbandmen, and went into a far country.*
+
+*2 And at the season he sent to the husbandmen a servant, that he might receive from the husbandmen of the fruit of the vineyard.*
+
+*3 And they caught him, and beat him, and sent him away empty.*
+
+*4 And again he sent unto them another servant; and at him they cast stones, and wounded him in the head, and sent him away shamefully handled.*
+
+*5 And again he sent another; and him they killed, and many others; beating some, and killing some.*
+
+*6 Having yet therefore one son, his wellbeloved, he sent him also last unto them, saying, They will reverence my son.*
+
+*7 But those husbandmen said among themselves, This is the heir; come, let us kill him, and the inheritance shall be ours.'*
+
+*8 And they took him, and killed him, and cast him out of the vineyard.*
+
+*9 What shall therefore the lord of the vineyard do? he will come and destroy the husbandmen, and will give the vineyard unto others.*
+
+*10 And have ye not read this scripture; The stone which the builders rejected is become the head of the corner:*
+
+*11 This was the Lord's doing, and it is marvellous in our eyes?*
+
+*12 And they sought to lay hold on him, but feared the people: for they knew that he had spoken the parable against them: and they left him, and went their way.*
+
+*13 And they send unto him certain of the Pharisees and of the Herodians, to catch him in his words.*
+
+*14 And when they were come, they say unto him, Master, we know that thou art true, and carest for no man: for thou regardest not the person of men, but teachest the way of God in truth: Is it lawful to give tribute to Caesar, or not?*
+
+*15 Shall we give, or shall we not give? But he, knowing their hypocrisy, said unto them, Why tempt ye me? bring me a penny, that I may see it.*
+
+*16 And they brought it. And he saith unto them, Whose is this image and superscription? And they said unto him, Caesar's.*
+
+*17 And Jesus answering said unto them, Render to Caesar the things that are Caesar's, and to God the things that are God's. And they marvelled at him.*
+
+*18 Then come unto him the Sadducees, which say there is no resurrection; and they asked him, saying,*
+
+*19 Master, Moses wrote unto us, If a man's brother die, and leave his wife behind him, and leave no children, that his brother should take his wife, and raise up seed unto his brother.*
+
+*20 Now there were seven brethren: and the first took a wife, and dying left no seed.*
+
+*21 And the second took her, and died, neither left he any seed: and the third likewise.*
+
+*22 And the seven had her, and left no seed: last of all the woman died also.*
+
+*23 In the resurrection therefore, when they shall rise, whose wife shall she be of them? for the seven had her to wife.*
+
+*24 And Jesus answering said unto them, Do ye not therefore err, because ye know not the scriptures, neither the power of God?*
+
+*25 For when they shall rise from the dead, they neither marry, nor are given in marriage; but are as the angels which are in heaven.*
+
+*26 And as touching the dead, that they rise: have ye not read in the book of Moses, how in the bush God spake unto him, saying, I am the God of Abraham, and the God of Isaac, and the God of Jacob?*
+
+*27 He is not the God of the dead, but the God of the living: ye therefore do greatly err.*
+
+*28 And one of the scribes came, and having heard them reasoning together, and perceiving that he had answered them well, asked him, Which is the first commandment of all?*
+
+*29 And Jesus answered him, The first of all the commandments is, Hear, O Israel; The Lord our God is one Lord:*
+
+*30 And thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind, and with all thy strength: this is the first commandment.*
+
+*31 And the second is like, namely this, Thou shalt love thy neighbour as thyself. There is none other commandment greater than these.*
+
+<!-- post 6316 · 2022-11-08 05:35 · scripture -->
+
+*32 And the scribe said unto him, Well, Master, thou hast said the truth: for there is one God; and there is none other but he:*
+
+*33 And to love him with all the heart, and with all the understanding, and with all the soul, and with all the strength, and to love his neighbour as himself, is more than all whole burnt offerings and sacrifices.*
+
+*34 And when Jesus saw that he answered discreetly, he said unto him, Thou art not far from the kingdom of God. And no man after that durst ask him any question.*
+
+*35 And Jesus answered and said, while he taught in the temple, How say the scribes that Christ is the son of David?*
+
+*36 For David himself said by the Holy Ghost, The Lord said to my Lord, Sit thou on my right hand, till I make thine enemies thy footstool.*
+
+*37 David therefore himself calleth him Lord; and whence is he then his son? And the common people heard him gladly.*
+
+*38 And he said unto them in his doctrine, Beware of the scribes, which love to go in long clothing, and love salutations in the marketplaces,*
+
+*39 And the chief seats in the synagogues, and the uppermost rooms at feasts:*
+
+*40 Which devour widows' houses, and for a pretence make long prayers: these shall receive greater damnation.*
+
+*41 And Jesus sat over against the treasury, and beheld how the people cast money into the treasury: and many that were rich cast in much.*
+
+*42 And there came a certain poor widow, and she threw in two mites, which make a farthing.*
+
+*43 And he called unto him his disciples, and saith unto them, Verily I say unto you, That this poor widow hath cast more in, than all they which have cast into the treasury:*
+
+*44 For all they did cast in of their abundance; but she of her want did cast in all that she had, even all her living.*
+
+<!-- post 6317 · 2022-11-08 05:54 · study -->
+
+Following the story of the fig tree which Jesus cursed for not producing fruit, He tells a parable. The master leaving a vineyard to be tended sends for the gathering, and the husbandmen he'd entrusted with the land beat and kill his messengers. He sends his only begotten son and they plot to kill him and take the inheritance for themselves. 
+
+With this not so thinly veiled analogy, Jesus puts the Jews who are seeking to kill Him on notice. They discern that Jesus is talking about them. Unlike most of His parables that fell on deaf ears. The Bible says "*they knew that he had spoken the parable against them: and they left him, and went their way*."
+
+It is amazing to us who believe that there are those who knowing the truth, seek to silence it, even with the Son of the Lord standing there in their presence. Even with the history of the Jews, who killed the prophets of God, and now plot to do the same to Christ. 
+
+They wish to not retain the word of God and the truth of Christ in their knowledge. They sought instead to take the inheritance of an earthly kingdom for themselves by His death. They worship the creation more than the creator. And God turned them over, gave them up, to a reprobate mind to do those things which are inconvenient. 
+
+*Reprobate silver men shall call them.* 
+
+Again, the dispensationalist idea that the Jews held a special place and God wasn't through with them yet, is a lie. They were given the advantage of the oracles of God and the ministry of Jesus Christ in the flesh, and rather than repent towards God, they sought to destroy Him. 
+
+And like the master of the vineyard, *he will come and destroy the husbandmen, and will give the vineyard unto others.*
+
+It does not say He will take it from them for a time. He destroys them and gives the Kingdom to those who will produce fruit, giving God the increase, in His Son's name.
+
+<!-- post 6318 · 2022-11-08 06:04 · study -->
+
+And in a familiar fashion, Jesus again corrects them by citing scripture, have ye not read this scripture; *The stone which the builders rejected is become the head of the corner: This was the Lord's doing, and it is marvellous in our eyes?*
+
+Jesus asks this question and makes the statement that they do not know scripture continuously in His dealings with the holy men of the Jews. It is with scripture He rebukes Satan in the wilderness and it is with scripture that He rebukes the Pharisees and Sadducees and scribes. 
+
+It is with scripture that we are told to correct and rebuke those in error today. 
+
+To think not of what we shall say, but allowing the Holy Spirit, through whom all wisdom and understanding is given unto us, to bring all things into remembrance that we, knowing the scriptures, will be able to rightly answer our accusers. 
+
+It is important to say this as even today, even good men, saved by faith, lean on their own understanding and logic, and are offended by others offering scripture to correct those in error. 
+
+But what's missed, I think, is that God, who is a loving God, just and true, and who, the Bible says readily gives wisdom to all who seek it, doesn't think it unreasonable to say "*Have ye not read this scripture?*" to man.
+
+God gave us His word to be understood. He gave us His word that we may know Him. He inspired it, preserved it and sent men of God to preach it, because in His mind He thinks that it is clear and understandable when given the oracles of God. That in Him nothing is hidden. 
+
+God finds it reasonable to ask this because it is reasonable to expect those who say they are of God to know the word of God. And that His word isn't some great mystery, but revealed to us if we take the time to know what it actually says. Not of any private interpretation, but the clear word. 
+
+Those who say you cannot understand it, need interpretation and scholars to tell you what it means, who claim hidden esoteric mumbo jumbo is the true purpose of scripture, rather than revealing to all men the truth, are vipers and liars, sons of Satan. 
+
+Like the Pharisees and scribes, keeping others from the knowledge of the truth, and in doing so, blinding themselves forever.
+
+<!-- post 6319 · 2022-11-08 06:43 · study -->
+
+I'm probably going to divide this chapter up too there's too much there. But I do hope people take the time to reflect on what I'm saying and consider biblical fundamentalism as the only way. God expects us to know the scriptures for a reason, they exist for a reason and it isn't just a mystify people and keep you spiraling down rabbit holes.
+
+*But he answered and said, It is written, Man shall not live by bread alone, but by every word that proceedeth out of the mouth of God.*
+
+<!-- post 6320 · 2022-11-08 06:48 · study -->
+
+I do find it odd that people who are ostensibly Christian hate being told what the word of God says. They will mock you for quoting scripture when it is entirely relevant what the word of God says regarding something.
+
+Nothing is more relevant.
+
+They claim to have faith, which the Bible says comes from hearing the word of God, and yet they cast doubt on scripture.
+
+They questioned the preservation, they questioned the inspiration, they questioned the origin and the meaning. They attempt to apply their own reasoning and understanding and reckoning and apply it to God, and if He falls short of their own understanding they reject Him and his word for their own. 
+
+They say things like "well I don't think a loving God would..." Or reason "I hate this thing and I love God so God also hates this thing here let me twist the scripture into saying that He agrees with me."
+
+It's just arrogance and pride and foolishness. 
+
+And when a fundamentalist corrects them because we have knowledge of the word, we've actually read it and it isn't very hard to understand, they get furious with us because it upsets their own conceits. 
+
+Because they've fallen for the oldest trick that Satan has, twisting the word of God.
+
+<!-- post 6338 · 2022-11-09 06:11 · study -->
+
+Continuing Mark 12. 
+
+The Pharisees who have decided they need to kill Jesus come tempting Him to say something rebellious against Roman occupation. They flatter Jesus and then ask if the Jews should pay taxes to the empire. 
+
+Jesus, in a verse even the godless heathens know, shows that Caesar is on the coin of the realm, and declares; *Render to Caesar the things that are Caesar's, and to God the things that are God's.*
+
+The amount of discomfort and twisting of this doctrine by those whose love of money, the material, has kept them from rendering to God what is His for generations, in every Christian culture. 
+
+There is always the religious equivalent of Sovereign Citizens who balk at the idea of giving "their money" to the beast system. Here Jesus says it's not yours. It's not God's. It's the beast's and the beast exacts tribute. The point isn't even to pay your taxes, though you shouldn't care if you have to, but to RENDER TO GOD what is His. 
+
+If we as a nation, a people, willingly did that, the tax thing would take care of itself, because we get the government we deserve as a people. God judges nations. 
+
+The nation of Judea was 40yrs from its final destiny. God vowed to destroy it, and Jesus' prophesy came true and Judea destroyed, just like the unfaithful servants at the vineyard. 
+
+And it was in a fit of rebellion that the last of the Jews were crushed, following a false messianic figure in the **Bar Kokhba revolt,** 70 years after that. 
+
+What never occurred to these seditious and adulterous Jews was repentance to God and acceptance of Jesus as Christ. 
+
+They followed man and wrath and fear instead. They made it their idol. They worshipped themselves and despised God's longsuffering mercy on them. 
+
+This is how a people die. This is how a nation is judged. And rather than accept that and turn from their wicked ways and fear only the living God, Americans keep voting harder. And it is ironic that it was with resentment towards rendering unto Caesar that the Republicans gained power and acceptance as the outlet for supposed Christians to seek change, rather than change in their own hearts.
+
+<!-- post 6339 · 2022-11-09 06:37 · study -->
+
+Still have half the chapter left, but it is amazing how God's word is not only always relevant, but His timing in presenting us with it is flawless.
+
+<!-- post 6359 · 2022-11-10 08:13 · scripture -->
+
+**Mark 12** 
+
+*18 Then come unto him the Sadducees, which say there is no resurrection; and they asked him, saying,*
+
+*19 Master, Moses wrote unto us, If a man's brother die, and leave his wife behind him, and leave no children, that his brother should take his wife, and raise up seed unto his brother.*
+
+*20 Now there were seven brethren: and the first took a wife, and dying left no seed.*
+
+*21 And the second took her, and died, neither left he any seed: and the third likewise.*
+
+*22 And the seven had her, and left no seed: last of all the woman died also.*
+
+*23 In the resurrection therefore, when they shall rise, whose wife shall she be of them? for the seven had her to wife.*
+
+*24 And Jesus answering said unto them, Do ye not therefore err, because ye know not the scriptures, neither the power of God?*
+
+*25 For when they shall rise from the dead, they neither marry, nor are given in marriage; but are as the angels which are in heaven.*
+
+*26 And as touching the dead, that they rise: have ye not read in the book of Moses, how in the bush God spake unto him, saying, I am the God of Abraham, and the God of Isaac, and the God of Jacob?*
+
+*27 He is not the God of the dead, but the God of the living: ye therefore do greatly err.*
+
+<!-- post 6360 · 2022-11-10 08:29 · study -->
+
+Continuing Mark chapter 12, we find the Sadducees come to bat, the Pharisees having struck out. They represent the secular Judaism we see today. Reform Jews make up the vast majority of so-called religious Jews, who eschew the spiritual and teach that there is no Heaven or Hell, and no resurrection. They believe they are to become gods on this earth, and teach that by their works, "healing the world" or tikkun olam as they call it, they can make a paradise on Earth where Jews naturally are the leaders of a global kingdom. 
+
+It isn't very far removed from the Orthodox Jew/Pharisaical religion of works-based righteousness and their inheritance of an earthly kingdom in the "time to come," just a bit more honest about their worship of self over God. 
+
+They seek to trip up Jesus with a very natural man Reddit-tier question regarding the law and the resurrection, thinking the one exposes a flaw in the other, and so bringing the entire thing down. 
+
+Jesus shows their sophistry easily. Angels cannot marry, or have relations the way humans do. In the resurrection, our glorified bodies will be like theirs. 
+(This is an unpopular take in our circles, but I am unmoved in my understanding that the Bible says at no time has God called the angels His sons, they cannot breed, and throughout scripture sons of God always refers to those saved by faith, who called upon His name for salvation, from the time of Seth onward)
+
+Jesus again, being the word made flesh, having perfect understanding of all things as the creator of all things, could not be tested of natural man who cannot receive the things of God as they are spiritually discerned. 
+
+We are called to be as knowledgeable in these spiritual matters by understanding of scripture, that when the Kingdom comes, and the millennial reign over Earth takes place, we will serve as judges, stewards over those born in those days. And the least shall be first. The meek shall inherit the kingdom. Those who increased the master's yield by 100 fold will be given much, and those that buried what they were given will rule over nothing. Amen.
+
+So study to show yourself approved unto God that you may be fruitful now, and a good and faithful servant in the Kingdom.
+
+<!-- post 6361 · 2022-11-10 08:32 · scripture -->
+
+**Mark 12**
+*28 And one of the scribes came, and having heard them reasoning together, and perceiving that he had answered them well, asked him, Which is the first commandment of all?*
+
+*29 And Jesus answered him, The first of all the commandments is, Hear, O Israel; The Lord our God is one Lord:*
+
+*30 And thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind, and with all thy strength: this is the first commandment.*
+
+*31 And the second is like, namely this, Thou shalt love thy neighbour as thyself. There is none other commandment greater than these.*
+
+*32 And the scribe said unto him, Well, Master, thou hast said the truth: for there is one God; and there is none other but he:*
+
+*33 And to love him with all the heart, and with all the understanding, and with all the soul, and with all the strength, and to love his neighbour as himself, is more than all whole burnt offerings and sacrifices.*
+
+*34 And when Jesus saw that he answered discreetly, he said unto him, Thou art not far from the kingdom of God. And no man after that durst ask him any question.*
+
+<!-- post 6363 · 2022-11-10 08:49 · study -->
+
+This scribe is getting it. He knows the scriptures and sees that Jesus has answered all that the Pharisees and Sadducees have come at Him with, as the scribe likely knows the scriptures better than they do, given his station. 
+
+And he asks what is a defining question of Christ, to give the greatest commandment of God. And Jesus Christ the Son of God, the word, sums up the whole of the law on two points:
+*Love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind, and with all thy strength: this is the first commandment. And the second is like, namely this, Thou shalt love thy neighbour as thyself.*
+
+Some say here Jesus has invented new doctrine, because they not knowing the scriptures don't know that Jesus has simply quoted the first of the 10 commandments from Exodus and that loving thy neighbor as yourself comes from Leviticus. 
+
+On these two points rests the whole of the Law. 
+
+(Some like to point at love thy neighbor' as new doctrine, to say Jesus was more liberal and hippy-dippy than the God of the OT, but Leviticus 19:18 where this is found, is located in the same teachings that deal with stoning sodomites and adulterers)
+
+The scribe agrees with Jesus answer, and adds to it from scripture prompting Jesus to say how near the Kingdom he is. Both physically, being in the presence of Christ, and spiritually, being so close to the truth, having faith from the word. 
+
+The contrast between this scribe and the Pharisees and Sadducees, is the difference between earnestly seeking the knowledge of God from his word and thinking themselves wise becoming fools.
+
+Many such cases. 
+
+People with a predetermined idea of what they want God's word to say cannot be swayed from their belief in themselves. From their own reasoning. But those who earnestly seek wisdom, and humbly allow God's word to reveal it to them gain understanding. It's just how it works.
+
+*For the LORD giveth wisdom: out of his mouth cometh knowledge and understanding. He layeth up sound wisdom for the righteous: he is a buckler to them that walk uprightly. He keepeth the paths of judgment, and preserveth the way of his saints*
+
+<!-- post 6364 · 2022-11-10 08:50 · scripture -->
+
+**Mark 12**
+
+*35 And Jesus answered and said, while he taught in the temple, How say the scribes that Christ is the son of David?*
+
+*36 For David himself said by the Holy Ghost, The Lord said to my Lord, Sit thou on my right hand, till I make thine enemies thy footstool.*
+
+*37 David therefore himself calleth him Lord; and whence is he then his son? And the common people heard him gladly.*
+
+*38 And he said unto them in his doctrine, Beware of the scribes, which love to go in long clothing, and love salutations in the marketplaces,*
+
+*39 And the chief seats in the synagogues, and the uppermost rooms at feasts:*
+
+*40 Which devour widows' houses, and for a pretence make long prayers: these shall receive greater damnation.*
+
+<!-- post 6365 · 2022-11-10 09:10 · study -->
+
+Jesus having exposed the errors of the hypocrite Pharisees and Sadducees now took aim at the scribes asking how say they that the Christ is the son of David, quoting **Psalm 110**:
+
+*The LORD said unto my Lord, Sit thou at my right hand, until I make thine enemies thy footstool.*
+
+*2 The LORD shall send the rod of thy strength out of Zion: rule thou in the midst of thine enemies.*
+
+*3 Thy people shall be willing in the day of thy power, in the beauties of holiness from the womb of the morning: thou hast the dew of thy youth.*
+
+*4 The LORD hath sworn, and will not repent, Thou art a priest for ever after the order of Melchizedek.*
+
+*5 The Lord at thy right hand shall strike through kings in the day of his wrath.*
+
+*6 He shall judge among the heathen, he shall fill the places with the dead bodies; he shall wound the heads over many countries.*
+
+Jesus asks how can a physical son be called Lord by David, himself a king at the writing of the Psalm. And Jesus notes the indication of God the Father, LORD, proclaiming the Adonai, the Lord, Christ, the anointed, the Messiah, is so much more than an earthly king, or a son of David. 
+
+The crowd who welcomed Him with palms and praise just days before all recognized Jesus as the son of David, promised by God through the prophets, but here Jesus makes clear what exactly that means. That He is the Christ that is seated at the right hand of God, and the people who he was teaching to received this teaching gladly. 
+
+Then, turning to rebuke the scribes who should know better than the people, who should have been those to proclaim the truth, being keepers of the law, Jesus exposes what their actual priorities are; being seen, being honored, being special boys given praise, preferential treatment and working their way in to widows houses to drain them of their wealth with their false teachings and spirituality without the Spirit. 
+
+Many such cases today, both in Christianity and in secular spiritual nonsense. Giving long public prayers to show how righteous they are. Wearing long robes to denote their high station, sitting in the choice seats of the synagogue as lords over the common people, using the word of God as their own wealth and prestige, like the parable of the unjust steward from **Luke 16**.
+
+And they earn themselves a greater condemnation, being given worse punishment in Hell for their transgression.
+
+<!-- post 6366 · 2022-11-10 09:12 · scripture -->
+
+**Mark 12**
+
+*41 And Jesus sat over against the treasury, and beheld how the people cast money into the treasury: and many that were rich cast in much.*
+
+*42 And there came a certain poor widow, and she threw in two mites, which make a farthing.*
+
+*43 And he called unto him his disciples, and saith unto them, Verily I say unto you, That this poor widow hath cast more in, than all they which have cast into the treasury:*
+
+*44 For all they did cast in of their abundance; but she of her want did cast in all that she had, even all her living.*
+
+<!-- post 6367 · 2022-11-10 09:16 · study -->
+
+As we come to the end of **Mark 12** (wew), we see a simple teaching of Jesus to His disciples, the example of the old woman, who by faith gives all of the pittance she has, and shows that she's given more than the rich men making a show of their tithes. 
+
+It's not wealth that God respects, but are willingness to have faith and believe regardless of how little wealth we have. It's about faith, not our works. And it's an important lesson that we should all take to heart. We should give all we have unto God without worry, and knowing that His blessings are enough. Amen
+
+<!-- post 6382 · 2022-11-11 07:09 · study -->
+
+The disproved theory of Evolution of the species, which has become unfalsifiable nonsense requiring increasingly foolish leaps, requiring the constant changing of factors like time frame, scale, etc as each presents a problem. Rather than abandoning the theory, adherents simply say the natural observations and assumptions that disprove it must be wrong. Including the math of time and adaptation that definitively debunks it. 
+
+Meanwhile, Biblical creation is proved as the testimony of God, and explains the kinds and types, impossible adaptations, incredible beauty, complexity of systems and gives us a true accounting of the origin of race and nations, and the boundaries and habitations thereof. 
+
+Nonbelievers have faith in science, falsely so-called and the theories of Jews and Masons and Jesuits that tickle their ears and appeal to their conceits, so much so that the shifting narratives used to buttress it fail to even elicit a blip of cognitive dissonance.
+
+<!-- post 6383 · 2022-11-11 07:22 · study -->
+
+Rather than provide a basis and rationalizations for race and ethnicity, and justification for segregation and nations, the theory of evolution actually undermines all of it with its central tenant of 'change or die.' 
+
+If evolution is real, and all creatures when exposed to other forces must change over time, seeking genetic dominance and continuation, then how is it not only natural but advantageous for the mixing of races, the dominance of the sub-Saharan population as it spreads across Europe, for example. Or the American erasure of Anglo-Germanic stock, replaced by brown goblins? 
+
+How can one make an argument for national purity for what is currently an endangered species in the face of overwhelming pressures to adapt and change? To cross breed for advantage? To erase borders as outdated constructs, giving way instead to migratory patterns of a global natural selection?
+
+It is with the God of the Bible and His handiwork that we have nations of men. It is His judgement that blesses and destroys bloodlines, ethnicities, nations. 
+
+It may feel easier to blame it all on the vagaries of chance, the fickle forces of evolution changing man over time, and place hope on some sort of eugenic natural preservation system, like we have for elephants or panda bears, to keep Whites as a race, alive. Easier than turning to God and allowing Him to heal your nation and keep it and bless it. But in the long run you simply shoot your own cause in the foot.
+
+<!-- post 6384 · 2022-11-11 07:41 · study -->
+
+Consider the Nation of Britain, which has gone from a global empire of dominance, to being completely subsumed by foreign phenotypes to the point of extinction, all within a few generations. A blink of time, if you believe that billions and billions of years were your creator, rather than the God of the Bible. 
+
+How is that not simply a natural evolution, even desirous, if weaker adaptations, ill suited for their changing environment, are meant to die out? For stronger, or at least better suited genetics to rise in status and pass on its genetic advantage? 
+
+What moral case for preservation of an ethnicity, a race of people, a nation? Their boundaries and habitations? What moral case can be made absent a purposeful creator who gave us these things? 
+
+The godless and purposeful process of natural selection provides no moral or even intellectual mooring in that debate. Securing a future for your children isn't something that matters to the god of evolution. 
+
+It simply doesn't care.
+
+<!-- post 6394 · 2022-11-11 09:50 · study -->
+
+I have zero interest in debating the theory of evolution versus the Bible. 
+
+Arguing against hypotheses that are made to confirm a predetermined idea or outcome, that shift constantly to fit new or contradictory information, that are forever unfalsifiable and have no room for an explanation other than chance, or lip service to a vague deity's hand on the scale, is fruitless. It's nailing jello to the wall. It's fighting on shifting sands. 
+
+The Bible is also unfalsifiable, because it is accepted on faith which is the evidence of things not seen. Things spiritually discerned and proven by personal observations of the wonders of God and His kept promises, and His Holy Spirit that resides within we who are saved. 
+
+If someone doesn't believe the Gospel, they will never accept the truth of creation.
+
+## Mark 13  ·  Primary study  ·  2022-11-11
+
+Source: https://t.me/HouseOfWews2/6386
+
+<!-- post 6386 · 2022-11-11 08:07 · scripture -->
+
+**Mark 13**
+
+*And as he went out of the temple, one of his disciples saith unto him, Master, see what manner of stones and what buildings are here!*
+
+*2 And Jesus answering said unto him, Seest thou these great buildings? there shall not be left one stone upon another, that shall not be thrown down.*
+
+*3 And as he sat upon the mount of Olives over against the temple, Peter and James and John and Andrew asked him privately,*
+
+*4 Tell us, when shall these things be? and what shall be the sign when all these things shall be fulfilled?*
+
+*5 And Jesus answering them began to say, Take heed lest any man deceive you:*
+
+*6 For many shall come in my name, saying, I am Christ; and shall deceive many.*
+
+*7 And when ye shall hear of wars and rumours of wars, be ye not troubled: for such things must needs be; but the end shall not be yet.*
+
+*8 For nation shall rise against nation, and kingdom against kingdom: and there shall be earthquakes in divers places, and there shall be famines and troubles: these are the beginnings of sorrows.*
+
+*9 But take heed to yourselves: for they shall deliver you up to councils; and in the synagogues ye shall be beaten: and ye shall be brought before rulers and kings for my sake, for a testimony against them.*
+
+*10 And the gospel must first be published among all nations.*
+
+*11 But when they shall lead you, and deliver you up, take no thought beforehand what ye shall speak, neither do ye premeditate: but whatsoever shall be given you in that hour, that speak ye: for it is not ye that speak, but the Holy Ghost.*
+
+*12 Now the brother shall betray the brother to death, and the father the son; and children shall rise up against their parents, and shall cause them to be put to death.*
+
+*13 And ye shall be hated of all men for my name's sake: but he that shall endure unto the end, the same shall be saved.*
+
+*14 But when ye shall see the abomination of desolation, spoken of by Daniel the prophet, standing where it ought not, (let him that readeth understand,) then let them that be in Judaea flee to the mountains:*
+
+*15 And let him that is on the housetop not go down into the house, neither enter therein, to take any thing out of his house:*
+
+*16 And let him that is in the field not turn back again for to take up his garment.*
+
+*17 But woe to them that are with child, and to them that give suck in those days!*
+
+*18 And pray ye that your flight be not in the winter.*
+
+*19 For in those days shall be affliction, such as was not from the beginning of the creation which God created unto this time, neither shall be.*
+
+*20 And except that the Lord had shortened those days, no flesh should be saved: but for the elect's sake, whom he hath chosen, he hath shortened the days.*
+
+*21 And then if any man shall say to you, Lo, here is Christ; or, lo, he is there; believe him not:*
+
+*22 For false Christs and false prophets shall rise, and shall shew signs and wonders, to seduce, if it were possible, even the elect.*
+
+*23 But take ye heed: behold, I have foretold you all things.*
+
+*24 But in those days, after that tribulation, the sun shall be darkened, and the moon shall not give her light,*
+
+*25 And the stars of heaven shall fall, and the powers that are in heaven shall be shaken.*
+
+*26 And then shall they see the Son of man coming in the clouds with great power and glory.*
+
+*27 And then shall he send his angels, and shall gather together his elect from the four winds, from the uttermost part of the earth to the uttermost part of heaven.*
+
+*28 Now learn a parable of the fig tree; When her branch is yet tender, and putteth forth leaves, ye know that summer is near:*
+
+*29 So ye in like manner, when ye shall see these things come to pass, know that it is nigh, even at the doors.*
+
+*30 Verily I say unto you, that this generation shall not pass, till all these things be done.*
+
+*31 Heaven and earth shall pass away: but my words shall not pass away.*
+
+*32 But of that day and that hour knoweth no man, no, not the angels which are in heaven, neither the Son, but the Father.*
+
+*33 Take ye heed, watch and pray: for ye know not when the time is.*
+
+<!-- post 6387 · 2022-11-11 08:07 · scripture -->
+
+*34 For the Son of Man is as a man taking a far journey, who left his house, and gave authority to his servants, and to every man his work, and commanded the porter to watch.*
+
+*35 Watch ye therefore: for ye know not when the master of the house cometh, at even, or at midnight, or at the cockcrowing, or in the morning:*
+
+*36 Lest coming suddenly he find you sleeping.*
+
+*37 And what I say unto you I say unto all, Watch.*
+
+<!-- post 6388 · 2022-11-11 08:52 · study -->
+
+End times Bible prophecy. The one area of study where we continue to see through a glass darkly. But, for the elects' sake, those of us chosen in Christ, who diligently keep watch, we have been given the knowledge of the signs of the season that we not be caught unawares. That Jesus doesn't come as a thief in the night to those with eyes to see. 
+
+And so, here in Mark's version of the Olivette discourse, where Jesus teaches some of the apostles, and by way of the Holy Spirit, teaches ourselves, what will be and what to look for, that we may be ready and be saved, should the great tribulation come in our day. 
+
+First, in response to a disciple wondering at the great temple, Jesus says not a stone on top of another will remain standing. This prophecy was fufifiled in 70AD.
+
+Some mistake this as meaning all that follows was fufifiled at that time, which is not supported. Jesus tells us of future events, far outlasting the 1st century, and signs that we have yet to see. 
+
+Biblical teaching is that we have been in the "end times" from the moment of Jesus ascension on Pentecost. These are the last days. And until the abomination of desolation is revealed and the sun and moon darkens, that like the fig tree budding signals summer, and Christ returns in His glory in the clouds, as angels gather we elect to join Him,  we shall remain in these, the last days. 
+
+And so Jesus begins by warning "*Take heed lest any man deceive you*." There will be false Christs who, if it were possible would deceive even believers. This we have seen throughout history, and witness it today. Many would be Messiahs, especially of the Jew, rising in prominence and power. False prophets and accused fake churches, claiming to be of Christ. Jesus and the apostles warn of this for good reason. *Even now there are many antichrists.* And thus shall it be till the end. *For many shall come in my name, saying, I am Christ; and shall deceive many.*
+
+*And when ye shall hear of wars and rumours of wars, be ye not troubled: for such things must needs be; but the end shall not be yet. For nation shall rise against nation, and kingdom against kingdom: and there shall be earthquakes in divers places, and there shall be famines and troubles: these are the beginnings of sorrows.*
+
+Jesus is still giving warning to not be deceived as to when the end comes. He says we will hear of wars and rumors of wars. Great kingdoms clashing. But we aren't to be troubled, because that's not the sign of His coming. These things are always happening. Same with earthquakes and famines and other tribulations, both man made and naturally occurring, that the superstitious and the fearful seize on to say "this is it! It must be the end of the world!" 
+
+Be not troubled, the end is not yet. This is just the beginning of sorrows. These are things that simply are. That must be. 
+
+So, he's warned us that we should watch for false Christ's and not be troubled or seek as a sign things like wars and disasters. What the natural man would see as a sign.
+
+And further, as a warning to His disciples, says they are going to be brought before rulers and the Jews of the synagogue of Satan to be persecuted and murdered for His name's sake. And that the Gospel must first be published in every nation. He is still warning them that they not be afraid. That they not take their persecution as the sign that the end is here, and understand that it is a testimony against the rulers of this world and how the Gospel is spread to every creature. He is encouraging them, and us as Christians to understand that this is still the case throughout the last days. First century AD, right up until the end. 
+
+Remember the apostles there asked for the signs to know when the day of redemption would be, and so Jesus is laying the groundwork for what NOT to take as a sign that His return was imminent. False Christs, wars and calamity, disasters and famines, the persecution of the saints in the publishing of the Gospel to all nations. 
+
+He's saying these things will all happen for sure, but be not troubled, it isn't the end.
+
+<!-- post 6389 · 2022-11-11 08:52 · study -->
+
+He gives them, and by inspiration of the word, future believers, the assurance that their persecution will be for God's glory, and that the Holy Ghost will give them what to say as a testimony. Knowing scripture by the Spirit and knowing He brings all things to remembrance that the word of God be made known. It is an assurance, a promise of the Lord. 
+
+*Now the brother shall betray the brother to death, and the father the son; and children shall rise up against their parents, and shall cause them to be put to death. And ye shall be hated of all men for my name's sake: but he that shall endure unto the end, the same shall be saved.*
+
+Understand the context of that last verse, that it is enduring persecution that Christ promises will occur, that those already saved spiritually will be saved physically. Even if by death of the body. Even if by rapture at His return. We are saved from that persecution. So endure. 
+
+This is not a verse on spiritual salvation, and those who try and make it about that intentionally strip it of it's actual context. Don't be fooled.
+
+<!-- post 6390 · 2022-11-11 09:17 · study -->
+
+Now, having laid out these stipulations, Jesus has given so that we may not be deceived into thinking His return was imminent, He segues to the actual day of the Lord they asked of. 
+
+*When ye shall see the abomination of desolation, spoken of by Daniel the prophet, standing where it ought not, (let him that readeth understand)*
+
+The parenthetical statement of for our benefit. We who are still here on Earth when it comes will understand. This is the sign we look for. Not false messiahs. Not wars or famines or earthquakes. Not persecution that seems overwhelming. Not betrayals by family and friends, or hatred of us for His name. 
+
+These things will always occur. They must be. 
+
+But when we see the abomination of desolation stand where it ought not, we should know the day of the Lord is nigh. 
+
+Jesus warns that all who may be in Judea should flee, shifting His focus from 'ye' to 'they.' That those present there shouldn't even take time to grab their coat. This is described in the parallel passage of **Luke 21** as "the days of Vengeance" and it is my belief, comparing scripture with Mark, Luke and Matthew 24, that the vengeance is upon the Jews for their role in setting up the beast to put the abomination of desolation in the midst of Jerusalem. The antichrist turning on them and destroying them. Either way, it's yet another sign when it comes upon them. 
+
+And *Jerusalem shall be trodden down of the Gentiles, until the times of the Gentiles be fulfilled.* 
+
+There is a lot of speculation as to what this means, but it seems pretty cut and dry. Jerusalem was trodden down by Rome, an empire of Gentiles, and it remains so, under Jews who say they are but are not. They that are in Judea. Until the harvest. Until the fullness of the Gentiles has come. When the increase is gathered, the sheaves brought in. The day of the Lord is the harvest. 
+
+With all biblical end times prophecy there is dual fulfillment, and as we see frequently throughout the Bible, things that fit prophecy are but a picture of the thing to come. But even understanding this, I still see this as fairly straightforward prophecy, given the frequent analogies of the harvest. The fullness of the season. 
+
+*And there shall be signs in the sun, and in the moon, and in the stars; and upon the earth distress of nations, with perplexity; the sea and the waves roaring; Men's hearts failing them for fear, and for looking after those things which are coming on the earth: for the powers of heaven shall be shaken.*
+
+And Jesus says this is when you know for sure that His coming is soon. There are those who say that the resurrection is passed, or that we are already in the millennial reign. The Sun and Moon darkening is the consistent signal the day of the Lord is here throughout the Old Testament prophecy and the New. This has not happened. And what follows certainly has never happened. The triumphant return of Jesus in the clouds, visible to all men. 
+
+*And then shall they see the Son of man coming in a cloud with power and great glory.*
+*And when these things begin to come to pass, then look up, and lift up your heads; for your redemption draweth nigh.*
+
+This is the sign. This is how you know for sure. This is the Great Tribulation such as never has been, followed by Sun and Moon darkening, and Christ's return and the gathering of the elect. The fullness of the Gentiles come in.
+
+<!-- post 6391 · 2022-11-11 09:23 · study -->
+
+And so this is the parable of the fig tree. This is the sign that it's soon. *So likewise ye, when ye see these things come to pass, know ye that the kingdom of God is nigh at hand.*
+
+*Verily I say unto you, This generation shall not pass away, till all be fulfilled.*
+
+This last verse confuses many. They ignore that this generation refers to the people alive and present when these things come to pass, and instead say that Jesus was speaking directly to the apostles in front of Him and their generation. 
+
+It's this confusion and other deliberate distortions of these scriptures that dispensationalists seize on to change the plain meaning of the Olivette discourse regarding the end times. They make it more complicated than it is, and trust those they are misleading won't understand the scripture. Exactly what Christ gave warning to beware.
+
+<!-- post 6392 · 2022-11-11 09:28 · study -->
+
+Continuing in **Mark 13**;
+
+*And except that the Lord had shortened those days, no flesh should be saved: but for the elect's sake, whom he hath chosen, he hath shortened the days.*
+
+*And then if any man shall say to you, Lo, here is Christ; or, lo, he is there; believe him not:  For false Christs and false prophets shall rise, and shall shew signs and wonders, to seduce, if it were possible, even the elect. But take ye heed: behold, I have foretold you all things.*
+
+Jesus says again, don't be fooled. *Behold, I have foretold you all things.* 
+
+And so, knowing these things he has foretold us, and keeping His warnings in mind, we can know when His day is near, for He gives us the signs and the timing. 
+
+..*In those days, after that tribulation, the sun shall be darkened, and the moon shall not give her light, And the stars of heaven shall fall, and the powers that are in heaven shall be shaken. And then shall they see the Son of man coming in the clouds with great power and glory. And then shall he send his angels, and shall gather together his elect from the four winds, from the uttermost part of the earth to the uttermost part of heaven.*
+
+In those days. AFTER the tribulation. The return. The rapture. The promise of eternal life given in the day of redemption, the Great Day of the Lord come at last! Amen.
+
+<!-- post 6393 · 2022-11-11 09:34 · study -->
+
+And so, knowing all this, and understanding what to look out for and what to be wary against, what shall we do? Christ tells us.
+
+
+*But of that day and that hour knoweth no man, no, not the angels which are in heaven, neither the Son, but the Father. Take ye heed, watch and pray: for ye know not when the time is.*
+
+*For the Son of Man is as a man taking a far journey, who left his house, and gave authority to his servants, and to every man his work, and commanded the porter to watch. Watch ye therefore: for ye know not when the master of the house cometh, at even, or at midnight, or at the cockcrowing, or in the morning; Lest coming suddenly he find you sleeping. And what I say unto you I say unto all, Watch.*
+
+Watch. Be prepared. Be sober and vigilant. Not carried away by the cares of this world. Not in fear of the tribulation of this world. Not fooled by false prophets. 
+
+We are to watch and be good stewards who sow increase for the Lord. Be like the virgins prepared for the bridegroom, who filled their lamps with oil. Be like a servant left with 10 talents of silver, who increased his master's treasure. 
+
+Watch and be ready, that on that great day Jesus greats you saying "well done my trusty servants. Well done."
+
+## Mark 14  ·  Primary study  ·  2022-11-12
+
+Source: https://t.me/HouseOfWews2/6411
+
+<!-- post 6411 · 2022-11-12 06:05 · scripture -->
+
+**Mark 14** 
+
+*After two days was the feast of the passover, and of unleavened bread: and the chief priests and the scribes sought how they might take him by craft, and put him to death.*
+
+*2 But they said, Not on the feast day, lest there be an uproar of the people.*
+
+*3 And being in Bethany in the house of Simon the leper, as he sat at meat, there came a woman having an alabaster box of ointment of spikenard very precious; and she brake the box, and poured it on his head.*
+
+*4 And there were some that had indignation within themselves, and said, Why was this waste of the ointment made?*
+
+*5 For it might have been sold for more than three hundred pence, and have been given to the poor. And they murmured against her.*
+
+*6 And Jesus said, Let her alone; why trouble ye her? she hath wrought a good work on me.*
+
+*7 For ye have the poor with you always, and whensoever ye will ye may do them good: but me ye have not always.*
+
+*8 She hath done what she could: she is come aforehand to anoint my body to the burying.*
+
+*9 Verily I say unto you, Wheresoever this gospel shall be preached throughout the whole world, this also that she hath done shall be spoken of for a memorial of her.*
+
+*10 And Judas Iscariot, one of the twelve, went unto the chief priests, to betray him unto them.*
+
+*11 And when they heard it, they were glad, and promised to give him money. And he sought how he might conveniently betray him.*
+
+*12 And the first day of unleavened bread, when they killed the passover, his disciples said unto him, Where wilt thou that we go and prepare that thou mayest eat the passover?*
+
+*13 And he sendeth forth two of his disciples, and saith unto them, Go ye into the city, and there shall meet you a man bearing a pitcher of water: follow him.*
+
+*14 And wheresoever he shall go in, say ye to the goodman of the house, The Master saith, Where is the guestchamber, where I shall eat the passover with my disciples?*
+
+*15 And he will shew you a large upper room furnished and prepared: there make ready for us.*
+
+*16 And his disciples went forth, and came into the city, and found as he had said unto them: and they made ready the passover.*
+
+*17 And in the evening he cometh with the twelve.*
+
+*18 And as they sat and did eat, Jesus said, Verily I say unto you, One of you which eateth with me shall betray me.*
+
+*19 And they began to be sorrowful, and to say unto him one by one, Is it I? and another said, Is it I?*
+
+*20 And he answered and said unto them, It is one of the twelve, that dippeth with me in the dish.*
+
+*21 The Son of man indeed goeth, as it is written of him: but woe to that man by whom the Son of man is betrayed! good were it for that man if he had never been born.*
+
+*22 And as they did eat, Jesus took bread, and blessed, and brake it, and gave to them, and said, Take, eat: this is my body.*
+
+*23 And he took the cup, and when he had given thanks, he gave it to them: and they all drank of it.*
+
+*24 And he said unto them, This is my blood of the new testament, which is shed for many.*
+
+*25 Verily I say unto you, I will drink no more of the fruit of the vine, until that day that I drink it new in the kingdom of God.*
+
+*26 And when they had sung an hymn, they went out into the mount of Olives.*
+
+*27 And Jesus saith unto them, All ye shall be offended because of me this night: for it is written, I will smite the shepherd, and the sheep shall be scattered.*
+
+*28 But after that I am risen, I will go before you into Galilee.*
+
+*29 But Peter said unto him, Although all shall be offended, yet will not I.*
+
+*30 And Jesus saith unto him, Verily I say unto thee, That this day, even in this night, before the cock crow twice, thou shalt deny me thrice.*
+
+*31 But he spake the more vehemently, If I should die with thee, I will not deny thee in any wise. Likewise also said they all.*
+
+*32 And they came to a place which was named Gethsemane: and he saith to his disciples, Sit ye here, while I shall pray.*
+
+*33 And he taketh with him Peter and James and John, and began to be sore amazed, and to be very heavy;*
+
+*34 And saith unto them, My soul is exceeding sorrowful unto death: tarry ye here, and watch.*
+
+<!-- post 6412 · 2022-11-12 06:05 · scripture -->
+
+*35 And he went forward a little, and fell on the ground, and prayed that, if it were possible, the hour might pass from him.*
+
+*36 And he said, Abba, Father, all things are possible unto thee; take away this cup from me: nevertheless not what I will, but what thou wilt.*
+
+*37 And he cometh, and findeth them sleeping, and saith unto Peter, Simon, sleepest thou? couldest not thou watch one hour?*
+
+*38 Watch ye and pray, lest ye enter into temptation. The spirit truly is ready, but the flesh is weak.*
+
+*39 And again he went away, and prayed, and spake the same words.*
+
+*40 And when he returned, he found them asleep again, (for their eyes were heavy,) neither wist they what to answer him.*
+
+*41 And he cometh the third time, and saith unto them, Sleep on now, and take your rest: it is enough, the hour is come; behold, the Son of man is betrayed into the hands of sinners.*
+
+*42 Rise up, let us go; lo, he that betrayeth me is at hand.*
+
+*43 And immediately, while he yet spake, cometh Judas, one of the twelve, and with him a great multitude with swords and staves, from the chief priests and the scribes and the elders.*
+
+*44 And he that betrayed him had given them a token, saying, Whomsoever I shall kiss, that same is he; take him, and lead him away safely.*
+
+*45 And as soon as he was come, he goeth straightway to him, and saith, Master, master; and kissed him.*
+
+*46 And they laid their hands on him, and took him.*
+
+*47 And one of them that stood by drew a sword, and smote a servant of the high priest, and cut off his ear.*
+
+*48 And Jesus answered and said unto them, Are ye come out, as against a thief, with swords and with staves to take me?*
+
+*49 I was daily with you in the temple teaching, and ye took me not: but the scriptures must be fulfilled.*
+
+*50 And they all forsook him, and fled.*
+
+*51 And there followed him a certain young man, having a linen cloth cast about his naked body; and the young men laid hold on him:*
+
+*52 And he left the linen cloth, and fled from them naked.*
+
+*53 And they led Jesus away to the high priest: and with him were assembled all the chief priests and the elders and the scribes.*
+
+*54 And Peter followed him afar off, even into the palace of the high priest: and he sat with the servants, and warmed himself at the fire.*
+
+*55 And the chief priests and all the council sought for witness against Jesus to put him to death; and found none.*
+
+*56 For many bare false witness against him, but their witness agreed not together.*
+
+*57 And there arose certain, and bare false witness against him, saying,*
+
+*58 We heard him say, I will destroy this temple that is made with hands, and within three days I will build another made without hands.*
+
+*59 But neither so did their witness agree together.*
+
+*60 And the high priest stood up in the midst, and asked Jesus, saying, Answerest thou nothing? what is it which these witness against thee?*
+
+*61 But he held his peace, and answered nothing. Again the high priest asked him, and said unto him, Art thou the Christ, the Son of the Blessed?*
+
+*62 And Jesus said, I am: and ye shall see the Son of man sitting on the right hand of power, and coming in the clouds of heaven.*
+
+*63 Then the high priest rent his clothes, and saith, What need we any further witnesses?*
+
+*64 Ye have heard the blasphemy: what think ye? And they all condemned him to be guilty of death.*
+
+*65 And some began to spit on him, and to cover his face, and to buffet him, and to say unto him, Prophesy: and the servants did strike him with the palms of their hands.*
+
+*66 And as Peter was beneath in the palace, there cometh one of the maids of the high priest:*
+
+*67 And when she saw Peter warming himself, she looked upon him, and said, And thou also wast with Jesus of Nazareth.*
+
+*68 But he denied, saying, I know not, neither understand I what thou sayest. And he went out into the porch; and the cock crew.*
+
+*69 And a maid saw him again, and began to say to them that stood by, This is one of them.*
+
+*70 And he denied it again. And a little after, they that stood by said again to Peter, Surely thou art one of them: for thou art a Galilaean, and thy speech agreeth thereto.*
+
+<!-- post 6413 · 2022-11-12 06:05 · scripture -->
+
+*71 But he began to curse and to swear, saying, I know not this man of whom ye speak.*
+
+*72 And the second time the cock crew. And Peter called to mind the word that Jesus said unto him, Before the cock crow twice, thou shalt deny me thrice. And when he thought thereon, he wept.*
+
+<!-- post 6414 · 2022-11-12 06:39 · study -->
+
+Here we have Mark's version of events leading to the crucifixion of Jesus. Like most of Mark, it is condensed but packed with narrative and meaning. 
+
+Like some of Mark's Gospel, details change slightly from the other three, though all of it is there. The difference in timing and point of view, but the testimony the same. Unlike those who came to bear false witness against Christ before the high priests. 
+
+We see the familiar anointing by the woman with the precious oils. Hear of Judas' decision to betray Him because of it. See the last supper feast, Jesus breaking the bread and blessing the wine, saying He won't drink the new wine, fresh juice of the vine, again until He drinks it in the Kingdom of God. And while Jesus says the bread represents His body, broken on the cross, and the wine, the blood to be shed of the new testament, He clearly doesn't believe it is literally His blood, or else why say that? 
+
+Christianity is not a cannibal cult.
+
+Jesus goes to pray, exceedingly sorrowful at His fate, but resigned to it. Peter and the others sleep when they should be on watch. Peter swears he would die with Jesus, but He tells Peter of his future denials, knowing all things that must happen. 
+Judas betrayal with a kiss. The ear of one of the guards cut off. The disciples scatter. 
+
+He is arrested. A detail found only in Mark, a boy wrapped in a linen blanket appears and the guards go to grab him, but he runs off naked. It is an odd account but most believe that a young Mark is that boy, his mother's house being in Jerusalem (**Acts 12:12**).
+
+Next we see the false accusations, but Jesus condemned by the truth that He is the Christ. I believe this is important, that they did not turn Jesus over to be crucified for false claims and lies, but they murdered the Son of God for the truth that He was Christ. 
+
+In the garden, 3 times Peter swears he will stay with Jesus unto death. Jesus tells him to watch and pray that he be not tempted. Yet three times Peter is found sleeping. Peter denies Jesus 3 times when called out, breaking that vow. 
+
+Had he stayed awake, watching, praying, perhaps Peter then would have had the courage to not deny Christ and honor his vows. In the previous chapter, Jesus warns us the same as Peter, to keep watch for Him. To be vigilant and sober and ready for persecution that will inevitably come for those who standfast in His name as we await Jesus return. To pray for the strength to suffer without fear. 
+
+And most of us, like Peter, read that admonition in Mark 13, and vow to God in ourselves that we will surely be vigilant, and never back down or deny Him, even unto death. Just as Peter does in the garden. 
+
+And just like Peter, many Christians, if not all, have periods in their lives where we fall asleep, spiritually. Where we are accused by the unsaved in Jesus' name, and deny Him. Where our vows of vigilance and devotion are forgotten and abandoned. And when we are reminded of Jesus's words, we fall to our knees weeping, like Peter, understanding how unworthy we are of Christ. 
+
+So, let us learn the lesson of Peter, to stay awake and in prayer that we may not fail when tempted, that we remain vigilant for His return. That we won't deny Him when troubles come because we love Him that the world hates.
+
+<!-- post 6415 · 2022-11-12 06:57 · study -->
+
+1 Peter 2:18-25
+
+*Servants, be subject to your masters with all fear; not only to the good and gentle, but also to the froward.*
+
+*For this is thankworthy, if a man for conscience toward God endure grief, suffering wrongfully.*
+
+*For what glory is it, if, when ye be buffeted for your faults, ye shall take it patiently? but if, when ye do well, and suffer for it, ye take it patiently, this is acceptable with God.*
+
+*For even hereunto were ye called: because Christ also suffered for us, leaving us an example, that ye should follow his steps: Who did no sin, neither was guile found in his mouth: Who, when he was reviled, reviled not again; when he suffered, he threatened not; but committed himself to him that judgeth righteously: Who his own self bare our sins in his own body on the tree, that we, being dead to sins, should live unto righteousness: by whose stripes ye were healed.*
+
+*For ye were as sheep going astray; but are now returned unto the Shepherd and Bishop of your souls.*
+
+Peter, aware of his own falling short, encourages us to understanding that to suffer for God with good conscience, taking it patiently as Jesus exemplified, we shall be found acceptable to God. 
+
+Peter makes a distinction here, that if we be punished for our own wrong doing and accept the punishment, we aren't doing anything to glory of. That's just expected. It's bare minimum. 
+
+But how often do we fail even this, and find ourselves facing true accusations or the consequences for our sin, and yet rail against our accusers or lash out at our punishment? This when we are guilty, let alone when we are innocent. 
+
+Peter says Christ's suffering, *when he was reviled, reviled not again; when he suffered, he threatened not; but committed himself to him that judgeth righteously* even though Jesus was blameless. Without sin. And in His patience suffered for us, carrying ours. 
+
+Jesus is our example; *For ye were as sheep going astray; but are now returned unto the Shepherd and Bishop of your souls.*
+
+<!-- post 6416 · 2022-11-12 07:08 · study -->
+
+This dichotomy of the believer, knowing the sacrifice and given the gift of eternal life anyway through God's unearned grace, through faith in Jesus, often make commitments to turn from sin. To sacrifice our comfort, wealth and possessions, even relationships, to show our love for Jesus. Vows made, despite the Bible's warnings. Good intentions, often gone astray. 
+
+We slip. We backslide. We feed the old man, neglecting the new. We have the Spirit inside of us, God's word before us and Jesus by our side, ready to carry us. And yet, for all this advantage, we turn back towards the world. 
+
+But, the Bible says if we walk in the word daily. In prayer and supplication. Growing faith on top of faith. Building on the foundation laid by Jesus, we won't be as easily tempted. We won't fail when tested. And we will not fall into sin to be accused of, and rightly punished for, but rather suffer patiently for Jesus'name, and in doing so, be pleasing to God. 
+
+So we are called to pick up our cross daily. To *be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what is that good, and acceptable, and perfect, will of God.*
+
+<!-- post 6418 · 2022-11-12 07:25 · study -->
+
+**Revelation 13:12-15**
+
+*And he exerciseth all the power of the first beast before him, and causeth the earth and them which dwell therein to worship the first beast, whose deadly wound was healed. And he doeth great wonders, so that he maketh fire come down from heaven on the earth in the sight of men, And deceiveth them that dwell on the earth by the means of those miracles which he had power to do in the sight of the beast; saying to them that dwell on the earth, that they should make an image to the beast, which had the wound by a sword, and did live.*
+
+*And he had power to give life unto the image of the beast, that the image of the beast should both speak, and cause that as many as would not worship the image of the beast should be killed.*
+
+## Mark 15  ·  Primary study  ·  2022-11-13
+
+Source: https://t.me/HouseOfWews2/6437
+
+<!-- post 6437 · 2022-11-13 07:56 · scripture -->
+
+**Mark 15**
+
+*And straightway in the morning the chief priests held a consultation with the elders and scribes and the whole council, and bound Jesus, and carried him away, and delivered him to Pilate.*
+
+*2 And Pilate asked him, Art thou the King of the Jews? And he answering said unto them, Thou sayest it.*
+
+*3 And the chief priests accused him of many things: but he answered nothing.*
+
+*4 And Pilate asked him again, saying, Answerest thou nothing? behold how many things they witness against thee.*
+
+*5 But Jesus yet answered nothing; so that Pilate marvelled.*
+
+*6 Now at that feast he released unto them one prisoner, whomsoever they desired.*
+
+*7 And there was one named Barabbas, which lay bound with them that had made insurrection with him, who had committed murder in the insurrection.*
+
+*8 And the multitude crying aloud began to desire him to do as he had ever done unto them.*
+
+*9 But Pilate answered them, saying, Will ye that I release unto you the King of the Jews?*
+
+*10 For he knew that the chief priests had delivered him for envy.*
+
+*11 But the chief priests moved the people, that he should rather release Barabbas unto them.*
+
+*12 And Pilate answered and said again unto them, What will ye then that I shall do unto him whom ye call the King of the Jews?*
+
+*13 And they cried out again, Crucify him.*
+
+*14 Then Pilate said unto them, Why, what evil hath he done? And they cried out the more exceedingly, Crucify him.*
+
+*15 And so Pilate, willing to content the people, released Barabbas unto them, and delivered Jesus, when he had scourged him, to be crucified.*
+
+*16 And the soldiers led him away into the hall, called Praetorium; and they call together the whole band.*
+
+*17 And they clothed him with purple, and platted a crown of thorns, and put it about his head,*
+
+*18 And began to salute him, Hail, King of the Jews!*
+
+*19 And they smote him on the head with a reed, and did spit upon him, and bowing their knees worshipped him.*
+
+*20 And when they had mocked him, they took off the purple from him, and put his own clothes on him, and led him out to crucify him.*
+
+*21 And they compel one Simon a Cyrenian, who passed by, coming out of the country, the father of Alexander and Rufus, to bear his cross.*
+
+*22 And they bring him unto the place Golgotha, which is, being interpreted, The place of a skull.*
+
+*23 And they gave him to drink wine mingled with myrrh: but he received it not.*
+
+*24 And when they had crucified him, they parted his garments, casting lots upon them, what every man should take.*
+
+*25 And it was the third hour, and they crucified him.*
+
+*26 And the superscription of his accusation was written over, The King Of The Jews.*
+
+*27 And with him they crucify two thieves; the one on his right hand, and the other on his left.*
+
+*28 And the scripture was fulfilled, which saith, And he was numbered with the transgressors.*
+
+*29 And they that passed by railed on him, wagging their heads, and saying, Ah, thou that destroyest the temple, and buildest it in three days,*
+
+*30 Save thyself, and come down from the cross.*
+
+*31 Likewise also the chief priests mocking said among themselves with the scribes, He saved others; himself he cannot save.*
+
+*32 Let Christ the King of Israel descend now from the cross, that we may see and believe. And they that were crucified with him reviled him.*
+
+*33 And when the sixth hour was come, there was darkness over the whole land until the ninth hour.*
+
+*34 And at the ninth hour Jesus cried with a loud voice, saying, Eloi, Eloi, lama sabachthani? which is, being interpreted, My God, my God, why hast thou forsaken me?*
+
+*35 And some of them that stood by, when they heard it, said, Behold, he calleth Elias.*
+
+*36 And one ran and filled a spunge full of vinegar, and put it on a reed, and gave him to drink, saying, Let alone; let us see whether Elias will come to take him down.*
+
+*37 And Jesus cried with a loud voice, and gave up the ghost.*
+
+*38 And the veil of the temple was rent in twain from the top to the bottom.*
+
+*39 And when the centurion, which stood over against him, saw that he so cried out, and gave up the ghost, he said, Truly this man was the Son of God.*
+
+<!-- post 6438 · 2022-11-13 07:56 · scripture -->
+
+*40 There were also women looking on afar off: among whom was Mary Magdalene, and Mary the mother of James the less and of Joses, and Salome;*
+
+*41 (Who also, when he was in Galilee, followed him, and ministered unto him;) and many other women which came up with him unto Jerusalem.*
+
+*42 And now when the even was come, because it was the preparation, that is, the day before the sabbath,*
+
+*43 Joseph of Arimathaea, an honourable counsellor, which also waited for the kingdom of God, came, and went in boldly unto Pilate, and craved the body of Jesus.*
+
+*44 And Pilate marvelled if he were already dead: and calling unto him the centurion, he asked him whether he had been any while dead.*
+
+*45 And when he knew it of the centurion, he gave the body to Joseph.*
+
+*46 And he bought fine linen, and took him down, and wrapped him in the linen, and laid him in a sepulchre which was hewn out of a rock, and rolled a stone unto the door of the sepulchre.*
+
+*47 And Mary Magdalene and Mary the mother of Joses beheld where he was laid.*
+
+<!-- post 6439 · 2022-11-13 07:58 · study -->
+
+And this is the manner of death He has spoken of. And to His glory, it was fufifiled. That God so loved the world He gave His only begotten Son that whoever believes on Him shall not perish but have everlasting life.
+
+<!-- post 6440 · 2022-11-13 11:41 · study -->
+
+It's curious too that Tertullian in his letter to Rome claims Pilate ended up believing and becoming a Christian. I could see it being true. 
+
+"But nevertheless, the leaders of the Jews, whom it nearly concerned both to spread abroad a lie, and keep back a people tributary and submissive to them from the faith, gave it out that the body of Christ had been stolen by His followers. For the Lord, you see, did not go forth into the public gaze, lest the wicked should be delivered from their error; that faith also, destined to a great reward, might hold its ground in difficulty. But He spent forty days with some of His disciples down in Galilee, a region of Judea, instructing them in the doctrines they were to teach to others. Thereafter, having given them commission to preach the gospel through the world, He was encompassed with a cloud and taken up to heaven, — a fact more certain far than the assertions of your Proculi concerning Romulus. All these things Pilate did to Christ; and now in fact a Christian in his own convictions, he sent word of Him to the reigning Cæsar, who was at the time Tiberius. Yes, and the Cæsars too would have believed on Christ, if either the Cæsars had not been necessary for the world, or if Christians could have been Cæsars. "
+
+## Mark 15  ·  Other post on this chapter  ·  2026-04-02
+
+Source: https://t.me/HouseOfWews2/17352
+
+<!-- post 17352 · 2026-04-02 05:55 · scripture -->
+
+**Mark 15**
+*And straightway in the morning the chief priests held a consultation with the elders and scribes and the whole council, and bound Jesus, and carried him away, and delivered him to Pilate.*
+
+*2 And Pilate asked him, Art thou the King of the Jews? And he answering said unto them, Thou sayest it.*
+
+*3 And the chief priests accused him of many things: but he answered nothing.*
+
+*4 And Pilate asked him again, saying, Answerest thou nothing? behold how many things they witness against thee.*
+
+*5 But Jesus yet answered nothing; so that Pilate marvelled.*
+
+*6 Now at that feast he released unto them one prisoner, whomsoever they desired.*
+
+*7 And there was one named Barabbas, which lay bound with them that had made insurrection with him, who had committed murder in the insurrection.*
+
+*8 And the multitude crying aloud began to desire him to do as he had ever done unto them.*
+
+*9 But Pilate answered them, saying, Will ye that I release unto you the King of the Jews?*
+
+*10 For he knew that the chief priests had delivered him for envy.*
+
+*11 But the chief priests moved the people, that he should rather release Barabbas unto them.*
+
+*12 And Pilate answered and said again unto them, What will ye then that I shall do unto him whom ye call the King of the Jews?*
+
+*13 And they cried out again, Crucify him.*
+
+*14 Then Pilate said unto them, Why, what evil hath he done? And they cried out the more exceedingly, Crucify him.*
+
+*15 And so Pilate, willing to content the people, released Barabbas unto them, and delivered Jesus, when he had scourged him, to be crucified.*
+
+*16 And the soldiers led him away into the hall, called Praetorium; and they call together the whole band.*
+
+*17 And they clothed him with purple, and platted a crown of thorns, and put it about his head,*
+
+*18 And began to salute him, Hail, King of the Jews!*
+
+*19 And they smote him on the head with a reed, and did spit upon him, and bowing their knees worshipped him.*
+
+*20 And when they had mocked him, they took off the purple from him, and put his own clothes on him, and led him out to crucify him.*
+
+*21 And they compel one Simon a Cyrenian, who passed by, coming out of the country, the father of Alexander and Rufus, to bear his cross.*
+
+*22 And they bring him unto the place Golgotha, which is, being interpreted, The place of a skull.*
+
+*23 And they gave him to drink wine mingled with myrrh: but he received it not.*
+
+*24 And when they had crucified him, they parted his garments, casting lots upon them, what every man should take.*
+
+*25 And it was the third hour, and they crucified him.*
+
+*26 And the superscription of his accusation was written over, The King Of The Jews.*
+
+*27 And with him they crucify two thieves; the one on his right hand, and the other on his left.*
+
+*28 And the scripture was fulfilled, which saith, And he was numbered with the transgressors.*
+
+*29 And they that passed by railed on him, wagging their heads, and saying, Ah, thou that destroyest the temple, and buildest it in three days,*
+
+*30 Save thyself, and come down from the cross.*
+
+*31 Likewise also the chief priests mocking said among themselves with the scribes, He saved others; himself he cannot save.*
+
+*32 Let Christ the King of Israel descend now from the cross, that we may see and believe. And they that were crucified with him reviled him.*
+
+*33 And when the sixth hour was come, there was darkness over the whole land until the ninth hour.*
+
+*34 And at the ninth hour Jesus cried with a loud voice, saying, Eloi, Eloi, lama sabachthani? which is, being interpreted, My God, my God, why hast thou forsaken me?*
+
+*35 And some of them that stood by, when they heard it, said, Behold, he calleth Elias.*
+
+*36 And one ran and filled a spunge full of vinegar, and put it on a reed, and gave him to drink, saying, Let alone; let us see whether Elias will come to take him down.*
+
+*37 And Jesus cried with a loud voice, and gave up the ghost.*
+
+*38 And the veil of the temple was rent in twain from the top to the bottom.*
+
+*39 And when the centurion, which stood over against him, saw that he so cried out, and gave up the ghost, he said, Truly this man was the Son of God.*
+
+<!-- post 17353 · 2026-04-02 05:55 · scripture -->
+
+*40 There were also women looking on afar off: among whom was Mary Magdalene, and Mary the mother of James the less and of Joses, and Salome;*
+
+*41 (Who also, when he was in Galilee, followed him, and ministered unto him;) and many other women which came up with him unto Jerusalem.*
+
+*42 And now when the even was come, because it was the preparation, that is, the day before the sabbath,*
+
+*43 Joseph of Arimathaea, an honourable counsellor, which also waited for the kingdom of God, came, and went in boldly unto Pilate, and craved the body of Jesus.*
+
+*44 And Pilate marvelled if he were already dead: and calling unto him the centurion, he asked him whether he had been any while dead.*
+
+*45 And when he knew it of the centurion, he gave the body to Joseph.*
+
+*46 And he bought fine linen, and took him down, and wrapped him in the linen, and laid him in a sepulchre which was hewn out of a rock, and rolled a stone unto the door of the sepulchre.*
+
+*47 And Mary Magdalene and Mary the mother of Joses beheld where he was laid.*
+
+## Mark 16  ·  Primary study  ·  2022-11-14
+
+Source: https://t.me/HouseOfWews2/6453
+
+<!-- post 6453 · 2022-11-14 05:44 · scripture -->
+
+**Mark 16**
+
+*And when the sabbath was past, Mary Magdalene, and Mary the mother of James, and Salome, had bought sweet spices, that they might come and anoint him.*
+
+*2 And very early in the morning the first day of the week, they came unto the sepulchre at the rising of the sun.*
+
+*3 And they said among themselves, Who shall roll us away the stone from the door of the sepulchre?*
+
+*4 And when they looked, they saw that the stone was rolled away: for it was very great.*
+
+*5 And entering into the sepulchre, they saw a young man sitting on the right side, clothed in a long white garment; and they were affrighted.*
+
+*6 And he saith unto them, Be not affrighted: Ye seek Jesus of Nazareth, which was crucified: he is risen; he is not here: behold the place where they laid him.*
+
+*7 But go your way, tell his disciples and Peter that he goeth before you into Galilee: there shall ye see him, as he said unto you.*
+
+*8 And they went out quickly, and fled from the sepulchre; for they trembled and were amazed: neither said they any thing to any man; for they were afraid.*
+
+*9 Now when Jesus was risen early the first day of the week, he appeared first to Mary Magdalene, out of whom he had cast seven devils.*
+
+*10 And she went and told them that had been with him, as they mourned and wept.*
+
+*11 And they, when they had heard that he was alive, and had been seen of her, believed not.*
+
+*12 After that he appeared in another form unto two of them, as they walked, and went into the country.*
+
+*13 And they went and told it unto the residue: neither believed they them.*
+
+*14 Afterward he appeared unto the eleven as they sat at meat, and upbraided them with their unbelief and hardness of heart, because they believed not them which had seen him after he was risen.*
+
+*15 And he said unto them, Go ye into all the world, and preach the gospel to every creature.*
+
+*16 He that believeth and is baptized shall be saved; but he that believeth not shall be damned.*
+
+*17 And these signs shall follow them that believe; In my name shall they cast out devils; they shall speak with new tongues;*
+
+*18 They shall take up serpents; and if they drink any deadly thing, it shall not hurt them; they shall lay hands on the sick, and they shall recover.*
+
+*19 So then after the Lord had spoken unto them, he was received up into heaven, and sat on the right hand of God.*
+
+*20 And they went forth, and preached every where, the Lord working with them, and confirming the word with signs following. Amen.*
+
+<!-- post 6454 · 2022-11-14 05:55 · study -->
+
+And with Mark's telling of the resurrection, instruction and ascension, we reach the end of his Gospel. It's shortest, often terse, but packs quite a bit of doctrine. 
+
+We see the familiar story of Marys going to the tomb on the third day, Sunday morning after the sabbath, (the 3 Sabbaths passed while Jesus was in Hell, doing all the work. Two holy days and one weekly sabbath). They find the tomb apparently unguarded, the stone rolled away and an angel of God, a messenger resembling a young man, sitting in the tomb telling them that Christ is risen. We are told Jesus appears unto Mary Magdalene, and on the road to two others. To the 11. Teaching them in all things. 
+
+*Go ye into all the world, and preach the gospel to every creature. He that believeth and is baptized shall be saved; but he that believeth not shall be damned.*
+
+This verse is often used to create the false doctrine of baptism being required for salvation, ignoring that the either/or condition is belief. And missing that, missing direct scripture, from Jesus saying that those who believe are saved, those who don't are damned. That's the gospel to be preached to every creature throughout the world. 
+
+Not of works or of any other means. Belief in the risen Christ who takes away the sins of the world. Baptism is the outward sign that we may assume someone has professed Christ, calling upon His name and the name of the Father and Holy Spirit. And those that believe not are damned to eternal punishment. 
+
+*So then after the Lord had spoken unto them, he was received up into heaven, and sat on the right hand of God*. 
+Amen
+
+<!-- post 6455 · 2022-11-14 05:58 · study -->
+
+The gifts of the Holy Ghost given to many who believed in the days of the Apostles, which scripture tells us was to edify the church, has passed. Except when it serves God and for the same purpose. Some pagan forms of false Christianity still maintain these signs as the only means of knowing you're saved, and in doing so tempt God, preach false gospels of works, and so misleading many in a blasphemy of the Holy Ghost.
+
+<!-- post 6456 · 2022-11-14 06:00 · study -->
+
+That's 3 Gospels and most of the epistles. I am thinking Genesis next. God bless those of you who have read almost the entire New Testament with us together. Hopefully it isn't the only Bible you read each day, but also I pray God has used this exercise as a blessing to you, as it is for me.
+
+## Mark 16  ·  Other post on this chapter  ·  2025-04-20
+
+Source: https://t.me/HouseOfWews2/15936
+
+<!-- post 15936 · 2025-04-20 05:49 · scripture -->
+
+**Mark 16**
+*And when the sabbath was past, Mary Magdalene, and Mary the mother of James, and Salome, had bought sweet spices, that they might come and anoint him.*
+
+*2 And very early in the morning the first day of the week, they came unto the sepulchre at the rising of the sun.*
+
+*3 And they said among themselves, Who shall roll us away the stone from the door of the sepulchre?*
+
+*4 And when they looked, they saw that the stone was rolled away: for it was very great.*
+
+*5 And entering into the sepulchre, they saw a young man sitting on the right side, clothed in a long white garment; and they were affrighted.*
+
+*6 And he saith unto them, Be not affrighted: Ye seek Jesus of Nazareth, which was crucified: he is risen; he is not here: behold the place where they laid him.*
+
+*7 But go your way, tell his disciples and Peter that he goeth before you into Galilee: there shall ye see him, as he said unto you.*
+
+*8 And they went out quickly, and fled from the sepulchre; for they trembled and were amazed: neither said they any thing to any man; for they were afraid.*
+
+*9 Now when Jesus was risen early the first day of the week, he appeared first to Mary Magdalene, out of whom he had cast seven devils.*
+
+*10 And she went and told them that had been with him, as they mourned and wept.*
+
+*11 And they, when they had heard that he was alive, and had been seen of her, believed not.*
+
+*12 After that he appeared in another form unto two of them, as they walked, and went into the country.*
+
+*13 And they went and told it unto the residue: neither believed they them.*
+
+*14 Afterward he appeared unto the eleven as they sat at meat, and upbraided them with their unbelief and hardness of heart, because they believed not them which had seen him after he was risen.*
+
+*15 And he said unto them, Go ye into all the world, and preach the gospel to every creature.*
+
+*16 He that believeth and is baptized shall be saved; but he that believeth not shall be damned.*
+
+*17 And these signs shall follow them that believe; In my name shall they cast out devils; they shall speak with new tongues;*
+
+*18 They shall take up serpents; and if they drink any deadly thing, it shall not hurt them; they shall lay hands on the sick, and they shall recover.*
+
+*19 So then after the Lord had spoken unto them, he was received up into heaven, and sat on the right hand of God.*
+
+*20 And they went forth, and preached every where, the Lord working with them, and confirming the word with signs following. Amen.*
+
+## Mark 16  ·  Other post on this chapter  ·  2026-04-03
+
+Source: https://t.me/HouseOfWews2/17355
+
+<!-- post 17355 · 2026-04-03 05:58 · scripture -->
+
+**Mark 16**
+*And when the sabbath was past, Mary Magdalene, and Mary the mother of James, and Salome, had bought sweet spices, that they might come and anoint him.*
+
+*2 And very early in the morning the first day of the week, they came unto the sepulchre at the rising of the sun.*
+
+*3 And they said among themselves, Who shall roll us away the stone from the door of the sepulchre?*
+
+*4 And when they looked, they saw that the stone was rolled away: for it was very great.*
+
+*5 And entering into the sepulchre, they saw a young man sitting on the right side, clothed in a long white garment; and they were affrighted.*
+
+*6 And he saith unto them, Be not affrighted: Ye seek Jesus of Nazareth, which was crucified: he is risen; he is not here: behold the place where they laid him.*
+
+*7 But go your way, tell his disciples and Peter that he goeth before you into Galilee: there shall ye see him, as he said unto you.*
+
+*8 And they went out quickly, and fled from the sepulchre; for they trembled and were amazed: neither said they any thing to any man; for they were afraid.*
+
+*9 Now when Jesus was risen early the first day of the week, he appeared first to Mary Magdalene, out of whom he had cast seven devils.*
+
+*10 And she went and told them that had been with him, as they mourned and wept.*
+
+*11 And they, when they had heard that he was alive, and had been seen of her, believed not.*
+
+*12 After that he appeared in another form unto two of them, as they walked, and went into the country.*
+
+*13 And they went and told it unto the residue: neither believed they them.*
+
+*14 Afterward he appeared unto the eleven as they sat at meat, and upbraided them with their unbelief and hardness of heart, because they believed not them which had seen him after he was risen.*
+
+*15 And he said unto them, Go ye into all the world, and preach the gospel to every creature.*
+
+*16 He that believeth and is baptized shall be saved; but he that believeth not shall be damned.*
+
+*17 And these signs shall follow them that believe; In my name shall they cast out devils; they shall speak with new tongues;*
+
+*18 They shall take up serpents; and if they drink any deadly thing, it shall not hurt them; they shall lay hands on the sick, and they shall recover.*
+
+*19 So then after the Lord had spoken unto them, he was received up into heaven, and sat on the right hand of God.*
+
+*20 And they went forth, and preached every where, the Lord working with them, and confirming the word with signs following. Amen.*

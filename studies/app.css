@@ -1,0 +1,442 @@
+/* Chapter Studies — same look as the portal (../index.html) */
+:root {
+  --red: #c0271f;
+  --red-dark: #8b1a14;
+  --red-glow: rgba(192,39,31,0.25);
+  --gold: #d4a843;
+  --gold-light: #f0c96a;
+  --cream: #f5efe4;
+  --dark: #0e0d0c;
+  --dark-2: #1a1816;
+  --dark-3: #242220;
+  --dark-4: #2e2b28;
+  --text: #e8e0d0;
+  --text-dim: #9a9080;
+  --border: rgba(212,168,67,0.2);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--dark);
+  color: var(--text);
+  font-family: 'Source Serif 4', Georgia, serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* GRAIN OVERLAY */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.4;
+}
+
+a { color: var(--gold); }
+a:hover { color: var(--gold-light); }
+
+/* HEADER */
+.site-header {
+  position: relative;
+  background: var(--dark-2);
+  border-bottom: 1px solid var(--border);
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 90px;
+  overflow: hidden;
+}
+.site-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--red), var(--gold), var(--red), transparent);
+}
+.logo-heart {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  display: block;
+}
+.logo-heart svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 8px var(--red-glow));
+}
+.logo-rooster {
+  font-size: 28px;
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.site-title { flex: 1; text-decoration: none; min-width: 0; }
+.site-title .jags {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  display: block;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+.site-title .h1 {
+  display: block;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 42px;
+  letter-spacing: 0.05em;
+  color: var(--cream);
+  line-height: 0.9;
+  text-shadow: 2px 2px 0 var(--red-dark);
+}
+.site-title .h1 span { color: var(--red); }
+.site-tagline {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: var(--text-dim);
+  font-style: italic;
+  margin-top: 4px;
+  display: block;
+}
+.header-kjv {
+  font-family: 'Playfair Display', serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: 2px;
+}
+.header-kjv:hover { border-color: var(--gold); }
+
+/* BREADCRUMBS (styled like the portal's tab bar) */
+.crumbs {
+  background: var(--dark-2);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 32px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  min-height: 46px;
+}
+.crumbs a, .crumbs span {
+  color: var(--text-dim);
+  text-decoration: none;
+  padding: 14px 0;
+}
+.crumbs a:hover { color: var(--gold); }
+.crumbs .sep { padding: 14px 12px; color: var(--dark-4); }
+.crumbs .here { color: var(--gold); border-bottom: 3px solid var(--red); padding-bottom: 11px; }
+
+/* MAIN */
+.main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 32px 64px;
+  outline: none;
+}
+.main.wide { max-width: 1200px; }
+.loading, .error { color: var(--text-dim); font-style: italic; padding: 40px 0; text-align: center; }
+.error { color: var(--gold); }
+
+.hero { text-align: center; padding: 24px 0 8px; }
+.hero h1, .page-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 56px;
+  letter-spacing: 0.08em;
+  color: var(--cream);
+  line-height: 1;
+  text-shadow: 3px 3px 0 var(--red-dark);
+  font-weight: normal;
+}
+.hero p { color: var(--text-dim); font-style: italic; margin-top: 10px; line-height: 1.7; }
+.hero-rule { display: flex; align-items: center; gap: 16px; justify-content: center; margin: 20px 0; }
+.hero-rule-line { height: 1px; width: 80px; background: linear-gradient(90deg, transparent, var(--gold)); }
+.hero-rule-line.r { background: linear-gradient(90deg, var(--gold), transparent); }
+.hero-rule-diamond { width: 8px; height: 8px; background: var(--red); transform: rotate(45deg); }
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin: 36px 0 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.section-header h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  font-weight: normal;
+}
+.section-header span { font-size: 13px; color: var(--text-dim); font-style: italic; }
+
+/* CONTINUE CARD */
+.continue {
+  display: block;
+  background: var(--dark-3);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  padding: 18px 24px;
+  border-radius: 2px;
+  text-decoration: none;
+  color: var(--text);
+  margin-top: 8px;
+}
+.continue:hover { border-color: rgba(212,168,67,0.5); border-left-color: var(--gold); }
+.label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 4px;
+}
+.continue strong { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 0.06em; color: var(--cream); font-weight: normal; }
+.continue em { color: var(--text-dim); font-size: 14px; margin-left: 8px; }
+
+/* BOOK TILES */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 12px;
+}
+.book {
+  display: block;
+  background: var(--dark-2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 14px 16px 12px;
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.book::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--red);
+  transform: scaleY(0);
+  transition: transform 0.2s;
+  transform-origin: bottom;
+}
+.book:hover { border-color: rgba(212,168,67,0.5); transform: translateY(-2px); color: var(--text); }
+.book:hover::before { transform: scaleY(1); }
+.book-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  display: block;
+}
+.book-count { font-size: 12px; color: var(--text-dim); font-style: italic; }
+.bar { height: 3px; background: var(--dark-4); margin-top: 8px; border-radius: 2px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--red), var(--gold)); }
+
+/* CHAPTER GRID */
+.legend { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 13px; color: var(--text-dim); margin-bottom: 18px; }
+.legend span { display: inline-flex; align-items: center; gap: 8px; }
+.legend i { width: 14px; height: 14px; border-radius: 2px; display: inline-block; }
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+  gap: 8px;
+}
+.ch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  transition: transform 0.15s, border-color 0.15s;
+}
+.ch:hover { transform: translateY(-2px); border-color: var(--gold); }
+.st-S, .legend .st-S { background: var(--dark-3); color: var(--cream); border-color: rgba(212,168,67,0.45); box-shadow: inset 0 -3px 0 var(--red); }
+.st-E, .legend .st-E { background: var(--dark-3); color: var(--gold); border-style: dashed; border-color: rgba(212,168,67,0.45); }
+.st-W, .legend .st-W { background: var(--dark-2); color: var(--gold); border-color: rgba(212,168,67,0.35); }
+.st-O, .legend .st-O { background: var(--dark-2); color: var(--text-dim); border-style: dashed; }
+.st-none { background: transparent; color: #5d564c; border-color: rgba(212,168,67,0.08); }
+.legend .st-none { background: transparent; border: 1px solid #5d564c; }
+.ch.st-W::after { content: '↗'; font-size: 12px; margin-left: 2px; color: var(--text-dim); }
+
+/* CHAPTER PAGE */
+.chapter-head { border-bottom: 1px solid var(--border); padding-bottom: 18px; margin-bottom: 8px; }
+.chapter-head .page-title { font-size: 64px; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-top: 12px; font-size: 14px; color: var(--text-dim); }
+.tag {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: var(--red);
+  border: 1px solid var(--red-dark);
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+.tag.gold { color: var(--gold); border-color: rgba(212,168,67,0.4); }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.btn {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  background: var(--dark-2);
+  padding: 9px 16px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.btn:hover { border-color: var(--gold); color: var(--gold-light); }
+.btn.primary { background: var(--red-dark); border-color: var(--red); color: var(--cream); }
+.btn.primary:hover { background: var(--red); color: #fff; }
+
+.notice {
+  background: var(--dark-3);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--red);
+  padding: 20px 24px;
+  margin: 28px 0;
+  border-radius: 2px;
+  line-height: 1.7;
+}
+.notice strong { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 0.1em; color: var(--gold); display: block; font-weight: normal; }
+
+/* KJV TEXT */
+.kjv { margin-top: 8px; }
+.kjv p.v { font-size: 18px; line-height: 1.85; color: var(--cream); margin: 0 0 6px; }
+.kjv sup { font-family: 'Bebas Neue', sans-serif; font-size: 13px; letter-spacing: 0.05em; color: var(--red); margin-right: 6px; vertical-align: 0.35em; }
+.kjv .from-post { font-size: 13px; color: var(--text-dim); font-style: italic; margin-bottom: 10px; }
+.kjv.folded { max-height: 520px; overflow: hidden; position: relative; }
+.kjv.folded::after {
+  content: '';
+  position: absolute; left: 0; right: 0; bottom: 0; height: 120px;
+  background: linear-gradient(transparent, var(--dark));
+}
+.unfold { margin-top: 12px; }
+
+/* COMMENTARY */
+.post { font-size: 17px; line-height: 1.8; margin: 0 0 22px; }
+.post p { margin: 0 0 14px; }
+.post p:last-child { margin-bottom: 0; }
+.post strong { color: var(--cream); }
+.post a { word-break: break-word; }
+.post + .post { border-top: 1px solid rgba(212,168,67,0.08); padding-top: 20px; }
+.day {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  color: var(--text-dim);
+  margin: 30px 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.day::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+blockquote.quote {
+  background: var(--dark-2);
+  border-left: 3px solid var(--gold);
+  padding: 14px 20px;
+  margin: 0 0 14px;
+  border-radius: 0 2px 2px 0;
+  font-style: italic;
+  color: var(--cream);
+}
+blockquote.quote em { font-style: italic; }
+blockquote.quote cite {
+  display: block;
+  font-style: normal;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+.media {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--text-dim);
+  border: 1px dashed var(--border);
+  padding: 8px 14px;
+  border-radius: 2px;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.media:hover { color: var(--gold); border-color: var(--gold); }
+
+/* OTHER PASSES */
+details.pass { background: var(--dark-2); border: 1px solid var(--border); border-radius: 3px; margin-bottom: 10px; }
+details.pass > summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 14px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  align-items: center;
+}
+details.pass > summary::-webkit-details-marker { display: none; }
+details.pass > summary::before { content: '▸'; color: var(--red); }
+details.pass[open] > summary::before { content: '▾'; }
+details.pass > summary b { font-family: 'Bebas Neue', sans-serif; font-weight: normal; font-size: 18px; letter-spacing: 0.08em; color: var(--gold); }
+details.pass > summary small { color: var(--text-dim); font-size: 13px; font-style: italic; }
+details.pass .pass-body { padding: 6px 22px 18px; border-top: 1px solid var(--border); }
+
+.pager { display: flex; justify-content: space-between; gap: 12px; margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--border); }
+.pager a { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 0.1em; text-decoration: none; }
+.pager .st-none-link { color: var(--text-dim); }
+
+/* FOOTER */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 20px 32px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  font-family: 'Bebas Neue', sans-serif;
+}
+.site-footer span { color: var(--gold); }
+
+@media (max-width: 640px) {
+  .site-header { padding: 0 16px; gap: 14px; min-height: 76px; }
+  .logo-heart { width: 48px; height: 48px; }
+  .logo-rooster { font-size: 22px; top: -6px; }
+  .site-title .h1 { font-size: 32px; }
+  .site-tagline { letter-spacing: 0.12em; font-size: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .crumbs { padding: 0 16px; }
+  .main { padding: 24px 16px 48px; }
+  .hero h1, .page-title { font-size: 42px; }
+  .chapter-head .page-title { font-size: 48px; }
+  .book-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+  .chapter-grid { grid-template-columns: repeat(auto-fill, minmax(48px, 1fr)); gap: 6px; }
+  .ch { height: 46px; font-size: 20px; }
+  .kjv p.v, .post { font-size: 17px; }
+  blockquote.quote { padding: 12px 14px; }
+}
