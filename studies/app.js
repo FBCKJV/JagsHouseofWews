@@ -375,7 +375,15 @@
       </div>
       ${topic.timeline ? `<section class="timeline-card" aria-label="The order of events">
         <span class="label">The order of events</span>
-        <ol class="timeline">${topic.timeline.map(step => `<li>${esc(step)}</li>`).join('')}</ol></section>` : ''}
+        <ol class="timeline">${topic.timeline.map(item => {
+          const step = typeof item === 'string' ? { step: item, refs: [] } : item;
+          const refs = (step.refs || []).map(r => {
+            const href = kjvRefLink(r);
+            return href ? `<a class="ref" href="${esc(href)}" target="_blank" rel="noopener">${esc(r)}</a>` : `<span class="ref">${esc(r)}</span>`;
+          }).join('');
+          return `<li>${esc(step.step)}${refs ? `<span class="refs">${refs}</span>` : ''}</li>`;
+        }).join('')}</ol>
+        ${topic.chart ? `<p class="chart-link"><a href="${esc(topic.chart.url)}" target="_blank" rel="noopener">See the full chart: ${esc(topic.chart.label)} ↗</a></p>` : ''}</section>` : ''}
       ${groups.length > 1 ? `<nav class="theme-chips" aria-label="Themes">${groups.map(g =>
         `<a href="#doctrine-${esc(id)}" data-theme="${slugify(g.name)}">${esc(g.name)} <span>${g.items.length}</span></a>`).join('')}</nav>` : ''}
       ${groups.map(g => `<section id="theme-${slugify(g.name)}">
@@ -692,8 +700,29 @@
         (skip && (skip.book !== t.book || skip.ch !== t.ch) ? ` · hold for ${chapterName(skip.book.book, skip.ch)}` : '');
       a.setAttribute('aria-label', (dir < 0 ? 'Previous: ' : 'Next: ') + chapterName(t.book.book, t.ch));
     });
+    fab.classList.remove('scrolling', 'at-end');
     fab.hidden = false;
   }
+
+  // Keep the page clear of the tab bar at whatever height it really is (big system text, full-screen browsing).
+  const tabbar = document.getElementById('tabbar');
+  const fitTabbar = () => document.body.style.setProperty('--tab-real', tabbar.offsetHeight + 'px');
+  fitTabbar();
+  if ('ResizeObserver' in window) new ResizeObserver(fitTabbar).observe(tabbar);
+  window.addEventListener('resize', fitTabbar);
+
+  // Prev/Next fade out while scrolling and at the end of a study, where the pager links are.
+  let scrollTimer = null;
+  window.addEventListener('scroll', () => {
+    if (fab.hidden) return;
+    fab.classList.add('scrolling');
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => {
+      fab.classList.remove('scrolling');
+      const pager = document.querySelector('.pager');
+      fab.classList.toggle('at-end', !!pager && pager.getBoundingClientRect().top < innerHeight);
+    }, 450);
+  }, { passive: true });
 
   fab.querySelectorAll('.rfloat').forEach(a => {
     let timer = null, held = false;

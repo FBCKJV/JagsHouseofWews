@@ -34,7 +34,10 @@ body {
   font-family: var(--font-ui);
   min-height: 100vh;
   overflow-x: hidden;
-  padding-bottom: calc(var(--tab-h) + env(safe-area-inset-bottom, 0px));
+  /* --tab-real is the tab bar's measured height (set by app.js), so nothing hides behind it */
+  padding-bottom: var(--tab-real, calc(var(--tab-h) + env(safe-area-inset-bottom, 0px)));
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 a { color: var(--gold); }
 a:hover { color: var(--gold-l); }
@@ -419,8 +422,9 @@ body.sheet-open { overflow: hidden; }
 .float-nav {
   position: fixed;
   left: 0; right: 0;
-  bottom: calc(var(--tab-h) + env(safe-area-inset-bottom, 0px) + 8px);
+  bottom: calc(var(--tab-real, calc(var(--tab-h) + env(safe-area-inset-bottom, 0px))) + 8px);
   z-index: 40;
+  transition: opacity .25s ease;
   display: flex;
   justify-content: space-between;
   padding: 0 max(14px, env(safe-area-inset-left, 0px)) 0 max(14px, env(safe-area-inset-right, 0px));
@@ -429,6 +433,9 @@ body.sheet-open { overflow: hidden; }
   margin: 0 auto;
 }
 .float-nav[hidden] { display: none; }
+/* Out of the way while scrolling, and at the end of a study (like the Bible app's reader) */
+.float-nav.scrolling, .float-nav.at-end { opacity: 0; }
+.float-nav.scrolling .rfloat, .float-nav.at-end .rfloat { pointer-events: none; }
 .rfloat {
   pointer-events: auto;
   background: var(--bg2);
@@ -459,10 +466,11 @@ body.sheet-open { overflow: hidden; }
   left: 0; right: 0; bottom: 0;
   z-index: 45;
   display: flex;
+  align-items: stretch;
   background: var(--bg2);
   border-top: 1px solid var(--border);
-  height: calc(var(--tab-h) + env(safe-area-inset-bottom, 0px));
-  padding: 0 env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+  min-height: calc(var(--tab-h) + env(safe-area-inset-bottom, 0px));
+  padding: 6px env(safe-area-inset-right, 0px) calc(6px + env(safe-area-inset-bottom, 0px)) env(safe-area-inset-left, 0px);
 }
 .tab {
   flex: 1;
@@ -471,13 +479,17 @@ body.sheet-open { overflow: hidden; }
   align-items: center;
   justify-content: center;
   gap: 3px;
+  min-width: 0;
   text-decoration: none;
   color: var(--text-m);
   font-size: 10px;
+  line-height: 1.2;
   font-weight: 500;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
+.tab svg { flex-shrink: 0; }
+.tab span { max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .tab:hover { color: var(--gold-t); }
 .tab.on { color: var(--gold); }
 
@@ -569,6 +581,10 @@ a.ref:hover { border-color: var(--gold-d); color: var(--gold-l); }
   font-size: 11px; font-weight: 600;
   display: flex; align-items: center; justify-content: center;
 }
+.timeline .refs { margin: 6px 0 0; }
+.timeline .ref { font-size: 11px; padding: 2px 8px; }
+.chart-link { margin: 4px 0 10px; font-size: 13px; }
+.chart-link a { text-decoration: none; }
 .timeline li:not(:last-child)::after { content: ''; position: absolute; left: 11px; top: 25px; bottom: 2px; width: 1px; background: var(--border); }
 
 /* ABOUT & TIPS, FIRST-VISIT WELCOME */
