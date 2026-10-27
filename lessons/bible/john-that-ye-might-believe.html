@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>That Ye Might Believe: The Gospel of John</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#e9dcc0; --page:#f6edd9; --ink:#2a1f14; --muted:#6b5a43;
+  --gold:#7d5a10; --rule:#c4a660; --crimson:#8f1f22; --rubric:#8f1f22;
+  --gilt:#ecc969; --mark:rgba(184,137,42,.28); --wash:rgba(184,137,42,.10);
+  --serif:"Cormorant Garamond", "Garamond", "Georgia", serif;
+  --caps:"Cinzel", "Trajan Pro", "Times New Roman", serif;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c0a07; --page:#17120d; --ink:#eadfc4; --muted:#a6957a;
+    --gold:#d4ae55; --rule:#6e5a2e; --crimson:#8a2426; --rubric:#d65c5e;
+    --gilt:#e6c36b; --mark:rgba(212,174,85,.24); --wash:rgba(212,174,85,.07);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c0a07; --page:#17120d; --ink:#eadfc4; --muted:#a6957a;
+  --gold:#d4ae55; --rule:#6e5a2e; --crimson:#8a2426; --rubric:#d65c5e;
+  --gilt:#e6c36b; --mark:rgba(212,174,85,.24); --wash:rgba(212,174,85,.07);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{height:100%;margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-weight:500;font-size:20px;line-height:1.55;-webkit-text-size-adjust:100%}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+.app{height:100%;display:flex;flex-direction:column}
+.stage{position:relative;flex:1;min-height:0;margin:10px 10px 0;border:3px double var(--rule);background:var(--page)}
+.corner{position:absolute;width:9px;height:9px;background:var(--gold);transform:rotate(45deg);z-index:3}
+.c1{top:-7px;left:-7px}.c2{top:-7px;right:-7px}.c3{bottom:-7px;left:-7px}.c4{bottom:-7px;right:-7px}
+.progress{position:absolute;top:0;left:0;height:2px;background:var(--gold);z-index:3;transition:width .3s}
+.theme{position:absolute;top:8px;right:8px;z-index:4;width:40px;height:40px;border:1px solid var(--rule);background:var(--page);color:var(--gold);border-radius:50%;cursor:pointer;font-size:18px;line-height:1}
+
+.slide{position:absolute;inset:0;overflow-y:auto;-webkit-overflow-scrolling:touch;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s}
+.slide.active{opacity:1;visibility:visible}
+.slide:focus{outline:none}
+.page{max-width:720px;margin:0 auto;padding:52px 22px 44px}
+
+h1,h2,h3{font-family:var(--caps);font-weight:600;letter-spacing:.02em;line-height:1.15;margin:0}
+h1{font-size:clamp(2rem,8vw,3.2rem)}
+h2{font-size:clamp(1.35rem,4.6vw,1.9rem)}
+p{margin:0 0 16px}
+.solo{margin-bottom:20px}
+
+.chap{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.init{flex:none;min-width:60px;height:60px;padding:0 10px;display:grid;place-items:center;background:var(--crimson);color:var(--gilt);font-family:var(--caps);font-weight:700;font-size:1.55rem;border:2px solid var(--gilt);outline:1px solid var(--gold);outline-offset:3px}
+.jn{display:block;font-family:var(--caps);font-size:.9rem;color:var(--muted);margin-bottom:4px}
+
+.lede::first-letter{float:left;font-family:var(--caps);font-weight:700;font-size:3.3em;line-height:.82;color:var(--rubric);padding:6px 10px 0 0}
+
+.ref{background:none;border:0;padding:0;margin:0;color:var(--gold);font-weight:600;cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-decoration-thickness:1px;text-underline-offset:3px;white-space:nowrap}
+.ref:hover{text-decoration-style:solid}
+
+blockquote.v{margin:18px 0;padding:0}
+blockquote.v p{font-size:1.34rem;line-height:1.5;font-style:italic;margin:0 0 6px}
+blockquote.v.big p{font-size:1.52rem}
+blockquote.v i{font-style:normal}
+blockquote.v footer{font-family:var(--caps);font-size:.92rem}
+.pil{font-style:normal;color:var(--rubric);font-weight:600;margin-right:6px}
+.vn{font-family:var(--caps);font-style:normal;font-size:.62em;color:var(--rubric);vertical-align:super;margin:0 3px 0 4px}
+.bl{background:linear-gradient(transparent 60%,var(--mark) 60%)}
+
+/* Comparison panels */
+.cmp{margin:16px 0 0}
+.pn{margin:0 0 14px;padding:12px 14px 12px 16px;border-left:3px solid var(--gold)}
+.pn h3{font-size:.85rem;letter-spacing:.06em;margin:0 0 2px}
+.pn.fig h3{color:var(--gold)}
+.pn.lit{border-left-color:var(--rubric)}
+.pn.lit h3{color:var(--rubric)}
+.pn.rev{border-left:5px double var(--gold);background:var(--wash)}
+.pn.rev h3{color:var(--ink)}
+.pn blockquote.v{margin:6px 0 8px}
+.pn blockquote.v p{font-size:1.22rem}
+.pn .ex{margin:0;line-height:1.5}
+
+.take{margin-top:22px;padding-top:14px;border-top:3px double var(--rule);font-style:italic;font-size:1.28rem;line-height:1.45}
+
+.xr{list-style:none;margin:16px 0 0;padding:0}
+.xr li{padding:12px 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr .ref{font-family:var(--caps);font-size:1rem;display:inline-block;margin:0 10px 2px 0}
+.xr span{display:block}
+
+.lens{margin:16px 0 0;padding:0}
+.lens > div{padding:12px 0;border-top:1px solid var(--rule)}
+.lens > div:last-child{border-bottom:1px solid var(--rule)}
+.lens dt{font-family:var(--caps);font-weight:600;font-size:1rem}
+.lens dd{margin:2px 0 0}
+
+.two{display:grid;grid-template-columns:1fr;gap:20px;margin-top:16px}
+@media (min-width:640px){.two{grid-template-columns:1fr 1fr}}
+.two h3{font-size:1rem;color:var(--rubric);margin-bottom:6px}
+.two ul{list-style:none;margin:0;padding:0;border-top:3px double var(--rule)}
+.two li{padding:8px 0;border-bottom:1px solid var(--rule)}
+.two li .ref{font-family:var(--caps);font-size:.95rem;margin-right:8px}
+
+.grp{padding:12px 0;border-top:1px solid var(--rule)}
+.grp:last-of-type{border-bottom:1px solid var(--rule)}
+.grp h3{font-size:1rem;color:var(--rubric);margin-bottom:4px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.chips .ref{font-family:var(--caps);font-size:.95rem;text-decoration:none;border:1px solid var(--rule);padding:7px 12px;border-radius:2px}
+
+.par{display:grid;grid-template-columns:1fr 1fr;margin:16px 0 0;border-top:3px double var(--rule)}
+.par > div{padding:10px 8px;border-bottom:1px solid var(--rule);font-size:1.08rem;line-height:1.4}
+.par > div:nth-child(even){border-left:1px solid var(--rule)}
+.par .h{font-family:var(--caps);font-size:.92rem;color:var(--rubric)}
+.par .h small{display:block;color:var(--muted);font-size:.78rem}
+.par .ref{font-family:var(--caps);font-size:.9rem;display:block}
+.par .same{font-style:italic}
+.par .add{color:var(--muted)}
+
+.toc{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:1fr;gap:0}
+@media (min-width:640px){.toc{grid-template-columns:1fr 1fr;column-gap:24px}}
+.toc button{display:grid;grid-template-columns:38px 1fr;align-items:baseline;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--rule);padding:9px 2px;cursor:pointer;line-height:1.35}
+.toc b{font-family:var(--caps);color:var(--rubric);font-weight:700}
+.toc button:hover span{text-decoration:underline;text-decoration-color:var(--gold)}
+
+.rub{list-style:none;margin:16px 0;padding:0}
+.rub li{padding:6px 0 6px 26px;position:relative}
+.rub li::before{content:"¶";position:absolute;left:0;color:var(--rubric);font-weight:600}
+
+.note{font-size:1rem;color:var(--muted)}
+
+.cover .page{min-height:100%;display:flex;flex-direction:column;justify-content:center}
+.cover h1{display:flex;align-items:flex-end;gap:6px;flex-wrap:wrap}
+.cover .init{min-width:84px;height:84px;font-size:2.6rem}
+.cover .sub{font-size:1.25rem;color:var(--muted);margin:16px 0 0}
+.hint{font-size:1rem;color:var(--muted);margin-top:22px}
+
+.nav{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px 10px}
+.navbtn{min-width:44px;height:44px;border:1px solid var(--rule);background:var(--page);color:var(--gold);font-family:var(--caps);font-size:1.3rem;cursor:pointer;border-radius:2px}
+.navbtn:disabled{opacity:.35;cursor:default}
+.mid{display:flex;align-items:center;gap:14px}
+.tocbtn{height:40px;padding:0 14px;border:1px solid var(--rule);background:none;color:var(--gold);font-family:var(--caps);font-size:.9rem;cursor:pointer;border-radius:2px}
+.count{font-family:var(--caps);font-size:.85rem;color:var(--muted);min-width:58px;text-align:center}
+
+dialog{border:3px double var(--gold);background:var(--page);color:var(--ink);padding:22px 22px 18px;width:min(560px,calc(100% - 28px));max-height:min(80vh,640px);overflow:auto;border-radius:2px}
+dialog::backdrop{background:rgba(10,8,5,.68)}
+dialog h3{color:var(--gold);font-size:1.1rem;margin:0 0 12px}
+#vtext p{font-size:1.3rem;line-height:1.55;margin:0 0 10px}
+.close{margin-top:10px;font-family:var(--caps);font-size:.95rem;border:1px solid var(--rule);background:none;color:var(--gold);padding:8px 18px;min-height:44px;cursor:pointer}
+
+@media (min-width:760px){
+  body{font-size:21px}
+  .page{padding:64px 40px 56px}
+  .stage{margin:16px 16px 0}
+}
+@media (prefers-reduced-motion:reduce){.slide,.progress{transition:none}}
+</style>
+</head>
+<body>
+<div class="app">
+  <main class="stage" id="stage">
+    <div class="progress" id="progress"></div>
+    <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"></button>
+
+    <!-- Cover -->
+    <section class="slide cover" tabindex="-1" aria-label="Cover">
+      <div class="page">
+        <h1 aria-label="That Ye Might Believe"><span class="init" aria-hidden="true">T</span><span aria-hidden="true">hat Ye Might Believe</span></h1>
+        <p class="sub">The Father gave His Son, who died, was buried and rose again. Whosoever believeth on Him hath everlasting life. Traced chapter by chapter through the figures, dark sayings and dual phrasings of the Gospel of John.</p>
+        <blockquote class="v big" data-v="John 3:16"></blockquote>
+        <p class="hint">Swipe or use the arrows to move through the study. Tap any gold reference to read the verse. The Chapters button opens the contents.</p>
+      </div>
+    </section>
+
+    <!-- Gospel in one verse -->
+    <section class="slide" tabindex="-1" aria-label="The gospel in one verse">
+      <div class="page">
+        <h2 class="solo">The gospel in one verse</h2>
+        <p class="lede">Before we follow the figures, we set down the whole message plainly. John 3:16 holds all of it.</p>
+        <dl class="lens">
+          <div><dt>“For God so loved the world”</dt><dd>Salvation begins with the Father’s love and grace, not with anything in us (<x-r>John 3:17</x-r>, <x-r>Ephesians 2:8</x-r>).</dd></div>
+          <div><dt>“that he gave his only begotten Son”</dt><dd>The Son died for our sins, was buried and rose again the third day (<x-r>1 Corinthians 15:3–4</x-r>, <x-r>John 10:17–18</x-r>, <x-r>John 19:30</x-r>).</dd></div>
+          <div><dt>“that whosoever believeth in him”</dt><dd>It is received by believing on Him, and it is offered to all (<x-r>John 3:15</x-r>, <x-r>John 12:32–33</x-r>).</dd></div>
+          <div><dt>“should not perish, but have everlasting life”</dt><dd>The believer is quickened, sealed by the Holy Spirit of promise and kept by the power of God (<x-r>Ephesians 2:5</x-r>, <x-r>Ephesians 1:13</x-r>, <x-r>1 Peter 1:5</x-r>, <x-r>John 10:28–29</x-r>).</dd></div>
+        </dl>
+        <p class="take">When John says “believe,” he means believing on this Son: God manifest in the flesh, given by the Father, crucified and risen. Every figure in the book restates this verse.</p>
+      </div>
+    </section>
+
+    <!-- How John teaches -->
+    <section class="slide" tabindex="-1" aria-label="How John teaches">
+      <div class="page">
+        <h2 class="solo">How John teaches</h2>
+        <p class="lede">Again and again in John, Jesus says something in a picture. Those who will not believe take the picture literally and are confused or offended. Then Jesus, or John himself, says it again plainly. The plain meaning is nearly always the same: believe on Him.</p>
+        <p>Every chapter in this study is laid out the same way:</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><p class="ex">A picture Jesus uses: a temple, a birth, water, bread, a door, sleep.</p></div>
+          <div class="pn lit"><h3>The literal hearer</h3><p class="ex">Someone takes the picture at face value and misses the point, or is offended by it.</p></div>
+          <div class="pn rev"><h3>The revealed meaning</h3><p class="ex">The plain truth, given by Jesus or explained by John. Most often it is a call to believe on Him.</p></div>
+        </div>
+        <p class="take">Jesus said it Himself: “These things have I spoken unto you in proverbs” (<x-r>John 16:25</x-r>).</p>
+      </div>
+    </section>
+
+    <!-- Why figures -->
+    <section class="slide" tabindex="-1" aria-label="Why speak in figures?">
+      <div class="page">
+        <h2 class="solo">Why speak in figures?</h2>
+        <p class="lede">The psalmist foretold that the Messiah would speak in parables and dark sayings, and the other gospels record Jesus explaining why.</p>
+        <blockquote class="v" data-v="Psalm 78:2"></blockquote>
+        <blockquote class="v" data-v="Matthew 13:13"></blockquote>
+        <p>A figure does not hide the truth from anyone who wants it. It shows who is listening in faith. The believer looks past the picture to the One speaking. The unbeliever argues with the picture and walks away. John records Jesus saying the same thing to those who opposed Him:</p>
+        <blockquote class="v" data-v="John 8:43"></blockquote>
+        <p class="take">The believer hears that Christ’s words “are spirit, and they are life” (<x-r>6:63</x-r>).</p>
+      </div>
+    </section>
+
+    <!-- I am overview -->
+    <section class="slide" tabindex="-1" aria-label="Seven figures and the bare I am">
+      <div class="page">
+        <h2 class="solo">Seven figures and the bare “I am”</h2>
+        <p class="lede">Two kinds of “I am” run through John. Seven times Jesus joins “I am” to a figure that describes who He is. Other times He says simply “I am,” the name God gave Moses at the burning bush (<x-r>Exodus 3:14</x-r>).</p>
+        <div class="two">
+          <div>
+            <h3>The seven figures</h3>
+            <ul>
+              <li><x-r>6:35</x-r>The bread of life</li>
+              <li><x-r>John 8:12</x-r>The light of the world</li>
+              <li><x-r>John 10:9</x-r>The door</li>
+              <li><x-r>John 10:11</x-r>The good shepherd</li>
+              <li><x-r>John 11:25</x-r>The resurrection, and the life</li>
+              <li><x-r>John 14:6</x-r>The way, the truth, and the life</li>
+              <li><x-r>John 15:1</x-r>The true vine</li>
+            </ul>
+          </div>
+          <div>
+            <h3>“I am <i>he</i>”</h3>
+            <ul>
+              <li><x-r>John 4:26</x-r>To the woman at the well</li>
+              <li><x-r>John 8:24</x-r>Believe, or die in your sins</li>
+              <li><x-r>John 8:28</x-r>Known when He is lifted up</li>
+              <li><x-r>John 8:58</x-r>Before Abraham was</li>
+              <li><x-r>John 13:19</x-r>That ye may believe</li>
+              <li><x-r>John 18:5–6</x-r>They fell to the ground</li>
+            </ul>
+          </div>
+        </div>
+        <p class="note" style="margin-top:16px">In the KJV, the italic <i>he</i> marks a word the translators supplied. Jesus said simply, “I am.”</p>
+      </div>
+    </section>
+
+    <!-- Contents -->
+    <section class="slide" id="toc" tabindex="-1" aria-label="Contents">
+      <div class="page">
+        <h2 class="solo">Chapter by chapter</h2>
+        <p class="lede">Tap a chapter to go straight to it. The Chapters button at the bottom brings you back here.</p>
+        <ul class="toc" id="tocList"></ul>
+      </div>
+    </section>
+
+    <!-- John 1a -->
+    <section class="slide" data-ch="1" data-ct="The Word Made Flesh" tabindex="-1" aria-label="John 1, The Word Made Flesh">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">1</span><div><span class="jn">John 1</span><h2>The Word Made Flesh</h2></div></div>
+        <p class="lede">John begins by telling us exactly who Jesus is, before a single miracle is recorded.</p>
+        <blockquote class="v big" data-v="John 1:1"></blockquote>
+        <blockquote class="v" data-v="John 1:14"></blockquote>
+        <p>The Word was with God, and the Word was God. That same Word was made flesh and lived among men. The Son the Father gave is no lesser being. He is God, come in the flesh. Everything else in John rests on this.</p>
+        <p class="take">No man hath seen God at any time. The only begotten Son has declared Him (<x-r>John 1:18</x-r>).</p>
+      </div>
+    </section>
+
+    <!-- John 1b -->
+    <section class="slide" data-ch="1" tabindex="-1" aria-label="John 1, Received Him, Believed on Him">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">1</span><div><span class="jn">John 1</span><h2>Received Him, Believed on Him</h2></div></div>
+        <p class="lede">In the same chapter John gives us the first figure, the first rejection and the first restatement.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 1:4–5"></blockquote><p class="ex">John pictures Jesus as light shining into a dark world.</p></div>
+          <div class="pn lit"><h3>The world’s response</h3><blockquote class="v" data-v="John 1:10–11"></blockquote><p class="ex">The world He made did not know Him, and His own people did not receive Him.</p></div>
+          <div class="pn rev"><h3>The revealed meaning</h3><blockquote class="v" data-v="John 1:12–13"></blockquote><p class="ex">Then John says it plainly. “Received him” is restated as “believe on his name.” Those who believe are born of God, not by any human effort.</p></div>
+        </div>
+        <p class="take">This is the pattern for the whole book: the figure, the response, and the plain meaning.</p>
+      </div>
+    </section>
+
+    <!-- John 2 -->
+    <section class="slide" data-ch="2" data-ct="Destroy This Temple" tabindex="-1" aria-label="John 2, Destroy This Temple">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">2</span><div><span class="jn">John 2</span><h2>Destroy This Temple</h2></div></div>
+        <p class="lede">After Jesus drives the money changers out of the temple, the Jews demand a sign of His authority. He answers with a figure.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 2:19"></blockquote><p class="ex">Jesus speaks of a temple destroyed and raised up in three days.</p></div>
+          <div class="pn lit"><h3>The literal hearer</h3><blockquote class="v" data-v="John 2:20"></blockquote><p class="ex">His hearers think only of the stone building in front of them, which had taken forty-six years to build.</p></div>
+          <div class="pn rev"><h3>The revealed meaning</h3><blockquote class="v" data-v="John 2:21–22"></blockquote><p class="ex">John tells us plainly that He meant His own body. After the resurrection, the disciples remembered His words and believed.</p></div>
+        </div>
+        <p class="take">The very first figure in John points to His death and resurrection, the heart of the gospel.</p>
+      </div>
+    </section>
+
+    <!-- John 3a -->
+    <section class="slide" data-ch="3" data-ct="Ye Must Be Born Again" tabindex="-1" aria-label="John 3, Ye Must Be Born Again">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">3</span><div><span class="jn">John 3</span><h2>Ye Must Be Born Again</h2></div></div>
+        <p class="lede">Nicodemus, a ruler of the Jews, comes to Jesus by night. Jesus answers him with a figure about birth.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 3:3"></blockquote><p class="ex">To see the kingdom of God, a man must be born a second time.</p></div>
+          <div class="pn lit"><h3>The literal hearer</h3><blockquote class="v" data-v="John 3:4"></blockquote><p class="ex">Nicodemus can only think of physical birth, and asks how a grown man could enter his mother’s womb again.</p></div>
+          <div class="pn rev"><h3>The revealed meaning</h3><blockquote class="v" data-v="John 3:5–6"></blockquote><p class="ex">Jesus says it again two ways, in back-to-back verses. “Born of water” is restated as “born of the flesh”: our natural birth. “Born of the Spirit” is restated as “is spirit”: the second birth. Every person is born once of the flesh. He must be born again of the Spirit.</p></div>
+        </div>
+        <p class="take">Like the wind, the new birth cannot be seen, but its effect is real (<x-r>John 3:7–8</x-r>).</p>
+      </div>
+    </section>
+
+    <!-- John 3b -->
+    <section class="slide" data-ch="3" tabindex="-1" aria-label="John 3, As Moses Lifted Up the Serpent">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">3</span><div><span class="jn">John 3</span><h2>As Moses Lifted Up the Serpent</h2></div></div>
+        <p class="lede">To explain how a man is born again, Jesus reaches back to a story Nicodemus knew well.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="Numbers 21:8–9"></blockquote><p class="ex">When fiery serpents bit Israel in the wilderness, God had Moses set a brass serpent on a pole. Every bitten man who looked at it lived.</p></div>
+          <div class="pn fig"><h3>The figure applied</h3><blockquote class="v" data-v="John 3:14"></blockquote><p class="ex">Jesus says He must be lifted up the same way, on the cross.</p></div>
+          <div class="pn rev"><h3>The revealed meaning</h3><blockquote class="v" data-v="John 3:15"></blockquote><p class="ex">Looking at the serpent becomes believing on the Son. The bitten man did nothing but look. The sinner does nothing but believe.</p></div>
+        </div>
+        <p class="take">“Look and live” in the wilderness becomes “believe and live” at the cross.</p>
+      </div>
+    </section>
+
+    <!-- John 3c -->
+    <section class="slide" data-ch="3" tabindex="-1" aria-label="John 3, Said, Then Said Again">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">3</span><div><span class="jn">John 3</span><h2>Said, Then Said Again</h2></div></div>
+        <p class="lede">Verse 16 repeats verse 15 almost word for word, then opens it wider to show where the gift came from.</p>
+        <div class="par" role="table" aria-label="John 3:15 compared with John 3:16">
+          <div class="h" role="columnheader"><x-r>John 3:15</x-r><small>The serpent explained</small></div>
+          <div class="h" role="columnheader"><x-r>John 3:16</x-r><small>The gospel stated</small></div>
+          <div role="cell" class="add">(as the serpent was lifted up, 3:14)</div>
+          <div role="cell">For God so loved the world, that he gave his only begotten Son,</div>
+          <div role="cell" class="same">That whosoever <span class="bl">believeth</span> in him</div>
+          <div role="cell" class="same">that whosoever <span class="bl">believeth</span> in him</div>
+          <div role="cell" class="same">should not perish,</div>
+          <div role="cell" class="same">should not perish,</div>
+          <div role="cell">but have eternal life.</div>
+          <div role="cell">but have everlasting life.</div>
+        </div>
+        <p style="margin-top:18px">“Eternal life” and “everlasting life” are the same gift. Verse 15 tells us what the serpent pictured. Verse 16 tells us why the Son was lifted up: the Father so loved the world that He gave Him.</p>
+        <blockquote class="v" data-v="John 3:18"></blockquote>
+        <p class="take">The line is drawn by one thing only: believing, or not believing, on the Son.</p>
+      </div>
+    </section>
+
+    <!-- John 4a -->
+    <section class="slide" data-ch="4" data-ct="Living Water" tabindex="-1" aria-label="John 4, Living Water">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">4</span><div><span class="jn">John 4</span><h2>Living Water</h2></div></div>
+        <p class="lede">At Jacob’s well, Jesus asks a Samaritan woman for a drink, then offers her water of a different kind.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 4:10"></blockquote><p class="ex">Jesus speaks of living water that only He can give.</p></div>
+          <div class="pn lit"><h3>The literal hearer</h3><blockquote class="v" data-v="John 4:11–12"></blockquote><p class="ex">She thinks of the well itself. He has no bucket, and the well is deep. Is He greater than Jacob, who dug it?</p></div>
+          <div class="pn rev"><h3>The revealed meaning</h3><blockquote class="v" data-v="John 4:13–14"></blockquote><p class="ex">Jesus contrasts the two waters. Well water leaves you thirsty again. The water He gives satisfies once and for ever, springing up into everlasting life.</p></div>
+        </div>
+        <p class="take">Even then she asks for it so she won’t have to come back and draw (<x-r>John 4:15</x-r>). John later explains the living water as the Spirit, received by those who believe (<x-r>John 7:39</x-r>).</p>
+      </div>
+    </section>
+
+    <!-- John 4b -->
+    <section class="slide" data-ch="4" tabindex="-1" aria-label="John 4, Meat to Eat">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">4</span><div><span class="jn">John 4</span><h2>Meat to Eat That Ye Know Not Of</h2></div></div>
+        <p class="lede">The disciples come back from town with food and urge Jesus to eat.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 4:32"></blockquote><p class="ex">Jesus says He has food they do not know about.</p></div>
+          <div class="pn lit"><h3>The literal hearer</h3><blockquote class="v" data-v="John 4:33"></blockquote><p class="ex">His own disciples wonder who brought Him something to eat.</p></div>
+          <div class="pn rev"><h3>The revealed meaning</h3><blockquote class="v" data-v="John 4:34"></blockquote><p class="ex">His food is doing the will of the Father who sent Him and finishing the work He was given. That work is finished at the cross (<x-r>John 19:30</x-r>).</p></div>
+        </div>
+        <p class="take">Even His disciples stumble at a figure until He explains it. This prepares us for John 6, where He Himself is the bread.</p>
+      </div>
+    </section>
+
+    <!-- John 4c -->
+    <section class="slide" data-ch="4" tabindex="-1" aria-label="John 4, I That Speak unto Thee Am He">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">4</span><div><span class="jn">John 4</span><h2>I That Speak unto Thee Am He</h2></div></div>
+        <p class="lede">The woman speaks of the coming Messiah, and Jesus answers her in plain words.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>Her hope</h3><blockquote class="v" data-v="John 4:25"></blockquote><p class="ex">She knows the Christ is coming and will tell them all things.</p></div>
+          <div class="pn rev"><h3>The revelation</h3><blockquote class="v" data-v="John 4:26"></blockquote><p class="ex">This is the first time in John that Jesus says “I am.” The italic <i>he</i> was supplied by the translators.</p></div>
+          <div class="pn rev"><h3>The believers</h3><blockquote class="v" data-v="John 4:41–42"></blockquote><p class="ex">The Samaritans believe because of His own word and confess Him as the Saviour of the world.</p></div>
+        </div>
+        <p class="take">She came for water from a well and went home believing on the Christ.</p>
+      </div>
+    </section>
+
+    <!-- John 5 -->
+    <section class="slide" data-ch="5" data-ct="Equal with God" tabindex="-1" aria-label="John 5, Equal with God">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">5</span><div><span class="jn">John 5</span><h2>Equal with God</h2></div></div>
+        <p class="lede">Jesus heals a lame man on the sabbath, and the Jews seek to kill Him. His answer shows what kind of claim He was making.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>His words</h3><blockquote class="v" data-v="John 5:17"></blockquote><p class="ex">Jesus calls God “my Father” and places His own work alongside the Father’s.</p></div>
+          <div class="pn lit"><h3>What they understood</h3><blockquote class="v" data-v="John 5:18"></blockquote><p class="ex">The unbelievers understood exactly what He meant. To call God His own Father in this way was to make Himself equal with God.</p></div>
+          <div class="pn rev"><h3>The promise</h3><blockquote class="v" data-v="John 5:24"></blockquote><p class="ex">Then the plain promise: hear and believe, and you have everlasting life now. You will not come into condemnation, because you have already passed from death unto life.</p></div>
+        </div>
+        <p class="take">Unbelief did not misunderstand His claim to be God. It rejected it.</p>
+      </div>
+    </section>
+
+    <!-- John 6a -->
+    <section class="slide" data-ch="6" data-ct="I Am the Bread of Life" tabindex="-1" aria-label="John 6, I Am the Bread of Life">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">6</span><div><span class="jn">John 6</span><h2>I Am the Bread of Life</h2></div></div>
+        <p class="lede">The day after He fed the five thousand, the crowd comes looking for more bread (<x-r>6:26</x-r>). Jesus offers them Himself.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 6:35"></blockquote><p class="ex">He calls Himself the bread of life and explains it in the same breath: coming to Him is eating, and believing on Him is drinking. One meal, and never hunger again.</p></div>
+          <div class="pn lit"><h3>The literal hearer</h3><blockquote class="v" data-v="John 6:52"></blockquote><p class="ex">When He says the bread is His flesh, given for the life of the world (<x-r>6:51</x-r>), the Jews argue about how a man could give his flesh to eat. Many disciples call it a hard saying (<x-r>6:60</x-r>).</p></div>
+          <div class="pn rev"><h3>The revealed meaning</h3><blockquote class="v" data-v="John 6:63"></blockquote><p class="ex">Jesus gives the key Himself. The flesh profits nothing. His words are spirit and life, received by believing them.</p></div>
+        </div>
+        <p class="take">Peter understood: “thou hast the words of eternal life” (<x-r>6:68–69</x-r>).</p>
+      </div>
+    </section>
+
+    <!-- John 6b -->
+    <section class="slide" data-ch="6" tabindex="-1" aria-label="John 6, Eating Is Believing">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">6</span><div><span class="jn">John 6</span><h2>Eating Is Believing</h2></div></div>
+        <p class="lede">Set verse 40 beside verse 54. Jesus states the same promise twice, once plainly and once in the figure.</p>
+        <div class="par" role="table" aria-label="John 6:40 compared with John 6:54">
+          <div class="h" role="columnheader"><x-r>6:40</x-r><small>Plain words</small></div>
+          <div class="h" role="columnheader"><x-r>6:54</x-r><small>The figure</small></div>
+          <div role="cell">every one which seeth the Son, and <span class="bl">believeth</span> on him,</div>
+          <div role="cell">Whoso eateth my flesh, and drinketh my blood,</div>
+          <div role="cell">may have everlasting life:</div>
+          <div role="cell">hath eternal life;</div>
+          <div role="cell" class="same">and I will raise him up at the last day.</div>
+          <div role="cell" class="same">and I will raise him up at the last day.</div>
+        </div>
+        <p style="margin-top:18px">Same promise, same result. To eat His flesh and drink His blood is to believe on the Son. And the one who comes is kept:</p>
+        <blockquote class="v" data-v="John 6:37"></blockquote>
+        <blockquote class="v" data-v="John 6:39"></blockquote>
+        <p class="take">None who come are cast out, and of all the Father has given Him, He will lose nothing.</p>
+      </div>
+    </section>
+    <!-- John 7a -->
+    <section class="slide" data-ch="7" data-ct="Whither Will He Go?" tabindex="-1" aria-label="John 7, Whither Will He Go?">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">7</span><div><span class="jn">John 7</span><h2>Whither Will He Go?</h2></div></div>
+        <p class="lede">At the feast of tabernacles, the rulers send officers to take Jesus, and He speaks of going away.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 7:33–34"></blockquote><p class="ex">He will soon go to the One who sent Him, where they cannot follow.</p></div>
+          <div class="pn lit"><h3>The literal hearer</h3><blockquote class="v" data-v="John 7:35–36"></blockquote><p class="ex">The Jews think of a journey on the map, perhaps to teach the Jews scattered among the Gentiles.</p></div>
+          <div class="pn rev"><h3>The revealed meaning</h3><blockquote class="v" data-v="John 16:28"></blockquote><p class="ex">Later He tells His disciples plainly: He came from the Father, and He is returning to the Father.</p></div>
+        </div>
+        <p class="take">They thought of a trip abroad. He spoke of going back to heaven, by way of the cross and the empty tomb.</p>
+      </div>
+    </section>
+
+    <!-- John 7b -->
+    <section class="slide" data-ch="7" tabindex="-1" aria-label="John 7, Rivers of Living Water">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">7</span><div><span class="jn">John 7</span><h2>Rivers of Living Water</h2></div></div>
+        <p class="lede">On the last and greatest day of the feast, Jesus stands and cries out to the crowd.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 7:37–38"></blockquote><p class="ex">He offers a drink to anyone who thirsts, and promises rivers flowing out of the one who believes.</p></div>
+          <div class="pn rev"><h3>John’s explanation</h3><blockquote class="v" data-v="John 7:39"></blockquote><p class="ex">John stops to tell us what it means. The living water is the Holy Spirit, whom believers would receive once Jesus was glorified.</p></div>
+        </div>
+        <p class="take">Coming and drinking is believing, and every believer receives the Spirit. This is the same water He offered the woman at the well.</p>
+      </div>
+    </section>
+
+    <!-- John 8a -->
+    <section class="slide" data-ch="8" data-ct="Believe That I Am He" tabindex="-1" aria-label="John 8, Believe That I Am He">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">8</span><div><span class="jn">John 8</span><h2>Believe That I Am He</h2></div></div>
+        <p class="lede">Jesus has just declared, “I am the light of the world” (<x-r>John 8:12</x-r>). Again He speaks of going where they cannot follow.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 8:21"></blockquote><p class="ex">He is going away, and they will die in their sins without Him.</p></div>
+          <div class="pn lit"><h3>The literal hearer</h3><blockquote class="v" data-v="John 8:22"></blockquote><p class="ex">The Jews wonder if He means to kill Himself.</p></div>
+          <div class="pn rev"><h3>The revealed meaning</h3><blockquote class="v" data-v="John 8:23–24"></blockquote><p class="ex">He explains: they are from beneath, and He is from above. The only way out of their sins is to believe that He is the I AM.</p></div>
+        </div>
+        <p class="take">Here believing on Him and who He is are joined in a single sentence.</p>
+      </div>
+    </section>
+
+    <!-- John 8b -->
+    <section class="slide" data-ch="8" tabindex="-1" aria-label="John 8, The Truth Shall Make You Free">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">8</span><div><span class="jn">John 8</span><h2>The Truth Shall Make You Free</h2></div></div>
+        <p class="lede">Jesus speaks to Jews who had begun to believe His words.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 8:31–32"></blockquote><p class="ex">He speaks of being set free.</p></div>
+          <div class="pn lit"><h3>The literal hearer</h3><blockquote class="v" data-v="John 8:33"></blockquote><p class="ex">They protest that Abraham’s children have never been anyone’s slaves.</p></div>
+          <div class="pn rev"><h3>The revealed meaning</h3><blockquote class="v" data-v="John 8:34–36"></blockquote><p class="ex">The bondage is sin, and only the Son can set a man free. A servant can be put out of the house. The Son abides for ever, and the freedom He gives is freedom indeed.</p></div>
+        </div>
+        <p class="take">They heard a question of ancestry. He spoke of the slavery of sin.</p>
+      </div>
+    </section>
+
+    <!-- John 8c -->
+    <section class="slide" data-ch="8" tabindex="-1" aria-label="John 8, Before Abraham Was, I Am">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">8</span><div><span class="jn">John 8</span><h2>Before Abraham Was, I Am</h2></div></div>
+        <p class="lede">The argument turns to Abraham, and Jesus makes His plainest claim yet.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 8:56"></blockquote><p class="ex">Abraham looked ahead in faith to the day of Christ and rejoiced.</p></div>
+          <div class="pn lit"><h3>The literal hearer</h3><blockquote class="v" data-v="John 8:57"></blockquote><p class="ex">They hear only a question of age. He is not even fifty, so how could He have seen Abraham?</p></div>
+          <div class="pn rev"><h3>The revealed meaning</h3><blockquote class="v" data-v="John 8:58"></blockquote><p class="ex">Jesus answers with the name God gave Moses at the burning bush: “I AM” (<x-r>Exodus 3:14</x-r>). He did not say “I was.” He has no beginning.</p></div>
+        </div>
+        <blockquote class="v" data-v="John 8:59"></blockquote>
+        <p class="take">The unbelievers understood the claim to be God, and reached for stones.</p>
+      </div>
+    </section>
+
+    <!-- John 9a -->
+    <section class="slide" data-ch="9" data-ct="Are We Blind Also?" tabindex="-1" aria-label="John 9, Are We Blind Also?">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">9</span><div><span class="jn">John 9</span><h2>Are We Blind Also?</h2></div></div>
+        <p class="lede">Jesus says, “I am the light of the world” (<x-r>John 9:5</x-r>), and gives sight to a man born blind. The Pharisees question the man and cast him out.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 9:39"></blockquote><p class="ex">Jesus uses sight and blindness as a picture of who receives Him.</p></div>
+          <div class="pn lit"><h3>The literal hearer</h3><blockquote class="v" data-v="John 9:40"></blockquote><p class="ex">The Pharisees take it as an insult to their eyesight.</p></div>
+          <div class="pn rev"><h3>The revealed meaning</h3><blockquote class="v" data-v="John 9:41"></blockquote><p class="ex">Their sin remains, not because they cannot see, but because they claim to see while they reject the Light standing in front of them.</p></div>
+        </div>
+        <p class="take">The man born blind received his sight. The men who said “We see” remained in darkness.</p>
+      </div>
+    </section>
+
+    <!-- John 9b -->
+    <section class="slide" data-ch="9" tabindex="-1" aria-label="John 9, Lord, I Believe">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">9</span><div><span class="jn">John 9</span><h2>Lord, I Believe</h2></div></div>
+        <p class="lede">After he is cast out, Jesus finds the healed man and asks him one question.</p>
+        <blockquote class="v" data-v="John 9:35–38"></blockquote>
+        <p>He believed and worshipped Him, and Jesus accepted it. Worship belongs to God alone. Then compare how Jesus described the light in John 8 with how He said it again in John 12:</p>
+        <div class="par" role="table" aria-label="John 8:12 compared with John 12:46">
+          <div class="h" role="columnheader"><x-r>John 8:12</x-r><small>The figure</small></div>
+          <div class="h" role="columnheader"><x-r>John 12:46</x-r><small>Said again</small></div>
+          <div role="cell">he that followeth me</div>
+          <div role="cell">whosoever <span class="bl">believeth</span> on me</div>
+          <div role="cell" class="same">shall not walk in darkness</div>
+          <div role="cell" class="same">should not abide in darkness</div>
+        </div>
+        <p class="take" style="margin-top:22px">Following the light is believing on Him.</p>
+      </div>
+    </section>
+
+    <!-- John 10a -->
+    <section class="slide" data-ch="10" data-ct="I Am the Door" tabindex="-1" aria-label="John 10, I Am the Door">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">10</span><div><span class="jn">John 10</span><h2>I Am the Door</h2></div></div>
+        <p class="lede">Jesus speaks of a sheepfold, its door, its shepherd and the thieves who climb in another way.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 10:1–3"></blockquote><p class="ex">A picture every shepherd in Israel would know: one rightful way into the fold.</p></div>
+          <div class="pn lit"><h3>The hearers</h3><blockquote class="v" data-v="John 10:6"></blockquote><p class="ex">John calls it a parable and tells us plainly that they did not understand it.</p></div>
+          <div class="pn rev"><h3>The revealed meaning</h3><blockquote class="v" data-v="John 10:7"></blockquote><blockquote class="v" data-v="John 10:9"></blockquote><p class="ex">So Jesus says it again. He is the door. Whoever enters by Him is saved.</p></div>
+        </div>
+        <p class="take">“Then said Jesus unto them again” is the dual pattern in John’s own words.</p>
+      </div>
+    </section>
+
+    <!-- John 10b -->
+    <section class="slide" data-ch="10" tabindex="-1" aria-label="John 10, I Am the Good Shepherd">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">10</span><div><span class="jn">John 10</span><h2>I Am the Good Shepherd</h2></div></div>
+        <p class="lede">The figure continues, and this time it points straight to the cross.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 10:11"></blockquote><p class="ex">A good shepherd gives his own life for his sheep.</p></div>
+          <div class="pn rev"><h3>His death and resurrection</h3><blockquote class="v" data-v="John 10:17–18"></blockquote><p class="ex">No one takes His life from Him. He lays it down Himself, and He takes it again.</p></div>
+          <div class="pn rev"><h3>The promise</h3><blockquote class="v" data-v="John 10:27–29"></blockquote><p class="ex">His sheep hear, follow and receive eternal life. They shall never perish, held in the Son’s hand and in the Father’s hand.</p></div>
+        </div>
+        <p class="take">The security of the sheep rests on the Shepherd who died and rose again.</p>
+      </div>
+    </section>
+
+    <!-- John 10c -->
+    <section class="slide" data-ch="10" tabindex="-1" aria-label="John 10, I and My Father Are One">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">10</span><div><span class="jn">John 10</span><h2>I and My Father Are One</h2></div></div>
+        <p class="lede">At the feast of dedication, the Jews press Him to tell them plainly whether He is the Christ.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>His words</h3><blockquote class="v" data-v="John 10:30"></blockquote><p class="ex">He has just said that no man can pluck the sheep out of the Father’s hand. Now He says He and the Father are one.</p></div>
+          <div class="pn lit"><h3>What they understood</h3><blockquote class="v" data-v="John 10:31–33"></blockquote><p class="ex">They state His claim in their own words: “thou, being a man, makest thyself God.”</p></div>
+        </div>
+        <p class="take">For the second time they took up stones. Even His enemies said it plainly. They understood He claimed to be God. They would not believe it.</p>
+      </div>
+    </section>
+
+    <!-- John 11a -->
+    <section class="slide" data-ch="11" data-ct="Lazarus Sleepeth" tabindex="-1" aria-label="John 11, Lazarus Sleepeth">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">11</span><div><span class="jn">John 11</span><h2>Lazarus Sleepeth</h2></div></div>
+        <p class="lede">Word comes that Lazarus of Bethany is sick. Jesus waits two days, then tells His disciples they are going back.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 11:11"></blockquote><p class="ex">Jesus speaks of death as sleep.</p></div>
+          <div class="pn lit"><h3>The literal hearer</h3><blockquote class="v" data-v="John 11:12–13"></blockquote><p class="ex">The disciples think Lazarus is resting and will get better. John notes their mistake.</p></div>
+          <div class="pn rev"><h3>The revealed meaning</h3><blockquote class="v" data-v="John 11:14"></blockquote><p class="ex">So Jesus tells them plainly.</p></div>
+        </div>
+        <p class="take">For the believer, death is called sleep because the Lord will wake him.</p>
+      </div>
+    </section>
+
+    <!-- John 11b -->
+    <section class="slide" data-ch="11" tabindex="-1" aria-label="John 11, Believest Thou This?">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">11</span><div><span class="jn">John 11</span><h2>Believest Thou This?</h2></div></div>
+        <p class="lede">Martha meets Jesus outside Bethany. Her brother has been in the grave four days.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 11:25–26"></blockquote><p class="ex">Two clauses, one promise. The believer who dies will live again. The believer who lives will never die. Then He asks her directly.</p></div>
+          <div class="pn rev"><h3>The believer’s answer</h3><blockquote class="v" data-v="John 11:27"></blockquote><p class="ex">Martha confesses who He is before Lazarus walks out of the tomb. She believed first and saw the glory of God afterward (<x-r>John 11:40</x-r>).</p></div>
+          <div class="pn rev"><h3>The proof</h3><blockquote class="v" data-v="John 11:43–44"></blockquote><p class="ex">The voice of the Son of God calls a dead man out of the grave.</p></div>
+        </div>
+        <p class="take">Many believed on Him (<x-r>John 11:45</x-r>). From that day the rulers plotted His death (<x-r>John 11:53</x-r>). The same question comes to every hearer: believest thou this?</p>
+      </div>
+    </section>
+
+    <!-- John 12 -->
+    <section class="slide" data-ch="12" data-ct="If I Be Lifted Up" tabindex="-1" aria-label="John 12, If I Be Lifted Up">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">12</span><div><span class="jn">John 12</span><h2>If I Be Lifted Up</h2></div></div>
+        <p class="lede">In His last public teaching, Jesus speaks once more of being lifted up.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 12:32"></blockquote><p class="ex">Lifted up from the earth, He will draw all men to Himself.</p></div>
+          <div class="pn rev"><h3>John’s explanation</h3><blockquote class="v" data-v="John 12:33"></blockquote><p class="ex">John tells us at once what “lifted up” meant: the kind of death He would die, raised up on a cross.</p></div>
+          <div class="pn lit"><h3>The literal hearer</h3><blockquote class="v" data-v="John 12:34"></blockquote><p class="ex">The people cannot fit a Christ who dies into their belief that the Christ abides for ever. They understood He meant death, and stumbled at it.</p></div>
+        </div>
+        <p class="take">This is the third time Jesus speaks of being lifted up (<x-r>John 3:14</x-r>, <x-r>John 8:28</x-r>). Each time it means the cross. By His death He draws all men, and whosoever believeth on Him lives.</p>
+      </div>
+    </section>
+
+    <!-- John 13 -->
+    <section class="slide" data-ch="13" data-ct="If I Wash Thee Not" tabindex="-1" aria-label="John 13, If I Wash Thee Not">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">13</span><div><span class="jn">John 13</span><h2>If I Wash Thee Not</h2></div></div>
+        <p class="lede">At the last supper Jesus rises, takes a towel and begins washing His disciples’ feet.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 13:8"></blockquote><p class="ex">Peter refuses, and Jesus answers that without His washing Peter has no part with Him.</p></div>
+          <div class="pn lit"><h3>The literal hearer</h3><blockquote class="v" data-v="John 13:9"></blockquote><p class="ex">Peter swings the other way and asks for a full bath.</p></div>
+          <div class="pn rev"><h3>The revealed meaning</h3><blockquote class="v" data-v="John 13:10–11"></blockquote><p class="ex">One who has been washed is clean every whit and only needs his feet washed. The washing that makes a man clean happens once. Judas was the exception, because he never believed.</p></div>
+        </div>
+        <p class="take">Later that night: “ye may believe that I am <i>he</i>” (<x-r>John 13:19</x-r>).</p>
+      </div>
+    </section>
+
+    <!-- John 14a -->
+    <section class="slide" data-ch="14" data-ct="I Am the Way" tabindex="-1" aria-label="John 14, I Am the Way">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">14</span><div><span class="jn">John 14</span><h2>I Am the Way</h2></div></div>
+        <p class="lede">Jesus comforts His troubled disciples: “ye believe in God, believe also in me” (<x-r>John 14:1</x-r>). He is going to prepare a place for them (<x-r>John 14:2–3</x-r>).</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 14:4"></blockquote><p class="ex">He tells them they know where He is going and the way there.</p></div>
+          <div class="pn lit"><h3>The literal hearer</h3><blockquote class="v" data-v="John 14:5"></blockquote><p class="ex">Thomas thinks of a road and a destination he cannot see.</p></div>
+          <div class="pn rev"><h3>The revealed meaning</h3><blockquote class="v" data-v="John 14:6"></blockquote><p class="ex">The way is not a road. It is a Person. No one comes to the Father except through Him.</p></div>
+        </div>
+        <p class="take">Notice the dual phrasing in verse 1: believe in God, believe also in Me.</p>
+      </div>
+    </section>
+
+    <!-- John 14b -->
+    <section class="slide" data-ch="14" tabindex="-1" aria-label="John 14, Shew Us the Father">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">14</span><div><span class="jn">John 14</span><h2>Shew Us the Father</h2></div></div>
+        <p class="lede">Philip asks for the one thing he thinks would settle everything.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 14:7"></blockquote><p class="ex">To know Jesus is to know the Father. They have already seen Him.</p></div>
+          <div class="pn lit"><h3>The literal hearer</h3><blockquote class="v" data-v="John 14:8"></blockquote><p class="ex">Philip wants a visible sight of the Father.</p></div>
+          <div class="pn rev"><h3>The revealed meaning</h3><blockquote class="v" data-v="John 14:9"></blockquote><p class="ex">To see the Son is to see the Father. There are few plainer statements of His deity in all of scripture.</p></div>
+        </div>
+        <p class="take">And the promise to the believer: “because I live, ye shall live also” (<x-r>John 14:19</x-r>).</p>
+      </div>
+    </section>
+
+    <!-- John 15 -->
+    <section class="slide" data-ch="15" data-ct="I Am the True Vine" tabindex="-1" aria-label="John 15, I Am the True Vine">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">15</span><div><span class="jn">John 15</span><h2>I Am the True Vine</h2></div></div>
+        <p class="lede">The last of the seven figures, spoken to the eleven on the way to Gethsemane.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 15:1"></blockquote><p class="ex">Jesus is the vine, and the Father tends it.</p></div>
+          <div class="pn rev"><h3>The revealed meaning</h3><blockquote class="v" data-v="John 15:5"></blockquote><p class="ex">A branch lives and bears fruit only by being joined to the vine. Without Him we can do nothing.</p></div>
+        </div>
+        <p class="take">The theme of the vine is fruit. Read <x-r>John 15:6</x-r> in light of what John has already promised the believer: never cast out (<x-r>6:37</x-r>), never perish (<x-r>John 10:28</x-r>).</p>
+      </div>
+    </section>
+
+    <!-- John 16a -->
+    <section class="slide" data-ch="16" data-ct="A Little While" tabindex="-1" aria-label="John 16, A Little While">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">16</span><div><span class="jn">John 16</span><h2>A Little While</h2></div></div>
+        <p class="lede">Jesus prepares His disciples for His death and resurrection, and they cannot follow what He means.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>The figure</h3><blockquote class="v" data-v="John 16:16"></blockquote><p class="ex">Soon they will not see Him, and soon after they will see Him again.</p></div>
+          <div class="pn lit"><h3>The confused hearers</h3><blockquote class="v" data-v="John 16:17–18"></blockquote><p class="ex">Even the disciples ask one another what He can mean.</p></div>
+          <div class="pn rev"><h3>The revealed meaning</h3><blockquote class="v" data-v="John 16:20–22"></blockquote><p class="ex">His death would bring them sorrow, like a woman in labour. His resurrection would turn it to a joy no man could take away.</p></div>
+        </div>
+        <p class="take">“A little while” was three days: the cross, the grave and the risen Lord.</p>
+      </div>
+    </section>
+
+    <!-- John 16b -->
+    <section class="slide" data-ch="16" tabindex="-1" aria-label="John 16, Now Speakest Thou Plainly">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">16</span><div><span class="jn">John 16</span><h2>Now Speakest Thou Plainly</h2></div></div>
+        <p class="lede">Jesus names the way He has been teaching, and then speaks without a figure.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>In proverbs</h3><blockquote class="v" data-v="John 16:25"></blockquote><p class="ex">He says He has been speaking in proverbs, and promises to speak plainly.</p></div>
+          <div class="pn rev"><h3>Plainly</h3><blockquote class="v" data-v="John 16:28"></blockquote><p class="ex">No figure at all: He came from the Father and returns to the Father.</p></div>
+          <div class="pn rev"><h3>The believers</h3><blockquote class="v" data-v="John 16:29–30"></blockquote><p class="ex">The disciples recognize the plain speech and believe that He came forth from God.</p></div>
+        </div>
+        <p class="take">Jesus Himself called His sayings proverbs. Reading His figures as figures is following His own description of how He taught.</p>
+      </div>
+    </section>
+
+    <!-- John 17 -->
+    <section class="slide" data-ch="17" data-ct="Keep Through Thine Own Name" tabindex="-1" aria-label="John 17, Keep Through Thine Own Name">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">17</span><div><span class="jn">John 17</span><h2>Keep Through Thine Own Name</h2></div></div>
+        <p class="lede">On the night before the cross, Jesus prays to the Father for those the Father has given Him.</p>
+        <div class="cmp">
+          <div class="pn rev"><h3>Life eternal</h3><blockquote class="v" data-v="John 17:3"></blockquote><p class="ex">Eternal life is knowing the only true God and the Son He sent.</p></div>
+          <div class="pn rev"><h3>Kept</h3><blockquote class="v" data-v="John 17:11–12"></blockquote><p class="ex">He asks the Father to keep them. None of them is lost except Judas, the son of perdition, who never believed.</p></div>
+          <div class="pn rev"><h3>With Him</h3><blockquote class="v" data-v="John 17:24"></blockquote><p class="ex">His will is that every one the Father gave Him be with Him where He is.</p></div>
+        </div>
+        <p class="take">The Son asked the Father to keep them, and the Father always hears the Son.</p>
+      </div>
+    </section>
+
+    <!-- John 18 -->
+    <section class="slide" data-ch="18" data-ct="I Am He" tabindex="-1" aria-label="John 18, I Am He">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">18</span><div><span class="jn">John 18</span><h2>I Am He</h2></div></div>
+        <p class="lede">Judas leads a band of soldiers and officers into the garden with lanterns, torches and weapons.</p>
+        <blockquote class="v" data-v="John 18:4–6"></blockquote>
+        <p>At the words “I am,” armed men go backward and fall to the ground. Then He gives Himself up willingly, and asks only that His disciples be let go:</p>
+        <blockquote class="v" data-v="John 18:8"></blockquote>
+        <p class="take">He was not taken by force. He laid down His life, just as He said (<x-r>John 10:18</x-r>).</p>
+      </div>
+    </section>
+
+    <!-- John 19 -->
+    <section class="slide" data-ch="19" data-ct="It Is Finished" tabindex="-1" aria-label="John 19, It Is Finished">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">19</span><div><span class="jn">John 19</span><h2>It Is Finished</h2></div></div>
+        <p class="lede">Every figure has pointed here: the temple destroyed, the serpent lifted up, the bread given, the shepherd laying down His life.</p>
+        <blockquote class="v big" data-v="John 19:30"></blockquote>
+        <p>The work the Father gave Him to do is complete (<x-r>John 4:34</x-r>, <x-r>John 17:4</x-r>). Nothing is left for the sinner to add. Three days later the temple of His body was raised, as He had said.</p>
+        <blockquote class="v" data-v="1 Corinthians 15:3–4"></blockquote>
+        <p class="take">Christ died for our sins, was buried and rose again. This is the gospel the believer believes.</p>
+      </div>
+    </section>
+
+    <!-- John 20 -->
+    <section class="slide" data-ch="20" data-ct="My Lord and My God" tabindex="-1" aria-label="John 20, My Lord and My God">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">20</span><div><span class="jn">John 20</span><h2>My Lord and My God</h2></div></div>
+        <p class="lede">Thomas was absent when the risen Lord first appeared to the disciples.</p>
+        <div class="cmp">
+          <div class="pn lit"><h3>The literal demand</h3><blockquote class="v" data-v="John 20:25"></blockquote><p class="ex">Thomas will believe only what he can see and touch.</p></div>
+          <div class="pn rev"><h3>The revelation</h3><blockquote class="v" data-v="John 20:27–28"></blockquote><p class="ex">Eight days later, Thomas confesses the risen Jesus as Lord and God, exactly what John declared in the first verse.</p></div>
+          <div class="pn rev"><h3>Said again, for us</h3><blockquote class="v" data-v="John 20:29"></blockquote><p class="ex">The last dual saying is for every reader who was not there: blessed are those who believe without seeing.</p></div>
+        </div>
+        <blockquote class="v" data-v="John 20:30–31"></blockquote>
+        <p class="take">John tells us why he wrote the whole book: that we might believe, and that believing we might have life.</p>
+      </div>
+    </section>
+
+    <!-- John 21 -->
+    <section class="slide" data-ch="21" data-ct="What Is That to Thee?" tabindex="-1" aria-label="John 21, What Is That to Thee?">
+      <div class="page">
+        <div class="chap"><span class="init" aria-hidden="true">21</span><div><span class="jn">John 21</span><h2>What Is That to Thee?</h2></div></div>
+        <p class="lede">By the sea of Tiberias, Peter asks the risen Lord what will happen to John.</p>
+        <div class="cmp">
+          <div class="pn fig"><h3>His words</h3><blockquote class="v" data-v="John 21:22"></blockquote><p class="ex">Jesus tells Peter that John’s future is not his concern. Peter is to follow.</p></div>
+          <div class="pn lit"><h3>The literal hearers</h3><blockquote class="v" data-v="John 21:23"></blockquote><p class="ex">The brethren turned His words into a rumor that John would never die. John corrects it by repeating exactly what Jesus said, not what they assumed.</p></div>
+        </div>
+        <p class="take">Even in the last chapter, John shows the difference between reading what the Lord said and reading into it.</p>
+      </div>
+    </section>
+
+    <!-- Believe and live -->
+    <section class="slide" tabindex="-1" aria-label="Believe, and live">
+      <div class="page">
+        <h2 class="solo">Believe, and live</h2>
+        <p class="lede">Looking back over the whole book, the only work John ever names is believing. He states the condition for life again and again, and never adds anything to it.</p>
+        <ul class="xr">
+          <li><x-r>6:28–29</x-r><span>“This is the work of God, that ye believe on him whom he hath sent.”</span></li>
+          <li><x-r>John 1:12</x-r><span>Sons of God by believing on His name.</span></li>
+          <li><x-r>John 3:16</x-r><span>Whosoever believeth should not perish.</span></li>
+          <li><x-r>John 5:24</x-r><span>Heareth and believeth, hath everlasting life, and is passed from death unto life.</span></li>
+          <li><x-r>6:47</x-r><span>He that believeth on me hath everlasting life.</span></li>
+          <li><x-r>John 11:25–26</x-r><span>He that believeth shall live and never die.</span></li>
+          <li><x-r>John 20:31</x-r><span>Believing, ye might have life through His name.</span></li>
+        </ul>
+        <p class="take">Condemnation in John rests on one thing: “because he hath not believed” (<x-r>John 3:18</x-r>).</p>
+      </div>
+    </section>
+
+    <!-- Kept for ever -->
+    <section class="slide" tabindex="-1" aria-label="Kept for ever">
+      <div class="page">
+        <h2 class="solo">Kept for ever</h2>
+        <p class="lede">The believer’s security is not a single proof text. John repeats it across the whole gospel in five kinds of promise.</p>
+        <div class="grp"><h3>Never</h3><span>never thirst, never hunger, never see death, never perish, never die</span>
+          <div class="chips"><x-r>John 4:14</x-r><x-r>6:35</x-r><x-r>John 8:51</x-r><x-r>John 10:28</x-r><x-r>John 11:26</x-r></div></div>
+        <div class="grp"><h3>Hath now</h3><span>everlasting life possessed today, condemnation already past</span>
+          <div class="chips"><x-r>John 3:36</x-r><x-r>John 5:24</x-r><x-r>6:47</x-r></div></div>
+        <div class="grp"><h3>Not lost</h3><span>not cast out, nothing lost, none plucked from His hand</span>
+          <div class="chips"><x-r>6:37</x-r><x-r>6:39</x-r><x-r>John 10:28–29</x-r><x-r>John 17:12</x-r></div></div>
+        <div class="grp"><h3>Washed, sealed and kept</h3><span>clean every whit, sealed by the Spirit, kept by the power of God</span>
+          <div class="chips"><x-r>John 13:10</x-r><x-r>John 17:11</x-r><x-r>Ephesians 1:13</x-r><x-r>1 Peter 1:5</x-r></div></div>
+        <div class="grp"><h3>Raised and received</h3><span>raised at the last day, received to Himself, with Him where He is</span>
+          <div class="chips"><x-r>6:40</x-r><x-r>John 14:2–3</x-r><x-r>John 14:19</x-r><x-r>John 17:24</x-r></div></div>
+        <p class="take">Life that could be lost would not be everlasting. The believer is kept by the Father’s will, the Son’s hand and the Son’s resurrection.</p>
+      </div>
+    </section>
+
+    <!-- Literalist vs believer -->
+    <section class="slide" tabindex="-1" aria-label="The literalist and the believer">
+      <div class="page">
+        <h2 class="solo">The literalist and the believer</h2>
+        <p class="lede">At every turn the literal hearer is shown to be wrong, and the believer looks past the figure to the One speaking.</p>
+        <div class="par" role="table" aria-label="Literal hearers compared with believers">
+          <div class="h" role="columnheader">The literalist</div>
+          <div class="h" role="columnheader">The believer</div>
+          <div role="cell"><x-r>John 2:20</x-r>“Forty and six years”</div>
+          <div role="cell"><x-r>John 2:22</x-r>They believed His word</div>
+          <div role="cell"><x-r>John 3:4</x-r>“Born when he is old?”</div>
+          <div role="cell"><x-r>John 1:12–13</x-r>Born of God</div>
+          <div role="cell"><x-r>John 4:11</x-r>“The well is deep”</div>
+          <div role="cell"><x-r>John 4:42</x-r>“The Saviour of the world”</div>
+          <div role="cell"><x-r>6:52</x-r>“How can this man…?”</div>
+          <div role="cell"><x-r>6:68</x-r>“Words of eternal life”</div>
+          <div role="cell"><x-r>John 9:40</x-r>“Are we blind also?”</div>
+          <div role="cell"><x-r>John 9:38</x-r>“Lord, I believe”</div>
+          <div role="cell"><x-r>John 14:8</x-r>“Shew us the Father”</div>
+          <div role="cell"><x-r>John 16:30</x-r>“Thou camest forth from God”</div>
+          <div role="cell"><x-r>John 20:25</x-r>“I will not believe”</div>
+          <div role="cell"><x-r>John 20:28</x-r>“My Lord and my God”</div>
+        </div>
+        <p class="take">The literalist argues with the figure. The believer receives the word and understands.</p>
+      </div>
+    </section>
+
+    <!-- Close -->
+    <section class="slide" tabindex="-1" aria-label="The plain truth">
+      <div class="page">
+        <h2 class="solo">The plain truth</h2>
+        <ul class="rub">
+          <li>God so loved the world that He gave His only begotten Son.</li>
+          <li>The Son is God. The Word was God, and Thomas called Him “My Lord and my God.”</li>
+          <li>He died for our sins, was buried and rose again the third day.</li>
+          <li>Whosoever believeth in Him should not perish, but have everlasting life, by grace through faith with nothing added.</li>
+          <li>The believer is quickened and sealed by the Spirit and kept by the power of God.</li>
+          <li>He spoke in figures and dark sayings that sorted His hearers.</li>
+          <li>The literalist stumbled over the figure. The believer heard words that are spirit and life.</li>
+        </ul>
+        <blockquote class="v big" data-v="John 20:31"></blockquote>
+      </div>
+    </section>
+  </main>
+
+  <nav class="nav" aria-label="Study navigation">
+    <button class="navbtn" id="prev" type="button" aria-label="Previous slide">‹</button>
+    <div class="mid">
+      <button class="tocbtn" id="toToc" type="button">Chapters</button>
+      <span class="count" id="count" aria-live="polite"></span>
+    </div>
+    <button class="navbtn" id="next" type="button" aria-label="Next slide">›</button>
+  </nav>
+</div>
+
+<dialog id="verse" aria-labelledby="vref">
+  <h3 id="vref"></h3>
+  <div id="vtext"></div>
+  <button class="close" type="button" id="vclose">Close</button>
+</dialog>
+<script>
+const V = {
+"John 4:41":"And many more believed because of his own word;",
+"John 5:17":"But Jesus answered them, My Father worketh hitherto, and I work.",
+"John 5:18":"Therefore the Jews sought the more to kill him, because he not only had broken the sabbath, but said also that God was his Father, making himself equal with God.",
+"John 7:33":"Then said Jesus unto them, Yet a little while am I with you, and then I go unto him that sent me.",
+"John 7:34":"Ye shall seek me, and shall not find me: and where I am, thither ye cannot come.",
+"John 7:35":"Then said the Jews among themselves, Whither will he go, that we shall not find him? will he go unto the dispersed among the Gentiles, and teach the Gentiles?",
+"John 7:36":"What manner of saying is this that he said, Ye shall seek me, and shall not find me: and where I am, thither ye cannot come?",
+"John 8:23":"And he said unto them, Ye are from beneath; I am from above: ye are of this world; I am not of this world.",
+"John 8:56":"Your father Abraham rejoiced to see my day: and he saw it, and was glad.",
+"John 8:57":"Then said the Jews unto him, Thou art not yet fifty years old, and hast thou seen Abraham?",
+"John 10:1":"Verily, verily, I say unto you, He that entereth not by the door into the sheepfold, but climbeth up some other way, the same is a thief and a robber.",
+"John 10:2":"But he that entereth in by the door is the shepherd of the sheep.",
+"John 10:3":"To him the porter openeth; and the sheep hear his voice: and he calleth his own sheep by name, and leadeth them out.",
+"John 12:34":"The people answered him, We have heard out of the law that Christ abideth for ever: and how sayest thou, The Son of man must be lifted up? who is this Son of man?",
+"John 13:8":"Peter saith unto him, Thou shalt never wash my feet. Jesus answered him, If I wash thee not, thou hast no part with me.",
+"John 13:9":"Simon Peter saith unto him, Lord, not my feet only, but also my hands and my head.",
+"John 13:10":"Jesus saith to him, He that is washed needeth not save to wash his feet, but is clean every whit: and ye are clean, but not all.",
+"John 13:11":"For he knew who should betray him; therefore said he, Ye are not all clean.",
+"John 16:16":"A little while, and ye shall not see me: and again, a little while, and ye shall see me, because I go to the Father.",
+"John 16:17":"Then said some of his disciples among themselves, What is this that he saith unto us, A little while, and ye shall not see me: and again, a little while, and ye shall see me: and, Because I go to the Father?",
+"John 16:18":"They said therefore, What is this that he saith, A little while? we cannot tell what he saith.",
+"John 16:20":"Verily, verily, I say unto you, That ye shall weep and lament, but the world shall rejoice: and ye shall be sorrowful, but your sorrow shall be turned into joy.",
+"John 16:21":"A woman when she is in travail hath sorrow, because her hour is come: but as soon as she is delivered of the child, she remembereth no more the anguish, for joy that a man is born into the world.",
+"John 16:22":"And ye now therefore have sorrow: but I will see you again, and your heart shall rejoice, and your joy no man taketh from you.",
+"John 16:28":"I came forth from the Father, and am come into the world: again, I leave the world, and go to the Father.",
+"John 17:3":"And this is life eternal, that they might know thee the only true God, and Jesus Christ, whom thou hast sent.",
+"John 17:4":"I have glorified thee on the earth: I have finished the work which thou gavest me to do.",
+"John 17:11":"And now I am no more in the world, but these are in the world, and I come to thee. Holy Father, keep through thine own name those whom thou hast given me, that they may be one, as we are.",
+"John 21:22":"Jesus saith unto him, If I will that he tarry till I come, what is that to thee? follow thou me.",
+"John 21:23":"Then went this saying abroad among the brethren, that that disciple should not die: yet Jesus said not unto him, He shall not die; but, If I will that he tarry till I come, what is that to thee?",
+"Exodus 3:14":"And God said unto Moses, I AM THAT I AM: and he said, Thus shalt thou say unto the children of Israel, I AM hath sent me unto you.",
+"Numbers 21:8":"And the LORD said unto Moses, Make thee a fiery serpent, and set it upon a pole: and it shall come to pass, that every one that is bitten, when he looketh upon it, shall live.",
+"Numbers 21:9":"And Moses made a serpent of brass, and put it upon a pole, and it came to pass, that if a serpent had bitten any man, when he beheld the serpent of brass, he lived.",
+"Psalm 78:2":"I will open my mouth in a parable: I will utter dark sayings of old:",
+"Matthew 13:13":"Therefore speak I to them in parables: because they seeing see not; and hearing they hear not, neither do they understand.",
+"1 Corinthians 15:3":"For I delivered unto you first of all that which I also received, how that Christ died for our sins according to the scriptures;",
+"1 Corinthians 15:4":"And that he was buried, and that he rose again the third day according to the scriptures:",
+"Ephesians 1:13":"In whom ye also trusted, after that ye heard the word of truth, the gospel of your salvation: in whom also after that ye believed, ye were sealed with that holy Spirit of promise,",
+"Ephesians 2:5":"Even when we were dead in sins, hath quickened us together with Christ, (by grace ye are saved;)",
+"Ephesians 2:8":"For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:",
+"1 Peter 1:5":"Who are kept by the power of God through faith unto salvation ready to be revealed in the last time.",
+"John 1:1":"In the beginning was the Word, and the Word was with God, and the Word was God.",
+"John 1:2":"The same was in the beginning with God.",
+"John 1:3":"All things were made by him; and without him was not any thing made that was made.",
+"John 1:4":"In him was life; and the life was the light of men.",
+"John 1:5":"And the light shineth in darkness; and the darkness comprehended it not.",
+"John 1:6":"There was a man sent from God, whose name was John.",
+"John 1:7":"The same came for a witness, to bear witness of the Light, that all men through him might believe.",
+"John 1:8":"He was not that Light, but was sent to bear witness of that Light.",
+"John 1:9":"That was the true Light, which lighteth every man that cometh into the world.",
+"John 1:10":"He was in the world, and the world was made by him, and the world knew him not.",
+"John 1:11":"He came unto his own, and his own received him not.",
+"John 1:12":"But as many as received him, to them gave he power to become the sons of God, even to them that believe on his name:",
+"John 1:13":"Which were born, not of blood, nor of the will of the flesh, nor of the will of man, but of God.",
+"John 1:14":"And the Word was made flesh, and dwelt among us, (and we beheld his glory, the glory as of the only begotten of the Father,) full of grace and truth.",
+"John 1:15":"John bare witness of him, and cried, saying, This was he of whom I spake, He that cometh after me is preferred before me: for he was before me.",
+"John 1:16":"And of his fulness have all we received, and grace for grace.",
+"John 1:17":"For the law was given by Moses, but grace and truth came by Jesus Christ.",
+"John 1:18":"No man hath seen God at any time; the only begotten Son, which is in the bosom of the Father, he hath declared him.",
+"John 2:19":"Jesus answered and said unto them, Destroy this temple, and in three days I will raise it up.",
+"John 2:20":"Then said the Jews, Forty and six years was this temple in building, and wilt thou rear it up in three days?",
+"John 2:21":"But he spake of the temple of his body.",
+"John 2:22":"When therefore he was risen from the dead, his disciples remembered that he had said this unto them; and they believed the scripture, and the word which Jesus had said.",
+"John 3:1":"There was a man of the Pharisees, named Nicodemus, a ruler of the Jews:",
+"John 3:2":"The same came to Jesus by night, and said unto him, Rabbi, we know that thou art a teacher come from God: for no man can do these miracles that thou doest, except God be with him.",
+"John 3:3":"Jesus answered and said unto him, Verily, verily, I say unto thee, Except a man be born again, he cannot see the kingdom of God.",
+"John 3:4":"Nicodemus saith unto him, How can a man be born when he is old? can he enter the second time into his mother’s womb, and be born?",
+"John 3:5":"Jesus answered, Verily, verily, I say unto thee, Except a man be born of water and of the Spirit, he cannot enter into the kingdom of God.",
+"John 3:6":"That which is born of the flesh is flesh; and that which is born of the Spirit is spirit.",
+"John 3:7":"Marvel not that I said unto thee, Ye must be born again.",
+"John 3:8":"The wind bloweth where it listeth, and thou hearest the sound thereof, but canst not tell whence it cometh, and whither it goeth: so is every one that is born of the Spirit.",
+"John 3:9":"Nicodemus answered and said unto him, How can these things be?",
+"John 3:10":"Jesus answered and said unto him, Art thou a master of Israel, and knowest not these things?",
+"John 3:11":"Verily, verily, I say unto thee, We speak that we do know, and testify that we have seen; and ye receive not our witness.",
+"John 3:12":"If I have told you earthly things, and ye believe not, how shall ye believe, if I tell you of heavenly things?",
+"John 3:13":"And no man hath ascended up to heaven, but he that came down from heaven, even the Son of man which is in heaven.",
+"John 3:14":"And as Moses lifted up the serpent in the wilderness, even so must the Son of man be lifted up:",
+"John 3:15":"That whosoever believeth in him should not perish, but have eternal life.",
+"John 3:16":"For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",
+"John 3:17":"For God sent not his Son into the world to condemn the world; but that the world through him might be saved.",
+"John 3:18":"He that believeth on him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God.",
+"John 3:19":"And this is the condemnation, that light is come into the world, and men loved darkness rather than light, because their deeds were evil.",
+"John 3:20":"For every one that doeth evil hateth the light, neither cometh to the light, lest his deeds should be reproved.",
+"John 3:21":"But he that doeth truth cometh to the light, that his deeds may be made manifest, that they are wrought in God.",
+"John 3:36":"He that believeth on the Son hath everlasting life: and he that believeth not the Son shall not see life; but the wrath of God abideth on him.",
+"John 4:7":"There cometh a woman of Samaria to draw water: Jesus saith unto her, Give me to drink.",
+"John 4:8":"(For his disciples were gone away unto the city to buy meat.)",
+"John 4:9":"Then saith the woman of Samaria unto him, How is it that thou, being a Jew, askest drink of me, which am a woman of Samaria? for the Jews have no dealings with the Samaritans.",
+"John 4:10":"Jesus answered and said unto her, If thou knewest the gift of God, and who it is that saith to thee, Give me to drink; thou wouldest have asked of him, and he would have given thee living water.",
+"John 4:11":"The woman saith unto him, Sir, thou hast nothing to draw with, and the well is deep: from whence then hast thou that living water?",
+"John 4:12":"Art thou greater than our father Jacob, which gave us the well, and drank thereof himself, and his children, and his cattle?",
+"John 4:13":"Jesus answered and said unto her, Whosoever drinketh of this water shall thirst again:",
+"John 4:14":"But whosoever drinketh of the water that I shall give him shall never thirst; but the water that I shall give him shall be in him a well of water springing up into everlasting life.",
+"John 4:15":"The woman saith unto him, Sir, give me this water, that I thirst not, neither come hither to draw.",
+"John 4:25":"The woman saith unto him, I know that Messias cometh, which is called Christ: when he is come, he will tell us all things.",
+"John 4:26":"Jesus saith unto her, I that speak unto thee am <i>he</i>.",
+"John 4:32":"But he said unto them, I have meat to eat that ye know not of.",
+"John 4:33":"Therefore said the disciples one to another, Hath any man brought him ought to eat?",
+"John 4:34":"Jesus saith unto them, My meat is to do the will of him that sent me, and to finish his work.",
+"John 4:42":"And said unto the woman, Now we believe, not because of thy saying: for we have heard him ourselves, and know that this is indeed the Christ, the Saviour of the world.",
+"John 5:24":"Verily, verily, I say unto you, He that heareth my word, and believeth on him that sent me, hath everlasting life, and shall not come into condemnation; but is passed from death unto life.",
+"John 6:26":"Jesus answered them and said, Verily, verily, I say unto you, Ye seek me, not because ye saw the miracles, but because ye did eat of the loaves, and were filled.",
+"John 6:27":"Labour not for the meat which perisheth, but for that meat which endureth unto everlasting life, which the Son of man shall give unto you: for him hath God the Father sealed.",
+"John 6:28":"Then said they unto him, What shall we do, that we might work the works of God?",
+"John 6:29":"Jesus answered and said unto them, This is the work of God, that ye believe on him whom he hath sent.",
+"John 6:33":"For the bread of God is he which cometh down from heaven, and giveth life unto the world.",
+"John 6:35":"And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst.",
+"John 6:37":"All that the Father giveth me shall come to me; and him that cometh to me I will in no wise cast out.",
+"John 6:38":"For I came down from heaven, not to do mine own will, but the will of him that sent me.",
+"John 6:39":"And this is the Father’s will which hath sent me, that of all which he hath given me I should lose nothing, but should raise it up again at the last day.",
+"John 6:40":"And this is the will of him that sent me, that every one which seeth the Son, and believeth on him, may have everlasting life: and I will raise him up at the last day.",
+"John 6:47":"Verily, verily, I say unto you, He that believeth on me hath everlasting life.",
+"John 6:51":"I am the living bread which came down from heaven: if any man eat of this bread, he shall live for ever: and the bread that I will give is my flesh, which I will give for the life of the world.",
+"John 6:52":"The Jews therefore strove among themselves, saying, How can this man give us his flesh to eat?",
+"John 6:54":"Whoso eateth my flesh, and drinketh my blood, hath eternal life; and I will raise him up at the last day.",
+"John 6:60":"Many therefore of his disciples, when they had heard this, said, This is an hard saying; who can hear it?",
+"John 6:63":"It is the spirit that quickeneth; the flesh profiteth nothing: the words that I speak unto you, they are spirit, and they are life.",
+"John 6:68":"Then Simon Peter answered him, Lord, to whom shall we go? thou hast the words of eternal life.",
+"John 6:69":"And we believe and are sure that thou art that Christ, the Son of the living God.",
+"John 7:37":"In the last day, that great day of the feast, Jesus stood and cried, saying, If any man thirst, let him come unto me, and drink.",
+"John 7:38":"He that believeth on me, as the scripture hath said, out of his belly shall flow rivers of living water.",
+"John 7:39":"(But this spake he of the Spirit, which they that believe on him should receive: for the Holy Ghost was not yet given; because that Jesus was not yet glorified.)",
+"John 8:12":"Then spake Jesus again unto them, saying, I am the light of the world: he that followeth me shall not walk in darkness, but shall have the light of life.",
+"John 8:21":"Then said Jesus again unto them, I go my way, and ye shall seek me, and shall die in your sins: whither I go, ye cannot come.",
+"John 8:22":"Then said the Jews, Will he kill himself? because he saith, Whither I go, ye cannot come.",
+"John 8:24":"I said therefore unto you, that ye shall die in your sins: for if ye believe not that I am <i>he</i>, ye shall die in your sins.",
+"John 8:28":"Then said Jesus unto them, When ye have lifted up the Son of man, then shall ye know that I am <i>he</i>, and that I do nothing of myself; but as my Father hath taught me, I speak these things.",
+"John 8:31":"Then said Jesus to those Jews which believed on him, If ye continue in my word, then are ye my disciples indeed;",
+"John 8:32":"And ye shall know the truth, and the truth shall make you free.",
+"John 8:33":"They answered him, We be Abraham’s seed, and were never in bondage to any man: how sayest thou, Ye shall be made free?",
+"John 8:34":"Jesus answered them, Verily, verily, I say unto you, Whosoever committeth sin is the servant of sin.",
+"John 8:35":"And the servant abideth not in the house for ever: but the Son abideth ever.",
+"John 8:36":"If the Son therefore shall make you free, ye shall be free indeed.",
+"John 8:43":"Why do ye not understand my speech? even because ye cannot hear my word.",
+"John 8:51":"Verily, verily, I say unto you, If a man keep my saying, he shall never see death.",
+"John 8:52":"Then said the Jews unto him, Now we know that thou hast a devil. Abraham is dead, and the prophets; and thou sayest, If a man keep my saying, he shall never taste of death.",
+"John 8:58":"Jesus said unto them, Verily, verily, I say unto you, Before Abraham was, I am.",
+"John 8:59":"Then took they up stones to cast at him: but Jesus hid himself, and went out of the temple, going through the midst of them, and so passed by.",
+"John 9:5":"As long as I am in the world, I am the light of the world.",
+"John 9:35":"Jesus heard that they had cast him out; and when he had found him, he said unto him, Dost thou believe on the Son of God?",
+"John 9:36":"He answered and said, Who is he, Lord, that I might believe on him?",
+"John 9:37":"And Jesus said unto him, Thou hast both seen him, and it is he that talketh with thee.",
+"John 9:38":"And he said, Lord, I believe. And he worshipped him.",
+"John 9:39":"And Jesus said, For judgment I am come into this world, that they which see not might see; and that they which see might be made blind.",
+"John 9:40":"And some of the Pharisees which were with him heard these words, and said unto him, Are we blind also?",
+"John 9:41":"Jesus said unto them, If ye were blind, ye should have no sin: but now ye say, We see; therefore your sin remaineth.",
+"John 10:6":"This parable spake Jesus unto them: but they understood not what things they were which he spake unto them.",
+"John 10:7":"Then said Jesus unto them again, Verily, verily, I say unto you, I am the door of the sheep.",
+"John 10:9":"I am the door: by me if any man enter in, he shall be saved, and shall go in and out, and find pasture.",
+"John 10:11":"I am the good shepherd: the good shepherd giveth his life for the sheep.",
+"John 10:17":"Therefore doth my Father love me, because I lay down my life, that I might take it again.",
+"John 10:18":"No man taketh it from me, but I lay it down of myself. I have power to lay it down, and I have power to take it again. This commandment have I received of my Father.",
+"John 10:27":"My sheep hear my voice, and I know them, and they follow me:",
+"John 10:28":"And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand.",
+"John 10:29":"My Father, which gave them me, is greater than all; and no man is able to pluck them out of my Father’s hand.",
+"John 10:30":"I and my Father are one.",
+"John 10:31":"Then the Jews took up stones again to stone him.",
+"John 10:32":"Jesus answered them, Many good works have I shewed you from my Father; for which of those works do ye stone me?",
+"John 10:33":"The Jews answered him, saying, For a good work we stone thee not; but for blasphemy; and because that thou, being a man, makest thyself God.",
+"John 11:11":"These things said he: and after that he saith unto them, Our friend Lazarus sleepeth; but I go, that I may awake him out of sleep.",
+"John 11:12":"Then said his disciples, Lord, if he sleep, he shall do well.",
+"John 11:13":"Howbeit Jesus spake of his death: but they thought that he had spoken of taking of rest in sleep.",
+"John 11:14":"Then said Jesus unto them plainly, Lazarus is dead.",
+"John 11:25":"Jesus said unto her, I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live:",
+"John 11:26":"And whosoever liveth and believeth in me shall never die. Believest thou this?",
+"John 11:27":"She saith unto him, Yea, Lord: I believe that thou art the Christ, the Son of God, which should come into the world.",
+"John 11:40":"Jesus saith unto her, Said I not unto thee, that, if thou wouldest believe, thou shouldest see the glory of God?",
+"John 11:43":"And when he thus had spoken, he cried with a loud voice, Lazarus, come forth.",
+"John 11:44":"And he that was dead came forth, bound hand and foot with graveclothes: and his face was bound about with a napkin. Jesus saith unto them, Loose him, and let him go.",
+"John 11:45":"Then many of the Jews which came to Mary, and had seen the things which Jesus did, believed on him.",
+"John 11:53":"Then from that day forth they took counsel together for to put him to death.",
+"John 12:32":"And I, if I be lifted up from the earth, will draw all men unto me.",
+"John 12:33":"This he said, signifying what death he should die.",
+"John 12:46":"I am come a light into the world, that whosoever believeth on me should not abide in darkness.",
+"John 13:19":"Now I tell you before it come, that, when it is come to pass, ye may believe that I am <i>he</i>.",
+"John 14:1":"Let not your heart be troubled: ye believe in God, believe also in me.",
+"John 14:2":"In my Father’s house are many mansions: if it were not so, I would have told you. I go to prepare a place for you.",
+"John 14:3":"And if I go and prepare a place for you, I will come again, and receive you unto myself; that where I am, there ye may be also.",
+"John 14:4":"And whither I go ye know, and the way ye know.",
+"John 14:5":"Thomas saith unto him, Lord, we know not whither thou goest; and how can we know the way?",
+"John 14:6":"Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me.",
+"John 14:7":"If ye had known me, ye should have known my Father also: and from henceforth ye know him, and have seen him.",
+"John 14:8":"Philip saith unto him, Lord, shew us the Father, and it sufficeth us.",
+"John 14:9":"Jesus saith unto him, Have I been so long time with you, and yet hast thou not known me, Philip? he that hath seen me hath seen the Father; and how sayest thou then, Shew us the Father?",
+"John 14:10":"Believest thou not that I am in the Father, and the Father in me? the words that I speak unto you I speak not of myself: but the Father that dwelleth in me, he doeth the works.",
+"John 14:11":"Believe me that I am in the Father, and the Father in me: or else believe me for the very works’ sake.",
+"John 14:19":"Yet a little while, and the world seeth me no more; but ye see me: because I live, ye shall live also.",
+"John 15:1":"I am the true vine, and my Father is the husbandman.",
+"John 15:5":"I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing.",
+"John 15:6":"If a man abide not in me, he is cast forth as a branch, and is withered; and men gather them, and cast them into the fire, and they are burned.",
+"John 16:25":"These things have I spoken unto you in proverbs: but the time cometh, when I shall no more speak unto you in proverbs, but I shall shew you plainly of the Father.",
+"John 16:29":"His disciples said unto him, Lo, now speakest thou plainly, and speakest no proverb.",
+"John 16:30":"Now are we sure that thou knowest all things, and needest not that any man should ask thee: by this we believe that thou camest forth from God.",
+"John 17:12":"While I was with them in the world, I kept them in thy name: those that thou gavest me I have kept, and none of them is lost, but the son of perdition; that the scripture might be fulfilled.",
+"John 17:24":"Father, I will that they also, whom thou hast given me, be with me where I am; that they may behold my glory, which thou hast given me: for thou lovedst me before the foundation of the world.",
+"John 18:4":"Jesus therefore, knowing all things that should come upon him, went forth, and said unto them, Whom seek ye?",
+"John 18:5":"They answered him, Jesus of Nazareth. Jesus saith unto them, I am <i>he</i>. And Judas also, which betrayed him, stood with them.",
+"John 18:6":"As soon then as he had said unto them, I am <i>he</i>, they went backward, and fell to the ground.",
+"John 18:7":"Then asked he them again, Whom seek ye? And they said, Jesus of Nazareth.",
+"John 18:8":"Jesus answered, I have told you that I am <i>he</i>: if therefore ye seek me, let these go their way:",
+"John 19:30":"When Jesus therefore had received the vinegar, he said, It is finished: and he bowed his head, and gave up the ghost.",
+"John 20:24":"But Thomas, one of the twelve, called Didymus, was not with them when Jesus came.",
+"John 20:25":"The other disciples therefore said unto him, We have seen the Lord. But he said unto them, Except I shall see in his hands the print of the nails, and put my finger into the print of the nails, and thrust my hand into his side, I will not believe.",
+"John 20:26":"And after eight days again his disciples were within, and Thomas with them: then came Jesus, the doors being shut, and stood in the midst, and said, Peace be unto you.",
+"John 20:27":"Then saith he to Thomas, Reach hither thy finger, and behold my hands; and reach hither thy hand, and thrust it into my side: and be not faithless, but believing.",
+"John 20:28":"And Thomas answered and said unto him, My Lord and my God.",
+"John 20:29":"Jesus saith unto him, Thomas, because thou hast seen me, thou hast believed: blessed are they that have not seen, and yet have believed.",
+"John 20:30":"And many other signs truly did Jesus in the presence of his disciples, which are not written in this book:",
+"John 20:31":"But these are written, that ye might believe that Jesus is the Christ, the Son of God; and that believing ye might have life through his name."
+};
+
+function full(r){ r = r.trim(); return /^\d+:\d/.test(r) ? "John " + r : r; }
+function lookup(ref){
+  const m = ref.match(/^(.+?) (\d+):(\d+)(?:[–-](\d+))?$/);
+  if(!m) return [];
+  const book = m[1], ch = m[2], a = +m[3], b = m[4] ? +m[4] : a, out = [];
+  for(let v = a; v <= b; v++){
+    const t = V[book + " " + ch + ":" + v];
+    if(t) out.push([v, t]);
+  }
+  return out;
+}
+function mark(t){ return t.replace(/\b(believ\w*)\b/gi, '<span class="bl">$1</span>'); }
+function makeRef(r, label){
+  const b = document.createElement("button");
+  b.type = "button"; b.className = "ref"; b.dataset.r = r; b.textContent = label || r;
+  return b;
+}
+
+document.querySelectorAll("x-r").forEach(el => {
+  const label = el.textContent.trim();
+  el.replaceWith(makeRef(full(label), label));
+});
+document.querySelectorAll("blockquote.v").forEach(bq => {
+  const r = full(bq.dataset.v), vs = lookup(r), multi = vs.length > 1;
+  const p = document.createElement("p");
+  p.innerHTML = '<span class="pil" aria-hidden="true">¶</span>' +
+    vs.map(([n, t]) => (multi ? '<span class="vn">' + n + '</span>' : "") + mark(t)).join(" ");
+  const f = document.createElement("footer");
+  f.appendChild(makeRef(r));
+  bq.append(p, f);
+});
+
+const slides = [...document.querySelectorAll(".slide")];
+const tocIndex = slides.findIndex(s => s.id === "toc");
+
+/* Contents */
+const tocList = document.getElementById("tocList");
+slides.forEach((s, i) => {
+  if(!s.dataset.ct) return;
+  const li = document.createElement("li");
+  const b = document.createElement("button");
+  b.type = "button";
+  b.innerHTML = "<b>" + s.dataset.ch + "</b><span></span>";
+  b.querySelector("span").textContent = s.dataset.ct;
+  b.setAttribute("aria-label", "John " + s.dataset.ch + ", " + s.dataset.ct);
+  b.addEventListener("click", () => go(i, true));
+  li.appendChild(b);
+  tocList.appendChild(li);
+});
+
+/* Verse dialog */
+const dlg = document.getElementById("verse");
+const vref = document.getElementById("vref");
+const vtext = document.getElementById("vtext");
+function openVerse(r){
+  const vs = lookup(r);
+  vref.textContent = r;
+  vtext.innerHTML = vs.length
+    ? vs.map(([n, t]) => '<p><span class="vn">' + n + '</span>' + mark(t) + '</p>').join("")
+    : "<p>Verse text not included in this study.</p>";
+  dlg.scrollTop = 0;
+  if(typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", "");
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if(b) openVerse(b.dataset.r);
+});
+document.getElementById("vclose").addEventListener("click", () => dlg.close());
+dlg.addEventListener("click", e => { if(e.target === dlg) dlg.close(); });
+
+/* Navigation */
+const prog = document.getElementById("progress");
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
+const count = document.getElementById("count");
+let cur = 0;
+function go(i, focus){
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  slides[cur].classList.remove("active");
+  cur = i;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  prog.style.width = ((cur + 1) / slides.length * 100) + "%";
+  prev.disabled = cur === 0;
+  next.disabled = cur === slides.length - 1;
+  count.textContent = (cur + 1) + " / " + slides.length;
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+  if(focus) s.focus({preventScroll:true});
+}
+prev.addEventListener("click", () => go(cur - 1));
+next.addEventListener("click", () => go(cur + 1));
+document.getElementById("toToc").addEventListener("click", () => go(tocIndex, true));
+document.addEventListener("keydown", e => {
+  if(dlg.open) return;
+  if(e.key === "ArrowRight" || e.key === "PageDown"){ e.preventDefault(); go(cur + 1, true); }
+  if(e.key === "ArrowLeft" || e.key === "PageUp"){ e.preventDefault(); go(cur - 1, true); }
+});
+let sx = 0, sy = 0;
+const stage = document.getElementById("stage");
+stage.addEventListener("touchstart", e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, {passive:true});
+stage.addEventListener("touchend", e => {
+  if(dlg.open) return;
+  const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+  if(Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+}, {passive:true});
+
+/* Theme */
+const themeBtn = document.getElementById("theme");
+const mq = window.matchMedia("(prefers-color-scheme: dark)");
+function effective(){ return document.documentElement.dataset.theme || (mq.matches ? "dark" : "light"); }
+function paintToggle(){ themeBtn.textContent = effective() === "dark" ? "☀" : "☾"; }
+try { const t = localStorage.getItem("john-series-theme"); if(t) document.documentElement.dataset.theme = t; } catch(e) {}
+themeBtn.addEventListener("click", () => {
+  const t = effective() === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = t;
+  try { localStorage.setItem("john-series-theme", t); } catch(e) {}
+  paintToggle();
+});
+mq.addEventListener && mq.addEventListener("change", paintToggle);
+paintToggle();
+
+const start = parseInt(location.hash.slice(1), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>

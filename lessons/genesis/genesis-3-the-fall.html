@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesis 3 • The Fall • Young Adult Sunday School</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Merriweather:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:            #0c1018;
+            --bg-card:       #141c28;
+            --bg-card-hi:    #1a2236;
+            --border:        #c8940a;
+            --border-dim:    rgba(200,148,10,0.35);
+            --text:          #ffffff;
+            --text-dim:      #c8d4e8;
+            --text-muted:    #8a9ab8;
+            --gold:          #fbbf24;
+            --green:         #34d399;
+            --red:           #f87171;
+            --blue:          #60a5fa;
+            --purple:        #c084fc;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Merriweather', Georgia, serif;
+            background: var(--bg);
+            color: var(--text);
+            padding: 40px 24px 80px;
+            min-height: 100vh;
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        .page-frame {
+            max-width: 1100px;
+            margin: 0 auto;
+            border: 5px double var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 0 0 1px rgba(200,148,10,0.2), 0 0 80px rgba(251,191,36,0.12);
+        }
+        header {
+            background: #080c12;
+            border-bottom: 4px solid var(--border);
+            padding: 44px 52px 36px;
+            text-align: center;
+        }
+        .header-eyebrow {
+            font-family: 'Cinzel', serif;
+            font-size: 1em; font-weight: 700;
+            letter-spacing: 6px; color: var(--text-muted);
+            text-transform: uppercase; margin-bottom: 16px;
+        }
+        header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 4.2em; font-weight: 900; color: var(--gold);
+            text-shadow: 0 0 30px rgba(251,191,36,0.6), 0 0 60px rgba(251,191,36,0.25);
+            letter-spacing: 6px; line-height: 1.1; margin-bottom: 12px;
+        }
+        header .subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3em; font-weight: 700; color: var(--text-dim); letter-spacing: 4px;
+        }
+        .header-divider {
+            margin: 24px auto 0; width: 55%; height: 2px;
+            background: linear-gradient(to right, transparent, var(--border), transparent);
+        }
+        .content-body {
+            background: var(--bg);
+            padding: 44px 44px 56px;
+            display: flex; flex-direction: column; gap: 24px;
+        }
+        .section-divider {
+            display: flex; align-items: center; gap: 18px; margin: 8px 0 0;
+        }
+        .section-divider .divider-line { flex: 1; height: 1px; background: linear-gradient(to right, transparent, var(--border-dim)); }
+        .section-divider .divider-line.right { background: linear-gradient(to left, transparent, var(--border-dim)); }
+        .section-divider .divider-label {
+            font-family: 'Cinzel', serif; font-size: 0.72em; font-weight: 700;
+            letter-spacing: 4px; text-transform: uppercase; color: var(--text-muted);
+        }
+        .day-card {
+            background: var(--bg-card);
+            border: 2px solid var(--border-dim);
+            border-top: 5px solid var(--gold);
+            border-radius: 12px; padding: 28px 30px 24px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.5);
+        }
+        .day-card.c-green  { border-top-color: var(--green); }
+        .day-card.c-blue   { border-top-color: var(--blue);  }
+        .day-card.c-red    { border-top-color: var(--red);   }
+        .day-card.c-purple { border-top-color: var(--purple);}
+        .day-card.c-key {
+            border-top-color: var(--gold); border-color: rgba(251,191,36,0.4);
+            background: var(--bg-card-hi);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.5), 0 0 30px rgba(251,191,36,0.08);
+        }
+        .day-card.c-red-key {
+            border-top-color: var(--red); border-color: rgba(248,113,113,0.35);
+            background: #1c1018;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.5), 0 0 30px rgba(248,113,113,0.08);
+        }
+        .day-badge {
+            display: flex; align-items: center; gap: 12px;
+            margin-bottom: 16px; flex-wrap: wrap;
+        }
+        .day-pill {
+            font-family: 'Cinzel', serif; font-size: 0.78em; font-weight: 900;
+            letter-spacing: 2px; text-transform: uppercase;
+            color: #000; background: var(--gold);
+            padding: 5px 16px 4px; border-radius: 20px; white-space: nowrap;
+        }
+        .day-card.c-green   .day-pill { background: var(--green);  color: #000; }
+        .day-card.c-blue    .day-pill { background: var(--blue);   color: #000; }
+        .day-card.c-red     .day-pill { background: var(--red);    color: #000; }
+        .day-card.c-red-key .day-pill { background: var(--red);    color: #000; }
+        .day-card.c-purple  .day-pill { background: var(--purple); color: #000; }
+        .verse-ref {
+            font-family: 'Cinzel', serif; font-size: 0.82em;
+            font-weight: 700; color: var(--text-muted); letter-spacing: 1px;
+        }
+        .day-title {
+            font-family: 'Cinzel', serif; font-size: 1.22em;
+            font-weight: 900; color: var(--gold); margin-bottom: 16px; letter-spacing: 1px;
+        }
+        .day-card.c-green   .day-title { color: var(--green);  }
+        .day-card.c-blue    .day-title { color: var(--blue);   }
+        .day-card.c-red     .day-title { color: var(--red);    }
+        .day-card.c-red-key .day-title { color: var(--red);    }
+        .day-card.c-purple  .day-title { color: var(--purple); }
+        .verse-text {
+            font-size: 1.52em; font-weight: 700; color: var(--text); line-height: 1.78;
+        }
+        .verse-text p { margin-bottom: 0.65em; }
+        .verse-text p:last-child { margin-bottom: 0; }
+        .vn {
+            font-family: 'Cinzel', serif; font-size: 0.58em; font-weight: 900;
+            color: var(--text-muted); vertical-align: super; margin-right: 3px;
+        }
+        .hl-gold   { color: var(--gold);   font-weight: 900; }
+        .hl-green  { color: var(--green);  font-weight: 900; }
+        .hl-red    { color: var(--red);    font-weight: 900; }
+        .hl-blue   { color: var(--blue);   font-weight: 900; }
+        .hl-purple { color: var(--purple); font-weight: 900; }
+        .key-verse-block {
+            display: block; margin: 8px 0 12px; padding: 14px 18px;
+            background: rgba(251,191,36,0.10); border-left: 5px solid var(--gold);
+            border-radius: 0 8px 8px 0; color: var(--gold);
+            font-weight: 900; font-style: italic; line-height: 1.65;
+        }
+        .key-verse-block.green {
+            background: rgba(52,211,153,0.10); border-left-color: var(--green); color: var(--green);
+        }
+        .key-verse-block.red {
+            background: rgba(248,113,113,0.10); border-left-color: var(--red); color: var(--red);
+        }
+
+        /* ── TEACHER NOTE ── */
+        .teacher-note {
+            display: block; margin-top: 14px; padding: 12px 16px;
+            background: rgba(96,165,250,0.07);
+            border-left: 4px solid rgba(96,165,250,0.4);
+            border-radius: 0 6px 6px 0;
+            font-family: 'Cinzel', serif; font-size: 0.8em;
+            font-weight: 700; letter-spacing: 0.5px;
+            color: var(--blue); line-height: 1.7;
+        }
+
+        /* ── SCRIPTURE REFERENCE TOOLTIPS ── */
+        .sref {
+            color: var(--gold);
+            font-weight: 900;
+            cursor: pointer;
+            border-bottom: 2px dotted var(--gold);
+            white-space: nowrap;
+            display: inline-block;
+            position: relative;
+        }
+        .sref:hover { color: var(--gold); opacity: 0.85; }
+
+        /* The floating tooltip box — built by JS, positioned absolutely */
+        .verse-tooltip {
+            position: fixed;
+            z-index: 2000;
+            max-width: 480px;
+            width: calc(100vw - 40px);
+            background: #0e1420;
+            border: 3px solid var(--border);
+            border-radius: 12px;
+            padding: 18px 20px 16px;
+            box-shadow: 0 0 40px rgba(251,191,36,0.25), 0 8px 40px rgba(0,0,0,0.8);
+            pointer-events: none;
+            opacity: 0;
+            transform: translateY(6px);
+            transition: opacity 0.18s ease, transform 0.18s ease;
+        }
+        .verse-tooltip.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        .verse-tooltip .tt-ref {
+            font-family: 'Cinzel', serif;
+            font-size: 0.82em; font-weight: 900;
+            letter-spacing: 3px; color: var(--gold);
+            margin-bottom: 8px; display: block;
+        }
+        .verse-tooltip .tt-verse {
+            font-family: 'Merriweather', serif;
+            font-size: 1.1em; font-weight: 700;
+            color: var(--text); line-height: 1.65;
+            font-style: italic;
+        }
+
+        /* ── XREF BUTTON ── */
+        .xref-btn {
+            display: inline-flex; align-items: center; gap: 10px;
+            margin-top: 20px; padding: 11px 24px;
+            background: transparent; border: 2px solid var(--gold);
+            border-radius: 40px; color: var(--gold);
+            font-family: 'Cinzel', serif; font-size: 0.82em;
+            font-weight: 900; letter-spacing: 2px;
+            cursor: pointer; text-transform: uppercase;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .xref-btn:hover { background: rgba(251,191,36,0.12); box-shadow: 0 0 20px rgba(251,191,36,0.3); }
+
+        footer {
+            background: #080c12; border-top: 3px solid var(--border);
+            padding: 22px 40px; text-align: center;
+            font-family: 'Cinzel', serif; font-size: 0.82em;
+            font-weight: 700; letter-spacing: 2px;
+            color: var(--text-muted); line-height: 1.9;
+        }
+
+        /* ── MODAL ── */
+        .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 1000; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(4px); }
+        .modal-overlay.open { display: flex; animation: fadeIn 0.2s ease; }
+        @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .modal-box { background: #0e1420; border: 4px double var(--border); border-radius: 16px; padding: 46px 48px 38px; max-width: 780px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; box-shadow: 0 0 80px rgba(251,191,36,0.2), 0 20px 80px rgba(0,0,0,0.8); animation: slideUp 0.25s ease; -webkit-font-smoothing: antialiased; }
+        .modal-close { position: absolute; top: 14px; right: 18px; background: var(--bg-card); border: 2px solid var(--border-dim); border-radius: 50%; width: 38px; height: 38px; color: var(--text-muted); font-size: 1.1em; font-weight: 900; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+        .modal-close:hover { background: var(--border); color: #000; }
+        .modal-eyebrow { font-family: 'Cinzel', serif; font-size: 0.82em; font-weight: 700; letter-spacing: 4px; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px; }
+        .modal-title { font-family: 'Cinzel', serif; font-size: 1.65em; font-weight: 900; color: var(--gold); margin-bottom: 28px; padding-bottom: 18px; border-bottom: 2px solid var(--border-dim); line-height: 1.2; padding-right: 40px; text-shadow: 0 0 20px rgba(251,191,36,0.3); }
+        .xref-entry { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        .xref-entry:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .xref-label { font-family: 'Cinzel', serif; font-size: 1em; font-weight: 900; color: var(--gold); letter-spacing: 2px; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        .xref-label::before { content: ''; display: inline-block; width: 8px; height: 8px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+        .xref-verse { font-size: 1.45em; font-weight: 700; color: var(--text); line-height: 1.72; font-style: italic; padding: 12px 16px; background: rgba(255,255,255,0.04); border-left: 4px solid var(--gold); border-radius: 0 6px 6px 0; margin-bottom: 10px; }
+        .xref-note { font-size: 1.25em; font-weight: 700; color: var(--green); padding-left: 16px; }
+        .modal-summary { margin-top: 26px; padding: 18px 22px; background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.3); border-radius: 10px; font-size: 1.35em; font-weight: 700; color: var(--text); line-height: 1.65; font-style: italic; }
+        .modal-box::-webkit-scrollbar { width: 6px; }
+        .modal-box::-webkit-scrollbar-track { background: transparent; }
+        .modal-box::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+        @media (max-width: 740px) {
+            .content-body { padding: 24px 16px 40px; }
+            header { padding: 32px 20px 26px; }
+            header h1 { font-size: 2.6em; }
+            .modal-box { padding: 30px 22px 26px; }
+            .modal-title { font-size: 1.25em; }
+        }
+    </style>
+</head>
+<body>
+<div class="page-frame">
+
+    <header>
+        <p class="header-eyebrow">Young Adult Sunday School • Genesis Series</p>
+        <h1>Genesis Chapter 3</h1>
+        <p class="subtitle">The Fall &nbsp;•&nbsp; The Curse &nbsp;•&nbsp; The First Promise</p>
+        <div class="header-divider"></div>
+    </header>
+
+    <div class="content-body">
+
+        <!-- ══ SERPENT'S MOVE ══ -->
+        <div class="day-card c-red-key">
+            <div class="day-badge">
+                <span class="day-pill">v. 1</span>
+                <span class="verse-ref">The Serpent's Opening Move</span>
+            </div>
+            <p class="day-title">"Yea, Hath God Said?" — Planting Doubt in God's Word</p>
+            <div class="verse-text">
+                <p><span class="vn">1</span>Now the serpent was more subtil than any beast of the field which the LORD God had made. And he said unto the woman, <span class="hl-red">Yea, hath God said, Ye shall not eat of every tree of the garden?</span></p>
+                <span class="teacher-note">The serpent does not begin with a lie — he begins with a question. He does not deny God's word; he causes Eve to doubt it. The first weapon of the enemy is not atheism but uncertainty about what God has said. <span class="sref" data-ref="2 Corinthians 11:3" data-verse="But I fear, lest by any means, as the serpent beguiled Eve through his subtilty, so your minds should be corrupted from the simplicity that is in Christ.">2 Cor. 11:3</span></span>
+            </div>
+        </div>
+
+        <!-- ══ THE TEMPTATION ══ -->
+        <div class="day-card c-red">
+            <div class="day-badge">
+                <span class="day-pill">vv. 2–5</span>
+                <span class="verse-ref">The Appeal — Become Like God</span>
+            </div>
+            <p class="day-title">The Lie: "Ye Shall Not Surely Die"</p>
+            <div class="verse-text">
+                <p><span class="vn">2</span>And the woman said unto the serpent, We may eat of the fruit of the trees of the garden: <span class="vn">3</span>But of the fruit of the tree which is in the midst of the garden, God hath said, Ye shall not eat of it, neither shall ye touch it, lest ye die.</p>
+                <p><span class="vn">4</span><span class="hl-red">And the serpent said unto the woman, Ye shall not surely die:</span> <span class="vn">5</span>For God doth know that in the day ye eat thereof, then your eyes shall be opened, <span class="hl-red">and ye shall be as gods, knowing good and evil.</span></p>
+                <span class="teacher-note">The serpent's appeal: you are being held back. God is withholding something good from you. You can be as God. Pride was the first sin in heaven — <span class="sref" data-ref="Isaiah 14:13–14" data-verse="For thou hast said in thine heart, I will ascend into heaven, I will exalt my throne above the stars of God: I will sit also upon the mount of the congregation, in the sides of the north: I will ascend above the heights of the clouds; I will be like the most High.">Isa. 14:13–14</span> — the same bait is set for man.</span>
+            </div>
+        </div>
+
+        <!-- ══ EVE CONVINCES HERSELF / ADAM CHOOSES ══ -->
+        <div class="day-card c-red">
+            <div class="day-badge">
+                <span class="day-pill">v. 6</span>
+                <span class="verse-ref">The Lust of the Eyes — Eve's Choice, Then Adam's</span>
+            </div>
+            <p class="day-title">She Saw • She Took • She Gave — He Did Eat</p>
+            <div class="verse-text">
+                <p><span class="vn">6</span>And when the woman <span class="hl-red">saw</span> that the tree was good for food, and that it was <span class="hl-red">pleasant to the eyes,</span> and a tree to be desired to make one wise, she took of the fruit thereof, and did eat, and <span class="hl-red">gave also unto her husband with her; and he did eat.</span></p>
+                <span class="teacher-note">Eve was deceived — she convinced herself through three appeals: good for food (lust of the flesh), pleasant to the eyes (lust of the eyes), desired to make wise (pride of life) — <span class="sref" data-ref="1 John 2:16" data-verse="For all that is in the world, the lust of the flesh, and the lust of the eyes, and the pride of life, is not of the Father, but is of the world.">1 John 2:16</span>. Adam was NOT deceived — <span class="sref" data-ref="1 Timothy 2:14" data-verse="And Adam was not deceived, but the woman being deceived was in the transgression.">1 Tim. 2:14</span>. He received God's command directly before Eve was created — <span class="sref" data-ref="Genesis 2:16–17" data-verse="And the LORD God commanded the man, saying, Of every tree of the garden thou mayest freely eat: But of the tree of the knowledge of good and evil, thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die.">Gen. 2:16–17</span>. Adam chose sin with open eyes.</span>
+            </div>
+            <button class="xref-btn" onclick="openModal('modal-romans5')">
+                ✦ &nbsp; Adam's Choice — Romans 5 &nbsp;•&nbsp; Death Through One Man
+            </button>
+        </div>
+
+        <!-- ══ FIG LEAVES ══ -->
+        <div class="section-divider"><div class="divider-line"></div><span class="divider-label">The Cover-Up</span><div class="divider-line right"></div></div>
+
+        <div class="day-card c-red">
+            <div class="day-badge">
+                <span class="day-pill">v. 7</span>
+                <span class="verse-ref">Their Own Works — Insufficient Before a Holy God</span>
+            </div>
+            <p class="day-title">Fig Leaves — Man's Attempt to Cover His Own Sin</p>
+            <div class="verse-text">
+                <p><span class="vn">7</span>And the eyes of them both were opened, and they knew that they were naked; <span class="hl-red">and they sewed fig leaves together, and made themselves aprons.</span></p>
+                <span class="teacher-note">Man's first religious instinct after sin: cover yourself by your own works. Fig leaves could not atone. No human effort, religion, or righteousness can cover the guilt of sin before a holy God. <span class="sref" data-ref="Isaiah 64:6" data-verse="But we are all as an unclean thing, and all our righteousnesses are as filthy rags; and we all do fade as a leaf; and our iniquities, like the wind, have taken us away.">Isa. 64:6</span></span>
+            </div>
+        </div>
+
+        <!-- ══ GOD WALKS IN THE GARDEN ══ -->
+        <div class="day-card c-blue">
+            <div class="day-badge">
+                <span class="day-pill">vv. 8–10</span>
+                <span class="verse-ref">The LORD God Walking — They Hid</span>
+            </div>
+            <p class="day-title">"Where Art Thou?" — God Comes Seeking the Sinner</p>
+            <div class="verse-text">
+                <p><span class="vn">8</span>And they heard <span class="hl-blue">the voice of the LORD God walking in the garden in the cool of the day:</span> and Adam and his wife hid themselves from the presence of the LORD God amongst the trees of the garden.</p>
+                <p><span class="vn">9</span>And the LORD God called unto Adam, and said unto him, <span class="hl-gold">Where art thou?</span></p>
+                <p><span class="vn">10</span>And he said, I heard thy voice in the garden, and I was afraid, because I was naked; and I hid myself.</p>
+                <span class="teacher-note">God knew exactly where Adam was. The question is not for God's information — it is for Adam's conviction. God is the one who comes seeking the sinner. This is the gospel pattern from the very beginning. <span class="sref" data-ref="Luke 19:10" data-verse="For the Son of man is come to seek and to save that which was lost.">Luke 19:10</span></span>
+            </div>
+        </div>
+
+        <!-- ══ THE BLAME GAME ══ -->
+        <div class="day-card c-red">
+            <div class="day-badge">
+                <span class="day-pill">vv. 11–13</span>
+                <span class="verse-ref">The Blame Game — No One Takes Responsibility</span>
+            </div>
+            <p class="day-title">Adam Blames God. Eve Blames the Serpent. All Are Guilty.</p>
+            <div class="verse-text">
+                <p><span class="vn">11</span>And he said, Who told thee that thou wast naked? Hast thou eaten of the tree, whereof I commanded thee that thou shouldest not eat?</p>
+                <p><span class="vn">12</span>And the man said, <span class="hl-red">The woman whom thou gavest to be with me, she gave me of the tree, and I did eat.</span></p>
+                <p><span class="vn">13</span>And the LORD God said unto the woman, What is this that thou hast done? And the woman said, <span class="hl-red">The serpent beguiled me, and I did eat.</span></p>
+                <span class="teacher-note">Adam blames the woman — and subtly blames God who gave her. Eve blames the serpent. But God holds each accountable in turn. We are each guilty of our own choices. <span class="sref" data-ref="Romans 14:12" data-verse="So then every one of us shall give account of himself to God.">Rom. 14:12</span> &nbsp;•&nbsp; <span class="sref" data-ref="Ezekiel 18:20" data-verse="The soul that sinneth, it shall die. The son shall not bear the iniquity of the father, neither shall the father bear the iniquity of the son: the righteousness of the righteous shall be upon him, and the wickedness of the wicked shall be upon him.">Ezek. 18:20</span></span>
+            </div>
+        </div>
+
+        <!-- ══ THE CURSES ══ -->
+        <div class="section-divider"><div class="divider-line"></div><span class="divider-label">The Judgment of God</span><div class="divider-line right"></div></div>
+
+        <!-- Serpent + Proto-Evangelium -->
+        <div class="day-card c-key">
+            <div class="day-badge">
+                <span class="day-pill">vv. 14–15</span>
+                <span class="verse-ref">The Serpent Cursed &nbsp;•&nbsp; The First Prophecy of Christ</span>
+            </div>
+            <p class="day-title">The Proto-Evangelium — The Seed of the Woman Shall Bruise His Head</p>
+            <div class="verse-text">
+                <p><span class="vn">14</span>And the LORD God said unto the serpent, <span class="hl-red">Because thou hast done this, thou art cursed above all cattle, and above every beast of the field; upon thy belly shalt thou go, and dust shalt thou eat all the days of thy life:</span></p>
+                <span class="key-verse-block"><span class="vn" style="color:rgba(251,191,36,0.5);">15</span> And I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel.</span>
+                <span class="teacher-note">The very first word of gospel in all Scripture. Before one curse falls on man, God announces the remedy. The seed of the woman — not of a man — points to the virgin birth. <span class="sref" data-ref="Galatians 4:4" data-verse="But when the fulness of the time was come, God sent forth his Son, made of a woman, made under the law,">Gal. 4:4</span>. He shall bruise thy head — fatal, final blow at the cross and resurrection. <span class="sref" data-ref="Colossians 2:15" data-verse="And having spoiled principalities and powers, he made a shew of them openly, triumphing over them in it.">Col. 2:15</span> &nbsp;•&nbsp; <span class="sref" data-ref="Romans 16:20" data-verse="And the God of peace shall bruise Satan under your feet shortly. The grace of our Lord Jesus Christ be with you. Amen.">Rom. 16:20</span>. Thou shalt bruise his heel — the suffering of Christ. Final end of the serpent: <span class="sref" data-ref="Revelation 20:10" data-verse="And the devil that deceived them was cast into the lake of fire and brimstone, where the beast and the false prophet are, and shall be tormented day and night for ever and ever.">Rev. 20:10</span></span>
+            </div>
+        </div>
+
+        <!-- Curse on Eve -->
+        <div class="day-card c-red">
+            <div class="day-badge">
+                <span class="day-pill">v. 16</span>
+                <span class="verse-ref">Eve Cursed — And All Women</span>
+            </div>
+            <p class="day-title">Sorrow in Childbirth &nbsp;•&nbsp; Desire and Rule</p>
+            <div class="verse-text">
+                <p><span class="vn">16</span>Unto the woman he said, <span class="hl-red">I will greatly multiply thy sorrow and thy conception; in sorrow thou shalt bring forth children;</span> and thy desire shall be to thy husband, and he shall rule over thee.</p>
+                <span class="teacher-note">The curse falls on the role God designed — childbearing becomes sorrow. The creation order of male headship is now complicated by the effects of sin. Every woman who has ever suffered in childbirth bears the mark of the Fall. Hope: <span class="sref" data-ref="1 Timothy 2:15" data-verse="Notwithstanding she shall be saved in childbearing, if they continue in faith and charity and holiness with sobriety.">1 Tim. 2:15</span></span>
+            </div>
+        </div>
+
+        <!-- Curse on Adam -->
+        <div class="day-card c-red">
+            <div class="day-badge">
+                <span class="day-pill">vv. 17–19</span>
+                <span class="verse-ref">Adam Cursed — And All Men</span>
+            </div>
+            <p class="day-title">Thorns and Thistles &nbsp;•&nbsp; Sweat &nbsp;•&nbsp; Dust to Dust</p>
+            <div class="verse-text">
+                <p><span class="vn">17</span>And unto Adam he said, Because thou hast hearkened unto the voice of thy wife, and hast eaten of the tree, of which I commanded thee, saying, Thou shalt not eat of it: <span class="hl-red">cursed is the ground for thy sake; in sorrow shalt thou eat of it all the days of thy life;</span></p>
+                <p><span class="vn">18</span><span class="hl-red">Thorns also and thistles shall it bring forth to thee;</span> and thou shalt eat the herb of the field;</p>
+                <p><span class="vn">19</span>In the sweat of thy face shalt thou eat bread, <span class="hl-red">till thou return unto the ground; for out of it wast thou taken: for dust thou art, and unto dust shalt thou return.</span></p>
+                <span class="teacher-note">Physical death enters here — every grave is the direct consequence of this moment. Every man who has ever broken his back for daily bread bears the mark of the Fall. The thorns Adam now cultivates foreshadow the crown of thorns on the Last Adam — Christ bore the curse in full. <span class="sref" data-ref="Galatians 3:13" data-verse="Christ hath redeemed us from the curse of the law, being made a curse for us: for it is written, Cursed is every one that hangeth on a tree:">Gal. 3:13</span> &nbsp;•&nbsp; <span class="sref" data-ref="Romans 5:12" data-verse="Wherefore, as by one man sin entered into the world, and death by sin; and so death passed upon all men, for that all have sinned:">Rom. 5:12</span></span>
+            </div>
+        </div>
+
+        <!-- ══ GOSPEL IN SKINS ══ -->
+        <div class="section-divider"><div class="divider-line"></div><span class="divider-label">The Gospel Enacted</span><div class="divider-line right"></div></div>
+
+        <div class="day-card c-key">
+            <div class="day-badge">
+                <span class="day-pill">v. 21</span>
+                <span class="verse-ref">The LORD Makes Coats of Skins</span>
+            </div>
+            <p class="day-title">Blood Must Be Shed — God Clothes the Sinner</p>
+            <div class="verse-text">
+                <span class="key-verse-block"><span class="vn" style="color:rgba(251,191,36,0.5);">21</span> Unto Adam also and to his wife did the LORD God make coats of skins, and clothed them.</span>
+                <span class="teacher-note">Man covered himself with leaves — his own works. God replaced those leaves with skins. An animal had to die. Blood had to be shed. This is the first sacrifice in Scripture — and it is God who performs it. God himself provides the covering for sin at the cost of innocent life. <span class="sref" data-ref="Hebrews 9:22" data-verse="And almost all things are by the law purged with blood; and without shedding of blood is no remission.">Heb. 9:22</span> &nbsp;•&nbsp; <span class="sref" data-ref="John 1:29" data-verse="The next day John seeth Jesus coming unto him, and saith, Behold the Lamb of God, which taketh away the sin of the world.">John 1:29</span> &nbsp;•&nbsp; <span class="sref" data-ref="Isaiah 61:10" data-verse="I will greatly rejoice in the LORD, my soul shall be joyful in my God; for he hath clothed me with the garments of salvation, he hath covered me with the robe of righteousness, as a bridegroom decketh himself with ornaments, and as a bride adorneth herself with her jewels.">Isa. 61:10</span></span>
+            </div>
+        </div>
+
+        <!-- ══ EXPELLED ══ -->
+        <div class="section-divider"><div class="divider-line"></div><span class="divider-label">Spiritual Death — Cast Out</span><div class="divider-line right"></div></div>
+
+        <div class="day-card c-red-key">
+            <div class="day-badge">
+                <span class="day-pill">vv. 22–24</span>
+                <span class="verse-ref">Expelled — Separated from God's Presence</span>
+            </div>
+            <p class="day-title">Driven Out &nbsp;•&nbsp; The Flaming Sword &nbsp;•&nbsp; The Tree of Life Guarded</p>
+            <div class="verse-text">
+                <p><span class="vn">22</span>And the LORD God said, Behold, the man is become as one of us, to know good and evil: and now, lest he put forth his hand, and take also of the tree of life, and eat, and live for ever:</p>
+                <p><span class="vn">23</span><span class="hl-red">Therefore the LORD God sent him forth from the garden of Eden, to till the ground from whence he was taken.</span></p>
+                <p><span class="vn">24</span><span class="hl-red">So he drove out the man; and he placed at the east of the garden of Eden Cherubims, and a flaming sword which turned every way, to keep the way of the tree of life.</span></p>
+                <span class="teacher-note">Spiritual death — separation from the presence of God where He walked with man. The way to the tree of life is now barred. It will not be opened again until the cross tears the veil — <span class="sref" data-ref="Matthew 27:51" data-verse="And, behold, the veil of the temple was rent in twain from the top to the bottom; and the earth did quake, and the rocks rent;">Matt. 27:51</span> — and the last chapter of Scripture restores what was lost: <span class="sref" data-ref="Revelation 22:14" data-verse="Blessed are they that do his commandments, that they may have right to the tree of life, and may enter in through the gates into the city.">Rev. 22:14</span></span>
+            </div>
+        </div>
+
+        <!-- Closing summary -->
+        <div class="day-card c-key">
+            <div class="day-badge">
+                <span class="day-pill">The Whole Story</span>
+                <span class="verse-ref">Genesis 3 in One Frame</span>
+            </div>
+            <p class="day-title">What the Fall Cost — What Christ Restores</p>
+            <div class="verse-text">
+                <p><span class="hl-red">Man doubted God's word. Man desired to be God. Man chose sin. Man tried to cover himself. Man hid from God. Man blamed others. Man was cursed. Man was driven out.</span></p>
+                <p><span class="hl-gold">But before the first curse was pronounced — God announced a Deliverer. Before the first animal died — God showed that blood would cover sin. Before the gate closed — God was already planning to open it again.</span></p>
+                <span class="key-verse-block green">Romans 5:19 — For as by one man's disobedience many were made sinners, so by the obedience of one shall many be made righteous.</span>
+            </div>
+        </div>
+
+    </div><!-- /content-body -->
+
+    <footer>
+        Young Adult Sunday School &nbsp;•&nbsp; Genesis Series &nbsp;•&nbsp; King James Bible<br>
+        <span style="font-size:0.88em;opacity:0.65;">Click ✦ for cross-reference panels &nbsp;•&nbsp; Hover or tap gold references for verse text &nbsp;•&nbsp; Esc to close</span>
+    </footer>
+
+</div><!-- /page-frame -->
+
+<!-- Tooltip element (single, reused) -->
+<div class="verse-tooltip" id="verseTooltip">
+    <span class="tt-ref" id="ttRef"></span>
+    <span class="tt-verse" id="ttVerse"></span>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     MODAL — Romans 5
+═══════════════════════════════════════════ -->
+<div class="modal-overlay" id="modal-romans5" onclick="handleOverlayClick(event,'modal-romans5')">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModal('modal-romans5')" aria-label="Close">✕</button>
+        <p class="modal-eyebrow">Cross References &nbsp;•&nbsp; Romans 5</p>
+        <h2 class="modal-title">Adam's Choice — Death Through One Man, Life Through One Man</h2>
+        <div class="xref-entry">
+            <p class="xref-label">Romans 5:12</p>
+            <p class="xref-verse">"Wherefore, as by one man sin entered into the world, and death by sin; and so death passed upon all men, for that all have sinned:"</p>
+            <p class="xref-note">→ Sin entered through Adam's wilful choice. He was the federal head of the human race. His act condemned all who come from him.</p>
+        </div>
+        <div class="xref-entry">
+            <p class="xref-label">Romans 5:14</p>
+            <p class="xref-verse">"Nevertheless death reigned from Adam to Moses, even over them that had not sinned after the similitude of Adam's transgression, who is the figure of him that was to come."</p>
+            <p class="xref-note">→ Adam is called a "figure" — a type — of Christ. The first Adam plunged the race into death; the Last Adam would lift it back to life.</p>
+        </div>
+        <div class="xref-entry">
+            <p class="xref-label">Romans 5:17</p>
+            <p class="xref-verse">"For if by one man's offence death reigned by one; much more they which receive abundance of grace and of the gift of righteousness shall reign in life by one, Jesus Christ."</p>
+            <p class="xref-note">→ The "much more" of grace — what Adam lost, Christ restores in abundance. Death reigned through Adam; the redeemed shall reign in life through Christ.</p>
+        </div>
+        <div class="xref-entry">
+            <p class="xref-label">Romans 5:18–19</p>
+            <p class="xref-verse">"Therefore as by the offence of one judgment came upon all men to condemnation; even so by the righteousness of one the free gift came upon all men unto justification of life. For as by one man's disobedience many were made sinners, so by the obedience of one shall many be made righteous."</p>
+            <p class="xref-note">→ The remedy is perfectly shaped to match the wound. One act of disobedience — condemnation. One act of obedience at the cross — justification.</p>
+        </div>
+        <div class="xref-entry">
+            <p class="xref-label">1 Corinthians 15:21–22</p>
+            <p class="xref-verse">"For since by man came death, by man came also the resurrection of the dead. For as in Adam all die, even so in Christ shall all be made alive."</p>
+            <p class="xref-note">→ Every human being stands in one of two federal heads: in Adam (dead), or in Christ (alive). There is no neutral ground.</p>
+        </div>
+        <div class="xref-entry">
+            <p class="xref-label">1 Timothy 2:14</p>
+            <p class="xref-verse">"And Adam was not deceived, but the woman being deceived was in the transgression."</p>
+            <p class="xref-note">→ Eve was deceived. Adam was not. Adam chose to follow his wife into sin with full knowledge of God's command. His representative role is therefore the greater.</p>
+        </div>
+        <div class="modal-summary">Adam received the command directly from God before Eve existed. He was not deceived — he sinned deliberately. This is why Scripture assigns the Fall to Adam, not Eve. But the glory of the gospel is that the same principle that condemned us — one man representing many — is the very mechanism God uses to save us. In Adam, all die. In Christ, all who believe are made alive.</div>
+    </div>
+</div>
+
+<script>
+    /* ── MODAL ── */
+    function openModal(id) { const el = document.getElementById(id); if (el) { el.classList.add('open'); document.body.style.overflow = 'hidden'; } }
+    function closeModal(id) { const el = document.getElementById(id); if (el) { el.classList.remove('open'); document.body.style.overflow = ''; } }
+    function handleOverlayClick(e, id) { if (e.target === e.currentTarget) closeModal(id); }
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal-overlay.open').forEach(el => el.classList.remove('open'));
+            document.body.style.overflow = '';
+            hideTooltip();
+        }
+    });
+
+    /* ── SCRIPTURE TOOLTIPS ── */
+    const tooltip   = document.getElementById('verseTooltip');
+    const ttRef     = document.getElementById('ttRef');
+    const ttVerse   = document.getElementById('ttVerse');
+    let   activeRef = null;
+    let   hideTimer = null;
+
+    function showTooltip(el) {
+        clearTimeout(hideTimer);
+        ttRef.textContent   = el.dataset.ref;
+        ttVerse.textContent = el.dataset.verse;
+
+        // Temporarily show offscreen to measure
+        tooltip.style.visibility = 'hidden';
+        tooltip.classList.add('visible');
+
+        const rect = el.getBoundingClientRect();
+        const tw   = tooltip.offsetWidth;
+        const th   = tooltip.offsetHeight;
+        const vw   = window.innerWidth;
+        const vh   = window.innerHeight;
+        const pad  = 12;
+
+        // Prefer above the reference; fall back to below
+        let top = rect.top - th - pad;
+        if (top < pad) top = rect.bottom + pad;
+
+        // Horizontal: align with ref, clamp to viewport
+        let left = rect.left;
+        if (left + tw > vw - pad) left = vw - tw - pad;
+        if (left < pad) left = pad;
+
+        tooltip.style.top  = top  + 'px';
+        tooltip.style.left = left + 'px';
+        tooltip.style.visibility = '';
+        activeRef = el;
+    }
+
+    function hideTooltip() {
+        hideTimer = setTimeout(function() {
+            tooltip.classList.remove('visible');
+            activeRef = null;
+        }, 120);
+    }
+
+    document.querySelectorAll('.sref').forEach(function(el) {
+        // Hover
+        el.addEventListener('mouseenter', function() { showTooltip(el); });
+        el.addEventListener('mouseleave', function() { hideTooltip(); });
+        // Click / tap toggle
+        el.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (activeRef === el && tooltip.classList.contains('visible')) {
+                hideTooltip();
+            } else {
+                showTooltip(el);
+            }
+        });
+    });
+
+    // Keep tooltip alive when hovering over it
+    tooltip.addEventListener('mouseenter', function() { clearTimeout(hideTimer); });
+    tooltip.addEventListener('mouseleave', function() { hideTooltip(); });
+
+    // Click anywhere else to dismiss
+    document.addEventListener('click', function() { hideTooltip(); });
+</script>
+</body>
+</html>

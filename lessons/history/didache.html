@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Didache: The Teaching of the Twelve</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#0d0a07;
+  --panel:#17120c;
+  --gold:#c9a227;
+  --gold-soft:#e4cd85;
+  --crimson:#8e1b1b;
+  --crimson-bright:#c0392b;
+  --vellum:#ece0c4;
+  --vellum-ink:#2a1d10;
+  --text:#ebe3d1;
+  --muted:#a99d85;
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Times New Roman", serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --ink:#0d0a07; --text:#ebe3d1; }
+}
+*,*::before,*::after{box-sizing:inherit}
+html,body{height:100%;margin:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  background:var(--ink);
+  color:var(--text);
+  font-family:var(--body);
+  font-size:clamp(19px,1.55vw,25px);
+  line-height:1.55;
+  overflow:hidden;
+}
+/* subtle vellum-grain vignette */
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,.55) 100%);
+}
+
+/* ---------- chrome ---------- */
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:5;
+  padding:calc(env(safe-area-inset-top,0px) + .7rem) 1.4rem .7rem;
+  display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+  font-family:var(--display);font-size:.62em;letter-spacing:.08em;color:var(--muted);
+  background:linear-gradient(var(--ink) 60%, transparent);
+}
+.topbar .sec{color:var(--gold)}
+.bottombar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  padding:.6rem 1.2rem calc(env(safe-area-inset-bottom,0px) + .7rem);
+  display:flex;align-items:center;gap:.8rem;
+  background:linear-gradient(transparent, var(--ink) 40%);
+}
+.progress{flex:1;height:2px;background:rgba(201,162,39,.18);position:relative}
+.progress span{position:absolute;inset:0 auto 0 0;background:var(--gold);transition:width .3s ease}
+.navbtn{
+  font-family:var(--display);font-size:.62em;letter-spacing:.06em;
+  background:transparent;color:var(--gold-soft);
+  border:1px solid rgba(201,162,39,.5);padding:.45rem .9rem;cursor:pointer;
+}
+.navbtn:hover{background:rgba(201,162,39,.12)}
+.navbtn:disabled{opacity:.3;cursor:default}
+button:focus-visible{outline:2px solid var(--gold-soft);outline-offset:3px}
+
+/* ---------- slides ---------- */
+.deck{height:100%;position:relative}
+.slide{
+  position:absolute;inset:0;
+  display:none;overflow-y:auto;
+  padding:4.2rem 1.4rem 5.2rem;
+}
+.slide.active{display:block}
+.slide.enter{animation:fadein .45s ease}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion: reduce){.slide.enter{animation:none}}
+.inner{max-width:60rem;margin:0 auto;min-height:100%;display:flex;flex-direction:column;justify-content:center}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-soft);margin:0}
+h2{font-size:1.75em;line-height:1.2;margin-bottom:.35em}
+h2 + .lede{margin-top:0}
+h3{font-size:.85em;letter-spacing:.04em;color:var(--gold);margin:1.1em 0 .4em}
+p{margin:.55em 0}
+.lede{font-size:1.12em;font-style:italic;color:var(--text)}
+.muted{color:var(--muted)}
+.small{font-size:.82em}
+ul.points{margin:.6em 0;padding-left:1.2em}
+ul.points li{margin:.35em 0}
+ul.points li::marker{content:"✠  ";color:var(--crimson-bright);font-size:.8em}
+.rule{border:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1.2em 0;opacity:.6}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;align-items:start}
+@media (max-width:760px){.cols{grid-template-columns:1fr;gap:.6rem}}
+
+/* Didache quotation card: vellum */
+.did{
+  background:var(--vellum);color:var(--vellum-ink);
+  margin:.9em 0;padding:1em 1.3em 1em;
+  border:1px solid var(--gold);
+  box-shadow:0 0 0 4px var(--vellum), 0 0 0 5px var(--gold);
+  margin-left:5px;margin-right:5px;
+  font-size:1.02em;line-height:1.45;
+}
+.did p{margin:0}
+.did cite{
+  display:block;margin-top:.5em;text-align:right;
+  font-family:var(--display);font-style:normal;font-size:.62em;letter-spacing:.06em;color:var(--crimson);
+}
+
+/* KJV references: gold tap-to-reveal */
+.refs{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1em}
+.ref{
+  font-family:var(--display);font-size:.6em;letter-spacing:.05em;
+  background:rgba(201,162,39,.08);color:var(--gold-soft);
+  border:1px solid var(--gold);padding:.5em .85em;cursor:pointer;
+}
+.ref::before{content:"KJV  ";color:var(--crimson-bright);font-weight:700}
+.ref:hover{background:rgba(201,162,39,.2)}
+
+/* Notes and inference boxes */
+.note{
+  border:1px solid rgba(192,57,43,.6);background:rgba(142,27,27,.14);
+  padding:.7em 1em;margin:.9em 0;font-size:.92em;
+}
+.note b{font-family:var(--display);font-weight:600;font-size:.72em;letter-spacing:.05em;color:var(--crimson-bright);display:block;margin-bottom:.2em}
+.stated{border:1px solid var(--gold);padding:.8em 1.1em;margin:.7em 0;background:rgba(201,162,39,.06)}
+.inferred{border:1px dashed var(--crimson-bright);padding:.8em 1.1em;margin:.7em 0}
+.tag{font-family:var(--display);font-size:.6em;letter-spacing:.08em;display:inline-block;margin-bottom:.3em}
+.stated .tag{color:var(--gold)}
+.inferred .tag{color:var(--crimson-bright)}
+
+/* Ordered sequences (water, end-times) */
+ol.seq{list-style:none;counter-reset:s;padding:0;margin:.8em 0}
+ol.seq li{counter-increment:s;position:relative;padding:.45em 0 .45em 3.1em;border-bottom:1px solid rgba(201,162,39,.18)}
+ol.seq li:last-child{border-bottom:0}
+ol.seq li::before{
+  content:counter(s);position:absolute;left:0;top:.35em;
+  width:2.1em;height:2.1em;display:grid;place-items:center;
+  font-family:var(--display);font-size:.8em;color:var(--gold-soft);
+  background:var(--crimson);border:1px solid var(--gold);
+}
+ol.seq li.last{color:var(--muted);font-style:italic}
+
+/* Timeline of years */
+.years{display:grid;grid-template-columns:auto 1fr;gap:.3em 1.2em;margin:.8em 0}
+.years dt{font-family:var(--display);color:var(--gold);font-size:.85em;padding-top:.15em;white-space:nowrap}
+.years dd{margin:0;border-bottom:1px solid rgba(201,162,39,.15);padding-bottom:.4em}
+
+/* Table */
+.tablewrap{overflow-x:auto;margin:.8em 0}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92em}
+th,td{text-align:left;padding:.55em .8em;border-bottom:1px solid rgba(201,162,39,.25);vertical-align:top}
+th{font-family:var(--display);font-weight:600;font-size:.7em;letter-spacing:.05em;color:var(--gold)}
+td:first-child{font-family:var(--display);font-size:.78em;color:var(--gold-soft);width:34%}
+tr.fit td{background:rgba(201,162,39,.09)}
+.verdict-no{color:#e08a7f}
+.verdict-yes{color:var(--gold-soft)}
+
+/* Illuminated initial: the one bold device */
+.illum{
+  display:inline-grid;place-items:center;
+  width:2.9em;height:2.9em;
+  font-family:var(--display);font-weight:700;font-size:2.6em;line-height:1;
+  color:var(--gold-soft);
+  background:
+    radial-gradient(circle at 30% 25%, rgba(228,205,133,.25), transparent 45%),
+    var(--crimson);
+  border:2px solid var(--gold);
+  box-shadow:0 0 0 6px var(--ink), 0 0 0 7px var(--gold), 0 0 40px rgba(201,162,39,.25);
+  margin-bottom:.9rem;
+}
+.divider .inner,.title .inner{align-items:center;text-align:center}
+.divider h2{font-size:2.2em;margin:.3em 0 .1em}
+.divider .chap{font-family:var(--display);color:var(--muted);font-size:.72em;letter-spacing:.08em}
+.divider .lede{max-width:34em}
+.title h1{font-size:clamp(2.4rem,7vw,5rem);letter-spacing:.06em;margin-top:.4rem}
+.title .sub{font-style:italic;font-size:1.2em;margin:.2em 0 .8em}
+.title .illum{font-size:3.4em}
+.hint{margin-top:2.4em;font-size:.75em;color:var(--muted)}
+
+/* ---------- KJV modal ---------- */
+dialog{
+  max-width:min(40rem,92vw);width:100%;
+  background:var(--panel);color:var(--text);
+  border:1px solid var(--gold);
+  box-shadow:0 0 0 5px var(--panel),0 0 0 6px var(--gold),0 20px 60px rgba(0,0,0,.7);
+  padding:1.6rem 1.7rem 1.3rem;
+}
+dialog::backdrop{background:rgba(5,3,1,.78)}
+dialog h3{margin:0 0 .6em;font-size:.95em;color:var(--gold-soft)}
+dialog .vtext{font-size:1.15em;line-height:1.6}
+dialog .src{font-family:var(--display);font-size:.58em;letter-spacing:.06em;color:var(--crimson-bright);margin-top:1em}
+dialog .close{margin-top:1.1em}
+</style>
+</head>
+<body>
+
+<header class="topbar" aria-live="polite">
+  <span class="sec" id="secLabel">The Didache</span>
+  <span id="counter">1 / 1</span>
+</header>
+
+<main class="deck" id="deck">
+
+<!-- ================= TITLE ================= -->
+<section class="slide title" data-section="The Didache">
+  <div class="inner">
+    <span class="illum" aria-hidden="true">D</span>
+    <h1>The Didache</h1>
+    <p class="sub">The Teaching of the Lord to the Gentiles by the Twelve Apostles</p>
+    <p class="muted">A first-century discipleship manual and local church guide</p>
+    <p class="hint">Use the arrow keys, swipe, or the buttons below. Tap any gold KJV reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- ================= I. FRAMING ================= -->
+<section class="slide divider" data-section="I. Before We Begin">
+  <div class="inner">
+    <span class="illum" aria-hidden="true">I</span>
+    <p class="chap">Section One</p>
+    <h2>Before We Begin</h2>
+    <p class="lede">What the Didache is, and where it stands next to the Word of God.</p>
+  </div>
+</section>
+
+<section class="slide" data-section="I. Before We Begin">
+  <div class="inner">
+    <h2>A Witness, Not Scripture</h2>
+    <p class="lede"><em>Didache</em> (DID-ah-kay) simply means “Teaching.”</p>
+    <div class="cols">
+      <div>
+        <h3>What it is</h3>
+        <ul class="points">
+          <li>One of the earliest Christian writings outside the New Testament.</li>
+          <li>A window into what early assemblies believed and practiced.</li>
+          <li>Where it agrees with the Bible, it shows the doctrine was held from the beginning.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What it is not</h3>
+        <ul class="points">
+          <li>It is not inspired.</li>
+          <li>It does not add to the canon.</li>
+          <li>Where it goes beyond the Bible, the Bible remains the final authority.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="refs">
+      <button class="ref" data-v="2tim3">2 Timothy 3:16–17</button>
+      <button class="ref" data-v="isa8">Isaiah 8:20</button>
+    </div>
+    <p class="small muted" style="margin-top:1.2em">Didache quotations appear on vellum cards. Scripture appears in gold. Quotations are from the public-domain Roberts-Donaldson and Lightfoot translations.</p>
+  </div>
+</section>
+
+<!-- ================= II. ORIGINS ================= -->
+<section class="slide divider" data-section="II. Origins">
+  <div class="inner">
+    <span class="illum" aria-hidden="true">II</span>
+    <p class="chap">Section Two</p>
+    <h2>Origins</h2>
+    <p class="lede">When it was written, where, and how a lost book was found again.</p>
+  </div>
+</section>
+
+<section class="slide" data-section="II. Origins">
+  <div class="inner">
+    <h2>When and Where</h2>
+    <div class="cols">
+      <div>
+        <h3>Written about 70 to 110 AD</h3>
+        <ul class="points">
+          <li>No popes, no regional hierarchy, no priesthood over the people.</li>
+          <li>Just local assemblies, each led by its own bishops and deacons.</li>
+          <li>That simplicity is itself a mark of an early date.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Compiled in Syria or Palestine</h3>
+        <ul class="points">
+          <li>The bread prayer speaks of grain scattered “upon the mountains.”</li>
+          <li>That describes hillside wheat farming, common in Syria and Palestine.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="II. Origins">
+  <div class="inner">
+    <h2>Lost and Found</h2>
+    <p class="lede">For centuries the West knew the Didache only by name.</p>
+    <dl class="years">
+      <dt>c. 70–110</dt><dd>The Didache is written.</dd>
+      <dt>4th century</dt><dd>A papyrus copy is made in Egypt. Fragments of it are later dug up at Oxyrhynchus.</dd>
+      <dt>1056</dt><dd>“Leon the Notary” copies it into a manuscript now called the <em>Codex Hierosolymitanus</em>.</dd>
+      <dt>1873</dt><dd>Philotheos Bryennios discovers that manuscript in a library in Constantinople.</dd>
+      <dt>1883</dt><dd>Bryennios publishes the text, and it spreads around the world.</dd>
+    </dl>
+    <p class="muted small">The ancient papyrus matches the medieval copy, showing the text was handed down faithfully.</p>
+  </div>
+</section>
+
+<!-- ================= III. THE TWO WAYS ================= -->
+<section class="slide divider" data-section="III. The Two Ways">
+  <div class="inner">
+    <span class="illum" aria-hidden="true">III</span>
+    <p class="chap">Section Three · Chapters 1–6</p>
+    <h2>The Two Ways</h2>
+    <p class="lede">The first lessons taught to new converts coming straight out of paganism, before they were baptized.</p>
+  </div>
+</section>
+
+<section class="slide" data-section="III. The Two Ways">
+  <div class="inner">
+    <h2>Two Roads, One Choice</h2>
+    <blockquote class="did"><p>“There are two ways, one of life and one of death; and there is a great difference between the two ways.”</p><cite>Didache 1:1</cite></blockquote>
+    <ul class="points">
+      <li>The Way of Life (chapters 1–4) applies the Ten Commandments and the Sermon on the Mount to life in the Roman world.</li>
+      <li>The Way of Death (chapter 5) describes the life of the unregenerate.</li>
+      <li>There is no third road.</li>
+    </ul>
+    <div class="refs">
+      <button class="ref" data-v="matt7_13">Matthew 7:13–14</button>
+      <button class="ref" data-v="jer21">Jeremiah 21:8</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="III. The Two Ways">
+  <div class="inner">
+    <h2>Love God, Love Your Neighbor</h2>
+    <blockquote class="did"><p>“The way of life, then, is this: First, you shall love God who made you; second, love your neighbor as yourself; and all things whatsoever you would not should be done to you, do not also to another.”</p><cite>Didache 1:2</cite></blockquote>
+    <p>The Didache starts exactly where Jesus said the whole law hangs, then gives the Golden Rule in its “do not” form.</p>
+    <div class="refs">
+      <button class="ref" data-v="matt22">Matthew 22:37–39</button>
+      <button class="ref" data-v="matt7_12">Matthew 7:12</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="III. The Two Ways">
+  <div class="inner">
+    <h2>The Other Cheek and the Open Hand</h2>
+    <blockquote class="did"><p>“If any one give thee a blow on thy right cheek, turn to him the other also, and thou shalt be perfect… Give to every one that asks thee, and ask it not back.”</p><cite>Didache 1:4–5</cite></blockquote>
+    <blockquote class="did"><p>“Let thine alms sweat in thy hands, until thou know to whom thou shouldst give.”</p><cite>Didache 1:6</cite></blockquote>
+    <p>Generous, but not careless. Hold the gift until you know it will do good.</p>
+    <div class="refs">
+      <button class="ref" data-v="matt5_39">Matthew 5:39, 42</button>
+      <button class="ref" data-v="2thess3_10">2 Thessalonians 3:10</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="III. The Two Ways">
+  <div class="inner">
+    <h2>Guarding Life and Guarding the Tongue</h2>
+    <blockquote class="did"><p>“Thou shalt not murder a child by abortion nor kill that which is begotten.”</p><cite>Didache 2:2</cite></blockquote>
+    <p>Rome tolerated abortion and the abandonment of infants. The early church named both as murder, standing on the sixth commandment.</p>
+    <blockquote class="did"><p>“Thou shalt not be double-minded nor double-tongued; for to be double-tongued is a snare of death. Thy speech shall not be false, nor empty, but fulfilled by deed.”</p><cite>Didache 2:4–5</cite></blockquote>
+    <div class="refs">
+      <button class="ref" data-v="ex20">Exodus 20:13</button>
+      <button class="ref" data-v="ps139">Psalm 139:13–14</button>
+      <button class="ref" data-v="jas1">James 1:8</button>
+      <button class="ref" data-v="prov18">Proverbs 18:21</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="III. The Two Ways">
+  <div class="inner">
+    <h2>Omens, Charms, and Idols</h2>
+    <blockquote class="did"><p>“My child, be not an observer of omens, since it leads the way to idolatry; neither an enchanter, nor an astrologer, nor a purifier, nor be willing to look at these things; for from all these idolatry is begotten.”</p><cite>Didache 3:4</cite></blockquote>
+    <ul class="points">
+      <li>Superstition is not harmless. It is the doorway to idolatry.</li>
+      <li>The Didache forbids not only practicing these things but even being willing to look at them.</li>
+    </ul>
+    <div class="refs">
+      <button class="ref" data-v="deut18">Deuteronomy 18:10–12</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="III. The Two Ways">
+  <div class="inner">
+    <h2>The Way of Death</h2>
+    <blockquote class="did"><p>“And the way of death is this: First of all it is evil and full of curse; murders, adulteries, lusts, fornications, thefts, idolatries, witchcrafts, sorceries, robberies, false witnessings, hypocrisies, double-heartedness, deceit, pride…”</p><cite>Didache 5:1</cite></blockquote>
+    <blockquote class="did"><p>“…hating truth, loving a lie… not pitying a poor man, not laboring for the afflicted…”</p><cite>Didache 5:2</cite></blockquote>
+    <p>Like the tares among the wheat, false professors sit beside true believers until the harvest reveals them.</p>
+    <div class="refs">
+      <button class="ref" data-v="gal5">Galatians 5:19–21</button>
+      <button class="ref" data-v="matt13">Matthew 13:30</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="III. The Two Ways">
+  <div class="inner">
+    <h2>The Yoke of the Lord</h2>
+    <blockquote class="did"><p>“For if thou art able to bear the whole yoke of the Lord, thou wilt be perfect; but if thou art not able, what thou art able that do.”</p><cite>Didache 6:2</cite></blockquote>
+    <p>A gentle word for babes in Christ: grow at the pace God gives, but keep growing.</p>
+    <blockquote class="did"><p>“But against that which is sacrificed to idols be exceedingly on thy guard; for it is a service of dead gods.”</p><cite>Didache 6:3</cite></blockquote>
+    <div class="refs">
+      <button class="ref" data-v="matt11">Matthew 11:29–30</button>
+      <button class="ref" data-v="1pet2_2">1 Peter 2:2</button>
+      <button class="ref" data-v="acts15">Acts 15:29</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= IV. ORDINANCES ================= -->
+<section class="slide divider" data-section="IV. The Ordinances">
+  <div class="inner">
+    <span class="illum" aria-hidden="true">IV</span>
+    <p class="chap">Section Four · Chapters 7–10</p>
+    <h2>The Ordinances</h2>
+    <p class="lede">Baptism, fasting and prayer, and the Thanksgiving meal.</p>
+  </div>
+</section>
+
+<section class="slide" data-section="IV. The Ordinances">
+  <div class="inner">
+    <h2>Taught First, Then Baptized</h2>
+    <blockquote class="did"><p>“And concerning baptism, thus baptize ye: Having first said all these things, baptize into the name of the Father, and of the Son, and of the Holy Spirit, in living water.”</p><cite>Didache 7:1</cite></blockquote>
+    <p>“All these things” means the Two Ways. Instruction came first.</p>
+    <blockquote class="did"><p>“And before the baptism let the baptizer fast, and the baptized, and whatever others can; but thou shalt command the baptized to fast one or two days before.”</p><cite>Didache 7:4</cite></blockquote>
+    <p>A candidate who is taught, and commanded to fast for a day or two, is a believer who can understand and obey. There is no place here for infant baptism.</p>
+    <div class="refs">
+      <button class="ref" data-v="matt28">Matthew 28:19–20</button>
+      <button class="ref" data-v="acts8">Acts 8:36–38</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="IV. The Ordinances">
+  <div class="inner">
+    <h2>Into the Water</h2>
+    <p class="lede">The Didache gives an order of preference.</p>
+    <ol class="seq">
+      <li><strong>Living water:</strong> running water, like a river or stream.</li>
+      <li><strong>Other water:</strong> still water, like a pool.</li>
+      <li><strong>Cold water</strong> before warm water.</li>
+      <li class="last">Only if there is not enough water of any kind to baptize in: pour water three times on the head.</li>
+    </ol>
+    <blockquote class="did"><p>“But if thou hast not either, pour out water thrice upon the head into the name of Father and Son and Holy Spirit.”</p><cite>Didache 7:3</cite></blockquote>
+    <div class="note"><b>Why this matters</b>Pouring is a last-resort exception for scarcity, not an equal choice. The very need for an exception shows that going down into the water was the normal practice.</div>
+    <div class="refs">
+      <button class="ref" data-v="rom6">Romans 6:4</button>
+      <button class="ref" data-v="john3">John 3:23</button>
+      <button class="ref" data-v="mark1">Mark 1:10</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="IV. The Ordinances">
+  <div class="inner">
+    <h2>Fasting and Prayer</h2>
+    <blockquote class="did"><p>“But let not your fasts be with the hypocrites; for they fast on the second and fifth day of the week; but fast ye on the fourth day and the Preparation (Friday).”</p><cite>Didache 8:1</cite></blockquote>
+    <p>The synagogue fasted Monday and Thursday. The church chose Wednesday and Friday, a deliberate line of separation.</p>
+    <blockquote class="did"><p>“Neither pray ye as the hypocrites, but as the Lord commanded in His Gospel, thus pray ye… Thrice in the day pray ye thus.”</p><cite>Didache 8:2–3</cite></blockquote>
+    <p>Three set times gave new believers a habit of prayer, without the endless chanting of the heathen.</p>
+    <div class="refs">
+      <button class="ref" data-v="matt6_16">Matthew 6:16</button>
+      <button class="ref" data-v="matt6_7">Matthew 6:7</button>
+      <button class="ref" data-v="ps55">Psalm 55:17</button>
+      <button class="ref" data-v="dan6">Daniel 6:10</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="IV. The Ordinances">
+  <div class="inner">
+    <h2>The Thanksgiving Meal</h2>
+    <p class="lede">A shared meal of worship. Chapter 10 begins “after ye are filled.”</p>
+    <blockquote class="did"><p>“We thank thee, our Father, for the holy vine of David Thy servant, which Thou madest known to us through Jesus Thy Servant.”</p><cite>Didache 9:2</cite></blockquote>
+    <blockquote class="did"><p>“Even as this broken bread was scattered over the hills, and was gathered together and became one, so let Thy Church be gathered together from the ends of the earth into Thy kingdom.”</p><cite>Didache 9:4</cite></blockquote>
+    <ul class="points">
+      <li>The bread prayer gives thanks for the life and knowledge made known through Jesus.</li>
+      <li>Wheat scattered across the hills becomes one loaf, a picture of God’s people scattered over the world, gathered into one kingdom.</li>
+      <li>The prayers say nothing about the bread or cup becoming Christ’s body and blood.</li>
+    </ul>
+    <div class="refs">
+      <button class="ref" data-v="acts2">Acts 2:46</button>
+      <button class="ref" data-v="john15">John 15:5</button>
+      <button class="ref" data-v="1cor10">1 Corinthians 10:17</button>
+      <button class="ref" data-v="john11">John 11:52</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="IV. The Ordinances">
+  <div class="inner">
+    <h2>Guarding the Table</h2>
+    <blockquote class="did"><p>“But let no one eat or drink of your Thanksgiving, but they who have been baptized into the name of the Lord; for concerning this also the Lord hath said: Give not that which is holy to the dogs.”</p><cite>Didache 9:5</cite></blockquote>
+    <blockquote class="did"><p>“Let grace come, and let this world pass away. Hosanna to the God of David! If any one is holy, let him come; if any one is not so, let him repent. Maranatha! Amen.”</p><cite>Didache 10:6</cite></blockquote>
+    <p><em>Maranatha</em> means “Our Lord, come!” The meal ended looking for His return.</p>
+    <div class="refs">
+      <button class="ref" data-v="matt7_6">Matthew 7:6</button>
+      <button class="ref" data-v="1cor11">1 Corinthians 11:28</button>
+      <button class="ref" data-v="1cor16">1 Corinthians 16:22</button>
+      <button class="ref" data-v="rev22">Revelation 22:20</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= V. CHURCH ORDER ================= -->
+<section class="slide divider" data-section="V. Church Order">
+  <div class="inner">
+    <span class="illum" aria-hidden="true">V</span>
+    <p class="chap">Section Five · Chapters 11–15</p>
+    <h2>Church Order</h2>
+    <p class="lede">How a local church with no headquarters protected itself and cared for its ministers.</p>
+  </div>
+</section>
+
+<section class="slide" data-section="V. Church Order">
+  <div class="inner">
+    <h2>Testing Traveling Preachers</h2>
+    <blockquote class="did"><p>“Whosoever, therefore, cometh and teacheth you all these things that have been said before, receive him. But if the teacher himself turn aside and teach another teaching to the destruction of this, hear him not.”</p><cite>Didache 11:1–2</cite></blockquote>
+    <h3>The checklist</h3>
+    <ul class="points">
+      <li>Does his teaching match what you were taught?</li>
+      <li>Does he move on after a day or two? “If he remain three days, he is a false prophet.” (11:5)</li>
+      <li>Does he ask for money for himself? “If he ask money, he is a false prophet.” (11:6)</li>
+      <li>Does he live like the Lord? Only then is he a true prophet. (11:8)</li>
+    </ul>
+    <div class="refs">
+      <button class="ref" data-v="gal1">Galatians 1:8</button>
+      <button class="ref" data-v="1john4">1 John 4:1</button>
+      <button class="ref" data-v="matt7_15">Matthew 7:15–16</button>
+      <button class="ref" data-v="2pet2">2 Peter 2:3</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="V. Church Order">
+  <div class="inner">
+    <h2>Beware the Christ-Peddler</h2>
+    <blockquote class="did"><p>“But if he who cometh wishes to settle among you, and is a craftsman, let him work and eat. But if he has no craft, according to your wisdom provide how he shall live as a Christian among you, but not in idleness. But if he will not act thus, he is a Christ-peddler. Beware of such.”</p><cite>Didache 12:3–5</cite></blockquote>
+    <p>The Greek word is <em>Christemporos</em>: someone who trades on the name of Christ to live off the church.</p>
+    <div class="refs">
+      <button class="ref" data-v="2thess3_11">2 Thessalonians 3:11–12</button>
+      <button class="ref" data-v="2cor2">2 Corinthians 2:17</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="V. Church Order">
+  <div class="inner">
+    <h2>The Laborer Is Worthy</h2>
+    <p class="lede">Having warned against freeloaders, the Didache balances the scale.</p>
+    <blockquote class="did"><p>“But every true prophet that wills to abide among you is worthy of his support. So also a true teacher is himself worthy, as the workman, of his support.”</p><cite>Didache 13:1–2</cite></blockquote>
+    <p>This is the principle of the ox. God told Israel not to muzzle the ox while it threshed the grain, and Paul applies that law to those who labor in the word.</p>
+    <div class="refs">
+      <button class="ref" data-v="deut25">Deuteronomy 25:4</button>
+      <button class="ref" data-v="1cor9">1 Corinthians 9:9–11</button>
+      <button class="ref" data-v="1cor9_14">1 Corinthians 9:14</button>
+      <button class="ref" data-v="1tim5">1 Timothy 5:17–18</button>
+      <button class="ref" data-v="matt10">Matthew 10:10</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="V. Church Order">
+  <div class="inner">
+    <h2>The Firstfruits</h2>
+    <blockquote class="did"><p>“Every first-fruit, therefore, of the products of wine-press and threshing-floor, of oxen and of sheep, you shall take and give to the prophets… If you make a batch of dough, take the first-fruit and give according to the commandment… and of money and clothing and every possession, take the first-fruit, as it may seem good to you, and give according to the commandment.”</p><cite>Didache 13:3, 5–7</cite></blockquote>
+    <ul class="points">
+      <li>The first and best of every increase: the farm, the kitchen, the purse, the closet.</li>
+      <li>“According to the commandment” ties this to the Old Testament firstfruits and tithes that supported the Levites.</li>
+    </ul>
+    <div class="refs">
+      <button class="ref" data-v="prov3">Proverbs 3:9–10</button>
+      <button class="ref" data-v="mal3">Malachi 3:10</button>
+      <button class="ref" data-v="num18">Numbers 18:21</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="V. Church Order">
+  <div class="inner">
+    <h2>“Your High Priests” and the Poor</h2>
+    <blockquote class="did"><p>“…give to the prophets, for they are your high priests. But if you have no prophet, give it to the poor.”</p><cite>Didache 13:3–4</cite></blockquote>
+    <div class="note"><b>A careful reading</b>“High priests” describes the role of receiving firstfruits, as the Levitical priests once did. It is not a priestly office in the church. Christ alone is our High Priest, and every believer is a priest unto God.</div>
+    <p>And the firstfruits are never simply kept back. If there is no minister to support, they go to the poor.</p>
+    <div class="refs">
+      <button class="ref" data-v="heb4">Hebrews 4:14</button>
+      <button class="ref" data-v="1pet2_9">1 Peter 2:9</button>
+      <button class="ref" data-v="prov19">Proverbs 19:17</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="V. Church Order">
+  <div class="inner">
+    <h2>Reconciled Before Worship</h2>
+    <blockquote class="did"><p>“But on the Lord’s Day do ye assemble and break bread, and give thanks, after having confessed your transgressions, that your sacrifice may be pure. But let every one that hath a dispute with his fellow not assemble with you, until they be reconciled, that your sacrifice be not defiled.”</p><cite>Didache 14:1–2</cite></blockquote>
+    <ul class="points">
+      <li>Confession here is brother to brother, settling wrongs before worship.</li>
+      <li>No priest stands in the middle. The “sacrifice” is the church’s thanksgiving and praise.</li>
+    </ul>
+    <div class="refs">
+      <button class="ref" data-v="matt5_23">Matthew 5:23–24</button>
+      <button class="ref" data-v="jas5">James 5:16</button>
+      <button class="ref" data-v="heb13">Hebrews 13:15</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="V. Church Order">
+  <div class="inner">
+    <h2>Two Offices, Chosen by the Church</h2>
+    <blockquote class="did"><p>“Appoint, therefore, for yourselves, bishops and deacons worthy of the Lord, men meek, and not lovers of money, and truthful and proven.”</p><cite>Didache 15:1</cite></blockquote>
+    <ul class="points">
+      <li>Only two offices: bishops (pastors) and deacons.</li>
+      <li>“For yourselves”: the congregation chooses. No outside bishop or headquarters appoints them.</li>
+    </ul>
+    <blockquote class="did"><p>“And reprove one another, not in anger, but in peace, as ye have it in the Gospel.”</p><cite>Didache 15:3</cite></blockquote>
+    <div class="refs">
+      <button class="ref" data-v="phil1">Philippians 1:1</button>
+      <button class="ref" data-v="acts6">Acts 6:3</button>
+      <button class="ref" data-v="matt18">Matthew 18:15</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VI. LAST THINGS ================= -->
+<section class="slide divider" data-section="VI. Last Things">
+  <div class="inner">
+    <span class="illum" aria-hidden="true">VI</span>
+    <p class="chap">Section Six · Chapter 16</p>
+    <h2>Last Things</h2>
+    <p class="lede">First what the text plainly says, then what we can reasonably draw from it.</p>
+    <p class="small muted">The only complete manuscript breaks off at 16:8. Whatever came next is lost.</p>
+  </div>
+</section>
+
+<section class="slide" data-section="VI. Last Things">
+  <div class="inner">
+    <h2>Watch, and Gather Often</h2>
+    <blockquote class="did"><p>“Watch for your life’s sake. Let not your lamps be quenched, nor your loins unloosed; but be ye ready, for ye know not the hour in which our Lord cometh.”</p><cite>Didache 16:1</cite></blockquote>
+    <blockquote class="did"><p>“But often shall ye come together, seeking the things which are befitting to your souls: for the whole time of your faith will not profit you, if ye be not made complete in the last time.”</p><cite>Didache 16:2</cite></blockquote>
+    <div class="refs">
+      <button class="ref" data-v="matt25">Matthew 25:13</button>
+      <button class="ref" data-v="luke12">Luke 12:35</button>
+      <button class="ref" data-v="heb10">Hebrews 10:25</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="VI. Last Things">
+  <div class="inner">
+    <h2>The World-Deceiver</h2>
+    <blockquote class="did"><p>“For in the last days false prophets and corrupters shall be multiplied, and the sheep shall be turned into wolves, and love shall be turned into hate.”</p><cite>Didache 16:3</cite></blockquote>
+    <blockquote class="did"><p>“And then shall appear the world-deceiver as Son of God, and shall do signs and wonders, and the earth shall be delivered into his hands, and he shall do iniquitous things which have never yet come to pass since the beginning.”</p><cite>Didache 16:4</cite></blockquote>
+    <div class="stated"><span class="tag">Stated in the text</span><br>The church is warned that it will face this deceiver.</div>
+    <div class="refs">
+      <button class="ref" data-v="matt24_12">Matthew 24:12–13</button>
+      <button class="ref" data-v="2thess2">2 Thessalonians 2:3–4</button>
+      <button class="ref" data-v="rev13">Revelation 13:7</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="VI. Last Things">
+  <div class="inner">
+    <h2>The Fiery Trial</h2>
+    <blockquote class="did"><p>“Then shall the creation of men come into the fire of trial, and many shall be stumbled and shall perish; but they that endure in their faith shall be saved by the Curse itself.”</p><cite>Didache 16:5</cite></blockquote>
+    <ul class="points">
+      <li>This is persecution under men, the great sifting of the professing church.</li>
+      <li>Those who only went through the motions fall away. True believers endure.</li>
+    </ul>
+    <div class="note"><b>“Saved by the Curse itself”</b>A puzzling phrase. It is most often understood as Christ, who was made a curse for us. Some translators render it “saved from the curse.”</div>
+    <div class="refs">
+      <button class="ref" data-v="1pet4">1 Peter 4:12</button>
+      <button class="ref" data-v="gal3">Galatians 3:13</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="VI. Last Things">
+  <div class="inner">
+    <h2>The Signs, the Trumpet, the Resurrection</h2>
+    <blockquote class="did"><p>“And then shall appear the signs of the truth; first, the sign of an outspreading in heaven; then the sign of the sound of the trumpet; and the third, the resurrection of the dead; yet not of all, but as it was said: The Lord shall come and all His saints with Him. Then shall the world see the Lord coming upon the clouds of heaven.”</p><cite>Didache 16:6–8</cite></blockquote>
+    <p>Public, audible, and visible. And it comes after the world-deceiver and the fiery trial.</p>
+    <div class="refs">
+      <button class="ref" data-v="matt24_29">Matthew 24:29–31</button>
+      <button class="ref" data-v="1thess4">1 Thessalonians 4:16–17</button>
+      <button class="ref" data-v="zech14">Zechariah 14:5</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="VI. Last Things">
+  <div class="inner">
+    <h2>The Order the Text Gives</h2>
+    <div class="stated"><span class="tag">Stated in the text</span>
+      <ol class="seq">
+        <li>False prophets multiply and love grows cold.</li>
+        <li>The world-deceiver appears and rules the earth.</li>
+        <li>The fiery trial: false professors fall away, true believers endure.</li>
+        <li>Signs in heaven, then the trumpet.</li>
+        <li>The resurrection of the dead, but not of all: the saints.</li>
+        <li>The world sees the Lord coming on the clouds.</li>
+        <li class="last">The manuscript breaks off here.</li>
+      </ol>
+    </div>
+    <p>The church is on earth through the deceiver’s reign, and the trumpet and resurrection of the saints come after it. That is a post-tribulation gathering, in the same order as Matthew 24.</p>
+  </div>
+</section>
+
+<section class="slide" data-section="VI. Last Things">
+  <div class="inner">
+    <h2>What We Can Reasonably Draw Out</h2>
+    <div class="inferred"><span class="tag">Inference</span>
+      <p><strong>Before the wrath.</strong> The fiery trial comes from men under the deceiver, not from God. The saints are raised at the trumpet before the world sees the Lord coming. God’s wrath itself is not described in what survives, so “pre-wrath” is the natural reading, but the wrath portion is less detailed.</p>
+    </div>
+    <div class="inferred"><span class="tag">Inference</span>
+      <p><strong>A later resurrection.</strong> “Not of all” means some of the dead are not raised yet. With Scripture, that fits a first resurrection of the saints and a later one before the Great White Throne.</p>
+    </div>
+    <div class="inferred"><span class="tag">Inference</span>
+      <p><strong>A future kingdom.</strong> The Didache never mentions a thousand years. But it prays for the Church to be gathered “into Thy kingdom” and for “this world to pass away.” The kingdom is still awaited.</p>
+    </div>
+    <div class="refs">
+      <button class="ref" data-v="1thess1">1 Thessalonians 1:10</button>
+      <button class="ref" data-v="1thess5">1 Thessalonians 5:9</button>
+      <button class="ref" data-v="rev20">Revelation 20:5–6</button>
+      <button class="ref" data-v="john5">John 5:28–29</button>
+      <button class="ref" data-v="matt6_10">Matthew 6:10</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="VI. Last Things">
+  <div class="inner">
+    <h2>Measured Against Modern Views</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th scope="col">View</th><th scope="col">Against Didache 16</th></tr></thead>
+        <tbody>
+          <tr><td>Preterism<br><span class="muted small">fulfilled in 70 AD</span></td><td class="verdict-no">Conflicts. The deceiver, trumpet, and resurrection are all still future.</td></tr>
+          <tr><td>Postmillennialism<br><span class="muted small">the world improves first</span></td><td class="verdict-no">Conflicts. The world grows worse until the end.</td></tr>
+          <tr><td>Amillennialism<br><span class="muted small">one general resurrection</span></td><td class="verdict-no">Strained. “Not of all” sits awkwardly with a single resurrection.</td></tr>
+          <tr><td>Pre-tribulation rapture<br><span class="muted small">church removed first</span></td><td class="verdict-no">Conflicts. The church is warned it will face the deceiver.</td></tr>
+          <tr class="fit"><td>Post-tribulation / pre-wrath premillennialism</td><td class="verdict-yes">Fits the stated order most naturally.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VII. APPLICATION ================= -->
+<section class="slide divider" data-section="VII. The Old Paths">
+  <div class="inner">
+    <span class="illum" aria-hidden="true">VII</span>
+    <p class="chap">Section Seven</p>
+    <h2>The Old Paths</h2>
+    <p class="lede">What a first-century manual still teaches a local church today.</p>
+  </div>
+</section>
+
+<section class="slide" data-section="VII. The Old Paths">
+  <div class="inner">
+    <h2>Walking in the Old Paths</h2>
+    <ul class="points">
+      <li><strong>Teach before you baptize.</strong> New believers need grounding in the way of life.</li>
+      <li><strong>Guard the pulpit.</strong> Test every teacher by the Word and by his life.</li>
+      <li><strong>Give your firstfruits.</strong> Support those who labor in the word, and care for the poor.</li>
+      <li><strong>Be reconciled.</strong> Settle what is between you and your brother before you worship.</li>
+      <li><strong>Watch.</strong> Gather often, endure, and keep your lamp burning.</li>
+    </ul>
+    <div class="refs">
+      <button class="ref" data-v="jer6">Jeremiah 6:16</button>
+      <button class="ref" data-v="jude3">Jude 3</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide divider" data-section="VII. The Old Paths">
+  <div class="inner">
+    <span class="illum" aria-hidden="true">M</span>
+    <h2>Maranatha</h2>
+    <blockquote class="did" style="max-width:36em"><p>“Let grace come, and let this world pass away. Hosanna to the God of David! If any one is holy, let him come; if any one is not so, let him repent. Maranatha! Amen.”</p><cite>Didache 10:6</cite></blockquote>
+    <div class="refs" style="justify-content:center">
+      <button class="ref" data-v="rev22">Revelation 22:20</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="bottombar">
+  <button class="navbtn" id="prev" aria-label="Previous slide">Back</button>
+  <div class="progress" aria-hidden="true"><span id="bar"></span></div>
+  <button class="navbtn" id="fs" aria-label="Toggle full screen">Full screen</button>
+  <button class="navbtn" id="next" aria-label="Next slide">Next</button>
+</footer>
+
+<dialog id="verse" aria-labelledby="vref">
+  <h3 id="vref"></h3>
+  <div class="vtext" id="vtext"></div>
+  <div class="src">King James Version</div>
+  <button class="navbtn close" id="vclose">Close</button>
+</dialog>
+
+<script>
+const VERSES = {
+  "2tim3": ["2 Timothy 3:16–17", "All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness: That the man of God may be perfect, throughly furnished unto all good works."],
+  "isa8": ["Isaiah 8:20", "To the law and to the testimony: if they speak not according to this word, it is because there is no light in them."],
+  "matt7_13": ["Matthew 7:13–14", "Enter ye in at the strait gate: for wide is the gate, and broad is the way, that leadeth to destruction, and many there be which go in thereat: Because strait is the gate, and narrow is the way, which leadeth unto life, and few there be that find it."],
+  "jer21": ["Jeremiah 21:8", "And unto this people thou shalt say, Thus saith the LORD; Behold, I set before you the way of life, and the way of death."],
+  "matt22": ["Matthew 22:37–39", "Jesus said unto him, Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind. This is the first and great commandment. And the second is like unto it, Thou shalt love thy neighbour as thyself."],
+  "matt7_12": ["Matthew 7:12", "Therefore all things whatsoever ye would that men should do to you, do ye even so to them: for this is the law and the prophets."],
+  "matt5_39": ["Matthew 5:39, 42", "But I say unto you, That ye resist not evil: but whosoever shall smite thee on thy right cheek, turn to him the other also… Give to him that asketh thee, and from him that would borrow of thee turn not thou away."],
+  "2thess3_10": ["2 Thessalonians 3:10", "For even when we were with you, this we commanded you, that if any would not work, neither should he eat."],
+  "ex20": ["Exodus 20:13", "Thou shalt not kill."],
+  "ps139": ["Psalm 139:13–14", "For thou hast possessed my reins: thou hast covered me in my mother’s womb. I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well."],
+  "jas1": ["James 1:8", "A double minded man is unstable in all his ways."],
+  "prov18": ["Proverbs 18:21", "Death and life are in the power of the tongue: and they that love it shall eat the fruit thereof."],
+  "deut18": ["Deuteronomy 18:10–12", "There shall not be found among you any one that maketh his son or his daughter to pass through the fire, or that useth divination, or an observer of times, or an enchanter, or a witch, Or a charmer, or a consulter with familiar spirits, or a wizard, or a necromancer. For all that do these things are an abomination unto the LORD: and because of these abominations the LORD thy God doth drive them out from before thee."],
+  "gal5": ["Galatians 5:19–21", "Now the works of the flesh are manifest, which are these; Adultery, fornication, uncleanness, lasciviousness, Idolatry, witchcraft, hatred, variance, emulations, wrath, strife, seditions, heresies, Envyings, murders, drunkenness, revellings, and such like: of the which I tell you before, as I have also told you in time past, that they which do such things shall not inherit the kingdom of God."],
+  "matt13": ["Matthew 13:30", "Let both grow together until the harvest: and in the time of harvest I will say to the reapers, Gather ye together first the tares, and bind them in bundles to burn them: but gather the wheat into my barn."],
+  "matt11": ["Matthew 11:29–30", "Take my yoke upon you, and learn of me; for I am meek and lowly in heart: and ye shall find rest unto your souls. For my yoke is easy, and my burden is light."],
+  "1pet2_2": ["1 Peter 2:2", "As newborn babes, desire the sincere milk of the word, that ye may grow thereby."],
+  "acts15": ["Acts 15:29", "That ye abstain from meats offered to idols, and from blood, and from things strangled, and from fornication: from which if ye keep yourselves, ye shall do well. Fare ye well."],
+  "matt28": ["Matthew 28:19–20", "Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost: Teaching them to observe all things whatsoever I have commanded you: and, lo, I am with you alway, even unto the end of the world. Amen."],
+  "acts8": ["Acts 8:36–38", "And as they went on their way, they came unto a certain water: and the eunuch said, See, here is water; what doth hinder me to be baptized? And Philip said, If thou believest with all thine heart, thou mayest. And he answered and said, I believe that Jesus Christ is the Son of God. And he commanded the chariot to stand still: and they went down both into the water, both Philip and the eunuch; and he baptized him."],
+  "rom6": ["Romans 6:4", "Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life."],
+  "john3": ["John 3:23", "And John also was baptizing in Aenon near to Salim, because there was much water there: and they came, and were baptized."],
+  "mark1": ["Mark 1:10", "And straightway coming up out of the water, he saw the heavens opened, and the Spirit like a dove descending upon him."],
+  "matt6_16": ["Matthew 6:16", "Moreover when ye fast, be not, as the hypocrites, of a sad countenance: for they disfigure their faces, that they may appear unto men to fast. Verily I say unto you, They have their reward."],
+  "matt6_7": ["Matthew 6:7", "But when ye pray, use not vain repetitions, as the heathen do: for they think that they shall be heard for their much speaking."],
+  "ps55": ["Psalm 55:17", "Evening, and morning, and at noon, will I pray, and cry aloud: and he shall hear my voice."],
+  "dan6": ["Daniel 6:10", "Now when Daniel knew that the writing was signed, he went into his house; and his windows being open in his chamber toward Jerusalem, he kneeled upon his knees three times a day, and prayed, and gave thanks before his God, as he did aforetime."],
+  "acts2": ["Acts 2:46", "And they, continuing daily with one accord in the temple, and breaking bread from house to house, did eat their meat with gladness and singleness of heart."],
+  "john15": ["John 15:5", "I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing."],
+  "1cor10": ["1 Corinthians 10:17", "For we being many are one bread, and one body: for we are all partakers of that one bread."],
+  "john11": ["John 11:52", "And not for that nation only, but that also he should gather together in one the children of God that were scattered abroad."],
+  "matt7_6": ["Matthew 7:6", "Give not that which is holy unto the dogs, neither cast ye your pearls before swine, lest they trample them under their feet, and turn again and rend you."],
+  "1cor11": ["1 Corinthians 11:28", "But let a man examine himself, and so let him eat of that bread, and drink of that cup."],
+  "1cor16": ["1 Corinthians 16:22", "If any man love not the Lord Jesus Christ, let him be Anathema Maranatha."],
+  "rev22": ["Revelation 22:20", "He which testifieth these things saith, Surely I come quickly. Amen. Even so, come, Lord Jesus."],
+  "gal1": ["Galatians 1:8", "But though we, or an angel from heaven, preach any other gospel unto you than that which we have preached unto you, let him be accursed."],
+  "1john4": ["1 John 4:1", "Beloved, believe not every spirit, but try the spirits whether they are of God: because many false prophets are gone out into the world."],
+  "matt7_15": ["Matthew 7:15–16", "Beware of false prophets, which come to you in sheep’s clothing, but inwardly they are ravening wolves. Ye shall know them by their fruits. Do men gather grapes of thorns, or figs of thistles?"],
+  "2pet2": ["2 Peter 2:3", "And through covetousness shall they with feigned words make merchandise of you: whose judgment now of a long time lingereth not, and their damnation slumbereth not."],
+  "2thess3_11": ["2 Thessalonians 3:11–12", "For we hear that there are some which walk among you disorderly, working not at all, but are busybodies. Now them that are such we command and exhort by our Lord Jesus Christ, that with quietness they work, and eat their own bread."],
+  "2cor2": ["2 Corinthians 2:17", "For we are not as many, which corrupt the word of God: but as of sincerity, but as of God, in the sight of God speak we in Christ."],
+  "deut25": ["Deuteronomy 25:4", "Thou shalt not muzzle the ox when he treadeth out the corn."],
+  "1cor9": ["1 Corinthians 9:9–11", "For it is written in the law of Moses, Thou shalt not muzzle the mouth of the ox that treadeth out the corn. Doth God take care for oxen? Or saith he it altogether for our sakes? For our sakes, no doubt, this is written: that he that ploweth should plow in hope; and that he that thresheth in hope should be partaker of his hope. If we have sown unto you spiritual things, is it a great thing if we shall reap your carnal things?"],
+  "1cor9_14": ["1 Corinthians 9:14", "Even so hath the Lord ordained that they which preach the gospel should live of the gospel."],
+  "1tim5": ["1 Timothy 5:17–18", "Let the elders that rule well be counted worthy of double honour, especially they who labour in the word and doctrine. For the scripture saith, Thou shalt not muzzle the ox that treadeth out the corn. And, The labourer is worthy of his reward."],
+  "matt10": ["Matthew 10:10", "Nor scrip for your journey, neither two coats, neither shoes, nor yet staves: for the workman is worthy of his meat."],
+  "prov3": ["Proverbs 3:9–10", "Honour the LORD with thy substance, and with the firstfruits of all thine increase: So shall thy barns be filled with plenty, and thy presses shall burst out with new wine."],
+  "mal3": ["Malachi 3:10", "Bring ye all the tithes into the storehouse, that there may be meat in mine house, and prove me now herewith, saith the LORD of hosts, if I will not open you the windows of heaven, and pour you out a blessing, that there shall not be room enough to receive it."],
+  "num18": ["Numbers 18:21", "And, behold, I have given the children of Levi all the tenth in Israel for an inheritance, for their service which they serve, even the service of the tabernacle of the congregation."],
+  "heb4": ["Hebrews 4:14", "Seeing then that we have a great high priest, that is passed into the heavens, Jesus the Son of God, let us hold fast our profession."],
+  "1pet2_9": ["1 Peter 2:9", "But ye are a chosen generation, a royal priesthood, an holy nation, a peculiar people; that ye should shew forth the praises of him who hath called you out of darkness into his marvellous light."],
+  "prov19": ["Proverbs 19:17", "He that hath pity upon the poor lendeth unto the LORD; and that which he hath given will he pay him again."],
+  "matt5_23": ["Matthew 5:23–24", "Therefore if thou bring thy gift to the altar, and there rememberest that thy brother hath ought against thee; Leave there thy gift before the altar, and go thy way; first be reconciled to thy brother, and then come and offer thy gift."],
+  "jas5": ["James 5:16", "Confess your faults one to another, and pray one for another, that ye may be healed. The effectual fervent prayer of a righteous man availeth much."],
+  "heb13": ["Hebrews 13:15", "By him therefore let us offer the sacrifice of praise to God continually, that is, the fruit of our lips giving thanks to his name."],
+  "phil1": ["Philippians 1:1", "Paul and Timotheus, the servants of Jesus Christ, to all the saints in Christ Jesus which are at Philippi, with the bishops and deacons."],
+  "acts6": ["Acts 6:3", "Wherefore, brethren, look ye out among you seven men of honest report, full of the Holy Ghost and wisdom, whom we may appoint over this business."],
+  "matt18": ["Matthew 18:15", "Moreover if thy brother shall trespass against thee, go and tell him his fault between thee and him alone: if he shall hear thee, thou hast gained thy brother."],
+  "matt25": ["Matthew 25:13", "Watch therefore, for ye know neither the day nor the hour wherein the Son of man cometh."],
+  "luke12": ["Luke 12:35", "Let your loins be girded about, and your lights burning."],
+  "heb10": ["Hebrews 10:25", "Not forsaking the assembling of ourselves together, as the manner of some is; but exhorting one another: and so much the more, as ye see the day approaching."],
+  "matt24_12": ["Matthew 24:12–13", "And because iniquity shall abound, the love of many shall wax cold. But he that shall endure unto the end, the same shall be saved."],
+  "2thess2": ["2 Thessalonians 2:3–4", "Let no man deceive you by any means: for that day shall not come, except there come a falling away first, and that man of sin be revealed, the son of perdition; Who opposeth and exalteth himself above all that is called God, or that is worshipped; so that he as God sitteth in the temple of God, shewing himself that he is God."],
+  "rev13": ["Revelation 13:7", "And it was given unto him to make war with the saints, and to overcome them: and power was given him over all kindreds, and tongues, and nations."],
+  "1pet4": ["1 Peter 4:12", "Beloved, think it not strange concerning the fiery trial which is to try you, as though some strange thing happened unto you."],
+  "gal3": ["Galatians 3:13", "Christ hath redeemed us from the curse of the law, being made a curse for us: for it is written, Cursed is every one that hangeth on a tree."],
+  "matt24_29": ["Matthew 24:29–31", "Immediately after the tribulation of those days shall the sun be darkened, and the moon shall not give her light, and the stars shall fall from heaven, and the powers of the heavens shall be shaken: And then shall appear the sign of the Son of man in heaven: and then shall all the tribes of the earth mourn, and they shall see the Son of man coming in the clouds of heaven with power and great glory. And he shall send his angels with a great sound of a trumpet, and they shall gather together his elect from the four winds, from one end of heaven to the other."],
+  "1thess4": ["1 Thessalonians 4:16–17", "For the Lord himself shall descend from heaven with a shout, with the voice of the archangel, and with the trump of God: and the dead in Christ shall rise first: Then we which are alive and remain shall be caught up together with them in the clouds, to meet the Lord in the air: and so shall we ever be with the Lord."],
+  "zech14": ["Zechariah 14:5", "…and the LORD my God shall come, and all the saints with thee."],
+  "1thess1": ["1 Thessalonians 1:10", "And to wait for his Son from heaven, whom he raised from the dead, even Jesus, which delivered us from the wrath to come."],
+  "1thess5": ["1 Thessalonians 5:9", "For God hath not appointed us to wrath, but to obtain salvation by our Lord Jesus Christ."],
+  "rev20": ["Revelation 20:5–6", "But the rest of the dead lived not again until the thousand years were finished. This is the first resurrection. Blessed and holy is he that hath part in the first resurrection: on such the second death hath no power, but they shall be priests of God and of Christ, and shall reign with him a thousand years."],
+  "john5": ["John 5:28–29", "Marvel not at this: for the hour is coming, in the which all that are in the graves shall hear his voice, And shall come forth; they that have done good, unto the resurrection of life; and they that have done evil, unto the resurrection of damnation."],
+  "matt6_10": ["Matthew 6:10", "Thy kingdom come. Thy will be done in earth, as it is in heaven."],
+  "jer6": ["Jeremiah 6:16", "Thus saith the LORD, Stand ye in the ways, and see, and ask for the old paths, where is the good way, and walk therein, and ye shall find rest for your souls. But they said, We will not walk therein."],
+  "jude3": ["Jude 3", "Beloved, when I gave all diligence to write unto you of the common salvation, it was needful for me to write unto you, and exhort you that ye should earnestly contend for the faith which was once delivered unto the saints."]
+};
+
+const slides = Array.from(document.querySelectorAll('.slide'));
+const secLabel = document.getElementById('secLabel');
+const counter = document.getElementById('counter');
+const bar = document.getElementById('bar');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+const dlg = document.getElementById('verse');
+let idx = 0;
+
+function show(n, animate = true){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[idx].classList.remove('active', 'enter');
+  idx = n;
+  const s = slides[idx];
+  s.classList.add('active');
+  if (animate) { void s.offsetWidth; s.classList.add('enter'); }
+  s.scrollTop = 0;
+  secLabel.textContent = s.dataset.section || '';
+  counter.textContent = (idx + 1) + ' / ' + slides.length;
+  bar.style.width = ((idx + 1) / slides.length * 100) + '%';
+  prevBtn.disabled = idx === 0;
+  nextBtn.disabled = idx === slides.length - 1;
+  history.replaceState(null, '', '#' + (idx + 1));
+}
+
+prevBtn.addEventListener('click', () => show(idx - 1));
+nextBtn.addEventListener('click', () => show(idx + 1));
+
+document.getElementById('fs').addEventListener('click', () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen && document.documentElement.requestFullscreen().catch(() => {});
+  } else {
+    document.exitFullscreen && document.exitFullscreen();
+  }
+});
+
+document.addEventListener('keydown', e => {
+  if (dlg.open) return;
+  if (['ArrowRight', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); show(idx + 1); }
+  else if (['ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); show(idx - 1); }
+  else if (e.key === 'Home') show(0);
+  else if (e.key === 'End') show(slides.length - 1);
+});
+
+let tx = null, ty = null;
+document.getElementById('deck').addEventListener('touchstart', e => {
+  tx = e.touches[0].clientX; ty = e.touches[0].clientY;
+}, { passive: true });
+document.getElementById('deck').addEventListener('touchend', e => {
+  if (tx === null || dlg.open) return;
+  if (e.target.closest('.tablewrap')) { tx = null; return; }
+  const dx = e.changedTouches[0].clientX - tx;
+  const dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) show(idx + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+});
+
+/* KJV verse modal */
+document.addEventListener('click', e => {
+  const b = e.target.closest('.ref');
+  if (!b) return;
+  const v = VERSES[b.dataset.v];
+  if (!v) return;
+  document.getElementById('vref').textContent = v[0];
+  document.getElementById('vtext').textContent = v[1];
+  dlg.showModal();
+});
+document.getElementById('vclose').addEventListener('click', () => dlg.close());
+dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+
+const start = parseInt(location.hash.slice(1), 10);
+show(Number.isFinite(start) ? start - 1 : 0, false);
+</script>
+</body>
+</html>

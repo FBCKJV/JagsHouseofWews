@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Doctrine of Christ — Week 8</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+SC:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #0a0c11;
+    --ink-2: #12151d;
+    --ink-3: #191d28;
+    --line: rgba(201,162,39,0.28);
+    --gold: #c9a227;
+    --gold-light: #e6ca7d;
+    --cream: #ece3cd;
+    --cream-dim: #b9b09a;
+    --crimson: #8c2f39;
+    --crimson-light: #c2626c;
+    --sage: #6f8f6a;
+    --sage-light: #a3c49b;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(1200px 700px at 15% -10%, rgba(201,162,39,0.09), transparent 60%),
+      radial-gradient(1000px 600px at 100% 0%, rgba(140,47,57,0.10), transparent 55%),
+      var(--ink);
+    color:var(--cream);
+    font-family:'EB Garamond', serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--gold); color:var(--ink);}
+
+  .grain{
+    position:fixed; inset:0; pointer-events:none; z-index:0; opacity:0.05; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  header.hero{
+    position:relative; z-index:1; padding:64px 6vw 48px; border-bottom:1px solid var(--line); text-align:center;
+  }
+  .eyebrow{
+    font-family:'Cormorant SC', serif; letter-spacing:0.35em; color:var(--gold-light);
+    font-size:15px; text-transform:uppercase; margin:0 0 18px;
+  }
+  h1.title{
+    font-family:'Cinzel', serif; font-weight:600; font-size:clamp(28px, 4vw, 54px);
+    line-height:1.18; margin:0 0 10px; color:var(--cream); text-shadow:0 0 40px rgba(201,162,39,0.15);
+  }
+  h1.title em{ font-style:normal; color:var(--gold); }
+  .subtitle{
+    font-family:'Cormorant SC', serif; font-size:clamp(15px,1.5vw,20px);
+    letter-spacing:0.1em; color:var(--cream-dim); margin:0 auto 30px; max-width:760px;
+  }
+  .hero-text{
+    max-width:840px; margin:0 auto; font-style:italic;
+    font-size:clamp(17px,1.7vw,21px); line-height:1.75; color:var(--cream-dim);
+    position:relative; padding:0 8px;
+  }
+  .hero-text .dropcap{
+    float:left; font-family:'Cinzel', serif; font-style:normal;
+    font-size:64px; line-height:0.8; color:var(--gold); padding:6px 10px 0 0;
+  }
+  .hero-ref{
+    display:inline-block; margin-top:18px; font-family:'Cormorant SC', serif;
+    letter-spacing:0.2em; font-size:14px; color:var(--gold-light); text-transform:uppercase;
+  }
+
+  nav.jump{
+    position:sticky; top:0; z-index:20; display:flex; flex-wrap:wrap; justify-content:center;
+    background:rgba(10,12,17,0.94); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); padding:2px 0;
+  }
+  nav.jump a{
+    color:var(--cream-dim); text-decoration:none; font-family:'Cormorant SC', serif;
+    letter-spacing:0.1em; font-size:12.5px; text-transform:uppercase; padding:13px 12px;
+    border-bottom:2px solid transparent; transition:color .2s, border-color .2s; white-space:nowrap;
+  }
+  nav.jump a:hover{ color:var(--gold-light); border-color:var(--gold); }
+
+  main{ position:relative; z-index:1; max-width:1280px; margin:0 auto; padding:10px 5vw 80px; }
+
+  section.block{ padding:54px 0 10px; border-bottom:1px solid var(--line); }
+  section.block:last-child{ border-bottom:none; }
+
+  .section-head{ display:flex; align-items:baseline; gap:16px; margin-bottom:8px; }
+  .section-num{ font-family:'Cinzel', serif; color:var(--gold); font-size:14px; letter-spacing:.2em; }
+  h2.section-title{
+    font-family:'Cinzel', serif; font-weight:600; font-size:clamp(21px,2.4vw,30px); margin:0; color:var(--cream);
+  }
+  .section-sub{
+    font-family:'EB Garamond', serif; font-style:italic; color:var(--cream-dim);
+    margin:6px 0 26px; font-size:16px; max-width:840px;
+  }
+
+  .teaching{ max-width:840px; font-size:16.5px; line-height:1.75; color:var(--cream-dim); margin:0 0 18px; }
+  .teaching strong{ color:var(--gold-light); font-weight:600; }
+
+  .grid{ display:grid; gap:16px; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); margin-bottom:8px; }
+  .grid.wide{ grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); }
+
+  .card{
+    background:linear-gradient(160deg, var(--ink-3), var(--ink-2));
+    border:1px solid var(--line); border-radius:4px; padding:20px 20px;
+    cursor:pointer; position:relative;
+    transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease; overflow:hidden;
+  }
+  .card::before{
+    content:""; position:absolute; left:0; top:0; bottom:0; width:3px;
+    background:var(--gold); opacity:.55; transition:opacity .18s ease, width .18s ease;
+  }
+  .card:hover{
+    transform:translateY(-3px); border-color:var(--gold);
+    box-shadow:0 14px 30px rgba(0,0,0,0.45), 0 0 0 1px rgba(201,162,39,0.15) inset;
+  }
+  .card:hover::before{ opacity:1; width:5px; }
+  .card .ct-name{ font-family:'Cinzel', serif; font-weight:600; font-size:17px; color:var(--cream); margin:0 0 6px; }
+  .card .ct-ref{ font-family:'Cormorant SC', serif; letter-spacing:.08em; font-size:13.5px; color:var(--gold-light); margin:0; }
+  .card .ct-hint{
+    margin-top:12px; font-size:13px; color:var(--cream-dim); opacity:.6;
+    font-family:'Cormorant SC', serif; letter-spacing:.12em; text-transform:uppercase;
+  }
+  .card.sage::before{ background:var(--sage-light); }
+  .card.sage:hover{ border-color:var(--sage-light); }
+  .card.sage .ct-ref{ color:var(--sage-light); }
+
+  /* numbered list for I Am statements */
+  ol.statements{ list-style:none; counter-reset:iam; margin:0; padding:0; display:grid; gap:14px; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); }
+  ol.statements li{
+    counter-increment:iam; position:relative; cursor:pointer;
+    background:linear-gradient(160deg, var(--ink-3), var(--ink-2));
+    border:1px solid var(--line); border-radius:4px; padding:18px 20px 18px 56px;
+    transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  }
+  ol.statements li:hover{
+    transform:translateY(-3px); border-color:var(--gold);
+    box-shadow:0 14px 30px rgba(0,0,0,0.45), 0 0 0 1px rgba(201,162,39,0.15) inset;
+  }
+  ol.statements li::before{
+    content:counter(iam); position:absolute; left:16px; top:16px;
+    font-family:'Cinzel', serif; color:var(--gold); font-size:20px; font-weight:600;
+  }
+  ol.statements .st-name{ font-family:'Cinzel', serif; font-weight:600; font-size:16.5px; color:var(--cream); margin:0 0 4px; }
+  ol.statements .st-ref{ font-family:'Cormorant SC', serif; letter-spacing:.08em; font-size:13px; color:var(--gold-light); margin:0; }
+
+  /* feature (pulpit-style) block for John 8:58 */
+  .feature{
+    margin:8px 0 10px; padding:34px 5vw 10px;
+    background:linear-gradient(160deg, rgba(201,162,39,0.07), transparent 60%);
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  }
+  .feature-inner{ max-width:900px; margin:0 auto; }
+  .feature-label{
+    text-align:center; font-family:'Cormorant SC', serif; letter-spacing:.3em;
+    text-transform:uppercase; color:var(--gold-light); font-size:14px; margin:0 0 20px;
+  }
+  .feature-title{
+    text-align:center; font-family:'Cinzel', serif; font-weight:600; color:var(--cream);
+    font-size:clamp(22px,2.8vw,32px); margin:0 0 22px;
+  }
+  blockquote.feature-quote{
+    margin:24px auto; max-width:640px; padding:0 0 0 26px; border-left:3px solid var(--gold);
+    font-style:italic; font-size:20px; line-height:1.7; color:var(--cream); text-align:left;
+  }
+  .feature-attr{ text-align:right; max-width:640px; margin:0 auto 30px; font-family:'Cormorant SC', serif; color:var(--gold-light); letter-spacing:.08em; font-size:14.5px; }
+
+  .overlay{
+    position:fixed; inset:0; z-index:100; background:rgba(4,5,8,0.86); backdrop-filter:blur(3px);
+    display:flex; align-items:center; justify-content:center; padding:5vw;
+    opacity:0; pointer-events:none; transition:opacity .22s ease;
+  }
+  .overlay.open{ opacity:1; pointer-events:auto; }
+  .modal{
+    max-width:760px; width:100%; max-height:82vh; overflow-y:auto;
+    background:linear-gradient(165deg, #16192389, #0d0f15); background-color:#12141c;
+    border:1px solid var(--gold); border-radius:6px; padding:44px 44px 40px; position:relative;
+    box-shadow:0 30px 80px rgba(0,0,0,0.6), 0 0 60px rgba(201,162,39,0.08);
+    transform:translateY(14px) scale(.98); transition:transform .22s ease;
+  }
+  .overlay.open .modal{ transform:translateY(0) scale(1); }
+  .modal-close{
+    position:absolute; top:16px; right:18px; width:38px; height:38px; border-radius:50%;
+    border:1px solid var(--line); background:var(--ink-2); color:var(--gold-light);
+    font-family:'Cinzel',serif; font-size:18px; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    transition:background .18s, color .18s, transform .18s;
+  }
+  .modal-close:hover{ background:var(--gold); color:var(--ink); transform:rotate(90deg); }
+  .modal-eyebrow{ font-family:'Cormorant SC', serif; letter-spacing:.25em; text-transform:uppercase; color:var(--gold-light); font-size:13px; margin:0 0 8px; }
+  .modal-title{ font-family:'Cinzel', serif; font-weight:600; color:var(--cream); font-size:clamp(20px,2.6vw,27px); margin:0 0 22px; padding-right:30px; }
+  .modal-meaning{ font-style:italic; color:var(--gold-light); font-size:16px; margin:0 0 22px; border-left:2px solid var(--gold); padding-left:14px; }
+  .verse-block{ margin-bottom:22px; }
+  .verse-block:last-child{ margin-bottom:0; }
+  .verse-ref{ font-family:'Cormorant SC', serif; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); font-size:14px; margin:0 0 6px; }
+  .verse-text{ font-size:18.5px; line-height:1.75; color:var(--cream); margin:0; }
+
+  footer{
+    text-align:center; padding:40px 20px 60px; position:relative; z-index:1;
+    color:var(--cream-dim); font-family:'Cormorant SC', serif; letter-spacing:.15em;
+    font-size:13px; text-transform:uppercase; opacity:.6;
+  }
+
+  @media (max-width:640px){
+    .modal{ padding:34px 26px 30px; max-height:88vh; }
+    header.hero{ padding:48px 6vw 34px; }
+  }
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<header class="hero">
+  <p class="eyebrow">Faith Baptist Church of Plymouth County &nbsp;·&nbsp; Adult Sunday School &nbsp;·&nbsp; Week 8</p>
+  <h1 class="title">The Doctrine of <em>Christ</em></h1>
+  <p class="subtitle">Jesus — promised, pre-incarnate, Creator, eternal Son, fully God, fully man, our only salvation</p>
+  <p class="hero-text"><span class="dropcap">A</span>nd without controversy great is the mystery of godliness: God was manifest in the flesh, justified in the Spirit, seen of angels, preached unto the Gentiles, believed on in the world, received up into glory.</p>
+  <div class="hero-ref">1 Timothy 3:16</div>
+</header>
+
+<nav class="jump">
+  <a href="#promise">Promise</a>
+  <a href="#theophanies">Theophanies</a>
+  <a href="#creator">Creator</a>
+  <a href="#sonship">Eternal Sonship</a>
+  <a href="#deity">Deity</a>
+  <a href="#iam">"I Am"</a>
+  <a href="#humanity">Humanity</a>
+  <a href="#salvation">Salvation</a>
+  <a href="#names">Names of Christ</a>
+</nav>
+
+<main>
+
+  <section class="block" id="promise">
+    <div class="section-head"><span class="section-num">I.</span><h2 class="section-title">The Promise of Christ</h2></div>
+    <p class="section-sub">From the Garden onward, Scripture points forward to one coming Deliverer.</p>
+    <div class="grid" id="grid-promise"></div>
+  </section>
+
+  <section class="block" id="theophanies">
+    <div class="section-head"><span class="section-num">II.</span><h2 class="section-title">Theophanies / Christophanies</h2></div>
+    <p class="section-sub">Old Testament appearances of Jesus — the "Angel of the LORD" and other pre-incarnate visitations widely understood as the Son of God, seen before Bethlehem.</p>
+    <div class="grid" id="grid-theophanies"></div>
+  </section>
+
+  <section class="block" id="creator">
+    <div class="section-head"><span class="section-num">III.</span><h2 class="section-title">Jesus as Creator of All Things</h2></div>
+    <p class="section-sub">All creation, visible and invisible, was made through Him — and He sustains it still.</p>
+    <div class="grid" id="grid-creator"></div>
+  </section>
+
+  <section class="block" id="sonship">
+    <div class="section-head"><span class="section-num">IV.</span><h2 class="section-title">Eternal Sonship</h2></div>
+    <p class="section-sub">Jesus as the eternal Word, co-existent with the Father before time began.</p>
+    <div class="grid" id="grid-sonship"></div>
+  </section>
+
+  <section class="block" id="deity">
+    <div class="section-head"><span class="section-num">V.</span><h2 class="section-title">The Deity of Jesus</h2></div>
+    <p class="section-sub">The complete essence of God dwells in Christ — He is not merely God-like, but God.</p>
+    <div class="grid" id="grid-deity"></div>
+  </section>
+
+  <section class="block" id="iam">
+    <div class="section-head"><span class="section-num">VI.</span><h2 class="section-title">The Seven "I Am" Statements</h2></div>
+    <p class="section-sub">In the Gospel of John, Jesus repeatedly says "I am" — not just self-description, but a direct claim to deity, echoing God's revelation to Moses as "I AM THAT I AM" (Exodus 3:14). These statements angered the Pharisees, who understood exactly what He was claiming.</p>
+    <ol class="statements" id="list-iam"></ol>
+  </section>
+
+</main>
+
+<div class="feature" id="beforeabraham">
+  <div class="feature-inner">
+    <p class="feature-label">The Most Direct Claim of All</p>
+    <h3 class="feature-title">"Before Abraham Was, I Am"</h3>
+    <p class="teaching" style="margin-left:auto; margin-right:auto;">Unlike the seven statements above, which all have a predicate — "bread," "light," "door" — this is an absolute declaration. The Greek behind it, <em>ἐγώ εἰμι</em> (egō eimi), is the same phrase used in the Greek Old Testament for God's name revealed to Moses at the burning bush. The Pharisees understood immediately that Jesus was claiming to be God — and picked up stones to kill Him for blasphemy.</p>
+    <blockquote class="feature-quote">"Verily, verily, I say unto you, Before Abraham was, I am."</blockquote>
+    <p class="feature-attr">&mdash; Jesus, John 8:58</p>
+  </div>
+</div>
+
+<main>
+
+  <section class="block" id="humanity">
+    <div class="section-head"><span class="section-num">VII.</span><h2 class="section-title">The Humanity of Jesus</h2></div>
+    <p class="section-sub">Fully God, Christ also took on real flesh and blood — tempted as we are, yet without sin.</p>
+    <div class="grid" id="grid-humanity"></div>
+  </section>
+
+  <section class="block" id="salvation">
+    <div class="section-head"><span class="section-num">VIII.</span><h2 class="section-title">Salvation in Jesus</h2></div>
+    <p class="section-sub">There is no other name under Heaven given among men whereby we must be saved.</p>
+    <div class="grid" id="grid-salvation"></div>
+  </section>
+
+  <section class="block" id="names">
+    <div class="section-head"><span class="section-num">IX.</span><h2 class="section-title">The Names of Christ</h2></div>
+    <p class="section-sub">Tap a name to read the verse where Scripture calls Him by it.</p>
+    <div class="grid wide" id="grid-names"></div>
+  </section>
+
+</main>
+
+<footer>Faith Baptist Church of Plymouth County &nbsp;·&nbsp; Authorized King James Version</footer>
+
+<div class="overlay" id="overlay">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modalClose" aria-label="Close">&#10005;</button>
+    <p class="modal-eyebrow" id="modalEyebrow"></p>
+    <h3 class="modal-title" id="modalTitle"></h3>
+    <p class="modal-meaning" id="modalMeaning" style="display:none;"></p>
+    <div id="modalVerses"></div>
+  </div>
+</div>
+
+<script>
+const DATA = {
+  promise: [
+    { title:"The First Prophecy of Christ", meaning:"The first prophecy of Christ, as a coming deliverer.", verses:[
+      {ref:"Genesis 3:15", text:"And I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel."}
+    ]},
+    { title:"The Promise to Abraham", meaning:"The promise to Abraham, through whom the Messiah would come.", verses:[
+      {ref:"Genesis 12:1-4", text:"Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father's house, unto a land that I will shew thee: And I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing: And I will bless them that bless thee, and curse him that curseth thee: and in thee shall all families of the earth be blessed."}
+    ]},
+    { title:"The Virgin Birth Foretold", meaning:"A prophecy of the virgin birth of Christ.", verses:[
+      {ref:"Isaiah 7:14", text:"Therefore the Lord himself shall give you a sign; Behold, a virgin shall conceive, and bear a son, and shall call his name Immanuel."}
+    ]},
+    { title:"Bethlehem &amp; His Eternal Nature", meaning:"A prophecy of Christ's birthplace and eternal nature.", verses:[
+      {ref:"Micah 5:2", text:"But thou, Bethlehem Ephratah, though thou be little among the thousands of Judah, yet out of thee shall he come forth unto me that is to be ruler in Israel; whose goings forth have been from of old, from everlasting."}
+    ]}
+  ],
+  theophanies: [
+    { title:"The Angel of the LORD and Hagar", meaning:"The \u201cAngel of the LORD\u201d is often seen as a pre-incarnate appearance of Jesus, here appearing to the bondwoman of Abraham and Sarah.", verses:[
+      {ref:"Genesis 16:7-13", text:"And the angel of the LORD found her by a fountain of water in the wilderness, by the fountain in the way to Shur... And she called the name of the LORD that spake unto her, Thou God seest me..."}
+    ]},
+    { title:"Melchizedek, King of Salem", meaning:"Without father, without mother, without descent, having neither beginning of days nor end of life, but made like unto the Son of God.", verses:[
+      {ref:"Genesis 14:18-20 & Hebrews 7:1-3", text:"And Melchizedek king of Salem brought forth bread and wine: and he was the priest of the most high God. And he blessed him, and said, Blessed be Abram of the most high God, possessor of heaven and earth... For this Melchisedec, king of Salem, priest of the most high God, who met Abraham returning from the slaughter of the kings, and blessed him; To whom also Abraham gave a tenth part of all; first being by interpretation King of righteousness, and after that also King of Salem, which is, King of peace; Without father, without mother, without descent, having neither beginning of days, nor end of life; but made like unto the Son of God; abideth a priest continually."}
+    ]},
+    { title:"The LORD at Mamre", meaning:"The LORD appearing to Abraham as a man.", verses:[
+      {ref:"Genesis 18:1-2", text:"And the LORD appeared unto him in the plains of Mamre: and he sat in the tent door in the heat of the day; And he lift up his eyes and looked, and, lo, three men stood by him: and when he saw them, he ran to meet them from the tent door..."}
+    ]},
+    { title:"Captain of the LORD's Host", meaning:"Widely understood as a pre-incarnate appearance of Jesus.", verses:[
+      {ref:"Joshua 5:13-15", text:"And it came to pass, when Joshua was by Jericho, that he lifted up his eyes and looked, and, behold, there stood a man over against him with his sword drawn in his hand: and Joshua went unto him, and said unto him, Art thou for us, or for our adversaries? And he said, Nay; but as captain of the host of the LORD am I now come..."}
+    ]},
+    { title:"The Fourth Man in the Fire", meaning:"A powerful visual appearance of Jesus to protect His followers.", verses:[
+      {ref:"Daniel 3:24-25", text:"Then Nebuchadnezzar the king was astonied, and rose up in haste, and spake, and said unto his counsellors, Did not we cast three men bound into the midst of the fire? They answered and said unto the king, True, O king. He answered and said, Lo, I see four men loose, walking in the midst of the fire, and they have no hurt; and the form of the fourth is like the Son of God."}
+    ]}
+  ],
+  creator: [
+    { title:"All Things Made by Him", verses:[
+      {ref:"John 1:3", text:"All things were made by him; and without him was not any thing made that was made."}
+    ]},
+    { title:"By Him All Things Consist", meaning:"Jesus is the source and sustainer of all creation.", verses:[
+      {ref:"Colossians 1:16-17", text:"For by him were all things created, that are in heaven, and that are in earth, visible and invisible, whether they be thrones, or dominions, or principalities, or powers: all things were created by him, and for him: And he is before all things, and by him all things consist."}
+    ]},
+    { title:"Heir of All Things", verses:[
+      {ref:"Hebrews 1:2", text:"Hath in these last days spoken unto us by his Son, whom he hath appointed heir of all things, by whom also he made the worlds."}
+    ]},
+    { title:"He Spake, and It Was Done", verses:[
+      {ref:"Psalm 33:6-9", text:"By the word of the Lord were the heavens made; and all the host of them by the breath of his mouth. He gathereth the waters of the sea together as an heap: he layeth up the depth in storehouses. Let all the earth fear the Lord: let all the inhabitants of the world stand in awe of him. For he spake, and it was done; he commanded, and it stood fast."}
+    ]}
+  ],
+  sonship: [
+    { title:"The Word Was God", meaning:"Jesus as the eternal Word, co-existent with the Father.", verses:[
+      {ref:"John 1:1-2", text:"In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God."}
+    ]},
+    { title:"Thy Throne, O God, Is For Ever", meaning:"The Son is called \u201cGod,\u201d and His throne is eternal.", verses:[
+      {ref:"Hebrews 1:8", text:"But unto the Son he saith, Thy throne, O God, is for ever and ever: a sceptre of righteousness is the sceptre of thy kingdom."}
+    ]},
+    { title:"What Is His Son's Name?", meaning:"A foreshadowing of the Father and the Son in the Old Testament.", verses:[
+      {ref:"Proverbs 30:4", text:"Who hath ascended up into heaven, or descended? who hath gathered the wind in his fists? who hath bound the waters in a garment? who hath established all the ends of the earth? what is his name, and what is his son's name, if thou canst tell?"}
+    ]}
+  ],
+  deity: [
+    { title:"The Word Was God", meaning:"Explicitly states Jesus's divine nature.", verses:[
+      {ref:"John 1:1", text:"In the beginning was the Word, and the Word was with God, and the Word was God."}
+    ]},
+    { title:"All the Fulness of the Godhead", meaning:"The complete essence of God dwells in Jesus.", verses:[
+      {ref:"Colossians 2:9", text:"For in him dwelleth all the fulness of the Godhead bodily."}
+    ]},
+    { title:"The Great God and Our Saviour", meaning:"Calls Jesus \u201cthe great God and our Saviour.\u201d", verses:[
+      {ref:"Titus 2:13", text:"Looking for that blessed hope, and the glorious appearing of the great God and our Saviour Jesus Christ."}
+    ]}
+  ],
+  humanity: [
+    { title:"Made in the Likeness of Men", meaning:"Christ's voluntary self-emptying to become a man.", verses:[
+      {ref:"Philippians 2:7", text:"But made himself of no reputation, and took upon him the form of a servant, and was made in the likeness of men."}
+    ], sage:true },
+    { title:"Should Taste Death for Every Man", verses:[
+      {ref:"Hebrews 2:9", text:"But we see Jesus, who was made a little lower than the angels for the suffering of death, crowned with glory and honour; that he by the grace of God should taste death for every man."}
+    ], sage:true },
+    { title:"Took Part of the Same", meaning:"Jesus shared in humanity to conquer death.", verses:[
+      {ref:"Hebrews 2:14", text:"Forasmuch then as the children are partakers of flesh and blood, he also himself likewise took part of the same; that through death he might destroy him that had the power of death, that is, the devil."}
+    ], sage:true },
+    { title:"Made Like Unto His Brethren", verses:[
+      {ref:"Hebrews 2:16-18", text:"For verily he took not on him the nature of angels; but he took on him the seed of Abraham. Wherefore in all things it behoved him to be made like unto his brethren, that he might be a merciful and faithful high priest in things pertaining to God, to make reconciliation for the sins of the people. For in that he himself hath suffered being tempted, he is able to succour them that are tempted."}
+    ], sage:true },
+    { title:"Tempted Like As We Are, Yet Without Sin", verses:[
+      {ref:"Hebrews 4:15", text:"For we have not an high priest which cannot be touched with the feeling of our infirmities; but was in all points tempted like as we are, yet without sin."}
+    ], sage:true },
+    { title:"The Man Christ Jesus", meaning:"Jesus is the sole mediator, a man, for humanity.", verses:[
+      {ref:"1 Timothy 2:5", text:"For there is one God, and one mediator between God and men, the man Christ Jesus."}
+    ], sage:true }
+  ],
+  salvation: [
+    { title:"None Other Name", meaning:"Jesus is the only way to salvation.", verses:[
+      {ref:"Acts 4:12", text:"Neither is there salvation in any other: for there is none other name under heaven given among men, whereby we must be saved."}
+    ]},
+    { title:"No Man Cometh Unto the Father, But by Me", meaning:"Jesus is the exclusive path to God the Father.", verses:[
+      {ref:"John 14:6", text:"Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me."}
+    ]},
+    { title:"Confess and Believe", verses:[
+      {ref:"Romans 10:9", text:"That if thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God hath raised him from the dead, thou shalt be saved."}
+    ]}
+  ],
+  names: [
+    { title:"The Word", verses:[{ref:"John 1:1", text:"In the beginning was the Word, and the Word was with God, and the Word was God."}] },
+    { title:"Immanuel", verses:[{ref:"Isaiah 7:14", text:"Therefore the Lord himself shall give you a sign; Behold, a virgin shall conceive, and bear a son, and shall call his name Immanuel."}] },
+    { title:"The Son of God", verses:[{ref:"John 1:34", text:"And I saw, and bare record that this is the Son of God."}] },
+    { title:"The Son of Man", verses:[{ref:"Matthew 16:27", text:"For the Son of man shall come in the glory of his Father with his angels; and then he shall reward every man according to his works."}] },
+    { title:"The Son of David", verses:[{ref:"Matthew 1:1", text:"The book of the generation of Jesus Christ, the son of David, the son of Abraham."}] },
+    { title:"The Lamb of God", verses:[{ref:"John 1:29", text:"The next day John seeth Jesus coming unto him, and saith, Behold the Lamb of God, which taketh away the sin of the world."}] },
+    { title:"The Savior", verses:[{ref:"Luke 2:11", text:"For unto you is born this day in the city of David a Saviour, which is Christ the Lord."}] },
+    { title:"Messiah / Christ", verses:[{ref:"John 4:25-26", text:"The woman saith unto him, I know that Messias cometh, which is called Christ: when he is come, he will tell us all things. Jesus saith unto her, I that speak unto thee am he."}] },
+    { title:"Wonderful, Counsellor, The Mighty God, The Everlasting Father, The Prince of Peace", verses:[{ref:"Isaiah 9:6", text:"For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace."}] },
+    { title:"The King of Kings and The Lord of Lords", verses:[{ref:"Revelation 19:16", text:"And he hath on his vesture and on his thigh a name written, KING OF KINGS, AND LORD OF LORDS."}] },
+    { title:"Alpha and Omega", verses:[{ref:"Revelation 1:8", text:"I am Alpha and Omega, the beginning and the ending, saith the Lord, which is, and which was, and which is to come, the Almighty."}] },
+    { title:"The Good Shepherd", verses:[{ref:"John 10:11", text:"I am the good shepherd: the good shepherd giveth his life for the sheep."}] },
+    { title:"The Bread of Life", verses:[{ref:"John 6:35", text:"And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst."}] },
+    { title:"The Light of the World", verses:[{ref:"John 8:12", text:"Then spake Jesus again unto them, saying, I am the light of the world: he that followeth me shall not walk in darkness, but shall have the light of life."}] },
+    { title:"The Way, the Truth, and the Life", verses:[{ref:"John 14:6", text:"Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me."}] },
+    { title:"The Sole Mediator", verses:[{ref:"1 Timothy 2:5", text:"For there is one God, and one mediator between God and men, the man Christ Jesus."}] },
+    { title:"The High Priest", verses:[{ref:"Hebrews 4:14", text:"Seeing then that we have a great high priest, that is passed into the heavens, Jesus the Son of God, let us hold fast our profession."}] }
+  ]
+};
+
+const IAM = [
+  { title:"I am the bread of life.", verses:[{ref:"John 6:35, 48", text:"And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst... I am that bread of life."}] },
+  { title:"I am the light of the world.", verses:[{ref:"John 8:12; 9:5", text:"Then spake Jesus again unto them, saying, I am the light of the world: he that followeth me shall not walk in darkness, but shall have the light of life... As long as I am in the world, I am the light of the world."}] },
+  { title:"I am the door of the sheep.", verses:[{ref:"John 10:7, 9", text:"Then said Jesus unto them again, Verily, verily, I say unto you, I am the door of the sheep... I am the door: by me if any man enter in, he shall be saved, and shall go in and out, and find pasture."}] },
+  { title:"I am the good shepherd.", verses:[{ref:"John 10:11, 14", text:"I am the good shepherd: the good shepherd giveth his life for the sheep... I am the good shepherd, and know my sheep, and am known of mine."}] },
+  { title:"I am the resurrection and the life.", verses:[{ref:"John 11:25", text:"Jesus said unto her, I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live."}] },
+  { title:"I am the way, the truth, and the life.", verses:[{ref:"John 14:6", text:"Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me."}] },
+  { title:"I am the true vine.", verses:[{ref:"John 15:1, 5", text:"I am the true vine, and my Father is the husbandman... I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing."}] }
+];
+
+function refLine(item){
+  if(item.verses.length === 1) return item.verses[0].ref;
+  return item.verses.map(v=>v.ref).join(" · ");
+}
+
+function buildGrid(containerId, items, opts){
+  opts = opts || {};
+  const el = document.getElementById(containerId);
+  if(!el) return;
+  items.forEach((item) => {
+    const card = document.createElement('div');
+    card.className = 'card' + (item.sage || opts.sage ? ' sage' : '');
+    card.innerHTML = `
+      <p class="ct-name">${item.title}</p>
+      <p class="ct-ref">${refLine(item)}</p>
+      <p class="ct-hint">Tap to read &rarr;</p>
+    `;
+    card.addEventListener('click', () => openModal(item, opts.eyebrow));
+    el.appendChild(card);
+  });
+}
+
+function buildStatements(containerId, items, eyebrow){
+  const el = document.getElementById(containerId);
+  if(!el) return;
+  items.forEach((item) => {
+    const li = document.createElement('li');
+    li.innerHTML = `
+      <p class="st-name">${item.title}</p>
+      <p class="st-ref">${refLine(item)}</p>
+    `;
+    li.addEventListener('click', () => openModal(item, eyebrow));
+    el.appendChild(li);
+  });
+}
+
+buildGrid('grid-promise', DATA.promise, {eyebrow:'The Promise of Christ'});
+buildGrid('grid-theophanies', DATA.theophanies, {eyebrow:'Theophanies / Christophanies'});
+buildGrid('grid-creator', DATA.creator, {eyebrow:'Jesus as Creator'});
+buildGrid('grid-sonship', DATA.sonship, {eyebrow:'Eternal Sonship'});
+buildGrid('grid-deity', DATA.deity, {eyebrow:'The Deity of Jesus'});
+buildGrid('grid-humanity', DATA.humanity, {eyebrow:'The Humanity of Jesus'});
+buildGrid('grid-salvation', DATA.salvation, {eyebrow:'Salvation in Jesus'});
+buildGrid('grid-names', DATA.names, {eyebrow:'The Names of Christ'});
+buildStatements('list-iam', IAM, 'The "I Am" Statements — John');
+
+const overlay = document.getElementById('overlay');
+const modalEyebrow = document.getElementById('modalEyebrow');
+const modalTitle = document.getElementById('modalTitle');
+const modalMeaning = document.getElementById('modalMeaning');
+const modalVerses = document.getElementById('modalVerses');
+
+function openModal(item, eyebrow){
+  modalEyebrow.textContent = eyebrow || '';
+  modalTitle.innerHTML = item.title;
+  if(item.meaning){
+    modalMeaning.style.display = 'block';
+    modalMeaning.textContent = item.meaning;
+  } else {
+    modalMeaning.style.display = 'none';
+  }
+  modalVerses.innerHTML = item.verses.map(v => `
+    <div class="verse-block">
+      <p class="verse-ref">${v.ref}</p>
+      <p class="verse-text">${v.text}</p>
+    </div>
+  `).join('');
+  overlay.classList.add('open');
+  document.getElementById('modal').scrollTop = 0;
+}
+
+function closeModal(){ overlay.classList.remove('open'); }
+
+document.getElementById('modalClose').addEventListener('click', closeModal);
+overlay.addEventListener('click', (e) => { if(e.target === overlay) closeModal(); });
+document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>

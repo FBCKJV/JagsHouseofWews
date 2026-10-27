@@ -1,0 +1,591 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creation Ex Nihilo — Defending the Biblical Doctrine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<style>:root {
+    --ink: #0b0e13;
+    --ink-2: #12161f;
+    --panel: #171c26;
+    --gold: #c9a24a;
+    --gold-bright: #e9cd82;
+    --burgundy: #6e2430;
+    --parchment: #e9e2ce;
+    --muted: #8c8a7e;
+    --rule: rgba(201,162,74,0.28);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    height: 100%;
+    overflow: hidden;
+    background: var(--ink);
+    color: var(--parchment);
+    font-family: 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
+  }
+  /* faint vignette + grain so the ink isn't flat */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(201,162,74,0.07), transparent 55%),
+      radial-gradient(ellipse at 50% 100%, rgba(0,0,0,0.5), transparent 60%);
+  }
+  /* progress rule — the scroll unrolling */
+  .progress-track {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: rgba(255,255,255,0.06);
+    z-index: 20;
+  }
+  .progress-fill {
+    height: 100%;
+    width: 7%;
+    background: linear-gradient(90deg, var(--burgundy), var(--gold), var(--gold-bright));
+    transition: width 0.45s ease;
+  }
+  .slideshow { height: 100vh; width: 100vw; position: relative; z-index: 1; }
+  .slide {
+    display: none;
+    height: 100%;
+    width: 100%;
+    padding: 3.4rem 6rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  .slide.active { display: flex; opacity: 1; transform: translateY(0); }
+  .slide.left-align { text-align: left; align-items: flex-start; }
+  .eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    opacity: 0.9;
+  }
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 3.1rem;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.1rem;
+    color: var(--gold-bright);
+  }
+  h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 2.15rem;
+    letter-spacing: 0.03em;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+    color: var(--gold-bright);
+    text-transform: uppercase;
+  }
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.9rem;
+    color: var(--parchment);
+    opacity: 0.85;
+    margin-bottom: 1.3rem;
+  }
+  .divider {
+    width: 130px;
+    height: 1px;
+    margin: 1.1rem 0 1.6rem;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    position: relative;
+  }
+  .divider::after {
+    content: "✦";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--gold);
+    font-size: 0.8rem;
+    background: var(--ink);
+    padding: 0 0.5rem;
+  }
+  .left-align .divider { margin-left: 0; }
+  .subtitle {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    max-width: 900px;
+    line-height: 1.5;
+  }
+  .scripture {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.75rem;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--parchment);
+    max-width: 1000px;
+    margin: 1rem auto 1.8rem;
+    padding: 1.3rem 2.2rem 1.3rem 2.6rem;
+    background: linear-gradient(180deg, rgba(201,162,74,0.06), rgba(201,162,74,0.02));
+    border-left: 3px solid var(--gold);
+    border-radius: 0 6px 6px 0;
+    text-align: left;
+    position: relative;
+  }
+  .scripture::first-letter {
+    font-family: 'Cinzel', serif;
+    font-style: normal;
+    font-size: 2.6rem;
+    color: var(--gold-bright);
+    padding-right: 0.15rem;
+    line-height: 1;
+  }
+  .defense {
+    font-size: 1.4rem;
+    line-height: 1.55;
+    max-width: 980px;
+    color: var(--parchment);
+    text-align: left;
+  }
+  .defense strong {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .point-list { list-style: none; max-width: 980px; text-align: left; font-size: 1.4rem; line-height: 1.55; }
+  .point-list li { margin-bottom: 1.2rem; padding-left: 1.6rem; position: relative; }
+  .point-list li::before {
+    content: "✦";
+    color: var(--gold);
+    position: absolute;
+    left: 0;
+    top: 0.15rem;
+    font-size: 0.8rem;
+  }
+  .point-list li strong { color: var(--gold-bright); font-weight: 600; }
+  .ref {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-top: 0.5rem;
+  }
+  .footer-nav {
+    position: fixed;
+    bottom: 1.3rem;
+    left: 0; right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+    color: var(--muted);
+    pointer-events: none;
+    z-index: 20;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.05em;
+  }
+  .nav-hint { font-size: 0.85rem; opacity: 0.65; }
+  .slide-counter { font-variant-numeric: tabular-nums; }
+  .title-block { max-width: 1100px; }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'Cinzel', serif;
+    background: transparent;
+    border: 1px solid var(--rule);
+    color: var(--gold);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.5rem 1.3rem;
+    border-radius: 999px;
+    margin-bottom: 2rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1080px;
+    width: 100%;
+    text-align: left;
+  }
+  .two-col .col {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 1.6rem 1.8rem;
+  }
+  .two-col .col h3 { margin-bottom: 0.8rem; font-size: 1.5rem; }
+  .two-col p, .two-col li { font-size: 1.15rem; line-height: 1.5; }
+  .two-col.wrong .col:first-child { border-color: rgba(110,36,48,0.5); }
+  .two-col.wrong .col:first-child h3 { color: #c97a86; }
+  .two-col.wrong .col:last-child { border-color: rgba(201,162,74,0.4); }
+  .closing { font-size: 1.55rem; font-style: italic; max-width: 880px; line-height: 1.55; font-family: 'Cormorant Garamond', serif; }
+  .seal {
+    width: 86px; height: 86px;
+    border: 1.5px solid var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1.8rem;
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    font-size: 1.6rem;
+    position: relative;
+  }
+  .seal::before {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border: 1px solid var(--rule);
+    border-radius: 50%;
+  }
+  @media (max-width: 900px) {
+    .slide { padding: 2rem 1.6rem; }
+    h1 { font-size: 2.1rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.3rem; }
+    .scripture { font-size: 1.25rem; padding: 1rem 1.4rem 1rem 1.7rem; }
+    .defense, .point-list { font-size: 1.1rem; }
+    .two-col { grid-template-columns: 1fr; }
+  }</style>
+<div class="progress-track">
+  <div class="progress-fill" id="progressFill"></div>
+</div>
+<div class="slideshow" id="slideshow"><!-- 1: Title -->
+  <section class="slide active">
+    <div class="title-block">
+      <div class="badge">✦ IFB · KJVO · Sunday Morning Class ✦</div>
+      <h1>Creation Out of Nothing</h1>
+      <div class="divider"></div>
+      <p class="subtitle">Defending the Biblical Doctrine of 
+        <em>Ex Nihilo</em>
+        <br>
+      and Answering the Divine Council Theory of Michael Heiser
+      </p>
+      <p style="font-size:1.2rem; color:var(--muted); margin-top:2rem; font-family:'Cinzel',serif; letter-spacing:0.05em;">Scripture Alone Settles the Question</p>
+    </div>
+  </section>
+  <!-- 2: Purpose -->
+  <section class="slide">
+    <div class="eyebrow">Why This Matters</div>
+    <h2>The Question Before Us</h2>
+    <div class="divider"></div>
+    <ul class="point-list">
+      <li>Historic Christian doctrine holds that God created 
+        <strong>all things</strong> out of nothing (
+        <em>ex nihilo</em>), by His word alone.
+      </li>
+      <li>A popular academic theory — associated with the late Michael Heiser and the "Divine Council Worldview" — claims the Old Testament originally taught a council of spirit-beings, a "pantheon," ruling alongside God, and reads a watery chaos as pre-existing His act of creating.</li>
+      <li>This is not a harmless footnote. It quietly relocates God's unique, incommunicable glory as Creator onto other beings.</li>
+      <li>We will test the theory against its own proof texts, then set the whole matter under the plain testimony of the New Testament and the grammar of Genesis.</li>
+    </ul>
+  </section>
+  <!-- 3: John 1:1-3 -->
+  <section class="slide">
+    <div class="eyebrow">Text One</div>
+    <h2>John 1:1–3</h2>
+    <h3>The Pre-Existence of the Word</h3>
+    <div class="scripture">In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God. All things were made by him; and without him was not any thing made that was made.</div>
+    <div class="defense">
+      <strong>The Defense</strong>
+      "Not any thing" made without Him leaves no crack for pre-existing matter, chaos, or a council of co-workers. Every category of created thing — spirit or matter — passes through the Word, and the Word passes through no one.
+    </div>
+  </section>
+  <!-- 4: Colossians 1:16-17 -->
+  <section class="slide">
+    <div class="eyebrow">Text Two</div>
+    <h2>Colossians 1:16–17</h2>
+    <h3>The Scope of Christ's Creation</h3>
+    <div class="scripture">For by him were all things created, that are in heaven, and that are in earth, visible and invisible, whether they be thrones, or dominions, or principalities, or powers: all things were created by him, and for him: And he is before all things, and by him all things consist.</div>
+    <div class="defense">
+      <strong>The Defense</strong>
+      Paul names the very categories a divine-council reading depends on — thrones, dominions, principalities, powers — and puts every one of them on the created side of the ledger. If the "council" is made by Christ, it cannot have stood alongside Him at creation. He alone is "before all things."
+    </div>
+  </section>
+  <!-- 5: Hebrews 11:3 -->
+  <section class="slide">
+    <div class="eyebrow">Text Three</div>
+    <h2>Hebrews 11:3</h2>
+    <h3>The Origin of Visible Matter</h3>
+    <div class="scripture">Through faith we understand that the worlds were framed by the word of God, so that things which are seen were not made of things which do appear.</div>
+    <div class="defense">
+      <strong>The Defense</strong>
+      This is the New Testament's own definition of 
+      <em>ex nihilo</em>. The visible universe was not organized out of some pre-existing, visible material — a chaotic deep sitting there before God got to work. It came strictly from His spoken word.
+    </div>
+  </section>
+  <!-- 6: Romans 4:17 -->
+  <section class="slide">
+    <div class="eyebrow">Text Four</div>
+    <h2>Romans 4:17</h2>
+    <h3>The Sovereign Power of God</h3>
+    <div class="scripture">…even God, who quickeneth the dead, and calleth those things which be not as though they were.</div>
+    <div class="defense">
+      <strong>The Defense</strong>
+      God's creative power is described as calling what does not exist into existence — not reshaping, not organizing, not commissioning help from beings already on hand. "Things which be not" is as plain a denial of pre-existing raw material as Scripture offers.
+    </div>
+  </section>
+  <!-- 7: Revelation 4:11 -->
+  <section class="slide">
+    <div class="eyebrow">Text Five</div>
+    <h2>Revelation 4:11</h2>
+    <h3>The Ultimate Purpose</h3>
+    <div class="scripture">Thou art worthy, O Lord, to receive glory and honour and power: for thou hast created all things, and for thy pleasure they are and were created.</div>
+    <div class="defense">
+      <strong>The Defense</strong>
+      The heavenly host itself — the very beings a council theory would promote to co-creators — falls down to say the glory belongs to God alone. If they knew of colleagues in creation, this would be the moment to name them. They don't.
+    </div>
+  </section>
+  <!-- 8: Isaiah 44:24 -->
+  <section class="slide">
+    <div class="eyebrow">Text Six</div>
+    <h2>Isaiah 44:24</h2>
+    <h3>"By Myself" — God's Own Claim</h3>
+    <div class="scripture">Thus saith the LORD, thy redeemer, and he that formed thee from the womb, I am the LORD that maketh all things; that stretcheth forth the heavens alone; that spreadeth abroad the earth by myself.</div>
+    <div class="defense">
+      <strong>The Defense</strong>
+      God does not merely say He made all things — He specifies the manner: "alone," "by myself." This is not a passage that leaves room for silent partners. Any theory that populates creation week with a working council must first explain past this verse, not around it.
+    </div>
+  </section>
+  <!-- 9: Job 38 -->
+  <section class="slide">
+    <div class="eyebrow">Answering a Proof Text</div>
+    <h2>Job 38:4–7</h2>
+    <h3>The Foundation Is Christ</h3>
+    <div class="scripture">Where wast thou when I laid the foundations of the earth?... when the morning stars sang together, and all the sons of God shouted for joy?</div>
+    <div class="defense">
+      <strong>The Defense</strong>
+      Bible-believers hold more than one view of who the "sons of God" are here — some angels, others the redeemed line from Seth onward — and that is a secondary question, not the point at issue tonight. What matters for our purpose is the foundation itself. Scripture names a foundation deeper than day one's dirt: Christ Himself, the cornerstone laid before the world began (1 Cor. 3:11; 1 Pet. 1:20) — the very foundation Abraham himself saw by faith and rejoiced in (John 8:56). On either view of the "sons," this text gives no committee of co-creators. It gives worshippers glad for a foundation God alone laid in Christ.
+    </div>
+  </section>
+  <!-- 10: Psalm 82 -->
+  <section class="slide">
+    <div class="eyebrow">Answering a Proof Text</div>
+    <h2>Psalm 82:1, 6–7</h2>
+    <h3>The "Gods" Who Die Like Men</h3>
+    <div class="scripture">God standeth in the congregation of the mighty; he judgeth among the gods... I have said, Ye are gods; and all of you are children of the most High. But ye shall die like men, and fall like one of the princes.</div>
+    <div class="defense">
+      <strong>The Defense</strong>
+      This is the Divine Council Worldview's cornerstone text — and it refutes itself. Whatever these "gods" are, the Psalm's own verdict is that they will 
+      <strong>die like men</strong>. An eternal pantheon does not die. Christ Himself applies this psalm to those who merely "received the word of God" (John 10:34–36) — corrupt human judges under divine indictment, not a co-eternal spirit council.
+    </div>
+  </section>
+  <!-- 11: Deuteronomy 32 -->
+  <section class="slide">
+    <div class="eyebrow">Answering a Proof Text</div>
+    <h2>Deuteronomy 32:8–9</h2>
+    <h3>A Textual Argument, Not a Scriptural One</h3>
+    <div class="scripture">When the most High divided to the nations their inheritance, when he separated the sons of Adam, he set the bounds of the people according to the number of the children of Israel.</div>
+    <div class="defense">
+      <strong>The Defense</strong>
+      The Divine Council argument here rests on preferring a variant reading — "sons of God" — found in some Dead Sea fragments and the Greek Septuagint, over the Hebrew Masoretic Text the King James translators followed under God's providential preservation. We do not rebuild doctrine on disputed fragments against the received, settled text. And even granting that angelic princes are set over nations elsewhere in Scripture (Daniel 10:13, 20–21), that describes derived, creaturely authority under God's appointment — never a council sharing in His work of creation.
+    </div>
+  </section>
+  <!-- 11b: Canaanite Method -->
+  <section class="slide">
+    <div class="eyebrow">A Question of Method</div>
+    <h2>Reading Scripture Through Canaanite Eyes</h2>
+    <div class="divider"></div>
+    <div class="defense" style="margin-bottom:1.4rem;">
+      <strong>The Claim</strong>
+      Much of the Divine Council Worldview is built by importing Ugaritic and Canaanite mythology — the Baal Cycle, the god El and his council — as the lens for reading Hebrew words like "council," "sons of God," and "Most High," on the assumption that Israel's writers shared their pagan neighbors' cosmology.
+    </div>
+    <div class="defense">
+      <strong>The Support</strong>
+      Scripture is its own interpreter and needs no pagan mythology to explain what it means (2 Peter 1:20–21; 2 Tim. 3:16–17). And where the Bible does speak of the "gods" of the nations, it does not describe them as junior members of a real heavenly bureaucracy — it calls them nothing: "all the gods of the nations are idols" (Ps. 96:5); Israel's sacrifices to them were sacrifices "unto devils, and not to God" (Deut. 32:17; 1 Cor. 10:20). Building doctrine by reading Canaan's myths into Moses gets the authority backwards.
+    </div>
+  </section>
+  <!-- 12: Transition to Genesis -->
+  <section class="slide">
+    <div class="eyebrow">Foundations in Genesis</div>
+    <h2>The Grammar Itself Answers</h2>
+    <div class="divider"></div>
+    <p class="subtitle" style="margin-top:0.5rem;">Three grammatical and structural facts that rule out a plural "council" of creators at the very source text.</p>
+    <ul class="point-list" style="margin-top:1.8rem;">
+      <li>The Grammatical Rule of 
+        <em>Elohim</em>
+      </li>
+      <li>The Structure of Genesis 1:1 as an Absolute Beginning</li>
+      <li>The Singular Execution in Genesis 1:26–27</li>
+    </ul>
+  </section>
+  <!-- 13: Elohim -->
+  <section class="slide">
+    <div class="eyebrow">Genesis, Point One</div>
+    <h2>The Grammatical Rule of Elohim</h2>
+    <div class="scripture" style="font-size:1.5rem;">The Hebrew word 
+      <strong>Elohim</strong> (אֱלֹהִים) carries a plural ending (-im). Yet in Genesis 1:1, its verb is 
+      <strong>bara</strong> (בָּרָא) — strictly singular: "He created."
+    </div>
+    <div class="defense">
+      <strong>The Support</strong>
+      A plural noun paired with a singular verb, in Hebrew, signals majesty or a single entity acting as one — never a voting committee. The King James translators rendered it correctly as the singular "God." It points to the unified Godhead — Father, Son, and Spirit — acting in absolute unison, and rules out a plural council of separate gods watching or helping Him work.
+    </div>
+  </section>
+  <!-- 14: Genesis 1:1 Structure -->
+  <section class="slide">
+    <div class="eyebrow">Genesis, Point Two</div>
+    <h2>The Structure of Genesis 1:1</h2>
+    <h3>An Absolute Beginning</h3>
+    <div class="defense" style="margin-bottom:1.4rem;">
+      <strong>The Claim</strong>
+      Heiser and other academics argue Genesis 1:1 is a dependent clause — "When God began to create... the earth was a watery chaos" — which requires re-pointing the vowels of the first word, 
+      <em>Bereshit</em> (בְּרֵאשִׁית).
+    </div>
+    <div class="defense">
+      <strong>The Support</strong>
+      The traditional, received reading is the independent, absolute form: "In the beginning..." — a foundational announcement of an absolute start. Verse 1 is the completed creation of everything from nothing; verse 2 simply zooms in to describe the earth's initial unformed state before the six days of forming and filling begin. No pre-existing chaos is required — only a text willing to stand as it was handed down.
+    </div>
+  </section>
+  <!-- 15: Genesis 1:26-27 -->
+  <section class="slide">
+    <div class="eyebrow">Genesis, Point Three</div>
+    <h2>Genesis 1:26–27</h2>
+    <h3>The Singular Execution</h3>
+    <div class="scripture" style="font-size:1.45rem;">And God said, Let us make man in our image... (v. 26)
+      <br>
+      <br>
+      So God created man in his own image, in the image of God created he him; male and female created he them. (v. 27)
+    </div>
+    <div class="defense">
+      <strong>The Support</strong>
+      The consultation of verse 26 uses the plural "Us" — the fellowship within the Trinity itself. But the execution in verse 27 drops to strictly singular pronouns: 
+      <em>his, he, he</em>. A council did not create mankind; the singular Godhead did. Angels never share the image or the creative power of God.
+    </div>
+  </section>
+  <!-- 16: What the theory gets wrong -->
+  <section class="slide">
+    <div class="eyebrow">Sorting the Claims</div>
+    <h2>What the Theory Gets Wrong</h2>
+    <div class="divider"></div>
+    <div class="two-col wrong" style="margin-top:1rem;">
+      <div class="col">
+        <h3>The Overreach</h3>
+        <ul class="point-list">
+          <li>That a heavenly host implies co-creators.</li>
+          <li>That "gods" in Psalm 82 means an eternal pantheon.</li>
+          <li>That a disputed textual variant should override the received Hebrew text.</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>The Actual Testimony</h3>
+        <ul class="point-list">
+          <li>Angels are creatures who worship, not architects who build (Job 38; Rev. 4:11).</li>
+          <li>Scripture's own "gods" die like men (Ps. 82:7) — no eternal rivals to the Most High.</li>
+          <li>God made all things "alone" and "by myself" (Isaiah 44:24) — a claim no council can share.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- 17: Summary -->
+  <section class="slide">
+    <div class="eyebrow">Summary</div>
+    <h2>Scripture Speaks Clearly</h2>
+    <div class="divider"></div>
+    <ul class="point-list">
+      <li>
+        <strong>John 1</strong> — Nothing was made without the Word.
+      </li>
+      <li>
+        <strong>Colossians 1</strong> — Christ is before all things, visible and invisible.
+      </li>
+      <li>
+        <strong>Hebrews 11</strong> — The seen was not made of things which appear.
+      </li>
+      <li>
+        <strong>Romans 4</strong> — God calls things which be not as though they were.
+      </li>
+      <li>
+        <strong>Revelation 4</strong> — All things were created for His pleasure.
+      </li>
+      <li>
+        <strong>Isaiah 44</strong> — God stretched forth the heavens alone, by Himself.
+      </li>
+      <li>
+        <strong>Job 38</strong> — Whoever the "sons" are, the foundation is Christ, not a council's handiwork.
+      </li>
+      <li>
+        <strong>Psalm 82</strong> — Scripture's own "gods" die like men; Christ applies it to earthly leaders.
+      </li>
+      <li>
+        <strong>Method</strong> — Canaanite mythology is not the lens Scripture hands us to read itself.
+      </li>
+      <li>
+        <strong>Genesis 1</strong> — Singular verbs, an absolute beginning, and singular execution.
+      </li>
+    </ul>
+  </section>
+  <!-- 18: Conclusion -->
+  <section class="slide">
+    <div class="eyebrow">Conclusion</div>
+    <h2>One God, One Word, One Work</h2>
+    <div class="divider"></div>
+    <p class="closing">The Bible consistently presents one sovereign God who created all things out of nothing by the power of His word. There is no eternal matter, no pre-existing chaos that limited Him, and no council of lesser gods that shares His creative work — however loudly modern scholarship dresses the claim in Hebrew grammar and ancient Near Eastern parallels.</p>
+    <p class="closing" style="margin-top:1.6rem; color:var(--gold);">"Thou art worthy, O Lord... for thou hast created all things."</p>
+    <p class="ref">— Revelation 4:11</p>
+  </section>
+  <!-- 19: End -->
+  <section class="slide">
+    <div class="title-block">
+      <div class="seal">✦</div>
+      <h1 style="font-size:2.4rem;">Soli Deo Gloria</h1>
+      <div class="divider" style="margin-left:auto; margin-right:auto;"></div>
+      <p class="subtitle" style="margin-top:0.5rem;">To God alone be the glory for the work of creation.</p>
+      <p style="font-size:1.1rem; color:var(--muted); margin-top:3rem; font-family:'Cinzel',serif; letter-spacing:0.08em;">USE ← → OR SPACEBAR TO NAVIGATE</p>
+    </div>
+  </section>
+</div>
+<div class="footer-nav">
+  <div class="nav-hint">← → or Space</div>
+  <div class="slide-counter">
+    <span id="current">1</span> / 
+    <span id="total">19</span>
+  </div>
+</div>
+<script>const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  let current = 0;
+  document.getElementById('total').textContent = total;
+  function showSlide(index) {
+    slides.forEach((s, i) => s.classList.toggle('active', i === index));
+    document.getElementById('current').textContent = index + 1;
+    document.getElementById('progressFill').style.width = (((index + 1) / total) * 100) + '%';
+    current = index;
+  }
+  function next() { if (current < total - 1) showSlide(current + 1); }
+  function prev() { if (current > 0) showSlide(current - 1); }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+      e.preventDefault(); next();
+    } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+      e.preventDefault(); prev();
+    } else if (e.key === 'Home') {
+      showSlide(0);
+    } else if (e.key === 'End') {
+      showSlide(total - 1);
+    }
+  });
+  document.getElementById('slideshow').addEventListener('click', (e) => {
+    if (e.clientX > window.innerWidth / 2) next(); else prev();
+  });
+  showSlide(0);</script>

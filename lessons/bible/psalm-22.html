@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Psalm 22 — The Cry From the Cross</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0a0806;
+    --ink-2:#120d09;
+    --card:#161009;
+    --card-2:#1c140c;
+    --gold:#c9a253;
+    --gold-bright:#e6c47a;
+    --gold-dim:#8a6f3c;
+    --cream:#ece3d1;
+    --parchment:#b8ad95;
+    --crimson:#7a2020;
+    --crimson-bright:#a63a3a;
+    --hairline:rgba(201,162,83,0.25);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse at 20% 0%, rgba(122,32,32,0.08), transparent 55%),
+      radial-gradient(ellipse at 80% 100%, rgba(201,162,83,0.06), transparent 55%),
+      var(--ink);
+    color:var(--cream);
+    font-family:'Cormorant Garamond', serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .frame{max-width:760px;margin:0 auto;padding:0 22px 120px;}
+
+  /* ---------- Header / Hero ---------- */
+  .hero{
+    position:relative;
+    padding:76px 22px 64px;
+    text-align:center;
+    border-bottom:1px solid var(--hairline);
+    background:
+      linear-gradient(180deg, rgba(122,32,32,0.10), transparent 70%);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      radial-gradient(1px 1px at 15% 30%, var(--gold-dim), transparent),
+      radial-gradient(1px 1px at 85% 20%, var(--gold-dim), transparent),
+      radial-gradient(1px 1px at 70% 75%, var(--gold-dim), transparent),
+      radial-gradient(1px 1px at 30% 80%, var(--gold-dim), transparent);
+    opacity:0.4;
+    pointer-events:none;
+  }
+  .eyebrow{
+    font-family:'Cinzel', serif;
+    letter-spacing:0.32em;
+    font-size:11px;
+    color:var(--gold);
+    text-transform:uppercase;
+    margin-bottom:22px;
+  }
+  .cross-motif{
+    width:34px;height:48px;margin:0 auto 22px;
+    position:relative;
+  }
+  .cross-motif::before,.cross-motif::after{
+    content:"";position:absolute;background:var(--gold);
+  }
+  .cross-motif::before{width:3px;height:48px;left:50%;transform:translateX(-50%);}
+  .cross-motif::after{width:26px;height:3px;top:12px;left:50%;transform:translateX(-50%);}
+  h1.title{
+    font-family:'Cinzel Decorative', serif;
+    font-weight:700;
+    font-size:clamp(30px,6vw,46px);
+    color:var(--gold-bright);
+    margin:0 0 14px;
+    line-height:1.15;
+    text-shadow:0 0 30px rgba(201,162,83,0.25);
+  }
+  .subtitle{
+    font-style:italic;
+    font-size:19px;
+    color:var(--parchment);
+    max-width:480px;
+    margin:0 auto 6px;
+  }
+  .ref-tag{
+    font-family:'Cinzel', serif;
+    font-size:12px;
+    letter-spacing:0.18em;
+    color:var(--gold-dim);
+    margin-top:18px;
+  }
+  .aramaic{
+    font-family:'EB Garamond', serif;
+    font-style:italic;
+    color:var(--gold);
+    font-size:22px;
+    margin-top:28px;
+    letter-spacing:0.02em;
+  }
+
+  /* ---------- Section framework ---------- */
+  section.block{padding:56px 0 8px;}
+  .divider{
+    display:flex;align-items:center;gap:14px;
+    margin:8px 0 34px;
+    color:var(--gold-dim);
+  }
+  .divider .line{flex:1;height:1px;background:linear-gradient(90deg, transparent, var(--hairline), transparent);}
+  .divider .glyph{font-size:13px;letter-spacing:0.2em;font-family:'Cinzel',serif;color:var(--gold);}
+
+  h2.section-title{
+    font-family:'Cinzel', serif;
+    font-weight:600;
+    font-size:22px;
+    color:var(--gold-bright);
+    letter-spacing:0.02em;
+    margin:0 0 6px;
+  }
+  .section-kicker{
+    font-family:'Cinzel', serif;
+    font-size:11px;
+    letter-spacing:0.24em;
+    text-transform:uppercase;
+    color:var(--gold-dim);
+    margin-bottom:10px;
+  }
+  p{font-size:19px;line-height:1.72;color:var(--cream);margin:0 0 18px;}
+  p.lede{font-size:20px;color:var(--parchment);}
+
+  .dropcap::first-letter{
+    font-family:'Cinzel Decorative', serif;
+    font-size:64px;
+    float:left;
+    line-height:0.8;
+    padding:8px 10px 0 0;
+    color:var(--gold-bright);
+    text-shadow:0 0 18px rgba(201,162,83,0.35);
+  }
+
+  /* ---------- Psalm reading card ---------- */
+  .psalm-card{
+    background:linear-gradient(180deg, var(--card), var(--card-2));
+    border:1px solid var(--hairline);
+    border-radius:4px;
+    padding:30px 26px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4), inset 0 0 40px rgba(201,162,83,0.03);
+  }
+  .verse{
+    margin-bottom:14px;
+    padding:9px 10px;
+    border-radius:3px;
+    cursor:pointer;
+    transition:background 0.2s ease;
+    position:relative;
+  }
+  .verse:hover{background:rgba(201,162,83,0.07);}
+  .verse.keyverse{border-left:2px solid var(--crimson-bright);padding-left:14px;}
+  .vnum{
+    font-family:'Cinzel', serif;
+    color:var(--gold);
+    font-size:13px;
+    margin-right:8px;
+    vertical-align:super;
+  }
+  .verse-text{font-size:18px;line-height:1.68;color:var(--cream);}
+  .tap-hint{
+    display:inline-block;
+    margin-left:8px;
+    font-family:'Cinzel', serif;
+    font-size:9px;
+    letter-spacing:0.1em;
+    color:var(--gold-dim);
+    text-transform:uppercase;
+    opacity:0.75;
+  }
+
+  /* ---------- Cross reference card ---------- */
+  .xref{
+    background:var(--card);
+    border:1px solid var(--hairline);
+    border-left:3px solid var(--gold);
+    border-radius:3px;
+    padding:18px 20px;
+    margin:22px 0;
+    cursor:pointer;
+    transition:transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  }
+  .xref:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 30px rgba(0,0,0,0.35);
+    border-color:var(--gold-bright);
+  }
+  .xref-label{
+    font-family:'Cinzel', serif;
+    font-size:12px;
+    letter-spacing:0.12em;
+    color:var(--gold-bright);
+    text-transform:uppercase;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .xref-label .open-icon{
+    font-family:serif;
+    font-size:16px;
+    color:var(--gold-dim);
+  }
+  .xref-preview{
+    font-style:italic;
+    color:var(--parchment);
+    font-size:16px;
+    margin-top:6px;
+  }
+
+  /* ---------- Reflection callout ---------- */
+  .callout{
+    background:linear-gradient(135deg, rgba(122,32,32,0.14), rgba(122,32,32,0.04));
+    border:1px solid rgba(166,58,58,0.3);
+    border-radius:4px;
+    padding:20px 22px;
+    margin:26px 0;
+  }
+  .callout .callout-label{
+    font-family:'Cinzel', serif;
+    font-size:11px;
+    letter-spacing:0.2em;
+    color:var(--crimson-bright);
+    text-transform:uppercase;
+    margin-bottom:8px;
+  }
+  .callout p{color:var(--cream);font-size:18px;margin:0;}
+
+  /* ---------- Discussion questions ---------- */
+  .discuss{
+    background:var(--card);
+    border:1px dashed var(--hairline);
+    border-radius:4px;
+    padding:22px 24px;
+    margin:30px 0;
+  }
+  .discuss h3{
+    font-family:'Cinzel', serif;
+    font-size:14px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin:0 0 14px;
+  }
+  .discuss ol{margin:0;padding-left:20px;}
+  .discuss li{font-size:17px;line-height:1.6;color:var(--parchment);margin-bottom:12px;}
+  .discuss li::marker{color:var(--gold-dim);font-family:'Cinzel',serif;}
+
+  /* ---------- Modal ---------- */
+  .modal-overlay{
+    display:none;
+    position:fixed;inset:0;
+    background:rgba(5,3,2,0.82);
+    backdrop-filter:blur(3px);
+    z-index:100;
+    align-items:center;justify-content:center;
+    padding:24px;
+  }
+  .modal-overlay.active{display:flex;}
+  .modal{
+    max-width:520px;
+    width:100%;
+    background:linear-gradient(180deg, #1a130c, #100b07);
+    border:1px solid var(--gold-dim);
+    border-radius:6px;
+    padding:30px 28px;
+    position:relative;
+    box-shadow:0 30px 80px rgba(0,0,0,0.6);
+    max-height:80vh;
+    overflow-y:auto;
+  }
+  .modal::before{
+    content:"✝";
+    display:block;
+    text-align:center;
+    color:var(--gold);
+    font-size:20px;
+    margin-bottom:14px;
+  }
+  .modal-ref{
+    font-family:'Cinzel', serif;
+    font-size:13px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--gold-bright);
+    text-align:center;
+    margin-bottom:16px;
+  }
+  .modal-text{
+    font-size:20px;
+    line-height:1.75;
+    color:var(--cream);
+    text-align:left;
+  }
+  .modal-close{
+    position:absolute;
+    top:14px;right:16px;
+    background:none;
+    border:none;
+    color:var(--gold-dim);
+    font-size:22px;
+    cursor:pointer;
+    line-height:1;
+    font-family:serif;
+  }
+  .modal-close:hover{color:var(--gold-bright);}
+
+  /* ---------- Footer ---------- */
+  footer{
+    text-align:center;
+    padding:56px 22px 20px;
+    border-top:1px solid var(--hairline);
+    margin-top:40px;
+  }
+  footer .amen{
+    font-family:'Cinzel Decorative', serif;
+    font-size:26px;
+    color:var(--gold-bright);
+    letter-spacing:0.06em;
+  }
+  footer .fine{
+    font-size:14px;
+    color:var(--gold-dim);
+    font-family:'Cinzel', serif;
+    letter-spacing:0.08em;
+    margin-top:14px;
+  }
+
+  @media (max-width:520px){
+    .hero{padding:56px 16px 44px;}
+    h1.title{font-size:28px;}
+    p, .verse-text{font-size:17px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .xref{transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="eyebrow">Sunday School &middot; Faith Baptist Church</div>
+  <div class="cross-motif"></div>
+  <h1 class="title">The Cry From the Cross</h1>
+  <p class="subtitle">A study of Psalm 22 — the prophetic song of David that Christ Himself prayed from the tree</p>
+  <div class="aramaic">"Eli, Eli, lama sabachthani?"</div>
+  <div class="ref-tag">Matthew 27:46 &nbsp;·&nbsp; Mark 15:34 &nbsp;·&nbsp; Psalm 22:1</div>
+</header>
+
+<div class="frame">
+
+  <!-- ============ THE PSALM ITSELF ============ -->
+  <section class="block" id="psalm">
+    <div class="section-kicker">Scripture Reading</div>
+    <h2 class="section-title">Psalm 22 (KJV)</h2>
+    <p class="lede">Read together as a class. Tap any highlighted verse to see how it points to Calvary.</p>
+
+    <div class="psalm-card">
+
+      <div class="verse keyverse" onclick="openModal('v1')"><span class="vnum">1</span><span class="verse-text">My God, my God, why hast thou forsaken me? why art thou so far from helping me, and from the words of my roaring?<span class="tap-hint">tap</span></span></div>
+
+      <div class="verse"><span class="vnum">2</span><span class="verse-text">O my God, I cry in the day time, but thou hearest not; and in the night season, and am not silent.</span></div>
+
+      <div class="verse"><span class="vnum">3</span><span class="verse-text">But thou art holy, O thou that inhabitest the praises of Israel.</span></div>
+
+      <div class="verse"><span class="vnum">4</span><span class="verse-text">Our fathers trusted in thee: they trusted, and thou didst deliver them.</span></div>
+
+      <div class="verse"><span class="vnum">5</span><span class="verse-text">They cried unto thee, and were delivered: they trusted in thee, and were not confounded.</span></div>
+
+      <div class="verse"><span class="vnum">6</span><span class="verse-text">But I am a worm, and no man; a reproach of men, and despised of the people.</span></div>
+
+      <div class="verse keyverse" onclick="openModal('v7')"><span class="vnum">7</span><span class="verse-text">All they that see me laugh me to scorn: they shoot out the lip, they shake the head, saying,<span class="tap-hint">tap</span></span></div>
+
+      <div class="verse keyverse" onclick="openModal('v8')"><span class="vnum">8</span><span class="verse-text">He trusted on the LORD that he would deliver him: let him deliver him, seeing he delighted in him.<span class="tap-hint">tap</span></span></div>
+
+      <div class="verse"><span class="vnum">9</span><span class="verse-text">But thou art he that took me out of the womb: thou didst make me hope when I was upon my mother's breasts.</span></div>
+
+      <div class="verse"><span class="vnum">10</span><span class="verse-text">I was cast upon thee from the womb: thou art my God from my mother's belly.</span></div>
+
+      <div class="verse"><span class="vnum">11</span><span class="verse-text">Be not far from me; for trouble is near; for there is none to help.</span></div>
+
+      <div class="verse"><span class="vnum">12</span><span class="verse-text">Many bulls have compassed me: strong bulls of Bashan have beset me round.</span></div>
+
+      <div class="verse"><span class="vnum">13</span><span class="verse-text">They gaped upon me with their mouths, as a ravening and a roaring lion.</span></div>
+
+      <div class="verse"><span class="vnum">14</span><span class="verse-text">I am poured out like water, and all my bones are out of joint: my heart is like wax; it is melted in the midst of my bowels.</span></div>
+
+      <div class="verse"><span class="vnum">15</span><span class="verse-text">My strength is dried up like a potsherd; and my tongue cleaveth to my jaws; and thou hast brought me into the dust of death.</span></div>
+
+      <div class="verse keyverse" onclick="openModal('v16')"><span class="vnum">16</span><span class="verse-text">For dogs have compassed me: the assembly of the wicked have inclosed me: they pierced my hands and my feet.<span class="tap-hint">tap</span></span></div>
+
+      <div class="verse"><span class="vnum">17</span><span class="verse-text">I may tell all my bones: they look and stare upon me.</span></div>
+
+      <div class="verse keyverse" onclick="openModal('v18')"><span class="vnum">18</span><span class="verse-text">They part my garments among them, and cast lots upon my vesture.<span class="tap-hint">tap</span></span></div>
+
+      <div class="verse"><span class="vnum">19</span><span class="verse-text">But be not thou far from me, O LORD: O my strength, haste thee to help me.</span></div>
+
+      <div class="verse"><span class="vnum">20</span><span class="verse-text">Deliver my soul from the sword; my darling from the power of the dog.</span></div>
+
+      <div class="verse"><span class="vnum">21</span><span class="verse-text">Save me from the lion's mouth: for thou hast heard me from the horns of the unicorns.</span></div>
+
+      <div class="verse"><span class="vnum">22</span><span class="verse-text">I will declare thy name unto my brethren: in the midst of the congregation will I praise thee.</span></div>
+
+      <div class="verse"><span class="vnum">23</span><span class="verse-text">Ye that fear the LORD, praise him; all ye the seed of Jacob, glorify him; and fear him, all ye the seed of Israel.</span></div>
+
+      <div class="verse"><span class="vnum">24</span><span class="verse-text">For he hath not despised nor abhorred the affliction of the afflicted; neither hath he hid his face from him; but when he cried unto him, he heard.</span></div>
+
+      <div class="verse"><span class="vnum">25</span><span class="verse-text">My praise shall be of thee in the great congregation: I will pay my vows before them that fear him.</span></div>
+
+      <div class="verse"><span class="vnum">26</span><span class="verse-text">The meek shall eat and be satisfied: they shall praise the LORD that seek him: your heart shall live for ever.</span></div>
+
+      <div class="verse"><span class="vnum">27</span><span class="verse-text">All the ends of the world shall remember and turn unto the LORD: and all the kindreds of the nations shall worship before thee.</span></div>
+
+      <div class="verse"><span class="vnum">28</span><span class="verse-text">For the kingdom is the LORD's: and he is the governor among the nations.</span></div>
+
+      <div class="verse"><span class="vnum">29</span><span class="verse-text">All they that be fat upon earth shall eat and worship: all they that go down to the dust shall bow before him: and none can keep alive his own soul.</span></div>
+
+      <div class="verse"><span class="vnum">30</span><span class="verse-text">A seed shall serve him; it shall be accounted to the Lord for a generation.</span></div>
+
+      <div class="verse"><span class="vnum">31</span><span class="verse-text">They shall come, and shall declare his righteousness unto a people that shall be born, that he hath done this.</span></div>
+
+    </div>
+  </section>
+
+  <div class="divider"><div class="line"></div><div class="glyph">✝</div><div class="line"></div></div>
+
+  <!-- ============ OPENING: THE CRY ITSELF ============ -->
+  <section class="block">
+    <div class="section-kicker">I. The Cry Itself</div>
+    <h2 class="section-title">A Prophecy Fulfilled in the Ninth Hour</h2>
+    <p class="dropcap lede">In the ninth hour, Jesus cried out from the cross the opening words of Psalm 22 — a song of desperation penned by David centuries earlier. It is recorded twice in the Gospels.</p>
+
+    <div class="xref" onclick="openModal('matt2746')">
+      <div class="xref-label">Matthew 27:46 <span class="open-icon">✥</span></div>
+      <div class="xref-preview">Jesus cries with a loud voice, quoting the opening line of the Psalm.</div>
+    </div>
+
+    <div class="xref" onclick="openModal('mark1534')">
+      <div class="xref-label">Mark 15:34 <span class="open-icon">✥</span></div>
+      <div class="xref-preview">The same cry, in the Aramaic Jesus spoke daily — "Eloi, Eloi."</div>
+    </div>
+
+    <p>The man Christ Jesus — after a day of betrayal, abuse, beaten beyond human recognition, scourged, shamed and mocked, cursed, hung on the tree, and made sin for all mankind — acknowledges in that moment that, having taken on all the sin of all creation, He is no longer looked upon by the Father with Whom He has been since everlasting.</p>
+
+    <p>Jesus cried out in Aramaic, the daily language of the people, the language He grew up speaking — conveying His humanity in that moment. The Hebrew words, long sung by Israel in the congregation, translated into Greek and given to us in English, never lose a scintilla of power.</p>
+
+    <div class="xref" onclick="openModal('heb122')">
+      <div class="xref-label">Hebrews 12:2–3 <span class="open-icon">✥</span></div>
+      <div class="xref-preview">Looking unto Jesus, who for the joy set before Him endured the cross.</div>
+    </div>
+  </section>
+
+  <!-- ============ THE SCAPEGOAT ============ -->
+  <section class="block">
+    <div class="section-kicker">II. Our High Priest</div>
+    <h2 class="section-title">The Scapegoat, Once for All</h2>
+    <p>Jesus, our scapegoat, received our sin in atonement, without the camp — taking it utterly away. Not as the blood of bulls and goats offered yearly for sanctification by the High Priest of the Tabernacle, but once and for all, shed for man. And He, as the true High Priest, entered into the Heavenly Tabernacle and applied His own precious blood upon the mercy seat in Heaven.</p>
+
+    <div class="callout">
+      <div class="callout-label">Consider</div>
+      <p>No greater love has ever been shown than this — that God became flesh and lived among us, sinless and perfect, that He might drink of this cup. Going to the cross that we might live. While we were yet sinners, Christ died for us.</p>
+    </div>
+  </section>
+
+  <!-- ============ THE FAITHFULNESS OF GOD ============ -->
+  <section class="block">
+    <div class="section-kicker">III. The Ground of Hope</div>
+    <h2 class="section-title">He Has Never Failed to Keep His Word</h2>
+    <p>The Psalm turns from desperation to the certain hope of a holy, promise-keeping God. We cry out and feel He is far from us — that He doesn't hear, that He may have abandoned us to our plight. But there is always the hope of faith and trust, because those who trusted Him were never confounded. He heard the cries in Egypt and brought them out of the land. He heard their cries in the wilderness. He delivered their children to the promised land. He heard them in the days of the judges, sending deliverers to raise them up out of the evil their own sin had brought upon them.</p>
+
+    <div class="xref" onclick="openModal('heb121')">
+      <div class="xref-label">Hebrews 12:1 <span class="open-icon">✥</span></div>
+      <div class="xref-preview">Compassed about with so great a cloud of witnesses.</div>
+    </div>
+
+    <p>We know God is good and cannot lie. Our deliverance is assured, even when the flesh is weak and we feel abandoned. His consistent faithfulness to those He foreknew gives us confidence and strength — these things were written for our admonition, that we may know Him as a rewarder of those who diligently seek Him.</p>
+
+    <div class="xref" onclick="openModal('rom154')">
+      <div class="xref-label">Romans 15:4 <span class="open-icon">✥</span></div>
+      <div class="xref-preview">Written aforetime for our learning, that we might have hope.</div>
+    </div>
+  </section>
+
+  <div class="divider"><div class="line"></div><div class="glyph">✝</div><div class="line"></div></div>
+
+  <!-- ============ THE SUFFERING FORESHADOWED ============ -->
+  <section class="block">
+    <div class="section-kicker">IV. A Shadow of Calvary</div>
+    <h2 class="section-title">Through a Glass Darkly</h2>
+    <p>In David's personal pain, we see a shadow of the suffering of Jesus — a reproach of men, despised of the people, laughed to scorn.</p>
+
+    <div class="xref" onclick="openModal('matt273943')">
+      <div class="xref-label">Matthew 27:39–43 <span class="open-icon">✥</span></div>
+      <div class="xref-preview">They that passed by reviled Him, wagging their heads.</div>
+    </div>
+
+    <p>Compassed about by bulls, by dogs, men like lions — surrounded by Roman soldiers doing the work of the Jews, piercing His hands and feet with nails. Splayed out upon the cross, His joints distended and twisted to bear the weight of His own body. Death settling in His guts as He struggled to breathe. His bones in sharp relief against His stretched-out skin.</p>
+
+    <p>Crying out for water, Jesus was given vinegar mingled with gall — a bitter drink that could not quench His overwhelming thirst. The soldiers then parted His garments by lot.</p>
+
+    <div class="xref" onclick="openModal('matt273435')">
+      <div class="xref-label">Matthew 27:34–35 <span class="open-icon">✥</span></div>
+      <div class="xref-preview">They crucified Him, and parted His garments, casting lots.</div>
+    </div>
+
+    <p>The desperation and loneliness Jesus suffered on the cross He had also carried with Him for thirty-three years — understanding, all along, the anguish that awaited Him at Calvary, while at all points touched by the infirmity of the flesh and tempted as we are. His prayer at Gethsemane, Son to Father, asked that the cup might pass — yet He remained steadfast to the Father's will, knowing full well the physical and emotional cost.</p>
+
+    <div class="xref" onclick="openModal('rom828')">
+      <div class="xref-label">Romans 8:28 <span class="open-icon">✥</span></div>
+      <div class="xref-preview">All things work together for good to them that love God.</div>
+    </div>
+  </section>
+
+  <!-- ============ THE TURN TO PRAISE ============ -->
+  <section class="block">
+    <div class="section-kicker">V. From Desperation to Praise</div>
+    <h2 class="section-title">The Condemned Man's Prayer of Certain Hope</h2>
+    <p>Compassed by dogs, scorned, ridiculed, pierced and heartbroken, feeling abandoned by God — the Psalm turns to a prayer of certain hope. We know God has delivered every promise He has made. He has heard the cries of His people and, in due season, saved them. We may persist in prayer, reminding God — and ourselves — of His faithfulness, even as we ask for more immediate relief. His timing may not be ours, but at our weakest He shows His strength.</p>
+
+    <div class="callout">
+      <div class="callout-label">From the Text — vv. 20–21</div>
+      <p>"Deliver my soul from the sword; my darling from the power of the dog. Save me from the lion's mouth: for thou hast heard me from the horns of the unicorns."</p>
+    </div>
+
+    <p>From the proverbial horns of a dilemma, from the immediate threat, we call upon the name of the Lord — not only the saved, His darling, but the lost often find His strength in their time of trial. Foxhole converts. The Potter often moves the clay in such a way that we finally see our own shortcomings and impotency, and our need for His hand to lift us up, that we may become what He has planned for us to be.</p>
+
+    <p>If even Jesus Christ was made a reproach and murdered by wicked men, that we might know eternal life as the risen and triumphant Son of God — then our trials are an opportunity to overcome by His power and give the Lord the glory.</p>
+  </section>
+
+  <!-- ============ THE CONGREGATION ============ -->
+  <section class="block">
+    <div class="section-kicker">VI. Declared in the Congregation</div>
+    <h2 class="section-title">Go to Church</h2>
+    <p>"I will declare thy name unto my brethren: in the midst of the congregation will I praise thee." In the midst of tribulation, we shall praise Him — that is the mind of a mature Christian. It is difficult to see sometimes, and we may feel isolated, alone — but in our most desperate hour, we praise Him. We declare His holy name to our brethren; in the congregation we hold up His excellence.</p>
+
+    <div class="callout">
+      <div class="callout-label">A Plain Application</div>
+      <p>It may not be a primary — or even secondary — application of this Psalm, but consider: we cannot lift our voice in praise to the congregation, or declare His name unto the brethren, if we avoid church. If we forsake the assembly. Go to church!</p>
+    </div>
+
+    <p>The praise, glory, and fear of the Lord come from the knowledge of the doctrines of God — the understanding of His ways, the past performance of His promises, the teaching of the fathers through the inspired and preserved word of God. Faith cometh by hearing.</p>
+
+    <div class="xref" onclick="openModal('rom113')">
+      <div class="xref-label">Romans 11:3–4 <span class="open-icon">✥</span></div>
+      <div class="xref-preview">I have reserved to myself seven thousand men.</div>
+    </div>
+
+    <div class="xref" onclick="openModal('heb1023')">
+      <div class="xref-label">Hebrews 10:23–25 <span class="open-icon">✥</span></div>
+      <div class="xref-preview">Not forsaking the assembling of ourselves together.</div>
+    </div>
+
+    <p>That communal exhortation is invaluable to a believer in tribulation. Hearing the victory Jesus has given others provides the strength to go on — to know the meek shall eat and be satisfied, seeking the Lord and finding Him, unto eternal life.</p>
+
+    <div class="xref" onclick="openModal('john635')">
+      <div class="xref-label">John 6:35–37 <span class="open-icon">✥</span></div>
+      <div class="xref-preview">I am the bread of life; him that cometh to me I will in no wise cast out.</div>
+    </div>
+  </section>
+
+  <!-- ============ TO THE ENDS OF THE WORLD ============ -->
+  <section class="block">
+    <div class="section-kicker">VII. To Every Generation</div>
+    <h2 class="section-title">A People Not Yet Born</h2>
+    <p>The truth of this gospel goes to the ends of the world, and every knee shall bow — for the kingdom is the LORD's, and He is governor among the nations. Our hope rests on the truth that what God has promised to deliver, He will. The present suffering pales in comparison to what is to come.</p>
+
+    <div class="xref" onclick="openModal('rom818')">
+      <div class="xref-label">Romans 8:18 <span class="open-icon">✥</span></div>
+      <div class="xref-preview">Not worthy to be compared with the glory which shall be revealed in us.</div>
+    </div>
+
+    <p>"A seed shall serve him; it shall be accounted to the Lord for a generation. They shall come, and shall declare his righteousness unto a people that shall be born, that he hath done this." Our suffering becomes cause to praise the Lord before the brethren, to bring others to the knowledge of Christ, to proclaim His power and promise, and to partake in the spreading of His gospel to all people — that every tongue shall confess that He hath done this.</p>
+  </section>
+
+  <div class="divider"><div class="line"></div><div class="glyph">✝</div><div class="line"></div></div>
+
+  <!-- ============ DISCUSSION QUESTIONS ============ -->
+  <section class="block">
+    <div class="discuss">
+      <h3>For Class Discussion</h3>
+      <ol>
+        <li>Why is it significant that Jesus quoted this Psalm in Aramaic — the language of His everyday life — rather than in formal Hebrew?</li>
+        <li>Verses 16 and 18 describe pierced hands and feet and garments divided by lot, written roughly a thousand years before crucifixion existed as a Roman practice. What does this tell us about the nature of prophecy and the authorship of Scripture?</li>
+        <li>The Psalm moves from "why hast thou forsaken me" to "I will declare thy name unto my brethren." What causes that turn, and where do we see the same pattern in our own trials?</li>
+        <li>How does Hebrews 10:23–25 connect the Psalm's call to praise "in the midst of the congregation" to our own responsibility to gather with the local church?</li>
+        <li>In what sense was Jesus a "foxhole convert's" answer and also the Savior of "His darling" — both the lost and the saved, in verse 20?</li>
+      </ol>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="amen">Amen</div>
+  <div class="fine">Faith Baptist Church of Plymouth County &middot; Sunday School</div>
+</footer>
+
+<!-- ============ MODAL ============ -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOnOverlay(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <div class="modal-ref" id="modalRef"></div>
+    <div class="modal-text" id="modalText"></div>
+  </div>
+</div>
+
+<script>
+  const verses = {
+    v1: {
+      ref: "Psalm 22:1",
+      text: "My God, my God, why hast thou forsaken me? why art thou so far from helping me, and from the words of my roaring?"
+    },
+    v7: {
+      ref: "Psalm 22:7",
+      text: "All they that see me laugh me to scorn: they shoot out the lip, they shake the head, saying,"
+    },
+    v8: {
+      ref: "Psalm 22:8",
+      text: "He trusted on the LORD that he would deliver him: let him deliver him, seeing he delighted in him."
+    },
+    v16: {
+      ref: "Psalm 22:16",
+      text: "For dogs have compassed me: the assembly of the wicked have inclosed me: they pierced my hands and my feet."
+    },
+    v18: {
+      ref: "Psalm 22:18",
+      text: "They part my garments among them, and cast lots upon my vesture."
+    },
+    matt2746: {
+      ref: "Matthew 27:46",
+      text: "And about the ninth hour Jesus cried with a loud voice, saying, Eli, Eli, lama sabachthani? that is to say, My God, my God, why hast thou forsaken me?"
+    },
+    mark1534: {
+      ref: "Mark 15:34",
+      text: "And at the ninth hour Jesus cried with a loud voice, saying, Eloi, Eloi, lama sabachthani? which is, being interpreted, My God, my God, why hast thou forsaken me?"
+    },
+    heb122: {
+      ref: "Hebrews 12:2–3",
+      text: "Looking unto Jesus the author and finisher of our faith; who for the joy that was set before him endured the cross, despising the shame, and is set down at the right hand of the throne of God. For consider him that endured such contradiction of sinners against himself, lest ye be wearied and faint in your minds."
+    },
+    heb121: {
+      ref: "Hebrews 12:1",
+      text: "Wherefore seeing we also are compassed about with so great a cloud of witnesses, let us lay aside every weight, and the sin which doth so easily beset us, and let us run with patience the race that is set before us."
+    },
+    rom154: {
+      ref: "Romans 15:4",
+      text: "For whatsoever things were written aforetime were written for our learning, that we through patience and comfort of the scriptures might have hope."
+    },
+    matt273943: {
+      ref: "Matthew 27:39–43",
+      text: "And they that passed by reviled him, wagging their heads, And saying, Thou that destroyest the temple, and buildest it in three days, save thyself. If thou be the Son of God, come down from the cross. Likewise also the chief priests mocking him, with the scribes and elders, said, He saved others; himself he cannot save. If he be the King of Israel, let him now come down from the cross, and we will believe him. He trusted in God; let him deliver him now, if he will have him: for he said, I am the Son of God."
+    },
+    matt273435: {
+      ref: "Matthew 27:34–35",
+      text: "They gave him vinegar to drink mingled with gall: and when he had tasted thereof, he would not drink. And they crucified him, and parted his garments, casting lots: that it might be fulfilled which was spoken by the prophet, They parted my garments among them, and upon my vesture did they cast lots."
+    },
+    rom828: {
+      ref: "Romans 8:28",
+      text: "And we know that all things work together for good to them that love God, to them who are the called according to his purpose."
+    },
+    rom113: {
+      ref: "Romans 11:3–4",
+      text: "Lord, they have killed thy prophets, and digged down thine altars; and I am left alone, and they seek my life. But what saith the answer of God unto him? I have reserved to myself seven thousand men, who have not bowed the knee to the image of Baal."
+    },
+    heb1023: {
+      ref: "Hebrews 10:23–25",
+      text: "Let us hold fast the profession of our faith without wavering; (for he is faithful that promised;) And let us consider one another to provoke unto love and to good works: Not forsaking the assembling of ourselves together, as the manner of some is; but exhorting one another: and so much the more, as ye see the day approaching."
+    },
+    john635: {
+      ref: "John 6:35–37",
+      text: "And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst. But I said unto you, That ye also have seen me, and believe not. All that the Father giveth me shall come to me; and him that cometh to me I will in no wise cast out."
+    },
+    rom818: {
+      ref: "Romans 8:18",
+      text: "For I reckon that the sufferings of this present time are not worthy to be compared with the glory which shall be revealed in us."
+    }
+  };
+
+  function openModal(key){
+    const v = verses[key];
+    if(!v) return;
+    document.getElementById('modalRef').textContent = v.ref;
+    document.getElementById('modalText').textContent = v.text;
+    document.getElementById('modalOverlay').classList.add('active');
+  }
+  function closeModal(){
+    document.getElementById('modalOverlay').classList.remove('active');
+  }
+  function closeModalOnOverlay(e){
+    if(e.target.id === 'modalOverlay') closeModal();
+  }
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeModal();
+  });
+</script>
+
+</body>
+</html>

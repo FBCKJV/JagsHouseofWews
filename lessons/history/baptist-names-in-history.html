@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baptist Names in History</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0a0806;
+    --ink-2:#120d0a;
+    --parchment:#e9dfc7;
+    --parchment-dim:#c9bd9e;
+    --gold:#c9a24b;
+    --gold-bright:#e8c877;
+    --crimson:#7a1f2b;
+    --crimson-bright:#a3283a;
+    --line:#3a2f22;
+    --shadow:0 20px 50px rgba(0,0,0,.55);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamond',serif;}
+  body{
+    background:
+      radial-gradient(circle at 15% 8%, rgba(122,31,43,.25), transparent 40%),
+      radial-gradient(circle at 85% 92%, rgba(201,162,75,.12), transparent 45%),
+      var(--ink);
+  }
+  .deck{max-width:900px;margin:0 auto;padding:0 0 8vh;}
+
+  section{
+    position:relative;
+    padding:9vh 6vw 7vh;
+    border-bottom:1px solid var(--line);
+  }
+  section:last-child{border-bottom:none;}
+
+  .eyebrow{
+    font-family:'Cinzel',serif;
+    font-size:.72rem;
+    letter-spacing:.28em;
+    color:var(--gold);
+    margin:0 0 1.1rem;
+  }
+  h1,h2{
+    font-family:'Cinzel',serif;
+    color:var(--parchment);
+    margin:0 0 .6rem;
+    font-weight:700;
+    line-height:1.15;
+  }
+  h1{font-size:clamp(2.1rem,5.2vw,3.4rem);}
+  h2{font-size:clamp(1.5rem,3.4vw,2.1rem);}
+  .sub{
+    font-style:italic;
+    color:var(--parchment-dim);
+    font-size:1.15rem;
+    max-width:60ch;
+    margin:0 0 2rem;
+  }
+  p{font-size:1.18rem;line-height:1.65;color:var(--parchment);max-width:62ch;}
+  .lede{font-size:1.32rem;line-height:1.7;color:var(--parchment);}
+
+  .rule{
+    width:120px;height:2px;
+    background:linear-gradient(90deg,var(--gold),transparent);
+    margin:1.6rem 0;
+  }
+
+  /* Hero */
+  .hero{
+    min-height:88vh;
+    display:flex;flex-direction:column;justify-content:center;
+    border-bottom:1px solid var(--line);
+    background:
+      linear-gradient(180deg, rgba(10,8,6,.4), rgba(10,8,6,.85)),
+      repeating-linear-gradient(135deg, rgba(201,162,75,.03) 0 2px, transparent 2px 40px);
+  }
+  .hero .plate{
+    border:1px solid var(--gold);
+    outline:1px solid rgba(201,162,75,.25);
+    outline-offset:6px;
+    padding:3rem 2.4rem;
+    background:linear-gradient(180deg, rgba(122,31,43,.18), rgba(10,8,6,.4));
+  }
+  .hero .kicker{font-family:'Cinzel',serif;letter-spacing:.35em;font-size:.85rem;color:var(--gold-bright);margin-bottom:1rem;}
+  .hero h1{font-size:clamp(2.6rem,7vw,4.4rem);}
+  .hero .verse-ref{margin-top:2rem;font-size:1.05rem;color:var(--gold);letter-spacing:.05em;}
+
+  /* Timeline strand — sections 2-5 */
+  .strand{
+    display:flex;flex-direction:column;gap:1.1rem;
+    margin-top:1.5rem;
+  }
+  .name-card{
+    border:1px solid var(--line);
+    border-left:3px solid var(--gold);
+    background:linear-gradient(90deg, rgba(201,162,75,.06), transparent 60%);
+    padding:1.1rem 1.4rem;
+    display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap;
+    cursor:pointer;
+    transition:border-color .25s ease, background .25s ease;
+  }
+  .name-card:hover{border-left-color:var(--gold-bright);background:linear-gradient(90deg, rgba(201,162,75,.12), transparent 60%);}
+  .name-card .term{
+    font-family:'Cinzel',serif;
+    font-size:1.15rem;
+    color:var(--gold-bright);
+    min-width:210px;
+  }
+  .name-card .desc{color:var(--parchment-dim);font-size:1.08rem;flex:1;min-width:200px;}
+  .name-card .tap{font-size:.85rem;color:var(--crimson-bright);font-style:italic;white-space:nowrap;}
+
+  /* Cross reference cards */
+  .xref-row{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:1rem;margin-top:1.6rem;
+  }
+  .xref{
+    border:1px solid var(--line);
+    background:var(--ink-2);
+    padding:1.1rem 1.2rem;
+    cursor:pointer;
+  }
+  .xref:hover{border-color:var(--gold);}
+  .xref .ref{font-family:'Cinzel',serif;color:var(--gold);font-size:.95rem;letter-spacing:.05em;}
+  .xref .snip{color:var(--parchment-dim);font-size:1rem;margin-top:.4rem;font-style:italic;}
+
+  /* Trail map (section 6) */
+  .trail{
+    margin-top:2rem;
+    border:1px solid var(--line);
+    padding:2rem 1.6rem;
+    background:linear-gradient(180deg, rgba(122,31,43,.08), transparent);
+  }
+  .trail-row{
+    display:flex;align-items:center;gap:1rem;
+    padding:.6rem 0;
+    border-bottom:1px dashed var(--line);
+    flex-wrap:wrap;
+  }
+  .trail-row:last-child{border-bottom:none;}
+  .trail-era{
+    font-family:'Cinzel',serif;color:var(--gold);
+    font-size:.85rem;min-width:120px;letter-spacing:.05em;
+  }
+  .trail-names{color:var(--parchment);font-size:1.08rem;}
+  .trail-names em{color:var(--crimson-bright);font-style:italic;}
+
+  /* Quote block section */
+  blockquote{
+    margin:1.6rem 0 0;
+    padding:1.6rem 1.8rem;
+    border-left:3px solid var(--crimson-bright);
+    background:rgba(122,31,43,.08);
+    font-style:italic;
+    font-size:1.2rem;
+    line-height:1.7;
+    color:var(--parchment);
+    max-width:66ch;
+  }
+  blockquote cite{
+    display:block;margin-top:.8rem;
+    font-family:'Cinzel',serif;font-style:normal;
+    font-size:.85rem;letter-spacing:.1em;color:var(--gold);
+  }
+
+  .marks{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:1.2rem;margin-top:1.8rem;
+  }
+  .mark{
+    border:1px solid var(--line);
+    padding:1.3rem 1.4rem;
+    background:var(--ink-2);
+  }
+  .mark .num{font-family:'Cinzel',serif;color:var(--gold);font-size:.85rem;letter-spacing:.15em;margin-bottom:.4rem;}
+  .mark .title{font-family:'Cinzel',serif;color:var(--parchment);font-size:1.1rem;margin-bottom:.4rem;}
+  .mark .body{color:var(--parchment-dim);font-size:1rem;line-height:1.55;}
+
+  /* closing */
+  .closing{
+    text-align:center;
+    padding-top:11vh;padding-bottom:11vh;
+  }
+  .closing .amen{font-family:'Cinzel',serif;font-size:1.4rem;color:var(--gold-bright);letter-spacing:.15em;}
+
+  /* Modal */
+  .modal-overlay{
+    position:fixed;inset:0;background:rgba(5,4,3,.86);
+    display:none;align-items:center;justify-content:center;
+    padding:6vw;z-index:50;
+  }
+  .modal-overlay.open{display:flex;}
+  .modal{
+    max-width:560px;width:100%;
+    background:var(--ink-2);
+    border:1px solid var(--gold);
+    outline:1px solid rgba(201,162,75,.2);
+    outline-offset:5px;
+    padding:2.2rem 2.2rem 1.8rem;
+    box-shadow:var(--shadow);
+    position:relative;
+  }
+  .modal .ref{font-family:'Cinzel',serif;color:var(--gold-bright);font-size:1.05rem;letter-spacing:.08em;margin-bottom:1rem;}
+  .modal .text{font-size:1.25rem;line-height:1.7;color:var(--parchment);}
+  .modal .close{
+    position:absolute;top:.8rem;right:1rem;
+    background:none;border:none;color:var(--parchment-dim);
+    font-size:1.6rem;cursor:pointer;line-height:1;font-family:'Cormorant Garamond',serif;
+  }
+  .modal .close:hover{color:var(--gold-bright);}
+
+  @media (max-width:640px){
+    section{padding:7vh 6.5vw 5.5vh;}
+    .name-card{flex-direction:column;align-items:flex-start;}
+    .name-card .term{min-width:0;}
+  }
+</style>
+</head>
+<body>
+
+<div class="deck">
+
+  <!-- SECTION 1: HERO / INTRODUCTION -->
+  <section class="hero">
+    <div class="plate">
+      <div class="kicker">Adult Sunday School &middot; The Baptist Succession</div>
+      <h1>Baptist Names<br>in History</h1>
+      <p class="sub">A study of the many names worn by the people of God through the long centuries between the apostles and today &mdash; and the one truth that held beneath every name.</p>
+      <div class="rule"></div>
+      <p class="lede">Religious bodies rarely choose their own names. A name is usually given &mdash; by a leader, a town, a doctrine, or an enemy's sneer. Yet trace the names back far enough, and the same conviction keeps appearing: a church is a company of the saved, baptized upon a profession of faith.</p>
+      <p class="verse-ref">&ldquo;And the disciples were called Christians first in Antioch.&rdquo;</p>
+      <div class="xref-row" style="margin-top:1rem;max-width:320px;">
+        <div class="xref" data-ref="Acts 11:26" data-text="And when he had found him, he brought him unto Antioch. And it came to pass, that a whole year they assembled themselves with the church, and taught much people. And the disciples were called Christians first in Antioch.">
+          <div class="ref">Acts 11:26</div>
+          <div class="snip">Tap to read in full</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: 1st-3rd CENTURY -->
+  <section>
+    <div class="eyebrow">Part One &middot; First to Third Century</div>
+    <h2>From Antioch to the Novatianists</h2>
+    <p class="sub">For nearly three hundred years, one name sufficed. Then the church's purity began to be tested from within.</p>
+
+    <div class="strand">
+      <div class="name-card" data-ref="Acts 11:26" data-text="And when he had found him, he brought him unto Antioch. And it came to pass, that a whole year they assembled themselves with the church, and taught much people. And the disciples were called Christians first in Antioch.">
+        <div class="term">Christians</div>
+        <div class="desc">The earliest and simplest name, given at Antioch to the followers of Christ.</div>
+        <div class="tap">tap for verse &rarr;</div>
+      </div>
+      <div class="name-card" data-ref="1 John 2:19" data-text="They went out from us, but they were not of us; for if they had been of us, they would no doubt have continued with us: but they went out, that they might be made manifest that they were not all of us.">
+        <div class="term">Novatianists</div>
+        <div class="desc">Followers of Novatian, who withdrew from a church he judged too lax toward those who had denied Christ under persecution &mdash; contending for a pure, regenerate membership.</div>
+        <div class="tap">tap for verse &rarr;</div>
+      </div>
+      <div class="name-card" data-ref="2 Corinthians 6:17" data-text="Wherefore come out from among them, and be ye separate, saith the Lord, and touch not the unclean thing; and I will receive you.">
+        <div class="term">Puritans</div>
+        <div class="desc">A name applied to the same separatist conviction &mdash; a church cleansed of unconverted membership, not merely reformed in ritual.</div>
+        <div class="tap">tap for verse &rarr;</div>
+      </div>
+      <div class="name-card" data-ref="Ephesians 5:26-27" data-text="That he might sanctify and cleanse it with the washing of water by the word, That he might present it to himself a glorious church, not having spot, or wrinkle, or any such thing; but that it should be holy and without blemish.">
+        <div class="term">Cathari &mdash; &ldquo;The Pure Ones&rdquo;</div>
+        <div class="desc">Greek for &ldquo;the pure,&rdquo; this name traveled alongside Novatianists and Puritans in the third century and would resurface centuries later among the Albigenses &mdash; always marking the same insistence on an unmixed, holy church.</div>
+        <div class="tap">tap for verse &rarr;</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2.5: THE GREAT SCHISM -->
+  <section>
+    <div class="eyebrow">Part Two &middot; The Schism Within</div>
+    <h2>Traditores, Infant Baptism, and a State Church</h2>
+    <p class="sub">The deepest wound to the early church did not come from Rome's sword alone. It came from compromise inside the church &mdash; and was then sealed into law by an emperor's embrace.</p>
+
+    <div class="strand">
+      <div class="name-card" data-ref="1 John 2:19" data-text="They went out from us, but they were not of us; for if they had been of us, they would no doubt have continued with us: but they went out, that they might be made manifest that they were not all of us.">
+        <div class="term">The Traditores</div>
+        <div class="desc">During the Diocletian persecution, some clergy surrendered copies of Scripture to be burned rather than suffer &mdash; earning the name &ldquo;traditores,&rdquo; those who handed the Word over. When restored to office afterward without repentance, faithful believers separated from them.</div>
+        <div class="tap">tap for verse &rarr;</div>
+      </div>
+      <div class="name-card" data-ref="2 Thessalonians 2:3" data-text="Let no man deceive you by any means: for that day shall not come, except there come a falling away first, and that man of sin be revealed, the son of perdition.">
+        <div class="term">Apostates</div>
+        <div class="desc">Others recanted the faith outright under threat of death, then sought readmission to church leadership without discipline &mdash; the very compromise that Novatian and his followers refused to accept, at the cost of being cast out themselves.</div>
+        <div class="tap">tap for verse &rarr;</div>
+      </div>
+      <div class="name-card" data-ref="Mark 16:16" data-text="He that believeth and is baptized shall be saved; but he that believeth not shall be damned.">
+        <div class="term">Infant Baptism Takes Root</div>
+        <div class="desc">Alongside this compromise, the doctrine of baptismal regeneration spread, and with it the practice of baptizing infants &mdash; formalized as unofficial custom in the third century and later established by imperial law in 416 A.D.</div>
+        <div class="tap">tap for verse &rarr;</div>
+      </div>
+      <div class="name-card" data-ref="John 18:36" data-text="Jesus answered, My kingdom is not of this world: if my kingdom were of this world, then would my servants fight, that I should not be delivered to the Jews: but now is my kingdom not from hence.">
+        <div class="term">Constantine and the State Church</div>
+        <div class="desc">In 313 A.D. the pagan emperor Constantine ended the persecution &mdash; but what followed was no less costly. Church and state were fused into one institution, membership by citizenship replaced membership by new birth, and a hierarchy grew up to govern it.</div>
+        <div class="tap">tap for verse &rarr;</div>
+      </div>
+      <div class="name-card" data-ref="Acts 5:29" data-text="Then Peter and the other apostles answered and said, We ought to obey God rather than men.">
+        <div class="term">Persecution Redirected</div>
+        <div class="desc">Persecution did not end with Constantine &mdash; it changed direction. The sword that had once fallen on all Christians now fell on those who refused the new state church and its infant baptism: Novatianists, Donatists, and every group after them that kept to New Testament faith and practice.</div>
+        <div class="tap">tap for verse &rarr;</div>
+      </div>
+    </div>
+
+    <div class="xref-row">
+      <div class="xref" data-ref="Revelation 17:1-2" data-text="And there came one of the seven angels which had the seven vials, and talked with me, saying unto me, Come hither; I will shew unto thee the judgment of the great whore that sitteth upon many waters: With whom the kings of the earth have committed fornication, and the inhabitants of the earth have been made drunk with the wine of her fornication.">
+        <div class="ref">Revelation 17:1-2</div>
+        <div class="snip">A church joined to civil power, pictured in judgment</div>
+      </div>
+      <div class="xref" data-ref="Galatians 1:6-7" data-text="I marvel that ye are so soon removed from him that called you into the grace of Christ unto another gospel: Which is not another; but there be some that trouble you, and would pervert the gospel of Christ.">
+        <div class="ref">Galatians 1:6-7</div>
+        <div class="snip">A warning against a gospel reshaped by compromise</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: 3rd-7th CENTURY -->
+  <section>
+    <div class="eyebrow">Part Three &middot; Third to Seventh Century</div>
+    <h2>Donatists and Anabaptists Arise</h2>
+    <p class="sub">Out of the traditores controversy and the new state church, dissenting bodies multiplied &mdash; each still contending for a regenerate church and believer's baptism, and each paying for it in blood.</p>
+
+    <div class="strand">
+      <div class="name-card" data-ref="Romans 16:17" data-text="Now I beseech you, brethren, mark them which cause divisions and offences contrary to the doctrine which ye have learned; and avoid them.">
+        <div class="term">Donatists</div>
+        <div class="desc">North African believers who refused fellowship with a state-favored church they considered compromised, insisting the church must remain pure.</div>
+        <div class="tap">tap for verse &rarr;</div>
+      </div>
+      <div class="name-card" data-ref="Acts 8:36-38" data-text="And as they went on their way, they came unto a certain water: and the eunuch said, See, here is water; what doth hinder me to be baptized? And Philip said, If thou believest with all thine heart, thou mayest. And he answered and said, I believe that Jesus Christ is the Son of God. And he commanded the chariot to stand still: and they went down both into the water, both Philip and the eunuch; and he baptized him.">
+        <div class="term">Anabaptists</div>
+        <div class="desc">Literally &ldquo;re-baptizers&rdquo; &mdash; a name of derision given because they baptized believers who had only received infant baptism, insisting baptism must follow a profession of faith.</div>
+        <div class="tap">tap for verse &rarr;</div>
+      </div>
+    </div>
+
+    <div class="xref-row">
+      <div class="xref" data-ref="Matthew 3:8" data-text="Bring forth therefore fruits meet for repentance.">
+        <div class="ref">Matthew 3:8</div>
+        <div class="snip">Baptism follows repentance, never precedes it</div>
+      </div>
+      <div class="xref" data-ref="Colossians 2:12" data-text="Buried with him in baptism, wherein also ye are risen with him through the faith of the operation of God, who hath raised him from the dead.">
+        <div class="ref">Colossians 2:12</div>
+        <div class="snip">Baptism as burial, requiring prior faith</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: 7th-11th CENTURY -->
+  <section>
+    <div class="eyebrow">Part Four &middot; Seventh to Eleventh Century</div>
+    <h2>The Paulicians and Their Heirs</h2>
+    <p class="sub">Through the Dark Ages, dissenting churches persisted in Armenia, Bulgaria, and Italy &mdash; hunted, scattered, and renamed with every migration.</p>
+
+    <div class="strand">
+      <div class="name-card" data-ref="Hebrews 11:37-38" data-text="They were stoned, they were sawn asunder, were tempted, were slain with the sword: they wandered about in sheepskins and goatskins; being destitute, afflicted, tormented; (Of whom the world was not worthy:) they wandered in deserts, and in mountains, and in dens and caves of the earth.">
+        <div class="term">Paulicians</div>
+        <div class="desc">A dissenting movement across Armenia and Asia Minor, later driven into the Balkans and Italy, planting seed that would surface again as new names in new lands.</div>
+        <div class="tap">tap for verse &rarr;</div>
+      </div>
+      <div class="name-card" data-ref="1 Peter 4:14" data-text="If ye be reproached for the name of Christ, happy are ye; for the spirit of glory and of God resteth upon you: on their part he is evil spoken of, but on your part he is glorified.">
+        <div class="term">Petrobrusians</div>
+        <div class="desc">Followers of Peter of Bruys in southern France, who rejected infant baptism and the veneration of the cross.</div>
+        <div class="tap">tap for verse &rarr;</div>
+      </div>
+      <div class="name-card" data-ref="Galatians 1:8" data-text="But though we, or an angel from heaven, preach any other gospel unto you than that which we have preached unto you, let him be accursed.">
+        <div class="term">Henricians &amp; Arnoldists</div>
+        <div class="desc">Named for Henry of Lausanne and Arnold of Brescia, both of whom preached against clerical corruption and for a church gathered by conversion.</div>
+        <div class="tap">tap for verse &rarr;</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: 11th-16th CENTURY -->
+  <section>
+    <div class="eyebrow">Part Five &middot; Eleventh to Sixteenth Century</div>
+    <h2>Albigenses, Waldenses, and Lollards</h2>
+    <p class="sub">By the eleventh century the names multiply again &mdash; a sign not of confusion, but of a movement too widespread to be governed by any single hierarchy.</p>
+
+    <div class="strand">
+      <div class="name-card" data-ref="Revelation 2:9-10" data-text="I know thy works, and tribulation, and poverty, (but thou art rich) and I know the blasphemy of them which say they are Jews, and are not, but are the synagogue of Satan. Fear none of those things which thou shalt suffer: behold, the devil shall cast some of you into prison, that ye may be tried; and ye shall have tribulation ten days: be thou faithful unto death, and I will give thee a crown of life.">
+        <div class="term">Albigenses</div>
+        <div class="desc">Named for the town of Albi in southern France, the target of a papal crusade in the thirteenth century for their rejection of Rome's authority.</div>
+        <div class="tap">tap for verse &rarr;</div>
+      </div>
+      <div class="name-card" data-ref="Matthew 5:10-12" data-text="Blessed are they which are persecuted for righteousness' sake: for theirs is the kingdom of heaven. Blessed are ye, when men shall revile you, and persecute you, and shall say all manner of evil against you falsely, for my sake. Rejoice, and be exceeding glad: for great is your reward in heaven: for so persecuted they the prophets which were before you.">
+        <div class="term">Vaudois &amp; Waldenses</div>
+        <div class="desc">&ldquo;People of the valley&rdquo; &mdash; followers of Peter Waldo who preserved vernacular Scripture and sent missionary preachers across Europe from their Alpine strongholds.</div>
+        <div class="tap">tap for verse &rarr;</div>
+      </div>
+      <div class="name-card" data-ref="John 8:31-32" data-text="Then said Jesus to those Jews which believed on him, If ye continue in my word, then are ye my disciples indeed; And ye shall know the truth, and the truth shall make you free.">
+        <div class="term">Lollards</div>
+        <div class="desc">Followers of Wycliffe's teaching in England, translating and spreading Scripture in the common tongue at great personal cost.</div>
+        <div class="tap">tap for verse &rarr;</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: TRAIL OF SUCCESSION -->
+  <section>
+    <div class="eyebrow">Part Six &middot; The Unbroken Thread</div>
+    <h2>One Way, Many Names</h2>
+    <p class="sub">Lay the centuries side by side, and a single line runs beneath every name &mdash; churches gathered by conversion and baptism, never by birth or decree.</p>
+
+    <div class="trail">
+      <div class="trail-row">
+        <div class="trail-era">100&ndash;300</div>
+        <div class="trail-names"><em>Christians</em> &middot; Asia Minor, Italy, England, Africa</div>
+      </div>
+      <div class="trail-row">
+        <div class="trail-era">300&ndash;600</div>
+        <div class="trail-names">Traditores fall away &middot; Constantine's state church, 313 &middot; Novatianists &middot; Donatists &middot; <em>Ana-Baptists</em> &middot; Spain, France, Wales, Armenia</div>
+      </div>
+      <div class="trail-row">
+        <div class="trail-era">600&ndash;900</div>
+        <div class="trail-names">Paulicians &middot; <em>Ana-Baptists</em> &middot; Armenia, Italy, Bulgaria</div>
+      </div>
+      <div class="trail-row">
+        <div class="trail-era">900&ndash;1300</div>
+        <div class="trail-names">Petrobrusians &middot; Henricians &middot; Arnoldists &middot; Albigenses &middot; <em>Ana-Baptists</em> &middot; France, Wales, Germany</div>
+      </div>
+      <div class="trail-row">
+        <div class="trail-era">1300&ndash;1600</div>
+        <div class="trail-names">Waldenses &middot; Lollards &middot; <em>Baptists</em> &middot; Holland, France, England</div>
+      </div>
+      <div class="trail-row">
+        <div class="trail-era">1600&ndash;present</div>
+        <div class="trail-names">John Clarke &middot; Roger Williams &middot; Sandy Creek &middot; <em>Baptists</em> &middot; England, Russia, America</div>
+      </div>
+    </div>
+
+    <div class="xref-row">
+      <div class="xref" data-ref="Matthew 16:18" data-text="And I say also unto thee, That thou art Peter, and upon this rock I will build my church; and the gates of hell shall not prevail against it.">
+        <div class="ref">Matthew 16:18</div>
+        <div class="snip">Christ's promise that His church would never be extinguished</div>
+      </div>
+      <div class="xref" data-ref="Matthew 28:20" data-text="Teaching them to observe all things whatsoever I have commanded you: and, lo, I am with you alway, even unto the end of the world. Amen.">
+        <div class="ref">Matthew 28:20</div>
+        <div class="snip">A promise of perpetuity to the local church</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: THE NATURE OF THE CHURCH -->
+  <section>
+    <div class="eyebrow">Part Seven &middot; The Mark That Never Changed</div>
+    <h2>The Nature of the Church</h2>
+    <p class="sub">Every name in this study points back to one contention, argued in every century against every pressure to abandon it.</p>
+
+    <blockquote>
+      &ldquo;The nature of the church has been the most distinguished mark of difference between all of our ancestors and the Roman Catholic Church. The Montanists, Novatianists, Donatists, Paulicians, Petrobrusians, Henricians, Arnoldists, Albigenses, Waldenses and all of our Baptist ancestors have contended for the purity of the church. To them, a church was a group of saved people, baptized upon a profession of faith. Since infants can make no profession of faith, infant baptism was rejected. True Baptists today believe the same thing. The truth of the Lord's church is a great truth with far reaching effects.&rdquo;
+      <cite>&mdash; Hisel</cite>
+    </blockquote>
+
+    <div class="marks">
+      <div class="mark">
+        <div class="num">Mark One</div>
+        <div class="title">A Regenerate Membership</div>
+        <div class="body">A church is composed of saved people only &mdash; never a mixed body of the converted and unconverted gathered by birth or geography.</div>
+      </div>
+      <div class="mark">
+        <div class="num">Mark Two</div>
+        <div class="title">Believer's Baptism</div>
+        <div class="body">Baptism follows a profession of faith; since an infant can profess nothing, infant baptism was rejected in every century by every name.</div>
+      </div>
+      <div class="mark">
+        <div class="num">Mark Three</div>
+        <div class="title">Separation from the State Church</div>
+        <div class="body">From Donatist to Waldensian to Baptist, this conviction repeatedly meant standing apart from &mdash; and often suffering under &mdash; a church allied with civil power.</div>
+      </div>
+    </div>
+
+    <div class="xref-row">
+      <div class="xref" data-ref="1 Timothy 3:15" data-text="But if I tarry long, that thou mayest know how thou oughtest to behave thyself in the house of God, which is the church of the living God, the pillar and ground of the truth.">
+        <div class="ref">1 Timothy 3:15</div>
+        <div class="snip">The church as the pillar and ground of the truth</div>
+      </div>
+      <div class="xref" data-ref="Acts 2:41" data-text="Then they that gladly received his word were baptized: and the same day there were added unto them about three thousand souls.">
+        <div class="ref">Acts 2:41</div>
+        <div class="snip">The apostolic pattern &mdash; receiving the word, then baptism</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="eyebrow">Closing Thought</div>
+    <h2>One Church, Called Out</h2>
+    <p class="lede" style="margin:0 auto 1.6rem;">Ekklesia &mdash; a called-out assembly. Whatever the century called them, and whatever the world called them in scorn, they held the same truth we hold: a visible, local, regenerate, baptized church, standing on the sole authority of Scripture.</p>
+    <div class="rule" style="margin-left:auto;margin-right:auto;"></div>
+    <div class="amen">Sole Authority of the Scriptures</div>
+  </section>
+
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="close" id="modalClose" aria-label="Close">&times;</button>
+    <div class="ref" id="modalRef"></div>
+    <div class="text" id="modalText"></div>
+  </div>
+</div>
+
+<script>
+  const overlay = document.getElementById('modalOverlay');
+  const modalRef = document.getElementById('modalRef');
+  const modalText = document.getElementById('modalText');
+
+  document.querySelectorAll('[data-ref]').forEach(el => {
+    el.addEventListener('click', () => {
+      modalRef.textContent = el.getAttribute('data-ref');
+      modalText.textContent = el.getAttribute('data-text');
+      overlay.classList.add('open');
+    });
+  });
+
+  document.getElementById('modalClose').addEventListener('click', () => overlay.classList.remove('open'));
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.classList.remove('open'); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') overlay.classList.remove('open'); });
+</script>
+
+</body>
+</html>

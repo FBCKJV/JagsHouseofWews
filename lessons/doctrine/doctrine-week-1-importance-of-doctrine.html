@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Importance of Doctrine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+SC:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #0a0c11;
+    --ink-2: #12151d;
+    --ink-3: #191d28;
+    --line: rgba(201,162,39,0.28);
+    --gold: #c9a227;
+    --gold-light: #e6ca7d;
+    --cream: #ece3cd;
+    --cream-dim: #b9b09a;
+    --crimson: #8c2f39;
+    --crimson-light: #c2626c;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(1200px 700px at 15% -10%, rgba(201,162,39,0.09), transparent 60%),
+      radial-gradient(1000px 600px at 100% 0%, rgba(140,47,57,0.10), transparent 55%),
+      var(--ink);
+    color:var(--cream);
+    font-family:'EB Garamond', serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--gold); color:var(--ink);}
+
+  .grain{
+    position:fixed; inset:0; pointer-events:none; z-index:0; opacity:0.05; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  header.hero{
+    position:relative; z-index:1;
+    padding:64px 6vw 48px;
+    border-bottom:1px solid var(--line);
+    text-align:center;
+  }
+  .eyebrow{
+    font-family:'Cormorant SC', serif;
+    letter-spacing:0.35em;
+    color:var(--gold-light);
+    font-size:15px;
+    text-transform:uppercase;
+    margin:0 0 18px;
+  }
+  h1.title{
+    font-family:'Cinzel', serif;
+    font-weight:600;
+    font-size:clamp(30px, 4.2vw, 58px);
+    line-height:1.15;
+    margin:0 0 10px;
+    color:var(--cream);
+    text-shadow:0 0 40px rgba(201,162,39,0.15);
+  }
+  h1.title em{ font-style:normal; color:var(--gold); }
+  .subtitle{
+    font-family:'Cormorant SC', serif;
+    font-size:clamp(16px,1.6vw,22px);
+    letter-spacing:0.12em;
+    color:var(--cream-dim);
+    margin:0 0 34px;
+  }
+  .hero-text{
+    max-width:820px; margin:0 auto;
+    font-style:italic; font-size:clamp(17px,1.7vw,21px); line-height:1.75;
+    color:var(--cream-dim); position:relative; padding:0 8px;
+  }
+  .hero-text .dropcap{
+    float:left; font-family:'Cinzel', serif; font-style:normal;
+    font-size:64px; line-height:0.8; color:var(--gold); padding:6px 10px 0 0;
+  }
+  .hero-ref{
+    display:inline-block; margin-top:18px;
+    font-family:'Cormorant SC', serif; letter-spacing:0.2em; font-size:14px;
+    color:var(--gold-light); text-transform:uppercase;
+  }
+
+  nav.jump{
+    position:sticky; top:0; z-index:20;
+    display:flex; flex-wrap:wrap; justify-content:center;
+    background:rgba(10,12,17,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+    padding:2px 0;
+  }
+  nav.jump a{
+    color:var(--cream-dim); text-decoration:none;
+    font-family:'Cormorant SC', serif; letter-spacing:0.13em; font-size:13.5px;
+    text-transform:uppercase; padding:14px 17px;
+    border-bottom:2px solid transparent;
+    transition:color .2s, border-color .2s; white-space:nowrap;
+  }
+  nav.jump a:hover{ color:var(--gold-light); border-color:var(--gold); }
+
+  main{ position:relative; z-index:1; max-width:1280px; margin:0 auto; padding:10px 5vw 80px; }
+
+  section.block{ padding:54px 0 10px; border-bottom:1px solid var(--line); }
+  section.block:last-child{ border-bottom:none; }
+
+  .section-head{ display:flex; align-items:baseline; gap:16px; margin-bottom:8px; }
+  .section-num{ font-family:'Cinzel', serif; color:var(--gold); font-size:14px; letter-spacing:.2em; }
+  h2.section-title{
+    font-family:'Cinzel', serif; font-weight:600;
+    font-size:clamp(22px,2.6vw,32px); margin:0; color:var(--cream);
+  }
+  .section-sub{
+    font-family:'EB Garamond', serif; font-style:italic; color:var(--cream-dim);
+    margin:6px 0 30px; font-size:16px; max-width:820px;
+  }
+
+  .grid{ display:grid; gap:16px; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); }
+
+  .card{
+    background:linear-gradient(160deg, var(--ink-3), var(--ink-2));
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:22px 20px;
+    cursor:pointer;
+    position:relative;
+    transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    overflow:hidden;
+  }
+  .card::before{
+    content:""; position:absolute; left:0; top:0; bottom:0; width:3px;
+    background:var(--gold); opacity:.55;
+    transition:opacity .18s ease, width .18s ease;
+  }
+  .card:hover{
+    transform:translateY(-3px); border-color:var(--gold);
+    box-shadow:0 14px 30px rgba(0,0,0,0.45), 0 0 0 1px rgba(201,162,39,0.15) inset;
+  }
+  .card:hover::before{ opacity:1; width:5px; }
+  .card .ct-name{ font-family:'Cinzel', serif; font-weight:600; font-size:18px; color:var(--cream); margin:0 0 6px; }
+  .card .ct-ref{ font-family:'Cormorant SC', serif; letter-spacing:.08em; font-size:14px; color:var(--gold-light); margin:0; }
+  .card .ct-hint{
+    margin-top:12px; font-size:13px; color:var(--cream-dim); opacity:.6;
+    font-family:'Cormorant SC', serif; letter-spacing:.12em; text-transform:uppercase;
+  }
+
+  .card.crimson::before{ background:var(--crimson-light); }
+  .card.crimson:hover{ border-color:var(--crimson-light); }
+  .card.crimson .ct-ref{ color:var(--crimson-light); }
+
+  .anchor-row{ display:flex; gap:20px; align-items:center; margin-bottom:26px; flex-wrap:wrap; }
+  .anchor-badge{
+    width:64px; height:64px; flex:0 0 auto; border-radius:50%;
+    border:1px solid var(--gold); display:flex; align-items:center; justify-content:center;
+    font-family:'Cinzel', serif; color:var(--gold-light); font-size:22px;
+  }
+
+  .overlay{
+    position:fixed; inset:0; z-index:100;
+    background:rgba(4,5,8,0.86); backdrop-filter:blur(3px);
+    display:flex; align-items:center; justify-content:center; padding:5vw;
+    opacity:0; pointer-events:none; transition:opacity .22s ease;
+  }
+  .overlay.open{ opacity:1; pointer-events:auto; }
+  .modal{
+    max-width:760px; width:100%; max-height:82vh; overflow-y:auto;
+    background:linear-gradient(165deg, #16192389, #0d0f15); background-color:#12141c;
+    border:1px solid var(--gold); border-radius:6px; padding:44px 44px 40px; position:relative;
+    box-shadow:0 30px 80px rgba(0,0,0,0.6), 0 0 60px rgba(201,162,39,0.08);
+    transform:translateY(14px) scale(.98); transition:transform .22s ease;
+  }
+  .overlay.open .modal{ transform:translateY(0) scale(1); }
+  .modal-close{
+    position:absolute; top:16px; right:18px; width:38px; height:38px; border-radius:50%;
+    border:1px solid var(--line); background:var(--ink-2); color:var(--gold-light);
+    font-family:'Cinzel',serif; font-size:18px; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    transition:background .18s, color .18s, transform .18s;
+  }
+  .modal-close:hover{ background:var(--gold); color:var(--ink); transform:rotate(90deg); }
+  .modal-eyebrow{ font-family:'Cormorant SC', serif; letter-spacing:.25em; text-transform:uppercase; color:var(--gold-light); font-size:13px; margin:0 0 8px; }
+  .modal-title{ font-family:'Cinzel', serif; font-weight:600; color:var(--cream); font-size:clamp(22px,3vw,30px); margin:0 0 22px; padding-right:30px; }
+  .verse-block{ margin-bottom:22px; }
+  .verse-block:last-child{ margin-bottom:0; }
+  .verse-ref{ font-family:'Cormorant SC', serif; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); font-size:14px; margin:0 0 6px; }
+  .verse-text{ font-size:19px; line-height:1.75; color:var(--cream); margin:0; }
+
+  footer{
+    text-align:center; padding:40px 20px 60px; position:relative; z-index:1;
+    color:var(--cream-dim); font-family:'Cormorant SC', serif; letter-spacing:.15em;
+    font-size:13px; text-transform:uppercase; opacity:.6;
+  }
+
+  @media (max-width:640px){
+    .modal{ padding:34px 26px 30px; max-height:88vh; }
+    header.hero{ padding:48px 6vw 34px; }
+  }
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<header class="hero">
+  <p class="eyebrow">Faith Baptist Church of Plymouth County &nbsp;·&nbsp; Adult Sunday School</p>
+  <h1 class="title">The Importance of <em>Doctrine</em></h1>
+  <p class="subtitle">Why sound doctrine matters — five reasons the Word gives for holding fast the faithful word</p>
+  <p class="hero-text"><span class="dropcap">A</span>ll scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness: That the man of God may be perfect, throughly furnished unto all good works.</p>
+  <div class="hero-ref">2 Timothy 3:16&ndash;17</div>
+</header>
+
+<nav class="jump">
+  <a href="#foundation">Foundation</a>
+  <a href="#will">Know God's Will</a>
+  <a href="#wisdom">Gain Wisdom</a>
+  <a href="#teach">Teach Others</a>
+  <a href="#false">Recognize False Ways</a>
+  <a href="#onemind">One Mind</a>
+</nav>
+
+<main>
+
+  <section class="block" id="foundation">
+    <div class="section-head"><span class="section-num">&middot;</span><h2 class="section-title">Holding Fast the Faithful Word</h2></div>
+    <p class="section-sub">Before the reasons, the charge — doctrine is not optional; it is to be held, guarded, and continued in.</p>
+    <div class="grid" id="grid-foundation"></div>
+  </section>
+
+  <section class="block" id="will">
+    <div class="section-head"><span class="section-num">I.</span><h2 class="section-title">To Know God's Will</h2></div>
+    <p class="section-sub">Romans 12:2 &middot; 1 Thessalonians 4:3 &middot; 1 Peter 2:15</p>
+    <div class="grid" id="grid-will"></div>
+  </section>
+
+  <section class="block" id="wisdom">
+    <div class="section-head"><span class="section-num">II.</span><h2 class="section-title">To Gain Wisdom</h2></div>
+    <p class="section-sub">Proverbs 2:6 &middot; James 1:5 &middot; Colossians 3:16</p>
+    <div class="grid" id="grid-wisdom"></div>
+  </section>
+
+  <section class="block" id="teach">
+    <div class="section-head"><span class="section-num">III.</span><h2 class="section-title">To Teach Others</h2></div>
+    <p class="section-sub">Matthew 28:19&ndash;20 &middot; 2 Timothy 2:2 &middot; Titus 2:1</p>
+    <div class="grid" id="grid-teach"></div>
+  </section>
+
+  <section class="block" id="false">
+    <div class="section-head"><span class="section-num">IV.</span><h2 class="section-title">To Recognize False Ways</h2></div>
+    <p class="section-sub">Psalm 119:104 &middot; Ephesians 4:14 &middot; 2 Peter 2:1&ndash;2 &middot; 1 John 4:1</p>
+    <div class="grid" id="grid-false"></div>
+  </section>
+
+  <section class="block" id="onemind">
+    <div class="section-head"><span class="section-num">V.</span><h2 class="section-title">To Be of One Mind with Believers</h2></div>
+    <p class="section-sub">2 Corinthians 6:14 &middot; Amos 3:3 &middot; Philippians 2:1&ndash;2</p>
+    <div class="grid" id="grid-onemind"></div>
+  </section>
+
+</main>
+
+<footer>Faith Baptist Church of Plymouth County &nbsp;·&nbsp; Authorized King James Version</footer>
+
+<div class="overlay" id="overlay">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modalClose" aria-label="Close">&#10005;</button>
+    <p class="modal-eyebrow" id="modalEyebrow"></p>
+    <h3 class="modal-title" id="modalTitle"></h3>
+    <div id="modalVerses"></div>
+  </div>
+</div>
+
+<script>
+const DATA = {
+  foundation: [
+    { title:"Profitable for Doctrine", verses:[
+      {ref:"2 Timothy 3:16-17", text:"All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness: That the man of God may be perfect, throughly furnished unto all good works."}
+    ]},
+    { title:"Sound Doctrine", verses:[
+      {ref:"Titus 1:9", text:"Holding fast the faithful word as he hath been taught, that he may be able by sound doctrine both to exhort and to convince the gainsayers."}
+    ]},
+    { title:"Take Heed Unto the Doctrine", verses:[
+      {ref:"1 Timothy 4:16", text:"Take heed unto thyself, and unto the doctrine; continue in them: for in doing this thou shalt both save thyself, and them that hear thee."}
+    ]}
+  ],
+  will: [
+    { title:"Prove What Is That Good Will of God", verses:[
+      {ref:"Romans 12:2", text:"And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what is that good, and acceptable, and perfect, will of God."}
+    ]},
+    { title:"Your Sanctification", verses:[
+      {ref:"1 Thessalonians 4:3", text:"For this is the will of God, even your sanctification, that ye should abstain from fornication:"}
+    ]},
+    { title:"Put to Silence the Ignorance of Foolish Men", verses:[
+      {ref:"1 Peter 2:15", text:"For so is the will of God, that with well doing ye may put to silence the ignorance of foolish men:"}
+    ]}
+  ],
+  wisdom: [
+    { title:"The LORD Giveth Wisdom", verses:[
+      {ref:"Proverbs 2:6", text:"For the LORD giveth wisdom: out of his mouth cometh knowledge and understanding."}
+    ]},
+    { title:"Ask of God", verses:[
+      {ref:"James 1:5", text:"If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him."}
+    ]},
+    { title:"Let the Word of Christ Dwell in You Richly", verses:[
+      {ref:"Colossians 3:16", text:"Let the word of Christ dwell in you richly in all wisdom; teaching and admonishing one another in psalms and hymns and spiritual songs, singing with grace in your hearts to the Lord."}
+    ]}
+  ],
+  teach: [
+    { title:"Teach All Nations", verses:[
+      {ref:"Matthew 28:19-20", text:"Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost: Teaching them to observe all things whatsoever I have commanded you: and, lo, I am with you alway, even unto the end of the world. Amen."}
+    ]},
+    { title:"Commit to Faithful Men", verses:[
+      {ref:"2 Timothy 2:2", text:"And the things that thou hast heard of me among many witnesses, the same commit thou to faithful men, who shall be able to teach others also."}
+    ]},
+    { title:"Speak Sound Doctrine", verses:[
+      {ref:"Titus 2:1", text:"But speak thou the things which become sound doctrine:"}
+    ]}
+  ],
+  false: [
+    { title:"I Hate Every False Way", verses:[
+      {ref:"Psalm 119:104", text:"Through thy precepts I get understanding: therefore I hate every false way."}
+    ]},
+    { title:"Every Wind of Doctrine", verses:[
+      {ref:"Ephesians 4:14", text:"That we henceforth be no more children, tossed to and fro, and carried about with every wind of doctrine, by the sleight of men, and cunning craftiness, whereby they lie in wait to deceive;"}
+    ]},
+    { title:"False Prophets Among You", verses:[
+      {ref:"2 Peter 2:1-2", text:"But there were false prophets also among the people, even as there shall be false teachers among you, who privily shall bring in damnable heresies, even denying the Lord that bought them, and bring upon themselves swift destruction. And many shall follow their pernicious ways; by reason of whom the way of truth shall be evil spoken of."}
+    ]},
+    { title:"Try the Spirits", verses:[
+      {ref:"1 John 4:1", text:"Beloved, believe not every spirit, but try the spirits whether they are of God: because many false prophets are gone out into the world."}
+    ]}
+  ],
+  onemind: [
+    { title:"Unequally Yoked", verses:[
+      {ref:"2 Corinthians 6:14", text:"Be ye not unequally yoked together with unbelievers"}
+    ]},
+    { title:"Can Two Walk Together?", verses:[
+      {ref:"Amos 3:3", text:"Can two walk together, except they be agreed?"}
+    ]},
+    { title:"Likeminded, of One Accord", verses:[
+      {ref:"Philippians 2:1-2", text:"If there be therefore any consolation in Christ, if any comfort of love, if any fellowship of the Spirit, if any bowels and mercies, Fulfil ye my joy, that ye be likeminded, having the same love, being of one accord, of one mind."}
+    ]}
+  ]
+};
+
+function refLine(item){
+  if(item.verses.length === 1) return item.verses[0].ref;
+  return item.verses.map(v=>v.ref).join(" · ");
+}
+
+function buildGrid(containerId, items, opts){
+  opts = opts || {};
+  const el = document.getElementById(containerId);
+  if(!el) return;
+  items.forEach((item) => {
+    const card = document.createElement('div');
+    card.className = 'card' + (opts.crimson ? ' crimson' : '');
+    card.innerHTML = `
+      <p class="ct-name">${item.title}</p>
+      <p class="ct-ref">${refLine(item)}</p>
+      <p class="ct-hint">Tap to read &rarr;</p>
+    `;
+    card.addEventListener('click', () => openModal(item, opts.eyebrow));
+    el.appendChild(card);
+  });
+}
+
+buildGrid('grid-foundation', DATA.foundation, {eyebrow:'The Charge'});
+buildGrid('grid-will', DATA.will, {eyebrow:"To Know God's Will"});
+buildGrid('grid-wisdom', DATA.wisdom, {eyebrow:'To Gain Wisdom'});
+buildGrid('grid-teach', DATA.teach, {eyebrow:'To Teach Others'});
+buildGrid('grid-false', DATA.false, {eyebrow:'To Recognize False Ways', crimson:true});
+buildGrid('grid-onemind', DATA.onemind, {eyebrow:'To Be of One Mind'});
+
+const overlay = document.getElementById('overlay');
+const modalEyebrow = document.getElementById('modalEyebrow');
+const modalTitle = document.getElementById('modalTitle');
+const modalVerses = document.getElementById('modalVerses');
+
+function openModal(item, eyebrow){
+  modalEyebrow.textContent = eyebrow || '';
+  modalTitle.innerHTML = item.title;
+  modalVerses.innerHTML = item.verses.map(v => `
+    <div class="verse-block">
+      <p class="verse-ref">${v.ref}</p>
+      <p class="verse-text">${v.text}</p>
+    </div>
+  `).join('');
+  overlay.classList.add('open');
+  document.getElementById('modal').scrollTop = 0;
+}
+
+function closeModal(){ overlay.classList.remove('open'); }
+
+document.getElementById('modalClose').addEventListener('click', closeModal);
+overlay.addEventListener('click', (e) => { if(e.target === overlay) closeModal(); });
+document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wise as Serpents</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#efe6d2; --surface:#f7f0df; --ink:#2a1f14; --muted:#6b5a43;
+  --gold:#8a6a1c; --gold-soft:rgba(138,106,28,.35); --crimson:#8e1b1f; --on-crimson:#f7f0df;
+  --shadow:0 1px 0 rgba(42,31,20,.08);
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d0b08; --surface:#17130e; --ink:#eadfc8; --muted:#b3a586;
+    --gold:#c9a24a; --gold-soft:rgba(201,162,74,.32); --crimson:#c23a3c; --on-crimson:#fff6e6;
+    --shadow:none; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d0b08; --surface:#17130e; --ink:#eadfc8; --muted:#b3a586;
+  --gold:#c9a24a; --gold-soft:rgba(201,162,74,.32); --crimson:#c23a3c; --on-crimson:#fff6e6;
+  --shadow:none; color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0;height:100%;display:flex;flex-direction:column;
+  background:var(--bg);color:var(--ink);
+  font-family:"Cormorant Garamond",Garamond,"Times New Roman",serif;
+  font-size:1.2rem;line-height:1.6;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* top bar */
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.6rem 1.1rem;border-bottom:1px solid var(--gold-soft)}
+.bar h1{margin:0;font-family:Cinzel,serif;font-weight:500;font-size:.85rem;letter-spacing:.08em;color:var(--gold)}
+.theme{background:none;border:1px solid var(--gold-soft);border-radius:999px;padding:.15rem .75rem;font-size:.95rem;cursor:pointer;color:var(--muted)}
+
+/* stage */
+main{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.slide{display:none;max-width:40rem;margin:0 auto;padding:2rem 1.25rem 3rem}
+.slide.on{display:block}
+@media (prefers-reduced-motion:no-preference){
+  .slide.on{animation:ink .45s ease-out}
+  @keyframes ink{from{opacity:0}to{opacity:1}}
+}
+
+/* title page */
+.cover{text-align:center;padding-top:3rem}
+.cover .rom{font-family:Cinzel,serif;color:var(--gold);font-size:.95rem;letter-spacing:.2em}
+.cover h2{font-family:Cinzel,serif;font-weight:700;font-size:clamp(2.2rem,8vw,3.4rem);line-height:1.08;margin:.8rem 0 .3rem;color:var(--ink)}
+.cover .sub{font-style:italic;font-size:1.3rem;color:var(--muted);margin:0 0 2.2rem}
+.pair{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem;margin:2rem auto;max-width:30rem}
+.pair div{font-family:Cinzel,serif;font-size:1.05rem;line-height:1.35}
+.pair .serpent{color:var(--crimson);text-align:right}
+.pair .dove{color:var(--gold);text-align:left}
+.pair .and{font-style:italic;color:var(--muted);font-size:1.4rem}
+.cover blockquote{margin:2rem auto 0;max-width:32rem;font-size:1.35rem;font-style:italic;line-height:1.55}
+.cover cite{display:block;margin-top:.6rem;font-style:normal;font-family:Cinzel,serif;font-size:.85rem;color:var(--gold);letter-spacing:.06em}
+.begin{margin-top:2.6rem;background:var(--crimson);color:var(--on-crimson);border:0;border-radius:4px;padding:.65rem 1.6rem;font-family:Cinzel,serif;font-size:.95rem;letter-spacing:.06em;cursor:pointer}
+
+/* section pages */
+.num{font-family:Cinzel,serif;color:var(--gold);font-size:1rem;letter-spacing:.15em;margin:0}
+.slide h2.t{font-family:Cinzel,serif;font-weight:700;font-size:clamp(1.6rem,5.5vw,2.2rem);line-height:1.15;margin:.3rem 0 1.4rem}
+.lead::first-letter{
+  float:left;font-family:Cinzel,serif;font-weight:700;font-size:3.6rem;line-height:.9;
+  padding:.35rem .5rem .2rem;margin:.2rem .6rem 0 0;color:var(--on-crimson);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+.slide p{margin:0 0 1rem}
+.pull{margin:1.8rem 0;padding:1rem 0 1rem 1.2rem;border-left:3px solid var(--crimson);font-size:1.4rem;font-style:italic;line-height:1.45}
+
+.key{display:block;width:100%;text-align:left;cursor:pointer;margin:1.6rem 0;
+  background:var(--surface);border:1px solid var(--gold);border-radius:6px;padding:1rem 1.15rem;box-shadow:var(--shadow)}
+.key .ref{font-family:Cinzel,serif;font-size:.9rem;color:var(--crimson);letter-spacing:.05em}
+.key .txt{display:block;margin-top:.35rem;font-size:1.22rem;font-style:italic}
+.key .hint{display:block;margin-top:.5rem;font-size:.95rem;color:var(--muted)}
+
+h3{font-family:Cinzel,serif;font-weight:500;font-size:1rem;color:var(--gold);margin:2rem 0 .7rem;letter-spacing:.05em}
+.xrefs{display:flex;flex-wrap:wrap;gap:.55rem}
+.xref{cursor:pointer;background:none;border:1px solid var(--gold-soft);border-radius:999px;padding:.3rem .9rem;font-size:1.02rem}
+.xref:hover{border-color:var(--gold)}
+.xref small{color:var(--muted);font-style:italic}
+
+.ask{margin-top:2rem;padding:1rem 1.15rem;border:1px dashed var(--gold-soft);border-radius:6px}
+.ask strong{font-family:Cinzel,serif;font-weight:500;font-size:.9rem;color:var(--crimson);display:block;margin-bottom:.3rem}
+
+/* the line ladder */
+.ladder{list-style:none;padding:0;margin:1.4rem 0;display:grid;gap:.9rem}
+.ladder li{display:grid;grid-template-columns:.4rem 1fr;gap:1rem;background:var(--surface);border-radius:6px;padding:1rem 1.1rem 1rem 0;box-shadow:var(--shadow)}
+.ladder li::before{content:"";border-radius:0 3px 3px 0;background:var(--tone)}
+.ladder .who{font-weight:600;font-size:1.15rem;line-height:1.35}
+.ladder .then{margin:.25rem 0 .45rem}
+.ladder .then b{font-family:Cinzel,serif;font-weight:700;color:var(--tone);font-size:.98rem;letter-spacing:.03em}
+.t1{--tone:#5c7a4a}.t2{--tone:var(--gold)}.t3{--tone:var(--crimson)}.t4{--tone:var(--muted)}
+
+/* footer nav */
+nav{display:flex;align-items:center;justify-content:space-between;gap:.6rem;padding:.6rem 1rem;border-top:1px solid var(--gold-soft);background:var(--bg)}
+nav button.step{background:none;border:1px solid var(--gold-soft);border-radius:4px;padding:.35rem .9rem;cursor:pointer;font-family:Cinzel,serif;font-size:.85rem}
+nav button.step:disabled{opacity:.35;cursor:default}
+.dots{display:flex;gap:.35rem;flex-wrap:wrap;justify-content:center}
+.dots button{width:1.9rem;height:1.9rem;border-radius:50%;border:1px solid var(--gold-soft);background:none;cursor:pointer;font-family:Cinzel,serif;font-size:.7rem;color:var(--muted);padding:0}
+.dots button[aria-current="true"]{background:var(--gold);color:var(--bg);border-color:var(--gold)}
+
+/* verse dialog */
+dialog{border:2px solid var(--gold);border-radius:8px;background:var(--surface);color:var(--ink);
+  max-width:min(34rem,92vw);padding:1.5rem 1.4rem 1.2rem}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+dialog h4{margin:0 0 .8rem;font-family:Cinzel,serif;color:var(--crimson);font-size:1.1rem;letter-spacing:.04em}
+dialog .v{margin:0 0 .7rem;font-size:1.22rem;line-height:1.6}
+dialog .v sup{font-family:Cinzel,serif;font-size:.65rem;color:var(--gold);margin-right:.25rem}
+dialog .close{margin-top:.6rem;background:var(--crimson);color:var(--on-crimson);border:0;border-radius:4px;padding:.4rem 1.1rem;font-family:Cinzel,serif;font-size:.85rem;cursor:pointer}
+
+@media print{
+  .bar,nav{display:none}
+  main{overflow:visible}
+  .slide{display:block!important;break-after:page}
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <h1>Wise as Serpents</h1>
+  <button class="theme" id="theme" type="button" aria-label="Switch light or dark">Light / Ink</button>
+</header>
+
+<main id="stage">
+
+<!-- Cover -->
+<section class="slide cover" id="cover" aria-label="Title">
+  <p class="rom">A Sunday School Lesson</p>
+  <h2>Wise as Serpents</h2>
+  <p class="sub">Handling doubtful disputations and sowers of division</p>
+  <div class="pair" aria-hidden="true">
+    <div class="serpent">Wise as<br>serpents</div>
+    <span class="and">&amp;</span>
+    <div class="dove">Harmless<br>as doves</div>
+  </div>
+  <blockquote>Behold, I send you forth as sheep in the midst of wolves: be ye therefore wise as serpents, and harmless as doves.
+    <cite>Matthew 10:16</cite></blockquote>
+  <button class="begin" type="button" data-go="1">Begin the lesson</button>
+</section>
+
+<!-- I -->
+<section class="slide" id="charge" aria-label="Section I">
+  <p class="num">I</p>
+  <h2 class="t">Two commands, not one</h2>
+  <p class="lead">Jesus sends His disciples out as sheep among wolves, and in the same breath He gives them two charges: be wise as serpents, and be harmless as doves. Many Christians keep the second and quietly drop the first.</p>
+  <p>We are good at being doves. We are not nearly as good at being serpents — at understanding the context and nature of those who come into our lives and exert a negative influence.</p>
+  <button class="key" type="button" data-v="Matthew 10:16">
+    <span class="ref">Matthew 10:16</span>
+    <span class="txt">Be ye therefore wise as serpents, and harmless as doves.</span>
+    <span class="hint">Tap to read the verse</span>
+  </button>
+  <h3>Cross references</h3>
+  <div class="xrefs">
+    <button class="xref" type="button" data-v="Matthew 7:15">Matthew 7:15 <small>sheep’s clothing</small></button>
+    <button class="xref" type="button" data-v="Acts 20:29–30">Acts 20:29–30 <small>grievous wolves</small></button>
+  </div>
+  <div class="ask"><strong>Discuss</strong>Why would Jesus pair these two qualities? What does a Christian look like who has only one of them?</div>
+</section>
+
+<!-- II -->
+<section class="slide" id="trap" aria-label="Section II">
+  <p class="num">II</p>
+  <h2 class="t">The dove-only trap</h2>
+  <p class="lead">We feel the need to show grace, to bridge peace, and to avoid conflict in every situation — to be sheep in both mind and spirit. The wolves take advantage of this.</p>
+  <p>Part of the problem is that we can’t imagine how evil people might behave. We cut them slack. We extend grace on our own conscience’s terms, and show a kindness and mercy that only encourages and emboldens them.</p>
+  <p>The wolf rarely comes with an obvious lie. He comes with a grain of truth. In the interest of fairness, and to seem reasonable, we validate his premise — but the premise was offered in bad faith. He was never seeking dialogue or understanding. His intent is to throw bombs, sow discord, and validate slander to promote his own agenda.</p>
+  <p class="pull">Grace without discernment is not biblical peace; it is an open door.</p>
+  <button class="key" type="button" data-v="Romans 16:17–18">
+    <span class="ref">Romans 16:17–18</span>
+    <span class="txt">By good words and fair speeches deceive the hearts of the simple.</span>
+    <span class="hint">Tap to read the passage</span>
+  </button>
+  <h3>Cross references</h3>
+  <div class="xrefs">
+    <button class="xref" type="button" data-v="2 Corinthians 11:13–14">2 Corinthians 11:13–14 <small>an angel of light</small></button>
+    <button class="xref" type="button" data-v="Hebrews 5:14">Hebrews 5:14 <small>senses exercised</small></button>
+  </div>
+  <div class="ask"><strong>Discuss</strong>Think of a time a “reasonable” point turned out to be a wedge. What was the grain of truth, and what was the real aim?</div>
+</section>
+
+<!-- III -->
+<section class="slide" id="weak" aria-label="Section III">
+  <p class="num">III</p>
+  <h2 class="t">Weak brother or wolf?</h2>
+  <p class="lead">Not everyone who comes in wrong is a wolf. Some are weak in the faith — confused on a doctrinal point, turned around by something they heard, or convicted about something the Bible doesn’t explicitly teach.</p>
+  <p>Those we receive. We bear with the ignorant, and we correct them in love. But Paul attaches a limit to the receiving: not to doubtful disputations. When a man comes in to argue, to stir turmoil, and to break the unity of the brethren, he is not to be received on those terms.</p>
+  <p>The difference is the intent of the heart. That is what the serpent’s wisdom is for.</p>
+  <button class="key" type="button" data-v="Romans 14:1">
+    <span class="ref">Romans 14:1</span>
+    <span class="txt">Him that is weak in the faith receive ye, but not to doubtful disputations.</span>
+    <span class="hint">Tap to read the verse</span>
+  </button>
+  <h3>Cross references</h3>
+  <div class="xrefs">
+    <button class="xref" type="button" data-v="Galatians 6:1">Galatians 6:1 <small>restore in meekness</small></button>
+    <button class="xref" type="button" data-v="2 Timothy 2:24–25">2 Timothy 2:24–25 <small>patient instruction</small></button>
+  </div>
+  <div class="ask"><strong>Discuss</strong>What signs tell you someone is asking to learn, and what signs tell you they are looking for a fight?</div>
+</section>
+
+<!-- IV -->
+<section class="slide" id="admonish" aria-label="Section IV">
+  <p class="num">IV</p>
+  <h2 class="t">First and second admonition</h2>
+  <p class="lead">Even the one who is simply in error gets a limit. Admonish him kindly. Admonish him again. If he is too proud to accept rebuke, the Bible does not tell you to keep the conversation going forever. It tells you to reject him.</p>
+  <p>Notice what Paul puts right before that command: foolish questions, genealogies, contentions, and strivings — unprofitable and vain. The church has no obligation to keep hosting them.</p>
+  <p>Matthew 18 gives the order: go to him alone, then with witnesses, then before the church. If he will not hear the church, he is to be treated as a heathen man and a publican.</p>
+  <button class="key" type="button" data-v="Titus 3:9–11">
+    <span class="ref">Titus 3:9–11</span>
+    <span class="txt">A man that is an heretick after the first and second admonition reject.</span>
+    <span class="hint">Tap to read the passage</span>
+  </button>
+  <h3>Cross references</h3>
+  <div class="xrefs">
+    <button class="xref" type="button" data-v="Matthew 18:15–17">Matthew 18:15–17 <small>the order of church discipline</small></button>
+  </div>
+  <div class="ask"><strong>Discuss</strong>Why does God give a limit to admonition instead of telling us to keep reasoning indefinitely?</div>
+</section>
+
+<!-- V -->
+<section class="slide" id="slander" aria-label="Section V">
+  <p class="num">V</p>
+  <h2 class="t">Answering the slanderer</h2>
+  <p class="lead">Defending yourself against a false accusation built on a bad-faith premise does nothing but legitimize the other person’s point.</p>
+  <p>If someone accused you of something vile and absurd about your own mother, your answer should not be “I am not!” It should be “You’re wicked!” You don’t defend yourself from slander by reasoning with the slanderer. You identify what he is doing, and you rebuke it.</p>
+  <p>This is especially true at the door when soul winning. It does no one any good to get bogged down in a doubtful disputation. When the hearer is plainly after contention and not the truth, shake off the dust and go to the next door.</p>
+  <button class="key" type="button" data-v="Proverbs 26:4–5">
+    <span class="ref">Proverbs 26:4–5</span>
+    <span class="txt">Answer not a fool according to his folly… Answer a fool according to his folly.</span>
+    <span class="hint">Tap to read the passage</span>
+  </button>
+  <h3>Cross references</h3>
+  <div class="xrefs">
+    <button class="xref" type="button" data-v="Nehemiah 6:3">Nehemiah 6:3 <small>a great work</small></button>
+    <button class="xref" type="button" data-v="Matthew 10:14">Matthew 10:14 <small>shake off the dust</small></button>
+    <button class="xref" type="button" data-v="Matthew 7:6">Matthew 7:6 <small>pearls before swine</small></button>
+  </div>
+  <div class="ask"><strong>Discuss</strong>Proverbs 26 gives both answers back to back. When do we refuse to engage the folly, and when do we expose it?</div>
+</section>
+
+<!-- VI -->
+<section class="slide" id="canker" aria-label="Section VI">
+  <p class="num">VI</p>
+  <h2 class="t">It will eat as doth a canker</h2>
+  <p class="lead">The real damage comes when sowers of division are entertained in the house of God or in a place of fellowship, and not put out at the first sign of their behavior.</p>
+  <p>Their contention grows and draws others in. Sheep who aren’t yet wise as serpents are pressured to compromise the truth to bring peace — to smooth things over, to debate slander as if it had merit. That only encourages the wolves, and keeps the confused, weak brother in his error.</p>
+  <p>It doesn’t matter what form the vain babbling takes: denying the resurrection to come, slandering men of God and their works, discouraging first love and soul winning, or teaching a false gospel that says men are made elect by their genealogy. It increases ungodliness and overthrows the faith of some.</p>
+  <button class="key" type="button" data-v="Proverbs 6:14–19">
+    <span class="ref">Proverbs 6:14–19</span>
+    <span class="txt">He that soweth discord among brethren.</span>
+    <span class="hint">Tap to read the passage</span>
+  </button>
+  <h3>Cross references</h3>
+  <div class="xrefs">
+    <button class="xref" type="button" data-v="2 Timothy 2:16–18">2 Timothy 2:16–18 <small>Hymenaeus and Philetus</small></button>
+    <button class="xref" type="button" data-v="1 Timothy 1:20">1 Timothy 1:20 <small>delivered unto Satan</small></button>
+    <button class="xref" type="button" data-v="1 Corinthians 5:6">1 Corinthians 5:6 <small>a little leaven</small></button>
+  </div>
+  <div class="ask"><strong>Discuss</strong>God names the sower of discord alongside a lying tongue and hands that shed innocent blood. Why do you think it ranks so seriously with Him?</div>
+</section>
+
+<!-- VII -->
+<section class="slide" id="line" aria-label="Section VII">
+  <p class="num">VII</p>
+  <h2 class="t">Where the line is drawn</h2>
+  <p class="lead">Serpent and dove are not opposites to balance. They work together: see clearly, act rightly, and keep your own heart clean while you do it.</p>
+  <ol class="ladder">
+    <li class="t1"><div><div class="who">Error, with humility and teachability</div>
+      <p class="then"><b>Patient instruction</b></p>
+      <div class="xrefs"><button class="xref" type="button" data-v="Romans 14:1">Romans 14:1</button><button class="xref" type="button" data-v="Galatians 6:1">Galatians 6:1</button></div></div></li>
+    <li class="t2"><div><div class="who">Error, with pride and refusal after admonition</div>
+      <p class="then"><b>Reject</b></p>
+      <div class="xrefs"><button class="xref" type="button" data-v="Titus 3:9–11">Titus 3:10</button></div></div></li>
+    <li class="t3"><div><div class="who">Discord sown by design</div>
+      <p class="then"><b>Identify, remove the influence, and treat as an outsider once the process is complete</b></p>
+      <div class="xrefs"><button class="xref" type="button" data-v="Proverbs 6:14–19">Proverbs 6</button><button class="xref" type="button" data-v="Matthew 18:15–17">Matthew 18</button></div></div></li>
+    <li class="t4"><div><div class="who">At the door, soul winning</div>
+      <p class="then"><b>Don’t be drawn into disputations — shake the dust when they want contention, not truth</b></p>
+      <div class="xrefs"><button class="xref" type="button" data-v="Matthew 10:14">Matthew 10:14</button><button class="xref" type="button" data-v="Nehemiah 6:3">Nehemiah 6:3</button></div></div></li>
+  </ol>
+  <p>Many Christians default to dove-only behavior because they cannot imagine the calculated malice, or the strategic use of partial truth, that wolves employ. Biblical wisdom requires us to see it when it appears and to act accordingly — without losing the innocence of the dove.</p>
+  <button class="key" type="button" data-v="Romans 16:19">
+    <span class="ref">Romans 16:19</span>
+    <span class="txt">I would have you wise unto that which is good, and simple concerning evil.</span>
+    <span class="hint">Tap to read the verse</span>
+  </button>
+  <p class="pull">Grace without discernment is not biblical peace; it is an open door.</p>
+  <div class="ask"><strong>Take it home</strong>Which comes more naturally to you, the serpent or the dove? What is one way you’ll practice the one that doesn’t?</div>
+</section>
+
+</main>
+
+<nav aria-label="Lesson sections">
+  <button class="step" id="prev" type="button">Back</button>
+  <div class="dots" id="dots"></div>
+  <button class="step" id="next" type="button">Next</button>
+</nav>
+
+<dialog id="verse" aria-labelledby="vref">
+  <h4 id="vref"></h4>
+  <div id="vbody"></div>
+  <button class="close" type="button" id="vclose">Close</button>
+</dialog>
+
+<script>
+const V = {
+  "Matthew 10:16": [[16,"Behold, I send you forth as sheep in the midst of wolves: be ye therefore wise as serpents, and harmless as doves."]],
+  "Matthew 7:15": [[15,"Beware of false prophets, which come to you in sheep’s clothing, but inwardly they are ravening wolves."]],
+  "Acts 20:29–30": [[29,"For I know this, that after my departing shall grievous wolves enter in among you, not sparing the flock."],[30,"Also of your own selves shall men arise, speaking perverse things, to draw away disciples after them."]],
+  "Romans 16:17–18": [[17,"Now I beseech you, brethren, mark them which cause divisions and offences contrary to the doctrine which ye have learned; and avoid them."],[18,"For they that are such serve not our Lord Jesus Christ, but their own belly; and by good words and fair speeches deceive the hearts of the simple."]],
+  "2 Corinthians 11:13–14": [[13,"For such are false apostles, deceitful workers, transforming themselves into the apostles of Christ."],[14,"And no marvel; for Satan himself is transformed into an angel of light."]],
+  "Hebrews 5:14": [[14,"But strong meat belongeth to them that are of full age, even those who by reason of use have their senses exercised to discern both good and evil."]],
+  "Romans 14:1": [[1,"Him that is weak in the faith receive ye, but not to doubtful disputations."]],
+  "Galatians 6:1": [[1,"Brethren, if a man be overtaken in a fault, ye which are spiritual, restore such an one in the spirit of meekness; considering thyself, lest thou also be tempted."]],
+  "2 Timothy 2:24–25": [[24,"And the servant of the Lord must not strive; but be gentle unto all men, apt to teach, patient,"],[25,"In meekness instructing those that oppose themselves; if God peradventure will give them repentance to the acknowledging of the truth;"]],
+  "Titus 3:9–11": [[9,"But avoid foolish questions, and genealogies, and contentions, and strivings about the law; for they are unprofitable and vain."],[10,"A man that is an heretick after the first and second admonition reject;"],[11,"Knowing that he that is such is subverted, and sinneth, being condemned of himself."]],
+  "Matthew 18:15–17": [[15,"Moreover if thy brother shall trespass against thee, go and tell him his fault between thee and him alone: if he shall hear thee, thou hast gained thy brother."],[16,"But if he will not hear thee, then take with thee one or two more, that in the mouth of two or three witnesses every word may be established."],[17,"And if he shall neglect to hear them, tell it unto the church: but if he neglect to hear the church, let him be unto thee as an heathen man and a publican."]],
+  "Proverbs 26:4–5": [[4,"Answer not a fool according to his folly, lest thou also be like unto him."],[5,"Answer a fool according to his folly, lest he be wise in his own conceit."]],
+  "Nehemiah 6:3": [[3,"And I sent messengers unto them, saying, I am doing a great work, so that I cannot come down: why should the work cease, whilst I leave it, and come down to you?"]],
+  "Matthew 10:14": [[14,"And whosoever shall not receive you, nor hear your words, when ye depart out of that house or city, shake off the dust of your feet."]],
+  "Matthew 7:6": [[6,"Give not that which is holy unto the dogs, neither cast ye your pearls before swine, lest they trample them under their feet, and turn again and rend you."]],
+  "Proverbs 6:14–19": [[14,"Frowardness is in his heart, he deviseth mischief continually; he soweth discord."],[15,"Therefore shall his calamity come suddenly; suddenly shall he be broken without remedy."],[16,"These six things doth the LORD hate: yea, seven are an abomination unto him:"],[17,"A proud look, a lying tongue, and hands that shed innocent blood,"],[18,"An heart that deviseth wicked imaginations, feet that be swift in running to mischief,"],[19,"A false witness that speaketh lies, and he that soweth discord among brethren."]],
+  "2 Timothy 2:16–18": [[16,"But shun profane and vain babblings: for they will increase unto more ungodliness."],[17,"And their word will eat as doth a canker: of whom is Hymenaeus and Philetus;"],[18,"Who concerning the truth have erred, saying that the resurrection is past already; and overthrow the faith of some."]],
+  "1 Timothy 1:20": [[20,"Of whom is Hymenaeus and Alexander; whom I have delivered unto Satan, that they may learn not to blaspheme."]],
+  "1 Corinthians 5:6": [[6,"Your glorying is not good. Know ye not that a little leaven leaveneth the whole lump?"]],
+  "Romans 16:19": [[19,"For your obedience is come abroad unto all men. I am glad therefore on your behalf: but yet I would have you wise unto that which is good, and simple concerning evil."]]
+};
+
+const slides = [...document.querySelectorAll('.slide')];
+const ids = slides.map(s => s.id);
+const labels = ['✦','I','II','III','IV','V','VI','VII'];
+const dots = document.getElementById('dots');
+const stage = document.getElementById('stage');
+let cur = 0;
+
+labels.forEach((l,i) => {
+  const b = document.createElement('button');
+  b.type = 'button'; b.textContent = l;
+  b.setAttribute('aria-label', i === 0 ? 'Title' : 'Section ' + l);
+  b.onclick = () => show(i);
+  dots.appendChild(b);
+});
+
+function show(i){
+  cur = Math.max(0, Math.min(slides.length - 1, i));
+  slides.forEach((s,n) => s.classList.toggle('on', n === cur));
+  [...dots.children].forEach((d,n) => d.setAttribute('aria-current', n === cur));
+  document.getElementById('prev').disabled = cur === 0;
+  document.getElementById('next').disabled = cur === slides.length - 1;
+  stage.scrollTop = 0;
+  try { history.replaceState(null, '', '#' + ids[cur]); } catch(e){}
+}
+
+document.getElementById('prev').onclick = () => show(cur - 1);
+document.getElementById('next').onclick = () => show(cur + 1);
+document.querySelectorAll('[data-go]').forEach(b => b.onclick = () => show(+b.dataset.go));
+
+const dlg = document.getElementById('verse');
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-v]');
+  if (!t) return;
+  const ref = t.dataset.v, vs = V[ref];
+  if (!vs) return;
+  document.getElementById('vref').textContent = ref + ' (KJV)';
+  const body = document.getElementById('vbody');
+  body.innerHTML = '';
+  vs.forEach(([n, txt]) => {
+    const p = document.createElement('p'); p.className = 'v';
+    const s = document.createElement('sup'); s.textContent = n;
+    p.append(s, txt); body.appendChild(p);
+  });
+  dlg.showModal();
+});
+document.getElementById('vclose').onclick = () => dlg.close();
+dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+
+document.addEventListener('keydown', e => {
+  if (dlg.open) return;
+  if (e.key === 'ArrowRight' || e.key === 'PageDown') show(cur + 1);
+  if (e.key === 'ArrowLeft' || e.key === 'PageUp') show(cur - 1);
+});
+
+let x0 = null;
+stage.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, {passive:true});
+stage.addEventListener('touchend', e => {
+  if (x0 === null) return;
+  const dx = e.changedTouches[0].clientX - x0; x0 = null;
+  if (Math.abs(dx) > 60) show(cur + (dx < 0 ? 1 : -1));
+}, {passive:true});
+
+const root = document.documentElement;
+try { const saved = localStorage.getItem('theme'); if (saved) root.dataset.theme = saved; } catch(e){}
+document.getElementById('theme').onclick = () => {
+  const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  root.dataset.theme = dark ? 'light' : 'dark';
+  try { localStorage.setItem('theme', root.dataset.theme); } catch(e){}
+};
+
+const start = ids.indexOf(location.hash.slice(1));
+show(start > -1 ? start : 0);
+</script>
+</body>
+</html>

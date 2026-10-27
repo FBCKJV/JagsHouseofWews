@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Importance of the KJV — Week 4</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+SC:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #0a0c11;
+    --ink-2: #12151d;
+    --ink-3: #191d28;
+    --line: rgba(201,162,39,0.28);
+    --gold: #c9a227;
+    --gold-light: #e6ca7d;
+    --cream: #ece3cd;
+    --cream-dim: #b9b09a;
+    --crimson: #8c2f39;
+    --crimson-light: #c2626c;
+    --sage: #6f8f6a;
+    --sage-light: #a3c49b;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(1200px 700px at 15% -10%, rgba(201,162,39,0.09), transparent 60%),
+      radial-gradient(1000px 600px at 100% 0%, rgba(140,47,57,0.10), transparent 55%),
+      var(--ink);
+    color:var(--cream);
+    font-family:'EB Garamond', serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--gold); color:var(--ink);}
+
+  .grain{
+    position:fixed; inset:0; pointer-events:none; z-index:0; opacity:0.05; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  header.hero{
+    position:relative; z-index:1; padding:64px 6vw 48px; border-bottom:1px solid var(--line); text-align:center;
+  }
+  .eyebrow{
+    font-family:'Cormorant SC', serif; letter-spacing:0.35em; color:var(--gold-light);
+    font-size:15px; text-transform:uppercase; margin:0 0 18px;
+  }
+  h1.title{
+    font-family:'Cinzel', serif; font-weight:600; font-size:clamp(28px, 4vw, 54px);
+    line-height:1.18; margin:0 0 10px; color:var(--cream); text-shadow:0 0 40px rgba(201,162,39,0.15);
+  }
+  h1.title em{ font-style:normal; color:var(--gold); }
+  .subtitle{
+    font-family:'Cormorant SC', serif; font-size:clamp(15px,1.5vw,20px);
+    letter-spacing:0.1em; color:var(--cream-dim); margin:0 auto 30px; max-width:760px;
+  }
+  .hero-text{
+    max-width:840px; margin:0 auto; font-style:italic;
+    font-size:clamp(17px,1.7vw,21px); line-height:1.75; color:var(--cream-dim);
+    position:relative; padding:0 8px;
+  }
+  .hero-text .dropcap{
+    float:left; font-family:'Cinzel', serif; font-style:normal;
+    font-size:64px; line-height:0.8; color:var(--gold); padding:6px 10px 0 0;
+  }
+  .hero-ref{
+    display:inline-block; margin-top:18px; font-family:'Cormorant SC', serif;
+    letter-spacing:0.2em; font-size:14px; color:var(--gold-light); text-transform:uppercase;
+  }
+
+  nav.jump{
+    position:sticky; top:0; z-index:20; display:flex; flex-wrap:wrap; justify-content:center;
+    background:rgba(10,12,17,0.94); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); padding:2px 0;
+  }
+  nav.jump a{
+    color:var(--cream-dim); text-decoration:none; font-family:'Cormorant SC', serif;
+    letter-spacing:0.1em; font-size:12.5px; text-transform:uppercase; padding:13px 13px;
+    border-bottom:2px solid transparent; transition:color .2s, border-color .2s; white-space:nowrap;
+  }
+  nav.jump a:hover{ color:var(--gold-light); border-color:var(--gold); }
+
+  main{ position:relative; z-index:1; max-width:1280px; margin:0 auto; padding:10px 5vw 80px; }
+
+  section.block{ padding:54px 0 10px; border-bottom:1px solid var(--line); }
+  section.block:last-child{ border-bottom:none; }
+
+  .section-head{ display:flex; align-items:baseline; gap:16px; margin-bottom:8px; }
+  .section-num{ font-family:'Cinzel', serif; color:var(--gold); font-size:14px; letter-spacing:.2em; }
+  h2.section-title{
+    font-family:'Cinzel', serif; font-weight:600; font-size:clamp(21px,2.4vw,30px); margin:0; color:var(--cream);
+  }
+  .section-sub{
+    font-family:'EB Garamond', serif; font-style:italic; color:var(--cream-dim);
+    margin:6px 0 26px; font-size:16px; max-width:840px;
+  }
+  h3.sub-title{
+    font-family:'Cinzel', serif; font-weight:500; font-size:15px; letter-spacing:.08em;
+    margin:32px 0 16px; text-transform:uppercase; color:var(--gold-light);
+  }
+  h3.sub-title:first-of-type{ margin-top:8px; }
+
+  .teaching{ max-width:840px; font-size:16.5px; line-height:1.75; color:var(--cream-dim); margin:0 0 18px; }
+  .teaching strong{ color:var(--gold-light); font-weight:600; }
+
+  .grid{ display:grid; gap:16px; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); margin-bottom:8px; }
+  .grid.wide{ grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); }
+
+  .card{
+    background:linear-gradient(160deg, var(--ink-3), var(--ink-2));
+    border:1px solid var(--line); border-radius:4px; padding:20px 20px;
+    cursor:pointer; position:relative;
+    transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease; overflow:hidden;
+  }
+  .card::before{
+    content:""; position:absolute; left:0; top:0; bottom:0; width:3px;
+    background:var(--gold); opacity:.55; transition:opacity .18s ease, width .18s ease;
+  }
+  .card:hover{
+    transform:translateY(-3px); border-color:var(--gold);
+    box-shadow:0 14px 30px rgba(0,0,0,0.45), 0 0 0 1px rgba(201,162,39,0.15) inset;
+  }
+  .card:hover::before{ opacity:1; width:5px; }
+  .card .ct-name{ font-family:'Cinzel', serif; font-weight:600; font-size:16.5px; color:var(--cream); margin:0 0 6px; }
+  .card .ct-ref{ font-family:'Cormorant SC', serif; letter-spacing:.08em; font-size:13.5px; color:var(--gold-light); margin:0; }
+  .card .ct-hint{
+    margin-top:12px; font-size:13px; color:var(--cream-dim); opacity:.6;
+    font-family:'Cormorant SC', serif; letter-spacing:.12em; text-transform:uppercase;
+  }
+  .card.crimson::before{ background:var(--crimson-light); }
+  .card.crimson:hover{ border-color:var(--crimson-light); }
+  .card.crimson .ct-ref{ color:var(--crimson-light); }
+  .card.sage::before{ background:var(--sage-light); }
+  .card.sage:hover{ border-color:var(--sage-light); }
+  .card.sage .ct-ref{ color:var(--sage-light); }
+
+  /* pull quote */
+  .callout{
+    position:relative; margin:22px 0 30px; padding:20px 26px 20px 54px;
+    background:linear-gradient(160deg, rgba(201,162,39,0.07), rgba(201,162,39,0.02));
+    border:1px solid var(--line); border-left:3px solid var(--gold); border-radius:4px;
+    font-style:italic; font-size:16.5px; line-height:1.7; color:var(--cream); max-width:840px;
+  }
+  .callout::before{
+    content:"\201C"; position:absolute; left:14px; top:4px;
+    font-family:'Cinzel', serif; font-style:normal; font-size:38px; color:var(--gold); opacity:.7;
+  }
+
+  /* Tyndale pulpit-style feature */
+  .feature{
+    margin:8px 0 10px; padding:34px 5vw 8px;
+    background:linear-gradient(160deg, rgba(140,47,57,0.09), transparent 60%);
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  }
+  .feature-inner{ max-width:900px; margin:0 auto; }
+  .feature-label{
+    text-align:center; font-family:'Cormorant SC', serif; letter-spacing:.3em;
+    text-transform:uppercase; color:var(--crimson-light); font-size:14px; margin:0 0 20px;
+  }
+  .feature-title{
+    text-align:center; font-family:'Cinzel', serif; font-weight:600; color:var(--cream);
+    font-size:clamp(22px,2.8vw,32px); margin:0 0 22px;
+  }
+  .feature p.teaching{ margin-left:auto; margin-right:auto; text-align:left; }
+  blockquote.feature-quote{
+    margin:24px auto; max-width:640px; padding:0 0 0 26px; border-left:3px solid var(--crimson-light);
+    font-style:italic; font-size:19px; line-height:1.7; color:var(--cream);
+  }
+  .feature-attr{ text-align:right; max-width:640px; margin:0 auto 30px; font-family:'Cormorant SC', serif; color:var(--crimson-light); letter-spacing:.08em; font-size:14.5px; }
+
+  /* pronoun table */
+  .pronoun-wrap{ display:flex; gap:26px; flex-wrap:wrap; max-width:900px; }
+  table.pronoun-table{ border-collapse:collapse; flex:1 1 260px; }
+  table.pronoun-table caption{
+    text-align:left; font-family:'Cinzel', serif; font-size:15px; color:var(--gold-light);
+    letter-spacing:.06em; text-transform:uppercase; margin-bottom:10px; caption-side:top;
+  }
+  table.pronoun-table th, table.pronoun-table td{
+    padding:9px 16px; text-align:left; border-bottom:1px solid var(--line); font-size:16px;
+  }
+  table.pronoun-table th{
+    font-family:'Cormorant SC', serif; letter-spacing:.1em; text-transform:uppercase;
+    font-size:12.5px; color:var(--cream-dim);
+  }
+  table.pronoun-table td.pn-word{ color:var(--cream); font-weight:600; }
+  table.pronoun-table td.pn-type{ color:var(--cream-dim); font-style:italic; }
+
+  .overlay{
+    position:fixed; inset:0; z-index:100; background:rgba(4,5,8,0.86); backdrop-filter:blur(3px);
+    display:flex; align-items:center; justify-content:center; padding:5vw;
+    opacity:0; pointer-events:none; transition:opacity .22s ease;
+  }
+  .overlay.open{ opacity:1; pointer-events:auto; }
+  .modal{
+    max-width:760px; width:100%; max-height:82vh; overflow-y:auto;
+    background:linear-gradient(165deg, #16192389, #0d0f15); background-color:#12141c;
+    border:1px solid var(--gold); border-radius:6px; padding:44px 44px 40px; position:relative;
+    box-shadow:0 30px 80px rgba(0,0,0,0.6), 0 0 60px rgba(201,162,39,0.08);
+    transform:translateY(14px) scale(.98); transition:transform .22s ease;
+  }
+  .overlay.open .modal{ transform:translateY(0) scale(1); }
+  .modal-close{
+    position:absolute; top:16px; right:18px; width:38px; height:38px; border-radius:50%;
+    border:1px solid var(--line); background:var(--ink-2); color:var(--gold-light);
+    font-family:'Cinzel',serif; font-size:18px; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    transition:background .18s, color .18s, transform .18s;
+  }
+  .modal-close:hover{ background:var(--gold); color:var(--ink); transform:rotate(90deg); }
+  .modal-eyebrow{ font-family:'Cormorant SC', serif; letter-spacing:.25em; text-transform:uppercase; color:var(--gold-light); font-size:13px; margin:0 0 8px; }
+  .modal-title{ font-family:'Cinzel', serif; font-weight:600; color:var(--cream); font-size:clamp(20px,2.6vw,27px); margin:0 0 22px; padding-right:30px; }
+  .verse-block{ margin-bottom:22px; }
+  .verse-block:last-child{ margin-bottom:0; }
+  .verse-ref{ font-family:'Cormorant SC', serif; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); font-size:14px; margin:0 0 6px; }
+  .verse-text{ font-size:18.5px; line-height:1.75; color:var(--cream); margin:0; }
+
+  footer{
+    text-align:center; padding:40px 20px 60px; position:relative; z-index:1;
+    color:var(--cream-dim); font-family:'Cormorant SC', serif; letter-spacing:.15em;
+    font-size:13px; text-transform:uppercase; opacity:.6;
+  }
+
+  @media (max-width:640px){
+    .modal{ padding:34px 26px 30px; max-height:88vh; }
+    header.hero{ padding:48px 6vw 34px; }
+  }
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<header class="hero">
+  <p class="eyebrow">Faith Baptist Church of Plymouth County &nbsp;·&nbsp; Adult Sunday School &nbsp;·&nbsp; Week 4</p>
+  <h1 class="title">The Importance of the <em>King James Bible</em></h1>
+  <p class="subtitle">A Timeless Legacy — how God preserved His Word for the English-speaking world</p>
+  <p class="hero-text"><span class="dropcap">I</span>n 1604, King James I of England commissioned renowned scholars to create a unified English Bible, birthing the KJV in 1611. This masterpiece shaped Christianity worldwide, becoming the spiritual cornerstone for the Pilgrims, fueling Baptist growth in America, and empowering missionaries to spread the Gospel across every continent.</p>
+  <div class="hero-ref">1604&ndash;1611</div>
+</header>
+
+<nav class="jump">
+  <a href="#legacy">Legacy</a>
+  <a href="#tyndale">Tyndale</a>
+  <a href="#translation">Translation &amp; Impact</a>
+  <a href="#lesserknown">Lesser-Known Facts</a>
+  <a href="#precision">Precision</a>
+  <a href="#funfacts">Fun Bible Facts</a>
+  <a href="#books">Books of the Bible</a>
+</nav>
+
+<main>
+
+  <section class="block" id="legacy">
+    <div class="section-head"><span class="section-num">I.</span><h2 class="section-title">A Timeless Legacy</h2></div>
+    <p class="section-sub">Fun facts about the King James, or Authorized, Version.</p>
+    <div class="grid" id="grid-legacy"></div>
+  </section>
+
+</main>
+
+<div class="feature" id="tyndale">
+  <div class="feature-inner">
+    <p class="feature-label">Martyred for the Word</p>
+    <h3 class="feature-title">William Tyndale — A Bible Translator Executed for Heresy</h3>
+    <p class="teaching">William Tyndale was a prominent figure during the Protestant Reformation who was burned at the stake in 1536 — executed for "heresy" by the Roman Catholic Church for translating the Bible into English and promoting its accessibility to the common people.</p>
+    <h3 class="sub-title" style="color:var(--crimson-light);">Why Was Translating the Bible Considered "Heretical"?</h3>
+    <p class="teaching"><strong>Challenging Church Authority:</strong> The Catholic Church held absolute authority on religious issues and guarded its power. Translations of the Bible into vernacular languages like English threatened that authority.</p>
+    <p class="teaching">Providing the Bible in English allowed literate individuals to read and interpret Scripture for themselves — often arriving at conclusions that differed from unbiblical Catholic doctrine.</p>
+    <blockquote class="feature-quote">"Lord, open the King of England's eyes."</blockquote>
+    <p class="feature-attr">&mdash; William Tyndale, before his execution</p>
+    <p class="teaching">This prayer was partially answered when King Henry VIII later allowed the English Bible to be available in every parish church.</p>
+  </div>
+</div>
+
+<main>
+
+  <section class="block" id="translation">
+    <div class="section-head"><span class="section-num">II.</span><h2 class="section-title">Translation, Text &amp; Impact</h2></div>
+    <p class="section-sub">The King James Version was created by a team of 54 scholars, including the greatest linguists of the time, from various backgrounds — ensuring a more comprehensive and accurate translation.</p>
+    <div class="grid wide" id="grid-translation"></div>
+    <div class="callout">The King James Version has profoundly influenced literature, language, and art — but its powerful, divinely inspired and preserved nature, as the complete Word of God without error in English, the "lingua franca" of this age, has shaped nations, influenced kings and presidents, converted millions, fed the spirit of believers, and served as the rock of Christianity since 1611.</div>
+  </section>
+
+  <section class="block" id="lesserknown">
+    <div class="section-head"><span class="section-num">III.</span><h2 class="section-title">Lesser-Known KJV Facts</h2></div>
+    <div class="grid" id="grid-lesserknown"></div>
+  </section>
+
+  <section class="block" id="precision">
+    <div class="section-head"><span class="section-num">IV.</span><h2 class="section-title">Precision in Translation</h2></div>
+    <p class="section-sub">Why the exact words matter — the KJV's careful rendering guards doctrine that looser translations can blur.</p>
+
+    <h3 class="sub-title">"Are Saved" — the Greek Behind Eternal Security</h3>
+    <p class="teaching">The Greek <em>σῳζομένοις</em> (sōzomenois) is a present passive participle meaning "to those saved." The KJV renders it <strong>"are saved"</strong> — a settled, present reality accomplished by God. Modern versions often render it "are being saved," an ongoing-process wording that can imply salvation is incomplete or losable.</p>
+    <div class="grid wide" id="grid-precision"></div>
+
+    <h3 class="sub-title">Thee, Thou, Ye, You — the KJV's Built-In Precision</h3>
+    <p class="teaching">Modern English collapsed singular and plural "you" into one word. The KJV never did — its pronouns tell you at a glance whether God (or a speaker) is addressing one person or a whole group.</p>
+    <div class="pronoun-wrap">
+      <table class="pronoun-table">
+        <caption>Singular</caption>
+        <tr><th>Word</th><th>Type</th></tr>
+        <tr><td class="pn-word">I / Me</td><td class="pn-type">Personal</td></tr>
+        <tr><td class="pn-word">My / Mine</td><td class="pn-type">Possessive</td></tr>
+        <tr><td class="pn-word">Thou / Thee</td><td class="pn-type">Personal</td></tr>
+        <tr><td class="pn-word">Thy / Thine</td><td class="pn-type">Possessive</td></tr>
+        <tr><td class="pn-word">He / Him / His</td><td class="pn-type">Personal / Possessive</td></tr>
+        <tr><td class="pn-word">She / Her / Hers</td><td class="pn-type">Personal / Possessive</td></tr>
+        <tr><td class="pn-word">It / Its</td><td class="pn-type">Personal / Possessive</td></tr>
+      </table>
+      <table class="pronoun-table">
+        <caption>Plural</caption>
+        <tr><th>Word</th><th>Type</th></tr>
+        <tr><td class="pn-word">We / Us</td><td class="pn-type">Personal</td></tr>
+        <tr><td class="pn-word">Our / Ours</td><td class="pn-type">Possessive</td></tr>
+        <tr><td class="pn-word">Ye / You</td><td class="pn-type">Personal</td></tr>
+        <tr><td class="pn-word">Your / Yours</td><td class="pn-type">Possessive</td></tr>
+        <tr><td class="pn-word">They / Them</td><td class="pn-type">Personal</td></tr>
+        <tr><td class="pn-word">Their / Theirs</td><td class="pn-type">Possessive</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="block" id="funfacts">
+    <div class="section-head"><span class="section-num">V.</span><h2 class="section-title">Fun Bible Facts</h2></div>
+    <div class="grid" id="grid-funfacts"></div>
+  </section>
+
+  <section class="block" id="books">
+    <div class="section-head"><span class="section-num">VI.</span><h2 class="section-title">How the KJV Bible Is Broken Down</h2></div>
+    <p class="section-sub">66 books, grouped by purpose and style, telling God's story from creation to eternity. Tap a category to see its books.</p>
+    <div class="grid wide" id="grid-books"></div>
+  </section>
+
+  <section class="block" id="closing">
+    <div class="section-head"><span class="section-num">&middot;</span><h2 class="section-title">Purified Seven Times</h2></div>
+    <div class="grid" id="grid-closing"></div>
+  </section>
+
+</main>
+
+<footer>Faith Baptist Church of Plymouth County &nbsp;·&nbsp; Authorized King James Version</footer>
+
+<div class="overlay" id="overlay">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modalClose" aria-label="Close">&#10005;</button>
+    <p class="modal-eyebrow" id="modalEyebrow"></p>
+    <h3 class="modal-title" id="modalTitle"></h3>
+    <div id="modalVerses"></div>
+  </div>
+</div>
+
+<script>
+const DATA = {
+  legacy: [
+    { title:"47 Scholars, One Epic Team", blocks:[{ref:"1604 Commission",text:"54 revisers were initially approved, but 47 brilliant minds crafted the KJV."}] },
+    { title:"Six Predecessors Paved the Way", blocks:[{ref:"Earlier English Bibles",text:"Built on Wycliffe's (1384), Tyndale's (1525), Coverdale's (1535), Matthew's (1537), Great (1539), and Bishops' (1568) Bibles, the KJV refined them all."}] },
+    { title:"Seven Years of Sweat", blocks:[{ref:"1604 to 1611",text:"Scholars toiled to translate from Hebrew, Greek, and Aramaic, ensuring accuracy and poetic flair."}] },
+    { title:"Six Companies, Divide and Conquer", blocks:[{ref:"Westminster · Oxford · Cambridge",text:"Split into six groups — two each in Westminster, Oxford, and Cambridge — they tackled different Bible sections for precision."}] },
+    { title:"Tyndale's Ghost Lives On", blocks:[{ref:"84% NT · 76% OT",text:"About 84% of the KJV's New Testament and 76% of its Old Testament echo William Tyndale's groundbreaking work."}] },
+    { title:"47,000 Copies Launched It", blocks:[{ref:'The "He Bible," 1611',text:"The first 1611 edition, dubbed the \u201cHe Bible,\u201d printed 47,000 copies — a massive run for its time."}] },
+    { title:"No Calvinist Notes Allowed", blocks:[{ref:"Royal Approval",text:"King James banned the Geneva Bible's Puritan notes, ensuring the KJV was a neutral, royal-approved text."}] }
+  ],
+  translation: [
+    { title:"Collaboration", blocks:[{ref:"Textual Sources",text:"Translators of the KJV utilized earlier translations and the original preserved manuscripts — the Masoretic Text for the Old Testament, and the Antioch manuscripts, called \u201cThe Received Text,\u201d or Textus Receptus, for the New Testament — striving for accuracy while adapting the language to be accessible and beautiful to the English-speaking public."}] },
+    { title:"Literary Style", blocks:[{ref:"A Literary Masterpiece",text:"The KJV is renowned for its poetic and rhythmic style, making it not only a religious text but also a literary masterpiece that has influenced English literature significantly."}] },
+    { title:"Cultural Impact", blocks:[{ref:"400 Years of Influence",text:"The King James Version has left an indelible mark on Christianity, used for 400 years to win souls on every continent and country — shaping the culture, language, and literature of the world, and the expressions and idioms that remain in common use even today."}] }
+  ],
+  lesserknown: [
+    { title:"Oxford &amp; Cambridge Tweak It", blocks:[{ref:"1762 &amp; 1769 Revisions",text:"Revised editions in 1769 (Oxford) and 1762 (Cambridge) standardized spelling, punctuation, and italics for clarity."}] },
+    { title:"Apocrypha? Not Inspired!", blocks:[{ref:"1611 Edition",text:"The 1611 KJV included the Apocrypha but clearly marked it as non-inspired, separating it from canonical Scripture."}] },
+    { title:"Sinners' Bible Blunder", blocks:[{ref:"1631 Misprint",text:'A 1631 misprint, dubbed the \u201cSinners\u2019 Bible,\u201d omitted \u201cnot\u201d from Exodus 20:14, reading \u201cThou shalt commit adultery\u201d!'}] },
+    { title:"Printer's Pricey Mistake", blocks:[{ref:"Robert Barker, 1631",text:'The \u201cSinners\u2019 Bible\u201d led to a \u00a31,000 fine for printer Robert Barker \u2014 big money in 1631!'}] },
+    { title:"Best-Selling Book Ever", blocks:[{ref:"Global Reach",text:"The KJV holds the title as the world's top-selling book, with billions of copies distributed globally."}] },
+    { title:"No Copyright (Outside England)", blocks:[{ref:"Crown Copyright",text:"Free to print worldwide, except in England, where the Crown holds rights — fueling its global spread."}] }
+  ],
+  precision: [
+    { title:"The Power of God to Them That Are Saved", blocks:[
+      {ref:"1 Corinthians 1:18", text:"For the preaching of the cross is to them that perish foolishness; but unto us which are saved it is the power of God."},
+      {ref:"Meaning", text:"The word of the cross is the power of God precisely to those who stand in the state of having been saved \u2014 God's effective, completed work secures the believer."}
+    ]},
+    { title:"If Ye Keep in Memory", blocks:[
+      {ref:"1 Corinthians 15:2", text:"By which also ye are saved, if ye keep in memory what I preached unto you, unless ye have believed in vain."},
+      {ref:"Meaning", text:"The \u201cif\u201d clause is not a condition for retaining salvation but the evidence of genuine faith \u2014 true believers hold fast because they are already saved."}
+    ]},
+    { title:"Supporting the Eternally Secure Reading", blocks:[
+      {ref:"Philippians 1:6", text:"Being confident of this very thing, that he which hath begun a good work in you will perform it until the day of Jesus Christ:"},
+      {ref:"John 10:28-29", text:"And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand. My Father, which gave them me, is greater than all; and none is able to pluck them out of my Father's hand."},
+      {ref:"Romans 8:30", text:"Moreover whom he did predestinate, them he also called: and whom he called, them he also justified: and whom he justified, them he also glorified."},
+      {ref:"Ephesians 2:8-9", text:"For by grace are ye saved through faith; and that not of yourselves: it is the gift of God: Not of works, lest any man should boast."}
+    ]}
+  ],
+  funfacts: [
+    { title:"Epic Timespan", blocks:[{ref:"4,284 Years Covered",text:"From creation in Genesis to John's writing of Revelation (c. AD 95\u201397), the Bible covers approximately 4,284 years. The writing itself spans over 1,500 years, from Moses (c. 1400 BC) penning the first five books to Revelation (c. AD 95)."}] },
+    { title:"40+ Authors, One God", blocks:[{ref:"Kings, Shepherds, Prophets, Fishermen",text:"Written by over 40 diverse authors, inspired by the Holy Spirit."}] },
+    { title:"Prophecy Power", blocks:[{ref:"1,800+ Prophecies",text:"Over 1,800 prophecies, with 300+ about Jesus fulfilled perfectly \u2014 like His Bethlehem birth (Micah 5:2)."}] },
+    { title:"Self-Referencing Scripture", blocks:[{ref:'"It Is Written"',text:"The Bible cites itself over 1,000 times, affirming its own authority."}] },
+    { title:"The KJV Is Its Own Dictionary", blocks:[{ref:"First Appearance Rule",text:"You can generally find the meaning of a word by looking for its first appearance and seeing the context."}] },
+    { title:"Year-Long Read", blocks:[{ref:"1,189 Chapters",text:"Read 3.3 chapters daily to finish in a year \u2014 or read 30 minutes daily and finish in under 5 months!"}] },
+    { title:"66 Books, One Story", blocks:[{ref:"39 OT + 27 NT",text:"Thirty-nine Old Testament and twenty-seven New Testament books weave God's redemptive plan from Genesis to Revelation."}] },
+    { title:"Verses Galore", blocks:[{ref:"31,102 Verses",text:"Packed with wisdom, history, and God's Word for all."}] },
+    { title:"No Contradictions", blocks:[{ref:"Divine Inspiration",text:"Despite centuries and 40+ authors, the Bible's message stays unified \u2014 a testament to divine inspiration."}] },
+    { title:"Three Tongues", blocks:[{ref:"Hebrew · Aramaic · Greek",text:"Written in Hebrew (Old Testament), Aramaic (parts of Daniel and Ezra), and Greek (New Testament)."}] },
+    { title:"Shortest &amp; Longest Chapters", blocks:[{ref:"Psalm 117 &amp; Psalm 119",text:"Psalm 117 (2 verses) is the shortest; Psalm 119 (176 verses) is the longest \u2014 a meditation on God's Word."}] },
+    { title:"Shortest Verse", blocks:[{ref:"John 11:35",text:'"Jesus wept" \u2014 shows Christ\u2019s humanity and mercy in just two words.'}] }
+  ],
+  books: [
+    { title:"Pentateuch", blocks:[{ref:"5 Books · God's Creation, the Law, Israel's Origins", text:"Genesis, Exodus, Leviticus, Numbers, Deuteronomy."}] },
+    { title:"Historical Books", blocks:[{ref:"12 Books · Conquest to Exile to Return", text:"Joshua, Judges, Ruth, 1 & 2 Samuel, 1 & 2 Kings, 1 & 2 Chronicles, Ezra, Nehemiah, Esther."}] },
+    { title:"Poetic / Wisdom Books", blocks:[{ref:"5 Books · Songs, Prayers, Wisdom", text:"Job, Psalms, Proverbs, Ecclesiastes, Song of Solomon."}] },
+    { title:"Major Prophets", blocks:[{ref:"5 Books · God's Word Through Bold Prophets", text:"Isaiah, Jeremiah/Lamentations, Ezekiel, Daniel."}] },
+    { title:"Minor Prophets", blocks:[{ref:"12 Books · Short, Powerful Prophetic Books", text:"Hosea, Joel, Amos, Obadiah, Jonah, Micah, Nahum, Habakkuk, Zephaniah, Haggai, Zechariah, Malachi."}] },
+    { title:"Gospels", blocks:[{ref:"4 Books · Jesus' Life, Death, and Resurrection", text:"Matthew, Mark, Luke, John."}] },
+    { title:"History", blocks:[{ref:"1 Book · The Early Church's Growth", text:"Acts."}] },
+    { title:"Pauline Epistles", blocks:[{ref:"13 Books · Paul's Letters to Churches and Leaders", text:"Romans, 1 & 2 Corinthians, Galatians, Ephesians, Philippians, Colossians, 1 & 2 Thessalonians, 1 & 2 Timothy, Titus, Philemon, Hebrews."}] },
+    { title:"General Epistles", blocks:[{ref:"8 Books · Letters for All Believers", text:"James, 1 & 2 Peter, 1, 2 & 3 John, Jude."}] },
+    { title:"Prophecy", blocks:[{ref:"1 Book · Christ's Return and Final Victory", text:"Revelation."}] }
+  ],
+  closing: [
+    { title:"Purified Seven Times", blocks:[{ref:"Psalm 12:6-7", text:"The words of the LORD are pure words: as silver tried in a furnace of earth, purified seven times. Thou shalt keep them, O LORD, thou shalt preserve them from this generation for ever."}] }
+  ]
+};
+
+function refLine(item){
+  if(item.blocks.length === 1) return item.blocks[0].ref;
+  return item.blocks.map(b=>b.ref).join(" · ");
+}
+
+function buildGrid(containerId, items, opts){
+  opts = opts || {};
+  const el = document.getElementById(containerId);
+  if(!el) return;
+  items.forEach((item) => {
+    let cls = 'card';
+    if(opts.crimson) cls += ' crimson';
+    if(opts.sage) cls += ' sage';
+    const card = document.createElement('div');
+    card.className = cls;
+    card.innerHTML = `
+      <p class="ct-name">${item.title}</p>
+      <p class="ct-ref">${refLine(item)}</p>
+      <p class="ct-hint">Tap to read &rarr;</p>
+    `;
+    card.addEventListener('click', () => openModal(item, opts.eyebrow));
+    el.appendChild(card);
+  });
+}
+
+buildGrid('grid-legacy', DATA.legacy, {eyebrow:'A Timeless Legacy'});
+buildGrid('grid-translation', DATA.translation, {eyebrow:'Translation & Impact'});
+buildGrid('grid-lesserknown', DATA.lesserknown, {eyebrow:'Lesser-Known Facts', crimson:true});
+buildGrid('grid-precision', DATA.precision, {eyebrow:'Precision in Translation'});
+buildGrid('grid-funfacts', DATA.funfacts, {eyebrow:'Fun Bible Facts', sage:true});
+buildGrid('grid-books', DATA.books, {eyebrow:'Books of the Bible'});
+buildGrid('grid-closing', DATA.closing, {eyebrow:'Preservation'});
+
+const overlay = document.getElementById('overlay');
+const modalEyebrow = document.getElementById('modalEyebrow');
+const modalTitle = document.getElementById('modalTitle');
+const modalVerses = document.getElementById('modalVerses');
+
+function openModal(item, eyebrow){
+  modalEyebrow.textContent = eyebrow || '';
+  modalTitle.innerHTML = item.title;
+  modalVerses.innerHTML = item.blocks.map(b => `
+    <div class="verse-block">
+      <p class="verse-ref">${b.ref}</p>
+      <p class="verse-text">${b.text}</p>
+    </div>
+  `).join('');
+  overlay.classList.add('open');
+  document.getElementById('modal').scrollTop = 0;
+}
+
+function closeModal(){ overlay.classList.remove('open'); }
+
+document.getElementById('modalClose').addEventListener('click', closeModal);
+overlay.addEventListener('click', (e) => { if(e.target === overlay) closeModal(); });
+document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>

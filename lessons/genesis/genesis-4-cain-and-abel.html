@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesis 4 • Cain & Abel • Young Adult Sunday School</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Merriweather:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root{--bg:#0c1018;--bg-card:#141c28;--bg-card-hi:#1a2236;--border:#c8940a;--border-dim:rgba(200,148,10,0.35);--text:#ffffff;--text-dim:#c8d4e8;--text-muted:#8a9ab8;--gold:#fbbf24;--green:#34d399;--red:#f87171;--blue:#60a5fa;--purple:#c084fc}
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:'Merriweather',Georgia,serif;background:var(--bg);color:var(--text);padding:40px 24px 80px;min-height:100vh;line-height:1.75;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+        .page-frame{max-width:1100px;margin:0 auto;border:5px double var(--border);border-radius:16px;overflow:hidden;box-shadow:0 0 0 1px rgba(200,148,10,0.2),0 0 80px rgba(251,191,36,0.12)}
+        header{background:#080c12;border-bottom:4px solid var(--border);padding:44px 52px 36px;text-align:center}
+        .header-eyebrow{font-family:'Cinzel',serif;font-size:1em;font-weight:700;letter-spacing:6px;color:var(--text-muted);text-transform:uppercase;margin-bottom:16px}
+        header h1{font-family:'Cinzel',serif;font-size:4.2em;font-weight:900;color:var(--gold);text-shadow:0 0 30px rgba(251,191,36,0.6),0 0 60px rgba(251,191,36,0.25);letter-spacing:6px;line-height:1.1;margin-bottom:12px}
+        header .subtitle{font-family:'Cinzel',serif;font-size:1.3em;font-weight:700;color:var(--text-dim);letter-spacing:4px}
+        .header-divider{margin:24px auto 0;width:55%;height:2px;background:linear-gradient(to right,transparent,var(--border),transparent)}
+        .content-body{background:var(--bg);padding:44px 44px 56px;display:flex;flex-direction:column;gap:24px}
+        .section-divider{display:flex;align-items:center;gap:18px;margin:8px 0 0}
+        .section-divider .divider-line{flex:1;height:1px;background:linear-gradient(to right,transparent,var(--border-dim))}
+        .section-divider .divider-line.right{background:linear-gradient(to left,transparent,var(--border-dim))}
+        .section-divider .divider-label{font-family:'Cinzel',serif;font-size:0.72em;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--text-muted)}
+        .day-card{background:var(--bg-card);border:2px solid var(--border-dim);border-top:5px solid var(--gold);border-radius:12px;padding:28px 30px 24px;box-shadow:0 6px 24px rgba(0,0,0,0.5)}
+        .day-card.c-green{border-top-color:var(--green)}.day-card.c-blue{border-top-color:var(--blue)}.day-card.c-red{border-top-color:var(--red)}.day-card.c-purple{border-top-color:var(--purple)}
+        .day-card.c-key{border-top-color:var(--gold);border-color:rgba(251,191,36,0.4);background:var(--bg-card-hi);box-shadow:0 6px 24px rgba(0,0,0,0.5),0 0 30px rgba(251,191,36,0.08)}
+        .day-card.c-red-key{border-top-color:var(--red);border-color:rgba(248,113,113,0.35);background:#1c1018;box-shadow:0 6px 24px rgba(0,0,0,0.5),0 0 30px rgba(248,113,113,0.08)}
+        .day-card.c-green-key{border-top-color:var(--green);border-color:rgba(52,211,153,0.35);background:#0d1c14;box-shadow:0 6px 24px rgba(0,0,0,0.5),0 0 30px rgba(52,211,153,0.08)}
+        .day-badge{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+        .day-pill{font-family:'Cinzel',serif;font-size:0.78em;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:#000;background:var(--gold);padding:5px 16px 4px;border-radius:20px;white-space:nowrap}
+        .day-card.c-green .day-pill,.day-card.c-green-key .day-pill{background:var(--green);color:#000}
+        .day-card.c-blue .day-pill{background:var(--blue);color:#000}
+        .day-card.c-red .day-pill,.day-card.c-red-key .day-pill{background:var(--red);color:#000}
+        .day-card.c-purple .day-pill{background:var(--purple);color:#000}
+        .verse-ref{font-family:'Cinzel',serif;font-size:0.82em;font-weight:700;color:var(--text-muted);letter-spacing:1px}
+        .day-title{font-family:'Cinzel',serif;font-size:1.22em;font-weight:900;color:var(--gold);margin-bottom:16px;letter-spacing:1px}
+        .day-card.c-green .day-title,.day-card.c-green-key .day-title{color:var(--green)}
+        .day-card.c-blue .day-title{color:var(--blue)}
+        .day-card.c-red .day-title,.day-card.c-red-key .day-title{color:var(--red)}
+        .day-card.c-purple .day-title{color:var(--purple)}
+        .verse-text{font-size:1.52em;font-weight:700;color:var(--text);line-height:1.78}
+        .verse-text p{margin-bottom:0.65em}.verse-text p:last-child{margin-bottom:0}
+        .vn{font-family:'Cinzel',serif;font-size:0.58em;font-weight:900;color:var(--text-muted);vertical-align:super;margin-right:3px}
+        .hl-gold{color:var(--gold);font-weight:900}.hl-green{color:var(--green);font-weight:900}.hl-red{color:var(--red);font-weight:900}.hl-blue{color:var(--blue);font-weight:900}
+        .key-verse-block{display:block;margin:8px 0 12px;padding:14px 18px;background:rgba(251,191,36,0.10);border-left:5px solid var(--gold);border-radius:0 8px 8px 0;color:var(--gold);font-weight:900;font-style:italic;line-height:1.65}
+        .key-verse-block.green{background:rgba(52,211,153,0.10);border-left-color:var(--green);color:var(--green)}
+        .teacher-note{display:block;margin-top:14px;padding:12px 16px;background:rgba(96,165,250,0.07);border-left:4px solid rgba(96,165,250,0.4);border-radius:0 6px 6px 0;font-family:'Cinzel',serif;font-size:0.8em;font-weight:700;letter-spacing:0.5px;color:var(--blue);line-height:1.7}
+        .sref{color:var(--gold);font-weight:900;cursor:pointer;border-bottom:2px dotted var(--gold);white-space:nowrap;display:inline-block;position:relative}
+        .verse-tooltip{position:fixed;z-index:2000;max-width:480px;width:calc(100vw - 40px);background:#0e1420;border:3px solid var(--border);border-radius:12px;padding:18px 20px 16px;box-shadow:0 0 40px rgba(251,191,36,0.25),0 8px 40px rgba(0,0,0,0.8);pointer-events:none;opacity:0;transform:translateY(6px);transition:opacity 0.18s ease,transform 0.18s ease}
+        .verse-tooltip.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+        .verse-tooltip .tt-ref{font-family:'Cinzel',serif;font-size:0.82em;font-weight:900;letter-spacing:3px;color:var(--gold);margin-bottom:8px;display:block}
+        .verse-tooltip .tt-verse{font-family:'Merriweather',serif;font-size:1.1em;font-weight:700;color:var(--text);line-height:1.65;font-style:italic}
+        .xref-btn{display:inline-flex;align-items:center;gap:10px;margin-top:20px;padding:11px 24px;background:transparent;border:2px solid var(--gold);border-radius:40px;color:var(--gold);font-family:'Cinzel',serif;font-size:0.82em;font-weight:900;letter-spacing:2px;cursor:pointer;text-transform:uppercase;transition:background 0.2s,box-shadow 0.2s}
+        .xref-btn:hover{background:rgba(251,191,36,0.12);box-shadow:0 0 20px rgba(251,191,36,0.3)}
+        footer{background:#080c12;border-top:3px solid var(--border);padding:22px 40px;text-align:center;font-family:'Cinzel',serif;font-size:0.82em;font-weight:700;letter-spacing:2px;color:var(--text-muted);line-height:1.9}
+        .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:1000;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+        .modal-overlay.open{display:flex;animation:fadeIn 0.2s ease}
+        @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+        @keyframes slideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
+        .modal-box{background:#0e1420;border:4px double var(--border);border-radius:16px;padding:46px 48px 38px;max-width:780px;width:100%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 0 80px rgba(251,191,36,0.2),0 20px 80px rgba(0,0,0,0.8);animation:slideUp 0.25s ease;-webkit-font-smoothing:antialiased}
+        .modal-close{position:absolute;top:14px;right:18px;background:var(--bg-card);border:2px solid var(--border-dim);border-radius:50%;width:38px;height:38px;color:var(--text-muted);font-size:1.1em;font-weight:900;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
+        .modal-close:hover{background:var(--border);color:#000}
+        .modal-eyebrow{font-family:'Cinzel',serif;font-size:0.82em;font-weight:700;letter-spacing:4px;color:var(--text-muted);text-transform:uppercase;margin-bottom:8px}
+        .modal-title{font-family:'Cinzel',serif;font-size:1.65em;font-weight:900;color:var(--gold);margin-bottom:28px;padding-bottom:18px;border-bottom:2px solid var(--border-dim);line-height:1.2;padding-right:40px;text-shadow:0 0 20px rgba(251,191,36,0.3)}
+        .xref-entry{margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,0.08)}
+        .xref-entry:last-of-type{border-bottom:none;margin-bottom:0;padding-bottom:0}
+        .xref-label{font-family:'Cinzel',serif;font-size:1em;font-weight:900;color:var(--gold);letter-spacing:2px;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+        .xref-label::before{content:'';display:inline-block;width:8px;height:8px;background:var(--gold);border-radius:50%;flex-shrink:0}
+        .xref-verse{font-size:1.45em;font-weight:700;color:var(--text);line-height:1.72;font-style:italic;padding:12px 16px;background:rgba(255,255,255,0.04);border-left:4px solid var(--gold);border-radius:0 6px 6px 0;margin-bottom:10px}
+        .xref-note{font-size:1.25em;font-weight:700;color:var(--green);padding-left:16px}
+        .modal-summary{margin-top:26px;padding:18px 22px;background:rgba(251,191,36,0.08);border:1px solid rgba(251,191,36,0.3);border-radius:10px;font-size:1.35em;font-weight:700;color:var(--text);line-height:1.65;font-style:italic}
+        .modal-box::-webkit-scrollbar{width:6px}.modal-box::-webkit-scrollbar-track{background:transparent}.modal-box::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+        @media(max-width:740px){.content-body{padding:24px 16px 40px}header{padding:32px 20px 26px}header h1{font-size:2.6em}.modal-box{padding:30px 22px 26px}.modal-title{font-size:1.25em}}
+    </style>
+</head>
+<body>
+<div class="page-frame">
+    <header>
+        <p class="header-eyebrow">Young Adult Sunday School • Genesis Series</p>
+        <h1>Genesis Chapter 4</h1>
+        <p class="subtitle">Cain &amp; Abel &nbsp;•&nbsp; The First Murder &nbsp;•&nbsp; Calling on the LORD</p>
+        <div class="header-divider"></div>
+    </header>
+    <div class="content-body">
+        <div class="day-card">
+            <div class="day-badge"><span class="day-pill">vv. 1–2</span><span class="verse-ref">Two Sons Born</span></div>
+            <p class="day-title">Cain and Abel</p>
+            <div class="verse-text">
+                <p><span class="vn">1</span>And Adam knew Eve his wife; and she conceived, and bare Cain, and said, <span class="hl-gold">I have gotten a man from the LORD.</span></p>
+                <p><span class="vn">2</span>And she again bare his brother Abel. And Abel was a keeper of sheep, but Cain was a tiller of the ground.</p>
+                <span class="teacher-note">Eve's declaration shows her faith that the promised seed of Genesis 3:15 would come from the LORD. Two brothers — two vocations — and two very different hearts before God.</span>
+            </div>
+        </div>
+        <div class="day-card c-key">
+            <div class="day-badge"><span class="day-pill">vv. 3–5</span><span class="verse-ref">Two Offerings — One Accepted, One Rejected</span></div>
+            <p class="day-title">Abel's Offering Accepted — Cain's Rejected</p>
+            <div class="verse-text">
+                <p><span class="vn">3</span>And in process of time it came to pass, that Cain brought of the fruit of the ground an offering unto the LORD.</p>
+                <p><span class="vn">4</span>And Abel, he also brought <span class="hl-gold">of the firstlings of his flock and of the fat thereof.</span> And the LORD had respect unto Abel and to his offering:</p>
+                <p><span class="vn">5</span><span class="hl-red">But unto Cain and to his offering he had not respect.</span> And Cain was very wroth, and his countenance fell.</p>
+                <span class="teacher-note">Abel brought blood — the firstlings of the flock. Cain brought the fruit of his own labour from the cursed ground. God had already shown in Genesis 3:21 that a blood covering was required — <span class="sref" data-ref="Hebrews 9:22" data-verse="And almost all things are by the law purged with blood; and without shedding of blood is no remission.">Heb. 9:22</span>. The difference was not the quality of the gift but the nature of it — and the faith behind it.</span>
+            </div>
+        </div>
+        <div class="day-card c-blue">
+            <div class="day-badge"><span class="day-pill">vv. 6–7</span><span class="verse-ref">God Warns Cain</span></div>
+            <p class="day-title">"Sin Lieth at the Door" — Grace Before Judgment</p>
+            <div class="verse-text">
+                <p><span class="vn">6</span>And the LORD said unto Cain, Why art thou wroth? and why is thy countenance fallen?</p>
+                <p><span class="vn">7</span>If thou doest well, shalt thou not be accepted? and if thou doest not well, <span class="hl-red">sin lieth at the door.</span> And unto thee shall be his desire, and thou shalt rule over him.</p>
+                <span class="teacher-note">God gives Cain a direct warning before he acts. Sin is pictured as a crouching beast at the threshold — desiring to master him, but he can still rule over it. Cain chose not to. God never sends judgment without first sending warning. <span class="sref" data-ref="1 Peter 5:8" data-verse="Be sober, be vigilant; because your adversary the devil, as a roaring lion, walketh about, seeking whom he may devour:">1 Pet. 5:8</span></span>
+            </div>
+        </div>
+        <div class="section-divider"><div class="divider-line"></div><span class="divider-label">The First Murder</span><div class="divider-line right"></div></div>
+        <div class="day-card c-red-key">
+            <div class="day-badge"><span class="day-pill">v. 8</span><span class="verse-ref">Cain Rises Against Abel</span></div>
+            <p class="day-title">The World's First Murder — Brother Against Brother</p>
+            <div class="verse-text">
+                <p><span class="vn">8</span>And Cain talked with Abel his brother: and it came to pass, when they were in the field, <span class="hl-red">that Cain rose up against Abel his brother, and slew him.</span></p>
+                <span class="teacher-note">The first death in human history is not natural — it is murder. And the victim is a righteous man killed by a religious man whose worship was rejected. <span class="sref" data-ref="Matthew 23:35" data-verse="That upon you may come all the righteous blood shed upon the earth, from the blood of righteous Abel unto the blood of Zacharias son of Barachias, whom ye slew between the temple and the altar.">Matt. 23:35</span> — Jesus names Abel as the first of a long line of righteous martyrs.</span>
+            </div>
+        </div>
+        <div class="day-card c-red">
+            <div class="day-badge"><span class="day-pill">vv. 9–12</span><span class="verse-ref">God's Judgment — The Blood Cries Out</span></div>
+            <p class="day-title">"Am I My Brother's Keeper?" — The Voice of Blood</p>
+            <div class="verse-text">
+                <p><span class="vn">9</span>And the LORD said unto Cain, Where is Abel thy brother? And he said, <span class="hl-red">I know not: Am I my brother's keeper?</span></p>
+                <p><span class="vn">10</span>And he said, What hast thou done? <span class="hl-gold">the voice of thy brother's blood crieth unto me from the ground.</span></p>
+                <p><span class="vn">11</span>And now art thou cursed from the earth, which hath opened her mouth to receive thy brother's blood from thy hand;</p>
+                <p><span class="vn">12</span>When thou tillest the ground, it shall not henceforth yield unto thee her strength; <span class="hl-red">a fugitive and a vagabond shalt thou be in the earth.</span></p>
+                <span class="teacher-note">Cain lies to God as Adam hid from God. But the blood itself is a witness — <span class="sref" data-ref="Hebrews 12:24" data-verse="And to Jesus the mediator of the new covenant, and to the blood of sprinkling, that speaketh better things than that of Abel.">Heb. 12:24</span> — the blood of Jesus speaketh better things than that of Abel. Abel's blood cried for vengeance; Christ's blood speaks peace.</span>
+            </div>
+            <button class="xref-btn" onclick="openModal('modal-heb114')">✦ &nbsp; Hebrews 11:4 — He Being Dead Yet Speaketh</button>
+        </div>
+        <div class="day-card c-red">
+            <div class="day-badge"><span class="day-pill">vv. 13–16</span><span class="verse-ref">Cain's Punishment — Departure from God's Presence</span></div>
+            <p class="day-title">Cain Went Out from the Presence of the LORD</p>
+            <div class="verse-text">
+                <p><span class="vn">13</span>And Cain said unto the LORD, My punishment is greater than I can bear.</p>
+                <p><span class="vn">14</span>Behold, thou hast driven me out this day from the face of the earth; and from thy face shall I be hid; and I shall be a fugitive and a vagabond in the earth; and it shall come to pass, that every one that findeth me shall slay me.</p>
+                <p><span class="vn">15</span>And the LORD said unto him, Therefore whosoever slayeth Cain, vengeance shall be taken on him sevenfold. And the LORD set a mark upon Cain, lest any finding him should kill him.</p>
+                <p><span class="vn">16</span><span class="hl-red">And Cain went out from the presence of the LORD, and dwelt in the land of Nod, on the east of Eden.</span></p>
+                <span class="teacher-note">Cain's complaint is about his suffering — not about what he has done. He does not repent; he grieves his consequences. Note that even in judgment God shows restraint — setting a mark of protection on Cain. Yet the defining sentence of v16 is the saddest in the chapter: <em>he went out from the presence of the LORD.</em></span>
+            </div>
+            <button class="xref-btn" onclick="openModal('modal-1john312')">✦ &nbsp; 1 John 3:12 — Not as Cain</button>
+        </div>
+        <div class="section-divider"><div class="divider-line"></div><span class="divider-label">The Line of Cain — Civilization Without God</span><div class="divider-line right"></div></div>
+        <div class="day-card c-blue">
+            <div class="day-badge"><span class="day-pill">vv. 17–22</span><span class="verse-ref">Cain's Descendants — City, Culture, Craft</span></div>
+            <p class="day-title">Progress Without God — Building, Music, Metalwork</p>
+            <div class="verse-text">
+                <p><span class="vn">17</span>And Cain knew his wife; and she conceived, and bare Enoch: and he builded a city, and called the name of the city, after the name of his son, Enoch.</p>
+                <p><span class="vn">18</span>And unto Enoch was born Irad: and Irad begat Mehujael: and Mehujael begat Methusael: and Methusael begat Lamech.</p>
+                <p><span class="vn">19</span>And Lamech took unto him two wives: the name of the one was Adah, and the name of the other Zillah.</p>
+                <p><span class="vn">20</span>And Adah bare Jabal: <span class="hl-blue">he was the father of such as dwell in tents, and of such as have cattle.</span></p>
+                <p><span class="vn">21</span>And his brother's name was Jubal: <span class="hl-blue">he was the father of all such as handle the harp and organ.</span></p>
+                <p><span class="vn">22</span>And Zillah, she also bare Tubalcain, <span class="hl-blue">an instructer of every cutting instrument of brass and iron:</span> and the sister of Tubalcain was Naamah.</p>
+                <span class="teacher-note">The line of Cain builds civilization — cities, livestock, music, metalwork. None of it is evil in itself. But all of it is constructed apart from God. Man can fill the earth with art and industry and still be walking away from the presence of the LORD.</span>
+            </div>
+        </div>
+        <div class="day-card c-red">
+            <div class="day-badge"><span class="day-pill">vv. 23–24</span><span class="verse-ref">Lamech's Boast — Violence Escalates</span></div>
+            <p class="day-title">Lamech — The Way of Cain Goes Further</p>
+            <div class="verse-text">
+                <p><span class="vn">23</span>And Lamech said unto his wives, Adah and Zillah, Hear my voice; ye wives of Lamech, hearken unto my speech: <span class="hl-red">for I have slain a man to my wounding, and a young man to my hurt.</span></p>
+                <p><span class="vn">24</span><span class="hl-red">If Cain shall be avenged sevenfold, truly Lamech seventy and sevenfold.</span></p>
+                <span class="teacher-note">Lamech takes God's promise of protection over Cain and twists it into a boast of personal vengeance. He has murdered and glories in it. This is sin unchecked — from Cain's silent deed in a field to Lamech's proud song. <span class="sref" data-ref="Romans 1:32" data-verse="Who knowing the judgment of God, that they which commit such things are worthy of death, not only do the same, but have pleasure in them that do them.">Rom. 1:32</span></span>
+            </div>
+            <button class="xref-btn" onclick="openModal('modal-jude')">✦ &nbsp; Jude 11 — The Way of Cain</button>
+        </div>
+        <div class="section-divider"><div class="divider-line"></div><span class="divider-label">The Line of Seth — Hope Restored</span><div class="divider-line right"></div></div>
+        <div class="day-card c-green-key">
+            <div class="day-badge"><span class="day-pill">vv. 25–26</span><span class="verse-ref">Seth Appointed — Men Call on the LORD</span></div>
+            <p class="day-title">"Then Began Men to Call upon the Name of the LORD"</p>
+            <div class="verse-text">
+                <p><span class="vn">25</span>And Adam knew his wife again; and she bare a son, and called his name Seth: <span class="hl-green">For God, said she, hath appointed me another seed instead of Abel, whom Cain slew.</span></p>
+                <p><span class="vn">26</span>And to Seth was born a son; and he called his name Enos: <span class="hl-gold">then began men to call upon the name of the LORD.</span></p>
+                <span class="teacher-note">Against the backdrop of Cain's city and Lamech's boast, God quietly raises up another seed. Seth — appointed in Abel's place — begins the godly line through which the promised Redeemer will come. And the mark of that line is this: they call upon the name of the LORD.</span>
+            </div>
+            <button class="xref-btn" onclick="openModal('modal-rom1013')">✦ &nbsp; Romans 10:13 — Whosoever Shall Call</button>
+        </div>
+    </div>
+    <footer>Young Adult Sunday School &nbsp;•&nbsp; Genesis Series &nbsp;•&nbsp; King James Bible<br><span style="font-size:0.88em;opacity:0.65;">Click ✦ buttons for cross-reference panels &nbsp;•&nbsp; Hover or tap gold references for verse text &nbsp;•&nbsp; Esc to close</span></footer>
+</div>
+
+<div class="verse-tooltip" id="verseTooltip"><span class="tt-ref" id="ttRef"></span><span class="tt-verse" id="ttVerse"></span></div>
+
+<div class="modal-overlay" id="modal-heb114" onclick="handleOverlayClick(event,'modal-heb114')"><div class="modal-box"><button class="modal-close" onclick="closeModal('modal-heb114')">✕</button><p class="modal-eyebrow">Cross References &nbsp;•&nbsp; Genesis 4:10</p><h2 class="modal-title">Hebrews 11:4 — He Being Dead Yet Speaketh</h2><div class="xref-entry"><p class="xref-label">Hebrews 11:4</p><p class="xref-verse">"By faith Abel offered unto God a more excellent sacrifice than Cain, by which he obtained witness that he was righteous, God testifying of his gifts: and by it he being dead yet speaketh."</p><p class="xref-note">→ The difference between the two offerings was faith. Abel's sacrifice was accepted not because it was larger or costlier, but because it was offered in faith — faith that required blood, pointing to the coming atonement. Though murdered, Abel still speaks through his faith recorded in Scripture.</p></div><div class="xref-entry"><p class="xref-label">Hebrews 12:24</p><p class="xref-verse">"And to Jesus the mediator of the new covenant, and to the blood of sprinkling, that speaketh better things than that of Abel."</p><p class="xref-note">→ Abel's blood cried out from the ground for justice and vengeance. The blood of Jesus speaks better things — it cries for mercy, for peace, for forgiveness. Both bloods speak; only one silences the accusation of the Law.</p></div><div class="xref-entry"><p class="xref-label">Romans 3:25</p><p class="xref-verse">"Whom God hath set forth to be a propitiation through faith in his blood, to declare his righteousness for the remission of sins that are past, through the forbearance of God;"</p><p class="xref-note">→ Every Old Testament blood sacrifice pointed forward to the propitiation Christ would make. Abel's faith looked forward to the same cross we look back on.</p></div><div class="modal-summary">Abel did not earn God's favour by working harder than Cain. He came God's way — by faith, with blood. The entire book of Hebrews is built on this pattern: the old sacrifices were shadows; Christ is the substance. Abel understood by faith what the Law would later codify and the cross would finally fulfil.</div></div></div>
+
+<div class="modal-overlay" id="modal-1john312" onclick="handleOverlayClick(event,'modal-1john312')"><div class="modal-box"><button class="modal-close" onclick="closeModal('modal-1john312')">✕</button><p class="modal-eyebrow">Cross References &nbsp;•&nbsp; Genesis 4:16</p><h2 class="modal-title">1 John 3:12 — Not as Cain</h2><div class="xref-entry"><p class="xref-label">1 John 3:11–12</p><p class="xref-verse">"For this is the message that ye heard from the beginning, that we should love one another. Not as Cain, who was of that wicked one, and slew his brother. And wherefore slew he him? Because his own works were evil, and his brother's righteous."</p><p class="xref-note">→ John names the root of Cain's murder: his works were evil and his brother's were righteous. Righteousness in another does not produce love in a corrupt heart — it produces hatred. This is the spirit that has always killed the prophets.</p></div><div class="xref-entry"><p class="xref-label">1 John 3:15</p><p class="xref-verse">"Whosoever hateth his brother is a murderer: and ye know that no murderer hath eternal life abiding in him."</p><p class="xref-note">→ John draws the line from Cain to the heart. Murder did not begin in the field — it began with the hatred before it.</p></div><div class="xref-entry"><p class="xref-label">John 8:44</p><p class="xref-verse">"Ye are of your father the devil, and the lusts of your father ye will do. He was a murderer from the beginning, and abode not in the truth, because there is no truth in him."</p><p class="xref-note">→ The spirit behind Cain's act is identified: the devil was a murderer from the beginning. Cain, John says in 1 John 3:12, "was of that wicked one."</p></div><div class="modal-summary">Cain went out from the presence of the LORD — the saddest verse of the chapter. His legacy is not only the first murder but a pattern John warns the church against: religious performance without genuine faith, and hatred of the righteous because their righteousness is a rebuke to our own evil works.</div></div></div>
+
+<div class="modal-overlay" id="modal-jude" onclick="handleOverlayClick(event,'modal-jude')"><div class="modal-box"><button class="modal-close" onclick="closeModal('modal-jude')">✕</button><p class="modal-eyebrow">Cross References &nbsp;•&nbsp; Genesis 4:24</p><h2 class="modal-title">Jude 11 — The Way of Cain</h2><div class="xref-entry"><p class="xref-label">Jude 10–11</p><p class="xref-verse">"But these speak evil of those things which they know not: but what they know naturally, as brute beasts, in those things they corrupt themselves. Woe unto them! for they have gone in the way of Cain, and ran greedily after the error of Balaam for reward, and perished in the gainsaying of Core."</p><p class="xref-note">→ Jude uses "the way of Cain" as a defined category of apostasy — approaching God on your own terms, rejecting the blood, hating the righteous, and ultimately being driven from God's presence. Lamech's boast in v24 is the fruit of what Cain's way produces across generations.</p></div><div class="xref-entry"><p class="xref-label">Compare: Matthew 18:21–22</p><p class="xref-verse">"Then came Peter to him, and said, Lord, how oft shall my brother sin against me, and I forgive him? till seven times? Jesus saith unto him, I say not unto thee, Until seven times: but, Until seventy times seven."</p><p class="xref-note">→ Jesus directly inverts Lamech's boast. Lamech: avenge seventy and sevenfold. Christ: forgive seventy times seven. The way of Cain multiplies vengeance; the way of Christ multiplies forgiveness.</p></div><div class="modal-summary">The way of Cain is the pattern of all religion that approaches God on its own terms, scorns the blood, hates the righteousness of others, and is driven further from God's presence. Jude warns the church that this spirit appears among false teachers in every age.</div></div></div>
+
+<div class="modal-overlay" id="modal-rom1013" onclick="handleOverlayClick(event,'modal-rom1013')"><div class="modal-box"><button class="modal-close" onclick="closeModal('modal-rom1013')">✕</button><p class="modal-eyebrow">Cross References &nbsp;•&nbsp; Genesis 4:26</p><h2 class="modal-title">Romans 10:13 — Whosoever Shall Call upon the Name of the Lord</h2><div class="xref-entry"><p class="xref-label">Romans 10:13</p><p class="xref-verse">"For whosoever shall call upon the name of the Lord shall be saved."</p><p class="xref-note">→ What began at Seth's generation — calling upon the name of the LORD — is still the only way of salvation. The promise in Genesis 4:26 finds its fullest declaration here in Paul's letter to Rome.</p></div><div class="xref-entry"><p class="xref-label">Romans 10:9–10</p><p class="xref-verse">"That if thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God hath raised him from the dead, thou shalt be saved. For with the heart man believeth unto righteousness; and with the mouth confession is made unto salvation."</p><p class="xref-note">→ Calling upon the name of the Lord flows from a heart that believes and a mouth that confesses. The same faith Abel had, Seth's generation expressed publicly in calling on the LORD.</p></div><div class="xref-entry"><p class="xref-label">Joel 2:32</p><p class="xref-verse">"And it shall come to pass, that whosoever shall call on the name of the LORD shall be delivered: for in mount Zion and in Jerusalem shall be deliverance, as the LORD hath said, and in the remnant whom the LORD shall call."</p><p class="xref-note">→ This promise spans both Testaments — Joel, Romans 10:13, and Acts 2:21 all repeat it. What Seth's generation began, the Church continues.</p></div><div class="xref-entry"><p class="xref-label">Acts 2:21</p><p class="xref-verse">"And it shall come to pass, that whosoever shall call on the name of the Lord shall be saved."</p><p class="xref-note">→ Peter quotes Joel on the Day of Pentecost — the same promise first glimpsed in Genesis 4:26 is now proclaimed to all nations. The door has always been the same: call upon the LORD.</p></div><div class="modal-summary">Genesis 4 ends not with Lamech's boast but with a quiet, eternal answer: men began to call upon the name of the LORD. Against every city Cain built and every song Lamech sang of blood, God was raising up a people who would simply call on Him. That calling — by faith, upon His name — is still the only way of salvation today.</div></div></div>
+
+<script>
+    function openModal(id){const el=document.getElementById(id);if(el){el.classList.add('open');document.body.style.overflow='hidden'}}
+    function closeModal(id){const el=document.getElementById(id);if(el){el.classList.remove('open');document.body.style.overflow=''}}
+    function handleOverlayClick(e,id){if(e.target===e.currentTarget)closeModal(id)}
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.querySelectorAll('.modal-overlay.open').forEach(el=>el.classList.remove('open'));document.body.style.overflow='';hideTooltip()}});
+    const tooltip=document.getElementById('verseTooltip'),ttRef=document.getElementById('ttRef'),ttVerse=document.getElementById('ttVerse');
+    let activeRef=null,hideTimer=null;
+    function showTooltip(el){clearTimeout(hideTimer);ttRef.textContent=el.dataset.ref;ttVerse.textContent=el.dataset.verse;tooltip.style.visibility='hidden';tooltip.classList.add('visible');const rect=el.getBoundingClientRect(),tw=tooltip.offsetWidth,th=tooltip.offsetHeight,vw=window.innerWidth,pad=12;let top=rect.top-th-pad;if(top<pad)top=rect.bottom+pad;let left=rect.left;if(left+tw>vw-pad)left=vw-tw-pad;if(left<pad)left=pad;tooltip.style.top=top+'px';tooltip.style.left=left+'px';tooltip.style.visibility='';activeRef=el}
+    function hideTooltip(){hideTimer=setTimeout(function(){tooltip.classList.remove('visible');activeRef=null},120)}
+    document.querySelectorAll('.sref').forEach(function(el){el.addEventListener('mouseenter',function(){showTooltip(el)});el.addEventListener('mouseleave',function(){hideTooltip()});el.addEventListener('click',function(e){e.stopPropagation();if(activeRef===el&&tooltip.classList.contains('visible')){hideTooltip()}else{showTooltip(el)}})});
+    tooltip.addEventListener('mouseenter',function(){clearTimeout(hideTimer)});
+    tooltip.addEventListener('mouseleave',function(){hideTooltip()});
+    document.addEventListener('click',function(){hideTooltip()});
+</script>
+</body>
+</html>
