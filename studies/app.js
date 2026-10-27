@@ -98,27 +98,32 @@
   const isItalic = l => /^\s*\*(?!\*)[^\n]*[^*\s]\*[.,;:!?'"’”]*\s*$/.test(l) || /^\s*\*[^*\s]\*\s*$/.test(l);
   const isBoldRef = l => /^\s*\*\*[^*]+\*\*\s*$/.test(l) && /\d/.test(l) && l.replace(/\*/g, '').trim().length < 60;
 
-  // Paragraphs of italic lines are scripture; a bold reference line just before them is its citation.
+  // Paragraphs of italic lines are scripture; a bold reference line is its citation. Some posts put
+  // the reference above the quote and some below it, so a post that ever cites below is read that way.
   // A scripture post (a chapter's text) is always shown as a quotation.
   function render(text, scripture) {
-    const paras = text.split(/\n\s*\n/).map(p => p.split('\n').filter(l => l.trim()));
+    const paras = text.split(/\n\s*\n/).map(p => p.split('\n').filter(l => l.trim())).filter(p => p.length);
+    const allItalic = ls => ls.length > 0 && ls.every(isItalic);
+    const citesBelow = paras.some((p, i) => isBoldRef(p[p.length - 1]) &&
+      (allItalic(p.slice(0, -1)) || (p.length === 1 && i > 0 && allItalic(paras[i - 1]))));
+    const quote = (cite, body) => '<blockquote class="quote">' + (cite ? `<cite>${inline(cite)}</cite>` : '') +
+      body.map(inline).join('<br>') + '</blockquote>';
     const out = [];
     for (let i = 0; i < paras.length; i++) {
       const lines = paras[i];
-      if (!lines.length) continue;
-      let cite = null, body = lines;
-      if (isBoldRef(lines[0])) {
-        cite = lines[0];
-        body = lines.slice(1);
-        if (!body.length && paras[i + 1] && paras[i + 1].length && paras[i + 1].every(isItalic)) {
-          body = paras[++i];
-        }
-      }
-      if (body.length && (scripture || body.every(isItalic))) {
-        out.push('<blockquote class="quote">' + (cite ? `<cite>${inline(cite)}</cite>` : '') +
-          body.map(inline).join('<br>') + '</blockquote>');
+      const last = lines[lines.length - 1];
+      if (citesBelow && isBoldRef(last) && allItalic(lines.slice(0, -1))) {
+        out.push(quote(last, lines.slice(0, -1)));
+      } else if (citesBelow && lines.length === 1 && isBoldRef(last) && allItalic(paras[i - 1] || [])) {
+        out.pop();
+        out.push(quote(last, paras[i - 1]));
+      } else if (isBoldRef(lines[0]) && (allItalic(lines.slice(1)) ||
+                 (lines.length === 1 && !citesBelow && allItalic(paras[i + 1] || [])))) {
+        out.push(quote(lines[0], lines.length > 1 ? lines.slice(1) : paras[++i]));
+      } else if (scripture || allItalic(lines)) {
+        out.push(quote(null, lines));
       } else {
-        out.push('<p>' + (cite ? inline(cite) + '<br>' : '') + body.map(inline).join('<br>') + '</p>');
+        out.push('<p>' + lines.map(inline).join('<br>') + '</p>');
       }
     }
     return out.join('');
