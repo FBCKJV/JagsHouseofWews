@@ -185,7 +185,7 @@
   // ---------- views ----------
   function home() {
     document.title = 'Chapter Studies — Jag\'s House of Wews';
-    setCrumbs([['Home', '#']], [['Doctrines & Teachings', '#doctrines']]);
+    setCrumbs([['Home', '#']], [['Doctrines & Teachings', '#doctrines'], ['About & tips', '#about']]);
     view.classList.add('wide');
     const total = INDEX.books.reduce((n, b) => n + b.chapters, 0);
     const done = INDEX.books.reduce((n, b) => n + studiedCount(b), 0);
@@ -246,6 +246,71 @@
       <div class="section-header"><h2>Chapters</h2></div>
       <div class="legend">${legend}</div>
       <div class="chapter-grid">${cells}</div>`;
+  }
+
+  // ---------- about these studies (text in about.md) & tips ----------
+  let ABOUT = null;
+  function loadAbout() {
+    return ABOUT ? Promise.resolve(ABOUT)
+      : fetch('about.md').then(r => r.ok ? r.text() : '').then(t => (ABOUT = t)).catch(() => '');
+  }
+
+  const TIPS = [
+    ['Jump to any chapter', 'Tap the chapter name at the top of a study (“Psalm 23 ▾”) to pick another chapter or book.'],
+    ['Prev and Next', 'The buttons at the bottom of a study walk through the whole Bible. Press and hold one to skip past chapters not yet studied.'],
+    ['Go to a chapter', 'Type a reference like “ps 23”, “1 cor 13” or “rev” in the Go to a chapter box.'],
+    ['Back button', 'Your phone’s Back button closes the chapter picker first, then steps back through the pages you came from.'],
+    ['Where you left off', 'The home page remembers the last study you opened on this device.'],
+    ['Read in the KJV app', 'Opens that chapter in the KJV Bible app in a new tab, so your place here stays put.'],
+    ['Doctrines & Teachings', 'Teachings that compare scripture with scripture, sorted by topic. Tap a verse to open it in the KJV Bible app, or open the chapter study it came from.'],
+    ['The chapter grid', 'Solid squares are series studies, dashed squares are earlier one-off studies, and dim squares are chapters not yet studied.']
+  ];
+
+  async function aboutView() {
+    document.title = 'About these studies — Jag\'s House of Wews';
+    setCrumbs([['Home', '#'], ['About & tips', '#about']]);
+    view.classList.remove('wide');
+    const text = await loadAbout();
+    if (location.hash !== '#about') return;
+    view.innerHTML = `
+      <div class="hero">
+        <h1>About &amp; Tips</h1>
+        <div class="hero-rule"><div class="hero-rule-line"></div><div class="hero-rule-diamond"></div><div class="hero-rule-line r"></div></div>
+      </div>
+      <div class="post about">${render(text)}</div>
+      <div class="section-header"><h2>Getting around</h2></div>
+      <dl class="tips">${TIPS.map(([t, d]) => `<dt>${esc(t)}</dt><dd>${esc(d)}</dd>`).join('')}</dl>`;
+  }
+
+  // First visit on this device: show the statement once. If the browser won't remember, don't nag.
+  const welcome = document.createElement('div');
+  welcome.className = 'sheet welcome';
+  welcome.hidden = true;
+  welcome.innerHTML = `<div class="sheet-backdrop" data-close></div>
+    <div class="sheet-panel" role="dialog" aria-modal="true" aria-label="About these studies">
+      <div class="post about" id="welcome-text"></div>
+      <p class="actions">
+        <button class="btn primary" type="button" data-close>Start reading</button>
+        <a class="btn" href="#about" data-tips>Tips for getting around</a>
+      </p>
+    </div>`;
+  document.body.appendChild(welcome);
+  welcome.addEventListener('click', e => {
+    if (e.target.closest('[data-close]')) { e.preventDefault(); history.back(); }
+    else if (e.target.closest('[data-tips]')) { e.preventDefault(); welcome.hidden = true; history.replaceState(null, '', '#about'); route(); }
+  });
+  window.addEventListener('popstate', () => { welcome.hidden = true; });
+
+  async function maybeWelcome() {
+    let seen;
+    try { seen = localStorage.getItem('wews_welcomed'); localStorage.setItem('wews_welcomed', '1'); } catch (e) { return; }
+    if (seen || location.hash === '#about') return;
+    const text = await loadAbout();
+    if (!text) return;
+    welcome.querySelector('#welcome-text').innerHTML = render(text);
+    welcome.hidden = false;
+    history.pushState({ welcome: true }, '', location.href);   // Back closes it
+    welcome.querySelector('[data-close].btn').focus({ preventScroll: true });
   }
 
   // ---------- doctrines & teachings ----------
@@ -648,6 +713,7 @@
       if (!INDEX) INDEX = await getJSON('data/books.json');
       if (!sheet.hidden) hideSheet();
       fab.hidden = true;
+      if (h === 'about') { await aboutView(); window.scrollTo(0, 0); return; }
       if (h === 'doctrines') { await doctrinesView(); window.scrollTo(0, 0); return; }
       const dm = h.match(/^doctrine-([a-z0-9-]+)$/);
       if (dm) { await topicView(dm[1]); window.scrollTo(0, 0); return; }
@@ -669,7 +735,7 @@
   }
 
   window.addEventListener('hashchange', route);
-  route();
+  route().then(maybeWelcome);
 
   // Offline: keep what's been opened, always prefer the network when it's there.
   if ('serviceWorker' in navigator && location.protocol === 'https:') {
