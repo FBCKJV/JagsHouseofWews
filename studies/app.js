@@ -344,7 +344,7 @@
       <div class="pass-body">
         <p class="teaching-sum">${esc(x.summary)}</p>
         ${refs ? `<div class="refs" aria-label="Scripture">${refs}</div>` : ''}
-        <div class="post">${render(x.text)}</div>
+        <div class="post" data-lazy="${x.id}"></div>
         <p class="actions">
           <a class="btn" href="#${esc(x.slug)}-${x.ch}">Open the ${esc(chapterName(x.book, x.ch))} study →</a>
           <a class="btn" href="${esc(x.link)}" target="_blank" rel="noopener">View on Telegram ↗</a>
@@ -373,11 +373,20 @@
         <h1>${esc(topic.name)}</h1>
         <p>${esc(topic.about)}</p>
       </div>
+      ${topic.timeline ? `<section class="timeline-card" aria-label="The order of events">
+        <span class="label">The order of events</span>
+        <ol class="timeline">${topic.timeline.map(step => `<li>${esc(step)}</li>`).join('')}</ol></section>` : ''}
       ${groups.length > 1 ? `<nav class="theme-chips" aria-label="Themes">${groups.map(g =>
         `<a href="#doctrine-${esc(id)}" data-theme="${slugify(g.name)}">${esc(g.name)} <span>${g.items.length}</span></a>`).join('')}</nav>` : ''}
       ${groups.map(g => `<section id="theme-${slugify(g.name)}">
         <div class="section-header"><h2>${esc(g.name)}</h2><span>${g.items.length}</span></div>
         ${g.items.map(x => teachingHTML(x, false)).join('')}</section>`).join('')}`;
+    // The full post is built when a teaching is opened, so a topic with hundreds stays quick.
+    const byId = new Map(topic.teachings.map(x => [String(x.id), x]));
+    view.querySelectorAll('details.teaching').forEach(d => d.addEventListener('toggle', () => {
+      const slot = d.open && d.querySelector('[data-lazy]');
+      if (slot && !slot.dataset.done) { slot.innerHTML = render(byId.get(slot.dataset.lazy).text); slot.dataset.done = '1'; }
+    }));
     view.querySelectorAll('[data-theme]').forEach(a => a.onclick = e => {
       e.preventDefault();
       document.getElementById('theme-' + a.dataset.theme).scrollIntoView({ behavior: 'smooth' });

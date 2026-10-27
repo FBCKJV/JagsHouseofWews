@@ -545,6 +545,32 @@ body.sheet-open { overflow: hidden; }
 }
 a.ref:hover { border-color: var(--gold-d); color: var(--gold-l); }
 
+/* A topic's order of events (End times) */
+.timeline-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 14px 16px 6px; margin: 14px 0 6px; }
+.timeline { list-style: none; counter-reset: step; margin: 6px 0 0; }
+.timeline li {
+  counter-increment: step;
+  position: relative;
+  padding: 0 0 12px 34px;
+  font-family: var(--font-read);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+}
+.timeline li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: 1px;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--bg3);
+  border: 1px solid var(--gold-d);
+  color: var(--gold);
+  font-family: var(--font-ui);
+  font-size: 11px; font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+}
+.timeline li:not(:last-child)::after { content: ''; position: absolute; left: 11px; top: 25px; bottom: 2px; width: 1px; background: var(--border); }
+
 /* ABOUT & TIPS, FIRST-VISIT WELCOME */
 .about strong { font-family: var(--font-title); font-weight: normal; font-size: 21px; color: var(--gold); }
 .welcome { align-items: center; }

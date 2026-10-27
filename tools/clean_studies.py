@@ -10,6 +10,7 @@ Reads (never edits):
   review/decisions.json                            your keep/drop choices (created if missing)
   review/corrections.json                          approved fixes: wrong verse labels, typos
   review/topics.json                               doctrine topics and the teachings filed under each
+  review/worldly.json                              posts marked as mostly politics/news/argument/harsh words
 Writes (regenerated on every run, don't hand-edit):
   studies/data/books.json          small index: every book and chapter with its status
   studies/data/books/<Book>.json   one cleaned file per book, loaded by the app on demand
@@ -17,6 +18,7 @@ Writes (regenerated on every run, don't hand-edit):
   studies/data/topics.json         doctrine topics with counts and themes
   studies/data/topics/<id>.json    the teachings filed under one topic
   review/topics_unsorted.md        teachings (verses chained from several books) not filed yet
+  review/worldly.md                the worldly posts, by book, with your keep/drop choice so far
 
 Choosing a chapter's study:
   series study   the primary pass of a series, with commentary
@@ -46,6 +48,8 @@ DECISIONS = os.path.join(ROOT, 'review', 'decisions.json')
 CORRECTIONS = os.path.join(ROOT, 'review', 'corrections.json')
 TOPICS = os.path.join(ROOT, 'review', 'topics.json')
 UNSORTED = os.path.join(ROOT, 'review', 'topics_unsorted.md')
+WORLDLY = os.path.join(ROOT, 'review', 'worldly.json')
+WORLDLY_MD = os.path.join(ROOT, 'review', 'worldly.md')
 FLAGGED = os.path.join(ROOT, 'review', 'flagged.md')
 OUT = os.path.join(ROOT, 'studies', 'data')
 MIN_CHARS = 500
@@ -173,6 +177,7 @@ def load_decisions():
     else:
         d = {}
     d.setdefault('flagged_default', 'drop')
+    d.setdefault('worldly_default', 'drop')
     d.setdefault('posts', {})
     d.setdefault('studies', {})
     return d
@@ -252,7 +257,8 @@ def write_topics(topics, posts_by_id):
         order = {th: i for i, (th, _) in enumerate(themes.most_common())}
         items.sort(key=lambda x: (x['theme'] == '', order.get(x['theme'], 999), x['date']))
         with open(os.path.join(OUT, 'topics', t['id'] + '.json'), 'w', encoding='utf-8') as f:
-            json.dump({'id': t['id'], 'name': t['name'], 'about': t.get('about', ''), 'teachings': items},
+            json.dump({'id': t['id'], 'name': t['name'], 'about': t.get('about', ''),
+                       **({'timeline': t['timeline']} if t.get('timeline') else {}), 'teachings': items},
                       f, ensure_ascii=False, separators=(',', ':'))
         index.append({'id': t['id'], 'name': t['name'], 'about': t.get('about', ''), 'count': len(items),
                       'themes': [th for th, _ in themes.most_common()]})
@@ -272,6 +278,47 @@ def write_topics(topics, posts_by_id):
     with open(UNSORTED, 'w', encoding='utf-8') as f:
         f.write(''.join(L))
     return sum(len(v) for v in filed.values()), len(unsorted)
+
+
+def load_worldly():
+    if not os.path.exists(WORLDLY):
+        return {}
+    with open(WORLDLY, encoding='utf-8') as f:
+        return {str(k): v for k, v in json.load(f).items() if not k.startswith('_')}
+
+
+def write_worldly(posts_by_id, dec):
+    """The list of posts marked worldly. With "worldly_default": "drop" in decisions.json they are
+    left out of the app entirely; mark one "keep" under "posts" to bring it back."""
+    marks = load_worldly()
+    if not marks:
+        return 0
+    choice = {str(k): v for k, v in dec['posts'].items()}
+    rows = defaultdict(list)
+    for pid, note in marks.items():
+        hit = posts_by_id.get(pid)
+        if hit:
+            rows[hit[0]].append((hit, note))
+    shown = dec['worldly_default'] != 'drop'
+    L = ['# Worldly posts\n',
+         f'\n{sum(len(v) for v in rows.values())} study posts are mostly politics, news, an argument with someone, '
+         'or harsh words. ' + ('They are shown in the app. To leave one out, mark it `"drop"`' if shown else
+         'They are left out of the app entirely (`"worldly_default": "drop"` in `review/decisions.json`). '
+         'To bring one back, mark it `"keep"`') + ' under `"posts"` in `review/decisions.json`, then rerun '
+         '`python3 tools/clean_studies.py`.\n',
+         '\nRegenerated on every run; edit `review/worldly.json` to change what is on it.\n']
+    for book in BOOKS:
+        if not rows.get(book):
+            continue
+        L.append(f'\n## {book}\n\n')
+        for (b, ch, study, p), note in sorted(rows[book], key=lambda x: (int(x[0][1]), x[0][3]['date'])):
+            link = study['link'].rsplit('/', 1)[0] + '/' + str(p['id'])
+            excerpt = re.sub(r'\s+', ' ', p['text'].replace('*', '')).strip()[:150]
+            L.append(f"- `{p['id']}` · {b} {ch} · {p['date'][:10]} · [post]({link}) · {note} · "
+                     f"{('**' + choice[str(p['id'])] + '**') if str(p['id']) in choice else 'undecided'}\n  > {excerpt}\n")
+    with open(WORLDLY_MD, 'w', encoding='utf-8') as f:
+        f.write(''.join(L))
+    return len(marks)
 
 
 def start_id(study):
@@ -295,6 +342,9 @@ def main():
     topics = load_topics()
     posts_by_id = {}                     # every post shown in the app: id -> (book, chapter, study, post)
     dec = load_decisions()
+    worldly = load_worldly() if dec['worldly_default'] == 'drop' else {}
+    every_post = {str(p['id']): (b, ch, s, p) for b, chs in src.items() for ch, passes in chs.items()
+                  for s in passes for p in s['posts']}
     post_dec = {str(k): v for k, v in dec['posts'].items()}
     study_dec = {str(k): v for k, v in dec['studies'].items()}
 
@@ -320,7 +370,8 @@ def main():
                         flagged[(book, ch)].append((p, reason, choice, study))
                         stats['flagged'] += 1
                         stats['flagged_' + ('2022-23' if p['date'][:4] in ('2022', '2023') else '2024+')] += 1
-                    keep = choice == 'keep' or (choice is None and not (reason and dec['flagged_default'] == 'drop'))
+                    keep = choice == 'keep' or (choice is None and not (reason and dec['flagged_default'] == 'drop')
+                                                and pid not in worldly)
                     if not keep:
                         stats['posts_hidden'] += 1
                         continue
@@ -401,6 +452,7 @@ def main():
 
     write_review(flagged, dec)
     n_filed, n_unsorted = write_topics(topics, posts_by_id)
+    n_worldly = write_worldly(every_post, dec)
     print(f"Books written to {os.path.relpath(OUT, ROOT)}/")
     print(f"Chapters: series {stats['chapters_series']}, with neighbor {stats['chapters_with']}, "
           f"earlier study {stats['chapters_earlier']}, not yet studied {stats['chapters_none']}")
@@ -410,6 +462,9 @@ def main():
     print(f"Corrections applied: {fixed}" + (f"; no longer matching (check these): {missed}" if missed else ''))
     print(f"Doctrine topics: {len(topics['topics'])}, teachings filed: {n_filed}; "
           f"not filed yet: {n_unsorted} (see {os.path.relpath(UNSORTED, ROOT)})")
+    if n_worldly:
+        print(f"Worldly posts: {n_worldly}, " + ('left out of the app' if dec['worldly_default'] == 'drop' else 'shown')
+              + f" (see {os.path.relpath(WORLDLY_MD, ROOT)})")
 
 
 def write_review(flagged, dec):
