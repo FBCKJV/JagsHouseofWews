@@ -23,12 +23,12 @@ Writes (regenerated on every run, don't hand-edit):
   review/worldly.md                the worldly posts, by book, with your keep/drop choice so far
 
 Choosing a chapter's study:
-  series study   the primary pass of a series, with commentary
+  series study   the newest series pass with commentary (the teaching improved over the years)
   with           series posted the chapter's text, its commentary is with a neighbor chapter
   earlier        no series study, but a one-off pass has >= MIN_CHARS of commentary in your own
                  words (quoted scripture and reference lines don't count)
   none           "Not yet studied" (scripture-only reposts are never shown as a study)
-Other passes are listed under the main study when they have >= MIN_CHARS of commentary.
+Other passes are listed under the main study, newest first, when they have >= MIN_CHARS of commentary.
 
 decisions.json:
   "posts":   {"<post id>": "keep" | "drop"}    applies to any post, flagged or not
@@ -256,10 +256,11 @@ def write_topics(topics, posts_by_id):
     index = []
     for t in topics['topics']:
         items = filed.get(t['id'], [])
-        # group by theme (the topic's main teachings first), then oldest first within a theme
+        # group by theme (the topic's main teachings first), then newest first within a theme
         themes = Counter(x['theme'] for x in items if x['theme'])
         order = {th: i for i, (th, _) in enumerate(themes.most_common())}
-        items.sort(key=lambda x: (x['theme'] == '', order.get(x['theme'], 999), x['date']))
+        items.sort(key=lambda x: x['date'], reverse=True)          # newest first within a theme
+        items.sort(key=lambda x: (x['theme'] == '', order.get(x['theme'], 999)))
         with open(os.path.join(OUT, 'topics', t['id'] + '.json'), 'w', encoding='utf-8') as f:
             json.dump({'id': t['id'], 'name': t['name'], 'about': t.get('about', ''),
                        **({'timeline': t['timeline']} if t.get('timeline') else {}),
@@ -478,16 +479,19 @@ def main():
                     return o == 'show'
                 return sum(own_words(p['text']) for p in s['posts'] if p['kind'] == 'study') >= MIN_CHARS
 
-            if primary and primary['study_chars'] > 0:
-                main_pass, status = primary, 'series'
+            # Newest first: the teaching got better over the years, so the latest series pass with
+            # commentary is the main study, and the other passes are listed newest to oldest.
+            series = [s for s in passes if s['series'] and s['study_chars'] > 0 and (s is primary or shown(s))]
+            if series:
+                main_pass, status = max(series, key=lambda s: s['date']), 'series'
             elif primary and primary.get('commentary_with'):
                 main_pass, status = primary, 'with'
             else:
                 earlier = [s for s in passes if s is not primary and not s['series'] and shown(s)]
                 if earlier:
-                    main_pass, status = max(earlier, key=lambda s: sum(
-                        own_words(p['text']) for p in s['posts'] if p['kind'] == 'study')), 'earlier'
-            others_src = [s for s in passes if s is not main_pass and shown(s)]
+                    main_pass, status = max(earlier, key=lambda s: s['date']), 'earlier'
+            others_src = sorted((s for s in passes if s is not main_pass and shown(s)),
+                                key=lambda s: s['date'], reverse=True)
 
             entry = {'status': status}
             if status == 'series' and (latest is None or main_pass['date'] >= latest['date']):

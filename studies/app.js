@@ -595,12 +595,14 @@
       posts.map(p => `<div class="post">${render(p.text, true)}</div>`).join('');
   }
 
-  function passLabel(s) {
-    const kind = s.series ? 'Series pass' : 'One-off';
-    return `<b>${kind}${s.range ? ' · ' + esc(s.range) : ''}</b><small>${esc(fmtDate(s.date))} · ${s.chars.toLocaleString()} characters of commentary</small>`;
+  // One tab per study of the chapter, newest first: "Oct 2023 · Series"
+  function studyTab(s, i, on, base) {
+    const when = new Date(s.date + 'T12:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
+    return `<a href="${base}.${i + 1}" class="study-tab${on ? ' on' : ''}" data-study="${i}"${on ? ' aria-current="true"' : ''}>
+      <b>${esc(when)}</b><small>${s.series ? 'Series' : 'One-off'}${s.range ? ' · ' + esc(s.range) : ''}</small></a>`;
   }
 
-  async function chapterView(b, ch) {
+  async function chapterView(b, ch, pick) {
     const title = chapterName(b.book, ch);
     document.title = title + ' — Chapter Studies';
     setCrumbs([['Home', '#'], [b.book, '#' + b.slug], [String(ch), `#${b.slug}-${ch}`]]);
@@ -610,9 +612,16 @@
     remember(b, ch);
 
     const [data, kjv, , lib] = await Promise.all([loadBook(b.slug), loadKJV(b.slug), loadTopics(), loadLessons()]);
-    if (location.hash !== `#${b.slug}-${ch}`) return;           // moved on while loading
+    const base = `#${b.slug}-${ch}`;
+    if (location.hash !== base && !location.hash.startsWith(base + '.')) return;   // moved on while loading
     const entry = data.studies[String(ch)] || { status: 'none' };
     const main = entry.main;
+    // every study of this chapter, newest first (the cleaner already puts the newest series pass first)
+    const studies = (main && entry.status !== 'with' ? [main] : []).concat(entry.others || [])
+      .sort((x, y) => y.date.localeCompare(x.date));
+    const home = Math.max(studies.indexOf(main), 0);             // the main study opens unless one is named
+    let current = pick ? Math.min(Math.max(pick - 1, 0), Math.max(studies.length - 1, 0)) : home;
+    const shownStudy = studies[current] || main;
     const kjvHref = kjvAppLink(b.book, ch);
 
     let tag = '', meta = '';
@@ -621,18 +630,21 @@
     else if (entry.status === 'with') tag = '<span class="tag gold">Scripture</span>';
     else tag = '<span class="tag gold">Not yet studied</span>';
     if (main) meta = `<span>Posted ${esc(fmtDate(main.date))}${main.range ? ' · ' + esc(main.range) : ''}</span>`;
+    if (studies.length > 1) meta += `<span>${studies.length} studies</span>`;
 
     const actions = `<div class="actions">
         <a class="btn primary" href="${esc(kjvHref)}" target="_blank" rel="noopener">Read in the KJV app ↗</a>
-        ${main ? `<a class="btn" href="${esc(main.link)}" target="_blank" rel="noopener">View on Telegram ↗</a>` : ''}
-        ${main && entry.status !== 'with' ? '<a class="btn" href="#commentary" data-jump>Skip to commentary ↓</a>' : ''}
+        ${shownStudy ? `<a class="btn" id="tg-link" href="${esc(shownStudy.link)}" target="_blank" rel="noopener">View on Telegram ↗</a>` : ''}
+        ${studies.length ? '<a class="btn" href="#commentary" data-jump>Skip to commentary ↓</a>' : ''}
       </div>`;
 
     let body = '';
-    if (!main) {
+    const hasKjv = !!(kjv && kjv.chapters[ch - 1]);
+    const commentary = s => renderPosts(s.posts, s, { skipScripture: hasKjv, days: true });
+    if (!main && !studies.length) {
       body += `<div class="notice"><strong>Not yet studied</strong>${esc(title)} hasn't had a study on the channel yet.</div>`;
     } else {
-      const text = kjvBlock(kjv, ch, main);
+      const text = kjvBlock(kjv, ch, main || studies[0]);
       const long = kjv && kjv.chapters[ch - 1] && kjv.chapters[ch - 1].verses.length > 30;
       if (text) {
         body += `<div class="section-header"><h2>King James Bible</h2><span>${esc(title)}</span></div>
@@ -645,9 +657,11 @@
         body += `<div class="notice"><strong>Commentary posted with ${esc(entry.with)}</strong>
           The study for ${esc(title)} was posted together with ${esc(entry.with)}.
           <div class="actions"><a class="btn" href="#${target ? target.slug : b.slug}-${wc}">Go to the ${esc(entry.with)} study →</a></div></div>`;
-      } else {
-        body += `<div class="section-header" id="commentary"><h2>Commentary</h2><span>${esc(fmtDate(main.date))}</span></div>
-          ${renderPosts(main.posts, main, { skipScripture: !!(kjv && kjv.chapters[ch - 1]), days: true })}`;
+      }
+      if (studies.length) {
+        body += `<div class="section-header" id="commentary"><h2>Commentary</h2><span id="study-date">${esc(fmtDate(shownStudy.date))}</span></div>
+          ${studies.length > 1 ? `<nav class="study-tabs" aria-label="Studies of ${esc(title)}">${studies.map((s, i) => studyTab(s, i, i === current, base)).join('')}</nav>` : ''}
+          <div id="commentary-body">${commentary(shownStudy)}</div>`;
       }
     }
     const onChapter = lib.lessons.filter(l => l.chapters.some(c => c.slug === b.slug && c.ch === ch));
@@ -656,12 +670,6 @@
       body += `<div class="section-header"><h2>Lessons on ${esc(title)}</h2><span>${onChapter.length + chPics.length}</span></div>
         ${onChapter.length ? `<div class="lesson-list">${onChapter.map(lessonCard).join('')}</div>` : ''}
         ${chPics.length ? pictureGrid(chPics) : ''}`;
-    }
-    if (entry.others && entry.others.length) {
-      body += `<div class="section-header"><h2>${main ? 'Other passes' : 'Passes'} on ${esc(title)}</h2><span>${entry.others.length}</span></div>` +
-        entry.others.map(s => `<details class="pass"><summary>${passLabel(s)}</summary>
-          <div class="pass-body"><p class="actions"><a class="btn" href="${esc(s.link)}" target="_blank" rel="noopener">View on Telegram ↗</a></p>
-          ${renderPosts(s.posts, s, { skipScripture: false, days: true })}</div></details>`).join('');
     }
 
     const prev = ch > 1 ? ch - 1 : null, next = ch < b.chapters ? ch + 1 : null;
@@ -684,6 +692,21 @@
     wirePictures(view, chPics);
     const unfold = document.getElementById('unfold');
     if (unfold) unfold.onclick = () => { document.getElementById('kjv').classList.remove('folded'); unfold.remove(); };
+    // Switching study swaps the commentary in place; the address (#Book-N.2) can be shared.
+    view.querySelectorAll('[data-study]').forEach(tab => tab.onclick = e => {
+      e.preventDefault();
+      current = +tab.dataset.study;
+      const s = studies[current];
+      history.replaceState(null, '', current === home ? base : `${base}.${current + 1}`);
+      view.querySelectorAll('[data-study]').forEach(t => {
+        t.classList.toggle('on', t === tab);
+        if (t === tab) t.setAttribute('aria-current', 'true'); else t.removeAttribute('aria-current');
+      });
+      document.getElementById('commentary-body').innerHTML = commentary(s);
+      document.getElementById('study-date').textContent = fmtDate(s.date);
+      const tg = document.getElementById('tg-link');
+      if (tg) tg.href = s.link;
+    });
     const jump = view.querySelector('[data-jump]');
     if (jump) jump.onclick = e => {
       e.preventDefault();
@@ -979,14 +1002,14 @@
       if (lm) { await lessonView(lm[1]); window.scrollTo(0, 0); return; }
       const dm = h.match(/^doctrine-([a-z0-9-]+)$/);
       if (dm) { await topicView(dm[1]); window.scrollTo(0, 0); return; }
-      const m = h.match(/^([A-Za-z0-9]+)(?:-(\d+))?$/);
+      const m = h.match(/^([A-Za-z0-9]+)(?:-(\d+)(?:\.(\d+))?)?$/);   // #Book, #Book-N, #Book-N.2 (second study)
       if (!m) { home(); }
       else {
         const b = bookBySlug(m[1]);
         const ch = m[2] ? parseInt(m[2], 10) : null;
         if (!b) home();
         else if (ch === null) bookView(b);
-        else if (ch >= 1 && ch <= b.chapters) await chapterView(b, ch);
+        else if (ch >= 1 && ch <= b.chapters) await chapterView(b, ch, m[3] ? parseInt(m[3], 10) : 0);
         else { location.hash = b.slug; return; }
       }
       window.scrollTo(0, 0);
