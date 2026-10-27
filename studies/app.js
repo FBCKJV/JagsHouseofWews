@@ -11,6 +11,8 @@
   let INDEX = null;
   const bookCache = {};
   const kjvCache = {};
+  let TOPICS = null;                     // doctrine topics index (data/topics.json), loaded when needed
+  const topicCache = {};
 
   const STATUS_TEXT = {
     S: 'Series study',
@@ -55,6 +57,36 @@
     return r.json();
   }
 
+  function loadTopics() {
+    return TOPICS ? Promise.resolve(TOPICS)
+      : getJSON('data/topics.json').then(t => (TOPICS = t)).catch(() => ({ topics: [] }));
+  }
+
+  function loadTopic(id) {
+    return topicCache[id] || (topicCache[id] = getJSON('data/topics/' + id + '.json')
+      .catch(e => { delete topicCache[id]; throw e; }));
+  }
+
+  function topicName(id) {
+    const t = TOPICS && TOPICS.topics.find(x => x.id === id);
+    return t ? t.name : null;
+  }
+
+  function filedUnder(ids) {
+    const links = (ids || []).map(id => topicName(id) && `<a href="#doctrine-${esc(id)}">${esc(topicName(id))}</a>`).filter(Boolean);
+    return links.length ? `<p class="filed">Filed under ${links.join(' · ')}</p>` : '';
+  }
+
+  // "John 3:16" -> the KJV app at that verse (it lights the verses up); links go one way only
+  function kjvRefLink(ref) {
+    const m = String(ref).match(/^(.*?)\s+(\d+)\s*[:.]\s*([\d,\-–\s]+)/);
+    if (!m) return null;
+    let name = m[1].trim().replace(/^Psalm$/i, 'Psalms');
+    const b = bookByName(name) || (parseRef(name + ' 1') || {}).book;
+    if (!b) return null;
+    return KJV_APP + '#' + b.book.split(' ').map(encodeURIComponent).join('+') + '+' + m[2] + ':' + m[3].replace(/\s+/g, '');
+  }
+
   function loadBook(slug) {
     return bookCache[slug] || (bookCache[slug] = getJSON('data/books/' + slug + '.json')
       .catch(e => { delete bookCache[slug]; throw e; }));
@@ -67,12 +99,14 @@
       .catch(() => { delete kjvCache[slug]; return null; }));
   }
 
-  function setCrumbs(parts) {
+  // The trail to this page; `aside` links sit at the right end of the bar.
+  function setCrumbs(parts, aside) {
     crumbs.innerHTML = parts.map((p, i) => {
       const last = i === parts.length - 1;
       const sep = i ? '<span class="sep">/</span>' : '';
       return sep + (last ? `<span class="here">${esc(p[0])}</span>` : `<a href="${p[1]}">${esc(p[0])}</a>`);
-    }).join('');
+    }).join('') + (aside ? '<span class="crumbs-aside">' +
+      aside.map(a => `<a href="${a[1]}">${esc(a[0])} ›</a>`).join('') + '</span>' : '');
   }
 
   // ---------- markdown (the subset extract_studies.py writes) ----------
@@ -142,6 +176,7 @@
         body += `<a class="media" href="${esc(telegramPost(study.link, p.id))}" target="_blank" rel="noopener">📷 ${what} — view on Telegram ↗</a>`;
       }
       if (p.text) body += render(p.text, p.kind === 'scripture');
+      if (body && p.topics) body += filedUnder(p.topics);
       if (body) html += `<div class="post" data-id="${p.id}">${body}</div>`;
     });
     return html;
@@ -150,7 +185,7 @@
   // ---------- views ----------
   function home() {
     document.title = 'Chapter Studies — Jag\'s House of Wews';
-    setCrumbs([['All books', '#']]);
+    setCrumbs([['Home', '#']], [['Doctrines & Teachings', '#doctrines'], ['About & tips', '#about']]);
     view.classList.add('wide');
     const total = INDEX.books.reduce((n, b) => n + b.chapters, 0);
     const done = INDEX.books.reduce((n, b) => n + studiedCount(b), 0);
@@ -177,6 +212,11 @@
           <strong>${esc(chapterName(L.book, L.chapter))}</strong><em>${esc(fmtDate(L.date))}</em></a>` : ''}
       </div>
       ${jumpBox('home-jump')}
+      <a class="doctrines-card" href="#doctrines">
+        <span class="label">Doctrines &amp; Teachings</span>
+        <strong>Teachings by topic</strong>
+        <em>Where verses from across the Bible are brought together to teach one truth: salvation, the church, the Word, the walk, prophecy and more.</em>
+      </a>
       <div class="section-header"><h2>Old Testament</h2><span>Genesis – Malachi</span></div>
       <div class="book-grid">${tiles('OT')}</div>
       <div class="section-header"><h2>New Testament</h2><span>Matthew – Revelation</span></div>
@@ -186,7 +226,7 @@
 
   function bookView(b) {
     document.title = b.book + ' — Chapter Studies';
-    setCrumbs([['All books', '#'], [b.book, '#' + b.slug]]);
+    setCrumbs([['Home', '#'], [b.book, '#' + b.slug]]);
     view.classList.add('wide');
     const n = studiedCount(b);
     const cells = [...b.status].map((s, i) => {
@@ -208,6 +248,146 @@
       <div class="chapter-grid">${cells}</div>`;
   }
 
+  // ---------- about these studies (text in about.md) & tips ----------
+  let ABOUT = null;
+  function loadAbout() {
+    return ABOUT ? Promise.resolve(ABOUT)
+      : fetch('about.md').then(r => r.ok ? r.text() : '').then(t => (ABOUT = t)).catch(() => '');
+  }
+
+  const TIPS = [
+    ['Jump to any chapter', 'Tap the chapter name at the top of a study (“Psalm 23 ▾”) to pick another chapter or book.'],
+    ['Prev and Next', 'The buttons at the bottom of a study walk through the whole Bible. Press and hold one to skip past chapters not yet studied.'],
+    ['Go to a chapter', 'Type a reference like “ps 23”, “1 cor 13” or “rev” in the Go to a chapter box.'],
+    ['Back button', 'Your phone’s Back button closes the chapter picker first, then steps back through the pages you came from.'],
+    ['Where you left off', 'The home page remembers the last study you opened on this device.'],
+    ['Read in the KJV app', 'Opens that chapter in the KJV Bible app in a new tab, so your place here stays put.'],
+    ['Doctrines & Teachings', 'Teachings that compare scripture with scripture, sorted by topic. Tap a verse to open it in the KJV Bible app, or open the chapter study it came from.'],
+    ['The chapter grid', 'Solid squares are series studies, dashed squares are earlier one-off studies, and dim squares are chapters not yet studied.']
+  ];
+
+  async function aboutView() {
+    document.title = 'About these studies — Jag\'s House of Wews';
+    setCrumbs([['Home', '#'], ['About & tips', '#about']]);
+    view.classList.remove('wide');
+    const text = await loadAbout();
+    if (location.hash !== '#about') return;
+    view.innerHTML = `
+      <div class="hero">
+        <h1>About &amp; Tips</h1>
+        <div class="hero-rule"><div class="hero-rule-line"></div><div class="hero-rule-diamond"></div><div class="hero-rule-line r"></div></div>
+      </div>
+      <div class="post about">${render(text)}</div>
+      <div class="section-header"><h2>Getting around</h2></div>
+      <dl class="tips">${TIPS.map(([t, d]) => `<dt>${esc(t)}</dt><dd>${esc(d)}</dd>`).join('')}</dl>`;
+  }
+
+  // First visit on this device: show the statement once. If the browser won't remember, don't nag.
+  const welcome = document.createElement('div');
+  welcome.className = 'sheet welcome';
+  welcome.hidden = true;
+  welcome.innerHTML = `<div class="sheet-backdrop" data-close></div>
+    <div class="sheet-panel" role="dialog" aria-modal="true" aria-label="About these studies">
+      <div class="post about" id="welcome-text"></div>
+      <p class="actions">
+        <button class="btn primary" type="button" data-close>Start reading</button>
+        <a class="btn" href="#about" data-tips>Tips for getting around</a>
+      </p>
+    </div>`;
+  document.body.appendChild(welcome);
+  welcome.addEventListener('click', e => {
+    if (e.target.closest('[data-close]')) { e.preventDefault(); history.back(); }
+    else if (e.target.closest('[data-tips]')) { e.preventDefault(); welcome.hidden = true; history.replaceState(null, '', '#about'); route(); }
+  });
+  window.addEventListener('popstate', () => { welcome.hidden = true; });
+
+  async function maybeWelcome() {
+    let seen;
+    try { seen = localStorage.getItem('wews_welcomed'); localStorage.setItem('wews_welcomed', '1'); } catch (e) { return; }
+    if (seen || location.hash === '#about') return;
+    const text = await loadAbout();
+    if (!text) return;
+    welcome.querySelector('#welcome-text').innerHTML = render(text);
+    welcome.hidden = false;
+    history.pushState({ welcome: true }, '', location.href);   // Back closes it
+    welcome.querySelector('[data-close].btn').focus({ preventScroll: true });
+  }
+
+  // ---------- doctrines & teachings ----------
+  async function doctrinesView() {
+    document.title = 'Doctrines & Teachings — Jag\'s House of Wews';
+    setCrumbs([['Home', '#'], ['Doctrines & Teachings', '#doctrines']]);
+    view.classList.add('wide');
+    const t = await loadTopics();
+    if (location.hash !== '#doctrines') return;
+    const total = t.topics.reduce((n, x) => n + x.count, 0);
+    view.innerHTML = `
+      <div class="hero">
+        <h1>Doctrines &amp; Teachings</h1>
+        <div class="hero-rule"><div class="hero-rule-line"></div><div class="hero-rule-diamond"></div><div class="hero-rule-line r"></div></div>
+        <p>Teachings where scripture is compared with scripture to set out one truth, gathered from the chapter studies and sorted by topic.</p>
+      </div>
+      <div class="topic-grid">${t.topics.filter(x => x.count).map(x => `
+        <a class="topic" href="#doctrine-${esc(x.id)}">
+          <span class="book-name">${esc(x.name)}</span>
+          <span class="topic-about">${esc(x.about)}</span>
+          <span class="book-count">${x.count} teaching${x.count === 1 ? '' : 's'}</span>
+        </a>`).join('')}</div>
+      <p class="fineprint">${total} entries. A teaching that sets out two doctrines is listed under both.</p>`;
+  }
+
+  function teachingHTML(x, open) {
+    const refs = x.refs.map(r => {
+      const href = kjvRefLink(r);
+      return href ? `<a class="ref" href="${esc(href)}" target="_blank" rel="noopener">${esc(r)}</a>` : `<span class="ref">${esc(r)}</span>`;
+    }).join('');
+    const also = x.also.map(id => topicName(id) && `<a href="#doctrine-${esc(id)}">${esc(topicName(id))}</a>`).filter(Boolean);
+    return `<details class="pass teaching" id="t${x.id}"${open ? ' open' : ''}>
+      <summary><b>${esc(x.title)}</b><small>${esc(chapterName(x.book, x.ch))} study · ${esc(fmtDate(x.date))}</small></summary>
+      <div class="pass-body">
+        <p class="teaching-sum">${esc(x.summary)}</p>
+        ${refs ? `<div class="refs" aria-label="Scripture">${refs}</div>` : ''}
+        <div class="post">${render(x.text)}</div>
+        <p class="actions">
+          <a class="btn" href="#${esc(x.slug)}-${x.ch}">Open the ${esc(chapterName(x.book, x.ch))} study →</a>
+          <a class="btn" href="${esc(x.link)}" target="_blank" rel="noopener">View on Telegram ↗</a>
+        </p>
+        ${also.length ? `<p class="filed">Also under ${also.join(' · ')}</p>` : ''}
+      </div>
+    </details>`;
+  }
+
+  async function topicView(id) {
+    const [t, topic] = await Promise.all([loadTopics(), loadTopic(id)]);
+    if (location.hash !== '#doctrine-' + id) return;
+    document.title = topic.name + ' — Doctrines & Teachings';
+    setCrumbs([['Home', '#'], ['Doctrines', '#doctrines'], [topic.name, '#doctrine-' + id]]);
+    view.classList.remove('wide');
+    const groups = [];
+    topic.teachings.forEach(x => {
+      const name = x.theme || 'Also on this topic';
+      let g = groups.find(gr => gr.name === name);
+      if (!g) groups.push(g = { name, items: [] });
+      g.items.push(x);
+    });
+    const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    view.innerHTML = `
+      <div class="hero">
+        <h1>${esc(topic.name)}</h1>
+        <div class="hero-rule"><div class="hero-rule-line"></div><div class="hero-rule-diamond"></div><div class="hero-rule-line r"></div></div>
+        <p>${esc(topic.about)}</p>
+      </div>
+      ${groups.length > 1 ? `<nav class="theme-chips" aria-label="Themes">${groups.map(g =>
+        `<a href="#doctrine-${esc(id)}" data-theme="${slugify(g.name)}">${esc(g.name)} <span>${g.items.length}</span></a>`).join('')}</nav>` : ''}
+      ${groups.map(g => `<section id="theme-${slugify(g.name)}">
+        <div class="section-header"><h2>${esc(g.name)}</h2><span>${g.items.length}</span></div>
+        ${g.items.map(x => teachingHTML(x, false)).join('')}</section>`).join('')}`;
+    view.querySelectorAll('[data-theme]').forEach(a => a.onclick = e => {
+      e.preventDefault();
+      document.getElementById('theme-' + a.dataset.theme).scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
   function kjvBlock(kjv, ch, fallbackStudy) {
     const chapter = kjv && kjv.chapters && kjv.chapters[ch - 1];
     if (chapter) {
@@ -227,13 +407,13 @@
   async function chapterView(b, ch) {
     const title = chapterName(b.book, ch);
     document.title = title + ' — Chapter Studies';
-    setCrumbs([['All books', '#'], [b.book, '#' + b.slug], [String(ch), `#${b.slug}-${ch}`]]);
+    setCrumbs([['Home', '#'], [b.book, '#' + b.slug], [String(ch), `#${b.slug}-${ch}`]]);
     view.classList.remove('wide');
     view.innerHTML = '<p class="loading">Loading ' + esc(title) + '…</p>';
     setFab(b, ch);
     remember(b, ch);
 
-    const [data, kjv] = await Promise.all([loadBook(b.slug), loadKJV(b.slug)]);
+    const [data, kjv] = await Promise.all([loadBook(b.slug), loadKJV(b.slug), loadTopics()]);
     if (location.hash !== `#${b.slug}-${ch}`) return;           // moved on while loading
     const entry = data.studies[String(ch)] || { status: 'none' };
     const main = entry.main;
@@ -533,6 +713,10 @@
       if (!INDEX) INDEX = await getJSON('data/books.json');
       if (!sheet.hidden) hideSheet();
       fab.hidden = true;
+      if (h === 'about') { await aboutView(); window.scrollTo(0, 0); return; }
+      if (h === 'doctrines') { await doctrinesView(); window.scrollTo(0, 0); return; }
+      const dm = h.match(/^doctrine-([a-z0-9-]+)$/);
+      if (dm) { await topicView(dm[1]); window.scrollTo(0, 0); return; }
       const m = h.match(/^([A-Za-z0-9]+)(?:-(\d+))?$/);
       if (!m) { home(); }
       else {
@@ -551,7 +735,7 @@
   }
 
   window.addEventListener('hashchange', route);
-  route();
+  route().then(maybeWelcome);
 
   // Offline: keep what's been opened, always prefer the network when it's there.
   if ('serviceWorker' in navigator && location.protocol === 'https:') {
