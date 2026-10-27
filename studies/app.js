@@ -393,26 +393,29 @@
       return href ? `<a class="ref" href="${esc(href)}" target="_blank" rel="noopener">${esc(r)}</a>` : `<span class="ref">${esc(r)}</span>`;
     }).join('');
     const also = x.also.map(id => topicName(id) && `<a href="#doctrine-${esc(id)}">${esc(topicName(id))}</a>`).filter(Boolean);
+    const from = x.book ? `${chapterName(x.book, x.ch)} study` : 'Standalone post';
+    const studyLinks = x.book ? `<a class="btn" href="#${esc(x.slug)}-${x.ch}">Open the ${esc(chapterName(x.book, x.ch))} study →</a>`
+      : (x.chapters || []).map(c => `<a class="btn" href="#${esc(c.slug)}-${c.ch}">${esc(chapterName(c.book, c.ch))} study →</a>`).join('');
     return `<details class="pass teaching" id="t${x.id}"${open ? ' open' : ''}>
-      <summary><b>${esc(x.title)}</b><small>${esc(chapterName(x.book, x.ch))} study · ${esc(fmtDate(x.date))}</small></summary>
+      <summary><b>${esc(x.title)}</b><small>${esc(from)} · ${esc(fmtDate(x.date))}</small></summary>
       <div class="pass-body">
         <p class="teaching-sum">${esc(x.summary)}</p>
         ${refs ? `<div class="refs" aria-label="Scripture">${refs}</div>` : ''}
         <div class="post" data-lazy="${x.id}"></div>
         <p class="actions">
-          <a class="btn" href="#${esc(x.slug)}-${x.ch}">Open the ${esc(chapterName(x.book, x.ch))} study →</a>
-          <a class="btn" href="${esc(x.link)}" target="_blank" rel="noopener">View on Telegram ↗</a>
+          ${studyLinks}
+          ${x.link ? `<a class="btn" href="${esc(x.link)}" target="_blank" rel="noopener">View on Telegram ↗</a>` : ''}
         </p>
         ${also.length ? `<p class="filed">Also under ${also.join(' · ')}</p>` : ''}
       </div>
     </details>`;
   }
 
-  async function topicView(id) {
+  async function topicView(id, openId) {
     const [t, topic, lib] = await Promise.all([loadTopics(), loadTopic(id), loadLessons()]);
     const onTopic = lib.lessons.filter(l => l.topics.includes(id));
     const pics = lib.pictures.filter(p => p.topics.includes(id));
-    if (location.hash !== '#doctrine-' + id) return;
+    if (!location.hash.startsWith('#doctrine-' + id)) return;
     document.title = topic.name + ' — Doctrines & Teachings';
     setCrumbs([['Home', '#'], ['Doctrines', '#doctrines'], [topic.name, '#doctrine-' + id]]);
     view.classList.remove('wide');
@@ -457,6 +460,12 @@
       if (slot && !slot.dataset.done) { slot.innerHTML = render(byId.get(slot.dataset.lazy).text); slot.dataset.done = '1'; }
     }));
     wirePictures(view, pics);
+    // #doctrine-salvation~123 opens that teaching (linked from a chapter's "More teaching" list)
+    const target = openId && document.getElementById('t' + openId);
+    if (target) {
+      target.open = true;
+      requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
+    }
     view.querySelectorAll('[data-theme]').forEach(a => a.onclick = e => {
       e.preventDefault();
       document.getElementById('theme-' + a.dataset.theme).scrollIntoView({ behavior: 'smooth' });
@@ -704,6 +713,12 @@
           ${studies.length > 1 ? `<nav class="study-tabs" aria-label="Studies of ${esc(title)}">${studies.map((s, i) => studyTab(s, i, i === current, base)).join('')}</nav>` : ''}
           <div id="commentary-body">${commentary(shownStudy)}</div>`;
       }
+    }
+    const moreHere = (data.more || {})[String(ch)] || [];
+    if (moreHere.length) {
+      body += `<div class="section-header"><h2>More teaching on ${esc(title)}</h2><span>${moreHere.length}</span></div>
+        <div class="lesson-list">${moreHere.map(x => `<a class="lesson-card" href="#doctrine-${esc(x.topic)}~${x.id}">
+          <span class="label">${esc(topicName(x.topic) || 'Teaching')} · ${esc(fmtDate(x.date))}</span><strong>${esc(x.title)}</strong></a>`).join('')}</div>`;
     }
     const onChapter = lib.lessons.filter(l => l.chapters.some(c => c.slug === b.slug && c.ch === ch));
     const chPics = lib.pictures.filter(p => p.chapters.some(c => c.slug === b.slug && c.ch === ch));
@@ -1041,8 +1056,8 @@
       if (h === 'pictures') { await picturesView(); window.scrollTo(0, 0); return; }
       const lm = h.match(/^lesson-([a-z0-9-]+)$/);
       if (lm) { await lessonView(lm[1]); window.scrollTo(0, 0); return; }
-      const dm = h.match(/^doctrine-([a-z0-9-]+)$/);
-      if (dm) { await topicView(dm[1]); window.scrollTo(0, 0); return; }
+      const dm = h.match(/^doctrine-([a-z0-9-]+?)(?:~(\d+))?$/);
+      if (dm) { window.scrollTo(0, 0); await topicView(dm[1], dm[2]); return; }
       const m = h.match(/^([A-Za-z0-9]+)(?:-(\d+)(?:\.(\d+))?)?$/);   // #Book, #Book-N, #Book-N.2 (second study)
       if (!m) { home(); }
       else {

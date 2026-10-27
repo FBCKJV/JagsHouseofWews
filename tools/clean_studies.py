@@ -12,7 +12,9 @@ Reads (never edits):
   review/topics.json                               doctrine topics and the teachings filed under each
   review/worldly.json                              posts marked as mostly politics/news/argument/harsh words
   review/refile.json                               posts the export filed under the wrong chapter, and
-                                                   commentary missing from the export (pasted in)
+                                                   commentary missing from the export (pasted in or read
+                                                   from the public channel)
+  review/standalone.json                           standalone teachings from the channel, filed by topic
 Writes (regenerated on every run, don't hand-edit):
   studies/data/books.json          small index: every book and chapter with its status
   studies/data/books/<Book>.json   one cleaned file per book, loaded by the app on demand
@@ -52,6 +54,7 @@ TOPICS = os.path.join(ROOT, 'review', 'topics.json')
 UNSORTED = os.path.join(ROOT, 'review', 'topics_unsorted.md')
 WORLDLY = os.path.join(ROOT, 'review', 'worldly.json')
 REFILE = os.path.join(ROOT, 'review', 'refile.json')
+STANDALONE = os.path.join(ROOT, 'review', 'standalone.json')
 WORLDLY_MD = os.path.join(ROOT, 'review', 'worldly.md')
 FLAGGED = os.path.join(ROOT, 'review', 'flagged.md')
 OUT = os.path.join(ROOT, 'studies', 'data')
@@ -253,6 +256,21 @@ def write_topics(topics, posts_by_id):
                     else study['link'].rsplit('/', 1)[0] + '/' + str(p['id']),
                     'refs': references(p['text']), 'also': [t for t in a['topics'] if t != tid and t in names],
                     'text': p['text']})
+    # standalone teachings (not part of a chapter study): their own group under each topic
+    standalone = json.load(open(STANDALONE, encoding='utf-8'))['teachings'] if os.path.exists(STANDALONE) else []
+    for x in standalone:
+        chs = []
+        for ref in x.get('chapters', []):
+            m = re.match(r'^(.*\S)\s+(\d+)$', ref)
+            if m and m.group(1) in BOOKS:
+                chs.append({'book': m.group(1), 'slug': slug(m.group(1)), 'ch': int(m.group(2))})
+        for i, tid in enumerate(x.get('topics', [])):
+            if tid in names:
+                filed[tid].append({
+                    'id': x['id'], 'title': x['title'], 'theme': 'Standalone teachings' if i == 0 else '',
+                    'summary': x.get('summary', ''), 'date': x['date'][:10], 'book': None, 'slug': None, 'ch': None,
+                    'chapters': chs, 'link': x.get('link'), 'refs': references(x['text']) or x.get('verses', []),
+                    'also': [t for t in x['topics'] if t != tid and t in names], 'text': x['text']})
     index = []
     for t in topics['topics']:
         items = filed.get(t['id'], [])
@@ -260,7 +278,7 @@ def write_topics(topics, posts_by_id):
         themes = Counter(x['theme'] for x in items if x['theme'])
         order = {th: i for i, (th, _) in enumerate(themes.most_common())}
         items.sort(key=lambda x: x['date'], reverse=True)          # newest first within a theme
-        items.sort(key=lambda x: (x['theme'] == '', order.get(x['theme'], 999)))
+        items.sort(key=lambda x: (x['theme'] == '', x['theme'] == 'Standalone teachings', order.get(x['theme'], 999)))
         with open(os.path.join(OUT, 'topics', t['id'] + '.json'), 'w', encoding='utf-8') as f:
             json.dump({'id': t['id'], 'name': t['name'], 'about': t.get('about', ''),
                        **({'timeline': t['timeline']} if t.get('timeline') else {}),
@@ -384,6 +402,15 @@ def apply_refile(src):
                     s['posts'] = [p for p in s['posts'] if p['id'] not in ids]
                     recount(s)
                 n += len(hits)
+    for job in rf.get('attach', []):     # posts of a day's study the export left out (read from the channel)
+        dest = primary(job['to'], like={'date': job['posts'][0]['date'][:10], 'series': True,
+                                        'link': f"https://t.me/HouseOfWews2/{job['posts'][0]['id']}"})
+        have = {p['id'] for p in dest['posts']}
+        new = [{'id': x['id'], 'date': x['date'], 'kind': 'study', 'text': x['text'], 'added': True}
+               for x in job['posts'] if x['id'] not in have]
+        dest['posts'] = sorted(dest['posts'] + new, key=lambda p: (p['date'], str(p['id'])))
+        recount(dest)
+        n += len(new)
     for job in rf.get('passes', []):     # a whole pass the export missed, read from the public channel
         book, ch = split(job['to'])
         passes = src.setdefault(book, {}).setdefault(ch, [])
@@ -427,9 +454,21 @@ def main():
     latest = None                        # newest series study, for "continue where the series is"
     os.makedirs(os.path.join(OUT, 'books'), exist_ok=True)
 
+    # standalone teachings listed on the chapters they teach on ("More teaching on Romans 5")
+    more = defaultdict(lambda: defaultdict(list))
+    if os.path.exists(STANDALONE):
+        for x in json.load(open(STANDALONE, encoding='utf-8'))['teachings']:
+            for ref in x.get('chapters', []):
+                m = re.match(r'^(.*\S)\s+(\d+)$', ref)
+                if m and x.get('topics'):
+                    more[m.group(1)][m.group(2)].append({'id': x['id'], 'title': x['title'], 'date': x['date'][:10],
+                                                         'topic': x['topics'][0]})
+
     for bi, book in enumerate(BOOKS):
         chapters = src.get(book, {})
         book_out = {'book': book, 'slug': slug(book), 'chapters': CHAPTERS[bi], 'studies': {}}
+        if book in more:
+            book_out['more'] = {c: sorted(v, key=lambda x: x['date'], reverse=True) for c, v in more[book].items()}
         def clean_study(study, ch):
             posts = []
             for p in study['posts']:
