@@ -1,6 +1,6 @@
 # Worldly posts to review
 
-43 study posts are mostly politics, news, an argument with someone, or harsh words. They are still shown in the app. To hide one, add its id to `review/decisions.json` under `"posts"` as `"drop"` (or `"keep"` to mark it reviewed), then rerun `python3 tools/clean_studies.py`.
+69 study posts are mostly politics, news, an argument with someone, or harsh words. They are still shown in the app. To hide one, add its id to `review/decisions.json` under `"posts"` as `"drop"` (or `"keep"` to mark it reviewed), then rerun `python3 tools/clean_studies.py`.
 
 Regenerated on every run; edit `review/worldly.json` to change what is on it.
 
@@ -31,10 +31,70 @@ Regenerated on every run; edit `review/worldly.json` to change what is on it.
 - `11413` · Leviticus 19 · 2023-08-03 · [post](https://t.me/HouseOfWews2/11413) · argument with opponents · undecided
   > And here's the thing. These unsaved fools who are pushing this nonsense want to make it an argument about individuals. About men. Because they feel th
 
+## Deuteronomy
+
+- `13026` · Deuteronomy 12 · 2023-12-29 · [post](https://t.me/HouseOfWews2/13026) · American conservative politics · undecided
+  > This is not only instruction to the children of Israel, but to us as saved Christians. Ye shall not do after all the things that we do here this day, 
+- `13027` · Deuteronomy 12 · 2023-12-29 · [post](https://t.me/HouseOfWews2/13027) · argues with libertarian internet theologians · undecided
+  > There are Internet theologians who claim that the OT law of the newly founded Israel was libertarian. That we should as Christians be libertarian. But
+- `13039` · Deuteronomy 13 · 2023-12-30 · [post](https://t.me/HouseOfWews2/13039) · blasphemy law history; attacks Jews · undecided
+  > "According to the Harvard Law Review, “the blackletter rule was clear. Constitutional liberty entailed a right to articulate views on religion, but no
+- `13041` · Deuteronomy 13 · 2023-12-30 · [post](https://t.me/HouseOfWews2/13041) · American legal history and politics · undecided
+  > Today, many Christians are oblivious to the fact that, within my lifetime, America had laws against sodomites, blasphemy and profanity, pornography an
+- `13043` · Deuteronomy 13 · 2023-12-30 · [post](https://t.me/HouseOfWews2/13043) · right-wing politics, free speech and gun rights · undecided
+  > On topic, I see a lot of people who identify as right-wing or conservative, arguing about rights and policies, constitutionally enumerated or traditio
+- `13183` · Deuteronomy 25 · 2024-01-15 · [post](https://t.me/HouseOfWews2/13183) · attacks Jews as cheats · undecided
+  > Next is an admonition against having divers weights or differing measures. Not using varying weights and measures to dishonestly trade with others. It
+- `13184` · Deuteronomy 25 · 2024-01-15 · [post](https://t.me/HouseOfWews2/13184) · attacks Jews and Talmud over Amalek · undecided
+  > Finally, the command to remember Amalek, and to blot out their memory. To not forget what the nation of Amalek did unto them in the wilderness, and to
+- `13211` · Deuteronomy 28 · 2024-01-21 · [post](https://t.me/HouseOfWews2/13211) · America's decline and immigration · undecided
+  > 54 more verses cursing the children of Israel if they depart from God's commands than the 14 blessing them for obeying. The conditions placed on the p
+
+## Joshua
+
+- `13359` · Joshua 7 · 2024-02-10 · [post](https://t.me/HouseOfWews2/13359) · evangelical apostasy movement · undecided
+  > There is an apostasy movement happening in evangelical circles that primarily focuses on normalizing sodomites and promoting feminism as a reaction to
+
+## 1 Samuel
+
+- `13983` · 1 Samuel 12 · 2024-04-25 · [post](https://t.me/HouseOfWews2/13983) · politics and ruling elites · undecided
+  > One of the takeaways to the story of Israel, from the patriarchs, Moses and Joshua, the judges and kings, is that the means of government is incidenta
+- `13985` · 1 Samuel 12 · 2024-04-25 · [post](https://t.me/HouseOfWews2/13985) · opioid crisis and drug recovery industry · undecided
+  > This lack of leadership, and not rightly judging the fatherless and caring for the widows, has caused so many to drop off, and become castaway. The op
+
+## 1 Kings
+
+- `14556` · 1 Kings 21 · 2024-07-16 · [post](https://t.me/HouseOfWews2/14556) · allusion to assassination attempt on a leader · undecided
+  > But there was none like unto Ahab, which did sell himself to work wickedness in the sight of the Lord, whom Jezebel his wife stirred up. And he did ve
+
+## 2 Chronicles
+
+- `15240` · 2 Chronicles 31 · 2024-11-08 · [post](https://t.me/HouseOfWews2/15240) · election politics · undecided
+  > Continuing 2 Chronicles, we pick up after the massive Passover revival led by King Hezekiah. The turning towards the Lord by all the people, and their
+
+## Psalms
+
+- `17786` · Psalms 27 · 2026-08-27 · [post](https://t.me/HouseOfWews2/17786) · harsh language about lazy Christians · undecided
+  > Last night after Wednesday service, a few of the brothers, myself and our Pastor were talking, and the subject of soul-winning came up. It was part of
+
+## Proverbs
+
+- `17269` · Proverbs 22 · 2026-03-10 · [post](https://t.me/HouseOfWews2/17269) · US debt and welfare politics · undecided
+  > Continuing in Proverbs 22; the rich rule over the poor, and a borrower serves the lender. This is a truth many struggle with, especially in America to
+
+## Ecclesiastes
+
+- `17520` · Ecclesiastes 8 · 2026-05-16 · [post](https://t.me/HouseOfWews2/17520) · crime and death penalty politics · undecided
+  > Because sentence against an evil work is not executed speedily, therefore the heart of the sons of men is fully set in them to do evil. Solomon sees t
+
 ## Isaiah
 
+- `15661` · Isaiah 3 · 2025-02-09 · [post](https://t.me/HouseOfWews2/15661) · harsh language about sodomites · undecided
+  > The prophet Isaiah continues his preaching against Judah, and the judgment of the Lord that is already upon them. The Lord has taken from them the sta
 - `170` · Isaiah 53 · 2022-04-16 · [post](https://t.me/HouseOfWews2/170) · racial remarks about Black people · undecided
   > Many of us in the so-called "realist" community have used the McDonald's ice cream machine standard to show how nogs are incapable of maintaining a Wh
+- `15954` · Isaiah 58 · 2025-04-25 · [post](https://t.me/HouseOfWews2/15954) · attacks a named pastor · undecided
+  > Recently, a novice pastor in Idaho who has fallen away from sound doctrine, preached multiple sermons against this idea, that the man of God, or even 
 
 ## Jeremiah
 
@@ -42,11 +102,24 @@ Regenerated on every run; edit `review/worldly.json` to change what is on it.
   > This ties in with the study of Jeremiah. Jews, modern people calling themselves Jews, are defined by their rejection of Jesus as the Christ. Regardles
 - `11683` · Jeremiah 10 · 2023-08-23 · [post](https://t.me/HouseOfWews2/11683) · insults critics of Christmas · undecided
   > And idiots and fools who tell people that they are being tricked into worshiping some pagan God because they choose to celebrate the birth of their Lo
+- `12121` · Jeremiah 38 · 2023-09-30 · [post](https://t.me/HouseOfWews2/12121) · fear of the Jews, ADL and Zionist pastors · undecided
+  > This story has so many applications. In the lives of saved believers, we often are mocked and ridiculed for preaching the word of God and telling thos
+- `12122` · Jeremiah 38 · 2023-09-30 · [post](https://t.me/HouseOfWews2/12122) · Trump and cowardly politicians · undecided
+  > King Zedekiah's fear and double-mindedness, and his equivocating between fear of the Lord and fear of man, honestly reminds me so much of supposed lea
+- `12216` · Jeremiah 51 · 2023-10-08 · [post](https://t.me/HouseOfWews2/12216) · Israel-Gaza war and Zionist churches · undecided
+  > I am not one to ever sow division amongst the brethren. I also recommend saved Christians find a church and attend and be a blessing to those there an
 
 ## Ezekiel
 
 - `10615` · Ezekiel 16 · 2023-06-06 · [post](https://t.me/HouseOfWews2/10615) · crude slur against homosexuals · undecided
   > In Ezekiel 16, as the Lord speaks through the prophet to condemn Judah and put away the children of Israel as His beloved for her fornication, with th
+- `16422` · Ezekiel 41 · 2025-07-25 · [post](https://t.me/HouseOfWews2/16422) · famous people's deaths debated · undecided
+  > The recent deaths of famous people, from the Pope, John MacArthur, musician Ozzy Osbourne, and now professional wrestling legend, Hulk Hogan, provide 
+
+## Amos
+
+- `15639` · Amos 8 · 2025-02-05 · [post](https://t.me/HouseOfWews2/15639) · American culture and blue laws · undecided
+  > Notice that as they waxed worse, they began to see even their superficial and wrong worship of God as an inconvenience to worldly gain. "When will the
 
 ## Matthew
 
@@ -119,6 +192,15 @@ Regenerated on every run; edit `review/worldly.json` to change what is on it.
   > John 6:35-40 - The Message (MSG) <35-38> Jesus said, "I am the Bread of Life. The person who aligns with me hungers no more and thirsts no more, ever.
 - `4207` · 2 Corinthians 8 · 2022-08-05 · [post](https://t.me/HouseOfWews2/4207) · politics, libertarianism, attacks Boomers · undecided
   > You can see how the inherently selfish ideology of libertarianism and post-welfare state conservativism are as antithetical to God's word as the idea 
+- `15068` · 2 Corinthians 13 · 2024-09-30 · [post](https://t.me/HouseOfWews2/15068) · argument over accusers in a controversy · undecided
+  > "But there are 3 witnesses! So it is established!" Foolish people lacking judgment and understanding abusing this passage need to be rebuked. The law 
+- `15073` · 2 Corinthians 13 · 2024-09-30 · [post](https://t.me/HouseOfWews2/15073) · defends Pastor Anderson, insults childless critics · undecided
+  > Stole this clip to say that this is the exact reason for my stance. Not being a respecter of persons, not holding any man in more regard. I don't know
+
+## Galatians
+
+- `14778` · Galatians 5 · 2024-08-18 · [post](https://t.me/HouseOfWews2/14778) · harsh rebuke of fruit inspectors · undecided
+  > The foolish Galatians had been being led astray by Judaizers who snuck in to pay out their liberty, and to falsely teach that they were not saved unle
 
 ## 1 Thessalonians
 
