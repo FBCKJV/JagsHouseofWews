@@ -383,6 +383,19 @@ def apply_refile(src):
                     s['posts'] = [p for p in s['posts'] if p['id'] not in ids]
                     recount(s)
                 n += len(hits)
+    for job in rf.get('passes', []):     # a whole pass the export missed, read from the public channel
+        book, ch = split(job['to'])
+        passes = src.setdefault(book, {}).setdefault(ch, [])
+        first = job['posts'][0]
+        if any(p['id'] == first['id'] for s in passes for p in s['posts']):
+            continue
+        study = {'date': first['date'][:10], 'series': False, 'link': f"https://t.me/HouseOfWews2/{first['id']}",
+                 'study_chars': 0, 'primary': False,
+                 'posts': [{'id': x['id'], 'date': x['date'], 'kind': 'study', 'text': x['text'], 'added': True}
+                           for x in job['posts']]}
+        recount(study)
+        passes.append(study)
+        n += len(job['posts'])
     for i, job in enumerate(rf.get('add', [])):
         dest = primary(job['to'])
         pid = 'added-' + re.sub(r'\W+', '-', job['to'].lower()) + f'-{i}'
