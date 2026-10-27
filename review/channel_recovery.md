@@ -6,7 +6,7 @@ The export only kept posts shaped like a chapter study. The whole public channel
 |---|---|---|
 | Missed part of a chapter study | 83 | Added to that day's study (`review/refile.json` "attach") |
 | Another pass on a chapter | 11 | Added as another study tab on the chapter ("passes") |
-| Standalone teaching | 329 | 319 kept in `review/standalone.json`: under their doctrine topic ("Standalone teachings"), and on the chapters they teach on ("More teaching on …") |
+| Standalone teaching | 329 | 321 kept in `review/standalone.json`: under their doctrine topic ("Standalone teachings"), and on the chapters they teach on ("More teaching on …") |
 | Worldly | 669 | Left out |
 | Scripture only | 176 | Left out |
 | Other (others' material, AI text, promotions, one-liners) | 247 | Left out |
@@ -21,13 +21,12 @@ Proverbs 25, Psalms 46, Revelation 2, Revelation 3, Romans 10, Romans 15, Romans
 
 ## Standalone teachings by topic
 
-salvation 58, false 42, scripture 34, assurance 32, walk 25, prophecy 20, church 16, reprobate 12, godhead 9, soulwinning 9, family 9, law 8, trust 8, wisdom 7, christ-ot 7, history 6, prayer 5, creation 3, angels 3, israel 3, judgment 2, nations 1
+salvation 58, false 44, scripture 34, assurance 32, walk 25, prophecy 20, church 16, reprobate 12, godhead 9, soulwinning 9, family 9, law 8, trust 8, wisdom 7, christ-ot 7, history 6, prayer 5, creation 3, angels 3, israel 3, judgment 2, nations 1
 
 ## Left out on purpose
 
 - "Is Trump the Antichrist?": prophecy mixed with politics.
 - Duplicate teachings, where the newest copy was kept: Grace Cannot Be Earned, Fire as a parable of Hell, Faith beyond saving faith.
-- Posts that read like AI output: the sons of God are believers (15859), the Septuagint (16007), Ruckman citations (16231–16233), Cathars and Augustine (17159–17161).
 - The seven-churches series (Dec 2024), already on Revelation 2 and 3.
 
 ## Content pass: salacious and too-topical posts
@@ -52,6 +51,7 @@ One to check: the cut Christmas post (Jeremiah 10) also quoted the Jeremiah 10 p
 ## Put back by the author
 
 - The four posts on ruling the house (autumn 2024), filed under family: Ruling well his own house; Honoring parents and forgiving debts; Raising children in a separated home; The rod of correction and ruling the house with all gravity.
+- Posts the author drafted from his notes with AI and then edited, first set aside, now in and formatted (headings bolded, run-on headings split; no words changed): The sons of God are believers, never angels (15859–15861); The Septuagint myth (16007–16009); the Ruckman posts (16231–16233), added to Ruckmanism: serpent seed, the Gap Theory and the KJV; the Augustine, Pelagius and Cathars posts (17159–17161), added to Augustine, Pelagius and the persecution of separated Christians.
 - Reprobate doctrine and fear, kept whole as doctrine: The Reprobate Doctrine and the churches that reject it; The reprobate doctrine and the repent-of-sins gospel; Reprobation and the false gospel of repenting of sins; Fear is a sin: step away from what feeds it.
 
 ## Scripture corrected to the KJV
