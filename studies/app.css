@@ -80,6 +80,7 @@ a:hover { color: var(--gold-l); }
   text-decoration: none;
   flex-shrink: 0;
 }
+.hbtn.on { color: var(--gold); border-color: var(--gold-d); }
 .hbtn:hover { background: var(--bg3); color: var(--gold); border-color: var(--gold-d); }
 
 /* BREADCRUMBS: a quiet line under the header */
@@ -95,6 +96,7 @@ a:hover { color: var(--gold-l); }
   color: var(--text-m);
   min-height: 28px;
 }
+.crumbs[hidden] { display: none; }
 .crumbs a { color: var(--text-m); text-decoration: none; }
 .crumbs a:hover { color: var(--gold); }
 .crumbs .sep { padding: 0 7px; color: var(--gold-d); }
@@ -157,7 +159,7 @@ a:hover { color: var(--gold-l); }
 
 /* CARDS (like the Verse of the Day card) */
 .continue-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin-top: 10px; }
-.continue, .doctrines-card {
+.continue {
   display: block;
   background: linear-gradient(160deg, var(--bg3), var(--bg2));
   border: 1px solid var(--gold-d);
@@ -166,9 +168,9 @@ a:hover { color: var(--gold-l); }
   text-decoration: none;
   color: var(--text);
 }
-.continue:hover, .doctrines-card:hover { border-color: var(--gold); color: var(--text); }
-.continue .label::before, .doctrines-card .label::before { content: '✦ '; }
-.continue strong, .doctrines-card strong {
+.continue:hover { border-color: var(--gold); color: var(--text); }
+.continue .label::before { content: '✦ '; }
+.continue strong {
   display: block;
   font-family: var(--font-read);
   font-style: italic;
@@ -177,8 +179,19 @@ a:hover { color: var(--gold-l); }
   color: var(--text);
 }
 .continue em { font-style: normal; font-size: 13px; color: var(--text-m); }
-.doctrines-card { margin-top: 10px; }
-.doctrines-card em { display: block; margin-top: 4px; font-family: var(--font-read); font-style: normal; font-size: 15px; color: var(--text-d); line-height: 1.5; }
+
+/* TESTAMENTS: each folds away; the header line is the button */
+.testament > summary { cursor: pointer; list-style: none; user-select: none; }
+.testament > summary::-webkit-details-marker { display: none; }
+.testament > summary h2::before {
+  content: ''; display: inline-block; vertical-align: 0.12em; margin-right: 0.45em;
+  border-left: 0.36em solid var(--gold-d); border-top: 0.24em solid transparent; border-bottom: 0.24em solid transparent;
+  transition: transform 0.15s;
+}
+.testament[open] > summary h2::before { transform: rotate(90deg); }
+.testament > summary em { flex-basis: 100%; font-style: normal; font-size: 12px; color: var(--text-m); padding-left: 1.05em; }
+.testament > summary:hover h2 { color: var(--gold-t); }
+.testament:not([open]) > summary { margin-bottom: 4px; }
 
 /* BOOK BUTTONS (like the Bible app's two-column book grid) */
 .book-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
