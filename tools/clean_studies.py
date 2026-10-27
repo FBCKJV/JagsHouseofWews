@@ -258,7 +258,8 @@ def write_topics(topics, posts_by_id):
         items.sort(key=lambda x: (x['theme'] == '', order.get(x['theme'], 999), x['date']))
         with open(os.path.join(OUT, 'topics', t['id'] + '.json'), 'w', encoding='utf-8') as f:
             json.dump({'id': t['id'], 'name': t['name'], 'about': t.get('about', ''),
-                       **({'timeline': t['timeline']} if t.get('timeline') else {}), 'teachings': items},
+                       **({'timeline': t['timeline']} if t.get('timeline') else {}),
+                       **({'chart': t['chart']} if t.get('chart') else {}), 'teachings': items},
                       f, ensure_ascii=False, separators=(',', ':'))
         index.append({'id': t['id'], 'name': t['name'], 'about': t.get('about', ''), 'count': len(items),
                       'themes': [th for th, _ in themes.most_common()]})
