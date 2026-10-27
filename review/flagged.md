@@ -1,6 +1,6 @@
 # Flagged study posts
 
-75 posts flagged, 75 still undecided. Undecided posts are currently **hidden** in the app (`flagged_default` in decisions.json).
+72 posts flagged, 72 still undecided. Undecided posts are currently **hidden** in the app (`flagged_default` in decisions.json).
 
 To decide, add the post id to `review/decisions.json` under `"posts"` as `"keep"` or `"drop"`, then rerun `python3 tools/clean_studies.py`. Your choices survive a re-export.
 
@@ -13,7 +13,7 @@ This file is regenerated on every run; don't edit it.
 | Genesis | 13 |
 | Numbers | 1 |
 | Deuteronomy | 3 |
-| Judges | 3 |
+| Judges | 2 |
 | 1 Kings | 1 |
 | 2 Kings | 1 |
 | 1 Chronicles | 1 |
@@ -23,7 +23,6 @@ This file is regenerated on every run; don't edit it.
 | Ecclesiastes | 1 |
 | Isaiah | 1 |
 | Jeremiah | 2 |
-| Daniel | 2 |
 | Hosea | 1 |
 | Mark | 2 |
 | Luke | 2 |
@@ -115,11 +114,6 @@ This file is regenerated on every run; don't edit it.
 
 ## Judges
 
-### Judges 16
-
-- `11554` · 2023-08-12 · [post](https://t.me/HouseOfWews2/11554) · short aside with no teaching · undecided
-  > I think he had 7 natty dreds
-
 ### Judges 17
 
 - `13744` · 2024-03-27 · [post](https://t.me/HouseOfWews2/13744) · meme or joke ("😜") · undecided
@@ -202,15 +196,6 @@ This file is regenerated on every run; don't edit it.
 
 - `11934` · 2023-09-13 · [post](https://t.me/HouseOfWews2/11934) · aimed at critics or other people ("cope") · undecided
   > Remember! Wine in the Bible is not always alcohol, in fact it usually just means fresh or preserved juice of the vine. The lie that juice wasn't invented until …
-
-## Daniel
-
-### Daniel 6
-
-- `10947` · 2023-06-29 · [post](https://t.me/HouseOfWews2/10947) · short aside with no teaching · undecided
-  > Actually I am not done.
-- `10952` · 2023-06-30 · [post](https://t.me/HouseOfWews2/10952) · channel chatter ("I wasn't done") · undecided
-  > I said, I wasn't done.
 
 ## Hosea
 
