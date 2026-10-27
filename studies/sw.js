@@ -1,7 +1,7 @@
 /* Chapter Studies offline support. Network first, so a new export shows up on the next
    load; whatever was opened before is kept for when there's no connection.
    Only touches caches named "wews-studies-*" (other apps on this site have their own). */
-const CACHE = 'wews-studies-v1.17';
+const CACHE = 'wews-studies-v1.18';
 const SHELL = ['./', 'index.html', 'app.css', 'app.js', 'manifest.json', 'data/books.json',
   '../img/logo-96.jpg', '../img/logo-256.jpg', '../img/icon-192.png'];
 

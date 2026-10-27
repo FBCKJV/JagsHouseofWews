@@ -7,7 +7,7 @@
 
   const KJV_APP = 'https://fbckjv.app/KJVBible/';
   // Shown on the About page. Started at v1.17 (after 17 merged updates); each merged update adds one.
-  const APP_VERSION = '1.17', APP_DATE = '2026-10-27';
+  const APP_VERSION = '1.18', APP_DATE = '2026-10-27';
   const view = document.getElementById('view');
   const crumbs = document.getElementById('crumbs');
   let INDEX = null;
@@ -107,8 +107,10 @@
       .catch(() => { delete kjvCache[slug]; return null; }));
   }
 
-  // The trail to this page; `aside` links sit at the right end of the bar.
+  // The trail to this page; `aside` links sit at the right end of the bar. Home has no trail,
+  // and a chapter has its own (the "Psalm 23 ▾" bar), so those pass [] and the line is hidden.
   function setCrumbs(parts, aside) {
+    crumbs.hidden = parts.length < 2;
     crumbs.innerHTML = parts.map((p, i) => {
       const last = i === parts.length - 1;
       const sep = i ? '<span class="sep">/</span>' : '';
@@ -193,20 +195,30 @@
   // ---------- views ----------
   function home() {
     document.title = 'Chapter Studies — Jag\'s House of Wews';
-    setCrumbs([['Home', '#']]);
+    setCrumbs([]);
     view.classList.add('wide');
     const total = INDEX.books.reduce((n, b) => n + b.chapters, 0);
     const done = INDEX.books.reduce((n, b) => n + studiedCount(b), 0);
     const L = INDEX.latest;
     const last = lastOpened();
     const showLast = last && !(L && last.book.slug === L.slug && last.ch === L.chapter);
-    const tiles = t => INDEX.books.filter(b => b.testament === t).map(b => {
+    const books = t => INDEX.books.filter(b => b.testament === t);
+    const tiles = t => books(t).map(b => {
       const n = studiedCount(b), pct = Math.round(100 * n / b.chapters);
       return `<a class="book" href="#${b.slug}">
         <span class="book-name">${esc(b.book)}</span>
-        <span class="book-count">${n === b.chapters ? `All ${b.chapters} chapters` : `${n} of ${b.chapters} chapters`}</span>
+        <span class="book-count">${b.chapters === 1 ? (n ? 'One chapter' : 'Not yet studied')
+          : n === b.chapters ? `All ${b.chapters} chapters` : `${n} of ${b.chapters} chapters`}</span>
         <span class="bar"><i style="width:${pct}%"></i></span></a>`;
     }).join('');
+    const testament = (t, name, span) => {
+      const n = books(t).reduce((k, b) => k + studiedCount(b), 0);
+      const m = books(t).reduce((k, b) => k + b.chapters, 0);
+      return `<details class="testament" data-t="${t}"${isOpen(t) ? ' open' : ''}>
+        <summary class="section-header"><h2>${name}</h2><span>${span}</span>
+          <em>${n.toLocaleString()} of ${m.toLocaleString()} chapters studied</em></summary>
+        <div class="book-grid">${tiles(t)}</div></details>`;
+    };
     view.innerHTML = `
       <div class="hero">
         <img class="hero-logo" src="../img/logo-256.jpg" alt="Jag's House of Wews" width="132" height="132">
@@ -220,21 +232,18 @@
           <strong>${esc(chapterName(L.book, L.chapter))}</strong><em>${esc(fmtDate(L.date))}</em></a>` : ''}
       </div>
       ${jumpBox('home-jump')}
-      <a class="doctrines-card" href="#doctrines">
-        <span class="label">Doctrines &amp; Teachings</span>
-        <strong>Teachings by topic</strong>
-        <em>Where verses from across the Bible are brought together to teach one truth: salvation, the church, the Word, the walk, prophecy and more.</em>
-      </a>
-      <a class="doctrines-card" href="#lessons">
-        <span class="label">Lessons &amp; Classes</span>
-        <strong>Slides, notes and handouts</strong>
-        <em>The Doctrine class, Genesis, sermons, Baptist history, answering error, prophecy, and the teaching pictures, filed by topic.</em>
-      </a>
-      <div class="section-header"><h2>Old Testament</h2><span>Genesis – Malachi</span></div>
-      <div class="book-grid">${tiles('OT')}</div>
-      <div class="section-header"><h2>New Testament</h2><span>Matthew – Revelation</span></div>
-      <div class="book-grid">${tiles('NT')}</div>`;
+      ${testament('OT', 'Old Testament', 'Genesis – Malachi')}
+      ${testament('NT', 'New Testament', 'Matthew – Revelation')}`;
+    // Each testament folds; the choice is remembered on this device.
+    view.querySelectorAll('details.testament').forEach(d => d.addEventListener('toggle', () => {
+      try { localStorage.setItem('wews_open_' + d.dataset.t, d.open ? '1' : '0'); } catch (e) {}
+    }));
     wireJump(view, hash => { location.hash = hash; });
+  }
+
+  // Testaments start open; after that they stay the way they were left.
+  function isOpen(t) {
+    try { return localStorage.getItem('wews_open_' + t) !== '0'; } catch (e) { return true; }
   }
 
   function bookView(b) {
@@ -272,7 +281,7 @@
     ['Prev and Next', 'The buttons at the bottom of a study walk through the whole Bible. Press and hold one to skip past chapters not yet studied.'],
     ['Go to a chapter', 'Type a reference like “ps 23”, “1 cor 13” or “rev” in the Go to a chapter box.'],
     ['Back button', 'Your phone’s Back button closes the chapter picker first, then steps back through the pages you came from.'],
-    ['Where you left off', 'The home page remembers the last study you opened on this device.'],
+    ['Where you left off', 'The home page remembers the last study you opened on this device. Tap Old Testament or New Testament to fold its books away.'],
     ['Read in the KJV app', 'Opens that chapter in the KJV Bible app in a new tab, so your place here stays put.'],
     ['Doctrines & Teachings', 'Teachings that compare scripture with scripture, sorted by topic. Tap a verse to open it in the KJV Bible app, or open the chapter study it came from.'],
     ['Install the app', 'On Android choose Install app from the browser menu; on iPhone use Share, then Add to Home Screen. It then opens full screen like the KJV Bible app.'],
@@ -329,7 +338,6 @@
       <div class="section-header"><h2>Getting around</h2></div>
       ${installCard()}
       <dl class="tips">${TIPS.map(([t, d]) => `<dt>${esc(t)}</dt><dd>${esc(d)}</dd>`).join('')}</dl>
-      <p class="fineprint"><a href="../">The older teaching portal</a> still has the Romans and Genesis class series.</p>
       <p class="fineprint version">Version ${APP_VERSION} · ${esc(fmtDate(APP_DATE))}</p>`;
     wireInstall();
   }
@@ -556,9 +564,7 @@
         <div class="section-header"><h2>${esc(s.name)}</h2><span>${s.items.length}</span></div>
         ${s.about ? `<p class="shelf-about">${esc(s.about)}</p>` : ''}
         <div class="lesson-list">${s.items.map(lessonCard).join('')}</div></section>`).join('')}
-      ${lib.pictures.length ? `<a class="doctrines-card" href="#pictures">
-        <span class="label">Pictures</span><strong>Teaching pictures by topic</strong>
-        <em>${lib.pictures.length} pictures and charts used in the classes and on the channel.</em></a>` : ''}`;
+`;
     view.querySelectorAll('[data-shelf]').forEach(a => a.onclick = e => {
       e.preventDefault();
       document.getElementById('shelf-' + a.dataset.shelf).scrollIntoView({ behavior: 'smooth' });
@@ -655,7 +661,7 @@
   async function chapterView(b, ch, pick) {
     const title = chapterName(b.book, ch);
     document.title = title + ' — Chapter Studies';
-    setCrumbs([['Home', '#'], [b.book, '#' + b.slug], [String(ch), `#${b.slug}-${ch}`]]);
+    setCrumbs([]);
     view.classList.remove('wide');
     view.innerHTML = '<p class="loading">Loading ' + esc(title) + '…</p>';
     setFab(b, ch);
@@ -1033,8 +1039,9 @@
   window.addEventListener('storage', e => { if (e.key === 'kjv_theme') applyTheme(theme = currentTheme()); });
 
   function markTab(h) {
-    const tab = h === 'about' ? 'about' : (h === 'doctrines' || h.startsWith('doctrine-')) ? 'doctrines'
+    const tab = h === 'about' ? '' : (h === 'doctrines' || h.startsWith('doctrine-')) ? 'doctrines'
       : (h === 'lessons' || h === 'pictures' || h.startsWith('lesson-')) ? 'lessons' : 'books';
+    document.getElementById('about-btn').classList.toggle('on', h === 'about');
     document.querySelectorAll('#tabbar .tab[data-tab]').forEach(a => {
       a.classList.toggle('on', a.dataset.tab === tab);
       if (a.dataset.tab === tab) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
@@ -1075,6 +1082,7 @@
     }
   }
 
+  document.getElementById('foot-version').textContent = 'v' + APP_VERSION;
   window.addEventListener('hashchange', route);
   route().then(maybeWelcome);
 
