@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/icon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <title>Jag's House of Wews — KJV Study Portal</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
 <style>
@@ -62,6 +65,15 @@
     bottom: 0; left: 0; right: 0;
     height: 2px;
     background: linear-gradient(90deg, transparent, var(--red), var(--gold), var(--red), transparent);
+  }
+
+  .logo-img {
+    width: 72px;
+    height: 72px;
+    border-radius: 14px;
+    flex-shrink: 0;
+    object-fit: cover;
+    box-shadow: 0 0 14px var(--red-glow);
   }
 
   .logo-heart {
@@ -597,6 +609,7 @@
 
   @media (max-width: 600px) {
     .site-header { padding: 0 16px; }
+    .logo-img { width: 56px; height: 56px; border-radius: 11px; }
     .nav-tabs { padding: 0 8px; }
     .main { padding: 24px 16px; }
     .dashboard-hero h2 { font-size: 36px; }
@@ -608,12 +621,7 @@
 
 <!-- HEADER -->
 <header class="site-header">
-  <div class="logo-heart">
-    <svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
-      <path d="M50 80 C50 80 10 52 10 28 C10 14 22 5 35 10 C41 13 47 18 50 23 C53 18 59 13 65 10 C78 5 90 14 90 28 C90 52 50 80 50 80Z" fill="none" stroke="#c0271f" stroke-width="6"/>
-    </svg>
-    <span class="logo-rooster">🐓</span>
-  </div>
+  <img class="logo-img" src="img/logo-256.jpg" alt="Jag's House of Wews" width="72" height="72">
   <div class="site-title">
     <span class="jags">JAG'S</span>
     <h1>HOUSE <span>OF</span> WEWS</h1>
@@ -654,7 +662,7 @@
 
     <div class="card-grid">
       <div class="section-card" onclick="location.href='studies/'">
-        <span class="card-icon">🐓</span>
+        <span class="card-icon"><img src="img/logo-96.jpg" alt="" width="40" height="40" style="border-radius:8px;display:block"></span>
         <div class="card-title">Chapter Studies</div>
         <div class="card-desc">Every chapter studied on the House of Wews channel, book by book. The KJV text, the commentary and cross-references, in posting order.</div>
         <span class="card-count">GENESIS TO REVELATION</span>
