@@ -1,6 +1,6 @@
-# Worldly posts to review
+# Worldly posts
 
-69 study posts are mostly politics, news, an argument with someone, or harsh words. They are still shown in the app. To hide one, add its id to `review/decisions.json` under `"posts"` as `"drop"` (or `"keep"` to mark it reviewed), then rerun `python3 tools/clean_studies.py`.
+69 study posts are mostly politics, news, an argument with someone, or harsh words. They are left out of the app entirely (`"worldly_default": "drop"` in `review/decisions.json`). To bring one back, mark it `"keep"` under `"posts"` in `review/decisions.json`, then rerun `python3 tools/clean_studies.py`.
 
 Regenerated on every run; edit `review/worldly.json` to change what is on it.
 

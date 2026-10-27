@@ -373,6 +373,9 @@
         <h1>${esc(topic.name)}</h1>
         <p>${esc(topic.about)}</p>
       </div>
+      ${topic.timeline ? `<section class="timeline-card" aria-label="The order of events">
+        <span class="label">The order of events</span>
+        <ol class="timeline">${topic.timeline.map(step => `<li>${esc(step)}</li>`).join('')}</ol></section>` : ''}
       ${groups.length > 1 ? `<nav class="theme-chips" aria-label="Themes">${groups.map(g =>
         `<a href="#doctrine-${esc(id)}" data-theme="${slugify(g.name)}">${esc(g.name)} <span>${g.items.length}</span></a>`).join('')}</nav>` : ''}
       ${groups.map(g => `<section id="theme-${slugify(g.name)}">
