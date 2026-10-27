@@ -201,6 +201,7 @@
     }).join('');
     view.innerHTML = `
       <div class="hero">
+        <img class="hero-logo" src="../img/logo-256.jpg" alt="Jag's House of Wews" width="132" height="132">
         <h1>Chapter Studies</h1>
         <p>${done.toLocaleString()} of ${total.toLocaleString()} chapters studied, Genesis to Revelation. Pick a book, then a chapter.</p>
       </div>
