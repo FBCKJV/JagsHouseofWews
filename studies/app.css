@@ -412,6 +412,125 @@ details.pass .pass-body { padding: 6px 22px 18px; border-top: 1px solid var(--bo
 .pager a { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 0.1em; text-decoration: none; }
 .pager .st-none-link { color: var(--text-dim); }
 
+/* STICKY CHAPTER BAR (tap for the chapter picker, like the KJV app's top bar) */
+.readbar {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  margin: -40px -32px 24px;
+  padding: 10px 16px;
+  background: rgba(26,24,22,0.94);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+}
+.readbar-loc {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 4px 14px;
+  cursor: pointer;
+}
+.readbar-loc:hover, .readbar-loc:focus-visible { border-color: var(--border); color: var(--gold-light); outline: none; }
+.readbar-loc span { font-size: 14px; color: var(--red); }
+
+/* CHAPTER PICKER SHEET */
+.sheet { position: fixed; inset: 0; z-index: 50; display: flex; align-items: flex-end; justify-content: center; }
+.sheet[hidden] { display: none; }
+.sheet-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
+.sheet-panel {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: var(--dark-2);
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  padding: 18px max(20px, env(safe-area-inset-right, 0px)) calc(24px + env(safe-area-inset-bottom, 0px)) max(20px, env(safe-area-inset-left, 0px));
+  box-shadow: 0 -12px 40px rgba(0,0,0,0.5);
+}
+.sheet-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.sheet-head h2 { font-family: 'Bebas Neue', sans-serif; font-weight: normal; font-size: 30px; letter-spacing: 0.08em; color: var(--cream); }
+.sheet-x { background: none; border: 1px solid var(--border); color: var(--text-dim); width: 36px; height: 36px; border-radius: 2px; cursor: pointer; font-size: 16px; }
+.sheet-x:hover { color: var(--gold); border-color: var(--gold); }
+#sheet-book {
+  width: 100%;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 16px;
+  color: var(--cream);
+  background: var(--dark-3);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+}
+.sheet-grid { margin-bottom: 20px; }
+.ch.cur { outline: 2px solid var(--red); outline-offset: 2px; }
+body.sheet-open { overflow: hidden; }
+
+/* FLOATING PREV / NEXT (like the KJV app's reader) */
+.float-nav {
+  position: fixed;
+  left: 0; right: 0;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  z-index: 30;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 max(16px, env(safe-area-inset-left, 0px)) 0 max(16px, env(safe-area-inset-right, 0px));
+  pointer-events: none;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.float-nav[hidden] { display: none; }
+.rfloat {
+  pointer-events: auto;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.12em;
+  color: var(--cream);
+  text-decoration: none;
+  background: rgba(36,34,32,0.95);
+  border: 1px solid rgba(212,168,67,0.4);
+  border-radius: 22px;
+  padding: 10px 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+.rfloat:hover { color: var(--gold-light); border-color: var(--gold); }
+.rfloat[hidden] { visibility: hidden; display: inline-block; }
+.rfloat span { color: var(--red); }
+.main:has(.readbar) { padding-bottom: 110px; }
+
+/* QUICK JUMP */
+.jump { margin: 24px 0 8px; }
+.jump-row { display: flex; gap: 8px; }
+.jump input {
+  flex: 1;
+  min-width: 0;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 17px;
+  color: var(--cream);
+  background: var(--dark-3);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 10px 14px;
+}
+.jump input:focus { outline: none; border-color: var(--gold); }
+.jump input::placeholder { color: var(--text-dim); font-style: italic; }
+.jump-hint { min-height: 1.4em; margin-top: 6px; font-size: 14px; color: var(--gold); font-style: italic; }
+
+.continue-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 8px; }
+.continue-row .continue { margin-top: 0; }
+
 /* FOOTER */
 .site-footer {
   border-top: 1px solid var(--border);
@@ -434,6 +553,7 @@ details.pass .pass-body { padding: 6px 22px 18px; border-top: 1px solid var(--bo
   .main { padding: 24px 16px 48px; }
   .hero h1, .page-title { font-size: 42px; }
   .chapter-head .page-title { font-size: 48px; }
+  .readbar { margin: -24px -16px 18px; }
   .book-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
   .chapter-grid { grid-template-columns: repeat(auto-fill, minmax(48px, 1fr)); gap: 6px; }
   .ch { height: 46px; font-size: 20px; }
