@@ -17,7 +17,8 @@ Writes (regenerated on every run, don't hand-edit):
 Choosing a chapter's study:
   series study   the primary pass of a series, with commentary
   with           series posted the chapter's text, its commentary is with a neighbor chapter
-  earlier        no series study, but a one-off pass has >= MIN_CHARS of commentary
+  earlier        no series study, but a one-off pass has >= MIN_CHARS of commentary in your own
+                 words (quoted scripture and reference lines don't count)
   none           "Not yet studied" (scripture-only reposts are never shown as a study)
 Other passes are listed under the main study when they have >= MIN_CHARS of commentary.
 
@@ -65,6 +66,16 @@ def slug(book):
 STRIP_HOSTS = r'(?:t\.me|telegram\.me|x\.com|twitter\.com|mobile\.twitter\.com|youtube\.com|m\.youtube\.com|youtu\.be)'
 RAW_URL = re.compile(r'(?<!\]\()(?<![\w/])(?:https?://)?(?:www\.)?' + STRIP_HOSTS + r'/[^\s)\]]*', re.I)
 ANY_URL = re.compile(r'(?<!\]\()https?://\S+|(?<![\w/.])(?:www\.)\S+', re.I)
+
+
+# A line wholly in italics or bold is a quotation; a bold "Book 1:2" line is its reference.
+QUOTE_LINE = re.compile(r'^\s*(?:\.\.\.|…)?\s*(\*\*?)(?!\s)[^*]+(?<!\s)\1[\s.,;:…]*$')
+REF_ONLY = re.compile(r'^\s*\*\*[^*]*\d[^*]*\*\*\s*$')
+
+
+def own_words(text):
+    """Length of the commentary itself, leaving out quoted scripture and reference lines."""
+    return sum(len(l) for l in text.split('\n') if l.strip() and not QUOTE_LINE.match(l) and not REF_ONLY.match(l))
 
 
 def strip_links(text):
@@ -239,7 +250,7 @@ def main():
                 if p.get('media'):
                     out['media'] = p['media']
                 posts.append(out)
-            chars = sum(len(p['text']) for p in posts if p['kind'] == 'study')
+            chars = sum(own_words(p['text']) for p in posts if p['kind'] == 'study')
             res = {'date': study['date'], 'series': study['series'], 'link': study['link'], 'chars': chars, 'posts': posts}
             r = verse_range(study)
             if r:
@@ -256,7 +267,7 @@ def main():
                 o = study_dec.get(start_id(s))
                 if o:
                     return o == 'show'
-                return s['study_chars'] >= MIN_CHARS
+                return sum(own_words(p['text']) for p in s['posts'] if p['kind'] == 'study') >= MIN_CHARS
 
             if primary and primary['study_chars'] > 0:
                 main_pass, status = primary, 'series'
@@ -265,7 +276,8 @@ def main():
             else:
                 earlier = [s for s in passes if s is not primary and not s['series'] and shown(s)]
                 if earlier:
-                    main_pass, status = max(earlier, key=lambda s: s['study_chars']), 'earlier'
+                    main_pass, status = max(earlier, key=lambda s: sum(
+                        own_words(p['text']) for p in s['posts'] if p['kind'] == 'study')), 'earlier'
             others_src = [s for s in passes if s is not main_pass and shown(s)]
 
             entry = {'status': status}
