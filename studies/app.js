@@ -67,6 +67,12 @@
       .catch(e => { delete topicCache[id]; throw e; }));
   }
 
+  let LESSONS = null;                    // lessons, slides and pictures (data/lessons.json), loaded when needed
+  function loadLessons() {
+    return LESSONS ? Promise.resolve(LESSONS)
+      : getJSON('data/lessons.json').then(l => (LESSONS = l)).catch(() => ({ shelves: [], lessons: [], pictures: [] }));
+  }
+
   function topicName(id) {
     const t = TOPICS && TOPICS.topics.find(x => x.id === id);
     return t ? t.name : null;
@@ -217,6 +223,11 @@
         <strong>Teachings by topic</strong>
         <em>Where verses from across the Bible are brought together to teach one truth: salvation, the church, the Word, the walk, prophecy and more.</em>
       </a>
+      <a class="doctrines-card" href="#lessons">
+        <span class="label">Lessons &amp; Classes</span>
+        <strong>Slides, notes and handouts</strong>
+        <em>The Doctrine class, Genesis, sermons, Baptist history, answering error, prophecy, and the teaching pictures, filed by topic.</em>
+      </a>
       <div class="section-header"><h2>Old Testament</h2><span>Genesis – Malachi</span></div>
       <div class="book-grid">${tiles('OT')}</div>
       <div class="section-header"><h2>New Testament</h2><span>Matthew – Revelation</span></div>
@@ -262,6 +273,7 @@
     ['Where you left off', 'The home page remembers the last study you opened on this device.'],
     ['Read in the KJV app', 'Opens that chapter in the KJV Bible app in a new tab, so your place here stays put.'],
     ['Doctrines & Teachings', 'Teachings that compare scripture with scripture, sorted by topic. Tap a verse to open it in the KJV Bible app, or open the chapter study it came from.'],
+    ['Lessons & Classes', 'Slides, notes and handouts from the classes. Slides open in a new tab; notes open right on the page. Tap a picture to see it full size.'],
     ['The chapter grid', 'Solid squares are series studies, dashed squares are earlier one-off studies, and dim squares are chapters not yet studied.']
   ];
 
@@ -277,7 +289,8 @@
       </div>
       <div class="post about">${render(text)}</div>
       <div class="section-header"><h2>Getting around</h2></div>
-      <dl class="tips">${TIPS.map(([t, d]) => `<dt>${esc(t)}</dt><dd>${esc(d)}</dd>`).join('')}</dl>`;
+      <dl class="tips">${TIPS.map(([t, d]) => `<dt>${esc(t)}</dt><dd>${esc(d)}</dd>`).join('')}</dl>
+      <p class="fineprint"><a href="../">The older teaching portal</a> still has the Romans and Genesis class series.</p>`;
   }
 
   // First visit on this device: show the statement once. If the browser won't remember, don't nag.
@@ -355,7 +368,9 @@
   }
 
   async function topicView(id) {
-    const [t, topic] = await Promise.all([loadTopics(), loadTopic(id)]);
+    const [t, topic, lib] = await Promise.all([loadTopics(), loadTopic(id), loadLessons()]);
+    const onTopic = lib.lessons.filter(l => l.topics.includes(id));
+    const pics = lib.pictures.filter(p => p.topics.includes(id));
     if (location.hash !== '#doctrine-' + id) return;
     document.title = topic.name + ' — Doctrines & Teachings';
     setCrumbs([['Home', '#'], ['Doctrines', '#doctrines'], [topic.name, '#doctrine-' + id]]);
@@ -384,6 +399,11 @@
           return `<li>${esc(step.step)}${refs ? `<span class="refs">${refs}</span>` : ''}</li>`;
         }).join('')}</ol>
         ${topic.chart ? `<p class="chart-link"><a href="${esc(topic.chart.url)}" target="_blank" rel="noopener">See the full chart: ${esc(topic.chart.label)} ↗</a></p>` : ''}</section>` : ''}
+      ${onTopic.length ? `<div class="section-header"><h2>Lessons on this topic</h2><span>${onTopic.length}</span></div>
+        <div class="lesson-list">${onTopic.map(lessonCard).join('')}</div>` : ''}
+      ${pics.length ? `<div class="section-header"><h2>Pictures</h2><span>${pics.length}</span></div>
+        ${pictureGrid(pics)}` : ''}
+      ${onTopic.length || pics.length ? `<div class="section-header"><h2>From the chapter studies</h2><span>${topic.teachings.length}</span></div>` : ''}
       ${groups.length > 1 ? `<nav class="theme-chips" aria-label="Themes">${groups.map(g =>
         `<a href="#doctrine-${esc(id)}" data-theme="${slugify(g.name)}">${esc(g.name)} <span>${g.items.length}</span></a>`).join('')}</nav>` : ''}
       ${groups.map(g => `<section id="theme-${slugify(g.name)}">
@@ -395,9 +415,171 @@
       const slot = d.open && d.querySelector('[data-lazy]');
       if (slot && !slot.dataset.done) { slot.innerHTML = render(byId.get(slot.dataset.lazy).text); slot.dataset.done = '1'; }
     }));
+    wirePictures(view, pics);
     view.querySelectorAll('[data-theme]').forEach(a => a.onclick = e => {
       e.preventDefault();
       document.getElementById('theme-' + a.dataset.theme).scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
+  // ---------- lessons & classes, and the teaching pictures ----------
+  const PART_VERB = { page: 'Open', pdf: 'Open', notes: 'Read' };
+
+  function lessonCard(l) {
+    const kinds = [...new Set(l.parts.map(p => p.label))].join(' · ');
+    return `<a class="lesson-card" href="#lesson-${esc(l.id)}">
+      <span class="label">${esc(kinds)}</span>
+      <strong>${esc(l.title)}</strong>
+      ${l.summary ? `<em>${esc(l.summary)}</em>` : ''}
+      ${l.by ? `<small>From ${esc(l.by)}</small>` : ''}
+    </a>`;
+  }
+
+  function refChips(refs) {
+    return refs.map(r => {
+      const href = kjvRefLink(r);
+      return href ? `<a class="ref" href="${esc(href)}" target="_blank" rel="noopener">${esc(r)}</a>` : `<span class="ref">${esc(r)}</span>`;
+    }).join('');
+  }
+
+  function pictureGrid(pics) {
+    return `<div class="pic-grid">${pics.map(p => `<button type="button" class="pic" data-pic="${esc(p.id)}" title="${esc(p.title)}">
+      <img src="${esc(p.src)}" alt="${esc(p.alt || p.title)}" loading="lazy"${p.w ? ` width="${p.w}" height="${p.h}"` : ''}>
+      <span>${esc(p.title)}</span></button>`).join('')}</div>`;
+  }
+
+  // A picture opens full size over the page; Back closes it.
+  const viewer = document.createElement('div');
+  viewer.className = 'sheet viewer';
+  viewer.hidden = true;
+  viewer.innerHTML = `<div class="sheet-backdrop" data-close></div>
+    <figure class="viewer-panel" role="dialog" aria-modal="true" aria-label="Picture">
+      <button class="sheet-x" type="button" data-close aria-label="Close">✕</button>
+      <img alt="">
+      <figcaption></figcaption>
+    </figure>`;
+  document.body.appendChild(viewer);
+  viewer.addEventListener('click', e => {
+    if (e.target.closest('[data-close]')) { e.preventDefault(); history.back(); return; }
+    const a = e.target.closest('a[href^="#"]');
+    if (a) { e.preventDefault(); viewer.hidden = true; history.replaceState(null, '', a.getAttribute('href')); route(); }
+  });
+  viewer.addEventListener('keydown', e => { if (e.key === 'Escape') history.back(); });
+  window.addEventListener('popstate', () => { viewer.hidden = true; });
+
+  function openPicture(p) {
+    viewer.querySelector('img').src = p.src;
+    viewer.querySelector('img').alt = p.alt || p.title;
+    const topics = p.topics.map(id => topicName(id) && `<a href="#doctrine-${esc(id)}">${esc(topicName(id))}</a>`).filter(Boolean);
+    viewer.querySelector('figcaption').innerHTML = `<strong>${esc(p.title)}</strong>
+      ${p.verses.length ? `<span class="refs">${refChips(p.verses)}</span>` : ''}
+      ${topics.length ? `<span class="filed">Filed under ${topics.join(' · ')}</span>` : ''}
+      <a class="btn" href="${esc(p.src)}" target="_blank" rel="noopener">Full size ↗</a>`;
+    viewer.hidden = false;
+    history.pushState({ viewer: true }, '', location.href);
+    viewer.querySelector('.sheet-x').focus({ preventScroll: true });
+  }
+
+  function wirePictures(root, pics) {
+    root.querySelectorAll('[data-pic]').forEach(btn => btn.onclick = () => {
+      const p = pics.find(x => x.id === btn.dataset.pic);
+      if (p) openPicture(p);
+    });
+  }
+
+  async function lessonsView() {
+    document.title = 'Lessons & Classes — Jag\'s House of Wews';
+    setCrumbs([['Home', '#'], ['Lessons & Classes', '#lessons']]);
+    view.classList.add('wide');
+    const [lib] = await Promise.all([loadLessons(), loadTopics()]);
+    if (location.hash !== '#lessons') return;
+    const shelves = lib.shelves.map(s => ({ ...s, items: lib.lessons.filter(l => l.shelf === s.id) })).filter(s => s.items.length);
+    view.innerHTML = `
+      <div class="hero">
+        <h1>Lessons &amp; Classes</h1>
+        <p>Slides, notes and handouts from the Sunday classes and other studies, and the teaching pictures. Each one is filed under its topics and the chapters it teaches on.</p>
+      </div>
+      <nav class="theme-chips" aria-label="Shelves">${shelves.map(s =>
+        `<a href="#lessons" data-shelf="${esc(s.id)}">${esc(s.name)} <span>${s.items.length}</span></a>`).join('')}
+        ${lib.pictures.length ? `<a href="#pictures">Pictures <span>${lib.pictures.length}</span></a>` : ''}</nav>
+      ${shelves.map(s => `<section id="shelf-${esc(s.id)}">
+        <div class="section-header"><h2>${esc(s.name)}</h2><span>${s.items.length}</span></div>
+        ${s.about ? `<p class="shelf-about">${esc(s.about)}</p>` : ''}
+        <div class="lesson-list">${s.items.map(lessonCard).join('')}</div></section>`).join('')}
+      ${lib.pictures.length ? `<a class="doctrines-card" href="#pictures">
+        <span class="label">Pictures</span><strong>Teaching pictures by topic</strong>
+        <em>${lib.pictures.length} pictures and charts used in the classes and on the channel.</em></a>` : ''}`;
+    view.querySelectorAll('[data-shelf]').forEach(a => a.onclick = e => {
+      e.preventDefault();
+      document.getElementById('shelf-' + a.dataset.shelf).scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
+  async function lessonView(id) {
+    const [lib] = await Promise.all([loadLessons(), loadTopics()]);
+    if (location.hash !== '#lesson-' + id) return;
+    const l = lib.lessons.find(x => x.id === id);
+    if (!l) { location.hash = 'lessons'; return; }
+    const shelf = lib.shelves.find(s => s.id === l.shelf) || { name: 'Lessons' };
+    document.title = l.title + ' — Lessons & Classes';
+    setCrumbs([['Home', '#'], ['Lessons', '#lessons'], [l.title, '#lesson-' + id]]);
+    view.classList.remove('wide');
+    const opens = l.parts.filter(p => p.kind !== 'notes');
+    const notes = l.parts.filter(p => p.kind === 'notes');
+    const chapters = l.chapters.map(c => `<a class="btn" href="#${esc(c.slug)}-${c.ch}">${esc(chapterName(c.book, c.ch))} study →</a>`);
+    view.innerHTML = `
+      <div class="chapter-head">
+        <span class="label">${esc(shelf.name)}</span>
+        <h1 class="page-title">${esc(l.title)}</h1>
+        ${l.by ? `<p class="by">From ${esc(l.by)}</p>` : ''}
+        ${l.summary ? `<p class="teaching-sum">${esc(l.summary)}</p>` : ''}
+        ${opens.length ? `<div class="actions">${opens.map((p, i) =>
+          `<a class="btn${i ? '' : ' primary'}" href="${esc(p.href)}" target="_blank" rel="noopener">${PART_VERB[p.kind]} the ${esc(p.label.toLowerCase())} ↗</a>`).join('')}</div>` : ''}
+        ${l.verses.length ? `<div class="refs" aria-label="Scripture">${refChips(l.verses)}</div>` : ''}
+        ${filedUnder(l.topics)}
+      </div>
+      ${notes.map((p, i) => `<details class="pass notes"${i ? '' : ' open'}>
+        <summary><b>${esc(p.label)}</b></summary>
+        <div class="pass-body"><div class="post lesson-notes" data-notes="${esc(p.href)}"></div></div>
+      </details>`).join('')}
+      ${chapters.length ? `<div class="section-header"><h2>Chapter studies</h2></div><div class="actions">${chapters.join('')}</div>` : ''}`;
+    // Notes are fetched when opened, so a lesson with a long handout stays quick.
+    view.querySelectorAll('details.notes').forEach(d => {
+      const fill = () => {
+        const slot = d.querySelector('[data-notes]');
+        if (!d.open || slot.dataset.done) return;
+        slot.dataset.done = '1';
+        slot.innerHTML = '<p class="loading">Loading…</p>';
+        fetch(slot.dataset.notes).then(r => r.ok ? r.text() : Promise.reject(r.status))
+          .then(html => { slot.innerHTML = html; })
+          .catch(() => { slot.innerHTML = '<p class="error">These notes couldn\'t be loaded. Check your connection and try again.</p>'; delete slot.dataset.done; });
+      };
+      d.addEventListener('toggle', fill);
+      fill();
+    });
+  }
+
+  async function picturesView() {
+    document.title = 'Pictures — Lessons & Classes';
+    setCrumbs([['Home', '#'], ['Lessons', '#lessons'], ['Pictures', '#pictures']]);
+    view.classList.add('wide');
+    const [lib, t] = await Promise.all([loadLessons(), loadTopics()]);
+    if (location.hash !== '#pictures') return;
+    const groups = t.topics.map(x => ({ ...x, pics: lib.pictures.filter(p => p.topics[0] === x.id) })).filter(g => g.pics.length);
+    view.innerHTML = `
+      <div class="hero">
+        <h1>Pictures</h1>
+        <p>Teaching pictures and charts, filed by topic. Tap one to see it full size.</p>
+      </div>
+      <nav class="theme-chips" aria-label="Topics">${groups.map(g =>
+        `<a href="#pictures" data-shelf="${esc(g.id)}">${esc(g.name)} <span>${g.pics.length}</span></a>`).join('')}</nav>
+      ${groups.map(g => `<section id="shelf-${esc(g.id)}">
+        <div class="section-header"><h2><a href="#doctrine-${esc(g.id)}">${esc(g.name)}</a></h2><span>${g.pics.length}</span></div>
+        ${pictureGrid(g.pics)}</section>`).join('')}`;
+    wirePictures(view, lib.pictures);
+    view.querySelectorAll('[data-shelf]').forEach(a => a.onclick = e => {
+      e.preventDefault();
+      document.getElementById('shelf-' + a.dataset.shelf).scrollIntoView({ behavior: 'smooth' });
     });
   }
 
@@ -427,7 +609,7 @@
     setFab(b, ch);
     remember(b, ch);
 
-    const [data, kjv] = await Promise.all([loadBook(b.slug), loadKJV(b.slug), loadTopics()]);
+    const [data, kjv, , lib] = await Promise.all([loadBook(b.slug), loadKJV(b.slug), loadTopics(), loadLessons()]);
     if (location.hash !== `#${b.slug}-${ch}`) return;           // moved on while loading
     const entry = data.studies[String(ch)] || { status: 'none' };
     const main = entry.main;
@@ -468,6 +650,13 @@
           ${renderPosts(main.posts, main, { skipScripture: !!(kjv && kjv.chapters[ch - 1]), days: true })}`;
       }
     }
+    const onChapter = lib.lessons.filter(l => l.chapters.some(c => c.slug === b.slug && c.ch === ch));
+    const chPics = lib.pictures.filter(p => p.chapters.some(c => c.slug === b.slug && c.ch === ch));
+    if (onChapter.length || chPics.length) {
+      body += `<div class="section-header"><h2>Lessons on ${esc(title)}</h2><span>${onChapter.length + chPics.length}</span></div>
+        ${onChapter.length ? `<div class="lesson-list">${onChapter.map(lessonCard).join('')}</div>` : ''}
+        ${chPics.length ? pictureGrid(chPics) : ''}`;
+    }
     if (entry.others && entry.others.length) {
       body += `<div class="section-header"><h2>${main ? 'Other passes' : 'Passes'} on ${esc(title)}</h2><span>${entry.others.length}</span></div>` +
         entry.others.map(s => `<details class="pass"><summary>${passLabel(s)}</summary>
@@ -492,6 +681,7 @@
       <nav class="pager">${pageLink(prev, `← ${esc(chapterName(b.book, prev))}`)}${pageLink(next, `${esc(chapterName(b.book, next))} →`)}</nav>`;
 
     document.getElementById('readbar-loc').onclick = () => openSheet(b, ch);
+    wirePictures(view, chPics);
     const unfold = document.getElementById('unfold');
     if (unfold) unfold.onclick = () => { document.getElementById('kjv').classList.remove('folded'); unfold.remove(); };
     const jump = view.querySelector('[data-jump]');
@@ -764,23 +954,29 @@
   window.addEventListener('storage', e => { if (e.key === 'kjv_theme') applyTheme(theme = currentTheme()); });
 
   function markTab(h) {
-    const tab = h === 'about' ? 'about' : (h === 'doctrines' || h.startsWith('doctrine-')) ? 'doctrines' : 'books';
+    const tab = h === 'about' ? 'about' : (h === 'doctrines' || h.startsWith('doctrine-')) ? 'doctrines'
+      : (h === 'lessons' || h === 'pictures' || h.startsWith('lesson-')) ? 'lessons' : 'books';
     document.querySelectorAll('#tabbar .tab[data-tab]').forEach(a => {
       a.classList.toggle('on', a.dataset.tab === tab);
       if (a.dataset.tab === tab) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
     });
   }
 
-  // ---------- router: (empty)  #Psalms  #Psalms-23 ----------
+  // ---------- router: (empty)  #Psalms  #Psalms-23  #doctrines  #doctrine-x  #lessons  #lesson-x  #pictures ----------
   async function route() {
     const h = decodeURIComponent(location.hash.slice(1));
     markTab(h);
     try {
       if (!INDEX) INDEX = await getJSON('data/books.json');
       if (!sheet.hidden) hideSheet();
+      viewer.hidden = true;
       fab.hidden = true;
       if (h === 'about') { await aboutView(); window.scrollTo(0, 0); return; }
       if (h === 'doctrines') { await doctrinesView(); window.scrollTo(0, 0); return; }
+      if (h === 'lessons') { await lessonsView(); window.scrollTo(0, 0); return; }
+      if (h === 'pictures') { await picturesView(); window.scrollTo(0, 0); return; }
+      const lm = h.match(/^lesson-([a-z0-9-]+)$/);
+      if (lm) { await lessonView(lm[1]); window.scrollTo(0, 0); return; }
       const dm = h.match(/^doctrine-([a-z0-9-]+)$/);
       if (dm) { await topicView(dm[1]); window.scrollTo(0, 0); return; }
       const m = h.match(/^([A-Za-z0-9]+)(?:-(\d+))?$/);

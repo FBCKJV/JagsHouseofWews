@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baptist Groups Compared — IFB Baseline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+SC:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0a0908;
+    --ink2:#131110;
+    --card:#17140f;
+    --gold:#c9a94d;
+    --gold-bright:#e6c874;
+    --cream:#ece3cc;
+    --cream-dim:#b9ad8f;
+    --crimson:#8f2233;
+    --crimson-bright:#c3495a;
+    --sage:#5f7a52;
+    --sage-bright:#8caa78;
+    --violet:#5b4a7a;
+    --violet-bright:#8a75b3;
+    --slate:#5c6470;
+    --slate-bright:#8b95a3;
+    --line:rgba(201,169,77,0.25);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse at top, #1a1712 0%, var(--ink) 60%),
+      var(--ink);
+    color:var(--cream);
+    font-family:'EB Garamond', serif;
+    line-height:1.6;
+  }
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/></svg>");
+    pointer-events:none; z-index:1; mix-blend-mode:overlay;
+  }
+  header.hero{
+    text-align:center;
+    padding:64px 24px 40px;
+    border-bottom:1px solid var(--line);
+    position:relative; z-index:2;
+  }
+  h1.title{
+    font-family:'Cinzel', serif;
+    font-weight:700;
+    font-size:clamp(28px,5vw,52px);
+    letter-spacing:0.04em;
+    color:var(--gold-bright);
+    margin:0 0 10px;
+    text-shadow:0 0 24px rgba(230,200,116,0.25);
+  }
+  p.subtitle{
+    font-family:'Cormorant SC', serif;
+    font-size:clamp(15px,2vw,20px);
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--cream-dim);
+    margin:0;
+  }
+  nav.toc{
+    position:sticky; top:0; z-index:20;
+    display:flex; flex-wrap:wrap; justify-content:center; gap:6px;
+    background:rgba(10,9,8,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+    padding:12px 16px;
+  }
+  nav.toc a{
+    font-family:'Cormorant SC', serif;
+    font-size:14px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--cream-dim);
+    text-decoration:none;
+    padding:6px 14px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    transition:all .2s;
+    white-space:nowrap;
+  }
+  nav.toc a:hover{ color:var(--gold-bright); border-color:var(--gold); }
+
+  main{ max-width:1180px; margin:0 auto; padding:0 20px 80px; position:relative; z-index:2; }
+
+  section{ padding:56px 0 24px; border-bottom:1px solid var(--line); }
+  section:last-of-type{ border-bottom:none; }
+
+  h2.section-head{
+    font-family:'Cinzel', serif;
+    font-size:clamp(22px,3vw,32px);
+    color:var(--gold-bright);
+    letter-spacing:0.03em;
+    margin:0 0 8px;
+    display:flex; align-items:baseline; gap:14px;
+  }
+  h2.section-head .num{
+    font-family:'Cormorant SC',serif;
+    font-size:15px; color:var(--crimson-bright);
+    border:1px solid var(--crimson); border-radius:50%;
+    width:30px;height:30px; display:inline-flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  p.section-intro{
+    font-style:italic; color:var(--cream-dim); max-width:800px;
+    font-size:17px; margin:0 0 32px;
+  }
+
+  /* Foundation cards */
+  .foundation-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+  .foundation-card{
+    background:var(--card); border:1px solid var(--line); border-radius:10px;
+    padding:20px; cursor:pointer; transition:transform .15s, border-color .15s;
+  }
+  .foundation-card:hover{ transform:translateY(-3px); border-color:var(--gold); }
+  .foundation-card h3{
+    font-family:'Cormorant Garamond',serif; font-weight:600; font-size:19px;
+    color:var(--gold-bright); margin:0 0 8px;
+  }
+  .foundation-card p{ margin:0; font-size:15px; color:var(--cream-dim); }
+  .foundation-card .tap{ font-size:12px; color:var(--crimson-bright); margin-top:10px; font-style:italic; }
+
+  /* Distinctives */
+  .distinctive-row{
+    display:grid; grid-template-columns:52px 1fr; gap:18px;
+    background:var(--card); border:1px solid var(--line); border-radius:10px;
+    padding:18px 20px; margin-bottom:14px;
+  }
+  .letter-badge{
+    font-family:'Cinzel',serif; font-size:22px; color:var(--gold-bright);
+    border:1px solid var(--gold); border-radius:50%;
+    width:52px; height:52px; display:flex; align-items:center; justify-content:center;
+  }
+  .distinctive-row h3{ font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:600; color:var(--cream); margin:0 0 6px; }
+  .distinctive-row .baseline{ font-size:15px; margin:0 0 8px; }
+  .distinctive-row .drift{
+    font-size:14px; color:var(--crimson-bright); border-left:2px solid var(--crimson);
+    padding-left:10px; margin:0; font-style:italic;
+  }
+  .note-callout{
+    background:rgba(143,34,51,0.12); border:1px solid var(--crimson);
+    border-radius:10px; padding:16px 20px; margin-top:8px; font-size:14px; color:var(--cream-dim); font-style:italic;
+  }
+
+  /* Comparison cards (soteriology / ecclesiology) */
+  .compare-card{
+    background:var(--card); border:1px solid var(--line); border-radius:12px;
+    padding:22px 22px 8px; margin-bottom:22px;
+  }
+  .compare-card h3{
+    font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:600;
+    color:var(--gold-bright); margin:0 0 16px;
+  }
+  .compare-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:12px; }
+  .group-block{
+    border-radius:8px; padding:12px 14px; font-size:13.5px; color:var(--cream);
+    border-left:3px solid var(--slate);
+  }
+  .group-block .group-name{
+    display:block; font-family:'Cormorant SC',serif; font-size:12px;
+    letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px;
+  }
+  .g-ifb{ border-color:var(--gold); background:rgba(201,169,77,0.10); }
+  .g-ifb .group-name{ color:var(--gold-bright); }
+  .g-sbc{ border-color:var(--slate); background:rgba(92,100,112,0.10); }
+  .g-sbc .group-name{ color:var(--slate-bright); }
+  .g-ref{ border-color:var(--violet); background:rgba(91,74,122,0.12); }
+  .g-ref .group-name{ color:var(--violet-bright); }
+  .g-lm{ border-color:var(--sage); background:rgba(95,122,82,0.12); }
+  .g-lm .group-name{ color:var(--sage-bright); }
+  .g-arm{ border-color:var(--crimson); background:rgba(143,34,51,0.12); }
+  .g-arm .group-name{ color:var(--crimson-bright); }
+
+  .verse-tag{
+    color:var(--gold-bright); cursor:pointer; text-decoration:underline dotted;
+    text-underline-offset:3px;
+  }
+
+  /* Summary */
+  .summary-card{
+    display:grid; grid-template-columns:44px 1fr; gap:16px;
+    background:var(--card); border:1px solid var(--crimson); border-radius:10px;
+    padding:18px 20px; margin-bottom:14px;
+  }
+  .summary-num{
+    font-family:'Cinzel',serif; font-size:20px; color:var(--crimson-bright);
+    border:1px solid var(--crimson); border-radius:50%;
+    width:44px; height:44px; display:flex; align-items:center; justify-content:center;
+  }
+  .summary-card h3{ font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:600; color:var(--gold-bright); margin:0 0 6px; }
+  .summary-card p{ margin:0; font-size:15px; color:var(--cream-dim); }
+
+  /* Legend */
+  .legend{ display:flex; flex-wrap:wrap; gap:16px; margin-bottom:26px; font-size:13px; color:var(--cream-dim); }
+  .legend span{ display:inline-flex; align-items:center; gap:7px; }
+  .swatch{ width:12px; height:12px; border-radius:50%; display:inline-block; }
+
+  /* Modal */
+  #overlay{
+    position:fixed; inset:0; background:rgba(5,4,3,0.86);
+    display:none; align-items:center; justify-content:center; z-index:100; padding:24px;
+  }
+  #overlay.open{ display:flex; }
+  #modal{
+    background:var(--ink2); border:1px solid var(--gold); border-radius:14px;
+    max-width:560px; width:100%; max-height:80vh; overflow-y:auto;
+    padding:30px 30px 26px; position:relative;
+    box-shadow:0 0 60px rgba(0,0,0,0.6);
+  }
+  #modalClose{
+    position:absolute; top:14px; right:16px; background:none; border:none;
+    color:var(--cream-dim); font-size:22px; cursor:pointer; line-height:1;
+  }
+  #modalClose:hover{ color:var(--gold-bright); }
+  #modalRef{
+    font-family:'Cormorant SC',serif; color:var(--gold-bright);
+    letter-spacing:0.05em; font-size:16px; text-transform:uppercase; margin:0 0 12px;
+  }
+  #modalText{ font-size:19px; font-style:italic; color:var(--cream); margin:0; }
+
+  footer{ text-align:center; padding:36px 20px 60px; color:var(--cream-dim); font-size:13px; font-style:italic; position:relative; z-index:2; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <h1 class="title">Baptist Groups Compared</h1>
+  <p class="subtitle">An IFB / KJVO baseline &middot; Adult Sunday School</p>
+</header>
+
+<nav class="toc">
+  <a href="#foundation">Foundation</a>
+  <a href="#distinctives">Distinctives</a>
+  <a href="#soteriology">Soteriology</a>
+  <a href="#ecclesiology">Ecclesiology</a>
+  <a href="#summary">Summary</a>
+</nav>
+
+<main>
+
+  <section id="foundation">
+    <h2 class="section-head"><span class="num">1</span>Core gospel foundation</h2>
+    <p class="section-intro">This chart treats classic Independent Fundamental Baptist doctrine as the closest practical match to New Testament church order and gospel preaching. These four points are non-negotiable — variations that subtract from or add conditions to them are treated as serious error.</p>
+    <div class="foundation-grid">
+      <div class="foundation-card" onclick="openVerse('eph2')">
+        <h3>Grace through faith alone</h3>
+        <p>No front-loaded or back-loaded works. Faith is the empty hand that receives Christ.</p>
+        <div class="tap">Tap for Ephesians 2:8&ndash;9 &rarr;</div>
+      </div>
+      <div class="foundation-card" onclick="openVerse('jn316')">
+        <h3>Provisional / general atonement</h3>
+        <p>Christ died for the whole world. The invitation is genuinely &ldquo;whosoever will.&rdquo;</p>
+        <div class="tap">Tap for John 3:16 &rarr;</div>
+      </div>
+      <div class="foundation-card" onclick="openVerse('jn1028')">
+        <h3>Once Saved Always Saved</h3>
+        <p>The believer is sealed and kept by God. Apostasy proves a person was never saved.</p>
+        <div class="tap">Tap for John 10:28&ndash;29 &rarr;</div>
+      </div>
+      <div class="foundation-card" onclick="openVerse('rom1013')">
+        <h3>Human responsibility</h3>
+        <p>Man is genuinely responsible and able to respond in free response to the gospel call.</p>
+        <div class="tap">Tap for Romans 10:13 &rarr;</div>
+      </div>
+    </div>
+    <div class="note-callout">Reformed Calvinism and Free-Will Arminianism are viewed as two sides of the same coin &mdash; both move away from this simple, provisional gospel center.</div>
+  </section>
+
+  <section id="distinctives">
+    <h2 class="section-head"><span class="num">2</span>Baptist distinctives</h2>
+    <p class="section-intro">Most historic Baptists formally affirm the BAPTISTS acrostic. Differences appear in application and in the doctrines underneath.</p>
+
+    <div class="distinctive-row">
+      <div class="letter-badge">B</div>
+      <div><h3>Biblical Authority</h3>
+        <p class="baseline">Scripture alone is final authority. No creed or confession may bind the conscience above the text. Preservation implies a pure English text (KJV).</p>
+        <p class="drift">Common drift: Confessionalism elevates 1689/Westminster language above plain reading. Multiple versions undermine preservation.</p>
+      </div>
+    </div>
+    <div class="distinctive-row">
+      <div class="letter-badge">A</div>
+      <div><h3>Autonomy of the Local Church</h3>
+        <p class="baseline">Each local assembly is independent under Christ. No hierarchy, convention, or association has authority over the church.</p>
+        <p class="drift">Common drift: SBC Cooperative Program and association pressures. Some Reformed networks function semi-presbyterially.</p>
+      </div>
+    </div>
+    <div class="distinctive-row">
+      <div class="letter-badge">P</div>
+      <div><h3>Priesthood of the Believer</h3>
+        <p class="baseline">Every believer has direct access to God and the right/responsibility to interpret Scripture under the Spirit.</p>
+        <p class="drift">Common drift: Heavy confessional gate-keeping or elder-rule systems can functionally limit this.</p>
+      </div>
+    </div>
+    <div class="distinctive-row">
+      <div class="letter-badge">T</div>
+      <div><h3>Two Ordinances</h3>
+        <p class="baseline">Baptism (immersion of believers) and the Lord's Supper only. Neither is salvific.</p>
+        <p class="drift">Common drift: Some Free Will / Separate groups add foot-washing as a third ordinance.</p>
+      </div>
+    </div>
+    <div class="distinctive-row">
+      <div class="letter-badge">I</div>
+      <div><h3>Individual Soul Liberty</h3>
+        <p class="baseline">No civil or ecclesiastical power may coerce conscience in matters of faith.</p>
+        <p class="drift">Common drift: Generally retained, though some Landmark or confessional circles tighten practical application.</p>
+      </div>
+    </div>
+    <div class="distinctive-row">
+      <div class="letter-badge">S</div>
+      <div><h3>Saved Church Membership</h3>
+        <p class="baseline">Only those who give credible evidence of regeneration and believer's baptism are received.</p>
+        <p class="drift">Common drift: Practically weakened where open membership or weak discipline exists.</p>
+      </div>
+    </div>
+    <div class="distinctive-row">
+      <div class="letter-badge">T</div>
+      <div><h3>Two Church Offices</h3>
+        <p class="baseline">Pastor (bishop/elder) and deacons. The pastor is under-shepherd; plurality of equal elders is not required by the text.</p>
+        <p class="drift">Common drift: Reformed Baptists often insist on plurality of elders as normative.</p>
+      </div>
+    </div>
+    <div class="distinctive-row">
+      <div class="letter-badge">S</div>
+      <div><h3>Security of the Believer</h3>
+        <p class="baseline">Eternal security / OSAS &mdash; the truly saved are kept by the power of God. Apostasy proves the person was never saved.</p>
+        <p class="drift">Common drift: Arminian groups teach conditional security. Some Calvinists reframe it as perseverance that can look like works.</p>
+      </div>
+    </div>
+
+    <div class="note-callout">Holding a detailed confession (e.g., the 1689 London Baptist Confession) as binding tends to drift from pure biblical authority &mdash; the confession becomes a lens that can override the plain reading of individual texts.</div>
+  </section>
+
+  <section id="soteriology">
+    <h2 class="section-head"><span class="num">3</span>Soteriology &mdash; the gospel core</h2>
+    <p class="section-intro">Grace through faith plus OSAS is the foundation. Systems that condition salvation on human performance (Arminian) or restrict the gospel offer and redefine security in terms of perseverance works (Calvinist) both miss the mark.</p>
+
+    <div class="legend">
+      <span><span class="swatch" style="background:var(--gold)"></span>IFB baseline</span>
+      <span><span class="swatch" style="background:var(--slate)"></span>Southern Baptist</span>
+      <span><span class="swatch" style="background:var(--violet)"></span>Reformed / Particular</span>
+      <span><span class="swatch" style="background:var(--sage)"></span>Landmark</span>
+      <span><span class="swatch" style="background:var(--crimson)"></span>Free Will / Arminian</span>
+    </div>
+
+    <div class="compare-card">
+      <h3>Salvation by faith alone</h3>
+      <div class="compare-grid">
+        <div class="group-block g-ifb"><span class="group-name">IFB baseline</span>By grace through faith, not of works (<span class="verse-tag" onclick="openVerse('eph2')">Eph 2:8&ndash;9</span>). No Lordship front-loading.</div>
+        <div class="group-block g-sbc"><span class="group-name">Southern Baptist</span>Generally affirms sola fide. Growing Calvinist minority introduces nuances.</div>
+        <div class="group-block g-ref"><span class="group-name">Reformed / Particular</span>Affirms justification by faith alone, yet ties true faith so tightly to perseverance that assurance is disturbed.</div>
+        <div class="group-block g-lm"><span class="group-name">Landmark</span>Generally holds faith alone; some circles emphasize local-church baptism heavily.</div>
+        <div class="group-block g-arm"><span class="group-name">Free Will / Arminian</span>Often mixes faith with ongoing obedience or the possibility of falling away &mdash; effectively adding works.</div>
+      </div>
+    </div>
+
+    <div class="compare-card">
+      <h3>Atonement scope</h3>
+      <div class="compare-grid">
+        <div class="group-block g-ifb"><span class="group-name">IFB baseline</span>General / provisional. Christ died for the world (<span class="verse-tag" onclick="openVerse('jn316')">John 3:16</span>; <span class="verse-tag" onclick="openVerse('1jn22')">1 John 2:2</span>; <span class="verse-tag" onclick="openVerse('1tim24')">1 Tim 2:4&ndash;6</span>).</div>
+        <div class="group-block g-sbc"><span class="group-name">Southern Baptist</span>Majority Traditionalist/Provisionist view is general atonement. Calvinist minority holds limited atonement.</div>
+        <div class="group-block g-ref"><span class="group-name">Reformed / Particular</span>Limited / particular atonement &mdash; Christ died only for the elect. This restricts the free offer of the gospel.</div>
+        <div class="group-block g-lm"><span class="group-name">Landmark</span>Usually general atonement, consistent with IFB on this point.</div>
+        <div class="group-block g-arm"><span class="group-name">Free Will / Arminian</span>General atonement, but paired with conditional security.</div>
+      </div>
+    </div>
+
+    <div class="compare-card">
+      <h3>Election &amp; free will</h3>
+      <div class="compare-grid">
+        <div class="group-block g-ifb"><span class="group-name">IFB baseline</span>God elects according to His foreknowledge; man is genuinely responsible and able to respond (<span class="verse-tag" onclick="openVerse('rom1013')">Rom 10:13</span>).</div>
+        <div class="group-block g-sbc"><span class="group-name">Southern Baptist</span>Mixed. Many hold a soft view of election; growing 5-point minority. Most still preach &ldquo;whosoever will.&rdquo;</div>
+        <div class="group-block g-ref"><span class="group-name">Reformed / Particular</span>Unconditional election and irresistible grace. The free offer is effectively only for the elect.</div>
+        <div class="group-block g-lm"><span class="group-name">Landmark</span>Usually closer to IFB: responsibility and free response emphasized.</div>
+        <div class="group-block g-arm"><span class="group-name">Free Will / Arminian</span>Strong free-will emphasis, often at the expense of God's sovereignty &mdash; salvation becomes man-centered.</div>
+      </div>
+    </div>
+
+    <div class="compare-card">
+      <h3>Eternal security (OSAS)</h3>
+      <div class="compare-grid">
+        <div class="group-block g-ifb"><span class="group-name">IFB baseline</span>Once saved, always saved. Sealed by the Spirit (<span class="verse-tag" onclick="openVerse('eph1')">Eph 1:13&ndash;14</span>; <span class="verse-tag" onclick="openVerse('jn1028')">John 10:28&ndash;29</span>).</div>
+        <div class="group-block g-sbc"><span class="group-name">Southern Baptist</span>Officially affirms eternal security. Vast majority of churches teach OSAS.</div>
+        <div class="group-block g-ref"><span class="group-name">Reformed / Particular</span>Perseverance of the saints &mdash; the elect will persevere; those who fall away were never elect. Can functionally resemble works-based assurance.</div>
+        <div class="group-block g-lm"><span class="group-name">Landmark</span>Generally holds eternal security / OSAS, consistent with IFB.</div>
+        <div class="group-block g-arm"><span class="group-name">Free Will / Arminian</span>Conditional security &mdash; a believer can lose salvation through willful sin or apostasy. Treated here as a grave error.</div>
+      </div>
+    </div>
+
+    <div class="compare-card">
+      <h3>Apostasy passages</h3>
+      <div class="compare-grid">
+        <div class="group-block g-ifb"><span class="group-name">IFB baseline</span>Hebrews 6, 10, etc. describe those who tasted but were never regenerated. &ldquo;They went out because they were not of us&rdquo; (<span class="verse-tag" onclick="openVerse('1jn219')">1 John 2:19</span>).</div>
+        <div class="group-block g-sbc"><span class="group-name">Southern Baptist</span>Most interpret consistently with eternal security. Some softer voices exist.</div>
+        <div class="group-block g-ref"><span class="group-name">Reformed / Particular</span>Usually interpreted as evidence of non-election. The warning passages function as means God uses to keep the elect.</div>
+        <div class="group-block g-lm"><span class="group-name">Landmark</span>Generally the same as IFB.</div>
+        <div class="group-block g-arm"><span class="group-name">Free Will / Arminian</span>Taken as proof that true believers can fall from grace and be lost. Misreads the texts.</div>
+      </div>
+    </div>
+
+    <div class="compare-card">
+      <h3>Works &amp; assurance</h3>
+      <div class="compare-grid">
+        <div class="group-block g-ifb"><span class="group-name">IFB baseline</span>Good works follow salvation but never secure or prove it. Assurance rests on Christ's finished work and the Spirit's witness.</div>
+        <div class="group-block g-sbc"><span class="group-name">Southern Baptist</span>Generally similar. Some Calvinist circles push Lordship or fruit-inspection that unsettles weak believers.</div>
+        <div class="group-block g-ref"><span class="group-name">Reformed / Particular</span>Strong emphasis on fruit and perseverance as evidence. Can produce a practical works-righteousness of introspection.</div>
+        <div class="group-block g-lm"><span class="group-name">Landmark</span>Usually closer to IFB simplicity.</div>
+        <div class="group-block g-arm"><span class="group-name">Free Will / Arminian</span>Ongoing obedience is often treated as a condition of remaining saved.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ecclesiology">
+    <h2 class="section-head"><span class="num">4</span>Ecclesiology, Scripture &amp; separation</h2>
+    <p class="section-intro">A New Testament church is local, autonomous, evangelistic, and under the pure preserved Word.</p>
+
+    <div class="legend">
+      <span><span class="swatch" style="background:var(--gold)"></span>IFB baseline</span>
+      <span><span class="swatch" style="background:var(--slate)"></span>Southern Baptist</span>
+      <span><span class="swatch" style="background:var(--violet)"></span>Reformed / Particular</span>
+      <span><span class="swatch" style="background:var(--sage)"></span>Landmark</span>
+      <span><span class="swatch" style="background:var(--crimson)"></span>Free Will / Arminian</span>
+    </div>
+
+    <div class="compare-card">
+      <h3>Local church autonomy</h3>
+      <div class="compare-grid">
+        <div class="group-block g-ifb"><span class="group-name">IFB baseline</span>Absolute under Christ. No convention, board, or association has authority over the local assembly. Fellowship is voluntary.</div>
+        <div class="group-block g-sbc"><span class="group-name">Southern Baptist</span>Officially autonomous, yet the Cooperative Program and convention structures create practical interdependence and pressure.</div>
+        <div class="group-block g-ref"><span class="group-name">Reformed / Particular</span>Autonomous in theory. Many practice elder-rule and association accountability that can limit congregational freedom.</div>
+        <div class="group-block g-lm"><span class="group-name">Landmark</span>Very strong emphasis on local-church authority &mdash; often the strongest among Baptist groups.</div>
+        <div class="group-block g-arm"><span class="group-name">Free Will / Arminian</span>Generally autonomous; associations exist but the local church remains primary.</div>
+      </div>
+    </div>
+
+    <div class="compare-card">
+      <h3>Succession / Landmarkism</h3>
+      <div class="compare-grid">
+        <div class="group-block g-ifb"><span class="group-name">IFB baseline</span>Many IFB hold a practical Baptist succession or &ldquo;trail of blood&rdquo; view &mdash; emphasizing continuity of New Testament order rather than an unbroken institutional chain.</div>
+        <div class="group-block g-sbc"><span class="group-name">Southern Baptist</span>Generally rejects strict Landmark successionism. Accepts broader evangelical baptism in many cases.</div>
+        <div class="group-block g-ref"><span class="group-name">Reformed / Particular</span>Rejects Landmark succession. Sees continuity through doctrine and the true church.</div>
+        <div class="group-block g-lm"><span class="group-name">Landmark</span>Core distinctive: only Baptist churches (in succession) are true churches. Closed communion; rejects &ldquo;alien immersion.&rdquo;</div>
+        <div class="group-block g-arm"><span class="group-name">Free Will / Arminian</span>Usually does not hold Landmark succession.</div>
+      </div>
+    </div>
+
+    <div class="compare-card">
+      <h3>Communion</h3>
+      <div class="compare-grid">
+        <div class="group-block g-ifb"><span class="group-name">IFB baseline</span>Typically close or closed &mdash; local-church members or those of like faith and order. Not open to the unbaptized or those in known error.</div>
+        <div class="group-block g-sbc"><span class="group-name">Southern Baptist</span>Varies widely &mdash; open, close, and closed all exist. Trend toward more open practice.</div>
+        <div class="group-block g-ref"><span class="group-name">Reformed / Particular</span>Often close (baptized believers of like faith). Some stricter.</div>
+        <div class="group-block g-lm"><span class="group-name">Landmark</span>Closed communion &mdash; restricted to members of the local church (or churches of like faith and order).</div>
+        <div class="group-block g-arm"><span class="group-name">Free Will / Arminian</span>Varies; many practice open or close communion.</div>
+      </div>
+    </div>
+
+    <div class="compare-card">
+      <h3>Offices</h3>
+      <div class="compare-grid">
+        <div class="group-block g-ifb"><span class="group-name">IFB baseline</span>Pastor (bishop/elder) and deacons. One primary teaching pastor is the New Testament pattern; plurality is permitted but not required.</div>
+        <div class="group-block g-sbc"><span class="group-name">Southern Baptist</span>Pastor and deacons standard. Some churches move toward elder plurality.</div>
+        <div class="group-block g-ref"><span class="group-name">Reformed / Particular</span>Strong preference for plurality of elders as the normative model.</div>
+        <div class="group-block g-lm"><span class="group-name">Landmark</span>Usually pastor and deacons, consistent with historic Baptist practice.</div>
+        <div class="group-block g-arm"><span class="group-name">Free Will / Arminian</span>Pastor and deacons; some groups have additional practices.</div>
+      </div>
+    </div>
+
+    <div class="compare-card">
+      <h3>Scripture &amp; preservation</h3>
+      <div class="compare-grid">
+        <div class="group-block g-ifb"><span class="group-name">IFB baseline</span>Verbal plenary inspiration + providential preservation. In English this leads to the King James Version. Modern critical-text versions are rejected.</div>
+        <div class="group-block g-sbc"><span class="group-name">Southern Baptist</span>Inerrancy officially affirmed. Majority use modern versions (ESV, NIV, CSB); KJV preference exists but is minority.</div>
+        <div class="group-block g-ref"><span class="group-name">Reformed / Particular</span>Inerrancy held. Almost universally use modern translations based on the critical text. Confessions treated as highly authoritative summaries.</div>
+        <div class="group-block g-lm"><span class="group-name">Landmark</span>Many Landmark churches are KJV-preferred or KJVO, similar to IFB.</div>
+        <div class="group-block g-arm"><span class="group-name">Free Will / Arminian</span>Generally accept modern versions; some older groups retain KJV.</div>
+      </div>
+    </div>
+
+    <div class="compare-card">
+      <h3>Evangelism &amp; missions</h3>
+      <div class="compare-grid">
+        <div class="group-block g-ifb"><span class="group-name">IFB baseline</span>Essential mark of a NT church. Aggressive soul-winning, local evangelism, and faith-mission support of church planting (<span class="verse-tag" onclick="openVerse('acts18')">Acts 1:8</span>; <span class="verse-tag" onclick="openVerse('mt2819')">Matt 28:18&ndash;20</span>).</div>
+        <div class="group-block g-sbc"><span class="group-name">Southern Baptist</span>Strong missions emphasis through the Cooperative Program and IMB. Methods and theological breadth vary.</div>
+        <div class="group-block g-ref"><span class="group-name">Reformed / Particular</span>Missions affirmed, but limited atonement and emphasis on the elect can dampen aggressive &ldquo;whosoever&rdquo; evangelism in practice.</div>
+        <div class="group-block g-lm"><span class="group-name">Landmark</span>Strong missions emphasis in many Landmark/Missionary Baptist groups, often through their own associations.</div>
+        <div class="group-block g-arm"><span class="group-name">Free Will / Arminian</span>Evangelism affirmed; conditional security can affect how the gospel is presented and followed up.</div>
+      </div>
+    </div>
+
+    <div class="compare-card">
+      <h3>Ecclesiastical separation</h3>
+      <div class="compare-grid">
+        <div class="group-block g-ifb"><span class="group-name">IFB baseline</span>Clear separation from apostasy, liberalism, and neo-evangelical compromise (<span class="verse-tag" onclick="openVerse('2cor614')">2 Cor 6:14&ndash;18</span>; <span class="verse-tag" onclick="openVerse('2thess36')">2 Thess 3:6, 14</span>). First- and second-degree separation practiced.</div>
+        <div class="group-block g-sbc"><span class="group-name">Southern Baptist</span>Officially conservative since the Conservative Resurgence, yet remains in cooperative structures including broader evangelicalism. Separation generally weaker.</div>
+        <div class="group-block g-ref"><span class="group-name">Reformed / Particular</span>Doctrinal separation on Calvinistic distinctives is often strong; fundamentalist-style separation from neo-evangelicalism is less consistent.</div>
+        <div class="group-block g-lm"><span class="group-name">Landmark</span>Often strong separation, especially regarding baptism and church order.</div>
+        <div class="group-block g-arm"><span class="group-name">Free Will / Arminian</span>Varies widely; many are less separatist.</div>
+      </div>
+    </div>
+
+    <div class="compare-card">
+      <h3>Confessionalism</h3>
+      <div class="compare-grid">
+        <div class="group-block g-ifb"><span class="group-name">IFB baseline</span>No binding creed beyond Scripture. Statements of faith are descriptive, not magisterial. Elevating a confession drifts from sola Scriptura.</div>
+        <div class="group-block g-sbc"><span class="group-name">Southern Baptist</span>Baptist Faith &amp; Message is a consensus document, not a rigid confession. Churches may differ within limits.</div>
+        <div class="group-block g-ref"><span class="group-name">Reformed / Particular</span>Highly confessional (1689 London Confession or similar). The confession functions as a secondary authority and interpretive grid.</div>
+        <div class="group-block g-lm"><span class="group-name">Landmark</span>Often use historic Baptist confessions or abstracts, but emphasis remains on local church and Scripture.</div>
+        <div class="group-block g-arm"><span class="group-name">Free Will / Arminian</span>Some have treatises or confessions; less rigid than Reformed Baptists.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="summary">
+    <h2 class="section-head"><span class="num">5</span>Where others miss the mark</h2>
+
+    <div class="summary-card">
+      <div class="summary-num">1</div>
+      <div><h3>The gospel center must not be moved</h3>
+        <p>Reformed Calvinism (by limiting the atonement and reframing security around inevitable perseverance) and Arminian Free-Will systems (by making security conditional) both move the gospel off center. This affects how the gospel is preached, how assurance is given, and how the church understands its mission.</p>
+      </div>
+    </div>
+    <div class="summary-card">
+      <div class="summary-num">2</div>
+      <div><h3>Biblical authority vs. confessional drift</h3>
+        <p>When a detailed confession becomes the functional authority or required interpretive grid, the church has begun to drift from sola Scriptura. Historic Baptist practice treated confessions as useful summaries, not binding secondary standards.</p>
+      </div>
+    </div>
+    <div class="summary-card">
+      <div class="summary-num">3</div>
+      <div><h3>Preservation and the English Bible</h3>
+        <p>If God inspired His Word and promised to preserve it, then in the English-speaking world that preserved Word is found in the King James Version. Churches that treat modern critical-text versions as equal or superior have accepted a different doctrine of preservation.</p>
+      </div>
+    </div>
+    <div class="summary-card">
+      <div class="summary-num">4</div>
+      <div><h3>Evangelism and missions are not optional</h3>
+        <p>A New Testament church is a soul-winning, missionary-sending body. Any system that dampens the free offer of the gospel or shifts energy away from aggressive evangelism has missed a central mark of the early church.</p>
+      </div>
+    </div>
+    <div class="summary-card">
+      <div class="summary-num">5</div>
+      <div><h3>Separation protects the testimony</h3>
+        <p>Ecclesiastical and personal separation are obedience to clear commands, not mean-spiritedness. Cooperation with unbelief or persistent doctrinal error eventually erodes the gospel and the purity of the church.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>Prepared for IFB / KJVO adult Sunday school use. The Independent Fundamental Baptist position is presented as the baseline; other groups are evaluated by that standard. All Scripture quotations, Authorized (King James) Version.</footer>
+
+<div id="overlay" onclick="closeOnOverlay(event)">
+  <div id="modal">
+    <button id="modalClose" onclick="closeVerse()">&times;</button>
+    <p id="modalRef"></p>
+    <p id="modalText"></p>
+  </div>
+</div>
+
+<script>
+const VERSES = {
+  eph2: { ref: "Ephesians 2:8&ndash;9", text: "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God: Not of works, lest any man should boast." },
+  jn316: { ref: "John 3:16", text: "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life." },
+  "1jn22": { ref: "1 John 2:2", text: "And he is the propitiation for our sins: and not for ours only, but also for the sins of the whole world." },
+  "1tim24": { ref: "1 Timothy 2:4&ndash;6", text: "Who will have all men to be saved, and to come unto the knowledge of the truth. For there is one God, and one mediator between God and men, the man Christ Jesus; Who gave himself a ransom for all, to be testified in due time." },
+  rom1013: { ref: "Romans 10:13", text: "For whosoever shall call upon the name of the Lord shall be saved." },
+  eph1: { ref: "Ephesians 1:13&ndash;14", text: "In whom ye also trusted, after that ye heard the word of truth, the gospel of your salvation: in whom also after that ye believed, ye were sealed with that holy Spirit of promise, Which is the earnest of our inheritance until the redemption of the purchased possession, unto the praise of his glory." },
+  jn1028: { ref: "John 10:28&ndash;29", text: "And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand. My Father, which gave them me, is greater than all; and no man is able to pluck them out of my Father's hand." },
+  "1jn219": { ref: "1 John 2:19", text: "They went out from us, but they were not of us; for if they had been of us, they would no doubt have continued with us: but they went out, that they might be made manifest that they were not all of us." },
+  acts18: { ref: "Acts 1:8", text: "But ye shall receive power, after that the Holy Ghost is come upon you: and ye shall be witnesses unto me both in Jerusalem, and in all Judaea, and in Samaria, and unto the uttermost part of the earth." },
+  mt2819: { ref: "Matthew 28:19&ndash;20", text: "Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost: Teaching them to observe all things whatsoever I have commanded you: and, lo, I am with you alway, even unto the end of the world. Amen." },
+  "2cor614": { ref: "2 Corinthians 6:14", text: "Be ye not unequally yoked together with unbelievers: for what fellowship hath righteousness with unrighteousness? and what communion hath light with darkness?" },
+  "2thess36": { ref: "2 Thessalonians 3:6", text: "Now we command you, brethren, in the name of our Lord Jesus Christ, that ye withdraw yourselves from every brother that walketh disorderly, and not after the tradition which he received of us." }
+};
+
+function openVerse(key){
+  const v = VERSES[key];
+  if(!v) return;
+  document.getElementById('modalRef').innerHTML = v.ref;
+  document.getElementById('modalText').textContent = v.text;
+  document.getElementById('overlay').classList.add('open');
+}
+function closeVerse(){ document.getElementById('overlay').classList.remove('open'); }
+function closeOnOverlay(e){ if(e.target.id === 'overlay') closeVerse(); }
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeVerse(); });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Rock is Jesus Christ, Not Peter</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0a0a0a;
+    font-family: 'EB Garamond', serif;
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px;
+  }
+
+  .page {
+    width: 600px;
+    background: #111;
+    border: 1px solid #2a2a2a;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 10%, rgba(180,140,60,0.05) 0%, transparent 55%),
+      radial-gradient(ellipse at 70% 90%, rgba(180,140,60,0.04) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .gold-rule {
+    height: 5px;
+    background: linear-gradient(90deg, transparent, #b8952a, #e8c84a, #b8952a, transparent);
+  }
+
+  /* HEADER */
+  .header {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 40px 40px 30px;
+    border-bottom: 1px solid #1e1e1e;
+  }
+
+  .eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    color: #b8952a;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: #f0e6c8;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+
+  .header h1 span { color: #e8c84a; }
+
+  .header-sub {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #777;
+    font-style: italic;
+  }
+
+  /* Scripture passage block */
+  .scripture-block {
+    margin: 22px 0 0;
+    padding: 20px 24px;
+    background: rgba(184,149,42,0.07);
+    border-left: 3px solid #b8952a;
+    text-align: left;
+  }
+
+  .scripture-verse {
+    font-size: 15px;
+    color: #d4c898;
+    line-height: 1.75;
+    font-style: italic;
+    margin-bottom: 6px;
+  }
+  .scripture-verse:last-child { margin-bottom: 0; }
+
+  .verse-num {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    font-style: normal;
+    color: #b8952a;
+    vertical-align: super;
+    margin-right: 4px;
+    letter-spacing: 0.05em;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 18px;
+  }
+  .divider-line {
+    height: 1px;
+    width: 60px;
+    background: linear-gradient(90deg, transparent, #b8952a);
+  }
+  .divider-line.r { background: linear-gradient(90deg, #b8952a, transparent); }
+  .divider-dot {
+    width: 5px; height: 5px;
+    background: #e8c84a;
+    transform: rotate(45deg);
+  }
+
+  /* QUOTES */
+  .quotes {
+    position: relative;
+    z-index: 1;
+    padding: 10px 0;
+  }
+
+  .quote-card {
+    padding: 22px 36px;
+    border-bottom: 1px solid #1a1a1a;
+    position: relative;
+  }
+  .quote-card:last-child { border-bottom: none; }
+
+  .quote-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, transparent, #b8952a55, transparent);
+  }
+
+  .quote-meta {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+
+  .quote-num {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: #b8952a;
+  }
+
+  .quote-name {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #f0e2b0;
+  }
+
+  .quote-dates {
+    font-size: 12px;
+    color: #6a6a6a;
+    font-style: italic;
+    margin-left: auto;
+  }
+
+  .quote-text {
+    font-size: 16px;
+    color: #d4c898;
+    line-height: 1.7;
+    font-style: italic;
+    padding-left: 18px;
+    position: relative;
+  }
+
+  .quote-text::before {
+    content: '\201C';
+    position: absolute;
+    left: -4px;
+    top: -6px;
+    font-size: 38px;
+    color: #b8952a;
+    opacity: 0.6;
+    line-height: 1;
+  }
+
+  /* FOOTER */
+  .footer {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid #1e1e1e;
+    padding: 20px 36px;
+    text-align: center;
+  }
+
+  .footer-verse {
+    font-size: 14px;
+    color: #aaa;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  .footer-meta {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    color: #b8952a;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="gold-rule"></div>
+
+  <div class="header">
+    <div class="eyebrow">Matthew 16 &nbsp;·&nbsp; Church Fathers Testimony</div>
+    <h1>The Rock is <span>Jesus Christ</span>,<br>Not Peter</h1>
+    <p class="header-sub">What the earliest church actually taught</p>
+
+    <div class="scripture-block">
+      <div class="scripture-verse"><span class="verse-num">15</span>He saith unto them, But whom say ye that I am?</div>
+      <div class="scripture-verse"><span class="verse-num">16</span>And Simon Peter answered and said, Thou art the Christ, the Son of the living God.</div>
+      <div class="scripture-verse"><span class="verse-num">17</span>And Jesus answered and said unto him, Blessed art thou, Simon Bar-jona: for flesh and blood hath not revealed it unto thee, but my Father which is in heaven.</div>
+      <div class="scripture-verse"><span class="verse-num">18</span>And I say also unto thee, That thou art Peter, and upon this rock I will build my church; and the gates of hell shall not prevail against it.</div>
+    </div>
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-dot"></div>
+      <div class="divider-line r"></div>
+    </div>
+  </div>
+
+  <div class="quotes">
+
+    <div class="quote-card">
+      <div class="quote-meta">
+        <span class="quote-num">01</span>
+        <span class="quote-name">Origen of Alexandria</span>
+        <span class="quote-dates">c. 184–253 A.D.</span>
+      </div>
+      <div class="quote-text">If we also say, 'You are the Christ, the Son of the living God,' we become Peter, and it can be said to us: 'Upon this rock I will build my Church.'</div>
+    </div>
+
+    <div class="quote-card">
+      <div class="quote-meta">
+        <span class="quote-num">02</span>
+        <span class="quote-name">St. John Chrysostom</span>
+        <span class="quote-dates">c. 349–407 A.D.</span>
+      </div>
+      <div class="quote-text">Upon this rock I will build my Church, that is, upon the faith of his confession.</div>
+    </div>
+
+    <div class="quote-card">
+      <div class="quote-meta">
+        <span class="quote-num">03</span>
+        <span class="quote-name">St. Hilary of Poitiers</span>
+        <span class="quote-dates">c. 310–367 A.D.</span>
+      </div>
+      <div class="quote-text">This faith is the foundation of the Church, for the Church is built upon this rock.</div>
+    </div>
+
+    <div class="quote-card">
+      <div class="quote-meta">
+        <span class="quote-num">04</span>
+        <span class="quote-name">St. Ambrose of Milan</span>
+        <span class="quote-dates">c. 339–397 A.D.</span>
+      </div>
+      <div class="quote-text">The rock is the faith upon which the Church is built.</div>
+    </div>
+
+    <div class="quote-card">
+      <div class="quote-meta">
+        <span class="quote-num">05</span>
+        <span class="quote-name">St. Augustine of Hippo</span>
+        <span class="quote-dates">354–430 A.D.</span>
+      </div>
+      <div class="quote-text">Christ did not say: you are the rock, but you are Peter. The rock was Christ. Peter was called rock because he confessed the Rock. The rock is the confession of faith Peter made: 'You are the Christ, the Son of the living God.'</div>
+    </div>
+
+    <div class="quote-card">
+      <div class="quote-meta">
+        <span class="quote-num">06</span>
+        <span class="quote-name">Theodoret of Cyrus</span>
+        <span class="quote-dates">c. 393–458 A.D.</span>
+      </div>
+      <div class="quote-text">Blessed are you, Simon Bar-Jonah because you confessed the Truth. I say to you that you are Peter, and upon this rock of the confession of faith I will build My Church.</div>
+    </div>
+
+    <div class="quote-card">
+      <div class="quote-meta">
+        <span class="quote-num">07</span>
+        <span class="quote-name">Eusebius of Caesarea</span>
+        <span class="quote-dates">c. 260–339 A.D.</span>
+      </div>
+      <div class="quote-text">The Church is built upon this confession of faith.</div>
+    </div>
+
+    <div class="quote-card">
+      <div class="quote-meta">
+        <span class="quote-num">08</span>
+        <span class="quote-name">Clement of Alexandria</span>
+        <span class="quote-dates">c. 150–215 A.D.</span>
+      </div>
+      <div class="quote-text">Christ is called the Rock… because He is the foundation of all teaching.</div>
+    </div>
+
+    <div class="quote-card">
+      <div class="quote-meta">
+        <span class="quote-num">09</span>
+        <span class="quote-name">Cyprian of Carthage</span>
+        <span class="quote-dates">c. 200–258 A.D.</span>
+      </div>
+      <div class="quote-text">The rest of the apostles were what Peter was, equal in honor and power.</div>
+    </div>
+
+    <div class="quote-card">
+      <div class="quote-meta">
+        <span class="quote-num">10</span>
+        <span class="quote-name">Jerome</span>
+        <span class="quote-dates">c. 347–420 A.D.</span>
+      </div>
+      <div class="quote-text">Upon this rock of confession the Church shall be built.</div>
+    </div>
+
+    <div class="quote-card">
+      <div class="quote-meta">
+        <span class="quote-num">11</span>
+        <span class="quote-name">Basil of Caesarea</span>
+        <span class="quote-dates">c. 329–379 A.D.</span>
+      </div>
+      <div class="quote-text">Do not say that the Church was built upon Peter… it was built upon the faith.</div>
+    </div>
+
+    <div class="quote-card">
+      <div class="quote-meta">
+        <span class="quote-num">12</span>
+        <span class="quote-name">Gregory of Nyssa</span>
+        <span class="quote-dates">c. 335–395 A.D.</span>
+      </div>
+      <div class="quote-text">His Christocentric theology excludes the idea that the foundation of the Church is a man. He refers to Christ as the Rock, not Peter.</div>
+    </div>
+
+    <div class="quote-card">
+      <div class="quote-meta">
+        <span class="quote-num">13</span>
+        <span class="quote-name">Tertullian</span>
+        <span class="quote-dates">c. 155–240 A.D.</span>
+      </div>
+      <div class="quote-text">The Rock is Christ, not Peter.</div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-verse">Matthew 16:15–18 &nbsp;·&nbsp; King James Version</div>
+    <div class="footer-meta">13 Witnesses &nbsp;·&nbsp; 1st–5th Century &nbsp;·&nbsp; Matthew 16</div>
+  </div>
+
+  <div class="gold-rule"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesis 5 • The Generations of Adam • Young Adult Sunday School</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Merriweather:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root{--bg:#0c1018;--bg-card:#141c28;--bg-card-hi:#1a2236;--border:#c8940a;--border-dim:rgba(200,148,10,0.35);--text:#ffffff;--text-dim:#c8d4e8;--text-muted:#8a9ab8;--gold:#fbbf24;--green:#34d399;--red:#f87171;--blue:#60a5fa;--purple:#c084fc}
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:'Merriweather',Georgia,serif;background:var(--bg);color:var(--text);padding:40px 24px 80px;min-height:100vh;line-height:1.75;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+        .page-frame{max-width:1100px;margin:0 auto;border:5px double var(--border);border-radius:16px;overflow:hidden;box-shadow:0 0 0 1px rgba(200,148,10,0.2),0 0 80px rgba(251,191,36,0.12)}
+        header{background:#080c12;border-bottom:4px solid var(--border);padding:44px 52px 36px;text-align:center}
+        .header-eyebrow{font-family:'Cinzel',serif;font-size:1em;font-weight:700;letter-spacing:6px;color:var(--text-muted);text-transform:uppercase;margin-bottom:16px}
+        header h1{font-family:'Cinzel',serif;font-size:4.2em;font-weight:900;color:var(--gold);text-shadow:0 0 30px rgba(251,191,36,0.6),0 0 60px rgba(251,191,36,0.25);letter-spacing:6px;line-height:1.1;margin-bottom:12px}
+        header .subtitle{font-family:'Cinzel',serif;font-size:1.3em;font-weight:700;color:var(--text-dim);letter-spacing:4px}
+        .header-divider{margin:24px auto 0;width:55%;height:2px;background:linear-gradient(to right,transparent,var(--border),transparent)}
+        .content-body{background:var(--bg);padding:44px 44px 56px;display:flex;flex-direction:column;gap:24px}
+        .section-divider{display:flex;align-items:center;gap:18px;margin:8px 0 0}
+        .section-divider .divider-line{flex:1;height:1px;background:linear-gradient(to right,transparent,var(--border-dim))}
+        .section-divider .divider-line.right{background:linear-gradient(to left,transparent,var(--border-dim))}
+        .section-divider .divider-label{font-family:'Cinzel',serif;font-size:0.72em;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--text-muted)}
+        .day-card{background:var(--bg-card);border:2px solid var(--border-dim);border-top:5px solid var(--gold);border-radius:12px;padding:28px 30px 24px;box-shadow:0 6px 24px rgba(0,0,0,0.5)}
+        .day-card.c-green{border-top-color:var(--green)}.day-card.c-blue{border-top-color:var(--blue)}.day-card.c-red{border-top-color:var(--red)}.day-card.c-purple{border-top-color:var(--purple)}
+        .day-card.c-key{border-top-color:var(--gold);border-color:rgba(251,191,36,0.4);background:var(--bg-card-hi);box-shadow:0 6px 24px rgba(0,0,0,0.5),0 0 30px rgba(251,191,36,0.08)}
+        .day-card.c-red-key{border-top-color:var(--red);border-color:rgba(248,113,113,0.35);background:#1c1018;box-shadow:0 6px 24px rgba(0,0,0,0.5),0 0 30px rgba(248,113,113,0.08)}
+        .day-card.c-green-key{border-top-color:var(--green);border-color:rgba(52,211,153,0.35);background:#0d1c14;box-shadow:0 6px 24px rgba(0,0,0,0.5),0 0 30px rgba(52,211,153,0.08)}
+        .day-badge{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+        .day-pill{font-family:'Cinzel',serif;font-size:0.78em;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:#000;background:var(--gold);padding:5px 16px 4px;border-radius:20px;white-space:nowrap}
+        .day-card.c-green .day-pill,.day-card.c-green-key .day-pill{background:var(--green);color:#000}
+        .day-card.c-blue .day-pill{background:var(--blue);color:#000}
+        .day-card.c-red .day-pill,.day-card.c-red-key .day-pill{background:var(--red);color:#000}
+        .day-card.c-purple .day-pill{background:var(--purple);color:#000}
+        .verse-ref{font-family:'Cinzel',serif;font-size:0.82em;font-weight:700;color:var(--text-muted);letter-spacing:1px}
+        .day-title{font-family:'Cinzel',serif;font-size:1.22em;font-weight:900;color:var(--gold);margin-bottom:16px;letter-spacing:1px}
+        .day-card.c-green .day-title,.day-card.c-green-key .day-title{color:var(--green)}
+        .day-card.c-blue .day-title{color:var(--blue)}
+        .day-card.c-red .day-title,.day-card.c-red-key .day-title{color:var(--red)}
+        .day-card.c-purple .day-title{color:var(--purple)}
+        .verse-text{font-size:1.52em;font-weight:700;color:var(--text);line-height:1.78}
+        .verse-text p{margin-bottom:0.65em}.verse-text p:last-child{margin-bottom:0}
+        .vn{font-family:'Cinzel',serif;font-size:0.58em;font-weight:900;color:var(--text-muted);vertical-align:super;margin-right:3px}
+        .hl-gold{color:var(--gold);font-weight:900}.hl-green{color:var(--green);font-weight:900}.hl-red{color:var(--red);font-weight:900}.hl-blue{color:var(--blue);font-weight:900}.hl-purple{color:var(--purple);font-weight:900}
+        .key-verse-block{display:block;margin:8px 0 12px;padding:14px 18px;background:rgba(251,191,36,0.10);border-left:5px solid var(--gold);border-radius:0 8px 8px 0;color:var(--gold);font-weight:900;font-style:italic;line-height:1.65}
+        .key-verse-block.green{background:rgba(52,211,153,0.10);border-left-color:var(--green);color:var(--green)}
+        .teacher-note{display:block;margin-top:14px;padding:12px 16px;background:rgba(96,165,250,0.07);border-left:4px solid rgba(96,165,250,0.4);border-radius:0 6px 6px 0;font-family:'Cinzel',serif;font-size:0.8em;font-weight:700;letter-spacing:0.5px;color:var(--blue);line-height:1.7}
+        .sref{color:var(--gold);font-weight:900;cursor:pointer;border-bottom:2px dotted var(--gold);white-space:nowrap;display:inline-block;position:relative}
+        .verse-tooltip{position:fixed;z-index:2000;max-width:480px;width:calc(100vw - 40px);background:#0e1420;border:3px solid var(--border);border-radius:12px;padding:18px 20px 16px;box-shadow:0 0 40px rgba(251,191,36,0.25),0 8px 40px rgba(0,0,0,0.8);pointer-events:none;opacity:0;transform:translateY(6px);transition:opacity 0.18s ease,transform 0.18s ease}
+        .verse-tooltip.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+        .verse-tooltip .tt-ref{font-family:'Cinzel',serif;font-size:0.82em;font-weight:900;letter-spacing:3px;color:var(--gold);margin-bottom:8px;display:block}
+        .verse-tooltip .tt-verse{font-family:'Merriweather',serif;font-size:1.1em;font-weight:700;color:var(--text);line-height:1.65;font-style:italic}
+        .xref-btn{display:inline-flex;align-items:center;gap:10px;margin-top:20px;padding:11px 24px;background:transparent;border:2px solid var(--gold);border-radius:40px;color:var(--gold);font-family:'Cinzel',serif;font-size:0.82em;font-weight:900;letter-spacing:2px;cursor:pointer;text-transform:uppercase;transition:background 0.2s,box-shadow 0.2s}
+        .xref-btn:hover{background:rgba(251,191,36,0.12);box-shadow:0 0 20px rgba(251,191,36,0.3)}
+        footer{background:#080c12;border-top:3px solid var(--border);padding:22px 40px;text-align:center;font-family:'Cinzel',serif;font-size:0.82em;font-weight:700;letter-spacing:2px;color:var(--text-muted);line-height:1.9}
+        .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:1000;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+        .modal-overlay.open{display:flex;animation:fadeIn 0.2s ease}
+        @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+        @keyframes slideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
+        .modal-box{background:#0e1420;border:4px double var(--border);border-radius:16px;padding:46px 48px 38px;max-width:780px;width:100%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 0 80px rgba(251,191,36,0.2),0 20px 80px rgba(0,0,0,0.8);animation:slideUp 0.25s ease;-webkit-font-smoothing:antialiased}
+        .modal-close{position:absolute;top:14px;right:18px;background:var(--bg-card);border:2px solid var(--border-dim);border-radius:50%;width:38px;height:38px;color:var(--text-muted);font-size:1.1em;font-weight:900;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
+        .modal-close:hover{background:var(--border);color:#000}
+        .modal-eyebrow{font-family:'Cinzel',serif;font-size:0.82em;font-weight:700;letter-spacing:4px;color:var(--text-muted);text-transform:uppercase;margin-bottom:8px}
+        .modal-title{font-family:'Cinzel',serif;font-size:1.65em;font-weight:900;color:var(--gold);margin-bottom:28px;padding-bottom:18px;border-bottom:2px solid var(--border-dim);line-height:1.2;padding-right:40px;text-shadow:0 0 20px rgba(251,191,36,0.3)}
+        .xref-entry{margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,0.08)}
+        .xref-entry:last-of-type{border-bottom:none;margin-bottom:0;padding-bottom:0}
+        .xref-label{font-family:'Cinzel',serif;font-size:1em;font-weight:900;color:var(--gold);letter-spacing:2px;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+        .xref-label::before{content:'';display:inline-block;width:8px;height:8px;background:var(--gold);border-radius:50%;flex-shrink:0}
+        .xref-verse{font-size:1.45em;font-weight:700;color:var(--text);line-height:1.72;font-style:italic;padding:12px 16px;background:rgba(255,255,255,0.04);border-left:4px solid var(--gold);border-radius:0 6px 6px 0;margin-bottom:10px}
+        .xref-note{font-size:1.25em;font-weight:700;color:var(--green);padding-left:16px}
+        .modal-summary{margin-top:26px;padding:18px 22px;background:rgba(251,191,36,0.08);border:1px solid rgba(251,191,36,0.3);border-radius:10px;font-size:1.35em;font-weight:700;color:var(--text);line-height:1.65;font-style:italic}
+        .modal-box::-webkit-scrollbar{width:6px}.modal-box::-webkit-scrollbar-track{background:transparent}.modal-box::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+        .chrono-table{width:100%;border-collapse:collapse;margin:10px 0 4px;font-family:'Cinzel',serif}
+        .chrono-table th{font-size:0.7em;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);text-align:left;padding:6px 10px;border-bottom:2px solid var(--border-dim)}
+        .chrono-table td{font-family:'Merriweather',serif;font-size:0.95em;font-weight:700;color:var(--text-dim);padding:6px 10px;border-bottom:1px solid rgba(255,255,255,0.06)}
+        .chrono-table td.num{color:var(--gold);font-weight:900;text-align:right}
+        .chrono-table tr.total td{color:var(--gold);font-weight:900;border-top:2px solid var(--border-dim);border-bottom:none;padding-top:10px}
+        .step-list{list-style:none;margin:4px 0 0;padding:0}
+        .step-list li{position:relative;padding-left:30px;margin-bottom:14px;font-family:'Cinzel',serif;font-size:0.85em;font-weight:700;letter-spacing:0.3px;color:var(--text-dim);line-height:1.7}
+        .step-list li:last-child{margin-bottom:0}
+        .step-list li::before{content:'\2726';position:absolute;left:0;top:1px;color:var(--green);font-size:1em}
+        .step-list li strong{color:var(--gold);font-weight:900}
+        .names-table{width:100%;border-collapse:collapse;margin:10px 0 4px;font-family:'Cinzel',serif}
+        .names-table th{font-size:0.68em;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);text-align:left;padding:6px 10px;border-bottom:2px solid var(--border-dim)}
+        .names-table td{font-family:'Merriweather',serif;font-size:0.92em;font-weight:700;color:var(--text-dim);padding:6px 10px;border-bottom:1px solid rgba(255,255,255,0.06)}
+        .names-table td.name{color:var(--gold);font-weight:900;font-family:'Cinzel',serif}
+        @media(max-width:740px){.content-body{padding:24px 16px 40px}header{padding:32px 20px 26px}header h1{font-size:2.6em}.modal-box{padding:30px 22px 26px}.modal-title{font-size:1.25em}.chrono-table,.names-table{font-size:0.85em}}
+    </style>
+</head>
+<body>
+<div class="page-frame">
+    <header>
+        <p class="header-eyebrow">Young Adult Sunday School • Genesis Series</p>
+        <h1>Genesis Chapter 5</h1>
+        <p class="subtitle">The Generations of Adam &nbsp;•&nbsp; From Creation to Noah &nbsp;•&nbsp; A Testimony in Years</p>
+        <div class="header-divider"></div>
+    </header>
+    <div class="content-body">
+
+        <div class="day-card">
+            <div class="day-badge"><span class="day-pill">vv. 1&ndash;2</span><span class="verse-ref">The Book of the Generations</span></div>
+            <p class="day-title">In the Likeness of God</p>
+            <div class="verse-text">
+                <p><span class="vn">1</span>This is the book of the generations of Adam. In the day that God created man, <span class="hl-gold">in the likeness of God made he him;</span></p>
+                <p><span class="vn">2</span>Male and female created he them; and blessed them, and called their name Adam, in the day when they were created.</p>
+                <span class="teacher-note">Moses opens this chapter the same way he opens a genealogy anywhere in Scripture &mdash; with a "book," a formal, deliberate record. This is not legend passed down loosely around a fire. It is a document, a <span class="sref" data-ref="Luke 3:38" data-verse="Which was the son of Enos, which was the son of Seth, which was the son of Adam, which was the son of God.">toledoth</span>, meant to be taken as literal history &mdash; the same way we take the record of names, dates, and reigns anywhere else in the Old Testament.</span>
+            </div>
+        </div>
+
+        <div class="day-card c-blue">
+            <div class="day-badge"><span class="day-pill">vv. 3&ndash;5</span><span class="verse-ref">The First Entry &mdash; Adam</span></div>
+            <p class="day-title">In His Own Likeness &mdash; After His Image</p>
+            <div class="verse-text">
+                <p><span class="vn">3</span>And Adam lived an hundred and thirty years, and begat a son <span class="hl-blue">in his own likeness, after his image;</span> and called his name Seth:</p>
+                <p><span class="vn">4</span>And the days of Adam after he had begotten Seth were eight hundred years: and he begat sons and daughters:</p>
+                <p><span class="vn">5</span>And all the days that Adam lived were nine hundred and thirty years: <span class="hl-red">and he died.</span></p>
+                <span class="teacher-note">Verse 1 said Adam was made in God's likeness. Verse 3 says Seth was born in Adam's likeness &mdash; fallen, mortal, sinful. That is the whole doctrine of the fall in one verse: what is passed down is not innocence but Adam's own broken image. And then the refrain begins: and he died. God's word to Adam in the garden was not a bluff.</span>
+            </div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-badge"><span class="day-pill">vv. 6&ndash;8</span><span class="verse-ref">Seth</span></div>
+            <p class="day-title">Nine Hundred Twelve Years &mdash; And He Died</p>
+            <div class="verse-text">
+                <p><span class="vn">6</span>And Seth lived an hundred and five years, and begat Enos:</p>
+                <p><span class="vn">7</span>And Seth lived after he begat Enos eight hundred and seven years, and begat sons and daughters:</p>
+                <p><span class="vn">8</span>And all the days of Seth were nine hundred and twelve years: <span class="hl-red">and he died.</span></p>
+            </div>
+        </div>
+
+        <div class="day-card c-green">
+            <div class="day-badge"><span class="day-pill">vv. 9&ndash;11</span><span class="verse-ref">Enos</span></div>
+            <p class="day-title">Then Began Men to Call Upon the LORD</p>
+            <div class="verse-text">
+                <p><span class="vn">9</span>And Enos lived ninety years, and begat Cainan:</p>
+                <p><span class="vn">10</span>And Enos lived after he begat Cainan eight hundred and fifteen years, and begat sons and daughters:</p>
+                <p><span class="vn">11</span>And all the days of Enos were nine hundred and five years: <span class="hl-red">and he died.</span></p>
+                <span class="teacher-note">Enos's own birth was the moment Genesis 4:26 marks: <span class="sref" data-ref="Genesis 4:26" data-verse="And to Seth, to him also there was born a son; and he called his name Enos: then began men to call upon the name of the LORD.">Gen. 4:26</span>. With the third generation from Adam, public, corporate calling on the name of the LORD begins &mdash; a confession made with the mouth, standing alongside the blood faith of Abel.</span>
+            </div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-badge"><span class="day-pill">vv. 12&ndash;14</span><span class="verse-ref">Cainan</span></div>
+            <p class="day-title">Nine Hundred Ten Years &mdash; And He Died</p>
+            <div class="verse-text">
+                <p><span class="vn">12</span>And Cainan lived seventy years, and begat Mahalaleel:</p>
+                <p><span class="vn">13</span>And Cainan lived after he begat Mahalaleel eight hundred and forty years, and begat sons and daughters:</p>
+                <p><span class="vn">14</span>And all the days of Cainan were nine hundred and ten years: <span class="hl-red">and he died.</span></p>
+            </div>
+        </div>
+
+        <div class="day-card c-blue">
+            <div class="day-badge"><span class="day-pill">vv. 15&ndash;17</span><span class="verse-ref">Mahalaleel</span></div>
+            <p class="day-title">Eight Hundred Ninety-Five Years &mdash; And He Died</p>
+            <div class="verse-text">
+                <p><span class="vn">15</span>And Mahalaleel lived sixty and five years, and begat Jared:</p>
+                <p><span class="vn">16</span>And Mahalaleel lived after he begat Jared eight hundred and thirty years, and begat sons and daughters:</p>
+                <p><span class="vn">17</span>And all the days of Mahalaleel were eight hundred ninety and five years: <span class="hl-red">and he died.</span></p>
+            </div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-badge"><span class="day-pill">vv. 18&ndash;20</span><span class="verse-ref">Jared</span></div>
+            <p class="day-title">Nine Hundred Sixty-Two Years &mdash; And He Died</p>
+            <div class="verse-text">
+                <p><span class="vn">18</span>And Jared lived an hundred sixty and two years, and he begat Enoch:</p>
+                <p><span class="vn">19</span>And Jared lived after he begat Enoch eight hundred years, and begat sons and daughters:</p>
+                <p><span class="vn">20</span>And all the days of Jared were nine hundred sixty and two years: <span class="hl-red">and he died.</span></p>
+                <span class="teacher-note">Jared lived longer than all but Methuselah &mdash; and he is the father of the one man in this chapter for whom the refrain never comes. Watch what happens in the very next entry.</span>
+            </div>
+        </div>
+
+        <div class="section-divider"><div class="divider-line"></div><span class="divider-label">The Man Who Did Not Die</span><div class="divider-line right"></div></div>
+
+        <div class="day-card c-key">
+            <div class="day-badge"><span class="day-pill">vv. 21&ndash;24</span><span class="verse-ref">Enoch, the Seventh from Adam</span></div>
+            <p class="day-title">And Enoch Walked With God: And He Was Not; For God Took Him</p>
+            <div class="verse-text">
+                <p><span class="vn">21</span>And Enoch lived sixty and five years, and begat Methuselah:</p>
+                <p><span class="vn">22</span><span class="hl-gold">And Enoch walked with God</span> after he begat Methuselah three hundred years, and begat sons and daughters:</p>
+                <p><span class="vn">23</span>And all the days of Enoch were three hundred sixty and five years:</p>
+                <p><span class="vn">24</span><span class="hl-gold">And Enoch walked with God: and he was not; for God took him.</span></p>
+                <span class="teacher-note">Every other name in this chapter closes the same way: and he died. Enoch's does not. He is the seventh from Adam &mdash; not to be confused with Cain's son Enoch, third from Adam in the other line (Gen. 4:17) &mdash; and Scripture is careful to tell us this was no ordinary death. <span class="sref" data-ref="Hebrews 11:5" data-verse="By faith Enoch was translated that he should not see death; and was not found, because God had translated him: for before his translation he had this testimony, that he pleased God.">Heb. 11:5</span> calls it a translation, by faith, and testifies that before it happened, he pleased God.</span>
+            </div>
+            <button class="xref-btn" onclick="openModal('modal-enoch')">&#9734; &nbsp; Hebrews 11 &amp; Jude 1 &mdash; Enoch's Testimony</button>
+        </div>
+
+        <div class="day-card c-purple">
+            <div class="day-badge"><span class="day-pill">vv. 25&ndash;27</span><span class="verse-ref">Methuselah</span></div>
+            <p class="day-title">The Oldest Man Who Ever Lived</p>
+            <div class="verse-text">
+                <p><span class="vn">25</span>And Methuselah lived an hundred eighty and seven years, and begat Lamech:</p>
+                <p><span class="vn">26</span>And Methuselah lived after he begat Lamech seven hundred eighty and two years, and begat sons and daughters:</p>
+                <p><span class="vn">27</span><span class="hl-purple">And all the days of Methuselah were nine hundred sixty and nine years:</span> <span class="hl-red">and he died.</span></p>
+                <span class="teacher-note">Nine hundred sixty-nine years &mdash; no man in Scripture, before or since, lived longer. Even the longest life this side of Eden still ends the same way every other life in this chapter ends. The refrain catches up to everyone but one.</span>
+            </div>
+        </div>
+
+        <div class="day-card c-green">
+            <div class="day-badge"><span class="day-pill">vv. 28&ndash;31</span><span class="verse-ref">Lamech</span></div>
+            <p class="day-title">This Same Shall Comfort Us</p>
+            <div class="verse-text">
+                <p><span class="vn">28</span>And Lamech lived an hundred eighty and two years, and begat a son:</p>
+                <p><span class="vn">29</span>And he called his name Noah, saying, <span class="hl-green">This same shall comfort us concerning our work and toil of our hands, because of the ground which the LORD hath cursed.</span></p>
+                <p><span class="vn">30</span>And Lamech lived after he begat Noah five hundred ninety and five years, and begat sons and daughters:</p>
+                <p><span class="vn">31</span>And all the days of Lamech were seven hundred seventy and seven years: <span class="hl-red">and he died.</span></p>
+                <span class="teacher-note">This is a different Lamech than Cain's descendant of Genesis 4 who boasted of vengeance seventy and sevenfold. This Lamech, of the line of Seth, names his son in hope &mdash; looking for relief from the curse on the ground pronounced back in Genesis 3:17. He could not have known how, but Noah's name proved prophetic the day the flood lifted and a new world began.</span>
+            </div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-badge"><span class="day-pill">v. 32</span><span class="verse-ref">Noah</span></div>
+            <p class="day-title">Shem, Ham, and Japheth</p>
+            <div class="verse-text">
+                <p><span class="vn">32</span>And Noah was five hundred years old: and <span class="hl-gold">Noah begat Shem, Ham, and Japheth.</span></p>
+                <span class="teacher-note">Ten generations, one continuous line, from the dust of Eden to the three sons who would repopulate the whole earth after the flood. The chapter that opened "in the likeness of God" closes by naming the men through whom every nation on earth descends.</span>
+            </div>
+        </div>
+
+        <div class="section-divider"><div class="divider-line"></div><span class="divider-label">Hidden in the Hebrew &mdash; The Names Themselves</span><div class="divider-line right"></div></div>
+
+        <div class="day-card c-key">
+            <div class="day-badge"><span class="day-pill">The Ten Names, In Order</span><span class="verse-ref">A Sentence Written Into the Genealogy</span></div>
+            <p class="day-title">The Gospel, Hidden in the Meaning of the Names</p>
+            <table class="names-table">
+                <tr><th>Name</th><th>Root Meaning</th></tr>
+                <tr><td class="name">Adam</td><td>Man</td></tr>
+                <tr><td class="name">Seth</td><td>Appointed</td></tr>
+                <tr><td class="name">Enosh (Enos)</td><td>Mortal</td></tr>
+                <tr><td class="name">Kenan (Cainan)</td><td>Sorrow</td></tr>
+                <tr><td class="name">Mahalalel</td><td>The Blessed God</td></tr>
+                <tr><td class="name">Jared</td><td>Shall come down</td></tr>
+                <tr><td class="name">Enoch</td><td>Teaching</td></tr>
+                <tr><td class="name">Methuselah</td><td>His death shall bring</td></tr>
+                <tr><td class="name">Lamech</td><td>The despairing</td></tr>
+                <tr><td class="name">Noah</td><td>Rest</td></tr>
+            </table>
+            <div class="key-verse-block" style="margin-top:16px;">"Man is appointed mortal sorrow, but the Blessed God shall come down teaching that His death shall bring the despairing rest."</div>
+            <div class="verse-text" style="margin-top:14px;">
+                <span class="teacher-note" style="margin-top:0;">Read straight down the family tree, in Hebrew, the ten names carrying us from Adam to Noah string together into that sentence &mdash; the gospel itself, laid into a genealogy centuries before Christ came down, taught among us, died, and gave rest to the despairing. Whether every root is pressed with equal precision or not, the pattern is hard to miss: the God who inspired this list wastes nothing, not even the names.</span>
+            </div>
+        </div>
+
+        <div class="section-divider"><div class="divider-line"></div><span class="divider-label">And He Died &mdash; The Refrain of the Chapter</span><div class="divider-line right"></div></div>
+
+        <div class="day-card c-red-key">
+            <div class="day-badge"><span class="day-pill">Eight Times Repeated</span><span class="verse-ref">The Wages of Sin, Written in a Genealogy</span></div>
+            <p class="day-title">They Lived, They Had Children, and They Died</p>
+            <div class="key-verse-block">and he died &nbsp;&middot;&nbsp; and he died &nbsp;&middot;&nbsp; and he died &nbsp;&middot;&nbsp; and he died &nbsp;&middot;&nbsp; and he died &nbsp;&middot;&nbsp; and he died &nbsp;&middot;&nbsp; and he died &nbsp;&middot;&nbsp; and he died</div>
+            <div class="verse-text">
+                <span class="teacher-note" style="margin-top:0;">Long-lived though they were, every man in this chapter but one lived, had sons and daughters, and died. Sons of God calling on the name of the LORD and sons of men who did not &mdash; all of them sinned, and all of them, in due time, died. This is not poetry or picture; it is the plain, literal accounting of years from creation to Noah. Taking the figurative as figurative and the literal as literal, these ages are given to us as literal history &mdash; the same rule of interpretation that lets us call Christ's parables parables without turning His genealogies into parables too. <span class="sref" data-ref="Romans 5:12" data-verse="Wherefore, as by one man sin entered into the world, and death by sin; and so death passed upon all men, for that all have sinned:">Rom. 5:12</span></span>
+            </div>
+            <button class="xref-btn" onclick="openModal('modal-wages')">&#9734; &nbsp; Romans 6:23 &mdash; The Wages of Sin Is Death</button>
+        </div>
+
+        <div class="section-divider"><div class="divider-line"></div><span class="divider-label">Counting the Years &mdash; From Creation to Christ</span><div class="divider-line right"></div></div>
+
+        <div class="day-card c-blue">
+            <div class="day-badge"><span class="day-pill">Genesis 5 &amp; 11</span><span class="verse-ref">A Literal Chronology</span></div>
+            <p class="day-title">About 2,008 Years, Adam to Abraham</p>
+            <table class="chrono-table">
+                <tr><th>Patriarch</th><th>Age at Next Birth</th></tr>
+                <tr><td>Adam</td><td class="num">130</td></tr>
+                <tr><td>Seth</td><td class="num">105</td></tr>
+                <tr><td>Enos</td><td class="num">90</td></tr>
+                <tr><td>Cainan</td><td class="num">70</td></tr>
+                <tr><td>Mahalaleel</td><td class="num">65</td></tr>
+                <tr><td>Jared</td><td class="num">162</td></tr>
+                <tr><td>Enoch</td><td class="num">65</td></tr>
+                <tr><td>Methuselah</td><td class="num">187</td></tr>
+                <tr><td>Lamech</td><td class="num">182</td></tr>
+                <tr><td>Noah (to Shem)</td><td class="num">~500</td></tr>
+                <tr class="total"><td>Adam to Shem</td><td class="num">1,556 yrs</td></tr>
+            </table>
+            <div class="verse-text" style="margin-top:14px;">
+                <span class="teacher-note" style="margin-top:0;">Following the given years of Genesis 5 forward, and then adding the generations of Genesis 11:10&ndash;32 from Shem down to Terah, father of Abraham, we arrive at roughly 2,008 years from Adam to Abraham. This isn't a modern estimate imposed on the text &mdash; it's simple addition of the years the text itself gives us.</span>
+            </div>
+        </div>
+
+        <div class="day-card c-purple">
+            <div class="day-badge"><span class="day-pill">Matthew 1:17</span><span class="verse-ref">Abraham to Christ</span></div>
+            <p class="day-title">Fourteen Generations, Three Times Over</p>
+            <div class="verse-text">
+                <p class="hl-purple"><span class="vn">17</span>So all the generations from Abraham to David are fourteen generations; and from David until the carrying away into Babylon are fourteen generations; and from the carrying away into Babylon unto Christ are fourteen generations.</p>
+                <span class="teacher-note" style="margin-top:14px;">Matthew closes the loop Genesis 5 opens. Between the literal years of Genesis and the counted generations of Matthew 1:17, Scripture hands us the recorded span from creation to Christ &mdash; inspired, and preserved. Add the roughly two thousand years since, and the commonly accepted span places the earth at just slightly more than six thousand years old &mdash; give or take a century or two.</span>
+            </div>
+        </div>
+
+        <div class="section-divider"><div class="divider-line"></div><span class="divider-label">A Pattern of Salvation in the Early Patriarchs</span><div class="divider-line right"></div></div>
+
+        <div class="day-card c-green-key">
+            <div class="day-badge"><span class="day-pill">Adam &rarr; Abel &rarr; Seth &amp; Enos &rarr; Enoch</span><span class="verse-ref">The Gospel, Illustrated in Genealogy</span></div>
+            <p class="day-title">Knowledge, Blood, Confession, and a Walk With God</p>
+            <div class="verse-text">
+                <p style="font-size:0.62em;font-family:'Cinzel',serif;font-weight:700;letter-spacing:0.3px;color:var(--text-dim);margin-bottom:2px;">Reading these early chapters together, a pattern for salvation emerges in the lives of these men:</p>
+                <ul class="step-list">
+                    <li><strong>Adam</strong> knows God his Creator, and knows his own sin.</li>
+                    <li><strong>Abel</strong> brings the blood of atonement, offered in faith for redemption.</li>
+                    <li><strong>Seth and Enos</strong> show that with the mouth, confession is made &mdash; calling upon the name of the LORD.</li>
+                    <li><strong>Enoch</strong> gives the testimony that he walked with God, that he lived separated, pleasing God.</li>
+                </ul>
+                <span class="teacher-note">Each of us passes through these same steps when we come to Christ and live for Him &mdash; an illustration God gave in His word, through the lives of these men, long before the cross.</span>
+            </div>
+        </div>
+
+        <div class="section-divider"><div class="divider-line"></div><span class="divider-label">Translated That He Should Not See Death</span><div class="divider-line right"></div></div>
+
+        <div class="day-card c-key">
+            <div class="day-badge"><span class="day-pill">Hebrews 11:5 &middot; John 8:51</span><span class="verse-ref">The Promise Behind the Pattern</span></div>
+            <p class="day-title">A Prophet Who Preached, and a Promise to Every Believer</p>
+            <div class="verse-text">
+                <span class="teacher-note" style="margin-top:0;">Enoch was more than a name in a list &mdash; he was a prophet. <span class="sref" data-ref="Jude 1:14–15" data-verse="And Enoch also, the seventh from Adam, prophesied of these, saying, Behold, the Lord cometh with ten thousands of his saints, To execute judgment upon all, and to convince all that are ungodly among them of all their ungodly deeds which they have ungodly committed, and of all their hard speeches which ungodly sinners have spoken against him.">Jude 1:14&ndash;15</span> preserves his preaching &mdash; a witness in the Spirit to Christ's coming victory in the day of the Lord, given ages before the flood, let alone the cross. And what happened to him is the promise held out to every believer since: <span class="sref" data-ref="John 8:51" data-verse="Verily, verily, I say unto you, If a man keep my saying, he shall never see death.">John 8:51</span> &mdash; "if a man keep my saying, he shall never see death."</span>
+            </div>
+            <button class="xref-btn" onclick="openModal('modal-translated')">&#9734; &nbsp; What Does "Translated" Mean?</button>
+        </div>
+
+        <div class="day-card">
+            <div class="day-badge"><span class="day-pill">A Caution</span><span class="verse-ref">Not Every Old Book Is Scripture</span></div>
+            <p class="day-title">The "Book of Enoch" Is Not Scripture</p>
+            <div class="verse-text">
+                <span class="teacher-note" style="margin-top:0;">There are rabbit trails worth naming and leaving alone. Ancient Jewish fables and the pseudepigraphal "Book of Enoch" claim to fill in what Genesis leaves silent, but the book contradicts itself and contains plain fabrications &mdash; it is not Scripture, whatever curiosity it satisfies. What we can know, and should hold to, is simply this: Enoch walked with God, prophesied of Christ, and pleased God &mdash; and by faith, we're meant to draw the same inspiration to live pleasing to God ourselves, in the Spirit, however our own days end.</span>
+            </div>
+        </div>
+
+    </div>
+    <footer>Young Adult Sunday School &nbsp;&bull;&nbsp; Genesis Series &nbsp;&bull;&nbsp; King James Bible<br><span style="font-size:0.88em;opacity:0.65;">Click &#9734; buttons for cross-reference panels &nbsp;&bull;&nbsp; Hover or tap gold references for verse text &nbsp;&bull;&nbsp; Esc to close</span></footer>
+</div>
+
+<div class="verse-tooltip" id="verseTooltip"><span class="tt-ref" id="ttRef"></span><span class="tt-verse" id="ttVerse"></span></div>
+
+<div class="modal-overlay" id="modal-enoch" onclick="handleOverlayClick(event,'modal-enoch')"><div class="modal-box"><button class="modal-close" onclick="closeModal('modal-enoch')">&#10005;</button><p class="modal-eyebrow">Cross References &nbsp;&bull;&nbsp; Genesis 5:24</p><h2 class="modal-title">Hebrews 11 &amp; Jude 1 &mdash; Enoch's Testimony</h2>
+<div class="xref-entry"><p class="xref-label">Hebrews 11:5</p><p class="xref-verse">"By faith Enoch was translated that he should not see death; and was not found, because God had translated him: for before his translation he had this testimony, that he pleased God."</p><p class="xref-note">&rarr; Two things are named here: the mechanism (faith) and the reward (translation, so that he never faced death at all). Before it happened, his testimony was already recorded &mdash; he pleased God.</p></div>
+<div class="xref-entry"><p class="xref-label">Jude 1:14&ndash;15</p><p class="xref-verse">"And Enoch also, the seventh from Adam, prophesied of these, saying, Behold, the Lord cometh with ten thousands of his saints, To execute judgment upon all, and to convince all that are ungodly among them of all their ungodly deeds which they have ungodly committed, and of all their hard speeches which ungodly sinners have spoken against him."</p><p class="xref-note">&rarr; Jude, writing near the end of the New Testament, quotes a sermon preached before the flood. Enoch's prophecy of the Lord's coming in judgment is the same hope every believer since has held &mdash; Christ's return with His saints.</p></div>
+<div class="xref-entry"><p class="xref-label">John 8:51</p><p class="xref-verse">"Verily, verily, I say unto you, If a man keep my saying, he shall never see death."</p><p class="xref-note">&rarr; What happened to Enoch bodily is the promise held spiritually for every believer in Christ: those who keep His word will never see death in the sense that matters &mdash; separation from God forever.</p></div>
+<div class="modal-summary">Enoch is not a strange exception tucked into a genealogy &mdash; he is proof, planted in the earliest pages of Scripture, that walking with God by faith is a life death cannot ultimately touch.</div>
+</div></div>
+
+<div class="modal-overlay" id="modal-wages" onclick="handleOverlayClick(event,'modal-wages')"><div class="modal-box"><button class="modal-close" onclick="closeModal('modal-wages')">&#10005;</button><p class="modal-eyebrow">Cross References &nbsp;&bull;&nbsp; Genesis 5, "and he died"</p><h2 class="modal-title">Romans 6:23 &mdash; The Wages of Sin Is Death</h2>
+<div class="xref-entry"><p class="xref-label">Romans 6:23</p><p class="xref-verse">"For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord."</p><p class="xref-note">&rarr; Genesis 5 is Romans 6:23 written out in eight literal case studies. Every long life in the chapter still ends exactly where Paul says sin's wages lead.</p></div>
+<div class="xref-entry"><p class="xref-label">Romans 5:12</p><p class="xref-verse">"Wherefore, as by one man sin entered into the world, and death by sin; and so death passed upon all men, for that all have sinned."</p><p class="xref-note">&rarr; Adam's sin did not stay Adam's problem. It passed to every name on this genealogy &mdash; sons of God and sons of men alike, whether they called upon the name of the LORD or rejected His salvation.</p></div>
+<div class="modal-summary">The refrain "and he died" is not filler between the numbers &mdash; it is the whole doctrine of sin and death, stated eight times over, so that the ninth time, when it doesn't come, we notice.</div>
+</div></div>
+
+<div class="modal-overlay" id="modal-translated" onclick="handleOverlayClick(event,'modal-translated')"><div class="modal-box"><button class="modal-close" onclick="closeModal('modal-translated')">&#10005;</button><p class="modal-eyebrow">A Question Worth Sitting With &nbsp;&bull;&nbsp; Genesis 5:24</p><h2 class="modal-title">What Does "Translated" Mean?</h2>
+<div class="xref-entry"><p class="xref-label">John 3:13</p><p class="xref-verse">"And no man hath ascended up to heaven, but he that came down from heaven, even the Son of man which is in heaven."</p><p class="xref-note">&rarr; Jesus says plainly that no man has ascended to heaven except Himself. So what are we to make of Enoch being taken, and of Elijah's whirlwind ascent in 2 Kings 2? Scripture doesn't fully resolve the question for us, and speculation runs quickly into Jewish fables and books that are not Scripture.</p></div>
+<div class="modal-summary">What we can say plainly: Enoch walked with God, prophesied of Christ, and was pleasing to God &mdash; and he did not see death. Beyond that, Genesis leaves the mechanics a mystery, and we do well to leave them there too, drawing our application from what is written rather than from what isn't.</div>
+</div></div>
+
+<script>
+    function openModal(id){const el=document.getElementById(id);if(el){el.classList.add('open');document.body.style.overflow='hidden'}}
+    function closeModal(id){const el=document.getElementById(id);if(el){el.classList.remove('open');document.body.style.overflow=''}}
+    function handleOverlayClick(e,id){if(e.target===e.currentTarget)closeModal(id)}
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.querySelectorAll('.modal-overlay.open').forEach(el=>el.classList.remove('open'));document.body.style.overflow='';hideTooltip()}});
+    const tooltip=document.getElementById('verseTooltip'),ttRef=document.getElementById('ttRef'),ttVerse=document.getElementById('ttVerse');
+    let activeRef=null,hideTimer=null;
+    function showTooltip(el){clearTimeout(hideTimer);ttRef.textContent=el.dataset.ref;ttVerse.textContent=el.dataset.verse;tooltip.style.visibility='hidden';tooltip.classList.add('visible');const rect=el.getBoundingClientRect(),tw=tooltip.offsetWidth,th=tooltip.offsetHeight,vw=window.innerWidth,pad=12;let top=rect.top-th-pad;if(top<pad)top=rect.bottom+pad;let left=rect.left;if(left+tw>vw-pad)left=vw-tw-pad;if(left<pad)left=pad;tooltip.style.top=top+'px';tooltip.style.left=left+'px';tooltip.style.visibility='';activeRef=el}
+    function hideTooltip(){hideTimer=setTimeout(function(){tooltip.classList.remove('visible');activeRef=null},120)}
+    document.querySelectorAll('.sref').forEach(function(el){el.addEventListener('mouseenter',function(){showTooltip(el)});el.addEventListener('mouseleave',function(){hideTooltip()});el.addEventListener('click',function(e){e.stopPropagation();if(activeRef===el&&tooltip.classList.contains('visible')){hideTooltip()}else{showTooltip(el)}})});
+    tooltip.addEventListener('mouseenter',function(){clearTimeout(hideTimer)});
+    tooltip.addEventListener('mouseleave',function(){hideTooltip()});
+    document.addEventListener('click',function(){hideTooltip()});
+</script>
+</body>
+</html>

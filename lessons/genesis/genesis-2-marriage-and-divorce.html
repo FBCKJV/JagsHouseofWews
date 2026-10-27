@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage & God's View of Divorce • Young Adult Sunday School</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Merriweather:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:            #0c1018;
+            --bg-card:       #141c28;
+            --bg-card-hi:    #1a2236;
+            --border:        #c8940a;
+            --border-dim:    rgba(200,148,10,0.35);
+            --text:          #ffffff;
+            --text-dim:      #c8d4e8;
+            --text-muted:    #8a9ab8;
+            --gold:          #fbbf24;
+            --green:         #34d399;
+            --red:           #f87171;
+            --blue:          #60a5fa;
+            --purple:        #c084fc;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Merriweather', Georgia, serif;
+            background: var(--bg);
+            color: var(--text);
+            padding: 40px 24px 80px;
+            min-height: 100vh;
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        .page-frame {
+            max-width: 1100px;
+            margin: 0 auto;
+            border: 5px double var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 0 0 1px rgba(200,148,10,0.2), 0 0 80px rgba(251,191,36,0.12);
+        }
+
+        /* ── HEADER ── */
+        header {
+            background: #080c12;
+            border-bottom: 4px solid var(--border);
+            padding: 44px 52px 36px;
+            text-align: center;
+        }
+        .header-eyebrow {
+            font-family: 'Cinzel', serif;
+            font-size: 1em;
+            font-weight: 700;
+            letter-spacing: 6px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.6em;
+            font-weight: 900;
+            color: var(--gold);
+            text-shadow: 0 0 30px rgba(251,191,36,0.6), 0 0 60px rgba(251,191,36,0.25);
+            letter-spacing: 5px;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+        header .subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3em;
+            font-weight: 700;
+            color: var(--text-dim);
+            letter-spacing: 4px;
+        }
+        .header-divider {
+            margin: 24px auto 0;
+            width: 55%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--border), transparent);
+        }
+
+        /* ── CONTENT BODY ── */
+        .content-body {
+            background: var(--bg);
+            padding: 44px 44px 56px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        /* Section divider */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin: 8px 0 0;
+        }
+        .section-divider .divider-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border-dim));
+        }
+        .section-divider .divider-line.right {
+            background: linear-gradient(to left, transparent, var(--border-dim));
+        }
+        .section-divider .divider-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.72em;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        /* ── CARDS ── */
+        .day-card {
+            background: var(--bg-card);
+            border: 2px solid var(--border-dim);
+            border-top: 5px solid var(--gold);
+            border-radius: 12px;
+            padding: 28px 30px 24px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.5);
+        }
+        .day-card.c-green  { border-top-color: var(--green); }
+        .day-card.c-blue   { border-top-color: var(--blue);  }
+        .day-card.c-red    { border-top-color: var(--red);   }
+        .day-card.c-purple { border-top-color: var(--purple);}
+        .day-card.c-key {
+            border-top-color: var(--gold);
+            border-color: rgba(251,191,36,0.4);
+            background: var(--bg-card-hi);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.5), 0 0 30px rgba(251,191,36,0.08);
+        }
+        .day-card.c-purple-key {
+            border-top-color: var(--purple);
+            border-color: rgba(192,132,252,0.35);
+            background: #160d24;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.5), 0 0 30px rgba(192,132,252,0.1);
+        }
+
+        .day-badge {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .day-pill {
+            font-family: 'Cinzel', serif;
+            font-size: 0.78em;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #000;
+            background: var(--gold);
+            padding: 5px 16px 4px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+        .day-card.c-green      .day-pill { background: var(--green);  color: #000; }
+        .day-card.c-blue       .day-pill { background: var(--blue);   color: #000; }
+        .day-card.c-red        .day-pill { background: var(--red);    color: #000; }
+        .day-card.c-purple     .day-pill { background: var(--purple); color: #000; }
+        .day-card.c-purple-key .day-pill { background: var(--purple); color: #000; }
+
+        .verse-ref {
+            font-family: 'Cinzel', serif;
+            font-size: 0.82em;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+
+        .day-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.22em;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+        .day-card.c-green      .day-title { color: var(--green);  }
+        .day-card.c-blue       .day-title { color: var(--blue);   }
+        .day-card.c-red        .day-title { color: var(--red);    }
+        .day-card.c-purple     .day-title { color: var(--purple); }
+        .day-card.c-purple-key .day-title { color: var(--purple); }
+
+        /* ── VERSE TEXT ── */
+        .verse-text {
+            font-size: 1.52em;
+            font-weight: 700;
+            color: var(--text);
+            line-height: 1.78;
+        }
+        .verse-text p { margin-bottom: 0.7em; }
+        .verse-text p:last-child { margin-bottom: 0; }
+
+        .vn {
+            font-family: 'Cinzel', serif;
+            font-size: 0.58em;
+            font-weight: 900;
+            color: var(--text-muted);
+            vertical-align: super;
+            margin-right: 3px;
+        }
+
+        /* Inline highlights */
+        .hl-gold   { color: var(--gold);   font-weight: 900; }
+        .hl-green  { color: var(--green);  font-weight: 900; }
+        .hl-red    { color: var(--red);    font-weight: 900; }
+        .hl-blue   { color: var(--blue);   font-weight: 900; }
+        .hl-purple { color: var(--purple); font-weight: 900; }
+
+        /* Gold key-verse block */
+        .key-verse-block {
+            display: block;
+            margin: 4px 0 12px;
+            padding: 14px 18px;
+            background: rgba(251,191,36,0.10);
+            border-left: 5px solid var(--gold);
+            border-radius: 0 8px 8px 0;
+            color: var(--gold);
+            font-weight: 900;
+            font-style: italic;
+            line-height: 1.65;
+        }
+        .key-verse-block.purple {
+            background: rgba(192,132,252,0.10);
+            border-left-color: var(--purple);
+            color: var(--purple);
+        }
+        .key-verse-block.green {
+            background: rgba(52,211,153,0.10);
+            border-left-color: var(--green);
+            color: var(--green);
+        }
+
+        /* Cross-ref button */
+        .xref-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 11px 24px;
+            background: transparent;
+            border: 2px solid var(--red);
+            border-radius: 40px;
+            color: var(--red);
+            font-family: 'Cinzel', serif;
+            font-size: 0.82em;
+            font-weight: 900;
+            letter-spacing: 2px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .xref-btn:hover {
+            background: rgba(248,113,113,0.12);
+            box-shadow: 0 0 20px rgba(248,113,113,0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #080c12;
+            border-top: 3px solid var(--border);
+            padding: 22px 40px;
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 0.82em;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            line-height: 1.9;
+        }
+
+        /* ═══════════════════════════════
+           MODAL
+        ═══════════════════════════════ */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(4px);
+        }
+        .modal-overlay.open { display: flex; animation: fadeIn 0.2s ease; }
+        @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+        .modal-box {
+            background: #0e1420;
+            border: 4px double var(--border);
+            border-radius: 16px;
+            padding: 46px 48px 38px;
+            max-width: 780px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 0 80px rgba(251,191,36,0.2), 0 20px 80px rgba(0,0,0,0.8);
+            animation: slideUp 0.25s ease;
+            -webkit-font-smoothing: antialiased;
+        }
+        .modal-close {
+            position: absolute;
+            top: 14px; right: 18px;
+            background: var(--bg-card);
+            border: 2px solid var(--border-dim);
+            border-radius: 50%;
+            width: 38px; height: 38px;
+            color: var(--text-muted);
+            font-size: 1.1em;
+            font-weight: 900;
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s;
+        }
+        .modal-close:hover { background: var(--border); color: #000; }
+
+        .modal-eyebrow {
+            font-family: 'Cinzel', serif;
+            font-size: 0.82em;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .modal-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.65em;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 28px;
+            padding-bottom: 18px;
+            border-bottom: 2px solid var(--border-dim);
+            line-height: 1.2;
+            padding-right: 40px;
+            text-shadow: 0 0 20px rgba(251,191,36,0.3);
+        }
+        .modal-verse-text {
+            font-size: 1.45em;
+            font-weight: 700;
+            color: var(--text);
+            line-height: 1.78;
+        }
+        .modal-verse-text p { margin-bottom: 0.7em; }
+        .modal-verse-text p:last-child { margin-bottom: 0; }
+
+        .modal-summary {
+            margin-top: 26px;
+            padding: 18px 22px;
+            background: rgba(251,191,36,0.08);
+            border: 1px solid rgba(251,191,36,0.3);
+            border-radius: 10px;
+            font-size: 1.35em;
+            font-weight: 700;
+            color: var(--text);
+            line-height: 1.65;
+            font-style: italic;
+        }
+        .modal-box::-webkit-scrollbar { width: 6px; }
+        .modal-box::-webkit-scrollbar-track { background: transparent; }
+        .modal-box::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+        @media (max-width: 740px) {
+            .content-body { padding: 24px 16px 40px; }
+            header { padding: 32px 20px 26px; }
+            header h1 { font-size: 2.4em; }
+            .modal-box { padding: 30px 22px 26px; }
+            .modal-title { font-size: 1.25em; }
+        }
+    </style>
+</head>
+<body>
+<div class="page-frame">
+
+    <header>
+        <p class="header-eyebrow">Young Adult Sunday School • Genesis Series</p>
+        <h1>Marriage &amp; God's View of Divorce</h1>
+        <p class="subtitle">One Flesh &nbsp;•&nbsp; God's Design &nbsp;•&nbsp; Not to Be Put Asunder</p>
+        <div class="header-divider"></div>
+    </header>
+
+    <div class="content-body">
+
+        <!-- Genesis 2:24 -->
+        <div class="day-card c-key">
+            <div class="day-badge">
+                <span class="day-pill">Genesis 2:24</span>
+                <span class="verse-ref">God's Original Design</span>
+            </div>
+            <p class="day-title">The Foundation of Marriage</p>
+            <div class="verse-text">
+                <span class="key-verse-block">Therefore shall a man leave his father and his mother, and shall cleave unto his wife: and they shall be one flesh.</span>
+            </div>
+        </div>
+
+        <!-- 1 Cor 7:2 -->
+        <div class="day-card">
+            <div class="day-badge">
+                <span class="day-pill">1 Corinthians 7:2</span>
+                <span class="verse-ref">Purpose of Marriage</span>
+            </div>
+            <p class="day-title">God's Provision Against Fornication</p>
+            <div class="verse-text">
+                <p>Nevertheless, to avoid fornication, <span class="hl-gold">let every man have his own wife, and let every woman have her own husband.</span></p>
+            </div>
+        </div>
+
+        <!-- Malachi 2:16 -->
+        <div class="day-card c-red">
+            <div class="day-badge">
+                <span class="day-pill">Malachi 2:16</span>
+                <span class="verse-ref">God Hates Divorce</span>
+            </div>
+            <p class="day-title">The LORD Hates Putting Away</p>
+            <div class="verse-text">
+                <p><span class="hl-red">For the LORD, the God of Israel, saith that he hateth putting away:</span> for one covereth violence with his garment, saith the LORD of hosts: therefore take heed to your spirit, that ye deal not treacherously.</p>
+            </div>
+        </div>
+
+        <!-- Matthew 5:32 -->
+        <div class="day-card">
+            <div class="day-badge">
+                <span class="day-pill">Matthew 5:32</span>
+                <span class="verse-ref">Jesus' Teaching</span>
+            </div>
+            <p class="day-title">The Sermon on the Mount</p>
+            <div class="verse-text">
+                <p>But I say unto you, That whosoever shall put away his wife, <span class="hl-gold">saving for the cause of fornication,</span> causeth her to commit adultery: and whosoever shall marry her that is divorced committeth adultery.</p>
+            </div>
+        </div>
+
+        <!-- Matthew 19:3-12 -->
+        <div class="day-card c-key">
+            <div class="day-badge">
+                <span class="day-pill">Matthew 19:3–12</span>
+                <span class="verse-ref">Jesus' Full Answer</span>
+            </div>
+            <p class="day-title">What God Hath Joined Together</p>
+            <div class="verse-text">
+                <p>The Pharisees also came unto him, tempting him, and saying, Is it lawful for a man to put away his wife for every cause?</p>
+                <p>And he answered and said unto them... For this cause shall a man leave father and mother, and shall cleave to his wife: and they twain shall be one flesh?</p>
+                <span class="key-verse-block">Wherefore they are no more twain, but one flesh. What therefore God hath joined together, let not man put asunder.</span>
+                <p>He saith unto them, Moses <span class="hl-red">because of the hardness of your hearts</span> suffered you to put away your wives: but from the beginning it was not so.</p>
+                <p>And I say unto you, Whosoever shall put away his wife, except it be for fornication, and shall marry another, committeth adultery...</p>
+            </div>
+        </div>
+
+        <!-- Deuteronomy 24:1-4 -->
+        <div class="day-card c-blue">
+            <div class="day-badge">
+                <span class="day-pill">Deuteronomy 24:1–4</span>
+                <span class="verse-ref">Old Testament Provision</span>
+            </div>
+            <p class="day-title">The Mosaic Concession</p>
+            <div class="verse-text">
+                <p>When a man hath taken a wife, and married her, and it come to pass that she find no favour in his eyes, because he hath found some uncleanness in her: then let him write her a bill of divorcement, and give it in her hand, and send her out of his house... Her former husband, which sent her away, may not take her again to be his wife, after that she is defiled; <span class="hl-red">for that is abomination before the LORD.</span></p>
+            </div>
+        </div>
+
+        <!-- 1 Corinthians 7:10-15 -->
+        <div class="day-card">
+            <div class="day-badge">
+                <span class="day-pill">1 Corinthians 7:10–15</span>
+                <span class="verse-ref">Apostolic Command</span>
+            </div>
+            <p class="day-title">The Lord's Command to the Married</p>
+            <div class="verse-text">
+                <p>And unto the married I command, yet not I, but the Lord, <span class="hl-gold">Let not the wife depart from her husband:</span> But and if she depart, let her remain unmarried, or be reconciled to her husband: and let not the husband put away his wife.</p>
+                <p>But if the unbelieving depart, let him depart. A brother or a sister is not under bondage in such cases: <span class="hl-green">but God hath called us to peace.</span></p>
+            </div>
+        </div>
+
+        <!-- Ephesians 5:22-25 -->
+        <div class="day-card c-green">
+            <div class="day-badge">
+                <span class="day-pill">Ephesians 5:22–25</span>
+                <span class="verse-ref">Christ and the Church</span>
+            </div>
+            <p class="day-title">The Great Mystery — Marriage as Gospel Picture</p>
+            <div class="verse-text">
+                <p>Wives, submit yourselves unto your own husbands, as unto the Lord. For the husband is the head of the wife, even as <span class="hl-green">Christ is the head of the church,</span> and he is the saviour of the body.</p>
+                <p>Therefore as the church is subject unto Christ, so let the wives be to their own husbands in every thing.</p>
+                <p><span class="hl-gold">Husbands, love your wives, even as Christ also loved the church, and gave himself for it;</span></p>
+            </div>
+        </div>
+
+        <!-- Further Warnings -->
+        <div class="day-card c-red">
+            <div class="day-badge">
+                <span class="day-pill">Further Warnings</span>
+                <span class="verse-ref">Mark 10:12 &nbsp;•&nbsp; Luke 16:18 &nbsp;•&nbsp; Romans 7:2 &nbsp;•&nbsp; 1 Timothy 5:8</span>
+            </div>
+            <p class="day-title">Warnings &amp; Duties</p>
+            <div class="verse-text">
+                <p><span class="hl-red">Mark 10:12 • Luke 16:18</span> — A woman who puts away her husband and marries another committeth adultery, and whosoever marries her that is put away committeth adultery.</p>
+                <p><span class="hl-gold">Romans 7:2</span> — The woman is bound by the law to her husband so long as he liveth.</p>
+                <p><span class="hl-gold">1 Timothy 5:8</span> — But if any provide not for his own, and specially for those of his own house, he hath denied the faith, and is worse than an infidel.</p>
+            </div>
+        </div>
+
+        <!-- Exhortations -->
+        <div class="day-card c-green">
+            <div class="day-badge">
+                <span class="day-pill">Exhortations</span>
+                <span class="verse-ref">Titus 2:4–5 &nbsp;•&nbsp; 1 Peter 3:1–7 &nbsp;•&nbsp; Hebrews 13:4</span>
+            </div>
+            <p class="day-title">Exhortations to Godly Marriage</p>
+            <div class="verse-text">
+                <p><span class="hl-green">Titus 2:4–5</span> — That they may teach the young women to be sober, to love their husbands, to love their children, To be discreet, chaste, keepers at home, good, obedient to their own husbands, that the word of God be not blasphemed.</p>
+                <p><span class="hl-green">1 Peter 3:1–7</span> — Wives, be in subjection to your own husbands... Likewise, ye husbands, dwell with them according to knowledge, giving honour unto the wife, as unto the weaker vessel, and as being heirs together of the grace of life.</p>
+                <p><span class="hl-green">Hebrews 13:4</span> — <span class="hl-gold">Marriage is honourable in all, and the bed undefiled:</span> but whoremongers and adulterers God will judge.</p>
+            </div>
+        </div>
+
+        <!-- ══ SECTION BREAK: ADULTERY UNDER THE LAW ══ -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <span class="divider-label">Adultery Under the Law</span>
+            <div class="divider-line right"></div>
+        </div>
+
+        <!-- Leviticus 20:10 & Deuteronomy 22:22-24 -->
+        <div class="day-card c-red">
+            <div class="day-badge">
+                <span class="day-pill">Leviticus 20:10</span>
+                <span class="verse-ref">A Capital Offense — Both Parties</span>
+            </div>
+            <p class="day-title">The Adulterer and the Adulteress Shall Surely Be Put to Death</p>
+            <div class="verse-text">
+                <p><span class="vn">10</span><span class="hl-red">And the man that committeth adultery with another man's wife, even he that committeth adultery with his neighbour's wife, the adulterer and the adulteress shall surely be put to death.</span></p>
+            </div>
+        </div>
+
+        <div class="day-card c-red">
+            <div class="day-badge">
+                <span class="day-pill">Deuteronomy 22:22–24</span>
+                <span class="verse-ref">Stoning — Both the Man and the Woman</span>
+            </div>
+            <p class="day-title">So Shalt Thou Put Away Evil from Israel</p>
+            <div class="verse-text">
+                <p><span class="vn">22</span><span class="hl-red">If a man be found lying with a woman married to an husband, then they shall both of them die, both the man that lay with the woman, and the woman: so shalt thou put away evil from Israel.</span></p>
+                <p><span class="vn">23</span>If a damsel that is a virgin be betrothed unto an husband, and a man find her in the city, and lie with her; <span class="vn">24</span><span class="hl-red">Then ye shall bring them both out unto the gate of that city, and ye shall stone them with stones that they die;</span> the damsel, because she cried not, being in the city; and the man, because he hath humbled his neighbour's wife: <span class="hl-red">so thou shalt put away evil from among you.</span></p>
+            </div>
+            <button class="xref-btn" onclick="openModal('modal-adultery')">
+                ✦ &nbsp; The Woman Taken in Adultery — John 8:1–11
+            </button>
+        </div>
+
+        <!-- ══ SECTION BREAK: MARRIAGE SUPPER OF THE LAMB ══ -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <span class="divider-label">The Marriage Supper of the Lamb</span>
+            <div class="divider-line right"></div>
+        </div>
+
+        <!-- Revelation 19:7-9 -->
+        <div class="day-card c-purple-key">
+            <div class="day-badge">
+                <span class="day-pill">Revelation 19:7–9</span>
+                <span class="verse-ref">The Marriage of the Lamb Is Come</span>
+            </div>
+            <p class="day-title">Blessed Are They Which Are Called</p>
+            <div class="verse-text">
+                <p><span class="vn">7</span><span class="hl-purple">Let us be glad and rejoice, and give honour to him: for the marriage of the Lamb is come, and his wife hath made herself ready.</span></p>
+                <p><span class="vn">8</span>And to her was granted that she should be arrayed in <span class="hl-gold">fine linen, clean and white:</span> for the fine linen is the <span class="hl-green">righteousness of saints.</span></p>
+                <span class="key-verse-block purple"><span class="vn" style="color:rgba(192,132,252,0.6);">9</span> And he saith unto me, Write, Blessed are they which are called unto the marriage supper of the Lamb: and he saith unto me, These are the true sayings of God.</span>
+            </div>
+        </div>
+
+        <!-- Revelation 7:9, 13-14 — Robes of White -->
+        <div class="day-card c-purple">
+            <div class="day-badge">
+                <span class="day-pill">Revelation 7:9, 13–14</span>
+                <span class="verse-ref">The Invited — Robes of White</span>
+            </div>
+            <p class="day-title">A Great Multitude in White Robes — Washed in the Blood of the Lamb</p>
+            <div class="verse-text">
+                <p><span class="vn">9</span>After this I beheld, and, lo, <span class="hl-purple">a great multitude, which no man could number, of all nations, and kindreds, and people, and tongues, stood before the throne, and before the Lamb, clothed with white robes, and palms in their hands;</span></p>
+                <p><span class="vn">13</span>And one of the elders answered, saying unto me, What are these which are arrayed in white robes? and whence came they?</p>
+                <span class="key-verse-block purple"><span class="vn" style="color:rgba(192,132,252,0.6);">14</span> These are they which came out of great tribulation, and have washed their robes, and made them white in the blood of the Lamb.</span>
+            </div>
+        </div>
+
+        <!-- Revelation 19:11-16 — The Bridegroom -->
+        <div class="day-card c-purple-key">
+            <div class="day-badge">
+                <span class="day-pill">Revelation 19:11–16</span>
+                <span class="verse-ref">The Bridegroom — Christ the King</span>
+            </div>
+            <p class="day-title">KING OF KINGS, AND LORD OF LORDS</p>
+            <div class="verse-text">
+                <p><span class="vn">11</span>And I saw heaven opened, and behold a white horse; and he that sat upon him was called <span class="hl-gold">Faithful and True,</span> and in righteousness he doth judge and make war.</p>
+                <p><span class="vn">12</span>His eyes were as a flame of fire, and on his head were many crowns; and he had a name written, that no man knew, but he himself.</p>
+                <p><span class="vn">13</span>And he was clothed with a vesture dipped in blood: and his name is called <span class="hl-gold">The Word of God.</span></p>
+                <p><span class="vn">14</span>And the armies which were in heaven followed him upon white horses, <span class="hl-green">clothed in fine linen, white and clean.</span></p>
+                <span class="key-verse-block purple"><span class="vn" style="color:rgba(192,132,252,0.6);">16</span> And he hath on his vesture and on his thigh a name written, KING OF KINGS, AND LORD OF LORDS.</span>
+            </div>
+        </div>
+
+        <!-- Revelation 21:2, 9-11 — New Jerusalem as Bride -->
+        <div class="day-card c-purple">
+            <div class="day-badge">
+                <span class="day-pill">Revelation 21:2, 9–11</span>
+                <span class="verse-ref">New Jerusalem — The Bride Adorned</span>
+            </div>
+            <p class="day-title">Prepared as a Bride Adorned for Her Husband</p>
+            <div class="verse-text">
+                <p><span class="vn">2</span><span class="hl-purple">And I John saw the holy city, new Jerusalem, coming down from God out of heaven, prepared as a bride adorned for her husband.</span></p>
+                <p><span class="vn">9</span>And there came unto me one of the seven angels... and talked with me, saying, Come hither, I will shew thee <span class="hl-purple">the bride, the Lamb's wife.</span></p>
+                <span class="key-verse-block purple"><span class="vn" style="color:rgba(192,132,252,0.6);">10–11</span> And he carried me away in the spirit to a great and high mountain, and shewed me that great city, the holy Jerusalem, descending out of heaven from God, Having the glory of God: and her light was like unto a stone most precious, even like a jasper stone, clear as crystal.</span>
+            </div>
+        </div>
+
+        <!-- Closing summary card -->
+        <div class="day-card c-key">
+            <div class="day-badge">
+                <span class="day-pill">The Full Picture</span>
+                <span class="verse-ref">Genesis to Revelation</span>
+            </div>
+            <p class="day-title">Marriage: From Eden to Eternity</p>
+            <div class="verse-text">
+                <p><span class="hl-gold">The Bible opens with a wedding</span> — one man, one woman, one flesh in the garden of God. <span class="hl-green">The Bible closes with a wedding</span> — the Lamb and His bride, the redeemed of all ages, clothed in white, gathered at the marriage supper of the Lamb.</p>
+                <p><span class="hl-purple">Every earthly marriage is a shadow of that eternal union.</span> Christ is the Bridegroom. The Church is His bride. He gave Himself for her, He is coming for her, and He will present her to Himself — holy, without blemish, in fine linen, clean and white.</p>
+                <span class="key-verse-block green">Ephesians 5:32 — This is a great mystery: but I speak concerning Christ and the church.</span>
+            </div>
+        </div>
+
+    </div><!-- /content-body -->
+
+    <footer>
+        Young Adult Sunday School &nbsp;•&nbsp; Genesis Series &nbsp;•&nbsp; King James Bible<br>
+        What therefore God hath joined together, let not man put asunder. &nbsp;•&nbsp; Rev. 19:9
+    </footer>
+
+</div><!-- /page-frame -->
+
+
+<!-- ═══════════════════════════════════════════
+     MODAL — Woman Taken in Adultery (John 8:1-11)
+═══════════════════════════════════════════ -->
+<div class="modal-overlay" id="modal-adultery" onclick="handleOverlayClick(event,'modal-adultery')">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModal('modal-adultery')" aria-label="Close">✕</button>
+        <p class="modal-eyebrow">John 8:1–11 &nbsp;•&nbsp; King James Bible</p>
+        <h2 class="modal-title">The Woman Taken in Adultery</h2>
+        <div class="modal-verse-text">
+            <p><span class="vn">1</span>Jesus went unto the mount of Olives.</p>
+            <p><span class="vn">2</span>And early in the morning he came again into the temple, and all the people came unto him; and he sat down, and taught them.</p>
+            <p><span class="vn">3</span>And the scribes and Pharisees brought unto him a woman taken in adultery; and when they had set her in the midst,</p>
+            <p><span class="vn">4</span>They say unto him, Master, this woman was taken in adultery, in the very act.</p>
+            <p><span class="vn">5</span><span class="hl-red">Now Moses in the law commanded us, that such should be stoned: but what sayest thou?</span></p>
+            <p><span class="vn">6</span>This they said, tempting him, that they might have to accuse him. But Jesus stooped down, and with his finger wrote on the ground, as though he heard them not.</p>
+            <p><span class="vn">7</span>So when they continued asking him, he lifted up himself, and said unto them, <span class="hl-gold">He that is without sin among you, let him first cast a stone at her.</span></p>
+            <p><span class="vn">8</span>And again he stooped down, and wrote on the ground.</p>
+            <p><span class="vn">9</span>And they which heard it, being convicted by their own conscience, went out one by one, beginning at the eldest, even unto the last: and Jesus was left alone, and the woman standing in the midst.</p>
+            <p><span class="vn">10</span>When Jesus had lifted up himself, and saw none but the woman, he said unto her, Woman, where are those thine accusers? hath no man condemned thee?</p>
+            <p><span class="vn">11</span>She said, No man, Lord. <span class="hl-gold">And Jesus said unto her, Neither do I condemn thee: go, and sin no more.</span></p>
+        </div>
+        <div class="modal-summary">
+            The Law demanded death for both parties — yet only the woman was brought. Jesus did not abolish the Law; He exposed the accusers' own guilt. His verdict was not cheap grace — "go, and sin no more" — but mercy that upheld the standard while extending redemption. Grace does not erase the Law; it fulfills it.
+        </div>
+    </div>
+</div>
+
+<script>
+    function openModal(id) {
+        const el = document.getElementById(id);
+        if (el) { el.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    }
+    function closeModal(id) {
+        const el = document.getElementById(id);
+        if (el) { el.classList.remove('open'); document.body.style.overflow = ''; }
+    }
+    function handleOverlayClick(e, id) {
+        if (e.target === e.currentTarget) closeModal(id);
+    }
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal-overlay.open').forEach(el => el.classList.remove('open'));
+            document.body.style.overflow = '';
+        }
+    });
+</script>
+</body>
+</html>

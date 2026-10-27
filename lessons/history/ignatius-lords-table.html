@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ignatius and the Lord’s Table</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#0d0a07;
+  --panel:#17120c;
+  --gold:#c9a227;
+  --gold-soft:#e4cd85;
+  --crimson:#8e1b1b;
+  --crimson-bright:#c0392b;
+  --vellum:#ece0c4;
+  --vellum-ink:#2a1d10;
+  --text:#ebe3d1;
+  --muted:#a99d85;
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Times New Roman", serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --ink:#0d0a07; --text:#ebe3d1; }
+}
+*,*::before,*::after{box-sizing:inherit}
+html,body{height:100%;margin:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  background:var(--ink);
+  color:var(--text);
+  font-family:var(--body);
+  font-size:clamp(19px,1.55vw,25px);
+  line-height:1.55;
+  overflow:hidden;
+}
+/* subtle vellum-grain vignette */
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,.55) 100%);
+}
+
+/* ---------- chrome ---------- */
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:5;
+  padding:calc(env(safe-area-inset-top,0px) + .7rem) 1.4rem .7rem;
+  display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+  font-family:var(--display);font-size:.62em;letter-spacing:.08em;color:var(--muted);
+  background:linear-gradient(var(--ink) 60%, transparent);
+}
+.topbar .sec{color:var(--gold)}
+.bottombar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  padding:.6rem 1.2rem calc(env(safe-area-inset-bottom,0px) + .7rem);
+  display:flex;align-items:center;gap:.8rem;
+  background:linear-gradient(transparent, var(--ink) 40%);
+}
+.progress{flex:1;height:2px;background:rgba(201,162,39,.18);position:relative}
+.progress span{position:absolute;inset:0 auto 0 0;background:var(--gold);transition:width .3s ease}
+.navbtn{
+  font-family:var(--display);font-size:.62em;letter-spacing:.06em;
+  background:transparent;color:var(--gold-soft);
+  border:1px solid rgba(201,162,39,.5);padding:.45rem .9rem;cursor:pointer;
+}
+.navbtn:hover{background:rgba(201,162,39,.12)}
+.navbtn:disabled{opacity:.3;cursor:default}
+button:focus-visible{outline:2px solid var(--gold-soft);outline-offset:3px}
+
+/* ---------- slides ---------- */
+.deck{height:100%;position:relative}
+.slide{
+  position:absolute;inset:0;
+  display:none;overflow-y:auto;
+  padding:4.2rem 1.4rem 5.2rem;
+}
+.slide.active{display:block}
+.slide.enter{animation:fadein .45s ease}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion: reduce){.slide.enter{animation:none}}
+.inner{max-width:60rem;margin:0 auto;min-height:100%;display:flex;flex-direction:column;justify-content:center}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-soft);margin:0}
+h2{font-size:1.75em;line-height:1.2;margin-bottom:.35em}
+h2 + .lede{margin-top:0}
+h3{font-size:.85em;letter-spacing:.04em;color:var(--gold);margin:1.1em 0 .4em}
+p{margin:.55em 0}
+.lede{font-size:1.12em;font-style:italic;color:var(--text)}
+.muted{color:var(--muted)}
+.small{font-size:.82em}
+ul.points{margin:.6em 0;padding-left:1.2em}
+ul.points li{margin:.35em 0}
+ul.points li::marker{content:"✠  ";color:var(--crimson-bright);font-size:.8em}
+.rule{border:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1.2em 0;opacity:.6}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;align-items:start}
+@media (max-width:760px){.cols{grid-template-columns:1fr;gap:.6rem}}
+
+/* Didache quotation card: vellum */
+.did{
+  background:var(--vellum);color:var(--vellum-ink);
+  margin:.9em 0;padding:1em 1.3em 1em;
+  border:1px solid var(--gold);
+  box-shadow:0 0 0 4px var(--vellum), 0 0 0 5px var(--gold);
+  margin-left:5px;margin-right:5px;
+  font-size:1.02em;line-height:1.45;
+}
+.did p{margin:0}
+.did cite{
+  display:block;margin-top:.5em;text-align:right;
+  font-family:var(--display);font-style:normal;font-size:.62em;letter-spacing:.06em;color:var(--crimson);
+}
+
+/* KJV references: gold tap-to-reveal */
+.refs{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1em}
+.ref{
+  font-family:var(--display);font-size:.6em;letter-spacing:.05em;
+  background:rgba(201,162,39,.08);color:var(--gold-soft);
+  border:1px solid var(--gold);padding:.5em .85em;cursor:pointer;
+}
+.ref::before{content:"KJV  ";color:var(--crimson-bright);font-weight:700}
+.ref:hover{background:rgba(201,162,39,.2)}
+
+/* Notes and inference boxes */
+.note{
+  border:1px solid rgba(192,57,43,.6);background:rgba(142,27,27,.14);
+  padding:.7em 1em;margin:.9em 0;font-size:.92em;
+}
+.note b{font-family:var(--display);font-weight:600;font-size:.72em;letter-spacing:.05em;color:var(--crimson-bright);display:block;margin-bottom:.2em}
+.stated{border:1px solid var(--gold);padding:.8em 1.1em;margin:.7em 0;background:rgba(201,162,39,.06)}
+.inferred{border:1px dashed var(--crimson-bright);padding:.8em 1.1em;margin:.7em 0}
+.tag{font-family:var(--display);font-size:.6em;letter-spacing:.08em;display:inline-block;margin-bottom:.3em}
+.stated .tag{color:var(--gold)}
+.inferred .tag{color:var(--crimson-bright)}
+
+/* Ordered sequences (water, end-times) */
+ol.seq{list-style:none;counter-reset:s;padding:0;margin:.8em 0}
+ol.seq li{counter-increment:s;position:relative;padding:.45em 0 .45em 3.1em;border-bottom:1px solid rgba(201,162,39,.18)}
+ol.seq li:last-child{border-bottom:0}
+ol.seq li::before{
+  content:counter(s);position:absolute;left:0;top:.35em;
+  width:2.1em;height:2.1em;display:grid;place-items:center;
+  font-family:var(--display);font-size:.8em;color:var(--gold-soft);
+  background:var(--crimson);border:1px solid var(--gold);
+}
+ol.seq li.last{color:var(--muted);font-style:italic}
+
+/* Timeline of years */
+.years{display:grid;grid-template-columns:auto 1fr;gap:.3em 1.2em;margin:.8em 0}
+.years dt{font-family:var(--display);color:var(--gold);font-size:.85em;padding-top:.15em;white-space:nowrap}
+.years dd{margin:0;border-bottom:1px solid rgba(201,162,39,.15);padding-bottom:.4em}
+
+/* Table */
+.tablewrap{overflow-x:auto;margin:.8em 0}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92em}
+th,td{text-align:left;padding:.55em .8em;border-bottom:1px solid rgba(201,162,39,.25);vertical-align:top}
+th{font-family:var(--display);font-weight:600;font-size:.7em;letter-spacing:.05em;color:var(--gold)}
+td:first-child{font-family:var(--display);font-size:.78em;color:var(--gold-soft);width:34%}
+tr.fit td{background:rgba(201,162,39,.09)}
+.verdict-no{color:#e08a7f}
+.verdict-yes{color:var(--gold-soft)}
+
+/* Illuminated initial: the one bold device */
+.illum{
+  display:inline-grid;place-items:center;
+  width:2.9em;height:2.9em;
+  font-family:var(--display);font-weight:700;font-size:2.6em;line-height:1;
+  color:var(--gold-soft);
+  background:
+    radial-gradient(circle at 30% 25%, rgba(228,205,133,.25), transparent 45%),
+    var(--crimson);
+  border:2px solid var(--gold);
+  box-shadow:0 0 0 6px var(--ink), 0 0 0 7px var(--gold), 0 0 40px rgba(201,162,39,.25);
+  margin-bottom:.9rem;
+}
+.divider .inner,.title .inner{align-items:center;text-align:center}
+.divider h2{font-size:2.2em;margin:.3em 0 .1em}
+.divider .chap{font-family:var(--display);color:var(--muted);font-size:.72em;letter-spacing:.08em}
+.divider .lede{max-width:34em}
+.title h1{font-size:clamp(2.4rem,7vw,5rem);letter-spacing:.06em;margin-top:.4rem}
+.title .sub{font-style:italic;font-size:1.2em;margin:.2em 0 .8em}
+.title .illum{font-size:3.4em}
+.hint{margin-top:2.4em;font-size:.75em;color:var(--muted)}
+
+/* ---------- KJV modal ---------- */
+dialog{
+  max-width:min(40rem,92vw);width:100%;
+  background:var(--panel);color:var(--text);
+  border:1px solid var(--gold);
+  box-shadow:0 0 0 5px var(--panel),0 0 0 6px var(--gold),0 20px 60px rgba(0,0,0,.7);
+  padding:1.6rem 1.7rem 1.3rem;
+}
+dialog::backdrop{background:rgba(5,3,1,.78)}
+dialog h3{margin:0 0 .6em;font-size:.95em;color:var(--gold-soft)}
+dialog .vtext{font-size:1.15em;line-height:1.6}
+dialog .src{font-family:var(--display);font-size:.58em;letter-spacing:.06em;color:var(--crimson-bright);margin-top:1em}
+dialog .close{margin-top:1.1em}
+</style>
+</head>
+<body>
+
+<header class="topbar" aria-live="polite">
+  <span class="sec" id="secLabel">Ignatius and the Lord’s Table</span>
+  <span id="counter">1 / 1</span>
+</header>
+
+<main class="deck" id="deck">
+
+<!-- ================= TITLE ================= -->
+<section class="slide title" data-section="Ignatius and the Lord’s Table">
+  <div class="inner">
+    <span class="illum" aria-hidden="true">I</span>
+    <h1>Ignatius and the Lord’s Table</h1>
+    <p class="sub">Answering the transubstantiation proof text</p>
+    <p class="muted">Smyrnaeans 7:1 in its own context, measured by the King James Bible</p>
+    <p class="hint">Use the arrow keys, swipe, or the buttons below. Tap any gold KJV reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- ================= I. WHO WAS IGNATIUS ================= -->
+<section class="slide divider" data-section="I. Who Was Ignatius?">
+  <div class="inner">
+    <span class="illum" aria-hidden="true">I</span>
+    <p class="chap">Section One</p>
+    <h2>Who Was Ignatius?</h2>
+    <p class="lede">A pastor in Antioch, writing on his way to die.</p>
+  </div>
+</section>
+
+<section class="slide" data-section="I. Who Was Ignatius?">
+  <div class="inner">
+    <h2>A Prisoner’s Letters</h2>
+    <ul class="points">
+      <li>Ignatius led the church at Antioch, where the disciples were first called Christians.</li>
+      <li>Around 107 to 110 AD he was arrested and taken under guard to Rome to be thrown to the beasts.</li>
+      <li>On the road he wrote seven short letters to churches, and one to Polycarp.</li>
+    </ul>
+    <div class="note"><b>Same rule as the Didache</b>Ignatius is a valuable early witness. He is not Scripture. Where he agrees with the Bible, he confirms it. Where he goes beyond it, the Bible corrects him.</div>
+    <div class="refs">
+      <button class="ref" data-v="acts11">Acts 11:26</button>
+      <button class="ref" data-v="isa8">Isaiah 8:20</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= II. THE REAL ENEMY ================= -->
+<section class="slide divider" data-section="II. The Real Enemy">
+  <div class="inner">
+    <span class="illum" aria-hidden="true">II</span>
+    <p class="chap">Section Two</p>
+    <h2>The Real Enemy</h2>
+    <p class="lede">Ignatius was not fighting about bread. He was fighting about the body of Jesus.</p>
+  </div>
+</section>
+
+<section class="slide" data-section="II. The Real Enemy">
+  <div class="inner">
+    <h2>The Docetists</h2>
+    <p class="lede">From the Greek <em>dokeō</em>, “to seem.”</p>
+    <ul class="points">
+      <li>They taught that Jesus was pure spirit who only seemed to have a human body.</li>
+      <li>So He only seemed to suffer, only seemed to die, and only seemed to rise.</li>
+      <li>John had already called this the spirit of antichrist.</li>
+    </ul>
+    <div class="stated"><span class="tag">The real question in Smyrna</span><br>Did Jesus Christ come in the flesh? Everything Ignatius says about the Lord’s Table answers that question.</div>
+    <div class="refs">
+      <button class="ref" data-v="1john4">1 John 4:2–3</button>
+      <button class="ref" data-v="2john7">2 John 7</button>
+      <button class="ref" data-v="john1">John 1:14</button>
+      <button class="ref" data-v="luke24">Luke 24:39</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= III. THE PROOF TEXT ================= -->
+<section class="slide divider" data-section="III. The Proof Text">
+  <div class="inner">
+    <span class="illum" aria-hidden="true">III</span>
+    <p class="chap">Section Three · Smyrnaeans 7:1</p>
+    <h2>The Proof Text</h2>
+    <p class="lede">The verse most often quoted to prove transubstantiation.</p>
+  </div>
+</section>
+
+<section class="slide" data-section="III. The Proof Text">
+  <div class="inner">
+    <h2>What Ignatius Wrote</h2>
+    <blockquote class="did"><p>“They abstain from the Eucharist and from prayer, because they confess not the Eucharist to be the flesh of our Saviour Jesus Christ, which suffered for our sins, and which the Father, of His goodness, raised up again.”</p><cite>Ignatius, Smyrnaeans 7:1</cite></blockquote>
+    <ul class="points">
+      <li>Who abstained? The Docetists.</li>
+      <li>Why? Because the meal remembered a body they said never existed.</li>
+      <li>Ignatius is exposing their denial of the Incarnation, not defining the bread.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="slide" data-section="III. The Proof Text">
+  <div class="inner">
+    <h2>A Figure of Speech</h2>
+    <p>Ignatius calls the meal by the name of what it represents. Grammarians call this <em>metonymy</em>: naming the sign for the thing signified.</p>
+    <div class="note"><b>The flag</b>If a man refuses to salute a nation’s flag because he denies that nation has a right to exist, his protest is against the nation, not the cloth. The Docetists refused the meal because they denied the body it remembered.</div>
+    <p>Jesus spoke the same way. No one thinks He is made of wood or grows on a trellis.</p>
+    <div class="refs">
+      <button class="ref" data-v="john10">John 10:9</button>
+      <button class="ref" data-v="john15_1">John 15:1</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="III. The Proof Text">
+  <div class="inner">
+    <h2>A Memorial of Thanksgiving</h2>
+    <p class="lede">“This do in remembrance of me.”</p>
+    <ul class="points">
+      <li>The Greek word is <em>anamnēsis</em>: a memorial, a calling to mind.</li>
+      <li>The elements point back to a finished act on Calvary, not to something happening in the eating.</li>
+      <li>And they point forward: “ye do shew the Lord’s death till he come.”</li>
+    </ul>
+    <div class="refs">
+      <button class="ref" data-v="luke22">Luke 22:19</button>
+      <button class="ref" data-v="1cor11">1 Corinthians 11:24–26</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= IV. JESUS AT THE TABLE ================= -->
+<section class="slide divider" data-section="IV. Jesus at the Table">
+  <div class="inner">
+    <span class="illum" aria-hidden="true">IV</span>
+    <p class="chap">Section Four</p>
+    <h2>Jesus at the Table</h2>
+    <p class="lede">What the first Supper shows about every Supper since.</p>
+  </div>
+</section>
+
+<section class="slide" data-section="IV. Jesus at the Table">
+  <div class="inner">
+    <h2>His Body Was Holding the Bread</h2>
+    <ul class="points">
+      <li>When Jesus said “This is my body,” His own body was whole and sitting at the table, holding the bread in His hands.</li>
+      <li>After the blessing, He still called the cup “this fruit of the vine.”</li>
+      <li>After the blessing, Paul still calls it “this bread.”</li>
+    </ul>
+    <div class="stated"><span class="tag">Stated in Scripture</span><br>The Lord Himself and the apostle Paul both named the elements as bread and fruit of the vine after they were blessed.</div>
+    <div class="refs">
+      <button class="ref" data-v="matt26">Matthew 26:29</button>
+      <button class="ref" data-v="1cor11_26">1 Corinthians 11:26</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="IV. Jesus at the Table">
+  <div class="inner">
+    <h2>Expect This Answer</h2>
+    <p>Ignatius calls it the flesh “which suffered for our sins, and which the Father raised up again.” It is tempting to say, “So the bread was crucified?”</p>
+    <div class="note"><b>Don’t lean on that</b>A Roman Catholic will simply agree that the body present is the same one that suffered and rose. That argument answers a view they don’t hold.</div>
+    <h3>Stand here instead</h3>
+    <ul class="points">
+      <li>His sacrifice was offered once for all, and is finished.</li>
+      <li>He sat down at the right hand of God.</li>
+      <li>His body is in heaven until He returns.</li>
+    </ul>
+    <div class="refs">
+      <button class="ref" data-v="heb10_10">Hebrews 10:10</button>
+      <button class="ref" data-v="heb10_12">Hebrews 10:12</button>
+      <button class="ref" data-v="acts3">Acts 3:21</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= V. IN HIS OWN WORDS ================= -->
+<section class="slide divider" data-section="V. In His Own Words">
+  <div class="inner">
+    <span class="illum" aria-hidden="true">V</span>
+    <p class="chap">Section Five</p>
+    <h2>In His Own Words</h2>
+    <p class="lede">Let Ignatius define “flesh” and “blood” for himself.</p>
+  </div>
+</section>
+
+<section class="slide" data-section="V. In His Own Words">
+  <div class="inner">
+    <h2>Faith Is the Flesh, Love Is the Blood</h2>
+    <blockquote class="did"><p>“Be renewed in faith, that is the flesh of the Lord, and in love, that is the blood of Jesus Christ.”</p><cite>Ignatius, Trallians 8:1</cite></blockquote>
+    <blockquote class="did"><p>“I desire the bread of God, the heavenly bread, the bread of life, which is the flesh of Jesus Christ… and I desire the drink of God, namely His blood, which is incorruptible love and eternal life.”</p><cite>Ignatius, Romans 7:3</cite></blockquote>
+    <p>In Ignatius’s own vocabulary, eating the flesh and drinking the blood describe living by faith and abiding in love.</p>
+  </div>
+</section>
+
+<section class="slide" data-section="V. In His Own Words">
+  <div class="inner">
+    <h2>Eating Is Believing</h2>
+    <p>Ignatius is echoing John 6. Jesus Himself explains what coming and eating mean.</p>
+    <ul class="points">
+      <li>He that cometh shall never hunger. He that believeth shall never thirst.</li>
+      <li>He that believeth hath everlasting life. “I am that bread of life.”</li>
+      <li>“The flesh profiteth nothing: the words that I speak unto you, they are spirit, and they are life.”</li>
+    </ul>
+    <div class="refs">
+      <button class="ref" data-v="john6_35">John 6:35</button>
+      <button class="ref" data-v="john6_47">John 6:47–48</button>
+      <button class="ref" data-v="john6_63">John 6:63</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VI. THE ALTAR IS THE ASSEMBLY ================= -->
+<section class="slide divider" data-section="VI. The Altar Is the Assembly">
+  <div class="inner">
+    <span class="illum" aria-hidden="true">VI</span>
+    <p class="chap">Section Six</p>
+    <h2>The Altar Is the Assembly</h2>
+    <p class="lede">Where the “altar” really is in Ignatius’s letters.</p>
+  </div>
+</section>
+
+<section class="slide" data-section="VI. The Altar Is the Assembly">
+  <div class="inner">
+    <h2>Christ Is Our Altar</h2>
+    <p>Some use Ignatius’s word “altar” to turn the thanksgiving meal into a new and continual sacrifice. Scripture says we already have an altar, and it is Christ, who suffered without the gate.</p>
+    <div class="refs">
+      <button class="ref" data-v="heb13">Hebrews 13:9–12</button>
+    </div>
+    <blockquote class="did"><p>“Let no man deceive himself: if any one be not within the altar, he is deprived of the bread of God.”</p><cite>Ignatius, Ephesians 5:2</cite></blockquote>
+    <p>“Within the altar” means within the gathered church. To be outside it is to separate yourself from the local congregation, and so lose your place at the memorial.</p>
+  </div>
+</section>
+
+<section class="slide" data-section="VI. The Altar Is the Assembly">
+  <div class="inner">
+    <h2>One Eucharist, One Altar</h2>
+    <blockquote class="did"><p>“Take ye heed, then, to have but one Eucharist. For there is one flesh of our Lord Jesus Christ, and one cup to show forth the unity of His blood; one altar; as there is one bishop, along with the presbytery and deacons, my fellow-servants.”</p><cite>Ignatius, Philadelphians 4:1</cite></blockquote>
+    <ul class="points">
+      <li>The point is unity: one meal, one cup, one gathered body.</li>
+      <li>“Eucharist” means the whole thanksgiving gathering, which the Docetists were boycotting.</li>
+      <li>The “one altar” is the one local assembly.</li>
+    </ul>
+    <div class="refs">
+      <button class="ref" data-v="1cor10">1 Corinthians 10:17</button>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-section="VI. The Altar Is the Assembly">
+  <div class="inner">
+    <h2>What “Catholic” Meant</h2>
+    <blockquote class="did"><p>“Wherever the bishop shall appear, there let the multitude of the people also be; even as, wherever Jesus Christ is, there is the Catholic Church.”</p><cite>Ignatius, Smyrnaeans 8:2</cite></blockquote>
+    <ul class="points">
+      <li>This is the first known use of the phrase. <em>Katholikos</em> means “whole” or “universal.”</li>
+      <li>It is defined by where Christ is, not by Rome.</li>
+      <li>In his letter to the church at Rome, Ignatius never mentions a bishop there at all.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="slide" data-section="VI. The Altar Is the Assembly">
+  <div class="inner">
+    <h2>Measured by Scripture</h2>
+    <p>Ignatius sets one bishop above the elders (presbyters). That is already a step beyond the New Testament.</p>
+    <div class="stated"><span class="tag">Stated in Scripture</span><br>Paul calls the same men “elders” and “bishops” (overseers). In the Bible these are one office, not two.</div>
+    <p>Even so, Ignatius’s bishop was the pastor of one church in one city, not a ruler over many churches.</p>
+    <div class="refs">
+      <button class="ref" data-v="titus1">Titus 1:5, 7</button>
+      <button class="ref" data-v="acts20">Acts 20:17, 28</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VII. ANSWERING IN ONE BREATH ================= -->
+<section class="slide divider" data-section="VII. The Answer">
+  <div class="inner">
+    <span class="illum" aria-hidden="true">VII</span>
+    <p class="chap">Section Seven</p>
+    <h2>The Answer</h2>
+    <p class="lede">Putting it together when Smyrnaeans 7:1 comes up.</p>
+  </div>
+</section>
+
+<section class="slide" data-section="VII. The Answer">
+  <div class="inner">
+    <h2>In One Breath</h2>
+    <div class="stated"><p>“Ignatius is not defining the substance of the bread. He is exposing the hypocrisy of the Docetists. They cannot join a thanksgiving meal meant to memorialize a physically broken body when they deny Jesus ever had a physical body to break. You are reading a 13th-century Roman Catholic definition of transubstantiation back into a 2nd-century defense of the literal, physical Incarnation.”</p></div>
+    <ul class="points">
+      <li>The enemy was Docetism, not a low view of the bread.</li>
+      <li>Ignatius defines flesh and blood as faith and love.</li>
+      <li>Jesus and Paul still called it bread and fruit of the vine.</li>
+      <li>Christ’s sacrifice is finished, once for all.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="slide divider" data-section="VII. The Answer">
+  <div class="inner">
+    <span class="illum" aria-hidden="true">✠</span>
+    <h2>Till He Come</h2>
+    <p class="lede" style="max-width:32em">“For as often as ye eat this bread, and drink this cup, ye do shew the Lord’s death till he come.”</p>
+    <div class="refs" style="justify-content:center">
+      <button class="ref" data-v="1cor11_26">1 Corinthians 11:26</button>
+      <button class="ref" data-v="heb10_12">Hebrews 10:12</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<footer class="bottombar">
+  <button class="navbtn" id="prev" aria-label="Previous slide">Back</button>
+  <div class="progress" aria-hidden="true"><span id="bar"></span></div>
+  <button class="navbtn" id="fs" aria-label="Toggle full screen">Full screen</button>
+  <button class="navbtn" id="next" aria-label="Next slide">Next</button>
+</footer>
+
+<dialog id="verse" aria-labelledby="vref">
+  <h3 id="vref"></h3>
+  <div class="vtext" id="vtext"></div>
+  <div class="src">King James Version</div>
+  <button class="navbtn close" id="vclose">Close</button>
+</dialog>
+
+<script>
+const VERSES = {
+  "acts11": ["Acts 11:26", "And when he had found him, he brought him unto Antioch. And it came to pass, that a whole year they assembled themselves with the church, and taught much people. And the disciples were called Christians first in Antioch."],
+  "isa8": ["Isaiah 8:20", "To the law and to the testimony: if they speak not according to this word, it is because there is no light in them."],
+  "1john4": ["1 John 4:2–3", "Hereby know ye the Spirit of God: Every spirit that confesseth that Jesus Christ is come in the flesh is of God: And every spirit that confesseth not that Jesus Christ is come in the flesh is not of God: and this is that spirit of antichrist, whereof ye have heard that it should come; and even now already is it in the world."],
+  "2john7": ["2 John 7", "For many deceivers are entered into the world, who confess not that Jesus Christ is come in the flesh. This is a deceiver and an antichrist."],
+  "john1": ["John 1:14", "And the Word was made flesh, and dwelt among us, (and we beheld his glory, the glory as of the only begotten of the Father,) full of grace and truth."],
+  "luke24": ["Luke 24:39", "Behold my hands and my feet, that it is I myself: handle me, and see; for a spirit hath not flesh and bones, as ye see me have."],
+  "john10": ["John 10:9", "I am the door: by me if any man enter in, he shall be saved, and shall go in and out, and find pasture."],
+  "john15_1": ["John 15:1", "I am the true vine, and my Father is the husbandman."],
+  "luke22": ["Luke 22:19", "And he took bread, and gave thanks, and brake it, and gave unto them, saying, This is my body which is given for you: this do in remembrance of me."],
+  "1cor11": ["1 Corinthians 11:24–26", "And when he had given thanks, he brake it, and said, Take, eat: this is my body, which is broken for you: this do in remembrance of me. After the same manner also he took the cup, when he had supped, saying, This cup is the new testament in my blood: this do ye, as oft as ye drink it, in remembrance of me. For as often as ye eat this bread, and drink this cup, ye do shew the Lord’s death till he come."],
+  "1cor11_26": ["1 Corinthians 11:26", "For as often as ye eat this bread, and drink this cup, ye do shew the Lord’s death till he come."],
+  "matt26": ["Matthew 26:29", "But I say unto you, I will not drink henceforth of this fruit of the vine, until that day when I drink it new with you in my Father’s kingdom."],
+  "heb10_10": ["Hebrews 10:10", "By the which will we are sanctified through the offering of the body of Jesus Christ once for all."],
+  "heb10_12": ["Hebrews 10:12", "But this man, after he had offered one sacrifice for sins for ever, sat down on the right hand of God."],
+  "acts3": ["Acts 3:21", "Whom the heaven must receive until the times of restitution of all things, which God hath spoken by the mouth of all his holy prophets since the world began."],
+  "john6_35": ["John 6:35", "And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst."],
+  "john6_47": ["John 6:47–48", "Verily, verily, I say unto you, He that believeth on me hath everlasting life. I am that bread of life."],
+  "john6_63": ["John 6:63", "It is the spirit that quickeneth; the flesh profiteth nothing: the words that I speak unto you, they are spirit, and they are life."],
+  "heb13": ["Hebrews 13:9–12", "Be not carried about with divers and strange doctrines. For it is a good thing that the heart be established with grace; not with meats, which have not profited them that have been occupied therein. We have an altar, whereof they have no right to eat which serve the tabernacle. For the bodies of those beasts, whose blood is brought into the sanctuary by the high priest for sin, are burned without the camp. Wherefore Jesus also, that he might sanctify the people with his own blood, suffered without the gate."],
+  "1cor10": ["1 Corinthians 10:17", "For we being many are one bread, and one body: for we are all partakers of that one bread."],
+  "titus1": ["Titus 1:5, 7", "For this cause left I thee in Crete, that thou shouldest set in order the things that are wanting, and ordain elders in every city, as I had appointed thee… For a bishop must be blameless, as the steward of God; not selfwilled, not soon angry, not given to wine, no striker, not given to filthy lucre."],
+  "acts20": ["Acts 20:17, 28", "And from Miletus he sent to Ephesus, and called the elders of the church… Take heed therefore unto yourselves, and to all the flock, over the which the Holy Ghost hath made you overseers, to feed the church of God, which he hath purchased with his own blood."]
+};
+
+const slides = Array.from(document.querySelectorAll('.slide'));
+const secLabel = document.getElementById('secLabel');
+const counter = document.getElementById('counter');
+const bar = document.getElementById('bar');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+const dlg = document.getElementById('verse');
+let idx = 0;
+
+function show(n, animate = true){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[idx].classList.remove('active', 'enter');
+  idx = n;
+  const s = slides[idx];
+  s.classList.add('active');
+  if (animate) { void s.offsetWidth; s.classList.add('enter'); }
+  s.scrollTop = 0;
+  secLabel.textContent = s.dataset.section || '';
+  counter.textContent = (idx + 1) + ' / ' + slides.length;
+  bar.style.width = ((idx + 1) / slides.length * 100) + '%';
+  prevBtn.disabled = idx === 0;
+  nextBtn.disabled = idx === slides.length - 1;
+  history.replaceState(null, '', '#' + (idx + 1));
+}
+
+prevBtn.addEventListener('click', () => show(idx - 1));
+nextBtn.addEventListener('click', () => show(idx + 1));
+
+document.getElementById('fs').addEventListener('click', () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen && document.documentElement.requestFullscreen().catch(() => {});
+  } else {
+    document.exitFullscreen && document.exitFullscreen();
+  }
+});
+
+document.addEventListener('keydown', e => {
+  if (dlg.open) return;
+  if (['ArrowRight', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); show(idx + 1); }
+  else if (['ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); show(idx - 1); }
+  else if (e.key === 'Home') show(0);
+  else if (e.key === 'End') show(slides.length - 1);
+});
+
+let tx = null, ty = null;
+document.getElementById('deck').addEventListener('touchstart', e => {
+  tx = e.touches[0].clientX; ty = e.touches[0].clientY;
+}, { passive: true });
+document.getElementById('deck').addEventListener('touchend', e => {
+  if (tx === null || dlg.open) return;
+  if (e.target.closest('.tablewrap')) { tx = null; return; }
+  const dx = e.changedTouches[0].clientX - tx;
+  const dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) show(idx + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+});
+
+/* KJV verse modal */
+document.addEventListener('click', e => {
+  const b = e.target.closest('.ref');
+  if (!b) return;
+  const v = VERSES[b.dataset.v];
+  if (!v) return;
+  document.getElementById('vref').textContent = v[0];
+  document.getElementById('vtext').textContent = v[1];
+  dlg.showModal();
+});
+document.getElementById('vclose').addEventListener('click', () => dlg.close());
+dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+
+const start = parseInt(location.hash.slice(1), 10);
+show(Number.isFinite(start) ? start - 1 : 0, false);
+</script>
+</body>
+</html>

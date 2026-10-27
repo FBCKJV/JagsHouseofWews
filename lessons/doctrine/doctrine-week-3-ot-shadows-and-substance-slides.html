@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Purpose of Old Testament Practices &amp; Salvation by Faith</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+SC:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #0a0c11;
+    --ink-2: #12151d;
+    --ink-3: #191d28;
+    --line: rgba(201,162,39,0.28);
+    --gold: #c9a227;
+    --gold-light: #e6ca7d;
+    --cream: #ece3cd;
+    --cream-dim: #b9b09a;
+    --crimson: #8c2f39;
+    --crimson-light: #c2626c;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(1200px 700px at 15% -10%, rgba(201,162,39,0.09), transparent 60%),
+      radial-gradient(1000px 600px at 100% 0%, rgba(140,47,57,0.10), transparent 55%),
+      var(--ink);
+    color:var(--cream);
+    font-family:'EB Garamond', serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--gold); color:var(--ink);}
+
+  .grain{
+    position:fixed; inset:0; pointer-events:none; z-index:0; opacity:0.05; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  header.hero{
+    position:relative; z-index:1;
+    padding:64px 6vw 48px;
+    border-bottom:1px solid var(--line);
+    text-align:center;
+  }
+  .eyebrow{
+    font-family:'Cormorant SC', serif;
+    letter-spacing:0.35em;
+    color:var(--gold-light);
+    font-size:15px;
+    text-transform:uppercase;
+    margin:0 0 18px;
+  }
+  h1.title{
+    font-family:'Cinzel', serif;
+    font-weight:600;
+    font-size:clamp(26px, 3.6vw, 48px);
+    line-height:1.22;
+    margin:0 0 10px;
+    color:var(--cream);
+    text-shadow:0 0 40px rgba(201,162,39,0.15);
+  }
+  h1.title em{ font-style:normal; color:var(--gold); }
+  .subtitle{
+    font-family:'Cormorant SC', serif;
+    font-size:clamp(15px,1.5vw,20px);
+    letter-spacing:0.1em;
+    color:var(--cream-dim);
+    margin:0 auto 30px;
+    max-width:760px;
+  }
+  .hero-text{
+    max-width:820px; margin:0 auto;
+    font-style:italic; font-size:clamp(17px,1.7vw,21px); line-height:1.75;
+    color:var(--cream-dim);
+    position:relative; padding:0 8px;
+  }
+  .hero-text .dropcap{
+    float:left; font-family:'Cinzel', serif; font-style:normal;
+    font-size:64px; line-height:0.8; color:var(--gold); padding:6px 10px 0 0;
+  }
+  .hero-ref{
+    display:inline-block; margin-top:18px;
+    font-family:'Cormorant SC', serif; letter-spacing:0.2em; font-size:14px;
+    color:var(--gold-light); text-transform:uppercase;
+  }
+
+  nav.jump{
+    position:sticky; top:0; z-index:20;
+    display:flex; flex-wrap:wrap; justify-content:center;
+    background:rgba(10,12,17,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+    padding:2px 0;
+  }
+  nav.jump a{
+    color:var(--cream-dim); text-decoration:none;
+    font-family:'Cormorant SC', serif; letter-spacing:0.12em; font-size:13px;
+    text-transform:uppercase; padding:14px 16px;
+    border-bottom:2px solid transparent;
+    transition:color .2s, border-color .2s; white-space:nowrap;
+  }
+  nav.jump a:hover{ color:var(--gold-light); border-color:var(--gold); }
+
+  main{ position:relative; z-index:1; max-width:1280px; margin:0 auto; padding:10px 5vw 80px; }
+
+  section.block{ padding:54px 0 10px; border-bottom:1px solid var(--line); }
+  section.block:last-child{ border-bottom:none; }
+
+  .section-head{ display:flex; align-items:baseline; gap:16px; margin-bottom:8px; }
+  .section-num{ font-family:'Cinzel', serif; color:var(--gold); font-size:14px; letter-spacing:.2em; }
+  h2.section-title{
+    font-family:'Cinzel', serif; font-weight:600;
+    font-size:clamp(21px,2.4vw,30px); margin:0; color:var(--cream);
+  }
+  .section-sub{
+    font-family:'EB Garamond', serif; font-style:italic; color:var(--cream-dim);
+    margin:6px 0 26px; font-size:16px; max-width:820px;
+  }
+  h3.sub-title{
+    font-family:'Cinzel', serif; font-weight:500; font-size:16px;
+    letter-spacing:.06em; color:var(--gold-light);
+    margin:34px 0 16px; text-transform:uppercase;
+  }
+  h3.sub-title:first-of-type{ margin-top:8px; }
+
+  /* Analogy callouts (not clickable — teaching illustrations) */
+  .analogy{
+    position:relative;
+    margin:22px 0 30px;
+    padding:22px 26px 22px 54px;
+    background:linear-gradient(160deg, rgba(201,162,39,0.07), rgba(201,162,39,0.02));
+    border:1px solid var(--line);
+    border-left:3px solid var(--gold);
+    border-radius:4px;
+    font-style:italic;
+    font-size:17px;
+    line-height:1.7;
+    color:var(--cream);
+    max-width:820px;
+  }
+  .analogy::before{
+    content:"\201C";
+    position:absolute; left:14px; top:6px;
+    font-family:'Cinzel', serif; font-style:normal;
+    font-size:40px; color:var(--gold); opacity:.7;
+  }
+
+  .teaching{
+    max-width:820px; font-size:16.5px; line-height:1.75; color:var(--cream-dim); margin:0 0 20px;
+  }
+  .teaching strong{ color:var(--gold-light); font-weight:600; }
+
+  .grid{ display:grid; gap:16px; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); margin-bottom:8px; }
+
+  .card{
+    background:linear-gradient(160deg, var(--ink-3), var(--ink-2));
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:20px 20px;
+    cursor:pointer;
+    position:relative;
+    transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    overflow:hidden;
+  }
+  .card::before{
+    content:""; position:absolute; left:0; top:0; bottom:0; width:3px;
+    background:var(--gold); opacity:.55;
+    transition:opacity .18s ease, width .18s ease;
+  }
+  .card:hover{
+    transform:translateY(-3px); border-color:var(--gold);
+    box-shadow:0 14px 30px rgba(0,0,0,0.45), 0 0 0 1px rgba(201,162,39,0.15) inset;
+  }
+  .card:hover::before{ opacity:1; width:5px; }
+  .card .ct-name{ font-family:'Cinzel', serif; font-weight:600; font-size:17px; color:var(--cream); margin:0 0 6px; }
+  .card .ct-ref{ font-family:'Cormorant SC', serif; letter-spacing:.08em; font-size:14px; color:var(--gold-light); margin:0; }
+  .card .ct-hint{
+    margin-top:12px; font-size:13px; color:var(--cream-dim); opacity:.6;
+    font-family:'Cormorant SC', serif; letter-spacing:.12em; text-transform:uppercase;
+  }
+
+  .card.crimson::before{ background:var(--crimson-light); }
+  .card.crimson:hover{ border-color:var(--crimson-light); }
+  .card.crimson .ct-ref{ color:var(--crimson-light); }
+
+  .takeaways{ display:grid; gap:14px; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); margin:20px 0 8px; }
+  .takeaway{
+    background:linear-gradient(160deg, var(--ink-3), var(--ink-2));
+    border:1px solid var(--line); border-radius:4px; padding:20px;
+  }
+  .takeaway .tk-title{ font-family:'Cinzel', serif; color:var(--gold-light); font-size:15px; margin:0 0 8px; letter-spacing:.02em; }
+  .takeaway p{ margin:0; font-size:15.5px; line-height:1.65; color:var(--cream-dim); }
+
+  .overlay{
+    position:fixed; inset:0; z-index:100;
+    background:rgba(4,5,8,0.86); backdrop-filter:blur(3px);
+    display:flex; align-items:center; justify-content:center; padding:5vw;
+    opacity:0; pointer-events:none; transition:opacity .22s ease;
+  }
+  .overlay.open{ opacity:1; pointer-events:auto; }
+  .modal{
+    max-width:760px; width:100%; max-height:82vh; overflow-y:auto;
+    background:linear-gradient(165deg, #16192389, #0d0f15); background-color:#12141c;
+    border:1px solid var(--gold); border-radius:6px; padding:44px 44px 40px; position:relative;
+    box-shadow:0 30px 80px rgba(0,0,0,0.6), 0 0 60px rgba(201,162,39,0.08);
+    transform:translateY(14px) scale(.98); transition:transform .22s ease;
+  }
+  .overlay.open .modal{ transform:translateY(0) scale(1); }
+  .modal-close{
+    position:absolute; top:16px; right:18px; width:38px; height:38px; border-radius:50%;
+    border:1px solid var(--line); background:var(--ink-2); color:var(--gold-light);
+    font-family:'Cinzel',serif; font-size:18px; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    transition:background .18s, color .18s, transform .18s;
+  }
+  .modal-close:hover{ background:var(--gold); color:var(--ink); transform:rotate(90deg); }
+  .modal-eyebrow{ font-family:'Cormorant SC', serif; letter-spacing:.25em; text-transform:uppercase; color:var(--gold-light); font-size:13px; margin:0 0 8px; }
+  .modal-title{ font-family:'Cinzel', serif; font-weight:600; color:var(--cream); font-size:clamp(20px,2.6vw,27px); margin:0 0 22px; padding-right:30px; }
+  .modal-meaning{ font-style:italic; color:var(--gold-light); font-size:16px; margin:0 0 22px; border-left:2px solid var(--gold); padding-left:14px; }
+  .verse-block{ margin-bottom:22px; }
+  .verse-block:last-child{ margin-bottom:0; }
+  .verse-ref{ font-family:'Cormorant SC', serif; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); font-size:14px; margin:0 0 6px; }
+  .verse-text{ font-size:19px; line-height:1.75; color:var(--cream); margin:0; }
+
+  footer{
+    text-align:center; padding:40px 20px 60px; position:relative; z-index:1;
+    color:var(--cream-dim); font-family:'Cormorant SC', serif; letter-spacing:.15em;
+    font-size:13px; text-transform:uppercase; opacity:.6;
+  }
+
+  @media (max-width:640px){
+    .modal{ padding:34px 26px 30px; max-height:88vh; }
+    header.hero{ padding:48px 6vw 34px; }
+  }
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<header class="hero">
+  <p class="eyebrow">Faith Baptist Church of Plymouth County &nbsp;·&nbsp; Adult Sunday School</p>
+  <h1 class="title">The Purpose of Old Testament <em>Practices</em><br>&amp; Salvation by Faith</h1>
+  <p class="subtitle">Shadow &amp; Substance — how the Tabernacle, the sacrifices, and the Law all pointed to the one true Savior, while righteousness before God has always come by faith alone.</p>
+  <p class="hero-text"><span class="dropcap">I</span>magine a shadow on the ground — it shows the shape of a person but isn't the person. Old Testament practices like the Tabernacle and sacrifices were shadows pointing to Jesus, the real thing.</p>
+  <div class="hero-ref">Opening Analogy</div>
+</header>
+
+<nav class="jump">
+  <a href="#intro">Introduction</a>
+  <a href="#flesh">Sanctifying the Flesh</a>
+  <a href="#faith">Salvation by Faith</a>
+  <a href="#eternity">New Heaven &amp; Earth</a>
+  <a href="#application">Application</a>
+  <a href="#conclusion">Conclusion</a>
+</nav>
+
+<main>
+
+  <section class="block" id="intro">
+    <div class="section-head"><span class="section-num">I.</span><h2 class="section-title">Introduction</h2></div>
+    <p class="section-sub">The Tabernacle, Temple, sacrifices, washings, and dietary laws were God's instructions to Israel — but they never saved a soul. Salvation has always been by faith, just as it is for us today in Christ.</p>
+    <div class="grid" id="grid-intro"></div>
+  </section>
+
+  <section class="block" id="flesh">
+    <div class="section-head"><span class="section-num">II.</span><h2 class="section-title">Old Testament Practices: Sanctifying the Flesh</h2></div>
+    <p class="section-sub">Temporary, outward acts that set Israel apart — they cleansed the body, not the soul.</p>
+
+    <h3 class="sub-title">A. What Were These Practices?</h3>
+    <p class="teaching"><strong>Tabernacle &amp; Temple</strong> — mobile, then permanent structures where God's presence dwelt. They marked Israel as God's people, but did not save their souls. The ritual restored ceremonial cleanliness for approaching God's presence — it did not justify the soul, which required faith.</p>
+    <div class="grid" id="grid-tabernacle"></div>
+
+    <p class="teaching" style="margin-top:26px;"><strong>Sacrifices</strong> — animal offerings, like on the Day of Atonement, cleaned the outside but couldn't fix the heart forever. Their yearly repetition underscores a temporary, external effect.</p>
+    <div class="grid" id="grid-sacrifices"></div>
+
+    <p class="teaching" style="margin-top:26px;"><strong>Washings &amp; Dietary Laws</strong> — ceremonial cleansings and food rules kept Israel distinct, addressing sources of ritual uncleanness. These were about physical purity and obedience, not eternal salvation.</p>
+    <div class="grid" id="grid-washings"></div>
+
+    <h3 class="sub-title">B. Why Did God Require Them?</h3>
+    <p class="teaching">To make Israel holy — set apart — among pagan nations, and to point to a greater sacrifice: Jesus. These rituals were a "picture" of the spiritual cleansing and atonement Christ would accomplish.</p>
+    <div class="grid" id="grid-why"></div>
+
+    <h3 class="sub-title">C. Limitation of These Practices</h3>
+    <p class="teaching">They couldn't permanently remove sin or save the soul — a temporary fix, like a bandage, not a cure.</p>
+    <div class="grid" id="grid-limits"></div>
+
+    <div class="analogy">These rituals were like a picture book pointing to Jesus, the real Savior.</div>
+
+    <div class="grid" id="grid-shadows"></div>
+  </section>
+
+  <section class="block" id="faith">
+    <div class="section-head"><span class="section-num">III.</span><h2 class="section-title">Salvation by Faith: The Eternal Truth</h2></div>
+    <p class="section-sub">Salvation has always been by faith, not works — Christ fulfills and surpasses every Old Testament ritual.</p>
+
+    <h3 class="sub-title">A. Faith in the Old Testament</h3>
+    <p class="teaching">Before the Law, salvation was by faith. While the sacrificial system dealt with ceremonial cleanliness, righteousness before God was consistently tied to faith in the Lord, not the performance of rituals.</p>
+    <div class="grid" id="grid-faith-ot"></div>
+
+    <h3 class="sub-title">B. Christ Fulfills the Law</h3>
+    <p class="teaching">Jesus' sacrifice replaces and perfects all Old Testament rituals — accomplishing both sanctification and the forgiveness of sins, resolving what the OT system never fully could.</p>
+    <div class="grid" id="grid-fulfill"></div>
+
+    <h3 class="sub-title">C. Salvation by Faith Today</h3>
+    <p class="teaching">We are saved by trusting in Christ, not by doing rituals or works.</p>
+    <div class="grid" id="grid-today"></div>
+
+    <div class="analogy">Old Testament rituals were like a map leading to Jesus, the destination.</div>
+  </section>
+
+  <section class="block" id="eternity">
+    <div class="section-head"><span class="section-num">IV.</span><h2 class="section-title">The New Heaven and New Earth: No Rituals Needed</h2></div>
+    <p class="section-sub">The temporary nature of Old Testament practices gives way to the eternal reality in Christ.</p>
+
+    <h3 class="sub-title">A. God's Presence Replaces the Temple</h3>
+    <div class="grid" id="grid-eternity"></div>
+
+    <h3 class="sub-title">B. Eternal Sanctification</h3>
+    <p class="teaching">Christ's work means we're fully sanctified by faith, not by repeated washings or sacrifices. The Old Testament pointed to this future, where God's presence is enough.</p>
+
+    <div class="analogy">The Tabernacle was like a tent for God's presence; now, Jesus Himself is our home.</div>
+  </section>
+
+  <section class="block" id="application">
+    <div class="section-head"><span class="section-num">V.</span><h2 class="section-title">Application</h2></div>
+    <p class="section-sub">Key takeaways for young believers.</p>
+    <div class="takeaways">
+      <div class="takeaway">
+        <p class="tk-title">Fleshly Sanctification</p>
+        <p>Sacrifices and washings restored ritual purity to allow access to the tabernacle. They addressed external states but could not cleanse the conscience or remove sin's guilt.</p>
+      </div>
+      <div class="takeaway">
+        <p class="tk-title">Spiritual Sanctification</p>
+        <p>Righteousness before God came through faith. Sacrifices were never a substitute for faith, but a means to maintain covenantal relationship in the physical sphere.</p>
+      </div>
+      <div class="takeaway">
+        <p class="tk-title">Christ as Fulfillment</p>
+        <p>Christ's sacrifice transcends the OT system, purifying both flesh and spirit. His blood cleanses the conscience and grants eternal redemption — what the rituals could only symbolize.</p>
+      </div>
+    </div>
+    <p class="teaching" style="margin-top:22px;"><strong>Practical Application:</strong> Encourage trust in Christ's finished work, not in personal efforts to earn salvation. Read Hebrews 9&ndash;10 at home to see how Jesus fulfills the Law.</p>
+    <div class="analogy">You're saved by faith, and Jesus has already made you holy in God's eyes. Rest in that!</div>
+  </section>
+
+  <section class="block" id="conclusion">
+    <div class="section-head"><span class="section-num">VI.</span><h2 class="section-title">Conclusion</h2></div>
+    <p class="section-sub">The Tabernacle, Temple, sacrifices, washings, and dietary laws were God's way to teach Israel about holiness and point to Jesus. Salvation has always been by faith, and Christ's sacrifice makes us holy forever — as we'll see in Heaven, with no need for a Temple.</p>
+    <div class="grid" id="grid-conclusion"></div>
+  </section>
+
+</main>
+
+<footer>Faith Baptist Church of Plymouth County &nbsp;·&nbsp; Authorized King James Version</footer>
+
+<div class="overlay" id="overlay">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modalClose" aria-label="Close">&#10005;</button>
+    <p class="modal-eyebrow" id="modalEyebrow"></p>
+    <h3 class="modal-title" id="modalTitle"></h3>
+    <p class="modal-meaning" id="modalMeaning" style="display:none;"></p>
+    <div id="modalVerses"></div>
+  </div>
+</div>
+
+<script>
+const DATA = {
+  intro: [
+    { title:"Abraham Believed God", meaning:"Before any Tabernacle or Law, Abraham was saved by faith, showing that faith is God's way.", verses:[
+      {ref:"Genesis 15:6", text:"And he believed in the LORD; and he counted it to him for righteousness."}
+    ]}
+  ],
+  tabernacle: [
+    { title:"A Sanctuary to Dwell Among Them", verses:[
+      {ref:"Exodus 25:8", text:"And let them make me a sanctuary; that I may dwell among them."}
+    ]},
+    { title:"The Glory Filled the House", verses:[
+      {ref:"1 Kings 8:10-11", text:"And it came to pass, when the priests were come out of the holy place, that the cloud filled the house of the LORD, so that the priests could not stand to minister because of the cloud: for the glory of the LORD had filled the house of the LORD."}
+    ]}
+  ],
+  sacrifices: [
+    { title:"The Day of Atonement", meaning:"Sacrifices cleaned the outside (the flesh) but couldn't fix the heart forever — ritual purity to maintain access to the tabernacle, not a transformation of the heart.", verses:[
+      {ref:"Leviticus 16:15-19", text:"Then shall he kill the goat of the sin offering, that is for the people, and bring his blood within the vail, and do with that blood as he did with the blood of the bullock, and sprinkle it upon the mercy seat, and before the mercy seat: And he shall make an atonement for the holy place, because of the uncleanness of the children of Israel, and because of their transgressions in all their sins."}
+    ]}
+  ],
+  washings: [
+    { title:"Cleansed of His Issue", meaning:"The ritual restored ceremonial cleanliness, ensuring the individual could approach God's presence without defiling the sanctuary.", verses:[
+      {ref:"Leviticus 15:13-15", text:"And when he that hath an issue is cleansed of his issue; then he shall... wash his clothes, and bathe himself in water, and be clean. And the priest shall offer a sin offering and a burnt offering, and make an atonement for him before the Lord."}
+    ]},
+    { title:"The Ashes of the Red Heifer", verses:[
+      {ref:"Numbers 19:1-2, 17-19", text:"And the LORD spake unto Moses... This is the ordinance of the law... And for an unclean person they shall take of the ashes of the burnt heifer of purification for sin, and running water shall be put thereto in a vessel: And a clean person shall take hyssop, and dip it in the water, and sprinkle it upon the unclean, and on the seventh day he shall purify himself."}
+    ]},
+    { title:"Carnal Ordinances", meaning:"These were \u201ccarnal\u201d (fleshly) rules, temporary until Christ came.", verses:[
+      {ref:"Hebrews 9:10", text:"Which stood only in meats and drinks, and divers washings, and carnal ordinances, imposed on them until the time of reformation."}
+    ]}
+  ],
+  why: [
+    { title:"Purifying the Flesh, Not the Soul", meaning:"These rituals purified the body, not the soul.", verses:[
+      {ref:"Hebrews 9:13", text:"For if the blood of bulls and of goats, and the ashes of an heifer sprinkling the unclean, sanctifieth to the purifying of the flesh."}
+    ]}
+  ],
+  limits: [
+    { title:"Never Able to Take Away Sins", meaning:"Animal sacrifices were a temporary fix, like a bandage, not a cure.", verses:[
+      {ref:"Hebrews 10:1-4", text:"For the law having a shadow of good things to come, and not the very image of the things, can never with those sacrifices which they offered year by year continually make the comers thereunto perfect. For then would they not have ceased to be offered? because that the worshippers once purged should have had no more conscience of sins. But in those sacrifices there is a remembrance again made of sins every year. For it is not possible that the blood of bulls and of goats should take away sins."}
+    ]}
+  ],
+  shadows: [
+    { title:"The Passover Lamb", meaning:"The temporary, external protection of the Passover lamb prefigures Christ's blood, which provides eternal spiritual redemption.", verses:[
+      {ref:"Exodus 12:13", text:"And the blood shall be to you for a token upon the houses where ye are: and when I see the blood, I will pass over you, and the plague shall not be upon you to destroy you, when I smite the land of Egypt."}
+    ]},
+    { title:"The Scapegoat", meaning:"A ritual act pointing to Christ, who \u201cbare our sins in his own body\u201d — but symbolic and external, requiring annual repetition, unlike Christ's once-for-all sacrifice.", verses:[
+      {ref:"Leviticus 16:20-22", text:"And Aaron shall lay both his hands upon the head of the live goat, and confess over him all the iniquities of the children of Israel, and all their transgressions in all their sins, putting them upon the head of the goat, and shall send him away by the hand of a fit man into the wilderness: and the goat shall bear upon him all their iniquities unto a land not inhabited."}
+    ]}
+  ],
+  faithOt: [
+    { title:"Counted for Righteousness", verses:[
+      {ref:"Genesis 15:6", text:"And he believed in the LORD; and he counted it to him for righteousness."}
+    ]},
+    { title:"The Just Shall Live by Faith", verses:[
+      {ref:"Habakkuk 2:4", text:"Behold, his soul which is lifted up is not upright in him: but the just shall live by his faith."}
+    ]},
+    { title:"A Broken and Contrite Heart", verses:[
+      {ref:"Psalm 51:16-17", text:"For thou desirest not sacrifice; else would I give it: thou delightest not in burnt offering. The sacrifices of God are a broken spirit: a broken and a contrite heart, O God, thou wilt not despise."}
+    ]},
+    { title:"Cease to Do Evil", verses:[
+      {ref:"Isaiah 1:11-18", text:"To what purpose is the multitude of your sacrifices unto me? saith the Lord... Wash you, make you clean; put away the evil of your doings from before mine eyes; cease to do evil."}
+    ]}
+  ],
+  fulfill: [
+    { title:"A Body Hast Thou Prepared Me", meaning:"Jesus' death on the cross was the one-time, perfect sacrifice that saves our souls forever.", verses:[
+      {ref:"Hebrews 10:5-14", text:"Sacrifice and offering thou wouldest not, but a body hast thou prepared me: In burnt offerings and sacrifices for sin thou hast had no pleasure. Then said I, Lo, I come (in the volume of the book it is written of me,) to do thy will, O God... He taketh away the first, that he may establish the second. By the which will we are sanctified through the offering of the body of Jesus Christ once for all... But this man, after he had offered one sacrifice for sins for ever, sat down on the right hand of God... For by one offering he hath perfected for ever them that are sanctified."}
+    ]},
+    { title:"Wisdom, Righteousness, Sanctification, Redemption", meaning:"Jesus doesn't just cover sin — He makes us holy (sanctified) in God's eyes.", verses:[
+      {ref:"1 Corinthians 1:30", text:"But of him are ye in Christ Jesus, who of God is made unto us wisdom, and righteousness, and sanctification, and redemption."}
+    ]},
+    { title:"I Will Remember Their Sins No More", verses:[
+      {ref:"Hebrews 9:15-17", text:"Whereof the Holy Ghost also is a witness to us: for after that he had said before, This is the covenant that I will make with them after those days, saith the Lord, I will put my laws into their hearts, and in their minds will I write them; And their sins and iniquities will I remember no more."}
+    ]}
+  ],
+  today: [
+    { title:"Justified by Faith", meaning:"Faith in Jesus gives us peace with God, something no sacrifice could fully do.", verses:[
+      {ref:"Romans 5:1", text:"Therefore being justified by faith, we have peace with God through our Lord Jesus Christ."}
+    ]}
+  ],
+  eternity: [
+    { title:"No Temple Therein", meaning:"In the New Jerusalem, we don't need rituals or buildings because Jesus' sacrifice makes us holy forever.", verses:[
+      {ref:"Revelation 21:22", text:"And I saw no temple therein: for the Lord God Almighty and the Lamb are the temple of it."}
+    ]}
+  ],
+  conclusion: [
+    { title:"Made Unto Us Wisdom and Righteousness", verses:[
+      {ref:"1 Corinthians 1:30", text:"But of him are ye in Christ Jesus, who of God is made unto us wisdom, and righteousness, and sanctification, and redemption."}
+    ]}
+  ]
+};
+
+function refLine(item){
+  if(item.verses.length === 1) return item.verses[0].ref;
+  return item.verses.map(v=>v.ref).join(" · ");
+}
+
+function buildGrid(containerId, items, opts){
+  opts = opts || {};
+  const el = document.getElementById(containerId);
+  if(!el) return;
+  items.forEach((item) => {
+    const card = document.createElement('div');
+    card.className = 'card' + (opts.crimson ? ' crimson' : '');
+    card.innerHTML = `
+      <p class="ct-name">${item.title}</p>
+      <p class="ct-ref">${refLine(item)}</p>
+      <p class="ct-hint">Tap to read &rarr;</p>
+    `;
+    card.addEventListener('click', () => openModal(item, opts.eyebrow));
+    el.appendChild(card);
+  });
+}
+
+buildGrid('grid-intro', DATA.intro, {eyebrow:'Introduction'});
+buildGrid('grid-tabernacle', DATA.tabernacle, {eyebrow:'Tabernacle & Temple'});
+buildGrid('grid-sacrifices', DATA.sacrifices, {eyebrow:'Sacrifices'});
+buildGrid('grid-washings', DATA.washings, {eyebrow:'Washings & Dietary Laws'});
+buildGrid('grid-why', DATA.why, {eyebrow:'Why God Required Them'});
+buildGrid('grid-limits', DATA.limits, {eyebrow:'Limitation of These Practices', crimson:true});
+buildGrid('grid-shadows', DATA.shadows, {eyebrow:'Types & Shadows of Christ'});
+buildGrid('grid-faith-ot', DATA.faithOt, {eyebrow:'Faith in the Old Testament'});
+buildGrid('grid-fulfill', DATA.fulfill, {eyebrow:'Christ Fulfills the Law'});
+buildGrid('grid-today', DATA.today, {eyebrow:'Salvation by Faith Today'});
+buildGrid('grid-eternity', DATA.eternity, {eyebrow:'The New Heaven & New Earth'});
+buildGrid('grid-conclusion', DATA.conclusion, {eyebrow:'Closing Verse'});
+
+const overlay = document.getElementById('overlay');
+const modalEyebrow = document.getElementById('modalEyebrow');
+const modalTitle = document.getElementById('modalTitle');
+const modalMeaning = document.getElementById('modalMeaning');
+const modalVerses = document.getElementById('modalVerses');
+
+function openModal(item, eyebrow){
+  modalEyebrow.textContent = eyebrow || '';
+  modalTitle.innerHTML = item.title;
+  if(item.meaning){
+    modalMeaning.style.display = 'block';
+    modalMeaning.textContent = item.meaning;
+  } else {
+    modalMeaning.style.display = 'none';
+  }
+  modalVerses.innerHTML = item.verses.map(v => `
+    <div class="verse-block">
+      <p class="verse-ref">${v.ref}</p>
+      <p class="verse-text">${v.text}</p>
+    </div>
+  `).join('');
+  overlay.classList.add('open');
+  document.getElementById('modal').scrollTop = 0;
+}
+
+function closeModal(){ overlay.classList.remove('open'); }
+
+document.getElementById('modalClose').addEventListener('click', closeModal);
+overlay.addEventListener('click', (e) => { if(e.target === overlay) closeModal(); });
+document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>

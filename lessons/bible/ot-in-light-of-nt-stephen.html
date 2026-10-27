@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>One History, Many Witnesses — The Old Testament Retold</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#000000;
+    --ink2:#0d0b07;
+    --gold:#d9b458;
+    --gold-bright:#ffd97a;
+    --crimson:#a8232f;
+    --crimson-bright:#e2495a;
+    --sage:#6f8f6a;
+    --sage-bright:#a3c49b;
+    --parchment:#faf6ec;
+    --parchment-dim:#d8cfb8;
+    --line: rgba(217,180,88,0.5);
+  }
+  *{box-sizing:border-box;}
+  html,body{
+    margin:0; padding:0; height:100%;
+    background:
+      radial-gradient(circle at 15% 10%, rgba(140,28,38,0.06), transparent 45%),
+      radial-gradient(circle at 85% 90%, rgba(201,162,75,0.06), transparent 45%),
+      var(--ink);
+    color:var(--parchment);
+    font-family:'Cormorant Garamond', serif;
+    font-weight: 500;
+    overflow:hidden;
+  }
+  #deck{ position:fixed; inset:14px; overflow:hidden; border-radius:4px; }
+
+  .frame-border{
+    position:fixed; inset:14px; border:2px solid var(--gold); border-radius:4px;
+    pointer-events:none; z-index:5;
+    box-shadow: inset 0 0 0 1px rgba(201,162,75,0.25), inset 0 0 40px rgba(0,0,0,0.5);
+  }
+  .frame-border::before, .frame-border::after{
+    content:"✦"; position:absolute; color:var(--gold); font-size:14px;
+  }
+  .frame-border::before{ top:-9px; left:-9px; }
+  .frame-border::after{ bottom:-9px; right:-9px; }
+
+  .slide{
+    position:absolute; inset:0;
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    padding: 70px 8vw 100px 8vw;
+    overflow-y:auto;
+  }
+  .slide.active{ display:flex; animation: fadeIn 0.6s ease; }
+  @keyframes fadeIn{ from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:translateY(0);} }
+
+  .roman{
+    font-family:'Cinzel', serif;
+    letter-spacing: 4px;
+    color: var(--gold);
+    font-size: 15px;
+    text-transform:uppercase;
+    margin-bottom: 6px;
+    opacity:0.85;
+  }
+  h1.deck-title{
+    font-family:'Cinzel Decorative', serif;
+    font-size: clamp(34px, 4.8vw, 58px);
+    color: var(--gold-bright);
+    text-align:center;
+    margin: 6px 0 4px 0;
+    text-shadow: 0 0 4px rgba(0,0,0,0.9), 0 0 26px rgba(232,200,119,0.35);
+  }
+  h2.slide-title{
+    font-family:'Cinzel', serif;
+    font-size: clamp(26px, 3.3vw, 40px);
+    font-weight: 600;
+    color: var(--gold-bright);
+    text-align:center;
+    margin: 4px 0 26px 0;
+    letter-spacing: 1px;
+  }
+  .subtitle{
+    font-style:normal; font-weight:600; color: var(--parchment-dim); text-align:left;
+    margin: 0 0 30px 0; font-size: clamp(24px,2.2vw,29px);
+  }
+  .divider{
+    width: 140px; height: 1px; margin: 18px auto;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .content-wrap{ width:100%; max-width: 820px; margin: 0 auto; }
+
+  .lead{
+    font-size: clamp(24px,2.4vw,29px); font-weight:500; line-height:1.5; text-align:left;
+    color:var(--parchment); margin-bottom: 22px;
+  }
+  .lead b{ color:var(--gold-bright); font-weight:700; }
+
+  .point{
+    display:flex; gap:14px; align-items:flex-start;
+    margin: 14px 0; padding: 16px 22px;
+    border-left: 3px solid var(--gold);
+    background: rgba(201,162,75,0.08);
+    border-radius: 2px;
+  }
+  .point .glyph{ color:var(--crimson-bright); font-size:24px; margin-top:2px; }
+  .point p{ margin:0; font-size: clamp(21px,1.9vw,25px); font-weight:500; line-height:1.5; }
+  .point b{ color: var(--gold-bright); font-weight:700; }
+
+  .verse-pill{
+    display:inline-flex; align-items:center; gap:6px;
+    font-family:'Cinzel', serif; font-size: 16px; font-weight:600; letter-spacing: 0.5px;
+    color: #000000; background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+    border:none; padding: 8px 16px 7px 16px; border-radius: 20px; cursor:pointer;
+    margin: 4px 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .verse-pill:hover{ transform: translateY(-2px); box-shadow: 0 4px 14px rgba(232,200,119,0.35); }
+  .verse-pill::before{ content:"✦"; font-size:10px; }
+
+  .verse-row{ text-align:center; margin: 10px 0 18px 0; }
+
+  .cross-ref-grid{
+    display:grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr));
+    gap: 14px; margin-top: 18px;
+  }
+  .cross-card{
+    border:1px solid var(--line); border-radius:6px; padding: 14px 16px;
+    background: linear-gradient(160deg, rgba(140,28,38,0.10), rgba(10,9,6,0.2));
+    position:relative;
+  }
+  .cross-card .tag{
+    font-family:'Cinzel', serif; font-size:13px; font-weight:600; letter-spacing:1.2px;
+    color: var(--crimson-bright); text-transform:uppercase; margin-bottom:8px; display:block;
+  }
+  .cross-card .tag.sage{ color: var(--sage-bright); }
+  .cross-card .body-text{ font-size: clamp(19px,1.6vw,22px); font-weight:500; line-height:1.5; color:var(--parchment); }
+
+  .closing{
+    text-align:center; margin-top: 18px; padding: 18px 24px;
+    border: 1px solid var(--gold); border-radius: 6px;
+    background: rgba(140,28,38,0.08); width:100%;
+  }
+  .closing.sage{ border-color: var(--sage); background: rgba(111,143,106,0.10); }
+  .closing .cv{ font-style: normal; font-weight:600; font-size: clamp(23px,2.1vw,27px); color: var(--gold-bright); }
+  .closing.sage .cv{ color: var(--sage-bright); }
+  .closing .cite{ display:block; margin-top:10px; font-family:'Cinzel', serif; font-size:15px; letter-spacing:1px; color: var(--parchment-dim); }
+
+  .verse-quote{
+    margin: 12px 0; padding: 16px 22px;
+    border-left: 3px solid var(--crimson-bright);
+    background: rgba(233,223,199,0.05);
+    border-radius: 2px;
+  }
+  .verse-quote a.vref{
+    display:block; font-family:'Cinzel', serif; font-size: 15px; font-weight:600; letter-spacing: 1.5px;
+    color: var(--gold-bright); text-decoration:none; margin-bottom: 8px;
+  }
+  .verse-quote a.vref:hover{ color: var(--crimson-bright); text-decoration: underline; }
+  .verse-quote p{ margin:0; font-style: normal; font-weight:500; font-size: clamp(21px,1.9vw,25px); line-height:1.5; color: var(--parchment); }
+  .connector-text{
+    text-align:left; margin: 12px 0; font-size: clamp(20px,1.7vw,23px);
+    font-weight:500; color: var(--parchment-dim); line-height:1.5;
+  }
+
+  /* Nav */
+  #nav{
+    position: fixed; bottom: 26px; left:0; right:0;
+    display:flex; align-items:center; justify-content:center; gap: 18px; z-index: 20;
+  }
+  .navbtn{
+    font-family:'Cinzel', serif; letter-spacing:1px; font-size:15px; font-weight:600;
+    color: var(--gold-bright); background: rgba(0,0,0,0.85);
+    border: 1px solid var(--gold); padding: 11px 22px; border-radius: 22px; cursor:pointer;
+    transition: background 0.2s;
+  }
+  .navbtn:hover{ background: rgba(201,162,75,0.22); }
+  .navbtn:disabled{ opacity:0.3; cursor:default; }
+  #dots{ display:flex; gap:8px; flex-wrap:wrap; justify-content:center; max-width:40vw; }
+  .dot{ width:9px; height:9px; border-radius:50%; background: rgba(201,162,75,0.35); cursor:pointer; transition: background 0.2s; }
+  .dot.active{ background: var(--gold-bright); box-shadow: 0 0 8px var(--gold-bright); }
+
+  #progress-label{
+    position: fixed; top: 26px; right: 40px; z-index:20;
+    font-family:'Cinzel', serif; font-size: 12px; letter-spacing: 2px; color: var(--parchment-dim);
+  }
+
+  /* Modal */
+  #modal-overlay{
+    position:fixed; inset:0; background: rgba(0,0,0,0.78); backdrop-filter: blur(3px);
+    display:none; align-items:center; justify-content:center; z-index: 100; padding: 30px;
+  }
+  #modal-overlay.open{ display:flex; }
+  #modal-box{
+    max-width: 680px; max-height: 80vh; overflow-y:auto;
+    background: linear-gradient(160deg, #17130b, #0c0a06);
+    border: 1px solid var(--gold); border-radius: 8px;
+    padding: 30px 34px; position:relative;
+    box-shadow: 0 0 60px rgba(0,0,0,0.7), 0 0 0 1px rgba(201,162,75,0.15);
+  }
+  #modal-box h4{
+    font-family:'Cinzel', serif; color: var(--gold-bright); font-size: 24px;
+    margin: 0 0 16px 0; letter-spacing:1px; text-align:center;
+  }
+  #modal-box .kjv-text{
+    font-size: clamp(22px,2.1vw,26px); font-weight:500; line-height:1.6; color: var(--parchment);
+    font-style: normal;
+  }
+  #modal-close{
+    position:absolute; top:12px; right:16px; background:none; border:none;
+    color: var(--gold); font-size: 22px; cursor:pointer; line-height:1;
+  }
+  #modal-close:hover{ color: var(--crimson-bright); }
+
+  ::-webkit-scrollbar{ width: 8px; }
+  ::-webkit-scrollbar-thumb{ background: rgba(201,162,75,0.4); border-radius:4px; }
+</style>
+</head>
+<body>
+
+<div class="frame-border"></div>
+<div id="progress-label"></div>
+<div id="deck"></div>
+
+<div id="nav">
+  <button class="navbtn" id="prevBtn">◄ PREV</button>
+  <div id="dots"></div>
+  <button class="navbtn" id="nextBtn">NEXT ►</button>
+</div>
+
+<div id="modal-overlay">
+  <div id="modal-box">
+    <button id="modal-close">✕</button>
+    <h4 id="modal-ref"></h4>
+    <div class="kjv-text" id="modal-text"></div>
+  </div>
+</div>
+
+<script>
+const VERSES = {
+  "1 Corinthians 10:11": "Now all these things happened unto them for ensamples: and they are written for our admonition, upon whom the ends of the world are come.",
+  "Nehemiah 9:6–15": "Thou, even thou, art LORD alone; thou hast made heaven, the heaven of heavens, with all their host, the earth, and all things that are therein, the seas, and all that is therein, and thou preservest them all; and the host of heaven worshippeth thee. Thou art the LORD the God, who didst choose Abram, and broughtest him forth out of Ur of the Chaldees, and gavest him the name of Abraham; And foundest his heart faithful before thee, and madest a covenant with him to give the land of the Canaanites, the Hittites, the Amorites, and the Perizzites, and the Jebusites, and the Girgashites, to give it, I say, to his seed, and hast performed thy words; for thou art righteous: And didst see the affliction of our fathers in Egypt, and heardest their cry by the Red sea; And shewedst signs and wonders upon Pharaoh, and on all his servants, and on all the people of his land: for thou knewest that they dealt proudly against them. So didst thou get thee a name, as it is this day. And thou didst divide the sea before them, so that they went through the midst of the sea on the dry land; and their persecutors thou threwest into the deeps, as a stone into the mighty waters. Moreover thou leddest them in the day by a cloudy pillar; and in the night by a pillar of fire, to give them light in the way wherein they should go. Thou camest down also upon mount Sinai, and spakest with them from heaven, and gavest them right judgments, and true laws, good statutes and commandments: And madest known unto them thy holy sabbath, and commandedst them precepts, statutes, and laws, by the hand of Moses thy servant: And gavest them bread from heaven for their hunger, and broughtest forth water for them out of the rock for their thirst, and promisedst them that they should go in to possess the land which thou hadst sworn to give them.",
+  "Nehemiah 9:16–25": "But they and our fathers dealt proudly, and hardened their necks, and hearkened not to thy commandments, And refused to obey, neither were mindful of thy wonders that thou didst among them; but hardened their necks, and in their rebellion appointed a captain to return to their bondage: but thou art a God ready to pardon, gracious and merciful, slow to anger, and of great kindness, and forsookest them not. Yea, when they had made them a molten calf, and said, This is thy God that brought thee up out of Egypt, and had wrought great provocations; Yet thou in thy manifold mercies forsookest them not in the wilderness: the pillar of the cloud departed not from them by day, to lead them in the way; neither the pillar of fire by night, to shew them light, and the way wherein they should go. Thou gavest also thy good spirit to instruct them, and withheldest not thy manna from their mouth, and gavest them water for their thirst. Yea, forty years didst thou sustain them in the wilderness, so that they lacked nothing; their clothes waxed not old, and their feet swelled not. Moreover thou gavest them kingdoms and nations, and didst divide them into corners: so they possessed the land of Sihon, and the land of the king of Heshbon, and the land of Og king of Bashan. Their children also multipliedst thou as the stars of heaven, and broughtest them into the land, concerning which thou hadst promised to their fathers, that they should go in to possess it. So the children went in and possessed the land, and thou subduedst before them the inhabitants of the land, the Canaanites, and gavest them into their hands, with their kings, and the people of the land, that they might do with them as they would. And they took strong cities, and a fat land, and possessed houses full of all goods, wells digged, vineyards, and oliveyards, and fruit trees in abundance: so they did eat, and were filled, and became fat, and delighted themselves in thy great goodness.",
+  "Nehemiah 9:26–31": "Nevertheless they were disobedient, and rebelled against thee, and cast thy law behind their backs, and slew thy prophets which testified against them to turn them to thee, and they wrought great provocations. Therefore thou deliveredst them into the hand of their enemies, who vexed them: and in the time of their trouble, when they cried unto thee, thou heardest them from heaven; and according to thy manifold mercies thou gavest them saviours, who saved them out of the hand of their enemies. But after they had rest, they did evil again before thee: therefore leftest thou them in the hand of their enemies, so that they had the dominion over them: yet when they returned, and cried unto thee, thou heardest them from heaven; and many times didst thou deliver them according to thy mercies; And testifiedst against them, that thou mightest bring them again unto thy law: yet they dealt proudly, and hearkened not unto thy commandments, but sinned against thy judgments, (which if a man do, he shall live in them;) and withdrew the shoulder, and hardened their neck, and would not hear. Yet many years didst thou forbear them, and testifiedst against them by thy spirit in thy prophets: yet would they not give ear: therefore gavest thou them into the hand of the people of the lands. Nevertheless for thy great mercies' sake thou didst not utterly consume them, nor forsake them; for thou art a gracious and merciful God.",
+  "Nehemiah 9:32–37": "Now therefore, our God, the great, the mighty, and the terrible God, who keepest covenant and mercy, let not all the trouble seem little before thee, that hath come upon us, on our kings, on our princes, and on our priests, and on our prophets, and on our fathers, and on all thy people, since the time of the kings of Assyria unto this day. Howbeit thou art just in all that is brought upon us; for thou hast done right, but we have done wickedly: Neither have our kings, our princes, our priests, nor our fathers, kept thy law, nor hearkened unto thy commandments and thy testimonies, wherewith thou didst testify against them. For they have not served thee in their kingdom, and in thy great goodness that thou gavest them, and in the large and fat land which thou gavest before them, neither turned they from their wicked works. Behold, we are servants this day, and for the land that thou gavest unto our fathers to eat the fruit thereof and the good thereof, behold, we are servants in it: And it yieldeth much increase unto the kings whom thou hast set over us because of our sins: also they have dominion over our bodies, and over our cattle, at their pleasure, and we are in great distress.",
+  "Genesis 12:1–3": "Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father's house, unto a land that I will shew thee: And I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing: And I will bless them that bless thee, and curse him that curseth thee: and in thee shall all families of the earth be blessed.",
+  "Exodus 3:5, 7, 10": "And he said, Draw not nigh hither: put off thy shoes from off thy feet, for the place whereon thou standest is holy ground... And the LORD said, I have surely seen the affliction of my people which are in Egypt... Come now therefore, and I will send thee unto Pharaoh, that thou mayest bring forth my people the children of Israel out of Egypt.",
+  "Acts 7:2–8": "And he said, Men, brethren, and fathers, hearken; The God of glory appeared unto our father Abraham, when he was in Mesopotamia, before he dwelt in Charran, And said unto him, Get thee out of thy country, and from thy kindred, and come into the land which I shall shew thee. Then came he out of the land of the Chaldaeans, and dwelt in Charran: and from thence, when his father was dead, he removed him into this land, wherein ye now dwell. And he gave him none inheritance in it, no, not so much as to set his foot on: yet he promised that he would give it to him for a possession, and to his seed after him, when as yet he had no child. And God spake on this wise, That his seed should sojourn in a strange land; and that they should bring them into bondage, and entreat them evil four hundred years. And the nation to whom they shall be in bondage will I judge, said God: and after that shall they come forth, and serve me in this place. And he gave him the covenant of circumcision: and so Abraham begat Isaac, and circumcised him the eighth day; and Isaac begat Jacob; and Jacob begat the twelve patriarchs.",
+  "Acts 7:9–16": "And the patriarchs, moved with envy, sold Joseph into Egypt: but God was with him, And delivered him out of all his afflictions, and gave him favour and wisdom in the sight of Pharaoh king of Egypt; and he made him governor over Egypt and all his house. Now there came a dearth over all the land of Egypt and Chanaan, and great affliction: and our fathers found no sustenance. But when Jacob heard that there was corn in Egypt, he sent out our fathers first. And at the second time Joseph was made known to his brethren; and Joseph's kindred was made known unto Pharaoh. Then sent Joseph, and called his father Jacob to him, and all his kindred, threescore and fifteen souls. So Jacob went down into Egypt, and died, he, and our fathers, And were carried over into Sychem, and laid in the sepulchre that Abraham bought for a sum of money of the sons of Emmor the father of Sychem.",
+  "Acts 7:17–34": "But when the time of the promise drew nigh, which God had sworn to Abraham, the people grew and multiplied in Egypt, Till another king arose, which knew not Joseph. The same dealt subtilly with our kindred, and evil entreated our fathers, so that they cast out their young children, to the end they might not live. In which time Moses was born, and was exceeding fair, and nourished up in his father's house three months: And when he was cast out, Pharaoh's daughter took him up, and nourished him for her own son. And Moses was learned in all the wisdom of the Egyptians, and was mighty in words and in deeds. And when he was full forty years old, it came into his heart to visit his brethren the children of Israel. And seeing one of them suffer wrong, he defended him, and avenged him that was oppressed, and smote the Egyptian: For he supposed his brethren would have understood how that God by his hand would deliver them: but they understood not. And the next day he shewed himself unto them as they strove, and would have set them at one again, saying, Sirs, ye are brethren; why do ye wrong one to another? But he that did his neighbour wrong thrust him away, saying, Who made thee a ruler and a judge over us? Wilt thou kill me, as thou diddest the Egyptian yesterday? Then fled Moses at this saying, and was a stranger in the land of Madian, where he begat two sons. And when forty years were expired, there appeared to him in the wilderness of mount Sina an angel of the Lord in a flame of fire in a bush. When Moses saw it, he wondered at the sight: and as he drew near to behold it, the voice of the Lord came unto him, Saying, I am the God of thy fathers, the God of Abraham, and the God of Isaac, and the God of Jacob. Then Moses trembled, and durst not behold. Then said the Lord to him, Put off thy shoes from thy feet: for the place where thou standest is holy ground. I have seen, I have seen the affliction of my people which is in Egypt, and I have heard their groaning, and am come down to deliver them. And now come, I will send thee into Egypt.",
+  "Acts 7:35–43": "This Moses whom they refused, saying, Who made thee a ruler and a judge? the same did God send to be a ruler and a deliverer by the hand of the angel which appeared to him in the bush. He brought them out, after that he had shewed wonders and signs in the land of Egypt, and in the Red sea, and in the wilderness forty years. This is that Moses, which said unto the children of Israel, A prophet shall the Lord your God raise up unto you of your brethren, like unto me; him shall ye hear. This is he, that was in the church in the wilderness with the angel which spake to him in the mount Sina, and with our fathers: who received the lively oracles to give unto us: To whom our fathers would not obey, but thrust him from them, and in their hearts turned back again into Egypt, Saying unto Aaron, Make us gods to go before us: for as for this Moses, which brought us out of the land of Egypt, we wot not what is become of him. And they made a calf in those days, and offered sacrifice unto the idol, and rejoiced in the works of their own hands. Then God turned, and gave them up to worship the host of heaven; as it is written in the book of the prophets, O ye house of Israel, have ye offered to me slain beasts and sacrifices by the space of forty years in the wilderness? Yea, ye took up the tabernacle of Moloch, and the star of your god Remphan, figures which ye made to worship them: and I will carry you away beyond Babylon.",
+  "Acts 7:44–50": "Our fathers had the tabernacle of witness in the wilderness, as he had appointed, speaking unto Moses, that he should make it according to the fashion that he had seen. Which also our fathers that came after brought in with Jesus into the possession of the Gentiles, whom God drave out before the face of our fathers, unto the days of David; Who found favour before God, and desired to find a tabernacle for the God of Jacob. But Solomon built him an house. Howbeit the most High dwelleth not in temples made with hands; as saith the prophet, Heaven is my throne, and earth is my footstool: what house will ye build me? saith the Lord: or what is the place of my rest? Hath not my hand made all these things?",
+  "Amos 5:25–27": "Have ye offered unto me sacrifices and offerings in the wilderness forty years, O house of Israel? But ye have borne the tabernacle of your Moloch and Chiun your images, the star of your god, which ye made to yourselves. Therefore will I cause you to go into captivity beyond Damascus, saith the LORD, whose name is The God of hosts.",
+  "Isaiah 66:1–2": "Thus saith the LORD, The heaven is my throne, and the earth is my footstool: where is the house that ye build unto me? and where is the place of my rest? For all those things hath mine hand made, and all those things have been, saith the LORD: but to this man will I look, even to him that is poor and of a contrite spirit, and trembleth at my word.",
+  "Acts 7:51–53": "Ye stiffnecked and uncircumcised in heart and ears, ye do always resist the Holy Ghost: as your fathers did, so do ye. Which of the prophets have not your fathers persecuted? and they have slain them which shewed before of the coming of the Just One; of whom ye have been now the betrayers and murderers: Who have received the law by the disposition of angels, and have not kept it.",
+  "Acts 7:54–8:1": "When they heard these things, they were cut to the heart, and they gnashed on him with their teeth. But he, being full of the Holy Ghost, looked up stedfastly into heaven, and saw the glory of God, and Jesus standing on the right hand of God, And said, Behold, I see the heavens opened, and the Son of man standing on the right hand of God. Then they cried out with a loud voice, and stopped their ears, and ran upon him with one accord, And cast him out of the city, and stoned him: and the witnesses laid down their clothes at a young man's feet, whose name was Saul. And they stoned Stephen, calling upon God, and saying, Lord Jesus, receive my spirit. And he kneeled down, and cried with a loud voice, Lord, lay not this sin to their charge. And when he had said this, he fell asleep. And Saul was consenting unto his death. And at that time there was a great persecution against the church which was at Jerusalem; and they were all scattered abroad throughout the regions of Judaea and Samaria, except the apostles.",
+  "Acts 13:16–25": "Then Paul stood up, and beckoning with his hand said, Men of Israel, and ye that fear God, give audience. The God of this people of Israel chose our fathers, and exalted the people when they dwelt as strangers in the land of Egypt, and with an high arm brought he them out of it. And about the time of forty years suffered he their manners in the wilderness. And when he had destroyed seven nations in the land of Chanaan, he divided their land to them by lot. And after that he gave unto them judges about the space of four hundred and fifty years, until Samuel the prophet. And afterward they desired a king: and God gave unto them Saul the son of Cis, a man of the tribe of Benjamin, by the space of forty years. And when he had removed him, he raised up unto them David to be their king; to whom also he gave testimony, and said, I have found David the son of Jesse, a man after mine own heart, which shall fulfil all my will. Of this man's seed hath God according to his promise raised unto Israel a Saviour, Jesus: When John had first preached before his coming the baptism of repentance to all the people of Israel. And as John fulfilled his course, he said, Whom think ye that I am? I am not he. But, behold, there cometh one after me, whose shoes of his feet I am not worthy to loose.",
+  "Matthew 23:29–39": "Woe unto you, scribes and Pharisees, hypocrites! because ye build the tombs of the prophets, and garnish the sepulchres of the righteous, And say, If we had been in the days of our fathers, we would not have been partakers with them in the blood of the prophets. Wherefore ye be witnesses unto yourselves, that ye are the children of them which killed the prophets. Fill ye up then the measure of your fathers. Ye serpents, ye generation of vipers, how can ye escape the damnation of hell? Wherefore, behold, I send unto you prophets, and wise men, and scribes: and some of them ye shall kill and crucify; and some of them shall ye scourge in your synagogues, and persecute them from city to city: That upon you may come all the righteous blood shed upon the earth, from the blood of righteous Abel unto the blood of Zacharias son of Barachias, whom ye slew between the temple and the altar. Verily I say unto you, All these things shall come upon this generation. O Jerusalem, Jerusalem, thou that killest the prophets, and stonest them which are sent unto thee, how often would I have gathered thy children together, even as a hen gathereth her chickens under her wings, and ye would not! Behold, your house is left unto you desolate. For I say unto you, Ye shall not see me henceforth, till ye shall say, Blessed is he that cometh in the name of the Lord.",
+  "Hebrews 11:1–22": "Now faith is the substance of things hoped for, the evidence of things not seen. For by it the elders obtained a good report. Through faith we understand that the worlds were framed by the word of God, so that things which are seen were not made of things which do appear. By faith Abel offered unto God a more excellent sacrifice than Cain, by which he obtained witness that he was righteous, God testifying of his gifts: and by it he being dead yet speaketh. By faith Enoch was translated that he should not see death; and was not found, because God had translated him: for before his translation he had this testimony, that he pleased God. But without faith it is impossible to please him: for he that cometh to God must believe that he is, and that he is a rewarder of them that diligently seek him. By faith Noah, being warned of God of things not seen as yet, moved with fear, prepared an ark to the saving of his house; by the which he condemned the world, and became heir of the righteousness which is by faith. By faith Abraham, when he was called to go out into a place which he should after receive for an inheritance, obeyed; and he went out, not knowing whither he went. By faith he sojourned in the land of promise, as in a strange country, dwelling in tabernacles with Isaac and Jacob, the heirs with him of the same promise: For he looked for a city which hath foundations, whose builder and maker is God. Through faith also Sara herself received strength to conceive seed, and was delivered of a child when she was past age, because she judged him faithful who had promised. Therefore sprang there even of one, and him as good as dead, so many as the stars of the sky in multitude, and as the sand which is by the sea shore innumerable. These all died in faith, not having received the promises, but having seen them afar off, and were persuaded of them, and embraced them, and confessed that they were strangers and pilgrims on the earth. For they that say such things declare plainly that they seek a country. And truly, if they had been mindful of that country from whence they came out, they might have had opportunity to have returned. But now they desire a better country, that is, an heavenly: wherefore God is not ashamed to be called their God: for he hath prepared for them a city. By faith Abraham, when he was tried, offered up Isaac: and he that had received the promises offered up his only begotten son, Of whom it was said, That in Isaac shall thy seed be called: Accounting that God was able to raise him up, even from the dead; from whence also he received him in a figure. By faith Isaac blessed Jacob and Esau concerning things to come. By faith Jacob, when he was a dying, blessed both the sons of Joseph; and worshipped, leaning upon the top of his staff. By faith Joseph, when he died, made mention of the departing of the children of Israel; and gave commandment concerning his bones.",
+  "Hebrews 11:23–40": "By faith Moses, when he was born, was hid three months of his parents, because they saw he was a proper child; and they were not afraid of the king's commandment. By faith Moses, when he was come to years, refused to be called the son of Pharaoh's daughter; Choosing rather to suffer affliction with the people of God, than to enjoy the pleasures of sin for a season; Esteeming the reproach of Christ greater riches than the treasures in Egypt: for he had respect unto the recompence of the reward. By faith he forsook Egypt, not fearing the wrath of the king: for he endured, as seeing him who is invisible. Through faith he kept the passover, and the sprinkling of blood, lest he that destroyed the firstborn should touch them. By faith they passed through the Red sea as by dry land: which the Egyptians assaying to do were drowned. By faith the walls of Jericho fell down, after they were compassed about seven days. By faith the harlot Rahab perished not with them that believed not, when she had received the spies with peace. And what shall I more say? for the time would fail me to tell of Gedeon, and of Barak, and of Samson, and of Jephthae; of David also, and Samuel, and of the prophets: Who through faith subdued kingdoms, wrought righteousness, obtained promises, stopped the mouths of lions, Quenched the violence of fire, escaped the edge of the sword, out of weakness were made strong, waxed valiant in fight, turned to flight the armies of the aliens. Women received their dead raised to life again: and others were tortured, not accepting deliverance; that they might obtain a better resurrection: And others had trial of cruel mockings and scourgings, yea, moreover of bonds and imprisonment: They were stoned, they were sawn asunder, were tempted, were slain with the sword: they wandered about in sheepskins and goatskins; being destitute, afflicted, tormented; (Of whom the world was not worthy:) they wandered in deserts, and in mountains, and in dens and caves of the earth. And these all, having obtained a good report through faith, received not the promise: God having provided some better thing for us, that they without us should not be made perfect."
+};
+
+function versePill(ref){
+  return `<button class="verse-pill" onclick="openVerse('${ref.replace(/'/g,"\\'")}')">${ref}</button>`;
+}
+
+const SLIDES = [
+
+// 1 — TITLE / PREMISE
+{
+  roman: "",
+  html: `
+    <h1 class="deck-title">One History, Many Witnesses</h1>
+    <h2 class="slide-title">The Old Testament Retold Throughout Scripture</h2>
+    <div class="divider"></div>
+    <div class="content-wrap">
+      <p class="connector-text">The Old Testament's narrative — God's covenant with Abraham, the Exodus, the wilderness, the kings and the prophets — is not told once and set aside. It is retold again and again across Scripture, always to teach the grace and mercy of God, His longsuffering towards His people, and the tendency of those people to be prone to wander, to become puffed up, to harden their hearts and stiffen their necks, and to disobey God and provoke Him.</p>
+      <div class="verse-quote">
+        <a class="vref" href="https://www.biblegateway.com/passage/?search=1+Corinthians+10%3A11&version=KJV" target="_blank" rel="noopener">1 Corinthians 10:11</a>
+        <p>Now all these things happened unto them for ensamples: and they are written for our admonition, upon whom the ends of the world are come.</p>
+      </div>
+      <p class="lead">This lesson follows <b>four</b> of those retellings — chosen because, read in order, they trace a single arc: confession, accusation, repetition, and redemption.</p>
+      <div class="cross-ref-grid">
+        <div class="cross-card"><span class="tag">I. Confession</span><div class="body-text">Nehemiah 9</div></div>
+        <div class="cross-card"><span class="tag">II. Accusation</span><div class="body-text">Acts 7 — Stephen</div></div>
+        <div class="cross-card"><span class="tag">III. Repetition</span><div class="body-text">Acts 13 — Paul</div></div>
+        <div class="cross-card"><span class="tag sage">IV. Redemption</span><div class="body-text">Hebrews 11</div></div>
+      </div>
+    </div>
+  `
+},
+
+// 2 — THE PATTERN IN SCRIPTURE
+{
+  roman: "",
+  html: `
+    <h2 class="slide-title">The Pattern in Scripture</h2>
+    <div class="content-wrap">
+      <p class="lead">This is not unique to these four. Retelling Israel's history is one of Scripture's standard tools — used by psalmists, prophets, and apostles alike to call God's people back to Him.</p>
+      <div class="cross-ref-grid">
+        <div class="cross-card">
+          <span class="tag">Corporate Confession</span>
+          <div class="body-text">Psalm 78; Psalm 105 &amp; 106; Psalm 135 &amp; 136 — the history sung and confessed in worship.</div>
+        </div>
+        <div class="cross-card">
+          <span class="tag">Prophetic Confrontation</span>
+          <div class="body-text">Ezekiel 20; Joshua 24; 1 Samuel 12 — the history used as an indictment, or a charge to choose.</div>
+        </div>
+        <div class="cross-card">
+          <span class="tag">New Testament Theology</span>
+          <div class="body-text">Galatians 3&ndash;4; Romans 9&ndash;11 — the history used by Paul to explain the Law, faith, and the difference between unbelieving Israel and the believing.</div>
+        </div>
+      </div>
+      <div class="closing" style="margin-top:22px;">
+        <span class="cv">We will look closely at just four — chosen because they trace one arc from confession to redemption.</span>
+      </div>
+    </div>
+  `
+},
+
+// 3 — NEHEMIAH'S CONFESSION
+{
+  roman: "I. Confession",
+  html: `
+    <h2 class="slide-title">Nehemiah's Confession</h2>
+    <div class="content-wrap">
+      <p class="lead">Generations before Stephen ever stood trial, the returned remnant stands in Jerusalem, reads the Law aloud — and confesses this same history as their own failure, verse for verse.</p>
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p><b>The Exodus and the Wilderness</b> — God chose Abraham, delivered Israel from Egypt with signs and wonders, and led them by cloud and fire to Sinai, giving them the Law, manna, and water. ${versePill("Nehemiah 9:6–15")}</p>
+      </div>
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p><b>The Golden Calf and God's Mercy</b> — they hardened their necks and made a molten calf, yet God's mercy did not depart from them, and He brought them in to possess the land. ${versePill("Nehemiah 9:16–25")}</p>
+      </div>
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p><b>The Cycle of Rebellion</b> — in the land, the pattern repeats for generations: they rebel, God delivers them to their enemies, they cry out, and He hears and saves them again. ${versePill("Nehemiah 9:26–31")}</p>
+      </div>
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p><b>The Confession:</b> "Thou art just in all that is brought upon us; for thou hast done right, but we have done wickedly." ${versePill("Nehemiah 9:32–37")}</p>
+      </div>
+    </div>
+  `
+},
+
+// 4 — STEPHEN'S ACCUSATION: ABRAHAM TO MOSES
+{
+  roman: "II. Accusation",
+  html: `
+    <h2 class="slide-title">Stephen's Accusation — Abraham to Moses</h2>
+    <div class="content-wrap">
+      <p class="lead">Brought before the council of Jews in Jerusalem, Stephen uses the very history Nehemiah's generation confessed as an accusation against his accusers. Indicting them for their rejection of God's Messiah, Christ Jesus.</p>
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p><b>Abraham</b> was called out of his own country to a land and an inheritance he never lived to receive. ${versePill("Acts 7:2–8")}</p>
+      </div>
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p><b>Joseph</b> was sold by his own brothers in envy — yet God was with him, and made him ruler over Egypt. ${versePill("Acts 7:9–16")}</p>
+      </div>
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p><b>Moses</b> was rejected the first time he tried to deliver his people on his own — but forty years later, was chosen by God to lead them from captivity. ${versePill("Acts 7:17–34")}</p>
+      </div>
+      <div class="cross-ref-grid">
+        <div class="cross-card">
+          <span class="tag">Genesis 12:1&ndash;3</span>
+          <div class="body-text">"Get thee out of thy country... and I will make of thee a great nation." ${versePill("Genesis 12:1–3")}</div>
+        </div>
+        <div class="cross-card">
+          <span class="tag">Exodus 3:5, 7, 10</span>
+          <div class="body-text">"Put off thy shoes... I have surely seen the affliction of my people." ${versePill("Exodus 3:5, 7, 10")}</div>
+        </div>
+      </div>
+    </div>
+  `
+},
+
+// 5 — STEPHEN'S ACCUSATION: IDOLS, TEMPLE, INDICTMENT
+{
+  roman: "II. Accusation",
+  html: `
+    <h2 class="slide-title">Stephen's Accusation — Idols, the Temple, and the Indictment</h2>
+    <div class="content-wrap">
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p>The same Moses who delivered them was refused again — while he was on the mountain, Israel turned back to Egypt's idols and built a golden calf. ${versePill("Acts 7:35–43")}</p>
+      </div>
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p>David wanted to build God a house but was denied because of his sin; his son Solomon was given the role instead. "The most High dwelleth not in temples made with hands" — the building was never the point, but a shadow of good things to come. ${versePill("Acts 7:44–50")}</p>
+      </div>
+      <div class="cross-ref-grid">
+        <div class="cross-card">
+          <span class="tag">Stephen Quotes &mdash; Amos 5:25&ndash;27</span>
+          <div class="body-text">"Have ye offered unto me sacrifices... forty years?... I will cause you to go into captivity beyond Damascus." ${versePill("Amos 5:25–27")}</div>
+        </div>
+        <div class="cross-card">
+          <span class="tag">Stephen Quotes &mdash; Isaiah 66:1&ndash;2</span>
+          <div class="body-text">"Heaven is my throne, and the earth is my footstool... where is the house that ye build unto me?" ${versePill("Isaiah 66:1–2")}</div>
+        </div>
+      </div>
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p><b>The Indictment:</b> "Ye stiffnecked... which of the prophets have not your fathers persecuted?" The same history Nehemiah confessed, Stephen turns into a charge. ${versePill("Acts 7:51–53")}</p>
+      </div>
+    </div>
+  `
+},
+
+// 6 — SAUL, CONSENTING
+{
+  roman: "II. Accusation",
+  html: `
+    <h2 class="slide-title">Saul, Consenting</h2>
+    <div class="content-wrap">
+      <p class="lead">The council is cut to the heart — not persuaded, but enraged. Stephen is dragged out of the city and stoned, praying for his killers as he dies.</p>
+      <div class="verse-quote">
+        <a class="vref" href="https://www.biblegateway.com/passage/?search=Acts+7%3A58-60&version=KJV" target="_blank" rel="noopener">Acts 7:58&ndash;60</a>
+        <p>And cast him out of the city, and stoned him: and the witnesses laid down their clothes at a young man's feet, whose name was Saul. And they stoned Stephen, calling upon God, and saying, Lord Jesus, receive my spirit. And he kneeled down, and cried with a loud voice, Lord, lay not this sin to their charge. And when he had said this, he fell asleep.</p>
+      </div>
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p>Standing at the edge of the crowd, holding the coats of the men throwing the stones, is a young Pharisee named Saul — <b>consenting</b> to Stephen's death. ${versePill("Acts 7:54–8:1")}</p>
+      </div>
+      <div class="closing" style="margin-top:22px;">
+        <span class="cv">Stephen is the first martyr, a powerful witness against unbelieving Israel. Saul will hear this testimony, and soon be the one giving it.</span>
+      </div>
+    </div>
+  `
+},
+
+// 7 — PAUL'S REPETITION
+{
+  roman: "III. Repetition",
+  html: `
+    <h2 class="slide-title">Paul's Repetition — The Second Witness</h2>
+    <div class="content-wrap">
+      <div class="verse-quote">
+        <a class="vref" href="https://www.biblegateway.com/passage/?search=2+Corinthians+13%3A1&version=KJV" target="_blank" rel="noopener">2 Corinthians 13:1</a>
+        <p>This is the third time I am coming to you. In the mouth of two or three witnesses shall every word be established.</p>
+      </div>
+      <p class="lead">Stephen is not the first to preach this against unbelieving Israel — Peter does, and Jesus certainly did in His own ministry. But Stephen's witness, and his consenting unto death for the cause of Christ, was a powerful testimony to the truth — a truth Saul, now called Paul, would echo. Years later, in a synagogue at Pisidian Antioch, the very man who watched him die for it becomes the second — independently preaching the same history, to the same end: that it all points to Jesus.</p>
+      <div class="verse-quote">
+        <a class="vref" href="https://www.biblegateway.com/passage/?search=Acts+13%3A17%2C+22-23&version=KJV" target="_blank" rel="noopener">Acts 13:17, 22&ndash;23</a>
+        <p>The God of this people of Israel chose our fathers, and exalted the people when they dwelt as strangers in the land of Egypt, and with an high arm brought he them out of it... he raised up unto them David to be their king... Of this man's seed hath God according to his promise raised unto Israel a Saviour, Jesus.</p>
+      </div>
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p>Paul walks the synagogue through Egypt, the wilderness, the judges, and the kings — the very shape of the history Stephen preached — and lands it on the same name: Jesus. ${versePill("Acts 13:16–25")}</p>
+      </div>
+    </div>
+  `
+},
+
+// 8 — TRANSITION: MATTHEW 23
+{
+  roman: "Interlude",
+  html: `
+    <h2 class="slide-title">A Rejection as Old as the Prophets</h2>
+    <div class="content-wrap">
+      <p class="lead">Before Stephen ever stood trial, Jesus leveled the same charge against the very city that would kill him — and named the pattern going all the way back to the beginning.</p>
+      <div class="verse-quote">
+        <a class="vref" href="https://www.biblegateway.com/passage/?search=Matthew+23%3A29-39&version=KJV" target="_blank" rel="noopener">Matthew 23:29&ndash;39</a>
+        <p>Woe unto you, scribes and Pharisees, hypocrites! because ye build the tombs of the prophets, and garnish the sepulchres of the righteous, and say, If we had been in the days of our fathers, we would not have been partakers with them in the blood of the prophets. Wherefore ye be witnesses unto yourselves, that ye are the children of them which killed the prophets... that upon you may come all the righteous blood shed upon the earth, from the blood of righteous Abel unto the blood of Zacharias son of Barachias, whom ye slew between the temple and the altar. O Jerusalem, Jerusalem, thou that killest the prophets, and stonest them which are sent unto thee, how often would I have gathered thy children together, even as a hen gathereth her chickens under her wings, and ye would not! Behold, your house is left unto you desolate.</p>
+      </div>
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p>Jesus names <b>Abel</b> first — the very same Abel that Hebrews 11 is about to commend by faith. The line runs from the first martyr, to the prophets, to Jesus Himself. ${versePill("Matthew 23:29–39")}</p>
+      </div>
+    </div>
+  `
+},
+
+// 9 — HEBREWS' REDEMPTION: BY FAITH
+{
+  roman: "IV. Redemption",
+  html: `
+    <h2 class="slide-title">Hebrews' Redemption — By Faith</h2>
+    <div class="content-wrap">
+      <p class="lead">The same names are recited a fourth time — not as accusation, not as confession, but as a roll call of faith.</p>
+      <div class="verse-quote">
+        <a class="vref" href="https://www.biblegateway.com/passage/?search=Hebrews+11%3A1-4&version=KJV" target="_blank" rel="noopener">Hebrews 11:1&ndash;4</a>
+        <p>Now faith is the substance of things hoped for, the evidence of things not seen. For by it the elders obtained a good report... By faith Abel offered unto God a more excellent sacrifice than Cain, by which he obtained witness that he was righteous, God testifying of his gifts: and by it he being dead yet speaketh.</p>
+      </div>
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p><b>Abel, Enoch, and Noah</b> obeyed God by faith before the Law ever existed — proof that faith, not ritual, has always been the standard. ${versePill("Hebrews 11:1–22")}</p>
+      </div>
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p><b>Abraham and Sarah</b> believed a promise neither of them lived to see fully kept — and died still looking for "a city which hath foundations, whose builder and maker is God."</p>
+      </div>
+    </div>
+  `
+},
+
+// 10 — HEBREWS' REDEMPTION: TIME WOULD FAIL ME
+{
+  roman: "IV. Redemption",
+  html: `
+    <h2 class="slide-title">Hebrews' Redemption — "Time Would Fail Me"</h2>
+    <div class="content-wrap">
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p><b>Moses</b> refused the treasures of Egypt, choosing to suffer with God's people rather than enjoy the pleasures of sin for a season. ${versePill("Hebrews 11:23–40")}</p>
+      </div>
+      <div class="verse-quote">
+        <a class="vref" href="https://www.biblegateway.com/passage/?search=Hebrews+11%3A32%2C+38-40&version=KJV" target="_blank" rel="noopener">Hebrews 11:32, 38&ndash;40</a>
+        <p>And what shall I more say? for the time would fail me to tell of Gedeon, and of Barak, and of Samson, and of Jephthae; of David also, and Samuel, and of the prophets... they wandered in deserts, and in mountains, and in dens and caves of the earth. And these all, having obtained a good report through faith, received not the promise: God having provided some better thing for us, that they without us should not be made perfect.</p>
+      </div>
+      <div class="closing sage" style="margin-top:22px;">
+        <span class="cv">Of whom the world was not worthy.</span>
+        <span class="cite">Hebrews 11:38 &mdash; the same men Stephen's accusers claimed to honor.</span>
+      </div>
+    </div>
+  `
+},
+
+// 11 — THE LESSON
+{
+  roman: "V. The Lesson",
+  html: `
+    <h2 class="slide-title">The Lesson</h2>
+    <div class="content-wrap">
+      <p class="lead">Four settings, one history. What changes is not the facts, but the posture toward them.</p>
+      <div class="cross-ref-grid">
+        <div class="cross-card"><span class="tag">Nehemiah</span><div class="body-text">Confession</div></div>
+        <div class="cross-card"><span class="tag">Stephen</span><div class="body-text">Accusation</div></div>
+        <div class="cross-card"><span class="tag">Paul</span><div class="body-text">Repetition</div></div>
+        <div class="cross-card"><span class="tag sage">Hebrews</span><div class="body-text">Redemption</div></div>
+      </div>
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p>Saul stood by consenting when this history was preached as judgment against a stiffnecked people. Years later he stood up and preached it himself — and in his own epistles, came to hold up the very same men and women as redeemed by faith, a great cloud of witnesses.</p>
+      </div>
+      <div class="closing" style="margin-top:22px;">
+        <span class="cv">The Old Testament story is both an indictment of men, who with the advantage of God's grace and protection, the oracles of God, still fell short in their sin — but also a powerful example of His redemptive plan for man, through faith in His Word, calling upon the name of Jesus.</span>
+      </div>
+    </div>
+  `
+}
+];
+
+let current = 0;
+const deck = document.getElementById('deck');
+const dotsEl = document.getElementById('dots');
+const progressLabel = document.getElementById('progress-label');
+
+function render(){
+  deck.innerHTML = SLIDES.map((s,i)=>`<div class="slide ${i===current?'active':''}">${s.roman?`<div class="roman">${s.roman}</div>`:""}${s.html}</div>`).join('');
+  dotsEl.innerHTML = SLIDES.map((_,i)=>`<div class="dot ${i===current?'active':''}" onclick="goTo(${i})"></div>`).join('');
+  progressLabel.textContent = `${current+1} / ${SLIDES.length}`;
+  document.getElementById('prevBtn').disabled = current===0;
+  document.getElementById('nextBtn').disabled = current===SLIDES.length-1;
+}
+function goTo(i){ current = Math.max(0, Math.min(SLIDES.length-1, i)); render(); }
+document.getElementById('prevBtn').onclick = ()=>goTo(current-1);
+document.getElementById('nextBtn').onclick = ()=>goTo(current+1);
+document.addEventListener('keydown', (e)=>{
+  if(e.key==='ArrowRight') goTo(current+1);
+  if(e.key==='ArrowLeft') goTo(current-1);
+  if(e.key==='Escape') closeVerse();
+});
+
+function openVerse(ref){
+  document.getElementById('modal-ref').textContent = ref;
+  document.getElementById('modal-text').textContent = VERSES[ref] || "(text unavailable)";
+  document.getElementById('modal-overlay').classList.add('open');
+}
+function closeVerse(){ document.getElementById('modal-overlay').classList.remove('open'); }
+document.getElementById('modal-close').onclick = closeVerse;
+document.getElementById('modal-overlay').addEventListener('click', (e)=>{
+  if(e.target.id==='modal-overlay') closeVerse();
+});
+
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Words of God — Jack Hyles on Inspiration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#000000;
+    --ink2:#0d0b07;
+    --gold:#d9b458;
+    --gold-bright:#ffd97a;
+    --crimson:#a8232f;
+    --crimson-bright:#e2495a;
+    --parchment:#faf6ec;
+    --parchment-dim:#d8cfb8;
+    --line: rgba(217,180,88,0.5);
+  }
+  *{box-sizing:border-box;}
+  html,body{
+    margin:0; padding:0; height:100%;
+    background:
+      radial-gradient(circle at 15% 10%, rgba(140,28,38,0.06), transparent 45%),
+      radial-gradient(circle at 85% 90%, rgba(201,162,75,0.06), transparent 45%),
+      var(--ink);
+    color:var(--parchment);
+    font-family:'Cormorant Garamond', serif;
+    font-weight: 500;
+    overflow:hidden;
+  }
+  #deck{ position:relative; width:100vw; height:100vh; }
+
+  .frame-border{
+    position:fixed; inset:14px; border:2px solid var(--gold); border-radius:4px;
+    pointer-events:none; z-index:5;
+    box-shadow: inset 0 0 0 1px rgba(201,162,75,0.25), inset 0 0 40px rgba(0,0,0,0.5);
+  }
+  .frame-border::before, .frame-border::after{
+    content:"✦"; position:absolute; color:var(--gold); font-size:14px;
+  }
+  .frame-border::before{ top:-9px; left:-9px; }
+  .frame-border::after{ bottom:-9px; right:-9px; }
+
+  .slide{
+    position:absolute; inset:0;
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    padding: 70px 8vw 100px 8vw;
+    overflow-y:auto;
+  }
+  .slide.active{ display:flex; animation: fadeIn 0.6s ease; }
+  @keyframes fadeIn{ from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:translateY(0);} }
+
+  .roman{
+    font-family:'Cinzel', serif;
+    letter-spacing: 4px;
+    color: var(--gold);
+    font-size: 15px;
+    text-transform:uppercase;
+    margin-bottom: 6px;
+    opacity:0.85;
+  }
+  h1.deck-title{
+    font-family:'Cinzel Decorative', serif;
+    font-size: clamp(36px, 5.2vw, 64px);
+    color: var(--gold-bright);
+    text-align:center;
+    margin: 6px 0 4px 0;
+    text-shadow: 0 0 4px rgba(0,0,0,0.9), 0 0 26px rgba(232,200,119,0.35);
+  }
+  h2.slide-title{
+    font-family:'Cinzel', serif;
+    font-size: clamp(28px, 3.6vw, 44px);
+    font-weight: 600;
+    color: var(--gold-bright);
+    text-align:center;
+    margin: 4px 0 26px 0;
+    letter-spacing: 1px;
+  }
+  .subtitle{
+    font-style:italic; color: var(--parchment-dim); text-align:center;
+    max-width: 760px; margin: 0 auto 30px auto; font-size: clamp(19px,1.9vw,24px);
+  }
+  .divider{
+    width: 140px; height: 1px; margin: 18px auto;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .content-wrap{ width:100%; max-width: 920px; margin: 0 auto; }
+
+  .lead{
+    font-size: clamp(21px,2.3vw,27px); font-weight:500; line-height:1.55; text-align:center;
+    color:var(--parchment); margin-bottom: 24px;
+  }
+  .lead b{ color:var(--gold-bright); font-weight:700; }
+
+  .point{
+    display:flex; gap:14px; align-items:flex-start;
+    margin: 16px 0; padding: 18px 22px;
+    border-left: 3px solid var(--gold);
+    background: rgba(201,162,75,0.08);
+    border-radius: 2px;
+  }
+  .point .glyph{ color:var(--crimson-bright); font-size:22px; margin-top:2px; }
+  .point p{ margin:0; font-size: clamp(19px,1.8vw,23px); font-weight:500; line-height:1.55; }
+  .point b{ color: var(--gold-bright); font-weight:700; }
+  .point i.ref{ color: var(--parchment-dim); }
+
+  .verse-quote{
+    max-width: 780px; margin: 14px auto; padding: 18px 24px;
+    border-left: 3px solid var(--crimson-bright);
+    background: rgba(233,223,199,0.05);
+    border-radius: 2px;
+  }
+  .verse-quote a.vref{
+    display:block; font-family:'Cinzel', serif; font-size: 15px; font-weight:600; letter-spacing: 1.5px;
+    color: var(--gold-bright); text-decoration:none; margin-bottom: 8px;
+  }
+  .verse-quote a.vref:hover{ color: var(--crimson-bright); text-decoration: underline; }
+  .verse-quote p{ margin:0; font-style: italic; font-weight:500; font-size: clamp(19px,1.9vw,23px); line-height:1.6; color: var(--parchment); }
+  .connector-text{
+    text-align:center; max-width: 780px; margin: 14px auto; font-size: clamp(18px,1.7vw,21px);
+    font-weight:500; color: var(--parchment-dim); line-height:1.55;
+  }
+
+  .cross-ref-grid{
+    display:grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+    gap: 16px; margin-top: 22px;
+  }
+  .cross-card{
+    border:1px solid var(--line); border-radius:6px; padding: 16px 18px;
+    background: linear-gradient(160deg, rgba(140,28,38,0.10), rgba(10,9,6,0.2));
+    position:relative;
+  }
+  .cross-card .tag{
+    font-family:'Cinzel', serif; font-size:13px; font-weight:600; letter-spacing:1.5px;
+    color: var(--crimson-bright); text-transform:uppercase; margin-bottom:8px; display:block;
+  }
+  .cross-card .body-text{ font-size: 19px; font-weight:500; line-height:1.5; color:var(--parchment); }
+
+  .two-col{ display:grid; grid-template-columns: 1fr 1fr; gap: 26px; width:100%; }
+  @media (max-width: 760px){ .two-col{ grid-template-columns: 1fr; } }
+  .col-card{
+    border:1px solid var(--line); border-radius: 6px; padding: 18px 20px;
+    background: rgba(233,223,199,0.03);
+  }
+  .col-card h3{
+    font-family:'Cinzel', serif; color: var(--gold-bright); font-size:21px;
+    letter-spacing:0.5px; margin: 0 0 10px 0; text-align:center;
+  }
+  .col-card p{ font-size:19px; font-weight:500; line-height:1.55; margin:6px 0; }
+
+  .takeaway-list{ list-style:none; padding:0; margin: 8px 0 0 0; counter-reset: step; }
+  .takeaway-list li{
+    font-size: clamp(19px,1.9vw,23px); font-weight:500; line-height:1.55; padding: 12px 0 12px 46px;
+    position:relative; border-bottom: 1px dashed var(--line);
+    counter-increment: step;
+  }
+  .takeaway-list li::before{
+    content: counter(step);
+    position:absolute; left:0; top:10px;
+    width: 30px; height: 30px; border-radius:50%;
+    border: 1px solid var(--gold); color: var(--gold-bright);
+    font-family:'Cinzel', serif; font-size:15px; font-weight:700;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .takeaway-list li:last-child{ border-bottom:none; }
+  .takeaway-list li b{ color: var(--gold-bright); font-weight:700; }
+
+  .closing{
+    text-align:center; margin-top: 20px; padding: 20px 26px;
+    border: 1px solid var(--gold); border-radius: 6px;
+    background: rgba(140,28,38,0.08); max-width: 760px;
+  }
+  .closing .cv{ font-style: italic; font-weight:600; font-size: clamp(20px,2.1vw,25px); color: var(--gold-bright); }
+  .closing .cite{ display:block; margin-top:8px; font-family:'Cinzel', serif; font-size:14px; letter-spacing:1px; color: var(--parchment-dim); }
+
+  /* Nav */
+  #nav{
+    position: fixed; bottom: 26px; left:0; right:0;
+    display:flex; align-items:center; justify-content:center; gap: 18px; z-index: 20;
+  }
+  .navbtn{
+    font-family:'Cinzel', serif; letter-spacing:1px; font-size:15px; font-weight:600;
+    color: var(--gold-bright); background: rgba(0,0,0,0.85);
+    border: 1px solid var(--gold); padding: 11px 22px; border-radius: 22px; cursor:pointer;
+    transition: background 0.2s;
+  }
+  .navbtn:hover{ background: rgba(201,162,75,0.22); }
+  .navbtn:disabled{ opacity:0.3; cursor:default; }
+  #dots{ display:flex; gap:9px; }
+  .dot{ width:10px; height:10px; border-radius:50%; background: rgba(201,162,75,0.35); cursor:pointer; transition: background 0.2s; }
+  .dot.active{ background: var(--gold-bright); box-shadow: 0 0 8px var(--gold-bright); }
+
+  #progress-label{
+    position: fixed; top: 26px; right: 40px; z-index:20;
+    font-family:'Cinzel', serif; font-size: 12px; letter-spacing: 2px; color: var(--parchment-dim);
+  }
+
+  ::-webkit-scrollbar{ width: 8px; }
+  ::-webkit-scrollbar-thumb{ background: rgba(201,162,75,0.4); border-radius:4px; }
+</style>
+</head>
+<body>
+
+<div class="frame-border"></div>
+<div id="progress-label"></div>
+<div id="deck"></div>
+
+<div id="nav">
+  <button class="navbtn" id="prevBtn">◄ PREV</button>
+  <div id="dots"></div>
+  <button class="navbtn" id="nextBtn">NEXT ►</button>
+</div>
+
+<script>
+const SLIDES = [
+
+// 1 — TITLE / GOD, THE PENMAN
+{
+  roman: "I. God, the Penman",
+  html: `
+    <h1 class="deck-title">The Words of God</h1>
+    <h2 class="slide-title">Pens in the Hand of the Penman</h2>
+    <p class="subtitle">A Lesson from Jack Hyles on the Inspiration of Scripture</p>
+    <div class="divider"></div>
+    <div class="content-wrap">
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p>The words of God were given to us by God — <b>not</b> by holy men. They were given to us by God <i>through</i> holy men, using them to get the words to us.</p>
+      </div>
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p>Sometimes that pen didn't understand all he wrote. References in the Bible reveal that some of these men did not know exactly what they were writing.</p>
+      </div>
+      <div class="closing" style="margin-top:22px;">
+        <span class="cv">Why? They were just pens; the Penman was doing the writing! God's voice gave His Word through them, not to them.</span>
+      </div>
+    </div>
+  `
+},
+
+// 2 — IF WE HAVE NO PERFECT BIBLE
+{
+  roman: "II. If We Have No Perfect Bible",
+  html: `
+    <h2 class="slide-title">What Difference Does It Make?</h2>
+    <div class="content-wrap">
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p>"Brother Hyles, so what if someone goes down to a so-called Christian college where he sits in a liberal professor's class who teaches, <i>'We have no perfect Bible.'</i> What difference does it make?"</p>
+      </div>
+      <div class="closing" style="margin-top:10px; margin-bottom:10px;">
+        <span class="cv">It makes all the difference in the world!</span>
+      </div>
+      <p class="connector-text">What he better do is stop and realize that if we have no perfect English Bible, we cannot live — because&hellip;</p>
+      <div class="verse-quote">
+        <a class="vref" href="https://www.biblegateway.com/passage/?search=Matthew+4%3A4&version=KJV" target="_blank" rel="noopener">Matthew 4:4</a>
+        <p>&hellip;Man shall not live by bread alone, but by every word that proceedeth out of the mouth of God.</p>
+      </div>
+    </div>
+  `
+},
+
+// 3 — A PREACHER'S CONVICTION
+{
+  roman: "III. A Preacher's Conviction",
+  html: `
+    <h2 class="slide-title">I Would Walk Out of This Pulpit</h2>
+    <div class="content-wrap">
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p>If I did not believe that every word in the Bible had been preserved from the time it was given through the mouth of men — as God, the Penman, wrote with the pen of humanity — I would walk out of this pulpit, and I wouldn't waste my life preaching.</p>
+      </div>
+      <div class="point">
+        <span class="glyph">✦</span>
+        <p>If there's a word in the Bible that is wrong, no one knows which one it is — so it could be any of them.</p>
+      </div>
+      <div class="closing" style="margin-top:22px;">
+        <span class="cv">I believe that we have God's preserved words for us in the King James Bible.</span>
+      </div>
+      <p class="connector-text" style="margin-top:20px;">In conclusion, how did we get God's words?</p>
+    </div>
+  `
+},
+
+// 4 — HOW WE GOT GOD'S WORDS
+{
+  roman: "IV. From Heaven to the King James Bible",
+  html: `
+    <h2 class="slide-title">How We Got God's Words</h2>
+    <div class="content-wrap">
+      <ol class="takeaway-list">
+        <li>The words of God were always in Heaven.</li>
+        <li>Man must have every word to live.</li>
+        <li>God had to find a way to get every word to man.</li>
+        <li>God chose men and made them holy, which means they were <b>"set apart or chosen"</b> to be God's pens.</li>
+        <li>God gave His words to us through those chosen men. God said, "I want you men to be My pens, and I will pick you up, and I will use you to write My words as the Penman. I will not use your brain; I will use your mouth." God gave us the God-breathed Book. God's breath across the vocal cords of human beings gave us His words.</li>
+        <li>God has preserved His words for us in the <b>King James Bible.</b></li>
+      </ol>
+    </div>
+  `
+}
+];
+
+let current = 0;
+const deck = document.getElementById('deck');
+const dotsEl = document.getElementById('dots');
+const progressLabel = document.getElementById('progress-label');
+
+function render(){
+  deck.innerHTML = SLIDES.map((s,i)=>`<div class="slide ${i===current?'active':''}">${s.roman?`<div class="roman">${s.roman}</div>`:""}${s.html}</div>`).join('');
+  dotsEl.innerHTML = SLIDES.map((_,i)=>`<div class="dot ${i===current?'active':''}" onclick="goTo(${i})"></div>`).join('');
+  progressLabel.textContent = `${current+1} / ${SLIDES.length}`;
+  document.getElementById('prevBtn').disabled = current===0;
+  document.getElementById('nextBtn').disabled = current===SLIDES.length-1;
+}
+function goTo(i){ current = Math.max(0, Math.min(SLIDES.length-1, i)); render(); }
+document.getElementById('prevBtn').onclick = ()=>goTo(current-1);
+document.getElementById('nextBtn').onclick = ()=>goTo(current+1);
+document.addEventListener('keydown', (e)=>{
+  if(e.key==='ArrowRight') goTo(current+1);
+  if(e.key==='ArrowLeft') goTo(current-1);
+});
+
+render();
+</script>
+</body>
+</html>
