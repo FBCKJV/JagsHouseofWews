@@ -226,7 +226,7 @@
       <a class="doctrines-card" href="#lessons">
         <span class="label">Lessons &amp; Classes</span>
         <strong>Slides, notes and handouts</strong>
-        <em>The Doctrine class, Genesis, Baptist history, answering error, prophecy, and the teaching pictures, filed by topic.</em>
+        <em>The Doctrine class, Genesis, sermons, Baptist history, answering error, prophecy, and the teaching pictures, filed by topic.</em>
       </a>
       <div class="section-header"><h2>Old Testament</h2><span>Genesis – Malachi</span></div>
       <div class="book-grid">${tiles('OT')}</div>
@@ -289,7 +289,8 @@
       </div>
       <div class="post about">${render(text)}</div>
       <div class="section-header"><h2>Getting around</h2></div>
-      <dl class="tips">${TIPS.map(([t, d]) => `<dt>${esc(t)}</dt><dd>${esc(d)}</dd>`).join('')}</dl>`;
+      <dl class="tips">${TIPS.map(([t, d]) => `<dt>${esc(t)}</dt><dd>${esc(d)}</dd>`).join('')}</dl>
+      <p class="fineprint"><a href="../">The older teaching portal</a> still has the Romans and Genesis class series.</p>`;
   }
 
   // First visit on this device: show the statement once. If the browser won't remember, don't nag.
