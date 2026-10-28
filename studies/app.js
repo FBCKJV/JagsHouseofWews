@@ -7,7 +7,7 @@
 
   const KJV_APP = 'https://fbckjv.app/KJVBible/';
   // Shown on the About page. Started at v1.17 (after 17 merged updates); each merged update adds one.
-  const APP_VERSION = '1.18', APP_DATE = '2026-10-27';
+  const APP_VERSION = '1.19', APP_DATE = '2026-10-27';
   const view = document.getElementById('view');
   const crumbs = document.getElementById('crumbs');
   let INDEX = null;
@@ -54,7 +54,7 @@
   }
 
   async function getJSON(url) {
-    const r = await fetch(url);
+    const r = await fetch(url, { cache: 'no-cache' });   // always ask the server, so updates show at once
     if (!r.ok) throw new Error(r.status + ' ' + url);
     return r.json();
   }
@@ -1088,6 +1088,6 @@
 
   // Offline: keep what's been opened, always prefer the network when it's there.
   if ('serviceWorker' in navigator && location.protocol === 'https:') {
-    navigator.serviceWorker.register('sw.js').catch(() => {});
+    navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).catch(() => {});
   }
 })();
