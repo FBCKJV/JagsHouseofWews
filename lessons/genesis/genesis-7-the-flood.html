@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Genesis 7 – The Flood</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="The Flood">
+  <div class="page title-page">
+    <div class="overline">A study in Genesis 7</div>
+    <h1>The Flood</h1>
+    <p class="sub">God’s judgment on the wicked and the scoffers, and just Noah saved by faith.</p>
+    <div class="refs center"><button class="ref" data-v="Gen 7:1-5">Genesis 7:1–24</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Into the ark" data-title="Come thou and all thy house">
+  <div class="page">
+    <h2>“Come thou and all thy house”</h2>
+    <blockquote class="scripture" style="font-style:italic"><sup>1</sup>And the <span class="lord">Lord</span> said unto Noah, Come thou and all thy house into the ark; for <mark>thee have I seen righteous</mark> before me in this generation. <sup>2</sup>Of every clean beast thou shalt take to thee by sevens, the male and his female: and of beasts that are not clean by two, the male and his female. <sup>3</sup>Of fowls also of the air by sevens, the male and the female; to keep seed alive upon the face of all the earth. <sup>4</sup>For yet seven days, and I will cause it to rain upon the earth forty days and forty nights; and every living substance that I have made will I destroy from off the face of the earth. <sup>5</sup>And Noah did according unto all that the <span class="lord">Lord</span> commanded him.<cite>Genesis 7:1–5</cite></blockquote>
+    <ul class="marks">
+      <li>God calls Noah in: “for thee have I seen righteous before me in this generation.” Just Noah, who found grace in the eyes of the <span class="lord">Lord</span>. <button class="ref" data-v="Gen 6:8-9">Gen 6:8–9</button></li>
+      <li>Seven days of warning, then forty days and forty nights of rain.</li>
+      <li>“And Noah did according unto all that the <span class="lord">Lord</span> commanded him.” Faith obeys.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Into the ark" data-title="Eight souls">
+  <div class="page">
+    <h2>Eight souls</h2>
+    <blockquote class="scripture" style="font-style:italic"><sup>13</sup>In the selfsame day entered Noah, and Shem, and Ham, and Japheth, the sons of Noah, and Noah’s wife, and the three wives of his sons with them, into the ark; <sup>14</sup>They, and every beast after his kind, and all the cattle after their kind, and every creeping thing that creepeth upon the earth after his kind, and every fowl after his kind, every bird of every sort. <sup>15</sup>And they went in unto Noah into the ark, two and two of all flesh, wherein is the breath of life.<cite>Genesis 7:13–15</cite></blockquote>
+    <div class="dims">
+      <div><span class="n">8</span><span class="lbl">souls: Noah, his wife, his three sons and their wives</span></div>
+      <div><span class="n">7</span><span class="lbl">days after God called them in, the waters came</span></div>
+      <div><span class="n">1</span><span class="lbl">ark, and one door</span></div>
+    </div>
+    <p class="center">“Wherein few, that is, eight souls were saved by water.” <button class="ref" data-v="1 Pet 3:20">1 Pet 3:20</button></p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Into the ark" data-title="And the Lord shut him in">
+  <div class="page title-page">
+    <div class="overline">Genesis 7:16</div>
+    <h1 style="font-size:clamp(2rem,5vw,3.8rem)">And the <span class="lord">Lord</span> shut him in</h1>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p style="max-width:54ch;margin:0 auto">Noah built the ark, but God closed the door. Those inside were kept by the <span class="lord">Lord</span>, and those outside were not let in. <button class="ref" data-v="Gen 7:16">Gen 7:16</button></p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="The judgment" data-title="Windows of heaven, fountains of the deep">
+  <div class="page">
+    <h2>Windows of heaven, fountains of the deep</h2>
+    <blockquote class="big-verse">In the six hundredth year of Noah’s life, in the second month, the seventeenth day of the month, the same day were all the <mark>fountains of the great deep</mark> broken up, and the <mark>windows of heaven</mark> were opened. And the rain was upon the earth forty days and forty nights.<cite>Genesis 7:11–12</cite></blockquote>
+    <p class="center">Waters pouring in from the skies like through open windows, and up from the deep like a fountain.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="The judgment" data-title="The waters prevailed">
+  <div class="page">
+    <h2>The waters prevailed</h2>
+    <blockquote class="scripture" style="font-style:italic"><sup>17</sup>And the flood was forty days upon the earth; and the waters increased, and bare up the ark, and it was lift up above the earth. <sup>18</sup>And the waters prevailed, and were increased greatly upon the earth; and the ark went upon the face of the waters. <sup>19</sup>And the waters prevailed exceedingly upon the earth; and <mark>all the high hills, that were under the whole heaven, were covered</mark>. <sup>20</sup>Fifteen cubits upward did the waters prevail; and the mountains were covered.<cite>Genesis 7:17–20</cite></blockquote>
+    <div class="dims">
+      <div><span class="n">40</span><span class="lbl">days and nights of rain</span></div>
+      <div><span class="n">15</span><span class="lbl">cubits above the highest mountains</span></div>
+      <div><span class="n">150</span><span class="lbl">days the waters prevailed upon the earth</span></div>
+    </div>
+    <p class="sub center">“All the high hills, that were under the whole heaven, were covered.” A global flood. <button class="ref" data-v="Gen 7:24">Gen 7:24</button></p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="The judgment" data-title="All flesh died">
+  <div class="page">
+    <h2>All flesh died</h2>
+    <blockquote class="scripture" style="font-style:italic"><sup>21</sup>And all flesh died that moved upon the earth, both of fowl, and of cattle, and of beast, and of every creeping thing that creepeth upon the earth, and every man: <sup>22</sup>All in whose nostrils was the breath of life, of all that was in the dry land, died. <sup>23</sup>And every living substance was destroyed which was upon the face of the ground, both man, and cattle, and the creeping things, and the fowl of the heaven; and they were destroyed from the earth: and <mark>Noah only remained alive</mark>, and they that were with him in the ark.<cite>Genesis 7:21–23</cite></blockquote>
+    <p>God’s judgment came upon the wicked and the scoffers, and the corrupt earth tainted with the blood of violence and sin. All flesh died, and just Noah was saved, with his sons and their wives, along with the animals of the earth. <button class="ref" data-v="Gen 6:11-13">Gen 6:11–13</button></p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="This is true" data-title="The Bible says it’s true">
+  <div class="page">
+    <h2>The Bible says it’s true</h2>
+    <p class="lead">There are archeologies and secular histories that all confirm a global flood, relegated to “myth” status but wondered about by natural men, seeking to confirm the story by natural means.</p>
+    <div class="cols">
+      <div class="panel believers"><h3>The face of the earth</h3><p>Fossils of sea life found on top of Everest, and deposits of salt in high plateaus. The deluge changing the face of the earth in grand canyons and fiords and river beds.</p></div>
+      <div class="panel believers"><h3>One family of man</h3><p>The common descent of every nation of men, traced back to the sons of Noah. <button class="ref" data-v="Gen 9:18-19">Gen 9:19</button> <button class="ref" data-v="Acts 17:26">Acts 17:26</button></p></div>
+    </div>
+    <div class="callout"><p><strong>But the Bible says it’s true, and that’s enough.</strong> The science of man comes around to confirming the accounts of scripture, not the other way around.</p></div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="This is true" data-title="Willingly ignorant">
+  <div class="page">
+    <h2>Willingly ignorant</h2>
+    <blockquote class="big-verse">Knowing this first, that there shall come in the last days scoffers, walking after their own lusts, And saying, Where is the promise of his coming? for since the fathers fell asleep, all things continue as they were from the beginning of the creation. For this they <mark>willingly</mark> are ignorant of, that by the word of God the heavens were of old, and the earth standing out of the water and in the water: Whereby the world that then was, being overflowed with water, perished:<cite>2 Peter 3:3–6</cite></blockquote>
+    <p>Scoffers laugh at the idea of Biblical fundamentalism, and some believers take it personally and are embarrassed by the word of God. We shouldn’t be moved. Rather, those scoffers should be embarrassed by themselves and their own foolish hearts.</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Ready with an answer" data-title="Ready always to give an answer">
+  <div class="page">
+    <h2>Ready always to give an answer</h2>
+    <blockquote class="scripture" style="font-style:italic"><sup>13</sup>And who is he that will harm you, if ye be followers of that which is good? <sup>14</sup>But and if ye suffer for righteousness’ sake, happy are ye: and be not afraid of their terror, neither be troubled; <sup>15</sup>But sanctify the Lord God in your hearts: and <mark>be ready always to give an answer</mark> to every man that asketh you a reason of the hope that is in you with meekness and fear: <sup>16</sup>Having a good conscience; that, whereas they speak evil of you, as of evildoers, they may be ashamed that falsely accuse your good conversation in Christ. <sup>17</sup>For it is better, if the will of God be so, that ye suffer for well doing, than for evil doing.<cite>1 Peter 3:13–17</cite></blockquote>
+    <ul class="marks">
+      <li>Be not afraid of their terror, neither be troubled.</li>
+      <li>Sanctify the Lord God in your hearts, and answer with meekness and fear.</li>
+      <li>Keep a good conscience, that they who speak evil of you may be ashamed.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Ready with an answer" data-title="Eight souls were saved by water">
+  <div class="page">
+    <h2>Eight souls were saved by water</h2>
+    <blockquote class="scripture" style="font-style:italic"><sup>18</sup>For Christ also hath once suffered for sins, the just for the unjust, that he might bring us to God, being put to death in the flesh, but quickened by the Spirit: <sup>19</sup>By which also he went and preached unto the spirits in prison; <sup>20</sup>Which sometime were disobedient, when once the longsuffering of God waited in the days of Noah, while the ark was a preparing, wherein few, that is, <mark>eight souls were saved by water</mark>. <sup>21</sup>The like figure whereunto even baptism doth also now save us (not the putting away of the filth of the flesh, but the answer of a good conscience toward God,) by the resurrection of Jesus Christ:<cite>1 Peter 3:18–21</cite></blockquote>
+    <div class="cols">
+      <div class="panel believers"><h3>Christ in triumph</h3><p>Jesus was triumphantly shown in Hell before those that didn’t believe, preaching His glory, leading captivity captive. <button class="ref" data-v="Eph 4:8-9">Eph 4:8–9</button></p></div>
+      <div class="panel cain"><h3>The disobedient</h3><p>The scoffers and unbelievers who mocked God, while the longsuffering of God waited, were swallowed up in the flood.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="The Lord delivers" data-title="The Lord knoweth how to deliver the godly">
+  <div class="page">
+    <h2>The <span class="lord">Lord</span> knoweth how to deliver</h2>
+    <blockquote class="scripture" style="font-style:italic"><sup>4</sup>For if God spared not the angels that sinned, but cast them down to hell, and delivered them into chains of darkness, to be reserved unto judgment; <sup>5</sup>And spared not the old world, but <mark>saved Noah the eighth person, a preacher of righteousness</mark>, bringing in the flood upon the world of the ungodly; <sup>6</sup>And turning the cities of Sodom and Gomorrha into ashes condemned them with an overthrow, making them an ensample unto those that after should live ungodly; <sup>7</sup>And delivered just Lot, vexed with the filthy conversation of the wicked: <sup>8</sup>(For that righteous man dwelling among them, in seeing and hearing, vexed his righteous soul from day to day with their unlawful deeds;) <sup>9</sup>The Lord knoweth how to deliver the godly out of temptations, and to reserve the unjust unto the day of judgment to be punished:<cite>2 Peter 2:4–9</cite></blockquote>
+    <div class="cols">
+      <div class="panel believers"><h3>Noah</h3><p>A preacher of righteousness, saved with his house while the world of the ungodly was destroyed.</p></div>
+      <div class="panel believers"><h3>Lot</h3><p>Just Lot, vexed by the filthy conversation of the wicked, delivered before the fire fell on Sodom and Gomorrha.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="The Lord delivers" data-title="The faith of Noah">
+  <div class="page">
+    <h2>The faith of Noah</h2>
+    <blockquote class="big-verse">By faith Noah, being warned of God of things not seen as yet, moved with fear, prepared an ark to the saving of his house; by the which he condemned the world, and became heir of the righteousness which is by faith.<cite>Hebrews 11:7</cite></blockquote>
+    <p>We are called to have the faith of Noah, who, having the grace of God extended to him, and faith in the Christ to come, believed God’s promise of salvation. Building the ark, diligently and meekly, obeying the <span class="lord">Lord</span>. Vexed, like Lot, by the sinful fallen world around him. Yet Noah stayed true, and God delivered him and destroyed the wicked, just as He will in the great day of the <span class="lord">Lord</span>.</p>
+    <div class="refs center"><button class="ref" data-v="Matt 24:37-39">Matt 24:37–39</button></div>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Close" data-title="Stand ready">
+  <div class="page title-page">
+    <div class="overline">Genesis 7</div>
+    <h1 style="font-size:clamp(2.1rem,5.2vw,4rem)">Stand ready</h1>
+    <p class="sub">by faith in God’s word, like Noah.</p>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <div style="text-align:left;max-width:640px;margin:0 auto">
+      <ol class="order">
+        <li><strong>The judgment was real</strong>A global flood upon a corrupt and violent world. The Bible says it’s true, and that’s enough.</li>
+        <li><strong>The ark was God’s provision</strong>One ark, one door, and the <span class="lord">Lord</span> shut him in. Eight souls were saved by water.</li>
+        <li><strong>Have an answer</strong>Stand ready with an answer for our hope, meekly and with fear, standfast in the truth.</li>
+        <li><strong>He delivers, and He judges</strong>God rewards those who diligently seek Him, and, despite all longsuffering, delivers His wrath on the wicked. <button class="ref" data-v="Heb 11:6">Heb 11:6</button></li>
+      </ol>
+    </div>
+  </div>
+</section>
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {"Gen": "Genesis", "Num": "Numbers", "Deut": "Deuteronomy", "Job": "Job", "Ps": "Psalm", "Prov": "Proverbs", "Isa": "Isaiah", "Matt": "Matthew", "Mark": "Mark", "Luke": "Luke", "John": "John", "Acts": "Acts", "Rom": "Romans", "Eph": "Ephesians", "Heb": "Hebrews", "Jas": "James", "1 Pet": "1 Peter", "2 Pet": "2 Peter", "Col": "Colossians", "Rev": "Revelation"};
+
+const V = {
+  "1 Pet 3:20":[[20, "Which sometime were disobedient, when once the longsuffering of God waited in the days of Noah, while the ark was a preparing, wherein few, that is, eight souls were saved by water."]],
+  "Acts 17:26":[[26, "And hath made of one blood all nations of men for to dwell on all the face of the earth, and hath determined the times before appointed, and the bounds of their habitation;"]],
+  "Eph 4:8-9":[[8, "Wherefore he saith, When he ascended up on high, he led captivity captive, and gave gifts unto men."], [9, "(Now that he ascended, what is it but that he also descended first into the lower parts of the earth?"]],
+  "Gen 6:11-13":[[11, "The earth also was corrupt before God, and the earth was filled with violence."], [12, "And God looked upon the earth, and, behold, it was corrupt; for all flesh had corrupted his way upon the earth."], [13, "And God said unto Noah, The end of all flesh is come before me; for the earth is filled with violence through them; and, behold, I will destroy them with the earth."]],
+  "Gen 6:8-9":[[8, "But Noah found grace in the eyes of the LORD."], [9, "These are the generations of Noah: Noah was a just man and perfect in his generations, and Noah walked with God."]],
+  "Gen 7:1-5":[[1, "And the LORD said unto Noah, Come thou and all thy house into the ark; for thee have I seen righteous before me in this generation."], [2, "Of every clean beast thou shalt take to thee by sevens, the male and his female: and of beasts that are not clean by two, the male and his female."], [3, "Of fowls also of the air by sevens, the male and the female; to keep seed alive upon the face of all the earth."], [4, "For yet seven days, and I will cause it to rain upon the earth forty days and forty nights; and every living substance that I have made will I destroy from off the face of the earth."], [5, "And Noah did according unto all that the LORD commanded him."]],
+  "Gen 7:16":[[16, "And they that went in, went in male and female of all flesh, as God had commanded him: and the LORD shut him in."]],
+  "Gen 7:24":[[24, "And the waters prevailed upon the earth an hundred and fifty days."]],
+  "Gen 9:18-19":[[18, "And the sons of Noah, that went forth of the ark, were Shem, and Ham, and Japheth: and Ham is the father of Canaan."], [19, "These are the three sons of Noah: and of them was the whole earth overspread."]],
+  "Heb 11:6":[[6, "But without faith it is impossible to please him: for he that cometh to God must believe that he is, and that he is a rewarder of them that diligently seek him."]],
+  "Matt 24:37-39":[[37, "But as the days of Noe were, so shall also the coming of the Son of man be."], [38, "For as in the days that were before the flood they were eating and drinking, marrying and giving in marriage, until the day that Noe entered into the ark,"], [39, "And knew not until the flood came, and took them all away; so shall also the coming of the Son of man be."]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "").replace("-", "–");
+  return (BOOKS[book] || book) + " " + cv.replace("-", "–");
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => "<sup>" + n + "</sup>" + smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
