@@ -287,7 +287,7 @@
     ['Read in the KJV app', 'Opens that chapter in the KJV Bible app in a new tab, so your place here stays put.'],
     ['Doctrines & Teachings', 'Teachings that compare scripture with scripture, sorted by topic. Tap a verse to open it in the KJV Bible app, or open the chapter study it came from.'],
     ['Install the app', 'On Android choose Install app from the browser menu; on iPhone use Share, then Add to Home Screen. It then opens full screen like the KJV Bible app.'],
-    ['Lessons & Classes', 'Slides, notes and handouts from the classes. Slides open in a new tab; notes open right on the page. Tap a picture to see it full size.'],
+    ['Lessons & Classes', 'Slides, notes and handouts from the classes. Slides open in a new tab; notes open right on the page. Tap a meme to see it full size.'],
     ['Search', 'Tap the magnifying glass at the top to search every study, teaching and lesson. Type a verse like “john 3:16” to see everywhere it is taught.'],
     ['The chapter grid', 'Solid squares are series studies, dashed squares are earlier one-off studies, and dim squares are chapters not yet studied.']
   ];
@@ -456,7 +456,7 @@
         ${topic.chart ? `<p class="chart-link"><a href="${esc(topic.chart.url)}" target="_blank" rel="noopener">See the full chart: ${esc(topic.chart.label)} ↗</a></p>` : ''}</section>` : ''}
       ${onTopic.length ? `<div class="section-header"><h2>Lessons on this topic</h2><span>${onTopic.length}</span></div>
         <div class="lesson-list">${onTopic.map(lessonCard).join('')}</div>` : ''}
-      ${pics.length ? `<div class="section-header"><h2>Pictures</h2><span>${pics.length}</span></div>
+      ${pics.length ? `<div class="section-header"><h2>Memes</h2><span>${pics.length}</span></div>
         ${pictureGrid(pics)}` : ''}
       ${onTopic.length || pics.length ? `<div class="section-header"><h2>From the chapter studies</h2><span>${topic.teachings.length}</span></div>` : ''}
       ${groups.length > 1 ? `<nav class="theme-chips" aria-label="Themes">${groups.map(g =>
@@ -520,7 +520,7 @@
   viewer.className = 'sheet viewer';
   viewer.hidden = true;
   viewer.innerHTML = `<div class="sheet-backdrop" data-close></div>
-    <figure class="viewer-panel" role="dialog" aria-modal="true" aria-label="Picture">
+    <figure class="viewer-panel" role="dialog" aria-modal="true" aria-label="Meme">
       <button class="sheet-x" type="button" data-close aria-label="Close">✕</button>
       <img alt="">
       <figcaption></figcaption>
@@ -569,9 +569,9 @@
     view.innerHTML = `
       <div class="hero">
         <h1>Lessons &amp; Classes</h1>
-        <p>Slides, notes and handouts from the Sunday classes and other studies, and the teaching pictures. Each one is filed under its topics and the chapters it teaches on.</p>
+        <p>Slides, notes and handouts from the Sunday classes and other studies, and the memes. Each one is filed under its topics and the chapters it teaches on.</p>
       </div>
-      ${lib.pictures.length ? `<nav class="theme-chips" aria-label="Pictures"><a href="#pictures">Teaching pictures <span>${lib.pictures.length}</span></a></nav>` : ''}
+      ${lib.pictures.length ? `<nav class="theme-chips" aria-label="Memes"><a href="#pictures">Memes <span>${lib.pictures.length}</span></a></nav>` : ''}
       ${shelves.map(s => `<details class="shelf" id="shelf-${esc(s.id)}" data-shelf-id="${esc(s.id)}"${shelfOpen(s.id) ? ' open' : ''}>
         <summary class="section-header"><h2>${esc(s.name)}</h2><span>${s.items.length}</span>
           ${s.about ? `<em>${esc(s.about)}</em>` : ''}</summary>
@@ -629,16 +629,16 @@
   }
 
   async function picturesView() {
-    document.title = 'Pictures — Lessons & Classes';
-    setCrumbs([['Home', '#'], ['Lessons', '#lessons'], ['Pictures', '#pictures']]);
+    document.title = 'Memes — Lessons & Classes';
+    setCrumbs([['Home', '#'], ['Lessons', '#lessons'], ['Memes', '#pictures']]);
     view.classList.add('wide');
     const [lib, t] = await Promise.all([loadLessons(), loadTopics()]);
     if (location.hash !== '#pictures') return;
     const groups = t.topics.map(x => ({ ...x, pics: lib.pictures.filter(p => p.topics[0] === x.id) })).filter(g => g.pics.length);
     view.innerHTML = `
       <div class="hero">
-        <h1>Pictures</h1>
-        <p>Teaching pictures and charts, filed by topic. Tap one to see it full size.</p>
+        <h1>Memes</h1>
+        <p>Memes and charts, filed by topic. Tap one to see it full size.</p>
       </div>
       <nav class="theme-chips" aria-label="Topics">${groups.map(g =>
         `<a href="#pictures" data-shelf="${esc(g.id)}">${esc(g.name)} <span>${g.pics.length}</span></a>`).join('')}</nav>
