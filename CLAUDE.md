@@ -9,6 +9,8 @@ A family and church archive of KJV Bible teaching (https://fbckjv.app/JagsHouseo
   HTML or add PDF-only lessons. Keep the outline or notes as a secondary part where they exist, and link a deck to
   related studies and lessons with `[[lesson:id|label]]` or `read:`.
   The deck is the deliverable. Do not add worksheets, answer keys or handouts unless the user asks.
+  Every old hand-made page is being moved onto the template. The list and order are in `review/deck_migration.md`:
+  take the next unchecked lesson from it, and move its row to Done in the same PR.
 
 ## Building a slide deck
 
