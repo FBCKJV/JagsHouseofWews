@@ -39,7 +39,7 @@ Week 7 and Week 8 infographics and the Week 4 pronouns chart become slides insid
 - [ ] **Week 10: Marriage, God's Plan for Man and Woman** (`doctrine-week-10-marriage-gods-plan`): Slides `doctrine/doctrine-week-10-marriage-gods-plan.html`
 
 ### 3. Genesis 1 to 5
-Genesis 2 has two versions (`marriage` and `marriage-and-divorce`): decide which is the finished one, per "use the most developed and polished."
+Genesis 2 has two lessons that overlap but are not copies: `marriage` walks through Genesis 2 and God's design for marriage, and `marriage-and-divorce` (young adult Sunday school) covers the same design and then divorce (Malachi, the Sermon on the Mount, Matthew 19). The user reviews both before deciding to keep them separate or fold them into one.
 
 - [ ] **Genesis 1: Creation** (`genesis-1-creation`): Slides `genesis/genesis-1-creation.html`
 - [ ] **Genesis 2: Marriage** (`genesis-2-marriage`): Slides `genesis/genesis-2-marriage.html`
