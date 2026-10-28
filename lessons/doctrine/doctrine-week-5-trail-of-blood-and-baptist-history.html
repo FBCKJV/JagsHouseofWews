@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Week 5 – A Trail of Blood</title>
+<script src="../deck-extras.js"></script>
 <meta name="description" content="Being Baptist, week 5: a brief history of the Baptists, a line of believers who held the Bible&#x27;s distinctives in every age, and the B.A.P.T.I.S.T. distinctives they held.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,6 +75,7 @@ p{margin:0 0 .85rem}
 .rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
 .fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
 
+.lead{display:flow-root}
 /* Illuminated initial */
 .lead::first-letter{
   font-family:var(--initial);float:left;
@@ -90,6 +92,33 @@ blockquote cite{display:block;font-style:normal;font-family:var(--display);font-
 .lord{font-variant:small-caps;letter-spacing:.04em}
 .scripture{font-size:.98em;line-height:1.75}
 .scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
 mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
 
 /* Reference chips */
@@ -98,6 +127,7 @@ mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px 
   font-family:var(--display);font-size:.72em;letter-spacing:.05em;
   color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
 }
+.ref.lesson-link{text-decoration:none;font-size:.8em}
 .ref:hover{color:var(--gold-bright);border-bottom-style:solid}
 .refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
 .refs.center{justify-content:center}
@@ -270,7 +300,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
     <div class="overline">Being Baptist · Week 5</div>
     <h1>A Trail of Blood</h1>
     <p class="sub">A brief history of the Baptists: believers who held to the Bible in every age, often at the cost of their lives.</p>
-    <div class="refs center"><button class="ref" data-v="Hebrews 11:36-38">Hebrews 11:36–38</button><button class="ref" data-v="Revelation 6:9-10">Revelation 6:9–10</button></div>
+    <div class="refs center"><button class="ref" data-v="Hebrews 11:36-38">Hebrews 11:36-38</button><button class="ref" data-v="Revelation 6:9-10">Revelation 6:9-10</button></div>
     <span class="fleuron">✦ ✦ ✦</span>
     <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse.</p>
   </div>
@@ -373,8 +403,8 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="page">
     <h2>The Reformation’s contradiction</h2>
     <div class="cols"><div class="panel cain"><h3>Lutheran (1517)</h3><p>Faith alone, yet infant baptism kept as a means of grace.</p></div><div class="panel cain"><h3>Reformed (1520s)</h3><p>Zwingli and Calvin: faith alone, yet infant baptism as a sign of the covenant.</p></div></div>
-    <div class="cols"><div class="panel cain"><h3>Anglican (1534)</h3><p>Henry VIII’s Church of England, its infant baptism and sacraments kept.</p></div><div class="panel believers"><h3>Anabaptists (1525)</h3><p>Grebel and Simons: believer’s baptism by immersion, no state church. The consistent answer: if salvation is by faith, baptism follows faith. <button class="ref" data-v="Acts 8:36-37">Acts 8:36–37</button></p></div></div>
-    <blockquote class="big-verse">For by grace are ye saved through faith; and that not of yourselves: it is the gift of God: Not of works, lest any man should boast.<cite>Ephesians 2:8–9</cite></blockquote>
+    <div class="cols"><div class="panel cain"><h3>Anglican (1534)</h3><p>Henry VIII’s Church of England, its infant baptism and sacraments kept.</p></div><div class="panel believers"><h3>Anabaptists (1525)</h3><p>Grebel and Simons: believer’s baptism by immersion, no state church. The consistent answer: if salvation is by faith, baptism follows faith. <button class="ref" data-v="Acts 8:36-37">Acts 8:36-37</button></p></div></div>
+    <blockquote class="big-verse">For by grace are ye saved through faith; and that not of yourselves: it is the gift of God: Not of works, lest any man should boast.<cite>Ephesians 2:8-9</cite></blockquote>
   </div>
 </section>
 
@@ -410,7 +440,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="Mystery, Babylon" data-title="The woman on the beast">
   <div class="page">
     <h2>The woman on the beast</h2>
-    <blockquote class="scripture" style="font-style:italic"><sup>1</sup>And there came one of the seven angels which had the seven vials, and talked with me, saying unto me, Come hither; I will shew unto thee the judgment of the great whore that sitteth upon many waters: <sup>2</sup>With whom the kings of the earth have committed fornication, and the inhabitants of the earth have been made drunk with the wine of her fornication. <sup>3</sup>So he carried me away in the spirit into the wilderness: and I saw a woman sit upon a scarlet coloured beast, full of names of blasphemy, having seven heads and ten horns. <sup>4</sup>And the woman was arrayed in purple and scarlet colour, and decked with gold and precious stones and pearls, having a golden cup in her hand full of abominations and filthiness of her fornication: <sup>5</sup>And upon her forehead was a name written, <mark>MYSTERY, BABYLON THE GREAT, THE MOTHER OF HARLOTS</mark> AND ABOMINATIONS OF THE EARTH. <sup>6</sup>And I saw the woman <mark>drunken with the blood of the saints</mark>, and with the blood of the martyrs of Jesus: and when I saw her, I wondered with great admiration.<cite>Revelation 17:1–6</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">And there came one of the seven angels which had the seven vials, and talked with me, saying unto me, Come hither; I will shew unto thee the judgment of the great whore that sitteth upon many waters: With whom the kings of the earth have committed fornication, and the inhabitants of the earth have been made drunk with the wine of her fornication. So he carried me away in the spirit into the wilderness: and I saw a woman sit upon a scarlet coloured beast, full of names of blasphemy, having seven heads and ten horns. And the woman was arrayed in purple and scarlet colour, and decked with gold and precious stones and pearls, having a golden cup in her hand full of abominations and filthiness of her fornication: And upon her forehead was a name written, <mark>MYSTERY, BABYLON THE GREAT, THE MOTHER OF HARLOTS</mark> AND ABOMINATIONS OF THE EARTH. And I saw the woman <mark>drunken with the blood of the saints</mark>, and with the blood of the martyrs of Jesus: and when I saw her, I wondered with great admiration.<cite>Revelation 17:1-6</cite></blockquote>
     <p>The great whore sits on seven mountains and many waters: peoples, multitudes, nations and tongues, drunk with the blood of the martyrs. The trail of blood leads straight to her door. <button class="ref" data-v="Revelation 17:9">Revelation 17:9</button> <button class="ref" data-v="Revelation 17:15">Revelation 17:15</button> <button class="ref" data-v="Revelation 17:18">Revelation 17:18</button></p>
   </div>
 </section>
@@ -427,7 +457,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="Being Baptist" data-title="The B.A.P.T.I.S.T. distinctives">
   <div class="page">
     <h2>The B.A.P.T.I.S.T. distinctives</h2>
-    <div class="timeline"><div><span class="n">B</span><span class="lbl"><strong>Biblical authority.</strong> The Bible alone is our rule of faith and practice. <button class="ref" data-v="2 Timothy 3:16-17">2 Timothy 3:16–17</button></span></div><div><span class="n">A</span><span class="lbl"><strong>Autonomy of the local church.</strong> Churches, plural: each self-governing under Christ. <button class="ref" data-v="Acts 9:31">Acts 9:31</button> <button class="ref" data-v="Revelation 1:4">Revelation 1:4</button></span></div><div><span class="n">P</span><span class="lbl"><strong>Priesthood of the believer.</strong> Every believer comes to God through Christ alone. <button class="ref" data-v="1 Peter 2:9">1 Peter 2:9</button> <button class="ref" data-v="1 Timothy 2:5">1 Timothy 2:5</button></span></div><div><span class="n">T</span><span class="lbl"><strong>Two ordinances.</strong> Baptism and the Lord’s Supper. <button class="ref" data-v="Matthew 28:19">Matthew 28:19</button> <button class="ref" data-v="1 Corinthians 11:23-26">1 Corinthians 11:23–26</button></span></div><div><span class="n">I</span><span class="lbl"><strong>Individual soul liberty.</strong> Every one shall give account of himself to God. <button class="ref" data-v="Romans 14:12">Romans 14:12</button></span></div><div><span class="n">S</span><span class="lbl"><strong>Saved church membership.</strong> Believers, baptized after they are saved. <button class="ref" data-v="Acts 2:41">Acts 2:41</button></span></div><div><span class="n">T</span><span class="lbl"><strong>Two offices.</strong> Pastors and deacons. <button class="ref" data-v="Philippians 1:1">Philippians 1:1</button></span></div></div>
+    <div class="timeline"><div><span class="n">B</span><span class="lbl"><strong>Biblical authority.</strong> The Bible alone is our rule of faith and practice. <button class="ref" data-v="2 Timothy 3:16-17">2 Timothy 3:16-17</button></span></div><div><span class="n">A</span><span class="lbl"><strong>Autonomy of the local church.</strong> Churches, plural: each self-governing under Christ. <button class="ref" data-v="Acts 9:31">Acts 9:31</button> <button class="ref" data-v="Revelation 1:4">Revelation 1:4</button></span></div><div><span class="n">P</span><span class="lbl"><strong>Priesthood of the believer.</strong> Every believer comes to God through Christ alone. <button class="ref" data-v="1 Peter 2:9">1 Peter 2:9</button> <button class="ref" data-v="1 Timothy 2:5">1 Timothy 2:5</button></span></div><div><span class="n">T</span><span class="lbl"><strong>Two ordinances.</strong> Baptism and the Lord’s Supper. <button class="ref" data-v="Matthew 28:19">Matthew 28:19</button> <button class="ref" data-v="1 Corinthians 11:23-26">1 Corinthians 11:23-26</button></span></div><div><span class="n">I</span><span class="lbl"><strong>Individual soul liberty.</strong> Every one shall give account of himself to God. <button class="ref" data-v="Romans 14:12">Romans 14:12</button></span></div><div><span class="n">S</span><span class="lbl"><strong>Saved church membership.</strong> Believers, baptized after they are saved. <button class="ref" data-v="Acts 2:41">Acts 2:41</button></span></div><div><span class="n">T</span><span class="lbl"><strong>Two offices.</strong> Pastors and deacons. <button class="ref" data-v="Philippians 1:1">Philippians 1:1</button></span></div></div>
   </div>
 </section>
 
@@ -435,7 +465,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="Being Baptist" data-title="What the distinctives mean">
   <div class="page">
     <h2>What the distinctives mean</h2>
-    <ul class="marks"><li>The New Testament says “churches,” plural, 49 times: each one local and independent. <button class="ref" data-v="Acts 9:31">Acts 9:31</button></li><li>The Pastoral Epistles give the qualifications for <strong>pastors and deacons</strong>. <button class="ref" data-v="1 Timothy 3:1-13">1 Timothy 3:1–13</button></li><li><strong>Bishop, elder, overseer and shepherd</strong> are the same office: the pastor. <button class="ref" data-v="Titus 1:5-7">Titus 1:5–7</button> <button class="ref" data-v="1 Peter 5:1-2">1 Peter 5:1–2</button></li><li>The offices are not priests: <strong>all believers are</strong>. <button class="ref" data-v="Revelation 1:6">Revelation 1:6</button></li><li>An <strong>ordinance</strong> is a practice the Lord commanded. It is not a “sacrament” that gives grace.</li><li>“Anabaptist” means “baptize again,” a Catholic insult: the converts had been baptized as babies, and were baptized again as believers.</li></ul>
+    <ul class="marks"><li>The New Testament says “churches,” plural, 49 times: each one local and independent. <button class="ref" data-v="Acts 9:31">Acts 9:31</button></li><li>The Pastoral Epistles give the qualifications for <strong>pastors and deacons</strong>. <button class="ref" data-v="1 Timothy 3:1-13">1 Timothy 3:1-13</button></li><li><strong>Bishop, elder, overseer and shepherd</strong> are the same office: the pastor. <button class="ref" data-v="Titus 1:5-7">Titus 1:5-7</button> <button class="ref" data-v="1 Peter 5:1-2">1 Peter 5:1-2</button></li><li>The offices are not priests: <strong>all believers are</strong>. <button class="ref" data-v="Revelation 1:6">Revelation 1:6</button></li><li>An <strong>ordinance</strong> is a practice the Lord commanded. It is not a “sacrament” that gives grace.</li><li>“Anabaptist” means “baptize again,” a Catholic insult: the converts had been baptized as babies, and were baptized again as believers.</li></ul>
   </div>
 </section>
 
@@ -445,7 +475,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
     <h2>Behold, hear, set thine heart</h2>
     <blockquote class="big-verse">And the man said unto me, Son of man, <mark>behold with thine eyes, and hear with thine ears, and set thine heart</mark> upon all that I shall shew thee; for to the intent that I might shew them unto thee art thou brought hither: <mark>declare all that thou seest</mark> to the house of Israel.<cite>Ezekiel 40:4</cite></blockquote>
     <p>The believers on the trail did what Ezekiel was told: they looked into the word, heard it, kept it in their hearts, and declared it, in the common tongue, whatever it cost.</p>
-    <div class="refs center"><button class="ref" data-v="Deuteronomy 11:18">Deuteronomy 11:18</button><button class="ref" data-v="Proverbs 4:20-21">Proverbs 4:20–21</button></div>
+    <div class="refs center"><button class="ref" data-v="Deuteronomy 11:18">Deuteronomy 11:18</button><button class="ref" data-v="Proverbs 4:20-21">Proverbs 4:20-21</button></div>
   </div>
 </section>
 
@@ -454,7 +484,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="page">
     <h2>Ears that will not hear</h2>
     <blockquote class="big-verse">For the heart of this people is waxed gross, and their ears are dull of hearing, and their eyes have they closed; lest they should see with their eyes, and hear with their ears, and understand with their heart, and should be converted, and I should heal them.<cite>Acts 28:27</cite></blockquote>
-    <p>Paul quotes Isaiah. Many will not hear, as many would not in every age of the trail. The word is declared anyway. <button class="ref" data-v="Isaiah 6:9-10">Isaiah 6:9–10</button></p>
+    <p>Paul quotes Isaiah. Many will not hear, as many would not in every age of the trail. The word is declared anyway. <button class="ref" data-v="Isaiah 6:9-10">Isaiah 6:9-10</button></p>
   </div>
 </section>
 
@@ -536,8 +566,8 @@ const V = {
 function refTitle(key){
   const i = key.lastIndexOf(" ");
   const book = key.slice(0, i), cv = key.slice(i + 1);
-  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "").replace("-", "–");
-  return (BOOKS[book] || book) + " " + cv.replace("-", "–");
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
 }
 function smallCaps(t){
   return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
@@ -600,7 +630,7 @@ function openVerse(keys, label){
     const data = V[k];
     if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
     if (!data) { html += "<p>Passage not loaded.</p>"; return; }
-    html += "<p>" + data.map(([n, t]) => "<sup>" + n + "</sup>" + smallCaps(t)).join(" ") + "</p>";
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
   });
   verseBody.innerHTML = html;
   verseDlg.showModal();
@@ -609,6 +639,7 @@ function openVerse(keys, label){
 
 document.addEventListener("click", e => {
   const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
   if (b) {
     const keys = b.dataset.v;
     const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
