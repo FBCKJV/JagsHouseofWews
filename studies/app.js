@@ -7,7 +7,7 @@
 
   const KJV_APP = 'https://fbckjv.app/KJVBible/';
   // Shown on the About page. Started at v1.17 (after 17 merged updates); each merged update adds one.
-  const APP_VERSION = '1.21', APP_DATE = '2026-10-28';
+  const APP_VERSION = '1.22', APP_DATE = '2026-10-28';
   const view = document.getElementById('view');
   const crumbs = document.getElementById('crumbs');
   let INDEX = null;
@@ -692,10 +692,18 @@
     if (main) meta = `<span>Posted ${esc(fmtDate(main.date))}${main.range ? ' · ' + esc(main.range) : ''}</span>`;
     if (studies.length > 1) meta += `<span>${studies.length} studies</span>`;
 
+    // Class slides made for this chapter (its main chapter, listed first): one opens directly,
+    // more than one jumps to the lessons list at the bottom.
+    const decks = lib.lessons.filter(l => l.chapters[0] && l.chapters[0].slug === b.slug && l.chapters[0].ch === ch)
+      .map(l => ({ l, part: l.parts.find(p => p.kind === 'page') })).filter(x => x.part);
+    const slidesBtn = decks.length === 1
+      ? `<a class="btn" href="${esc(decks[0].part.href)}" target="_blank" rel="noopener">Class slides ↗</a>`
+      : decks.length ? `<a class="btn" href="#lessons-here" data-jump="lessons-here">Class slides (${decks.length}) ↓</a>` : '';
     const actions = `<div class="actions">
         <a class="btn primary" href="${esc(kjvHref)}" target="_blank" rel="noopener">Read in the KJV app ↗</a>
         ${shownStudy ? `<a class="btn" id="tg-link" href="${esc(shownStudy.link)}" target="_blank" rel="noopener">View on Telegram ↗</a>` : ''}
-        ${studies.length ? '<a class="btn" href="#commentary" data-jump>Skip to commentary ↓</a>' : ''}
+        ${slidesBtn}
+        ${studies.length ? '<a class="btn" href="#commentary" data-jump="commentary">Skip to commentary ↓</a>' : ''}
       </div>`;
 
     let body = '';
@@ -733,7 +741,7 @@
     const onChapter = lib.lessons.filter(l => l.chapters.some(c => c.slug === b.slug && c.ch === ch));
     const chPics = lib.pictures.filter(p => p.chapters.some(c => c.slug === b.slug && c.ch === ch));
     if (onChapter.length || chPics.length) {
-      body += `<div class="section-header"><h2>Lessons on ${esc(title)}</h2><span>${onChapter.length + chPics.length}</span></div>
+      body += `<div class="section-header" id="lessons-here"><h2>Lessons on ${esc(title)}</h2><span>${onChapter.length + chPics.length}</span></div>
         ${onChapter.length ? `<div class="lesson-list">${onChapter.map(lessonCard).join('')}</div>` : ''}
         ${chPics.length ? pictureGrid(chPics) : ''}`;
     }
@@ -773,11 +781,10 @@
       const tg = document.getElementById('tg-link');
       if (tg) tg.href = s.link;
     });
-    const jump = view.querySelector('[data-jump]');
-    if (jump) jump.onclick = e => {
+    view.querySelectorAll('[data-jump]').forEach(jump => jump.onclick = e => {
       e.preventDefault();
-      document.getElementById('commentary').scrollIntoView({ behavior: 'smooth' });
-    };
+      document.getElementById(jump.dataset.jump).scrollIntoView({ behavior: 'smooth' });
+    });
   }
 
   function splitRef(ref) {
