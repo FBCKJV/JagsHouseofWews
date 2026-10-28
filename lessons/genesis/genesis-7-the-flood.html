@@ -75,6 +75,7 @@ p{margin:0 0 .85rem}
 .rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
 .fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
 
+.lead{display:flow-root}
 /* Illuminated initial */
 .lead::first-letter{
   font-family:var(--initial);float:left;
@@ -91,6 +92,33 @@ blockquote cite{display:block;font-style:normal;font-family:var(--display);font-
 .lord{font-variant:small-caps;letter-spacing:.04em}
 .scripture{font-size:.98em;line-height:1.75}
 .scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
 mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
 
 /* Reference chips */
@@ -272,7 +300,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
     <div class="overline">A study in Genesis 7</div>
     <h1>The Flood</h1>
     <p class="sub">God’s judgment on the wicked and the scoffers, and just Noah saved by faith.</p>
-    <div class="refs center"><button class="ref" data-v="Genesis 7:1-5">Genesis 7:1–5</button></div>
+    <div class="refs center"><button class="ref" data-v="Genesis 7:1-5">Genesis 7:1-5</button></div>
     <span class="fleuron">✦ ✦ ✦</span>
     <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse.</p>
   </div>
@@ -282,8 +310,8 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="Into the ark" data-title="Come thou and all thy house">
   <div class="page">
     <h2>“Come thou and all thy house”</h2>
-    <blockquote class="scripture" style="font-style:italic"><sup>1</sup>And the <span class="lord">Lord</span> said unto Noah, Come thou and all thy house into the ark; for <mark>thee have I seen righteous</mark> before me in this generation. <sup>2</sup>Of every clean beast thou shalt take to thee by sevens, the male and his female: and of beasts that are not clean by two, the male and his female. <sup>3</sup>Of fowls also of the air by sevens, the male and the female; to keep seed alive upon the face of all the earth. <sup>4</sup>For yet seven days, and I will cause it to rain upon the earth forty days and forty nights; and every living substance that I have made will I destroy from off the face of the earth. <sup>5</sup>And Noah did according unto all that the <span class="lord">Lord</span> commanded him.<cite>Genesis 7:1–5</cite></blockquote>
-    <ul class="marks"><li>God calls Noah in: “for thee have I seen righteous before me in this generation.” Just Noah, who found grace in the eyes of the <span class="lord">Lord</span>. <button class="ref" data-v="Genesis 6:8-9">Genesis 6:8–9</button></li><li>Seven days of warning, then forty days and forty nights of rain.</li><li>“And Noah did according unto all that the <span class="lord">Lord</span> commanded him.” Faith obeys.</li></ul>
+    <blockquote class="scripture" style="font-style:italic">And the <span class="lord">Lord</span> said unto Noah, Come thou and all thy house into the ark; for <mark>thee have I seen righteous</mark> before me in this generation. Of every clean beast thou shalt take to thee by sevens, the male and his female: and of beasts that are not clean by two, the male and his female. Of fowls also of the air by sevens, the male and the female; to keep seed alive upon the face of all the earth. For yet seven days, and I will cause it to rain upon the earth forty days and forty nights; and every living substance that I have made will I destroy from off the face of the earth. And Noah did according unto all that the <span class="lord">Lord</span> commanded him.<cite>Genesis 7:1-5</cite></blockquote>
+    <ul class="marks"><li>God calls Noah in: “for thee have I seen righteous before me in this generation.” Just Noah, who found grace in the eyes of the <span class="lord">Lord</span>. <button class="ref" data-v="Genesis 6:8-9">Genesis 6:8-9</button></li><li>Seven days of warning, then forty days and forty nights of rain.</li><li>“And Noah did according unto all that the <span class="lord">Lord</span> commanded him.” Faith obeys.</li></ul>
   </div>
 </section>
 
@@ -291,7 +319,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="Into the ark" data-title="Eight souls">
   <div class="page">
     <h2>Eight souls</h2>
-    <blockquote class="scripture" style="font-style:italic"><sup>13</sup>In the selfsame day entered Noah, and Shem, and Ham, and Japheth, the sons of Noah, and Noah’s wife, and the three wives of his sons with them, into the ark; <sup>14</sup>They, and every beast after his kind, and all the cattle after their kind, and every creeping thing that creepeth upon the earth after his kind, and every fowl after his kind, every bird of every sort. <sup>15</sup>And they went in unto Noah into the ark, two and two of all flesh, wherein is the breath of life.<cite>Genesis 7:13–15</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">In the selfsame day entered Noah, and Shem, and Ham, and Japheth, the sons of Noah, and Noah’s wife, and the three wives of his sons with them, into the ark; They, and every beast after his kind, and all the cattle after their kind, and every creeping thing that creepeth upon the earth after his kind, and every fowl after his kind, every bird of every sort. And they went in unto Noah into the ark, two and two of all flesh, wherein is the breath of life.<cite>Genesis 7:13-15</cite></blockquote>
     <div class="dims"><div><span class="n">8</span><span class="lbl">souls: Noah, his wife, his three sons and their wives</span></div><div><span class="n">7</span><span class="lbl">days after God called them in, the waters came</span></div><div><span class="n">1</span><span class="lbl">ark, and one door</span></div></div>
     <p class="center">“Wherein few, that is, eight souls were saved by water.” <button class="ref" data-v="1 Peter 3:20">1 Peter 3:20</button></p>
   </div>
@@ -311,7 +339,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="The judgment" data-title="Windows of heaven, fountains of the deep">
   <div class="page">
     <h2>Windows of heaven, fountains of the deep</h2>
-    <blockquote class="big-verse">In the six hundredth year of Noah’s life, in the second month, the seventeenth day of the month, the same day were all the <mark>fountains of the great deep</mark> broken up, and the <mark>windows of heaven</mark> were opened. And the rain was upon the earth forty days and forty nights.<cite>Genesis 7:11–12</cite></blockquote>
+    <blockquote class="big-verse">In the six hundredth year of Noah’s life, in the second month, the seventeenth day of the month, the same day were all the <mark>fountains of the great deep</mark> broken up, and the <mark>windows of heaven</mark> were opened. And the rain was upon the earth forty days and forty nights.<cite>Genesis 7:11-12</cite></blockquote>
     <p class="center">Waters pouring in from the skies like through open windows, and up from the deep like a fountain.</p>
   </div>
 </section>
@@ -320,7 +348,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="The judgment" data-title="The waters prevailed">
   <div class="page">
     <h2>The waters prevailed</h2>
-    <blockquote class="scripture" style="font-style:italic"><sup>17</sup>And the flood was forty days upon the earth; and the waters increased, and bare up the ark, and it was lift up above the earth. <sup>18</sup>And the waters prevailed, and were increased greatly upon the earth; and the ark went upon the face of the waters. <sup>19</sup>And the waters prevailed exceedingly upon the earth; and <mark>all the high hills, that were under the whole heaven, were covered</mark>. <sup>20</sup>Fifteen cubits upward did the waters prevail; and the mountains were covered.<cite>Genesis 7:17–20</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">And the flood was forty days upon the earth; and the waters increased, and bare up the ark, and it was lift up above the earth. And the waters prevailed, and were increased greatly upon the earth; and the ark went upon the face of the waters. And the waters prevailed exceedingly upon the earth; and <mark>all the high hills, that were under the whole heaven, were covered</mark>. Fifteen cubits upward did the waters prevail; and the mountains were covered.<cite>Genesis 7:17-20</cite></blockquote>
     <div class="dims"><div><span class="n">40</span><span class="lbl">days and nights of rain</span></div><div><span class="n">15</span><span class="lbl">cubits above the highest mountains</span></div><div><span class="n">150</span><span class="lbl">days the waters prevailed upon the earth</span></div></div>
     <p class="sub center">“All the high hills, that were under the whole heaven, were covered.” A global flood. <button class="ref" data-v="Genesis 7:24">Genesis 7:24</button></p>
   </div>
@@ -330,8 +358,8 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="The judgment" data-title="All flesh died">
   <div class="page">
     <h2>All flesh died</h2>
-    <blockquote class="scripture" style="font-style:italic"><sup>21</sup>And all flesh died that moved upon the earth, both of fowl, and of cattle, and of beast, and of every creeping thing that creepeth upon the earth, and every man: <sup>22</sup>All in whose nostrils was the breath of life, of all that was in the dry land, died. <sup>23</sup>And every living substance was destroyed which was upon the face of the ground, both man, and cattle, and the creeping things, and the fowl of the heaven; and they were destroyed from the earth: and <mark>Noah only remained alive</mark>, and they that were with him in the ark.<cite>Genesis 7:21–23</cite></blockquote>
-    <p>God’s judgment came upon the wicked and the scoffers, and the corrupt earth tainted with the blood of violence and sin. All flesh died, and just Noah was saved, with his sons and their wives, along with the animals of the earth. <button class="ref" data-v="Genesis 6:11-13">Genesis 6:11–13</button></p>
+    <blockquote class="scripture" style="font-style:italic">And all flesh died that moved upon the earth, both of fowl, and of cattle, and of beast, and of every creeping thing that creepeth upon the earth, and every man: All in whose nostrils was the breath of life, of all that was in the dry land, died. And every living substance was destroyed which was upon the face of the ground, both man, and cattle, and the creeping things, and the fowl of the heaven; and they were destroyed from the earth: and <mark>Noah only remained alive</mark>, and they that were with him in the ark.<cite>Genesis 7:21-23</cite></blockquote>
+    <p>God’s judgment came upon the wicked and the scoffers, and the corrupt earth tainted with the blood of violence and sin. All flesh died, and just Noah was saved, with his sons and their wives, along with the animals of the earth. <button class="ref" data-v="Genesis 6:11-13">Genesis 6:11-13</button></p>
   </div>
 </section>
 
@@ -349,7 +377,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="This is true" data-title="Willingly ignorant">
   <div class="page">
     <h2>Willingly ignorant</h2>
-    <blockquote class="big-verse">Knowing this first, that there shall come in the last days scoffers, walking after their own lusts, And saying, Where is the promise of his coming? for since the fathers fell asleep, all things continue as they were from the beginning of the creation. For this they <mark>willingly</mark> are ignorant of, that by the word of God the heavens were of old, and the earth standing out of the water and in the water: Whereby the world that then was, being overflowed with water, perished:<cite>2 Peter 3:3–6</cite></blockquote>
+    <blockquote class="big-verse">Knowing this first, that there shall come in the last days scoffers, walking after their own lusts, And saying, Where is the promise of his coming? for since the fathers fell asleep, all things continue as they were from the beginning of the creation. For this they <mark>willingly</mark> are ignorant of, that by the word of God the heavens were of old, and the earth standing out of the water and in the water: Whereby the world that then was, being overflowed with water, perished:<cite>2 Peter 3:3-6</cite></blockquote>
     <p>Scoffers laugh at the idea of Biblical fundamentalism, and some believers take it personally and are embarrassed by the word of God. We shouldn’t be moved. Rather, those scoffers should be embarrassed by themselves and their own foolish hearts.</p>
   </div>
 </section>
@@ -358,7 +386,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="Ready with an answer" data-title="Ready always to give an answer">
   <div class="page">
     <h2>Ready always to give an answer</h2>
-    <blockquote class="scripture" style="font-style:italic"><sup>13</sup>And who is he that will harm you, if ye be followers of that which is good? <sup>14</sup>But and if ye suffer for righteousness’ sake, happy are ye: and be not afraid of their terror, neither be troubled; <sup>15</sup>But sanctify the Lord God in your hearts: and <mark>be ready always to give an answer</mark> to every man that asketh you a reason of the hope that is in you with meekness and fear: <sup>16</sup>Having a good conscience; that, whereas they speak evil of you, as of evildoers, they may be ashamed that falsely accuse your good conversation in Christ. <sup>17</sup>For it is better, if the will of God be so, that ye suffer for well doing, than for evil doing.<cite>1 Peter 3:13–17</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">And who is he that will harm you, if ye be followers of that which is good? But and if ye suffer for righteousness’ sake, happy are ye: and be not afraid of their terror, neither be troubled; But sanctify the Lord God in your hearts: and <mark>be ready always to give an answer</mark> to every man that asketh you a reason of the hope that is in you with meekness and fear: Having a good conscience; that, whereas they speak evil of you, as of evildoers, they may be ashamed that falsely accuse your good conversation in Christ. For it is better, if the will of God be so, that ye suffer for well doing, than for evil doing.<cite>1 Peter 3:13-17</cite></blockquote>
     <ul class="marks"><li>Be not afraid of their terror, neither be troubled.</li><li>Sanctify the Lord God in your hearts, and answer with meekness and fear.</li><li>Keep a good conscience, that they who speak evil of you may be ashamed.</li></ul>
   </div>
 </section>
@@ -367,8 +395,8 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="Ready with an answer" data-title="Eight souls were saved by water">
   <div class="page">
     <h2>Eight souls were saved by water</h2>
-    <blockquote class="scripture" style="font-style:italic"><sup>18</sup>For Christ also hath once suffered for sins, the just for the unjust, that he might bring us to God, being put to death in the flesh, but quickened by the Spirit: <sup>19</sup>By which also he went and preached unto the spirits in prison; <sup>20</sup>Which sometime were disobedient, when once the longsuffering of God waited in the days of Noah, while the ark was a preparing, wherein few, that is, <mark>eight souls were saved by water</mark>. <sup>21</sup>The like figure whereunto even baptism doth also now save us (not the putting away of the filth of the flesh, but the answer of a good conscience toward God,) by the resurrection of Jesus Christ:<cite>1 Peter 3:18–21</cite></blockquote>
-    <div class="cols"><div class="panel believers"><h3>Christ in triumph</h3><p>Jesus was triumphantly shown in Hell before those that didn’t believe, preaching His glory, leading captivity captive. <button class="ref" data-v="Ephesians 4:8-9">Ephesians 4:8–9</button></p></div><div class="panel cain"><h3>The disobedient</h3><p>The scoffers and unbelievers who mocked God, while the longsuffering of God waited, were swallowed up in the flood.</p></div></div>
+    <blockquote class="scripture" style="font-style:italic">For Christ also hath once suffered for sins, the just for the unjust, that he might bring us to God, being put to death in the flesh, but quickened by the Spirit: By which also he went and preached unto the spirits in prison; Which sometime were disobedient, when once the longsuffering of God waited in the days of Noah, while the ark was a preparing, wherein few, that is, <mark>eight souls were saved by water</mark>. The like figure whereunto even baptism doth also now save us (not the putting away of the filth of the flesh, but the answer of a good conscience toward God,) by the resurrection of Jesus Christ:<cite>1 Peter 3:18-21</cite></blockquote>
+    <div class="cols"><div class="panel believers"><h3>Christ in triumph</h3><p>Jesus was triumphantly shown in Hell before those that didn’t believe, preaching His glory, leading captivity captive. <button class="ref" data-v="Ephesians 4:8-9">Ephesians 4:8-9</button></p></div><div class="panel cain"><h3>The disobedient</h3><p>The scoffers and unbelievers who mocked God, while the longsuffering of God waited, were swallowed up in the flood.</p></div></div>
   </div>
 </section>
 
@@ -376,7 +404,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="The Lord delivers" data-title="The Lord knoweth how to deliver the godly">
   <div class="page">
     <h2>The <span class="lord">Lord</span> knoweth how to deliver</h2>
-    <blockquote class="scripture" style="font-style:italic"><sup>4</sup>For if God spared not the angels that sinned, but cast them down to hell, and delivered them into chains of darkness, to be reserved unto judgment; <sup>5</sup>And spared not the old world, but <mark>saved Noah the eighth person, a preacher of righteousness</mark>, bringing in the flood upon the world of the ungodly; <sup>6</sup>And turning the cities of Sodom and Gomorrha into ashes condemned them with an overthrow, making them an ensample unto those that after should live ungodly; <sup>7</sup>And delivered just Lot, vexed with the filthy conversation of the wicked: <sup>8</sup>(For that righteous man dwelling among them, in seeing and hearing, vexed his righteous soul from day to day with their unlawful deeds;) <sup>9</sup>The Lord knoweth how to deliver the godly out of temptations, and to reserve the unjust unto the day of judgment to be punished:<cite>2 Peter 2:4–9</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">For if God spared not the angels that sinned, but cast them down to hell, and delivered them into chains of darkness, to be reserved unto judgment; And spared not the old world, but <mark>saved Noah the eighth person, a preacher of righteousness</mark>, bringing in the flood upon the world of the ungodly; And turning the cities of Sodom and Gomorrha into ashes condemned them with an overthrow, making them an ensample unto those that after should live ungodly; And delivered just Lot, vexed with the filthy conversation of the wicked: (For that righteous man dwelling among them, in seeing and hearing, vexed his righteous soul from day to day with their unlawful deeds;) The Lord knoweth how to deliver the godly out of temptations, and to reserve the unjust unto the day of judgment to be punished:<cite>2 Peter 2:4-9</cite></blockquote>
     <div class="cols"><div class="panel believers"><h3>Noah</h3><p>A preacher of righteousness, saved with his house while the world of the ungodly was destroyed.</p></div><div class="panel believers"><h3>Lot</h3><p>Just Lot, vexed by the filthy conversation of the wicked, delivered before the fire fell on Sodom and Gomorrha.</p></div></div>
   </div>
 </section>
@@ -387,7 +415,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
     <h2>The faith of Noah</h2>
     <blockquote class="big-verse">By faith Noah, being warned of God of things not seen as yet, moved with fear, prepared an ark to the saving of his house; by the which he condemned the world, and became heir of the righteousness which is by faith.<cite>Hebrews 11:7</cite></blockquote>
     <p>We are called to have the faith of Noah, who, having the grace of God extended to him, and faith in the Christ to come, believed God’s promise of salvation. Building the ark, diligently and meekly, obeying the <span class="lord">Lord</span>. Vexed, like Lot, by the sinful fallen world around him. Yet Noah stayed true, and God delivered him and destroyed the wicked, just as He will in the great day of the <span class="lord">Lord</span>.</p>
-    <div class="refs center"><button class="ref" data-v="Matthew 24:37-39">Matthew 24:37–39</button></div>
+    <div class="refs center"><button class="ref" data-v="Matthew 24:37-39">Matthew 24:37-39</button></div>
   </div>
 </section>
 
@@ -445,8 +473,8 @@ const V = {
 function refTitle(key){
   const i = key.lastIndexOf(" ");
   const book = key.slice(0, i), cv = key.slice(i + 1);
-  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "").replace("-", "–");
-  return (BOOKS[book] || book) + " " + cv.replace("-", "–");
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
 }
 function smallCaps(t){
   return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
@@ -509,7 +537,7 @@ function openVerse(keys, label){
     const data = V[k];
     if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
     if (!data) { html += "<p>Passage not loaded.</p>"; return; }
-    html += "<p>" + data.map(([n, t]) => "<sup>" + n + "</sup>" + smallCaps(t)).join(" ") + "</p>";
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
   });
   verseBody.innerHTML = html;
   verseDlg.showModal();

@@ -75,6 +75,7 @@ p{margin:0 0 .85rem}
 .rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
 .fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
 
+.lead{display:flow-root}
 /* Illuminated initial */
 .lead::first-letter{
   font-family:var(--initial);float:left;
@@ -91,6 +92,33 @@ blockquote cite{display:block;font-style:normal;font-family:var(--display);font-
 .lord{font-variant:small-caps;letter-spacing:.04em}
 .scripture{font-size:.98em;line-height:1.75}
 .scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
 mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
 
 /* Reference chips */
@@ -310,7 +338,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="Introduction" data-title="What they argued for">
   <div class="page">
     <h2>What they argued for</h2>
-    <div class="timeline"><div><span class="n">1</span><span class="lbl"><strong>Soul liberty.</strong> Every man answers to God for himself. <button class="ref" data-v="Romans 14:12">Romans 14:12</button></span></div><div><span class="n">2</span><span class="lbl"><strong>Voluntary membership.</strong> A church is the saved, baptized upon their own profession of faith. <button class="ref" data-v="Acts 8:36-37">Acts 8:36–37</button></span></div><div><span class="n">3</span><span class="lbl"><strong>No coercion in religion.</strong> Faith cannot be forced, and the sword is not the church’s weapon. <button class="ref" data-v="2 Corinthians 10:4">2 Corinthians 10:4</button></span></div><div><span class="n">4</span><span class="lbl"><strong>Liberty for all.</strong> Not only for Baptists, but for every conscience, even those they disagreed with.</span></div></div>
+    <div class="timeline"><div><span class="n">1</span><span class="lbl"><strong>Soul liberty.</strong> Every man answers to God for himself. <button class="ref" data-v="Romans 14:12">Romans 14:12</button></span></div><div><span class="n">2</span><span class="lbl"><strong>Voluntary membership.</strong> A church is the saved, baptized upon their own profession of faith. <button class="ref" data-v="Acts 8:36-37">Acts 8:36-37</button></span></div><div><span class="n">3</span><span class="lbl"><strong>No coercion in religion.</strong> Faith cannot be forced, and the sword is not the church’s weapon. <button class="ref" data-v="2 Corinthians 10:4">2 Corinthians 10:4</button></span></div><div><span class="n">4</span><span class="lbl"><strong>Liberty for all.</strong> Not only for Baptists, but for every conscience, even those they disagreed with.</span></div></div>
   </div>
 </section>
 
@@ -319,7 +347,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="page">
     <h2>Render unto Caesar</h2>
     <blockquote class="big-verse">They say unto him, Caesar’s. Then saith he unto them, <mark>Render therefore unto Caesar the things which are Caesar’s</mark>; <mark>and unto God the things that are God’s</mark>.<cite>Matthew 22:21</cite></blockquote>
-    <p>Two realms, and two kinds of authority. The magistrate keeps the peace. He does not keep the soul. <button class="ref" data-v="John 18:36">John 18:36</button> <button class="ref" data-v="Romans 13:1-4">Romans 13:1–4</button></p>
+    <p>Two realms, and two kinds of authority. The magistrate keeps the peace. He does not keep the soul. <button class="ref" data-v="John 18:36">John 18:36</button> <button class="ref" data-v="Romans 13:1-4">Romans 13:1-4</button></p>
   </div>
 </section>
 
@@ -327,8 +355,8 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="Why they refused" data-title="Let both grow together">
   <div class="page">
     <h2>Let both grow together</h2>
-    <blockquote class="scripture" style="font-style:italic"><sup>24</sup>Another parable put he forth unto them, saying, The kingdom of heaven is likened unto a man which sowed good seed in his field: <sup>25</sup>But while men slept, his enemy came and sowed tares among the wheat, and went his way. <sup>26</sup>But when the blade was sprung up, and brought forth fruit, then appeared the tares also. <sup>27</sup>So the servants of the householder came and said unto him, Sir, didst not thou sow good seed in thy field? from whence then hath it tares? <sup>28</sup>He said unto them, An enemy hath done this. The servants said unto him, Wilt thou then that we go and gather them up? <sup>29</sup>But he said, Nay; lest while ye gather up the tares, ye root up also the wheat with them. <sup>30</sup><mark>Let both grow together until the harvest</mark>: and in the time of harvest I will say to the reapers, Gather ye together first the tares, and bind them in bundles to burn them: but gather the wheat into my barn.<cite>Matthew 13:24–30</cite></blockquote>
-    <p>Roger Williams leaned on this parable. If the tares are among the wheat until the harvest, then the sword has no business sorting them now. <button class="ref" data-v="Luke 9:54-56">Luke 9:54–56</button></p>
+    <blockquote class="scripture" style="font-style:italic">Another parable put he forth unto them, saying, The kingdom of heaven is likened unto a man which sowed good seed in his field: But while men slept, his enemy came and sowed tares among the wheat, and went his way. But when the blade was sprung up, and brought forth fruit, then appeared the tares also. So the servants of the householder came and said unto him, Sir, didst not thou sow good seed in thy field? from whence then hath it tares? He said unto them, An enemy hath done this. The servants said unto him, Wilt thou then that we go and gather them up? But he said, Nay; lest while ye gather up the tares, ye root up also the wheat with them. <mark>Let both grow together until the harvest</mark>: and in the time of harvest I will say to the reapers, Gather ye together first the tares, and bind them in bundles to burn them: but gather the wheat into my barn.<cite>Matthew 13:24-30</cite></blockquote>
+    <p>Roger Williams leaned on this parable. If the tares are among the wheat until the harvest, then the sword has no business sorting them now. <button class="ref" data-v="Luke 9:54-56">Luke 9:54-56</button></p>
   </div>
 </section>
 
@@ -337,7 +365,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="page">
     <h2>We ought to obey God</h2>
     <blockquote class="big-verse">Then Peter and the other apostles answered and said, <mark>We ought to obey God rather than men</mark>.<cite>Acts 5:29</cite></blockquote>
-    <p>The answer every one of these men gave when the court told them to stop preaching, stop baptizing, or stop meeting. <button class="ref" data-v="Acts 4:19-20">Acts 4:19–20</button></p>
+    <p>The answer every one of these men gave when the court told them to stop preaching, stop baptizing, or stop meeting. <button class="ref" data-v="Acts 4:19-20">Acts 4:19-20</button></p>
   </div>
 </section>
 
@@ -346,7 +374,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="page">
     <h2>Thomas Helwys</h2>
     <p class="lead">The Baptist argument for soul liberty began in England, before any Baptist reached America.</p>
-    <div class="steps"><div class="st"><span class="when">1609</span><div>John Smyth forms a Baptist congregation of English exiles in Amsterdam, and Thomas Helwys is among them. <button class="ref" data-v="Acts 8:36-37">Acts 8:36–37</button></div></div><div class="st"><span class="when">c. 1612</span><div>Helwys leads part of the congregation home to England, and publishes <em>A Short Declaration of the Mystery of Iniquity</em>, a plea for liberty of conscience that may be the first in the English language.</div></div><div class="st"><span class="when">1612 →</span><div>He sends a copy to King James I. Helwys and others are thrown into Newgate prison, and he probably died there about 1616.</div></div></div>
+    <div class="steps"><div class="st"><span class="when">1609</span><div>John Smyth forms a Baptist congregation of English exiles in Amsterdam, and Thomas Helwys is among them. <button class="ref" data-v="Acts 8:36-37">Acts 8:36-37</button></div></div><div class="st"><span class="when">c. 1612</span><div>Helwys leads part of the congregation home to England, and publishes <em>A Short Declaration of the Mystery of Iniquity</em>, a plea for liberty of conscience that may be the first in the English language.</div></div><div class="st"><span class="when">1612 →</span><div>He sends a copy to King James I. Helwys and others are thrown into Newgate prison, and he probably died there about 1616.</div></div></div>
     <blockquote>Let them be heretics, Turks, Jews, or whatsoever, it appertains not to the earthly power to punish them in the least measure.<cite>Thomas Helwys, 1612</cite></blockquote>
     <p class="sub center">The same conviction, a century and a half earlier, that Holmes, Backus and Leland would suffer for.</p>
   </div>
@@ -582,7 +610,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="page">
     <h2>Different roots, same conclusion</h2>
     <p class="lead">In Virginia the Baptists found allies in Jefferson and Madison, who wanted the state out of religion for other reasons.</p>
-    <div class="cols"><div class="panel believers"><h3>The Enlightenment wing</h3><p>Jefferson and Madison reasoned from natural rights: religion is a private matter, and government has no jurisdiction over it.</p></div><div class="panel believers"><h3>The Baptists</h3><p>They reasoned from the gospel: faith must be free, because a faith that cannot be refused means nothing. <button class="ref" data-v="John 6:44">John 6:44</button> <button class="ref" data-v="Acts 8:36-37">Acts 8:36–37</button></p></div></div>
+    <div class="cols"><div class="panel believers"><h3>The Enlightenment wing</h3><p>Jefferson and Madison reasoned from natural rights: religion is a private matter, and government has no jurisdiction over it.</p></div><div class="panel believers"><h3>The Baptists</h3><p>They reasoned from the gospel: faith must be free, because a faith that cannot be refused means nothing. <button class="ref" data-v="John 6:44">John 6:44</button> <button class="ref" data-v="Acts 8:36-37">Acts 8:36-37</button></p></div></div>
     <div class="callout"><p>Both pressed past the middle way, where the state still leans on Christianity through taxes, oaths and laws. The Baptists did not become secular for it. They asked the state to leave the church alone, so that the church would be free to be the church. <button class="ref" data-v="John 18:36">John 18:36</button></p></div>
   </div>
 </section>
@@ -613,7 +641,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
     <h2>The thread</h2>
     <p class="lead">Holmes, Merrill, Backus, Leland and the rest are one thread.</p>
     <ul class="marks"><li>Willing to suffer for believer’s baptism.</li><li>Unwilling to submit to state church authority.</li><li>Strong for religious liberty for everyone, even those they disagreed with.</li><li>Faith was a matter between a man and God, not a matter of law. <button class="ref" data-v="1 Timothy 2:5">1 Timothy 2:5</button></li></ul>
-    <div class="refs center"><button class="ref" data-v="Hebrews 11:36-38">Hebrews 11:36–38</button><button class="ref" data-v="2 Timothy 3:12">2 Timothy 3:12</button></div>
+    <div class="refs center"><button class="ref" data-v="Hebrews 11:36-38">Hebrews 11:36-38</button><button class="ref" data-v="2 Timothy 3:12">2 Timothy 3:12</button></div>
   </div>
 </section>
 
@@ -650,7 +678,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
     <h1>Stand fast</h1>
     <p class="sub">“Stand fast therefore in the liberty wherewith Christ hath made us free, and be not entangled again with the yoke of bondage.”</p>
     <span class="fleuron">✦ ✦ ✦</span>
-    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>Soul liberty</strong>Every one of us shall give account of himself to God. <button class="ref" data-v="Romans 14:12">Romans 14:12</button></li><li><strong>Obey God rather than men</strong>Even when the court says otherwise. <button class="ref" data-v="Acts 5:29">Acts 5:29</button></li><li><strong>Believers, baptized</strong>A church of the saved, by their own profession. <button class="ref" data-v="Acts 8:36-37">Acts 8:36–37</button></li><li><strong>Liberty for all</strong>The conscience cannot be forced, and the gospel does not need the sword. <button class="ref" data-v="2 Corinthians 10:4">2 Corinthians 10:4</button></li></ol></div>
+    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>Soul liberty</strong>Every one of us shall give account of himself to God. <button class="ref" data-v="Romans 14:12">Romans 14:12</button></li><li><strong>Obey God rather than men</strong>Even when the court says otherwise. <button class="ref" data-v="Acts 5:29">Acts 5:29</button></li><li><strong>Believers, baptized</strong>A church of the saved, by their own profession. <button class="ref" data-v="Acts 8:36-37">Acts 8:36-37</button></li><li><strong>Liberty for all</strong>The conscience cannot be forced, and the gospel does not need the sword. <button class="ref" data-v="2 Corinthians 10:4">2 Corinthians 10:4</button></li></ol></div>
   </div>
 </section>
 
@@ -711,8 +739,8 @@ const V = {
 function refTitle(key){
   const i = key.lastIndexOf(" ");
   const book = key.slice(0, i), cv = key.slice(i + 1);
-  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "").replace("-", "–");
-  return (BOOKS[book] || book) + " " + cv.replace("-", "–");
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
 }
 function smallCaps(t){
   return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
@@ -775,7 +803,7 @@ function openVerse(keys, label){
     const data = V[k];
     if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
     if (!data) { html += "<p>Passage not loaded.</p>"; return; }
-    html += "<p>" + data.map(([n, t]) => "<sup>" + n + "</sup>" + smallCaps(t)).join(" ") + "</p>";
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
   });
   verseBody.innerHTML = html;
   verseDlg.showModal();
