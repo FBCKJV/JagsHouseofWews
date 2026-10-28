@@ -7,7 +7,7 @@
 
   const KJV_APP = 'https://fbckjv.app/KJVBible/';
   // Shown on the About page. Started at v1.17 (after 17 merged updates); each merged update adds one.
-  const APP_VERSION = '1.23', APP_DATE = '2026-10-28';
+  const APP_VERSION = '1.24', APP_DATE = '2026-10-28';
   const view = document.getElementById('view');
   const crumbs = document.getElementById('crumbs');
   let INDEX = null;
@@ -194,7 +194,7 @@
 
   // ---------- views ----------
   function home() {
-    document.title = 'Chapter Studies — Jag\'s House of Wews';
+    document.title = 'Jag\'s House of Wews — KJV Bible studies';
     setCrumbs([]);
     view.classList.add('wide');
     const total = INDEX.books.reduce((n, b) => n + b.chapters, 0);
@@ -221,19 +221,19 @@
     };
     view.innerHTML = `
       <div class="hero">
-        <img class="hero-logo" src="../img/logo-256.jpg" alt="Jag's House of Wews" width="132" height="132">
-        <h1>Chapter Studies</h1>
-        <p>${done.toLocaleString()} of ${total.toLocaleString()} chapters studied, Genesis to Revelation. Pick a book, then a chapter.</p>
+        <img class="hero-logo" src="../img/logo-256.jpg" alt="" width="132" height="132">
+        <h1>Jag’s House of Wews</h1>
+        <p>Chapter-by-chapter studies of the King James Bible, with doctrine, lessons and classes.</p>
+        <p class="hero-stats">${done.toLocaleString()} of ${total.toLocaleString()} chapters studied, Genesis to Revelation</p>
       </div>
-      <a class="continue gospel-card" href="#heaven"><span class="label">The gospel</span>
-        <strong>How to know for sure you’re going to Heaven</strong></a>
+      <a class="gospel-line" href="#heaven">How to know for sure you’re going to Heaven <span aria-hidden="true">→</span></a>
+      ${jumpBox('home-jump', true)}
       <div class="continue-row">
         ${showLast ? `<a class="continue" href="#${last.book.slug}-${last.ch}"><span class="label">Where you left off</span>
           <strong>${esc(chapterName(last.book.book, last.ch))}</strong></a>` : ''}
         ${L ? `<a class="continue" href="#${L.slug}-${L.chapter}"><span class="label">Latest in the series</span>
           <strong>${esc(chapterName(L.book, L.chapter))}</strong><em>${esc(fmtDate(L.date))}</em></a>` : ''}
       </div>
-      ${jumpBox('home-jump')}
       ${testament('OT', 'Old Testament', 'Genesis – Malachi')}
       ${testament('NT', 'New Testament', 'Matthew – Revelation')}`;
     // Each testament folds; the choice is remembered on this device.
@@ -422,7 +422,7 @@
     </details>`;
   }
 
-  async function topicView(id, openId) {
+  async function topicView(id, openId, line) {
     const [t, topic, lib] = await Promise.all([loadTopics(), loadTopic(id), loadLessons()]);
     const onTopic = lib.lessons.filter(l => l.topics.includes(id));
     const pics = lib.pictures.filter(p => p.topics.includes(id));
@@ -471,11 +471,17 @@
       if (slot && !slot.dataset.done) { slot.innerHTML = render(byId.get(slot.dataset.lazy).text); slot.dataset.done = '1'; }
     }));
     wirePictures(view, pics);
-    // #doctrine-salvation~123 opens that teaching (linked from a chapter's "More teaching" list)
+    // #doctrine-salvation~123 opens that teaching (linked from a chapter's "More teaching" list);
+    // #doctrine-salvation~123~Some words goes on to that line in it and marks it
     const target = openId && document.getElementById('t' + openId);
     if (target) {
       target.open = true;
-      requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
+      const slot = target.querySelector('[data-lazy]');   // build its text now, so the line can be found
+      if (slot && !slot.dataset.done) { slot.innerHTML = render(byId.get(slot.dataset.lazy).text); slot.dataset.done = '1'; }
+      const want = line && line.toLowerCase();
+      const at = want && [...target.querySelectorAll('p, blockquote, li')].find(el => el.textContent.toLowerCase().includes(want));
+      if (at) at.classList.add('flash');
+      requestAnimationFrame(() => (at || target).scrollIntoView({ block: at ? 'center' : 'start' }));
     }
     view.querySelectorAll('[data-theme]').forEach(a => a.onclick = e => {
       e.preventDefault();
@@ -847,13 +853,15 @@
     return { book: b, ch };
   }
 
-  function jumpBox(id) {
-    return `<form class="jump" data-jump-form>
-      <label for="${id}" class="label">Go to a chapter</label>
+  // The chapter box. With `find` (the home page) it also takes a verse or words: a chapter opens its
+  // study, a verse shows everywhere it is taught, anything else is searched.
+  function jumpBox(id, find) {
+    return `<form class="jump" data-jump-form${find ? ' data-find' : ''}>
+      <label for="${id}" class="label">${find ? 'Find a chapter, a verse or a word' : 'Go to a chapter'}</label>
       <div class="jump-row">
-        <input id="${id}" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false"
-               placeholder="ps 23, 1 cor 13, rev 1" aria-describedby="${id}-hint">
-        <button class="btn primary" type="submit">Go</button>
+        <input id="${id}" type="${find ? 'search' : 'text'}" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false"
+               placeholder="${find ? 'ps 23, john 3:16, propitiation' : 'ps 23, 1 cor 13, rev 1'}" aria-describedby="${id}-hint">
+        <button class="btn primary" type="submit">${find ? 'Find' : 'Go'}</button>
       </div>
       <p class="jump-hint" id="${id}-hint" aria-live="polite"></p>
     </form>`;
@@ -862,6 +870,30 @@
   function wireJump(root, onGo) {
     root.querySelectorAll('[data-jump-form]').forEach(form => {
       const input = form.querySelector('input'), hint = form.querySelector('.jump-hint');
+      if (form.hasAttribute('data-find')) {
+        // a word that only starts like a book ("am", "phil") is a search, not a book
+        const chapterOf = v => {
+          const r = parseRef(v);
+          if (!r || /\d/.test(v)) return r;
+          const key = v.toLowerCase().replace(/[\s.]+/g, '');
+          return ALIASES[key] || r.book.book.toLowerCase().replace(/\s+/g, '') === key ? r : null;
+        };
+        const target = v => {
+          const vr = verseRef(v);
+          if (vr) return ['#search=' + encodeURIComponent(v), `→ ${chapterName(vr.book.book, vr.ch)}:${vr.from}: everywhere it is taught`];
+          const r = chapterOf(v);
+          if (r) return [r.ch ? `#${r.book.slug}-${r.ch}` : `#${r.book.slug}`, '→ ' + (r.ch ? chapterName(r.book.book, r.ch) : r.book.book)];
+          return ['#search=' + encodeURIComponent(v), `→ Search for “${v}”`];
+        };
+        input.addEventListener('input', () => { const v = input.value.trim(); hint.textContent = v ? target(v)[1] : ''; });
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          const v = input.value.trim(); if (!v) return;
+          input.value = ''; hint.textContent = '';
+          onGo(target(v)[0]);
+        });
+        return;
+      }
       input.addEventListener('input', () => {
         const r = input.value.trim() && parseRef(input.value);
         hint.textContent = !input.value.trim() ? '' : r ? '→ ' + (r.ch ? chapterName(r.book.book, r.ch) : r.book.book)
@@ -1221,8 +1253,8 @@
       if (h === 'pictures') { await picturesView(); window.scrollTo(0, 0); return; }
       const lm = h.match(/^lesson-([a-z0-9-]+)$/);
       if (lm) { await lessonView(lm[1]); window.scrollTo(0, 0); return; }
-      const dm = h.match(/^doctrine-([a-z0-9-]+?)(?:~(\d+))?$/);
-      if (dm) { window.scrollTo(0, 0); await topicView(dm[1], dm[2]); return; }
+      const dm = h.match(/^doctrine-([a-z0-9-]+?)(?:~(\d+))?(?:~(.+))?$/);
+      if (dm) { window.scrollTo(0, 0); await topicView(dm[1], dm[2], dm[3]); return; }
       const m = h.match(/^([A-Za-z0-9]+)(?:-(\d+)(?:\.(\d+))?)?$/);   // #Book, #Book-N, #Book-N.2 (second study)
       if (!m) { home(); }
       else {
