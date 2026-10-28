@@ -7,7 +7,7 @@
 
   const KJV_APP = 'https://fbckjv.app/KJVBible/';
   // Shown on the About page. Started at v1.17 (after 17 merged updates); each merged update adds one.
-  const APP_VERSION = '1.24', APP_DATE = '2026-10-28';
+  const APP_VERSION = '1.25', APP_DATE = '2026-10-28';
   const view = document.getElementById('view');
   const crumbs = document.getElementById('crumbs');
   let INDEX = null;
@@ -554,6 +554,11 @@
     });
   }
 
+  // Shelves start folded, so the page reads as a list of what's there.
+  function shelfOpen(id) {
+    try { return localStorage.getItem('wews_shelf_' + id) === '1'; } catch (e) { return false; }
+  }
+
   async function lessonsView() {
     document.title = 'Lessons & Classes — Jag\'s House of Wews';
     setCrumbs([['Home', '#'], ['Lessons & Classes', '#lessons']]);
@@ -566,18 +571,17 @@
         <h1>Lessons &amp; Classes</h1>
         <p>Slides, notes and handouts from the Sunday classes and other studies, and the teaching pictures. Each one is filed under its topics and the chapters it teaches on.</p>
       </div>
-      <nav class="theme-chips" aria-label="Shelves">${shelves.map(s =>
-        `<a href="#lessons" data-shelf="${esc(s.id)}">${esc(s.name)} <span>${s.items.length}</span></a>`).join('')}
-        ${lib.pictures.length ? `<a href="#pictures">Pictures <span>${lib.pictures.length}</span></a>` : ''}</nav>
-      ${shelves.map(s => `<section id="shelf-${esc(s.id)}">
-        <div class="section-header"><h2>${esc(s.name)}</h2><span>${s.items.length}</span></div>
-        ${s.about ? `<p class="shelf-about">${esc(s.about)}</p>` : ''}
-        <div class="lesson-list">${s.items.map(lessonCard).join('')}</div></section>`).join('')}
+      ${lib.pictures.length ? `<nav class="theme-chips" aria-label="Pictures"><a href="#pictures">Teaching pictures <span>${lib.pictures.length}</span></a></nav>` : ''}
+      ${shelves.map(s => `<details class="shelf" id="shelf-${esc(s.id)}" data-shelf-id="${esc(s.id)}"${shelfOpen(s.id) ? ' open' : ''}>
+        <summary class="section-header"><h2>${esc(s.name)}</h2><span>${s.items.length}</span>
+          ${s.about ? `<em>${esc(s.about)}</em>` : ''}</summary>
+        <div class="lesson-list">${s.items.map(lessonCard).join('')}</div></details>`).join('')}
 `;
-    view.querySelectorAll('[data-shelf]').forEach(a => a.onclick = e => {
-      e.preventDefault();
-      document.getElementById('shelf-' + a.dataset.shelf).scrollIntoView({ behavior: 'smooth' });
-    });
+    // Each shelf folds; the choice is remembered on this device.
+    view.querySelectorAll('details.shelf').forEach(d => d.addEventListener('toggle', () => {
+      try { localStorage.setItem('wews_shelf_' + d.dataset.shelfId, d.open ? '1' : '0'); } catch (e) {}
+    }));
+
   }
 
   async function lessonView(id) {
