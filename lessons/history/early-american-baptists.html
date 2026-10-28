@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Early American Baptists – Disestablishmentarianism</title>
+<meta name="description" content="Who the early American Baptists were, from Roger Williams and Obadiah Holmes to Isaac Backus and John Leland, what they suffered, and how they won liberty of conscience for the new nation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Early American Baptists">
+  <div class="page title-page">
+    <div class="overline">Baptist history</div>
+    <h1>Disestablishmentarianism</h1>
+    <p class="sub">Who they were, what they suffered, and how they won liberty of conscience for a nation.</p>
+    <div class="refs center"><button class="ref" data-v="Acts 5:29">Acts 5:29</button><button class="ref" data-v="Galatians 5:1">Galatians 5:1</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="What the long word means">
+  <div class="page">
+    <h2>What the long word means</h2>
+    <p class="lead">An <strong>establishment</strong> is a church backed by the state. To <strong>disestablish</strong> is to end that backing: no tax for the church, no license to preach, no law that makes you belong.</p>
+    <div class="cols"><div class="panel believers"><h3>Establishment</h3><p>The state names one church, pays it with taxes, licenses its preachers, and fines or jails everyone else.</p></div><div class="panel believers"><h3>Disestablishment</h3><p>The state steps out. A church lives on the gifts of its members and the favor of God, and a man’s conscience is his own.</p></div></div>
+    <div class="callout"><p>“Antidisestablishmentarianism” is the famous long word, and it means the opposite: holding that the state church should stay. The Baptists were the disestablishers, and they paid for it.</p></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Introduction" data-title="What they were fighting">
+  <div class="page">
+    <h2>What they were fighting</h2>
+    <div class="cols"><div class="panel cain"><h3>Tax-funded churches</h3><p>Everyone paid for the Congregational church in New England and the Anglican church in the South, whatever he believed.</p></div><div class="panel cain"><h3>Licenses to preach</h3><p>A man could not preach without the state church’s permission, and unlicensed preaching was a crime.</p></div></div>
+    <div class="cols"><div class="panel cain"><h3>Infant baptism as a civil duty</h3><p>Babies were baptized into the church and the commonwealth together, and refusing it marked a man as a troublemaker.</p></div><div class="panel cain"><h3>Enforced conformity</h3><p>Fines, whippings, jail and banishment for those who would not conform.</p></div></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Introduction" data-title="What they argued for">
+  <div class="page">
+    <h2>What they argued for</h2>
+    <div class="timeline"><div><span class="n">1</span><span class="lbl"><strong>Soul liberty.</strong> Every man answers to God for himself. <button class="ref" data-v="Romans 14:12">Romans 14:12</button></span></div><div><span class="n">2</span><span class="lbl"><strong>Voluntary membership.</strong> A church is the saved, baptized upon their own profession of faith. <button class="ref" data-v="Acts 8:36-37">Acts 8:36–37</button></span></div><div><span class="n">3</span><span class="lbl"><strong>No coercion in religion.</strong> Faith cannot be forced, and the sword is not the church’s weapon. <button class="ref" data-v="2 Corinthians 10:4">2 Corinthians 10:4</button></span></div><div><span class="n">4</span><span class="lbl"><strong>Liberty for all.</strong> Not only for Baptists, but for every conscience, even those they disagreed with.</span></div></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Why they refused" data-title="Render unto Caesar">
+  <div class="page">
+    <h2>Render unto Caesar</h2>
+    <blockquote class="big-verse">They say unto him, Caesar’s. Then saith he unto them, <mark>Render therefore unto Caesar the things which are Caesar’s</mark>; <mark>and unto God the things that are God’s</mark>.<cite>Matthew 22:21</cite></blockquote>
+    <p>Two realms, and two kinds of authority. The magistrate keeps the peace. He does not keep the soul. <button class="ref" data-v="John 18:36">John 18:36</button> <button class="ref" data-v="Romans 13:1-4">Romans 13:1–4</button></p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Why they refused" data-title="Let both grow together">
+  <div class="page">
+    <h2>Let both grow together</h2>
+    <blockquote class="scripture" style="font-style:italic"><sup>24</sup>Another parable put he forth unto them, saying, The kingdom of heaven is likened unto a man which sowed good seed in his field: <sup>25</sup>But while men slept, his enemy came and sowed tares among the wheat, and went his way. <sup>26</sup>But when the blade was sprung up, and brought forth fruit, then appeared the tares also. <sup>27</sup>So the servants of the householder came and said unto him, Sir, didst not thou sow good seed in thy field? from whence then hath it tares? <sup>28</sup>He said unto them, An enemy hath done this. The servants said unto him, Wilt thou then that we go and gather them up? <sup>29</sup>But he said, Nay; lest while ye gather up the tares, ye root up also the wheat with them. <sup>30</sup><mark>Let both grow together until the harvest</mark>: and in the time of harvest I will say to the reapers, Gather ye together first the tares, and bind them in bundles to burn them: but gather the wheat into my barn.<cite>Matthew 13:24–30</cite></blockquote>
+    <p>Roger Williams leaned on this parable. If the tares are among the wheat until the harvest, then the sword has no business sorting them now. <button class="ref" data-v="Luke 9:54-56">Luke 9:54–56</button></p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Why they refused" data-title="We ought to obey God">
+  <div class="page">
+    <h2>We ought to obey God</h2>
+    <blockquote class="big-verse">Then Peter and the other apostles answered and said, <mark>We ought to obey God rather than men</mark>.<cite>Acts 5:29</cite></blockquote>
+    <p>The answer every one of these men gave when the court told them to stop preaching, stop baptizing, or stop meeting. <button class="ref" data-v="Acts 4:19-20">Acts 4:19–20</button></p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="New England" data-title="The New England core">
+  <div class="page">
+    <h2>The New England core</h2>
+    <div class="timeline"><div><span class="n">1636</span><span class="lbl"><strong>Roger Williams</strong> banished from Massachusetts Bay; founds Providence.</span></div><div><span class="n">1639</span><span class="lbl"><strong>Providence and Newport.</strong> The first Baptist churches in America take form.</span></div><div><span class="n">1651</span><span class="lbl"><strong>Obadiah Holmes</strong> whipped on Boston Common.</span></div><div><span class="n">1663</span><span class="lbl"><strong>Rhode Island’s charter</strong> guarantees religious freedom.</span></div><div><span class="n">1770s</span><span class="lbl"><strong>Isaac Backus</strong> carries the fight against the tax-supported church.</span></div></div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="New England" data-title="Roger Williams">
+  <div class="page">
+    <h2>Roger Williams</h2>
+    <div class="steps"><div class="st"><span class="when">1635</span><div>The Massachusetts Bay court banishes him for “newe and dangerous opinions”, chiefly that the magistrate has no authority over the soul. He flees into the winter wilderness in January 1636.</div></div><div class="st"><span class="when">1636</span><div>He founds <strong>Providence</strong>, a colony where no man would be compelled to worship.</div></div><div class="st"><span class="when">1639</span><div>Baptized, he helps form the Providence church, often counted the first Baptist church in America. He left it within months and ended as a “Seeker”, so we claim his argument and not his later path.</div></div><div class="st"><span class="when">1644</span><div><em>The Bloudy Tenent of Persecution</em> argues that forcing conscience is itself the sin. John Cotton of Boston answers him, and the debate runs for years.</div></div></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="New England" data-title="John Clarke">
+  <div class="page">
+    <h2>John Clarke</h2>
+    <div class="steps"><div class="st"><span class="when">1638–44</span><div>A physician, he helps found Newport and gathers its Baptist church, the second in America and still in Newport today.</div></div><div class="st"><span class="when">1651</span><div>Arrested at Lynn with Obadiah Holmes and John Crandall for holding a private worship service, and imprisoned in Boston. Clarke is fined £20, Crandall £5 and Holmes £30.</div></div><div class="st"><span class="when">1652</span><div>Publishes <em>Ill Newes from New England</em> in London, exposing Massachusetts to the English public.</div></div><div class="st"><span class="when">1663</span><div>After years in England as agent, he secures Rhode Island’s royal charter from Charles II: “a lively experiment” in full liberty in religious concernments.</div></div></div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="New England" data-title="Obadiah Holmes">
+  <div class="page">
+    <h2>Obadiah Holmes</h2>
+    <p class="lead">Born in Lancashire about 1610, a weaver and glassmaker, Holmes left Salem and then Rehoboth for his Baptist convictions, was excommunicated, and fled to Newport in 1650.</p>
+    <div class="steps"><div class="st"><span class="when">July 1651</span><div>Arrested at the home of blind William Witter in Lynn for preaching, baptizing and the Lord’s Supper.</div></div><div class="st"><span class="when">Sept. 5, 1651</span><div>Thirty lashes with a three-corded whip on Boston Common. He declined wine beforehand and preached through the whipping.</div></div><div class="st"><span class="when">1652 →</span><div>Succeeds Clarke as pastor of the Newport church, and serves it for some thirty years until his death in 1682.</div></div></div>
+    <blockquote>You have struck me as with roses.<cite>Obadiah Holmes, to the magistrates, after the whipping</cite></blockquote>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-obadiah-holmes" target="_blank" rel="noopener">Read the full study: Obadiah Holmes ↗</a></div>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="New England" data-title="Holmes and the apostles">
+  <div class="page">
+    <h2>Holmes and the apostles</h2>
+    <blockquote class="big-verse">And they departed from the presence of the council, <mark>rejoicing that they were counted worthy to suffer shame for his name</mark>.<cite>Acts 5:41</cite></blockquote>
+    <p>Holmes read his stripes in the light of Peter and John. He prayed that the sin not be laid to the charge of his persecutors, as Stephen did. <button class="ref" data-v="Acts 7:60">Acts 7:60</button> <button class="ref" data-v="Galatians 6:17">Galatians 6:17</button></p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="New England" data-title="Isaac Backus">
+  <div class="page">
+    <h2>Isaac Backus</h2>
+    <div class="steps"><div class="st"><span class="when">1724–1806</span><div>Converted in the Great Awakening, he left the established church, became a Baptist in 1751, and pastored at Middleborough, Massachusetts, for fifty years.</div></div><div class="st"><span class="when">1768–70</span><div>Baptists at Ashfield have their land auctioned to pay the Congregational minister’s tax. Backus carries their case to the courts and the public.</div></div><div class="st"><span class="when">1773</span><div><em>An Appeal to the Public for Religious Liberty</em>, the plainest Baptist argument against a state-taxed church.</div></div><div class="st"><span class="when">1774</span><div>Goes to Philadelphia with the Baptist grievance committee to put the case before the Continental Congress.</div></div></div>
+    <p>Backus refused to take out the “certificates” that excused Baptists from the tax, because to ask the state’s permission was to grant its authority. He also wrote the history of New England Baptists.</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="New England" data-title="Hezekiah Smith and the Warren Association">
+  <div class="page">
+    <h2>Hezekiah Smith and the Warren Association</h2>
+    <div class="steps"><div class="st"><span class="when">1764</span><div>Baptists found Rhode Island College, later Brown University, and Hezekiah Smith is among its early graduates.</div></div><div class="st"><span class="when">1767</span><div>The Warren Association unites New England Baptist churches and, in time, carries their grievances to the courts and Congress.</div></div><div class="st"><span class="when">1770s</span><div>Smith, pastor at Haverhill, Massachusetts, serves as a chaplain with the Continental Army and works in the liberty cause, civil and religious.</div></div></div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="New England" data-title="Daniel Merrill">
+  <div class="page">
+    <h2>Daniel Merrill</h2>
+    <p class="lead">A Congregational pastor in Sedgwick, Maine, and a convinced pedobaptist, who studied the Bible on baptism when Baptists came to town in 1802.</p>
+    <div class="steps"><div class="st"><span class="when">1805</span><div>His church votes unanimously to become Baptist, and Merrill, his wife and sixty-four others are baptized in the Benjamin River.</div></div><div class="st"><span class="when">1808</span><div>Writes <em>The Kingdom of Heaven Distinguished from Babylon</em>, holding that churches that admit the unbaptized are not baptized churches.</div></div><div class="st"><span class="when">1812</span><div><em>Miniature History of the Baptists</em>: their origin can be found “no where unless it be conceded that it was at Jordan or Enon.”</div></div></div>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-daniel-merrill" target="_blank" rel="noopener">Read the full study: Daniel Merrill ↗</a></div>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="The South" data-title="Separate Baptists">
+  <div class="page">
+    <h2>Separate Baptists</h2>
+    <p class="lead">The Great Awakening reached the South through Separate Baptists, preachers called to preach whether the Anglican parish permitted it or not.</p>
+    <div class="steps"><div class="st"><span class="when">1755</span><div><strong>Shubal Stearns</strong>, from New England, plants the Sandy Creek church in North Carolina. From it the Separate Baptists spread into Virginia and beyond.</div></div><div class="st"><span class="when">1760s–70s</span><div><strong>Daniel Marshall</strong>, Stearns’s brother-in-law, is arrested for preaching without license, and plants the Kiokee church in Georgia.</div></div></div>
+    <p>Their preaching was warm, their meetings were long, and the parish clergy did not like it. They preached under open sky and in houses because no one would give them a pulpit.</p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="The South" data-title="Jailed for preaching">
+  <div class="page">
+    <h2>Jailed for preaching</h2>
+    <div class="steps"><div class="st"><span class="when">1768</span><div><strong>Spotsylvania County.</strong> John Waller, Lewis Craig and others are arrested as “disturbers of the peace”. The prosecutor complained they could not meet a man on the road without ramming a text of Scripture down his throat.</div></div><div class="st"><span class="when">1768–78</span><div>Dozens of Baptist preachers are jailed in Virginia. <strong>John Waller</strong> is arrested several times; the preachers speak through the jail windows to crowds outside.</div></div><div class="st"><span class="when">1770s</span><div><strong>Lewis Craig</strong> and <strong>Elijah Craig</strong>, both jailed, later lead congregations to Kentucky.</div></div></div>
+    <div class="callout"><p>Tradition says Patrick Henry rode to Spotsylvania to defend the Baptist preachers. The same Henry later proposed a general tax for religion in Virginia, and the Baptists opposed him.</p></div>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="The South" data-title="The Anglican establishment">
+  <div class="page">
+    <h2>The Anglican establishment</h2>
+    <div class="cols-3"><div class="panel cain"><h3>Preaching licenses</h3><p>Granted by the parish and the county court, and withheld from dissenters.</p></div><div class="panel cain"><h3>Parish taxes</h3><p>Everyone paid the Church of England’s tithe, Baptists included.</p></div><div class="panel cain"><h3>Legal penalties for dissenters</h3><p>County courts, parish vestries and crown-appointed governors enforced it all.</p></div></div>
+    <p class="sub center">Not always one famous name, but a whole system of establishment.</p>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="The other side" data-title="The antidisestablishmentarians">
+  <div class="page">
+    <h2>The antidisestablishmentarians</h2>
+    <p class="lead">They were not always villains. Many believed society could not hold together without the state’s support of religion.</p>
+    <div class="cols-3"><div class="panel cain"><h3>John Cotton</h3><p>Defended a close church-state relationship in early Massachusetts, and answered Roger Williams.</p></div><div class="panel cain"><h3>Increase and Cotton Mather</h3><p>Upheld established church structures and the ideal of a godly commonwealth.</p></div><div class="panel cain"><h3>Patrick Henry</h3><p>Proposed a general religious assessment in Virginia in 1784.</p></div></div>
+    <div class="callout"><p>Their motives were order and morality. The Baptists’ answer was that Christ is the only head of the church, and conscience cannot be commanded. <button class="ref" data-v="Colossians 1:18">Colossians 1:18</button></p></div>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="The turning point" data-title="Virginia">
+  <div class="page">
+    <h2>Virginia</h2>
+    <div class="steps"><div class="st"><span class="when">1776</span><div>The Declaration of Rights, Article 16, guarantees “free exercise” of religion. James Madison’s amendment replaced Mason’s “toleration” with “free exercise”.</div></div><div class="st"><span class="when">1784</span><div>Patrick Henry’s general assessment bill would have taxed every Virginian for the church of his choice. Baptists petition against it through their General Committee.</div></div><div class="st"><span class="when">1785</span><div>James Madison’s <em>Memorial and Remonstrance</em> helps defeat it.</div></div><div class="st"><span class="when">1786</span><div>The Virginia Statute for Religious Freedom, drafted by Jefferson, passes.</div></div></div>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="The turning point" data-title="John Leland">
+  <div class="page">
+    <h2>John Leland</h2>
+    <div class="steps"><div class="st"><span class="when">1754–1841</span><div>Ordained in Virginia in 1775, Leland pastored there until he went home to Massachusetts in 1791.</div></div><div class="st"><span class="when">1788</span><div>Tradition says Leland and Madison met in Orange County, and that Leland backed Madison’s election to the Virginia ratifying convention after Madison pledged to seek a Bill of Rights.</div></div><div class="st"><span class="when">1791</span><div><em>The Rights of Conscience Inalienable</em>: liberty for all men, “Pagan, Turk, Jew or Christian”, not for Baptists alone.</div></div></div>
+    <p>Leland’s conviction was the Baptist one: the same freedom he asked for himself, he asked for those he disagreed with. <button class="ref" data-v="Matthew 7:12">Matthew 7:12</button></p>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="The turning point" data-title="The First Amendment">
+  <div class="page">
+    <h2>The First Amendment</h2>
+    <blockquote class="big-verse"><mark>Stand fast therefore in the liberty wherewith Christ hath made us free</mark>, and be not entangled again with the yoke of bondage.<cite>Galatians 5:1</cite></blockquote>
+    <p>In 1791 the First Amendment was ratified: no establishment of religion and no prohibiting the free exercise of it. The Baptist voices of Backus, Leland and the Virginia committee were among those that carried the argument.</p>
+    <div class="callout"><p>In 1801 the Danbury Baptists wrote to President Jefferson, since Connecticut still had a state church. His 1802 reply spoke of a “wall of separation.” In their case it is a wall to keep the state out of the church, not the church out of society.</p></div>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="The turning point" data-title="Disestablishment, state by state">
+  <div class="page">
+    <h2>Disestablishment, state by state</h2>
+    <div class="steps"><div class="st"><span class="when">1786</span><div>Virginia ends its establishment.</div></div><div class="st"><span class="when">1818</span><div>Connecticut ends tax support for its Congregational church.</div></div><div class="st"><span class="when">1819</span><div>New Hampshire ends its religious tax.</div></div><div class="st"><span class="when">1833</span><div>Massachusetts is the last state to disestablish, almost two centuries after Holmes was whipped.</div></div></div>
+    <p class="sub center">The First Amendment bound only the national government at first. The states had to follow one at a time.</p>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="What it means" data-title="The thread">
+  <div class="page">
+    <h2>The thread</h2>
+    <p class="lead">Holmes, Merrill, Backus, Leland and the rest are one thread.</p>
+    <ul class="marks"><li>Willing to suffer for believer’s baptism.</li><li>Unwilling to submit to state church authority.</li><li>Strong for religious liberty for everyone, even those they disagreed with.</li><li>Faith was a matter between a man and God, not a matter of law. <button class="ref" data-v="1 Timothy 2:5">1 Timothy 2:5</button></li></ul>
+    <div class="refs center"><button class="ref" data-v="Hebrews 11:36-38">Hebrews 11:36–38</button><button class="ref" data-v="2 Timothy 3:12">2 Timothy 3:12</button></div>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="What it means" data-title="A line of believers">
+  <div class="page">
+    <h2>A line of believers</h2>
+    <div class="cols"><div class="panel believers"><h3>The Trail of Blood</h3><p>These men stand in the line of believers who held the same distinctives and paid for them in every age. <button class="ref" data-v="Hebrews 12:1">Hebrews 12:1</button></p></div><div class="panel believers"><h3>Our inheritance</h3><p>Soul liberty, the local church and believer’s baptism are not American inventions, but Bible convictions people bled to keep. <button class="ref" data-v="Acts 5:29">Acts 5:29</button></p></div></div>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-doctrine-week-5-trail-of-blood-and-baptist-history" target="_blank" rel="noopener">Week 5: A Trail of Blood ↗</a><a class="ref lesson-link" href="../../studies/#lesson-baptist-perpetuity" target="_blank" rel="noopener">Baptist Perpetuity ↗</a></div>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="slide" data-section="Close" data-title="Stand fast">
+  <div class="page title-page later">
+    <div class="overline">Galatians 5:1</div>
+    <h1>Stand fast</h1>
+    <p class="sub">“Stand fast therefore in the liberty wherewith Christ hath made us free, and be not entangled again with the yoke of bondage.”</p>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>Soul liberty</strong>Every one of us shall give account of himself to God. <button class="ref" data-v="Romans 14:12">Romans 14:12</button></li><li><strong>Obey God rather than men</strong>Even when the court says otherwise. <button class="ref" data-v="Acts 5:29">Acts 5:29</button></li><li><strong>Believers, baptized</strong>A church of the saved, by their own profession. <button class="ref" data-v="Acts 8:36-37">Acts 8:36–37</button></li><li><strong>Liberty for all</strong>The conscience cannot be forced, and the gospel does not need the sword. <button class="ref" data-v="2 Corinthians 10:4">2 Corinthians 10:4</button></li></ol></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 Timothy 2:5":[[5, "For there is one God, and one mediator between God and men, the man Christ Jesus;"]],
+  "2 Corinthians 10:4":[[4, "(For the weapons of our warfare are not carnal, but mighty through God to the pulling down of strong holds;)"]],
+  "2 Timothy 3:12":[[12, "Yea, and all that will live godly in Christ Jesus shall suffer persecution."]],
+  "Acts 4:19-20":[[19, "But Peter and John answered and said unto them, Whether it be right in the sight of God to hearken unto you more than unto God, judge ye."], [20, "For we cannot but speak the things which we have seen and heard."]],
+  "Acts 5:29":[[29, "Then Peter and the other apostles answered and said, We ought to obey God rather than men."]],
+  "Acts 7:60":[[60, "And he kneeled down, and cried with a loud voice, Lord, lay not this sin to their charge. And when he had said this, he fell asleep."]],
+  "Acts 8:36-37":[[36, "And as they went on their way, they came unto a certain water: and the eunuch said, See, here is water; what doth hinder me to be baptized?"], [37, "And Philip said, If thou believest with all thine heart, thou mayest. And he answered and said, I believe that Jesus Christ is the Son of God."]],
+  "Colossians 1:18":[[18, "And he is the head of the body, the church: who is the beginning, the firstborn from the dead; that in all things he might have the preeminence."]],
+  "Galatians 5:1":[[1, "Stand fast therefore in the liberty wherewith Christ hath made us free, and be not entangled again with the yoke of bondage."]],
+  "Galatians 6:17":[[17, "From henceforth let no man trouble me: for I bear in my body the marks of the Lord Jesus."]],
+  "Hebrews 11:36-38":[[36, "And others had trial of cruel mockings and scourgings, yea, moreover of bonds and imprisonment:"], [37, "They were stoned, they were sawn asunder, were tempted, were slain with the sword: they wandered about in sheepskins and goatskins; being destitute, afflicted, tormented;"], [38, "(Of whom the world was not worthy:) they wandered in deserts, and in mountains, and in dens and caves of the earth."]],
+  "Hebrews 12:1":[[1, "Wherefore seeing we also are compassed about with so great a cloud of witnesses, let us lay aside every weight, and the sin which doth so easily beset us, and let us run with patience the race that is set before us,"]],
+  "John 18:36":[[36, "Jesus answered, My kingdom is not of this world: if my kingdom were of this world, then would my servants fight, that I should not be delivered to the Jews: but now is my kingdom not from hence."]],
+  "Luke 9:54-56":[[54, "And when his disciples James and John saw this, they said, Lord, wilt thou that we command fire to come down from heaven, and consume them, even as Elias did?"], [55, "But he turned, and rebuked them, and said, Ye know not what manner of spirit ye are of."], [56, "For the Son of man is not come to destroy men’s lives, but to save them. And they went to another village."]],
+  "Matthew 7:12":[[12, "Therefore all things whatsoever ye would that men should do to you, do ye even so to them: for this is the law and the prophets."]],
+  "Romans 13:1-4":[[1, "Let every soul be subject unto the higher powers. For there is no power but of God: the powers that be are ordained of God."], [2, "Whosoever therefore resisteth the power, resisteth the ordinance of God: and they that resist shall receive to themselves damnation."], [3, "For rulers are not a terror to good works, but to the evil. Wilt thou then not be afraid of the power? do that which is good, and thou shalt have praise of the same:"], [4, "For he is the minister of God to thee for good. But if thou do that which is evil, be afraid; for he beareth not the sword in vain: for he is the minister of God, a revenger to execute wrath upon him that doeth evil."]],
+  "Romans 14:12":[[12, "So then every one of us shall give account of himself to God."]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "").replace("-", "–");
+  return (BOOKS[book] || book) + " " + cv.replace("-", "–");
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => "<sup>" + n + "</sup>" + smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>

@@ -37,8 +37,10 @@ Source format, one element per line (blank lines are ignored, # starts a comment
   tile: 930 | Adam dies                        a short boxed entry; consecutive tiles sit side by side
   point: Title | text                          numbered summary points (closing slides)
   refs: John 3:16; Romans 10:13                a row of verse buttons
+  read: obadiah-holmes | Obadiah Holmes        a row of links to other lessons in the app (consecutive lines make one row)
 
-Inline, in any text:  [[John 3:16]] or [[John 3:16|label]] is a tap-to-read verse, {Lord} is
+Inline, in any text:  [[John 3:16]] or [[John 3:16|label]] is a tap-to-read verse, [[lesson:daniel-merrill|label]]
+links to a lesson in the app, {Lord} is
 LORD in small capitals, **bold**, *italic*.
 """
 import glob, html, json, os, re, sys
@@ -97,6 +99,8 @@ def verses(ref):
 
 
 USED = {}
+UP = ''   # path from the deck's folder back to the repo root, set per deck, for links into the app
+
 
 
 def esc(s):
@@ -108,11 +112,19 @@ def inline(s):
     out, last = [], 0
     for m in re.finditer(r'\[\[([^\]|]+)(?:\|([^\]]+))?\]\]', s):
         out.append(fmt(esc(s[last:m.start()])))
+        if m.group(1).startswith('lesson:'):
+            out.append(lesson_link(m.group(1)[7:].strip(), m.group(2)))
+            last = m.end(); continue
         k = key_of(m.group(1)); USED[k] = verses(m.group(1))
         out.append(f'<button class="ref" data-v="{esc(k)}">{esc(m.group(2) or label_of(m.group(1)))}</button>')
         last = m.end()
     out.append(fmt(esc(s[last:])))
     return ''.join(out)
+
+
+def lesson_link(lid, label=None):
+    return (f'<a class="ref lesson-link" href="{UP}studies/#lesson-{esc(lid)}" target="_blank" rel="noopener">'
+            f'{esc(label or lid)} ↗</a>')
 
 
 def fmt(s):
@@ -163,6 +175,8 @@ def build(src):
         k, _, v = line.partition(':')
         slide['items'].append((k.strip(), v.strip()))
 
+    global UP
+    UP = '../' * len(os.path.dirname(meta['output']).split('/'))
     body = []
     for i, s in enumerate(slides, 1):
         title_page = s['kind'] == 'title'
@@ -179,7 +193,7 @@ def build(src):
             group = [v]
             same = lambda a, b: a == b or {a, b} <= {'panel', 'panel-warn'}   # cards of both kinds share a row
             kinds = [k]
-            while j + 1 < len(items) and same(items[j + 1][0], k) and k in ('-', 'panel', 'panel-warn', 'stat', 'step', 'tile', 'point'):
+            while j + 1 < len(items) and same(items[j + 1][0], k) and k in ('-', 'panel', 'panel-warn', 'stat', 'step', 'tile', 'point', 'read'):
                 j += 1; group.append(items[j][1]); kinds.append(items[j][0])
             if k in ('overline', 'heading'):
                 pass
@@ -224,6 +238,9 @@ def build(src):
                 parts.append('<div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order">' + ''.join(
                     f'<li><strong>{inline(a.strip())}</strong>{inline(b.strip())}</li>'
                     for a, _, b in (x.partition('|') for x in group)) + '</ol></div>')
+            elif k == 'read':   # a row of links to other lessons: read: lesson-id | label
+                parts.append('<div class="refs center">' + ''.join(
+                    lesson_link(a.strip(), b.strip()) for a, _, b in (x.partition('|') for x in group)) + '</div>')
             elif k == 'refs':
                 parts.append('<div class="refs center">' + ''.join(
                     inline(f'[[{r.strip()}]]') for r in v.split(';') if r.strip()) + '</div>')
