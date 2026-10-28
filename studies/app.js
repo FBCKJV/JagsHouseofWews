@@ -651,11 +651,15 @@
       posts.map(p => `<div class="post">${render(p.text, true)}</div>`).join('');
   }
 
-  // One tab per study of the chapter, newest first: "Oct 2023 · Series"
+  // One tab per study of the chapter, newest first: "Oct 2023 · Series". A labelled tab gathers
+  // teaching on this chapter from other studies until it gets a study of its own.
+  const studyWhen = s => s.label ? 'From other studies' : fmtDate(s.date);
+
   function studyTab(s, i, on, base) {
     const when = new Date(s.date + 'T12:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
     return `<a href="${base}.${i + 1}" class="study-tab${on ? ' on' : ''}" data-study="${i}"${on ? ' aria-current="true"' : ''}>
-      <b>${esc(when)}</b><small>${s.series ? 'Series' : 'One-off'}${s.range ? ' · ' + esc(s.range) : ''}</small></a>`;
+      ${s.label ? `<b>${esc(s.label)}</b><small>From other studies</small>`
+        : `<b>${esc(when)}</b><small>${s.series ? 'Series' : 'One-off'}${s.range ? ' · ' + esc(s.range) : ''}</small>`}</a>`;
   }
 
   async function chapterView(b, ch, pick) {
@@ -715,8 +719,8 @@
           <div class="actions"><a class="btn" href="#${target ? target.slug : b.slug}-${wc}">Go to the ${esc(entry.with)} study →</a></div></div>`;
       }
       if (studies.length) {
-        body += `<div class="section-header" id="commentary"><h2>Commentary</h2><span id="study-date">${esc(fmtDate(shownStudy.date))}</span></div>
-          ${studies.length > 1 ? `<nav class="study-tabs" aria-label="Studies of ${esc(title)}">${studies.map((s, i) => studyTab(s, i, i === current, base)).join('')}</nav>` : ''}
+        body += `<div class="section-header" id="commentary"><h2>Commentary</h2><span id="study-date">${esc(studyWhen(shownStudy))}</span></div>
+          ${studies.length > 1 || studies.some(x => x.label) ? `<nav class="study-tabs" aria-label="Studies of ${esc(title)}">${studies.map((s, i) => studyTab(s, i, i === current, base)).join('')}</nav>` : ''}
           <div id="commentary-body">${commentary(shownStudy)}</div>`;
       }
     }
@@ -765,7 +769,7 @@
         if (t === tab) t.setAttribute('aria-current', 'true'); else t.removeAttribute('aria-current');
       });
       document.getElementById('commentary-body').innerHTML = commentary(s);
-      document.getElementById('study-date').textContent = fmtDate(s.date);
+      document.getElementById('study-date').textContent = studyWhen(s);
       const tg = document.getElementById('tg-link');
       if (tg) tg.href = s.link;
     });
