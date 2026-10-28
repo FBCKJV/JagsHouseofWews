@@ -1,158 +1,649 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Trail of Blood - A Brief History of the Baptists</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F8F4F0;
-            color: #4A4A4A;
-        }
-        .text-maroon { color: #800000; }
-        .bg-maroon-dark { background-color: #5D0000; }
-        .bg-maroon-light { background-color: #B22222; }
-        .border-maroon { border-color: #800000; }
-        .border-gray-light { border-color: #D3D3D3; }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -12px;
-            top: 12px;
-            transform: translateY(-50%);
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #800000;
-            border: 2px solid #F8F4F0;
-        }
-        .timeline-item.split::before {
-            background-color: #B22222;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Week 5 – A Trail of Blood</title>
+<meta name="description" content="Being Baptist, week 5: a brief history of the Baptists, a line of believers who held the Bible&#x27;s distinctives in every age, and the B.A.P.T.I.S.T. distinctives they held.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
 </head>
-<body class="text-gray-700">
+<body>
 
-    <div class="container mx-auto p-4 md:p-8">
+<main class="deck" id="deck">
 
-        <header class="text-center mb-12 md:mb-16">
-            <h1 class="text-4xl md:text-6xl font-black text-maroon mb-4">A Trail of Blood</h1>
-            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">A brief history of the Baptists, tracing the continuous lineage of churches that held to core principles of believer’s baptism and biblical authority, often in the face of persecution.</p>
-        </header>
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="A Trail of Blood">
+  <div class="page title-page">
+    <div class="overline">Being Baptist · Week 5</div>
+    <h1>A Trail of Blood</h1>
+    <p class="sub">A brief history of the Baptists: believers who held to the Bible in every age, often at the cost of their lives.</p>
+    <div class="refs center"><button class="ref" data-v="Hebrews 11:36-38">Hebrews 11:36–38</button><button class="ref" data-v="Revelation 6:9-10">Revelation 6:9–10</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse.</p>
+  </div>
+</section>
 
-        <section class="mb-16">
-            <h2 class="text-3xl font-bold text-maroon text-center mb-10">Chronology of a Continuous Faith</h2>
-            <div class="relative max-w-4xl mx-auto px-4 md:px-8">
-                <div class="absolute left-1/2 -translate-x-1/2 w-1 bg-maroon-dark h-full hidden md:block"></div>
-                <div class="space-y-12">
-                    <!-- Apostolic Era -->
-                    <div class="relative flex flex-col md:flex-row items-center md:items-start justify-between">
-                        <div class="md:w-1/2 md:pr-12 text-right">
-                            <h3 class="text-xl md:text-2xl font-bold text-maroon mb-2">33–100 AD: Apostolic Era</h3>
-                            <p class="text-gray-600 text-sm md:text-base">The church founded by Jesus Christ, practicing believer's baptism and local church autonomy, spreads through apostolic preaching.</p>
-                        </div>
-                        <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
-                            <!-- Empty for timeline visual -->
-                        </div>
-                    </div>
-                    
-                    <!-- Post-Apostolic Persecutions -->
-                    <div class="relative flex flex-col md:flex-row items-center md:items-start justify-between">
-                        <div class="md:w-1/2 md:pr-12 order-2 md:order-1 mt-4 md:mt-0">
-                            <!-- Empty for timeline visual -->
-                        </div>
-                        <div class="md:w-1/2 md:pl-12 text-left order-1 md:order-2">
-                            <h3 class="text-xl md:text-2xl font-bold text-maroon mb-2">100–313 AD: Post-Apostolic Persecutions</h3>
-                            <p class="text-gray-600 text-sm md:text-base">Groups like the Montanists face Roman persecution and opposition from the growing pre-Catholic hierarchy for their adherence to biblical purity.</p>
-                        </div>
-                    </div>
+<!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="A line of believers, not a chain of churches">
+  <div class="page">
+    <h2>A line of believers, not a chain of churches</h2>
+    <p class="lead">The Trail of Blood follows a simple, observable truth: in every age since Christ there have been believers living faith to faith, holding the same gospel and the same Bible distinctives, and paying for it in blood.</p>
+    <div class="cols"><div class="panel believers"><h3>What history shows</h3><p>An unbroken line of believers, saved by grace through faith, who held believer’s baptism, the authority of scripture and the independence of the local church, under different names in every century. <button class="ref" data-v="Romans 1:17">Romans 1:17</button></p></div><div class="panel cain"><h3>What it does not prove</h3><p>An unbroken chain of one church, of pastors laying hands on pastors back to the apostles. That claim (Landmarkism, the “bride” doctrine) builds a rigid system on more than history or scripture can show.</p></div></div>
+    <div class="callout"><p>We learn from this history; we are not married to a system. The line that matters is faith, and the Bible decides what a church is, not a chain of ordinations.</p></div>
+  </div>
+</section>
 
-                    <!-- Rise of Catholicism -->
-                    <div class="relative flex flex-col md:flex-row items-center md:items-start justify-between">
-                        <div class="md:w-1/2 md:pr-12 text-right">
-                            <h3 class="text-xl md:text-2xl font-bold text-maroon mb-2">313–600 AD: Rise of Catholicism</h3>
-                            <p class="text-gray-600 text-sm md:text-base">Constantine legalizes Christianity, but persecutes groups like the Donatists who reject infant baptism and church hierarchy. The Catholic Church restricts Scripture to Latin, suppressing vernacular translations.</p>
-                        </div>
-                        <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
-                            <!-- Empty for timeline visual -->
-                        </div>
-                    </div>
+<!-- 3 -->
+<section class="slide" data-section="Introduction" data-title="The gates of hell shall not prevail">
+  <div class="page">
+    <h2>The gates of hell shall not prevail</h2>
+    <blockquote class="big-verse">And I say also unto thee, That thou art Peter, and upon this rock I will build my church; and <mark>the gates of hell shall not prevail against it</mark>.<cite>Matthew 16:18</cite></blockquote>
+    <p>Christ promised His church would endure. He also promised it would suffer. The world has always hated those who hold His word without compromise. <button class="ref" data-v="John 15:20">John 15:20</button> <button class="ref" data-v="2 Timothy 3:12">2 Timothy 3:12</button></p>
+    <blockquote class="big-verse">And I saw the woman <mark>drunken with the blood of the saints</mark>, and with the blood of the martyrs of Jesus: and when I saw her, I wondered with great admiration.<cite>Revelation 17:6</cite></blockquote>
+  </div>
+</section>
 
-                    <!-- Medieval Dissenters -->
-                    <div class="relative flex flex-col md:flex-row items-center md:items-start justify-between">
-                        <div class="md:w-1/2 md:pr-12 order-2 md:order-1 mt-4 md:mt-0">
-                            <!-- Empty for timeline visual -->
-                        </div>
-                        <div class="md:w-1/2 md:pl-12 text-left order-1 md:order-2">
-                            <h3 class="text-xl md:text-2xl font-bold text-maroon mb-2">600–1200 AD: Medieval Dissenters</h3>
-                            <p class="text-gray-600 text-sm md:text-base">Groups like the Paulicians and Bogomils maintain believer’s baptism and Scripture-based worship, enduring Catholic crusades and executions. The Church condemns and burns non-Latin Scriptures.</p>
-                        </div>
-                    </div>
+<!-- 4 -->
+<section class="slide" data-section="The trail" data-title="The early church">
+  <div class="page">
+    <h2>The early church</h2>
+    <div class="steps"><div class="st"><span class="when">33–100</span><div><strong>Apostolic Era.</strong> The church founded by Jesus Christ spreads by apostolic preaching. Believers, first called Christians at Antioch, practice believer’s baptism and local church autonomy, persecuted by Jewish and Roman authorities for holding to scripture. <button class="ref" data-v="Acts 11:26">Acts 11:26</button></div></div><div class="st"><span class="when">100–313</span><div><strong>Post-apostolic persecutions.</strong> Groups like the Montanists (c. 150) hold to biblical purity against an emerging hierarchy, under Roman persecution, and work to put Scripture in the common tongue.</div></div></div>
+  </div>
+</section>
 
-                    <!-- Pre-Reformation Movements -->
-                    <div class="relative flex flex-col md:flex-row items-center md:items-start justify-between">
-                        <div class="md:w-1/2 md:pr-12 text-right">
-                            <h3 class="text-xl md:text-2xl font-bold text-maroon mb-2">1200–1500 AD: Pre-Reformation Movements</h3>
-                            <p class="text-gray-600 text-sm md:text-base">The Waldensians and Albigensians preach biblical simplicity and translate the Bible. The Albigensian Crusade kills hundreds of thousands, and the Waldensians face massacres for rejecting clerical authority.</p>
-                        </div>
-                        <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
-                            <!-- Empty for timeline visual -->
-                        </div>
-                    </div>
+<!-- 5 -->
+<section class="slide" data-section="The trail" data-title="The rise of the imperial church">
+  <div class="page">
+    <h2>The rise of the imperial church</h2>
+    <div class="steps"><div class="st"><span class="when">313</span><div><strong>The Edict of Milan.</strong> Constantine legalizes Christianity, and the state church that follows persecutes the churches that will not submit to it, like the Donatists (300s), who reject infant baptism and the hierarchy.</div></div><div class="st"><span class="when">313–600</span><div>Rome comes to restrict Scripture to the Latin Vulgate and suppress the common tongue. Dissenters face death, exile, and the burning of their writings.</div></div></div>
+    <div class="callout"><p>The same pattern repeats for a thousand years: the Bible in the people’s own language, believer’s baptism, and no master but Christ, answered with the sword. <button class="ref" data-v="Acts 5:29">Acts 5:29</button></p></div>
+  </div>
+</section>
 
-                    <!-- Reformation and Anabaptists -->
-                    <div class="relative flex flex-col md:flex-row items-center md:items-start justify-between">
-                        <div class="md:w-1/2 md:pr-12 order-2 md:order-1 mt-4 md:mt-0">
-                            <!-- Empty for timeline visual -->
-                        </div>
-                        <div class="md:w-1/2 md:pl-12 text-left order-1 md:order-2">
-                            <h3 class="text-xl md:text-2xl font-bold text-maroon mb-2">1500–1600 AD: Reformation and Anabaptists</h3>
-                            <p class="text-gray-600 text-sm md:text-base">Anabaptists revive believer’s baptism and face persecution from both Catholics and Protestants. Key events include the executions of Felix Manz and George Blaurock, and the Münster siege. Tyndale's Bible translations are burned.</p>
-                        </div>
-                    </div>
+<!-- 6 -->
+<section class="slide" data-section="The trail" data-title="Medieval dissenters">
+  <div class="page">
+    <h2>Medieval dissenters</h2>
+    <div class="steps"><div class="st"><span class="when">600–1200</span><div><strong>Paulicians and Bogomils.</strong> They keep believer’s baptism and Scripture-based worship, through Catholic crusades and executions. Councils condemn Scripture in any tongue but Latin, and the translations are burned.</div></div><div class="st"><span class="when">1200–1500</span><div><strong>Waldensians and Albigenses.</strong> Peter Waldo’s followers (c. 1173) and the Cathars preach biblical simplicity and put the Bible into the common tongue. The papal bull <em>Ad Abolendam</em> (1184) orders them put down.</div></div></div>
+    <div class="dims"><div><span class="n">1209</span><span class="lbl">Béziers: up to 20,000 killed in one day</span></div><div><span class="n">1209–29</span><span class="lbl">the Albigensian Crusade: hundreds of thousands killed</span></div><div><span class="n">1545</span><span class="lbl">Mérindol: Waldensian villages massacred</span></div></div>
+  </div>
+</section>
 
-                    <!-- Baptist Emergence -->
-                    <div class="relative flex flex-col md:flex-row items-center md:items-start justify-between">
-                        <div class="md:w-1/2 md:pr-12 text-right">
-                            <h3 class="text-xl md:text-2xl font-bold text-maroon mb-2">1600–1700 AD: Baptist Emergence</h3>
-                            <p class="text-gray-600 text-sm md:text-base">Early Baptists like John Smyth form congregations, enduring persecution. They face Anglican and Puritan restrictions in England and the American colonies, with leaders like John Clarke and Obadiah Holmes being whipped and imprisoned.</p>
-                        </div>
-                        <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
-                            <!-- Empty for timeline visual -->
-                        </div>
-                    </div>
+<!-- 7 -->
+<section class="slide" data-section="The trail" data-title="Anabaptists and the Reformation">
+  <div class="page">
+    <h2>Anabaptists and the Reformation</h2>
+    <p class="lead">Anabaptists (c. 1525) revive believer’s baptism and separation from the state church, and are persecuted by Catholics and Protestants alike.</p>
+    <div class="dims"><div><span class="n">1527</span><span class="lbl">Felix Manz drowned in Zürich</span></div><div><span class="n">1529</span><span class="lbl">George Blaurock burned</span></div><div><span class="n">1536</span><span class="lbl">William Tyndale strangled and burned</span></div></div>
+    <p>Tyndale gave England the Bible in English, and his books were burned under Rome’s decrees. Under Queen Mary (1553–1558) more than 280 were burned at the stake, John Rogers, Hugh Latimer and Nicholas Ridley among them. The French Wars of Religion (1562–1598), with the St. Bartholomew’s Day Massacre (1572), took up to three million lives.</p>
+  </div>
+</section>
 
-                    <!-- Baptist Growth -->
-                    <div class="relative flex flex-col md:flex-row items-center md:items-start justify-between">
-                        <div class="md:w-1/2 md:pr-12 order-2 md:order-1 mt-4 md:mt-0">
-                            <!-- Empty for timeline visual -->
-                        </div>
-                        <div class="md:w-1/2 md:pl-12 text-left order-1 md:order-2">
-                            <h3 class="text-xl md:text-2xl font-bold text-maroon mb-2">1700–1900 AD: Baptist Growth</h3>
-                            <p class="text-gray-600 text-sm md:text-base">Baptists continue to face fines and imprisonment in the American colonies. The Great Awakening and the Revolutionary War lead to the adoption of Baptist principles of religious liberty in the First Amendment, allowing the church to grow.</p>
-                        </div>
-                    </div>
+<!-- 8 -->
+<section class="slide" data-section="The trail" data-title="Baptists by name">
+  <div class="page">
+    <h2>Baptists by name</h2>
+    <div class="steps"><div class="st"><span class="when">1609</span><div><strong>John Smyth</strong> forms a Baptist congregation of exiles in Amsterdam; English Baptists follow, under Anglican persecution, their preachers jailed and their Bibles burned.</div></div><div class="st"><span class="when">1651</span><div><strong>John Clarke and Obadiah Holmes</strong> are fined, and Holmes is whipped in Boston, for preaching Baptist principles in Puritan Massachusetts.</div></div><div class="st"><span class="when">1655</span><div><strong>The Piedmont Easter</strong> massacre of the Waldensians, in the Savoyard wars (1655–1690).</div></div><div class="st"><span class="when">1660s–80s</span><div>Virginia’s Anglican laws fine and jail Baptists for preaching without a license.</div></div></div>
+  </div>
+</section>
 
-                    <!-- Modern Baptists -->
-                    <div class="relative flex flex-col md:flex-row items-center md:items-start justify-between">
-                        <div class="md:w-1/2 md:pr-12 text-right">
-                            <h3 class="text-xl md:text-2xl font-bold text-maroon mb-2">1900 AD–Present: Modern Baptists</h3>
-                            <p class="text-gray-600 text-sm md:text-base">Baptists preserve the apostolic faith through local churches, upholding the King James Bible and the "Old Paths" and "Landmarks" that define their distinctives today.</p>
-                        </div>
-                        <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
-                            <!-- Empty for timeline visual -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- 9 -->
+<section class="slide" data-section="The trail" data-title="Liberty">
+  <div class="page">
+    <h2>Liberty</h2>
+    <p class="lead">Persecution drove believers to the American colonies, where the Pilgrims landed in 1620. In time, the Baptist conviction of soul liberty became the nation’s.</p>
+    <ul class="marks"><li>The Great Awakening (1730s–1740s) spread the gospel, and unlicensed preachers were arrested for it.</li><li>The new states, many settled by those fleeing state churches, adopted the Baptist principle of religious liberty: the First Amendment forbids a state church.</li><li>With that freedom, the gospel spread and Baptist churches formed throughout the nation.</li></ul>
+    <div class="refs center"><button class="ref" data-v="Romans 14:12">Romans 14:12</button><button class="ref" data-v="Galatians 5:1">Galatians 5:1</button></div>
+  </div>
+</section>
 
-    </div>
+<!-- 10 -->
+<section class="slide" data-section="The trail" data-title="The old paths">
+  <div class="page">
+    <h2>The old paths</h2>
+    <blockquote class="big-verse">Thus saith the <span class="lord">Lord</span>, Stand ye in the ways, and see, and <mark>ask for the old paths</mark>, where is the good way, and walk therein, and ye shall find rest for your souls. But they said, We will not walk therein.<cite>Jeremiah 6:16</cite></blockquote>
+    <p>Today Baptists keep the apostolic faith in local churches, with the King James Bible, against secularism, modernism and denominationalism. Not a new movement, and not an institution, but the old paths of the Bible. <button class="ref" data-v="Proverbs 22:28">Proverbs 22:28</button></p>
+  </div>
+</section>
 
+<!-- 11 -->
+<section class="slide" data-section="A history of division" data-title="Three great splits">
+  <div class="page">
+    <h2>Three great splits</h2>
+    <div class="steps"><div class="st"><span class="when">313</span><div><strong>The Edict of Milan.</strong> The state-aligned imperial church, later the Roman Catholic Church, parts from the independent believers over state control and practices like infant baptism.</div></div><div class="st"><span class="when">1054</span><div><strong>The Great Schism.</strong> The Latin West (Pope Leo IX) and the Greek East (Patriarch Michael Cerularius) divide over doctrine (the <em>filioque</em> clause), authority and culture: Catholic and Orthodox.</div></div><div class="st"><span class="when">1517</span><div><strong>The Reformation.</strong> Luther’s 95 Theses protest indulgences and preach faith alone and scripture alone.</div></div></div>
+    <p class="sub center">The believers who never joined Rome were never part of these splits.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="A history of division" data-title="The Reformation’s contradiction">
+  <div class="page">
+    <h2>The Reformation’s contradiction</h2>
+    <div class="cols"><div class="panel cain"><h3>Lutheran (1517)</h3><p>Faith alone, yet infant baptism kept as a means of grace.</p></div><div class="panel cain"><h3>Reformed (1520s)</h3><p>Zwingli and Calvin: faith alone, yet infant baptism as a sign of the covenant.</p></div></div>
+    <div class="cols"><div class="panel cain"><h3>Anglican (1534)</h3><p>Henry VIII’s Church of England, its infant baptism and sacraments kept.</p></div><div class="panel believers"><h3>Anabaptists (1525)</h3><p>Grebel and Simons: believer’s baptism by immersion, no state church. The consistent answer: if salvation is by faith, baptism follows faith. <button class="ref" data-v="Acts 8:36-37">Acts 8:36–37</button></p></div></div>
+    <blockquote class="big-verse">For by grace are ye saved through faith; and that not of yourselves: it is the gift of God: Not of works, lest any man should boast.<cite>Ephesians 2:8–9</cite></blockquote>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="A history of division" data-title="Later divisions">
+  <div class="page">
+    <h2>Later divisions</h2>
+    <div class="cols"><div class="panel believers"><h3>1600s</h3><p>Presbyterians (John Knox, rule by elders) and Congregationalists (local autonomy) from the Reformed, both keeping infant baptism.</p></div><div class="panel believers"><h3>1700s</h3><p>Methodists from the Church of England (John Wesley, personal holiness), and the Quakers (George Fox, the “inner light”).</p></div></div>
+    <div class="cols"><div class="panel believers"><h3>1800s</h3><p>Adventists from the Millerites (1844), and the Holiness movement from the Methodists, with its “second blessing.”</p></div><div class="panel believers"><h3>1900s</h3><p>Pentecostals from the Holiness movement (Azusa Street, 1906), and the Charismatic renewal spreading tongues across the denominations (1960s).</p></div></div>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="A history of division" data-title="New religions">
+  <div class="page">
+    <h2>New religions</h2>
+    <div class="cols-3"><div class="panel cain"><h3>Latter-day Saints (1830)</h3><p>Joseph Smith claims new revelation, the Book of Mormon.</p></div><div class="panel cain"><h3>Seventh-day Adventists (1844)</h3><p>Ellen G. White, after the “Great Disappointment”: the Saturday Sabbath.</p></div><div class="panel cain"><h3>Jehovah’s Witnesses (1870s)</h3><p>Charles Taze Russell: a “strict monotheism” that denies Christ is God.</p></div></div>
+    <blockquote class="big-verse">But though we, or an angel from heaven, preach any other gospel unto you than that which we have preached unto you, let him be accursed.<cite>Galatians 1:8</cite></blockquote>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="A history of division" data-title="Where the Baptists come from">
+  <div class="page">
+    <h2>Where the Baptists come from</h2>
+    <p class="lead">Independent Baptists did not come out of the Reformation. They are the latest in a line of believers who never joined Rome, holding the same distinctives under many names.</p>
+    <div class="steps"><div class="st"><span class="when">Every age</span><div>Believers holding believer’s baptism, the local church and Scripture alone, apart from the state churches</div></div><div class="st"><span class="when">1600s</span><div>Baptist churches by name, in England and the colonies</div></div><div class="st"><span class="when">1800s</span><div>Independent Baptist churches, rejecting liberalism and sacramentalism</div></div><div class="st"><span class="when">1900s</span><div>Independent Fundamental Baptist churches: the Bible, the gospel of grace, believer’s baptism, local church autonomy</div></div></div>
+    <p class="sub center">A family likeness of doctrine, not a line of succession.</p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Mystery, Babylon" data-title="The woman on the beast">
+  <div class="page">
+    <h2>The woman on the beast</h2>
+    <blockquote class="scripture" style="font-style:italic"><sup>1</sup>And there came one of the seven angels which had the seven vials, and talked with me, saying unto me, Come hither; I will shew unto thee the judgment of the great whore that sitteth upon many waters: <sup>2</sup>With whom the kings of the earth have committed fornication, and the inhabitants of the earth have been made drunk with the wine of her fornication. <sup>3</sup>So he carried me away in the spirit into the wilderness: and I saw a woman sit upon a scarlet coloured beast, full of names of blasphemy, having seven heads and ten horns. <sup>4</sup>And the woman was arrayed in purple and scarlet colour, and decked with gold and precious stones and pearls, having a golden cup in her hand full of abominations and filthiness of her fornication: <sup>5</sup>And upon her forehead was a name written, <mark>MYSTERY, BABYLON THE GREAT, THE MOTHER OF HARLOTS</mark> AND ABOMINATIONS OF THE EARTH. <sup>6</sup>And I saw the woman <mark>drunken with the blood of the saints</mark>, and with the blood of the martyrs of Jesus: and when I saw her, I wondered with great admiration.<cite>Revelation 17:1–6</cite></blockquote>
+    <p>The great whore sits on seven mountains and many waters: peoples, multitudes, nations and tongues, drunk with the blood of the martyrs. The trail of blood leads straight to her door. <button class="ref" data-v="Revelation 17:9">Revelation 17:9</button> <button class="ref" data-v="Revelation 17:15">Revelation 17:15</button> <button class="ref" data-v="Revelation 17:18">Revelation 17:18</button></p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Mystery, Babylon" data-title="Mother of harlots">
+  <div class="page">
+    <h2>Mother of harlots</h2>
+    <div class="cols-3"><div class="panel cain"><h3>The city on seven hills</h3><p>Rome, and the false church that rules from her, given power by the kings of the earth.</p></div><div class="panel cain"><h3>Her daughters</h3><p>The churches that came out of her and kept her sacraments, her infant baptism and her hierarchy.</p></div><div class="panel believers"><h3>Come out of her</h3><p>God calls His people out, to be separate. <button class="ref" data-v="Revelation 18:4">Revelation 18:4</button> <button class="ref" data-v="2 Corinthians 6:17">2 Corinthians 6:17</button></p></div></div>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Being Baptist" data-title="The B.A.P.T.I.S.T. distinctives">
+  <div class="page">
+    <h2>The B.A.P.T.I.S.T. distinctives</h2>
+    <div class="timeline"><div><span class="n">B</span><span class="lbl"><strong>Biblical authority.</strong> The Bible alone is our rule of faith and practice. <button class="ref" data-v="2 Timothy 3:16-17">2 Timothy 3:16–17</button></span></div><div><span class="n">A</span><span class="lbl"><strong>Autonomy of the local church.</strong> Churches, plural: each self-governing under Christ. <button class="ref" data-v="Acts 9:31">Acts 9:31</button> <button class="ref" data-v="Revelation 1:4">Revelation 1:4</button></span></div><div><span class="n">P</span><span class="lbl"><strong>Priesthood of the believer.</strong> Every believer comes to God through Christ alone. <button class="ref" data-v="1 Peter 2:9">1 Peter 2:9</button> <button class="ref" data-v="1 Timothy 2:5">1 Timothy 2:5</button></span></div><div><span class="n">T</span><span class="lbl"><strong>Two ordinances.</strong> Baptism and the Lord’s Supper. <button class="ref" data-v="Matthew 28:19">Matthew 28:19</button> <button class="ref" data-v="1 Corinthians 11:23-26">1 Corinthians 11:23–26</button></span></div><div><span class="n">I</span><span class="lbl"><strong>Individual soul liberty.</strong> Every one shall give account of himself to God. <button class="ref" data-v="Romans 14:12">Romans 14:12</button></span></div><div><span class="n">S</span><span class="lbl"><strong>Saved church membership.</strong> Believers, baptized after they are saved. <button class="ref" data-v="Acts 2:41">Acts 2:41</button></span></div><div><span class="n">T</span><span class="lbl"><strong>Two offices.</strong> Pastors and deacons. <button class="ref" data-v="Philippians 1:1">Philippians 1:1</button></span></div></div>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Being Baptist" data-title="What the distinctives mean">
+  <div class="page">
+    <h2>What the distinctives mean</h2>
+    <ul class="marks"><li>The New Testament says “churches,” plural, 49 times: each one local and independent. <button class="ref" data-v="Acts 9:31">Acts 9:31</button></li><li>The Pastoral Epistles give the qualifications for <strong>pastors and deacons</strong>. <button class="ref" data-v="1 Timothy 3:1-13">1 Timothy 3:1–13</button></li><li><strong>Bishop, elder, overseer and shepherd</strong> are the same office: the pastor. <button class="ref" data-v="Titus 1:5-7">Titus 1:5–7</button> <button class="ref" data-v="1 Peter 5:1-2">1 Peter 5:1–2</button></li><li>The offices are not priests: <strong>all believers are</strong>. <button class="ref" data-v="Revelation 1:6">Revelation 1:6</button></li><li>An <strong>ordinance</strong> is a practice the Lord commanded. It is not a “sacrament” that gives grace.</li><li>“Anabaptist” means “baptize again,” a Catholic insult: the converts had been baptized as babies, and were baptized again as believers.</li></ul>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Behold, hear, declare" data-title="Behold, hear, set thine heart">
+  <div class="page">
+    <h2>Behold, hear, set thine heart</h2>
+    <blockquote class="big-verse">And the man said unto me, Son of man, <mark>behold with thine eyes, and hear with thine ears, and set thine heart</mark> upon all that I shall shew thee; for to the intent that I might shew them unto thee art thou brought hither: <mark>declare all that thou seest</mark> to the house of Israel.<cite>Ezekiel 40:4</cite></blockquote>
+    <p>The believers on the trail did what Ezekiel was told: they looked into the word, heard it, kept it in their hearts, and declared it, in the common tongue, whatever it cost.</p>
+    <div class="refs center"><button class="ref" data-v="Deuteronomy 11:18">Deuteronomy 11:18</button><button class="ref" data-v="Proverbs 4:20-21">Proverbs 4:20–21</button></div>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Behold, hear, declare" data-title="Ears that will not hear">
+  <div class="page">
+    <h2>Ears that will not hear</h2>
+    <blockquote class="big-verse">For the heart of this people is waxed gross, and their ears are dull of hearing, and their eyes have they closed; lest they should see with their eyes, and hear with their ears, and understand with their heart, and should be converted, and I should heal them.<cite>Acts 28:27</cite></blockquote>
+    <p>Paul quotes Isaiah. Many will not hear, as many would not in every age of the trail. The word is declared anyway. <button class="ref" data-v="Isaiah 6:9-10">Isaiah 6:9–10</button></p>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Close" data-title="The faith once delivered">
+  <div class="page title-page later">
+    <div class="overline">Jude 3</div>
+    <h1>The faith once delivered</h1>
+    <p class="sub">“…earnestly contend for the faith which was once delivered unto the saints.”</p>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>A line of believers</strong>Not a chain of churches, but believers in every age, saved by grace through faith. <button class="ref" data-v="Hebrews 12:1">Hebrews 12:1</button></li><li><strong>The distinctives are the Bible’s</strong>Not a tradition of men, but what the scriptures teach.</li><li><strong>The cost was blood</strong>Of whom the world was not worthy. <button class="ref" data-v="Hebrews 11:38">Hebrews 11:38</button></li><li><strong>Our part</strong>Behold, hear, set thine heart, and declare. <button class="ref" data-v="Ezekiel 40:4">Ezekiel 40:4</button></li></ol></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 Corinthians 11:23-26":[[23, "For I have received of the Lord that which also I delivered unto you, That the Lord Jesus the same night in which he was betrayed took bread:"], [24, "And when he had given thanks, he brake it, and said, Take, eat: this is my body, which is broken for you: this do in remembrance of me."], [25, "After the same manner also he took the cup, when he had supped, saying, This cup is the new testament in my blood: this do ye, as oft as ye drink it, in remembrance of me."], [26, "For as often as ye eat this bread, and drink this cup, ye do shew the Lord’s death till he come."]],
+  "1 Peter 2:9":[[9, "But ye are a chosen generation, a royal priesthood, an holy nation, a peculiar people; that ye should shew forth the praises of him who hath called you out of darkness into his marvellous light:"]],
+  "1 Peter 5:1-2":[[1, "The elders which are among you I exhort, who am also an elder, and a witness of the sufferings of Christ, and also a partaker of the glory that shall be revealed:"], [2, "Feed the flock of God which is among you, taking the oversight thereof, not by constraint, but willingly; not for filthy lucre, but of a ready mind;"]],
+  "1 Timothy 2:5":[[5, "For there is one God, and one mediator between God and men, the man Christ Jesus;"]],
+  "1 Timothy 3:1-13":[[1, "This is a true saying, If a man desire the office of a bishop, he desireth a good work."], [2, "A bishop then must be blameless, the husband of one wife, vigilant, sober, of good behaviour, given to hospitality, apt to teach;"], [3, "Not given to wine, no striker, not greedy of filthy lucre; but patient, not a brawler, not covetous;"], [4, "One that ruleth well his own house, having his children in subjection with all gravity;"], [5, "(For if a man know not how to rule his own house, how shall he take care of the church of God?)"], [6, "Not a novice, lest being lifted up with pride he fall into the condemnation of the devil."], [7, "Moreover he must have a good report of them which are without; lest he fall into reproach and the snare of the devil."], [8, "Likewise must the deacons be grave, not doubletongued, not given to much wine, not greedy of filthy lucre;"], [9, "Holding the mystery of the faith in a pure conscience."], [10, "And let these also first be proved; then let them use the office of a deacon, being found blameless."], [11, "Even so must their wives be grave, not slanderers, sober, faithful in all things."], [12, "Let the deacons be the husbands of one wife, ruling their children and their own houses well."], [13, "For they that have used the office of a deacon well purchase to themselves a good degree, and great boldness in the faith which is in Christ Jesus."]],
+  "2 Corinthians 6:17":[[17, "Wherefore come out from among them, and be ye separate, saith the Lord, and touch not the unclean thing; and I will receive you,"]],
+  "2 Timothy 3:12":[[12, "Yea, and all that will live godly in Christ Jesus shall suffer persecution."]],
+  "2 Timothy 3:16-17":[[16, "All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness:"], [17, "That the man of God may be perfect, throughly furnished unto all good works."]],
+  "Acts 11:26":[[26, "And when he had found him, he brought him unto Antioch. And it came to pass, that a whole year they assembled themselves with the church, and taught much people. And the disciples were called Christians first in Antioch."]],
+  "Acts 2:41":[[41, "Then they that gladly received his word were baptized: and the same day there were added unto them about three thousand souls."]],
+  "Acts 5:29":[[29, "Then Peter and the other apostles answered and said, We ought to obey God rather than men."]],
+  "Acts 8:36-37":[[36, "And as they went on their way, they came unto a certain water: and the eunuch said, See, here is water; what doth hinder me to be baptized?"], [37, "And Philip said, If thou believest with all thine heart, thou mayest. And he answered and said, I believe that Jesus Christ is the Son of God."]],
+  "Acts 9:31":[[31, "Then had the churches rest throughout all Judaea and Galilee and Samaria, and were edified; and walking in the fear of the Lord, and in the comfort of the Holy Ghost, were multiplied."]],
+  "Deuteronomy 11:18":[[18, "Therefore shall ye lay up these my words in your heart and in your soul, and bind them for a sign upon your hand, that they may be as frontlets between your eyes."]],
+  "Ezekiel 40:4":[[4, "And the man said unto me, Son of man, behold with thine eyes, and hear with thine ears, and set thine heart upon all that I shall shew thee; for to the intent that I might shew them unto thee art thou brought hither: declare all that thou seest to the house of Israel."]],
+  "Galatians 5:1":[[1, "Stand fast therefore in the liberty wherewith Christ hath made us free, and be not entangled again with the yoke of bondage."]],
+  "Hebrews 11:36-38":[[36, "And others had trial of cruel mockings and scourgings, yea, moreover of bonds and imprisonment:"], [37, "They were stoned, they were sawn asunder, were tempted, were slain with the sword: they wandered about in sheepskins and goatskins; being destitute, afflicted, tormented;"], [38, "(Of whom the world was not worthy:) they wandered in deserts, and in mountains, and in dens and caves of the earth."]],
+  "Hebrews 11:38":[[38, "(Of whom the world was not worthy:) they wandered in deserts, and in mountains, and in dens and caves of the earth."]],
+  "Hebrews 12:1":[[1, "Wherefore seeing we also are compassed about with so great a cloud of witnesses, let us lay aside every weight, and the sin which doth so easily beset us, and let us run with patience the race that is set before us,"]],
+  "Isaiah 6:9-10":[[9, "And he said, Go, and tell this people, Hear ye indeed, but understand not; and see ye indeed, but perceive not."], [10, "Make the heart of this people fat, and make their ears heavy, and shut their eyes; lest they see with their eyes, and hear with their ears, and understand with their heart, and convert, and be healed."]],
+  "John 15:20":[[20, "Remember the word that I said unto you, The servant is not greater than his lord. If they have persecuted me, they will also persecute you; if they have kept my saying, they will keep yours also."]],
+  "Matthew 28:19":[[19, "Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost:"]],
+  "Philippians 1:1":[[1, "Paul and Timotheus, the servants of Jesus Christ, to all the saints in Christ Jesus which are at Philippi, with the bishops and deacons:"]],
+  "Proverbs 22:28":[[28, "Remove not the ancient landmark, which thy fathers have set."]],
+  "Proverbs 4:20-21":[[20, "My son, attend to my words; incline thine ear unto my sayings."], [21, "Let them not depart from thine eyes; keep them in the midst of thine heart."]],
+  "Revelation 17:15":[[15, "And he saith unto me, The waters which thou sawest, where the whore sitteth, are peoples, and multitudes, and nations, and tongues."]],
+  "Revelation 17:18":[[18, "And the woman which thou sawest is that great city, which reigneth over the kings of the earth."]],
+  "Revelation 17:9":[[9, "And here is the mind which hath wisdom. The seven heads are seven mountains, on which the woman sitteth."]],
+  "Revelation 18:4":[[4, "And I heard another voice from heaven, saying, Come out of her, my people, that ye be not partakers of her sins, and that ye receive not of her plagues."]],
+  "Revelation 1:4":[[4, "John to the seven churches which are in Asia: Grace be unto you, and peace, from him which is, and which was, and which is to come; and from the seven Spirits which are before his throne;"]],
+  "Revelation 1:6":[[6, "And hath made us kings and priests unto God and his Father; to him be glory and dominion for ever and ever. Amen."]],
+  "Revelation 6:9-10":[[9, "And when he had opened the fifth seal, I saw under the altar the souls of them that were slain for the word of God, and for the testimony which they held:"], [10, "And they cried with a loud voice, saying, How long, O Lord, holy and true, dost thou not judge and avenge our blood on them that dwell on the earth?"]],
+  "Romans 14:12":[[12, "So then every one of us shall give account of himself to God."]],
+  "Romans 1:17":[[17, "For therein is the righteousness of God revealed from faith to faith: as it is written, The just shall live by faith."]],
+  "Titus 1:5-7":[[5, "For this cause left I thee in Crete, that thou shouldest set in order the things that are wanting, and ordain elders in every city, as I had appointed thee:"], [6, "If any be blameless, the husband of one wife, having faithful children not accused of riot or unruly."], [7, "For a bishop must be blameless, as the steward of God; not selfwilled, not soon angry, not given to wine, no striker, not given to filthy lucre;"]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "").replace("-", "–");
+  return (BOOKS[book] || book) + " " + cv.replace("-", "–");
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => "<sup>" + n + "</sup>" + smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
 </body>
 </html>
