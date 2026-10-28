@@ -3,8 +3,8 @@
    request always checks with the server (cache: 'no-cache'), so the browser's own cache of
    up to four hours can't hold back an update.
    Only touches caches named "wews-studies-*" (other apps on this site have their own). */
-const CACHE = 'wews-studies-v1.22';
-const SHELL = ['./', 'index.html', 'app.css', 'app.js', 'manifest.json', 'data/books.json',
+const CACHE = 'wews-studies-v1.23';
+const SHELL = ['./', 'index.html', 'app.css', 'app.js', 'manifest.json', 'data/books.json', 'heaven.html',
   '../img/logo-96.jpg', '../img/logo-256.jpg', '../img/icon-192.png'];
 
 self.addEventListener('install', e => {

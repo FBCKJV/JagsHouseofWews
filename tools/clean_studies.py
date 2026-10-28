@@ -629,3 +629,5 @@ def write_review(flagged, dec):
 
 if __name__ == '__main__':
     main()
+    import build_search   # the search index reads what was just written
+    build_search.main()

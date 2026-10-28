@@ -93,4 +93,7 @@ def main():
 
 
 if __name__ == '__main__':
-    sys.exit(main())
+    code = main()
+    import build_search   # lessons are in the search index too
+    build_search.main()
+    sys.exit(code)
