@@ -8,6 +8,7 @@ A family and church archive of KJV Bible teaching (https://fbckjv.app/JagsHouseo
   `tools/build_deck.py` and `tools/deck/template.html` from a source in `lessons/src/*.deck`. Do not hand-write lesson
   HTML or add PDF-only lessons. Keep the outline or notes as a secondary part where they exist, and link a deck to
   related studies and lessons with `[[lesson:id|label]]` or `read:`.
+  The deck is the deliverable. Do not add worksheets, answer keys or handouts unless the user asks.
 - Whenever a file is changed, give the user the full file (SendUserFile), not fragments.
 - Links go one way only: nothing is ever added to fbckjv.app.
 - Do not change the KJV language. Non-KJV pastes are corrected to the KJV.
