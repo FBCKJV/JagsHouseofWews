@@ -129,7 +129,7 @@ Regenerated on every run; edit `review/worldly.json` to change what is on it.
 ## Mark
 
 - `6234` · Mark 9 · 2022-11-03 · [post](https://t.me/HouseOfWews2/6234) · harsh language: says abusers should kill themselves; 'sperg' jab · undecided
-  > We come to Jesus's teaching in Capernaum to the Apostles. He asked them what they had been squabbling about between themselves and they reply embarras
+  > We come to Jesus' teaching in Capernaum to the Apostles. He asked them what they had been squabbling about between themselves and they reply embarrass
 - `6265` · Mark 10 · 2022-11-05 · [post](https://t.me/HouseOfWews2/6265) · racial slur · undecided
   > One more thing regarding Mark 10; There is a false doctrine claimed by works-n1gg3rs, taken from the story of the rich young man. They will say someth
 - `6338` · Mark 12 · 2022-11-09 · [post](https://t.me/HouseOfWews2/6338) · election politics, Republicans · undecided
