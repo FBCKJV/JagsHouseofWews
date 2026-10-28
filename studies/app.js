@@ -422,7 +422,7 @@
     </details>`;
   }
 
-  async function topicView(id, openId) {
+  async function topicView(id, openId, line) {
     const [t, topic, lib] = await Promise.all([loadTopics(), loadTopic(id), loadLessons()]);
     const onTopic = lib.lessons.filter(l => l.topics.includes(id));
     const pics = lib.pictures.filter(p => p.topics.includes(id));
@@ -471,11 +471,17 @@
       if (slot && !slot.dataset.done) { slot.innerHTML = render(byId.get(slot.dataset.lazy).text); slot.dataset.done = '1'; }
     }));
     wirePictures(view, pics);
-    // #doctrine-salvation~123 opens that teaching (linked from a chapter's "More teaching" list)
+    // #doctrine-salvation~123 opens that teaching (linked from a chapter's "More teaching" list);
+    // #doctrine-salvation~123~Some words goes on to that line in it and marks it
     const target = openId && document.getElementById('t' + openId);
     if (target) {
       target.open = true;
-      requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
+      const slot = target.querySelector('[data-lazy]');   // build its text now, so the line can be found
+      if (slot && !slot.dataset.done) { slot.innerHTML = render(byId.get(slot.dataset.lazy).text); slot.dataset.done = '1'; }
+      const want = line && line.toLowerCase();
+      const at = want && [...target.querySelectorAll('p, blockquote, li')].find(el => el.textContent.toLowerCase().includes(want));
+      if (at) at.classList.add('flash');
+      requestAnimationFrame(() => (at || target).scrollIntoView({ block: at ? 'center' : 'start' }));
     }
     view.querySelectorAll('[data-theme]').forEach(a => a.onclick = e => {
       e.preventDefault();
@@ -1247,8 +1253,8 @@
       if (h === 'pictures') { await picturesView(); window.scrollTo(0, 0); return; }
       const lm = h.match(/^lesson-([a-z0-9-]+)$/);
       if (lm) { await lessonView(lm[1]); window.scrollTo(0, 0); return; }
-      const dm = h.match(/^doctrine-([a-z0-9-]+?)(?:~(\d+))?$/);
-      if (dm) { window.scrollTo(0, 0); await topicView(dm[1], dm[2]); return; }
+      const dm = h.match(/^doctrine-([a-z0-9-]+?)(?:~(\d+))?(?:~(.+))?$/);
+      if (dm) { window.scrollTo(0, 0); await topicView(dm[1], dm[2], dm[3]); return; }
       const m = h.match(/^([A-Za-z0-9]+)(?:-(\d+)(?:\.(\d+))?)?$/);   // #Book, #Book-N, #Book-N.2 (second study)
       if (!m) { home(); }
       else {
