@@ -213,6 +213,20 @@ a:hover { color: var(--gold-l); }
 .testament > summary:hover h2 { color: var(--gold-t); }
 .testament:not([open]) > summary { margin-bottom: 4px; }
 
+/* LESSON SHELVES fold the same way; the description stays under the name */
+.shelf > summary { cursor: pointer; list-style: none; user-select: none; }
+.shelf > summary::-webkit-details-marker { display: none; }
+.shelf > summary h2::before {
+  content: ''; display: inline-block; vertical-align: 0.12em; margin-right: 0.45em;
+  border-left: 0.36em solid var(--gold-d); border-top: 0.24em solid transparent; border-bottom: 0.24em solid transparent;
+  transition: transform 0.15s;
+}
+.shelf[open] > summary h2::before { transform: rotate(90deg); }
+.shelf > summary em { flex-basis: 100%; font-family: var(--font-read); font-style: italic; font-size: 15px; line-height: 1.5; color: var(--text-m); padding-left: 1.05em; }
+.shelf > summary:hover h2 { color: var(--gold-t); }
+.shelf { border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+.shelf[open] { padding-bottom: 16px; }
+
 /* BOOK BUTTONS (like the Bible app's two-column book grid) */
 .book-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
 .book {
