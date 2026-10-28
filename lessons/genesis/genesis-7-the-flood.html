@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Genesis 7 – The Flood</title>
+<script src="../deck-extras.js"></script>
 <meta name="description" content="A study in Genesis 7: the Flood, God’s judgment on the wicked and the scoffers, and just Noah saved by faith.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -98,6 +99,7 @@ mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px 
   font-family:var(--display);font-size:.72em;letter-spacing:.05em;
   color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
 }
+.ref.lesson-link{text-decoration:none;font-size:.8em}
 .ref:hover{color:var(--gold-bright);border-bottom-style:solid}
 .refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
 .refs.center{justify-content:center}
@@ -516,6 +518,7 @@ function openVerse(keys, label){
 
 document.addEventListener("click", e => {
   const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
   if (b) {
     const keys = b.dataset.v;
     const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);

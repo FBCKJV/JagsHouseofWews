@@ -260,6 +260,7 @@ def build(src):
                               for k, v in sorted(USED.items())) + '\n}'
     out = (tpl.replace('{{TITLE}}', html.escape(meta['title'], quote=False))
               .replace('{{DESCRIPTION}}', html.escape(meta.get('description', ''), quote=True))
+              .replace('{{EXTRAS}}', os.path.relpath(os.path.join(ROOT, 'lessons', 'deck-extras.js'), os.path.dirname(os.path.join(ROOT, meta['output']))))
               .replace('{{SLIDES}}', '\n'.join(body)).replace('{{VERSES}}', vmap))
     dest = os.path.join(ROOT, meta['output'])
     with open(dest, 'w', encoding='utf-8') as f:
