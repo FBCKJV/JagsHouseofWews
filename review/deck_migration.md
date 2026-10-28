@@ -39,7 +39,7 @@ Week 7 and Week 8 infographics and the Week 4 pronouns chart become slides insid
 - [ ] **Week 10: Marriage, God's Plan for Man and Woman** (`doctrine-week-10-marriage-gods-plan`): Slides `doctrine/doctrine-week-10-marriage-gods-plan.html`
 
 ### 3. Genesis 1 to 5
-Genesis 2 has two lessons that overlap but are not copies: `marriage` walks through Genesis 2 and God's design for marriage, and `marriage-and-divorce` (young adult Sunday school) covers the same design and then divorce (Malachi, the Sermon on the Mount, Matthew 19). The user reviews both before deciding to keep them separate or fold them into one.
+Genesis 2 has two different lessons that overlap on the design of marriage: `marriage` (Genesis 2 and God's design) and `marriage-and-divorce` (young adult Sunday school, adds divorce). Per the user, they stay separate decks, like the two Genesis 6 lessons.
 
 - [ ] **Genesis 1: Creation** (`genesis-1-creation`): Slides `genesis/genesis-1-creation.html`
 - [ ] **Genesis 2: Marriage** (`genesis-2-marriage`): Slides `genesis/genesis-2-marriage.html`
@@ -95,4 +95,4 @@ Each chapter has a main page plus several side pages, recaps, charts and workshe
 - Verses are blocks with the reference below (John 3:16-18), no inline verse numbers. The builder pulls the KJV text.
 - Each finished deck gets the shared resume and Share script automatically.
 - Fact-check against primary sources; mark traditions; ask the user about anything that is opinion or doctrine.
-- Folding several pages into one deck is the default for a lesson with side pages, as with Week 5 and John 6.
+- Fold pages into one deck only when they are parts of one study (side pages, recaps, narrated copies, charts), as with Week 5 and John 6. Lessons that cover different things stay separate decks, like the two Genesis 6 lessons and the two Genesis 2 lessons.
