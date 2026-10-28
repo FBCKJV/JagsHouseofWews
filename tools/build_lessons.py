@@ -83,7 +83,8 @@ def main():
     order = {s['id']: i for i, s in enumerate(cat['shelves'])}
     lessons.sort(key=lambda l: (order.get(l['shelf'], 99), l['order'], l['title'].lower()))
     with open(OUT, 'w', encoding='utf-8') as f:
-        json.dump({'shelves': cat['shelves'], 'lessons': lessons, 'pictures': pictures},
+        # "moved": lessons replaced by another; old links forward to the new one
+        json.dump({'shelves': cat['shelves'], 'lessons': lessons, 'pictures': pictures, 'moved': cat.get('moved', [])},
                   f, ensure_ascii=False, separators=(',', ':'))
 
     print(f'Lessons: {len(lessons)} on {len(cat["shelves"])} shelves; pictures: {len(pictures)}')
