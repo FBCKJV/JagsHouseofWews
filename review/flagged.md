@@ -1,6 +1,6 @@
 # Flagged study posts
 
-72 posts flagged, 72 still undecided. Undecided posts are currently **hidden** in the app (`flagged_default` in decisions.json).
+72 posts flagged, 69 still undecided. Undecided posts are currently **hidden** in the app (`flagged_default` in decisions.json).
 
 To decide, add the post id to `review/decisions.json` under `"posts"` as `"keep"` or `"drop"`, then rerun `python3 tools/clean_studies.py`. Your choices survive a re-export.
 
@@ -279,11 +279,11 @@ This file is regenerated on every run; don't edit it.
 
 - `2667` · 2022-06-13 · [post](https://t.me/HouseOfWews2/2667) · politics or current events ("voting") · undecided
   > This extends to politics, especially voting. While voting in an election to oppose sin or to support a truly Godly, Christian candidate in a local race (someone…
-- `2672` · 2022-06-13 · [post](https://t.me/HouseOfWews2/2672) · short aside with no teaching · undecided
+- `2672` · 2022-06-13 · [post](https://t.me/HouseOfWews2/2672) · short aside with no teaching · **drop**
   > And literally as I hit send AltSkull's VM brings up same thing https://t.me/AltSkull48/3655
-- `2677` · 2022-06-13 · [post](https://t.me/HouseOfWews2/2677) · politics or current events ("election") · undecided
+- `2677` · 2022-06-13 · [post](https://t.me/HouseOfWews2/2677) · politics or current events ("election") · **drop**
   > Also, a majority of the posts by ACT Blue, CTR and the like, since at least 2014, have been bots. They have call centers with scripts that users maintain, but y…
-- `2678` · 2022-06-13 · [post](https://t.me/HouseOfWews2/2678) · politics or current events ("election") · undecided
+- `2678` · 2022-06-13 · [post](https://t.me/HouseOfWews2/2678) · politics or current events ("election") · **drop**
   > Remember after the 2016 election, when all these patriotic conservative accounts with Boomer tier profiles that were "ex-GOP"? For example
 
 ### Acts 9
@@ -335,7 +335,7 @@ This file is regenerated on every run; don't edit it.
 ### 1 Corinthians 15
 
 - `3943` · 2022-07-26 · [post](https://t.me/HouseOfWews2/3943) · aimed at critics or other people ("@Reinh4rdt") · undecided
-  > As a side note, in @Reinh4rdt's chat yesterday some Reddit Muslim came in, calling the Bible schitzo children's verses, and claiming the Quaran, which is a disj…
+  > As a side note, in @Reinh4rdt's chat yesterday some Reddit Muslim came in, calling the Bible schitzo children's verses, and claiming the Quran, which is a disjo…
 
 ## Galatians
 

@@ -37,7 +37,7 @@ From the Sermons folder, only the "Past sermons" and "Ready to preach" docs were
 | "Daniel Chapter 11: A Prophetic Overview" | Already whole inside the Daniel 11 study (PDF) on the Prophecy shelf |
 | "Haggai the prophet" (PDF) | The doc of the same sermon |
 | "Overview of the book of Proverbs" (lesson) | "Proverbs: Instruction to the Heirs of the Kingdom", the Wednesday sermon that contains it |
-| "Mark Smith and his lies" | Held until the author decides: it names a brother from the pulpit, in fun, and the title reads differently out of context |
+| "Mark Smith and his lies" | Included at the author's word as "Brother Mark and His Lies": the name is changed to "brother Mark", otherwise as preached |
 
 Scripture quoted in modern wording was changed to the exact KJV: Proverbs 12:18, 15:4 and 20:19, Psalm 35:28, Ephesians 4:29 and 1 Peter 3:10-11 (Taming Your Tongue); John 6:40 and Mark 16:15 (Increase Our Faith); Hebrews 9:27 (Spiritual Father); Proverbs 19:17 (Help Me, Help You); John 8:58 (Doctrine class Week 8 notes); Romans 10:21 (Romans 9 notes).
 
