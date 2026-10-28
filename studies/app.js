@@ -7,7 +7,7 @@
 
   const KJV_APP = 'https://fbckjv.app/KJVBible/';
   // Shown on the About page. Started at v1.17 (after 17 merged updates); each merged update adds one.
-  const APP_VERSION = '1.22', APP_DATE = '2026-10-28';
+  const APP_VERSION = '1.23', APP_DATE = '2026-10-28';
   const view = document.getElementById('view');
   const crumbs = document.getElementById('crumbs');
   let INDEX = null;
@@ -225,6 +225,8 @@
         <h1>Chapter Studies</h1>
         <p>${done.toLocaleString()} of ${total.toLocaleString()} chapters studied, Genesis to Revelation. Pick a book, then a chapter.</p>
       </div>
+      <a class="continue gospel-card" href="#heaven"><span class="label">The gospel</span>
+        <strong>How to know for sure you’re going to Heaven</strong></a>
       <div class="continue-row">
         ${showLast ? `<a class="continue" href="#${last.book.slug}-${last.ch}"><span class="label">Where you left off</span>
           <strong>${esc(chapterName(last.book.book, last.ch))}</strong></a>` : ''}
@@ -286,6 +288,7 @@
     ['Doctrines & Teachings', 'Teachings that compare scripture with scripture, sorted by topic. Tap a verse to open it in the KJV Bible app, or open the chapter study it came from.'],
     ['Install the app', 'On Android choose Install app from the browser menu; on iPhone use Share, then Add to Home Screen. It then opens full screen like the KJV Bible app.'],
     ['Lessons & Classes', 'Slides, notes and handouts from the classes. Slides open in a new tab; notes open right on the page. Tap a picture to see it full size.'],
+    ['Search', 'Tap the magnifying glass at the top to search every study, teaching and lesson. Type a verse like “john 3:16” to see everywhere it is taught.'],
     ['The chapter grid', 'Solid squares are series studies, dashed squares are earlier one-off studies, and dim squares are chapters not yet studied.']
   ];
 
@@ -1049,10 +1052,152 @@
   // Changing the theme in the Bible app (another tab) changes it here too.
   window.addEventListener('storage', e => { if (e.key === 'kjv_theme') applyTheme(theme = currentTheme()); });
 
+  // ---------- How to know for sure you're going to Heaven (text in heaven.html) ----------
+  let HEAVEN = null;
+  async function heavenView() {
+    document.title = 'How to know for sure you\'re going to Heaven — Jag\'s House of Wews';
+    setCrumbs([['Home', '#'], ['Going to Heaven', '#heaven']]);
+    view.classList.remove('wide');
+    HEAVEN = HEAVEN || await fetch('heaven.html', { cache: 'no-cache' }).then(r => r.ok ? r.text() : '').catch(() => '');
+    if (location.hash !== '#heaven') return;
+    view.innerHTML = `
+      <div class="hero"><span class="label">The gospel</span><h1>How to know for sure you’re going to Heaven</h1></div>
+      <div class="post gospel">${HEAVEN || '<p class="error">This page couldn\'t be loaded. Check your connection and try again.</p>'}</div>`;
+  }
+
+  // ---------- search: words anywhere, or a verse ("john 3:16") to see everywhere it is taught ----------
+  let SEARCH = null;
+  function loadSearch() {
+    return SEARCH || (SEARCH = getJSON('data/search.json').then(d => {
+      d.items.forEach(it => { it.lc = (it[2] + ' ' + it[4]).toLowerCase(); });
+      return d;
+    }).catch(e => { SEARCH = null; throw e; }));
+  }
+  const KIND = { s: 'Study', t: 'Teaching', l: 'Lesson' };
+
+  // "rom 10:9", "1 John 5:11-13" -> { book, ch, from, to }
+  function verseRef(q) {
+    const m = String(q).trim().match(/^(.*?\S)\s*(\d+)\s*:\s*(\d+)(?:\s*[-–]\s*(\d+))?$/);
+    if (!m) return null;
+    const r = parseRef(m[1] + ' ' + m[2]);
+    if (!r || !r.ch) return null;
+    const from = +m[3], to = Math.max(from, Math.min(+(m[4] || m[3]), from + 30));
+    return { book: r.book, ch: r.ch, from, to };
+  }
+
+  function snippet(text, words, at) {
+    const lc = text.toLowerCase();
+    let i = at != null ? at : Math.min(...words.map(w => lc.indexOf(w)).filter(x => x >= 0), Infinity);
+    if (!isFinite(i)) i = 0;
+    const start = Math.max(0, text.lastIndexOf(' ', Math.max(0, i - 90)) + 1), end = Math.min(text.length, i + 170);
+    let out = esc((start ? '…' : '') + text.slice(start, end) + (end < text.length ? '…' : ''));
+    words.filter(w => w.length > 1).forEach(w => {
+      out = out.replace(new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi'), '<mark>$1</mark>');
+    });
+    return out;
+  }
+
+  function resultCard(it, words, at) {
+    const meta = [KIND[it[0]], it[0] === 's' ? it[5] : null, it[3] ? fmtDate(it[3]) : null].filter(Boolean).join(' · ');
+    return `<a class="lesson-card result" href="${esc(it[1])}"><span class="label">${esc(meta)}</span>
+      <strong>${esc(it[2])}</strong><span class="snip">${snippet(it[4], words, at)}</span></a>`;
+  }
+
+  let searchKind = '', searchShown = 30;
+  async function searchView(q) {
+    document.title = 'Search — Jag\'s House of Wews';
+    setCrumbs([['Home', '#'], ['Search', '#search']]);
+    view.classList.remove('wide');
+    if (!document.getElementById('search-q')) {
+      view.innerHTML = `
+        <div class="hero"><h1>Search</h1><p>Words or a verse, across every study, teaching and lesson.</p></div>
+        <form class="jump" id="search-form" role="search">
+          <label for="search-q" class="label">Search</label>
+          <div class="jump-row">
+            <input id="search-q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="propitiation, john 3:16, rom 10:9">
+            <button class="btn primary" type="submit">Search</button>
+          </div>
+        </form>
+        <nav class="theme-chips" id="search-kinds" aria-label="Show">${[['', 'All'], ['s', 'Studies'], ['t', 'Teachings'], ['l', 'Lessons']]
+          .map(([k, n]) => `<a href="#search" data-kind="${k}"${k === searchKind ? ' class="on"' : ''}>${n}</a>`).join('')}</nav>
+        <div id="search-results"><p class="loading">Loading the index…</p></div>`;
+      const input = document.getElementById('search-q');
+      input.value = q;
+      let t = null;
+      const run = () => {
+        const v = input.value.trim();
+        history.replaceState(null, '', v ? '#search=' + encodeURIComponent(v) : '#search');
+        searchShown = 30; showResults(v);
+      };
+      input.addEventListener('input', () => { clearTimeout(t); t = setTimeout(run, 250); });
+      document.getElementById('search-form').onsubmit = e => { e.preventDefault(); clearTimeout(t); run(); input.blur(); };
+      view.querySelectorAll('[data-kind]').forEach(a => a.onclick = e => {
+        e.preventDefault(); searchKind = a.dataset.kind; searchShown = 30;
+        view.querySelectorAll('[data-kind]').forEach(x => x.classList.toggle('on', x === a));
+        showResults(input.value.trim());
+      });
+      if (!q) input.focus();
+    }
+    await showResults(q);
+  }
+
+  async function showResults(q) {
+    const box = document.getElementById('search-results');
+    if (!box) return;
+    if (!q) { box.innerHTML = '<p class="fineprint">Type a word or two, or a reference like “john 3:16”. A verse lists everywhere it is taught.</p>'; return; }
+    let data;
+    try { data = await loadSearch(); } catch (e) { box.innerHTML = '<p class="error">Search couldn\'t be loaded. Check your connection and try again.</p>'; return; }
+    if (document.getElementById('search-q') && document.getElementById('search-q').value.trim() !== q) return;
+    const pick = it => !searchKind || it[0] === searchKind;
+    const vr = verseRef(q);
+    if (vr) {
+      const keys = []; for (let v = vr.from; v <= vr.to; v++) keys.push(`${vr.book.book} ${vr.ch}:${v}`);
+      const ids = [...new Set(keys.flatMap(k => data.verses[k] || []))];
+      const hits = ids.map(i => data.items[i]).filter(pick).sort((a, b) => (b[3] || '').localeCompare(a[3] || ''));
+      const label = `${chapterName(vr.book.book, vr.ch)}:${vr.from}${vr.to > vr.from ? '–' + vr.to : ''}`;
+      const kjv = await loadKJV(vr.book.slug);
+      if (document.getElementById('search-q') && document.getElementById('search-q').value.trim() !== q) return;   // typed on meanwhile
+      const chap = kjv && kjv.chapters[vr.ch - 1];
+      const text = chap ? chap.verses.filter(v => +v.verse >= vr.from && +v.verse <= vr.to).map(v => esc(v.text)).join(' ') : '';
+      const needle = new RegExp(`${vr.book.book.replace(/^Psalms$/, 'Psalms?')}\\.?\\s+${vr.ch}:${vr.from}\\b`, 'i');
+      box.innerHTML = `${text ? `<blockquote class="quote"><cite>${esc(label)}</cite>${text}</blockquote>` : ''}
+        <div class="section-header"><h2>${esc(label)} is taught in</h2><span>${hits.length}</span></div>
+        <p class="actions"><a class="btn" href="#${vr.book.slug}-${vr.ch}">Go to the ${esc(chapterName(vr.book.book, vr.ch))} study →</a></p>
+        <div class="lesson-list">${hits.slice(0, searchShown).map(it => {
+          const m = it[4].match(needle); return resultCard(it, [], m ? m.index : 0);
+        }).join('') || '<p class="fineprint">No study, teaching or lesson cites this verse yet.</p>'}</div>
+        ${hits.length > searchShown ? '<p class="center"><button class="btn" id="more">Show more</button></p>' : ''}`;
+    } else {
+      const phrase = q.match(/^"(.+)"$/);
+      const words = phrase ? [phrase[1].toLowerCase()] : q.toLowerCase().split(/\s+/).filter(w => w.length > 1);
+      const scored = [];
+      for (const it of data.items) {
+        if (!pick(it) || !words.every(w => it.lc.includes(w))) continue;
+        let score = 0;
+        for (const w of words) {
+          if (it[2].toLowerCase().includes(w)) score += 20;
+          let i = -1, n = 0; while ((i = it.lc.indexOf(w, i + 1)) >= 0 && n < 20) n++;
+          score += n;
+        }
+        scored.push([score, it]);
+      }
+      scored.sort((a, b) => b[0] - a[0] || (b[1][3] || '').localeCompare(a[1][3] || ''));
+      const rc = parseRef(q);
+      box.innerHTML = `${rc && rc.ch ? `<p class="actions"><a class="btn" href="#${rc.book.slug}-${rc.ch}">Go to the ${esc(chapterName(rc.book.book, rc.ch))} study →</a></p>` : ''}
+        <div class="section-header"><h2>Results</h2><span>${scored.length}</span></div>
+        <div class="lesson-list">${scored.slice(0, searchShown).map(([, it]) => resultCard(it, words)).join('') ||
+          '<p class="fineprint">Nothing found. Try fewer words, or a different spelling.</p>'}</div>
+        ${scored.length > searchShown ? '<p class="center"><button class="btn" id="more">Show more</button></p>' : ''}`;
+    }
+    const more = document.getElementById('more');
+    if (more) more.onclick = () => { searchShown += 30; showResults(q); };
+  }
+
   function markTab(h) {
-    const tab = h === 'about' ? '' : (h === 'doctrines' || h.startsWith('doctrine-')) ? 'doctrines'
+    const tab = h === 'about' || h === 'heaven' || h.startsWith('search') ? '' : (h === 'doctrines' || h.startsWith('doctrine-')) ? 'doctrines'
       : (h === 'lessons' || h === 'pictures' || h.startsWith('lesson-')) ? 'lessons' : 'books';
     document.getElementById('about-btn').classList.toggle('on', h === 'about');
+    document.getElementById('search-btn').classList.toggle('on', h.startsWith('search'));
     document.querySelectorAll('#tabbar .tab[data-tab]').forEach(a => {
       a.classList.toggle('on', a.dataset.tab === tab);
       if (a.dataset.tab === tab) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
@@ -1069,6 +1214,8 @@
       viewer.hidden = true;
       fab.hidden = true;
       if (h === 'about') { await aboutView(); window.scrollTo(0, 0); return; }
+      if (h === 'heaven') { await heavenView(); window.scrollTo(0, 0); return; }
+      if (h === 'search' || h.startsWith('search=')) { await searchView(h.slice(7)); return; }
       if (h === 'doctrines') { await doctrinesView(); window.scrollTo(0, 0); return; }
       if (h === 'lessons') { await lessonsView(); window.scrollTo(0, 0); return; }
       if (h === 'pictures') { await picturesView(); window.scrollTo(0, 0); return; }
