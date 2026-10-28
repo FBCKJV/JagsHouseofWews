@@ -21,7 +21,7 @@ Regenerated on every run; edit `review/worldly.json` to change what is on it.
 ## Leviticus
 
 - `11160` · Leviticus 10 · 2023-07-18 · [post](https://t.me/HouseOfWews2/11160) · mocks critics of sola scriptura · undecided
-  > This is the reason why Biblical fundamentalism is the only way. What is derisively called "sola scripta" by those seeking to mock the word of God, is 
+  > This is the reason why Biblical fundamentalism is the only way. What is derisively called "sola scriptura" by those seeking to mock the word of God, i
 - `11274` · Leviticus 15 · 2023-07-26 · [post](https://t.me/HouseOfWews2/11274) · rant against a rival group as a cult · undecided
   > It's the sign of a cult when the people in charge answer every challenge to any of their personal opinions with ad hominem, railing accusations and wr
 - `11276` · Leviticus 15 · 2023-07-26 · [post](https://t.me/HouseOfWews2/11276) · sarcasm aimed at critics · undecided
@@ -129,7 +129,7 @@ Regenerated on every run; edit `review/worldly.json` to change what is on it.
 ## Mark
 
 - `6234` · Mark 9 · 2022-11-03 · [post](https://t.me/HouseOfWews2/6234) · harsh language: says abusers should kill themselves; 'sperg' jab · undecided
-  > We come to Jesus's teaching in Capernaum to the Apostles. He asked them what they had been swabbling about between themselves and they reply embarrass
+  > We come to Jesus' teaching in Capernaum to the Apostles. He asked them what they had been squabbling about between themselves and they reply embarrass
 - `6265` · Mark 10 · 2022-11-05 · [post](https://t.me/HouseOfWews2/6265) · racial slur · undecided
   > One more thing regarding Mark 10; There is a false doctrine claimed by works-n1gg3rs, taken from the story of the rich young man. They will say someth
 - `6338` · Mark 12 · 2022-11-09 · [post](https://t.me/HouseOfWews2/6338) · election politics, Republicans · undecided
@@ -187,7 +187,7 @@ Regenerated on every run; edit `review/worldly.json` to change what is on it.
 - `4164` · 2 Corinthians 6 · 2022-08-03 · [post](https://t.me/HouseOfWews2/4164) · scolds political online audience · undecided
   > Honestly, if you all dropped the stupid pose for like 5 seconds, we could accomplish so much legitimately, and in faith. But you're also worked up abo
 - `4169` · 2 Corinthians 6 · 2022-08-03 · [post](https://t.me/HouseOfWews2/4169) · politics, capital punishment, ZiOps · undecided
-  > Openly support capital punishment for sodomy, beastiality, sorcery, witchcraft, adultery, and rape. All of it. Make them say that Christians deserve p
+  > Openly support capital punishment for sodomy, bestiality, sorcery, witchcraft, adultery, and rape. All of it. Make them say that Christians deserve pu
 - `4191` · 2 Corinthians 7 · 2022-08-04 · [post](https://t.me/HouseOfWews2/4191) · mocks Calvinists via The Message · undecided
   > John 6:35-40 - The Message (MSG) <35-38> Jesus said, "I am the Bread of Life. The person who aligns with me hungers no more and thirsts no more, ever.
 - `4207` · 2 Corinthians 8 · 2022-08-05 · [post](https://t.me/HouseOfWews2/4207) · politics, libertarianism, attacks Boomers · undecided

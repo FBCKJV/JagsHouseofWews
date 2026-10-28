@@ -419,6 +419,8 @@ def apply_refile(src):
             continue
         study = {'date': first['date'][:10], 'series': False, 'link': f"https://t.me/HouseOfWews2/{first['id']}",
                  'study_chars': 0, 'primary': False,
+                 # "label": teaching gathered from other studies; shown as a tab, never as the chapter's study
+                 **({'label': job['label'], 'gathered': True} if job.get('label') else {}),
                  'posts': [{'id': x['id'], 'date': x['date'], 'kind': 'study', 'text': x['text'], 'added': True}
                            for x in job['posts']]}
         recount(study)
@@ -502,8 +504,10 @@ def main():
             chars = sum(own_words(p['text']) for p in posts if p['kind'] == 'study')
             res = {'date': study['date'], 'series': study['series'], 'link': study['link'], 'chars': chars, 'posts': posts}
             r = verse_range(study)
-            if r:
+            if r and not study.get('gathered'):
                 res['range'] = r
+            if study.get('label'):
+                res['label'] = study['label']
             return res
 
         for ch_s in sorted(chapters, key=int):
@@ -526,7 +530,7 @@ def main():
             elif primary and primary.get('commentary_with'):
                 main_pass, status = primary, 'with'
             else:
-                earlier = [s for s in passes if s is not primary and not s['series'] and shown(s)]
+                earlier = [s for s in passes if s is not primary and not s['series'] and not s.get('gathered') and shown(s)]
                 if earlier:
                     main_pass, status = max(earlier, key=lambda s: s['date']), 'earlier'
             others_src = sorted((s for s in passes if s is not main_pass and shown(s)),

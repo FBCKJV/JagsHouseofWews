@@ -43,10 +43,10 @@ Posts trimmed from a teaching (the rest of the teaching stays):
 
 - Slurs or crude language: Nephilim and serpent seed are not biblical; Pride goes before destruction; Making an Idol of the Translation, a Man or an Opinion; Turning to God is what saves a nation; God repented; Romans 13: Paul obeyed authority in faith; Romans 5
 - Politics or news: You can know you have eternal life (Trump); The rosary and Mary worship (a shooting); Revelation 5 (modern Israel)
-- Remarks about Jews as a people or conspiracy: Christmas decorations, Jeremiah 10 and Romans 14; The day of the Lord is darkness to the damned; Revelation was written after 70 AD; Matthew 24:22 and the pre-trib rapture; 2 Peter 2; Hebrews 11; James 2; Psalms 22; Romans 8; Zechariah 4; The Scarlet Thread (closing paragraph)
+- Remarks about Jews as a people or conspiracy: The day of the Lord is darkness to the damned; Revelation was written after 70 AD; Matthew 24:22 and the pre-trib rapture; 2 Peter 2; Hebrews 11; James 2; Psalms 22; Romans 8; Zechariah 4; The Scarlet Thread (closing paragraph)
 - Insults and chat drama: Be in a local church
 
-One to check: the cut Christmas post (Jeremiah 10) also quoted the Jeremiah 10 passage. Say if it should go back.
+The Christmas post (Jeremiah 10) was put back at the author's word: it is an annual favorite.
 
 ## Put back by the author
 
