@@ -81,7 +81,7 @@ def main():
                 if not text.strip():
                     continue
                 href = f"#{b['slug']}-{ch}" + ('' if k == home else f'.{k + 1}')
-                label = 'Gathered' if s.get('label') else ('Series study' if s['series'] else 'Earlier study')
+                label = 'Gathered' if s.get('label') else ('Study' if s.get('title') else ('Series study' if s['series'] else 'Earlier study'))
                 add('s', href, f"{b['book']} {ch}", s['date'][:10], text)
                 items[-1].append(label)
 
