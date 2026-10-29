@@ -17,25 +17,14 @@ Week 7 and Week 8 infographics and the Week 4 pronouns chart become slides insid
 ### 3. Genesis 1 to 5
 Genesis 2 has two different lessons that overlap on the design of marriage: `marriage` (Genesis 2 and God's design) and `marriage-and-divorce` (young adult Sunday school, adds divorce). Per the user, they stay separate decks, like the two Genesis 6 lessons.
 
-- [ ] **Genesis 1: Creation** (`genesis-1-creation`): Slides `genesis/genesis-1-creation.html`
-- [ ] **Genesis 2: Marriage** (`genesis-2-marriage`): Slides `genesis/genesis-2-marriage.html`
-- [ ] **Genesis 2: Marriage and Divorce** (`genesis-2-marriage-and-divorce`): Slides `genesis/genesis-2-marriage-and-divorce.html`
-- [ ] **Genesis 3: The Fall** (`genesis-3-the-fall`): Slides `genesis/genesis-3-the-fall.html`
-- [ ] **Genesis 4: Cain and Abel** (`genesis-4-cain-and-abel`): Slides `genesis/genesis-4-cain-and-abel.html`
-- [ ] **Genesis 5: The Generations of Adam** (`genesis-5-generations-of-adam`): Slides `genesis/genesis-5-generations-of-adam.html`
 
 ### 4. Heresies and charts
 The election chart becomes a table slide.
 
-- [ ] **That Rock Was Christ, Not Peter** (`heresies-that-rock-was-christ`): Slides `heresies/heresies-that-rock-was-christ.html`
-- [ ] **Election in the Bible** (`election-in-the-bible`): Chart `heresies/election-in-the-bible.html`
 
 ### 5. Baptist history
 `baptist-groups-compared` has an SVG chart; rebuild as comparison slides.
 
-- [ ] **Baptist Voices** (`baptist-voices`): Slides `history/baptist-voices.html`
-- [ ] **Baptist Names in History** (`baptist-names-in-history`): Slides `history/baptist-names-in-history.html`
-- [ ] **Baptist Groups Compared** (`baptist-groups-compared`): Slides `history/baptist-groups-compared.html`
 
 ### 6. Romans class (17 lessons, about 50 pages)
 Each chapter has a main page plus several side pages, recaps, charts and worksheets. Following the Week 5 model, fold each chapter into ONE deck and retire the side pages. This is the biggest piece, so it goes last and chapter by chapter.
@@ -60,6 +49,17 @@ Each chapter has a main page plus several side pages, recaps, charts and workshe
 
 ## Done
 
+- [x] **Genesis 1: Creation** (`genesis-1-creation`)
+- [x] **Genesis 2: Marriage** (`genesis-2-marriage`)
+- [x] **Genesis 2: Marriage and Divorce** (`genesis-2-marriage-and-divorce`)
+- [x] **Genesis 3: The Fall** (`genesis-3-the-fall`)
+- [x] **Genesis 4: Cain and Abel** (`genesis-4-cain-and-abel`)
+- [x] **Genesis 5: The Generations of Adam** (`genesis-5-generations-of-adam`)
+- [x] **That Rock Was Christ, Not Peter** (`heresies-that-rock-was-christ`)
+- [x] **Election in the Bible** (`election-in-the-bible`)
+- [x] **Baptist Voices** (`baptist-voices`)
+- [x] **Baptist Names in History** (`baptist-names-in-history`)
+- [x] **Baptist Groups Compared** (`baptist-groups-compared`)
 - [x] **Week 1: The Importance of Doctrine** (`doctrine-week-1-importance-of-doctrine`)
 - [x] **Week 2: How God Reveals Himself to Man** (`doctrine-week-2-how-god-reveals-himself`)
 - [x] **Week 3: The Doctrine of Scripture** (`doctrine-week-3-doctrine-of-scripture`)
