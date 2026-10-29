@@ -1,691 +1,738 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>The Bread of Life: John 6</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="A plain reading of John 6:26-71, showing that Jesus explains His own figure of bread, eating and drinking: to come and believe on Him.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#e9dcc0; --page:#f6edd9; --ink:#2a1f14; --muted:#6b5a43;
-  --gold:#7d5a10; --rule:#c4a660; --crimson:#8f1f22; --rubric:#8f1f22;
-  --gilt:#ecc969; --mark:rgba(184,137,42,.28);
-  --serif:"Cormorant Garamond", "Garamond", "Georgia", serif;
-  --caps:"Cinzel", "Trajan Pro", "Times New Roman", serif;
-  color-scheme:light;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
 }
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#0c0a07; --page:#17120d; --ink:#eadfc4; --muted:#a6957a;
-    --gold:#d4ae55; --rule:#6e5a2e; --crimson:#8a2426; --rubric:#d65c5e;
-    --gilt:#e6c36b; --mark:rgba(212,174,85,.24);
-    color-scheme:dark;
-  }
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
 }
-:root[data-theme="dark"]{
-  --bg:#0c0a07; --page:#17120d; --ink:#eadfc4; --muted:#a6957a;
-  --gold:#d4ae55; --rule:#6e5a2e; --crimson:#8a2426; --rubric:#d65c5e;
-  --gilt:#e6c36b; --mark:rgba(212,174,85,.24);
-  color-scheme:dark;
-}
-*,*::before,*::after{box-sizing:inherit}
-html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
-body{height:100%;margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-weight:500;font-size:20px;line-height:1.55;-webkit-text-size-adjust:100%}
 button{font:inherit;color:inherit}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
 
-.app{height:100%;display:flex;flex-direction:column}
-.stage{position:relative;flex:1;min-height:0;margin:10px 10px 0;border:3px double var(--rule);background:var(--page)}
-.corner{position:absolute;width:9px;height:9px;background:var(--gold);transform:rotate(45deg);z-index:3}
-.c1{top:-7px;left:-7px}.c2{top:-7px;right:-7px}.c3{bottom:-7px;left:-7px}.c4{bottom:-7px;right:-7px}
-.progress{position:absolute;top:0;left:0;height:2px;background:var(--gold);z-index:3;transition:width .3s}
-.theme{position:absolute;top:8px;right:8px;z-index:4;width:40px;height:40px;border:1px solid var(--rule);background:var(--page);color:var(--gold);border-radius:50%;cursor:pointer;font-size:18px;line-height:1}
-
-.slide{position:absolute;inset:0;overflow-y:auto;-webkit-overflow-scrolling:touch;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s}
-.slide.active{opacity:1;visibility:visible}
-.slide:focus{outline:none}
-.page{max-width:720px;margin:0 auto;padding:52px 22px 44px}
-
-h1,h2{font-family:var(--caps);font-weight:600;letter-spacing:.02em;line-height:1.15;margin:0}
-h1{font-size:clamp(2rem,8vw,3.2rem)}
-h2{font-size:clamp(1.35rem,4.6vw,1.9rem)}
-p{margin:0 0 16px}
-
-.sec{display:flex;align-items:center;gap:16px;margin-bottom:22px}
-.init{flex:none;min-width:60px;height:60px;padding:0 10px;display:grid;place-items:center;background:var(--crimson);color:var(--gilt);font-family:var(--caps);font-weight:700;font-size:1.55rem;border:2px solid var(--gilt);outline:1px solid var(--gold);outline-offset:3px}
-.sec .range{display:block;margin-top:4px;font-size:1rem}
-.run{font-family:var(--caps);font-size:.9rem;color:var(--muted);margin-bottom:8px}
-.run b{color:var(--rubric);margin-right:10px;font-weight:700}
-.run + h2{margin-bottom:20px}
-
-.lede::first-letter{float:left;font-family:var(--caps);font-weight:700;font-size:3.3em;line-height:.82;color:var(--rubric);padding:6px 10px 0 0}
-
-.ref{background:none;border:0;padding:0;margin:0;color:var(--gold);font-weight:600;cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-decoration-thickness:1px;text-underline-offset:3px;white-space:nowrap}
-.ref:hover{text-decoration-style:solid}
-
-blockquote.v{margin:22px 0;padding:0}
-blockquote.v p{font-size:1.38rem;line-height:1.5;font-style:italic;margin:0 0 6px}
-blockquote.v.big p{font-size:1.6rem}
-blockquote.v footer{font-family:var(--caps);font-size:.95rem}
-.pil{font-style:normal;color:var(--rubric);font-weight:600;margin-right:6px}
-.vn{font-family:var(--caps);font-style:normal;font-size:.62em;color:var(--rubric);vertical-align:super;margin:0 3px 0 4px}
-.bl{background:linear-gradient(transparent 60%,var(--mark) 60%)}
-
-.take{margin-top:28px;padding-top:14px;border-top:3px double var(--rule);font-style:italic;font-size:1.32rem;line-height:1.45}
-
-.xr{list-style:none;margin:18px 0 0;padding:0}
-.xr li{padding:12px 0;border-top:1px solid var(--rule)}
-.xr li:last-child{border-bottom:1px solid var(--rule)}
-.xr .ref{font-family:var(--caps);font-size:1rem;display:inline-block;margin-bottom:2px}
-.xr span{display:block}
-
-.gloss{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;margin:4px 0 8px;padding:14px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.gloss dt{font-family:var(--caps);color:var(--rubric);font-weight:600;font-size:1rem;padding-top:2px}
-.gloss dd{margin:0}
-
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 18px}
-.chips .ref{font-family:var(--caps);font-size:1rem;text-decoration:none;border:1px solid var(--rule);padding:8px 14px;border-radius:2px}
-
-.par{display:grid;grid-template-columns:1fr 1fr;margin:18px 0 0;border-top:3px double var(--rule)}
-.par > div{padding:12px 10px;border-bottom:1px solid var(--rule);font-size:1.12rem;line-height:1.4}
-.par > div:nth-child(even){border-left:1px solid var(--rule)}
-.par .h{font-family:var(--caps);font-size:.95rem}
-.par .h small{display:block;color:var(--muted);font-size:.8rem}
-.par .same{font-style:italic;color:var(--rubric)}
-
-.echo{margin:22px 0;padding-left:16px;border-left:3px double var(--gold)}
-.echo p{margin:0 0 14px;font-style:italic;font-size:1.3rem}
-.echo b{display:block;font-style:normal;font-family:var(--caps);font-weight:600;font-size:.9rem;color:var(--muted)}
-
-.steps{list-style:none;counter-reset:s;margin:18px 0;padding:0}
-.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:4px;padding:12px 0;border-top:1px solid var(--rule)}
-.steps li:last-child{border-bottom:1px solid var(--rule)}
-.steps li::before{content:counter(s,upper-roman);font-family:var(--caps);font-weight:700;color:var(--rubric)}
-.steps b{font-family:var(--caps);font-weight:600;font-size:1rem;display:block}
-
-.tl{position:relative;height:130px;margin:26px 24px 10px}
-.tl::before{content:"";position:absolute;left:0;right:0;top:50%;border-top:3px double var(--rule)}
-.mk{position:absolute;top:50%;width:34px;height:34px;transform:translate(-50%,-50%);background:none;border:0;padding:0;cursor:pointer}
-.mk::before{content:"";position:absolute;left:50%;top:50%;width:14px;height:14px;transform:translate(-50%,-50%) rotate(45deg);background:var(--gold);box-shadow:0 0 0 3px var(--page)}
-.mk span{position:absolute;left:50%;transform:translateX(-50%);font-family:var(--caps);font-size:.82rem;font-weight:600;color:var(--ink);white-space:nowrap}
-.mk.up span{bottom:34px}
-.mk.dn span{top:34px}
-.tlcap{font-size:1rem;color:var(--muted);text-align:center;margin-bottom:8px}
-
-.rub{list-style:none;margin:18px 0;padding:0}
-.rub li{padding:6px 0 6px 26px;position:relative}
-.rub li::before{content:"¶";position:absolute;left:0;color:var(--rubric);font-weight:600}
-
-.cover .page{min-height:100%;display:flex;flex-direction:column;justify-content:center}
-.cover h1{display:flex;align-items:flex-end;gap:6px;flex-wrap:wrap}
-.cover .init{min-width:84px;height:84px;font-size:2.6rem}
-.cover .sub{font-size:1.25rem;color:var(--muted);margin:16px 0 0}
-.hint{font-size:1rem;color:var(--muted);margin-top:26px}
-
-.nav{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:8px 10px 10px}
-.navbtn{min-width:44px;height:44px;border:1px solid var(--rule);background:var(--page);color:var(--gold);font-family:var(--caps);font-size:1.3rem;cursor:pointer;border-radius:2px}
-.navbtn:disabled{opacity:.35;cursor:default}
-.secs{display:flex;gap:2px;flex-wrap:nowrap}
-.sn{min-width:30px;height:40px;border:0;background:none;font-family:var(--caps);font-weight:600;font-size:.85rem;color:var(--muted);cursor:pointer;padding:0 4px;border-bottom:2px solid transparent}
-.sn[aria-current="true"]{color:var(--rubric);border-bottom-color:var(--gold)}
-
-dialog{border:3px double var(--gold);background:var(--page);color:var(--ink);padding:22px 22px 18px;width:min(560px,calc(100% - 28px));max-height:min(80vh,640px);overflow:auto;border-radius:2px}
-dialog::backdrop{background:rgba(10,8,5,.68)}
-dialog h3{font-family:var(--caps);font-weight:600;color:var(--gold);font-size:1.1rem;margin:0 0 12px}
-#vtext p{font-size:1.3rem;line-height:1.55;margin:0 0 10px}
-.close{margin-top:10px;font-family:var(--caps);font-size:.95rem;border:1px solid var(--rule);background:none;color:var(--gold);padding:8px 18px;min-height:44px;cursor:pointer}
-
-@media (min-width:760px){
-  body{font-size:21px}
-  .page{padding:64px 40px 56px}
-  .stage{margin:16px 16px 0}
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
 }
-@media (prefers-reduced-motion:reduce){
-  .slide,.progress{transition:none}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
 }
 </style>
-<script src="../deck-extras.js"></script>
 </head>
 <body>
-<div class="app">
-  <main class="stage" id="stage">
-    <div class="progress" id="progress"></div>
-    <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
-    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"></button>
 
-    <!-- Cover -->
-    <section class="slide cover" data-sec="0" tabindex="-1" aria-label="Cover">
-      <div class="page">
-        <h1 aria-label="The Bread of Life"><span class="init" aria-hidden="true">T</span><span aria-hidden="true">he Bread of Life</span></h1>
-        <p class="sub">A plain reading of <x-r>John 6:26–71</x-r>, as Christ Himself explains it</p>
-        <blockquote class="v" data-v="6:35"></blockquote>
-        <p class="hint">Swipe or use the arrows to move through the lesson. Tap any gold reference to read the verse.</p>
-      </div>
-    </section>
+<main class="deck" id="deck">
 
-    <!-- Thread -->
-    <section class="slide" data-sec="0" tabindex="-1" aria-label="One figure, explained twice">
-      <div class="page">
-        <h2 style="margin-bottom:20px">One figure, explained twice</h2>
-        <p class="lede">From the rebuke in verse 26 to Peter’s confession in verse 69, Jesus speaks in a single figure: bread, eating and drinking. He does not leave it unexplained. He interprets it Himself near the start and again near the end.</p>
-        <ol class="steps">
-          <li><div><b>The figure</b>Bread from heaven, eaten and drunk (<x-r>6:27–58</x-r>)</div></li>
-          <li><div><b>The first key</b>“he that cometh to me… he that believeth on me” (<x-r>6:35</x-r>)</div></li>
-          <li><div><b>The last key</b>“the words that I speak unto you, they are spirit, and they are life” (<x-r>6:63</x-r>)</div></li>
-        </ol>
-        <p>Peter’s answer in <x-r>6:68</x-r> shows that the disciples who stayed understood Him.</p>
-      </div>
-    </section>
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="The Bread of Life">
+  <div class="page title-page">
+    <div class="overline">John 6</div>
+    <h1>The Bread of Life</h1>
+    <p class="sub">A plain reading of <button class="ref" data-v="John 6:26-71">John 6:26-71</button>, as Christ Himself explains it</p>
+    <blockquote class="big-verse">And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that <mark class="w">believeth</mark> on me shall never thirst.<cite>John 6:35</cite></blockquote>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Swipe or use the arrows to move through the lesson. Tap any gold reference to read the verse.</p>
+  </div>
+</section>
 
-    <!-- I -->
-    <section class="slide opener" data-sec="1" tabindex="-1" aria-label="I. The Reproach">
-      <div class="page">
-        <div class="sec"><span class="init" aria-hidden="true">I</span><div><h2>The Reproach</h2><span class="range"><x-r>John 6:26–29</x-r></span></div></div>
-        <p class="lede">The discourse begins with a rebuke. The crowd had crossed the sea after another meal, not after the One who gave it.</p>
-        <blockquote class="v" data-v="6:26"></blockquote>
-        <p>Christ takes the bread they wanted and turns it into a figure: meat that perisheth set against meat that endureth unto everlasting life (<x-r>6:27</x-r>). When they ask what work God requires (<x-r>6:28</x-r>), He answers in plain words before the figure is developed at all:</p>
-        <blockquote class="v big" data-v="6:29"></blockquote>
-        <p class="take">Everything after verse 29 is commentary on believing.</p>
-      </div>
-    </section>
+<!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="One figure, explained twice">
+  <div class="page">
+    <h2>One figure, explained twice</h2>
+    <p class="lead">From the rebuke in verse 26 to Peter’s confession in verse 69, Jesus speaks in a single figure: bread, eating and drinking. He does not leave it unexplained. He interprets it Himself near the start and again near the end.</p>
+    <div class="steps"><div class="st"><span class="when">The figure</span><div>Bread from heaven, eaten and drunk (<button class="ref" data-v="John 6:27-58">John 6:27-58</button>)</div></div><div class="st"><span class="when">The first key</span><div>“he that cometh to me… he that believeth on me” (<button class="ref" data-v="John 6:35">John 6:35</button>)</div></div><div class="st"><span class="when">The last key</span><div>“the words that I speak unto you, they are spirit, and they are life” (<button class="ref" data-v="John 6:63">John 6:63</button>)</div></div></div>
+    <p>Peter’s answer in <button class="ref" data-v="John 6:68">John 6:68</button> shows that the disciples who stayed understood Him.</p>
+  </div>
+</section>
 
-    <!-- II a -->
-    <section class="slide opener" data-sec="2" tabindex="-1" aria-label="II. The True Bread">
-      <div class="page">
-        <div class="sec"><span class="init" aria-hidden="true">II</span><div><h2>The True Bread</h2><span class="range"><x-r>John 6:30–36</x-r></span></div></div>
-        <p class="lede">The crowd asks for a sign and points to the manna (<x-r>6:30–31</x-r>). Jesus answers that Moses never gave the true bread (<x-r>6:32</x-r>). The Father gives it, and the bread is a Person:</p>
-        <blockquote class="v" data-v="6:33"></blockquote>
-        <p>They still hear loaves: “Lord, evermore give us this bread” (<x-r>6:34</x-r>), just as the woman at the well asked for water so she would not have to draw again (<x-r>John 4:15</x-r>). So Jesus defines the figure in the same breath He uses it:</p>
-        <blockquote class="v big" data-v="6:35"></blockquote>
-        <dl class="gloss">
-          <dt>To eat</dt><dd>is to come to Him</dd>
-          <dt>To drink</dt><dd>is to believe on Him</dd>
-        </dl>
-        <p class="take">Verse 36 names what the crowd lacked: “ye also have seen me, and believe not” (<x-r>6:36</x-r>).</p>
-      </div>
-    </section>
+<!-- 3 -->
+<section class="slide" data-section="I. The Reproach" data-title="The Reproach">
+  <div class="page">
+    <div class="kicker">I · <button class="ref" data-v="John 6:26-29">John 6:26-29</button></div>
+    <h2>The Reproach</h2>
+    <p class="lead">The discourse begins with a rebuke. The crowd had crossed the sea after another meal, not after the One who gave it.</p>
+    <blockquote class="scripture" style="font-style:italic">Jesus answered them and said, Verily, verily, I say unto you, Ye seek me, not because ye saw the miracles, but because ye did eat of the loaves, and were filled.<cite>John 6:26</cite></blockquote>
+    <p>Christ takes the bread they wanted and turns it into a figure: meat that perisheth set against meat that endureth unto everlasting life (<button class="ref" data-v="John 6:27">John 6:27</button>). When they ask what work God requires (<button class="ref" data-v="John 6:28">John 6:28</button>), He answers in plain words before the figure is developed at all:</p>
+    <blockquote class="big-verse">Jesus answered and said unto them, This is the work of God, that ye <mark class="w">believe</mark> on him whom he hath sent.<cite>John 6:29</cite></blockquote>
+    <p class="take">Everything after verse 29 is commentary on believing.</p>
+  </div>
+</section>
 
-    <!-- II b -->
-    <section class="slide" data-sec="2" tabindex="-1" aria-label="Never hunger, never thirst">
-      <div class="page">
-        <div class="run"><b>II</b>The True Bread</div>
-        <h2>Never hunger, never thirst</h2>
-        <p class="lede">A meal that must be repeated to keep you alive is the opposite of what Christ promises in <x-r>6:35</x-r>. Whoever comes and believes is satisfied once, and for ever.</p>
-        <p>John uses the same figure with water, and he explains it for us.</p>
-        <ul class="xr">
-          <li><x-r>John 4:13–14</x-r><span>Well water leaves you thirsty again. The water Christ gives becomes a well within, springing up into everlasting life.</span></li>
-          <li><x-r>John 7:37–39</x-r><span>“Come unto me, and drink.” John adds that He spoke of the Spirit, received by those who believe on Him.</span></li>
-        </ul>
-        <p class="take">The water is received by believing. The bread is received the same way.</p>
-      </div>
-    </section>
+<!-- 4 -->
+<section class="slide" data-section="II. The True Bread" data-title="The True Bread">
+  <div class="page">
+    <div class="kicker">II · <button class="ref" data-v="John 6:30-36">John 6:30-36</button></div>
+    <h2>The True Bread</h2>
+    <p class="lead">The crowd asks for a sign and points to the manna (<button class="ref" data-v="John 6:30-31">John 6:30-31</button>). Jesus answers that Moses never gave the true bread (<button class="ref" data-v="John 6:32">John 6:32</button>). The Father gives it, and the bread is a Person:</p>
+    <blockquote class="scripture" style="font-style:italic">For the bread of God is he which cometh down from heaven, and giveth life unto the world.<cite>John 6:33</cite></blockquote>
+    <p>They still hear loaves: “Lord, evermore give us this bread” (<button class="ref" data-v="John 6:34">John 6:34</button>), just as the woman at the well asked for water so she would not have to draw again (<button class="ref" data-v="John 4:15">John 4:15</button>). So Jesus defines the figure in the same breath He uses it:</p>
+    <blockquote class="big-verse">And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that <mark class="w">believeth</mark> on me shall never thirst.<cite>John 6:35</cite></blockquote>
+    <div class="cols"><div class="panel believers"><h3>To eat</h3><p>is to come to Him</p></div><div class="panel believers"><h3>To drink</h3><p>is to believe on Him</p></div></div>
+    <p class="take">Verse 36 names what the crowd lacked: “ye also have seen me, and believe not” (<button class="ref" data-v="John 6:36">John 6:36</button>).</p>
+  </div>
+</section>
 
-    <!-- III -->
-    <section class="slide opener" data-sec="3" tabindex="-1" aria-label="III. Kept by the Son">
-      <div class="page">
-        <div class="sec"><span class="init" aria-hidden="true">III</span><div><h2>Kept by the Son</h2><span class="range"><x-r>John 6:37–40</x-r></span></div></div>
-        <p class="lede">Those who come are not received on probation. Christ states their security again and again.</p>
-        <blockquote class="v" data-v="6:37"></blockquote>
-        <p>Of all the Father has given Him, He will “lose nothing” (<x-r>6:39</x-r>). Every one that believeth “may have everlasting life” (<x-r>6:40</x-r>). And four times in the chapter He promises, “I will raise him up at the last day”:</p>
-        <div class="chips"><x-r>6:39</x-r><x-r>6:40</x-r><x-r>6:44</x-r><x-r>6:54</x-r></div>
-        <ul class="xr">
-          <li><x-r>John 10:28</x-r><span>They shall never perish, and no man shall pluck them out of His hand.</span></li>
-        </ul>
-        <p class="take">The keeping rests on the Father’s will and the Son’s promise, not on the believer eating again.</p>
-      </div>
-    </section>
+<!-- 5 -->
+<section class="slide" data-section="II. The True Bread" data-title="Never hunger, never thirst">
+  <div class="page">
+    <div class="kicker">II · The True Bread</div>
+    <h2>Never hunger, never thirst</h2>
+    <p class="lead">A meal that must be repeated to keep you alive is the opposite of what Christ promises in <button class="ref" data-v="John 6:35">John 6:35</button>. Whoever comes and believes is satisfied once, and for ever.</p>
+    <p>John uses the same figure with water, and he explains it for us.</p>
+    <ul class="xr"><li><button class="ref" data-v="John 4:13-14">John 4:13-14</button><span>Well water leaves you thirsty again. The water Christ gives becomes a well within, springing up into everlasting life.</span></li><li><button class="ref" data-v="John 7:37-39">John 7:37-39</button><span>“let him come unto me, and drink.” John adds that He spoke of the Spirit, received by those who believe on Him.</span></li></ul>
+    <p class="take">The water is received by believing. The bread is received the same way.</p>
+  </div>
+</section>
 
-    <!-- IV a -->
-    <section class="slide opener" data-sec="4" tabindex="-1" aria-label="IV. Taught of God">
-      <div class="page">
-        <div class="sec"><span class="init" aria-hidden="true">IV</span><div><h2>Taught of God</h2><span class="range"><x-r>John 6:41–47</x-r></span></div></div>
-        <p class="lede">The Jews murmur because a man they know, the son of Joseph, claims to have come down from heaven (<x-r>6:41–42</x-r>). Jesus tells them who comes to Him:</p>
-        <blockquote class="v" data-v="6:44"></blockquote>
-        <p>He immediately explains that drawing by quoting the prophet:</p>
-        <blockquote class="v big" data-v="6:45"></blockquote>
-        <p>The Father draws through His word. Those who had truly heard and learned from the Father in the scriptures recognized His Son and came readily.</p>
-        <ul class="xr">
-          <li><x-r>Isaiah 54:13</x-r><span>The promise Jesus quotes: all thy children shall be taught of the LORD.</span></li>
-          <li><x-r>John 5:46–47</x-r><span>Believing Moses leads to believing Christ. Rejecting Moses’ writings means rejecting His words.</span></li>
-          <li><x-r>John 12:32</x-r><span>Once lifted up on the cross, He draws all men unto Him.</span></li>
-        </ul>
-      </div>
-    </section>
+<!-- 6 -->
+<section class="slide" data-section="III. Kept by the Son" data-title="Kept by the Son">
+  <div class="page">
+    <div class="kicker">III · <button class="ref" data-v="John 6:37-40">John 6:37-40</button></div>
+    <h2>Kept by the Son</h2>
+    <p class="lead">Those who come are not received on probation. Christ states their security again and again.</p>
+    <blockquote class="scripture" style="font-style:italic">All that the Father giveth me shall come to me; and him that cometh to me I will in no wise cast out.<cite>John 6:37</cite></blockquote>
+    <p>Of all the Father has given Him, He will “lose nothing” (<button class="ref" data-v="John 6:39">John 6:39</button>). Every one that believeth “may have everlasting life” (<button class="ref" data-v="John 6:40">John 6:40</button>). And four times in the chapter He promises to raise His own up at the last day:</p>
+    <div class="refs center"><button class="ref" data-v="John 6:39">John 6:39</button><button class="ref" data-v="John 6:40">John 6:40</button><button class="ref" data-v="John 6:44">John 6:44</button><button class="ref" data-v="John 6:54">John 6:54</button></div>
+    <ul class="xr"><li><button class="ref" data-v="John 10:28">John 10:28</button><span>They shall never perish, and no man shall pluck them out of His hand.</span></li></ul>
+    <p class="take">The keeping rests on the Father’s will and the Son’s promise, not on the believer eating again.</p>
+  </div>
+</section>
 
-    <!-- IV b -->
-    <section class="slide" data-sec="4" tabindex="-1" aria-label="Believing is eating">
-      <div class="page">
-        <div class="run"><b>IV</b>Taught of God</div>
-        <h2>Believing is eating</h2>
-        <p class="lede">Before the figure turns to flesh and blood, Jesus sets the plain truth and the figure side by side:</p>
-        <blockquote class="v big" data-v="6:47"></blockquote>
-        <blockquote class="v big" data-v="6:48"></blockquote>
-        <p>One verse says believe and have everlasting life. The next says, I am that bread. They belong together, and the rest of the discourse is read in their light.</p>
-      </div>
-    </section>
+<!-- 7 -->
+<section class="slide" data-section="IV. Taught of God" data-title="Taught of God">
+  <div class="page">
+    <div class="kicker">IV · <button class="ref" data-v="John 6:41-47">John 6:41-47</button></div>
+    <h2>Taught of God</h2>
+    <p class="lead">The Jews murmur because a man they know, the son of Joseph, claims to have come down from heaven (<button class="ref" data-v="John 6:41-42">John 6:41-42</button>). Jesus tells them who comes to Him:</p>
+    <blockquote class="scripture" style="font-style:italic">No man can come to me, except the Father which hath sent me draw him: and I will raise him up at the last day.<cite>John 6:44</cite></blockquote>
+    <p>He immediately explains that drawing by quoting the prophet:</p>
+    <blockquote class="big-verse">It is written in the prophets, And they shall be all taught of God. Every man therefore that hath heard, and hath learned of the Father, cometh unto me.<cite>John 6:45</cite></blockquote>
+    <p>The Father draws through His word. Those who had truly heard and learned from the Father in the scriptures recognized His Son and came readily.</p>
+    <ul class="xr"><li><button class="ref" data-v="Isaiah 54:13">Isaiah 54:13</button><span>The promise Jesus quotes: all thy children shall be taught of the <span class="lord">Lord</span>.</span></li><li><button class="ref" data-v="John 5:46-47">John 5:46-47</button><span>Believing Moses leads to believing Christ. Rejecting Moses’ writings means rejecting His words.</span></li><li><button class="ref" data-v="John 12:32">John 12:32</button><span>Once lifted up on the cross, He draws all men unto Him.</span></li></ul>
+  </div>
+</section>
 
-    <!-- V a -->
-    <section class="slide opener" data-sec="5" tabindex="-1" aria-label="V. Flesh and Blood">
-      <div class="page">
-        <div class="sec"><span class="init" aria-hidden="true">V</span><div><h2>Flesh and Blood</h2><span class="range"><x-r>John 6:48–58</x-r></span></div></div>
-        <p class="lede">The fathers ate manna and died (<x-r>6:49</x-r>). This bread is eaten and the eater lives for ever (<x-r>6:50</x-r>). Then Jesus adds a new element to the same figure:</p>
-        <blockquote class="v big" data-v="6:51"></blockquote>
-        <p>“Will give” is future. His flesh would be given for the life of the world at the cross. Naming flesh and blood apart (<x-r>6:53</x-r>) describes a body given in death.</p>
-        <p class="take">The figure now points to His sacrifice, received by faith.</p>
-      </div>
-    </section>
+<!-- 8 -->
+<section class="slide" data-section="IV. Taught of God" data-title="Believing is eating">
+  <div class="page">
+    <div class="kicker">IV · Taught of God</div>
+    <h2>Believing is eating</h2>
+    <p class="lead">Before the figure turns to flesh and blood, Jesus sets the plain truth and the figure side by side:</p>
+    <blockquote class="big-verse">Verily, verily, I say unto you, He that <mark class="w">believeth</mark> on me hath everlasting life.<cite>John 6:47</cite></blockquote>
+    <blockquote class="big-verse">I am that bread of life.<cite>John 6:48</cite></blockquote>
+    <p>One verse says believe and have everlasting life. The next says, I am that bread. They belong together, and the rest of the discourse is read in their light.</p>
+  </div>
+</section>
 
-    <!-- V b -->
-    <section class="slide" data-sec="5" tabindex="-1" aria-label="The same misunderstanding">
-      <div class="page">
-        <div class="run"><b>V</b>Flesh and Blood</div>
-        <h2>The same misunderstanding</h2>
-        <p class="lede">Throughout John’s gospel, Jesus speaks in a figure and unbelief answers it literally.</p>
-        <ul class="xr">
-          <li><x-r>John 3:4</x-r><span>Nicodemus hears “born again” and asks about entering the womb a second time.</span></li>
-          <li><x-r>John 4:11</x-r><span>The woman hears “living water” and points out how deep the well is.</span></li>
-          <li><x-r>John 6:52</x-r><span>The Jews hear “my flesh” and ask how this man can give it to eat.</span></li>
-        </ul>
-        <p class="take">Each time, the literal reading belongs to the one who has not yet understood.</p>
-      </div>
-    </section>
+<!-- 9 -->
+<section class="slide" data-section="V. Flesh and Blood" data-title="Flesh and Blood">
+  <div class="page">
+    <div class="kicker">V · <button class="ref" data-v="John 6:48-58">John 6:48-58</button></div>
+    <h2>Flesh and Blood</h2>
+    <p class="lead">The fathers ate manna and died (<button class="ref" data-v="John 6:49">John 6:49</button>). This bread is eaten and the eater lives for ever (<button class="ref" data-v="John 6:50">John 6:50</button>). Then Jesus adds a new element to the same figure:</p>
+    <blockquote class="big-verse">I am the living bread which came down from heaven: if any man eat of this bread, he shall live for ever: and the bread that I will give is my flesh, which I will give for the life of the world.<cite>John 6:51</cite></blockquote>
+    <p>“Will give” is future. His flesh would be given for the life of the world at the cross. Naming flesh and blood apart (<button class="ref" data-v="John 6:53">John 6:53</button>) describes a body given in death.</p>
+    <p class="take">The figure now points to His sacrifice, received by faith.</p>
+  </div>
+</section>
 
-    <!-- V b2 -->
-    <section class="slide" data-sec="5" tabindex="-1" aria-label="Born twice">
-      <div class="page">
-        <div class="run"><b>V</b>Flesh and Blood</div>
-        <h2>Born twice</h2>
-        <p class="lede">Jesus teaches Nicodemus the same way. He states the figure (<x-r>John 3:3</x-r>), the hearer takes it literally (<x-r>John 3:4</x-r>), and Jesus says it again two ways, one verse after the other.</p>
-        <div class="par" role="table" aria-label="John 3:5 compared with John 3:6">
-          <div class="h" role="columnheader"><x-r>John 3:5</x-r><small>The figure</small></div>
-          <div class="h" role="columnheader"><x-r>John 3:6</x-r><small>Said again</small></div>
-          <div role="cell">born of water</div>
-          <div role="cell">That which is born of the flesh is flesh</div>
-          <div role="cell">and of the Spirit</div>
-          <div role="cell">that which is born of the Spirit is spirit</div>
-        </div>
-        <p style="margin-top:18px">A man is born once of water, in the flesh. He must be born a second time, of the Spirit (<x-r>John 3:7</x-r>). Jesus then gives a second figure, the wind, and applies it in the same verse (<x-r>John 3:8</x-r>).</p>
-        <p>Before the conversation ends, the brass serpent becomes a call to believe (<x-r>John 3:14–16</x-r>).</p>
-        <p class="take">The figure is followed by its plain sense, and the plain sense is believing.</p>
-      </div>
-    </section>
+<!-- 10 -->
+<section class="slide" data-section="V. Flesh and Blood" data-title="The same misunderstanding">
+  <div class="page">
+    <div class="kicker">V · Flesh and Blood</div>
+    <h2>The same misunderstanding</h2>
+    <p class="lead">Throughout John’s gospel, Jesus speaks in a figure and unbelief answers it literally.</p>
+    <ul class="xr"><li><button class="ref" data-v="John 3:4">John 3:4</button><span>Nicodemus hears “born again” and asks about entering the womb a second time.</span></li><li><button class="ref" data-v="John 4:11">John 4:11</button><span>The woman hears “living water” and points out how deep the well is.</span></li><li><button class="ref" data-v="John 6:52">John 6:52</button><span>The Jews hear “my flesh” and ask how this man can give it to eat.</span></li></ul>
+    <p class="take">Each time, the literal reading belongs to the one who has not yet understood.</p>
+  </div>
+</section>
 
-    <!-- V b3 -->
-    <section class="slide" data-sec="5" tabindex="-1" aria-label="Said, then said plainly">
-      <div class="page">
-        <div class="run"><b>V</b>Flesh and Blood</div>
-        <h2>Said, then said plainly</h2>
-        <p class="lede">John records the pattern throughout his gospel: a figure, a misunderstanding, then the meaning given outright.</p>
-        <ul class="xr">
-          <li><x-r>John 2:19–21</x-r><span>“Destroy this temple.” The Jews think of the building. John explains He spoke of the temple of His body.</span></li>
-          <li><x-r>John 4:32–34</x-r><span>“I have meat to eat that ye know not of.” The disciples wonder who brought Him food. His meat is to do the Father’s will.</span></li>
-          <li><x-r>John 10:6–9</x-r><span>John calls the sheepfold a parable they did not understand, so Jesus speaks again: “I am the door.”</span></li>
-          <li><x-r>John 11:11–14</x-r><span>“Lazarus sleepeth.” The disciples think of rest, so Jesus tells them plainly, Lazarus is dead.</span></li>
-          <li><x-r>John 12:32–33</x-r><span>“Lifted up,” and John adds that it signified what death He should die.</span></li>
-          <li><x-r>John 16:25</x-r> <x-r>John 16:29</x-r><span>Jesus says He has spoken in proverbs. The disciples answer that now He speaks plainly.</span></li>
-        </ul>
-        <p class="take">Jesus Himself called His sayings proverbs. Reading John 6 as a figure follows His own description of how He taught.</p>
-      </div>
-    </section>
+<!-- 11 -->
+<section class="slide" data-section="V. Flesh and Blood" data-title="Born twice">
+  <div class="page">
+    <div class="kicker">V · Flesh and Blood</div>
+    <h2>Born twice</h2>
+    <p class="lead">Jesus teaches Nicodemus the same way. He states the figure (<button class="ref" data-v="John 3:3">John 3:3</button>), the hearer takes it literally (<button class="ref" data-v="John 3:4">John 3:4</button>), and Jesus says it again two ways, one verse after the other.</p>
+    <div class="par"><div class="h"><button class="ref" data-v="John 3:5">John 3:5</button><small>The figure</small></div><div class="h"><button class="ref" data-v="John 3:6">John 3:6</button><small>Said again</small></div><div>born of water</div><div>That which is born of the flesh is flesh</div><div>and of the Spirit</div><div>that which is born of the Spirit is spirit</div></div>
+    <p>A man is born once of water, in the flesh. He must be born a second time, of the Spirit (<button class="ref" data-v="John 3:7">John 3:7</button>). Jesus then gives a second figure, the wind, and applies it in the same verse (<button class="ref" data-v="John 3:8">John 3:8</button>).</p>
+    <p>Before the conversation ends, the brass serpent becomes a call to believe (<button class="ref" data-v="John 3:14-16">John 3:14-16</button>).</p>
+    <p class="take">The figure is followed by its plain sense, and the plain sense is believing.</p>
+  </div>
+</section>
 
-    <!-- V c -->
-    <section class="slide" data-sec="5" tabindex="-1" aria-label="Two ways of saying one thing">
-      <div class="page">
-        <div class="run"><b>V</b>Flesh and Blood</div>
-        <h2>Two ways of saying one thing</h2>
-        <p class="lede">Set verse 40 beside verse 54. The condition is stated two ways, and the result is identical.</p>
-        <div class="par" role="table" aria-label="John 6:40 compared with John 6:54">
-          <div class="h" role="columnheader"><x-r>6:40</x-r><small>Plain words</small></div>
-          <div class="h" role="columnheader"><x-r>6:54</x-r><small>The figure</small></div>
-          <div role="cell">every one which seeth the Son, and <span class="bl">believeth</span> on him</div>
-          <div role="cell">Whoso eateth my flesh, and drinketh my blood</div>
-          <div role="cell">may have everlasting life</div>
-          <div role="cell">hath eternal life</div>
-          <div role="cell" class="same">and I will raise him up at the last day</div>
-          <div role="cell" class="same">and I will raise him up at the last day</div>
-        </div>
-        <p class="take">To eat His flesh and drink His blood is to believe on the Son.</p>
-      </div>
-    </section>
+<!-- 12 -->
+<section class="slide" data-section="V. Flesh and Blood" data-title="Said, then said plainly">
+  <div class="page">
+    <div class="kicker">V · Flesh and Blood</div>
+    <h2>Said, then said plainly</h2>
+    <p class="lead">John records the pattern throughout his gospel: a figure, a misunderstanding, then the meaning given outright.</p>
+    <ul class="xr"><li><button class="ref" data-v="John 2:19-21">John 2:19-21</button><span>“Destroy this temple.” The Jews think of the building. John explains He spoke of the temple of His body.</span></li><li><button class="ref" data-v="John 4:32-34">John 4:32-34</button><span>“I have meat to eat that ye know not of.” The disciples wonder who brought Him food. His meat is to do the Father’s will.</span></li><li><button class="ref" data-v="John 10:6-9">John 10:6-9</button><span>John calls the sheepfold a parable they did not understand, so Jesus speaks again: “I am the door.”</span></li><li><button class="ref" data-v="John 11:11-14">John 11:11-14</button><span>“Lazarus sleepeth.” The disciples think of rest, so Jesus tells them plainly, Lazarus is dead.</span></li><li><button class="ref" data-v="John 12:32-33">John 12:32-33</button><span>“Lifted up,” and John adds that it signified what death He should die.</span></li><li><button class="ref" data-v="John 16:25">John 16:25</button><span>Jesus says He has spoken in proverbs.</span></li><li><button class="ref" data-v="John 16:29">John 16:29</button><span>The disciples answer that now He speaks plainly.</span></li></ul>
+    <p class="take">Jesus Himself called His sayings proverbs. Reading John 6 as a figure follows His own description of how He taught.</p>
+  </div>
+</section>
 
-    <!-- V d -->
-    <section class="slide" data-sec="5" tabindex="-1" aria-label="The text marks the figure">
-      <div class="page">
-        <div class="run"><b>V</b>Flesh and Blood</div>
-        <h2>The text marks the figure</h2>
-        <p class="lede">The discourse itself shows that this language is figurative.</p>
-        <ul class="xr">
-          <li><x-r>John 6:56</x-r><span>“dwelleth in me, and I in him.” A mutual indwelling is spiritual by nature.</span></li>
-          <li><x-r>John 6:57</x-r><span>“he that eateth me.” Eating a whole Person can only be a figure.</span></li>
-          <li><x-r>Leviticus 17:10–11</x-r><span>The Law forbade eating blood, because the life is in the blood given on the altar for atonement. The Lord would not command His hearers to break His own law.</span></li>
-        </ul>
-        <p class="take">Those who took offense heard Him literally and missed what He meant.</p>
-      </div>
-    </section>
+<!-- 13 -->
+<section class="slide" data-section="V. Flesh and Blood" data-title="Two ways of saying one thing">
+  <div class="page">
+    <div class="kicker">V · Flesh and Blood</div>
+    <h2>Two ways of saying one thing</h2>
+    <p class="lead">Set verse 40 beside verse 54. The condition is stated two ways, and the result is identical.</p>
+    <div class="par"><div class="h"><button class="ref" data-v="John 6:40">John 6:40</button><small>Plain words</small></div><div class="h"><button class="ref" data-v="John 6:54">John 6:54</button><small>The figure</small></div><div>every one which seeth the Son, and <mark class="w">believeth</mark> on him</div><div>Whoso eateth my flesh, and drinketh my blood</div><div>may have everlasting life</div><div>hath eternal life</div><div class="same">and I will raise him up at the last day</div><div class="same">and I will raise him up at the last day</div></div>
+    <p class="take">To eat His flesh and drink His blood is to believe on the Son.</p>
+  </div>
+</section>
 
-    <!-- VI -->
-    <section class="slide opener" data-sec="6" tabindex="-1" aria-label="VI. Spirit and Life">
-      <div class="page">
-        <div class="sec"><span class="init" aria-hidden="true">VI</span><div><h2>Spirit and Life</h2><span class="range"><x-r>John 6:59–65</x-r></span></div></div>
-        <p class="lede">In the synagogue at Capernaum, even many disciples object: “This is an hard saying; who can hear it?” (<x-r>6:60</x-r>). Jesus answers in two steps.</p>
-        <p>First, they would see the Son of man ascend up where He was before (<x-r>6:62</x-r>). His flesh was going back to heaven. Second, He gives the interpretation of everything He has said:</p>
-        <blockquote class="v big" data-v="6:63"></blockquote>
-        <p>Then He names the real problem. It was not a hard teaching but unbelief:</p>
-        <blockquote class="v" data-v="6:64"></blockquote>
-        <p>No man comes unless it is given him of the Father (<x-r>6:65</x-r>), and from that time many went back (<x-r>6:66</x-r>).</p>
-        <ul class="xr">
-          <li><x-r>1 John 2:19</x-r><span>They went out from us because they were never of us.</span></li>
-        </ul>
-      </div>
-    </section>
+<!-- 14 -->
+<section class="slide" data-section="V. Flesh and Blood" data-title="The text marks the figure">
+  <div class="page">
+    <div class="kicker">V · Flesh and Blood</div>
+    <h2>The text marks the figure</h2>
+    <p class="lead">The discourse itself shows that this language is figurative.</p>
+    <ul class="xr"><li><button class="ref" data-v="John 6:56">John 6:56</button><span>“dwelleth in me, and I in him.” A mutual indwelling is spiritual by nature.</span></li><li><button class="ref" data-v="John 6:57">John 6:57</button><span>“he that eateth me.” Eating a whole Person can only be a figure.</span></li><li><button class="ref" data-v="Leviticus 17:10-11">Leviticus 17:10-11</button><span>The Law forbade eating blood, because the life is in the blood given on the altar for atonement. The Lord would not command His hearers to break His own law.</span></li></ul>
+    <p class="take">Those who took offense heard Him literally and missed what He meant.</p>
+  </div>
+</section>
 
-    <!-- VII a -->
-    <section class="slide opener" data-sec="7" tabindex="-1" aria-label="VII. The Words of Eternal Life">
-      <div class="page">
-        <div class="sec"><span class="init" aria-hidden="true">VII</span><div><h2>The Words of Eternal Life</h2><span class="range"><x-r>John 6:66–71</x-r></span></div></div>
-        <p class="lede">Jesus turns to the twelve: “Will ye also go away?” (<x-r>6:67</x-r>). Peter answers:</p>
-        <blockquote class="v big" data-v="6:68–69"></blockquote>
-        <div class="echo">
-          <p><b>Jesus, <x-r>6:63</x-r></b>“the words that I speak unto you, they are spirit, and they are life”</p>
-          <p><b>Peter, <x-r>6:68</x-r></b>“thou hast the words of eternal life”</p>
-        </div>
-        <p class="take">Peter speaks of words and belief, not of flesh. He understood the figure.</p>
-      </div>
-    </section>
+<!-- 15 -->
+<section class="slide" data-section="VI. Spirit and Life" data-title="Spirit and Life">
+  <div class="page">
+    <div class="kicker">VI · <button class="ref" data-v="John 6:59-65">John 6:59-65</button></div>
+    <h2>Spirit and Life</h2>
+    <p class="lead">In the synagogue at Capernaum, even many disciples object: “This is an hard saying; who can hear it?” (<button class="ref" data-v="John 6:60">John 6:60</button>). Jesus answers in two steps.</p>
+    <p>First, they would see the Son of man ascend up where He was before (<button class="ref" data-v="John 6:62">John 6:62</button>). His flesh was going back to heaven. Second, He gives the interpretation of everything He has said:</p>
+    <blockquote class="big-verse">It is the spirit that quickeneth; the flesh profiteth nothing: the words that I speak unto you, they are spirit, and they are life.<cite>John 6:63</cite></blockquote>
+    <p>Then He names the real problem. It was not a hard teaching but unbelief:</p>
+    <blockquote class="scripture" style="font-style:italic">But there are some of you that <mark class="w">believe</mark> not. For Jesus knew from the beginning who they were that <mark class="w">believed</mark> not, and who should betray him.<cite>John 6:64</cite></blockquote>
+    <p>No man comes unless it is given him of the Father (<button class="ref" data-v="John 6:65">John 6:65</button>), and from that time many went back (<button class="ref" data-v="John 6:66">John 6:66</button>).</p>
+    <ul class="xr"><li><button class="ref" data-v="1 John 2:19">1 John 2:19</button><span>They went out from us because they were never of us.</span></li></ul>
+  </div>
+</section>
 
-    <!-- VII b -->
-    <section class="slide" data-sec="7" tabindex="-1" aria-label="Near the bread, never fed">
-      <div class="page">
-        <div class="run"><b>VII</b>The Words of Eternal Life</div>
-        <h2>Near the bread, never fed</h2>
-        <p class="lede">Jesus chose twelve, and one of them was a devil (<x-r>6:70</x-r>). John names him: Judas Iscariot, who should betray Him (<x-r>6:71</x-r>).</p>
-        <p>Verse 64 had already said Jesus knew from the beginning “who they were that believed not, and who should betray him.” Judas held the office, heard every word and saw every miracle, yet he never believed.</p>
-        <p class="take">Being near Christ is not the same as having come to Him.</p>
-      </div>
-    </section>
+<!-- 16 -->
+<section class="slide" data-section="VII. The Words of Eternal Life" data-title="The Words of Eternal Life">
+  <div class="page">
+    <div class="kicker">VII · <button class="ref" data-v="John 6:66-71">John 6:66-71</button></div>
+    <h2>The Words of Eternal Life</h2>
+    <p class="lead">Jesus turns to the twelve: “Will ye also go away?” (<button class="ref" data-v="John 6:67">John 6:67</button>). Peter answers:</p>
+    <blockquote class="big-verse">Then Simon Peter answered him, Lord, to whom shall we go? thou hast the words of eternal life. And we <mark class="w">believe</mark> and are sure that thou art that Christ, the Son of the living God.<cite>John 6:68-69</cite></blockquote>
+    <div class="par"><div class="h"><button class="ref" data-v="John 6:63">John 6:63</button><small>Jesus</small></div><div class="h"><button class="ref" data-v="John 6:68">John 6:68</button><small>Peter</small></div><div>the words that I speak unto you, they are spirit, and they are life</div><div>thou hast the words of eternal life</div></div>
+    <p class="take">Peter speaks of words and belief, not of flesh. He understood the figure.</p>
+  </div>
+</section>
 
-    <!-- Believe -->
-    <section class="slide" data-sec="8" tabindex="-1" aria-label="Believe, nine times">
-      <div class="page">
-        <h2 style="margin-bottom:20px">Believe, nine times</h2>
-        <p class="lede">The word runs through the whole discourse, from the opening question to Peter’s confession. Tap a mark to read the verse.</p>
-        <div class="tl" id="tl" aria-label="Where believe appears between verses 26 and 71"></div>
-        <p class="tlcap">The line runs from verse 26 to verse 71.</p>
-        <ul class="xr">
-          <li><x-r>6:29</x-r><span>The work of God is to believe.</span></li>
-          <li><x-r>6:30</x-r><span>The crowd asks for a sign so they may believe.</span></li>
-          <li><x-r>6:35</x-r><span>He that believeth shall never thirst.</span></li>
-          <li><x-r>6:36</x-r><span>Ye have seen me, and believe not.</span></li>
-          <li><x-r>6:40</x-r><span>Every one that believeth may have everlasting life.</span></li>
-          <li><x-r>6:47</x-r><span>He that believeth hath everlasting life.</span></li>
-          <li><x-r>6:64</x-r><span>Some of you believe not, twice over.</span></li>
-          <li><x-r>6:69</x-r><span>We believe and are sure.</span></li>
-        </ul>
-        <p class="take">The discourse opens with believing, turns on believing, explains departure as not believing, and closes with believing. The eating language sits inside that frame.</p>
-      </div>
-    </section>
+<!-- 17 -->
+<section class="slide" data-section="VII. The Words of Eternal Life" data-title="Near the bread, never fed">
+  <div class="page">
+    <div class="kicker">VII · The Words of Eternal Life</div>
+    <h2>Near the bread, never fed</h2>
+    <p class="lead">Jesus chose twelve, and one of them was a devil (<button class="ref" data-v="John 6:70">John 6:70</button>). John names him: Judas Iscariot, who should betray Him (<button class="ref" data-v="John 6:71">John 6:71</button>).</p>
+    <p>Verse 64 had already said Jesus knew from the beginning “who they were that believed not, and who should betray him.” Judas held the office, heard every word and saw every miracle, yet he never believed.</p>
+    <p class="take">Being near Christ is not the same as having come to Him.</p>
+  </div>
+</section>
 
-    <!-- Close -->
-    <section class="slide" data-sec="8" tabindex="-1" aria-label="The plain reading">
-      <div class="page">
-        <h2 style="margin-bottom:20px">The plain reading</h2>
-        <ul class="rub">
-          <li>Christ is the true Bread come down from heaven.</li>
-          <li>To come to Him and believe on Him is to eat and drink, and never hunger or thirst again.</li>
-          <li>Those taught of the Father through His word came to Him, and none who come are cast out or lost.</li>
-          <li>The flesh and blood point to His death for the life of the world, received by faith.</li>
-          <li>His words are spirit and life, and Peter confessed them as the words of eternal life.</li>
-        </ul>
-        <blockquote class="v big" data-v="6:47"></blockquote>
-      </div>
-    </section>
-  </main>
+<!-- 18 -->
+<section class="slide" data-section="Summary" data-title="Believe, nine times">
+  <div class="page">
+    <h2>Believe, nine times</h2>
+    <p class="lead">The word runs through the whole discourse, from the opening question to Peter’s confession. Tap a mark to read the verse. The line runs from verse 26 to verse 71.</p>
+    <div class="steps"><div class="st"><span class="when"><button class="ref" data-v="John 6:29">John 6:29</button></span><div>The work of God is to believe.</div></div><div class="st"><span class="when"><button class="ref" data-v="John 6:30">John 6:30</button></span><div>The crowd asks for a sign so they may believe.</div></div><div class="st"><span class="when"><button class="ref" data-v="John 6:35">John 6:35</button></span><div>He that believeth shall never thirst.</div></div><div class="st"><span class="when"><button class="ref" data-v="John 6:36">John 6:36</button></span><div>Ye have seen me, and believe not.</div></div><div class="st"><span class="when"><button class="ref" data-v="John 6:40">John 6:40</button></span><div>Every one that believeth may have everlasting life.</div></div><div class="st"><span class="when"><button class="ref" data-v="John 6:47">John 6:47</button></span><div>He that believeth hath everlasting life.</div></div><div class="st"><span class="when"><button class="ref" data-v="John 6:64">John 6:64</button></span><div>Some of you believe not, twice over.</div></div><div class="st"><span class="when"><button class="ref" data-v="John 6:69">John 6:69</button></span><div>We believe and are sure.</div></div></div>
+    <p class="take">The discourse opens with believing, turns on believing, explains departure as not believing, and closes with believing. The eating language sits inside that frame.</p>
+  </div>
+</section>
 
-  <nav class="nav" aria-label="Lesson navigation">
-    <button class="navbtn" id="prev" type="button" aria-label="Previous slide">‹</button>
-    <div class="secs" id="secs"></div>
-    <button class="navbtn" id="next" type="button" aria-label="Next slide">›</button>
-  </nav>
-</div>
+<!-- 19 -->
+<section class="slide" data-section="Summary" data-title="The plain reading">
+  <div class="page">
+    <h2>The plain reading</h2>
+    <ul class="marks"><li>Christ is the true Bread come down from heaven.</li><li>To come to Him and believe on Him is to eat and drink, and never hunger or thirst again.</li><li>Those taught of the Father through His word came to Him, and none who come are cast out or lost.</li><li>The flesh and blood point to His death for the life of the world, received by faith.</li><li>His words are spirit and life, and Peter confessed them as the words of eternal life.</li></ul>
+    <blockquote class="big-verse">Verily, verily, I say unto you, He that <mark class="w">believeth</mark> on me hath everlasting life.<cite>John 6:47</cite></blockquote>
+  </div>
+</section>
 
-<dialog id="verse" aria-labelledby="vref">
-  <h3 id="vref"></h3>
-  <div id="vtext"></div>
-  <button class="close" type="button" id="vclose">Close</button>
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
 </dialog>
 
 <script>
-const J6 = {
-26:"Jesus answered them and said, Verily, verily, I say unto you, Ye seek me, not because ye saw the miracles, but because ye did eat of the loaves, and were filled.",
-27:"Labour not for the meat which perisheth, but for that meat which endureth unto everlasting life, which the Son of man shall give unto you: for him hath God the Father sealed.",
-28:"Then said they unto him, What shall we do, that we might work the works of God?",
-29:"Jesus answered and said unto them, This is the work of God, that ye believe on him whom he hath sent.",
-30:"They said therefore unto him, What sign shewest thou then, that we may see, and believe thee? what dost thou work?",
-31:"Our fathers did eat manna in the desert; as it is written, He gave them bread from heaven to eat.",
-32:"Then Jesus said unto them, Verily, verily, I say unto you, Moses gave you not that bread from heaven; but my Father giveth you the true bread from heaven.",
-33:"For the bread of God is he which cometh down from heaven, and giveth life unto the world.",
-34:"Then said they unto him, Lord, evermore give us this bread.",
-35:"And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst.",
-36:"But I said unto you, That ye also have seen me, and believe not.",
-37:"All that the Father giveth me shall come to me; and him that cometh to me I will in no wise cast out.",
-38:"For I came down from heaven, not to do mine own will, but the will of him that sent me.",
-39:"And this is the Father’s will which hath sent me, that of all which he hath given me I should lose nothing, but should raise it up again at the last day.",
-40:"And this is the will of him that sent me, that every one which seeth the Son, and believeth on him, may have everlasting life: and I will raise him up at the last day.",
-41:"The Jews then murmured at him, because he said, I am the bread which came down from heaven.",
-42:"And they said, Is not this Jesus, the son of Joseph, whose father and mother we know? how is it then that he saith, I came down from heaven?",
-43:"Jesus therefore answered and said unto them, Murmur not among yourselves.",
-44:"No man can come to me, except the Father which hath sent me draw him: and I will raise him up at the last day.",
-45:"It is written in the prophets, And they shall be all taught of God. Every man therefore that hath heard, and hath learned of the Father, cometh unto me.",
-46:"Not that any man hath seen the Father, save he which is of God, he hath seen the Father.",
-47:"Verily, verily, I say unto you, He that believeth on me hath everlasting life.",
-48:"I am that bread of life.",
-49:"Your fathers did eat manna in the wilderness, and are dead.",
-50:"This is the bread which cometh down from heaven, that a man may eat thereof, and not die.",
-51:"I am the living bread which came down from heaven: if any man eat of this bread, he shall live for ever: and the bread that I will give is my flesh, which I will give for the life of the world.",
-52:"The Jews therefore strove among themselves, saying, How can this man give us his flesh to eat?",
-53:"Then Jesus said unto them, Verily, verily, I say unto you, Except ye eat the flesh of the Son of man, and drink his blood, ye have no life in you.",
-54:"Whoso eateth my flesh, and drinketh my blood, hath eternal life; and I will raise him up at the last day.",
-55:"For my flesh is meat indeed, and my blood is drink indeed.",
-56:"He that eateth my flesh, and drinketh my blood, dwelleth in me, and I in him.",
-57:"As the living Father hath sent me, and I live by the Father: so he that eateth me, even he shall live by me.",
-58:"This is that bread which came down from heaven: not as your fathers did eat manna, and are dead: he that eateth of this bread shall live for ever.",
-59:"These things said he in the synagogue, as he taught in Capernaum.",
-60:"Many therefore of his disciples, when they had heard this, said, This is an hard saying; who can hear it?",
-61:"When Jesus knew in himself that his disciples murmured at it, he said unto them, Doth this offend you?",
-62:"What and if ye shall see the Son of man ascend up where he was before?",
-63:"It is the spirit that quickeneth; the flesh profiteth nothing: the words that I speak unto you, they are spirit, and they are life.",
-64:"But there are some of you that believe not. For Jesus knew from the beginning who they were that believed not, and who should betray him.",
-65:"And he said, Therefore said I unto you, that no man can come unto me, except it were given unto him of my Father.",
-66:"From that time many of his disciples went back, and walked no more with him.",
-67:"Then said Jesus unto the twelve, Will ye also go away?",
-68:"Then Simon Peter answered him, Lord, to whom shall we go? thou hast the words of eternal life.",
-69:"And we believe and are sure that thou art that Christ, the Son of the living God.",
-70:"Jesus answered them, Have not I chosen you twelve, and one of you is a devil?",
-71:"He spake of Judas Iscariot the son of Simon: for he it was that should betray him, being one of the twelve."
-};
-const OTHER = {
-"John 3:4":"Nicodemus saith unto him, How can a man be born when he is old? can he enter the second time into his mother’s womb, and be born?",
-"John 4:11":"The woman saith unto him, Sir, thou hast nothing to draw with, and the well is deep: from whence then hast thou that living water?",
-"John 4:13":"Jesus answered and said unto her, Whosoever drinketh of this water shall thirst again:",
-"John 4:14":"But whosoever drinketh of the water that I shall give him shall never thirst; but the water that I shall give him shall be in him a well of water springing up into everlasting life.",
-"John 4:15":"The woman saith unto him, Sir, give me this water, that I thirst not, neither come hither to draw.",
-"John 5:46":"For had ye believed Moses, ye would have believed me: for he wrote of me.",
-"John 5:47":"But if ye believe not his writings, how shall ye believe my words?",
-"John 7:37":"In the last day, that great day of the feast, Jesus stood and cried, saying, If any man thirst, let him come unto me, and drink.",
-"John 7:38":"He that believeth on me, as the scripture hath said, out of his belly shall flow rivers of living water.",
-"John 7:39":"(But this spake he of the Spirit, which they that believe on him should receive: for the Holy Ghost was not yet given; because that Jesus was not yet glorified.)",
-"John 10:28":"And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand.",
-"John 12:32":"And I, if I be lifted up from the earth, will draw all men unto me.",
-"Isaiah 54:13":"And all thy children shall be taught of the LORD; and great shall be the peace of thy children.",
-"Leviticus 17:10":"And whatsoever man there be of the house of Israel, or of the strangers that sojourn among you, that eateth any manner of blood; I will even set my face against that soul that eateth blood, and will cut him off from among his people.",
-"Leviticus 17:11":"For the life of the flesh is in the blood: and I have given it to you upon the altar to make an atonement for your souls: for it is the blood that maketh an atonement for the soul.",
-"1 John 2:19":"They went out from us, but they were not of us; for if they had been of us, they would no doubt have continued with us: but they went out, that they might be made manifest that they were not all of us.",
-"John 2:19":"Jesus answered and said unto them, Destroy this temple, and in three days I will raise it up.",
-"John 2:20":"Then said the Jews, Forty and six years was this temple in building, and wilt thou rear it up in three days?",
-"John 2:21":"But he spake of the temple of his body.",
-"John 3:3":"Jesus answered and said unto him, Verily, verily, I say unto thee, Except a man be born again, he cannot see the kingdom of God.",
-"John 3:5":"Jesus answered, Verily, verily, I say unto thee, Except a man be born of water and of the Spirit, he cannot enter into the kingdom of God.",
-"John 3:6":"That which is born of the flesh is flesh; and that which is born of the Spirit is spirit.",
-"John 3:7":"Marvel not that I said unto thee, Ye must be born again.",
-"John 3:8":"The wind bloweth where it listeth, and thou hearest the sound thereof, but canst not tell whence it cometh, and whither it goeth: so is every one that is born of the Spirit.",
-"John 3:14":"And as Moses lifted up the serpent in the wilderness, even so must the Son of man be lifted up:",
-"John 3:15":"That whosoever believeth in him should not perish, but have eternal life.",
-"John 3:16":"For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",
-"John 4:32":"But he said unto them, I have meat to eat that ye know not of.",
-"John 4:33":"Therefore said the disciples one to another, Hath any man brought him ought to eat?",
-"John 4:34":"Jesus saith unto them, My meat is to do the will of him that sent me, and to finish his work.",
-"John 10:6":"This parable spake Jesus unto them: but they understood not what things they were which he spake unto them.",
-"John 10:7":"Then said Jesus unto them again, Verily, verily, I say unto you, I am the door of the sheep.",
-"John 10:8":"All that ever came before me are thieves and robbers: but the sheep did not hear them.",
-"John 10:9":"I am the door: by me if any man enter in, he shall be saved, and shall go in and out, and find pasture.",
-"John 11:11":"These things said he: and after that he saith unto them, Our friend Lazarus sleepeth; but I go, that I may awake him out of sleep.",
-"John 11:12":"Then said his disciples, Lord, if he sleep, he shall do well.",
-"John 11:13":"Howbeit Jesus spake of his death: but they thought that he had spoken of taking of rest in sleep.",
-"John 11:14":"Then said Jesus unto them plainly, Lazarus is dead.",
-"John 12:33":"This he said, signifying what death he should die.",
-"John 16:25":"These things have I spoken unto you in proverbs: but the time cometh, when I shall no more speak unto you in proverbs, but I shall shew you plainly of the Father.",
-"John 16:29":"His disciples said unto him, Lo, now speakest thou plainly, and speakest no proverb."
+const BOOKS = {};
+
+const V = {
+  "1 John 2:19":[[19, "They went out from us, but they were not of us; for if they had been of us, they would no doubt have continued with us: but they went out, that they might be made manifest that they were not all of us."]],
+  "Isaiah 54:13":[[13, "And all thy children shall be taught of the LORD; and great shall be the peace of thy children."]],
+  "John 10:28":[[28, "And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand."]],
+  "John 10:6-9":[[6, "This parable spake Jesus unto them: but they understood not what things they were which he spake unto them."], [7, "Then said Jesus unto them again, Verily, verily, I say unto you, I am the door of the sheep."], [8, "All that ever came before me are thieves and robbers: but the sheep did not hear them."], [9, "I am the door: by me if any man enter in, he shall be saved, and shall go in and out, and find pasture."]],
+  "John 11:11-14":[[11, "These things said he: and after that he saith unto them, Our friend Lazarus sleepeth; but I go, that I may awake him out of sleep."], [12, "Then said his disciples, Lord, if he sleep, he shall do well."], [13, "Howbeit Jesus spake of his death: but they thought that he had spoken of taking of rest in sleep."], [14, "Then said Jesus unto them plainly, Lazarus is dead."]],
+  "John 12:32":[[32, "And I, if I be lifted up from the earth, will draw all men unto me."]],
+  "John 12:32-33":[[32, "And I, if I be lifted up from the earth, will draw all men unto me."], [33, "This he said, signifying what death he should die."]],
+  "John 16:25":[[25, "These things have I spoken unto you in proverbs: but the time cometh, when I shall no more speak unto you in proverbs, but I shall shew you plainly of the Father."]],
+  "John 16:29":[[29, "His disciples said unto him, Lo, now speakest thou plainly, and speakest no proverb."]],
+  "John 2:19-21":[[19, "Jesus answered and said unto them, Destroy this temple, and in three days I will raise it up."], [20, "Then said the Jews, Forty and six years was this temple in building, and wilt thou rear it up in three days?"], [21, "But he spake of the temple of his body."]],
+  "John 3:14-16":[[14, "And as Moses lifted up the serpent in the wilderness, even so must the Son of man be lifted up:"], [15, "That whosoever believeth in him should not perish, but have eternal life."], [16, "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."]],
+  "John 3:3":[[3, "Jesus answered and said unto him, Verily, verily, I say unto thee, Except a man be born again, he cannot see the kingdom of God."]],
+  "John 3:4":[[4, "Nicodemus saith unto him, How can a man be born when he is old? can he enter the second time into his mother’s womb, and be born?"]],
+  "John 3:5":[[5, "Jesus answered, Verily, verily, I say unto thee, Except a man be born of water and of the Spirit, he cannot enter into the kingdom of God."]],
+  "John 3:6":[[6, "That which is born of the flesh is flesh; and that which is born of the Spirit is spirit."]],
+  "John 3:7":[[7, "Marvel not that I said unto thee, Ye must be born again."]],
+  "John 3:8":[[8, "The wind bloweth where it listeth, and thou hearest the sound thereof, but canst not tell whence it cometh, and whither it goeth: so is every one that is born of the Spirit."]],
+  "John 4:11":[[11, "The woman saith unto him, Sir, thou hast nothing to draw with, and the well is deep: from whence then hast thou that living water?"]],
+  "John 4:13-14":[[13, "Jesus answered and said unto her, Whosoever drinketh of this water shall thirst again:"], [14, "But whosoever drinketh of the water that I shall give him shall never thirst; but the water that I shall give him shall be in him a well of water springing up into everlasting life."]],
+  "John 4:15":[[15, "The woman saith unto him, Sir, give me this water, that I thirst not, neither come hither to draw."]],
+  "John 4:32-34":[[32, "But he said unto them, I have meat to eat that ye know not of."], [33, "Therefore said the disciples one to another, Hath any man brought him ought to eat?"], [34, "Jesus saith unto them, My meat is to do the will of him that sent me, and to finish his work."]],
+  "John 5:46-47":[[46, "For had ye believed Moses, ye would have believed me: for he wrote of me."], [47, "But if ye believe not his writings, how shall ye believe my words?"]],
+  "John 6:26-29":[[26, "Jesus answered them and said, Verily, verily, I say unto you, Ye seek me, not because ye saw the miracles, but because ye did eat of the loaves, and were filled."], [27, "Labour not for the meat which perisheth, but for that meat which endureth unto everlasting life, which the Son of man shall give unto you: for him hath God the Father sealed."], [28, "Then said they unto him, What shall we do, that we might work the works of God?"], [29, "Jesus answered and said unto them, This is the work of God, that ye believe on him whom he hath sent."]],
+  "John 6:26-71":[[26, "Jesus answered them and said, Verily, verily, I say unto you, Ye seek me, not because ye saw the miracles, but because ye did eat of the loaves, and were filled."], [27, "Labour not for the meat which perisheth, but for that meat which endureth unto everlasting life, which the Son of man shall give unto you: for him hath God the Father sealed."], [28, "Then said they unto him, What shall we do, that we might work the works of God?"], [29, "Jesus answered and said unto them, This is the work of God, that ye believe on him whom he hath sent."], [30, "They said therefore unto him, What sign shewest thou then, that we may see, and believe thee? what dost thou work?"], [31, "Our fathers did eat manna in the desert; as it is written, He gave them bread from heaven to eat."], [32, "Then Jesus said unto them, Verily, verily, I say unto you, Moses gave you not that bread from heaven; but my Father giveth you the true bread from heaven."], [33, "For the bread of God is he which cometh down from heaven, and giveth life unto the world."], [34, "Then said they unto him, Lord, evermore give us this bread."], [35, "And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst."], [36, "But I said unto you, That ye also have seen me, and believe not."], [37, "All that the Father giveth me shall come to me; and him that cometh to me I will in no wise cast out."], [38, "For I came down from heaven, not to do mine own will, but the will of him that sent me."], [39, "And this is the Father’s will which hath sent me, that of all which he hath given me I should lose nothing, but should raise it up again at the last day."], [40, "And this is the will of him that sent me, that every one which seeth the Son, and believeth on him, may have everlasting life: and I will raise him up at the last day."], [41, "The Jews then murmured at him, because he said, I am the bread which came down from heaven."], [42, "And they said, Is not this Jesus, the son of Joseph, whose father and mother we know? how is it then that he saith, I came down from heaven?"], [43, "Jesus therefore answered and said unto them, Murmur not among yourselves."], [44, "No man can come to me, except the Father which hath sent me draw him: and I will raise him up at the last day."], [45, "It is written in the prophets, And they shall be all taught of God. Every man therefore that hath heard, and hath learned of the Father, cometh unto me."], [46, "Not that any man hath seen the Father, save he which is of God, he hath seen the Father."], [47, "Verily, verily, I say unto you, He that believeth on me hath everlasting life."], [48, "I am that bread of life."], [49, "Your fathers did eat manna in the wilderness, and are dead."], [50, "This is the bread which cometh down from heaven, that a man may eat thereof, and not die."], [51, "I am the living bread which came down from heaven: if any man eat of this bread, he shall live for ever: and the bread that I will give is my flesh, which I will give for the life of the world."], [52, "The Jews therefore strove among themselves, saying, How can this man give us his flesh to eat?"], [53, "Then Jesus said unto them, Verily, verily, I say unto you, Except ye eat the flesh of the Son of man, and drink his blood, ye have no life in you."], [54, "Whoso eateth my flesh, and drinketh my blood, hath eternal life; and I will raise him up at the last day."], [55, "For my flesh is meat indeed, and my blood is drink indeed."], [56, "He that eateth my flesh, and drinketh my blood, dwelleth in me, and I in him."], [57, "As the living Father hath sent me, and I live by the Father: so he that eateth me, even he shall live by me."], [58, "This is that bread which came down from heaven: not as your fathers did eat manna, and are dead: he that eateth of this bread shall live for ever."], [59, "These things said he in the synagogue, as he taught in Capernaum."], [60, "Many therefore of his disciples, when they had heard this, said, This is an hard saying; who can hear it?"], [61, "When Jesus knew in himself that his disciples murmured at it, he said unto them, Doth this offend you?"], [62, "What and if ye shall see the Son of man ascend up where he was before?"], [63, "It is the spirit that quickeneth; the flesh profiteth nothing: the words that I speak unto you, they are spirit, and they are life."], [64, "But there are some of you that believe not. For Jesus knew from the beginning who they were that believed not, and who should betray him."], [65, "And he said, Therefore said I unto you, that no man can come unto me, except it were given unto him of my Father."], [66, "From that time many of his disciples went back, and walked no more with him."], [67, "Then said Jesus unto the twelve, Will ye also go away?"], [68, "Then Simon Peter answered him, Lord, to whom shall we go? thou hast the words of eternal life."], [69, "And we believe and are sure that thou art that Christ, the Son of the living God."], [70, "Jesus answered them, Have not I chosen you twelve, and one of you is a devil?"], [71, "He spake of Judas Iscariot the son of Simon: for he it was that should betray him, being one of the twelve."]],
+  "John 6:27":[[27, "Labour not for the meat which perisheth, but for that meat which endureth unto everlasting life, which the Son of man shall give unto you: for him hath God the Father sealed."]],
+  "John 6:27-58":[[27, "Labour not for the meat which perisheth, but for that meat which endureth unto everlasting life, which the Son of man shall give unto you: for him hath God the Father sealed."], [28, "Then said they unto him, What shall we do, that we might work the works of God?"], [29, "Jesus answered and said unto them, This is the work of God, that ye believe on him whom he hath sent."], [30, "They said therefore unto him, What sign shewest thou then, that we may see, and believe thee? what dost thou work?"], [31, "Our fathers did eat manna in the desert; as it is written, He gave them bread from heaven to eat."], [32, "Then Jesus said unto them, Verily, verily, I say unto you, Moses gave you not that bread from heaven; but my Father giveth you the true bread from heaven."], [33, "For the bread of God is he which cometh down from heaven, and giveth life unto the world."], [34, "Then said they unto him, Lord, evermore give us this bread."], [35, "And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst."], [36, "But I said unto you, That ye also have seen me, and believe not."], [37, "All that the Father giveth me shall come to me; and him that cometh to me I will in no wise cast out."], [38, "For I came down from heaven, not to do mine own will, but the will of him that sent me."], [39, "And this is the Father’s will which hath sent me, that of all which he hath given me I should lose nothing, but should raise it up again at the last day."], [40, "And this is the will of him that sent me, that every one which seeth the Son, and believeth on him, may have everlasting life: and I will raise him up at the last day."], [41, "The Jews then murmured at him, because he said, I am the bread which came down from heaven."], [42, "And they said, Is not this Jesus, the son of Joseph, whose father and mother we know? how is it then that he saith, I came down from heaven?"], [43, "Jesus therefore answered and said unto them, Murmur not among yourselves."], [44, "No man can come to me, except the Father which hath sent me draw him: and I will raise him up at the last day."], [45, "It is written in the prophets, And they shall be all taught of God. Every man therefore that hath heard, and hath learned of the Father, cometh unto me."], [46, "Not that any man hath seen the Father, save he which is of God, he hath seen the Father."], [47, "Verily, verily, I say unto you, He that believeth on me hath everlasting life."], [48, "I am that bread of life."], [49, "Your fathers did eat manna in the wilderness, and are dead."], [50, "This is the bread which cometh down from heaven, that a man may eat thereof, and not die."], [51, "I am the living bread which came down from heaven: if any man eat of this bread, he shall live for ever: and the bread that I will give is my flesh, which I will give for the life of the world."], [52, "The Jews therefore strove among themselves, saying, How can this man give us his flesh to eat?"], [53, "Then Jesus said unto them, Verily, verily, I say unto you, Except ye eat the flesh of the Son of man, and drink his blood, ye have no life in you."], [54, "Whoso eateth my flesh, and drinketh my blood, hath eternal life; and I will raise him up at the last day."], [55, "For my flesh is meat indeed, and my blood is drink indeed."], [56, "He that eateth my flesh, and drinketh my blood, dwelleth in me, and I in him."], [57, "As the living Father hath sent me, and I live by the Father: so he that eateth me, even he shall live by me."], [58, "This is that bread which came down from heaven: not as your fathers did eat manna, and are dead: he that eateth of this bread shall live for ever."]],
+  "John 6:28":[[28, "Then said they unto him, What shall we do, that we might work the works of God?"]],
+  "John 6:29":[[29, "Jesus answered and said unto them, This is the work of God, that ye believe on him whom he hath sent."]],
+  "John 6:30":[[30, "They said therefore unto him, What sign shewest thou then, that we may see, and believe thee? what dost thou work?"]],
+  "John 6:30-31":[[30, "They said therefore unto him, What sign shewest thou then, that we may see, and believe thee? what dost thou work?"], [31, "Our fathers did eat manna in the desert; as it is written, He gave them bread from heaven to eat."]],
+  "John 6:30-36":[[30, "They said therefore unto him, What sign shewest thou then, that we may see, and believe thee? what dost thou work?"], [31, "Our fathers did eat manna in the desert; as it is written, He gave them bread from heaven to eat."], [32, "Then Jesus said unto them, Verily, verily, I say unto you, Moses gave you not that bread from heaven; but my Father giveth you the true bread from heaven."], [33, "For the bread of God is he which cometh down from heaven, and giveth life unto the world."], [34, "Then said they unto him, Lord, evermore give us this bread."], [35, "And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst."], [36, "But I said unto you, That ye also have seen me, and believe not."]],
+  "John 6:32":[[32, "Then Jesus said unto them, Verily, verily, I say unto you, Moses gave you not that bread from heaven; but my Father giveth you the true bread from heaven."]],
+  "John 6:34":[[34, "Then said they unto him, Lord, evermore give us this bread."]],
+  "John 6:35":[[35, "And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst."]],
+  "John 6:36":[[36, "But I said unto you, That ye also have seen me, and believe not."]],
+  "John 6:37-40":[[37, "All that the Father giveth me shall come to me; and him that cometh to me I will in no wise cast out."], [38, "For I came down from heaven, not to do mine own will, but the will of him that sent me."], [39, "And this is the Father’s will which hath sent me, that of all which he hath given me I should lose nothing, but should raise it up again at the last day."], [40, "And this is the will of him that sent me, that every one which seeth the Son, and believeth on him, may have everlasting life: and I will raise him up at the last day."]],
+  "John 6:39":[[39, "And this is the Father’s will which hath sent me, that of all which he hath given me I should lose nothing, but should raise it up again at the last day."]],
+  "John 6:40":[[40, "And this is the will of him that sent me, that every one which seeth the Son, and believeth on him, may have everlasting life: and I will raise him up at the last day."]],
+  "John 6:41-42":[[41, "The Jews then murmured at him, because he said, I am the bread which came down from heaven."], [42, "And they said, Is not this Jesus, the son of Joseph, whose father and mother we know? how is it then that he saith, I came down from heaven?"]],
+  "John 6:41-47":[[41, "The Jews then murmured at him, because he said, I am the bread which came down from heaven."], [42, "And they said, Is not this Jesus, the son of Joseph, whose father and mother we know? how is it then that he saith, I came down from heaven?"], [43, "Jesus therefore answered and said unto them, Murmur not among yourselves."], [44, "No man can come to me, except the Father which hath sent me draw him: and I will raise him up at the last day."], [45, "It is written in the prophets, And they shall be all taught of God. Every man therefore that hath heard, and hath learned of the Father, cometh unto me."], [46, "Not that any man hath seen the Father, save he which is of God, he hath seen the Father."], [47, "Verily, verily, I say unto you, He that believeth on me hath everlasting life."]],
+  "John 6:44":[[44, "No man can come to me, except the Father which hath sent me draw him: and I will raise him up at the last day."]],
+  "John 6:47":[[47, "Verily, verily, I say unto you, He that believeth on me hath everlasting life."]],
+  "John 6:48-58":[[48, "I am that bread of life."], [49, "Your fathers did eat manna in the wilderness, and are dead."], [50, "This is the bread which cometh down from heaven, that a man may eat thereof, and not die."], [51, "I am the living bread which came down from heaven: if any man eat of this bread, he shall live for ever: and the bread that I will give is my flesh, which I will give for the life of the world."], [52, "The Jews therefore strove among themselves, saying, How can this man give us his flesh to eat?"], [53, "Then Jesus said unto them, Verily, verily, I say unto you, Except ye eat the flesh of the Son of man, and drink his blood, ye have no life in you."], [54, "Whoso eateth my flesh, and drinketh my blood, hath eternal life; and I will raise him up at the last day."], [55, "For my flesh is meat indeed, and my blood is drink indeed."], [56, "He that eateth my flesh, and drinketh my blood, dwelleth in me, and I in him."], [57, "As the living Father hath sent me, and I live by the Father: so he that eateth me, even he shall live by me."], [58, "This is that bread which came down from heaven: not as your fathers did eat manna, and are dead: he that eateth of this bread shall live for ever."]],
+  "John 6:49":[[49, "Your fathers did eat manna in the wilderness, and are dead."]],
+  "John 6:50":[[50, "This is the bread which cometh down from heaven, that a man may eat thereof, and not die."]],
+  "John 6:52":[[52, "The Jews therefore strove among themselves, saying, How can this man give us his flesh to eat?"]],
+  "John 6:53":[[53, "Then Jesus said unto them, Verily, verily, I say unto you, Except ye eat the flesh of the Son of man, and drink his blood, ye have no life in you."]],
+  "John 6:54":[[54, "Whoso eateth my flesh, and drinketh my blood, hath eternal life; and I will raise him up at the last day."]],
+  "John 6:56":[[56, "He that eateth my flesh, and drinketh my blood, dwelleth in me, and I in him."]],
+  "John 6:57":[[57, "As the living Father hath sent me, and I live by the Father: so he that eateth me, even he shall live by me."]],
+  "John 6:59-65":[[59, "These things said he in the synagogue, as he taught in Capernaum."], [60, "Many therefore of his disciples, when they had heard this, said, This is an hard saying; who can hear it?"], [61, "When Jesus knew in himself that his disciples murmured at it, he said unto them, Doth this offend you?"], [62, "What and if ye shall see the Son of man ascend up where he was before?"], [63, "It is the spirit that quickeneth; the flesh profiteth nothing: the words that I speak unto you, they are spirit, and they are life."], [64, "But there are some of you that believe not. For Jesus knew from the beginning who they were that believed not, and who should betray him."], [65, "And he said, Therefore said I unto you, that no man can come unto me, except it were given unto him of my Father."]],
+  "John 6:60":[[60, "Many therefore of his disciples, when they had heard this, said, This is an hard saying; who can hear it?"]],
+  "John 6:62":[[62, "What and if ye shall see the Son of man ascend up where he was before?"]],
+  "John 6:63":[[63, "It is the spirit that quickeneth; the flesh profiteth nothing: the words that I speak unto you, they are spirit, and they are life."]],
+  "John 6:64":[[64, "But there are some of you that believe not. For Jesus knew from the beginning who they were that believed not, and who should betray him."]],
+  "John 6:65":[[65, "And he said, Therefore said I unto you, that no man can come unto me, except it were given unto him of my Father."]],
+  "John 6:66":[[66, "From that time many of his disciples went back, and walked no more with him."]],
+  "John 6:66-71":[[66, "From that time many of his disciples went back, and walked no more with him."], [67, "Then said Jesus unto the twelve, Will ye also go away?"], [68, "Then Simon Peter answered him, Lord, to whom shall we go? thou hast the words of eternal life."], [69, "And we believe and are sure that thou art that Christ, the Son of the living God."], [70, "Jesus answered them, Have not I chosen you twelve, and one of you is a devil?"], [71, "He spake of Judas Iscariot the son of Simon: for he it was that should betray him, being one of the twelve."]],
+  "John 6:67":[[67, "Then said Jesus unto the twelve, Will ye also go away?"]],
+  "John 6:68":[[68, "Then Simon Peter answered him, Lord, to whom shall we go? thou hast the words of eternal life."]],
+  "John 6:69":[[69, "And we believe and are sure that thou art that Christ, the Son of the living God."]],
+  "John 6:70":[[70, "Jesus answered them, Have not I chosen you twelve, and one of you is a devil?"]],
+  "John 6:71":[[71, "He spake of Judas Iscariot the son of Simon: for he it was that should betray him, being one of the twelve."]],
+  "John 7:37-39":[[37, "In the last day, that great day of the feast, Jesus stood and cried, saying, If any man thirst, let him come unto me, and drink."], [38, "He that believeth on me, as the scripture hath said, out of his belly shall flow rivers of living water."], [39, "(But this spake he of the Spirit, which they that believe on him should receive: for the Holy Ghost was not yet given; because that Jesus was not yet glorified.)"]],
+  "Leviticus 17:10-11":[[10, "And whatsoever man there be of the house of Israel, or of the strangers that sojourn among you, that eateth any manner of blood; I will even set my face against that soul that eateth blood, and will cut him off from among his people."], [11, "For the life of the flesh is in the blood: and I have given it to you upon the altar to make an atonement for your souls: for it is the blood that maketh an atonement for the soul."]]
 };
 
-function full(r){ r = r.trim(); return /^\d+:\d/.test(r) ? "John " + r : r; }
-function lookup(ref){
-  const m = ref.match(/^(.+?) (\d+):(\d+)(?:[–-](\d+))?$/);
-  if(!m) return [];
-  const book = m[1], ch = m[2], a = +m[3], b = m[4] ? +m[4] : a, out = [];
-  for(let v = a; v <= b; v++){
-    const t = (book === "John" && ch === "6") ? J6[v] : OTHER[book + " " + ch + ":" + v];
-    if(t) out.push([v, t]);
-  }
-  return out;
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
 }
-function mark(t){ return t.replace(/\b(believ\w*)\b/gi, '<span class="bl">$1</span>'); }
-function makeRef(r, label){
-  const b = document.createElement("button");
-  b.type = "button"; b.className = "ref"; b.dataset.r = r; b.textContent = label || r;
-  return b;
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
 }
 
-/* Shorthand refs */
-document.querySelectorAll("x-r").forEach(el => {
-  const label = el.textContent.trim();
-  el.replaceWith(makeRef(full(label), label));
-});
-/* Verse blocks */
-document.querySelectorAll("blockquote.v").forEach(bq => {
-  const r = full(bq.dataset.v), vs = lookup(r);
-  const multi = vs.length > 1;
-  const p = document.createElement("p");
-  p.innerHTML = '<span class="pil" aria-hidden="true">¶</span>' +
-    vs.map(([n, t]) => (multi ? '<span class="vn">' + n + '</span>' : "") + mark(t)).join(" ");
-  const f = document.createElement("footer");
-  f.appendChild(makeRef(r));
-  bq.append(p, f);
-});
-
-/* Believe timeline */
-const tl = document.getElementById("tl");
-[[29,"up"],[30,"dn"],[35,"up"],[36,"dn"],[40,"up"],[47,"dn"],[64,"up","6:64 ×2"],[69,"dn"]].forEach(([v, pos, lab]) => {
-  const b = makeRef("John 6:" + v);
-  b.className = "ref mk " + pos;
-  b.textContent = "";
-  b.style.left = ((v - 26) / 45 * 100) + "%";
-  b.setAttribute("aria-label", "John 6:" + v);
-  const s = document.createElement("span");
-  s.textContent = lab || "6:" + v;
-  s.setAttribute("aria-hidden", "true");
-  b.appendChild(s);
-  tl.appendChild(b);
-});
-
-/* Verse dialog */
-const dlg = document.getElementById("verse");
-const vref = document.getElementById("vref");
-const vtext = document.getElementById("vtext");
-function openVerse(r){
-  const vs = lookup(r);
-  vref.textContent = r;
-  vtext.innerHTML = vs.length
-    ? vs.map(([n, t]) => '<p><span class="vn">' + n + '</span>' + mark(t) + '</p>').join("")
-    : "<p>Verse text not included in this lesson.</p>";
-  dlg.scrollTop = 0;
-  if(typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", "");
-}
-document.addEventListener("click", e => {
-  const b = e.target.closest(".ref");
-  if(b) openVerse(b.dataset.r);
-});
-document.getElementById("vclose").addEventListener("click", () => dlg.close());
-dlg.addEventListener("click", e => { if(e.target === dlg) dlg.close(); });
-
-/* Deck navigation */
-const slides = [...document.querySelectorAll(".slide")];
-const prog = document.getElementById("progress");
-const prev = document.getElementById("prev");
-const next = document.getElementById("next");
-const secsEl = document.getElementById("secs");
-const numerals = ["I","II","III","IV","V","VI","VII"];
-const secBtns = numerals.map((n, i) => {
-  const target = slides.findIndex(s => s.dataset.sec === String(i + 1));
-  const b = document.createElement("button");
-  b.type = "button"; b.className = "sn"; b.textContent = n;
-  b.setAttribute("aria-label", "Section " + n);
-  b.addEventListener("click", () => go(target));
-  secsEl.appendChild(b);
-  return b;
-});
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
 let cur = 0;
-function go(i, focus){
-  i = Math.max(0, Math.min(slides.length - 1, i));
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
   slides[cur].classList.remove("active");
-  cur = i;
+  cur = n;
   const s = slides[cur];
   s.classList.add("active");
   s.scrollTop = 0;
-  prog.style.width = ((cur + 1) / slides.length * 100) + "%";
-  prev.disabled = cur === 0;
-  next.disabled = cur === slides.length - 1;
-  const sec = +s.dataset.sec;
-  secBtns.forEach((b, k) => b.setAttribute("aria-current", String(k + 1 === sec)));
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
   try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
-  if(focus) s.focus({preventScroll:true});
 }
-prev.addEventListener("click", () => go(cur - 1));
-next.addEventListener("click", () => go(cur + 1));
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
 document.addEventListener("keydown", e => {
-  if(dlg.open) return;
-  if(e.key === "ArrowRight" || e.key === "PageDown"){ e.preventDefault(); go(cur + 1, true); }
-  if(e.key === "ArrowLeft" || e.key === "PageUp"){ e.preventDefault(); go(cur - 1, true); }
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
 });
-let sx = 0, sy = 0;
-const stage = document.getElementById("stage");
-stage.addEventListener("touchstart", e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, {passive:true});
-stage.addEventListener("touchend", e => {
-  if(dlg.open) return;
-  const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
-  if(Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
 }, {passive:true});
 
-/* Theme */
-const themeBtn = document.getElementById("theme");
-const mq = window.matchMedia("(prefers-color-scheme: dark)");
-function effective(){ return document.documentElement.dataset.theme || (mq.matches ? "dark" : "light"); }
-function paintToggle(){ themeBtn.textContent = effective() === "dark" ? "☀" : "☾"; }
-try { const t = localStorage.getItem("john6-theme"); if(t) document.documentElement.dataset.theme = t; } catch(e) {}
-themeBtn.addEventListener("click", () => {
-  const t = effective() === "dark" ? "light" : "dark";
-  document.documentElement.dataset.theme = t;
-  try { localStorage.setItem("john6-theme", t); } catch(e) {}
-  paintToggle();
-});
-mq.addEventListener && mq.addEventListener("change", paintToggle);
-paintToggle();
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
 
-const start = parseInt(location.hash.slice(1), 10);
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
 go(Number.isFinite(start) ? start - 1 : 0);
 </script>
 </body>

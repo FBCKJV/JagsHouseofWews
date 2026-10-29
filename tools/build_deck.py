@@ -43,6 +43,8 @@ Source format, one element per line (blank lines are ignored, # starts a comment
   xr: John 3:16 | the words                      a list of references with a line each
   group: Never | never thirst | John 4:14; 6:35  a heading, a line and a row of verse buttons
   take: …                                        a closing italic line
+  table: Head A | Head B   then tr: a | b lines  a table (cells may hold [[verse]] buttons and **bold**)
+  image: lessons/x/pic.png | alt text | caption  a picture, saved next to the deck (use the same file name)
   highlight: believ                              (meta, top of the file) stems highlighted in every quoted verse
   read: obadiah-holmes | Obadiah Holmes        a row of links to other lessons in the app (consecutive lines make one row)
 
@@ -298,6 +300,20 @@ def build(src):
                 j = j2 - 1
             elif k == 'row':
                 pass
+            elif k == 'table':   # table: Head A | Head B | Head C, then tr: a | b | c lines
+                j2 = j + 1; trs = []
+                while j2 < len(items) and items[j2][0] == 'tr':
+                    trs.append(items[j2][1]); j2 += 1
+                th = ''.join(f'<th>{inline(c.strip())}</th>' for c in v.split('|'))
+                tb = ''.join('<tr>' + ''.join(f'<td>{stems(inline(c.strip()))}</td>' for c in r.split('|')) + '</tr>' for r in trs)
+                parts.append(f'<div class="tbl"><table><thead><tr>{th}</tr></thead><tbody>{tb}</tbody></table></div>')
+                j = j2 - 1
+            elif k == 'tr':
+                pass
+            elif k == 'image':   # image: lessons/bible/pic.jpg | alt text | caption (optional); the file sits next to the deck
+                src_, alt, cap = (v.split('|') + ['', ''])[:3]
+                parts.append(f'<figure class="pic"><img src="{esc(os.path.basename(src_.strip()))}" alt="{html.escape(alt.strip())}" loading="lazy">'
+                             + (f'<figcaption>{inline(cap.strip())}</figcaption>' if cap.strip() else '') + '</figure>')
             elif k == 'xr':   # xr: John 6:28-29 | the words      a list of references with a line each
                 parts.append('<ul class="xr">' + ''.join(
                     f'<li>{inline("[[" + a.strip() + "]]")}<span>{inline(b.strip())}</span></li>'
