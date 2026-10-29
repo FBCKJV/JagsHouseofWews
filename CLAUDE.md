@@ -40,6 +40,8 @@ in the repo, without publishing artifacts or building a separate page:
   says to add it and merge). The study appears as another tab on that chapter, with no Telegram link.
 - Whenever a file is changed, give the user the full file (SendUserFile), not fragments.
 - Links go one way only: nothing is ever added to fbckjv.app.
+- The "View on Telegram" buttons are off (`TELEGRAM_LINKS` in `studies/app.js`) because the text is in the app. The 69
+  photos, a video and an animation that exist only on Telegram keep their link until they are saved here.
 - Do not change the KJV language. Non-KJV pastes are corrected to the KJV.
 - Fix the user's typos, but otherwise leave their wording. Where a date, place or name is wrong, correct it.
   Where something is the user's opinion or a judgment call, ask instead of changing it.
