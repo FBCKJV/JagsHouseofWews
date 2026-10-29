@@ -21,10 +21,12 @@ in the repo, without publishing artifacts or building a separate page:
    `review/lessons.json`).
 2. Write `lessons/src/<id>.deck` and build it with `python3 tools/build_deck.py`. Use the template's elements (see the
    top of `tools/build_deck.py`). Scripture is pulled from the KJV by the builder, so never type verse text by hand.
-3. Fact-check dates, names, places and quotations against primary sources before they go on a slide. Quote the
-   primary text, not a summary or an AI answer. Where a source is missing or a claim is a tradition, say so on the
-   slide or leave it out. Correct errors, including ones in the user's source, and tell the user what changed.
-   Ask the user instead of deciding anything that is their opinion or doctrine.
+3. Do not fact-check the author's sources, historical claims or doctrinal judgments, and do not question or soften them.
+   The author makes their own points (for example, Constantine is called a pagan because he never believed the gospel
+   and trusted in water baptism; that is the point being made, not a claim to verify against what the world, Catholics
+   or other religions say). Fix only basic spelling and typos, plain date or number slips (a year that contradicts the
+   page's own text), and a Bible reference that plainly does not match the verse quoted. Bible text is always the KJV.
+   Ask the user only when two old pages truly contradict each other or something looks dropped.
 4. Fix typos and spelling in the user's source. Leave their wording otherwise.
 5. Add the deck as the "Slides" part of the lesson in `review/lessons.json` (keep the outline as a secondary part),
    run `python3 tools/build_lessons.py`, and link related studies and lessons with `[[lesson:id|label]]` or `read:`.
@@ -34,6 +36,6 @@ in the repo, without publishing artifacts or building a separate page:
 - Whenever a file is changed, give the user the full file (SendUserFile), not fragments.
 - Links go one way only: nothing is ever added to fbckjv.app.
 - Do not change the KJV language. Non-KJV pastes are corrected to the KJV.
-- Fix the user's typos, but otherwise leave their wording. Where a date, place or name is wrong, correct it.
-  Where something is the user's opinion or a judgment call, ask instead of changing it.
+- Fix the user's typos, but otherwise leave their wording. Do not change their historical claims, doctrine or tone.
+  Correct only basic spelling and plain date or number slips.
 - Merge a PR only when the user says "merge".
