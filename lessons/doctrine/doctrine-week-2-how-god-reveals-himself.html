@@ -2,424 +2,546 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How God Reveals Himself to Man — Week 2</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+SC:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ink: #0a0c11;
-    --ink-2: #12151d;
-    --ink-3: #191d28;
-    --line: rgba(201,162,39,0.28);
-    --gold: #c9a227;
-    --gold-light: #e6ca7d;
-    --cream: #ece3cd;
-    --cream-dim: #b9b09a;
-    --crimson: #8c2f39;
-    --crimson-light: #c2626c;
-    --sage: #6f8f6a;
-    --sage-light: #a3c49b;
-  }
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
-  body{
-    background:
-      radial-gradient(1200px 700px at 15% -10%, rgba(201,162,39,0.09), transparent 60%),
-      radial-gradient(1000px 600px at 100% 0%, rgba(140,47,57,0.10), transparent 55%),
-      var(--ink);
-    color:var(--cream);
-    font-family:'EB Garamond', serif;
-    -webkit-font-smoothing:antialiased;
-  }
-  ::selection{background:var(--gold); color:var(--ink);}
-
-  .grain{
-    position:fixed; inset:0; pointer-events:none; z-index:0; opacity:0.05; mix-blend-mode:overlay;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-
-  header.hero{
-    position:relative; z-index:1;
-    padding:64px 6vw 48px;
-    border-bottom:1px solid var(--line);
-    text-align:center;
-  }
-  .eyebrow{
-    font-family:'Cormorant SC', serif; letter-spacing:0.35em; color:var(--gold-light);
-    font-size:15px; text-transform:uppercase; margin:0 0 18px;
-  }
-  h1.title{
-    font-family:'Cinzel', serif; font-weight:600;
-    font-size:clamp(26px, 3.8vw, 52px); line-height:1.18; margin:0 0 10px;
-    color:var(--cream); text-shadow:0 0 40px rgba(201,162,39,0.15);
-  }
-  h1.title em{ font-style:normal; color:var(--gold); }
-  .subtitle{
-    font-family:'Cormorant SC', serif; font-size:clamp(15px,1.5vw,20px);
-    letter-spacing:0.1em; color:var(--cream-dim); margin:0 auto 30px; max-width:760px;
-  }
-  .hero-text{
-    max-width:820px; margin:0 auto; font-style:italic;
-    font-size:clamp(17px,1.7vw,21px); line-height:1.75; color:var(--cream-dim);
-    position:relative; padding:0 8px;
-  }
-  .hero-text .dropcap{
-    float:left; font-family:'Cinzel', serif; font-style:normal;
-    font-size:64px; line-height:0.8; color:var(--gold); padding:6px 10px 0 0;
-  }
-  .hero-ref{
-    display:inline-block; margin-top:18px; font-family:'Cormorant SC', serif;
-    letter-spacing:0.2em; font-size:14px; color:var(--gold-light); text-transform:uppercase;
-  }
-
-  nav.jump{
-    position:sticky; top:0; z-index:20; display:flex; flex-wrap:wrap; justify-content:center;
-    background:rgba(10,12,17,0.92); backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--line); padding:2px 0;
-  }
-  nav.jump a{
-    color:var(--cream-dim); text-decoration:none; font-family:'Cormorant SC', serif;
-    letter-spacing:0.12em; font-size:13px; text-transform:uppercase; padding:14px 16px;
-    border-bottom:2px solid transparent; transition:color .2s, border-color .2s; white-space:nowrap;
-  }
-  nav.jump a:hover{ color:var(--gold-light); border-color:var(--gold); }
-
-  main{ position:relative; z-index:1; max-width:1280px; margin:0 auto; padding:10px 5vw 80px; }
-
-  section.block{ padding:54px 0 10px; border-bottom:1px solid var(--line); }
-  section.block:last-child{ border-bottom:none; }
-
-  .section-head{ display:flex; align-items:baseline; gap:16px; margin-bottom:8px; }
-  .section-num{ font-family:'Cinzel', serif; color:var(--gold); font-size:14px; letter-spacing:.2em; }
-  h2.section-title{
-    font-family:'Cinzel', serif; font-weight:600; font-size:clamp(21px,2.4vw,30px);
-    margin:0; color:var(--cream);
-  }
-  .section-sub{
-    font-family:'EB Garamond', serif; font-style:italic; color:var(--cream-dim);
-    margin:6px 0 26px; font-size:16px; max-width:820px;
-  }
-  h3.sub-title{
-    font-family:'Cinzel', serif; font-weight:500; font-size:15.5px; letter-spacing:.08em;
-    margin:32px 0 16px; text-transform:uppercase;
-  }
-  h3.sub-title.gen{ color:var(--sage-light); }
-  h3.sub-title.spec{ color:var(--gold-light); }
-  h3.sub-title:first-of-type{ margin-top:8px; }
-
-  .teaching{ max-width:820px; font-size:16.5px; line-height:1.75; color:var(--cream-dim); margin:0 0 18px; }
-  .teaching strong{ color:var(--gold-light); font-weight:600; }
-
-  /* Discussion / illustration callouts */
-  .callout{
-    position:relative; margin:22px 0 30px; padding:20px 26px 20px 54px;
-    background:linear-gradient(160deg, rgba(201,162,39,0.07), rgba(201,162,39,0.02));
-    border:1px solid var(--line); border-left:3px solid var(--gold); border-radius:4px;
-    font-style:italic; font-size:16.5px; line-height:1.7; color:var(--cream); max-width:820px;
-  }
-  .callout::before{
-    content:"\201C"; position:absolute; left:14px; top:4px;
-    font-family:'Cinzel', serif; font-style:normal; font-size:38px; color:var(--gold); opacity:.7;
-  }
-  .callout.question{ border-left-color:var(--sage-light); }
-  .callout.question::before{ content:"?"; color:var(--sage-light); font-size:26px; top:16px; left:20px; }
-
-  .grid{ display:grid; gap:16px; grid-template-columns:repeat(auto-fill, minmax(250px,1fr)); margin-bottom:8px; }
-
-  .card{
-    background:linear-gradient(160deg, var(--ink-3), var(--ink-2));
-    border:1px solid var(--line); border-radius:4px; padding:20px 20px;
-    cursor:pointer; position:relative;
-    transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease; overflow:hidden;
-  }
-  .card::before{
-    content:""; position:absolute; left:0; top:0; bottom:0; width:3px;
-    background:var(--gold); opacity:.55; transition:opacity .18s ease, width .18s ease;
-  }
-  .card:hover{
-    transform:translateY(-3px); border-color:var(--gold);
-    box-shadow:0 14px 30px rgba(0,0,0,0.45), 0 0 0 1px rgba(201,162,39,0.15) inset;
-  }
-  .card:hover::before{ opacity:1; width:5px; }
-  .card .ct-name{ font-family:'Cinzel', serif; font-weight:600; font-size:17px; color:var(--cream); margin:0 0 6px; }
-  .card .ct-ref{ font-family:'Cormorant SC', serif; letter-spacing:.08em; font-size:14px; color:var(--gold-light); margin:0; }
-  .card .ct-hint{
-    margin-top:12px; font-size:13px; color:var(--cream-dim); opacity:.6;
-    font-family:'Cormorant SC', serif; letter-spacing:.12em; text-transform:uppercase;
-  }
-
-  .card.sage::before{ background:var(--sage-light); }
-  .card.sage:hover{ border-color:var(--sage-light); }
-  .card.sage .ct-ref{ color:var(--sage-light); }
-
-  .card.crimson::before{ background:var(--crimson-light); }
-  .card.crimson:hover{ border-color:var(--crimson-light); }
-  .card.crimson .ct-ref{ color:var(--crimson-light); }
-
-  .overlay{
-    position:fixed; inset:0; z-index:100; background:rgba(4,5,8,0.86); backdrop-filter:blur(3px);
-    display:flex; align-items:center; justify-content:center; padding:5vw;
-    opacity:0; pointer-events:none; transition:opacity .22s ease;
-  }
-  .overlay.open{ opacity:1; pointer-events:auto; }
-  .modal{
-    max-width:760px; width:100%; max-height:82vh; overflow-y:auto;
-    background:linear-gradient(165deg, #16192389, #0d0f15); background-color:#12141c;
-    border:1px solid var(--gold); border-radius:6px; padding:44px 44px 40px; position:relative;
-    box-shadow:0 30px 80px rgba(0,0,0,0.6), 0 0 60px rgba(201,162,39,0.08);
-    transform:translateY(14px) scale(.98); transition:transform .22s ease;
-  }
-  .overlay.open .modal{ transform:translateY(0) scale(1); }
-  .modal-close{
-    position:absolute; top:16px; right:18px; width:38px; height:38px; border-radius:50%;
-    border:1px solid var(--line); background:var(--ink-2); color:var(--gold-light);
-    font-family:'Cinzel',serif; font-size:18px; cursor:pointer;
-    display:flex; align-items:center; justify-content:center;
-    transition:background .18s, color .18s, transform .18s;
-  }
-  .modal-close:hover{ background:var(--gold); color:var(--ink); transform:rotate(90deg); }
-  .modal-eyebrow{ font-family:'Cormorant SC', serif; letter-spacing:.25em; text-transform:uppercase; color:var(--gold-light); font-size:13px; margin:0 0 8px; }
-  .modal-title{ font-family:'Cinzel', serif; font-weight:600; color:var(--cream); font-size:clamp(20px,2.6vw,27px); margin:0 0 22px; padding-right:30px; }
-  .modal-meaning{ font-style:italic; color:var(--gold-light); font-size:16px; margin:0 0 22px; border-left:2px solid var(--gold); padding-left:14px; }
-  .verse-block{ margin-bottom:22px; }
-  .verse-block:last-child{ margin-bottom:0; }
-  .verse-ref{ font-family:'Cormorant SC', serif; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); font-size:14px; margin:0 0 6px; }
-  .verse-text{ font-size:19px; line-height:1.75; color:var(--cream); margin:0; }
-
-  footer{
-    text-align:center; padding:40px 20px 60px; position:relative; z-index:1;
-    color:var(--cream-dim); font-family:'Cormorant SC', serif; letter-spacing:.15em;
-    font-size:13px; text-transform:uppercase; opacity:.6;
-  }
-
-  @media (max-width:640px){
-    .modal{ padding:34px 26px 30px; max-height:88vh; }
-    header.hero{ padding:48px 6vw 34px; }
-  }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How God Reveals Himself to Man – Week 2</title>
 <script src="../deck-extras.js"></script>
+<meta name="description" content="General revelation and specific revelation: how God speaks through nature, His actions, and His Word.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
 </head>
 <body>
-<div class="grain"></div>
 
-<header class="hero">
-  <p class="eyebrow">Faith Baptist Church of Plymouth County &nbsp;·&nbsp; Adult Sunday School &nbsp;·&nbsp; Week 2</p>
-  <h1 class="title">How God Reveals <em>Himself</em> to Man</h1>
-  <p class="subtitle">General Revelation vs. Specific Revelation — how God speaks through nature, His actions, and His Word</p>
-  <p class="hero-text"><span class="dropcap">T</span>he heavens declare the glory of God; and the firmament sheweth his handywork. Day unto day uttereth speech, and night unto night sheweth knowledge. There is no speech nor language, where their voice is not heard.</p>
-  <div class="hero-ref">Psalm 19:1&ndash;4</div>
-</header>
+<main class="deck" id="deck">
 
-<nav class="jump">
-  <a href="#overview">General &amp; Specific</a>
-  <a href="#creation">Creation</a>
-  <a href="#wrath">Wrath</a>
-  <a href="#mercy">Mercy</a>
-  <a href="#word">The Word</a>
-</nav>
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="How God Reveals Himself to Man">
+  <div class="page title-page">
+    <div class="overline">Faith Baptist Church of Plymouth County · Adult Sunday School · Week 2</div>
+    <h1>How God Reveals Himself to Man</h1>
+    <p class="sub">General Revelation vs. Specific Revelation: how God speaks through nature, His actions, and His Word</p>
+    <blockquote class="big-verse">The heavens declare the glory of God; and the firmament sheweth his handywork. Day unto day uttereth speech, and night unto night sheweth knowledge. There is no speech nor language, where their voice is not heard. Their line is gone out through all the earth, and their words to the end of the world. In them hath he set a tabernacle for the sun,<cite>Psalm 19:1-4</cite></blockquote>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move through the lesson. Tap any gold reference to read the verse. The Contents button lists every section.</p>
+  </div>
+</section>
 
-<main>
+<!-- 2 -->
+<section class="slide" data-section="I. General &amp; Specific Revelation" data-title="General &amp; Specific Revelation">
+  <div class="page">
+    <h2>General &amp; Specific Revelation</h2>
+    <p class="lead">Have you ever looked at a sunset, or read a Bible verse, and felt God’s presence? God’s revelation comes in two forms: one available to all, one given through His Word.</p>
+  </div>
+</section>
 
-  <section class="block" id="overview">
-    <div class="section-head"><span class="section-num">I.</span><h2 class="section-title">General &amp; Specific Revelation</h2></div>
-    <p class="section-sub">Have you ever looked at a sunset, or read a Bible verse, and felt God's presence? God's revelation comes in two forms — one available to all, one given through His Word.</p>
+<!-- 3 -->
+<section class="slide" data-section="I. General &amp; Specific Revelation" data-title="General Revelation: Available to All">
+  <div class="page">
+    <h2>General Revelation: Available to All</h2>
+    <p>God revealing Himself through creation and the human conscience, His law written on men’s hearts. Universal, non-verbal: it points to God’s existence but not to the specifics of salvation. All creation is a parable for us to know God.</p>
+    <div class="vps"><div class="vp fig"><h3>Without Excuse</h3><blockquote class="scripture" style="font-style:italic">For the wrath of God is revealed from heaven against all ungodliness and unrighteousness of men, who hold the truth in unrighteousness; Because that which may be known of God is manifest in them; for God hath shewed it unto them. For the invisible things of him from the creation of the world are clearly seen, being understood by the things that are made, even his eternal power and Godhead; so that they are without excuse:<cite>Romans 1:18-20</cite></blockquote></div><div class="vp fig"><h3>The Heavens Declare His Glory</h3><blockquote class="scripture" style="font-style:italic">The heavens declare the glory of God; and the firmament sheweth his handywork. Day unto day uttereth speech, and night unto night sheweth knowledge. There is no speech nor language, where their voice is not heard. Their line is gone out through all the earth, and their words to the end of the world. In them hath he set a tabernacle for the sun,<cite>Psalm 19:1-4</cite></blockquote></div><div class="vp fig"><h3>The Law Written on Their Hearts</h3><blockquote class="scripture" style="font-style:italic">For when the Gentiles, which have not the law, do by nature the things contained in the law, these, having not the law, are a law unto themselves: Which shew the work of the law written in their hearts, their conscience also bearing witness, and their thoughts the mean while accusing or else excusing one another;)<cite>Romans 2:14-15</cite></blockquote><p>This internal moral compass, the conscience, is part of General Revelation.</p></div></div>
+    <div class="callout"><p>What about that guy on that deserted island? What about people who have never heard of Jesus?</p></div>
+  </div>
+</section>
 
-    <h3 class="sub-title gen">General Revelation — Available to All</h3>
-    <p class="teaching">God revealing Himself through creation and the human conscience, His law written on men's hearts. Universal, non-verbal — it points to God's existence but not to the specifics of salvation. All creation is a parable for us to know God.</p>
-    <div class="grid" id="grid-general"></div>
-    <div class="callout question">What about that guy on that deserted island? What about people who have never heard of Jesus?</div>
+<!-- 4 -->
+<section class="slide" data-section="I. General &amp; Specific Revelation" data-title="Specific Revelation: Through the Word">
+  <div class="page">
+    <h2>Specific Revelation: Through the Word</h2>
+    <p>God revealing Himself through direct means: His Word, the prophets, and Jesus Christ. Detailed and verbal, it reveals God’s plan for salvation, His commandments, and prophecy for times past and times to come. Specific Revelation builds on General Revelation, giving clarity so that we might know God’s will, collectively and individually.</p>
+    <div class="vps"><div class="vp fig"><h3>God Hath Spoken by His Son</h3><blockquote class="scripture" style="font-style:italic">God, who at sundry times and in divers manners spake in time past unto the fathers by the prophets, Hath in these last days spoken unto us by his Son, whom he hath appointed heir of all things, by whom also he made the worlds;<cite>Hebrews 1:1-2</cite></blockquote></div><div class="vp fig"><h3>In the Beginning Was the Word</h3><blockquote class="scripture" style="font-style:italic">In the beginning was the Word, and the Word was with God, and the Word was God.<cite>John 1:1</cite></blockquote><p>Jesus is God’s ultimate revelation.</p></div><div class="vp fig"><h3>Profitable for Doctrine</h3><blockquote class="scripture" style="font-style:italic">All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness: That the man of God may be perfect, throughly furnished unto all good works.<cite>2 Timothy 3:16-17</cite></blockquote></div></div>
+  </div>
+</section>
 
-    <h3 class="sub-title spec">Specific Revelation — Through the Word</h3>
-    <p class="teaching">God revealing Himself through direct means — His Word, the prophets, and Jesus Christ. Detailed and verbal, it reveals God's plan for salvation, His commandments, and prophecy for times past and times to come. Specific Revelation builds on General Revelation, giving clarity so that we might know God's will, collectively and individually.</p>
-    <div class="grid" id="grid-specific"></div>
-  </section>
+<!-- 5 -->
+<section class="slide" data-section="II. Revelation Through Creation" data-title="Revelation Through Creation">
+  <div class="page">
+    <h2>Revelation Through Creation</h2>
+    <p class="lead">Creation (sky, stars, nature, animals) declares God’s glory, power, and wisdom, leaving mankind without excuse.</p>
+    <div class="vps"><div class="vp fig"><h3>Day Unto Day Uttereth Speech</h3><blockquote class="scripture" style="font-style:italic">The heavens declare the glory of God; and the firmament sheweth his handywork. Day unto day uttereth speech, and night unto night sheweth knowledge. There is no speech nor language, where their voice is not heard.<cite>Psalm 19:1-3</cite></blockquote></div><div class="vp fig"><h3>Clearly Seen, Understood by the Things Made</h3><blockquote class="scripture" style="font-style:italic">For the invisible things of him from the creation of the world are clearly seen, being understood by the things that are made, even his eternal power and Godhead; so that they are without excuse:<cite>Romans 1:20</cite></blockquote></div><div class="vp fig"><h3>Ask Now the Beasts</h3><blockquote class="scripture" style="font-style:italic">But ask now the beasts, and they shall teach thee; and the fowls of the air, and they shall tell thee: Or speak to the earth, and it shall teach thee: and the fishes of the sea shall declare unto thee. Who knoweth not in all these that the hand of the <span class="lord">Lord</span> hath wrought this?<cite>Job 12:7-9</cite></blockquote></div></div>
+    <p>A bird’s migration shows God’s design. The miracle of birth, the intricacy of DNA: all of nature is a parable pointing back to its Maker.</p>
+  </div>
+</section>
 
-  <section class="block" id="creation">
-    <div class="section-head"><span class="section-num">II.</span><h2 class="section-title">Revelation Through Creation</h2></div>
-    <p class="section-sub">Creation — sky, stars, nature, animals — declares God's glory, power, and wisdom, leaving mankind without excuse.</p>
-    <div class="grid" id="grid-creation"></div>
-    <p class="teaching" style="margin-top:22px;">A bird's migration shows God's design. The miracle of birth, the intricacy of DNA — all of nature is a parable pointing back to its Maker.</p>
-  </section>
+<!-- 6 -->
+<section class="slide" data-section="III. Revelation Through Wrath" data-title="Revelation Through Wrath">
+  <div class="page">
+    <h2>Revelation Through Wrath</h2>
+    <p class="lead">God’s wrath is not arbitrary. It is a response to sin, revealing His holiness, His justice, and His moral standard.</p>
+    <div class="vps"><div class="vp lit"><h3>Angry with the Wicked Every Day</h3><blockquote class="scripture" style="font-style:italic">God judgeth the righteous, and God is angry with the wicked every day. If he turn not, he will whet his sword; he hath bent his bow, and made it ready. He hath also prepared for him the instruments of death; he ordaineth his arrows against the persecutors.<cite>Psalm 7:11-13</cite></blockquote></div><div class="vp lit"><h3>How Long, O Lord?</h3><blockquote class="scripture" style="font-style:italic">And they cried with a loud voice, saying, How long, O Lord, holy and true, dost thou not judge and avenge our blood on them that dwell on the earth?<cite>Revelation 6:10</cite></blockquote></div><div class="vp lit"><h3>Vengeance Belongeth Unto Me</h3><blockquote class="scripture" style="font-style:italic">For we know him that hath said, Vengeance belongeth unto me, I will recompense, saith the Lord. And again, The Lord shall judge his people.<cite>Hebrews 10:30</cite></blockquote></div></div>
+  </div>
+</section>
 
-  <section class="block" id="wrath">
-    <div class="section-head"><span class="section-num">III.</span><h2 class="section-title">Revelation Through Wrath</h2></div>
-    <p class="section-sub">God's wrath is not arbitrary — it is a response to sin, revealing His holiness, His justice, and His moral standard.</p>
-    <div class="grid" id="grid-wrath"></div>
-    <p class="teaching" style="margin-top:22px;">Seeing wrath fall on the wicked — even natural consequences of sin — teaches unbelievers that there is a just Creator. Even the secular idea of "karma" points to a moral order only a just God could establish. God judges nations, not only individuals, by their works.</p>
-    <div class="callout question">How does knowing God judges fairly affect our view of Him?</div>
-    <div class="callout question">Why is it important to teach about God's wrath alongside His love?</div>
-  </section>
+<!-- 7 -->
+<section class="slide" data-section="III. Revelation Through Wrath" data-title="Wrath on the Nations">
+  <div class="page">
+    <h2>Wrath on the Nations</h2>
+    <div class="vps"><div class="vp lit"><h3>The <span class="lord">Lord</span> Hath a Controversy with the Nations</h3><blockquote class="scripture" style="font-style:italic">A noise shall come even to the ends of the earth; for the <span class="lord">Lord</span> hath a controversy with the nations, he will plead with all flesh; he will give them that are wicked to the sword, saith the <span class="lord">Lord</span>. Thus saith the <span class="lord">Lord</span> of hosts, Behold, evil shall go forth from nation to nation, and a great whirlwind shall be raised up from the coasts of the earth.<cite>Jeremiah 25:31-32</cite></blockquote></div><div class="vp lit"><h3>Abhor That Which Is Evil</h3><blockquote class="scripture" style="font-style:italic">Let love be without dissimulation. Abhor that which is evil; cleave to that which is good.<cite>Romans 12:9</cite></blockquote></div></div>
+    <p>Seeing wrath fall on the wicked, even natural consequences of sin, teaches unbelievers that there is a just Creator. Even the secular idea of “karma” points to a moral order only a just God could establish. God judges nations, not only individuals, by their works.</p>
+    <div class="callout"><p>How does knowing God judges fairly affect our view of Him?</p></div>
+    <div class="callout"><p>Why is it important to teach about God’s wrath alongside His love?</p></div>
+  </div>
+</section>
 
-  <section class="block" id="mercy">
-    <div class="section-head"><span class="section-num">IV.</span><h2 class="section-title">Revelation Through Mercy</h2></div>
-    <p class="section-sub">Where wrath reveals God's justice, mercy reveals His love — slow to anger, rich in compassion toward the undeserving.</p>
-    <div class="grid" id="grid-mercy"></div>
-    <p class="teaching" style="margin-top:22px;">When we show others the mercy and grace God has shown us, it reveals His nature to them. They hear our praise for answered prayer, or see a changed life, and come to a better understanding of His longsuffering — and He receives the glory for loving His people.</p>
-    <div class="callout">Leader: share a brief story of God's mercy — personal, or biblical, such as the Prodigal Son.</div>
-  </section>
+<!-- 8 -->
+<section class="slide" data-section="IV. Revelation Through Mercy" data-title="Revelation Through Mercy">
+  <div class="page">
+    <h2>Revelation Through Mercy</h2>
+    <p class="lead">Where wrath reveals God’s justice, mercy reveals His love: slow to anger, rich in compassion toward the undeserving.</p>
+    <div class="vps"><div class="vp fig"><h3>Merciful and Gracious, Slow to Anger</h3><blockquote class="scripture" style="font-style:italic">The <span class="lord">Lord</span> is merciful and gracious, slow to anger, and plenteous in mercy.<cite>Psalm 103:8</cite></blockquote></div><div class="vp fig"><h3>Rich in Mercy, Great Love</h3><blockquote class="scripture" style="font-style:italic">But God, who is rich in mercy, for his great love wherewith he loved us,<cite>Ephesians 2:4</cite></blockquote></div><div class="vp fig"><h3>That They Also May Obtain Mercy</h3><blockquote class="scripture" style="font-style:italic">For as ye in times past have not believed God, yet have now obtained mercy through their unbelief: Even so have these also now not believed, that through your mercy they also may obtain mercy.<cite>Romans 11:30-31</cite></blockquote></div></div>
+    <p>When we show others the mercy and grace God has shown us, it reveals His nature to them. They hear our praise for answered prayer, or see a changed life, and come to a better understanding of His longsuffering, and He receives the glory for loving His people.</p>
+    <div class="callout"><p>Leader: share a brief story of God’s mercy, personal or biblical, such as the Prodigal Son.</p></div>
+  </div>
+</section>
 
-  <section class="block" id="word">
-    <div class="section-head"><span class="section-num">V.</span><h2 class="section-title">Revelation Through the Word</h2></div>
-    <p class="section-sub">God spoke through the prophets in ages past; now He has spoken through His Son, and given us Scripture, breathed out by His Spirit.</p>
-    <div class="grid" id="grid-word"></div>
-    <p class="teaching" style="margin-top:22px;">Scripture is "God-breathed," written by men carried along by the Holy Ghost — the prophets were the pen, God was the Author. This is what secures Scripture's trustworthiness as God's Specific Revelation.</p>
-    <div class="callout question">Why is it comforting to know Scripture comes from God, and not just human ideas?</div>
-    <div class="callout question">How has a Bible verse, or a story about Jesus, helped you know God better?</div>
-  </section>
+<!-- 9 -->
+<section class="slide" data-section="V. Revelation Through the Word" data-title="Revelation Through the Word">
+  <div class="page">
+    <h2>Revelation Through the Word</h2>
+    <p class="lead">God spoke through the prophets in ages past; now He has spoken through His Son, and given us Scripture, breathed out by His Spirit.</p>
+    <div class="vps"><div class="vp fig"><h3>By Whom Also He Made the Worlds</h3><blockquote class="scripture" style="font-style:italic">God, who at sundry times and in divers manners spake in time past unto the fathers by the prophets, Hath in these last days spoken unto us by his Son, whom he hath appointed heir of all things, by whom also he made the worlds;<cite>Hebrews 1:1-2</cite></blockquote></div><div class="vp fig"><h3>All Things Were Made by Him</h3><blockquote class="scripture" style="font-style:italic">In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God. All things were made by him; and without him was not any thing made that was made.<cite>John 1:1-3</cite></blockquote></div><div class="vp fig"><h3>Moved by the Holy Ghost</h3><blockquote class="scripture" style="font-style:italic">Knowing this first, that no prophecy of the scripture is of any private interpretation. For the prophecy came not in old time by the will of man: but holy men of God spake as they were moved by the Holy Ghost.<cite>2 Peter 1:20-21</cite></blockquote><p>Prophets were the pen, God the Author: the burden of the <span class="lord">Lord</span>, delivered faithfully.</p></div></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="V. Revelation Through the Word" data-title="Scripture Is God-Breathed">
+  <div class="page">
+    <h2>Scripture Is God-Breathed</h2>
+    <p>Scripture is “God-breathed,” written by men carried along by the Holy Ghost: the prophets were the pen, God was the Author. This is what secures Scripture’s trustworthiness as God’s Specific Revelation.</p>
+    <div class="callout"><p>Why is it comforting to know Scripture comes from God, and not just human ideas?</p></div>
+    <div class="callout"><p>How has a Bible verse, or a story about Jesus, helped you know God better?</p></div>
+  </div>
+</section>
 
 </main>
 
-<footer>Faith Baptist Church of Plymouth County &nbsp;·&nbsp; Authorized King James Version</footer>
-
-<div class="overlay" id="overlay">
-  <div class="modal" id="modal">
-    <button class="modal-close" id="modalClose" aria-label="Close">&#10005;</button>
-    <p class="modal-eyebrow" id="modalEyebrow"></p>
-    <h3 class="modal-title" id="modalTitle"></h3>
-    <p class="modal-meaning" id="modalMeaning" style="display:none;"></p>
-    <div id="modalVerses"></div>
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
   </div>
-</div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
 
 <script>
-const DATA = {
-  general: [
-    { title:"Without Excuse", verses:[
-      {ref:"Romans 1:18-20", text:"For the wrath of God is revealed from heaven against all ungodliness and unrighteousness of men, who hold the truth in unrighteousness; Because that which may be known of God is manifest in them; for God hath shewed it unto them. For the invisible things of him from the creation of the world are clearly seen, being understood by the things that are made, even his eternal power and Godhead; so that they are without excuse:"}
-    ]},
-    { title:"The Heavens Declare His Glory", verses:[
-      {ref:"Psalm 19:1-4", text:"The heavens declare the glory of God; and the firmament sheweth his handywork. Day unto day uttereth speech, and night unto night sheweth knowledge. There is no speech nor language, where their voice is not heard. Their line is gone out through all the earth, and their words to the end of the world."}
-    ]},
-    { title:"The Law Written on Their Hearts", meaning:"This internal moral compass — the conscience — is part of General Revelation.", verses:[
-      {ref:"Romans 2:14-15", text:"For when the Gentiles, which have not the law, do by nature the things contained in the law, these, having not the law, are a law unto themselves: Which shew the work of the law written in their hearts, their conscience also bearing witness, and their thoughts the mean while accusing or else excusing one another."}
-    ]}
-  ],
-  specific: [
-    { title:"God Hath Spoken by His Son", verses:[
-      {ref:"Hebrews 1:1-2", text:"God, who at sundry times and in divers manners spake in time past unto the fathers by the prophets, hath in these last days spoken unto us by his Son, whom he hath appointed heir of all things, by whom also he made the worlds."}
-    ]},
-    { title:"In the Beginning Was the Word", meaning:"Jesus is God's ultimate revelation.", verses:[
-      {ref:"John 1:1", text:"In the beginning was the Word, and the Word was with God, and the Word was God."}
-    ]},
-    { title:"Profitable for Doctrine", verses:[
-      {ref:"2 Timothy 3:16-17", text:"All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness: That the man of God may be perfect, thoroughly furnished unto all good works."}
-    ]}
-  ],
-  creation: [
-    { title:"Day Unto Day Uttereth Speech", verses:[
-      {ref:"Psalm 19:1-3", text:"The heavens declare the glory of God; and the firmament sheweth his handywork. Day unto day uttereth speech, and night unto night sheweth knowledge. There is no speech nor language, where their voice is not heard."}
-    ]},
-    { title:"Clearly Seen, Understood by the Things Made", verses:[
-      {ref:"Romans 1:20", text:"For the invisible things of him from the creation of the world are clearly seen, being understood by the things that are made, even his eternal power and Godhead; so that they are without excuse:"}
-    ]},
-    { title:"Ask Now the Beasts", verses:[
-      {ref:"Job 12:7-9", text:"But ask now the beasts, and they shall teach thee; and the fowls of the air, and they shall tell thee: Or speak to the earth, and it shall teach thee: and the fishes of the sea shall declare unto thee. Who knoweth not in all these that the hand of the LORD hath wrought this?"}
-    ]}
-  ],
-  wrath: [
-    { title:"Angry with the Wicked Every Day", verses:[
-      {ref:"Psalm 7:11-13", text:"God judgeth the righteous, and God is angry with the wicked every day. If he turn not, he will whet his sword; he hath bent his bow, and made it ready. He hath also prepared for him the instruments of death; he ordaineth his arrows against the persecutors."}
-    ]},
-    { title:"How Long, O Lord?", verses:[
-      {ref:"Revelation 6:10", text:"And they cried with a loud voice, saying, How long, O Lord, holy and true, dost thou not judge and avenge our blood on them that dwell on the earth?"}
-    ]},
-    { title:"Vengeance Belongeth Unto Me", verses:[
-      {ref:"Hebrews 10:30", text:"For we know him that hath said, Vengeance belongeth unto me, I will recompense, saith the Lord. And again, The Lord shall judge his people."}
-    ]},
-    { title:"The LORD Hath a Controversy with the Nations", verses:[
-      {ref:"Jeremiah 25:31-32", text:"A noise shall come even to the ends of the earth; for the LORD hath a controversy with the nations, he will plead with all flesh; he will give them that are wicked to the sword, saith the LORD. Thus saith the LORD of hosts, Behold, evil shall go forth from nation to nation, and a great whirlwind shall be raised up from the coasts of the earth."}
-    ]},
-    { title:"Abhor That Which Is Evil", verses:[
-      {ref:"Romans 12:9", text:"Let love be without dissimulation. Abhor that which is evil; cleave to that which is good."}
-    ]}
-  ],
-  mercy: [
-    { title:"Merciful and Gracious, Slow to Anger", verses:[
-      {ref:"Psalm 103:8", text:"The LORD is merciful and gracious, slow to anger, and plenteous in mercy."}
-    ]},
-    { title:"Rich in Mercy, Great Love", verses:[
-      {ref:"Ephesians 2:4", text:"But God, who is rich in mercy, for his great love wherewith he loved us,"}
-    ]},
-    { title:"That They Also May Obtain Mercy", verses:[
-      {ref:"Romans 11:30-31", text:"For as ye in times past have not believed God, yet have now obtained mercy through their unbelief: Even so have these also now not believed, that through your mercy they also may obtain mercy."}
-    ]}
-  ],
-  word: [
-    { title:"By Whom Also He Made the Worlds", verses:[
-      {ref:"Hebrews 1:1-2", text:"God, who at sundry times and in divers manners spake in time past unto the fathers by the prophets, hath in these last days spoken unto us by his Son, whom he hath appointed heir of all things, by whom also he made the worlds."}
-    ]},
-    { title:"All Things Were Made by Him", verses:[
-      {ref:"John 1:1-3", text:"In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God. All things were made by him; and without him was not any thing made that was made."}
-    ]},
-    { title:"Moved by the Holy Ghost", meaning:"Prophets were the pen, God the Author — the burden of the Lord, delivered faithfully.", verses:[
-      {ref:"2 Peter 1:20-21", text:"Knowing this first, that no prophecy of the scripture is of any private interpretation. For the prophecy came not in old time by the will of man: but holy men of God spake as they were moved by the Holy Ghost."}
-    ]}
-  ]
+const BOOKS = {};
+
+const V = {
+
 };
 
-function refLine(item){
-  if(item.verses.length === 1) return item.verses[0].ref;
-  return item.verses.map(v=>v.ref).join(" · ");
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
 }
 
-function buildGrid(containerId, items, opts){
-  opts = opts || {};
-  const el = document.getElementById(containerId);
-  if(!el) return;
-  items.forEach((item) => {
-    let cls = 'card';
-    if(opts.sage) cls += ' sage';
-    if(opts.crimson) cls += ' crimson';
-    const card = document.createElement('div');
-    card.className = cls;
-    card.innerHTML = `
-      <p class="ct-name">${item.title}</p>
-      <p class="ct-ref">${refLine(item)}</p>
-      <p class="ct-hint">Tap to read &rarr;</p>
-    `;
-    card.addEventListener('click', () => openModal(item, opts.eyebrow));
-    el.appendChild(card);
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
   });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
 }
 
-buildGrid('grid-general', DATA.general, {eyebrow:'General Revelation', sage:true});
-buildGrid('grid-specific', DATA.specific, {eyebrow:'Specific Revelation'});
-buildGrid('grid-creation', DATA.creation, {eyebrow:'Revelation Through Creation', sage:true});
-buildGrid('grid-wrath', DATA.wrath, {eyebrow:'Revelation Through Wrath', crimson:true});
-buildGrid('grid-mercy', DATA.mercy, {eyebrow:'Revelation Through Mercy'});
-buildGrid('grid-word', DATA.word, {eyebrow:'Revelation Through the Word'});
-
-const overlay = document.getElementById('overlay');
-const modalEyebrow = document.getElementById('modalEyebrow');
-const modalTitle = document.getElementById('modalTitle');
-const modalMeaning = document.getElementById('modalMeaning');
-const modalVerses = document.getElementById('modalVerses');
-
-function openModal(item, eyebrow){
-  modalEyebrow.textContent = eyebrow || '';
-  modalTitle.innerHTML = item.title;
-  if(item.meaning){
-    modalMeaning.style.display = 'block';
-    modalMeaning.textContent = item.meaning;
-  } else {
-    modalMeaning.style.display = 'none';
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
   }
-  modalVerses.innerHTML = item.verses.map(v => `
-    <div class="verse-block">
-      <p class="verse-ref">${v.ref}</p>
-      <p class="verse-text">${v.text}</p>
-    </div>
-  `).join('');
-  overlay.classList.add('open');
-  document.getElementById('modal').scrollTop = 0;
-}
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
 
-function closeModal(){ overlay.classList.remove('open'); }
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
 
-document.getElementById('modalClose').addEventListener('click', closeModal);
-overlay.addEventListener('click', (e) => { if(e.target === overlay) closeModal(); });
-document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
 </script>
 </body>
 </html>

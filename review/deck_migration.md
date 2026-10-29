@@ -13,15 +13,6 @@ Already slides, so mostly a mechanical rebuild plus the fact-check and typo pass
 ### 2. Doctrine weeks 1 to 10
 Week 7 and Week 8 infographics and the Week 4 pronouns chart become slides inside their week's deck. Worksheets and answer keys stay as notes parts, but are not rebuilt.
 
-- [ ] **Week 1: The Importance of Doctrine** (`doctrine-week-1-importance-of-doctrine`): Slides `doctrine/doctrine-week-1-importance-of-doctrine.html`
-- [ ] **Week 2: How God Reveals Himself to Man** (`doctrine-week-2-how-god-reveals-himself`): Slides `doctrine/doctrine-week-2-how-god-reveals-himself.html`
-- [ ] **Week 3: The Doctrine of Scripture** (`doctrine-week-3-doctrine-of-scripture`): Slides `doctrine/doctrine-week-3-doctrine-of-scripture.html`
-- [ ] **Week 4: The Importance of the KJV** (`doctrine-week-4-importance-of-the-kjv`): Slides `doctrine/doctrine-week-4-importance-of-the-kjv.html`; Pronouns chart `doctrine/doctrine-week-4-pronouns-chart.html`
-- [ ] **Week 6: Terms and Conditions** (`doctrine-week-6-terms-and-conditions`): Slides `doctrine/doctrine-week-6-terms-and-conditions.html`
-- [ ] **Week 7: The Doctrine of God (the Father)** (`doctrine-week-7-doctrine-of-god`): Slides `doctrine/doctrine-week-7-doctrine-of-god.html`; Infographic `doctrine/doctrine-week-7-infographic.html`
-- [ ] **Week 8: The Doctrine of Christ** (`doctrine-week-8-doctrine-of-christ`): Slides `doctrine/doctrine-week-8-doctrine-of-christ.html`; Infographic `doctrine/doctrine-week-8-infographic.html`
-- [ ] **Week 9: The Doctrine of the Holy Spirit** (`doctrine-week-9-doctrine-of-the-holy-spirit`): Slides `doctrine/doctrine-week-9-doctrine-of-the-holy-spirit.html`
-- [ ] **Week 10: Marriage, God's Plan for Man and Woman** (`doctrine-week-10-marriage-gods-plan`): Slides `doctrine/doctrine-week-10-marriage-gods-plan.html`
 
 ### 3. Genesis 1 to 5
 Genesis 2 has two different lessons that overlap on the design of marriage: `marriage` (Genesis 2 and God's design) and `marriage-and-divorce` (young adult Sunday school, adds divorce). Per the user, they stay separate decks, like the two Genesis 6 lessons.
@@ -69,6 +60,15 @@ Each chapter has a main page plus several side pages, recaps, charts and workshe
 
 ## Done
 
+- [x] **Week 1: The Importance of Doctrine** (`doctrine-week-1-importance-of-doctrine`)
+- [x] **Week 2: How God Reveals Himself to Man** (`doctrine-week-2-how-god-reveals-himself`)
+- [x] **Week 3: The Doctrine of Scripture** (`doctrine-week-3-doctrine-of-scripture`)
+- [x] **Week 4: The Importance of the KJV** (`doctrine-week-4-importance-of-the-kjv`)
+- [x] **Week 6: Terms and Conditions** (`doctrine-week-6-terms-and-conditions`)
+- [x] **Week 7: The Doctrine of God (the Father)** (`doctrine-week-7-doctrine-of-god`)
+- [x] **Week 8: The Doctrine of Christ** (`doctrine-week-8-doctrine-of-christ`)
+- [x] **Week 9: The Doctrine of the Holy Spirit** (`doctrine-week-9-doctrine-of-the-holy-spirit`)
+- [x] **Week 10: Marriage, God's Plan for Man and Woman** (`doctrine-week-10-marriage-gods-plan`)
 - [x] **Genesis 6: The Days of Noah** (`genesis-6-the-days-of-noah`)
 - [x] **Genesis 6: Sons of God** (`genesis-6-sons-of-god`)
 - [x] **John 6: The Bread of Life** (`john-6-bread-of-life`)
