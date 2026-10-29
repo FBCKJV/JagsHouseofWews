@@ -431,7 +431,7 @@ def apply_refile(src):
     for job in rf.get('drive', []):      # a study the author wrote in Google Drive and announced for a chapter
         book, ch = split(job['to'])
         passes = src.setdefault(book, {}).setdefault(ch, [])
-        pid = 'added-drive-' + job['drive']
+        pid = 'added-drive-' + job['id']
         if any(str(p['id']) == pid for s in passes for p in s['posts']):
             continue
         study = {'date': job['date'][:10], 'series': False, 'link': None, 'study_chars': 0, 'primary': False,
