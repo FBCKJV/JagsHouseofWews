@@ -7,7 +7,7 @@ Pick the next lesson from the top of the "To do" list. When one is finished, mov
 ## To do
 
 ### 1. Slide-style pages (closest to the template)
-Already slides, so mostly a mechanical rebuild plus the fact-check and typo pass. John 6's narrated copy (a read-aloud player) is kept until the author decides whether to keep read-aloud. `saved-christian-now-what` (824 KB) and `fundamentalism-vs-vain-philosophy` (420 KB) embed images; `conditional-promises` uses its own `deck-stage.js`.
+Already slides, so mostly a mechanical rebuild plus the fact-check and typo pass. John 6's narrated copy and its read-aloud player were retired: the author said the browser voices are not good, so read-aloud is dropped for now. `saved-christian-now-what` (824 KB) and `fundamentalism-vs-vain-philosophy` (420 KB) embed images; `conditional-promises` uses its own `deck-stage.js`.
 
 
 ### 2. Doctrine weeks 1 to 10
