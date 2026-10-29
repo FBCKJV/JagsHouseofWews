@@ -1,330 +1,635 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>From Conditional Promises to New Covenant Reality – Rightly Dividing the Word</title>
 <script src="../../deck-extras.js"></script>
+<meta name="description" content="How Israel&#x27;s choices reshaped the timing, scope and form of God&#x27;s promises: conditional Old Testament prophecy, the kingdom offer and its rejection, and the reconfigured fulfillment in the New Testament.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
 </head>
 <body>
-<x-dc>
-<helmet>
-<meta name="omelette-owns-print" content="deck">
-<style>body{margin:0;background:#000;}</style>
-</helmet>
-<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
 
-<section data-label="Title" data-speaker-notes="Welcome the class. Introduce the framework: many OT prophecies were conditional on Israel's obedience. When conditions went unmet, God's plan shifted to a reconfigured, spiritual fulfillment under the new covenant." style="width:1920px;height:1080px;position:relative;background:#101826;color:#f4f6f8;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;">
-  <div style="font-size:32px;font-weight:700;letter-spacing:6px;text-transform:uppercase;color:#e0a940;margin-bottom:36px;">Rightly Dividing the Word</div>
-  <div style="font-size:92px;font-weight:800;line-height:1.1;max-width:1550px;">From Conditional Promises to New Covenant Reality</div>
-  <div style="font-size:34px;font-weight:400;color:#b9c2cc;margin-top:48px;max-width:1300px;">How Israel's choices reshaped the timing, scope, and form of God's promises</div>
-  <div style="margin-top:70px;font-size:24px;color:#8a95a3;">Tap any highlighted reference to read the verse &mdash; tap again to close</div>
-</section>
+<main class="deck" id="deck">
 
-<section data-label="Core Principle" data-speaker-notes="Explain: many OT prophecies were conditional on Israel's obedience. Unmet conditions did not cancel God's plan -- they redirected it. OT shows 'what could have been'; NT shows 'what will be.'" style="width:1920px;height:1080px;position:relative;background:#101826;color:#f4f6f8;display:flex;flex-direction:column;padding:90px 140px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;">
-  <div style="font-size:28px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#e0a940;">The Core Principle</div>
-  <div style="font-size:62px;font-weight:800;margin-top:14px;margin-bottom:50px;">Conditional Promise, Sovereign Response</div>
-  <div style="display:flex;gap:60px;flex:1;">
-    <div style="flex:1;display:flex;flex-direction:column;gap:22px;">
-      <div style="font-size:38px;font-weight:700;color:#e0664a;">What Could Have Been (OT)</div>
-      <div style="font-size:34px;line-height:1.45;color:#dbe1e6;">Prophecies promised a national, physical, immediate kingdom &mdash; contingent on Israel's obedience and repentance. See <span onClick="{{ toggles.gen12 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Genesis 12:1-3</span> and <span onClick="{{ toggles.ex19 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Exodus 19:5-6</span>.</div>
-    </div>
-    <div style="width:4px;background:#2a3648;"></div>
-    <div style="flex:1;display:flex;flex-direction:column;gap:22px;">
-      <div style="font-size:38px;font-weight:700;color:#5fb87a;">What Will Be (NT)</div>
-      <div style="font-size:34px;line-height:1.45;color:#dbe1e6;">When conditions went unmet, God's plan shifted &mdash; the New Testament presents a reconfigured, spiritual fulfillment under a new covenant, opened to all who believe.</div>
-    </div>
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="From Conditional Promises to New Covenant Reality">
+  <div class="page title-page">
+    <div class="overline">Rightly Dividing the Word</div>
+    <h1>From Conditional Promises to New Covenant Reality</h1>
+    <p class="sub">How Israel’s choices reshaped the timing, scope, and form of God’s promises</p>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any gold reference to read the verse.</p>
   </div>
-  <div style="font-size:30px;color:#b9c2cc;margin-top:36px;font-style:italic;">Not contradiction &mdash; the same faithful God adapting the outworking to the choices of men.</div>
-  <sc-if value="{{ verseOpen.gen12 }}"><div onClick="{{ toggles.gen12 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Genesis 12:1-3</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"Now the LORD had said unto Abram, Get thee out of thy country... and I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing... and in thee shall all families of the earth be blessed."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.ex19 }}"><div onClick="{{ toggles.ex19 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Exodus 19:5-6</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"Now therefore, if ye will obey my voice indeed, and keep my covenant, then ye shall be a peculiar treasure unto me above all people... And ye shall be unto me a kingdom of priests, and an holy nation."</div></div></div></sc-if>
 </section>
 
-<section data-label="Judgment and Free Will" data-speaker-notes="Explain individual judgment by faith vs national judgment by works. God's foreknowledge lets Him offer real conditions while knowing the outcome -- He redirects blessing to a new nation of believers rather than voiding His word." style="width:1920px;height:1080px;position:relative;background:#101826;color:#f4f6f8;display:flex;flex-direction:column;padding:90px 140px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;">
-  <div style="font-size:28px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#e0a940;">Two Kinds of Judgment, One Sovereign God</div>
-  <div style="font-size:58px;font-weight:800;margin-top:14px;margin-bottom:44px;">Free Will Under a Foreknowing God</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;flex:0 0 auto;">
-    <div style="background:#1b2637;padding:40px;border-radius:14px;">
-      <div style="font-size:32px;font-weight:700;color:#7ec2df;margin-bottom:14px;">Individual &mdash; Judged by Faith</div>
-      <div style="font-size:28px;line-height:1.4;">Every person is offered life or death, blessing or cursing, and is judged on faith in Christ. <span onClick="{{ toggles.deut30 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Deuteronomy 30:19</span></div>
-    </div>
-    <div style="background:#1b2637;padding:40px;border-radius:14px;">
-      <div style="font-size:32px;font-weight:700;color:#d99a6c;margin-bottom:14px;">National &mdash; Judged by Works</div>
-      <div style="font-size:28px;line-height:1.4;">Israel, as a covenant nation, is judged corporately on obedience &mdash; the basis for the land, kingdom, and temple promises.</div>
-    </div>
+<!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="Conditional Promise, Sovereign Response">
+  <div class="page">
+    <div class="kicker">The Core Principle</div>
+    <h2>Conditional Promise, Sovereign Response</h2>
+    <div class="cols"><div class="panel cain"><h3>What Could Have Been (OT)</h3><p>Prophecies promised a national, physical, immediate kingdom, contingent on Israel’s obedience and repentance. See <button class="ref" data-v="Genesis 12:1-3">Genesis 12:1-3</button> and <button class="ref" data-v="Exodus 19:5-6">Exodus 19:5-6</button>.</p></div><div class="panel believers"><h3>What Will Be (NT)</h3><p>When conditions went unmet, God’s plan shifted. The New Testament presents a reconfigured, spiritual fulfillment under a new covenant, opened to all who believe.</p></div></div>
+    <p class="take">Not contradiction, but the same faithful God adapting the outworking to the choices of men.</p>
   </div>
-  <div style="margin-top:44px;font-size:30px;line-height:1.55;color:#e4e8eb;max-width:1550px;">God's foreknowledge lets Him offer genuine conditions while already knowing men's choices. Longsuffering, He does not force obedience &mdash; He redirects the blessing to a "new nation" of believers rather than void His word. <span onClick="{{ toggles.pet2_3 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">2 Peter 3:9</span></div>
-  <sc-if value="{{ verseOpen.deut30 }}"><div onClick="{{ toggles.deut30 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Deuteronomy 30:19</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"I have set before you life and death, blessing and cursing: therefore choose life, that both thou and thy seed may live."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.pet2_3 }}"><div onClick="{{ toggles.pet2_3 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">2 Peter 3:9</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"The Lord is not slack concerning his promise... but is longsuffering to us-ward, not willing that any should perish, but that all should come to repentance."</div></div></div></sc-if>
 </section>
 
-<section data-label="Genesis: Winnowing" data-speaker-notes="Cain's disobedience shifts the godly line to Seth. Abraham's promise is unconditional for salvation (the Seed, Christ) but conditional for national land possession." style="width:1920px;height:1080px;position:relative;background:#101826;color:#f4f6f8;display:flex;flex-direction:column;padding:90px 140px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;">
-  <div style="font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#e0a940;">Timeline &middot; Genesis</div>
-  <div style="font-size:56px;font-weight:800;margin-top:12px;margin-bottom:40px;">The Foundation of Winnowing</div>
-  <div style="display:flex;flex-direction:column;gap:26px;flex:1;">
-    <div style="display:flex;gap:32px;align-items:flex-start;">
-      <div style="font-size:26px;font-weight:800;color:#7ec2df;width:220px;flex-shrink:0;">PROMISE</div>
-      <div style="font-size:30px;line-height:1.45;">God promises a great nation and land to Abraham, and that his Seed &mdash; Christ &mdash; would be a light to the nations. <span onClick="{{ toggles.gen12b }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Genesis 12:1-3</span> Salvation is unconditional &mdash; faith alone; the land's immediate possession requires obedience.</div>
-    </div>
-    <div style="display:flex;gap:32px;align-items:flex-start;">
-      <div style="font-size:26px;font-weight:800;color:#d99a6c;width:220px;flex-shrink:0;">CHOICE</div>
-      <div style="font-size:30px;line-height:1.45;">Cain offers an improper sacrifice and murders Abel <span onClick="{{ toggles.gen4 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Genesis 4:6-7</span> &mdash; exiled, forfeiting the godly line. Abraham's own lack of faith delays fulfillment &mdash; taking Hagar rather than waiting on God's promise. <span onClick="{{ toggles.gen16 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Genesis 16:1-2</span></div>
-    </div>
-    <div style="display:flex;gap:32px;align-items:flex-start;">
-      <div style="font-size:26px;font-weight:800;color:#8bbf8f;width:220px;flex-shrink:0;">OUTCOME</div>
-      <div style="font-size:30px;line-height:1.45;">The godly line shifts to Seth. God's plan adapts, winnowing the unfaithful while preserving the promised line to Christ.</div>
-    </div>
+<!-- 3 -->
+<section class="slide" data-section="Introduction" data-title="Free Will Under a Foreknowing God">
+  <div class="page">
+    <div class="kicker">Two Kinds of Judgment, One Sovereign God</div>
+    <h2>Free Will Under a Foreknowing God</h2>
+    <div class="cols"><div class="panel believers"><h3>Individual: Judged by Faith</h3><p>Every person is offered life or death, blessing or cursing, and is judged on faith in Christ. <button class="ref" data-v="Deuteronomy 30:19">Deuteronomy 30:19</button></p></div><div class="panel cain"><h3>National: Judged by Works</h3><p>Israel, as a covenant nation, is judged corporately on obedience, the basis for the land, kingdom, and temple promises.</p></div></div>
+    <p>God’s foreknowledge lets Him offer genuine conditions while already knowing men’s choices. Longsuffering, He does not force obedience. He redirects the blessing to a “new nation” of believers rather than void His word. <button class="ref" data-v="2 Peter 3:9">2 Peter 3:9</button></p>
   </div>
-  <sc-if value="{{ verseOpen.gen12b }}"><div onClick="{{ toggles.gen12b }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Genesis 12:1-3</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"I will make of thee a great nation... and in thee shall all families of the earth be blessed."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.gen4 }}"><div onClick="{{ toggles.gen4 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Genesis 4:6-7</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"Why art thou wroth? ... If thou doest well, shalt thou not be accepted? and if thou doest not well, sin lieth at the door."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.gen16 }}"><div onClick="{{ toggles.gen16 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Genesis 16:1-2</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"Sarai said unto Abram... I pray thee, go in unto my maid; it may be that I may obtain children by her. And Abram hearkened to the voice of Sarai."</div></div></div></sc-if>
 </section>
 
-<section data-label="Exodus and Leviticus" data-speaker-notes="Israel's covenant obedience is the condition for the land; the priesthood shifts from the firstborn to the Levites after the golden calf, because of Levite loyalty." style="width:1920px;height:1080px;position:relative;background:#101826;color:#f4f6f8;display:flex;flex-direction:column;padding:90px 140px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;">
-  <div style="font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#e0a940;">Timeline &middot; Exodus &amp; Leviticus</div>
-  <div style="font-size:56px;font-weight:800;margin-top:12px;margin-bottom:40px;">National Promises and Priesthood</div>
-  <div style="display:flex;flex-direction:column;gap:26px;flex:1;">
-    <div style="display:flex;gap:32px;align-items:flex-start;">
-      <div style="font-size:26px;font-weight:800;color:#7ec2df;width:220px;flex-shrink:0;">PROMISE</div>
-      <div style="font-size:30px;line-height:1.45;">God promises deliverance from Egypt and Canaan, conditioned on covenantal obedience. <span onClick="{{ toggles.ex19b }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Exodus 19:5-6</span> The priesthood is likewise offered on faithfulness.</div>
-    </div>
-    <div style="display:flex;gap:32px;align-items:flex-start;">
-      <div style="font-size:26px;font-weight:800;color:#d99a6c;width:220px;flex-shrink:0;">CHOICE</div>
-      <div style="font-size:30px;line-height:1.45;">Pharaoh's defiance brings judgment on Egypt. Israel's idolatry with the golden calf <span onClick="{{ toggles.ex32 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Exodus 32:26-29</span> contrasts with the Levites' loyalty.</div>
-    </div>
-    <div style="display:flex;gap:32px;align-items:flex-start;">
-      <div style="font-size:26px;font-weight:800;color:#8bbf8f;width:220px;flex-shrink:0;">OUTCOME</div>
-      <div style="font-size:30px;line-height:1.45;">The land promise is delayed. The priesthood shifts from the firstborn of all Israel to the tribe of Levi alone.</div>
-    </div>
+<!-- 4 -->
+<section class="slide" data-section="The timeline of conditional promises" data-title="The Foundation of Winnowing">
+  <div class="page">
+    <div class="kicker">Timeline · Genesis</div>
+    <h2>The Foundation of Winnowing</h2>
+    <div class="steps"><div class="st"><span class="when">PROMISE</span><div>God promises a great nation and land to Abraham, and that his Seed, Christ, would be a light to the nations. <button class="ref" data-v="Genesis 12:1-3">Genesis 12:1-3</button> Salvation is unconditional, faith alone; the land’s immediate possession requires obedience.</div></div><div class="st"><span class="when">CHOICE</span><div>Cain offers an improper sacrifice and murders Abel <button class="ref" data-v="Genesis 4:6-7">Genesis 4:6-7</button>, exiled, forfeiting the godly line. Abraham’s own lack of faith delays fulfillment, taking Hagar rather than waiting on God’s promise. <button class="ref" data-v="Genesis 16:1-2">Genesis 16:1-2</button></div></div><div class="st"><span class="when">OUTCOME</span><div>The godly line shifts to Seth. God’s plan adapts, winnowing the unfaithful while preserving the promised line to Christ.</div></div></div>
   </div>
-  <sc-if value="{{ verseOpen.ex19b }}"><div onClick="{{ toggles.ex19b }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Exodus 19:5-6</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"If ye will obey my voice indeed, and keep my covenant, then ye shall be a peculiar treasure unto me... a kingdom of priests, and an holy nation."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.ex32 }}"><div onClick="{{ toggles.ex32 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Exodus 32:26-29</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"Who is on the LORD's side? let him come unto me. And all the sons of Levi gathered themselves unto him... Consecrate yourselves today to the LORD."</div></div></div></sc-if>
 </section>
 
-<section data-label="Numbers and Deuteronomy" data-speaker-notes="Kadesh-Barnea rebellion causes the wilderness generation to forfeit the land. God outlines blessing for obedience, cursing for disobedience -- ultimately leading toward exile." style="width:1920px;height:1080px;position:relative;background:#101826;color:#f4f6f8;display:flex;flex-direction:column;padding:90px 140px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;">
-  <div style="font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#e0a940;">Timeline &middot; Numbers &amp; Deuteronomy</div>
-  <div style="font-size:56px;font-weight:800;margin-top:12px;margin-bottom:40px;">Forfeiture of the Promised Land</div>
-  <div style="display:flex;flex-direction:column;gap:26px;flex:1;">
-    <div style="display:flex;gap:32px;align-items:flex-start;">
-      <div style="font-size:26px;font-weight:800;color:#7ec2df;width:220px;flex-shrink:0;">PROMISE</div>
-      <div style="font-size:30px;line-height:1.45;">God reaffirms the land, contingent on trust and obedience, with blessings and curses spelled out plainly. <span onClick="{{ toggles.deut28 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Deuteronomy 28:1-2, 15</span></div>
-    </div>
-    <div style="display:flex;gap:32px;align-items:flex-start;">
-      <div style="font-size:26px;font-weight:800;color:#d99a6c;width:220px;flex-shrink:0;">CHOICE</div>
-      <div style="font-size:30px;line-height:1.45;">The Kadesh-Barnea rebellion, spurred by the spies' unbelief, defies God. <span onClick="{{ toggles.num14 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Numbers 14:20-23</span> Korah's rebellion follows the same pattern. <span onClick="{{ toggles.num16 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Numbers 16:31-33</span></div>
-    </div>
-    <div style="display:flex;gap:32px;align-items:flex-start;">
-      <div style="font-size:26px;font-weight:800;color:#8bbf8f;width:220px;flex-shrink:0;">OUTCOME</div>
-      <div style="font-size:30px;line-height:1.45;">The land promise is delayed forty years; that generation dies in the wilderness. The promise persists for their children &mdash; but national disobedience will one day lead to exile.</div>
-    </div>
+<!-- 5 -->
+<section class="slide" data-section="The timeline of conditional promises" data-title="National Promises and Priesthood">
+  <div class="page">
+    <div class="kicker">Timeline · Exodus &amp; Leviticus</div>
+    <h2>National Promises and Priesthood</h2>
+    <div class="steps"><div class="st"><span class="when">PROMISE</span><div>God promises deliverance from Egypt and Canaan, conditioned on covenantal obedience. <button class="ref" data-v="Exodus 19:5-6">Exodus 19:5-6</button> The priesthood is likewise offered on faithfulness.</div></div><div class="st"><span class="when">CHOICE</span><div>Pharaoh’s defiance brings judgment on Egypt. Israel’s idolatry with the golden calf <button class="ref" data-v="Exodus 32:26-29">Exodus 32:26-29</button> contrasts with the Levites’ loyalty.</div></div><div class="st"><span class="when">OUTCOME</span><div>The land promise is delayed. The priesthood shifts from the firstborn of all Israel to the tribe of Levi alone.</div></div></div>
   </div>
-  <sc-if value="{{ verseOpen.deut28 }}"><div onClick="{{ toggles.deut28 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Deuteronomy 28:1-2, 15</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"If thou shalt hearken diligently unto the voice of the LORD... all these blessings shall come on thee... But it shall come to pass, if thou wilt not hearken... all these curses shall come upon thee."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.num14 }}"><div onClick="{{ toggles.num14 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Numbers 14:20-23</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"Surely they shall not see the land which I sware unto their fathers, neither shall any of them that despised me see it."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.num16 }}"><div onClick="{{ toggles.num16 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Numbers 16:31-33</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"The earth opened her mouth, and swallowed them up... and they perished from among the congregation."</div></div></div></sc-if>
 </section>
 
-<section data-label="Joshua to 1 Kings" data-speaker-notes="Achan's sin and incomplete conquest sow future idolatry. Saul's disobedience forfeits his dynasty and the Messianic line shifts to David. Jeroboam's idolatry costs his house the northern throne, and it shifts to Judah's line." style="width:1920px;height:1080px;position:relative;background:#101826;color:#f4f6f8;display:flex;flex-direction:column;padding:90px 140px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;">
-  <div style="font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#e0a940;">Timeline &middot; Joshua &ndash; 1 Kings</div>
-  <div style="font-size:52px;font-weight:800;margin-top:12px;margin-bottom:36px;">Fulfillment, Disobedience, Forfeited Dynasties</div>
-  <div style="display:flex;flex-direction:column;gap:22px;flex:1;">
-    <div style="display:flex;gap:32px;align-items:flex-start;">
-      <div style="font-size:26px;font-weight:800;color:#7ec2df;width:220px;flex-shrink:0;">PROMISE</div>
-      <div style="font-size:28px;line-height:1.4;">The land is fulfilled under Joshua, but continued possession requires obedience. God promises Saul a lasting dynasty, and later Jeroboam a house sure as David's <span onClick="{{ toggles.kings11 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">1 Kings 11:38</span> &mdash; each contingent on obedience.</div>
-    </div>
-    <div style="display:flex;gap:32px;align-items:flex-start;">
-      <div style="font-size:26px;font-weight:800;color:#d99a6c;width:220px;flex-shrink:0;">CHOICE</div>
-      <div style="font-size:28px;line-height:1.4;">Achan's sin <span onClick="{{ toggles.josh7 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Joshua 7:11-12</span> brings defeat at Ai; unexpelled Canaanites seed future idolatry <span onClick="{{ toggles.judg2 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Judges 2:1-3</span>. Saul disobeys and is rejected. <span onClick="{{ toggles.sam13 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">1 Samuel 13:13-14</span> Jeroboam's idolatry dooms his house. <span onClick="{{ toggles.kings13 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">1 Kings 13:33-34</span></div>
-    </div>
-    <div style="display:flex;gap:32px;align-items:flex-start;">
-      <div style="font-size:26px;font-weight:800;color:#8bbf8f;width:220px;flex-shrink:0;">OUTCOME</div>
-      <div style="font-size:28px;line-height:1.4;">The Messianic lineage shifts to David. The promise to Jeroboam's line shifts permanently to Judah's line.</div>
-    </div>
+<!-- 6 -->
+<section class="slide" data-section="The timeline of conditional promises" data-title="Forfeiture of the Promised Land">
+  <div class="page">
+    <div class="kicker">Timeline · Numbers &amp; Deuteronomy</div>
+    <h2>Forfeiture of the Promised Land</h2>
+    <div class="steps"><div class="st"><span class="when">PROMISE</span><div>God reaffirms the land, contingent on trust and obedience, with blessings and curses spelled out plainly. <button class="ref" data-v="Deuteronomy 28:1-2">Deuteronomy 28:1-2</button> <button class="ref" data-v="Deuteronomy 28:15">Deuteronomy 28:15</button></div></div><div class="st"><span class="when">CHOICE</span><div>The Kadesh-Barnea rebellion, spurred by the spies’ unbelief, defies God. <button class="ref" data-v="Numbers 14:20-23">Numbers 14:20-23</button> Korah’s rebellion follows the same pattern. <button class="ref" data-v="Numbers 16:31-33">Numbers 16:31-33</button></div></div><div class="st"><span class="when">OUTCOME</span><div>The land promise is delayed forty years; that generation dies in the wilderness. The promise persists for their children, but national disobedience will one day lead to exile.</div></div></div>
   </div>
-  <sc-if value="{{ verseOpen.kings11 }}"><div onClick="{{ toggles.kings11 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">1 Kings 11:38</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"If thou wilt hearken unto all that I command thee... I will build thee a sure house, as I built for David."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.sam13 }}"><div onClick="{{ toggles.sam13 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">1 Samuel 13:13-14</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"Thou hast done foolishly... now thy kingdom shall not continue: the LORD hath sought him a man after his own heart."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.josh7 }}"><div onClick="{{ toggles.josh7 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Joshua 7:11-12</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"Israel hath sinned... therefore the children of Israel could not stand before their enemies."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.judg2 }}"><div onClick="{{ toggles.judg2 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Judges 2:2-3</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"Ye have not obeyed my voice... I also will not drive them out from before you; but they shall be as thorns in your sides."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.kings13 }}"><div onClick="{{ toggles.kings13 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">1 Kings 13:33-34</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"This thing became sin unto the house of Jeroboam, even to cut it off, and to destroy it from off the face of the earth."</div></div></div></sc-if>
 </section>
 
-<section data-label="The Prophets" data-speaker-notes="God offers restoration if Judah repents. Ezekiel's temple vision and Zechariah's kingdom are conditional on repentance and obedience -- and Judah becomes 'reprobate silver,' forfeiting the vision." style="width:1920px;height:1080px;position:relative;background:#101826;color:#f4f6f8;display:flex;flex-direction:column;padding:90px 140px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;">
-  <div style="font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#e0a940;">Timeline &middot; The Prophets</div>
-  <div style="font-size:56px;font-weight:800;margin-top:12px;margin-bottom:36px;">Reprobate Silver, Conditional Eschatology</div>
-  <div style="display:flex;flex-direction:column;gap:22px;flex:1;">
-    <div style="display:flex;gap:32px;align-items:flex-start;">
-      <div style="font-size:26px;font-weight:800;color:#7ec2df;width:220px;flex-shrink:0;">PROMISE</div>
-      <div style="font-size:28px;line-height:1.4;">Restoration if Judah repents. Ezekiel promises a restored temple and land, contingent on Israel's shame for their iniquities. <span onClick="{{ toggles.ezek43 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Ezekiel 43:10-11</span> Zechariah promises a kingdom "if ye will diligently obey." <span onClick="{{ toggles.zech6 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Zechariah 6:15</span></div>
-    </div>
-    <div style="display:flex;gap:32px;align-items:flex-start;">
-      <div style="font-size:26px;font-weight:800;color:#d99a6c;width:220px;flex-shrink:0;">CHOICE</div>
-      <div style="font-size:28px;line-height:1.4;">Babylon's pride brings its own destruction. <span onClick="{{ toggles.isa14 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Isaiah 14:12-15</span> Judah's persistent idolatry renders them "reprobate silver." <span onClick="{{ toggles.jer6 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Jeremiah 6:30</span> They fail to repent and fail to obey.</div>
-    </div>
-    <div style="display:flex;gap:32px;align-items:flex-start;">
-      <div style="font-size:26px;font-weight:800;color:#8bbf8f;width:220px;flex-shrink:0;">OUTCOME</div>
-      <div style="font-size:28px;line-height:1.4;">Mercy grants a remnant's return from exile. But the restored kingdom and temple are forfeited &mdash; Ezekiel's vision becomes "what could have been," and blessing redirects to the coming "new nation."</div>
-    </div>
+<!-- 7 -->
+<section class="slide" data-section="The timeline of conditional promises" data-title="Fulfillment, Disobedience, Forfeited Dynasties">
+  <div class="page">
+    <div class="kicker">Timeline · Joshua – 1 Kings</div>
+    <h2>Fulfillment, Disobedience, Forfeited Dynasties</h2>
+    <div class="steps"><div class="st"><span class="when">PROMISE</span><div>The land is fulfilled under Joshua, but continued possession requires obedience. God promises Saul a lasting dynasty, and later Jeroboam a house sure as David’s <button class="ref" data-v="1 Kings 11:38">1 Kings 11:38</button>, each contingent on obedience.</div></div><div class="st"><span class="when">CHOICE</span><div>Achan’s sin <button class="ref" data-v="Joshua 7:11-12">Joshua 7:11-12</button> brings defeat at Ai; unexpelled Canaanites seed future idolatry <button class="ref" data-v="Judges 2:1-3">Judges 2:1-3</button>. Saul disobeys and is rejected. <button class="ref" data-v="1 Samuel 13:13-14">1 Samuel 13:13-14</button> Jeroboam’s idolatry dooms his house. <button class="ref" data-v="1 Kings 13:33-34">1 Kings 13:33-34</button></div></div><div class="st"><span class="when">OUTCOME</span><div>The Messianic lineage shifts to David. The promise to Jeroboam’s line shifts permanently to Judah’s line.</div></div></div>
   </div>
-  <sc-if value="{{ verseOpen.ezek43 }}"><div onClick="{{ toggles.ezek43 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Ezekiel 43:10-11</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"Thou son of man, shew the house to the house of Israel, that they may be ashamed of their iniquities... if they be ashamed of all that they have done, shew them the form of the house."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.zech6 }}"><div onClick="{{ toggles.zech6 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Zechariah 6:15</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"This shall come to pass, if ye will diligently obey the voice of the LORD your God."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.jer6 }}"><div onClick="{{ toggles.jer6 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Jeremiah 6:30</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"Reprobate silver shall men call them, because the LORD hath rejected them."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.isa14 }}"><div onClick="{{ toggles.isa14 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Isaiah 14:12-15</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"How art thou fallen from heaven, O Lucifer... yet thou shalt be brought down to hell."</div></div></div></sc-if>
 </section>
 
-<section data-label="Kingdom Offer Timeline" data-speaker-notes="Walk through the four stages: opening offer, rise of national rejection via blasphemy of the Holy Ghost, official rejection at the cross, and the final offer culminating in Stephen's martyrdom." style="width:1920px;height:1080px;position:relative;background:#101826;color:#f4f6f8;display:flex;flex-direction:column;padding:90px 120px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;">
-  <div style="font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#e0a940;">The Kingdom Offer Timeline</div>
-  <div style="font-size:56px;font-weight:800;margin-top:12px;margin-bottom:48px;">The Road to Final Rejection</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:32px;flex:1;">
-    <div style="background:#182a38;padding:36px 28px;border-radius:14px;display:flex;flex-direction:column;gap:14px;">
-      <div style="font-size:60px;font-weight:800;color:#7ec2df;">1</div>
-      <div style="font-size:28px;font-weight:700;">The Opening Offer</div>
-      <div style="font-size:24px;line-height:1.4;">John and Jesus both preach, <span onClick="{{ toggles.matt4 }}" style="display:inline-block;padding:2px 10px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">"Repent, the kingdom of heaven is at hand"</span> &mdash; a literal offer confirmed by miracles, given exclusively to "the lost sheep of the house of Israel." <span onClick="{{ toggles.matt10 }}" style="display:inline-block;padding:2px 10px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Matthew 10:5-6</span></div>
-    </div>
-    <div style="background:#302a1c;padding:36px 28px;border-radius:14px;display:flex;flex-direction:column;gap:14px;">
-      <div style="font-size:60px;font-weight:800;color:#e0c15a;">2</div>
-      <div style="font-size:28px;font-weight:700;">Rise of Rejection</div>
-      <div style="font-size:24px;line-height:1.4;">The Pharisees commit blasphemy against the Holy Ghost, crediting Christ's power to Satan. <span onClick="{{ toggles.matt12 }}" style="display:inline-block;padding:2px 10px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Matthew 12:24-32</span> Jesus turns to parables, concealing truth from hardened hearts. <span onClick="{{ toggles.matt13 }}" style="display:inline-block;padding:2px 10px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Matthew 13:13-15</span></div>
-    </div>
-    <div style="background:#332019;padding:36px 28px;border-radius:14px;display:flex;flex-direction:column;gap:14px;">
-      <div style="font-size:60px;font-weight:800;color:#d9835f;">3</div>
-      <div style="font-size:28px;font-weight:700;">Official Rejection</div>
-      <div style="font-size:24px;line-height:1.4;">At the Cross, the nation's leaders and people reject Jesus as King and choose a murderer instead. <span onClick="{{ toggles.matt27 }}" style="display:inline-block;padding:2px 10px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Matthew 27:20-25</span></div>
-    </div>
-    <div style="background:#3a1a1a;padding:36px 28px;border-radius:14px;display:flex;flex-direction:column;gap:14px;">
-      <div style="font-size:60px;font-weight:800;color:#e0664a;">4</div>
-      <div style="font-size:28px;font-weight:700;">The Last Straw</div>
-      <div style="font-size:24px;line-height:1.4;">Peter offers one final chance: repent to believe that Jesus is the Christ, the promised Messiah. <span onClick="{{ toggles.acts3 }}" style="display:inline-block;padding:2px 10px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Acts 3:19-21</span> Stephen's sermon and the Jews' rejection of the gospel from Scripture serve as an emphatic rejection of the truth of Jesus &mdash; the nation's definitive "no." <span onClick="{{ toggles.acts7 }}" style="display:inline-block;padding:2px 10px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Acts 7:51-60</span></div>
-    </div>
+<!-- 8 -->
+<section class="slide" data-section="The timeline of conditional promises" data-title="Reprobate Silver, Conditional Eschatology">
+  <div class="page">
+    <div class="kicker">Timeline · The Prophets</div>
+    <h2>Reprobate Silver, Conditional Eschatology</h2>
+    <div class="steps"><div class="st"><span class="when">PROMISE</span><div>Restoration if Judah repents. Ezekiel promises a restored temple and land, contingent on Israel’s shame for their iniquities. <button class="ref" data-v="Ezekiel 43:10-11">Ezekiel 43:10-11</button> Zechariah promises a kingdom “if ye will diligently obey.” <button class="ref" data-v="Zechariah 6:15">Zechariah 6:15</button></div></div><div class="st"><span class="when">CHOICE</span><div>Babylon’s pride brings its own destruction. <button class="ref" data-v="Isaiah 14:12-15">Isaiah 14:12-15</button> Judah’s persistent idolatry renders them “reprobate silver.” <button class="ref" data-v="Jeremiah 6:30">Jeremiah 6:30</button> They fail to repent and fail to obey.</div></div><div class="st"><span class="when">OUTCOME</span><div>Mercy grants a remnant’s return from exile. But the restored kingdom and temple are forfeited. Ezekiel’s vision becomes “what could have been,” and blessing redirects to the coming “new nation.”</div></div></div>
   </div>
-  <sc-if value="{{ verseOpen.matt10 }}"><div onClick="{{ toggles.matt10 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Matthew 10:5-6</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"Go not into the way of the Gentiles... but go rather to the lost sheep of the house of Israel."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.matt4 }}"><div onClick="{{ toggles.matt4 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Matthew 4:17</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"From that time Jesus began to preach, and to say, Repent: for the kingdom of heaven is at hand."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.matt12 }}"><div onClick="{{ toggles.matt12 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Matthew 12:24, 31-32</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"This fellow doth not cast out devils, but by Beelzebub the prince of the devils... the blasphemy against the Holy Ghost shall not be forgiven unto men."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.matt13 }}"><div onClick="{{ toggles.matt13 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Matthew 13:13-15</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"Therefore speak I to them in parables: because they seeing see not... lest at any time they should... be converted, and I should heal them."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.matt27 }}"><div onClick="{{ toggles.matt27 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Matthew 27:22-25</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"They said, Let him be crucified... Then answered all the people, and said, His blood be on us, and on our children."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.acts3 }}"><div onClick="{{ toggles.acts3 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Acts 3:19-20</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"Repent ye, and be converted, that your sins may be blotted out... and he shall send Jesus Christ, which before was preached unto you."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.acts7 }}"><div onClick="{{ toggles.acts7 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Acts 7:51-52, 58</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"Ye do always resist the Holy Ghost: as your fathers did, so do ye... And they stoned Stephen."</div></div></div></sc-if>
 </section>
 
-<section data-label="NT Fulfillment Intro" data-speaker-notes="After the final rejection, the kingdom offer to the nation was withdrawn and delayed to the Second Coming. God's plan shifted to a reconfigured, spiritual fulfillment focused on a universal, spiritual kingdom." style="width:1920px;height:1080px;position:relative;background:#0f1f18;color:#f4f6f8;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;">
-  <div style="font-size:30px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:#5fb87a;margin-bottom:32px;">What Will Be</div>
-  <div style="font-size:80px;font-weight:800;line-height:1.15;max-width:1500px;">New Testament Fulfillment and Resolution</div>
-  <div style="font-size:34px;font-weight:400;color:#c3cdd6;margin-top:44px;max-width:1350px;line-height:1.5;">After Israel's final rejection, the earthly kingdom was delayed to Christ's Second Coming. The prophecies are fulfilled in a reconfigured, spiritual way &mdash; a universal kingdom open to all believers.</div>
-</section>
-
-<section data-label="Ezekiel Gog Magog vs Revelation" data-speaker-notes="Ezekiel's conditional prophecy of a national victory for Israel is reconfigured in Revelation 20 as a global, spiritual conflict for the camp of the saints, after the millennial reign." style="width:1920px;height:1080px;position:relative;background:#101826;color:#f4f6f8;display:flex;flex-direction:column;padding:90px 140px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;">
-  <div style="font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#e0a940;">Reconfigured Fulfillment</div>
-  <div style="font-size:52px;font-weight:800;margin-top:12px;margin-bottom:44px;">Gog and Magog: Ezekiel vs. Revelation</div>
-  <div style="display:flex;gap:0;flex:1;align-items:stretch;">
-    <div style="flex:1;background:#332019;padding:44px;border-radius:14px 0 0 14px;display:flex;flex-direction:column;gap:18px;">
-      <div style="font-size:28px;font-weight:700;color:#d9835f;">Ezekiel 38&ndash;39 (Conditional)</div>
-      <div style="font-size:30px;line-height:1.45;">A national, military victory for a restored, obedient Israel over invading nations &mdash; tied to Israel's repentance and a rebuilt covenant land. <span onClick="{{ toggles.ezek38 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Ezekiel 38:8, 23</span></div>
-    </div>
-    <div style="display:flex;align-items:center;justify-content:center;width:100px;font-size:50px;color:#e0a940;flex-shrink:0;">&rarr;</div>
-    <div style="flex:1;background:#193527;padding:44px;border-radius:0 14px 14px 0;display:flex;flex-direction:column;gap:18px;">
-      <div style="font-size:28px;font-weight:700;color:#5fb87a;">Revelation 20:7&ndash;10 (Fulfilled)</div>
-      <div style="font-size:30px;line-height:1.45;">A global, spiritual conflict against the camp of the saints, occurring after the millennial reign of Christ &mdash; resolved by direct divine judgment. <span onClick="{{ toggles.rev20 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Revelation 20:7-10</span></div>
-    </div>
+<!-- 9 -->
+<section class="slide" data-section="The kingdom offer" data-title="The Road to Final Rejection">
+  <div class="page">
+    <div class="kicker">The Kingdom Offer Timeline</div>
+    <h2>The Road to Final Rejection</h2>
+    <div class="steps"><div class="st"><span class="when">1</span><div><strong>The Opening Offer.</strong> John and Jesus both preach, “Repent: for the kingdom of heaven is at hand” <button class="ref" data-v="Matthew 4:17">Matthew 4:17</button>, a literal offer confirmed by miracles, given exclusively to “the lost sheep of the house of Israel.” <button class="ref" data-v="Matthew 10:5-6">Matthew 10:5-6</button></div></div><div class="st"><span class="when">2</span><div><strong>Rise of Rejection.</strong> The Pharisees commit blasphemy against the Holy Ghost, crediting Christ’s power to Satan. <button class="ref" data-v="Matthew 12:24-32">Matthew 12:24-32</button> Jesus turns to parables, concealing truth from hardened hearts. <button class="ref" data-v="Matthew 13:13-15">Matthew 13:13-15</button></div></div><div class="st"><span class="when">3</span><div><strong>Official Rejection.</strong> At the Cross, the nation’s leaders and people reject Jesus as King and choose a murderer instead. <button class="ref" data-v="Matthew 27:20-25">Matthew 27:20-25</button></div></div><div class="st"><span class="when">4</span><div><strong>The Last Straw.</strong> Peter offers one final chance: repent to believe that Jesus is the Christ, the promised Messiah. <button class="ref" data-v="Acts 3:19-21">Acts 3:19-21</button> Stephen’s sermon and the Jews’ rejection of the gospel from Scripture serve as an emphatic rejection of the truth of Jesus, the nation’s definitive “no.” <button class="ref" data-v="Acts 7:51-60">Acts 7:51-60</button></div></div></div>
   </div>
-  <sc-if value="{{ verseOpen.ezek38 }}"><div onClick="{{ toggles.ezek38 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Ezekiel 38:8, 23</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"In the latter years thou shalt come into the land that is brought back from the sword... Thus will I magnify myself, and sanctify myself; and I will be known in the eyes of many nations."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.rev20 }}"><div onClick="{{ toggles.rev20 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Revelation 20:8-9</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"Gog and Magog, to gather them together to battle... and compassed the camp of the saints about... and fire came down from God out of heaven, and devoured them."</div></div></div></sc-if>
 </section>
 
-<section data-label="Ezekiel Temple vs Spiritual Temple" data-speaker-notes="The conditional promise of Ezekiel's physical temple is reconfigured -- the church is now the temple of the Holy Spirit, Christ the cornerstone, and the New Jerusalem has no temple because God and the Lamb are its temple." style="width:1920px;height:1080px;position:relative;background:#101826;color:#f4f6f8;display:flex;flex-direction:column;padding:90px 140px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;">
-  <div style="font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#e0a940;">Reconfigured Fulfillment</div>
-  <div style="font-size:52px;font-weight:800;margin-top:12px;margin-bottom:44px;">The Temple: Physical vs. Spiritual</div>
-  <div style="display:flex;gap:0;flex:1;align-items:stretch;">
-    <div style="flex:1;background:#332019;padding:44px;border-radius:14px 0 0 14px;display:flex;flex-direction:column;gap:18px;">
-      <div style="font-size:28px;font-weight:700;color:#d9835f;">Ezekiel 40&ndash;48 (Conditional)</div>
-      <div style="font-size:30px;line-height:1.45;">A physical, restored temple and land &mdash; contingent on Israel's repentance and shame for their iniquities. <span onClick="{{ toggles.ezek43b }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Ezekiel 43:10-11</span></div>
-    </div>
-    <div style="display:flex;align-items:center;justify-content:center;width:100px;font-size:50px;color:#e0a940;flex-shrink:0;">&rarr;</div>
-    <div style="flex:1;background:#193527;padding:44px;border-radius:0 14px 14px 0;display:flex;flex-direction:column;gap:18px;">
-      <div style="font-size:28px;font-weight:700;color:#5fb87a;">Church &amp; New Jerusalem (Fulfilled)</div>
-      <div style="font-size:30px;line-height:1.45;">The church becomes the temple of the Holy Spirit, Christ the cornerstone <span onClick="{{ toggles.eph2 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Ephesians 2:20-21</span>. The New Jerusalem has no temple &mdash; "the Lord God Almighty and the Lamb are the temple of it." <span onClick="{{ toggles.rev21 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Revelation 21:22</span></div>
-    </div>
+<!-- 10 -->
+<section class="slide" data-section="What will be" data-title="New Testament Fulfillment and Resolution">
+  <div class="page title-page later">
+    <div class="overline">What Will Be</div>
+    <h1>New Testament Fulfillment and Resolution</h1>
+    <p class="sub">After Israel’s final rejection, the earthly kingdom was delayed to Christ’s Second Coming. The prophecies are fulfilled in a reconfigured, spiritual way, a universal kingdom open to all believers.</p>
+    <span class="fleuron">✦ ✦ ✦</span>
   </div>
-  <sc-if value="{{ verseOpen.ezek43b }}"><div onClick="{{ toggles.ezek43b }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Ezekiel 43:10-11</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"That they may be ashamed of their iniquities... if they be ashamed of all that they have done, shew them the form of the house."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.eph2 }}"><div onClick="{{ toggles.eph2 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Ephesians 2:20-21</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"Jesus Christ himself being the chief corner stone... groweth unto an holy temple in the Lord."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.rev21 }}"><div onClick="{{ toggles.rev21 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Revelation 21:22</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"I saw no temple therein: for the Lord God Almighty and the Lamb are the temple of it."</div></div></div></sc-if>
 </section>
 
-<section data-label="Zechariah vs Millennial Kingdom" data-speaker-notes="Zechariah's physical earthly kingdom, conditional on Israel's obedience, is fulfilled as a spiritual reign with Christ and the saints -- the New Jerusalem descends with no physical temple." style="width:1920px;height:1080px;position:relative;background:#101826;color:#f4f6f8;display:flex;flex-direction:column;padding:90px 140px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;">
-  <div style="font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#e0a940;">Reconfigured Fulfillment</div>
-  <div style="font-size:52px;font-weight:800;margin-top:12px;margin-bottom:44px;">The Kingdom: Zechariah vs. Revelation</div>
-  <div style="display:flex;gap:0;flex:1;align-items:stretch;">
-    <div style="flex:1;background:#332019;padding:44px;border-radius:14px 0 0 14px;display:flex;flex-direction:column;gap:18px;">
-      <div style="font-size:28px;font-weight:700;color:#d9835f;">Zechariah (Conditional)</div>
-      <div style="font-size:30px;line-height:1.45;">A physical, earthly Messianic kingdom centered on Jerusalem &mdash; promised "if ye will diligently obey." <span onClick="{{ toggles.zech6b }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Zechariah 6:15</span></div>
-    </div>
-    <div style="display:flex;align-items:center;justify-content:center;width:100px;font-size:50px;color:#e0a940;flex-shrink:0;">&rarr;</div>
-    <div style="flex:1;background:#193527;padding:44px;border-radius:0 14px 14px 0;display:flex;flex-direction:column;gap:18px;">
-      <div style="font-size:28px;font-weight:700;color:#5fb87a;">Revelation's New Jerusalem (Fulfilled)</div>
-      <div style="font-size:30px;line-height:1.45;">A spiritual reign of Christ and the saints; the New Jerusalem descends from heaven with no physical temple. <span onClick="{{ toggles.rev21b }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Revelation 21:2-3</span></div>
-    </div>
+<!-- 11 -->
+<section class="slide" data-section="Reconfigured fulfillment" data-title="Gog and Magog: Ezekiel vs. Revelation">
+  <div class="page">
+    <div class="kicker">Reconfigured Fulfillment</div>
+    <h2>Gog and Magog: Ezekiel vs. Revelation</h2>
+    <div class="par"><div class="h">Ezekiel 38-39<small>Conditional</small></div><div class="h"><button class="ref" data-v="Revelation 20:7-10">Revelation 20:7-10</button><small>Fulfilled</small></div><div>A national, military victory for a restored, obedient Israel over invading nations, tied to Israel’s repentance and a rebuilt covenant land. <button class="ref" data-v="Ezekiel 38:8">Ezekiel 38:8</button> <button class="ref" data-v="Ezekiel 38:23">Ezekiel 38:23</button></div><div>A global, spiritual conflict against the camp of the saints, occurring after the millennial reign of Christ, resolved by direct divine judgment.</div></div>
   </div>
-  <sc-if value="{{ verseOpen.zech6b }}"><div onClick="{{ toggles.zech6b }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Zechariah 6:15</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"This shall come to pass, if ye will diligently obey the voice of the LORD your God."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.rev21b }}"><div onClick="{{ toggles.rev21b }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Revelation 21:2-3</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"I John saw the holy city, new Jerusalem, coming down from God out of heaven... Behold, the tabernacle of God is with men."</div></div></div></sc-if>
 </section>
 
-<section data-label="Isaiah Peace vs Tribulation" data-speaker-notes="Isaiah's vision of immediate peace is fulfilled in Revelation 6-19 as an intense tribulation preceding final peace -- suffering that must precede Christ's spiritual kingdom because immediate peace was forfeited." style="width:1920px;height:1080px;position:relative;background:#101826;color:#f4f6f8;display:flex;flex-direction:column;padding:90px 140px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;">
-  <div style="font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#e0a940;">Reconfigured Fulfillment</div>
-  <div style="font-size:52px;font-weight:800;margin-top:12px;margin-bottom:44px;">Peace: Isaiah vs. the Tribulation</div>
-  <div style="display:flex;gap:0;flex:1;align-items:stretch;">
-    <div style="flex:1;background:#332019;padding:44px;border-radius:14px 0 0 14px;display:flex;flex-direction:column;gap:18px;">
-      <div style="font-size:28px;font-weight:700;color:#d9835f;">Isaiah (Conditional)</div>
-      <div style="font-size:30px;line-height:1.45;">A vision of near, sweeping peace &mdash; nations beating swords into plowshares. <span onClick="{{ toggles.isa2 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Isaiah 2:4</span></div>
-    </div>
-    <div style="display:flex;align-items:center;justify-content:center;width:100px;font-size:50px;color:#e0a940;flex-shrink:0;">&rarr;</div>
-    <div style="flex:1;background:#193527;padding:44px;border-radius:0 14px 14px 0;display:flex;flex-direction:column;gap:18px;">
-      <div style="font-size:28px;font-weight:700;color:#5fb87a;">Revelation 6&ndash;19 (Fulfilled)</div>
-      <div style="font-size:30px;line-height:1.45;">An intense tribulation of suffering precedes final peace, established only at Christ's return. <span onClick="{{ toggles.rev19 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Revelation 19:11-16</span></div>
-    </div>
+<!-- 12 -->
+<section class="slide" data-section="Reconfigured fulfillment" data-title="The Temple: Physical vs. Spiritual">
+  <div class="page">
+    <div class="kicker">Reconfigured Fulfillment</div>
+    <h2>The Temple: Physical vs. Spiritual</h2>
+    <div class="par"><div class="h">Ezekiel 40-48<small>Conditional</small></div><div class="h">Church &amp; New Jerusalem<small>Fulfilled</small></div><div>A physical, restored temple and land, contingent on Israel’s repentance and shame for their iniquities. <button class="ref" data-v="Ezekiel 43:10-11">Ezekiel 43:10-11</button></div><div>The church becomes the temple of the Holy Spirit, Christ the cornerstone <button class="ref" data-v="Ephesians 2:20-21">Ephesians 2:20-21</button>. The New Jerusalem has no temple: “the Lord God Almighty and the Lamb are the temple of it.” <button class="ref" data-v="Revelation 21:22">Revelation 21:22</button></div></div>
   </div>
-  <sc-if value="{{ verseOpen.isa2 }}"><div onClick="{{ toggles.isa2 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Isaiah 2:4</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"They shall beat their swords into plowshares... neither shall they learn war any more."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.rev19 }}"><div onClick="{{ toggles.rev19 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Revelation 19:11, 15</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"I saw heaven opened, and behold a white horse; and he that sat upon him was called Faithful and True... and he treadeth the winepress of the fierceness and wrath of Almighty God."</div></div></div></sc-if>
 </section>
 
-<section data-label="Joel vs Acts and Revelation" data-speaker-notes="Joel's outpouring of the Spirit on all flesh is fulfilled at Pentecost in Acts 2, marking the start of the new covenant. The Day of the Lord portion is reinterpreted in Revelation as global judgment on the unrepentant." style="width:1920px;height:1080px;position:relative;background:#101826;color:#f4f6f8;display:flex;flex-direction:column;padding:90px 140px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;">
-  <div style="font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#e0a940;">Reconfigured Fulfillment</div>
-  <div style="font-size:52px;font-weight:800;margin-top:12px;margin-bottom:44px;">Joel's Day of the Lord: Two-Part Fulfillment</div>
-  <div style="display:flex;gap:0;flex:1;align-items:stretch;">
-    <div style="flex:1;background:#182a38;padding:44px;border-radius:14px 0 0 14px;display:flex;flex-direction:column;gap:18px;">
-      <div style="font-size:28px;font-weight:700;color:#7ec2df;">Part 1 &mdash; Fulfilled at Pentecost</div>
-      <div style="font-size:30px;line-height:1.45;">The outpouring of the Spirit "on all flesh" begins the new covenant. <span onClick="{{ toggles.joel2 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Joel 2:28-29</span> &rarr; <span onClick="{{ toggles.acts2 }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Acts 2:16-21</span></div>
-    </div>
-    <div style="display:flex;align-items:center;justify-content:center;width:100px;font-size:50px;color:#e0a940;flex-shrink:0;">&rarr;</div>
-    <div style="flex:1;background:#3a1a1a;padding:44px;border-radius:0 14px 14px 0;display:flex;flex-direction:column;gap:18px;">
-      <div style="font-size:28px;font-weight:700;color:#e0664a;">Part 2 &mdash; Awaiting Revelation</div>
-      <div style="font-size:30px;line-height:1.45;">The "Day of the Lord" &mdash; not yet fulfilled &mdash; is reinterpreted as global judgment on the unrepentant world. <span onClick="{{ toggles.joel2b }}" style="display:inline-block;padding:2px 12px;background:rgba(224,169,64,0.18);border-bottom:2px dotted #e0a940;color:#e0a940;cursor:pointer;font-weight:700;border-radius:6px;">Joel 2:30-31</span></div>
-    </div>
+<!-- 13 -->
+<section class="slide" data-section="Reconfigured fulfillment" data-title="The Kingdom: Zechariah vs. Revelation">
+  <div class="page">
+    <div class="kicker">Reconfigured Fulfillment</div>
+    <h2>The Kingdom: Zechariah vs. Revelation</h2>
+    <div class="par"><div class="h">Zechariah<small>Conditional</small></div><div class="h">Revelation’s New Jerusalem<small>Fulfilled</small></div><div>A physical, earthly Messianic kingdom centered on Jerusalem, promised “if ye will diligently obey.” <button class="ref" data-v="Zechariah 6:15">Zechariah 6:15</button></div><div>A spiritual reign of Christ and the saints; the New Jerusalem descends from heaven with no physical temple. <button class="ref" data-v="Revelation 21:2-3">Revelation 21:2-3</button></div></div>
   </div>
-  <sc-if value="{{ verseOpen.joel2 }}"><div onClick="{{ toggles.joel2 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Joel 2:28-29</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"I will pour out my spirit upon all flesh; and your sons and your daughters shall prophesy... your young men shall see visions."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.acts2 }}"><div onClick="{{ toggles.acts2 }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Acts 2:16-17</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"This is that which was spoken by the prophet Joel... it shall come to pass in the last days, saith God, I will pour out of my Spirit upon all flesh."</div></div></div></sc-if>
-  <sc-if value="{{ verseOpen.joel2b }}"><div onClick="{{ toggles.joel2b }}" style="position:absolute;inset:0;background:rgba(6,10,16,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;"><div style="max-width:1300px;background:#182231;border:3px solid #e0a940;border-radius:16px;padding:56px 64px;" onClick="{{ stop }}"><div style="font-size:32px;font-weight:800;color:#e0a940;margin-bottom:20px;">Joel 2:30-31</div><div style="font-size:34px;line-height:1.5;color:#f4f6f8;">"The sun shall be turned into darkness, and the moon into blood, before the great and terrible day of the LORD come."</div></div></div></sc-if>
 </section>
 
-<section data-label="Conclusion" data-speaker-notes="Wrap up: not contradictions, but different pictures of a conditional covenant. Israel's failure culminating at Stephen's martyrdom led to the new covenant, shifting from conditional/national/physical to unconditional/universal/spiritual. God's sovereignty and desire for all to choose life stand affirmed." style="width:1920px;height:1080px;position:relative;background:#101826;color:#f4f6f8;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;">
-  <div style="font-size:28px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:#e0a940;margin-bottom:32px;">Conclusion</div>
-  <div style="font-size:72px;font-weight:800;line-height:1.2;max-width:1550px;">Not Contradiction &mdash; Different Pictures of a Conditional Covenant</div>
-  <div style="font-size:32px;font-weight:400;color:#dbe1e6;margin-top:44px;max-width:1400px;line-height:1.55;">Israel's failure, culminating at Stephen's martyrdom, led to the new covenant &mdash; shifting from conditional, national, physical fulfillment to unconditional, universal, spiritual reality. The Old Testament reveals the path that could have been; the New Testament reveals the ultimate reality of God's plan.</div>
-  <div style="font-size:34px;font-weight:700;color:#5fb87a;margin-top:56px;">God's sovereignty stands &mdash; and His desire for all to choose life.</div>
+<!-- 14 -->
+<section class="slide" data-section="Reconfigured fulfillment" data-title="Peace: Isaiah vs. the Tribulation">
+  <div class="page">
+    <div class="kicker">Reconfigured Fulfillment</div>
+    <h2>Peace: Isaiah vs. the Tribulation</h2>
+    <div class="par"><div class="h">Isaiah<small>Conditional</small></div><div class="h">Revelation 6-19<small>Fulfilled</small></div><div>A vision of near, sweeping peace, nations beating swords into plowshares. <button class="ref" data-v="Isaiah 2:4">Isaiah 2:4</button></div><div>An intense tribulation of suffering precedes final peace, established only at Christ’s return. <button class="ref" data-v="Revelation 19:11-16">Revelation 19:11-16</button></div></div>
+  </div>
 </section>
 
-</x-import>
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  state = { open_verse: null };
-  renderVals() {
-    const ids = ["gen12","ex19","deut30","pet2_3","gen12b","gen4","ex19b","ex32","deut28","num14","kings11","sam13","ezek43","zech6","jer6","matt4","matt12","matt27","acts3","acts7","ezek38","rev20","ezek43b","eph2","rev21","zech6b","rev21b","isa2","rev19","joel2","acts2","joel2b","gen16","num16","josh7","judg2","kings13","isa14","matt10","matt13"];
-    const toggles = {};
-    const verseOpen = {};
-    ids.forEach(id => {
-      toggles[id] = () => this.setState(s => ({ open_verse: s.open_verse === id ? null : id }));
-      verseOpen[id] = this.state.open_verse === id;
-    });
-    return { toggles, verseOpen, stop: (e) => e.stopPropagation() };
-  }
+<!-- 15 -->
+<section class="slide" data-section="Reconfigured fulfillment" data-title="Joel’s Day of the Lord: Two-Part Fulfillment">
+  <div class="page">
+    <div class="kicker">Reconfigured Fulfillment</div>
+    <h2>Joel’s Day of the Lord: Two-Part Fulfillment</h2>
+    <div class="par"><div class="h">Part 1<small>Fulfilled at Pentecost</small></div><div class="h">Part 2<small>Awaiting Revelation</small></div><div>The outpouring of the Spirit “on all flesh” begins the new covenant. <button class="ref" data-v="Joel 2:28-29">Joel 2:28-29</button> then <button class="ref" data-v="Acts 2:16-21">Acts 2:16-21</button></div><div>The “Day of the Lord,” not yet fulfilled, is reinterpreted as global judgment on the unrepentant world. <button class="ref" data-v="Joel 2:30-31">Joel 2:30-31</button></div></div>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Conclusion" data-title="Not Contradiction: Different Pictures of a Conditional Covenant">
+  <div class="page">
+    <div class="kicker">Conclusion</div>
+    <h2>Not Contradiction: Different Pictures of a Conditional Covenant</h2>
+    <p class="lead">Israel’s failure, culminating at Stephen’s martyrdom, led to the new covenant, shifting from conditional, national, physical fulfillment to unconditional, universal, spiritual reality. The Old Testament reveals the path that could have been; the New Testament reveals the ultimate reality of God’s plan.</p>
+    <p class="take">God’s sovereignty stands, and His desire for all to choose life.</p>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 Kings 11:38":[[38, "And it shall be, if thou wilt hearken unto all that I command thee, and wilt walk in my ways, and do that is right in my sight, to keep my statutes and my commandments, as David my servant did; that I will be with thee, and build thee a sure house, as I built for David, and will give Israel unto thee."]],
+  "1 Kings 13:33-34":[[33, "After this thing Jeroboam returned not from his evil way, but made again of the lowest of the people priests of the high places: whosoever would, he consecrated him, and he became one of the priests of the high places."], [34, "And this thing became sin unto the house of Jeroboam, even to cut it off, and to destroy it from off the face of the earth."]],
+  "1 Samuel 13:13-14":[[13, "And Samuel said to Saul, Thou hast done foolishly: thou hast not kept the commandment of the LORD thy God, which he commanded thee: for now would the LORD have established thy kingdom upon Israel for ever."], [14, "But now thy kingdom shall not continue: the LORD hath sought him a man after his own heart, and the LORD hath commanded him to be captain over his people, because thou hast not kept that which the LORD commanded thee."]],
+  "2 Peter 3:9":[[9, "The Lord is not slack concerning his promise, as some men count slackness; but is longsuffering to us-ward, not willing that any should perish, but that all should come to repentance."]],
+  "Acts 2:16-21":[[16, "But this is that which was spoken by the prophet Joel;"], [17, "And it shall come to pass in the last days, saith God, I will pour out of my Spirit upon all flesh: and your sons and your daughters shall prophesy, and your young men shall see visions, and your old men shall dream dreams:"], [18, "And on my servants and on my handmaidens I will pour out in those days of my Spirit; and they shall prophesy:"], [19, "And I will shew wonders in heaven above, and signs in the earth beneath; blood, and fire, and vapour of smoke:"], [20, "The sun shall be turned into darkness, and the moon into blood, before that great and notable day of the Lord come:"], [21, "And it shall come to pass, that whosoever shall call on the name of the Lord shall be saved."]],
+  "Acts 3:19-21":[[19, "Repent ye therefore, and be converted, that your sins may be blotted out, when the times of refreshing shall come from the presence of the Lord;"], [20, "And he shall send Jesus Christ, which before was preached unto you:"], [21, "Whom the heaven must receive until the times of restitution of all things, which God hath spoken by the mouth of all his holy prophets since the world began."]],
+  "Acts 7:51-60":[[51, "Ye stiffnecked and uncircumcised in heart and ears, ye do always resist the Holy Ghost: as your fathers did, so do ye."], [52, "Which of the prophets have not your fathers persecuted? and they have slain them which shewed before of the coming of the Just One; of whom ye have been now the betrayers and murderers:"], [53, "Who have received the law by the disposition of angels, and have not kept it."], [54, "When they heard these things, they were cut to the heart, and they gnashed on him with their teeth."], [55, "But he, being full of the Holy Ghost, looked up stedfastly into heaven, and saw the glory of God, and Jesus standing on the right hand of God,"], [56, "And said, Behold, I see the heavens opened, and the Son of man standing on the right hand of God."], [57, "Then they cried out with a loud voice, and stopped their ears, and ran upon him with one accord,"], [58, "And cast him out of the city, and stoned him: and the witnesses laid down their clothes at a young man’s feet, whose name was Saul."], [59, "And they stoned Stephen, calling upon God, and saying, Lord Jesus, receive my spirit."], [60, "And he kneeled down, and cried with a loud voice, Lord, lay not this sin to their charge. And when he had said this, he fell asleep."]],
+  "Deuteronomy 28:1-2":[[1, "And it shall come to pass, if thou shalt hearken diligently unto the voice of the LORD thy God, to observe and to do all his commandments which I command thee this day, that the LORD thy God will set thee on high above all nations of the earth:"], [2, "And all these blessings shall come on thee, and overtake thee, if thou shalt hearken unto the voice of the LORD thy God."]],
+  "Deuteronomy 28:15":[[15, "But it shall come to pass, if thou wilt not hearken unto the voice of the LORD thy God, to observe to do all his commandments and his statutes which I command thee this day; that all these curses shall come upon thee, and overtake thee:"]],
+  "Deuteronomy 30:19":[[19, "I call heaven and earth to record this day against you, that I have set before you life and death, blessing and cursing: therefore choose life, that both thou and thy seed may live:"]],
+  "Ephesians 2:20-21":[[20, "And are built upon the foundation of the apostles and prophets, Jesus Christ himself being the chief corner stone;"], [21, "In whom all the building fitly framed together groweth unto an holy temple in the Lord:"]],
+  "Exodus 19:5-6":[[5, "Now therefore, if ye will obey my voice indeed, and keep my covenant, then ye shall be a peculiar treasure unto me above all people: for all the earth is mine:"], [6, "And ye shall be unto me a kingdom of priests, and an holy nation. These are the words which thou shalt speak unto the children of Israel."]],
+  "Exodus 32:26-29":[[26, "Then Moses stood in the gate of the camp, and said, Who is on the LORD’s side? let him come unto me. And all the sons of Levi gathered themselves together unto him."], [27, "And he said unto them, Thus saith the LORD God of Israel, Put every man his sword by his side, and go in and out from gate to gate throughout the camp, and slay every man his brother, and every man his companion, and every man his neighbour."], [28, "And the children of Levi did according to the word of Moses: and there fell of the people that day about three thousand men."], [29, "For Moses had said, Consecrate yourselves today to the LORD, even every man upon his son, and upon his brother; that he may bestow upon you a blessing this day."]],
+  "Ezekiel 38:23":[[23, "Thus will I magnify myself, and sanctify myself; and I will be known in the eyes of many nations, and they shall know that I am the LORD."]],
+  "Ezekiel 38:8":[[8, "After many days thou shalt be visited: in the latter years thou shalt come into the land that is brought back from the sword, and is gathered out of many people, against the mountains of Israel, which have been always waste: but it is brought forth out of the nations, and they shall dwell safely all of them."]],
+  "Ezekiel 43:10-11":[[10, "Thou son of man, shew the house to the house of Israel, that they may be ashamed of their iniquities: and let them measure the pattern."], [11, "And if they be ashamed of all that they have done, shew them the form of the house, and the fashion thereof, and the goings out thereof, and the comings in thereof, and all the forms thereof, and all the ordinances thereof, and all the forms thereof, and all the laws thereof: and write it in their sight, that they may keep the whole form thereof, and all the ordinances thereof, and do them."]],
+  "Genesis 12:1-3":[[1, "Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father’s house, unto a land that I will shew thee:"], [2, "And I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing:"], [3, "And I will bless them that bless thee, and curse him that curseth thee: and in thee shall all families of the earth be blessed."]],
+  "Genesis 16:1-2":[[1, "Now Sarai Abram’s wife bare him no children: and she had an handmaid, an Egyptian, whose name was Hagar."], [2, "And Sarai said unto Abram, Behold now, the LORD hath restrained me from bearing: I pray thee, go in unto my maid; it may be that I may obtain children by her. And Abram hearkened to the voice of Sarai."]],
+  "Genesis 4:6-7":[[6, "And the LORD said unto Cain, Why art thou wroth? and why is thy countenance fallen?"], [7, "If thou doest well, shalt thou not be accepted? and if thou doest not well, sin lieth at the door. And unto thee shall be his desire, and thou shalt rule over him."]],
+  "Isaiah 14:12-15":[[12, "How art thou fallen from heaven, O Lucifer, son of the morning! how art thou cut down to the ground, which didst weaken the nations!"], [13, "For thou hast said in thine heart, I will ascend into heaven, I will exalt my throne above the stars of God: I will sit also upon the mount of the congregation, in the sides of the north:"], [14, "I will ascend above the heights of the clouds; I will be like the most High."], [15, "Yet thou shalt be brought down to hell, to the sides of the pit."]],
+  "Isaiah 2:4":[[4, "And he shall judge among the nations, and shall rebuke many people: and they shall beat their swords into plowshares, and their spears into pruninghooks: nation shall not lift up sword against nation, neither shall they learn war any more."]],
+  "Jeremiah 6:30":[[30, "Reprobate silver shall men call them, because the LORD hath rejected them."]],
+  "Joel 2:28-29":[[28, "And it shall come to pass afterward, that I will pour out my spirit upon all flesh; and your sons and your daughters shall prophesy, your old men shall dream dreams, your young men shall see visions:"], [29, "And also upon the servants and upon the handmaids in those days will I pour out my spirit."]],
+  "Joel 2:30-31":[[30, "And I will shew wonders in the heavens and in the earth, blood, and fire, and pillars of smoke."], [31, "The sun shall be turned into darkness, and the moon into blood, before the great and the terrible day of the LORD come."]],
+  "Joshua 7:11-12":[[11, "Israel hath sinned, and they have also transgressed my covenant which I commanded them: for they have even taken of the accursed thing, and have also stolen, and dissembled also, and they have put it even among their own stuff."], [12, "Therefore the children of Israel could not stand before their enemies, but turned their backs before their enemies, because they were accursed: neither will I be with you any more, except ye destroy the accursed from among you."]],
+  "Judges 2:1-3":[[1, "And an angel of the LORD came up from Gilgal to Bochim, and said, I made you to go up out of Egypt, and have brought you unto the land which I sware unto your fathers; and I said, I will never break my covenant with you."], [2, "And ye shall make no league with the inhabitants of this land; ye shall throw down their altars: but ye have not obeyed my voice: why have ye done this?"], [3, "Wherefore I also said, I will not drive them out from before you; but they shall be as thorns in your sides, and their gods shall be a snare unto you."]],
+  "Matthew 10:5-6":[[5, "These twelve Jesus sent forth, and commanded them, saying, Go not into the way of the Gentiles, and into any city of the Samaritans enter ye not:"], [6, "But go rather to the lost sheep of the house of Israel."]],
+  "Matthew 12:24-32":[[24, "But when the Pharisees heard it, they said, This fellow doth not cast out devils, but by Beelzebub the prince of the devils."], [25, "And Jesus knew their thoughts, and said unto them, Every kingdom divided against itself is brought to desolation; and every city or house divided against itself shall not stand:"], [26, "And if Satan cast out Satan, he is divided against himself; how shall then his kingdom stand?"], [27, "And if I by Beelzebub cast out devils, by whom do your children cast them out? therefore they shall be your judges."], [28, "But if I cast out devils by the Spirit of God, then the kingdom of God is come unto you."], [29, "Or else how can one enter into a strong man’s house, and spoil his goods, except he first bind the strong man? and then he will spoil his house."], [30, "He that is not with me is against me; and he that gathereth not with me scattereth abroad."], [31, "Wherefore I say unto you, All manner of sin and blasphemy shall be forgiven unto men: but the blasphemy against the Holy Ghost shall not be forgiven unto men."], [32, "And whosoever speaketh a word against the Son of man, it shall be forgiven him: but whosoever speaketh against the Holy Ghost, it shall not be forgiven him, neither in this world, neither in the world to come."]],
+  "Matthew 13:13-15":[[13, "Therefore speak I to them in parables: because they seeing see not; and hearing they hear not, neither do they understand."], [14, "And in them is fulfilled the prophecy of Esaias, which saith, By hearing ye shall hear, and shall not understand; and seeing ye shall see, and shall not perceive:"], [15, "For this people’s heart is waxed gross, and their ears are dull of hearing, and their eyes they have closed; lest at any time they should see with their eyes and hear with their ears, and should understand with their heart, and should be converted, and I should heal them."]],
+  "Matthew 27:20-25":[[20, "But the chief priests and elders persuaded the multitude that they should ask Barabbas, and destroy Jesus."], [21, "The governor answered and said unto them, Whether of the twain will ye that I release unto you? They said, Barabbas."], [22, "Pilate saith unto them, What shall I do then with Jesus which is called Christ? They all say unto him, Let him be crucified."], [23, "And the governor said, Why, what evil hath he done? But they cried out the more, saying, Let him be crucified."], [24, "When Pilate saw that he could prevail nothing, but that rather a tumult was made, he took water, and washed his hands before the multitude, saying, I am innocent of the blood of this just person: see ye to it."], [25, "Then answered all the people, and said, His blood be on us, and on our children."]],
+  "Matthew 4:17":[[17, "From that time Jesus began to preach, and to say, Repent: for the kingdom of heaven is at hand."]],
+  "Numbers 14:20-23":[[20, "And the LORD said, I have pardoned according to thy word:"], [21, "But as truly as I live, all the earth shall be filled with the glory of the LORD."], [22, "Because all those men which have seen my glory, and my miracles, which I did in Egypt and in the wilderness, and have tempted me now these ten times, and have not hearkened to my voice;"], [23, "Surely they shall not see the land which I sware unto their fathers, neither shall any of them that provoked me see it:"]],
+  "Numbers 16:31-33":[[31, "And it came to pass, as he had made an end of speaking all these words, that the ground clave asunder that was under them:"], [32, "And the earth opened her mouth, and swallowed them up, and their houses, and all the men that appertained unto Korah, and all their goods."], [33, "They, and all that appertained to them, went down alive into the pit, and the earth closed upon them: and they perished from among the congregation."]],
+  "Revelation 19:11-16":[[11, "And I saw heaven opened, and behold a white horse; and he that sat upon him was called Faithful and True, and in righteousness he doth judge and make war."], [12, "His eyes were as a flame of fire, and on his head were many crowns; and he had a name written, that no man knew, but he himself."], [13, "And he was clothed with a vesture dipped in blood: and his name is called The Word of God."], [14, "And the armies which were in heaven followed him upon white horses, clothed in fine linen, white and clean."], [15, "And out of his mouth goeth a sharp sword, that with it he should smite the nations: and he shall rule them with a rod of iron: and he treadeth the winepress of the fierceness and wrath of Almighty God."], [16, "And he hath on his vesture and on his thigh a name written, KING OF KINGS, AND LORD OF LORDS."]],
+  "Revelation 20:7-10":[[7, "And when the thousand years are expired, Satan shall be loosed out of his prison,"], [8, "And shall go out to deceive the nations which are in the four quarters of the earth, Gog and Magog, to gather them together to battle: the number of whom is as the sand of the sea."], [9, "And they went up on the breadth of the earth, and compassed the camp of the saints about, and the beloved city: and fire came down from God out of heaven, and devoured them."], [10, "And the devil that deceived them was cast into the lake of fire and brimstone, where the beast and the false prophet are, and shall be tormented day and night for ever and ever."]],
+  "Revelation 21:2-3":[[2, "And I John saw the holy city, new Jerusalem, coming down from God out of heaven, prepared as a bride adorned for her husband."], [3, "And I heard a great voice out of heaven saying, Behold, the tabernacle of God is with men, and he will dwell with them, and they shall be his people, and God himself shall be with them, and be their God."]],
+  "Revelation 21:22":[[22, "And I saw no temple therein: for the Lord God Almighty and the Lamb are the temple of it."]],
+  "Zechariah 6:15":[[15, "And they that are far off shall come and build in the temple of the LORD, and ye shall know that the LORD of hosts hath sent me unto you. And this shall come to pass, if ye will diligently obey the voice of the LORD your God."]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
 }
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
 </script>
 </body>
 </html>

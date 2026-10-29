@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Genesis 6 – Sons of God</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="A study in Genesis 6:1-2: who the sons of God were, both views laid out from the King James Bible, and why it matters that God judged man.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
@@ -73,6 +75,7 @@ p{margin:0 0 .85rem}
 .rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
 .fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
 
+.lead{display:flow-root}
 /* Illuminated initial */
 .lead::first-letter{
   font-family:var(--initial);float:left;
@@ -89,6 +92,40 @@ blockquote cite{display:block;font-style:normal;font-family:var(--display);font-
 .lord{font-variant:small-caps;letter-spacing:.04em}
 .scripture{font-size:.98em;line-height:1.75}
 .scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
 mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
 
 /* Reference chips */
@@ -97,6 +134,7 @@ mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px 
   font-family:var(--display);font-size:.72em;letter-spacing:.05em;
   color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
 }
+.ref.lesson-link{text-decoration:none;font-size:.8em}
 .ref:hover{color:var(--gold-bright);border-bottom-style:solid}
 .refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
 .refs.center{justify-content:center}
@@ -233,6 +271,24 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 .toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
 .toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
 
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
 @media print{
   body{overflow:visible;background:#fff;color:#000}
   .bar{display:none}
@@ -240,7 +296,6 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
 }
 </style>
-<script src="../deck-extras.js"></script>
 </head>
 <body>
 
@@ -252,7 +307,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
     <div class="overline">A study in Genesis 6</div>
     <h1>Sons of God</h1>
     <p class="sub">Who took the daughters of men to wife, and why it matters that God judged <em>man</em>.</p>
-    <div class="refs center"><button class="ref" data-v="Gen 6:1-2">Genesis 6:1–2</button></div>
+    <div class="refs center"><button class="ref" data-v="Genesis 6:1-2">Genesis 6:1-2</button></div>
     <span class="fleuron">✦ ✦ ✦</span>
     <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse.</p>
   </div>
@@ -263,25 +318,9 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="page">
     <h2>A disagreement among brethren</h2>
     <p class="lead">Who the sons of God were in Genesis 6 is a tertiary doctrine. It does not touch salvation, and faithful believers who love the King James Bible hold both of these views:</p>
-    <div class="cols">
-      <div class="panel believers">
-        <h3>Sons are believers</h3>
-        <p>The sons of God were men of Seth’s believing line who married unbelieving women of the world.</p>
-      </div>
-      <div class="panel angels">
-        <h3>Sons are angels</h3>
-        <p>The sons of God were fallen angels who took human women as wives.</p>
-      </div>
-    </div>
-    <p style="margin-top:1rem">We will show our work from the King James Bible alone, state each view as its holders would, and let the text decide. <button class="ref" data-v="Rom 14:5">Rom 14:5</button> <button class="ref" data-v="Eph 4:3">Eph 4:3</button></p>
-    <hr class="rule">
-    <ol class="order">
-      <li><strong>Two lines</strong>Cain’s family and Seth’s family, from Genesis 4 and 5</li>
-      <li><strong>The case for Sons are believers</strong></li>
-      <li><strong>The case for Sons are angels</strong>Stated fairly, then compared text by text</li>
-      <li><strong>After the Flood</strong>Giants, possession, and where Scripture puts the blame</li>
-      <li><strong>The deciding question</strong>Would God call fallen angels His sons?</li>
-    </ol>
+    <div class="cols"><div class="panel believers"><h3>Sons are believers</h3><p>The sons of God were men of Seth’s believing line who married unbelieving women of the world.</p></div><div class="panel believers"><h3>Sons are angels</h3><p>The sons of God were fallen angels who took human women as wives.</p></div></div>
+    <p>We will show our work from the King James Bible alone, state each view as its holders would, and let the text decide. <button class="ref" data-v="Romans 14:5">Romans 14:5</button> <button class="ref" data-v="Ephesians 4:3">Ephesians 4:3</button></p>
+    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>Two lines</strong>Cain’s family and Seth’s family, from Genesis 4 and 5</li><li><strong>The case for Sons are believers</strong></li><li><strong>The case for Sons are angels</strong>Stated fairly, then compared text by text</li><li><strong>After the Flood</strong>Giants, possession, and where Scripture puts the blame</li><li><strong>The deciding question</strong>Would God call fallen angels His sons?</li></ol></div>
   </div>
 </section>
 
@@ -290,14 +329,8 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="page">
     <h2>The line of Cain</h2>
     <blockquote class="big-verse">And Cain went out from the presence of the <span class="lord">Lord</span>, and dwelt in the land of Nod, on the east of Eden.<cite>Genesis 4:16</cite></blockquote>
-    <div class="panel cain">
-      <ul class="marks">
-        <li>Cain builds a city and names it after his son Enoch. <button class="ref" data-v="Gen 4:16-17">Gen 4:17</button></li>
-        <li>Lamech takes two wives, the first man recorded to do so. <button class="ref" data-v="Gen 4:19">Gen 4:19</button></li>
-        <li>Lamech boasts to his wives that he has slain a man, and claims a vengeance greater than Cain’s. <button class="ref" data-v="Gen 4:23-24">Gen 4:23–24</button></li>
-      </ul>
-    </div>
-    <p style="margin-top:1rem">A line that walks away from the presence of the <span class="lord">Lord</span> and grows in cities, crafts, and violence. Not once in Genesis 4 does anyone in this line call upon God.</p>
+    <ul class="marks"><li>Cain builds a city and names it after his son Enoch. <button class="ref" data-v="Genesis 4:16-17">Gen 4:17</button></li><li>Lamech takes two wives, the first man recorded to do so. <button class="ref" data-v="Genesis 4:19">Genesis 4:19</button></li><li>Lamech boasts to his wives that he has slain a man, and claims a vengeance greater than Cain’s. <button class="ref" data-v="Genesis 4:23-24">Gen 4:23–24</button></li></ul>
+    <p>A line that walks away from the presence of the <span class="lord">Lord</span> and grows in cities, crafts, and violence. Not once in Genesis 4 does anyone in this line call upon God.</p>
   </div>
 </section>
 
@@ -306,10 +339,8 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="page">
     <h2>The line of Seth</h2>
     <blockquote class="big-verse">And to Seth, to him also there was born a son; and he called his name Enos: then began men to call upon the name of the <span class="lord">Lord</span>.<cite>Genesis 4:26</cite></blockquote>
-    <p>God appoints “another seed instead of Abel,” and from that seed men begin to call on the <span class="lord">Lord</span>. Genesis 5 then traces that line by name, ten generations from Adam to Noah. <button class="ref" data-v="Gen 4:25-26">Gen 4:25–26</button></p>
-    <div class="lineage" aria-label="The generations of Genesis 5">
-      <span>Adam</span><i>›</i><span class="key">Seth</span><i>›</i><span class="key">Enos</span><i>›</i><span>Cainan</span><i>›</i><span>Mahalaleel</span><i>›</i><span>Jared</span><i>›</i><span class="key">Enoch</span><i>›</i><span>Methuselah</span><i>›</i><span>Lamech</span><i>›</i><span class="key">Noah</span>
-    </div>
+    <p>God appoints “another seed instead of Abel,” and from that seed men begin to call on the <span class="lord">Lord</span>. Genesis 5 then traces that line by name, ten generations from Adam to Noah. <button class="ref" data-v="Genesis 4:25-26">Gen 4:25–26</button></p>
+    <div class="timeline"><div><span class="n">1</span><span class="lbl">Adam</span></div><div><span class="n">2</span><span class="lbl">Seth</span></div><div><span class="n">3</span><span class="lbl">Enos</span></div><div><span class="n">4</span><span class="lbl">Cainan</span></div><div><span class="n">5</span><span class="lbl">Mahalaleel</span></div><div><span class="n">6</span><span class="lbl">Jared</span></div><div><span class="n">7</span><span class="lbl">Enoch</span></div><div><span class="n">8</span><span class="lbl">Methuselah</span></div><div><span class="n">9</span><span class="lbl">Lamech</span></div><div><span class="n">10</span><span class="lbl">Noah</span></div></div>
     <p>Two families now live side by side on the earth: one that went out from the <span class="lord">Lord</span>’s presence, and one that calls on His name.</p>
   </div>
 </section>
@@ -319,19 +350,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="page">
     <h2>Two Enochs, two Lamechs</h2>
     <p>Moses gives both lines a man named Enoch and a man named Lamech, as if to set them side by side so we cannot miss the contrast.</p>
-    <div style="overflow-x:auto">
-    <table class="duo">
-      <thead><tr><th></th><th class="c">Cain’s line</th><th class="s">Seth’s line</th></tr></thead>
-      <tbody>
-        <tr><td class="name">Enoch</td>
-          <td>A city is named for him. <button class="ref" data-v="Gen 4:16-17">Gen 4:17</button></td>
-          <td>“Enoch walked with God: and he was not; for God took him.” <button class="ref" data-v="Gen 5:24">Gen 5:24</button></td></tr>
-        <tr><td class="name">Lamech</td>
-          <td>Takes two wives and boasts of slaying a man. <button class="ref" data-v="Gen 4:23-24">Gen 4:23–24</button></td>
-          <td>Names his son Noah, hoping for comfort from the ground the <span class="lord">Lord</span> cursed. <button class="ref" data-v="Gen 5:29">Gen 5:29</button></td></tr>
-      </tbody>
-    </table>
-    </div>
+    <div class="par"><div class="h">Cain’s line</div><div class="h">Seth’s line</div><div><strong>Enoch.</strong> A city is named for him. <button class="ref" data-v="Genesis 4:17">Genesis 4:17</button></div><div><strong>Enoch.</strong> “Enoch walked with God: and he was not; for God took him.” <button class="ref" data-v="Genesis 5:24">Genesis 5:24</button></div><div><strong>Lamech.</strong> Takes two wives and boasts of slaying a man. <button class="ref" data-v="Genesis 4:23-24">Genesis 4:23-24</button></div><div><strong>Lamech.</strong> Names his son Noah, hoping for comfort from the ground the <span class="lord">Lord</span> cursed. <button class="ref" data-v="Genesis 5:29">Genesis 5:29</button></div></div>
     <p>Same names, opposite hearts. When Genesis 6 speaks of “sons of God” and “daughters of men,” these two families are the ones the reader has just met.</p>
   </div>
 </section>
@@ -340,12 +359,9 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="Two lines" data-title="Noah, the last son before the Flood">
   <div class="page">
     <h2>Noah, the last son before the Flood</h2>
-    <blockquote class="big-verse">But Noah found grace in the eyes of the <span class="lord">Lord</span>. These are the generations of Noah: Noah was a just man and perfect in his generations, and Noah walked with God.<cite>Genesis 6:8–9</cite></blockquote>
+    <blockquote class="big-verse">But Noah found grace in the eyes of the <span class="lord">Lord</span>. These are the generations of Noah: Noah was a just man and perfect in his generations, and Noah walked with God.<cite>Genesis 6:8-9</cite></blockquote>
     <p>Ten generations after Adam, the line that called on the <span class="lord">Lord</span> comes down to one man and his house. The sons of God had married into the world around them; Noah walked with God.</p>
-    <div class="callout">
-      <p>“Perfect in his generations” means that among the men of his own time, Noah was a believer, mature in his faith. God calls Job “perfect” in the same way, and asks it of Abram. The verse explains itself: “Noah walked with God.”</p>
-      <div class="refs" style="margin-bottom:0"><button class="ref" data-v="Job 1:1">Job 1:1</button><button class="ref" data-v="Gen 17:1">Gen 17:1</button></div>
-    </div>
+    <div class="callout"><p>“Perfect in his generations” means that among the men of his own time, Noah was a believer, mature in his faith. God calls Job “perfect” in the same way, and asks it of Abram. The verse explains itself: “Noah walked with God.” <button class="ref" data-v="Job 1:1">Job 1:1</button> <button class="ref" data-v="Genesis 17:1">Genesis 17:1</button></p></div>
   </div>
 </section>
 
@@ -353,11 +369,9 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="Sons are believers" data-title="How anyone becomes a son of God">
   <div class="page">
     <h2>How anyone becomes a son of God</h2>
-    <blockquote class="big-verse">But as many as received him, to them gave he power to become the sons of God, even to them that believe on his name.<cite>John 1:12</cite></blockquote>
-    <div class="cols">
-      <blockquote>For as many as are led by the Spirit of God, they are the sons of God.<cite>Romans 8:14</cite></blockquote>
-      <blockquote>For ye are all the children of God by faith in Christ Jesus.<cite>Galatians 3:26</cite></blockquote>
-    </div>
+    <blockquote class="big-verse">But as many as received him, to them gave he power to become the sons of God, even to them that believe on his name:<cite>John 1:12</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">For as many as are led by the Spirit of God, they are the sons of God.<cite>Romans 8:14</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">For ye are all the children of God by faith in Christ Jesus.<cite>Galatians 3:26</cite></blockquote>
     <p class="center">Scripture never makes sonship a matter of nature, rank, or power. It is received by faith in the Son.</p>
   </div>
 </section>
@@ -367,26 +381,8 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="page">
     <h2>Sons before the cross</h2>
     <p class="lead">Christ is “the Lamb slain from the foundation of the world.” His work stands outside of time, and Old Testament saints believed God’s promise of Him.</p>
-    <div class="cols">
-      <div class="panel believers">
-        <h3>They looked to Christ</h3>
-        <ul class="marks">
-          <li>The Lamb slain from the foundation of the world. <button class="ref" data-v="Rev 13:8">Rev 13:8</button></li>
-          <li>Abraham rejoiced to see Christ’s day. <button class="ref" data-v="John 8:56">John 8:56</button></li>
-          <li>Moses esteemed the reproach of Christ. <button class="ref" data-v="Heb 11:26">Heb 11:26</button></li>
-          <li>Seth’s line called on the name of the <span class="lord">Lord</span>. <button class="ref" data-v="Gen 4:25-26">Gen 4:26</button></li>
-        </ul>
-      </div>
-      <div class="panel believers">
-        <h3>God called them His own</h3>
-        <ul class="marks">
-          <li>“Ye are the children of the <span class="lord">Lord</span> your God.” <button class="ref" data-v="Deut 14:1">Deut 14:1</button></li>
-          <li>“Bring my sons from far, and my daughters.” <button class="ref" data-v="Isa 43:6">Isa 43:6</button></li>
-          <li>“Ye are the sons of the living God.” <button class="ref" data-v="Hos 1:10">Hos 1:10</button></li>
-        </ul>
-      </div>
-    </div>
-    <p style="margin-top:1rem">The Old Testament already uses the language of sons for God’s believing people. Genesis 6 does not need a new definition.</p>
+    <div class="cols"><div class="panel believers"><h3>They looked to Christ</h3><p>The Lamb slain from the foundation of the world. <button class="ref" data-v="Revelation 13:8">Revelation 13:8</button> Abraham rejoiced to see Christ’s day. <button class="ref" data-v="John 8:56">John 8:56</button> Moses esteemed the reproach of Christ. <button class="ref" data-v="Hebrews 11:26">Hebrews 11:26</button> Seth’s line called on the name of the <span class="lord">Lord</span>. <button class="ref" data-v="Genesis 4:25-26">Gen 4:26</button></p></div><div class="panel believers"><h3>God called them His own</h3><p>“Ye are the children of the <span class="lord">Lord</span> your God.” <button class="ref" data-v="Deuteronomy 14:1">Deuteronomy 14:1</button> “Bring my sons from far, and my daughters.” <button class="ref" data-v="Isaiah 43:6">Isaiah 43:6</button> “Ye are the sons of the living God.” <button class="ref" data-v="Hosea 1:10">Hosea 1:10</button></p></div></div>
+    <p>The Old Testament already uses the language of sons for God’s believing people. Genesis 6 does not need a new definition.</p>
   </div>
 </section>
 
@@ -394,14 +390,9 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="Sons are believers" data-title="Read Genesis 6:1–7 slowly">
   <div class="page">
     <h2>Read it slowly</h2>
-    <div class="gen6">
-      <p class="scripture"><sup>1</sup>And it came to pass, when <mark>men</mark> began to multiply on the face of the earth, and daughters were born unto them, <sup>2</sup>That the sons of God saw the daughters of <mark>men</mark> that they were fair; and they took them wives of all which they chose. <sup>3</sup>And the <span class="lord">Lord</span> said, My spirit shall not always strive with <mark>man</mark>, for that he also is flesh: yet his days shall be an hundred and twenty years. <sup>4</sup>There were giants in the earth in those days; and also after that, when the sons of God came in unto the daughters of <mark>men</mark>, and they bare children to them, the same became mighty <mark>men</mark> which were of old, <mark>men</mark> of renown. <sup>5</sup>And <span class="lord">God</span> saw that the wickedness of <mark>man</mark> was great in the earth, and that every imagination of the thoughts of his heart was only evil continually. <sup>6</sup>And it repented the <span class="lord">Lord</span> that he had made <mark>man</mark> on the earth, and it grieved him at his heart. <sup>7</sup>And the <span class="lord">Lord</span> said, I will destroy <mark>man</mark> whom I have created from the face of the earth; both <mark>man</mark>, and beast, and the creeping thing, and the fowls of the air; for it repenteth me that I have made them.</p>
-      <div class="tally">
-        <div><span class="n">X</span><span class="lbl">times the passage says man or men</span></div>
-        <div class="none"><span class="n">0</span><span class="lbl">times it says angel</span></div>
-      </div>
-    </div>
-    <p style="margin-top:1rem">God’s Spirit strives with man, “for that he also is flesh.” The flesh in view is man’s. The wickedness God sees is man’s. The creature God repents of making is man.</p>
+    <blockquote class="scripture" style="font-style:italic">And it came to pass, when men began to multiply on the face of the earth, and daughters were born unto them, That the sons of God saw the daughters of men that they were fair; and they took them wives of all which they chose. And the <span class="lord">Lord</span> said, My spirit shall not always strive with man, for that he also is flesh: yet his days shall be an hundred and twenty years. There were giants in the earth in those days; and also after that, when the sons of God came in unto the daughters of men, and they bare children to them, the same became mighty men which were of old, men of renown. And God saw that the wickedness of man was great in the earth, and that every imagination of the thoughts of his heart was only evil continually. And it repented the <span class="lord">Lord</span> that he had made man on the earth, and it grieved him at his heart. And the <span class="lord">Lord</span> said, I will destroy man whom I have created from the face of the earth; both man, and beast, and the creeping thing, and the fowls of the air; for it repenteth me that I have made them.<cite>Genesis 6:1-7</cite></blockquote>
+    <div class="dims"><div><span class="n">10</span><span class="lbl">times the passage says man or men</span></div><div><span class="n">0</span><span class="lbl">times it says angel</span></div></div>
+    <p>God’s Spirit strives with man, “for that he also is flesh.” The flesh in view is man’s. The wickedness God sees is man’s. The creature God repents of making is man.</p>
   </div>
 </section>
 
@@ -409,14 +400,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="Sons are believers" data-title="The order of events">
   <div class="page">
     <h2>The order of events</h2>
-    <ol class="order">
-      <li><strong>The giants are already there</strong>“There were giants in the earth in those days.” They are present before the text describes any union. <button class="ref" data-v="Gen 6:4">Gen 6:4</button></li>
-      <li><strong>The sons of God take wives</strong>They choose by sight, “of all which they chose,” not by faith. <button class="ref" data-v="Gen 6:1-2">Gen 6:2</button></li>
-      <li class="focus"><strong>Their children become famous men</strong>“Mighty <mark>men</mark> which were of old, <mark>men</mark> of renown.” Famous <mark>men</mark>. The text never calls the children giants, angels, or anything but men. <button class="ref" data-v="Gen 6:4">Gen 6:4</button></li>
-      <li class="verdict"><strong>God sees the wickedness of man</strong>Every imagination of man’s heart was only evil continually. <button class="ref" data-v="Gen 6:5">Gen 6:5</button></li>
-      <li class="verdict"><strong>God repents that He made man, and will destroy man</strong><button class="ref" data-v="Gen 6:6-7">Gen 6:6–7</button></li>
-      <li><strong>But Noah found grace</strong><button class="ref" data-v="Gen 6:8-9">Gen 6:8</button></li>
-    </ol>
+    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>The giants are already there</strong>“There were giants in the earth in those days.” They are present before the text describes any union. <button class="ref" data-v="Genesis 6:4">Genesis 6:4</button></li><li><strong>The sons of God take wives</strong>They choose by sight, “of all which they chose,” not by faith. <button class="ref" data-v="Genesis 6:1-2">Gen 6:2</button></li><li><strong>Their children become famous men</strong>“Mighty <strong>men</strong> which were of old, <strong>men</strong> of renown.” Famous <strong>men</strong>. The text never calls the children giants, angels, or anything but men. <button class="ref" data-v="Genesis 6:4">Genesis 6:4</button></li><li><strong>God sees the wickedness of man</strong>Every imagination of man’s heart was only evil continually. <button class="ref" data-v="Genesis 6:5">Genesis 6:5</button></li><li><strong>God repents that He made man, and will destroy man</strong><button class="ref" data-v="Genesis 6:6-7">Gen 6:6–7</button></li><li><strong>But Noah found grace</strong><button class="ref" data-v="Genesis 6:8-9">Gen 6:8</button></li></ol></div>
     <p class="sub center">The judgment falls on the godly line’s compromise and the world’s wickedness alike. Nowhere does God name a hybrid race as the cause.</p>
   </div>
 </section>
@@ -425,18 +409,9 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="Sons are believers" data-title="Job 1 and 2">
   <div class="page">
     <h2>Job 1 and 2: the sons of God in heaven</h2>
-    <blockquote class="big-verse">Now there was a day when the sons of God came to present themselves before the <span class="lord">Lord</span>, and Satan came also among them.<cite>Job 1:6 (repeated in 2:1)</cite></blockquote>
-    <div class="cols">
-      <div class="panel believers">
-        <h3>Who stands before God</h3>
-        <p>The heavenly assembly includes “the spirits of just men made perfect.” Redeemed men stand in God’s presence. <button class="ref" data-v="Heb 12:22-23">Heb 12:22–23</button></p>
-      </div>
-      <div class="panel believers">
-        <h3>Among them, not of them</h3>
-        <p>Satan comes “among them” as the accuser, there to charge Job. He is never counted as one of the sons. <button class="ref" data-v="Job 1:9-11">Job 1:9–11</button> <button class="ref" data-v="Job 2:1">Job 2:1</button></p>
-      </div>
-    </div>
-    <p style="margin-top:1rem">Repeating the scene in chapter 2 adds nothing new: the same sons, and the same accuser in their midst.</p>
+    <blockquote class="big-verse">Now there was a day when the sons of God came to present themselves before the <span class="lord">Lord</span>, and Satan came also among them.<cite>Job 1:6</cite></blockquote>
+    <div class="cols"><div class="panel believers"><h3>Who stands before God</h3><p>The heavenly assembly includes “the spirits of just men made perfect.” Redeemed men stand in God’s presence. <button class="ref" data-v="Hebrews 12:22-23">Heb 12:22–23</button></p></div><div class="panel believers"><h3>Among them, not of them</h3><p>Satan comes “among them” as the accuser, there to charge Job. He is never counted as one of the sons. <button class="ref" data-v="Job 1:9-11">Job 1:9–11</button> <button class="ref" data-v="Job 2:1">Job 2:1</button></p></div></div>
+    <p>Repeating the scene in chapter 2 adds nothing new: the same sons, and the same accuser in their midst. <button class="ref" data-v="Job 2:1">Job 2:1</button></p>
   </div>
 </section>
 
@@ -444,20 +419,12 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="Sons are believers" data-title="Job 38:7, who is the corner stone?">
   <div class="page">
     <h2>Job 38:7: who is the corner stone?</h2>
-    <p class="center sub">The strongest text for Sons are angels, and the answer rests on one question.</p>
-    <blockquote class="scripture" style="font-style:italic"><sup>4</sup>Where wast thou when I laid <mark>the foundations of the earth</mark>? declare, if thou hast understanding. <sup>5</sup>Who hath laid the measures thereof, if thou knowest? or who hath stretched the line upon it? <sup>6</sup>Whereupon are the foundations thereof fastened? or who laid <mark>the corner stone</mark> thereof; <sup>7</sup>When the morning stars sang together, and all the sons of God shouted for joy?<cite>Job 38:4–7</cite></blockquote>
-    <div class="callout honest" style="margin:0 0 1rem">
-      <p><strong>Who are the morning stars?</strong> Angels. Scripture pictures angels as stars: Lucifer is the “son of the morning,” and the dragon’s tail drew “the third part of the stars of heaven.” The plural morning stars are not to be confused with Christ, who alone is “the bright and morning star.” <button class="ref" data-v="Isa 14:12">Isa 14:12</button> <button class="ref" data-v="Rev 12:4">Rev 12:4</button> <button class="ref" data-v="Rev 22:16">Rev 22:16</button></p>
-    </div>
+    <p class="center">The strongest text for Sons are angels, and the answer rests on one question.</p>
+    <blockquote class="scripture" style="font-style:italic">Where wast thou when I laid <mark>the foundations of the earth</mark>? declare, if thou hast understanding. Who hath laid the measures thereof, if thou knowest? or who hath stretched the line upon it? Whereupon are the foundations thereof fastened? or who laid <mark>the corner stone</mark> thereof; When the morning stars sang together, and all the sons of God shouted for joy?<cite>Job 38:4-7</cite></blockquote>
+    <div class="callout honest"><p><strong>Who are the morning stars?</strong> Angels. Scripture pictures angels as stars: Lucifer is the “son of the morning,” and the dragon’s tail drew “the third part of the stars of heaven.” The plural morning stars are not to be confused with Christ, who alone is “the bright and morning star.” <button class="ref" data-v="Isaiah 14:12">Isaiah 14:12</button> <button class="ref" data-v="Revelation 12:4">Revelation 12:4</button> <button class="ref" data-v="Revelation 22:16">Revelation 22:16</button></p></div>
     <p>So verse 7 names two companies, angels singing and the sons of God shouting. And God names two works: the foundations of the earth, and the corner stone. The sons of God shout when the corner stone is laid. So when was Christ laid as the corner stone?</p>
-    <ol class="order">
-      <li><strong>Before the foundation of the world</strong>The Lamb was foreordained before the foundation of the world, and is the Lamb slain from its foundation. <button class="ref" data-v="1 Pet 1:19-20">1 Pet 1:19–20</button> <button class="ref" data-v="Rev 13:8">Rev 13:8</button></li>
-      <li><strong>At creation, He is the Creator</strong>“In the beginning was the Word… and the Word was God. All things were made by him.” At creation Christ is the Builder, not a stone laid in His own building. If the corner stone were laid at creation, the Creator would become part of the creation. <button class="ref" data-v="John 1:1-3">John 1:1–3</button> <button class="ref" data-v="Col 1:16">Col 1:16</button></li>
-      <li class="focus"><strong>In time, God lays the corner stone</strong>God promised to lay it “in Zion” (<button class="ref" data-v="Isa 28:16">Isa 28:16</button>). It was laid when He came in the flesh, was crucified and set at nought by the builders, and was raised from the dead. At the resurrection God fulfilled “Thou art my Son, this day have I begotten thee.” <button class="ref" data-v="Acts 4:10-11">Acts 4:10–11</button> <button class="ref" data-v="Acts 13:33">Acts 13:33</button> <button class="ref" data-v="Eph 2:20">Eph 2:20</button></li>
-    </ol>
-    <div class="callout">
-      <p><strong>The question:</strong> is laying the corner stone the same event as founding the earth? Sons are angels reads verses 4–7 as one creation scene, and on a first reading that is natural. Sons are believers sees two works, linked but separate: the earth founded by Christ the Creator, and Christ Himself laid as the corner stone in His triumph over death. At that, the morning stars (the angels) sing, and the sons of God, the redeemed, shout for joy, as Abraham rejoiced to see His day. <button class="ref" data-v="John 8:56">John 8:56</button></p>
-    </div>
+    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>Before the foundation of the world</strong>The Lamb was foreordained before the foundation of the world, and is the Lamb slain from its foundation. <button class="ref" data-v="1 Peter 1:19-20">1 Pet 1:19–20</button> <button class="ref" data-v="Revelation 13:8">Revelation 13:8</button></li><li><strong>At creation, He is the Creator</strong>“In the beginning was the Word… and the Word was God. All things were made by him.” At creation Christ is the Builder, not a stone laid in His own building. If the corner stone were laid at creation, the Creator would become part of the creation. <button class="ref" data-v="John 1:1-3">John 1:1–3</button> <button class="ref" data-v="Colossians 1:16">Colossians 1:16</button></li><li><strong>In time, God lays the corner stone</strong>God promised to lay it “in Zion” (<button class="ref" data-v="Isaiah 28:16">Isaiah 28:16</button>). It was laid when He came in the flesh, was crucified and set at nought by the builders, and was raised from the dead. At the resurrection God fulfilled “Thou art my Son, this day have I begotten thee.” <button class="ref" data-v="Acts 4:10-11">Acts 4:10–11</button> <button class="ref" data-v="Acts 13:33">Acts 13:33</button> <button class="ref" data-v="Ephesians 2:20">Ephesians 2:20</button></li></ol></div>
+    <div class="callout"><p><strong>The question:</strong> is laying the corner stone the same event as founding the earth? Sons are angels reads verses 4–7 as one creation scene, and on a first reading that is natural. Sons are believers sees two works, linked but separate: the earth founded by Christ the Creator, and Christ Himself laid as the corner stone in His triumph over death. At that, the morning stars (the angels) sing, and the sons of God, the redeemed, shout for joy, as Abraham rejoiced to see His day. <button class="ref" data-v="John 8:56">John 8:56</button></p></div>
   </div>
 </section>
 
@@ -465,16 +432,11 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="Sons are believers" data-title="Angels are not sons, and do not marry">
   <div class="page">
     <h2>Angels are not sons, and do not marry</h2>
-    <div class="cols">
-      <div>
-        <blockquote>For unto which of the angels said he at any time, Thou art my Son, this day have I begotten thee? And again, I will be to him a Father, and he shall be to me a Son?<cite>Hebrews 1:5</cite></blockquote>
-        <blockquote>Are they not all ministering spirits, sent forth to minister for them who shall be heirs of salvation?<cite>Hebrews 1:14 &nbsp;<button class="ref" data-v="Heb 1:13-14">1:13–14</button></cite></blockquote>
-      </div>
-      <div>
-        <blockquote>For in the resurrection they neither marry, nor are given in marriage, but are as the angels of God in heaven.<cite>Matthew 22:30</cite></blockquote>
-        <blockquote>For when they shall rise from the dead, they neither marry, nor are given in marriage; but are as the angels which are in heaven.<cite>Mark 12:25</cite></blockquote>
-      </div>
-    </div>
+    <blockquote class="scripture" style="font-style:italic">For unto which of the angels said he at any time, Thou art my Son, this day have I begotten thee? And again, I will be to him a Father, and he shall be to me a Son?<cite>Hebrews 1:5</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Are they not all ministering spirits, sent forth to minister for them who shall be heirs of salvation?<cite>Hebrews 1:14</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">For in the resurrection they neither marry, nor are given in marriage, but are as the angels of God in heaven.<cite>Matthew 22:30</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">For when they shall rise from the dead, they neither marry, nor are given in marriage; but are as the angels which are in heaven.<cite>Mark 12:25</cite></blockquote>
+    <div class="refs center"><button class="ref" data-v="Hebrews 1:13-14">Hebrews 1:13-14</button></div>
     <p class="center">Angels serve the heirs of salvation; they are not the heirs. And the Lord Jesus uses angels as the very picture of beings who do not marry.</p>
   </div>
 </section>
@@ -484,83 +446,16 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="page">
     <h2>Sons are angels, stated fairly</h2>
     <p class="lead">Many faithful believers hold that the sons of God were fallen angels who took human wives. Most reject the Book of Enoch and build the case from the King James Bible. Stated as its holders would state it:</p>
-    <div class="panel angels">
-      <ul class="marks">
-        <li>In Job, the sons of God stand before the <span class="lord">Lord</span> in heaven, so Genesis 6 should be read the same way. <button class="ref" data-v="Job 1:6">Job 1:6</button> <button class="ref" data-v="Job 2:1">Job 2:1</button></li>
-        <li>Job 38:7 places the sons of God at the founding of the earth, before man was made. <button class="ref" data-v="Job 38:4-7">Job 38:4–7</button></li>
-        <li>Setting “sons of God” against “daughters of men” marks two different kinds of being. <button class="ref" data-v="Gen 6:1-2">Gen 6:2</button></li>
-        <li>Angels have taken bodies, eaten, and been taken for men. <button class="ref" data-v="Gen 18:8">Gen 18:8</button> <button class="ref" data-v="Gen 19:1">Gen 19:1</button> <button class="ref" data-v="Heb 13:2">Heb 13:2</button></li>
-        <li>Matthew 22:30 describes holy angels in heaven, not the ones who “left their own habitation.” <button class="ref" data-v="Matt 22:30">Matt 22:30</button> <button class="ref" data-v="Jude 1:6">Jude 6</button></li>
-        <li>Jude, 2 Peter, and 1 Peter tie angelic sin to “strange flesh” and to the days of Noah. <button class="ref" data-v="Jude 1:4-8">Jude 4–8</button> <button class="ref" data-v="2 Pet 2:4-9">2 Pet 2:4–9</button> <button class="ref" data-v="1 Pet 3:18-20">1 Pet 3:18–20</button></li>
-        <li>The children became “mighty men… of renown,” something beyond the ordinary. <button class="ref" data-v="Gen 6:4">Gen 6:4</button></li>
-      </ul>
-    </div>
-    <div class="callout honest">
-      <p>We grant that this is a real case for angels, built from Scripture by people who love the Book. Notice, though, which angels it needs: not holy ones, but angels who had fallen or were falling in that very act. We will come back to that.</p>
-    </div>
+    <ul class="marks"><li>In Job, the sons of God stand before the <span class="lord">Lord</span> in heaven, so Genesis 6 should be read the same way. <button class="ref" data-v="Job 1:6">Job 1:6</button> <button class="ref" data-v="Job 2:1">Job 2:1</button></li><li>Job 38:7 places the sons of God at the founding of the earth, before man was made. <button class="ref" data-v="Job 38:4-7">Job 38:4–7</button></li><li>Setting “sons of God” against “daughters of men” marks two different kinds of being. <button class="ref" data-v="Genesis 6:1-2">Gen 6:2</button></li><li>Angels have taken bodies, eaten, and been taken for men. <button class="ref" data-v="Genesis 18:8">Genesis 18:8</button> <button class="ref" data-v="Genesis 19:1">Genesis 19:1</button> <button class="ref" data-v="Hebrews 13:2">Hebrews 13:2</button></li><li>Matthew 22:30 describes holy angels in heaven, not the ones who “left their own habitation.” <button class="ref" data-v="Matthew 22:30">Matthew 22:30</button> <button class="ref" data-v="Jude 1:6">Jude 6</button></li><li>Jude, 2 Peter, and 1 Peter tie angelic sin to “strange flesh” and to the days of Noah. <button class="ref" data-v="Jude 1:4-8">Jude 4–8</button> <button class="ref" data-v="2 Peter 2:4-9">2 Pet 2:4–9</button> <button class="ref" data-v="1 Peter 3:18-20">1 Pet 3:18–20</button></li><li>The children became “mighty men… of renown,” something beyond the ordinary. <button class="ref" data-v="Genesis 6:4">Genesis 6:4</button></li></ul>
+    <div class="callout honest"><p>We grant that this is a real case for angels, built from Scripture by people who love the Book. Notice, though, which angels it needs: not holy ones, but angels who had fallen or were falling in that very act. We will come back to that.</p></div>
   </div>
 </section>
 
 <!-- 15 -->
 <section class="slide" data-section="Sons are angels" data-title="The proof texts, side by side">
-  <div class="page wide">
+  <div class="page">
     <h2>The proof texts, side by side</h2>
-    <div class="legend"><span><b style="background:var(--lapis)"></b>Sons are angels</span><span><b style="background:var(--gold)"></b>Sons are believers</span></div>
-    <table class="chart">
-      <thead><tr><th class="t">The text</th><th class="angels">Sons are angels</th><th class="believers">Sons are believers</th></tr></thead>
-      <tbody>
-        <tr class="strong">
-          <td class="t"><button class="ref" data-v="Job 38:4-7">Job 38:7</button><br><span class="tag">Strongest text</span></td>
-          <td class="angels">The sons of God shout for joy when the earth’s foundations are laid, before Adam existed, so they must be angels.</td>
-          <td class="believers">God names two works: the earth’s foundations, and the corner stone. At creation Christ is the Creator (<button class="ref" data-v="John 1:1-3">John 1:1–3</button>), not a stone laid in His own building. The corner stone is laid in time: Christ made head of the corner when God raised Him from the dead (<button class="ref" data-v="Acts 4:10-11">Acts 4:10–11</button>, <button class="ref" data-v="Eph 2:20">Eph 2:20</button>). The sons rejoice in His triumph; the morning stars are angels, named apart from them (<button class="ref" data-v="Isa 14:12|Rev 12:4">Isa 14:12; Rev 12:4</button>).</td>
-        </tr>
-        <tr>
-          <td class="t"><button class="ref" data-v="Job 1:6|Job 2:1">Job 1:6; 2:1</button></td>
-          <td class="angels">An assembly before God in heaven is an assembly of angels.</td>
-          <td class="believers">Redeemed men stand in heaven (<button class="ref" data-v="Heb 12:22-23">Heb 12:23</button>). Satan comes “among them” as accuser, not as a son.</td>
-        </tr>
-        <tr>
-          <td class="t"><button class="ref" data-v="Gen 6:1-2">Gen 6:2</button></td>
-          <td class="angels">“Sons of God” against “daughters of men” marks two kinds of being.</td>
-          <td class="believers">It marks two kinds of people, as Scripture sets “the children of this world” against “the children of light” (<button class="ref" data-v="Luke 16:8">Luke 16:8</button>). Both are men.</td>
-        </tr>
-        <tr>
-          <td class="t"><button class="ref" data-v="Gen 6:4">Gen 6:4</button></td>
-          <td class="angels">The unions produced the giants, or at least the extraordinary mighty men.</td>
-          <td class="believers">The giants were already “in the earth in those days.” The children became “men of renown,” famous men, never called giants or hybrids.</td>
-        </tr>
-        <tr class="strong">
-          <td class="t"><button class="ref" data-v="Gen 18:8|Gen 19:1|Heb 13:2">Gen 18–19; Heb 13:2</button><br><span class="tag">Strongest text</span></td>
-          <td class="angels">Angels can take bodies, eat, and be handled as men.</td>
-          <td class="believers">An angel is a messenger, appearing as a man or as a winged creature as God sends him (<button class="ref" data-v="Isa 6:2">Isa 6:2</button>). Angels are ministering spirits for the heirs of salvation (<button class="ref" data-v="Heb 1:13-14">Heb 1:14</button>), never physically mankind. None weds or begets.</td>
-        </tr>
-        <tr>
-          <td class="t"><button class="ref" data-v="Matt 22:30|Mark 12:25">Matt 22:30; Mark 12:25</button></td>
-          <td class="angels">These speak of holy angels “in heaven,” not angels who left their estate.</td>
-          <td class="believers">Jesus states what angels are, not only where they are. Leaving a habitation does not grant a new nature.</td>
-        </tr>
-        <tr>
-          <td class="t"><button class="ref" data-v="Jude 1:4-8">Jude 6–7</button></td>
-          <td class="angels">“In like manner… going after strange flesh” ties the angels’ sin to Sodom’s.</td>
-          <td class="believers">Jude is warning about “certain men crept in unawares” (v. 4). He lists the judged: Israel destroyed in the wilderness, angels reserved in chains, Sodom and Gomorrha. Then: “Likewise also these filthy dreamers” (v. 8). It is a list of rebels destroyed, not a link between angels and strange flesh. Hell itself was prepared “for the devil and his angels” (<button class="ref" data-v="Matt 25:41">Matt 25:41</button>).</td>
-        </tr>
-        <tr>
-          <td class="t"><button class="ref" data-v="2 Pet 2:1|2 Pet 2:4-9">2 Pet 2:4–5</button></td>
-          <td class="angels">The angels that sinned are named right beside the Flood.</td>
-          <td class="believers">Peter makes the same comparison as Jude, against false teachers (v. 1): angels, the old world, Sodom, then Lot delivered. The point is that “the Lord knoweth how… to reserve the unjust unto the day of judgment” (v. 9), not that one judgment caused the next.</td>
-        </tr>
-        <tr>
-          <td class="t"><button class="ref" data-v="1 Pet 3:18-20">1 Pet 3:19–20</button></td>
-          <td class="angels">The spirits in prison were disobedient in the days of Noah.</td>
-          <td class="believers">The spirits in prison are the disobedient of Noah’s day: scorners who heard Noah, “a preacher of righteousness” (<button class="ref" data-v="2 Pet 2:4-9">2 Pet 2:5</button>), while the ark was preparing, and were killed in the Flood.</td>
-        </tr>
-        <tr>
-          <td class="t"><button class="ref" data-v="Gen 6:8-9">Gen 6:9</button></td>
-          <td class="angels">“Perfect in his generations” means Noah’s line was untouched by the unions.</td>
-          <td class="believers">Among the men of his time, Noah was a believer, mature in his faith. God calls Job “perfect” too (<button class="ref" data-v="Job 1:1|Gen 17:1">Job 1:1; Gen 17:1</button>). “Noah walked with God.”</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="par"><div class="h">Sons are angels</div><div class="h">Sons are believers</div><div><button class="ref" data-v="Job 38:4-7">Job 38:4-7</button> <em>(strongest text)</em> The sons of God shout for joy when the earth’s foundations are laid, before Adam existed, so they must be angels.</div><div>God names two works: the earth’s foundations, and the corner stone. At creation Christ is the Creator (<button class="ref" data-v="John 1:1-3">John 1:1–3</button>), not a stone laid in His own building. The corner stone is laid in time: Christ made head of the corner when God raised Him from the dead (<button class="ref" data-v="Acts 4:10-11">Acts 4:10–11</button>, <button class="ref" data-v="Ephesians 2:20">Ephesians 2:20</button>). The sons rejoice in His triumph; the morning stars are angels, named apart from them (<button class="ref" data-v="Isaiah 14:12">Isaiah 14:12</button>, <button class="ref" data-v="Revelation 12:4">Revelation 12:4</button>).</div><div><button class="ref" data-v="Job 1:6">Job 1:6</button>, <button class="ref" data-v="Job 2:1">Job 2:1</button> An assembly before God in heaven is an assembly of angels.</div><div>Redeemed men stand in heaven (<button class="ref" data-v="Hebrews 12:23">Hebrews 12:23</button>). Satan comes “among them” as accuser, not as a son.</div><div><button class="ref" data-v="Genesis 6:2">Genesis 6:2</button> “Sons of God” against “daughters of men” marks two kinds of being.</div><div>It marks two kinds of people, as Scripture sets “the children of this world” against “the children of light” (<button class="ref" data-v="Luke 16:8">Luke 16:8</button>). Both are men.</div><div><button class="ref" data-v="Genesis 6:4">Genesis 6:4</button> The unions produced the giants, or at least the extraordinary mighty men.</div><div>The giants were already “in the earth in those days.” The children became “men of renown,” famous men, never called giants or hybrids.</div><div><button class="ref" data-v="Genesis 18:8">Genesis 18:8</button>, <button class="ref" data-v="Genesis 19:1">Genesis 19:1</button>, <button class="ref" data-v="Hebrews 13:2">Hebrews 13:2</button> <em>(strongest text)</em> Angels can take bodies, eat, and be handled as men.</div><div>An angel is a messenger, appearing as a man or as a winged creature as God sends him (<button class="ref" data-v="Isaiah 6:2">Isaiah 6:2</button>). Angels are ministering spirits for the heirs of salvation (<button class="ref" data-v="Hebrews 1:14">Hebrews 1:14</button>), never physically mankind. None weds or begets.</div><div><button class="ref" data-v="Matthew 22:30">Matthew 22:30</button>, <button class="ref" data-v="Mark 12:25">Mark 12:25</button> These speak of holy angels “in heaven,” not angels who left their estate.</div><div>Jesus states what angels are, not only where they are. Leaving a habitation does not grant a new nature.</div><div><button class="ref" data-v="Jude 1:6-7">Jude 6-7</button> “In like manner… going after strange flesh” ties the angels’ sin to Sodom’s.</div><div>Jude is warning about “certain men crept in unawares” (v. 4). He lists the judged: Israel destroyed in the wilderness, angels reserved in chains, Sodom and Gomorrha. Then: “Likewise also these filthy dreamers” (v. 8). It is a list of rebels destroyed, not a link between angels and strange flesh. Hell itself was prepared “for the devil and his angels” (<button class="ref" data-v="Matthew 25:41">Matthew 25:41</button>).</div><div><button class="ref" data-v="2 Peter 2:4-5">2 Peter 2:4-5</button> The angels that sinned are named right beside the Flood.</div><div>Peter makes the same comparison as Jude, against false teachers (v. 1): angels, the old world, Sodom, then Lot delivered. The point is that “the Lord knoweth how… to reserve the unjust unto the day of judgment” (v. 9), not that one judgment caused the next.</div><div><button class="ref" data-v="1 Peter 3:19-20">1 Peter 3:19-20</button> The spirits in prison were disobedient in the days of Noah.</div><div>The spirits in prison are the disobedient of Noah’s day: scorners who heard Noah, “a preacher of righteousness” (<button class="ref" data-v="2 Peter 2:5">2 Peter 2:5</button>), while the ark was preparing, and were killed in the Flood.</div><div><button class="ref" data-v="Genesis 6:9">Genesis 6:9</button> “Perfect in his generations” means Noah’s line was untouched by the unions.</div><div>Among the men of his time, Noah was a believer, mature in his faith. God calls Job “perfect” too (<button class="ref" data-v="Job 1:1">Job 1:1</button>, <button class="ref" data-v="Genesis 17:1">Genesis 17:1</button>). “Noah walked with God.”</div></div>
   </div>
 </section>
 
@@ -568,28 +463,10 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="Sons are angels" data-title="Jude 6, honestly">
   <div class="page">
     <h2>Jude 6, honestly</h2>
-    <blockquote class="big-verse">And the angels which kept not their first estate, but left their own habitation, he hath reserved in everlasting chains under darkness unto the judgment of the great day.<cite>Jude 6 &nbsp;<button class="ref" data-v="Jude 1:4-8">read Jude 4–8</button></cite></blockquote>
-    <div class="cols">
-      <div class="panel angels">
-        <h3>What it says</h3>
-        <ul class="marks">
-          <li>Some angels did not keep their first estate.</li>
-          <li>They left their own habitation.</li>
-          <li>They are held in chains for the judgment.</li>
-        </ul>
-      </div>
-      <div class="panel believers">
-        <h3>What it does not say</h3>
-        <ul class="marks">
-          <li>When they left.</li>
-          <li>Anything about women, marriage, or children.</li>
-          <li>Anything about the Flood.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="callout">
-      <p><strong>The Sons are believers reading, held with an open hand:</strong> unclean spirits seek a habitation in men. The wickedness of Noah’s day may well have included spirits possessing men, as they still do, with no bodies, wives, or children of their own. Where Scripture is not plain, we should not build a doctrine. <button class="ref" data-v="Matt 12:43-45">Matt 12:43–45</button></p>
-    </div>
+    <blockquote class="big-verse">And the angels which kept not their first estate, but left their own habitation, he hath reserved in everlasting chains under darkness unto the judgment of the great day.<cite>Jude 6</cite></blockquote>
+    <div class="refs center"><button class="ref" data-v="Jude 1:4-8">Jude 4-8</button></div>
+    <div class="cols"><div class="panel believers"><h3>What it says</h3><p>Some angels did not keep their first estate. They left their own habitation. They are held in chains for the judgment.</p></div><div class="panel believers"><h3>What it does not say</h3><p>When they left. Anything about women, marriage, or children. Anything about the Flood.</p></div></div>
+    <div class="callout"><p><strong>The Sons are believers reading, held with an open hand:</strong> unclean spirits seek a habitation in men. The wickedness of Noah’s day may well have included spirits possessing men, as they still do, with no bodies, wives, or children of their own. Where Scripture is not plain, we should not build a doctrine. <button class="ref" data-v="Matthew 12:43-45">Matt 12:43–45</button></p></div>
   </div>
 </section>
 
@@ -597,16 +474,9 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="Sons are angels" data-title="Angels in the form of men">
   <div class="page">
     <h2>Angels in the form of men</h2>
-    <div class="callout honest" style="margin-top:0">
-      <p><strong>What Sons are angels rightly sees:</strong> angels have appeared as men, eaten a meal, and taken men by the hand. Some have entertained angels unawares. <button class="ref" data-v="Gen 18:8">Gen 18:8</button> <button class="ref" data-v="Gen 19:1">Gen 19:1</button> <button class="ref" data-v="Heb 13:2">Heb 13:2</button></p>
-    </div>
-    <h3 style="margin-top:1.3rem">What Scripture also shows</h3>
-    <ul class="marks">
-      <li>An angel is a messenger sent from God, and appears in whatever form God sends him: as men at Abraham’s tent, as six-winged seraphims in Isaiah’s vision. <button class="ref" data-v="Isa 6:2">Isa 6:2</button></li>
-      <li>Hebrews calls them “ministering spirits, sent forth to minister for them who shall be heirs of salvation.” They are spirits who serve the sons of God, not mankind in the flesh. <button class="ref" data-v="Heb 1:13-14">Heb 1:14</button></li>
-      <li>At Sodom, the angels are the ones defended, not the ones defiled. The lust belongs to the men of the city, and the angels strike them blind. <button class="ref" data-v="Gen 19:10-11">Gen 19:10–11</button></li>
-      <li>No angel who appears as a man ever weds a woman or fathers a child.</li>
-    </ul>
+    <div class="callout honest"><p><strong>What Sons are angels rightly sees:</strong> angels have appeared as men, eaten a meal, and taken men by the hand. Some have entertained angels unawares. <button class="ref" data-v="Genesis 18:8">Genesis 18:8</button> <button class="ref" data-v="Genesis 19:1">Genesis 19:1</button> <button class="ref" data-v="Hebrews 13:2">Hebrews 13:2</button></p></div>
+    <p><strong>What Scripture also shows</strong></p>
+    <ul class="marks"><li>An angel is a messenger sent from God, and appears in whatever form God sends him: as men at Abraham’s tent, as six-winged seraphims in Isaiah’s vision. <button class="ref" data-v="Isaiah 6:2">Isaiah 6:2</button></li><li>Hebrews calls them “ministering spirits, sent forth to minister for them who shall be heirs of salvation.” They are spirits who serve the sons of God, not mankind in the flesh. <button class="ref" data-v="Hebrews 1:13-14">Heb 1:14</button></li><li>At Sodom, the angels are the ones defended, not the ones defiled. The lust belongs to the men of the city, and the angels strike them blind. <button class="ref" data-v="Genesis 19:10-11">Gen 19:10–11</button></li><li>No angel who appears as a man ever weds a woman or fathers a child.</li></ul>
     <p class="center">Appearing as a man for a message is not becoming a man for a marriage.</p>
   </div>
 </section>
@@ -615,22 +485,9 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="After the Flood" data-title="The Flood settled it either way">
   <div class="page">
     <h2>The Flood settled it either way</h2>
-    <p class="lead">Whatever those unions were, God destroyed them. “Noah only remained alive, and they that were with him in the ark.” <button class="ref" data-v="Gen 7:23">Gen 7:23</button></p>
-    <div class="cols-3">
-      <div class="panel believers">
-        <h3>How Jesus told it</h3>
-        <p>In Noah’s days they were eating, drinking, marrying, and giving in marriage. Ordinary marriages of ordinary men. <button class="ref" data-v="Matt 24:37-39">Matt 24:37–39</button> <button class="ref" data-v="Luke 17:26-27">Luke 17:26–27</button></p>
-      </div>
-      <div class="panel believers">
-        <h3>Never again</h3>
-        <p>After the Flood, Scripture never records another union of angels and women. If it happened once, it left no trace in the rest of the Book.</p>
-      </div>
-      <div class="panel believers">
-        <h3>Still today</h3>
-        <p>Possession by unclean spirits appears again and again, and missionaries still meet it. <button class="ref" data-v="Mark 5:2|Mark 5:9">Mark 5</button> <button class="ref" data-v="Acts 16:16">Acts 16:16</button></p>
-      </div>
-    </div>
-    <p class="center" style="margin-top:1.1rem">One explanation fits what Scripture keeps showing us. The other requires an event Scripture never shows again.</p>
+    <p class="lead">Whatever those unions were, God destroyed them. “Noah only remained alive, and they that were with him in the ark.” <button class="ref" data-v="Genesis 7:23">Genesis 7:23</button></p>
+    <div class="cols-3"><div class="panel believers"><h3>How Jesus told it</h3><p>In Noah’s days they were eating, drinking, marrying, and giving in marriage. Ordinary marriages of ordinary men. <button class="ref" data-v="Matthew 24:37-39">Matt 24:37–39</button> <button class="ref" data-v="Luke 17:26-27">Luke 17:26–27</button></p></div><div class="panel believers"><h3>Never again</h3><p>After the Flood, Scripture never records another union of angels and women. If it happened once, it left no trace in the rest of the Book.</p></div><div class="panel believers"><h3>Still today</h3><p>Possession by unclean spirits appears again and again, and missionaries still meet it. <button class="ref" data-v="Mark 5:2">Mark 5</button> <button class="ref" data-v="Acts 16:16">Acts 16:16</button></p></div></div>
+    <p class="center">One explanation fits what Scripture keeps showing us. The other requires an event Scripture never shows again.</p>
   </div>
 </section>
 
@@ -639,16 +496,8 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="page">
     <h2>Giants are men</h2>
     <p>Genesis 6:4 says there were giants “also after that.” The rest of the Bible shows exactly that: tall men, after the Flood, with no angels involved.</p>
-    <ul class="marks">
-      <li>The sons of Anak, “which come of the giants.” <button class="ref" data-v="Num 13:33">Num 13:33</button></li>
-      <li>The Emims, “a people great, and many, and tall.” <button class="ref" data-v="Deut 2:10-11">Deut 2:10–11</button></li>
-      <li>Og of Bashan, whose iron bed was nine cubits long, about thirteen and a half feet. <button class="ref" data-v="Deut 3:11">Deut 3:11</button></li>
-      <li>Goliath of Gath, six cubits and a span, nearly ten feet. <button class="ref" data-v="1 Sam 17:4">1 Sam 17:4</button></li>
-      <li>A man of great stature with six fingers and six toes, “born to the giant,” slain by David’s men. <button class="ref" data-v="2 Sam 21:20|2 Sam 21:22">2 Sam 21:20–22</button></li>
-    </ul>
-    <div class="callout">
-      <p>In living memory, Robert Wadlow (1918–1940) stood 8 feet 11 inches tall. Great stature is a human trait, then and now. It needs no angelic father.</p>
-    </div>
+    <ul class="marks"><li>The sons of Anak, “which come of the giants.” <button class="ref" data-v="Numbers 13:33">Numbers 13:33</button></li><li>The Emims, “a people great, and many, and tall.” <button class="ref" data-v="Deuteronomy 2:10-11">Deut 2:10–11</button></li><li>Og of Bashan, whose iron bed was nine cubits long, about thirteen and a half feet. <button class="ref" data-v="Deuteronomy 3:11">Deuteronomy 3:11</button></li><li>Goliath of Gath, six cubits and a span, nearly ten feet. <button class="ref" data-v="1 Samuel 17:4">1 Samuel 17:4</button></li><li>A man of great stature with six fingers and six toes, “born to the giant,” slain by David’s men. <button class="ref" data-v="2 Samuel 21:20-22">2 Sam 21:20–22</button></li></ul>
+    <div class="callout"><p>In living memory, Robert Wadlow (1918–1940) stood 8 feet 11 inches tall. Great stature is a human trait, then and now. It needs no angelic father.</p></div>
   </div>
 </section>
 
@@ -656,12 +505,10 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="After the Flood" data-title="Do not shift the blame">
   <div class="page">
     <h2>Do not shift the blame</h2>
-    <blockquote>And the man said, The woman whom thou gavest to be with me, she gave me of the tree, and I did eat… And the woman said, The serpent beguiled me, and I did eat.<cite>Genesis 3:12–13 &nbsp;<button class="ref" data-v="Gen 3:12-13">read</button></cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">And the man said, The woman whom thou gavest to be with me, she gave me of the tree, and I did eat. And the <span class="lord">Lord</span> God said unto the woman, What is this that thou hast done? And the woman said, The serpent beguiled me, and I did eat.<cite>Genesis 3:12-13</cite></blockquote>
     <p>Since the garden, man has pointed somewhere else. God answered each one for his own sin.</p>
-    <blockquote>But every man is tempted, when he is drawn away of his own lust, and enticed.<cite>James 1:14</cite></blockquote>
-    <div class="callout">
-      <p>In Genesis 6, God names one guilty party: man. Even if spirits were at work in that day, His verdict is “the wickedness of man.” A teaching that moves the weight of Genesis 6 onto a demonic host moves it where God did not put it, under either view. <button class="ref" data-v="Gen 6:5">Gen 6:5</button></p>
-    </div>
+    <blockquote class="scripture" style="font-style:italic">But every man is tempted, when he is drawn away of his own lust, and enticed.<cite>James 1:14</cite></blockquote>
+    <div class="callout"><p>In Genesis 6, God names one guilty party: man. Even if spirits were at work in that day, His verdict is “the wickedness of man.” A teaching that moves the weight of Genesis 6 onto a demonic host moves it where God did not put it, under either view. <button class="ref" data-v="Genesis 6:5">Genesis 6:5</button></p></div>
   </div>
 </section>
 
@@ -670,24 +517,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="page">
     <h2>Grant that they were angels</h2>
     <p class="lead">Suppose the case for angels is right. Then they were not holy angels, who keep their estate. They were fallen angels, rebels against God in the very act of Genesis 6. So the question becomes: would God call those His sons?</p>
-    <div class="cols">
-      <div class="panel angels">
-        <h3>What Scripture says of fallen angels</h3>
-        <ul class="marks">
-          <li>They share the devil’s final destination: hell, “prepared for the devil and his angels.” <button class="ref" data-v="Matt 25:41">Matt 25:41</button></li>
-          <li>Even wicked men are called “children of the devil” and “children of disobedience.” <button class="ref" data-v="1 John 3:10">1 John 3:10</button> <button class="ref" data-v="Eph 2:2">Eph 2:2</button> <button class="ref" data-v="John 8:44">John 8:44</button></li>
-          <li>God never calls an angel His son, holy or fallen. <button class="ref" data-v="Heb 1:5">Heb 1:5</button></li>
-        </ul>
-      </div>
-      <div class="panel believers">
-        <h3>What Scripture says of sons who sin</h3>
-        <ul class="marks">
-          <li>They are still sons. Just Lot was a righteous man while he vexed his soul in Sodom. <button class="ref" data-v="2 Pet 2:4-9">2 Pet 2:7–8</button></li>
-          <li>God’s sons are warned to come out and be separate, not yoked with unbelievers. <button class="ref" data-v="2 Cor 6:14|2 Cor 6:17-18">2 Cor 6:14–18</button></li>
-          <li>Israel was not to marry the nations, “for they will turn away thy son from following me.” <button class="ref" data-v="Deut 7:3-4">Deut 7:3–4</button></li>
-        </ul>
-      </div>
-    </div>
+    <div class="cols"><div class="panel cain"><h3>What Scripture says of fallen angels</h3><p>They share the devil’s final destination: hell, “prepared for the devil and his angels.” <button class="ref" data-v="Matthew 25:41">Matthew 25:41</button> Even wicked men are called “children of the devil” and “children of disobedience.” <button class="ref" data-v="1 John 3:10">1 John 3:10</button> <button class="ref" data-v="Ephesians 2:2">Eph 2:2</button> <button class="ref" data-v="John 8:44">John 8:44</button> God never calls an angel His son, holy or fallen. <button class="ref" data-v="Hebrews 1:5">Hebrews 1:5</button></p></div><div class="panel believers"><h3>What Scripture says of sons who sin</h3><p>They are still sons. Just Lot was a righteous man while he vexed his soul in Sodom. <button class="ref" data-v="2 Peter 2:7-8">2 Pet 2:7–8</button> God’s sons are warned to come out and be separate, not yoked with unbelievers. <button class="ref" data-v="2 Corinthians 6:14">2 Cor 6:14</button> <button class="ref" data-v="2 Corinthians 6:17-18">2 Cor 6:17–18</button> Israel was not to marry the nations, “for they will turn away thy son from following me.” <button class="ref" data-v="Deuteronomy 7:3-4">Deut 7:3–4</button></p></div></div>
   </div>
 </section>
 
@@ -695,26 +525,10 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="The deciding question" data-title="Sons are made in His image">
   <div class="page">
     <h2>Sons are made in His image</h2>
-    <blockquote class="big-verse">So God created man in his own image, in the image of God created he him; male and female created he them.<cite>Genesis 1:27 &nbsp;<button class="ref" data-v="Gen 1:26-27">read 1:26–27</button></cite></blockquote>
-    <div class="cols">
-      <div class="panel believers">
-        <h3>Man</h3>
-        <ul class="marks">
-          <li>Made in the image and likeness of God.</li>
-          <li>Christ took on Him the seed of Abraham, so that men might become sons by faith. <button class="ref" data-v="Heb 2:16">Heb 2:16</button> <button class="ref" data-v="John 1:12">John 1:12</button></li>
-        </ul>
-      </div>
-      <div class="panel angels">
-        <h3>Angels</h3>
-        <ul class="marks">
-          <li>Spirits, created by Him and for His purpose, not made in His likeness. <button class="ref" data-v="Col 1:16">Col 1:16</button> <button class="ref" data-v="Heb 1:13-14">Heb 1:14</button></li>
-          <li>Salvation is never offered to them: “he took not on him the nature of angels.” <button class="ref" data-v="Heb 2:16">Heb 2:16</button></li>
-        </ul>
-      </div>
-    </div>
-    <div class="callout">
-      <p>James, answering what “a man may say,” notes that “the devils also believe, and tremble.” Even so, that is not belief unto salvation, because saving grace was never extended to them. Sonship by faith is offered only to the creature made in God’s image. <button class="ref" data-v="Jas 2:18-19">Jas 2:18–19</button></p>
-    </div>
+    <blockquote class="big-verse">So God created man in his own image, in the image of God created he him; male and female created he them.<cite>Genesis 1:27</cite></blockquote>
+    <div class="refs center"><button class="ref" data-v="Genesis 1:26-27">Genesis 1:26-27</button></div>
+    <div class="cols"><div class="panel believers"><h3>Man</h3><p>Made in the image and likeness of God. Christ took on Him the seed of Abraham, so that men might become sons by faith. <button class="ref" data-v="Hebrews 2:16">Hebrews 2:16</button> <button class="ref" data-v="John 1:12">John 1:12</button></p></div><div class="panel believers"><h3>Angels</h3><p>Spirits, created by Him and for His purpose, not made in His likeness. <button class="ref" data-v="Colossians 1:16">Colossians 1:16</button> <button class="ref" data-v="Hebrews 1:14">Hebrews 1:14</button> Salvation is never offered to them: “he took not on him the nature of angels.” <button class="ref" data-v="Hebrews 2:16">Hebrews 2:16</button></p></div></div>
+    <div class="callout"><p>James, answering what “a man may say,” notes that “the devils also believe, and tremble.” Even so, that is not belief unto salvation, because saving grace was never extended to them. Sonship by faith is offered only to the creature made in God’s image. <button class="ref" data-v="James 2:18-19">Jas 2:18–19</button></p></div>
   </div>
 </section>
 
@@ -724,26 +538,19 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
     <h2>A note on the fringe</h2>
     <p class="lead">The Book of Enoch, the “Watchers,” and giants thousands of feet tall are not found in the Bible, and they have no place in this study. Most who hold Sons are angels reject them as well.</p>
     <p>Jude’s quoting one prophecy of Enoch no more makes that book Scripture than Paul’s quoting pagan poets makes their writings Scripture.</p>
-    <div class="refs"><button class="ref" data-v="Jude 1:14">Jude 14</button><button class="ref" data-v="Acts 17:28">Acts 17:28</button><button class="ref" data-v="Titus 1:12">Titus 1:12</button><button class="ref" data-v="Prov 30:6">Prov 30:6</button></div>
+    <div class="refs center"><button class="ref" data-v="Jude 1:14">Jude 14</button><button class="ref" data-v="Acts 17:28">Acts 17:28</button><button class="ref" data-v="Titus 1:12">Titus 1:12</button><button class="ref" data-v="Proverbs 30:6">Proverbs 30:6</button></div>
   </div>
 </section>
 
 <!-- 24 -->
 <section class="slide" data-section="Close" data-title="Be fully persuaded">
-  <div class="page title-page">
+  <div class="page title-page later">
     <div class="overline">Romans 14:5</div>
-    <h1 style="font-size:clamp(2.1rem,5.2vw,4rem)">Be fully persuaded</h1>
-    <p class="sub">“Let every man be fully persuaded in his own mind.”</p>
+    <h1>Be fully persuaded</h1>
+    <blockquote class="big-verse">One man esteemeth one day above another: another esteemeth every day alike. Let every man be fully persuaded in his own mind.<cite>Romans 14:5</cite></blockquote>
     <span class="fleuron">✦ ✦ ✦</span>
-    <div style="text-align:left;max-width:680px;margin:0 auto">
-      <p>We have laid out both views and shown our work. Now search the Scriptures for yourself, as the Bereans did, and weigh these questions: <button class="ref" data-v="Acts 17:11">Acts 17:11</button></p>
-      <ol class="order">
-        <li><strong>Who does Scripture call the sons of God?</strong></li>
-        <li><strong>Who is the corner stone of Job 38?</strong></li>
-        <li><strong>Whose wickedness did God judge in Genesis 6?</strong></li>
-        <li><strong>Would God call fallen angels His sons?</strong></li>
-      </ol>
-    </div>
+    <p>We have laid out both views and shown our work. Now search the Scriptures for yourself, as the Bereans did, and weigh these questions: <button class="ref" data-v="Acts 17:11">Acts 17:11</button></p>
+    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>Who does Scripture call the sons of God?</strong></li><li><strong>Who is the corner stone of Job 38?</strong></li><li><strong>Whose wickedness did God judge in Genesis 6?</strong></li><li><strong>Would God call fallen angels His sons?</strong></li></ol></div>
     <p class="hint">Whichever way you land, Noah found grace in the eyes of the <span class="lord">Lord</span>, by faith. Hold your view with conviction, and your brethren with charity.</p>
   </div>
 </section>
@@ -772,106 +579,103 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 </dialog>
 
 <script>
-const BOOKS = {
-  "Gen":"Genesis","Num":"Numbers","Deut":"Deuteronomy","1 Sam":"1 Samuel","2 Sam":"2 Samuel",
-  "Job":"Job","Ps":"Psalm","Prov":"Proverbs","Isa":"Isaiah","Hos":"Hosea",
-  "Matt":"Matthew","Mark":"Mark","Luke":"Luke","John":"John","Acts":"Acts","Rom":"Romans",
-  "2 Cor":"2 Corinthians","Gal":"Galatians","Eph":"Ephesians","Col":"Colossians","Titus":"Titus","Heb":"Hebrews",
-  "Jas":"James","1 Pet":"1 Peter","2 Pet":"2 Peter","1 John":"1 John","Jude":"Jude","Rev":"Revelation"
-};
+const BOOKS = {};
 
 const V = {
-  "Gen 1:26-27":[[26,"And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth."],[27,"So God created man in his own image, in the image of God created he him; male and female created he them."]],
-  "Gen 3:12-13":[[12,"And the man said, The woman whom thou gavest to be with me, she gave me of the tree, and I did eat."],[13,"And the LORD God said unto the woman, What is this that thou hast done? And the woman said, The serpent beguiled me, and I did eat."]],
-  "Gen 4:16-17":[[16,"And Cain went out from the presence of the LORD, and dwelt in the land of Nod, on the east of Eden."],[17,"And Cain knew his wife; and she conceived, and bare Enoch: and he builded a city, and called the name of the city, after the name of his son, Enoch."]],
-  "Gen 4:19":[[19,"And Lamech took unto him two wives: the name of the one was Adah, and the name of the other Zillah."]],
-  "Gen 4:23-24":[[23,"And Lamech said unto his wives, Adah and Zillah, Hear my voice; ye wives of Lamech, hearken unto my speech: for I have slain a man to my wounding, and a young man to my hurt."],[24,"If Cain shall be avenged sevenfold, truly Lamech seventy and sevenfold."]],
-  "Gen 4:25-26":[[25,"And Adam knew his wife again; and she bare a son, and called his name Seth: For God, said she, hath appointed me another seed instead of Abel, whom Cain slew."],[26,"And to Seth, to him also there was born a son; and he called his name Enos: then began men to call upon the name of the LORD."]],
-  "Gen 5:24":[[24,"And Enoch walked with God: and he was not; for God took him."]],
-  "Gen 5:29":[[29,"And he called his name Noah, saying, This same shall comfort us concerning our work and toil of our hands, because of the ground which the LORD hath cursed."]],
-  "Gen 6:1-2":[[1,"And it came to pass, when men began to multiply on the face of the earth, and daughters were born unto them,"],[2,"That the sons of God saw the daughters of men that they were fair; and they took them wives of all which they chose."]],
-  "Gen 6:3":[[3,"And the LORD said, My spirit shall not always strive with man, for that he also is flesh: yet his days shall be an hundred and twenty years."]],
-  "Gen 6:4":[[4,"There were giants in the earth in those days; and also after that, when the sons of God came in unto the daughters of men, and they bare children to them, the same became mighty men which were of old, men of renown."]],
-  "Gen 6:5":[[5,"And GOD saw that the wickedness of man was great in the earth, and that every imagination of the thoughts of his heart was only evil continually."]],
-  "Gen 6:6-7":[[6,"And it repented the LORD that he had made man on the earth, and it grieved him at his heart."],[7,"And the LORD said, I will destroy man whom I have created from the face of the earth; both man, and beast, and the creeping thing, and the fowls of the air; for it repenteth me that I have made them."]],
-  "Gen 6:8-9":[[8,"But Noah found grace in the eyes of the LORD."],[9,"These are the generations of Noah: Noah was a just man and perfect in his generations, and Noah walked with God."]],
-  "Gen 7:23":[[23,"And every living substance was destroyed which was upon the face of the ground, both man, and cattle, and the creeping things, and the fowl of the heaven; and they were destroyed from the earth: and Noah only remained alive, and they that were with him in the ark."]],
-  "Gen 17:1":[[1,"And when Abram was ninety years old and nine, the LORD appeared to Abram, and said unto him, I am the Almighty God; walk before me, and be thou perfect."]],
-  "Gen 18:8":[[8,"And he took butter, and milk, and the calf which he had dressed, and set it before them; and he stood by them under the tree, and they did eat."]],
-  "Gen 19:1":[[1,"And there came two angels to Sodom at even; and Lot sat in the gate of Sodom: and Lot seeing them rose up to meet them; and he bowed himself with his face toward the ground;"]],
-  "Gen 19:10-11":[[10,"But the men put forth their hand, and pulled Lot into the house to them, and shut to the door."],[11,"And they smote the men that were at the door of the house with blindness, both small and great: so that they wearied themselves to find the door."]],
-  "Num 13:33":[[33,"And there we saw the giants, the sons of Anak, which come of the giants: and we were in our own sight as grasshoppers, and so we were in their sight."]],
-  "Deut 2:10-11":[[10,"The Emims dwelt therein in times past, a people great, and many, and tall, as the Anakims;"],[11,"Which also were accounted giants, as the Anakims; but the Moabites call them Emims."]],
-  "Deut 3:11":[[11,"For only Og king of Bashan remained of the remnant of giants; behold, his bedstead was a bedstead of iron; is it not in Rabbath of the children of Ammon? nine cubits was the length thereof, and four cubits the breadth of it, after the cubit of a man."]],
-  "Deut 7:3-4":[[3,"Neither shalt thou make marriages with them; thy daughter thou shalt not give unto his son, nor his daughter shalt thou take unto thy son."],[4,"For they will turn away thy son from following me, that they may serve other gods: so will the anger of the LORD be kindled against you, and destroy thee suddenly."]],
-  "Deut 14:1":[[1,"Ye are the children of the LORD your God: ye shall not cut yourselves, nor make any baldness between your eyes for the dead."]],
-  "1 Sam 17:4":[[4,"And there went out a champion out of the camp of the Philistines, named Goliath, of Gath, whose height was six cubits and a span."]],
-  "2 Sam 21:20":[[20,"And there was yet a battle in Gath, where was a man of great stature, that had on every hand six fingers, and on every foot six toes, four and twenty in number; and he also was born to the giant."]],
-  "2 Sam 21:22":[[22,"These four were born to the giant in Gath, and fell by the hand of David, and by the hand of his servants."]],
-  "Job 1:1":[[1,"There was a man in the land of Uz, whose name was Job; and that man was perfect and upright, and one that feared God, and eschewed evil."]],
-  "Job 1:6":[[6,"Now there was a day when the sons of God came to present themselves before the LORD, and Satan came also among them."]],
-  "Job 1:9-11":[[9,"Then Satan answered the LORD, and said, Doth Job fear God for nought?"],[10,"Hast not thou made an hedge about him, and about his house, and about all that he hath on every side? thou hast blessed the work of his hands, and his substance is increased in the land."],[11,"But put forth thine hand now, and touch all that he hath, and he will curse thee to thy face."]],
-  "Job 2:1":[[1,"Again there was a day when the sons of God came to present themselves before the LORD, and Satan came also among them to present himself before the LORD."]],
-  "Job 38:4-7":[[4,"Where wast thou when I laid the foundations of the earth? declare, if thou hast understanding."],[5,"Who hath laid the measures thereof, if thou knowest? or who hath stretched the line upon it?"],[6,"Whereupon are the foundations thereof fastened? or who laid the corner stone thereof;"],[7,"When the morning stars sang together, and all the sons of God shouted for joy?"]],
-  "Ps 118:22":[[22,"The stone which the builders refused is become the head stone of the corner."]],
-  "Prov 30:6":[[6,"Add thou not unto his words, lest he reprove thee, and thou be found a liar."]],
-  "Isa 6:2":[[2,"Above it stood the seraphims: each one had six wings; with twain he covered his face, and with twain he covered his feet, and with twain he did fly."]],
-  "Isa 43:6":[[6,"I will say to the north, Give up; and to the south, Keep not back: bring my sons from far, and my daughters from the ends of the earth;"]],
-  "Hos 1:10":[[10,"Yet the number of the children of Israel shall be as the sand of the sea, which cannot be measured nor numbered; and it shall come to pass, that in the place where it was said unto them, Ye are not my people, there it shall be said unto them, Ye are the sons of the living God."]],
-  "Matt 12:43-45":[[43,"When the unclean spirit is gone out of a man, he walketh through dry places, seeking rest, and findeth none."],[44,"Then he saith, I will return into my house from whence I came out; and when he is come, he findeth it empty, swept, and garnished."],[45,"Then goeth he, and taketh with himself seven other spirits more wicked than himself, and they enter in and dwell there: and the last state of that man is worse than the first. Even so shall it be also unto this wicked generation."]],
-  "Matt 22:30":[[30,"For in the resurrection they neither marry, nor are given in marriage, but are as the angels of God in heaven."]],
-  "Matt 24:37-39":[[37,"But as the days of Noe were, so shall also the coming of the Son of man be."],[38,"For as in the days that were before the flood they were eating and drinking, marrying and giving in marriage, until the day that Noe entered into the ark,"],[39,"And knew not until the flood came, and took them all away; so shall also the coming of the Son of man be."]],
-  "Matt 25:41":[[41,"Then shall he say also unto them on the left hand, Depart from me, ye cursed, into everlasting fire, prepared for the devil and his angels:"]],
-  "Mark 5:2":[[2,"And when he was come out of the ship, immediately there met him out of the tombs a man with an unclean spirit,"]],
-  "Mark 5:9":[[9,"And he asked him, What is thy name? And he answered, saying, My name is Legion: for we are many."]],
-  "Mark 12:25":[[25,"For when they shall rise from the dead, they neither marry, nor are given in marriage; but are as the angels which are in heaven."]],
-  "Luke 16:8":[[8,"And the lord commended the unjust steward, because he had done wisely: for the children of this world are in their generation wiser than the children of light."]],
-  "Luke 17:26-27":[[26,"And as it was in the days of Noe, so shall it be also in the days of the Son of man."],[27,"They did eat, they drank, they married wives, they were given in marriage, until the day that Noe entered into the ark, and the flood came, and destroyed them all."]],
-  "John 1:1-3":[[1,"In the beginning was the Word, and the Word was with God, and the Word was God."],[2,"The same was in the beginning with God."],[3,"All things were made by him; and without him was not any thing made that was made."]],
-  "Isa 28:16":[[16,"Therefore thus saith the Lord GOD, Behold, I lay in Zion for a foundation a stone, a tried stone, a precious corner stone, a sure foundation: he that believeth shall not make haste."]],
-  "Acts 13:33":[[33,"God hath fulfilled the same unto us their children, in that he hath raised up Jesus again; as it is also written in the second psalm, Thou art my Son, this day have I begotten thee."]],
-  "1 Pet 1:19-20":[[19,"But with the precious blood of Christ, as of a lamb without blemish and without spot:"],[20,"Who verily was foreordained before the foundation of the world, but was manifest in these last times for you,"]],
-  "John 1:12":[[12,"But as many as received him, to them gave he power to become the sons of God, even to them that believe on his name:"]],
-  "John 8:44":[[44,"Ye are of your father the devil, and the lusts of your father ye will do. He was a murderer from the beginning, and abode not in the truth, because there is no truth in him. When he speaketh a lie, he speaketh of his own: for he is a liar, and the father of it."]],
-  "John 8:56":[[56,"Your father Abraham rejoiced to see my day: and he saw it, and was glad."]],
-  "Acts 4:10-11":[[10,"Be it known unto you all, and to all the people of Israel, that by the name of Jesus Christ of Nazareth, whom ye crucified, whom God raised from the dead, even by him doth this man stand here before you whole."],[11,"This is the stone which was set at nought of you builders, which is become the head of the corner."]],
-  "Acts 16:16":[[16,"And it came to pass, as we went to prayer, a certain damsel possessed with a spirit of divination met us, which brought her masters much gain by soothsaying:"]],
-  "Acts 17:11":[[11,"These were more noble than those in Thessalonica, in that they received the word with all readiness of mind, and searched the scriptures daily, whether those things were so."]],
-  "Acts 17:28":[[28,"For in him we live, and move, and have our being; as certain also of your own poets have said, For we are also his offspring."]],
-  "Rom 14:5":[[5,"One man esteemeth one day above another: another esteemeth every day alike. Let every man be fully persuaded in his own mind."]],
-  "2 Cor 6:14":[[14,"Be ye not unequally yoked together with unbelievers: for what fellowship hath righteousness with unrighteousness? and what communion hath light with darkness?"]],
-  "2 Cor 6:17-18":[[17,"Wherefore come out from among them, and be ye separate, saith the Lord, and touch not the unclean thing; and I will receive you,"],[18,"And will be a Father unto you, and ye shall be my sons and daughters, saith the Lord Almighty."]],
-  "Eph 2:2":[[2,"Wherein in time past ye walked according to the course of this world, according to the prince of the power of the air, the spirit that now worketh in the children of disobedience:"]],
-  "Eph 2:20":[[20,"And are built upon the foundation of the apostles and prophets, Jesus Christ himself being the chief corner stone;"]],
-  "Eph 4:3":[[3,"Endeavouring to keep the unity of the Spirit in the bond of peace."]],
-  "Col 1:16":[[16,"For by him were all things created, that are in heaven, and that are in earth, visible and invisible, whether they be thrones, or dominions, or principalities, or powers: all things were created by him, and for him:"]],
-  "Titus 1:12":[[12,"One of themselves, even a prophet of their own, said, The Cretians are alway liars, evil beasts, slow bellies."]],
-  "Heb 1:5":[[5,"For unto which of the angels said he at any time, Thou art my Son, this day have I begotten thee? And again, I will be to him a Father, and he shall be to me a Son?"]],
-  "Heb 1:13-14":[[13,"But to which of the angels said he at any time, Sit on my right hand, until I make thine enemies thy footstool?"],[14,"Are they not all ministering spirits, sent forth to minister for them who shall be heirs of salvation?"]],
-  "Heb 2:16":[[16,"For verily he took not on him the nature of angels; but he took on him the seed of Abraham."]],
-  "Heb 11:26":[[26,"Esteeming the reproach of Christ greater riches than the treasures in Egypt: for he had respect unto the recompence of the reward."]],
-  "Heb 12:22-23":[[22,"But ye are come unto mount Sion, and unto the city of the living God, the heavenly Jerusalem, and to an innumerable company of angels,"],[23,"To the general assembly and church of the firstborn, which are written in heaven, and to God the Judge of all, and to the spirits of just men made perfect,"]],
-  "Heb 13:2":[[2,"Be not forgetful to entertain strangers: for thereby some have entertained angels unawares."]],
-  "Jas 2:18-19":[[18,"Yea, a man may say, Thou hast faith, and I have works: shew me thy faith without thy works, and I will shew thee my faith by my works."],[19,"Thou believest that there is one God; thou doest well: the devils also believe, and tremble."]],
-  "1 Pet 2:6":[[6,"Wherefore also it is contained in the scripture, Behold, I lay in Sion a chief corner stone, elect, precious: and he that believeth on him shall not be confounded."]],
-  "1 Pet 3:18-20":[[18,"For Christ also hath once suffered for sins, the just for the unjust, that he might bring us to God, being put to death in the flesh, but quickened by the Spirit:"],[19,"By which also he went and preached unto the spirits in prison;"],[20,"Which sometime were disobedient, when once the longsuffering of God waited in the days of Noah, while the ark was a preparing, wherein few, that is, eight souls were saved by water."]],
-  "2 Pet 2:1":[[1,"But there were false prophets also among the people, even as there shall be false teachers among you, who privily shall bring in damnable heresies, even denying the Lord that bought them, and bring upon themselves swift destruction."]],
-  "2 Pet 2:4-9":[[4,"For if God spared not the angels that sinned, but cast them down to hell, and delivered them into chains of darkness, to be reserved unto judgment;"],[5,"And spared not the old world, but saved Noah the eighth person, a preacher of righteousness, bringing in the flood upon the world of the ungodly;"],[6,"And turning the cities of Sodom and Gomorrha into ashes condemned them with an overthrow, making them an ensample unto those that after should live ungodly;"],[7,"And delivered just Lot, vexed with the filthy conversation of the wicked:"],[8,"(For that righteous man dwelling among them, in seeing and hearing, vexed his righteous soul from day to day with their unlawful deeds;)"],[9,"The Lord knoweth how to deliver the godly out of temptations, and to reserve the unjust unto the day of judgment to be punished:"]],
-  "1 John 3:10":[[10,"In this the children of God are manifest, and the children of the devil: whosoever doeth not righteousness is not of God, neither he that loveth not his brother."]],
-  "Jude 1:4-8":[[4,"For there are certain men crept in unawares, who were before of old ordained to this condemnation, ungodly men, turning the grace of our God into lasciviousness, and denying the only Lord God, and our Lord Jesus Christ."],[5,"I will therefore put you in remembrance, though ye once knew this, how that the Lord, having saved the people out of the land of Egypt, afterward destroyed them that believed not."],[6,"And the angels which kept not their first estate, but left their own habitation, he hath reserved in everlasting chains under darkness unto the judgment of the great day."],[7,"Even as Sodom and Gomorrha, and the cities about them in like manner, giving themselves over to fornication, and going after strange flesh, are set forth for an example, suffering the vengeance of eternal fire."],[8,"Likewise also these filthy dreamers defile the flesh, despise dominion, and speak evil of dignities."]],
-  "Jude 1:6":[[6,"And the angels which kept not their first estate, but left their own habitation, he hath reserved in everlasting chains under darkness unto the judgment of the great day."]],
-  "Jude 1:14":[[14,"And Enoch also, the seventh from Adam, prophesied of these, saying, Behold, the Lord cometh with ten thousands of his saints,"]],
-  "Isa 14:12":[[12,"How art thou fallen from heaven, O Lucifer, son of the morning! how art thou cut down to the ground, which didst weaken the nations!"]],
-  "Rev 12:4":[[4,"And his tail drew the third part of the stars of heaven, and did cast them to the earth: and the dragon stood before the woman which was ready to be delivered, for to devour her child as soon as it was born."]],
-  "Rev 22:16":[[16,"I Jesus have sent mine angel to testify unto you these things in the churches. I am the root and the offspring of David, and the bright and morning star."]],
-  "Rev 13:8":[[8,"And all that dwell upon the earth shall worship him, whose names are not written in the book of life of the Lamb slain from the foundation of the world."]]
+  "1 John 3:10":[[10, "In this the children of God are manifest, and the children of the devil: whosoever doeth not righteousness is not of God, neither he that loveth not his brother."]],
+  "1 Peter 1:19-20":[[19, "But with the precious blood of Christ, as of a lamb without blemish and without spot:"], [20, "Who verily was foreordained before the foundation of the world, but was manifest in these last times for you,"]],
+  "1 Peter 3:18-20":[[18, "For Christ also hath once suffered for sins, the just for the unjust, that he might bring us to God, being put to death in the flesh, but quickened by the Spirit:"], [19, "By which also he went and preached unto the spirits in prison;"], [20, "Which sometime were disobedient, when once the longsuffering of God waited in the days of Noah, while the ark was a preparing, wherein few, that is, eight souls were saved by water."]],
+  "1 Peter 3:19-20":[[19, "By which also he went and preached unto the spirits in prison;"], [20, "Which sometime were disobedient, when once the longsuffering of God waited in the days of Noah, while the ark was a preparing, wherein few, that is, eight souls were saved by water."]],
+  "1 Samuel 17:4":[[4, "And there went out a champion out of the camp of the Philistines, named Goliath, of Gath, whose height was six cubits and a span."]],
+  "2 Corinthians 6:14":[[14, "Be ye not unequally yoked together with unbelievers: for what fellowship hath righteousness with unrighteousness? and what communion hath light with darkness?"]],
+  "2 Corinthians 6:17-18":[[17, "Wherefore come out from among them, and be ye separate, saith the Lord, and touch not the unclean thing; and I will receive you,"], [18, "And will be a Father unto you, and ye shall be my sons and daughters, saith the Lord Almighty."]],
+  "2 Peter 2:4-5":[[4, "For if God spared not the angels that sinned, but cast them down to hell, and delivered them into chains of darkness, to be reserved unto judgment;"], [5, "And spared not the old world, but saved Noah the eighth person, a preacher of righteousness, bringing in the flood upon the world of the ungodly;"]],
+  "2 Peter 2:4-9":[[4, "For if God spared not the angels that sinned, but cast them down to hell, and delivered them into chains of darkness, to be reserved unto judgment;"], [5, "And spared not the old world, but saved Noah the eighth person, a preacher of righteousness, bringing in the flood upon the world of the ungodly;"], [6, "And turning the cities of Sodom and Gomorrha into ashes condemned them with an overthrow, making them an ensample unto those that after should live ungodly;"], [7, "And delivered just Lot, vexed with the filthy conversation of the wicked:"], [8, "(For that righteous man dwelling among them, in seeing and hearing, vexed his righteous soul from day to day with their unlawful deeds;)"], [9, "The Lord knoweth how to deliver the godly out of temptations, and to reserve the unjust unto the day of judgment to be punished:"]],
+  "2 Peter 2:5":[[5, "And spared not the old world, but saved Noah the eighth person, a preacher of righteousness, bringing in the flood upon the world of the ungodly;"]],
+  "2 Peter 2:7-8":[[7, "And delivered just Lot, vexed with the filthy conversation of the wicked:"], [8, "(For that righteous man dwelling among them, in seeing and hearing, vexed his righteous soul from day to day with their unlawful deeds;)"]],
+  "2 Samuel 21:20-22":[[20, "And there was yet a battle in Gath, where was a man of great stature, that had on every hand six fingers, and on every foot six toes, four and twenty in number; and he also was born to the giant."], [21, "And when he defied Israel, Jonathan the son of Shimeah the brother of David slew him."], [22, "These four were born to the giant in Gath, and fell by the hand of David, and by the hand of his servants."]],
+  "Acts 13:33":[[33, "God hath fulfilled the same unto us their children, in that he hath raised up Jesus again; as it is also written in the second psalm, Thou art my Son, this day have I begotten thee."]],
+  "Acts 16:16":[[16, "And it came to pass, as we went to prayer, a certain damsel possessed with a spirit of divination met us, which brought her masters much gain by soothsaying:"]],
+  "Acts 17:11":[[11, "These were more noble than those in Thessalonica, in that they received the word with all readiness of mind, and searched the scriptures daily, whether those things were so."]],
+  "Acts 17:28":[[28, "For in him we live, and move, and have our being; as certain also of your own poets have said, For we are also his offspring."]],
+  "Acts 4:10-11":[[10, "Be it known unto you all, and to all the people of Israel, that by the name of Jesus Christ of Nazareth, whom ye crucified, whom God raised from the dead, even by him doth this man stand here before you whole."], [11, "This is the stone which was set at nought of you builders, which is become the head of the corner."]],
+  "Colossians 1:16":[[16, "For by him were all things created, that are in heaven, and that are in earth, visible and invisible, whether they be thrones, or dominions, or principalities, or powers: all things were created by him, and for him:"]],
+  "Deuteronomy 14:1":[[1, "Ye are the children of the LORD your God: ye shall not cut yourselves, nor make any baldness between your eyes for the dead."]],
+  "Deuteronomy 2:10-11":[[10, "The Emims dwelt therein in times past, a people great, and many, and tall, as the Anakims;"], [11, "Which also were accounted giants, as the Anakims; but the Moabites call them Emims."]],
+  "Deuteronomy 3:11":[[11, "For only Og king of Bashan remained of the remnant of giants; behold, his bedstead was a bedstead of iron; is it not in Rabbath of the children of Ammon? nine cubits was the length thereof, and four cubits the breadth of it, after the cubit of a man."]],
+  "Deuteronomy 7:3-4":[[3, "Neither shalt thou make marriages with them; thy daughter thou shalt not give unto his son, nor his daughter shalt thou take unto thy son."], [4, "For they will turn away thy son from following me, that they may serve other gods: so will the anger of the LORD be kindled against you, and destroy thee suddenly."]],
+  "Ephesians 2:2":[[2, "Wherein in time past ye walked according to the course of this world, according to the prince of the power of the air, the spirit that now worketh in the children of disobedience:"]],
+  "Ephesians 2:20":[[20, "And are built upon the foundation of the apostles and prophets, Jesus Christ himself being the chief corner stone;"]],
+  "Ephesians 4:3":[[3, "Endeavouring to keep the unity of the Spirit in the bond of peace."]],
+  "Genesis 17:1":[[1, "And when Abram was ninety years old and nine, the LORD appeared to Abram, and said unto him, I am the Almighty God; walk before me, and be thou perfect."]],
+  "Genesis 18:8":[[8, "And he took butter, and milk, and the calf which he had dressed, and set it before them; and he stood by them under the tree, and they did eat."]],
+  "Genesis 19:1":[[1, "And there came two angels to Sodom at even; and Lot sat in the gate of Sodom: and Lot seeing them rose up to meet them; and he bowed himself with his face toward the ground;"]],
+  "Genesis 19:10-11":[[10, "But the men put forth their hand, and pulled Lot into the house to them, and shut to the door."], [11, "And they smote the men that were at the door of the house with blindness, both small and great: so that they wearied themselves to find the door."]],
+  "Genesis 1:26-27":[[26, "And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth."], [27, "So God created man in his own image, in the image of God created he him; male and female created he them."]],
+  "Genesis 4:16-17":[[16, "And Cain went out from the presence of the LORD, and dwelt in the land of Nod, on the east of Eden."], [17, "And Cain knew his wife; and she conceived, and bare Enoch: and he builded a city, and called the name of the city, after the name of his son, Enoch."]],
+  "Genesis 4:17":[[17, "And Cain knew his wife; and she conceived, and bare Enoch: and he builded a city, and called the name of the city, after the name of his son, Enoch."]],
+  "Genesis 4:19":[[19, "And Lamech took unto him two wives: the name of the one was Adah, and the name of the other Zillah."]],
+  "Genesis 4:23-24":[[23, "And Lamech said unto his wives, Adah and Zillah, Hear my voice; ye wives of Lamech, hearken unto my speech: for I have slain a man to my wounding, and a young man to my hurt."], [24, "If Cain shall be avenged sevenfold, truly Lamech seventy and sevenfold."]],
+  "Genesis 4:25-26":[[25, "And Adam knew his wife again; and she bare a son, and called his name Seth: For God, said she, hath appointed me another seed instead of Abel, whom Cain slew."], [26, "And to Seth, to him also there was born a son; and he called his name Enos: then began men to call upon the name of the LORD."]],
+  "Genesis 5:24":[[24, "And Enoch walked with God: and he was not; for God took him."]],
+  "Genesis 5:29":[[29, "And he called his name Noah, saying, This same shall comfort us concerning our work and toil of our hands, because of the ground which the LORD hath cursed."]],
+  "Genesis 6:1-2":[[1, "And it came to pass, when men began to multiply on the face of the earth, and daughters were born unto them,"], [2, "That the sons of God saw the daughters of men that they were fair; and they took them wives of all which they chose."]],
+  "Genesis 6:2":[[2, "That the sons of God saw the daughters of men that they were fair; and they took them wives of all which they chose."]],
+  "Genesis 6:4":[[4, "There were giants in the earth in those days; and also after that, when the sons of God came in unto the daughters of men, and they bare children to them, the same became mighty men which were of old, men of renown."]],
+  "Genesis 6:5":[[5, "And God saw that the wickedness of man was great in the earth, and that every imagination of the thoughts of his heart was only evil continually."]],
+  "Genesis 6:6-7":[[6, "And it repented the LORD that he had made man on the earth, and it grieved him at his heart."], [7, "And the LORD said, I will destroy man whom I have created from the face of the earth; both man, and beast, and the creeping thing, and the fowls of the air; for it repenteth me that I have made them."]],
+  "Genesis 6:8-9":[[8, "But Noah found grace in the eyes of the LORD."], [9, "These are the generations of Noah: Noah was a just man and perfect in his generations, and Noah walked with God."]],
+  "Genesis 6:9":[[9, "These are the generations of Noah: Noah was a just man and perfect in his generations, and Noah walked with God."]],
+  "Genesis 7:23":[[23, "And every living substance was destroyed which was upon the face of the ground, both man, and cattle, and the creeping things, and the fowl of the heaven; and they were destroyed from the earth: and Noah only remained alive, and they that were with him in the ark."]],
+  "Hebrews 11:26":[[26, "Esteeming the reproach of Christ greater riches than the treasures in Egypt: for he had respect unto the recompence of the reward."]],
+  "Hebrews 12:22-23":[[22, "But ye are come unto mount Sion, and unto the city of the living God, the heavenly Jerusalem, and to an innumerable company of angels,"], [23, "To the general assembly and church of the firstborn, which are written in heaven, and to God the Judge of all, and to the spirits of just men made perfect,"]],
+  "Hebrews 12:23":[[23, "To the general assembly and church of the firstborn, which are written in heaven, and to God the Judge of all, and to the spirits of just men made perfect,"]],
+  "Hebrews 13:2":[[2, "Be not forgetful to entertain strangers: for thereby some have entertained angels unawares."]],
+  "Hebrews 1:13-14":[[13, "But to which of the angels said he at any time, Sit on my right hand, until I make thine enemies thy footstool?"], [14, "Are they not all ministering spirits, sent forth to minister for them who shall be heirs of salvation?"]],
+  "Hebrews 1:14":[[14, "Are they not all ministering spirits, sent forth to minister for them who shall be heirs of salvation?"]],
+  "Hebrews 1:5":[[5, "For unto which of the angels said he at any time, Thou art my Son, this day have I begotten thee? And again, I will be to him a Father, and he shall be to me a Son?"]],
+  "Hebrews 2:16":[[16, "For verily he took not on him the nature of angels; but he took on him the seed of Abraham."]],
+  "Hosea 1:10":[[10, "Yet the number of the children of Israel shall be as the sand of the sea, which cannot be measured nor numbered; and it shall come to pass, that in the place where it was said unto them, Ye are not my people, there it shall be said unto them, Ye are the sons of the living God."]],
+  "Isaiah 14:12":[[12, "How art thou fallen from heaven, O Lucifer, son of the morning! how art thou cut down to the ground, which didst weaken the nations!"]],
+  "Isaiah 28:16":[[16, "Therefore thus saith the Lord GOD, Behold, I lay in Zion for a foundation a stone, a tried stone, a precious corner stone, a sure foundation: he that believeth shall not make haste."]],
+  "Isaiah 43:6":[[6, "I will say to the north, Give up; and to the south, Keep not back: bring my sons from far, and my daughters from the ends of the earth;"]],
+  "Isaiah 6:2":[[2, "Above it stood the seraphims: each one had six wings; with twain he covered his face, and with twain he covered his feet, and with twain he did fly."]],
+  "James 2:18-19":[[18, "Yea, a man may say, Thou hast faith, and I have works: shew me thy faith without thy works, and I will shew thee my faith by my works."], [19, "Thou believest that there is one God; thou doest well: the devils also believe, and tremble."]],
+  "Job 1:1":[[1, "There was a man in the land of Uz, whose name was Job; and that man was perfect and upright, and one that feared God, and eschewed evil."]],
+  "Job 1:6":[[6, "Now there was a day when the sons of God came to present themselves before the LORD, and Satan came also among them."]],
+  "Job 1:9-11":[[9, "Then Satan answered the LORD, and said, Doth Job fear God for nought?"], [10, "Hast not thou made an hedge about him, and about his house, and about all that he hath on every side? thou hast blessed the work of his hands, and his substance is increased in the land."], [11, "But put forth thine hand now, and touch all that he hath, and he will curse thee to thy face."]],
+  "Job 2:1":[[1, "Again there was a day when the sons of God came to present themselves before the LORD, and Satan came also among them to present himself before the LORD."]],
+  "Job 38:4-7":[[4, "Where wast thou when I laid the foundations of the earth? declare, if thou hast understanding."], [5, "Who hath laid the measures thereof, if thou knowest? or who hath stretched the line upon it?"], [6, "Whereupon are the foundations thereof fastened? or who laid the corner stone thereof;"], [7, "When the morning stars sang together, and all the sons of God shouted for joy?"]],
+  "John 1:1-3":[[1, "In the beginning was the Word, and the Word was with God, and the Word was God."], [2, "The same was in the beginning with God."], [3, "All things were made by him; and without him was not any thing made that was made."]],
+  "John 1:12":[[12, "But as many as received him, to them gave he power to become the sons of God, even to them that believe on his name:"]],
+  "John 8:44":[[44, "Ye are of your father the devil, and the lusts of your father ye will do. He was a murderer from the beginning, and abode not in the truth, because there is no truth in him. When he speaketh a lie, he speaketh of his own: for he is a liar, and the father of it."]],
+  "John 8:56":[[56, "Your father Abraham rejoiced to see my day: and he saw it, and was glad."]],
+  "Jude 1:14":[[14, "And Enoch also, the seventh from Adam, prophesied of these, saying, Behold, the Lord cometh with ten thousands of his saints,"]],
+  "Jude 1:4-8":[[4, "For there are certain men crept in unawares, who were before of old ordained to this condemnation, ungodly men, turning the grace of our God into lasciviousness, and denying the only Lord God, and our Lord Jesus Christ."], [5, "I will therefore put you in remembrance, though ye once knew this, how that the Lord, having saved the people out of the land of Egypt, afterward destroyed them that believed not."], [6, "And the angels which kept not their first estate, but left their own habitation, he hath reserved in everlasting chains under darkness unto the judgment of the great day."], [7, "Even as Sodom and Gomorrha, and the cities about them in like manner, giving themselves over to fornication, and going after strange flesh, are set forth for an example, suffering the vengeance of eternal fire."], [8, "Likewise also these filthy dreamers defile the flesh, despise dominion, and speak evil of dignities."]],
+  "Jude 1:6":[[6, "And the angels which kept not their first estate, but left their own habitation, he hath reserved in everlasting chains under darkness unto the judgment of the great day."]],
+  "Jude 1:6-7":[[6, "And the angels which kept not their first estate, but left their own habitation, he hath reserved in everlasting chains under darkness unto the judgment of the great day."], [7, "Even as Sodom and Gomorrha, and the cities about them in like manner, giving themselves over to fornication, and going after strange flesh, are set forth for an example, suffering the vengeance of eternal fire."]],
+  "Luke 16:8":[[8, "And the lord commended the unjust steward, because he had done wisely: for the children of this world are in their generation wiser than the children of light."]],
+  "Luke 17:26-27":[[26, "And as it was in the days of Noe, so shall it be also in the days of the Son of man."], [27, "They did eat, they drank, they married wives, they were given in marriage, until the day that Noe entered into the ark, and the flood came, and destroyed them all."]],
+  "Mark 12:25":[[25, "For when they shall rise from the dead, they neither marry, nor are given in marriage; but are as the angels which are in heaven."]],
+  "Mark 5:2":[[2, "And when he was come out of the ship, immediately there met him out of the tombs a man with an unclean spirit,"]],
+  "Matthew 12:43-45":[[43, "When the unclean spirit is gone out of a man, he walketh through dry places, seeking rest, and findeth none."], [44, "Then he saith, I will return into my house from whence I came out; and when he is come, he findeth it empty, swept, and garnished."], [45, "Then goeth he, and taketh with himself seven other spirits more wicked than himself, and they enter in and dwell there: and the last state of that man is worse than the first. Even so shall it be also unto this wicked generation."]],
+  "Matthew 22:30":[[30, "For in the resurrection they neither marry, nor are given in marriage, but are as the angels of God in heaven."]],
+  "Matthew 24:37-39":[[37, "But as the days of Noe were, so shall also the coming of the Son of man be."], [38, "For as in the days that were before the flood they were eating and drinking, marrying and giving in marriage, until the day that Noe entered into the ark,"], [39, "And knew not until the flood came, and took them all away; so shall also the coming of the Son of man be."]],
+  "Matthew 25:41":[[41, "Then shall he say also unto them on the left hand, Depart from me, ye cursed, into everlasting fire, prepared for the devil and his angels:"]],
+  "Numbers 13:33":[[33, "And there we saw the giants, the sons of Anak, which come of the giants: and we were in our own sight as grasshoppers, and so we were in their sight."]],
+  "Proverbs 30:6":[[6, "Add thou not unto his words, lest he reprove thee, and thou be found a liar."]],
+  "Revelation 12:4":[[4, "And his tail drew the third part of the stars of heaven, and did cast them to the earth: and the dragon stood before the woman which was ready to be delivered, for to devour her child as soon as it was born."]],
+  "Revelation 13:8":[[8, "And all that dwell upon the earth shall worship him, whose names are not written in the book of life of the Lamb slain from the foundation of the world."]],
+  "Revelation 22:16":[[16, "I Jesus have sent mine angel to testify unto you these things in the churches. I am the root and the offspring of David, and the bright and morning star."]],
+  "Romans 14:5":[[5, "One man esteemeth one day above another: another esteemeth every day alike. Let every man be fully persuaded in his own mind."]],
+  "Titus 1:12":[[12, "One of themselves, even a prophet of their own, said, The Cretians are alway liars, evil beasts, slow bellies."]]
 };
 
 function refTitle(key){
   const i = key.lastIndexOf(" ");
   const book = key.slice(0, i), cv = key.slice(i + 1);
-  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "").replace("-", "–");
-  return (BOOKS[book] || book) + " " + cv.replace("-", "–");
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
 }
 function smallCaps(t){
   return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
@@ -934,7 +738,7 @@ function openVerse(keys, label){
     const data = V[k];
     if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
     if (!data) { html += "<p>Passage not loaded.</p>"; return; }
-    html += "<p>" + data.map(([n, t]) => "<sup>" + n + "</sup>" + smallCaps(t)).join(" ") + "</p>";
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
   });
   verseBody.innerHTML = html;
   verseDlg.showModal();
@@ -943,6 +747,7 @@ function openVerse(keys, label){
 
 document.addEventListener("click", e => {
   const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
   if (b) {
     const keys = b.dataset.v;
     const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);

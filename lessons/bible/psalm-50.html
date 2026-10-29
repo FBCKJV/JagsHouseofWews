@@ -1,718 +1,824 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>God Is Judge Himself: Psalm 50</title>
+<title>Psalm 50: God Is Judge</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Psalm 50 read as a courtroom in four movements: the summons, the sacrifice God seeks, the indictment, and the verdict and promise.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#e9dcc0; --page:#f6edd9; --ink:#2a1f14; --muted:#6b5a43;
-  --gold:#7d5a10; --rule:#c4a660; --crimson:#8f1f22; --rubric:#8f1f22;
-  --gilt:#ecc969; --mark:rgba(184,137,42,.28); --wash:rgba(184,137,42,.10);
-  --serif:"Cormorant Garamond", "Garamond", "Georgia", serif;
-  --caps:"Cinzel", "Trajan Pro", "Times New Roman", serif;
-  color-scheme:light;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
 }
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#0c0a07; --page:#17120d; --ink:#eadfc4; --muted:#a6957a;
-    --gold:#d4ae55; --rule:#6e5a2e; --crimson:#8a2426; --rubric:#d65c5e;
-    --gilt:#e6c36b; --mark:rgba(212,174,85,.24); --wash:rgba(212,174,85,.07);
-    color-scheme:dark;
-  }
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
 }
-:root[data-theme="dark"]{
-  --bg:#0c0a07; --page:#17120d; --ink:#eadfc4; --muted:#a6957a;
-  --gold:#d4ae55; --rule:#6e5a2e; --crimson:#8a2426; --rubric:#d65c5e;
-  --gilt:#e6c36b; --mark:rgba(212,174,85,.24); --wash:rgba(212,174,85,.07);
-  color-scheme:dark;
-}
-*,*::before,*::after{box-sizing:inherit}
-html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
-body{height:100%;margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:21px;line-height:1.55;overflow:hidden;-webkit-text-size-adjust:100%}
 button{font:inherit;color:inherit}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
 
-/* ---------- deck frame ---------- */
-.deck{height:100%;display:flex;flex-direction:column}
-.stage{flex:1;min-height:0;position:relative;padding:18px 18px 0}
-.slide{position:absolute;inset:18px 18px 0;display:none;overflow-y:auto;-webkit-overflow-scrolling:touch;
-  background:var(--page);border:1px solid var(--rule);outline:1px solid var(--rule);outline-offset:-7px;
-  padding:clamp(28px,5vw,64px) clamp(22px,6vw,88px) 56px}
-.slide.on{display:block;animation:turn .35s ease-out}
-@keyframes turn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){.slide.on{animation:none}}
-.inner{max-width:900px;margin:0 auto}
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
 
-/* ---------- type ---------- */
-.rubric{font-family:var(--caps);font-size:15px;letter-spacing:.14em;color:var(--rubric);margin:0 0 18px;display:flex;gap:12px;align-items:center}
-.rubric::after{content:"";flex:1;height:1px;background:var(--rule)}
-.rubric b{font-weight:700}
-h1,h2,h3{font-family:var(--caps);font-weight:600;color:var(--ink);line-height:1.15;margin:0}
-h2{font-size:clamp(28px,4.2vw,44px);margin-bottom:22px}
-h3{font-size:19px;letter-spacing:.06em;color:var(--gold);margin:28px 0 8px}
-p{margin:0 0 16px}
-.muted{color:var(--muted)}
-em{font-style:italic}
-.big{font-size:clamp(22px,2.6vw,27px);line-height:1.5}
-.lede::first-letter{float:left;font-family:var(--caps);font-weight:700;font-size:64px;line-height:1;
-  color:var(--gilt);background:var(--crimson);padding:8px 12px 6px;margin:4px 12px 0 0;border:2px solid var(--gilt);
-  box-shadow:0 0 0 1px var(--crimson)}
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
 
-/* the psalm verse being expounded */
-.lection{margin:0 0 26px;padding:14px 0 14px 22px;border-left:3px solid var(--crimson);font-style:italic;font-size:clamp(22px,2.6vw,28px);line-height:1.45}
-.lection .vn{font-style:normal;font-family:var(--caps);font-size:14px;color:var(--rubric);vertical-align:super;margin-right:4px}
-.lection .ref{font-style:normal;font-size:16px;margin-left:6px}
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
 
-/* tappable references */
-.ref{font-family:var(--caps);font-size:.78em;letter-spacing:.04em;color:var(--gold);background:var(--wash);
-  border:1px solid var(--rule);border-radius:3px;padding:1px 7px 2px;cursor:pointer;white-space:nowrap}
-.ref:hover{background:var(--mark)}
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
 
-/* cross-reference cards */
-.xrefs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:22px 0}
-.xcard{display:block;text-align:left;background:transparent;border:1px solid var(--rule);border-top:3px solid var(--gold);
-  padding:14px 18px 16px;cursor:pointer;width:100%}
-.xcard:hover{background:var(--wash)}
-.xcard .xr{display:block;font-family:var(--caps);font-size:14px;letter-spacing:.06em;color:var(--gold);margin-bottom:6px}
-.xcard .xq{display:block;font-style:italic;font-size:20px;line-height:1.4}
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
 
-/* two-column contrast */
-.pair{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:22px 0;border:1px solid var(--rule)}
-.pair>div{padding:18px 22px}
-.pair>div+div{border-left:1px solid var(--rule)}
-.pair h3{margin-top:0}
-@media (max-width:700px){.pair{grid-template-columns:1fr}.pair>div+div{border-left:0;border-top:1px solid var(--rule)}}
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
 
-/* the counts of the indictment */
-.counts{margin:18px 0;border-top:1px solid var(--rule)}
-.count{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:14px 0;border-bottom:1px solid var(--rule)}
-.count .cn{font-family:var(--caps);font-size:14px;letter-spacing:.06em;color:var(--rubric);padding-top:4px}
-.count p{margin:0}
-@media (max-width:600px){.count{grid-template-columns:1fr;gap:4px}}
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
 
-/* trinity of titles */
-.triad{display:flex;flex-wrap:wrap;justify-content:center;gap:0;margin:28px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.triad div{flex:1 1 200px;text-align:center;padding:20px 12px}
-.triad div+div{border-left:1px solid var(--rule)}
-.triad b{display:block;font-family:var(--caps);font-size:26px;color:var(--crimson)}
-.triad span{color:var(--muted);font-size:18px}
-@media (max-width:600px){.triad div+div{border-left:0;border-top:1px solid var(--rule)}}
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
 
-/* outline of the psalm */
-.movements{margin:20px 0;border-top:1px solid var(--rule)}
-.mv{display:grid;grid-template-columns:120px 1fr auto;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--rule)}
-.mv .vv{font-family:var(--caps);color:var(--rubric);font-size:16px}
-.mv b{font-family:var(--caps);font-weight:600;font-size:19px}
-.mv span.d{display:block;color:var(--muted);font-size:18px}
-@media (max-width:600px){.mv{grid-template-columns:1fr}}
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
 
-/* title & close */
-.title{text-align:center;padding-top:clamp(10px,4vh,50px)}
-.title .pre{font-family:var(--caps);letter-spacing:.2em;color:var(--rubric);font-size:16px;margin-bottom:22px}
-.title h1{font-size:clamp(40px,7vw,80px);font-weight:700;line-height:1.05}
-.title .sub{font-style:italic;font-size:clamp(22px,3vw,30px);color:var(--muted);margin:18px auto 28px;max-width:640px}
-.orn{display:block;width:180px;height:22px;margin:22px auto;color:var(--gold)}
-.keyline{font-style:italic;font-size:clamp(24px,3.2vw,34px);line-height:1.4;text-align:center;max-width:760px;margin:30px auto}
-.keyline .ref{font-style:normal;font-size:16px}
-.charge{list-style:none;padding:0;margin:22px 0;counter-reset:c}
-.charge li{padding:10px 0 10px 40px;position:relative;border-bottom:1px solid var(--rule)}
-.charge li::before{content:"✠";position:absolute;left:6px;top:10px;color:var(--crimson)}
-.contents{columns:2 260px;column-gap:40px;margin:24px 0}
-.contents button{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--rule);padding:10px 0;cursor:pointer;break-inside:avoid}
-.contents button b{font-family:var(--caps);color:var(--rubric);margin-right:10px}
-.contents button:hover{color:var(--gold)}
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
 
-/* ---------- bottom bar ---------- */
-.bar{display:flex;align-items:center;gap:6px;padding:10px 18px calc(10px + env(safe-area-inset-bottom,0px));}
-.bar button{background:transparent;border:1px solid var(--rule);color:var(--ink);min-width:40px;height:40px;cursor:pointer;font-family:var(--caps);font-size:14px}
-.bar button:hover{background:var(--wash)}
-.bar .secs{display:flex;gap:4px;flex:1;justify-content:center;flex-wrap:nowrap;overflow-x:auto}
-.bar .secs button{min-width:36px;padding:0 6px}
-.bar .secs button.cur{background:var(--crimson);color:var(--gilt);border-color:var(--crimson)}
-.bar .count-l{font-family:var(--caps);font-size:13px;color:var(--muted);min-width:56px;text-align:center}
-@media (max-width:520px){.bar .count-l{display:none}.bar .secs button{min-width:30px}}
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
 
-/* ---------- verse dialog ---------- */
-dialog{border:1px solid var(--rule);outline:1px solid var(--rule);outline-offset:-7px;background:var(--page);color:var(--ink);
-  width:min(680px,calc(100vw - 28px));max-height:min(80vh,780px);padding:0;overflow:hidden}
-dialog::backdrop{background:rgba(12,10,7,.62)}
-dialog[open]{display:flex;flex-direction:column}
-.dh{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 26px 12px;border-bottom:1px solid var(--rule)}
-.dh h4{margin:0;font-family:var(--caps);font-size:20px;color:var(--rubric);font-weight:600}
-.dh button{background:none;border:1px solid var(--rule);width:36px;height:36px;cursor:pointer;font-size:20px;line-height:1}
-.db{padding:18px 26px 26px;overflow-y:auto;font-size:22px;line-height:1.55}
-.db sup{font-family:var(--caps);font-size:13px;color:var(--rubric);margin-right:3px}
-.db .kjv{font-family:var(--caps);font-size:12px;letter-spacing:.12em;color:var(--muted);margin-top:16px}
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
 </style>
-<script src="../deck-extras.js"></script>
 </head>
 <body>
-<div class="deck">
-<main class="stage" id="stage">
-<!-- 1 TITLE -->
-<section class="slide" data-sec="0"><div class="inner title">
-  <p class="pre">A Psalm of Asaph</p>
-  <h1>God Is Judge Himself</h1>
-  <p class="sub">Psalm 50 and the case the mighty God brings against His own people</p>
-  <svg class="orn" viewBox="0 0 180 22" aria-hidden="true"><path d="M0 11H74M106 11H180" stroke="currentColor"/><path d="M90 3l8 8-8 8-8-8z" fill="none" stroke="currentColor"/><circle cx="90" cy="11" r="2" fill="currentColor"/></svg>
-  <p class="keyline">“The mighty God, even the LORD, hath spoken, and called the earth from the rising of the sun unto the going down thereof.” <button class="ref" data-v="Psalm 50:1">Psalm 50:1</button></p>
-  <p class="muted">Tap any gold reference to read the verse.</p>
-</div></section>
 
-<!-- 2 THE PSALM -->
-<section class="slide" data-sec="0"><div class="inner">
-  <p class="rubric">The Text</p>
-  <h2>Psalm 50 in four movements</h2>
-  <p>The whole psalm is a courtroom. God summons the court, sets aside what He is <em>not</em> charging, brings the indictment, and then gives the verdict and the promise.</p>
-  <div class="movements">
-    <div class="mv"><span class="vv">vv. 1–6</span><span><b>The Summons</b><span class="d">The Judge comes out of Zion and gathers His saints</span></span><button class="ref" data-v="Psalm 50:1-6">Read</button></div>
-    <div class="mv"><span class="vv">vv. 7–15</span><span><b>The Sacrifice God Seeks</b><span class="d">Not bulls and goats, but thanksgiving and calling on Him</span></span><button class="ref" data-v="Psalm 50:7-15">Read</button></div>
-    <div class="mv"><span class="vv">vv. 16–21</span><span><b>The Indictment</b><span class="d">The charges against those who take His covenant in their mouth</span></span><button class="ref" data-v="Psalm 50:16-21">Read</button></div>
-    <div class="mv"><span class="vv">vv. 22–23</span><span><b>Verdict and Promise</b><span class="d">A warning to those that forget God, and salvation shewn to the faithful</span></span><button class="ref" data-v="Psalm 50:22-23">Read</button></div>
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="God Is Judge Himself">
+  <div class="page title-page">
+    <div class="overline">A Psalm of Asaph</div>
+    <h1>God Is Judge Himself</h1>
+    <p class="sub">Psalm 50 and the case the mighty God brings against His own people</p>
+    <blockquote class="big-verse">The mighty God, even the <span class="lord">Lord</span>, hath spoken, and called the earth from the rising of the sun unto the going down thereof.<cite>Psalm 50:1</cite></blockquote>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Tap any gold reference to read the verse.</p>
   </div>
-  <p style="text-align:center"><button class="ref" data-v="Psalm 50:1-23">Read the whole psalm</button></p>
-</div></section>
+</section>
 
-<!-- 3 CONTENTS -->
-<section class="slide" data-sec="0"><div class="inner">
-  <p class="rubric">Contents</p>
-  <h2>The lesson</h2>
-  <div class="contents" id="contents">
-    <button data-go="1"><b>I</b>The Author and His Seer</button>
-    <button data-go="2"><b>II</b>Our God Shall Come</button>
-    <button data-go="3"><b>III</b>Not Thy Sacrifices</button>
-    <button data-go="4"><b>IV</b>The Offering God Seeks</button>
-    <button data-go="5"><b>V</b>The Indictment</button>
-    <button data-go="6"><b>VI</b>The Case Against Us</button>
-    <button data-go="7"><b>VII</b>Consider This</button>
+<!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="Psalm 50 in four movements">
+  <div class="page">
+    <div class="kicker">The Text</div>
+    <h2>Psalm 50 in four movements</h2>
+    <p class="lead">The whole psalm is a courtroom. God summons the court, sets aside what He is <em>not</em> charging, brings the indictment, and then gives the verdict and the promise.</p>
+    <ul class="xr"><li><button class="ref" data-v="Psalms 50:1-6">Psalm 50:1-6</button><span><strong>The Summons</strong> (vv. 1–6). The Judge comes out of Zion and gathers His saints</span></li><li><button class="ref" data-v="Psalms 50:7-15">Psalm 50:7-15</button><span><strong>The Sacrifice God Seeks</strong> (vv. 7–15). Not bulls and goats, but thanksgiving and calling on Him</span></li><li><button class="ref" data-v="Psalms 50:16-21">Psalm 50:16-21</button><span><strong>The Indictment</strong> (vv. 16–21). The charges against those who take His covenant in their mouth</span></li><li><button class="ref" data-v="Psalms 50:22-23">Psalm 50:22-23</button><span><strong>Verdict and Promise</strong> (vv. 22–23). A warning to those that forget God, and salvation shewn to the faithful</span></li></ul>
+    <p class="center"><button class="ref" data-v="Psalms 50:1-23">Read the whole psalm</button></p>
   </div>
-</div></section>
+</section>
 
-<!-- ============ I ============ -->
-<section class="slide" data-sec="1"><div class="inner">
-  <p class="rubric"><b>I</b> The Author and His Seer</p>
-  <h2>God speaks in the first person</h2>
-  <p class="lection"><span class="vn">1</span>The mighty God, even the LORD, hath spoken, and called the earth from the rising of the sun unto the going down thereof. <button class="ref" data-v="Psalm 50:1">v. 1</button></p>
-  <p class="lede big">Psalm 50 is a song written in the voice of God Himself, His own perspective spoken directly to man. It is instruction in doctrine and in prophecy, given by His word, in the first person.</p>
-  <p>The psalm opens by introducing its Author: <em>the mighty God</em>. All scripture is given by inspiration of God <button class="ref" data-v="2 Timothy 3:16">2 Timothy 3:16</button>. It is God-breathed and God-spoken. But this psalm is set apart as the word of God delivered as a message of judgment for His people.</p>
-</div></section>
-
-<section class="slide" data-sec="1"><div class="inner">
-  <p class="rubric"><b>I</b> The Author and His Seer</p>
-  <h2>Asaph, the seer</h2>
-  <p class="big">God spoke these words through a psalmist other than David. The superscription titles it “A Psalm of Asaph,” the first of the twelve Asaphite psalms in the Bible.</p>
-  <p>Asaph was a prominent Levite, appointed by King David as the chief musician and worship leader before the Ark of the Covenant when it was brought to Jerusalem <button class="ref" data-v="1 Chronicles 16:4-5">1 Chronicles 16:4–5</button>. He was more than a song director. Scripture credits him as a prophet, and calls him a <em>seer</em>.</p>
-  <div class="xrefs">
-    <button class="xcard" data-v="2 Chronicles 29:30"><span class="xr">2 Chronicles 29:30</span><span class="xq">“…sing praise unto the LORD with the words of David, and of Asaph the seer.”</span></button>
+<!-- 3 -->
+<section class="slide" data-section="Introduction" data-title="The lesson">
+  <div class="page">
+    <div class="kicker">Contents</div>
+    <h2>The lesson</h2>
+    <div class="timeline"><div><span class="n">I</span><span class="lbl">The Author and His Seer</span></div><div><span class="n">II</span><span class="lbl">Our God Shall Come</span></div><div><span class="n">III</span><span class="lbl">Not Thy Sacrifices</span></div><div><span class="n">IV</span><span class="lbl">The Offering God Seeks</span></div><div><span class="n">V</span><span class="lbl">The Indictment</span></div><div><span class="n">VI</span><span class="lbl">The Case Against Us</span></div><div><span class="n">VII</span><span class="lbl">Consider This</span></div></div>
   </div>
-  <div class="pair">
-    <div><h3>Prophesying</h3><p>May refer to preaching and declaring the word of God.</p></div>
-    <div><h3>Seeing</h3><p>The specific term for a visionary given glimpses of the future by God: prophetic understanding of things that are not, but will be.</p></div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="I. The Author and His Seer" data-title="God speaks in the first person">
+  <div class="page">
+    <div class="kicker">I · The Author and His Seer</div>
+    <h2>God speaks in the first person</h2>
+    <blockquote class="scripture" style="font-style:italic">The mighty God, even the <span class="lord">Lord</span>, hath spoken, and called the earth from the rising of the sun unto the going down thereof.<cite>Psalm 50:1</cite></blockquote>
+    <p class="lead">Psalm 50 is a song written in the voice of God Himself, His own perspective spoken directly to man. It is instruction in doctrine and in prophecy, given by His word, in the first person.</p>
+    <p>The psalm opens by introducing its Author: <em>the mighty God</em>. All scripture is given by inspiration of God (<button class="ref" data-v="2 Timothy 3:16">2 Timothy 3:16</button>). It is God-breathed and God-spoken. But this psalm is set apart as the word of God delivered as a message of judgment for His people.</p>
   </div>
-</div></section>
+</section>
 
-<section class="slide" data-sec="1"><div class="inner">
-  <p class="rubric"><b>I</b> The Author and His Seer</p>
-  <h2>The Word who called the earth</h2>
-  <p class="big">The psalm first establishes the primacy of God the Creator. By His Word the earth and the heavens were made.</p>
-  <div class="xrefs">
-    <button class="xcard" data-v="John 1:1-4"><span class="xr">John 1:1–4</span><span class="xq">“All things were made by him; and without him was not any thing made that was made.”</span></button>
-    <button class="xcard" data-v="1 Corinthians 8:6"><span class="xr">1 Corinthians 8:6</span><span class="xq">“…and one Lord Jesus Christ, by whom are all things, and we by him.”</span></button>
+<!-- 5 -->
+<section class="slide" data-section="I. The Author and His Seer" data-title="Asaph, the seer">
+  <div class="page">
+    <div class="kicker">I · The Author and His Seer</div>
+    <h2>Asaph, the seer</h2>
+    <p class="lead">God spoke these words through a psalmist other than David. The superscription titles it “A Psalm of Asaph,” the first of the twelve Asaphite psalms in the Bible.</p>
+    <p>Asaph was a prominent Levite, appointed by King David as the chief musician and worship leader before the Ark of the Covenant when it was brought to Jerusalem (<button class="ref" data-v="1 Chronicles 16:4-5">1 Chronicles 16:4-5</button>). He was more than a song director. Scripture credits him as a prophet, and calls him a <em>seer</em>.</p>
+    <ul class="xr"><li><button class="ref" data-v="2 Chronicles 29:30">2 Chronicles 29:30</button><span>“…sing praise unto the <span class="lord">Lord</span> with the words of David, and of Asaph the seer.”</span></li></ul>
+    <div class="cols"><div class="panel believers"><h3>Prophesying</h3><p>May refer to preaching and declaring the word of God.</p></div><div class="panel believers"><h3>Seeing</h3><p>The specific term for a visionary given glimpses of the future by God: prophetic understanding of things that are not, but will be.</p></div></div>
   </div>
-  <p>When the Bible credits creation to God, remember that this includes Jesus. We read the Old Testament revelation with a New Testament understanding. The nature of the Godhead is revealed in the creation, and it matters for this psalm: the God who called the earth is the God who will come to judge it.</p>
-</div></section>
+</section>
 
-<!-- ============ II ============ -->
-<section class="slide" data-sec="2"><div class="inner">
-  <p class="rubric"><b>II</b> Our God Shall Come</p>
-  <h2>Out of Zion God hath shined</h2>
-  <p class="lection"><span class="vn">2</span>Out of Zion, the perfection of beauty, God hath shined. <button class="ref" data-v="Psalm 50:2">v. 2</button></p>
-  <p class="lede big">Zion is the place God chose to put His name.</p>
-  <p>His presence in the Tabernacle and later the Temple, God dwelling with His people through their worship, is an echo of the true coming of the Lord in the flesh, and of His return on His day to judge the nations upon that holy mountain.</p>
-  <div class="triad">
-    <div><b>Tabernacle</b><span>God among His people in worship</span></div>
-    <div><b>Incarnation</b><span>God come in the flesh</span></div>
-    <div><b>Return</b><span>God come to judge on His holy mountain</span></div>
+<!-- 6 -->
+<section class="slide" data-section="I. The Author and His Seer" data-title="The Word who called the earth">
+  <div class="page">
+    <div class="kicker">I · The Author and His Seer</div>
+    <h2>The Word who called the earth</h2>
+    <p class="lead">The psalm first establishes the primacy of God the Creator. By His Word the earth and the heavens were made.</p>
+    <ul class="xr"><li><button class="ref" data-v="John 1:1-4">John 1:1-4</button><span>“All things were made by him; and without him was not any thing made that was made.”</span></li><li><button class="ref" data-v="1 Corinthians 8:6">1 Corinthians 8:6</button><span>“…and one Lord Jesus Christ, by whom are all things, and we by him.”</span></li></ul>
+    <p>When the Bible credits creation to God, remember that this includes Jesus. We read the Old Testament revelation with a New Testament understanding. The nature of the Godhead is revealed in the creation, and it matters for this psalm: the God who called the earth is the God who will come to judge it.</p>
   </div>
-</div></section>
+</section>
 
-<section class="slide" data-sec="2"><div class="inner">
-  <p class="rubric"><b>II</b> Our God Shall Come</p>
-  <h2>A fire shall devour before Him</h2>
-  <p class="lection"><span class="vn">3</span>Our God shall come, and shall not keep silence: a fire shall devour before him, and it shall be very tempestuous round about him. <button class="ref" data-v="Psalm 50:3">v. 3</button></p>
-  <p>The Second Coming, the return of Christ, is the day we look forward to with gladness. He will come with power, a consuming fire proceeding from Him, and the sword of His word from His mouth shall slay the wicked.</p>
-  <div class="xrefs">
-    <button class="xcard" data-v="2 Thessalonians 1:7-9"><span class="xr">2 Thessalonians 1:7–9</span><span class="xq">“…in flaming fire taking vengeance on them that know not God…”</span></button>
-    <button class="xcard" data-v="Revelation 19:15"><span class="xr">Revelation 19:15</span><span class="xq">“And out of his mouth goeth a sharp sword…”</span></button>
+<!-- 7 -->
+<section class="slide" data-section="II. Our God Shall Come" data-title="Out of Zion God hath shined">
+  <div class="page">
+    <div class="kicker">II · Our God Shall Come</div>
+    <h2>Out of Zion God hath shined</h2>
+    <blockquote class="scripture" style="font-style:italic">Out of Zion, the perfection of beauty, God hath shined.<cite>Psalm 50:2</cite></blockquote>
+    <p class="lead">Zion is the place God chose to put His name.</p>
+    <p>His presence in the Tabernacle and later the Temple, God dwelling with His people through their worship, is an echo of the true coming of the Lord in the flesh, and of His return on His day to judge the nations upon that holy mountain.</p>
+    <div class="cols-3"><div class="panel believers"><h3>Tabernacle</h3><p>God among His people in worship</p></div><div class="panel believers"><h3>Incarnation</h3><p>God come in the flesh</p></div><div class="panel believers"><h3>Return</h3><p>God come to judge on His holy mountain</p></div></div>
   </div>
-  <p>The future judgment of the world was a key part of Israel’s understanding, though they saw it through a glass, darkly <button class="ref" data-v="1 Corinthians 13:12">1 Corinthians 13:12</button>. With the full revelation of the completed Bible, we see clearly what they only glimpsed in faith.</p>
-</div></section>
+</section>
 
-<section class="slide" data-sec="2"><div class="inner">
-  <p class="rubric"><b>II</b> Our God Shall Come</p>
-  <h2>Gather my saints together</h2>
-  <p class="lection"><span class="vn">4</span>He shall call to the heavens from above, and to the earth, that he may judge his people. <span class="vn">5</span>Gather my saints together unto me; those that have made a covenant with me by sacrifice. <button class="ref" data-v="Psalm 50:4-5">vv. 4–5</button></p>
-  <p>He comes as Judge, the Son calling up to heaven and down to earth, with a shout, with the trump: the call to judgment of His people, before His wrath is poured out on the world.</p>
-  <div class="xrefs">
-    <button class="xcard" data-v="1 Thessalonians 4:16-17"><span class="xr">1 Thessalonians 4:16–17</span><span class="xq">“…caught up together with them in the clouds, to meet the Lord in the air…”</span></button>
+<!-- 8 -->
+<section class="slide" data-section="II. Our God Shall Come" data-title="A fire shall devour before Him">
+  <div class="page">
+    <div class="kicker">II · Our God Shall Come</div>
+    <h2>A fire shall devour before Him</h2>
+    <blockquote class="scripture" style="font-style:italic">Our God shall come, and shall not keep silence: a fire shall devour before him, and it shall be very tempestuous round about him.<cite>Psalm 50:3</cite></blockquote>
+    <p>The Second Coming, the return of Christ, is the day we look forward to with gladness. He will come with power, a consuming fire proceeding from Him, and the sword of His word from His mouth shall slay the wicked.</p>
+    <ul class="xr"><li><button class="ref" data-v="2 Thessalonians 1:7-9">2 Thessalonians 1:7-9</button><span>“…in flaming fire taking vengeance on them that know not God…”</span></li><li><button class="ref" data-v="Revelation 19:15">Revelation 19:15</button><span>“And out of his mouth goeth a sharp sword…”</span></li></ul>
+    <p>The future judgment of the world was a key part of Israel’s understanding, though they saw it through a glass, darkly (<button class="ref" data-v="1 Corinthians 13:12">1 Corinthians 13:12</button>). With the full revelation of the completed Bible, we see clearly what they only glimpsed in faith.</p>
   </div>
-  <p class="big">The gathering of the elect, those sanctified by the Spirit in Christ, is not a “new doctrine,” as some would claim. The Rapture was a key part of prophecy for the Lord’s people, sung by Asaph the seer.</p>
-</div></section>
+</section>
 
-<section class="slide" data-sec="2"><div class="inner">
-  <p class="rubric"><b>II</b> Our God Shall Come</p>
-  <h2>A covenant made by sacrifice</h2>
-  <p class="lection"><span class="vn">6</span>And the heavens shall declare his righteousness: for God is judge himself. Selah. <button class="ref" data-v="Psalm 50:6">v. 6</button></p>
-  <p>The covenant Moses made between the people and God was sealed with blood that represented the blood of Christ, and with it the promise of a better covenant made by a better sacrifice: the sacrifice of the Son.</p>
-  <div class="xrefs">
-    <button class="xcard" data-v="Hebrews 9:19-23"><span class="xr">Hebrews 9:19–23</span><span class="xq">“…without shedding of blood is no remission.”</span></button>
+<!-- 9 -->
+<section class="slide" data-section="II. Our God Shall Come" data-title="Gather my saints together">
+  <div class="page">
+    <div class="kicker">II · Our God Shall Come</div>
+    <h2>Gather my saints together</h2>
+    <blockquote class="scripture" style="font-style:italic">He shall call to the heavens from above, and to the earth, that he may judge his people. Gather my saints together unto me; those that have made a covenant with me by sacrifice.<cite>Psalm 50:4-5</cite></blockquote>
+    <p>He comes as Judge, the Son calling up to heaven and down to earth, with a shout, with the trump: the call to judgment of His people, before His wrath is poured out on the world.</p>
+    <ul class="xr"><li><button class="ref" data-v="1 Thessalonians 4:16-17">1 Thessalonians 4:16-17</button><span>“…caught up together with them in the clouds, to meet the Lord in the air…”</span></li></ul>
+    <p class="lead">The gathering of the elect, those sanctified by the Spirit in Christ, is not a “new doctrine,” as some would claim. The Rapture was a key part of prophecy for the Lord’s people, sung by Asaph the seer.</p>
   </div>
-  <p>The heavens declare the righteousness of Christ Jesus, and His righteousness is upon all His people.</p>
-  <div class="triad">
-    <div><b>The Judge</b><span>Himself</span></div>
-    <div><b>The Atonement</b><span>Himself</span></div>
-    <div><b>The Mediator</b><span>Himself</span></div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="II. Our God Shall Come" data-title="A covenant made by sacrifice">
+  <div class="page">
+    <div class="kicker">II · Our God Shall Come</div>
+    <h2>A covenant made by sacrifice</h2>
+    <blockquote class="scripture" style="font-style:italic">And the heavens shall declare his righteousness: for God is judge himself. Selah.<cite>Psalm 50:6</cite></blockquote>
+    <p>The covenant Moses made between the people and God was sealed with blood that represented the blood of Christ, and with it the promise of a better covenant made by a better sacrifice: the sacrifice of the Son.</p>
+    <ul class="xr"><li><button class="ref" data-v="Hebrews 9:19-23">Hebrews 9:19-23</button><span>“…without shedding of blood is no remission.”</span></li></ul>
+    <p>The heavens declare the righteousness of Christ Jesus, and His righteousness is upon all His people.</p>
+    <div class="cols-3"><div class="panel believers"><h3>The Judge</h3><p>Himself</p></div><div class="panel believers"><h3>The Atonement</h3><p>Himself</p></div><div class="panel believers"><h3>The Mediator</h3><p>Himself</p></div></div>
+    <p class="take">The saints are secure in His righteousness. But now God speaks to Israel in judgment, beginning with His own people.</p>
   </div>
-  <p class="muted">The saints are secure in His righteousness. But now God speaks to Israel in judgment, beginning with His own people.</p>
-</div></section>
-<!-- ============ III ============ -->
-<section class="slide" data-sec="3"><div class="inner">
-  <p class="rubric"><b>III</b> Not Thy Sacrifices</p>
-  <h2>Hear, O my people</h2>
-  <p class="lection"><span class="vn">7</span>Hear, O my people, and I will speak; O Israel, and I will testify against thee: I am God, even thy God. <span class="vn">8</span>I will not reprove thee for thy sacrifices or thy burnt offerings, to have been continually before me. <button class="ref" data-v="Psalm 50:7-8">vv. 7–8</button></p>
-  <p class="lede big">The psalm turns from the future prophecy to the present call.</p>
-  <p>The sacrifices had been kept. Israel maintained the Levitical ordinances on which God had based His promises, the constant offerings that preserved ritual cleanliness and kept His presence among them. Those offerings stayed His hand from reproving them harshly. He is not asking for more sacrifice. No additional bulls or goats need shed their blood.</p>
-</div></section>
+</section>
 
-<section class="slide" data-sec="3"><div class="inner">
-  <p class="rubric"><b>III</b> Not Thy Sacrifices</p>
-  <h2>The better sacrifice</h2>
-  <p class="big">Under the old covenant the blood of bulls and goats was offered continually by the Levites, each one signifying the Sacrifice to come. We have that better sacrifice, once and for all: a covenant made by the blood of Jesus, the burnt offering for our sin.</p>
-  <div class="xrefs">
-    <button class="xcard" data-v="Hebrews 9:11-14"><span class="xr">Hebrews 9:11–14</span><span class="xq">“How much more shall the blood of Christ… purge your conscience from dead works to serve the living God?”</span></button>
+<!-- 11 -->
+<section class="slide" data-section="III. Not Thy Sacrifices" data-title="Hear, O my people">
+  <div class="page">
+    <div class="kicker">III · Not Thy Sacrifices</div>
+    <h2>Hear, O my people</h2>
+    <blockquote class="scripture" style="font-style:italic">Hear, O my people, and I will speak; O Israel, and I will testify against thee: I am God, even thy God. I will not reprove thee for thy sacrifices or thy burnt offerings, to have been continually before me.<cite>Psalm 50:7-8</cite></blockquote>
+    <p class="lead">The psalm turns from the future prophecy to the present call.</p>
+    <p>The sacrifices had been kept. Israel maintained the Levitical ordinances on which God had based His promises, the constant offerings that preserved ritual cleanliness and kept His presence among them. Those offerings stayed His hand from reproving them harshly. He is not asking for more sacrifice. No additional bulls or goats need shed their blood.</p>
   </div>
-</div></section>
+</section>
 
-<section class="slide" data-sec="3"><div class="inner">
-  <p class="rubric"><b>III</b> Not Thy Sacrifices</p>
-  <h2>The cattle upon a thousand hills</h2>
-  <p class="lection"><span class="vn">10</span>For every beast of the forest is mine, and the cattle upon a thousand hills. … <span class="vn">12</span>If I were hungry, I would not tell thee: for the world is mine, and the fulness thereof. <span class="vn">13</span>Will I eat the flesh of bulls, or drink the blood of goats? <button class="ref" data-v="Psalm 50:9-13">vv. 9–13</button></p>
-  <p>Every beast is His. If He were hungry, wanting the savour of the fat and the sustenance of meat, He would have His pick and His fill. He does not need them.</p>
-  <p class="big">Israel’s sacrifices were a picture, and a necessity of the covenant, but they did not please Him in and of themselves.</p>
-</div></section>
-
-<section class="slide" data-sec="3"><div class="inner">
-  <p class="rubric"><b>III</b> Not Thy Sacrifices</p>
-  <h2>Mercy, and not sacrifice</h2>
-  <div class="pair">
-    <div><h3>The prophet</h3><p><em>“For I desired mercy, and not sacrifice; and the knowledge of God more than burnt offerings.”</em></p><button class="ref" data-v="Hosea 6:6">Hosea 6:6</button></div>
-    <div><h3>The Lord Jesus</h3><p><em>“But if ye had known what this meaneth, I will have mercy, and not sacrifice, ye would not have condemned the guiltless.”</em></p><button class="ref" data-v="Matthew 12:7">Matthew 12:7</button></div>
+<!-- 12 -->
+<section class="slide" data-section="III. Not Thy Sacrifices" data-title="The better sacrifice">
+  <div class="page">
+    <div class="kicker">III · Not Thy Sacrifices</div>
+    <h2>The better sacrifice</h2>
+    <p class="lead">Under the old covenant the blood of bulls and goats was offered continually by the Levites, each one signifying the Sacrifice to come. We have that better sacrifice, once and for all: a covenant made by the blood of Jesus, the burnt offering for our sin.</p>
+    <ul class="xr"><li><button class="ref" data-v="Hebrews 9:11-14">Hebrews 9:11-14</button><span>“How much more shall the blood of Christ… purge your conscience from dead works to serve the living God?”</span></li></ul>
   </div>
-  <p class="big">The same sentiment, spoken by Hosea and repeated by Christ. What God was after in Psalm 50 is what He is still after.</p>
-</div></section>
+</section>
 
-<!-- ============ IV ============ -->
-<section class="slide" data-sec="4"><div class="inner">
-  <p class="rubric"><b>IV</b> The Offering God Seeks</p>
-  <h2>Offer unto God thanksgiving</h2>
-  <p class="lection"><span class="vn">14</span>Offer unto God thanksgiving; and pay thy vows unto the most High: <button class="ref" data-v="Psalm 50:14">v. 14</button></p>
-  <p class="lede big">God makes it plain that the offering is thanksgiving.</p>
-  <p>Their vows were to be paid to keep their part in the covenant as His nation: tithes and firstfruits as acts of faith. Unlike the offerings to other gods, it was not a meal for Him to consume. It was thanksgiving, offered in gratitude for all He had supplied, and to keep themselves unspotted as His people.</p>
-  <p>God desires mercy toward others: right judgment, defending the weak, and hating the workers of iniquity.</p>
-  <div class="xrefs">
-    <button class="xcard" data-v="Matthew 23:23"><span class="xr">Matthew 23:23</span><span class="xq">“…and have omitted the weightier matters of the law, judgment, mercy, and faith…”</span></button>
+<!-- 13 -->
+<section class="slide" data-section="III. Not Thy Sacrifices" data-title="The cattle upon a thousand hills">
+  <div class="page">
+    <div class="kicker">III · Not Thy Sacrifices</div>
+    <h2>The cattle upon a thousand hills</h2>
+    <blockquote class="scripture" style="font-style:italic">I will take no bullock out of thy house, nor he goats out of thy folds. For every beast of the forest is mine, and the cattle upon a thousand hills. I know all the fowls of the mountains: and the wild beasts of the field are mine. If I were hungry, I would not tell thee: for the world is mine, and the fulness thereof. Will I eat the flesh of bulls, or drink the blood of goats?<cite>Psalm 50:9-13</cite></blockquote>
+    <p>Every beast is His. If He were hungry, wanting the savour of the fat and the sustenance of meat, He would have His pick and His fill. He does not need them.</p>
+    <p class="lead">Israel’s sacrifices were a picture, and a necessity of the covenant, but they did not please Him in and of themselves.</p>
   </div>
-  <p class="muted">These are not the repeated acts of priests, but matters of the heart, which God judges and which He seeks from us.</p>
-</div></section>
+</section>
 
-<section class="slide" data-sec="4"><div class="inner">
-  <p class="rubric"><b>IV</b> The Offering God Seeks</p>
-  <h2>Call upon me in the day of trouble</h2>
-  <p class="lection"><span class="vn">15</span>And call upon me in the day of trouble: I will deliver thee, and thou shalt glorify me. <button class="ref" data-v="Psalm 50:15">v. 15</button></p>
-  <p class="big">Having established His ways, God gives the gospel: good news to all men in all ages, the dispensation of grace.</p>
-  <p>Calling upon the name of the Lord for salvation, that we may glorify Him before all men. It is the promise of salvation and the heart of the Great Commission, joined to the truth that when we are in Him we magnify His light, so that men see our works of righteousness, mercy and thanksgiving, and glorify God.</p>
-  <div class="xrefs">
-    <button class="xcard" data-v="Matthew 5:16"><span class="xr">Matthew 5:16</span><span class="xq">“Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.”</span></button>
+<!-- 14 -->
+<section class="slide" data-section="III. Not Thy Sacrifices" data-title="Mercy, and not sacrifice">
+  <div class="page">
+    <div class="kicker">III · Not Thy Sacrifices</div>
+    <h2>Mercy, and not sacrifice</h2>
+    <div class="vps"><div class="vp fig"><h3>The prophet</h3><blockquote class="scripture" style="font-style:italic">For I desired mercy, and not sacrifice; and the knowledge of God more than burnt offerings.<cite>Hosea 6:6</cite></blockquote></div><div class="vp fig"><h3>The Lord Jesus</h3><blockquote class="scripture" style="font-style:italic">But if ye had known what this meaneth, I will have mercy, and not sacrifice, ye would not have condemned the guiltless.<cite>Matthew 12:7</cite></blockquote></div></div>
+    <p class="lead">The same sentiment, spoken by Hosea and repeated by Christ. What God was after in Psalm 50 is what He is still after.</p>
   </div>
-  <p class="muted">This is our purpose as believers: to make known the judgment of God and to be an example of His mercy, praising His name in thanksgiving, all openly before men, that He may be glorified.</p>
-</div></section>
+</section>
 
-<!-- ============ V ============ -->
-<section class="slide" data-sec="5"><div class="inner">
-  <p class="rubric"><b>V</b> The Indictment</p>
-  <h2>The charge of formalism</h2>
-  <p class="lection"><span class="vn">16</span>But unto the wicked God saith, What hast thou to do to declare my statutes, or that thou shouldest take my covenant in thy mouth? <span class="vn">17</span>Seeing thou hatest instruction, and casteth my words behind thee. <button class="ref" data-v="Psalm 50:16-17">vv. 16–17</button></p>
-  <p>Having summoned the court and stated His position, God begins the indictment. Having shown that He has no need of bulls, goats or fowls, He lays the charge of <em>formalism</em> against His covenant people.</p>
-  <p class="big">The religious practices are being kept, the bare minimum of service to maintain the covenant. The Lord is not accusing them of failing there, but in the weightier matters, just as Jesus accused the Pharisees.</p>
-</div></section>
-
-<section class="slide" data-sec="5"><div class="inner">
-  <p class="rubric"><b>V</b> The Indictment</p>
-  <h2>A light to all nations</h2>
-  <p class="big">God gave Israel promises and practices to keep them as His people, but they were failing to declare His statutes and proclaim His law.</p>
-  <p>The whole point of Israel was to be a light to all men, not to selfishly reap the benefits while doing nothing to teach the nations by example. They squandered their blessings by not fulfilling that role.</p>
-  <div class="xrefs">
-    <button class="xcard" data-v="Deuteronomy 4:5-6"><span class="xr">Deuteronomy 4:5–6</span><span class="xq">“…Surely this great nation is a wise and understanding people.”</span></button>
+<!-- 15 -->
+<section class="slide" data-section="IV. The Offering God Seeks" data-title="Offer unto God thanksgiving">
+  <div class="page">
+    <div class="kicker">IV · The Offering God Seeks</div>
+    <h2>Offer unto God thanksgiving</h2>
+    <blockquote class="scripture" style="font-style:italic">Offer unto God thanksgiving; and pay thy vows unto the most High:<cite>Psalm 50:14</cite></blockquote>
+    <p class="lead">God makes it plain that the offering is thanksgiving.</p>
+    <p>Their vows were to be paid to keep their part in the covenant as His nation: tithes and firstfruits as acts of faith. Unlike the offerings to other gods, it was not a meal for Him to consume. It was thanksgiving, offered in gratitude for all He had supplied, and to keep themselves unspotted as His people.</p>
+    <p>God desires mercy toward others: right judgment, defending the weak, and hating the workers of iniquity.</p>
+    <ul class="xr"><li><button class="ref" data-v="Matthew 23:23">Matthew 23:23</button><span>“…and have omitted the weightier matters of the law, judgment, mercy, and faith…”</span></li></ul>
+    <p class="take">These are not the repeated acts of priests, but matters of the heart, which God judges and which He seeks from us.</p>
   </div>
-</div></section>
+</section>
 
-<section class="slide" data-sec="5"><div class="inner">
-  <p class="rubric"><b>V</b> The Indictment</p>
-  <h2>Near with their lips, far in their heart</h2>
-  <p class="big">God accuses the wicked among His people of missing the entire point, the same charge Jesus would bring against the religious leaders of the Jews.</p>
-  <div class="xrefs">
-    <button class="xcard" data-v="Matthew 15:8"><span class="xr">Matthew 15:8</span><span class="xq">“This people draweth nigh unto me with their mouth… but their heart is far from me.”</span></button>
-    <button class="xcard" data-v="Matthew 23:27-28"><span class="xr">Matthew 23:27–28</span><span class="xq">“…ye are like unto whited sepulchres, which indeed appear beautiful outward…”</span></button>
+<!-- 16 -->
+<section class="slide" data-section="IV. The Offering God Seeks" data-title="Call upon me in the day of trouble">
+  <div class="page">
+    <div class="kicker">IV · The Offering God Seeks</div>
+    <h2>Call upon me in the day of trouble</h2>
+    <blockquote class="scripture" style="font-style:italic">And call upon me in the day of trouble: I will deliver thee, and thou shalt glorify me.<cite>Psalm 50:15</cite></blockquote>
+    <p class="lead">Having established His ways, God gives the gospel: good news to all men in all ages, the dispensation of grace.</p>
+    <p>Calling upon the name of the Lord for salvation, that we may glorify Him before all men. It is the promise of salvation and the heart of the Great Commission, joined to the truth that when we are in Him we magnify His light, so that men see our works of righteousness, mercy and thanksgiving, and glorify God.</p>
+    <ul class="xr"><li><button class="ref" data-v="Matthew 5:16">Matthew 5:16</button><span>“Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.”</span></li></ul>
+    <p class="take">This is our purpose as believers: to make known the judgment of God and to be an example of His mercy, praising His name in thanksgiving, all openly before men, that He may be glorified.</p>
   </div>
-</div></section>
+</section>
 
-<section class="slide" data-sec="5"><div class="inner">
-  <p class="rubric"><b>V</b> The Indictment</p>
-  <h2>The counts against them</h2>
-  <p>God’s accusations are sharp. <button class="ref" data-v="Psalm 50:18-20">vv. 18–20</button></p>
-  <div class="counts">
-    <div class="count"><span class="cn">Consent</span><p><em>“When thou sawest a thief, then thou consentedst with him.”</em> They went along with the thief.</p></div>
-    <div class="count"><span class="cn">Partaking</span><p><em>“…and hast been partaker with adulterers.”</em> Both the literal engagement with the world, and the spiritual adultery of general ecumenicalism.</p></div>
-    <div class="count"><span class="cn">Deceit</span><p><em>“Thou givest thy mouth to evil, and thy tongue frameth deceit.”</em> They speak evil things, and lie.</p></div>
-    <div class="count"><span class="cn">Slander</span><p><em>“Thou sittest and speakest against thy brother.”</em> They not only fail to love their neighbour, they lie against their own brother.</p></div>
+<!-- 17 -->
+<section class="slide" data-section="V. The Indictment" data-title="The charge of formalism">
+  <div class="page">
+    <div class="kicker">V · The Indictment</div>
+    <h2>The charge of formalism</h2>
+    <blockquote class="scripture" style="font-style:italic">But unto the wicked God saith, What hast thou to do to declare my statutes, or that thou shouldest take my covenant in thy mouth? Seeing thou hatest instruction, and casteth my words behind thee.<cite>Psalm 50:16-17</cite></blockquote>
+    <p>Having summoned the court and stated His position, God begins the indictment. Having shown that He has no need of bulls, goats or fowls, He lays the charge of <em>formalism</em> against His covenant people.</p>
+    <p class="lead">The religious practices are being kept, the bare minimum of service to maintain the covenant. The Lord is not accusing them of failing there, but in the weightier matters, just as Jesus accused the Pharisees.</p>
   </div>
-</div></section>
+</section>
 
-<section class="slide" data-sec="5"><div class="inner">
-  <p class="rubric"><b>V</b> The Indictment</p>
-  <h2>“And I kept silence”</h2>
-  <p class="lection"><span class="vn">21</span>These things hast thou done, and I kept silence; thou thoughtest that I was altogether such an one as thyself: but I will reprove thee, and set them in order before thine eyes. <button class="ref" data-v="Psalm 50:21">v. 21</button></p>
-  <p class="big">God is longsuffering and merciful, not willing that any should perish <button class="ref" data-v="2 Peter 3:9">2 Peter 3:9</button>. He gave them space and time to reconsider their ways.</p>
-  <p>Instead they considered themselves holy as God is holy. They thought that by their religious practice, keeping the letter of the law, they could ignore the purpose and spirit of the law. It is the same indictment as Matthew 23, and it could be said of so many supposed Christians today.</p>
-</div></section>
-<!-- ============ VI ============ -->
-<section class="slide" data-sec="6"><div class="inner">
-  <p class="rubric"><b>VI</b> The Case Against Us</p>
-  <h2>The leaven of the Pharisees</h2>
-  <p class="lede big">For Christians today, the indictment is the same leaven of the Pharisees: hypocrisy. <button class="ref" data-v="Luke 12:1">Luke 12:1</button></p>
-  <p>Just as the Pharisees had the Old Testament sacrifices, we have the once-and-for-all sacrifice of Christ and the total remission of sins.</p>
-  <div class="xrefs">
-    <button class="xcard" data-v="Hebrews 10:8"><span class="xr">Hebrews 10:8</span><span class="xq">“Sacrifice and offering and burnt offerings and offering for sin thou wouldest not, neither hadst pleasure therein…”</span></button>
+<!-- 18 -->
+<section class="slide" data-section="V. The Indictment" data-title="A light to all nations">
+  <div class="page">
+    <div class="kicker">V · The Indictment</div>
+    <h2>A light to all nations</h2>
+    <p class="lead">God gave Israel promises and practices to keep them as His people, but they were failing to declare His statutes and proclaim His law.</p>
+    <p>The whole point of Israel was to be a light to all men, not to selfishly reap the benefits while doing nothing to teach the nations by example. They squandered their blessings by not fulfilling that role.</p>
+    <ul class="xr"><li><button class="ref" data-v="Deuteronomy 4:5-6">Deuteronomy 4:5-6</button><span>“…Surely this great nation is a wise and understanding people.”</span></li></ul>
   </div>
-</div></section>
+</section>
 
-<section class="slide" data-sec="6"><div class="inner">
-  <p class="rubric"><b>VI</b> The Case Against Us</p>
-  <h2>No more sacrifice</h2>
-  <p>As God told Israel He was not seeking to add sacrifices to those they already offered, He is not asking us for additional acts of atonement. He remembers our sins no more.</p>
-  <div class="pair">
-    <div><h3>For those in Christ</h3><p><em>“Now where remission of these is, there is no more offering for sin.”</em></p><button class="ref" data-v="Hebrews 10:17-18">Hebrews 10:17–18</button></div>
-    <div><h3>For wilful sin</h3><p><em>“…there remaineth no more sacrifice for sins, but a certain fearful looking for of judgment…”</em></p><button class="ref" data-v="Hebrews 10:26-27">Hebrews 10:26–27</button></div>
+<!-- 19 -->
+<section class="slide" data-section="V. The Indictment" data-title="Near with their lips, far in their heart">
+  <div class="page">
+    <div class="kicker">V · The Indictment</div>
+    <h2>Near with their lips, far in their heart</h2>
+    <p class="lead">God accuses the wicked among His people of missing the entire point, the same charge Jesus would bring against the religious leaders of the Jews.</p>
+    <ul class="xr"><li><button class="ref" data-v="Matthew 15:8">Matthew 15:8</button><span>“This people draweth nigh unto me with their mouth… but their heart is far from me.”</span></li><li><button class="ref" data-v="Matthew 23:27-28">Matthew 23:27-28</button><span>“…ye are like unto whited sepulchres, which indeed appear beautiful outward…”</span></li></ul>
   </div>
-  <p class="big">Like Israel in Psalm 50, we are covered by the blood. We are His people. But are we bound by formalism and the outward appearance of being clean, while failing at the good work He saved us for, the work that gives Him glory?</p>
-</div></section>
+</section>
 
-<section class="slide" data-sec="6"><div class="inner">
-  <p class="rubric"><b>VI</b> The Case Against Us</p>
-  <h2>Taking His covenant in our mouth</h2>
-  <p class="big">If we are not declaring His righteousness and glory in thanksgiving, and showing mercy and judgment to others, loving our neighbour, how are we taking His covenant in our mouths?</p>
-  <p>How are we telling the world we are Christians when we are not acting like it? Who does it benefit?</p>
-  <div class="xrefs">
-    <button class="xcard" data-v="James 2:14-17"><span class="xr">James 2:14–17</span><span class="xq">“Even so faith, if it hath not works, is dead, being alone.”</span></button>
+<!-- 20 -->
+<section class="slide" data-section="V. The Indictment" data-title="The counts against them">
+  <div class="page">
+    <div class="kicker">V · The Indictment</div>
+    <h2>The counts against them</h2>
+    <p>God’s accusations are sharp. (<button class="ref" data-v="Psalms 50:18-20">vv. 18–20</button>)</p>
+    <div class="cols"><div class="panel believers"><h3>Consent</h3><p><em>“When thou sawest a thief, then thou consentedst with him.”</em> They went along with the thief.</p></div><div class="panel believers"><h3>Partaking</h3><p><em>“…and hast been partaker with adulterers.”</em> Both the literal engagement with the world, and the spiritual adultery of general ecumenicalism.</p></div></div>
+    <div class="cols"><div class="panel believers"><h3>Deceit</h3><p><em>“Thou givest thy mouth to evil, and thy tongue frameth deceit.”</em> They speak evil things, and lie.</p></div><div class="panel believers"><h3>Slander</h3><p><em>“Thou sittest and speakest against thy brother.”</em> They not only fail to love their neighbour, they lie against their own brother.</p></div></div>
   </div>
-</div></section>
+</section>
 
-<section class="slide" data-sec="6"><div class="inner">
-  <p class="rubric"><b>VI</b> The Case Against Us</p>
-  <h2>This is not legalism</h2>
-  <p class="big">God is not saying that we must do works to be saved, or to be His. We are not justified before God by our works, but before men. Yet God does have works for us to do.</p>
-  <div class="pair">
-    <div><h3>Before God</h3><p>Justified by faith, through the blood of Christ alone.</p></div>
-    <div><h3>Before men</h3><p>Shown to be His by the good works He ordained for us.</p></div>
+<!-- 21 -->
+<section class="slide" data-section="V. The Indictment" data-title="“And I kept silence”">
+  <div class="page">
+    <div class="kicker">V · The Indictment</div>
+    <h2>“And I kept silence”</h2>
+    <blockquote class="scripture" style="font-style:italic">These things hast thou done, and I kept silence; thou thoughtest that I was altogether such an one as thyself: but I will reprove thee, and set them in order before thine eyes.<cite>Psalm 50:21</cite></blockquote>
+    <p class="lead">God is longsuffering and merciful, not willing that any should perish (<button class="ref" data-v="2 Peter 3:9">2 Peter 3:9</button>). He gave them space and time to reconsider their ways.</p>
+    <p>Instead they considered themselves holy as God is holy. They thought that by their religious practice, keeping the letter of the law, they could ignore the purpose and spirit of the law. It is the same indictment as Matthew 23, and it could be said of so many supposed Christians today.</p>
   </div>
-  <div class="xrefs">
-    <button class="xcard" data-v="Ephesians 2:10"><span class="xr">Ephesians 2:10</span><span class="xq">“For we are his workmanship, created in Christ Jesus unto good works…”</span></button>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="VI. The Case Against Us" data-title="The leaven of the Pharisees">
+  <div class="page">
+    <div class="kicker">VI · The Case Against Us</div>
+    <h2>The leaven of the Pharisees</h2>
+    <p class="lead">For Christians today, the indictment is the same leaven of the Pharisees: hypocrisy. (<button class="ref" data-v="Luke 12:1">Luke 12:1</button>)</p>
+    <p>Just as the Pharisees had the Old Testament sacrifices, we have the once-and-for-all sacrifice of Christ and the total remission of sins.</p>
+    <ul class="xr"><li><button class="ref" data-v="Hebrews 10:8">Hebrews 10:8</button><span>“Sacrifice and offering and burnt offerings and offering for sin thou wouldest not, neither hadst pleasure therein…”</span></li></ul>
   </div>
-</div></section>
+</section>
 
-<section class="slide" data-sec="6"><div class="inner">
-  <p class="rubric"><b>VI</b> The Case Against Us</p>
-  <h2>The buried talent</h2>
-  <p>The indictment against His people is that while we have availed ourselves of His covenant and promises, we have squandered the talents of silver He has given us. <button class="ref" data-v="Matthew 25:14-30">Matthew 25:14–30</button></p>
-  <div class="counts">
-    <div class="count"><span class="cn">Five talents</span><p>Traded, and gained five more. <em>“Well done, thou good and faithful servant.”</em></p></div>
-    <div class="count"><span class="cn">Two talents</span><p>Gained two more. <em>“Well done, good and faithful servant.”</em></p></div>
-    <div class="count"><span class="cn">One talent</span><p>Afraid, went and digged in the earth, and hid it. <em>“Thou wicked and slothful servant.”</em></p></div>
+<!-- 23 -->
+<section class="slide" data-section="VI. The Case Against Us" data-title="No more sacrifice">
+  <div class="page">
+    <div class="kicker">VI · The Case Against Us</div>
+    <h2>No more sacrifice</h2>
+    <p>As God told Israel He was not seeking to add sacrifices to those they already offered, He is not asking us for additional acts of atonement. He remembers our sins no more.</p>
+    <div class="vps"><div class="vp fig"><h3>For those in Christ</h3><blockquote class="scripture" style="font-style:italic">And their sins and iniquities will I remember no more. Now where remission of these is, there is no more offering for sin.<cite>Hebrews 10:17-18</cite></blockquote></div><div class="vp fig"><h3>For wilful sin</h3><blockquote class="scripture" style="font-style:italic">For if we sin wilfully after that we have received the knowledge of the truth, there remaineth no more sacrifice for sins, But a certain fearful looking for of judgment and fiery indignation, which shall devour the adversaries.<cite>Hebrews 10:26-27</cite></blockquote></div></div>
+    <p class="lead">Like Israel in Psalm 50, we are covered by the blood. We are His people. But are we bound by formalism and the outward appearance of being clean, while failing at the good work He saved us for, the work that gives Him glory?</p>
   </div>
-  <p class="big">To whom much is given, much is required <button class="ref" data-v="Luke 12:48">Luke 12:48</button>. There are professing Christians who have taken the offer and buried it. They never took it in as their own, nurtured it, or used it to increase God’s kingdom.</p>
-  <p class="muted">Again, this is not works-based salvation. Had the servant kept his one talent in his own care, he would not have been cast out. Instead he buried it and went through the motions.</p>
-</div></section>
+</section>
 
-<section class="slide" data-sec="6"><div class="inner">
-  <p class="rubric"><b>VI</b> The Case Against Us</p>
-  <h2>Not forsaking the assembling</h2>
-  <p>Hebrews 10 sets the command to gather between its two statements on sacrifice: no more need of sacrifice for those in Christ, and no more sacrifice for wilful sin.</p>
-  <div class="xrefs">
-    <button class="xcard" data-v="Hebrews 10:23-25"><span class="xr">Hebrews 10:23–25</span><span class="xq">“Not forsaking the assembling of ourselves together… but exhorting one another…”</span></button>
+<!-- 24 -->
+<section class="slide" data-section="VI. The Case Against Us" data-title="Taking His covenant in our mouth">
+  <div class="page">
+    <div class="kicker">VI · The Case Against Us</div>
+    <h2>Taking His covenant in our mouth</h2>
+    <p class="lead">If we are not declaring His righteousness and glory in thanksgiving, and showing mercy and judgment to others, loving our neighbour, how are we taking His covenant in our mouths?</p>
+    <p>How are we telling the world we are Christians when we are not acting like it? Who does it benefit?</p>
+    <ul class="xr"><li><button class="ref" data-v="James 2:14-17">James 2:14-17</button><span>“Even so faith, if it hath not works, is dead, being alone.”</span></li></ul>
   </div>
-  <p class="big">We are commanded not to forsake the assembly, and its purpose is to love one another: edifying, building each other up, so much the more as the day approaches.</p>
-  <p>Yet some treat church as a checkbox for their righteousness, proving themselves holy by attendance alone. They wash the outside of the cup <button class="ref" data-v="Matthew 23:25-26">Matthew 23:25–26</button> while within they are whited tombs full of dead men’s bones. To them religion is rituals and obligations that benefit only themselves, sacraments as their sacrifice rather than the blood of Christ.</p>
-</div></section>
+</section>
 
-<!-- ============ VII ============ -->
-<section class="slide" data-sec="7"><div class="inner">
-  <p class="rubric"><b>VII</b> Consider This</p>
-  <h2>Ye that forget God</h2>
-  <p class="lection"><span class="vn">22</span>Now consider this, ye that forget God, lest I tear you in pieces, and there be none to deliver. <button class="ref" data-v="Psalm 50:22">v. 22</button></p>
-  <p class="big">Christians in name only go through the motions and never once consider God.</p>
-  <p>God goes out of His way in this psalm to stipulate that His righteous people are protected under His care. His case is with the false professors of His name, who think the formalism of their worship is enough to spare them from His wrath. They forget God, and He will tear them in pieces. They bury their talent out of fear, while never truly fearing God.</p>
-</div></section>
-
-<section class="slide" data-sec="7"><div class="inner">
-  <p class="rubric"><b>VII</b> Consider This</p>
-  <h2>Whoso offereth praise</h2>
-  <p class="lection"><span class="vn">23</span>Whoso offereth praise glorifieth me: and to him that ordereth his conversation aright will I shew the salvation of God. <button class="ref" data-v="Psalm 50:23">v. 23</button></p>
-  <p class="lede big">But God, ever gracious, ends on a note of promise.</p>
-  <p>Our purpose as His people is to praise His name, that He be glorified among men. We are the salt of the earth, preserving the world against judgment, and He encourages us to continue in praise and thanksgiving.</p>
-  <div class="xrefs">
-    <button class="xcard" data-v="Matthew 5:13"><span class="xr">Matthew 5:13</span><span class="xq">“…but if the salt have lost his savour, wherewith shall it be salted?”</span></button>
-    <button class="xcard" data-v="Revelation 3:16"><span class="xr">Revelation 3:16</span><span class="xq">“So then because thou art lukewarm… I will spue thee out of my mouth.”</span></button>
-    <button class="xcard" data-v="Revelation 2:5"><span class="xr">Revelation 2:5</span><span class="xq">“…or else I will come unto thee quickly, and will remove thy candlestick…”</span></button>
+<!-- 25 -->
+<section class="slide" data-section="VI. The Case Against Us" data-title="This is not legalism">
+  <div class="page">
+    <div class="kicker">VI · The Case Against Us</div>
+    <h2>This is not legalism</h2>
+    <p class="lead">God is not saying that we must do works to be saved, or to be His. We are not justified before God by our works, but before men. Yet God does have works for us to do.</p>
+    <div class="cols"><div class="panel believers"><h3>Before God</h3><p>Justified by faith, through the blood of Christ alone.</p></div><div class="panel believers"><h3>Before men</h3><p>Shown to be His by the good works He ordained for us.</p></div></div>
+    <ul class="xr"><li><button class="ref" data-v="Ephesians 2:10">Ephesians 2:10</button><span>“For we are his workmanship, created in Christ Jesus unto good works…”</span></li></ul>
   </div>
-  <p class="muted">Salt can lose its savour. A lukewarm church can have its candlestick removed, and be of no further use to God.</p>
-</div></section>
+</section>
 
-<section class="slide" data-sec="7"><div class="inner">
-  <p class="rubric"><b>VII</b> Consider This</p>
-  <h2>Stay salty</h2>
-  <p class="big">God’s case against Israel is God’s case against all who call themselves by His name and fail to live to proclaim His glory. Let us then keep our savour:</p>
-  <ul class="charge">
-    <li>Do all things with mercy and judgment</li>
-    <li>Forgive those who trespass against us</li>
-    <li>Consider the poor, the widow and the fatherless</li>
-    <li>Exhort one another, so much the more as the day approaches</li>
-    <li>Offer praise and thanksgiving, that God be glorified among men</li>
-  </ul>
-  <p class="keyline">So that at the coming of Christ, when He brings fiery judgment upon the world, we will be found acceptable: <em>“Well done, thou good and faithful servant.”</em> <button class="ref" data-v="Matthew 25:21">Matthew 25:21</button></p>
-  <svg class="orn" viewBox="0 0 180 22" aria-hidden="true"><path d="M0 11H74M106 11H180" stroke="currentColor"/><path d="M90 3l8 8-8 8-8-8z" fill="none" stroke="currentColor"/><circle cx="90" cy="11" r="2" fill="currentColor"/></svg>
-  <p style="text-align:center;font-family:var(--caps);letter-spacing:.2em;color:var(--rubric)">Amen</p>
-</div></section>
+<!-- 26 -->
+<section class="slide" data-section="VI. The Case Against Us" data-title="The buried talent">
+  <div class="page">
+    <div class="kicker">VI · The Case Against Us</div>
+    <h2>The buried talent</h2>
+    <p>The indictment against His people is that while we have availed ourselves of His covenant and promises, we have squandered the talents of silver He has given us. (<button class="ref" data-v="Matthew 25:14-30">Matthew 25:14-30</button>)</p>
+    <div class="cols-3"><div class="panel believers"><h3>Five talents</h3><p>Traded, and gained five more. <em>“Well done, thou good and faithful servant.”</em></p></div><div class="panel believers"><h3>Two talents</h3><p>Gained two more. <em>“Well done, good and faithful servant.”</em></p></div><div class="panel believers"><h3>One talent</h3><p>Afraid, went and digged in the earth, and hid it. <em>“Thou wicked and slothful servant.”</em></p></div></div>
+    <p class="lead">To whom much is given, much is required (<button class="ref" data-v="Luke 12:48">Luke 12:48</button>). There are professing Christians who have taken the offer and buried it. They never took it in as their own, nurtured it, or used it to increase God’s kingdom.</p>
+    <p class="take">Again, this is not works-based salvation. Had the servant kept his one talent in his own care, he would not have been cast out. Instead he buried it and went through the motions.</p>
+  </div>
+</section>
+
+<!-- 27 -->
+<section class="slide" data-section="VI. The Case Against Us" data-title="Not forsaking the assembling">
+  <div class="page">
+    <div class="kicker">VI · The Case Against Us</div>
+    <h2>Not forsaking the assembling</h2>
+    <p>Hebrews 10 sets the command to gather between its two statements on sacrifice: no more need of sacrifice for those in Christ, and no more sacrifice for wilful sin.</p>
+    <ul class="xr"><li><button class="ref" data-v="Hebrews 10:23-25">Hebrews 10:23-25</button><span>“Not forsaking the assembling of ourselves together… but exhorting one another…”</span></li></ul>
+    <p class="lead">We are commanded not to forsake the assembly, and its purpose is to love one another: edifying, building each other up, so much the more as the day approaches.</p>
+    <p>Yet some treat church as a checkbox for their righteousness, proving themselves holy by attendance alone. They wash the outside of the cup (<button class="ref" data-v="Matthew 23:25-27">Matthew 23:25-27</button>) while within they are whited tombs full of dead men’s bones. To them religion is rituals and obligations that benefit only themselves, sacraments as their sacrifice rather than the blood of Christ.</p>
+  </div>
+</section>
+
+<!-- 28 -->
+<section class="slide" data-section="VII. Consider This" data-title="Ye that forget God">
+  <div class="page">
+    <div class="kicker">VII · Consider This</div>
+    <h2>Ye that forget God</h2>
+    <blockquote class="scripture" style="font-style:italic">Now consider this, ye that forget God, lest I tear you in pieces, and there be none to deliver.<cite>Psalm 50:22</cite></blockquote>
+    <p class="lead">Christians in name only go through the motions and never once consider God.</p>
+    <p>God goes out of His way in this psalm to stipulate that His righteous people are protected under His care. His case is with the false professors of His name, who think the formalism of their worship is enough to spare them from His wrath. They forget God, and He will tear them in pieces. They bury their talent out of fear, while never truly fearing God.</p>
+  </div>
+</section>
+
+<!-- 29 -->
+<section class="slide" data-section="VII. Consider This" data-title="Whoso offereth praise">
+  <div class="page">
+    <div class="kicker">VII · Consider This</div>
+    <h2>Whoso offereth praise</h2>
+    <blockquote class="scripture" style="font-style:italic">Whoso offereth praise glorifieth me: and to him that ordereth his conversation aright will I shew the salvation of God.<cite>Psalm 50:23</cite></blockquote>
+    <p class="lead">But God, ever gracious, ends on a note of promise.</p>
+    <p>Our purpose as His people is to praise His name, that He be glorified among men. We are the salt of the earth, preserving the world against judgment, and He encourages us to continue in praise and thanksgiving.</p>
+    <ul class="xr"><li><button class="ref" data-v="Matthew 5:13">Matthew 5:13</button><span>“…but if the salt have lost his savour, wherewith shall it be salted?”</span></li><li><button class="ref" data-v="Revelation 3:16">Revelation 3:16</button><span>“So then because thou art lukewarm… I will spue thee out of my mouth.”</span></li><li><button class="ref" data-v="Revelation 2:5">Revelation 2:5</button><span>“…or else I will come unto thee quickly, and will remove thy candlestick…”</span></li></ul>
+    <p class="take">Salt can lose its savour. A lukewarm church can have its candlestick removed, and be of no further use to God.</p>
+  </div>
+</section>
+
+<!-- 30 -->
+<section class="slide" data-section="VII. Consider This" data-title="Stay salty">
+  <div class="page">
+    <div class="kicker">VII · Consider This</div>
+    <h2>Stay salty</h2>
+    <p class="lead">God’s case against Israel is God’s case against all who call themselves by His name and fail to live to proclaim His glory. Let us then keep our savour:</p>
+    <ul class="marks"><li>Do all things with mercy and judgment</li><li>Forgive those who trespass against us</li><li>Consider the poor, the widow and the fatherless</li><li>Exhort one another, so much the more as the day approaches</li><li>Offer praise and thanksgiving, that God be glorified among men</li></ul>
+    <p>So that at the coming of Christ, when He brings fiery judgment upon the world, we will be found acceptable: <em>“Well done, thou good and faithful servant.”</em> (<button class="ref" data-v="Matthew 25:21">Matthew 25:21</button>)</p>
+    <p class="take">Amen</p>
+  </div>
+</section>
+
 </main>
-<nav class="bar" aria-label="Slide navigation">
-  <button id="prev" aria-label="Previous slide">‹</button>
-  <div class="secs" id="secs"></div>
-  <span class="count-l" id="cnt"></span>
-  <button id="theme" aria-label="Switch light or dark">☾</button>
-  <button id="next" aria-label="Next slide">›</button>
-</nav>
-</div>
 
-<dialog id="dlg" aria-labelledby="dlgT">
-  <div class="dh"><h4 id="dlgT"></h4><button id="dlgX" aria-label="Close">×</button></div>
-  <div class="db" id="dlgB"></div>
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
 </dialog>
 
 <script>
-const KJV = {
-"Psalm 50":{
-1:"The mighty God, even the LORD, hath spoken, and called the earth from the rising of the sun unto the going down thereof.",
-2:"Out of Zion, the perfection of beauty, God hath shined.",
-3:"Our God shall come, and shall not keep silence: a fire shall devour before him, and it shall be very tempestuous round about him.",
-4:"He shall call to the heavens from above, and to the earth, that he may judge his people.",
-5:"Gather my saints together unto me; those that have made a covenant with me by sacrifice.",
-6:"And the heavens shall declare his righteousness: for God is judge himself. Selah.",
-7:"Hear, O my people, and I will speak; O Israel, and I will testify against thee: I am God, even thy God.",
-8:"I will not reprove thee for thy sacrifices or thy burnt offerings, to have been continually before me.",
-9:"I will take no bullock out of thy house, nor he goats out of thy folds.",
-10:"For every beast of the forest is mine, and the cattle upon a thousand hills.",
-11:"I know all the fowls of the mountains: and the wild beasts of the field are mine.",
-12:"If I were hungry, I would not tell thee: for the world is mine, and the fulness thereof.",
-13:"Will I eat the flesh of bulls, or drink the blood of goats?",
-14:"Offer unto God thanksgiving; and pay thy vows unto the most High:",
-15:"And call upon me in the day of trouble: I will deliver thee, and thou shalt glorify me.",
-16:"But unto the wicked God saith, What hast thou to do to declare my statutes, or that thou shouldest take my covenant in thy mouth?",
-17:"Seeing thou hatest instruction, and castest my words behind thee.",
-18:"When thou sawest a thief, then thou consentedst with him, and hast been partaker with adulterers.",
-19:"Thou givest thy mouth to evil, and thy tongue frameth deceit.",
-20:"Thou sittest and speakest against thy brother; thou slanderest thine own mother’s son.",
-21:"These things hast thou done, and I kept silence; thou thoughtest that I was altogether such an one as thyself: but I will reprove thee, and set them in order before thine eyes.",
-22:"Now consider this, ye that forget God, lest I tear you in pieces, and there be none to deliver.",
-23:"Whoso offereth praise glorifieth me: and to him that ordereth his conversation aright will I shew the salvation of God."},
-"2 Timothy 3":{16:"All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness:"},
-"1 Chronicles 16":{
-4:"And he appointed certain of the Levites to minister before the ark of the LORD, and to record, and to thank and praise the LORD God of Israel:",
-5:"Asaph the chief, and next to him Zechariah, Jeiel, and Shemiramoth, and Jehiel, and Mattithiah, and Eliab, and Benaiah, and Obededom: and Jeiel with psalteries and with harps; but Asaph made a sound with cymbals;"},
-"2 Chronicles 29":{30:"Moreover Hezekiah the king and the princes commanded the Levites to sing praise unto the LORD with the words of David, and of Asaph the seer. And they sang praises with gladness, and they bowed their heads and worshipped."},
-"John 1":{
-1:"In the beginning was the Word, and the Word was with God, and the Word was God.",
-2:"The same was in the beginning with God.",
-3:"All things were made by him; and without him was not any thing made that was made.",
-4:"In him was life; and the life was the light of men."},
-"1 Corinthians 8":{6:"But to us there is but one God, the Father, of whom are all things, and we in him; and one Lord Jesus Christ, by whom are all things, and we by him."},
-"1 Corinthians 13":{12:"For now we see through a glass, darkly; but then face to face: now I know in part; but then shall I know even as also I am known."},
-"2 Thessalonians 1":{
-7:"And to you who are troubled rest with us, when the Lord Jesus shall be revealed from heaven with his mighty angels,",
-8:"In flaming fire taking vengeance on them that know not God, and that obey not the gospel of our Lord Jesus Christ:",
-9:"Who shall be punished with everlasting destruction from the presence of the Lord, and from the glory of his power;"},
-"Revelation 19":{15:"And out of his mouth goeth a sharp sword, that with it he should smite the nations: and he shall rule them with a rod of iron: and he treadeth the winepress of the fierceness and wrath of Almighty God."},
-"1 Thessalonians 4":{
-16:"For the Lord himself shall descend from heaven with a shout, with the voice of the archangel, and with the trump of God: and the dead in Christ shall rise first:",
-17:"Then we which are alive and remain shall be caught up together with them in the clouds, to meet the Lord in the air: and so shall we ever be with the Lord."},
-"Hebrews 9":{
-11:"But Christ being come an high priest of good things to come, by a greater and more perfect tabernacle, not made with hands, that is to say, not of this building;",
-12:"Neither by the blood of goats and calves, but by his own blood he entered in once into the holy place, having obtained eternal redemption for us.",
-13:"For if the blood of bulls and of goats, and the ashes of an heifer sprinkling the unclean, sanctifieth to the purifying of the flesh:",
-14:"How much more shall the blood of Christ, who through the eternal Spirit offered himself without spot to God, purge your conscience from dead works to serve the living God?",
-19:"For when Moses had spoken every precept to all the people according to the law, he took the blood of calves and of goats, with water, and scarlet wool, and hyssop, and sprinkled both the book, and all the people,",
-20:"Saying, This is the blood of the testament which God hath enjoined unto you.",
-21:"Moreover he sprinkled with blood both the tabernacle, and all the vessels of the ministry.",
-22:"And almost all things are by the law purged with blood; and without shedding of blood is no remission.",
-23:"It was therefore necessary that the patterns of things in the heavens should be purified with these; but the heavenly things themselves with better sacrifices than these."},
-"Hebrews 10":{
-8:"Above when he said, Sacrifice and offering and burnt offerings and offering for sin thou wouldest not, neither hadst pleasure therein; which are offered by the law;",
-17:"And their sins and iniquities will I remember no more.",
-18:"Now where remission of these is, there is no more offering for sin.",
-23:"Let us hold fast the profession of our faith without wavering; (for he is faithful that promised;)",
-24:"And let us consider one another to provoke unto love and to good works:",
-25:"Not forsaking the assembling of ourselves together, as the manner of some is; but exhorting one another: and so much the more, as ye see the day approaching.",
-26:"For if we sin wilfully after that we have received the knowledge of the truth, there remaineth no more sacrifice for sins,",
-27:"But a certain fearful looking for of judgment and fiery indignation, which shall devour the adversaries."},
-"Hosea 6":{6:"For I desired mercy, and not sacrifice; and the knowledge of God more than burnt offerings."},
-"Matthew 5":{
-13:"Ye are the salt of the earth: but if the salt have lost his savour, wherewith shall it be salted? it is thenceforth good for nothing, but to be cast out, and to be trodden under foot of men.",
-16:"Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven."},
-"Matthew 12":{7:"But if ye had known what this meaneth, I will have mercy, and not sacrifice, ye would not have condemned the guiltless."},
-"Matthew 15":{8:"This people draweth nigh unto me with their mouth, and honoureth me with their lips; but their heart is far from me."},
-"Matthew 23":{
-23:"Woe unto you, scribes and Pharisees, hypocrites! for ye pay tithe of mint and anise and cummin, and have omitted the weightier matters of the law, judgment, mercy, and faith: these ought ye to have done, and not to leave the other undone.",
-25:"Woe unto you, scribes and Pharisees, hypocrites! for ye make clean the outside of the cup and of the platter, but within they are full of extortion and excess.",
-26:"Thou blind Pharisee, cleanse first that which is within the cup and platter, that the outside of them may be clean also.",
-27:"Woe unto you, scribes and Pharisees, hypocrites! for ye are like unto whited sepulchres, which indeed appear beautiful outward, but are within full of dead men’s bones, and of all uncleanness.",
-28:"Even so ye also outwardly appear righteous unto men, but within ye are full of hypocrisy and iniquity."},
-"Matthew 25":{
-14:"For the kingdom of heaven is as a man travelling into a far country, who called his own servants, and delivered unto them his goods.",
-15:"And unto one he gave five talents, to another two, and to another one; to every man according to his several ability; and straightway took his journey.",
-16:"Then he that had received the five talents went and traded with the same, and made them other five talents.",
-17:"And likewise he that had received two, he also gained other two.",
-18:"But he that had received one went and digged in the earth, and hid his lord’s money.",
-19:"After a long time the lord of those servants cometh, and reckoneth with them.",
-20:"And so he that had received five talents came and brought other five talents, saying, Lord, thou deliveredst unto me five talents: behold, I have gained beside them five talents more.",
-21:"His lord said unto him, Well done, thou good and faithful servant: thou hast been faithful over a few things, I will make thee ruler over many things: enter thou into the joy of thy lord.",
-22:"He also that had received two talents came and said, Lord, thou deliveredst unto me two talents: behold, I have gained two other talents beside them.",
-23:"His lord said unto him, Well done, good and faithful servant; thou hast been faithful over a few things, I will make thee ruler over many things: enter thou into the joy of thy lord.",
-24:"Then he which had received the one talent came and said, Lord, I knew thee that thou art an hard man, reaping where thou hast not sown, and gathering where thou hast not strawed:",
-25:"And I was afraid, and went and hid thy talent in the earth: lo, there thou hast that is thine.",
-26:"His lord answered and said unto him, Thou wicked and slothful servant, thou knewest that I reap where I sowed not, and gather where I have not strawed:",
-27:"Thou oughtest therefore to have put my money to the exchangers, and then at my coming I should have received mine own with usury.",
-28:"Take therefore the talent from him, and give it unto him which hath ten talents.",
-29:"For unto every one that hath shall be given, and he shall have abundance: but from him that hath not shall be taken away even that which he hath.",
-30:"And cast ye the unprofitable servant into outer darkness: there shall be weeping and gnashing of teeth."},
-"Deuteronomy 4":{
-5:"Behold, I have taught you statutes and judgments, even as the LORD my God commanded me, that ye should do so in the land whither ye go to possess it.",
-6:"Keep therefore and do them; for this is your wisdom and your understanding in the sight of the nations, which shall hear all these statutes, and say, Surely this great nation is a wise and understanding people."},
-"2 Peter 3":{9:"The Lord is not slack concerning his promise, as some men count slackness; but is longsuffering to us-ward, not willing that any should perish, but that all should come to repentance."},
-"Luke 12":{
-1:"In the mean time, when there were gathered together an innumerable multitude of people, insomuch that they trode one upon another, he began to say unto his disciples first of all, Beware ye of the leaven of the Pharisees, which is hypocrisy.",
-48:"But he that knew not, and did commit things worthy of stripes, shall be beaten with few stripes. For unto whomsoever much is given, of him shall be much required: and to whom men have committed much, of them they will ask the more."},
-"James 2":{
-14:"What doth it profit, my brethren, though a man say he hath faith, and have not works? can faith save him?",
-15:"If a brother or sister be naked, and destitute of daily food,",
-16:"And one of you say unto them, Depart in peace, be ye warmed and filled; notwithstanding ye give them not those things which are needful to the body; what doth it profit?",
-17:"Even so faith, if it hath not works, is dead, being alone."},
-"Ephesians 2":{10:"For we are his workmanship, created in Christ Jesus unto good works, which God hath before ordained that we should walk in them."},
-"Revelation 2":{5:"Remember therefore from whence thou art fallen, and repent, and do the first works; or else I will come unto thee quickly, and will remove thy candlestick out of his place, except thou repent."},
-"Revelation 3":{16:"So then because thou art lukewarm, and neither cold nor hot, I will spue thee out of my mouth."}
+const BOOKS = {};
+
+const V = {
+  "1 Chronicles 16:4-5":[[4, "And he appointed certain of the Levites to minister before the ark of the LORD, and to record, and to thank and praise the LORD God of Israel:"], [5, "Asaph the chief, and next to him Zechariah, Jeiel, and Shemiramoth, and Jehiel, and Mattithiah, and Eliab, and Benaiah, and Obededom: and Jeiel with psalteries and with harps; but Asaph made a sound with cymbals;"]],
+  "1 Corinthians 13:12":[[12, "For now we see through a glass, darkly; but then face to face: now I know in part; but then shall I know even as also I am known."]],
+  "1 Corinthians 8:6":[[6, "But to us there is but one God, the Father, of whom are all things, and we in him; and one Lord Jesus Christ, by whom are all things, and we by him."]],
+  "1 Thessalonians 4:16-17":[[16, "For the Lord himself shall descend from heaven with a shout, with the voice of the archangel, and with the trump of God: and the dead in Christ shall rise first:"], [17, "Then we which are alive and remain shall be caught up together with them in the clouds, to meet the Lord in the air: and so shall we ever be with the Lord."]],
+  "2 Chronicles 29:30":[[30, "Moreover Hezekiah the king and the princes commanded the Levites to sing praise unto the LORD with the words of David, and of Asaph the seer. And they sang praises with gladness, and they bowed their heads and worshipped."]],
+  "2 Peter 3:9":[[9, "The Lord is not slack concerning his promise, as some men count slackness; but is longsuffering to us-ward, not willing that any should perish, but that all should come to repentance."]],
+  "2 Thessalonians 1:7-9":[[7, "And to you who are troubled rest with us, when the Lord Jesus shall be revealed from heaven with his mighty angels,"], [8, "In flaming fire taking vengeance on them that know not God, and that obey not the gospel of our Lord Jesus Christ:"], [9, "Who shall be punished with everlasting destruction from the presence of the Lord, and from the glory of his power;"]],
+  "2 Timothy 3:16":[[16, "All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness:"]],
+  "Deuteronomy 4:5-6":[[5, "Behold, I have taught you statutes and judgments, even as the LORD my God commanded me, that ye should do so in the land whither ye go to possess it."], [6, "Keep therefore and do them; for this is your wisdom and your understanding in the sight of the nations, which shall hear all these statutes, and say, Surely this great nation is a wise and understanding people."]],
+  "Ephesians 2:10":[[10, "For we are his workmanship, created in Christ Jesus unto good works, which God hath before ordained that we should walk in them."]],
+  "Hebrews 10:23-25":[[23, "Let us hold fast the profession of our faith without wavering; (for he is faithful that promised;)"], [24, "And let us consider one another to provoke unto love and to good works:"], [25, "Not forsaking the assembling of ourselves together, as the manner of some is; but exhorting one another: and so much the more, as ye see the day approaching."]],
+  "Hebrews 10:8":[[8, "Above when he said, Sacrifice and offering and burnt offerings and offering for sin thou wouldest not, neither hadst pleasure therein; which are offered by the law;"]],
+  "Hebrews 9:11-14":[[11, "But Christ being come an high priest of good things to come, by a greater and more perfect tabernacle, not made with hands, that is to say, not of this building;"], [12, "Neither by the blood of goats and calves, but by his own blood he entered in once into the holy place, having obtained eternal redemption for us."], [13, "For if the blood of bulls and of goats, and the ashes of an heifer sprinkling the unclean, sanctifieth to the purifying of the flesh:"], [14, "How much more shall the blood of Christ, who through the eternal Spirit offered himself without spot to God, purge your conscience from dead works to serve the living God?"]],
+  "Hebrews 9:19-23":[[19, "For when Moses had spoken every precept to all the people according to the law, he took the blood of calves and of goats, with water, and scarlet wool, and hyssop, and sprinkled both the book, and all the people,"], [20, "Saying, This is the blood of the testament which God hath enjoined unto you."], [21, "Moreover he sprinkled with blood both the tabernacle, and all the vessels of the ministry."], [22, "And almost all things are by the law purged with blood; and without shedding of blood is no remission."], [23, "It was therefore necessary that the patterns of things in the heavens should be purified with these; but the heavenly things themselves with better sacrifices than these."]],
+  "James 2:14-17":[[14, "What doth it profit, my brethren, though a man say he hath faith, and have not works? can faith save him?"], [15, "If a brother or sister be naked, and destitute of daily food,"], [16, "And one of you say unto them, Depart in peace, be ye warmed and filled; notwithstanding ye give them not those things which are needful to the body; what doth it profit?"], [17, "Even so faith, if it hath not works, is dead, being alone."]],
+  "John 1:1-4":[[1, "In the beginning was the Word, and the Word was with God, and the Word was God."], [2, "The same was in the beginning with God."], [3, "All things were made by him; and without him was not any thing made that was made."], [4, "In him was life; and the life was the light of men."]],
+  "Luke 12:1":[[1, "In the mean time, when there were gathered together an innumerable multitude of people, insomuch that they trode one upon another, he began to say unto his disciples first of all, Beware ye of the leaven of the Pharisees, which is hypocrisy."]],
+  "Luke 12:48":[[48, "But he that knew not, and did commit things worthy of stripes, shall be beaten with few stripes. For unto whomsoever much is given, of him shall be much required: and to whom men have committed much, of him they will ask the more."]],
+  "Matthew 15:8":[[8, "This people draweth nigh unto me with their mouth, and honoureth me with their lips; but their heart is far from me."]],
+  "Matthew 23:23":[[23, "Woe unto you, scribes and Pharisees, hypocrites! for ye pay tithe of mint and anise and cummin, and have omitted the weightier matters of the law, judgment, mercy, and faith: these ought ye to have done, and not to leave the other undone."]],
+  "Matthew 23:25-27":[[25, "Woe unto you, scribes and Pharisees, hypocrites! for ye make clean the outside of the cup and of the platter, but within they are full of extortion and excess."], [26, "Thou blind Pharisee, cleanse first that which is within the cup and platter, that the outside of them may be clean also."], [27, "Woe unto you, scribes and Pharisees, hypocrites! for ye are like unto whited sepulchres, which indeed appear beautiful outward, but are within full of dead men’s bones, and of all uncleanness."]],
+  "Matthew 23:27-28":[[27, "Woe unto you, scribes and Pharisees, hypocrites! for ye are like unto whited sepulchres, which indeed appear beautiful outward, but are within full of dead men’s bones, and of all uncleanness."], [28, "Even so ye also outwardly appear righteous unto men, but within ye are full of hypocrisy and iniquity."]],
+  "Matthew 25:14-30":[[14, "For the kingdom of heaven is as a man travelling into a far country, who called his own servants, and delivered unto them his goods."], [15, "And unto one he gave five talents, to another two, and to another one; to every man according to his several ability; and straightway took his journey."], [16, "Then he that had received the five talents went and traded with the same, and made them other five talents."], [17, "And likewise he that had received two, he also gained other two."], [18, "But he that had received one went and digged in the earth, and hid his lord’s money."], [19, "After a long time the lord of those servants cometh, and reckoneth with them."], [20, "And so he that had received five talents came and brought other five talents, saying, Lord, thou deliveredst unto me five talents: behold, I have gained beside them five talents more."], [21, "His lord said unto him, Well done, thou good and faithful servant: thou hast been faithful over a few things, I will make thee ruler over many things: enter thou into the joy of thy lord."], [22, "He also that had received two talents came and said, Lord, thou deliveredst unto me two talents: behold, I have gained two other talents beside them."], [23, "His lord said unto him, Well done, good and faithful servant; thou hast been faithful over a few things, I will make thee ruler over many things: enter thou into the joy of thy lord."], [24, "Then he which had received the one talent came and said, Lord, I knew thee that thou art an hard man, reaping where thou hast not sown, and gathering where thou hast not strawed:"], [25, "And I was afraid, and went and hid thy talent in the earth: lo, there thou hast that is thine."], [26, "His lord answered and said unto him, Thou wicked and slothful servant, thou knewest that I reap where I sowed not, and gather where I have not strawed:"], [27, "Thou oughtest therefore to have put my money to the exchangers, and then at my coming I should have received mine own with usury."], [28, "Take therefore the talent from him, and give it unto him which hath ten talents."], [29, "For unto every one that hath shall be given, and he shall have abundance: but from him that hath not shall be taken away even that which he hath."], [30, "And cast ye the unprofitable servant into outer darkness: there shall be weeping and gnashing of teeth."]],
+  "Matthew 25:21":[[21, "His lord said unto him, Well done, thou good and faithful servant: thou hast been faithful over a few things, I will make thee ruler over many things: enter thou into the joy of thy lord."]],
+  "Matthew 5:13":[[13, "Ye are the salt of the earth: but if the salt have lost his savour, wherewith shall it be salted? it is thenceforth good for nothing, but to be cast out, and to be trodden under foot of men."]],
+  "Matthew 5:16":[[16, "Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven."]],
+  "Psalms 50:1-23":[[1, "The mighty God, even the LORD, hath spoken, and called the earth from the rising of the sun unto the going down thereof."], [2, "Out of Zion, the perfection of beauty, God hath shined."], [3, "Our God shall come, and shall not keep silence: a fire shall devour before him, and it shall be very tempestuous round about him."], [4, "He shall call to the heavens from above, and to the earth, that he may judge his people."], [5, "Gather my saints together unto me; those that have made a covenant with me by sacrifice."], [6, "And the heavens shall declare his righteousness: for God is judge himself. Selah."], [7, "Hear, O my people, and I will speak; O Israel, and I will testify against thee: I am God, even thy God."], [8, "I will not reprove thee for thy sacrifices or thy burnt offerings, to have been continually before me."], [9, "I will take no bullock out of thy house, nor he goats out of thy folds."], [10, "For every beast of the forest is mine, and the cattle upon a thousand hills."], [11, "I know all the fowls of the mountains: and the wild beasts of the field are mine."], [12, "If I were hungry, I would not tell thee: for the world is mine, and the fulness thereof."], [13, "Will I eat the flesh of bulls, or drink the blood of goats?"], [14, "Offer unto God thanksgiving; and pay thy vows unto the most High:"], [15, "And call upon me in the day of trouble: I will deliver thee, and thou shalt glorify me."], [16, "But unto the wicked God saith, What hast thou to do to declare my statutes, or that thou shouldest take my covenant in thy mouth?"], [17, "Seeing thou hatest instruction, and casteth my words behind thee."], [18, "When thou sawest a thief, then thou consentedst with him, and hast been partaker with adulterers."], [19, "Thou givest thy mouth to evil, and thy tongue frameth deceit."], [20, "Thou sittest and speakest against thy brother; thou slanderest thine own mother’s son."], [21, "These things hast thou done, and I kept silence; thou thoughtest that I was altogether such an one as thyself: but I will reprove thee, and set them in order before thine eyes."], [22, "Now consider this, ye that forget God, lest I tear you in pieces, and there be none to deliver."], [23, "Whoso offereth praise glorifieth me: and to him that ordereth his conversation aright will I shew the salvation of God."]],
+  "Psalms 50:1-6":[[1, "The mighty God, even the LORD, hath spoken, and called the earth from the rising of the sun unto the going down thereof."], [2, "Out of Zion, the perfection of beauty, God hath shined."], [3, "Our God shall come, and shall not keep silence: a fire shall devour before him, and it shall be very tempestuous round about him."], [4, "He shall call to the heavens from above, and to the earth, that he may judge his people."], [5, "Gather my saints together unto me; those that have made a covenant with me by sacrifice."], [6, "And the heavens shall declare his righteousness: for God is judge himself. Selah."]],
+  "Psalms 50:16-21":[[16, "But unto the wicked God saith, What hast thou to do to declare my statutes, or that thou shouldest take my covenant in thy mouth?"], [17, "Seeing thou hatest instruction, and casteth my words behind thee."], [18, "When thou sawest a thief, then thou consentedst with him, and hast been partaker with adulterers."], [19, "Thou givest thy mouth to evil, and thy tongue frameth deceit."], [20, "Thou sittest and speakest against thy brother; thou slanderest thine own mother’s son."], [21, "These things hast thou done, and I kept silence; thou thoughtest that I was altogether such an one as thyself: but I will reprove thee, and set them in order before thine eyes."]],
+  "Psalms 50:18-20":[[18, "When thou sawest a thief, then thou consentedst with him, and hast been partaker with adulterers."], [19, "Thou givest thy mouth to evil, and thy tongue frameth deceit."], [20, "Thou sittest and speakest against thy brother; thou slanderest thine own mother’s son."]],
+  "Psalms 50:22-23":[[22, "Now consider this, ye that forget God, lest I tear you in pieces, and there be none to deliver."], [23, "Whoso offereth praise glorifieth me: and to him that ordereth his conversation aright will I shew the salvation of God."]],
+  "Psalms 50:7-15":[[7, "Hear, O my people, and I will speak; O Israel, and I will testify against thee: I am God, even thy God."], [8, "I will not reprove thee for thy sacrifices or thy burnt offerings, to have been continually before me."], [9, "I will take no bullock out of thy house, nor he goats out of thy folds."], [10, "For every beast of the forest is mine, and the cattle upon a thousand hills."], [11, "I know all the fowls of the mountains: and the wild beasts of the field are mine."], [12, "If I were hungry, I would not tell thee: for the world is mine, and the fulness thereof."], [13, "Will I eat the flesh of bulls, or drink the blood of goats?"], [14, "Offer unto God thanksgiving; and pay thy vows unto the most High:"], [15, "And call upon me in the day of trouble: I will deliver thee, and thou shalt glorify me."]],
+  "Revelation 19:15":[[15, "And out of his mouth goeth a sharp sword, that with it he should smite the nations: and he shall rule them with a rod of iron: and he treadeth the winepress of the fierceness and wrath of Almighty God."]],
+  "Revelation 2:5":[[5, "Remember therefore from whence thou art fallen, and repent, and do the first works; or else I will come unto thee quickly, and will remove thy candlestick out of his place, except thou repent."]],
+  "Revelation 3:16":[[16, "So then because thou art lukewarm, and neither cold nor hot, I will spue thee out of my mouth."]]
 };
 
-function lookup(ref){
-  const m = ref.match(/^(.+?) (\d+):(\d+)(?:-(\d+))?$/);
-  if(!m) return null;
-  const ch = KJV[m[1]+" "+m[2]]; if(!ch) return null;
-  const a = +m[3], b = m[4] ? +m[4] : a, out = [];
-  for(let n=a;n<=b;n++){ if(!ch[n]) return null; out.push([n,ch[n]]); }
-  return out;
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
 }
 
-/* Slides */
-const slides = [...document.querySelectorAll(".slide")];
-const SEC = ["I","II","III","IV","V","VI","VII"];
-const secFirst = {};
-slides.forEach((s,i)=>{ const k=+s.dataset.sec; if(!(k in secFirst)) secFirst[k]=i; });
-const secs = document.getElementById("secs");
-SEC.forEach((r,i)=>{ const b=document.createElement("button"); b.textContent=r; b.setAttribute("aria-label","Section "+r); b.onclick=()=>go(secFirst[i+1]); secs.appendChild(b); });
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
 let cur = 0;
-function go(i){
-  i = Math.max(0, Math.min(slides.length-1, i));
-  slides[cur].classList.remove("on");
-  cur = i;
-  const s = slides[cur]; s.classList.add("on"); s.scrollTop = 0;
-  document.getElementById("cnt").textContent = (cur+1)+" / "+slides.length;
-  const k = +s.dataset.sec;
-  [...secs.children].forEach((b,j)=>b.classList.toggle("cur", j+1===k));
-  try { history.replaceState(null,"","#"+(cur+1)); } catch(e) {}
-}
-document.getElementById("prev").onclick = ()=>go(cur-1);
-document.getElementById("next").onclick = ()=>go(cur+1);
-document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>go(secFirst[+b.dataset.go]));
 
-/* Verse dialog */
-const dlg = document.getElementById("dlg");
-function openRef(ref){
-  const v = lookup(ref);
-  document.getElementById("dlgT").textContent = ref.replace("-", "–");
-  const body = document.getElementById("dlgB"); body.innerHTML = "";
-  if(!v){ body.textContent = "This passage isn’t included in the deck."; }
-  else {
-    const p = document.createElement("p"); p.style.margin = "0";
-    v.forEach(([n,t],i)=>{ const sup=document.createElement("sup"); sup.textContent=n; p.appendChild(sup); p.appendChild(document.createTextNode(t+(i<v.length-1?" ":""))); });
-    body.appendChild(p);
-    const k = document.createElement("div"); k.className="kjv"; k.textContent="King James Version"; body.appendChild(k);
-  }
-  dlg.showModal(); body.scrollTop = 0;
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
 }
-document.addEventListener("click", e=>{
-  const t = e.target.closest("[data-v]"); if(t) openRef(t.dataset.v);
-});
-document.getElementById("dlgX").onclick = ()=>dlg.close();
-dlg.addEventListener("click", e=>{ if(e.target===dlg) dlg.close(); });
 
-/* Keys & swipe */
-document.addEventListener("keydown", e=>{
-  if(dlg.open) return;
-  if(e.key==="ArrowRight"||e.key==="PageDown"||(e.key===" "&&!e.target.closest("button"))){ e.preventDefault(); go(cur+1); }
-  if(e.key==="ArrowLeft"||e.key==="PageUp"){ e.preventDefault(); go(cur-1); }
-  if(e.key==="Home") go(0);
-  if(e.key==="End") go(slides.length-1);
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
 });
-let sx=null, sy=null;
-const stage = document.getElementById("stage");
-stage.addEventListener("touchstart", e=>{ sx=e.touches[0].clientX; sy=e.touches[0].clientY; }, {passive:true});
-stage.addEventListener("touchend", e=>{
-  if(sx===null) return;
-  const dx=e.changedTouches[0].clientX-sx, dy=e.changedTouches[0].clientY-sy;
-  if(Math.abs(dx)>60 && Math.abs(dx)>Math.abs(dy)*1.5) go(cur+(dx<0?1:-1));
-  sx=null;
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
 }, {passive:true});
 
-/* Theme */
-const themeBtn = document.getElementById("theme");
-const mq = window.matchMedia("(prefers-color-scheme: dark)");
-function effective(){ return document.documentElement.dataset.theme || (mq.matches ? "dark" : "light"); }
-function paintToggle(){ themeBtn.textContent = effective() === "dark" ? "☀" : "☾"; }
-try { const t = localStorage.getItem("ps50-theme"); if(t) document.documentElement.dataset.theme = t; } catch(e) {}
-themeBtn.addEventListener("click", () => {
-  const t = effective() === "dark" ? "light" : "dark";
-  document.documentElement.dataset.theme = t;
-  try { localStorage.setItem("ps50-theme", t); } catch(e) {}
-  paintToggle();
-});
-mq.addEventListener && mq.addEventListener("change", paintToggle);
-paintToggle();
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
 
-const start = parseInt(location.hash.slice(1), 10);
-slides[0].classList.add("on");
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
 go(Number.isFinite(start) ? start - 1 : 0);
 </script>
 </body>

@@ -7,23 +7,8 @@ Pick the next lesson from the top of the "To do" list. When one is finished, mov
 ## To do
 
 ### 1. Slide-style pages (closest to the template)
-Already slides, so mostly a mechanical rebuild plus the fact-check and typo pass. John 6 has a "narrated" copy; fold it into the one deck. `saved-christian-now-what` (824 KB) and `fundamentalism-vs-vain-philosophy` (420 KB) embed images; `conditional-promises` uses its own `deck-stage.js`.
+Already slides, so mostly a mechanical rebuild plus the fact-check and typo pass. John 6's narrated copy (a read-aloud player) is kept until the author decides whether to keep read-aloud. `saved-christian-now-what` (824 KB) and `fundamentalism-vs-vain-philosophy` (420 KB) embed images; `conditional-promises` uses its own `deck-stage.js`.
 
-- [ ] **Genesis 6: The Days of Noah** (`genesis-6-the-days-of-noah`): Slides `genesis/genesis-6-the-days-of-noah.html`
-- [ ] **Genesis 6: Sons of God** (`genesis-6-sons-of-god`): Slides `genesis/genesis-6-sons-of-god.html`
-- [ ] **John 6: The Bread of Life** (`john-6-bread-of-life`): Slides `bible/john-6-bread-of-life.html`; Narrated slides `bible/john-6-bread-of-life-narrated-slides.html`
-- [ ] **Psalm 50: God Is Judge** (`psalm-50`): Slides `bible/psalm-50.html`
-- [ ] **Psalm 22: A Cry from the Cross** (`psalm-22`): Slides `bible/psalm-22.html`
-- [ ] **The Didache** (`didache`): Slides `history/didache.html`
-- [ ] **Ignatius and the Lord's Table** (`ignatius-lords-table`): Slides `history/ignatius-lords-table.html`
-- [ ] **Wise as Serpents** (`wise-as-serpents`): Slides `heresies/wise-as-serpents.html`
-- [ ] **Creation Ex Nihilo** (`heresies-creation-ex-nihilo`): Slides `heresies/heresies-creation-ex-nihilo.html`
-- [ ] **Fundamentalism vs. Vain Philosophy** (`fundamentalism-vs-vain-philosophy`): Slides `heresies/fundamentalism-vs-vain-philosophy.html`; Lesson plan `heresies/fundamentalism-vs-vain-philosophy-lesson-plan.html`
-- [ ] **The Old Testament in Light of the New: Stephen** (`ot-in-light-of-nt-stephen`): Slides `bible/ot-in-light-of-nt-stephen.html`
-- [ ] **The Words of God: Jack Hyles on Inspiration** (`hyles-on-inspiration`): Slides `others/hyles-on-inspiration.html`
-- [ ] **Shadows and Substance: Why the Old Testament Practices** (`doctrine-week-3-ot-shadows-and-substance`): Slides `doctrine/doctrine-week-3-ot-shadows-and-substance.html`; Follow-up slides `doctrine/doctrine-week-3-ot-shadows-and-substance-slides.html`
-- [ ] **So You're a Saved Christian, Now What?** (`saved-christian-now-what`): Slides `bible/saved-christian-now-what.html`
-- [ ] **Conditional Promises and Covenant Shifts** (`conditional-promises-rightly-dividing`): Slides `prophecy/conditional-promises-rightly-dividing/index.html`
 
 ### 2. Doctrine weeks 1 to 10
 Week 7 and Week 8 infographics and the Week 4 pronouns chart become slides inside their week's deck. Worksheets and answer keys stay as notes parts, but are not rebuilt.
@@ -84,6 +69,21 @@ Each chapter has a main page plus several side pages, recaps, charts and workshe
 
 ## Done
 
+- [x] **Genesis 6: The Days of Noah** (`genesis-6-the-days-of-noah`)
+- [x] **Genesis 6: Sons of God** (`genesis-6-sons-of-god`)
+- [x] **John 6: The Bread of Life** (`john-6-bread-of-life`)
+- [x] **Psalm 50: God Is Judge** (`psalm-50`)
+- [x] **Psalm 22: A Cry from the Cross** (`psalm-22`)
+- [x] **The Didache** (`didache`)
+- [x] **Ignatius and the Lord's Table** (`ignatius-lords-table`)
+- [x] **Wise as Serpents** (`wise-as-serpents`)
+- [x] **Creation Ex Nihilo** (`heresies-creation-ex-nihilo`)
+- [x] **Fundamentalism vs. Vain Philosophy** (`fundamentalism-vs-vain-philosophy`)
+- [x] **The Old Testament in Light of the New: Stephen** (`ot-in-light-of-nt-stephen`)
+- [x] **The Words of God: Jack Hyles on Inspiration** (`hyles-on-inspiration`)
+- [x] **Shadows and Substance: Why the Old Testament Practices** (`doctrine-week-3-ot-shadows-and-substance`)
+- [x] **So You're a Saved Christian, Now What?** (`saved-christian-now-what`)
+- [x] **Conditional Promises and Covenant Shifts** (`conditional-promises-rightly-dividing`)
 - [x] **Week 5: A Trail of Blood and Being Baptist** (`doctrine-week-5-trail-of-blood-and-baptist-history`)
 - [x] **Genesis 7: The Flood** (`genesis-7-the-flood`)
 - [x] **Early American Baptists: Establishment, Disestablishment and Soul Liberty** (`early-american-baptists`)
