@@ -7,7 +7,7 @@
 
   const KJV_APP = 'https://fbckjv.app/KJVBible/';
   // Shown on the About page. Started at v1.17 (after 17 merged updates); each merged update adds one.
-  const APP_VERSION = '1.51', APP_DATE = '2026-10-28';
+  const APP_VERSION = '1.52', APP_DATE = '2026-10-28';
   const view = document.getElementById('view');
   const crumbs = document.getElementById('crumbs');
   let INDEX = null;
@@ -676,6 +676,7 @@
     const when = new Date(s.date + 'T12:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
     return `<a href="${base}.${i + 1}" class="study-tab${on ? ' on' : ''}" data-study="${i}"${on ? ' aria-current="true"' : ''}>
       ${s.label ? `<b>${esc(s.label)}</b><small>From other studies</small>`
+        : s.title ? `<b>${esc(s.title)}</b><small>${esc(when)} · Study</small>`
         : `<b>${esc(when)}</b><small>${s.series ? 'Series' : 'One-off'}${s.range ? ' · ' + esc(s.range) : ''}</small>`}</a>`;
   }
 
@@ -718,7 +719,7 @@
       : decks.length ? `<a class="btn" href="#lessons-here" data-jump="lessons-here">Class slides (${decks.length}) ↓</a>` : '';
     const actions = `<div class="actions">
         <a class="btn primary" href="${esc(kjvHref)}" target="_blank" rel="noopener">Read in the KJV app ↗</a>
-        ${shownStudy ? `<a class="btn" id="tg-link" href="${esc(shownStudy.link)}" target="_blank" rel="noopener">View on Telegram ↗</a>` : ''}
+        ${shownStudy ? `<a class="btn" id="tg-link" href="${esc(shownStudy.link || '#')}" target="_blank" rel="noopener"${shownStudy.link ? '' : ' hidden'}>View on Telegram ↗</a>` : ''}
         ${slidesBtn}
         ${studies.length ? '<a class="btn" href="#commentary" data-jump="commentary">Skip to commentary ↓</a>' : ''}
       </div>`;
@@ -796,7 +797,7 @@
       document.getElementById('commentary-body').innerHTML = commentary(s);
       document.getElementById('study-date').textContent = studyWhen(s);
       const tg = document.getElementById('tg-link');
-      if (tg) tg.href = s.link;
+      if (tg) { tg.hidden = !s.link; if (s.link) tg.href = s.link; }
     });
     view.querySelectorAll('[data-jump]').forEach(jump => jump.onclick = e => {
       e.preventDefault();

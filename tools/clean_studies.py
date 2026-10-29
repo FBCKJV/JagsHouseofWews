@@ -346,6 +346,8 @@ def write_worldly(posts_by_id, dec):
 
 
 def start_id(study):
+    if not study.get('link'):                  # a Drive study has no Telegram post: use its first post id
+        return str(study['posts'][0]['id'])
     return study['link'].rstrip('/').rsplit('/', 1)[-1]
 
 
@@ -426,6 +428,18 @@ def apply_refile(src):
         recount(study)
         passes.append(study)
         n += len(job['posts'])
+    for job in rf.get('drive', []):      # a study the author wrote in Google Drive and announced for a chapter
+        book, ch = split(job['to'])
+        passes = src.setdefault(book, {}).setdefault(ch, [])
+        pid = 'added-drive-' + job['drive']
+        if any(str(p['id']) == pid for s in passes for p in s['posts']):
+            continue
+        study = {'date': job['date'][:10], 'series': False, 'link': None, 'study_chars': 0, 'primary': False,
+                 'title': job['title'], 'source': 'drive',
+                 'posts': [{'id': pid, 'date': job['date'][:10] + 'T00:00', 'kind': 'study', 'text': job['text'], 'added': True}]}
+        recount(study)
+        passes.append(study)
+        n += 1
     for i, job in enumerate(rf.get('add', [])):
         dest = primary(job['to'])
         pid = 'added-' + re.sub(r'\W+', '-', job['to'].lower()) + f'-{i}'
@@ -508,6 +522,9 @@ def main():
                 res['range'] = r
             if study.get('label'):
                 res['label'] = study['label']
+            if study.get('title'):                 # a study written in Google Drive: no Telegram link
+                res['title'] = study['title']
+                res['source'] = study.get('source')
             return res
 
         for ch_s in sorted(chapters, key=int):
