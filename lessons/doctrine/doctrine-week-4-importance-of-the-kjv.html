@@ -2,481 +2,647 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Importance of the KJV — Week 4</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+SC:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ink: #0a0c11;
-    --ink-2: #12151d;
-    --ink-3: #191d28;
-    --line: rgba(201,162,39,0.28);
-    --gold: #c9a227;
-    --gold-light: #e6ca7d;
-    --cream: #ece3cd;
-    --cream-dim: #b9b09a;
-    --crimson: #8c2f39;
-    --crimson-light: #c2626c;
-    --sage: #6f8f6a;
-    --sage-light: #a3c49b;
-  }
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
-  body{
-    background:
-      radial-gradient(1200px 700px at 15% -10%, rgba(201,162,39,0.09), transparent 60%),
-      radial-gradient(1000px 600px at 100% 0%, rgba(140,47,57,0.10), transparent 55%),
-      var(--ink);
-    color:var(--cream);
-    font-family:'EB Garamond', serif;
-    -webkit-font-smoothing:antialiased;
-  }
-  ::selection{background:var(--gold); color:var(--ink);}
-
-  .grain{
-    position:fixed; inset:0; pointer-events:none; z-index:0; opacity:0.05; mix-blend-mode:overlay;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-
-  header.hero{
-    position:relative; z-index:1; padding:64px 6vw 48px; border-bottom:1px solid var(--line); text-align:center;
-  }
-  .eyebrow{
-    font-family:'Cormorant SC', serif; letter-spacing:0.35em; color:var(--gold-light);
-    font-size:15px; text-transform:uppercase; margin:0 0 18px;
-  }
-  h1.title{
-    font-family:'Cinzel', serif; font-weight:600; font-size:clamp(28px, 4vw, 54px);
-    line-height:1.18; margin:0 0 10px; color:var(--cream); text-shadow:0 0 40px rgba(201,162,39,0.15);
-  }
-  h1.title em{ font-style:normal; color:var(--gold); }
-  .subtitle{
-    font-family:'Cormorant SC', serif; font-size:clamp(15px,1.5vw,20px);
-    letter-spacing:0.1em; color:var(--cream-dim); margin:0 auto 30px; max-width:760px;
-  }
-  .hero-text{
-    max-width:840px; margin:0 auto; font-style:italic;
-    font-size:clamp(17px,1.7vw,21px); line-height:1.75; color:var(--cream-dim);
-    position:relative; padding:0 8px;
-  }
-  .hero-text .dropcap{
-    float:left; font-family:'Cinzel', serif; font-style:normal;
-    font-size:64px; line-height:0.8; color:var(--gold); padding:6px 10px 0 0;
-  }
-  .hero-ref{
-    display:inline-block; margin-top:18px; font-family:'Cormorant SC', serif;
-    letter-spacing:0.2em; font-size:14px; color:var(--gold-light); text-transform:uppercase;
-  }
-
-  nav.jump{
-    position:sticky; top:0; z-index:20; display:flex; flex-wrap:wrap; justify-content:center;
-    background:rgba(10,12,17,0.94); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); padding:2px 0;
-  }
-  nav.jump a{
-    color:var(--cream-dim); text-decoration:none; font-family:'Cormorant SC', serif;
-    letter-spacing:0.1em; font-size:12.5px; text-transform:uppercase; padding:13px 13px;
-    border-bottom:2px solid transparent; transition:color .2s, border-color .2s; white-space:nowrap;
-  }
-  nav.jump a:hover{ color:var(--gold-light); border-color:var(--gold); }
-
-  main{ position:relative; z-index:1; max-width:1280px; margin:0 auto; padding:10px 5vw 80px; }
-
-  section.block{ padding:54px 0 10px; border-bottom:1px solid var(--line); }
-  section.block:last-child{ border-bottom:none; }
-
-  .section-head{ display:flex; align-items:baseline; gap:16px; margin-bottom:8px; }
-  .section-num{ font-family:'Cinzel', serif; color:var(--gold); font-size:14px; letter-spacing:.2em; }
-  h2.section-title{
-    font-family:'Cinzel', serif; font-weight:600; font-size:clamp(21px,2.4vw,30px); margin:0; color:var(--cream);
-  }
-  .section-sub{
-    font-family:'EB Garamond', serif; font-style:italic; color:var(--cream-dim);
-    margin:6px 0 26px; font-size:16px; max-width:840px;
-  }
-  h3.sub-title{
-    font-family:'Cinzel', serif; font-weight:500; font-size:15px; letter-spacing:.08em;
-    margin:32px 0 16px; text-transform:uppercase; color:var(--gold-light);
-  }
-  h3.sub-title:first-of-type{ margin-top:8px; }
-
-  .teaching{ max-width:840px; font-size:16.5px; line-height:1.75; color:var(--cream-dim); margin:0 0 18px; }
-  .teaching strong{ color:var(--gold-light); font-weight:600; }
-
-  .grid{ display:grid; gap:16px; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); margin-bottom:8px; }
-  .grid.wide{ grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); }
-
-  .card{
-    background:linear-gradient(160deg, var(--ink-3), var(--ink-2));
-    border:1px solid var(--line); border-radius:4px; padding:20px 20px;
-    cursor:pointer; position:relative;
-    transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease; overflow:hidden;
-  }
-  .card::before{
-    content:""; position:absolute; left:0; top:0; bottom:0; width:3px;
-    background:var(--gold); opacity:.55; transition:opacity .18s ease, width .18s ease;
-  }
-  .card:hover{
-    transform:translateY(-3px); border-color:var(--gold);
-    box-shadow:0 14px 30px rgba(0,0,0,0.45), 0 0 0 1px rgba(201,162,39,0.15) inset;
-  }
-  .card:hover::before{ opacity:1; width:5px; }
-  .card .ct-name{ font-family:'Cinzel', serif; font-weight:600; font-size:16.5px; color:var(--cream); margin:0 0 6px; }
-  .card .ct-ref{ font-family:'Cormorant SC', serif; letter-spacing:.08em; font-size:13.5px; color:var(--gold-light); margin:0; }
-  .card .ct-hint{
-    margin-top:12px; font-size:13px; color:var(--cream-dim); opacity:.6;
-    font-family:'Cormorant SC', serif; letter-spacing:.12em; text-transform:uppercase;
-  }
-  .card.crimson::before{ background:var(--crimson-light); }
-  .card.crimson:hover{ border-color:var(--crimson-light); }
-  .card.crimson .ct-ref{ color:var(--crimson-light); }
-  .card.sage::before{ background:var(--sage-light); }
-  .card.sage:hover{ border-color:var(--sage-light); }
-  .card.sage .ct-ref{ color:var(--sage-light); }
-
-  /* pull quote */
-  .callout{
-    position:relative; margin:22px 0 30px; padding:20px 26px 20px 54px;
-    background:linear-gradient(160deg, rgba(201,162,39,0.07), rgba(201,162,39,0.02));
-    border:1px solid var(--line); border-left:3px solid var(--gold); border-radius:4px;
-    font-style:italic; font-size:16.5px; line-height:1.7; color:var(--cream); max-width:840px;
-  }
-  .callout::before{
-    content:"\201C"; position:absolute; left:14px; top:4px;
-    font-family:'Cinzel', serif; font-style:normal; font-size:38px; color:var(--gold); opacity:.7;
-  }
-
-  /* Tyndale pulpit-style feature */
-  .feature{
-    margin:8px 0 10px; padding:34px 5vw 8px;
-    background:linear-gradient(160deg, rgba(140,47,57,0.09), transparent 60%);
-    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
-  }
-  .feature-inner{ max-width:900px; margin:0 auto; }
-  .feature-label{
-    text-align:center; font-family:'Cormorant SC', serif; letter-spacing:.3em;
-    text-transform:uppercase; color:var(--crimson-light); font-size:14px; margin:0 0 20px;
-  }
-  .feature-title{
-    text-align:center; font-family:'Cinzel', serif; font-weight:600; color:var(--cream);
-    font-size:clamp(22px,2.8vw,32px); margin:0 0 22px;
-  }
-  .feature p.teaching{ margin-left:auto; margin-right:auto; text-align:left; }
-  blockquote.feature-quote{
-    margin:24px auto; max-width:640px; padding:0 0 0 26px; border-left:3px solid var(--crimson-light);
-    font-style:italic; font-size:19px; line-height:1.7; color:var(--cream);
-  }
-  .feature-attr{ text-align:right; max-width:640px; margin:0 auto 30px; font-family:'Cormorant SC', serif; color:var(--crimson-light); letter-spacing:.08em; font-size:14.5px; }
-
-  /* pronoun table */
-  .pronoun-wrap{ display:flex; gap:26px; flex-wrap:wrap; max-width:900px; }
-  table.pronoun-table{ border-collapse:collapse; flex:1 1 260px; }
-  table.pronoun-table caption{
-    text-align:left; font-family:'Cinzel', serif; font-size:15px; color:var(--gold-light);
-    letter-spacing:.06em; text-transform:uppercase; margin-bottom:10px; caption-side:top;
-  }
-  table.pronoun-table th, table.pronoun-table td{
-    padding:9px 16px; text-align:left; border-bottom:1px solid var(--line); font-size:16px;
-  }
-  table.pronoun-table th{
-    font-family:'Cormorant SC', serif; letter-spacing:.1em; text-transform:uppercase;
-    font-size:12.5px; color:var(--cream-dim);
-  }
-  table.pronoun-table td.pn-word{ color:var(--cream); font-weight:600; }
-  table.pronoun-table td.pn-type{ color:var(--cream-dim); font-style:italic; }
-
-  .overlay{
-    position:fixed; inset:0; z-index:100; background:rgba(4,5,8,0.86); backdrop-filter:blur(3px);
-    display:flex; align-items:center; justify-content:center; padding:5vw;
-    opacity:0; pointer-events:none; transition:opacity .22s ease;
-  }
-  .overlay.open{ opacity:1; pointer-events:auto; }
-  .modal{
-    max-width:760px; width:100%; max-height:82vh; overflow-y:auto;
-    background:linear-gradient(165deg, #16192389, #0d0f15); background-color:#12141c;
-    border:1px solid var(--gold); border-radius:6px; padding:44px 44px 40px; position:relative;
-    box-shadow:0 30px 80px rgba(0,0,0,0.6), 0 0 60px rgba(201,162,39,0.08);
-    transform:translateY(14px) scale(.98); transition:transform .22s ease;
-  }
-  .overlay.open .modal{ transform:translateY(0) scale(1); }
-  .modal-close{
-    position:absolute; top:16px; right:18px; width:38px; height:38px; border-radius:50%;
-    border:1px solid var(--line); background:var(--ink-2); color:var(--gold-light);
-    font-family:'Cinzel',serif; font-size:18px; cursor:pointer;
-    display:flex; align-items:center; justify-content:center;
-    transition:background .18s, color .18s, transform .18s;
-  }
-  .modal-close:hover{ background:var(--gold); color:var(--ink); transform:rotate(90deg); }
-  .modal-eyebrow{ font-family:'Cormorant SC', serif; letter-spacing:.25em; text-transform:uppercase; color:var(--gold-light); font-size:13px; margin:0 0 8px; }
-  .modal-title{ font-family:'Cinzel', serif; font-weight:600; color:var(--cream); font-size:clamp(20px,2.6vw,27px); margin:0 0 22px; padding-right:30px; }
-  .verse-block{ margin-bottom:22px; }
-  .verse-block:last-child{ margin-bottom:0; }
-  .verse-ref{ font-family:'Cormorant SC', serif; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); font-size:14px; margin:0 0 6px; }
-  .verse-text{ font-size:18.5px; line-height:1.75; color:var(--cream); margin:0; }
-
-  footer{
-    text-align:center; padding:40px 20px 60px; position:relative; z-index:1;
-    color:var(--cream-dim); font-family:'Cormorant SC', serif; letter-spacing:.15em;
-    font-size:13px; text-transform:uppercase; opacity:.6;
-  }
-
-  @media (max-width:640px){
-    .modal{ padding:34px 26px 30px; max-height:88vh; }
-    header.hero{ padding:48px 6vw 34px; }
-  }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Importance of the King James Bible – A Timeless Legacy</title>
 <script src="../deck-extras.js"></script>
+<meta name="description" content="How God preserved His Word for the English-speaking world: the history of the King James Version, its precision (including the thee, thou, ye, you pronouns), fun Bible facts and how the Bible is arranged.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
 </head>
 <body>
-<div class="grain"></div>
 
-<header class="hero">
-  <p class="eyebrow">Faith Baptist Church of Plymouth County &nbsp;·&nbsp; Adult Sunday School &nbsp;·&nbsp; Week 4</p>
-  <h1 class="title">The Importance of the <em>King James Bible</em></h1>
-  <p class="subtitle">A Timeless Legacy — how God preserved His Word for the English-speaking world</p>
-  <p class="hero-text"><span class="dropcap">I</span>n 1604, King James I of England commissioned renowned scholars to create a unified English Bible, birthing the KJV in 1611. This masterpiece shaped Christianity worldwide, becoming the spiritual cornerstone for the Pilgrims, fueling Baptist growth in America, and empowering missionaries to spread the Gospel across every continent.</p>
-  <div class="hero-ref">1604&ndash;1611</div>
-</header>
+<main class="deck" id="deck">
 
-<nav class="jump">
-  <a href="#legacy">Legacy</a>
-  <a href="#tyndale">Tyndale</a>
-  <a href="#translation">Translation &amp; Impact</a>
-  <a href="#lesserknown">Lesser-Known Facts</a>
-  <a href="#precision">Precision</a>
-  <a href="#funfacts">Fun Bible Facts</a>
-  <a href="#books">Books of the Bible</a>
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="The Importance of the King James Bible">
+  <div class="page title-page">
+    <div class="overline">Faith Baptist Church of Plymouth County · Adult Sunday School · Week 4</div>
+    <h1>The Importance of the King James Bible</h1>
+    <p class="sub">A Timeless Legacy: how God preserved His Word for the English-speaking world</p>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p>In 1604, King James I of England commissioned renowned scholars to create a unified English Bible, birthing the KJV in 1611. This masterpiece shaped Christianity worldwide, becoming the spiritual cornerstone for the Pilgrims, fueling Baptist growth in America, and empowering missionaries to spread the Gospel across every continent.</p>
+    <p class="sub center">1604–1611</p>
+    <p class="hint">Use the arrow keys or swipe to move through the study. Tap any gold reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="I. A Timeless Legacy" data-title="A Timeless Legacy (1 of 2)">
+  <div class="page">
+    <h2>A Timeless Legacy (1 of 2)</h2>
+    <p class="lead">Fun facts about the King James, or Authorized, Version.</p>
+    <div class="cols"><div class="panel believers"><h3>47 Scholars, One Epic Team</h3><p><strong>1604 Commission.</strong> 54 revisers were initially approved, but 47 brilliant minds crafted the KJV.</p></div><div class="panel believers"><h3>Six Predecessors Paved the Way</h3><p><strong>Earlier English Bibles.</strong> Built on Wycliffe’s (1384), Tyndale’s (1525), Coverdale’s (1535), Matthew’s (1537), Great (1539), and Bishops’ (1568) Bibles, the KJV refined them all.</p></div></div>
+    <div class="cols"><div class="panel believers"><h3>Seven Years of Sweat</h3><p><strong>1604 to 1611.</strong> Scholars toiled to translate from Hebrew, Greek, and Aramaic, ensuring accuracy and poetic flair.</p></div><div class="panel believers"><h3>Six Companies, Divide and Conquer</h3><p><strong>Westminster · Oxford · Cambridge.</strong> Split into six groups, two each in Westminster, Oxford, and Cambridge, they tackled different Bible sections for precision.</p></div></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="I. A Timeless Legacy" data-title="A Timeless Legacy (2 of 2)">
+  <div class="page">
+    <h2>A Timeless Legacy (2 of 2)</h2>
+    <div class="cols-3"><div class="panel believers"><h3>Tyndale’s Ghost Lives On</h3><p><strong>84% NT · 76% OT.</strong> About 84% of the KJV’s New Testament and 76% of its Old Testament echo William Tyndale’s groundbreaking work.</p></div><div class="panel believers"><h3>The “He Bible,” 1611</h3><p><strong>First edition.</strong> The first 1611 edition, dubbed the “He Bible,” is estimated at 1,500 to 2,000 copies; the exact number is not known.</p></div><div class="panel believers"><h3>No Calvinist Notes Allowed</h3><p><strong>Royal Approval.</strong> King James banned the Geneva Bible’s Puritan notes, ensuring the KJV was a neutral, royal-approved text.</p></div></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Martyred for the Word" data-title="William Tyndale: A Bible Translator Executed for Heresy">
+  <div class="page">
+    <div class="kicker">Martyred for the Word</div>
+    <h2>William Tyndale: A Bible Translator Executed for Heresy</h2>
+    <p class="lead">William Tyndale was a prominent figure during the Protestant Reformation who was burned at the stake in 1536, executed for “heresy” by the Roman Catholic Church for translating the Bible into English and promoting its accessibility to the common people.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Martyred for the Word" data-title="Why Was Translating the Bible Considered “Heretical”?">
+  <div class="page">
+    <div class="kicker">William Tyndale</div>
+    <h2>Why Was Translating the Bible Considered “Heretical”?</h2>
+    <p><strong>Challenging Church Authority:</strong> The Catholic Church held absolute authority on religious issues and guarded its power. Translations of the Bible into vernacular languages like English threatened that authority.</p>
+    <p>Providing the Bible in English allowed literate individuals to read and interpret Scripture for themselves, often arriving at conclusions that differed from unbiblical Catholic doctrine.</p>
+    <blockquote>“Lord, open the King of England’s eyes.”<cite>William Tyndale, before his execution</cite></blockquote>
+    <p>This prayer was partially answered when King Henry VIII later allowed the English Bible to be available in every parish church.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="II. Translation, Text &amp; Impact" data-title="Translation, Text &amp; Impact">
+  <div class="page">
+    <h2>Translation, Text &amp; Impact</h2>
+    <p class="lead">The King James Version was created by a team of 47 scholars (54 were originally appointed), including the greatest linguists of the time, from various backgrounds, ensuring a more comprehensive and accurate translation.</p>
+    <div class="cols-3"><div class="panel believers"><h3>Collaboration</h3><p><strong>Textual Sources.</strong> Translators of the KJV utilized earlier translations and the original preserved manuscripts: the Masoretic Text for the Old Testament, and the Antioch manuscripts, called “The Received Text,” or Textus Receptus, for the New Testament, striving for accuracy while adapting the language to be accessible and beautiful to the English-speaking public.</p></div><div class="panel believers"><h3>Literary Style</h3><p><strong>A Literary Masterpiece.</strong> The KJV is renowned for its poetic and rhythmic style, making it not only a religious text but also a literary masterpiece that has influenced English literature significantly.</p></div><div class="panel believers"><h3>Cultural Impact</h3><p><strong>400 Years of Influence.</strong> The King James Version has left an indelible mark on Christianity, used for 400 years to win souls on every continent and country, shaping the culture, language, and literature of the world, and the expressions and idioms that remain in common use even today.</p></div></div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="II. Translation, Text &amp; Impact" data-title="Its Powerful, Preserved Nature">
+  <div class="page">
+    <h2>Its Powerful, Preserved Nature</h2>
+    <div class="callout"><p>The King James Version has profoundly influenced literature, language, and art, but its powerful, divinely inspired and preserved nature, as the complete Word of God without error in English, the “lingua franca” of this age, has shaped nations, influenced kings and presidents, converted millions, fed the spirit of believers, and served as the rock of Christianity since 1611.</p></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="III. Lesser-Known KJV Facts" data-title="Lesser-Known KJV Facts (1 of 2)">
+  <div class="page">
+    <h2>Lesser-Known KJV Facts (1 of 2)</h2>
+    <div class="cols-3"><div class="panel cain"><h3>Oxford &amp; Cambridge Tweak It</h3><p><strong>1762 &amp; 1769 Revisions.</strong> Revised editions in 1769 (Oxford) and 1762 (Cambridge) standardized spelling, punctuation, and italics for clarity.</p></div><div class="panel cain"><h3>Apocrypha? Not Inspired!</h3><p><strong>1611 Edition.</strong> The 1611 KJV included the Apocrypha but clearly marked it as non-inspired, separating it from canonical Scripture.</p></div><div class="panel cain"><h3>Sinners’ Bible Blunder</h3><p><strong>1631 Misprint.</strong> A 1631 misprint, dubbed the “Sinners’ Bible,” omitted “not” from <button class="ref" data-v="Exodus 20:14">Exodus 20:14</button>, reading “Thou shalt commit adultery”!</p></div></div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="III. Lesser-Known KJV Facts" data-title="Lesser-Known KJV Facts (2 of 2)">
+  <div class="page">
+    <h2>Lesser-Known KJV Facts (2 of 2)</h2>
+    <div class="cols-3"><div class="panel cain"><h3>Printer’s Pricey Mistake</h3><p><strong>Robert Barker, 1631.</strong> The “Sinners’ Bible” led to a £300 fine for printer Robert Barker, big money in 1631!</p></div><div class="panel cain"><h3>Best-Selling Book Ever</h3><p><strong>Global Reach.</strong> The KJV holds the title as the world’s top-selling book, with billions of copies distributed globally.</p></div><div class="panel cain"><h3>No Copyright (Outside England)</h3><p><strong>Crown Copyright.</strong> Free to print worldwide, except in England, where the Crown holds rights, fueling its global spread.</p></div></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="IV. Precision in Translation" data-title="“Are Saved”: the Greek Behind Eternal Security">
+  <div class="page">
+    <h2>“Are Saved”: the Greek Behind Eternal Security</h2>
+    <p class="lead">Why the exact words matter: the KJV’s careful rendering guards doctrine that looser translations can blur.</p>
+    <p>The Greek <em>σῳζομένοις</em> (sōzomenois) is a present passive participle meaning “to those saved.” The KJV renders it <strong>“are saved”</strong>, a settled, present reality accomplished by God. Modern versions often render it “are being saved,” an ongoing-process wording that can imply salvation is incomplete or losable.</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="IV. Precision in Translation" data-title="The Power of God to Them That Are Saved">
+  <div class="page">
+    <h2>The Power of God to Them That Are Saved</h2>
+    <div class="vps"><div class="vp fig"><h3>The Power of God to Them That Are Saved</h3><blockquote class="scripture" style="font-style:italic">For the preaching of the cross is to them that perish foolishness; but unto us which are saved it is the power of God.<cite>1 Corinthians 1:18</cite></blockquote><p><strong>Meaning:</strong> The word of the cross is the power of God precisely to those who stand in the state of having been saved. God’s effective, completed work secures the believer.</p></div><div class="vp fig"><h3>If Ye Keep in Memory</h3><blockquote class="scripture" style="font-style:italic">By which also ye are saved, if ye keep in memory what I preached unto you, unless ye have believed in vain.<cite>1 Corinthians 15:2</cite></blockquote><p><strong>Meaning:</strong> The “if” clause is not a condition for retaining salvation but the evidence of genuine faith. True believers hold fast because they are already saved.</p></div></div>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="IV. Precision in Translation" data-title="Supporting the Eternally Secure Reading">
+  <div class="page">
+    <h2>Supporting the Eternally Secure Reading</h2>
+    <div class="refs center"><button class="ref" data-v="Philippians 1:6">Philippians 1:6</button><button class="ref" data-v="John 10:28-29">John 10:28-29</button><button class="ref" data-v="Romans 8:30">Romans 8:30</button><button class="ref" data-v="Ephesians 2:8-9">Ephesians 2:8-9</button></div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="IV. Precision in Translation" data-title="Thee, Thou, Ye, You: the KJV’s Built-In Precision">
+  <div class="page">
+    <h2>Thee, Thou, Ye, You: the KJV’s Built-In Precision</h2>
+    <p class="lead">Modern English collapsed singular and plural “you” into one word. The KJV never did. Its pronouns tell you at a glance whether God (or a speaker) is addressing one person or a whole group.</p>
+    <p>The next two slides chart the pronouns of the KJV, singular and plural, by type and number.</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="IV. Precision in Translation" data-title="Pronouns in the KJV Bible: Singular">
+  <div class="page">
+    <h2>Pronouns in the KJV Bible: Singular</h2>
+    <div class="tbl"><table><thead><tr><th>Pronoun</th><th>Type</th><th>Number</th></tr></thead><tbody><tr><td>I</td><td>Personal (subject)</td><td>Singular</td></tr><tr><td>Me</td><td>Personal (object)</td><td>Singular</td></tr><tr><td>My / Mine</td><td>Possessive</td><td>Singular</td></tr><tr><td><strong>Thou</strong></td><td>Personal (subject)</td><td>Singular</td></tr><tr><td><strong>Thee</strong></td><td>Personal (object)</td><td>Singular</td></tr><tr><td><strong>Thy / Thine</strong></td><td>Possessive</td><td>Singular</td></tr><tr><td>He</td><td>Personal (subject)</td><td>Singular</td></tr><tr><td>Him</td><td>Personal (object)</td><td>Singular</td></tr><tr><td>His</td><td>Possessive</td><td>Singular</td></tr><tr><td>She</td><td>Personal (subject)</td><td>Singular</td></tr><tr><td>Her / Hers</td><td>Personal (object) / Possessive</td><td>Singular</td></tr><tr><td>It</td><td>Personal</td><td>Singular</td></tr><tr><td>Its</td><td>Possessive</td><td>Singular</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="IV. Precision in Translation" data-title="Pronouns in the KJV Bible: Plural">
+  <div class="page">
+    <h2>Pronouns in the KJV Bible: Plural</h2>
+    <div class="tbl"><table><thead><tr><th>Pronoun</th><th>Type</th><th>Number</th></tr></thead><tbody><tr><td>We</td><td>Personal (subject)</td><td>Plural</td></tr><tr><td>Us</td><td>Personal (object)</td><td>Plural</td></tr><tr><td>Our / Ours</td><td>Possessive</td><td>Plural</td></tr><tr><td><strong>Ye</strong></td><td>Personal (subject)</td><td>Plural</td></tr><tr><td><strong>You</strong></td><td>Personal (object)</td><td>Plural</td></tr><tr><td><strong>Your / Yours</strong></td><td>Possessive</td><td>Plural</td></tr><tr><td>They</td><td>Personal (subject)</td><td>Plural</td></tr><tr><td>Them</td><td>Personal (object)</td><td>Plural</td></tr><tr><td>Their / Theirs</td><td>Possessive</td><td>Plural</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="V. Fun Bible Facts" data-title="Fun Bible Facts (1 of 4)">
+  <div class="page">
+    <h2>Fun Bible Facts (1 of 4)</h2>
+    <div class="cols-3"><div class="panel believers"><h3>Epic Timespan</h3><p><strong>4,284 years covered.</strong> From creation in Genesis to John’s writing of Revelation (c. AD 95–97), the Bible covers approximately 4,284 years. The writing itself spans about 1,500 years, from Moses (c. 1400 BC) penning the first five books to Revelation (c. AD 95).</p></div><div class="panel believers"><h3>40+ Authors, One God</h3><p><strong>Kings, shepherds, prophets, fishermen.</strong> Written by over 40 diverse authors, inspired by the Holy Spirit.</p></div><div class="panel believers"><h3>Prophecy Power</h3><p><strong>1,800+ prophecies.</strong> Over 1,800 prophecies, with 300+ about Jesus fulfilled perfectly, like His Bethlehem birth (<button class="ref" data-v="Micah 5:2">Micah 5:2</button>).</p></div></div>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="V. Fun Bible Facts" data-title="Fun Bible Facts (2 of 4)">
+  <div class="page">
+    <h2>Fun Bible Facts (2 of 4)</h2>
+    <div class="cols-3"><div class="panel believers"><h3>Self-Referencing Scripture</h3><p><strong>“It is written.”</strong> The Bible cites itself over 1,000 times, affirming its own authority.</p></div><div class="panel believers"><h3>The KJV Is Its Own Dictionary</h3><p><strong>First appearance rule.</strong> You can generally find the meaning of a word by looking for its first appearance and seeing the context.</p></div><div class="panel believers"><h3>Year-Long Read</h3><p><strong>1,189 chapters.</strong> Read 3.3 chapters daily to finish in a year, or read 30 minutes daily and finish in under 5 months!</p></div></div>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="V. Fun Bible Facts" data-title="Fun Bible Facts (3 of 4)">
+  <div class="page">
+    <h2>Fun Bible Facts (3 of 4)</h2>
+    <div class="cols-3"><div class="panel believers"><h3>66 Books, One Story</h3><p><strong>39 OT + 27 NT.</strong> Thirty-nine Old Testament and twenty-seven New Testament books weave God’s redemptive plan from Genesis to Revelation.</p></div><div class="panel believers"><h3>Verses Galore</h3><p><strong>31,102 verses.</strong> Packed with wisdom, history, and God’s Word for all.</p></div><div class="panel believers"><h3>No Contradictions</h3><p><strong>Divine inspiration.</strong> Despite centuries and 40+ authors, the Bible’s message stays unified, a testament to divine inspiration.</p></div></div>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="V. Fun Bible Facts" data-title="Fun Bible Facts (4 of 4)">
+  <div class="page">
+    <h2>Fun Bible Facts (4 of 4)</h2>
+    <div class="cols-3"><div class="panel believers"><h3>Three Tongues</h3><p><strong>Hebrew · Aramaic · Greek.</strong> Written in Hebrew (Old Testament), Aramaic (parts of Daniel and Ezra), and Greek (New Testament).</p></div><div class="panel believers"><h3>Shortest &amp; Longest Chapters</h3><p>**<button class="ref" data-v="Psalms 117:1-2">Psalm 117</button> &amp; <button class="ref" data-v="Psalms 119:1-176">Psalm 119</button>.** Psalm 117 (2 verses) is the shortest; Psalm 119 (176 verses) is the longest, a meditation on God’s Word.</p></div><div class="panel believers"><h3>Shortest Verse</h3><p>**<button class="ref" data-v="John 11:35">John 11:35</button>.** “Jesus wept,” shows Christ’s humanity and mercy in just two words.</p></div></div>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="VI. How the KJV Bible Is Broken Down" data-title="How the KJV Bible Is Broken Down: Old Testament">
+  <div class="page">
+    <h2>How the KJV Bible Is Broken Down: Old Testament</h2>
+    <p class="lead">66 books, grouped by purpose and style, telling God’s story from creation to eternity.</p>
+    <div class="tbl"><table><thead><tr><th>Category, number of books and theme</th><th>The books</th></tr></thead><tbody><tr><td><strong>Pentateuch</strong>: 5 books · God’s Creation, the Law, Israel’s Origins</td><td>Genesis, Exodus, Leviticus, Numbers, Deuteronomy.</td></tr><tr><td><strong>Historical Books</strong>: 12 books · Conquest to Exile to Return</td><td>Joshua, Judges, Ruth, 1 &amp; 2 Samuel, 1 &amp; 2 Kings, 1 &amp; 2 Chronicles, Ezra, Nehemiah, Esther.</td></tr><tr><td><strong>Poetic / Wisdom Books</strong>: 5 books · Songs, Prayers, Wisdom</td><td>Job, Psalms, Proverbs, Ecclesiastes, Song of Solomon.</td></tr><tr><td><strong>Major Prophets</strong>: 5 books · God’s Word Through Bold Prophets</td><td>Isaiah, Jeremiah/Lamentations, Ezekiel, Daniel.</td></tr><tr><td><strong>Minor Prophets</strong>: 12 books · Short, Powerful Prophetic Books</td><td>Hosea, Joel, Amos, Obadiah, Jonah, Micah, Nahum, Habakkuk, Zephaniah, Haggai, Zechariah, Malachi.</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="VI. How the KJV Bible Is Broken Down" data-title="How the KJV Bible Is Broken Down: New Testament">
+  <div class="page">
+    <h2>How the KJV Bible Is Broken Down: New Testament</h2>
+    <div class="tbl"><table><thead><tr><th>Category, number of books and theme</th><th>The books</th></tr></thead><tbody><tr><td><strong>Gospels</strong>: 4 books · Jesus’ Life, Death, and Resurrection</td><td>Matthew, Mark, Luke, John.</td></tr><tr><td><strong>History</strong>: 1 book · The Early Church’s Growth</td><td>Acts.</td></tr><tr><td><strong>Pauline Epistles</strong>: 13 books · Paul’s Letters to Churches and Leaders</td><td>Romans, 1 &amp; 2 Corinthians, Galatians, Ephesians, Philippians, Colossians, 1 &amp; 2 Thessalonians, 1 &amp; 2 Timothy, Titus, Philemon, Hebrews.</td></tr><tr><td><strong>General Epistles</strong>: 8 books · Letters for All Believers</td><td>James, 1 &amp; 2 Peter, 1, 2 &amp; 3 John, Jude.</td></tr><tr><td><strong>Prophecy</strong>: 1 book · Christ’s Return and Final Victory</td><td>Revelation.</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Purified Seven Times" data-title="Purified Seven Times">
+  <div class="page">
+    <h2>Purified Seven Times</h2>
+    <blockquote class="big-verse">The words of the <span class="lord">Lord</span> are pure words: as silver tried in a furnace of earth, purified seven times. Thou shalt keep them, O <span class="lord">Lord</span>, thou shalt preserve them from this generation for ever.<cite>Psalm 12:6-7</cite></blockquote>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
 </nav>
 
-<main>
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
 
-  <section class="block" id="legacy">
-    <div class="section-head"><span class="section-num">I.</span><h2 class="section-title">A Timeless Legacy</h2></div>
-    <p class="section-sub">Fun facts about the King James, or Authorized, Version.</p>
-    <div class="grid" id="grid-legacy"></div>
-  </section>
-
-</main>
-
-<div class="feature" id="tyndale">
-  <div class="feature-inner">
-    <p class="feature-label">Martyred for the Word</p>
-    <h3 class="feature-title">William Tyndale — A Bible Translator Executed for Heresy</h3>
-    <p class="teaching">William Tyndale was a prominent figure during the Protestant Reformation who was burned at the stake in 1536 — executed for "heresy" by the Roman Catholic Church for translating the Bible into English and promoting its accessibility to the common people.</p>
-    <h3 class="sub-title" style="color:var(--crimson-light);">Why Was Translating the Bible Considered "Heretical"?</h3>
-    <p class="teaching"><strong>Challenging Church Authority:</strong> The Catholic Church held absolute authority on religious issues and guarded its power. Translations of the Bible into vernacular languages like English threatened that authority.</p>
-    <p class="teaching">Providing the Bible in English allowed literate individuals to read and interpret Scripture for themselves — often arriving at conclusions that differed from unbiblical Catholic doctrine.</p>
-    <blockquote class="feature-quote">"Lord, open the King of England's eyes."</blockquote>
-    <p class="feature-attr">&mdash; William Tyndale, before his execution</p>
-    <p class="teaching">This prayer was partially answered when King Henry VIII later allowed the English Bible to be available in every parish church.</p>
-  </div>
-</div>
-
-<main>
-
-  <section class="block" id="translation">
-    <div class="section-head"><span class="section-num">II.</span><h2 class="section-title">Translation, Text &amp; Impact</h2></div>
-    <p class="section-sub">The King James Version was created by a team of 54 scholars, including the greatest linguists of the time, from various backgrounds — ensuring a more comprehensive and accurate translation.</p>
-    <div class="grid wide" id="grid-translation"></div>
-    <div class="callout">The King James Version has profoundly influenced literature, language, and art — but its powerful, divinely inspired and preserved nature, as the complete Word of God without error in English, the "lingua franca" of this age, has shaped nations, influenced kings and presidents, converted millions, fed the spirit of believers, and served as the rock of Christianity since 1611.</div>
-  </section>
-
-  <section class="block" id="lesserknown">
-    <div class="section-head"><span class="section-num">III.</span><h2 class="section-title">Lesser-Known KJV Facts</h2></div>
-    <div class="grid" id="grid-lesserknown"></div>
-  </section>
-
-  <section class="block" id="precision">
-    <div class="section-head"><span class="section-num">IV.</span><h2 class="section-title">Precision in Translation</h2></div>
-    <p class="section-sub">Why the exact words matter — the KJV's careful rendering guards doctrine that looser translations can blur.</p>
-
-    <h3 class="sub-title">"Are Saved" — the Greek Behind Eternal Security</h3>
-    <p class="teaching">The Greek <em>σῳζομένοις</em> (sōzomenois) is a present passive participle meaning "to those saved." The KJV renders it <strong>"are saved"</strong> — a settled, present reality accomplished by God. Modern versions often render it "are being saved," an ongoing-process wording that can imply salvation is incomplete or losable.</p>
-    <div class="grid wide" id="grid-precision"></div>
-
-    <h3 class="sub-title">Thee, Thou, Ye, You — the KJV's Built-In Precision</h3>
-    <p class="teaching">Modern English collapsed singular and plural "you" into one word. The KJV never did — its pronouns tell you at a glance whether God (or a speaker) is addressing one person or a whole group.</p>
-    <div class="pronoun-wrap">
-      <table class="pronoun-table">
-        <caption>Singular</caption>
-        <tr><th>Word</th><th>Type</th></tr>
-        <tr><td class="pn-word">I / Me</td><td class="pn-type">Personal</td></tr>
-        <tr><td class="pn-word">My / Mine</td><td class="pn-type">Possessive</td></tr>
-        <tr><td class="pn-word">Thou / Thee</td><td class="pn-type">Personal</td></tr>
-        <tr><td class="pn-word">Thy / Thine</td><td class="pn-type">Possessive</td></tr>
-        <tr><td class="pn-word">He / Him / His</td><td class="pn-type">Personal / Possessive</td></tr>
-        <tr><td class="pn-word">She / Her / Hers</td><td class="pn-type">Personal / Possessive</td></tr>
-        <tr><td class="pn-word">It / Its</td><td class="pn-type">Personal / Possessive</td></tr>
-      </table>
-      <table class="pronoun-table">
-        <caption>Plural</caption>
-        <tr><th>Word</th><th>Type</th></tr>
-        <tr><td class="pn-word">We / Us</td><td class="pn-type">Personal</td></tr>
-        <tr><td class="pn-word">Our / Ours</td><td class="pn-type">Possessive</td></tr>
-        <tr><td class="pn-word">Ye / You</td><td class="pn-type">Personal</td></tr>
-        <tr><td class="pn-word">Your / Yours</td><td class="pn-type">Possessive</td></tr>
-        <tr><td class="pn-word">They / Them</td><td class="pn-type">Personal</td></tr>
-        <tr><td class="pn-word">Their / Theirs</td><td class="pn-type">Possessive</td></tr>
-      </table>
-    </div>
-  </section>
-
-  <section class="block" id="funfacts">
-    <div class="section-head"><span class="section-num">V.</span><h2 class="section-title">Fun Bible Facts</h2></div>
-    <div class="grid" id="grid-funfacts"></div>
-  </section>
-
-  <section class="block" id="books">
-    <div class="section-head"><span class="section-num">VI.</span><h2 class="section-title">How the KJV Bible Is Broken Down</h2></div>
-    <p class="section-sub">66 books, grouped by purpose and style, telling God's story from creation to eternity. Tap a category to see its books.</p>
-    <div class="grid wide" id="grid-books"></div>
-  </section>
-
-  <section class="block" id="closing">
-    <div class="section-head"><span class="section-num">&middot;</span><h2 class="section-title">Purified Seven Times</h2></div>
-    <div class="grid" id="grid-closing"></div>
-  </section>
-
-</main>
-
-<footer>Faith Baptist Church of Plymouth County &nbsp;·&nbsp; Authorized King James Version</footer>
-
-<div class="overlay" id="overlay">
-  <div class="modal" id="modal">
-    <button class="modal-close" id="modalClose" aria-label="Close">&#10005;</button>
-    <p class="modal-eyebrow" id="modalEyebrow"></p>
-    <h3 class="modal-title" id="modalTitle"></h3>
-    <div id="modalVerses"></div>
-  </div>
-</div>
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
 
 <script>
-const DATA = {
-  legacy: [
-    { title:"47 Scholars, One Epic Team", blocks:[{ref:"1604 Commission",text:"54 revisers were initially approved, but 47 brilliant minds crafted the KJV."}] },
-    { title:"Six Predecessors Paved the Way", blocks:[{ref:"Earlier English Bibles",text:"Built on Wycliffe's (1384), Tyndale's (1525), Coverdale's (1535), Matthew's (1537), Great (1539), and Bishops' (1568) Bibles, the KJV refined them all."}] },
-    { title:"Seven Years of Sweat", blocks:[{ref:"1604 to 1611",text:"Scholars toiled to translate from Hebrew, Greek, and Aramaic, ensuring accuracy and poetic flair."}] },
-    { title:"Six Companies, Divide and Conquer", blocks:[{ref:"Westminster · Oxford · Cambridge",text:"Split into six groups — two each in Westminster, Oxford, and Cambridge — they tackled different Bible sections for precision."}] },
-    { title:"Tyndale's Ghost Lives On", blocks:[{ref:"84% NT · 76% OT",text:"About 84% of the KJV's New Testament and 76% of its Old Testament echo William Tyndale's groundbreaking work."}] },
-    { title:"47,000 Copies Launched It", blocks:[{ref:'The "He Bible," 1611',text:"The first 1611 edition, dubbed the \u201cHe Bible,\u201d printed 47,000 copies — a massive run for its time."}] },
-    { title:"No Calvinist Notes Allowed", blocks:[{ref:"Royal Approval",text:"King James banned the Geneva Bible's Puritan notes, ensuring the KJV was a neutral, royal-approved text."}] }
-  ],
-  translation: [
-    { title:"Collaboration", blocks:[{ref:"Textual Sources",text:"Translators of the KJV utilized earlier translations and the original preserved manuscripts — the Masoretic Text for the Old Testament, and the Antioch manuscripts, called \u201cThe Received Text,\u201d or Textus Receptus, for the New Testament — striving for accuracy while adapting the language to be accessible and beautiful to the English-speaking public."}] },
-    { title:"Literary Style", blocks:[{ref:"A Literary Masterpiece",text:"The KJV is renowned for its poetic and rhythmic style, making it not only a religious text but also a literary masterpiece that has influenced English literature significantly."}] },
-    { title:"Cultural Impact", blocks:[{ref:"400 Years of Influence",text:"The King James Version has left an indelible mark on Christianity, used for 400 years to win souls on every continent and country — shaping the culture, language, and literature of the world, and the expressions and idioms that remain in common use even today."}] }
-  ],
-  lesserknown: [
-    { title:"Oxford &amp; Cambridge Tweak It", blocks:[{ref:"1762 &amp; 1769 Revisions",text:"Revised editions in 1769 (Oxford) and 1762 (Cambridge) standardized spelling, punctuation, and italics for clarity."}] },
-    { title:"Apocrypha? Not Inspired!", blocks:[{ref:"1611 Edition",text:"The 1611 KJV included the Apocrypha but clearly marked it as non-inspired, separating it from canonical Scripture."}] },
-    { title:"Sinners' Bible Blunder", blocks:[{ref:"1631 Misprint",text:'A 1631 misprint, dubbed the \u201cSinners\u2019 Bible,\u201d omitted \u201cnot\u201d from Exodus 20:14, reading \u201cThou shalt commit adultery\u201d!'}] },
-    { title:"Printer's Pricey Mistake", blocks:[{ref:"Robert Barker, 1631",text:'The \u201cSinners\u2019 Bible\u201d led to a \u00a31,000 fine for printer Robert Barker \u2014 big money in 1631!'}] },
-    { title:"Best-Selling Book Ever", blocks:[{ref:"Global Reach",text:"The KJV holds the title as the world's top-selling book, with billions of copies distributed globally."}] },
-    { title:"No Copyright (Outside England)", blocks:[{ref:"Crown Copyright",text:"Free to print worldwide, except in England, where the Crown holds rights — fueling its global spread."}] }
-  ],
-  precision: [
-    { title:"The Power of God to Them That Are Saved", blocks:[
-      {ref:"1 Corinthians 1:18", text:"For the preaching of the cross is to them that perish foolishness; but unto us which are saved it is the power of God."},
-      {ref:"Meaning", text:"The word of the cross is the power of God precisely to those who stand in the state of having been saved \u2014 God's effective, completed work secures the believer."}
-    ]},
-    { title:"If Ye Keep in Memory", blocks:[
-      {ref:"1 Corinthians 15:2", text:"By which also ye are saved, if ye keep in memory what I preached unto you, unless ye have believed in vain."},
-      {ref:"Meaning", text:"The \u201cif\u201d clause is not a condition for retaining salvation but the evidence of genuine faith \u2014 true believers hold fast because they are already saved."}
-    ]},
-    { title:"Supporting the Eternally Secure Reading", blocks:[
-      {ref:"Philippians 1:6", text:"Being confident of this very thing, that he which hath begun a good work in you will perform it until the day of Jesus Christ:"},
-      {ref:"John 10:28-29", text:"And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand. My Father, which gave them me, is greater than all; and none is able to pluck them out of my Father's hand."},
-      {ref:"Romans 8:30", text:"Moreover whom he did predestinate, them he also called: and whom he called, them he also justified: and whom he justified, them he also glorified."},
-      {ref:"Ephesians 2:8-9", text:"For by grace are ye saved through faith; and that not of yourselves: it is the gift of God: Not of works, lest any man should boast."}
-    ]}
-  ],
-  funfacts: [
-    { title:"Epic Timespan", blocks:[{ref:"4,284 Years Covered",text:"From creation in Genesis to John's writing of Revelation (c. AD 95\u201397), the Bible covers approximately 4,284 years. The writing itself spans over 1,500 years, from Moses (c. 1400 BC) penning the first five books to Revelation (c. AD 95)."}] },
-    { title:"40+ Authors, One God", blocks:[{ref:"Kings, Shepherds, Prophets, Fishermen",text:"Written by over 40 diverse authors, inspired by the Holy Spirit."}] },
-    { title:"Prophecy Power", blocks:[{ref:"1,800+ Prophecies",text:"Over 1,800 prophecies, with 300+ about Jesus fulfilled perfectly \u2014 like His Bethlehem birth (Micah 5:2)."}] },
-    { title:"Self-Referencing Scripture", blocks:[{ref:'"It Is Written"',text:"The Bible cites itself over 1,000 times, affirming its own authority."}] },
-    { title:"The KJV Is Its Own Dictionary", blocks:[{ref:"First Appearance Rule",text:"You can generally find the meaning of a word by looking for its first appearance and seeing the context."}] },
-    { title:"Year-Long Read", blocks:[{ref:"1,189 Chapters",text:"Read 3.3 chapters daily to finish in a year \u2014 or read 30 minutes daily and finish in under 5 months!"}] },
-    { title:"66 Books, One Story", blocks:[{ref:"39 OT + 27 NT",text:"Thirty-nine Old Testament and twenty-seven New Testament books weave God's redemptive plan from Genesis to Revelation."}] },
-    { title:"Verses Galore", blocks:[{ref:"31,102 Verses",text:"Packed with wisdom, history, and God's Word for all."}] },
-    { title:"No Contradictions", blocks:[{ref:"Divine Inspiration",text:"Despite centuries and 40+ authors, the Bible's message stays unified \u2014 a testament to divine inspiration."}] },
-    { title:"Three Tongues", blocks:[{ref:"Hebrew · Aramaic · Greek",text:"Written in Hebrew (Old Testament), Aramaic (parts of Daniel and Ezra), and Greek (New Testament)."}] },
-    { title:"Shortest &amp; Longest Chapters", blocks:[{ref:"Psalm 117 &amp; Psalm 119",text:"Psalm 117 (2 verses) is the shortest; Psalm 119 (176 verses) is the longest \u2014 a meditation on God's Word."}] },
-    { title:"Shortest Verse", blocks:[{ref:"John 11:35",text:'"Jesus wept" \u2014 shows Christ\u2019s humanity and mercy in just two words.'}] }
-  ],
-  books: [
-    { title:"Pentateuch", blocks:[{ref:"5 Books · God's Creation, the Law, Israel's Origins", text:"Genesis, Exodus, Leviticus, Numbers, Deuteronomy."}] },
-    { title:"Historical Books", blocks:[{ref:"12 Books · Conquest to Exile to Return", text:"Joshua, Judges, Ruth, 1 & 2 Samuel, 1 & 2 Kings, 1 & 2 Chronicles, Ezra, Nehemiah, Esther."}] },
-    { title:"Poetic / Wisdom Books", blocks:[{ref:"5 Books · Songs, Prayers, Wisdom", text:"Job, Psalms, Proverbs, Ecclesiastes, Song of Solomon."}] },
-    { title:"Major Prophets", blocks:[{ref:"5 Books · God's Word Through Bold Prophets", text:"Isaiah, Jeremiah/Lamentations, Ezekiel, Daniel."}] },
-    { title:"Minor Prophets", blocks:[{ref:"12 Books · Short, Powerful Prophetic Books", text:"Hosea, Joel, Amos, Obadiah, Jonah, Micah, Nahum, Habakkuk, Zephaniah, Haggai, Zechariah, Malachi."}] },
-    { title:"Gospels", blocks:[{ref:"4 Books · Jesus' Life, Death, and Resurrection", text:"Matthew, Mark, Luke, John."}] },
-    { title:"History", blocks:[{ref:"1 Book · The Early Church's Growth", text:"Acts."}] },
-    { title:"Pauline Epistles", blocks:[{ref:"13 Books · Paul's Letters to Churches and Leaders", text:"Romans, 1 & 2 Corinthians, Galatians, Ephesians, Philippians, Colossians, 1 & 2 Thessalonians, 1 & 2 Timothy, Titus, Philemon, Hebrews."}] },
-    { title:"General Epistles", blocks:[{ref:"8 Books · Letters for All Believers", text:"James, 1 & 2 Peter, 1, 2 & 3 John, Jude."}] },
-    { title:"Prophecy", blocks:[{ref:"1 Book · Christ's Return and Final Victory", text:"Revelation."}] }
-  ],
-  closing: [
-    { title:"Purified Seven Times", blocks:[{ref:"Psalm 12:6-7", text:"The words of the LORD are pure words: as silver tried in a furnace of earth, purified seven times. Thou shalt keep them, O LORD, thou shalt preserve them from this generation for ever."}] }
-  ]
+const BOOKS = {};
+
+const V = {
+  "Ephesians 2:8-9":[[8, "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:"], [9, "Not of works, lest any man should boast."]],
+  "Exodus 20:14":[[14, "Thou shalt not commit adultery."]],
+  "John 10:28-29":[[28, "And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand."], [29, "My Father, which gave them me, is greater than all; and no man is able to pluck them out of my Father’s hand."]],
+  "John 11:35":[[35, "Jesus wept."]],
+  "Micah 5:2":[[2, "But thou, Bethlehem Ephratah, though thou be little among the thousands of Judah, yet out of thee shall he come forth unto me that is to be ruler in Israel; whose goings forth have been from of old, from everlasting."]],
+  "Philippians 1:6":[[6, "Being confident of this very thing, that he which hath begun a good work in you will perform it until the day of Jesus Christ:"]],
+  "Psalms 117:1-2":[[1, "O Praise the LORD, all ye nations: praise him, all ye people."], [2, "For his merciful kindness is great toward us: and the truth of the LORD endureth for ever. Praise ye the LORD."]],
+  "Psalms 119:1-176":[[1, "Blessed are the undefiled in the way, who walk in the law of the LORD."], [2, "Blessed are they that keep his testimonies, and that seek him with the whole heart."], [3, "They also do no iniquity: they walk in his ways."], [4, "Thou hast commanded us to keep thy precepts diligently."], [5, "O that my ways were directed to keep thy statutes!"], [6, "Then shall I not be ashamed, when I have respect unto all thy commandments."], [7, "I will praise thee with uprightness of heart, when I shall have learned thy righteous judgments."], [8, "I will keep thy statutes: O forsake me not utterly."], [9, "Wherewithal shall a young man cleanse his way? by taking heed thereto according to thy word."], [10, "With my whole heart have I sought thee: O let me not wander from thy commandments."], [11, "Thy word have I hid in mine heart, that I might not sin against thee."], [12, "Blessed art thou, O LORD: teach me thy statutes."], [13, "With my lips have I declared all the judgments of thy mouth."], [14, "I have rejoiced in the way of thy testimonies, as much as in all riches."], [15, "I will meditate in thy precepts, and have respect unto thy ways."], [16, "I will delight myself in thy statutes: I will not forget thy word."], [17, "Deal bountifully with thy servant, that I may live, and keep thy word."], [18, "Open thou mine eyes, that I may behold wondrous things out of thy law."], [19, "I am a stranger in the earth: hide not thy commandments from me."], [20, "My soul breaketh for the longing that it hath unto thy judgments at all times."], [21, "Thou hast rebuked the proud that are cursed, which do err from thy commandments."], [22, "Remove from me reproach and contempt; for I have kept thy testimonies."], [23, "Princes also did sit and speak against me: but thy servant did meditate in thy statutes."], [24, "Thy testimonies also are my delight and my counsellors."], [25, "My soul cleaveth unto the dust: quicken thou me according to thy word."], [26, "I have declared my ways, and thou heardest me: teach me thy statutes."], [27, "Make me to understand the way of thy precepts: so shall I talk of thy wondrous works."], [28, "My soul melteth for heaviness: strengthen thou me according unto thy word."], [29, "Remove from me the way of lying: and grant me thy law graciously."], [30, "I have chosen the way of truth: thy judgments have I laid before me."], [31, "I have stuck unto thy testimonies: O LORD, put me not to shame."], [32, "I will run the way of thy commandments, when thou shalt enlarge my heart."], [33, "Teach me, O LORD, the way of thy statutes; and I shall keep it unto the end."], [34, "Give me understanding, and I shall keep thy law; yea, I shall observe it with my whole heart."], [35, "Make me to go in the path of thy commandments; for therein do I delight."], [36, "Incline my heart unto thy testimonies, and not to covetousness."], [37, "Turn away mine eyes from beholding vanity; and quicken thou me in thy way."], [38, "Stablish thy word unto thy servant, who is devoted to thy fear."], [39, "Turn away my reproach which I fear: for thy judgments are good."], [40, "Behold, I have longed after thy precepts: quicken me in thy righteousness."], [41, "Let thy mercies come also unto me, O LORD, even thy salvation, according to thy word."], [42, "So shall I have wherewith to answer him that reproacheth me: for I trust in thy word."], [43, "And take not the word of truth utterly out of my mouth; for I have hoped in thy judgments."], [44, "So shall I keep thy law continually for ever and ever."], [45, "And I will walk at liberty: for I seek thy precepts."], [46, "I will speak of thy testimonies also before kings, and will not be ashamed."], [47, "And I will delight myself in thy commandments, which I have loved."], [48, "My hands also will I lift up unto thy commandments, which I have loved; and I will meditate in thy statutes."], [49, "Remember the word unto thy servant, upon which thou hast caused me to hope."], [50, "This is my comfort in my affliction: for thy word hath quickened me."], [51, "The proud have had me greatly in derision: yet have I not declined from thy law."], [52, "I remembered thy judgments of old, O LORD; and have comforted myself."], [53, "Horror hath taken hold upon me because of the wicked that forsake thy law."], [54, "Thy statutes have been my songs in the house of my pilgrimage."], [55, "I have remembered thy name, O LORD, in the night, and have kept thy law."], [56, "This I had, because I kept thy precepts."], [57, "Thou art my portion, O LORD: I have said that I would keep thy words."], [58, "I intreated thy favour with my whole heart: be merciful unto me according to thy word."], [59, "I thought on my ways, and turned my feet unto thy testimonies."], [60, "I made haste, and delayed not to keep thy commandments."], [61, "The bands of the wicked have robbed me: but I have not forgotten thy law."], [62, "At midnight I will rise to give thanks unto thee because of thy righteous judgments."], [63, "I am a companion of all them that fear thee, and of them that keep thy precepts."], [64, "The earth, O LORD, is full of thy mercy: teach me thy statutes."], [65, "Thou hast dealt well with thy servant, O LORD, according unto thy word."], [66, "Teach me good judgment and knowledge: for I have believed thy commandments."], [67, "Before I was afflicted I went astray: but now have I kept thy word."], [68, "Thou art good, and doest good; teach me thy statutes."], [69, "The proud have forged a lie against me: but I will keep thy precepts with my whole heart."], [70, "Their heart is as fat as grease; but I delight in thy law."], [71, "It is good for me that I have been afflicted; that I might learn thy statutes."], [72, "The law of thy mouth is better unto me than thousands of gold and silver."], [73, "Thy hands have made me and fashioned me: give me understanding, that I may learn thy commandments."], [74, "They that fear thee will be glad when they see me; because I have hoped in thy word."], [75, "I know, O LORD, that thy judgments are right, and that thou in faithfulness hast afflicted me."], [76, "Let, I pray thee, thy merciful kindness be for my comfort, according to thy word unto thy servant."], [77, "Let thy tender mercies come unto me, that I may live: for thy law is my delight."], [78, "Let the proud be ashamed; for they dealt perversely with me without a cause: but I will meditate in thy precepts."], [79, "Let those that fear thee turn unto me, and those that have known thy testimonies."], [80, "Let my heart be sound in thy statutes; that I be not ashamed."], [81, "My soul fainteth for thy salvation: but I hope in thy word."], [82, "Mine eyes fail for thy word, saying, When wilt thou comfort me?"], [83, "For I am become like a bottle in the smoke; yet do I not forget thy statutes."], [84, "How many are the days of thy servant? when wilt thou execute judgment on them that persecute me?"], [85, "The proud have digged pits for me, which are not after thy law."], [86, "All thy commandments are faithful: they persecute me wrongfully; help thou me."], [87, "They had almost consumed me upon earth; but I forsook not thy precepts."], [88, "Quicken me after thy lovingkindness; so shall I keep the testimony of thy mouth."], [89, "For ever, O LORD, thy word is settled in heaven."], [90, "Thy faithfulness is unto all generations: thou hast established the earth, and it abideth."], [91, "They continue this day according to thine ordinances: for all are thy servants."], [92, "Unless thy law had been my delights, I should then have perished in mine affliction."], [93, "I will never forget thy precepts: for with them thou hast quickened me."], [94, "I am thine, save me; for I have sought thy precepts."], [95, "The wicked have waited for me to destroy me: but I will consider thy testimonies."], [96, "I have seen an end of all perfection: but thy commandment is exceeding broad."], [97, "O how love I thy law! it is my meditation all the day."], [98, "Thou through thy commandments hast made me wiser than mine enemies: for they are ever with me."], [99, "I have more understanding than all my teachers: for thy testimonies are my meditation."], [100, "I understand more than the ancients, because I keep thy precepts."], [101, "I have refrained my feet from every evil way, that I might keep thy word."], [102, "I have not departed from thy judgments: for thou hast taught me."], [103, "How sweet are thy words unto my taste! yea, sweeter than honey to my mouth!"], [104, "Through thy precepts I get understanding: therefore I hate every false way."], [105, "Thy word is a lamp unto my feet, and a light unto my path."], [106, "I have sworn, and I will perform it, that I will keep thy righteous judgments."], [107, "I am afflicted very much: quicken me, O LORD, according unto thy word."], [108, "Accept, I beseech thee, the freewill offerings of my mouth, O LORD, and teach me thy judgments."], [109, "My soul is continually in my hand: yet do I not forget thy law."], [110, "The wicked have laid a snare for me: yet I erred not from thy precepts."], [111, "Thy testimonies have I taken as an heritage for ever: for they are the rejoicing of my heart."], [112, "I have inclined mine heart to perform thy statutes alway, even unto the end."], [113, "I hate vain thoughts: but thy law do I love."], [114, "Thou art my hiding place and my shield: I hope in thy word."], [115, "Depart from me, ye evildoers: for I will keep the commandments of my God."], [116, "Uphold me according unto thy word, that I may live: and let me not be ashamed of my hope."], [117, "Hold thou me up, and I shall be safe: and I will have respect unto thy statutes continually."], [118, "Thou hast trodden down all them that err from thy statutes: for their deceit is falsehood."], [119, "Thou puttest away all the wicked of the earth like dross: therefore I love thy testimonies."], [120, "My flesh trembleth for fear of thee; and I am afraid of thy judgments."], [121, "I have done judgment and justice: leave me not to mine oppressors."], [122, "Be surety for thy servant for good: let not the proud oppress me."], [123, "Mine eyes fail for thy salvation, and for the word of thy righteousness."], [124, "Deal with thy servant according unto thy mercy, and teach me thy statutes."], [125, "I am thy servant; give me understanding, that I may know thy testimonies."], [126, "It is time for thee, LORD, to work: for they have made void thy law."], [127, "Therefore I love thy commandments above gold; yea, above fine gold."], [128, "Therefore I esteem all thy precepts concerning all things to be right; and I hate every false way."], [129, "Thy testimonies are wonderful: therefore doth my soul keep them."], [130, "The entrance of thy words giveth light; it giveth understanding unto the simple."], [131, "I opened my mouth, and panted: for I longed for thy commandments."], [132, "Look thou upon me, and be merciful unto me, as thou usest to do unto those that love thy name."], [133, "Order my steps in thy word: and let not any iniquity have dominion over me."], [134, "Deliver me from the oppression of man: so will I keep thy precepts."], [135, "Make thy face to shine upon thy servant; and teach me thy statutes."], [136, "Rivers of waters run down mine eyes, because they keep not thy law."], [137, "Righteous art thou, O LORD, and upright are thy judgments."], [138, "Thy testimonies that thou hast commanded are righteous and very faithful."], [139, "My zeal hath consumed me, because mine enemies have forgotten thy words."], [140, "Thy word is very pure: therefore thy servant loveth it."], [141, "I am small and despised: yet do not I forget thy precepts."], [142, "Thy righteousness is an everlasting righteousness, and thy law is the truth."], [143, "Trouble and anguish have taken hold on me: yet thy commandments are my delights."], [144, "The righteousness of thy testimonies is everlasting: give me understanding, and I shall live."], [145, "I cried with my whole heart; hear me, O LORD: I will keep thy statutes."], [146, "I cried unto thee; save me, and I shall keep thy testimonies."], [147, "I prevented the dawning of the morning, and cried: I hoped in thy word."], [148, "Mine eyes prevent the night watches, that I might meditate in thy word."], [149, "Hear my voice according unto thy lovingkindness: O LORD, quicken me according to thy judgment."], [150, "They draw nigh that follow after mischief: they are far from thy law."], [151, "Thou art near, O LORD; and all thy commandments are truth."], [152, "Concerning thy testimonies, I have known of old that thou hast founded them for ever."], [153, "Consider mine affliction, and deliver me: for I do not forget thy law."], [154, "Plead my cause, and deliver me: quicken me according to thy word."], [155, "Salvation is far from the wicked: for they seek not thy statutes."], [156, "Great are thy tender mercies, O LORD: quicken me according to thy judgments."], [157, "Many are my persecutors and mine enemies; yet do I not decline from thy testimonies."], [158, "I beheld the transgressors, and was grieved; because they kept not thy word."], [159, "Consider how I love thy precepts: quicken me, O LORD, according to thy lovingkindness."], [160, "Thy word is true from the beginning: and every one of thy righteous judgments endureth for ever."], [161, "Princes have persecuted me without a cause: but my heart standeth in awe of thy word."], [162, "I rejoice at thy word, as one that findeth great spoil."], [163, "I hate and abhor lying: but thy law do I love."], [164, "Seven times a day do I praise thee because of thy righteous judgments."], [165, "Great peace have they which love thy law: and nothing shall offend them."], [166, "LORD, I have hoped for thy salvation, and done thy commandments."], [167, "My soul hath kept thy testimonies; and I love them exceedingly."], [168, "I have kept thy precepts and thy testimonies: for all my ways are before thee."], [169, "Let my cry come near before thee, O LORD: give me understanding according to thy word."], [170, "Let my supplication come before thee: deliver me according to thy word."], [171, "My lips shall utter praise, when thou hast taught me thy statutes."], [172, "My tongue shall speak of thy word: for all thy commandments are righteousness."], [173, "Let thine hand help me; for I have chosen thy precepts."], [174, "I have longed for thy salvation, O LORD; and thy law is my delight."], [175, "Let my soul live, and it shall praise thee; and let thy judgments help me."], [176, "I have gone astray like a lost sheep; seek thy servant; for I do not forget thy commandments."]],
+  "Romans 8:30":[[30, "Moreover whom he did predestinate, them he also called: and whom he called, them he also justified: and whom he justified, them he also glorified."]]
 };
 
-function refLine(item){
-  if(item.blocks.length === 1) return item.blocks[0].ref;
-  return item.blocks.map(b=>b.ref).join(" · ");
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
 }
 
-function buildGrid(containerId, items, opts){
-  opts = opts || {};
-  const el = document.getElementById(containerId);
-  if(!el) return;
-  items.forEach((item) => {
-    let cls = 'card';
-    if(opts.crimson) cls += ' crimson';
-    if(opts.sage) cls += ' sage';
-    const card = document.createElement('div');
-    card.className = cls;
-    card.innerHTML = `
-      <p class="ct-name">${item.title}</p>
-      <p class="ct-ref">${refLine(item)}</p>
-      <p class="ct-hint">Tap to read &rarr;</p>
-    `;
-    card.addEventListener('click', () => openModal(item, opts.eyebrow));
-    el.appendChild(card);
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
   });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
 }
 
-buildGrid('grid-legacy', DATA.legacy, {eyebrow:'A Timeless Legacy'});
-buildGrid('grid-translation', DATA.translation, {eyebrow:'Translation & Impact'});
-buildGrid('grid-lesserknown', DATA.lesserknown, {eyebrow:'Lesser-Known Facts', crimson:true});
-buildGrid('grid-precision', DATA.precision, {eyebrow:'Precision in Translation'});
-buildGrid('grid-funfacts', DATA.funfacts, {eyebrow:'Fun Bible Facts', sage:true});
-buildGrid('grid-books', DATA.books, {eyebrow:'Books of the Bible'});
-buildGrid('grid-closing', DATA.closing, {eyebrow:'Preservation'});
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
 
-const overlay = document.getElementById('overlay');
-const modalEyebrow = document.getElementById('modalEyebrow');
-const modalTitle = document.getElementById('modalTitle');
-const modalVerses = document.getElementById('modalVerses');
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
 
-function openModal(item, eyebrow){
-  modalEyebrow.textContent = eyebrow || '';
-  modalTitle.innerHTML = item.title;
-  modalVerses.innerHTML = item.blocks.map(b => `
-    <div class="verse-block">
-      <p class="verse-ref">${b.ref}</p>
-      <p class="verse-text">${b.text}</p>
-    </div>
-  `).join('');
-  overlay.classList.add('open');
-  document.getElementById('modal').scrollTop = 0;
-}
-
-function closeModal(){ overlay.classList.remove('open'); }
-
-document.getElementById('modalClose').addEventListener('click', closeModal);
-overlay.addEventListener('click', (e) => { if(e.target === overlay) closeModal(); });
-document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
 </script>
 </body>
 </html>
