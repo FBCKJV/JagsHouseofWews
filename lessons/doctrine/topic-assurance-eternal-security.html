@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eternal Security – Once Saved, Always Saved</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="The believer can never lose salvation: kept in the Father&#x27;s hand, sealed by the Spirit, and never cast out. Built from the teachings on eternal security.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="The doctrine" data-title="Eternal Security">
+  <div class="page title-page">
+    <div class="overline">Doctrine · Assurance</div>
+    <h1>Eternal Security</h1>
+    <p class="sub">Once saved always saved is not just a slogan, it is the truth of the Gospel.</p>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move through the study. Tap any gold reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="The doctrine" data-title="They can never lose their salvation">
+  <div class="page">
+    <h2>They can never lose their salvation</h2>
+    <blockquote class="big-verse">And I give unto them eternal life; and <mark>they shall never perish</mark>, neither shall any man pluck them out of my hand. My Father, which gave them me, is greater than all; and no man is able to pluck them out of my Father’s hand.<cite>John 10:28-29</cite></blockquote>
+    <p class="lead">If a person has believed in their heart that Jesus Christ died for their sins, and received the baptism of the holy Spirit, made a child of God, they can NEVER lose their salvation.</p>
+    <p class="sub center">You cannot claim to believe on Christ and at the same time maintain that it can be lost.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="What Jesus says" data-title="None shall pluck them out">
+  <div class="page">
+    <div class="kicker">John 10</div>
+    <h2>None shall pluck them out</h2>
+    <p class="lead">Like we have seen repeatedly, Jesus spells it out and explains His parables and analogies in clear, unmistakable language.</p>
+    <p>Those who hear the Gospel and believe the truth Jesus gives <strong>eternal life</strong>. They <strong>shall never perish</strong>. No man can take them, that is make them unbelievers, bring them to repent of their faith, having repented into belief. <strong>No man</strong>. Not ourselves, not another.</p>
+    <div class="callout"><p>Once you are saved you are always saved, always His, always His sheep.</p></div>
+    <div class="refs center"><button class="ref" data-v="John 10:27-30">John 10:27-30</button></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="What Jesus says" data-title="In no wise cast out">
+  <div class="page">
+    <h2>In no wise cast out</h2>
+    <blockquote class="scripture" style="font-style:italic">All that the Father giveth me shall come to me; and him that cometh to me <mark>I will in no wise cast out</mark>. For I came down from heaven, not to do mine own will, but the will of him that sent me. And this is the Father’s will which hath sent me, that of all which he hath given me <mark>I should lose nothing</mark>, but should raise it up again at the last day. And this is the will of him that sent me, that every one which seeth the Son, and believeth on him, may have everlasting life: and I will raise him up at the last day.<cite>John 6:37-40</cite></blockquote>
+    <p>Those who say you can lose your salvation ignore that Jesus says those given Him by God's grace shall in no wise be cast out. That He <strong>shall not lose any</strong> who believe and are given Him. That they will have everlasting life and be raised up on the last day.</p>
+    <p class="center"><strong>Everlasting</strong>. You cannot lose your salvation.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="What Jesus says" data-title="Shall never die">
+  <div class="page">
+    <h2>Shall never die</h2>
+    <blockquote class="big-verse">Jesus said unto her, I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live: And whosoever liveth and believeth in me <mark>shall never die</mark>. Believest thou this?<cite>John 11:25-26</cite></blockquote>
+    <p>Martha confesses the truth of the Gospel Jesus gives, the truth her brother and sister also believe. That those who believe on Him shall never die, but he shall live. This is salvation by faith and eternal security, yet again.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Kept by God" data-title="Nothing can separate us">
+  <div class="page">
+    <h2>Nothing can separate us</h2>
+    <blockquote class="scripture" style="font-style:italic">Who shall separate us from the love of Christ? shall tribulation, or distress, or persecution, or famine, or nakedness, or peril, or sword? As it is written, For thy sake we are killed all the day long; we are accounted as sheep for the slaughter. Nay, in all these things we are more than conquerors through him that loved us. For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come, Nor height, nor depth, nor any other creature, <mark>shall be able to separate us from the love of God</mark>, which is in Christ Jesus our Lord.<cite>Romans 8:35-39</cite></blockquote>
+    <p>And nothing can separate us from God once we have received the Spirit, which is by faith, through grace.</p>
+    <div class="callout"><p>Let no man tell you you can lose your salvation. Let no man lay charge against you who are in Christ. Let no man lead you back to the yoke of the law, which is death.</p></div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Kept by God" data-title="Sealed and kept by the power of God">
+  <div class="page">
+    <h2>Sealed and kept by the power of God</h2>
+    <p class="lead">All who believe on Him have eternal life and remission of sin, are sealed by the Spirit unto redemption. To an inheritance incorruptible, that never fades. Kept by the power of God. Eternal security. Once saved, always saved.</p>
+    <blockquote class="scripture" style="font-style:italic">To an inheritance incorruptible, and undefiled, and that fadeth not away, reserved in heaven for you, Who are <mark>kept by the power of God</mark> through faith unto salvation ready to be revealed in the last time.<cite>1 Peter 1:4-5</cite></blockquote>
+    <p>The eternal security of salvation is the purpose of the Spirit indwelling us. That we may KNOW we have eternal life.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Kept by God" data-title="The truth dwelleth in us for ever">
+  <div class="page">
+    <h2>The truth dwelleth in us for ever</h2>
+    <blockquote class="big-verse">For the truth’s sake, which dwelleth in us, and shall be with us for ever.<cite>2 John 2</cite></blockquote>
+    <p>They may backslide, become castaway and chastised by God, not produce works or fruits and even forget their own salvation, but they will NEVER believe anything other than the truth of the gospel, because the truth dwells within us and shall be with us forever.</p>
+    <p>Once you have partaken and drank the water of life, you will never thirst again. How could you? The Spirit of truth does not leave room for the spirit of error.</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Kept by God" data-title="His sons are always His sons">
+  <div class="page">
+    <h2>His sons are always His sons</h2>
+    <p class="lead">In dozens of clear verses, and in parable and story, we see how God rates forgiveness, how His sons are always His sons.</p>
+    <p>That we are heirs to the kingdom through Christ, adopted to the promise. Not servants to work off debt. Not fumbling Esau, trying to emulate Jacob and regain favor.</p>
+    <div class="vps"><div class="vp fig"><h3>Planted, not plucked up</h3><blockquote class="scripture" style="font-style:italic">For I will set mine eyes upon them for good, and I will bring them again to this land: and I will build them, and not pull them down; and I will plant them, and not pluck them up.<cite>Jeremiah 24:6</cite></blockquote><p>We are planted in Christ and cannot be plucked up.</p></div></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Answering the errors" data-title="Judas was never saved">
+  <div class="page">
+    <h2>Judas was never saved</h2>
+    <div class="cols"><div class="panel cain"><h3>The claim</h3><p>There is a false doctrine out there that Judas proves you can lose your salvation, but of course that's untrue.</p></div><div class="panel believers"><h3>The answer</h3><p>Not only wasn't Judas saved, he was a reprobate and Jesus knew this.</p></div></div>
+    <div class="vps"><div class="vp fig"><h3>One of you is a devil</h3><blockquote class="scripture" style="font-style:italic">Jesus answered them, Have not I chosen you twelve, and one of you is a devil?<cite>John 6:70</cite></blockquote></div></div>
+    <p>This literally couldn't be any clearer and is completely spelled out. <button class="ref" data-v="John 6:64">John 6:64</button></p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Answering the errors" data-title="Hebrews 6">
+  <div class="page">
+    <h2>Hebrews 6</h2>
+    <div class="cols"><div class="panel cain"><h3>The claim</h3><p>And so many false prophets teach that Hebrews 6 is a warning that you can lose your salvation.</p></div><div class="panel believers"><h3>The answer</h3><p>If someone chooses atheism after having full knowledge of salvation, they were never saved. They believed in vain. They had head knowledge, but didn't trust in their heart.</p></div></div>
+    <div class="vps"><div class="vp fig"><h3>They were not of us</h3><blockquote class="scripture" style="font-style:italic">They went out from us, but they were not of us; for if they had been of us, they would no doubt have continued with us: but they went out, that they might be made manifest that they were not all of us.<cite>1 John 2:19</cite></blockquote></div></div>
+    <p>God has sworn we cannot lose the free gift of eternal life that He has given us in His grace and mercy, purchased by the blood of Christ. <button class="ref" data-v="Hebrews 6:4-6">Hebrews 6:4-6</button></p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Answering the errors" data-title="He that endureth to the end">
+  <div class="page">
+    <h2>He that endureth to the end</h2>
+    <div class="vps"><div class="vp lit"><h3>Endure unto the end</h3><blockquote class="scripture" style="font-style:italic">But he that shall endure unto the end, the same shall be saved.<cite>Matthew 24:13</cite></blockquote></div></div>
+    <p>Too many false teachers assert that perseverance is for our spiritual salvation, that we could lose the free gift of eternal life, but that is not the context or meaning of it. It is for grace and protection during tribulation and persecution.</p>
+    <div class="callout"><p>Saved from the persecution. Saved out of great tribulation. <button class="ref" data-v="Revelation 7:14">Revelation 7:14</button></p></div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Answering the errors" data-title="Salvation cannot be lost, only refused">
+  <div class="page">
+    <h2>Salvation cannot be lost, only refused</h2>
+    <div class="cols"><div class="panel cain"><h3>The claim</h3><p>Some use these parables to teach that you can lose your salvation. That the foolish virgins and the unprofitable servant were saved, and having been sinful or disobedient, had lost their shot at Heaven.</p></div><div class="panel believers"><h3>The answer</h3><p>The foolish virgins and unprofitable servant believed falsely, and what had been given them, the chance to enter into the joy of the Lord, is taken from them. Salvation cannot be lost, only refused.</p></div></div>
+    <p>The unforgiving servant wasn't saved and then lost his salvation for being unforgiving. He was never saved because he never accepted that he truly owed that debt.</p>
+    <div class="refs center"><button class="ref" data-v="Matthew 25:1-13">Matthew 25:1-13</button><button class="ref" data-v="Matthew 25:24-30">Matthew 25:24-30</button><button class="ref" data-v="Matthew 18:23-35">Matthew 18:23-35</button></div>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Answering the errors" data-title="The candlestick and the book of life">
+  <div class="page">
+    <h2>The candlestick and the book of life</h2>
+    <div class="cols"><div class="panel cain"><h3>Remove thy candlestick</h3><p>Aren't those verses where Jesus tells the churches to repent or He will "remove thy candlestick" saying they are going to lose their salvation? The answer is a resounding no.</p></div><div class="panel believers"><h3>The candlesticks are the churches</h3><p>He is literally speaking of their authority, hedge of protection, etc, as His church in fellowship with Him. He doesn't threaten those saints with damnation.</p></div></div>
+    <div class="vps"><div class="vp fig"><h3>The seven candlesticks</h3><blockquote class="scripture" style="font-style:italic">The mystery of the seven stars which thou sawest in my right hand, and the seven golden candlesticks. The seven stars are the angels of the seven churches: and the seven candlesticks which thou sawest are the seven churches.<cite>Revelation 1:20</cite></blockquote></div></div>
+    <p>Jesus' promise to us who are saved is that He will confess our names before our Father. No one in the Bible is added to the book of life, only blotted out and removed having already been there. <button class="ref" data-v="Revelation 3:5">Revelation 3:5</button></p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Saved, yet chastened" data-title="Castaway, not lost">
+  <div class="page">
+    <h2>Castaway, not lost</h2>
+    <p class="lead">Saul was castaway. He never stopped believing, never lost his salvation, but he no longer would receive the blessings and benefits.</p>
+    <p>Obedience to the Lord is not for our spiritual salvation, but rather that it be well with us and we may be His workmen doing great things for the Lord.</p>
+    <p>The longsuffering of God has limits and He will take from us blessings and eventually even call us home if we no longer can be useful to His works that He has crafted us to do.</p>
+    <div class="refs center"><button class="ref" data-v="1 Samuel 15:22-23">1 Samuel 15:22-23</button><button class="ref" data-v="1 Corinthians 9:27">1 Corinthians 9:27</button></div>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Saved, yet chastened" data-title="Not a license to sin">
+  <div class="page">
+    <h2>Not a license to sin</h2>
+    <div class="cols"><div class="panel cain"><h3>The slander</h3><p>People who doubt the gospel will often slanderously report that we teach a license to sin.</p></div><div class="panel believers"><h3>The truth</h3><p>But in truth, we who are saved are held to a higher standard. To whom much is given, much is expected. The chastisement of God is fierce against our sin.</p></div></div>
+    <div class="vps"><div class="vp fig"><h3>Vessels to honour and dishonour</h3><blockquote class="scripture" style="font-style:italic">But in a great house there are not only vessels of gold and of silver, but also of wood and of earth; and some to honour, and some to dishonour. If a man therefore purge himself from these, he shall be a vessel unto honour, sanctified, and meet for the master’s use, and prepared unto every good work.<cite>2 Timothy 2:20-21</cite></blockquote><p>Some will sanctify themselves to honor, becoming more useful to God. Others won't be more than earthen pots, and dishonored. But all are saved.</p></div></div>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Saved, yet chastened" data-title="The evil report">
+  <div class="page">
+    <h2>The evil report</h2>
+    <p class="lead">Probably the biggest stumbling block people get caught on is the idea of eternal security.</p>
+    <div class="vps"><div class="vp lit"><h3>The evil report</h3><blockquote class="scripture" style="font-style:italic">And they brought up an evil report of the land which they had searched unto the children of Israel, saying, The land, through which we have gone to search it, is a land that eateth up the inhabitants thereof; and all the people that we saw in it are men of a great stature. And there we saw the giants, the sons of Anak, which come of the giants: and we were in our own sight as grasshoppers, and so we were in their sight.<cite>Numbers 13:32-33</cite></blockquote><p>This is the spirit of fear and doubt that uses the lie that eternal security doesn't exist. That you can lose your salvation. That because you are small and weak, you won't make it.</p></div><div class="vp rev"><h3>Let us go up at once</h3><blockquote class="scripture" style="font-style:italic">And Caleb stilled the people before Moses, and said, Let us go up at once, and possess it; for we are well able to overcome it.<cite>Numbers 13:30</cite></blockquote><p>Joshua and Caleb showed them the fruit that comes from trusting in the Lord.</p></div></div>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Saved, yet chastened" data-title="Our blessed hope">
+  <div class="page">
+    <h2>Our blessed hope</h2>
+    <blockquote class="big-verse">Beloved, now are we the sons of God, and it doth not yet appear what we shall be: but we know that, when he shall appear, <mark>we shall be like him</mark>; for we shall see him as he is.<cite>1 John 3:2</cite></blockquote>
+    <p>We seek the resurrection. To be shed of the sinful flesh and to fully be the new man. That is our hope.</p>
+    <p>If you aren't trusting God that that's a sure thing for believing Jesus died and rose again, when His word tells us again and again that that is the payoff for that faith, then you don't have a hope in Hell.</p>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Summary" data-title="Summary">
+  <div class="page">
+    <h2>Summary</h2>
+    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>Never lost</strong>If a person has believed in their heart that Jesus Christ died for their sins, they can NEVER lose their salvation.</li><li><strong>Held in His hand</strong>No man can take them. <strong>No man</strong>. Not ourselves, not another.</li><li><strong>Never cast out</strong>He <strong>shall not lose any</strong> who believe and are given Him.</li><li><strong>Never fall away</strong>The truth dwells within us and shall be with us forever.</li><li><strong>Chastened, not lost</strong>Obedience to the Lord is not for our spiritual salvation. The chastisement of God is fierce against our sin.</li><li><strong>Our hope</strong>Once saved always saved is not just a slogan, it is the truth of the Gospel and the crux of the Gospel.</li></ol></div>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Summary" data-title="Read the teachings">
+  <div class="page">
+    <h2>Read the teachings</h2>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-assurance~1718" target="_blank" rel="noopener">None shall pluck them out of my hand ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-assurance~1553" target="_blank" rel="noopener">I will in no wise cast out ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-assurance~12335" target="_blank" rel="noopener">Nothing can separate us ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-assurance~15606" target="_blank" rel="noopener">The truth dwelleth in us for ever ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-assurance~8597" target="_blank" rel="noopener">Hebrews 6 Does Not Teach Losing Salvation ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-assurance~15618" target="_blank" rel="noopener">He that endureth to the end ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-assurance~5571" target="_blank" rel="noopener">Salvation cannot be lost, only refused ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-assurance~12544" target="_blank" rel="noopener">The evil report against eternal security ↗</a></div>
+    <p class="sub center">Every teaching on this theme is on the <a class="ref lesson-link" href="../../studies/#doctrine-assurance" target="_blank" rel="noopener">Repentance &amp; assurance ↗</a> page.</p>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 Corinthians 9:27":[[27, "But I keep under my body, and bring it into subjection: lest that by any means, when I have preached to others, I myself should be a castaway."]],
+  "1 Samuel 15:22-23":[[22, "And Samuel said, Hath the LORD as great delight in burnt offerings and sacrifices, as in obeying the voice of the LORD? Behold, to obey is better than sacrifice, and to hearken than the fat of rams."], [23, "For rebellion is as the sin of witchcraft, and stubbornness is as iniquity and idolatry. Because thou hast rejected the word of the LORD, he hath also rejected thee from being king."]],
+  "Hebrews 6:4-6":[[4, "For it is impossible for those who were once enlightened, and have tasted of the heavenly gift, and were made partakers of the Holy Ghost,"], [5, "And have tasted the good word of God, and the powers of the world to come,"], [6, "If they shall fall away, to renew them again unto repentance; seeing they crucify to themselves the Son of God afresh, and put him to an open shame."]],
+  "John 10:27-30":[[27, "My sheep hear my voice, and I know them, and they follow me:"], [28, "And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand."], [29, "My Father, which gave them me, is greater than all; and no man is able to pluck them out of my Father’s hand."], [30, "I and my Father are one."]],
+  "John 6:64":[[64, "But there are some of you that believe not. For Jesus knew from the beginning who they were that believed not, and who should betray him."]],
+  "Matthew 18:23-35":[[23, "Therefore is the kingdom of heaven likened unto a certain king, which would take account of his servants."], [24, "And when he had begun to reckon, one was brought unto him, which owed him ten thousand talents."], [25, "But forasmuch as he had not to pay, his lord commanded him to be sold, and his wife, and children, and all that he had, and payment to be made."], [26, "The servant therefore fell down, and worshipped him, saying, Lord, have patience with me, and I will pay thee all."], [27, "Then the lord of that servant was moved with compassion, and loosed him, and forgave him the debt."], [28, "But the same servant went out, and found one of his fellowservants, which owed him an hundred pence: and he laid hands on him, and took him by the throat, saying, Pay me that thou owest."], [29, "And his fellowservant fell down at his feet, and besought him, saying, Have patience with me, and I will pay thee all."], [30, "And he would not: but went and cast him into prison, till he should pay the debt."], [31, "So when his fellowservants saw what was done, they were very sorry, and came and told unto their lord all that was done."], [32, "Then his lord, after that he had called him, said unto him, O thou wicked servant, I forgave thee all that debt, because thou desiredst me:"], [33, "Shouldest not thou also have had compassion on thy fellowservant, even as I had pity on thee?"], [34, "And his lord was wroth, and delivered him to the tormentors, till he should pay all that was due unto him."], [35, "So likewise shall my heavenly Father do also unto you, if ye from your hearts forgive not every one his brother their trespasses."]],
+  "Matthew 25:1-13":[[1, "Then shall the kingdom of heaven be likened unto ten virgins, which took their lamps, and went forth to meet the bridegroom."], [2, "And five of them were wise, and five were foolish."], [3, "They that were foolish took their lamps, and took no oil with them:"], [4, "But the wise took oil in their vessels with their lamps."], [5, "While the bridegroom tarried, they all slumbered and slept."], [6, "And at midnight there was a cry made, Behold, the bridegroom cometh; go ye out to meet him."], [7, "Then all those virgins arose, and trimmed their lamps."], [8, "And the foolish said unto the wise, Give us of your oil; for our lamps are gone out."], [9, "But the wise answered, saying, Not so; lest there be not enough for us and you: but go ye rather to them that sell, and buy for yourselves."], [10, "And while they went to buy, the bridegroom came; and they that were ready went in with him to the marriage: and the door was shut."], [11, "Afterward came also the other virgins, saying, Lord, Lord, open to us."], [12, "But he answered and said, Verily I say unto you, I know you not."], [13, "Watch therefore, for ye know neither the day nor the hour wherein the Son of man cometh."]],
+  "Matthew 25:24-30":[[24, "Then he which had received the one talent came and said, Lord, I knew thee that thou art an hard man, reaping where thou hast not sown, and gathering where thou hast not strawed:"], [25, "And I was afraid, and went and hid thy talent in the earth: lo, there thou hast that is thine."], [26, "His lord answered and said unto him, Thou wicked and slothful servant, thou knewest that I reap where I sowed not, and gather where I have not strawed:"], [27, "Thou oughtest therefore to have put my money to the exchangers, and then at my coming I should have received mine own with usury."], [28, "Take therefore the talent from him, and give it unto him which hath ten talents."], [29, "For unto every one that hath shall be given, and he shall have abundance: but from him that hath not shall be taken away even that which he hath."], [30, "And cast ye the unprofitable servant into outer darkness: there shall be weeping and gnashing of teeth."]],
+  "Revelation 3:5":[[5, "He that overcometh, the same shall be clothed in white raiment; and I will not blot out his name out of the book of life, but I will confess his name before my Father, and before his angels."]],
+  "Revelation 7:14":[[14, "And I said unto him, Sir, thou knowest. And he said to me, These are they which came out of great tribulation, and have washed their robes, and made them white in the blood of the Lamb."]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
