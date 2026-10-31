@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Post-Tribulation, Pre-Wrath Timeline</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="A post-tribulation, pre-wrath timeline in Daniel’s seven-year week: general tribulation, a 75-day climactic great tribulation, the rapture, then God’s wrath in the trumpets and vials, with Revelation read as two parallel accounts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Post-Tribulation, Pre-Wrath Eschatological Timeline">
+  <div class="page title-page">
+    <div class="overline">Prophecy &amp; the covenants</div>
+    <h1>Post-Tribu­lation, Pre-Wrath Eschato­logical Timeline</h1>
+    <p class="sub">Based on a 7-Year Framework with a 75-Day Climactic Great Tribulation</p>
+    <div class="refs center"><button class="ref" data-v="Daniel 9:27">Daniel 9:27</button><button class="ref" data-v="Daniel 12:11-12">Daniel 12:11-12</button><button class="ref" data-v="Matthew 24:29-31">Matthew 24:29-31</button><button class="ref" data-v="Revelation 6:12-17">Revelation 6:12-17</button><button class="ref" data-v="Revelation 13:7">Revelation 13:7</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="A post-tribulation, pre-wrath view">
+  <div class="page">
+    <h2>A post-tribulation, pre-wrath view</h2>
+    <p class="lead">This document synthesizes a post-tribulation, pre-wrath rapture view of end-times events, grounded in a plain reading of the King James Version (KJV) scriptures. The timeline spans a 7-year period (Daniel’s “one week”), divided into approximately 3.5 years of general tribulation, a 75-day climactic great tribulation, and a period of God’s wrath, culminating in Christ’s return with glorified saints to establish the millennial kingdom.</p>
+    <p>The Book of Revelation is structured as two parallel accounts (chapters 4-11 and 12-22) of the same events, with tribulation in Revelation 6-7 and 13, and wrath in the trumpets (Revelation 8-9) and vials (Revelation 16). This view refutes pre-tribulationism’s conflation of tribulation and wrath and its invention of “tribulation saints,” affirming the church’s presence during tribulation.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Introduction" data-title="Overview of the Timeline">
+  <div class="page">
+    <h2>Overview of the Timeline</h2>
+    <ul class="marks"><li><strong>7-Year Framework:</strong> Derived from <button class="ref" data-v="Daniel 9:27">Daniel 9:27</button>’s “one week,” split at the midpoint by the <strong>abomination of desolation</strong> and the <strong>beast’s deadly wound/healing</strong>.</li></ul>
+    <p><strong>Key Periods:</strong></p>
+    <div class="cols-3"><div class="panel believers"><h3>First 3.5 Years (~1260 days)</h3><p>General tribulation (natural and manmade trials, beast’s rise).</p></div><div class="panel believers"><h3>75 Days</h3><p>Climactic great tribulation, <strong>post-abomination</strong> and <strong>beast’s wound/healing</strong>, marked by the beast’s head wound, dragon empowerment, and intense persecution, “cut short” for the elect (<button class="ref" data-v="Daniel 12:11-12">Daniel 12:11-12</button>’s 1290-1335 days).</p></div><div class="panel cain"><h3>Wrath Period</h3><p>Post-rapture, God’s judgments (trumpets and vials) on the <strong>beast’s kingdom</strong> while the <strong>beast continues his full 42-month reign</strong>, followed by Christ’s return with saints.</p></div></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Introduction" data-title="The rapture, and Revelation’s structure">
+  <div class="page">
+    <div class="kicker">Overview of the Timeline</div>
+    <h2>The rapture, and Revelation’s structure</h2>
+    <ul class="marks"><li><strong>Rapture:</strong> Occurs post-tribulation at Christ’s visible second coming (<button class="ref" data-v="Matthew 24:29-31">Matthew 24:29-31</button>), after the 75-day climax (<strong>~1290 days from the abomination</strong>), <strong>before wrath</strong>.</li><li><strong>Revelation’s Structure:</strong> Chapters 4-11 (heavenly perspective) and 12-22 (cosmic/earthly perspective) overlap, with tribulation in Revelation 6-7 and 13, rapture in <button class="ref" data-v="Revelation 6:12-17">Revelation 6:12-17</button> and <button class="ref" data-v="Revelation 15:2">Revelation 15:2</button>, and wrath in Revelation 8-9 and 16.</li></ul>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Introduction" data-title="The order of events">
+  <div class="page">
+    <div class="kicker">Chronological Timeline</div>
+    <h2>The order of events</h2>
+    <figure class="pic"><img src="post-trib-pre-wrath-order.svg" alt="The order of events: covenant confirmed; seals 1 to 5; midpoint at day 1260, the abomination and the beast’s wound healed; 75 days of great tribulation cut short; the sixth seal, sun black, moon blood, stars fall; the rapture; the seventh seal and half-hour silence; wrath in the trumpets and vials; Christ returns with saints at day 2520" loading="lazy"><figcaption>Tribulation, then the rapture, then wrath (<button class="ref" data-v="Matthew 24:29-31">Matthew 24:29-31</button>; <button class="ref" data-v="Revelation 6:12-17">Revelation 6:12-17</button>; <button class="ref" data-v="Revelation 8:1">Revelation 8:1</button>)</figcaption></figure>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="1. General tribulation" data-title="First 3.5 Years: General Tribulation">
+  <div class="page">
+    <div class="kicker">1 · ~1260 Days</div>
+    <h2>First 3.5 Years: General Tribulation</h2>
+    <p><strong>Description:</strong> The 7-year period begins with a covenant, likely involving Israel, initiating tribulation—natural and manmade trials including wars, famines, and persecution. The beast rises, setting the stage for its dominance. The church endures these trials, refuting pre-tribulationism’s early rapture.</p>
+    <p><strong>Key Events:</strong></p>
+    <ul class="marks"><li>Covenant confirmed, starting the 7 years.</li><li>Wars, famines, and death afflict the world (Revelation’s early seals).</li><li>Believers face persecution; the beast gains influence.</li></ul>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="1. General tribulation" data-title="The covenant for one week">
+  <div class="page">
+    <div class="kicker">1 · Scriptures</div>
+    <h2>The covenant for one week</h2>
+    <blockquote class="scripture" style="font-style:italic">And <mark>he shall confirm the covenant with many for one week</mark>: and in the midst of the week he shall cause the sacrifice and the oblation to cease, and for the overspreading of abominations he shall make it desolate, even until the consummation, and that determined shall be poured upon the desolate.<cite>Daniel 9:27</cite></blockquote>
+    <p>The covenant marks the 7-year start, with the midpoint (~1260 days) pivotal.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="1. General tribulation" data-title="The first four seals">
+  <div class="page">
+    <div class="kicker">1 · Scriptures</div>
+    <h2>The first four seals</h2>
+    <blockquote class="scripture" style="font-style:italic">And I saw when the Lamb opened one of the seals, and I heard, as it were the noise of thunder, one of the four beasts saying, Come and see. And I saw, and behold <mark>a white horse</mark>: and he that sat on him had a bow; and a crown was given unto him: and he went forth conquering, and to conquer. And when he had opened the second seal, I heard the second beast say, Come and see. And there went out <mark>another horse that was red</mark>: and power was given to him that sat thereon to take peace from the earth, and that they should kill one another: and there was given unto him a great sword. And when he had opened the third seal, I heard the third beast say, Come and see. And I beheld, and lo <mark>a black horse</mark>; and he that sat on him had a pair of balances in his hand. And I heard a voice in the midst of the four beasts say, A measure of wheat for a penny, and three measures of barley for a penny; and see thou hurt not the oil and the wine. And when he had opened the fourth seal, I heard the voice of the fourth beast say, Come and see. And I looked, and behold <mark>a pale horse</mark>: and his name that sat on him was Death, and Hell followed with him. And power was given unto them over the fourth part of the earth, to kill with sword, and with hunger, and with death, and with the beasts of the earth.<cite>Revelation 6:1-8</cite></blockquote>
+    <p>The first four seals depict tribulation’s trials (war, famine, death).</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="1. General tribulation" data-title="Ye shall be hated">
+  <div class="page">
+    <div class="kicker">1 · Scriptures</div>
+    <h2>Ye shall be hated</h2>
+    <blockquote class="scripture" style="font-style:italic">And ye shall hear of wars and rumours of wars: see that ye be not troubled: for all these things must come to pass, but the end is not yet. For nation shall rise against nation, and kingdom against kingdom: and there shall be famines, and pestilences, and earthquakes, in divers places. All these are the beginning of sorrows. Then shall they deliver you up to be afflicted, and shall kill you: and <mark>ye shall be hated of all nations for my name’s sake</mark>.<cite>Matthew 24:6-9</cite></blockquote>
+    <p>Believers endure tribulation.</p>
+    <div class="callout"><p><strong>Why:</strong> The church’s presence (<button class="ref" data-v="Matthew 24:9">Matthew 24:9</button>, “ye”) and seals’ trials (Revelation 6) define tribulation as distinct from wrath. Pre-tribulationism’s claim that the church is absent ignores these scriptures.</p></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="2. Midpoint" data-title="Midpoint: Abomination of Desolation and Beast’s Empowerment">
+  <div class="page">
+    <div class="kicker">2 · ~1260 Days</div>
+    <h2>Midpoint: Abomination of Desolation and Beast’s Empowerment</h2>
+    <p><strong>Description:</strong> At the 7-year midpoint, the beast breaks the covenant, halts sacrifices, and sets up the abomination of desolation, triggering the great tribulation. The beast suffers a deadly head wound, is healed (possibly empowered/possessed by the dragon), and begins its 42-month reign, intensifying persecution.</p>
+    <p><strong>Key Events:</strong></p>
+    <ul class="marks"><li>Abomination of desolation desecrates the temple.</li><li>Beast’s head wound is healed, gaining global worship.</li><li>Dragon empowers the beast, starting its 42-month authority.</li></ul>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="2. Midpoint" data-title="The abomination of desolation">
+  <div class="page">
+    <div class="kicker">2 · Scriptures</div>
+    <h2>The abomination of desolation</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>When ye therefore shall see the abomination of desolation</mark>, spoken of by Daniel the prophet, stand in the holy place, (whoso readeth, let him understand:)<cite>Matthew 24:15</cite></blockquote><blockquote class="scripture" style="font-style:italic">For <mark>then shall be great tribulation</mark>, such as was not since the beginning of the world to this time, no, nor ever shall be.<cite>Matthew 24:21</cite></blockquote>
+    <p>The church (“ye”) faces great tribulation.</p>
+    <ul class="xr"><li><button class="ref" data-v="Daniel 9:27">Daniel 9:27</button><span>The abomination marks the midpoint.</span></li><li><button class="ref" data-v="2 Thessalonians 2:4">2 Thessalonians 2:4</button><span>This parallels the abomination.</span></li></ul>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="2. Midpoint" data-title="The deadly wound healed">
+  <div class="page">
+    <div class="kicker">2 · Scriptures</div>
+    <h2>The deadly wound healed</h2>
+    <blockquote class="scripture" style="font-style:italic">And the beast which I saw was like unto a leopard, and his feet were as the feet of a bear, and his mouth as the mouth of a lion: and <mark>the dragon gave him his power</mark>, and his seat, and great authority. And I saw one of his heads as it were wounded to death; and <mark>his deadly wound was healed</mark>: and all the world wondered after the beast. And they worshipped the dragon which gave power unto the beast: and they worshipped the beast, saying, Who is like unto the beast? who is able to make war with him? And there was given unto him a mouth speaking great things and blasphemies; and <mark>power was given unto him to continue forty and two months</mark>.<cite>Revelation 13:2-5</cite></blockquote>
+    <p>The wound and dragon’s power (<button class="ref" data-v="Revelation 13:2">Revelation 13:2</button>) initiate the beast’s reign.</p>
+    <div class="callout"><p><strong>Why:</strong> The abomination (<button class="ref" data-v="Daniel 9:27">Daniel 9:27</button>) and beast’s wound (<button class="ref" data-v="Revelation 13:3">Revelation 13:3</button>) trigger great tribulation, with saints present (<button class="ref" data-v="Matthew 24:15">Matthew 24:15</button>, <button class="ref" data-v="Revelation 13:7">Revelation 13:7</button>). Pre-tribulationism’s early rapture contradicts this.</p></div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="3. The 75 days" data-title="75 Days: Climactic Great Tribulation">
+  <div class="page">
+    <div class="kicker">3 · ~1260 to ~1335 Days</div>
+    <h2>75 Days: Climactic Great Tribulation</h2>
+    <p><strong>Description:</strong> The great tribulation’s climax, a 75-day period post-abomination and beast’s wound, is the most intense phase of persecution, “cut short” for the elect. The beast enforces the mark and image worship, warring against saints, until cosmic signs herald Christ’s return and the rapture. The 75 days derive from <button class="ref" data-v="Daniel 12:11-12">Daniel 12:11-12</button>’s 1290-1335 days.</p>
+    <p><strong>Key Events:</strong></p>
+    <ul class="marks"><li>Beast enforces mark and image worship, persecuting saints.</li><li>Great tribulation “cut short” to preserve the elect.</li><li>Cosmic signs (sun darkened, stars fall) signal tribulation’s end.</li><li>Rapture at Christ’s visible second coming (~1290 days).</li></ul>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="3. The 75 days" data-title="The 1290 and 1335 days">
+  <div class="page">
+    <div class="kicker">3 · Scriptures</div>
+    <h2>The 1290 and 1335 days</h2>
+    <blockquote class="scripture" style="font-style:italic">And from the time that the daily sacrifice shall be taken away, and the abomination that maketh desolate set up, there shall be <mark>a thousand two hundred and ninety days</mark>. Blessed is he that waiteth, and cometh to <mark>the thousand three hundred and five and thirty days</mark>.<cite>Daniel 12:11-12</cite></blockquote>
+    <p>The 1290 days may mark the rapture; 1335 days, a later blessing (e.g., kingdom).</p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="3. The 75 days" data-title="War with the saints">
+  <div class="page">
+    <div class="kicker">3 · Scriptures</div>
+    <h2>War with the saints</h2>
+    <blockquote class="scripture" style="font-style:italic">And it was given unto him to <mark>make war with the saints</mark>, and to overcome them: and power was given him over all kindreds, and tongues, and nations.<cite>Revelation 13:7</cite></blockquote><blockquote class="scripture" style="font-style:italic">And he had power to give life unto the image of the beast, that the image of the beast should both speak, and cause that <mark>as many as would not worship the image of the beast should be killed</mark>. And he causeth all, both small and great, rich and poor, free and bond, to receive a mark in their right hand, or in their foreheads: And that no man might buy or sell, save he that had the mark, or the name of the beast, or the number of his name.<cite>Revelation 13:15-17</cite></blockquote>
+    <p>The beast’s persecution peaks.</p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="3. The 75 days" data-title="Those days shortened">
+  <div class="page">
+    <div class="kicker">3 · Scriptures</div>
+    <h2>Those days shortened</h2>
+    <blockquote class="scripture" style="font-style:italic">And except those days should be shortened, there should no flesh be saved: but <mark>for the elect’s sake those days shall be shortened</mark>.<cite>Matthew 24:22</cite></blockquote><blockquote class="scripture" style="font-style:italic">For there shall arise false Christs, and false prophets, and shall shew great signs and wonders; insomuch that, <mark>if it were possible, they shall deceive the very elect</mark>.<cite>Matthew 24:24</cite></blockquote>
+    <p>The tribulation is cut short, with the elect present.</p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="3. The 75 days" data-title="The sixth seal">
+  <div class="page">
+    <div class="kicker">3 · Scriptures</div>
+    <h2>The sixth seal</h2>
+    <blockquote class="scripture" style="font-style:italic">And I beheld when he had opened the sixth seal, and, lo, there was a great earthquake; and <mark>the sun became black as sackcloth of hair</mark>, and the moon became as blood; And the stars of heaven fell unto the earth, even as a fig tree casteth her untimely figs, when she is shaken of a mighty wind. And the heaven departed as a scroll when it is rolled together; and every mountain and island were moved out of their places. And the kings of the earth, and the great men, and the rich men, and the chief captains, and the mighty men, and every bondman, and every free man, hid themselves in the dens and in the rocks of the mountains; And said to the mountains and rocks, Fall on us, and hide us from the face of him that sitteth on the throne, and from <mark>the wrath of the Lamb</mark>: For the great day of his wrath is come; and who shall be able to stand?<cite>Revelation 6:12-17</cite></blockquote>
+    <p>Cosmic signs match <button class="ref" data-v="Matthew 24:29">Matthew 24:29</button>.</p>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="3. The 75 days" data-title="Immediately after the tribulation">
+  <div class="page">
+    <div class="kicker">3 · Scriptures</div>
+    <h2>Immediately after the tribulation</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>Immediately after the tribulation of those days</mark> shall the sun be darkened, and the moon shall not give her light, and the stars shall fall from heaven, and the powers of the heavens shall be shaken: And then shall appear the sign of the Son of man in heaven: and then shall all the tribes of the earth mourn, and they shall see the Son of man coming in the clouds of heaven with power and great glory. And he shall send his angels with a great sound of a trumpet, and <mark>they shall gather together his elect</mark> from the four winds, from one end of heaven to the other.<cite>Matthew 24:29-31</cite></blockquote>
+    <p>The rapture occurs post-tribulation.</p>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="3. The 75 days" data-title="Out of great tribulation">
+  <div class="page">
+    <div class="kicker">3 · Scriptures</div>
+    <h2>Out of great tribulation</h2>
+    <blockquote class="scripture" style="font-style:italic">After this I beheld, and, lo, <mark>a great multitude</mark>, which no man could number, of all nations, and kindreds, and people, and tongues, stood before the throne, and before the Lamb, clothed with white robes, and palms in their hands; And cried with a loud voice, saying, Salvation to our God which sitteth upon the throne, and unto the Lamb. And all the angels stood round about the throne, and about the elders and the four beasts, and fell before the throne on their faces, and worshipped God, Saying, Amen: Blessing, and glory, and wisdom, and thanksgiving, and honour, and power, and might, be unto our God for ever and ever. Amen. And one of the elders answered, saying unto me, What are these which are arrayed in white robes? and whence came they? And I said unto him, Sir, thou knowest. And he said to me, <mark>These are they which came out of great tribulation</mark>, and have washed their robes, and made them white in the blood of the Lamb.<cite>Revelation 7:9-14</cite></blockquote>
+    <p>The multitude is raptured post-tribulation.</p>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="3. The 75 days" data-title="On the sea of glass">
+  <div class="page">
+    <div class="kicker">3 · Scriptures</div>
+    <h2>On the sea of glass</h2>
+    <blockquote class="big-verse">And I saw as it were a sea of glass mingled with fire: and <mark>them that had gotten the victory over the beast</mark>, and over his image, and over his mark, and over the number of his name, stand on the sea of glass, having the harps of God.<cite>Revelation 15:2</cite></blockquote>
+    <p>These saints, post-75 days, parallel Revelation 7’s multitude.</p>
+    <div class="callout"><p><strong>Why:</strong> The 75-day climax (<button class="ref" data-v="Daniel 12:11-12">Daniel 12:11-12</button>) aligns with the beast’s persecution (<button class="ref" data-v="Revelation 13:7">Revelation 13:7</button>) and cosmic signs (<button class="ref" data-v="Revelation 6:12">Revelation 6:12</button>), ending with the rapture (<button class="ref" data-v="Matthew 24:31">Matthew 24:31</button>). The church’s presence refutes pre-tribulationism, as saints endure the mark and deception (<button class="ref" data-v="Matthew 24:24">Matthew 24:24</button>). Revelation’s parallel accounts place this in both 6-7 and 13-15. <strong>The beast’s full 42-month reign continues through the subsequent wrath period.</strong></p></div>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="4. Half hour of silence" data-title="Half Hour of Silence: Transition to Wrath">
+  <div class="page">
+    <div class="kicker">4 · ~1290 Days</div>
+    <h2>Half Hour of Silence: Transition to Wrath</h2>
+    <p><strong>Description:</strong> After the rapture, a brief pause in heaven marks the shift from tribulation to God’s wrath, as the seventh seal is opened.</p>
+    <p><strong>Key Event:</strong></p>
+    <ul class="marks"><li>Silence in heaven, preparing for judgments.</li></ul>
+    <blockquote class="big-verse">And when he had opened the seventh seal, there was silence in heaven about the space of half an hour.<cite>Revelation 8:1</cite></blockquote>
+    <div class="callout"><p><strong>Why:</strong> The silence follows the sixth seal’s rapture (<button class="ref" data-v="Revelation 6:12-17">Revelation 6:12-17</button>), distinguishing tribulation from wrath. The church, now raptured, is spared wrath (<button class="ref" data-v="1 Thessalonians 5:9">1 Thessalonians 5:9</button>).</p></div>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="5. Wrath" data-title="Wrath: Trumpets and Vials">
+  <div class="page">
+    <div class="kicker">5 · ~1290 to ~1335 Days or Beyond</div>
+    <h2>Wrath: Trumpets and Vials</h2>
+    <p><strong>Description:</strong> God’s wrath, post-rapture, targets the beast’s kingdom via trumpets and vials, which are parallel judgments in Revelation’s two accounts (4-11 and 12-22). The beast and his followers endure these supernatural judgments.</p>
+    <p><strong>Key Events:</strong></p>
+    <ul class="marks"><li>Trumpets afflict the earth (third part affected).</li><li>Vials intensify judgments (universal scope).</li><li>Beast’s kingdom suffers, gathers for Armageddon.</li></ul>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="5. Wrath" data-title="The first trumpet and the first vial">
+  <div class="page">
+    <div class="kicker">5 · Scriptures</div>
+    <h2>The first trumpet and the first vial</h2>
+    <blockquote class="scripture" style="font-style:italic">The first angel sounded, and there followed hail and fire mingled with blood, and they were cast upon the earth: and <mark>the third part of trees was burnt up</mark>, and all green grass was burnt up.<cite>Revelation 8:7</cite></blockquote><blockquote class="scripture" style="font-style:italic">And the first went, and poured out his vial upon the earth; and there fell <mark>a noisome and grievous sore upon the men which had the mark of the beast</mark>, and upon them which worshipped his image.<cite>Revelation 16:2</cite></blockquote>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="5. Wrath" data-title="The beast’s kingdom">
+  <div class="page">
+    <div class="kicker">5 · Scriptures</div>
+    <h2>The beast’s kingdom</h2>
+    <blockquote class="scripture" style="font-style:italic">And the fifth angel poured out his vial upon the seat of the beast; and <mark>his kingdom was full of darkness</mark>; and they gnawed their tongues for pain,<cite>Revelation 16:10</cite></blockquote><blockquote class="scripture" style="font-style:italic">And I saw three unclean spirits like frogs come out of the mouth of the dragon, and out of the mouth of the beast, and out of the mouth of the false prophet. For they are the spirits of devils, working miracles, which go forth unto the kings of the earth and of the whole world, <mark>to gather them to the battle of that great day of God Almighty</mark>.<cite>Revelation 16:13-14</cite></blockquote>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="5. Wrath" data-title="Not appointed to wrath">
+  <div class="page">
+    <div class="kicker">5 · Scriptures</div>
+    <h2>Not appointed to wrath</h2>
+    <blockquote class="big-verse">For God hath not appointed us to wrath, but to obtain salvation by our Lord Jesus Christ,<cite>1 Thessalonians 5:9</cite></blockquote>
+    <div class="callout"><p><strong>Why:</strong> Trumpets and vials, as parallel wrath (Revelation 8-9, 16), follow the rapture, targeting the beast’s followers (<button class="ref" data-v="Revelation 16:2">Revelation 16:2</button>). The church’s absence during wrath aligns with the tribulation/wrath distinction, refuting pre-tribulationism’s conflation. <strong>The beast continues his reign throughout this period.</strong></p></div>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="slide" data-section="6. Christ’s return" data-title="Christ’s Return with Glorified Saints and Millennial Kingdom">
+  <div class="page">
+    <div class="kicker">6 · ~1335 Days or Later</div>
+    <h2>Christ’s Return with Glorified Saints and Millennial Kingdom</h2>
+    <p><strong>Description:</strong> After wrath, Christ returns with glorified saints (raptured earlier) to defeat the beast and false prophet, bind Satan, and establish the 1,000-year kingdom.</p>
+    <p><strong>Key Events:</strong></p>
+    <ul class="marks"><li>Christ returns with saints, defeats the beast.</li><li>Beast and false prophet cast into the lake of fire.</li><li>Satan bound for 1,000 years.</li><li>Millennial kingdom established.</li></ul>
+  </div>
+</section>
+
+<!-- 27 -->
+<section class="slide" data-section="6. Christ’s return" data-title="The armies which were in heaven">
+  <div class="page">
+    <div class="kicker">6 · Scriptures</div>
+    <h2>The armies which were in heaven</h2>
+    <blockquote class="scripture" style="font-style:italic">And I saw heaven opened, and behold a white horse; and he that sat upon him was called Faithful and True, and in righteousness he doth judge and make war. His eyes were as a flame of fire, and on his head were many crowns; and he had a name written, that no man knew, but he himself. And he was clothed with a vesture dipped in blood: and his name is called The Word of God. And <mark>the armies which were in heaven followed him upon white horses</mark>, clothed in fine linen, white and clean.<cite>Revelation 19:11-14</cite></blockquote><blockquote class="scripture" style="font-style:italic">And the beast was taken, and with him the false prophet that wrought miracles before him, with which he deceived them that had received the mark of the beast, and them that worshipped his image. <mark>These both were cast alive into a lake of fire burning with brimstone</mark>.<cite>Revelation 19:20</cite></blockquote>
+  </div>
+</section>
+
+<!-- 28 -->
+<section class="slide" data-section="6. Christ’s return" data-title="Bound a thousand years">
+  <div class="page">
+    <div class="kicker">6 · Scriptures</div>
+    <h2>Bound a thousand years</h2>
+    <blockquote class="scripture" style="font-style:italic">And I saw an angel come down from heaven, having the key of the bottomless pit and a great chain in his hand. And he laid hold on the dragon, that old serpent, which is the Devil, and Satan, and <mark>bound him a thousand years</mark>, And cast him into the bottomless pit, and shut him up, and set a seal upon him, that he should deceive the nations no more, till the thousand years should be fulfilled: and after that he must be loosed a little season. And I saw thrones, and they sat upon them, and judgment was given unto them: and I saw the souls of them that were beheaded for the witness of Jesus, and for the word of God, and which had not worshipped the beast, neither his image, neither had received his mark upon their foreheads, or in their hands; and <mark>they lived and reigned with Christ a thousand years</mark>. But the rest of the dead lived not again until the thousand years were finished. This is the first resurrection. Blessed and holy is he that hath part in the first resurrection: on such the second death hath no power, but they shall be priests of God and of Christ, and shall reign with him a thousand years.<cite>Revelation 20:1-6</cite></blockquote>
+    <div class="refs center"><button class="ref" data-v="Daniel 7:27">Daniel 7:27</button></div>
+    <ul class="xr"><li><button class="ref" data-v="Revelation 11:15">Revelation 11:15</button><span>This parallels Revelation 19 in the 4-11 account.</span></li></ul>
+    <div class="callout"><p><strong>Why:</strong> Christ’s return with saints (Revelation 19) follows wrath, fulfilling the kingdom’s establishment (<button class="ref" data-v="Revelation 11:15">Revelation 11:15</button>, <button class="ref" data-v="Revelation 20:4">Revelation 20:4</button>). The church, raptured post-tribulation, returns glorified, aligning with this view.</p></div>
+  </div>
+</section>
+
+<!-- 29 -->
+<section class="slide" data-section="Refutation" data-title="Refutation of Pre-Tribulationism">
+  <div class="page">
+    <h2>Refutation of Pre-Tribulationism</h2>
+    <p>This timeline counters pre-tribulationism’s errors:</p>
+    <div class="cols"><div class="panel believers"><h3>Church’s Presence</h3><p>Saints endure tribulation (<button class="ref" data-v="Revelation 13:7">Revelation 13:7</button>, <button class="ref" data-v="Matthew 24:24">Matthew 24:24</button>), facing the beast’s mark and abomination, contradicting an early rapture.</p></div><div class="panel believers"><h3>Visible Rapture</h3><p>The rapture at Christ’s second coming (<button class="ref" data-v="Matthew 24:29-31">Matthew 24:29-31</button>, <button class="ref" data-v="Revelation 6:12-17">Revelation 6:12-17</button>) is visible (<button class="ref" data-v="Revelation 1:7">Revelation 1:7</button>), not secret.</p></div></div>
+    <div class="cols"><div class="panel cain"><h3>Tribulation vs. Wrath</h3><p>Tribulation (persecution, disasters) is distinct from wrath (God’s judgments), with the church enduring the former (Revelation 6-7, 13) but spared the latter (Revelation 8-9, 16).</p></div><div class="panel believers"><h3>No Invented Doctrines</h3><p>“Saints” (<button class="ref" data-v="Revelation 7:14">Revelation 7:14</button>, <button class="ref" data-v="Revelation 13:7">Revelation 13:7</button>) are the church, not a separate “tribulation saints” group, aligning with a plain reading.</p></div></div>
+  </div>
+</section>
+
+<!-- 30 -->
+<section class="slide" data-section="Conclusion" data-title="Conclusion">
+  <div class="page">
+    <h2>Conclusion</h2>
+    <p class="lead">This post-tribulation, pre-wrath timeline, rooted in Daniel’s 7-year framework and Revelation’s parallel accounts, places the church in tribulation (3.5 years, 75-day climax), raptured at Christ’s visible second coming (~1290 days), spared wrath (trumpets/vials), and returning with Christ to establish the millennium.</p>
+    <div class="callout"><p>The 75-day climactic great tribulation, post-abomination and beast’s wound, is a pivotal period of intense persecution, cut short for the elect.</p></div>
+  </div>
+</section>
+
+<!-- 31 -->
+<section class="slide" data-section="Conclusion" data-title="Chronological Timeline: tribulation">
+  <div class="page">
+    <div class="kicker">Chronological Timeline Table (Visual Summary)</div>
+    <h2>Chronological Timeline: tribulation</h2>
+    <div class="steps"><div class="st"><span class="when">Days 1–1260 (~3.5 yrs)</span><div><strong>Beginning of Sorrows.</strong> Seals 1–5/6: Conquest, war, famine, death, martyrdom. Church endures. <button class="ref" data-v="Matthew 24:4-14">Matthew 24:4-14</button> <button class="ref" data-v="Revelation 6:1-11">Revelation 6:1-11</button></div></div><div class="st"><span class="when">Day 1260</span><div><strong>Midpoint.</strong> Abomination of desolation; beast’s wound healed; dragon empowers beast. <button class="ref" data-v="Daniel 9:27">Daniel 9:27</button> <button class="ref" data-v="Matthew 24:15">Matthew 24:15</button> <button class="ref" data-v="Revelation 13:1-5">Revelation 13:1-5</button></div></div><div class="st"><span class="when">Days 1261 – ~1335 (~75 days)</span><div><strong>Climactic Great Tribulation.</strong> Mark enforced, war on saints peaks, persecution at maximum intensity. Days “cut short” for the elect. <button class="ref" data-v="Matthew 24:21-22">Matthew 24:21-22</button> <button class="ref" data-v="Revelation 13:7-17">Revelation 13:7-17</button> <button class="ref" data-v="Daniel 12:11-12">Daniel 12:11-12</button></div></div></div>
+  </div>
+</section>
+
+<!-- 32 -->
+<section class="slide" data-section="Conclusion" data-title="Chronological Timeline: rapture and wrath">
+  <div class="page">
+    <div class="kicker">Chronological Timeline Table (Visual Summary)</div>
+    <h2>Chronological Timeline: rapture and wrath</h2>
+    <div class="steps"><div class="st"><span class="when">~Day 1335</span><div><strong>Rapture &amp; Cosmic Signs.</strong> Sun/moon darkened, stars fall, Son of Man appears, angels gather elect. <button class="ref" data-v="Matthew 24:29-31">Matthew 24:29-31</button> Revelation 6:12–7:17</div></div><div class="st"><span class="when">Brief transition</span><div><strong>Half-hour silence.</strong> Seventh seal opened → pause in heaven. <button class="ref" data-v="Revelation 8:1">Revelation 8:1</button></div></div><div class="st"><span class="when">Remaining ~1185 days</span><div><strong>God’s Wrath (Day of the Lord).</strong> Trumpets &amp; vials poured out on beast’s kingdom while beast still reigns (full 42 months). Revelation 8–9, 16 · <button class="ref" data-v="1 Thessalonians 5:9">1 Thessalonians 5:9</button></div></div><div class="st"><span class="when">Day 2520</span><div><strong>End of 7 Years.</strong> Christ returns with saints, beast/false prophet defeated, Satan bound, millennial kingdom begins. Revelation 19–20</div></div></div>
+  </div>
+</section>
+
+<!-- 33 -->
+<section class="slide" data-section="The Olivet Discourse" data-title="Pronoun Usage and Timing Clauses in the Olivet Discourse">
+  <div class="page">
+    <div class="kicker">Matthew 24, Mark 13, Luke 21 (KJV)</div>
+    <h2>Pronoun Usage and Timing Clauses in the Olivet Discourse</h2>
+    <p>The table below analyzes key verses from the Olivet Discourse, focusing on <strong>timing clauses</strong> (e.g., “before,” “then,” “after,” “immediately after,” “in those days”) and <strong>pronoun shifts</strong> (“ye/you/your” for believers Jesus addresses directly vs. “they/them” for unbelieving world/Jews or general unbelievers). This supports the premise:</p>
+    <ul class="marks"><li>Believers (“ye”) endure general tribulation (beginning of sorrows) and the climactic great tribulation (post-abomination, cut short).</li><li>The rapture gathers the elect immediately after this tribulation.</li><li>Unbelievers (“they”) face ongoing wrath/judgment post-rapture (beast’s reign continues, but church is spared).</li></ul>
+  </div>
+</section>
+
+<!-- 34 -->
+<section class="slide" data-section="The Olivet Discourse" data-title="Olivet Discourse: the beginning of sorrows">
+  <div class="page">
+    <div class="kicker">Pronoun Usage and Timing Clauses</div>
+    <h2>Olivet Discourse: the beginning of sorrows</h2>
+    <div class="grp"><h3><strong>Beginning phase</strong> (before the end). <strong>“Ye”</strong> (believers addressed)</h3><span><strong>General tribulation (first 3.5 years):</strong> Church endures wars, famines, earthquakes as “beginning of sorrows.”</span><div class="chips"><button class="ref" data-v="Matthew 24:6-8">Matthew 24:6-8</button><button class="ref" data-v="Mark 13:7-8">Mark 13:7-8</button><button class="ref" data-v="Luke 21:9-11">Luke 21:9-11</button></div></div><div class="grp"><h3><strong>“Then”</strong> (after beginning of sorrows). Luke: <em>“before all these”</em> (persecution precedes some signs). <strong>Shift:</strong> <strong>“They”</strong> deliver/persecute; <strong>“you/ye”</strong> (believers) are victims</h3><span><strong>General tribulation:</strong> Believers persecuted/hated; church present and enduring.</span><div class="chips"><button class="ref" data-v="Matthew 24:9">Matthew 24:9</button><button class="ref" data-v="Mark 13:9">Mark 13:9</button><button class="ref" data-v="Mark 13:13">Mark 13:13</button><button class="ref" data-v="Luke 21:12">Luke 21:12</button><button class="ref" data-v="Luke 21:17">Luke 21:17</button></div></div><div class="grp"><h3><strong>“When ye shall see”</strong> (midpoint trigger). <strong>“Ye”</strong> (believers see and respond)</h3><span><strong>Midpoint:</strong> Abomination triggers climactic great tribulation; believers witness it and are instructed to flee.</span><div class="chips"><button class="ref" data-v="Matthew 24:15">Matthew 24:15</button><button class="ref" data-v="Mark 13:14">Mark 13:14</button><button class="ref" data-v="Luke 21:20">Luke 21:20</button></div></div>
+  </div>
+</section>
+
+<!-- 35 -->
+<section class="slide" data-section="The Olivet Discourse" data-title="Olivet Discourse: great tribulation">
+  <div class="page">
+    <div class="kicker">Pronoun Usage and Timing Clauses</div>
+    <h2>Olivet Discourse: great tribulation</h2>
+    <div class="grp"><h3><strong>“Then”</strong> / <strong>“For in those days”</strong> (immediately post-abomination). Luke: <strong>“This people”</strong> (unbelieving Jews); general affliction</h3><span><strong>Climactic great tribulation (75 days):</strong> Intense phase begins; Luke highlights wrath/vengeance on unbelieving Israel (“days of vengeance”).</span><div class="chips"><button class="ref" data-v="Matthew 24:21">Matthew 24:21</button><button class="ref" data-v="Mark 13:19">Mark 13:19</button><button class="ref" data-v="Luke 21:23">Luke 21:23</button></div></div><div class="grp"><h3><strong>Shortening of “those days.”</strong> <strong>“The elect”</strong> (believers)</h3><span><strong>Climactic great tribulation cut short</strong> (~75 days via Daniel 12); preserves believers for rapture.</span><div class="chips"><button class="ref" data-v="Matthew 24:22">Matthew 24:22</button><button class="ref" data-v="Mark 13:20">Mark 13:20</button></div></div><div class="grp"><h3><strong>During great tribulation.</strong> <strong>“They”</strong> (false prophets deceive); <strong>“the very elect”</strong> (believers protected)</h3><span><strong>Church (“elect”) present</strong> during deception but not deceived.</span><div class="chips"><button class="ref" data-v="Matthew 24:24">Matthew 24:24</button><button class="ref" data-v="Mark 13:22">Mark 13:22</button></div></div>
+  </div>
+</section>
+
+<!-- 36 -->
+<section class="slide" data-section="The Olivet Discourse" data-title="Olivet Discourse: after that tribulation">
+  <div class="page">
+    <div class="kicker">Pronoun Usage and Timing Clauses</div>
+    <h2>Olivet Discourse: after that tribulation</h2>
+    <div class="grp"><h3><strong>“Immediately after”</strong> / <strong>“after that tribulation”</strong> / <em>“those things which are coming on the earth.”</em> <strong>“Men’s hearts”</strong> / general fear (unbelievers)</h3><span><strong>End of climactic great tribulation:</strong> Cosmic signs; unbelievers (“they/men”) terrified as wrath approaches.</span><div class="chips"><button class="ref" data-v="Matthew 24:29">Matthew 24:29</button><button class="ref" data-v="Mark 13:24">Mark 13:24</button><button class="ref" data-v="Luke 21:25-26">Luke 21:25-26</button></div></div><div class="grp"><h3><strong>“Immediately after… And then”</strong> / <em>“And then shall they see.”</em> <strong>Shift:</strong> <strong>“All the tribes… they”</strong> mourn/see (unbelievers); angels gather <strong>“his elect”</strong> / <strong>“your redemption”</strong> (believers)</h3><span><strong>Rapture at visible second coming:</strong> Unbelievers mourn; elect (church/believers) gathered/raptured post-tribulation, pre-full wrath.</span><div class="chips"><button class="ref" data-v="Matthew 24:30-31">Matthew 24:30-31</button><button class="ref" data-v="Mark 13:26-27">Mark 13:26-27</button><button class="ref" data-v="Luke 21:27-28">Luke 21:27-28</button></div></div><div class="grp"><h3><strong>“In those days”</strong> (great tribulation/wrath overlap for unbelievers). <strong>“This people… they”</strong> (unbelieving Jews)</h3><span><strong>Supports distinction:</strong> Unbelieving Israel endures “days of vengeance”/wrath (beast’s persecution continues post-rapture).</span><div class="chips"><button class="ref" data-v="Luke 21:23-24">Luke 21:23-24</button></div></div>
+  </div>
+</section>
+
+<!-- 37 -->
+<section class="slide" data-section="The Olivet Discourse" data-title="What the Olivet table shows">
+  <div class="page">
+    <div class="kicker">Pronoun Usage and Timing Clauses</div>
+    <h2>What the Olivet table shows</h2>
+    <p class="lead">This table demonstrates how Jesus’ <strong>timing clauses</strong> sequence events into general tribulation → midpoint trigger → shortened climactic great tribulation → immediate cosmic signs/rapture.</p>
+    <p><strong>Pronoun shifts</strong> consistently address believers (“ye/you”) for endurance and deliverance, while “they/them” describes unbelievers (especially unbelieving Jews in context) facing mourning, fear, and vengeance. Supporting the view that the church/believer endures tribulation but is raptured pre-wrath, with the beast’s reign persisting against the unsaved through the wrath.</p>
+  </div>
+</section>
+
+<!-- 38 -->
+<section class="slide" data-section="Revelation’s two accounts" data-title="Parallel Structure of Revelation">
+  <div class="page">
+    <div class="kicker">Overlapping Accounts (Chapters 4-11 and 12-22)</div>
+    <h2>Parallel Structure of Revelation</h2>
+    <p>Revelation uses recapitulation: the same timeline is repeated from heavenly (4-11) and cosmic/earthly (12-22) perspectives. The rapture is at the sixth seal (<button class="ref" data-v="Revelation 6:12-17">Revelation 6:12-17</button>), with saints immediately appearing in heaven (<button class="ref" data-v="Revelation 7:9-17">Revelation 7:9-17</button>, paralleled in <button class="ref" data-v="Revelation 15:2">Revelation 15:2</button>).</p>
+    <figure class="pic"><img src="revelation-parallel-accounts.svg" alt="Revelation 4 to 11 beside Revelation 12 to 22, phase by phase: throne room and Lamb beside the dragon cast out; seals 1 to 5 beside the beast rising; the sixth seal beside the mark, image and war on saints; the great multitude beside the sea of glass; the half-hour silence beside the temple filled with smoke; the trumpets beside the vials; the seventh trumpet beside Christ’s return" loading="lazy"><figcaption>Same events, different angles</figcaption></figure>
+  </div>
+</section>
+
+<!-- 39 -->
+<section class="slide" data-section="Revelation’s two accounts" data-title="Heavenly Introduction / Start of Conflict">
+  <div class="page">
+    <div class="kicker">Parallel Structure of Revelation · 1</div>
+    <h2>Heavenly Introduction / Start of Conflict</h2>
+    <div class="cols"><div class="panel believers"><h3>Rev 4-5 (Heavenly Perspective)</h3><p>Throne room; Lamb worthy to open scroll. <em>Details</em> (<button class="ref" data-v="Revelation 4:1-11">Revelation 4:1-11</button>; <button class="ref" data-v="Revelation 5:1-14">Revelation 5:1-14</button>): Door open in heaven; Lamb takes scroll; worship.</p></div><div class="panel believers"><h3>Rev 12 (Cosmic/Earthly Perspective)</h3><p>Dragon, woman, child, war in heaven. <em>Details</em> (<button class="ref" data-v="Revelation 12:1-12">Revelation 12:1-12</button>): Woman clothed with sun; dragon cast out; rejoicing in heaven.</p></div></div>
+    <p><strong>Overlap:</strong> Heavenly authority given; cosmic war begins as Satan is cast down.</p>
+    <p><strong>Key cross-references:</strong> <button class="ref" data-v="Daniel 7:9-14">Daniel 7:9-14</button> (throne, books opened); <button class="ref" data-v="John 12:31">John 12:31</button>.</p>
+  </div>
+</section>
+
+<!-- 40 -->
+<section class="slide" data-section="Revelation’s two accounts" data-title="General Tribulation (Beginning of Sorrows)">
+  <div class="page">
+    <div class="kicker">Parallel Structure of Revelation · 2</div>
+    <h2>General Tribulation (Beginning of Sorrows)</h2>
+    <div class="cols"><div class="panel believers"><h3>Rev 6:1-11: Seals 1-5 opened</h3><p>White (conquest), Red (war), Black (famine), Pale (death) horses; martyrs under altar (<button class="ref" data-v="Revelation 6:9-11">v. 9-11</button>).</p></div><div class="panel believers"><h3>Rev 13:1-10: Beast from sea rises, wars on saints</h3><p>Beast with heads/horns; authority 42 months; overcomes saints.</p></div></div>
+    <p><strong>Overlap:</strong> Man/Satan-driven trials: wars, famine, death, persecution; church endures.</p>
+    <p><strong>Key cross-references:</strong> <button class="ref" data-v="Matthew 24:4-14">Matthew 24:4-14</button> (wars, famines); <button class="ref" data-v="Luke 21:9-12">Luke 21:9-12</button>; <button class="ref" data-v="Revelation 13:7">Revelation 13:7</button>.</p>
+  </div>
+</section>
+
+<!-- 41 -->
+<section class="slide" data-section="Revelation’s two accounts" data-title="Midpoint Trigger &amp; Climactic Great Tribulation">
+  <div class="page">
+    <div class="kicker">Parallel Structure of Revelation · 3</div>
+    <h2>Midpoint Trigger &amp; Climactic Great Tribulation</h2>
+    <div class="cols"><div class="panel believers"><h3>Rev 6:12-17: 6th Seal – Cosmic disturbance</h3><p>Earthquake; sun black, moon blood, stars fall; kings hide from “wrath of the Lamb.”</p></div><div class="panel believers"><h3>Rev 13: Beast fully empowered; mark, image, persecution</h3><p>Beast’s wound healed; dragon gives power; war on saints; mark 666 enforced.</p></div></div>
+    <p><strong>Overlap:</strong> Abomination/beast empowerment triggers intense persecution (“cut short” for elect); cosmic signs end this phase.</p>
+    <p><strong>Key cross-references:</strong> <button class="ref" data-v="Daniel 9:27">Daniel 9:27</button> (abomination); <button class="ref" data-v="Matthew 24:15-22">Matthew 24:15-22</button>, <button class="ref" data-v="Matthew 24:29">Matthew 24:29</button>; <button class="ref" data-v="Daniel 12:11-12">Daniel 12:11-12</button> (1290/1335 days).</p>
+  </div>
+</section>
+
+<!-- 42 -->
+<section class="slide" data-section="Revelation’s two accounts" data-title="Rapture &amp; Saints in Heaven">
+  <div class="page">
+    <div class="kicker">Parallel Structure of Revelation · 4</div>
+    <h2>Rapture &amp; Saints in Heaven</h2>
+    <div class="cols"><div class="panel believers"><h3>Rev 7:1-17: Multitude from great tribulation before throne</h3><p>144,000 sealed; great multitude from all nations; God wipes away tears.</p></div><div class="panel believers"><h3>Rev 15:2: Victors over beast on sea of glass</h3><p><em>Details</em> (<button class="ref" data-v="Revelation 15:1-8">Revelation 15:1-8</button>): Sea of glass mingled with fire; harps; song of Moses/Lamb.</p></div></div>
+    <p><strong>Overlap:</strong> Raptured church safe in heaven post-tribulation; victory over beast/mark.</p>
+    <p><strong>Key cross-references:</strong> <button class="ref" data-v="Matthew 24:29-31">Matthew 24:29-31</button>; <button class="ref" data-v="1 Thessalonians 4:16-17">1 Thessalonians 4:16-17</button>; <button class="ref" data-v="Revelation 6:12-17">Revelation 6:12-17</button>.</p>
+  </div>
+</section>
+
+<!-- 43 -->
+<section class="slide" data-section="Revelation’s two accounts" data-title="Transition to Wrath">
+  <div class="page">
+    <div class="kicker">Parallel Structure of Revelation · 5</div>
+    <h2>Transition to Wrath</h2>
+    <div class="cols"><div class="panel believers"><h3>Rev 8:1: Half-hour silence when 7th seal opened</h3><p>Silence in heaven about half an hour.</p></div><div class="panel believers"><h3>Implicit transition after victors appear in heaven</h3><p><em>Details</em> (<button class="ref" data-v="Revelation 15:5-8">Revelation 15:5-8</button>): Temple filled with smoke; no man enters till plagues finished.</p></div></div>
+    <p><strong>Overlap:</strong> Brief heavenly pause before judgments begin.</p>
+  </div>
+</section>
+
+<!-- 44 -->
+<section class="slide" data-section="Revelation’s two accounts" data-title="God’s Wrath Poured Out">
+  <div class="page">
+    <div class="kicker">Parallel Structure of Revelation · 6</div>
+    <h2>God’s Wrath Poured Out</h2>
+    <div class="cols"><div class="panel cain"><h3>Rev 8-9: Trumpets – Partial judgments</h3><p>Hail/fire, sea blood, waters bitter (thirds affected); locusts/demonic army.</p></div><div class="panel cain"><h3>Rev 16: Vials – Intensified/universal judgments</h3><p>Sores on mark-bearers, sea/rivers blood, darkness on kingdom, Armageddon gathered.</p></div></div>
+    <p><strong>Overlap:</strong> Parallel wrath: Trumpets affect thirds (partial); vials full/universal on beast’s kingdom.</p>
+    <p><strong>Key cross-references:</strong> <button class="ref" data-v="Joel 2:1-11">Joel 2:1-11</button>; <button class="ref" data-v="Revelation 16:2">Revelation 16:2</button>, <button class="ref" data-v="Revelation 16:10-11">Revelation 16:10-11</button> (target mark-bearers); <button class="ref" data-v="1 Thessalonians 5:9">1 Thessalonians 5:9</button>.</p>
+  </div>
+</section>
+
+<!-- 45 -->
+<section class="slide" data-section="Revelation’s two accounts" data-title="Kingdom Proclaimed / Established">
+  <div class="page">
+    <div class="kicker">Parallel Structure of Revelation · 7</div>
+    <h2>Kingdom Proclaimed / Established</h2>
+    <div class="cols"><div class="panel believers"><h3>Rev 11:15-19: 7th trumpet – Kingdom comes</h3><p>Kingdoms become Christ’s; reward saints, destroy destroyers.</p></div><div class="panel believers"><h3>Rev 19-20: Christ returns, beast defeated, millennium</h3><p>White horse return; beast to lake of fire; Satan bound; saints reign 1000 years.</p></div></div>
+    <p><strong>Overlap:</strong> Final victory; kingdom established.</p>
+    <p><strong>Key cross-references:</strong> <button class="ref" data-v="Daniel 7:27">Daniel 7:27</button>; <button class="ref" data-v="Matthew 25:31-46">Matthew 25:31-46</button>; <button class="ref" data-v="Revelation 11:15">Revelation 11:15</button> // Revelation 19.</p>
+    <div class="callout"><p>This detailed table reinforces the parallel structure: same events (tribulation → rapture → wrath → kingdom), different angles. The church endures tribulation (Rev 6 seals / Rev 13 beast) but is raptured at the sixth seal before wrath (Rev 8+ trumpets // Rev 16 vials).</p></div>
+  </div>
+</section>
+
+<!-- 46 -->
+<section class="slide" data-section="Trumpets and vials" data-title="Trumpets and Vials as Parallel Judgments in Revelation">
+  <div class="page">
+    <h2>Trumpets and Vials as Parallel Judgments in Revelation</h2>
+    <p>The trumpets (Rev 8–9) and vials/bowls (Rev 16) are <strong>parallel descriptions of the same wrath judgments</strong> from different perspectives:</p>
+    <ul class="marks"><li><strong>Trumpets:</strong> Heavenly viewpoint, partial/limited scope (often “a third” affected), emphasizing warning and opportunity for repentance (though none repent, <button class="ref" data-v="Revelation 9:20-21">Rev 9:20-21</button>).</li><li><strong>Vials:</strong> Earthly/cosmic viewpoint, intensified/universal scope, poured out on the beast’s kingdom and mark-bearers specifically.</li></ul>
+    <p>This supports the overlapping structure (Rev 4-11 heavenly // Rev 12-22 earthly), with wrath post-rapture targeting the ungodly while the church is absent.</p>
+  </div>
+</section>
+
+<!-- 47 -->
+<section class="slide" data-section="Trumpets and vials" data-title="Seven trumpets, seven vials">
+  <div class="page">
+    <div class="kicker">Trumpets and Vials as Parallel Judgments</div>
+    <h2>Seven trumpets, seven vials</h2>
+    <div class="tbl"><table><thead><tr><th>Trumpet (Rev 8–9)</th><th>Vial/Bowl (Rev 16)</th></tr></thead><tbody><tr><td><strong>1st</strong> · Rev 8:7 – Hail and fire mingled with blood</td><td><strong>1st</strong> · Rev 16:2 – Noisome and grievous sore</td></tr><tr><td><strong>2nd</strong> · Rev 8:8-9 – Great mountain burning with fire cast into sea</td><td><strong>2nd</strong> · Rev 16:3 – Vial poured into sea</td></tr><tr><td><strong>3rd</strong> · Rev 8:10-11 – Great star (Wormwood) falls, burns</td><td><strong>3rd</strong> · Rev 16:4-7 – Vial into rivers and fountains</td></tr><tr><td><strong>4th</strong> · Rev 8:12 – Heavens smitten</td><td><strong>4th</strong> · Rev 16:8-9 – Vial upon the sun</td></tr><tr><td><strong>5th</strong> · Rev 9:1-12 – Star falls, opens bottomless pit; locusts torment</td><td><strong>5th</strong> · Rev 16:10-11 – Vial upon throne of beast</td></tr><tr><td><strong>6th</strong> · Rev 9:13-21 – Four angels loosed at Euphrates; 200M horsemen</td><td><strong>6th</strong> · Rev 16:12-16 – Vial upon Euphrates</td></tr><tr><td><strong>7th</strong> · Rev 11:15-19 – Great voices: kingdoms become Christ’s</td><td><strong>7th</strong> · Rev 16:17-21 – Vial into air; “It is done”</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- 48 -->
+<section class="slide" data-section="Trumpets and vials" data-title="The 1st trumpet and vial">
+  <div class="page">
+    <div class="kicker">Trumpets and Vials · 1st</div>
+    <h2>The 1st trumpet and vial</h2>
+    <div class="cols"><div class="panel believers"><h3>Trumpet · <button class="ref" data-v="Revelation 8:7">Revelation 8:7</button></h3><p>Burns a third of trees, all green grass.</p></div><div class="panel cain"><h3>Vial · <button class="ref" data-v="Revelation 16:2">Revelation 16:2</button></h3><p>Sores on men who have the mark of the beast and worship his image.</p></div></div>
+    <p><strong>Parallel:</strong> Earth afflicted (vegetation burned // sores on beast followers).</p>
+    <p><strong>Note:</strong> Targeted at beast system in vials.</p>
+  </div>
+</section>
+
+<!-- 49 -->
+<section class="slide" data-section="Trumpets and vials" data-title="The 2nd trumpet and vial">
+  <div class="page">
+    <div class="kicker">Trumpets and Vials · 2nd</div>
+    <h2>The 2nd trumpet and vial</h2>
+    <div class="cols"><div class="panel believers"><h3>Trumpet · <button class="ref" data-v="Revelation 8:8-9">Revelation 8:8-9</button></h3><p>Third of sea becomes blood; third of sea creatures die; third of ships destroyed.</p></div><div class="panel cain"><h3>Vial · <button class="ref" data-v="Revelation 16:3">Revelation 16:3</button></h3><p>Sea becomes blood as of a dead man; every living soul in sea dies.</p></div></div>
+    <p><strong>Parallel:</strong> Sea turned to blood (partial // total).</p>
+    <p><strong>Note:</strong> Escalation from warning to full judgment.</p>
+  </div>
+</section>
+
+<!-- 50 -->
+<section class="slide" data-section="Trumpets and vials" data-title="The 3rd trumpet and vial">
+  <div class="page">
+    <div class="kicker">Trumpets and Vials · 3rd</div>
+    <h2>The 3rd trumpet and vial</h2>
+    <div class="cols"><div class="panel believers"><h3>Trumpet · <button class="ref" data-v="Revelation 8:10-11">Revelation 8:10-11</button></h3><p>Third of rivers/fountains bitter; many men die from waters.</p></div><div class="panel cain"><h3>Vial · <button class="ref" data-v="Revelation 16:4-7">Revelation 16:4-7</button></h3><p>Rivers/fountains become blood; angel declares righteousness.</p></div></div>
+    <p><strong>Parallel:</strong> Fresh waters poisoned/blood (partial // total).</p>
+    <p><strong>Note:</strong> Judgment on water sources.</p>
+  </div>
+</section>
+
+<!-- 51 -->
+<section class="slide" data-section="Trumpets and vials" data-title="The 4th trumpet and vial">
+  <div class="page">
+    <div class="kicker">Trumpets and Vials · 4th</div>
+    <h2>The 4th trumpet and vial</h2>
+    <div class="cols"><div class="panel believers"><h3>Trumpet · <button class="ref" data-v="Revelation 8:12">Revelation 8:12</button></h3><p>Third of sun, moon, stars darkened; third of day/night no light.</p></div><div class="panel cain"><h3>Vial · <button class="ref" data-v="Revelation 16:8-9">Revelation 16:8-9</button></h3><p>Sun scorches men with fire; men blaspheme God, repent not.</p></div></div>
+    <p><strong>Parallel:</strong> Heavenly lights afflicted (partial darkening // intensified heat).</p>
+    <p><strong>Note:</strong> Men gnaw tongues but do not repent.</p>
+  </div>
+</section>
+
+<!-- 52 -->
+<section class="slide" data-section="Trumpets and vials" data-title="The 5th trumpet and vial">
+  <div class="page">
+    <div class="kicker">Trumpets and Vials · 5th</div>
+    <h2>The 5th trumpet and vial</h2>
+    <div class="cols"><div class="panel believers"><h3>Trumpet · <button class="ref" data-v="Revelation 9:1-12">Revelation 9:1-12</button></h3><p>Torment men without seal of God for 5 months (no death); like scorpions.</p></div><div class="panel cain"><h3>Vial · <button class="ref" data-v="Revelation 16:10-11">Revelation 16:10-11</button></h3><p>Kingdom full of darkness; men gnaw tongues for pain, blaspheme God.</p></div></div>
+    <p><strong>Parallel:</strong> Darkness and torment (demonic locusts // darkness on beast throne).</p>
+    <p><strong>Note:</strong> Pain without repentance; beast targeted.</p>
+  </div>
+</section>
+
+<!-- 53 -->
+<section class="slide" data-section="Trumpets and vials" data-title="The 6th trumpet and vial">
+  <div class="page">
+    <div class="kicker">Trumpets and Vials · 6th</div>
+    <h2>The 6th trumpet and vial</h2>
+    <div class="cols"><div class="panel believers"><h3>Trumpet · <button class="ref" data-v="Revelation 9:13-21">Revelation 9:13-21</button></h3><p>Third of men killed by fire/smoke/brimstone; no repentance of idolatry/murder.</p></div><div class="panel cain"><h3>Vial · <button class="ref" data-v="Revelation 16:12-16">Revelation 16:12-16</button></h3><p>River dried for kings of east; unclean spirits gather to Armageddon.</p></div></div>
+    <p><strong>Parallel:</strong> Euphrates involved; demonic gathering/armies (killing third // gathering for final battle).</p>
+    <p><strong>Note:</strong> Preparation for Armageddon.</p>
+  </div>
+</section>
+
+<!-- 54 -->
+<section class="slide" data-section="Trumpets and vials" data-title="The 7th trumpet and vial">
+  <div class="page">
+    <div class="kicker">Trumpets and Vials · 7th</div>
+    <h2>The 7th trumpet and vial</h2>
+    <div class="cols"><div class="panel believers"><h3>Trumpet · <button class="ref" data-v="Revelation 11:15-19">Revelation 11:15-19</button></h3><p>Temple opened, lightning, voices, earthquake, hail.</p></div><div class="panel cain"><h3>Vial · <button class="ref" data-v="Revelation 16:17-21">Revelation 16:17-21</button></h3><p>Voices, thunders, greatest earthquake, Babylon falls, great hail.</p></div></div>
+    <p><strong>Parallel:</strong> Final consummation: kingdom proclaimed // great earthquake/hail, Babylon judged.</p>
+    <p><strong>Note:</strong> <button class="ref" data-v="Revelation 11:15">Revelation 11:15</button>; parallels Rev 19-20 kingdom.</p>
+    <div class="callout"><p>This parallelism shows trumpets as limited warnings (partial, heavenly focus) and vials as complete execution (universal, earthly focus on beast worshippers). Both occur post-rapture during the wrath period, with the beast active throughout (<button class="ref" data-v="Revelation 16:10">Revelation 16:10</button>, <button class="ref" data-v="Revelation 16:13-14">Revelation 16:13-14</button>). No repentance in either (<button class="ref" data-v="Revelation 9:20-21">Revelation 9:20-21</button>; <button class="ref" data-v="Revelation 16:9">Revelation 16:9</button>, <button class="ref" data-v="Revelation 16:11">Revelation 16:11</button>). Supports <button class="ref" data-v="1 Thessalonians 5:9">1 Thessalonians 5:9</button>—church spared wrath.</p></div>
+  </div>
+</section>
+
+<!-- 55 -->
+<section class="slide" data-section="Close" data-title="Tribulation, Rapture, Wrath, Kingdom">
+  <div class="page title-page later">
+    <div class="overline">Prophecy &amp; the covenants</div>
+    <h1>Tribulation, Rapture, Wrath, Kingdom</h1>
+    <p class="sub">Same events (tribulation → rapture → wrath → kingdom), different angles.</p>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>Tribulation</strong>The church endures tribulation (Rev 6 seals / Rev 13 beast). <button class="ref" data-v="Matthew 24:9">Matthew 24:9</button></li><li><strong>Rapture</strong>Raptured at Christ’s visible second coming. <button class="ref" data-v="Matthew 24:29-31">Matthew 24:29-31</button></li><li><strong>Wrath</strong>Spared wrath (trumpets/vials). <button class="ref" data-v="1 Thessalonians 5:9">1 Thessalonians 5:9</button></li><li><strong>Kingdom</strong>Returning with Christ to establish the millennium. <button class="ref" data-v="Revelation 19:11-14">Revelation 19:11-14</button></li></ol></div>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-daniel-8-12-timeline" target="_blank" rel="noopener">Timeline of Days in Daniel 8 and 12 ↗</a><a class="ref lesson-link" href="../../studies/#lesson-daniel-11" target="_blank" rel="noopener">Daniel 11 ↗</a><a class="ref lesson-link" href="../../studies/#lesson-revelation-daniels-70th-week-chart" target="_blank" rel="noopener">Daniel’s 70th Week (chart) ↗</a><a class="ref lesson-link" href="../../studies/#lesson-conditional-covenants-ezekiel-temple" target="_blank" rel="noopener">Conditional Covenants and Ezekiel’s Temple ↗</a><a class="ref lesson-link" href="../../studies/#lesson-ot-prophecy-conditional" target="_blank" rel="noopener">OT Prophecy: God’s Grace in a Conditional Promise ↗</a><a class="ref lesson-link" href="../../studies/#lesson-doctrine-covenants-rightly-dividing" target="_blank" rel="noopener">Outline of the Covenants ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 Thessalonians 4:16-17":[[16, "For the Lord himself shall descend from heaven with a shout, with the voice of the archangel, and with the trump of God: and the dead in Christ shall rise first:"], [17, "Then we which are alive and remain shall be caught up together with them in the clouds, to meet the Lord in the air: and so shall we ever be with the Lord."]],
+  "1 Thessalonians 5:9":[[9, "For God hath not appointed us to wrath, but to obtain salvation by our Lord Jesus Christ,"]],
+  "2 Thessalonians 2:4":[[4, "Who opposeth and exalteth himself above all that is called God, or that is worshipped; so that he as God sitteth in the temple of God, shewing himself that he is God."]],
+  "Daniel 12:11-12":[[11, "And from the time that the daily sacrifice shall be taken away, and the abomination that maketh desolate set up, there shall be a thousand two hundred and ninety days."], [12, "Blessed is he that waiteth, and cometh to the thousand three hundred and five and thirty days."]],
+  "Daniel 7:27":[[27, "And the kingdom and dominion, and the greatness of the kingdom under the whole heaven, shall be given to the people of the saints of the most High, whose kingdom is an everlasting kingdom, and all dominions shall serve and obey him."]],
+  "Daniel 7:9-14":[[9, "I beheld till the thrones were cast down, and the Ancient of days did sit, whose garment was white as snow, and the hair of his head like the pure wool: his throne was like the fiery flame, and his wheels as burning fire."], [10, "A fiery stream issued and came forth from before him: thousand thousands ministered unto him, and ten thousand times ten thousand stood before him: the judgment was set, and the books were opened."], [11, "I beheld then because of the voice of the great words which the horn spake: I beheld even till the beast was slain, and his body destroyed, and given to the burning flame."], [12, "As concerning the rest of the beasts, they had their dominion taken away: yet their lives were prolonged for a season and time."], [13, "I saw in the night visions, and, behold, one like the Son of man came with the clouds of heaven, and came to the Ancient of days, and they brought him near before him."], [14, "And there was given him dominion, and glory, and a kingdom, that all people, nations, and languages, should serve him: his dominion is an everlasting dominion, which shall not pass away, and his kingdom that which shall not be destroyed."]],
+  "Daniel 9:27":[[27, "And he shall confirm the covenant with many for one week: and in the midst of the week he shall cause the sacrifice and the oblation to cease, and for the overspreading of abominations he shall make it desolate, even until the consummation, and that determined shall be poured upon the desolate."]],
+  "Joel 2:1-11":[[1, "Blow ye the trumpet in Zion, and sound an alarm in my holy mountain: let all the inhabitants of the land tremble: for the day of the LORD cometh, for it is nigh at hand;"], [2, "A day of darkness and of gloominess, a day of clouds and of thick darkness, as the morning spread upon the mountains: a great people and a strong; there hath not been ever the like, neither shall be any more after it, even to the years of many generations."], [3, "A fire devoureth before them; and behind them a flame burneth: the land is as the garden of Eden before them, and behind them a desolate wilderness; yea, and nothing shall escape them."], [4, "The appearance of them is as the appearance of horses; and as horsemen, so shall they run."], [5, "Like the noise of chariots on the tops of mountains shall they leap, like the noise of a flame of fire that devoureth the stubble, as a strong people set in battle array."], [6, "Before their face the people shall be much pained: all faces shall gather blackness."], [7, "They shall run like mighty men; they shall climb the wall like men of war; and they shall march every one on his ways, and they shall not break their ranks:"], [8, "Neither shall one thrust another; they shall walk every one in his path: and when they fall upon the sword, they shall not be wounded."], [9, "They shall run to and fro in the city; they shall run upon the wall, they shall climb up upon the houses; they shall enter in at the windows like a thief."], [10, "The earth shall quake before them; the heavens shall tremble: the sun and the moon shall be dark, and the stars shall withdraw their shining:"], [11, "And the LORD shall utter his voice before his army: for his camp is very great: for he is strong that executeth his word: for the day of the LORD is great and very terrible; and who can abide it?"]],
+  "John 12:31":[[31, "Now is the judgment of this world: now shall the prince of this world be cast out."]],
+  "Luke 21:12":[[12, "But before all these, they shall lay their hands on you, and persecute you, delivering you up to the synagogues, and into prisons, being brought before kings and rulers for my name’s sake."]],
+  "Luke 21:17":[[17, "And ye shall be hated of all men for my name’s sake."]],
+  "Luke 21:20":[[20, "And when ye shall see Jerusalem compassed with armies, then know that the desolation thereof is nigh."]],
+  "Luke 21:23":[[23, "But woe unto them that are with child, and to them that give suck, in those days! for there shall be great distress in the land, and wrath upon this people."]],
+  "Luke 21:23-24":[[23, "But woe unto them that are with child, and to them that give suck, in those days! for there shall be great distress in the land, and wrath upon this people."], [24, "And they shall fall by the edge of the sword, and shall be led away captive into all nations: and Jerusalem shall be trodden down of the Gentiles, until the times of the Gentiles be fulfilled."]],
+  "Luke 21:25-26":[[25, "And there shall be signs in the sun, and in the moon, and in the stars; and upon the earth distress of nations, with perplexity; the sea and the waves roaring;"], [26, "Men’s hearts failing them for fear, and for looking after those things which are coming on the earth: for the powers of heaven shall be shaken."]],
+  "Luke 21:27-28":[[27, "And then shall they see the Son of man coming in a cloud with power and great glory."], [28, "And when these things begin to come to pass, then look up, and lift up your heads; for your redemption draweth nigh."]],
+  "Luke 21:9-11":[[9, "But when ye shall hear of wars and commotions, be not terrified: for these things must first come to pass; but the end is not by and by."], [10, "Then said he unto them, Nation shall rise against nation, and kingdom against kingdom:"], [11, "And great earthquakes shall be in divers places, and famines, and pestilences; and fearful sights and great signs shall there be from heaven."]],
+  "Luke 21:9-12":[[9, "But when ye shall hear of wars and commotions, be not terrified: for these things must first come to pass; but the end is not by and by."], [10, "Then said he unto them, Nation shall rise against nation, and kingdom against kingdom:"], [11, "And great earthquakes shall be in divers places, and famines, and pestilences; and fearful sights and great signs shall there be from heaven."], [12, "But before all these, they shall lay their hands on you, and persecute you, delivering you up to the synagogues, and into prisons, being brought before kings and rulers for my name’s sake."]],
+  "Mark 13:13":[[13, "And ye shall be hated of all men for my name’s sake: but he that shall endure unto the end, the same shall be saved."]],
+  "Mark 13:14":[[14, "But when ye shall see the abomination of desolation, spoken of by Daniel the prophet, standing where it ought not, (let him that readeth understand,) then let them that be in Judaea flee to the mountains:"]],
+  "Mark 13:19":[[19, "For in those days shall be affliction, such as was not from the beginning of the creation which God created unto this time, neither shall be."]],
+  "Mark 13:20":[[20, "And except that the Lord had shortened those days, no flesh should be saved: but for the elect’s sake, whom he hath chosen, he hath shortened the days."]],
+  "Mark 13:22":[[22, "For false Christs and false prophets shall rise, and shall shew signs and wonders, to seduce, if it were possible, even the elect."]],
+  "Mark 13:24":[[24, "But in those days, after that tribulation, the sun shall be darkened, and the moon shall not give her light,"]],
+  "Mark 13:26-27":[[26, "And then shall they see the Son of man coming in the clouds with great power and glory."], [27, "And then shall he send his angels, and shall gather together his elect from the four winds, from the uttermost part of the earth to the uttermost part of heaven."]],
+  "Mark 13:7-8":[[7, "And when ye shall hear of wars and rumours of wars, be ye not troubled: for such things must needs be; but the end shall not be yet."], [8, "For nation shall rise against nation, and kingdom against kingdom: and there shall be earthquakes in divers places, and there shall be famines and troubles: these are the beginnings of sorrows."]],
+  "Mark 13:9":[[9, "But take heed to yourselves: for they shall deliver you up to councils; and in the synagogues ye shall be beaten: and ye shall be brought before rulers and kings for my sake, for a testimony against them."]],
+  "Matthew 24:15":[[15, "When ye therefore shall see the abomination of desolation, spoken of by Daniel the prophet, stand in the holy place, (whoso readeth, let him understand:)"]],
+  "Matthew 24:15-22":[[15, "When ye therefore shall see the abomination of desolation, spoken of by Daniel the prophet, stand in the holy place, (whoso readeth, let him understand:)"], [16, "Then let them which be in Judaea flee into the mountains:"], [17, "Let him which is on the housetop not come down to take any thing out of his house:"], [18, "Neither let him which is in the field return back to take his clothes."], [19, "And woe unto them that are with child, and to them that give suck in those days!"], [20, "But pray ye that your flight be not in the winter, neither on the sabbath day:"], [21, "For then shall be great tribulation, such as was not since the beginning of the world to this time, no, nor ever shall be."], [22, "And except those days should be shortened, there should no flesh be saved: but for the elect’s sake those days shall be shortened."]],
+  "Matthew 24:21":[[21, "For then shall be great tribulation, such as was not since the beginning of the world to this time, no, nor ever shall be."]],
+  "Matthew 24:21-22":[[21, "For then shall be great tribulation, such as was not since the beginning of the world to this time, no, nor ever shall be."], [22, "And except those days should be shortened, there should no flesh be saved: but for the elect’s sake those days shall be shortened."]],
+  "Matthew 24:22":[[22, "And except those days should be shortened, there should no flesh be saved: but for the elect’s sake those days shall be shortened."]],
+  "Matthew 24:24":[[24, "For there shall arise false Christs, and false prophets, and shall shew great signs and wonders; insomuch that, if it were possible, they shall deceive the very elect."]],
+  "Matthew 24:29":[[29, "Immediately after the tribulation of those days shall the sun be darkened, and the moon shall not give her light, and the stars shall fall from heaven, and the powers of the heavens shall be shaken:"]],
+  "Matthew 24:29-31":[[29, "Immediately after the tribulation of those days shall the sun be darkened, and the moon shall not give her light, and the stars shall fall from heaven, and the powers of the heavens shall be shaken:"], [30, "And then shall appear the sign of the Son of man in heaven: and then shall all the tribes of the earth mourn, and they shall see the Son of man coming in the clouds of heaven with power and great glory."], [31, "And he shall send his angels with a great sound of a trumpet, and they shall gather together his elect from the four winds, from one end of heaven to the other."]],
+  "Matthew 24:30-31":[[30, "And then shall appear the sign of the Son of man in heaven: and then shall all the tribes of the earth mourn, and they shall see the Son of man coming in the clouds of heaven with power and great glory."], [31, "And he shall send his angels with a great sound of a trumpet, and they shall gather together his elect from the four winds, from one end of heaven to the other."]],
+  "Matthew 24:31":[[31, "And he shall send his angels with a great sound of a trumpet, and they shall gather together his elect from the four winds, from one end of heaven to the other."]],
+  "Matthew 24:4-14":[[4, "And Jesus answered and said unto them, Take heed that no man deceive you."], [5, "For many shall come in my name, saying, I am Christ; and shall deceive many."], [6, "And ye shall hear of wars and rumours of wars: see that ye be not troubled: for all these things must come to pass, but the end is not yet."], [7, "For nation shall rise against nation, and kingdom against kingdom: and there shall be famines, and pestilences, and earthquakes, in divers places."], [8, "All these are the beginning of sorrows."], [9, "Then shall they deliver you up to be afflicted, and shall kill you: and ye shall be hated of all nations for my name’s sake."], [10, "And then shall many be offended, and shall betray one another, and shall hate one another."], [11, "And many false prophets shall rise, and shall deceive many."], [12, "And because iniquity shall abound, the love of many shall wax cold."], [13, "But he that shall endure unto the end, the same shall be saved."], [14, "And this gospel of the kingdom shall be preached in all the world for a witness unto all nations; and then shall the end come."]],
+  "Matthew 24:6-8":[[6, "And ye shall hear of wars and rumours of wars: see that ye be not troubled: for all these things must come to pass, but the end is not yet."], [7, "For nation shall rise against nation, and kingdom against kingdom: and there shall be famines, and pestilences, and earthquakes, in divers places."], [8, "All these are the beginning of sorrows."]],
+  "Matthew 24:9":[[9, "Then shall they deliver you up to be afflicted, and shall kill you: and ye shall be hated of all nations for my name’s sake."]],
+  "Matthew 25:31-46":[[31, "When the Son of man shall come in his glory, and all the holy angels with him, then shall he sit upon the throne of his glory:"], [32, "And before him shall be gathered all nations: and he shall separate them one from another, as a shepherd divideth his sheep from the goats:"], [33, "And he shall set the sheep on his right hand, but the goats on the left."], [34, "Then shall the King say unto them on his right hand, Come, ye blessed of my Father, inherit the kingdom prepared for you from the foundation of the world:"], [35, "For I was an hungred, and ye gave me meat: I was thirsty, and ye gave me drink: I was a stranger, and ye took me in:"], [36, "Naked, and ye clothed me: I was sick, and ye visited me: I was in prison, and ye came unto me."], [37, "Then shall the righteous answer him, saying, Lord, when saw we thee an hungred, and fed thee? or thirsty, and gave thee drink?"], [38, "When saw we thee a stranger, and took thee in? or naked, and clothed thee?"], [39, "Or when saw we thee sick, or in prison, and came unto thee?"], [40, "And the King shall answer and say unto them, Verily I say unto you, Inasmuch as ye have done it unto one of the least of these my brethren, ye have done it unto me."], [41, "Then shall he say also unto them on the left hand, Depart from me, ye cursed, into everlasting fire, prepared for the devil and his angels:"], [42, "For I was an hungred, and ye gave me no meat: I was thirsty, and ye gave me no drink:"], [43, "I was a stranger, and ye took me not in: naked, and ye clothed me not: sick, and in prison, and ye visited me not."], [44, "Then shall they also answer him, saying, Lord, when saw we thee an hungred, or athirst, or a stranger, or naked, or sick, or in prison, and did not minister unto thee?"], [45, "Then shall he answer them, saying, Verily I say unto you, Inasmuch as ye did it not to one of the least of these, ye did it not to me."], [46, "And these shall go away into everlasting punishment: but the righteous into life eternal."]],
+  "Revelation 11:15":[[15, "And the seventh angel sounded; and there were great voices in heaven, saying, The kingdoms of this world are become the kingdoms of our Lord, and of his Christ; and he shall reign for ever and ever."]],
+  "Revelation 11:15-19":[[15, "And the seventh angel sounded; and there were great voices in heaven, saying, The kingdoms of this world are become the kingdoms of our Lord, and of his Christ; and he shall reign for ever and ever."], [16, "And the four and twenty elders, which sat before God on their seats, fell upon their faces, and worshipped God,"], [17, "Saying, We give thee thanks, O LORD God Almighty, which art, and wast, and art to come; because thou hast taken to thee thy great power, and hast reigned."], [18, "And the nations were angry, and thy wrath is come, and the time of the dead, that they should be judged, and that thou shouldest give reward unto thy servants the prophets, and to the saints, and them that fear thy name, small and great; and shouldest destroy them which destroy the earth."], [19, "And the temple of God was opened in heaven, and there was seen in his temple the ark of his testament: and there were lightnings, and voices, and thunderings, and an earthquake, and great hail."]],
+  "Revelation 12:1-12":[[1, "And there appeared a great wonder in heaven; a woman clothed with the sun, and the moon under her feet, and upon her head a crown of twelve stars:"], [2, "And she being with child cried, travailing in birth, and pained to be delivered."], [3, "And there appeared another wonder in heaven; and behold a great red dragon, having seven heads and ten horns, and seven crowns upon his heads."], [4, "And his tail drew the third part of the stars of heaven, and did cast them to the earth: and the dragon stood before the woman which was ready to be delivered, for to devour her child as soon as it was born."], [5, "And she brought forth a man child, who was to rule all nations with a rod of iron: and her child was caught up unto God, and to his throne."], [6, "And the woman fled into the wilderness, where she hath a place prepared of God, that they should feed her there a thousand two hundred and threescore days."], [7, "And there was war in heaven: Michael and his angels fought against the dragon; and the dragon fought and his angels,"], [8, "And prevailed not; neither was their place found any more in heaven."], [9, "And the great dragon was cast out, that old serpent, called the Devil, and Satan, which deceiveth the whole world: he was cast out into the earth, and his angels were cast out with him."], [10, "And I heard a loud voice saying in heaven, Now is come salvation, and strength, and the kingdom of our God, and the power of his Christ: for the accuser of our brethren is cast down, which accused them before our God day and night."], [11, "And they overcame him by the blood of the Lamb, and by the word of their testimony; and they loved not their lives unto the death."], [12, "Therefore rejoice, ye heavens, and ye that dwell in them. Woe to the inhabiters of the earth and of the sea! for the devil is come down unto you, having great wrath, because he knoweth that he hath but a short time."]],
+  "Revelation 13:1-5":[[1, "And I stood upon the sand of the sea, and saw a beast rise up out of the sea, having seven heads and ten horns, and upon his horns ten crowns, and upon his heads the name of blasphemy."], [2, "And the beast which I saw was like unto a leopard, and his feet were as the feet of a bear, and his mouth as the mouth of a lion: and the dragon gave him his power, and his seat, and great authority."], [3, "And I saw one of his heads as it were wounded to death; and his deadly wound was healed: and all the world wondered after the beast."], [4, "And they worshipped the dragon which gave power unto the beast: and they worshipped the beast, saying, Who is like unto the beast? who is able to make war with him?"], [5, "And there was given unto him a mouth speaking great things and blasphemies; and power was given unto him to continue forty and two months."]],
+  "Revelation 13:2":[[2, "And the beast which I saw was like unto a leopard, and his feet were as the feet of a bear, and his mouth as the mouth of a lion: and the dragon gave him his power, and his seat, and great authority."]],
+  "Revelation 13:3":[[3, "And I saw one of his heads as it were wounded to death; and his deadly wound was healed: and all the world wondered after the beast."]],
+  "Revelation 13:7":[[7, "And it was given unto him to make war with the saints, and to overcome them: and power was given him over all kindreds, and tongues, and nations."]],
+  "Revelation 13:7-17":[[7, "And it was given unto him to make war with the saints, and to overcome them: and power was given him over all kindreds, and tongues, and nations."], [8, "And all that dwell upon the earth shall worship him, whose names are not written in the book of life of the Lamb slain from the foundation of the world."], [9, "If any man have an ear, let him hear."], [10, "He that leadeth into captivity shall go into captivity: he that killeth with the sword must be killed with the sword. Here is the patience and the faith of the saints."], [11, "And I beheld another beast coming up out of the earth; and he had two horns like a lamb, and he spake as a dragon."], [12, "And he exerciseth all the power of the first beast before him, and causeth the earth and them which dwell therein to worship the first beast, whose deadly wound was healed."], [13, "And he doeth great wonders, so that he maketh fire come down from heaven on the earth in the sight of men,"], [14, "And deceiveth them that dwell on the earth by the means of those miracles which he had power to do in the sight of the beast; saying to them that dwell on the earth, that they should make an image to the beast, which had the wound by a sword, and did live."], [15, "And he had power to give life unto the image of the beast, that the image of the beast should both speak, and cause that as many as would not worship the image of the beast should be killed."], [16, "And he causeth all, both small and great, rich and poor, free and bond, to receive a mark in their right hand, or in their foreheads:"], [17, "And that no man might buy or sell, save he that had the mark, or the name of the beast, or the number of his name."]],
+  "Revelation 15:1-8":[[1, "And I saw another sign in heaven, great and marvellous, seven angels having the seven last plagues; for in them is filled up the wrath of God."], [2, "And I saw as it were a sea of glass mingled with fire: and them that had gotten the victory over the beast, and over his image, and over his mark, and over the number of his name, stand on the sea of glass, having the harps of God."], [3, "And they sing the song of Moses the servant of God, and the song of the Lamb, saying, Great and marvellous are thy works, Lord God Almighty; just and true are thy ways, thou King of saints."], [4, "Who shall not fear thee, O Lord, and glorify thy name? for thou only art holy: for all nations shall come and worship before thee; for thy judgments are made manifest."], [5, "And after that I looked, and, behold, the temple of the tabernacle of the testimony in heaven was opened:"], [6, "And the seven angels came out of the temple, having the seven plagues, clothed in pure and white linen, and having their breasts girded with golden girdles."], [7, "And one of the four beasts gave unto the seven angels seven golden vials full of the wrath of God, who liveth for ever and ever."], [8, "And the temple was filled with smoke from the glory of God, and from his power; and no man was able to enter into the temple, till the seven plagues of the seven angels were fulfilled."]],
+  "Revelation 15:2":[[2, "And I saw as it were a sea of glass mingled with fire: and them that had gotten the victory over the beast, and over his image, and over his mark, and over the number of his name, stand on the sea of glass, having the harps of God."]],
+  "Revelation 15:5-8":[[5, "And after that I looked, and, behold, the temple of the tabernacle of the testimony in heaven was opened:"], [6, "And the seven angels came out of the temple, having the seven plagues, clothed in pure and white linen, and having their breasts girded with golden girdles."], [7, "And one of the four beasts gave unto the seven angels seven golden vials full of the wrath of God, who liveth for ever and ever."], [8, "And the temple was filled with smoke from the glory of God, and from his power; and no man was able to enter into the temple, till the seven plagues of the seven angels were fulfilled."]],
+  "Revelation 16:10":[[10, "And the fifth angel poured out his vial upon the seat of the beast; and his kingdom was full of darkness; and they gnawed their tongues for pain,"]],
+  "Revelation 16:10-11":[[10, "And the fifth angel poured out his vial upon the seat of the beast; and his kingdom was full of darkness; and they gnawed their tongues for pain,"], [11, "And blasphemed the God of heaven because of their pains and their sores, and repented not of their deeds."]],
+  "Revelation 16:11":[[11, "And blasphemed the God of heaven because of their pains and their sores, and repented not of their deeds."]],
+  "Revelation 16:12-16":[[12, "And the sixth angel poured out his vial upon the great river Euphrates; and the water thereof was dried up, that the way of the kings of the east might be prepared."], [13, "And I saw three unclean spirits like frogs come out of the mouth of the dragon, and out of the mouth of the beast, and out of the mouth of the false prophet."], [14, "For they are the spirits of devils, working miracles, which go forth unto the kings of the earth and of the whole world, to gather them to the battle of that great day of God Almighty."], [15, "Behold, I come as a thief. Blessed is he that watcheth, and keepeth his garments, lest he walk naked, and they see his shame."], [16, "And he gathered them together into a place called in the Hebrew tongue Armageddon."]],
+  "Revelation 16:13-14":[[13, "And I saw three unclean spirits like frogs come out of the mouth of the dragon, and out of the mouth of the beast, and out of the mouth of the false prophet."], [14, "For they are the spirits of devils, working miracles, which go forth unto the kings of the earth and of the whole world, to gather them to the battle of that great day of God Almighty."]],
+  "Revelation 16:17-21":[[17, "And the seventh angel poured out his vial into the air; and there came a great voice out of the temple of heaven, from the throne, saying, It is done."], [18, "And there were voices, and thunders, and lightnings; and there was a great earthquake, such as was not since men were upon the earth, so mighty an earthquake, and so great."], [19, "And the great city was divided into three parts, and the cities of the nations fell: and great Babylon came in remembrance before God, to give unto her the cup of the wine of the fierceness of his wrath."], [20, "And every island fled away, and the mountains were not found."], [21, "And there fell upon men a great hail out of heaven, every stone about the weight of a talent: and men blasphemed God because of the plague of the hail; for the plague thereof was exceeding great."]],
+  "Revelation 16:2":[[2, "And the first went, and poured out his vial upon the earth; and there fell a noisome and grievous sore upon the men which had the mark of the beast, and upon them which worshipped his image."]],
+  "Revelation 16:3":[[3, "And the second angel poured out his vial upon the sea; and it became as the blood of a dead man: and every living soul died in the sea."]],
+  "Revelation 16:4-7":[[4, "And the third angel poured out his vial upon the rivers and fountains of waters; and they became blood."], [5, "And I heard the angel of the waters say, Thou art righteous, O Lord, which art, and wast, and shalt be, because thou hast judged thus."], [6, "For they have shed the blood of saints and prophets, and thou hast given them blood to drink; for they are worthy."], [7, "And I heard another out of the altar say, Even so, Lord God Almighty, true and righteous are thy judgments."]],
+  "Revelation 16:8-9":[[8, "And the fourth angel poured out his vial upon the sun; and power was given unto him to scorch men with fire."], [9, "And men were scorched with great heat, and blasphemed the name of God, which hath power over these plagues: and they repented not to give him glory."]],
+  "Revelation 16:9":[[9, "And men were scorched with great heat, and blasphemed the name of God, which hath power over these plagues: and they repented not to give him glory."]],
+  "Revelation 19:11-14":[[11, "And I saw heaven opened, and behold a white horse; and he that sat upon him was called Faithful and True, and in righteousness he doth judge and make war."], [12, "His eyes were as a flame of fire, and on his head were many crowns; and he had a name written, that no man knew, but he himself."], [13, "And he was clothed with a vesture dipped in blood: and his name is called The Word of God."], [14, "And the armies which were in heaven followed him upon white horses, clothed in fine linen, white and clean."]],
+  "Revelation 1:7":[[7, "Behold, he cometh with clouds; and every eye shall see him, and they also which pierced him: and all kindreds of the earth shall wail because of him. Even so, Amen."]],
+  "Revelation 20:4":[[4, "And I saw thrones, and they sat upon them, and judgment was given unto them: and I saw the souls of them that were beheaded for the witness of Jesus, and for the word of God, and which had not worshipped the beast, neither his image, neither had received his mark upon their foreheads, or in their hands; and they lived and reigned with Christ a thousand years."]],
+  "Revelation 4:1-11":[[1, "After this I looked, and, behold, a door was opened in heaven: and the first voice which I heard was as it were of a trumpet talking with me; which said, Come up hither, and I will shew thee things which must be hereafter."], [2, "And immediately I was in the spirit: and, behold, a throne was set in heaven, and one sat on the throne."], [3, "And he that sat was to look upon like a jasper and a sardine stone: and there was a rainbow round about the throne, in sight like unto an emerald."], [4, "And round about the throne were four and twenty seats: and upon the seats I saw four and twenty elders sitting, clothed in white raiment; and they had on their heads crowns of gold."], [5, "And out of the throne proceeded lightnings and thunderings and voices: and there were seven lamps of fire burning before the throne, which are the seven Spirits of God."], [6, "And before the throne there was a sea of glass like unto crystal: and in the midst of the throne, and round about the throne, were four beasts full of eyes before and behind."], [7, "And the first beast was like a lion, and the second beast like a calf, and the third beast had a face as a man, and the fourth beast was like a flying eagle."], [8, "And the four beasts had each of them six wings about him; and they were full of eyes within: and they rest not day and night, saying, Holy, holy, holy, LORD God Almighty, which was, and is, and is to come."], [9, "And when those beasts give glory and honour and thanks to him that sat on the throne, who liveth for ever and ever,"], [10, "The four and twenty elders fall down before him that sat on the throne, and worship him that liveth for ever and ever, and cast their crowns before the throne, saying,"], [11, "Thou art worthy, O Lord, to receive glory and honour and power: for thou hast created all things, and for thy pleasure they are and were created."]],
+  "Revelation 5:1-14":[[1, "And I saw in the right hand of him that sat on the throne a book written within and on the backside, sealed with seven seals."], [2, "And I saw a strong angel proclaiming with a loud voice, Who is worthy to open the book, and to loose the seals thereof?"], [3, "And no man in heaven, nor in earth, neither under the earth, was able to open the book, neither to look thereon."], [4, "And I wept much, because no man was found worthy to open and to read the book, neither to look thereon."], [5, "And one of the elders saith unto me, Weep not: behold, the Lion of the tribe of Juda, the Root of David, hath prevailed to open the book, and to loose the seven seals thereof."], [6, "And I beheld, and, lo, in the midst of the throne and of the four beasts, and in the midst of the elders, stood a Lamb as it had been slain, having seven horns and seven eyes, which are the seven Spirits of God sent forth into all the earth."], [7, "And he came and took the book out of the right hand of him that sat upon the throne."], [8, "And when he had taken the book, the four beasts and four and twenty elders fell down before the Lamb, having every one of them harps, and golden vials full of odours, which are the prayers of saints."], [9, "And they sung a new song, saying, Thou art worthy to take the book, and to open the seals thereof: for thou wast slain, and hast redeemed us to God by thy blood out of every kindred, and tongue, and people, and nation;"], [10, "And hast made us unto our God kings and priests: and we shall reign on the earth."], [11, "And I beheld, and I heard the voice of many angels round about the throne and the beasts and the elders: and the number of them was ten thousand times ten thousand, and thousands of thousands;"], [12, "Saying with a loud voice, Worthy is the Lamb that was slain to receive power, and riches, and wisdom, and strength, and honour, and glory, and blessing."], [13, "And every creature which is in heaven, and on the earth, and under the earth, and such as are in the sea, and all that are in them, heard I saying, Blessing, and honour, and glory, and power, be unto him that sitteth upon the throne, and unto the Lamb for ever and ever."], [14, "And the four beasts said, Amen. And the four and twenty elders fell down and worshipped him that liveth for ever and ever."]],
+  "Revelation 6:1-11":[[1, "And I saw when the Lamb opened one of the seals, and I heard, as it were the noise of thunder, one of the four beasts saying, Come and see."], [2, "And I saw, and behold a white horse: and he that sat on him had a bow; and a crown was given unto him: and he went forth conquering, and to conquer."], [3, "And when he had opened the second seal, I heard the second beast say, Come and see."], [4, "And there went out another horse that was red: and power was given to him that sat thereon to take peace from the earth, and that they should kill one another: and there was given unto him a great sword."], [5, "And when he had opened the third seal, I heard the third beast say, Come and see. And I beheld, and lo a black horse; and he that sat on him had a pair of balances in his hand."], [6, "And I heard a voice in the midst of the four beasts say, A measure of wheat for a penny, and three measures of barley for a penny; and see thou hurt not the oil and the wine."], [7, "And when he had opened the fourth seal, I heard the voice of the fourth beast say, Come and see."], [8, "And I looked, and behold a pale horse: and his name that sat on him was Death, and Hell followed with him. And power was given unto them over the fourth part of the earth, to kill with sword, and with hunger, and with death, and with the beasts of the earth."], [9, "And when he had opened the fifth seal, I saw under the altar the souls of them that were slain for the word of God, and for the testimony which they held:"], [10, "And they cried with a loud voice, saying, How long, O Lord, holy and true, dost thou not judge and avenge our blood on them that dwell on the earth?"], [11, "And white robes were given unto every one of them; and it was said unto them, that they should rest yet for a little season, until their fellowservants also and their brethren, that should be killed as they were, should be fulfilled."]],
+  "Revelation 6:12":[[12, "And I beheld when he had opened the sixth seal, and, lo, there was a great earthquake; and the sun became black as sackcloth of hair, and the moon became as blood;"]],
+  "Revelation 6:12-17":[[12, "And I beheld when he had opened the sixth seal, and, lo, there was a great earthquake; and the sun became black as sackcloth of hair, and the moon became as blood;"], [13, "And the stars of heaven fell unto the earth, even as a fig tree casteth her untimely figs, when she is shaken of a mighty wind."], [14, "And the heaven departed as a scroll when it is rolled together; and every mountain and island were moved out of their places."], [15, "And the kings of the earth, and the great men, and the rich men, and the chief captains, and the mighty men, and every bondman, and every free man, hid themselves in the dens and in the rocks of the mountains;"], [16, "And said to the mountains and rocks, Fall on us, and hide us from the face of him that sitteth on the throne, and from the wrath of the Lamb:"], [17, "For the great day of his wrath is come; and who shall be able to stand?"]],
+  "Revelation 6:9-11":[[9, "And when he had opened the fifth seal, I saw under the altar the souls of them that were slain for the word of God, and for the testimony which they held:"], [10, "And they cried with a loud voice, saying, How long, O Lord, holy and true, dost thou not judge and avenge our blood on them that dwell on the earth?"], [11, "And white robes were given unto every one of them; and it was said unto them, that they should rest yet for a little season, until their fellowservants also and their brethren, that should be killed as they were, should be fulfilled."]],
+  "Revelation 7:14":[[14, "And I said unto him, Sir, thou knowest. And he said to me, These are they which came out of great tribulation, and have washed their robes, and made them white in the blood of the Lamb."]],
+  "Revelation 7:9-17":[[9, "After this I beheld, and, lo, a great multitude, which no man could number, of all nations, and kindreds, and people, and tongues, stood before the throne, and before the Lamb, clothed with white robes, and palms in their hands;"], [10, "And cried with a loud voice, saying, Salvation to our God which sitteth upon the throne, and unto the Lamb."], [11, "And all the angels stood round about the throne, and about the elders and the four beasts, and fell before the throne on their faces, and worshipped God,"], [12, "Saying, Amen: Blessing, and glory, and wisdom, and thanksgiving, and honour, and power, and might, be unto our God for ever and ever. Amen."], [13, "And one of the elders answered, saying unto me, What are these which are arrayed in white robes? and whence came they?"], [14, "And I said unto him, Sir, thou knowest. And he said to me, These are they which came out of great tribulation, and have washed their robes, and made them white in the blood of the Lamb."], [15, "Therefore are they before the throne of God, and serve him day and night in his temple: and he that sitteth on the throne shall dwell among them."], [16, "They shall hunger no more, neither thirst any more; neither shall the sun light on them, nor any heat."], [17, "For the Lamb which is in the midst of the throne shall feed them, and shall lead them unto living fountains of waters: and God shall wipe away all tears from their eyes."]],
+  "Revelation 8:1":[[1, "And when he had opened the seventh seal, there was silence in heaven about the space of half an hour."]],
+  "Revelation 8:10-11":[[10, "And the third angel sounded, and there fell a great star from heaven, burning as it were a lamp, and it fell upon the third part of the rivers, and upon the fountains of waters;"], [11, "And the name of the star is called Wormwood: and the third part of the waters became wormwood; and many men died of the waters, because they were made bitter."]],
+  "Revelation 8:12":[[12, "And the fourth angel sounded, and the third part of the sun was smitten, and the third part of the moon, and the third part of the stars; so as the third part of them was darkened, and the day shone not for a third part of it, and the night likewise."]],
+  "Revelation 8:7":[[7, "The first angel sounded, and there followed hail and fire mingled with blood, and they were cast upon the earth: and the third part of trees was burnt up, and all green grass was burnt up."]],
+  "Revelation 8:8-9":[[8, "And the second angel sounded, and as it were a great mountain burning with fire was cast into the sea: and the third part of the sea became blood;"], [9, "And the third part of the creatures which were in the sea, and had life, died; and the third part of the ships were destroyed."]],
+  "Revelation 9:1-12":[[1, "And the fifth angel sounded, and I saw a star fall from heaven unto the earth: and to him was given the key of the bottomless pit."], [2, "And he opened the bottomless pit; and there arose a smoke out of the pit, as the smoke of a great furnace; and the sun and the air were darkened by reason of the smoke of the pit."], [3, "And there came out of the smoke locusts upon the earth: and unto them was given power, as the scorpions of the earth have power."], [4, "And it was commanded them that they should not hurt the grass of the earth, neither any green thing, neither any tree; but only those men which have not the seal of God in their foreheads."], [5, "And to them it was given that they should not kill them, but that they should be tormented five months: and their torment was as the torment of a scorpion, when he striketh a man."], [6, "And in those days shall men seek death, and shall not find it; and shall desire to die, and death shall flee from them."], [7, "And the shapes of the locusts were like unto horses prepared unto battle; and on their heads were as it were crowns like gold, and their faces were as the faces of men."], [8, "And they had hair as the hair of women, and their teeth were as the teeth of lions."], [9, "And they had breastplates, as it were breastplates of iron; and the sound of their wings was as the sound of chariots of many horses running to battle."], [10, "And they had tails like unto scorpions, and there were stings in their tails: and their power was to hurt men five months."], [11, "And they had a king over them, which is the angel of the bottomless pit, whose name in the Hebrew tongue is Abaddon, but in the Greek tongue hath his name Apollyon."], [12, "One woe is past; and, behold, there come two woes more hereafter."]],
+  "Revelation 9:13-21":[[13, "And the sixth angel sounded, and I heard a voice from the four horns of the golden altar which is before God,"], [14, "Saying to the sixth angel which had the trumpet, Loose the four angels which are bound in the great river Euphrates."], [15, "And the four angels were loosed, which were prepared for an hour, and a day, and a month, and a year, for to slay the third part of men."], [16, "And the number of the army of the horsemen were two hundred thousand thousand: and I heard the number of them."], [17, "And thus I saw the horses in the vision, and them that sat on them, having breastplates of fire, and of jacinth, and brimstone: and the heads of the horses were as the heads of lions; and out of their mouths issued fire and smoke and brimstone."], [18, "By these three was the third part of men killed, by the fire, and by the smoke, and by the brimstone, which issued out of their mouths."], [19, "For their power is in their mouth, and in their tails: for their tails were like unto serpents, and had heads, and with them they do hurt."], [20, "And the rest of the men which were not killed by these plagues yet repented not of the works of their hands, that they should not worship devils, and idols of gold, and silver, and brass, and stone, and of wood: which neither can see, nor hear, nor walk:"], [21, "Neither repented they of their murders, nor of their sorceries, nor of their fornication, nor of their thefts."]],
+  "Revelation 9:20-21":[[20, "And the rest of the men which were not killed by these plagues yet repented not of the works of their hands, that they should not worship devils, and idols of gold, and silver, and brass, and stone, and of wood: which neither can see, nor hear, nor walk:"], [21, "Neither repented they of their murders, nor of their sorceries, nor of their fornication, nor of their thefts."]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
