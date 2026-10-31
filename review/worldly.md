@@ -142,7 +142,7 @@ Regenerated on every run; edit `review/worldly.json` to change what is on it.
 ## Luke
 
 - `9017` · Luke 2 · 2023-03-07 · [post](https://t.me/HouseOfWews2/9017) · rebuts online critics calling Christianity cucked; hate speech laws and the Jews · **keep**
-  > I was just struck with a realization about the irony of those who call Christianity "cucked," and who attempt to discredit the writings of the Apostle
+  > I was just struck with a realization about the irony of those who call Christianity "compromised and weak," and who attempt to discredit the writings 
 - `9441` · Luke 12 · 2023-03-23 · [post](https://t.me/HouseOfWews2/9441) · crude language and racial slurs; attacks MGTOW men · undecided
   > The Bible tells husbands to submit to Christ and to love their wives the way Jesus loves us. The Bible doesn't tell women to submit to any guy who com
 - `9713` · Luke 20 · 2023-04-03 · [post](https://t.me/HouseOfWews2/9713) · Bud Light transgender ad and culture-war complaints · **keep**
