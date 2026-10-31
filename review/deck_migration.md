@@ -40,7 +40,7 @@ builder, no fact-checking of the author's views. Order:
 1. ~~Standalone posts (6)~~ done
 2. ~~Answering error (9)~~ done
 3. ~~Baptist & church history (10)~~ done
-4. Prophecy (4), the Doctrine class notes (3), Bible lessons (2)
+4. ~~Prophecy (4), the Doctrine class notes (3), Bible lessons (2)~~ done
 
 Sermons and the lessons from other preachers do not get decks. They stay as notes.
 

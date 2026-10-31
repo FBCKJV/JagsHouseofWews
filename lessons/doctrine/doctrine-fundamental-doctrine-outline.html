@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fundamental Doctrine Outline</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="The outline of the Doctrine class in nineteen parts, from the doctrine of the Bible to soul-winning, with the verses for every heading.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Fundamental Doctrine Outline">
+  <div class="page title-page">
+    <div class="overline">The Doctrine class</div>
+    <h1>Fundamental Doctrine Outline</h1>
+    <p class="sub">The course in nineteen parts</p>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move through the outline. Tap any gold reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="The Course (1 of 2)">
+  <div class="page">
+    <h2>The Course (1 of 2)</h2>
+    <div class="steps"><div class="st"><span class="when">Part 1</span><div>The Doctrine of the Bible</div></div><div class="st"><span class="when">Part 2</span><div>The Doctrine of God</div></div><div class="st"><span class="when">Part 3</span><div>The Doctrine of Christ</div></div><div class="st"><span class="when">Part 4</span><div>The Doctrine of the Holy Spirit</div></div><div class="st"><span class="when">Part 5</span><div>The Doctrine of the Trinity</div></div><div class="st"><span class="when">Part 6</span><div>The Doctrine of Creation</div></div><div class="st"><span class="when">Part 7</span><div>The Doctrine of Man</div></div><div class="st"><span class="when">Part 8</span><div>The Doctrine of Salvation</div></div><div class="st"><span class="when">Part 9</span><div>The Doctrine of the Servant</div></div><div class="st"><span class="when">Part 10</span><div>The Doctrine of Marriage</div></div></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Introduction" data-title="The Course (2 of 2)">
+  <div class="page">
+    <h2>The Course (2 of 2)</h2>
+    <div class="steps"><div class="st"><span class="when">Part 11</span><div>The Doctrine of Church</div></div><div class="st"><span class="when">Part 12</span><div>The Doctrine of Ordinances - Baptisms</div></div><div class="st"><span class="when">Part 13</span><div>The Doctrine of Ordinances - The Lord’s Supper</div></div><div class="st"><span class="when">Part 14</span><div>The Doctrine of the New Man</div></div><div class="st"><span class="when">Part 15</span><div>The Doctrine of Heaven</div></div><div class="st"><span class="when">Part 16</span><div>The Doctrine of Hell</div></div><div class="st"><span class="when">Part 17</span><div>What is Love?</div></div><div class="st"><span class="when">Part 18</span><div>The Doctrine of Friendship</div></div><div class="st"><span class="when">Part 19</span><div>The Doctrine of Soul-winning</div></div></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Part 1 · The Bible" data-title="The Importance of Doctrine">
+  <div class="page">
+    <div class="kicker">Part 1 · The Doctrine of the Bible · Week 1</div>
+    <h2>The Importance of Doctrine</h2>
+    <div class="refs center"><button class="ref" data-v="2 Timothy 3:16-17">2 Timothy 3:16-17</button><button class="ref" data-v="Titus 1:9">Titus 1:9</button><button class="ref" data-v="1 Timothy 4:16">1 Timothy 4:16</button></div>
+    <div class="grp"><h3>Know God’s will</h3><span></span><div class="chips"><button class="ref" data-v="Romans 12:2">Romans 12:2</button><button class="ref" data-v="1 Thessalonians 4:3">1 Thessalonians 4:3</button><button class="ref" data-v="1 Peter 2:15">1 Peter 2:15</button></div></div><div class="grp"><h3>Gain wisdom</h3><span></span><div class="chips"><button class="ref" data-v="Proverbs 2:6">Proverbs 2:6</button><button class="ref" data-v="James 1:5">James 1:5</button><button class="ref" data-v="Colossians 3:16">Colossians 3:16</button></div></div><div class="grp"><h3>Teach others</h3><span></span><div class="chips"><button class="ref" data-v="Matthew 28:19-20">Matthew 28:19-20</button><button class="ref" data-v="2 Timothy 2:2">2 Timothy 2:2</button><button class="ref" data-v="Titus 2:1">Titus 2:1</button></div></div><div class="grp"><h3>Recognize false ways</h3><span></span><div class="chips"><button class="ref" data-v="Psalms 119:104">Psalm 119:104</button><button class="ref" data-v="Ephesians 4:14">Ephesians 4:14</button><button class="ref" data-v="2 Peter 2:1-2">2 Peter 2:1-2</button><button class="ref" data-v="1 John 4:1">1 John 4:1</button></div></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Part 1 · The Bible" data-title="How God Reveals Himself to Man">
+  <div class="page">
+    <div class="kicker">Part 1 · The Doctrine of the Bible · Week 2</div>
+    <h2>How God Reveals Himself to Man</h2>
+    <p class="lead">General Revelation v Specific Revelation</p>
+    <div class="grp"><h3>Creation</h3><span></span><div class="chips"><button class="ref" data-v="Psalms 19:1">Psalm 19:1</button><button class="ref" data-v="Romans 1:20">Romans 1:20</button><button class="ref" data-v="Job 12:7-9">Job 12:7-9</button></div></div><div class="grp"><h3>Wrath</h3><span></span><div class="chips"><button class="ref" data-v="Romans 1:18">Romans 1:18</button><button class="ref" data-v="Psalms 7:11">Psalm 7:11</button><button class="ref" data-v="Revelation 19:15">Revelation 19:15</button></div></div><div class="grp"><h3>Mercy</h3><span></span><div class="chips"><button class="ref" data-v="Psalms 103:8">Psalm 103:8</button><button class="ref" data-v="Ephesians 2:4">Ephesians 2:4</button><button class="ref" data-v="Titus 3:5">Titus 3:5</button></div></div><div class="grp"><h3>The Word (Scripture)</h3><span></span><div class="chips"><button class="ref" data-v="Hebrews 1:1-2">Hebrews 1:1-2</button><button class="ref" data-v="John 1:1">John 1:1</button><button class="ref" data-v="2 Peter 1:20-21">2 Peter 1:20-21</button></div></div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Part 1 · The Bible" data-title="Scripture">
+  <div class="page">
+    <div class="kicker">Part 1 · The Doctrine of the Bible · Week 3</div>
+    <h2>Scripture</h2>
+    <div class="grp"><h3>Inspiration</h3><span></span><div class="chips"><button class="ref" data-v="2 Timothy 3:16-17">2 Timothy 3:16-17</button><button class="ref" data-v="2 Peter 1:20-21">2 Peter 1:20-21</button><button class="ref" data-v="Jeremiah 36:2">Jeremiah 36:2</button></div></div><div class="grp"><h3>Preservation</h3><span></span><div class="chips"><button class="ref" data-v="Psalms 12:6-7">Psalm 12:6-7</button><button class="ref" data-v="Matthew 24:35">Matthew 24:35</button><button class="ref" data-v="Isaiah 40:8">Isaiah 40:8</button></div></div><div class="grp"><h3>Inerrancy</h3><span></span><div class="chips"><button class="ref" data-v="John 17:17">John 17:17</button><button class="ref" data-v="Isaiah 40:8">Isaiah 40:8</button><button class="ref" data-v="Matthew 24:35">Matthew 24:35</button></div></div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Part 1 · The Bible" data-title="KJVO">
+  <div class="page">
+    <div class="kicker">Part 1 · The Doctrine of the Bible · Week 4</div>
+    <h2>KJVO</h2>
+    <div class="grp"><h3>Yea, hath God said?</h3><span></span><div class="chips"><button class="ref" data-v="Genesis 3:1-24">Genesis 3:1-24</button><button class="ref" data-v="Psalms 19:7">Psalm 19:7</button></div></div>
+    <div class="refs center"><button class="ref" data-v="Psalms 12:6-7">Psalm 12:6-7</button><button class="ref" data-v="Matthew 5:18">Matthew 5:18</button><button class="ref" data-v="Isaiah 59:21">Isaiah 59:21</button></div>
+    <ul class="marks"><li>TR and Masoretic Text</li><li>Apocrypha, LXX/Critical Texts, modern versions</li><li>Opinion vs doctrine vs dogma (vain traditions, philosophy, science falsely so called)</li></ul>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Part 1 · The Bible" data-title="Terms and Definitions That Are Often Misunderstood">
+  <div class="page">
+    <div class="kicker">Part 1 · The Doctrine of the Bible · Week 5</div>
+    <h2>Terms and Definitions That Are Often Misunderstood</h2>
+    <div class="refs center"><button class="ref" data-v="2 Peter 3:15-16">2 Peter 3:15-16</button></div>
+    <ul class="marks"><li>Repentance</li><li>Grace</li><li>Faith</li><li>Salvation/Justification</li><li>Sanctification</li><li>Separation</li><li>Propitiation</li><li>Conviction</li><li>Faith without works is dead</li></ul>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Part 2 · God" data-title="The Nature and Attributes of God">
+  <div class="page">
+    <div class="kicker">Part 2 · The Doctrine of God</div>
+    <h2>The Nature and Attributes of God</h2>
+    <div class="grp"><h3>Love, holiness, mercy, grace</h3><span></span><div class="chips"><button class="ref" data-v="1 John 4:8">1 John 4:8</button><button class="ref" data-v="1 Peter 1:16">1 Peter 1:16</button><button class="ref" data-v="Psalms 86:15">Psalm 86:15</button><button class="ref" data-v="Ephesians 2:8">Ephesians 2:8</button></div></div><div class="grp"><h3>Omnipotent, omnipresent</h3><span></span><div class="chips"><button class="ref" data-v="Revelation 19:6">Revelation 19:6</button><button class="ref" data-v="Psalms 139:7-10">Psalm 139:7-10</button><button class="ref" data-v="Jeremiah 32:17">Jeremiah 32:17</button></div></div><div class="grp"><h3>7 spirits of God</h3><span></span><div class="chips"><button class="ref" data-v="Revelation 1:4">Revelation 1:4</button><button class="ref" data-v="Revelation 4:5">Revelation 4:5</button><button class="ref" data-v="Isaiah 11:2">Isaiah 11:2</button></div></div><div class="grp"><h3>7 Things God hates</h3><span></span><div class="chips"><button class="ref" data-v="Proverbs 6:16-19">Proverbs 6:16-19</button></div></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Part 2 · God" data-title="The Names of God">
+  <div class="page">
+    <div class="kicker">Part 2 · The Doctrine of God</div>
+    <h2>The Names of God</h2>
+    <div class="tbl"><table><thead><tr><th>Verse</th><th>Name</th></tr></thead><tbody><tr><td><button class="ref" data-v="Genesis 1:1">Genesis 1:1</button></td><td>Elohim</td></tr><tr><td><button class="ref" data-v="Exodus 3:14">Exodus 3:14</button></td><td>I AM THAT I AM (YHWH, known as the Tetragrammaton)</td></tr><tr><td><button class="ref" data-v="Genesis 17:1">Genesis 17:1</button></td><td>Almighty God [El Shaddai]</td></tr><tr><td><button class="ref" data-v="Psalms 23:1">Psalm 23:1</button></td><td>The <span class="lord">Lord</span> [Jehovah]</td></tr><tr><td><button class="ref" data-v="Exodus 34:14">Exodus 34:14</button></td><td>Jealous [Jehovah Qanna]</td></tr><tr><td><button class="ref" data-v="Deuteronomy 4:24">Deuteronomy 4:24</button></td><td>A consuming fire</td></tr><tr><td><button class="ref" data-v="Psalms 46:1">Psalm 46:1</button></td><td>God is our refuge and strength [El Ma’oz]</td></tr><tr><td><button class="ref" data-v="Isaiah 7:14">Isaiah 7:14</button></td><td>Immanuel</td></tr><tr><td><button class="ref" data-v="Deuteronomy 10:17">Deuteronomy 10:17</button></td><td>Lord of lords</td></tr><tr><td><button class="ref" data-v="Jeremiah 10:10">Jeremiah 10:10</button></td><td>The living God</td></tr><tr><td><button class="ref" data-v="Matthew 1:21">Matthew 1:21</button></td><td>Jesus</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Part 2 · God" data-title="The Godhead and the Father">
+  <div class="page">
+    <div class="kicker">Part 2 · The Doctrine of God</div>
+    <h2>The Godhead and the Father</h2>
+    <div class="grp"><h3>The Godhead</h3><span></span><div class="chips"><button class="ref" data-v="1 John 5:7">1 John 5:7</button><button class="ref" data-v="Matthew 28:19">Matthew 28:19</button><button class="ref" data-v="2 Corinthians 13:14">2 Corinthians 13:14</button></div></div><div class="grp"><h3>The Father</h3><span></span><div class="chips"><button class="ref" data-v="John 6:27">John 6:27</button><button class="ref" data-v="Ephesians 4:6">Ephesians 4:6</button><button class="ref" data-v="1 Corinthians 8:6">1 Corinthians 8:6</button></div></div>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Part 3 · Christ" data-title="The Nature and Attributes of Jesus">
+  <div class="page">
+    <div class="kicker">Part 3 · The Doctrine of Christ</div>
+    <h2>The Nature and Attributes of Jesus</h2>
+    <div class="grp"><h3>The promise of Christ</h3><span></span><div class="chips"><button class="ref" data-v="Genesis 3:15">Genesis 3:15</button><button class="ref" data-v="Genesis 12:1-4">Genesis 12:1-4</button><button class="ref" data-v="Isaiah 7:14">Isaiah 7:14</button><button class="ref" data-v="Micah 5:2">Micah 5:2</button></div></div><div class="grp"><h3>Eternal Sonship</h3><span></span><div class="chips"><button class="ref" data-v="John 1:1-2">John 1:1-2</button><button class="ref" data-v="Hebrews 1:8">Hebrews 1:8</button><button class="ref" data-v="Proverbs 30:4">Proverbs 30:4</button></div></div><div class="grp"><h3>The deity of Jesus</h3><span></span><div class="chips"><button class="ref" data-v="John 1:1">John 1:1</button><button class="ref" data-v="Colossians 2:9">Colossians 2:9</button><button class="ref" data-v="Titus 2:13">Titus 2:13</button></div></div><div class="grp"><h3>The humanity of Jesus</h3><span></span><div class="chips"><button class="ref" data-v="Philippians 2:7">Philippians 2:7</button><button class="ref" data-v="Hebrews 2:14">Hebrews 2:14</button><button class="ref" data-v="1 Timothy 2:5">1 Timothy 2:5</button></div></div><div class="grp"><h3>Salvation in Jesus</h3><span></span><div class="chips"><button class="ref" data-v="Acts 4:12">Acts 4:12</button><button class="ref" data-v="John 14:6">John 14:6</button><button class="ref" data-v="Romans 10:9">Romans 10:9</button></div></div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Part 3 · Christ" data-title="Names of Christ (1 of 2)">
+  <div class="page">
+    <div class="kicker">Part 3 · The Doctrine of Christ</div>
+    <h2>Names of Christ (1 of 2)</h2>
+    <div class="tbl"><table><thead><tr><th>Name</th><th>Verse</th></tr></thead><tbody><tr><td>The Word</td><td><button class="ref" data-v="John 1:1">John 1:1</button></td></tr><tr><td>Immanuel</td><td><button class="ref" data-v="Isaiah 7:14">Isaiah 7:14</button></td></tr><tr><td>The Son of God</td><td><button class="ref" data-v="John 1:34">John 1:34</button></td></tr><tr><td>The Son of Man</td><td><button class="ref" data-v="Matthew 16:27">Matthew 16:27</button></td></tr><tr><td>The Son of David</td><td></td></tr><tr><td>The Lamb of God</td><td><button class="ref" data-v="John 1:29">John 1:29</button></td></tr><tr><td>The Savior</td><td><button class="ref" data-v="Luke 2:11">Luke 2:11</button></td></tr><tr><td>Messiah/Christ</td><td><button class="ref" data-v="John 4:25-26">John 4:25-26</button></td></tr><tr><td>Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace</td><td><button class="ref" data-v="Isaiah 9:6">Isaiah 9:6</button></td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Part 3 · Christ" data-title="Names of Christ (2 of 2)">
+  <div class="page">
+    <div class="kicker">Part 3 · The Doctrine of Christ</div>
+    <h2>Names of Christ (2 of 2)</h2>
+    <div class="tbl"><table><thead><tr><th>Name</th><th>Verse</th></tr></thead><tbody><tr><td>The King of kings</td><td><button class="ref" data-v="Revelation 19:16">Revelation 19:16</button></td></tr><tr><td>The Lord of lords</td><td><button class="ref" data-v="Revelation 19:16">Revelation 19:16</button></td></tr><tr><td>Alpha and Omega</td><td><button class="ref" data-v="Revelation 1:8">Revelation 1:8</button></td></tr><tr><td>The Good Shepherd</td><td><button class="ref" data-v="John 10:11">John 10:11</button></td></tr><tr><td>The Bread of Life</td><td><button class="ref" data-v="John 6:35">John 6:35</button></td></tr><tr><td>The Light of the World</td><td><button class="ref" data-v="John 8:12">John 8:12</button></td></tr><tr><td>The Way, the Truth, and the Life</td><td><button class="ref" data-v="John 14:6">John 14:6</button></td></tr><tr><td>The Sole Mediator</td><td><button class="ref" data-v="1 Timothy 2:5">1 Timothy 2:5</button></td></tr><tr><td>The High Priest</td><td><button class="ref" data-v="Hebrews 4:14">Hebrews 4:14</button></td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Part 4 · The Holy Spirit" data-title="The Nature and Attributes of the Spirit">
+  <div class="page">
+    <div class="kicker">Part 4 · The Doctrine of the Holy Spirit</div>
+    <h2>The Nature and Attributes of the Spirit</h2>
+    <div class="grp"><h3>The promise of the Spirit</h3><span></span><div class="chips"><button class="ref" data-v="Joel 2:28">Joel 2:28</button><button class="ref" data-v="John 14:16-17">John 14:16-17</button><button class="ref" data-v="Acts 1:8">Acts 1:8</button></div></div><div class="grp"><h3>Roles and purpose</h3><span></span><div class="chips"><button class="ref" data-v="John 16:13">John 16:13</button><button class="ref" data-v="1 Corinthians 12:7">1 Corinthians 12:7</button><button class="ref" data-v="Romans 8:26">Romans 8:26</button></div></div><div class="grp"><h3>The deity of the Spirit</h3><span></span><div class="chips"><button class="ref" data-v="Acts 5:3-4">Acts 5:3-4</button><button class="ref" data-v="1 Corinthians 3:16">1 Corinthians 3:16</button><button class="ref" data-v="Hebrews 9:14">Hebrews 9:14</button></div></div><div class="grp"><h3>Salvation</h3><span></span><div class="chips"><button class="ref" data-v="Titus 3:5">Titus 3:5</button><button class="ref" data-v="John 3:5">John 3:5</button><button class="ref" data-v="Romans 8:9">Romans 8:9</button></div></div>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Part 4 · The Holy Spirit" data-title="The Work and Gifts of the Spirit">
+  <div class="page">
+    <div class="kicker">Part 4 · The Doctrine of the Holy Spirit</div>
+    <h2>The Work and Gifts of the Spirit</h2>
+    <div class="grp"><h3>Sanctification</h3><span></span><div class="chips"><button class="ref" data-v="2 Thessalonians 2:13">2 Thessalonians 2:13</button><button class="ref" data-v="1 Peter 1:2">1 Peter 1:2</button><button class="ref" data-v="Galatians 5:22-23">Galatians 5:22-23</button></div></div><div class="grp"><h3>Gifts of the Spirit</h3><span></span><div class="chips"><button class="ref" data-v="1 Corinthians 12:4-11">1 Corinthians 12:4-11</button><button class="ref" data-v="Romans 12:6-8">Romans 12:6-8</button><button class="ref" data-v="Ephesians 4:11">Ephesians 4:11</button></div></div><div class="grp"><h3>Fruit of the Spirit</h3><span></span><div class="chips"><button class="ref" data-v="Galatians 5:22-23">Galatians 5:22-23</button></div></div><div class="grp"><h3>Blasphemy of the Spirit - Reprobation</h3><span></span><div class="chips"><button class="ref" data-v="Matthew 12:31-32">Matthew 12:31-32</button></div></div>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Part 5 · The Trinity" data-title="The Doctrine of the Trinity">
+  <div class="page">
+    <div class="kicker">Part 5</div>
+    <h2>The Doctrine of the Trinity</h2>
+    <div class="grp"><h3>The Biblical concept</h3><span></span><div class="chips"><button class="ref" data-v="1 John 5:7">1 John 5:7</button><button class="ref" data-v="Matthew 3:16-17">Matthew 3:16-17</button><button class="ref" data-v="2 Corinthians 13:14">2 Corinthians 13:14</button></div></div><div class="grp"><h3>Implications</h3><span></span><div class="chips"><button class="ref" data-v="John 10:30">John 10:30</button><button class="ref" data-v="Genesis 1:26">Genesis 1:26</button><button class="ref" data-v="Isaiah 48:16">Isaiah 48:16</button></div></div><div class="grp"><h3>How the will of God is served</h3><span></span><div class="chips"><button class="ref" data-v="John 6:38">John 6:38</button><button class="ref" data-v="Hebrews 10:7">Hebrews 10:7</button><button class="ref" data-v="Romans 8:27">Romans 8:27</button></div></div>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Part 6 · Creation" data-title="The Doctrine of Creation">
+  <div class="page">
+    <div class="kicker">Part 6</div>
+    <h2>The Doctrine of Creation</h2>
+    <div class="grp"><h3>Genesis</h3><span></span><div class="chips"><button class="ref" data-v="Genesis 1:1">Genesis 1:1</button><button class="ref" data-v="Genesis 2:1-3">Genesis 2:1-3</button><button class="ref" data-v="John 1:3">John 1:3</button></div></div><div class="grp"><h3>It was good</h3><span></span><div class="chips"><button class="ref" data-v="Genesis 1:31">Genesis 1:31</button><button class="ref" data-v="1 Timothy 4:4">1 Timothy 4:4</button><button class="ref" data-v="Psalms 104:24">Psalm 104:24</button></div></div><div class="grp"><h3>The garden</h3><span></span><div class="chips"><button class="ref" data-v="Genesis 2:8-9">Genesis 2:8-9</button><button class="ref" data-v="Genesis 3:8">Genesis 3:8</button><button class="ref" data-v="Ezekiel 28:13">Ezekiel 28:13</button></div></div><div class="grp"><h3>The fall</h3><span></span><div class="chips"><button class="ref" data-v="Genesis 3:6-7">Genesis 3:6-7</button><button class="ref" data-v="Romans 5:12">Romans 5:12</button><button class="ref" data-v="1 Corinthians 15:21">1 Corinthians 15:21</button></div></div><div class="grp"><h3>Glory</h3><span></span><div class="chips"><button class="ref" data-v="Psalms 19:1">Psalm 19:1</button><button class="ref" data-v="Isaiah 6:3">Isaiah 6:3</button><button class="ref" data-v="Romans 11:36">Romans 11:36</button></div></div>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Part 7 · Man" data-title="The Doctrine of Man">
+  <div class="page">
+    <div class="kicker">Part 7</div>
+    <h2>The Doctrine of Man</h2>
+    <div class="grp"><h3>Creation in the image of God</h3><span></span><div class="chips"><button class="ref" data-v="Genesis 1:26-27">Genesis 1:26-27</button><button class="ref" data-v="Genesis 2:7">Genesis 2:7</button><button class="ref" data-v="Psalms 139:14">Psalm 139:14</button></div></div><div class="grp"><h3>Eve and everything after</h3><span></span><div class="chips"><button class="ref" data-v="Genesis 2:21-22">Genesis 2:21-22</button><button class="ref" data-v="Genesis 3:20">Genesis 3:20</button><button class="ref" data-v="1 Timothy 2:13">1 Timothy 2:13</button></div></div><div class="grp"><h3>Sin nature - Adam</h3><span></span><div class="chips"><button class="ref" data-v="Romans 5:12">Romans 5:12</button><button class="ref" data-v="Psalms 51:5">Psalm 51:5</button><button class="ref" data-v="1 Corinthians 15:22">1 Corinthians 15:22</button></div></div><div class="grp"><h3>Fig leaves</h3><span></span><div class="chips"><button class="ref" data-v="Genesis 3:7">Genesis 3:7</button><button class="ref" data-v="Isaiah 64:6">Isaiah 64:6</button><button class="ref" data-v="Titus 3:5">Titus 3:5</button></div></div><div class="grp"><h3>The way of Cain</h3><span></span><div class="chips"><button class="ref" data-v="Jude 1:11">Jude 11</button><button class="ref" data-v="Genesis 4:5-7">Genesis 4:5-7</button><button class="ref" data-v="Hebrews 11:4">Hebrews 11:4</button></div></div><div class="grp"><h3>Special boys</h3><span></span><div class="chips"><button class="ref" data-v="Genesis 4:25">Genesis 4:25</button><button class="ref" data-v="Genesis 5:3">Genesis 5:3</button><button class="ref" data-v="Luke 3:38">Luke 3:38</button></div></div>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Part 8 · Salvation" data-title="The Law: Its Purpose">
+  <div class="page">
+    <div class="kicker">Part 8 · The Doctrine of Salvation</div>
+    <h2>The Law: Its Purpose</h2>
+    <div class="grp"><h3>Schoolmaster</h3><span></span><div class="chips"><button class="ref" data-v="Galatians 3:24">Galatians 3:24</button><button class="ref" data-v="Romans 7:7">Romans 7:7</button><button class="ref" data-v="Romans 3:20">Romans 3:20</button></div></div><div class="grp"><h3>That it be well with you…</h3><span></span><div class="chips"><button class="ref" data-v="Deuteronomy 5:29">Deuteronomy 5:29</button><button class="ref" data-v="Ephesians 6:2-3">Ephesians 6:2-3</button><button class="ref" data-v="Psalms 119:165">Psalm 119:165</button></div></div><div class="grp"><h3>Salvation - Children of God</h3><span></span><div class="chips"><button class="ref" data-v="Romans 10:17">Romans 10:17</button><button class="ref" data-v="John 1:12">John 1:12</button><button class="ref" data-v="Romans 8:16">Romans 8:16</button><button class="ref" data-v="Galatians 3:26">Galatians 3:26</button></div></div>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Part 8 · Salvation" data-title="The Lost, Reprobation, Heaven and Hell">
+  <div class="page">
+    <div class="kicker">Part 8 · The Doctrine of Salvation</div>
+    <h2>The Lost, Reprobation, Heaven and Hell</h2>
+    <div class="grp"><h3>Unregenerate - Children of disobedience (the Lost)</h3><span></span><div class="chips"><button class="ref" data-v="Ephesians 2:2">Ephesians 2:2</button><button class="ref" data-v="Colossians 3:6">Colossians 3:6</button><button class="ref" data-v="John 8:44">John 8:44</button></div></div><div class="grp"><h3>Reprobation - Children of the Devil</h3><span></span><div class="chips"><button class="ref" data-v="Romans 1:18-32">Romans 1:18-32</button><button class="ref" data-v="John 8:44">John 8:44</button><button class="ref" data-v="1 John 3:10">1 John 3:10</button><button class="ref" data-v="Matthew 13:38">Matthew 13:38</button><button class="ref" data-v="Exodus 7:1-25">Exodus 7:1-25</button><button class="ref" data-v="Exodus 8:1-32">Exodus 8:1-32</button><button class="ref" data-v="Exodus 9:1-35">Exodus 9:1-35</button></div></div><div class="grp"><h3>“Faith without works is dead” - James 2 in context</h3><span></span><div class="chips"><button class="ref" data-v="Romans 4:1-25">Romans 4:1-25</button><button class="ref" data-v="James 2:1-26">James 2:1-26</button></div></div>
+    <ul class="marks"><li>Heaven</li><li>Hell</li></ul>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Part 9 · The Servant" data-title="The Doctrine of the Servant (1 of 2)">
+  <div class="page">
+    <div class="kicker">Part 9</div>
+    <h2>The Doctrine of the Servant (1 of 2)</h2>
+    <div class="grp"><h3>Hierarchies</h3><span></span><div class="chips"><button class="ref" data-v="1 Corinthians 11:3">1 Corinthians 11:3</button><button class="ref" data-v="Ephesians 5:23">Ephesians 5:23</button><button class="ref" data-v="Colossians 1:18">Colossians 1:18</button></div></div><div class="grp"><h3>Submission to God</h3><span></span><div class="chips"><button class="ref" data-v="James 4:7">James 4:7</button><button class="ref" data-v="Hebrews 12:9">Hebrews 12:9</button><button class="ref" data-v="1 Peter 5:6">1 Peter 5:6</button></div></div><div class="grp"><h3>Submission to parents</h3><span></span><div class="chips"><button class="ref" data-v="Ephesians 6:1">Ephesians 6:1</button><button class="ref" data-v="Colossians 3:20">Colossians 3:20</button><button class="ref" data-v="Exodus 20:12">Exodus 20:12</button></div></div><div class="grp"><h3>First commandment with promise</h3><span></span><div class="chips"><button class="ref" data-v="Ephesians 6:2">Ephesians 6:2</button><button class="ref" data-v="Exodus 20:12">Exodus 20:12</button><button class="ref" data-v="Deuteronomy 5:16">Deuteronomy 5:16</button></div></div><div class="grp"><h3>Honoring parents as adults</h3><span></span><div class="chips"><button class="ref" data-v="Leviticus 19:3">Leviticus 19:3</button><button class="ref" data-v="Proverbs 23:22">Proverbs 23:22</button><button class="ref" data-v="Matthew 15:4">Matthew 15:4</button></div></div><div class="grp"><h3>Submission to boss/employer</h3><span></span><div class="chips"><button class="ref" data-v="Ephesians 6:5-7">Ephesians 6:5-7</button><button class="ref" data-v="Colossians 3:22">Colossians 3:22</button><button class="ref" data-v="1 Peter 2:18">1 Peter 2:18</button></div></div>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Part 9 · The Servant" data-title="The Doctrine of the Servant (2 of 2)">
+  <div class="page">
+    <div class="kicker">Part 9</div>
+    <h2>The Doctrine of the Servant (2 of 2)</h2>
+    <div class="grp"><h3>Submission to government</h3><span></span><div class="chips"><button class="ref" data-v="Romans 13:1">Romans 13:1</button><button class="ref" data-v="1 Peter 2:13-14">1 Peter 2:13-14</button><button class="ref" data-v="Titus 3:1">Titus 3:1</button></div></div><div class="grp"><h3>Higher authority</h3><span></span><div class="chips"><button class="ref" data-v="Acts 5:29">Acts 5:29</button><button class="ref" data-v="Daniel 3:16-18">Daniel 3:16-18</button><button class="ref" data-v="Exodus 1:17">Exodus 1:17</button></div></div><div class="grp"><h3>We wrestle not with flesh and blood</h3><span></span><div class="chips"><button class="ref" data-v="Ephesians 6:12">Ephesians 6:12</button><button class="ref" data-v="2 Corinthians 10:4">2 Corinthians 10:4</button><button class="ref" data-v="1 Peter 5:8">1 Peter 5:8</button></div></div><div class="grp"><h3>Being hated for His sake/small (t) tribulation</h3><span></span><div class="chips"><button class="ref" data-v="John 15:18">John 15:18</button><button class="ref" data-v="Matthew 5:10-12">Matthew 5:10-12</button><button class="ref" data-v="2 Timothy 3:12">2 Timothy 3:12</button></div></div><div class="grp"><h3>Jesus as the Servant</h3><span></span><div class="chips"><button class="ref" data-v="Philippians 2:7">Philippians 2:7</button><button class="ref" data-v="Mark 10:45">Mark 10:45</button><button class="ref" data-v="John 13:14-15">John 13:14-15</button></div></div>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="Part 10 · Marriage" data-title="The Doctrine of Marriage">
+  <div class="page">
+    <div class="kicker">Part 10</div>
+    <h2>The Doctrine of Marriage</h2>
+    <div class="grp"><h3>Submission to husband</h3><span></span><div class="chips"><button class="ref" data-v="Ephesians 5:22">Ephesians 5:22</button><button class="ref" data-v="Colossians 3:18">Colossians 3:18</button><button class="ref" data-v="1 Peter 3:1">1 Peter 3:1</button></div></div><div class="grp"><h3>Responsibility of the husband</h3><span></span><div class="chips"><button class="ref" data-v="Ephesians 5:25">Ephesians 5:25</button><button class="ref" data-v="Colossians 3:19">Colossians 3:19</button><button class="ref" data-v="1 Peter 3:7">1 Peter 3:7</button></div></div><div class="grp"><h3>Fornication</h3><span></span><div class="chips"><button class="ref" data-v="1 Corinthians 6:18">1 Corinthians 6:18</button><button class="ref" data-v="Hebrews 13:4">Hebrews 13:4</button><button class="ref" data-v="Matthew 15:19">Matthew 15:19</button></div></div><div class="grp"><h3>Adultery</h3><span></span><div class="chips"><button class="ref" data-v="Exodus 20:14">Exodus 20:14</button><button class="ref" data-v="Matthew 5:28">Matthew 5:28</button><button class="ref" data-v="Proverbs 6:32">Proverbs 6:32</button></div></div><div class="grp"><h3>Children</h3><span></span><div class="chips"><button class="ref" data-v="Psalms 127:3">Psalm 127:3</button><button class="ref" data-v="Ephesians 6:4">Ephesians 6:4</button><button class="ref" data-v="Proverbs 22:6">Proverbs 22:6</button></div></div><div class="grp"><h3>Divorce</h3><span></span><div class="chips"><button class="ref" data-v="Matthew 19:6-9">Matthew 19:6-9</button><button class="ref" data-v="1 Corinthians 7:10-11">1 Corinthians 7:10-11</button><button class="ref" data-v="Mark 10:11-12">Mark 10:11-12</button></div></div>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="Part 11 · Church" data-title="The Doctrine of Church (1 of 3)">
+  <div class="page">
+    <div class="kicker">Part 11</div>
+    <h2>The Doctrine of Church (1 of 3)</h2>
+    <div class="grp"><h3>Need for church</h3><span></span><div class="chips"><button class="ref" data-v="Hebrews 10:25">Hebrews 10:25</button><button class="ref" data-v="Acts 2:42">Acts 2:42</button><button class="ref" data-v="Matthew 18:20">Matthew 18:20</button></div></div><div class="grp"><h3>Responsibility of the church</h3><span></span><div class="chips"><button class="ref" data-v="Ephesians 4:11-12">Ephesians 4:11-12</button><button class="ref" data-v="1 Timothy 3:15">1 Timothy 3:15</button><button class="ref" data-v="Acts 20:28">Acts 20:28</button></div></div><div class="grp"><h3>Responsibility of those in church</h3><span></span><div class="chips"><button class="ref" data-v="1 Corinthians 12:27">1 Corinthians 12:27</button><button class="ref" data-v="Romans 12:4-5">Romans 12:4-5</button><button class="ref" data-v="1 Peter 4:10">1 Peter 4:10</button></div></div><div class="grp"><h3>Offices</h3><span></span><div class="chips"></div></div><div class="grp"><h3>Qualifications for Pastor</h3><span></span><div class="chips"><button class="ref" data-v="1 Timothy 3:1-7">1 Timothy 3:1-7</button><button class="ref" data-v="Titus 1:5-9">Titus 1:5-9</button><button class="ref" data-v="1 Peter 5:2-3">1 Peter 5:2-3</button></div></div><div class="grp"><h3>Qualifications for Deacon</h3><span></span><div class="chips"><button class="ref" data-v="1 Timothy 3:8-13">1 Timothy 3:8-13</button><button class="ref" data-v="Acts 6:3">Acts 6:3</button><button class="ref" data-v="Philippians 1:1">Philippians 1:1</button></div></div>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="slide" data-section="Part 11 · Church" data-title="The Doctrine of Church (2 of 3)">
+  <div class="page">
+    <div class="kicker">Part 11</div>
+    <h2>The Doctrine of Church (2 of 3)</h2>
+    <div class="grp"><h3>Ministers</h3><span></span><div class="chips"><button class="ref" data-v="Ephesians 4:11">Ephesians 4:11</button><button class="ref" data-v="2 Corinthians 3:6">2 Corinthians 3:6</button><button class="ref" data-v="1 Timothy 4:6">1 Timothy 4:6</button></div></div><div class="grp"><h3>Care for others/relatives/honors</h3><span></span><div class="chips"><button class="ref" data-v="1 Timothy 5:3-4">1 Timothy 5:3-4</button><button class="ref" data-v="James 1:27">James 1:27</button><button class="ref" data-v="Galatians 6:10">Galatians 6:10</button></div></div><div class="grp"><h3>Church discipline</h3><span></span><div class="chips"><button class="ref" data-v="Matthew 18:15-17">Matthew 18:15-17</button><button class="ref" data-v="1 Corinthians 5:11-13">1 Corinthians 5:11-13</button><button class="ref" data-v="2 Thessalonians 3:6">2 Thessalonians 3:6</button></div></div><div class="grp"><h3>The purpose of church discipline</h3><span></span><div class="chips"><button class="ref" data-v="Galatians 6:1">Galatians 6:1</button><button class="ref" data-v="2 Corinthians 2:6-8">2 Corinthians 2:6-8</button><button class="ref" data-v="Titus 3:10">Titus 3:10</button></div></div><div class="grp"><h3>Not defrauding/taking to judgment</h3><span></span><div class="chips"><button class="ref" data-v="1 Corinthians 6:1-8">1 Corinthians 6:1-8</button><button class="ref" data-v="Matthew 5:25">Matthew 5:25</button><button class="ref" data-v="Romans 13:8">Romans 13:8</button></div></div>
+  </div>
+</section>
+
+<!-- 27 -->
+<section class="slide" data-section="Part 11 · Church" data-title="The Doctrine of Church (3 of 3)">
+  <div class="page">
+    <div class="kicker">Part 11</div>
+    <h2>The Doctrine of Church (3 of 3)</h2>
+    <div class="grp"><h3>Conflict resolution in light of <button class="ref" data-v="Matthew 18:15-20">Matthew 18:15-20</button></h3><span></span><div class="chips"><button class="ref" data-v="Matthew 18:15-17">Matthew 18:15-17</button><button class="ref" data-v="Galatians 6:1">Galatians 6:1</button><button class="ref" data-v="Proverbs 25:9">Proverbs 25:9</button></div></div><div class="grp"><h3>Reasons for church discipline</h3><span></span><div class="chips"><button class="ref" data-v="1 Corinthians 5:1-5">1 Corinthians 5:1-5</button><button class="ref" data-v="Romans 16:17">Romans 16:17</button><button class="ref" data-v="2 Timothy 3:5">2 Timothy 3:5</button></div></div><div class="grp"><h3>Restoration after church discipline</h3><span></span><div class="chips"><button class="ref" data-v="2 Corinthians 2:7-8">2 Corinthians 2:7-8</button><button class="ref" data-v="Galatians 6:1">Galatians 6:1</button><button class="ref" data-v="Luke 15:7">Luke 15:7</button></div></div><div class="grp"><h3>Tithes and offerings</h3><span></span><div class="chips"><button class="ref" data-v="Malachi 3:8-10">Malachi 3:8-10</button><button class="ref" data-v="2 Corinthians 9:7">2 Corinthians 9:7</button><button class="ref" data-v="Luke 6:38">Luke 6:38</button></div></div><div class="grp"><h3>Not muzzling the ox</h3><span></span><div class="chips"><button class="ref" data-v="1 Timothy 5:18">1 Timothy 5:18</button><button class="ref" data-v="1 Corinthians 9:9">1 Corinthians 9:9</button><button class="ref" data-v="Deuteronomy 25:4">Deuteronomy 25:4</button></div></div>
+  </div>
+</section>
+
+<!-- 28 -->
+<section class="slide" data-section="Parts 12-13 · Ordinances" data-title="Baptisms">
+  <div class="page">
+    <div class="kicker">Part 12 · The Doctrine of Ordinances</div>
+    <h2>Baptisms</h2>
+    <div class="grp"><h3>Purpose</h3><span></span><div class="chips"><button class="ref" data-v="Matthew 28:19">Matthew 28:19</button><button class="ref" data-v="Acts 2:38">Acts 2:38</button><button class="ref" data-v="Romans 6:3-4">Romans 6:3-4</button></div></div><div class="grp"><h3>What doth hinder?</h3><span></span><div class="chips"><button class="ref" data-v="Acts 8:36">Acts 8:36</button><button class="ref" data-v="Acts 10:47">Acts 10:47</button><button class="ref" data-v="Acts 16:33">Acts 16:33</button></div></div><div class="grp"><h3>Baptism of the Spirit</h3><span></span><div class="chips"><button class="ref" data-v="1 Corinthians 12:13">1 Corinthians 12:13</button><button class="ref" data-v="Acts 1:5">Acts 1:5</button><button class="ref" data-v="Ephesians 4:5">Ephesians 4:5</button></div></div><div class="grp"><h3>Baptism of Fire</h3><span></span><div class="chips"><button class="ref" data-v="Matthew 3:11">Matthew 3:11</button><button class="ref" data-v="Luke 3:16">Luke 3:16</button><button class="ref" data-v="Acts 2:3-4">Acts 2:3-4</button></div></div>
+  </div>
+</section>
+
+<!-- 29 -->
+<section class="slide" data-section="Parts 12-13 · Ordinances" data-title="The Lord’s Supper">
+  <div class="page">
+    <div class="kicker">Part 13 · The Doctrine of Ordinances</div>
+    <h2>The Lord’s Supper</h2>
+    <div class="grp"><h3>Purpose</h3><span></span><div class="chips"><button class="ref" data-v="1 Corinthians 11:24-25">1 Corinthians 11:24-25</button><button class="ref" data-v="Luke 22:19-20">Luke 22:19-20</button><button class="ref" data-v="Matthew 26:26-28">Matthew 26:26-28</button></div></div><div class="grp"><h3>Who it’s for</h3><span></span><div class="chips"><button class="ref" data-v="1 Corinthians 11:27-29">1 Corinthians 11:27-29</button><button class="ref" data-v="Acts 20:7">Acts 20:7</button><button class="ref" data-v="1 Corinthians 10:16-17">1 Corinthians 10:16-17</button></div></div><div class="grp"><h3>Right attitude</h3><span></span><div class="chips"><button class="ref" data-v="1 Corinthians 11:28-29">1 Corinthians 11:28-29</button><button class="ref" data-v="2 Corinthians 13:5">2 Corinthians 13:5</button><button class="ref" data-v="Psalms 26:2">Psalm 26:2</button></div></div><div class="grp"><h3>Variances in practice</h3><span></span><div class="chips"><button class="ref" data-v="1 Corinthians 11:21-22">1 Corinthians 11:21-22</button><button class="ref" data-v="Acts 2:46">Acts 2:46</button><button class="ref" data-v="Jude 1:12">Jude 12</button></div></div>
+  </div>
+</section>
+
+<!-- 30 -->
+<section class="slide" data-section="Part 14 · The New Man" data-title="The Doctrine of the New Man (1 of 2)">
+  <div class="page">
+    <div class="kicker">Part 14</div>
+    <h2>The Doctrine of the New Man (1 of 2)</h2>
+    <div class="grp"><h3>Salvation</h3><span></span><div class="chips"><button class="ref" data-v="Ephesians 2:8-9">Ephesians 2:8-9</button><button class="ref" data-v="Romans 10:9">Romans 10:9</button><button class="ref" data-v="John 3:16">John 3:16</button></div></div><div class="grp"><h3>Quickening</h3><span></span><div class="chips"><button class="ref" data-v="Ephesians 2:1">Ephesians 2:1</button><button class="ref" data-v="Colossians 2:13">Colossians 2:13</button><button class="ref" data-v="John 5:21">John 5:21</button></div></div><div class="grp"><h3>Adoption</h3><span></span><div class="chips"><button class="ref" data-v="Romans 8:15">Romans 8:15</button><button class="ref" data-v="Galatians 4:5">Galatians 4:5</button><button class="ref" data-v="Ephesians 1:5">Ephesians 1:5</button></div></div><div class="grp"><h3>Redemption</h3><span></span><div class="chips"><button class="ref" data-v="Ephesians 1:7">Ephesians 1:7</button><button class="ref" data-v="Colossians 1:14">Colossians 1:14</button><button class="ref" data-v="Hebrews 9:12">Hebrews 9:12</button></div></div><div class="grp"><h3>Sanctification</h3><span></span><div class="chips"><button class="ref" data-v="1 Thessalonians 4:3">1 Thessalonians 4:3</button><button class="ref" data-v="Hebrews 10:10">Hebrews 10:10</button><button class="ref" data-v="John 17:17">John 17:17</button></div></div><div class="grp"><h3>Sanctification by the Spirit</h3><span></span><div class="chips"><button class="ref" data-v="2 Thessalonians 2:13">2 Thessalonians 2:13</button><button class="ref" data-v="1 Peter 1:2">1 Peter 1:2</button><button class="ref" data-v="Romans 15:16">Romans 15:16</button></div></div>
+  </div>
+</section>
+
+<!-- 31 -->
+<section class="slide" data-section="Part 14 · The New Man" data-title="The Doctrine of the New Man (2 of 2)">
+  <div class="page">
+    <div class="kicker">Part 14</div>
+    <h2>The Doctrine of the New Man (2 of 2)</h2>
+    <div class="grp"><h3>Sanctification by walking in the Spirit</h3><span></span><div class="chips"><button class="ref" data-v="Galatians 5:16">Galatians 5:16</button><button class="ref" data-v="Romans 8:4">Romans 8:4</button><button class="ref" data-v="Ephesians 5:18">Ephesians 5:18</button></div></div><div class="grp"><h3>Sanctification by the word</h3><span></span><div class="chips"><button class="ref" data-v="John 17:17">John 17:17</button><button class="ref" data-v="Ephesians 5:26">Ephesians 5:26</button><button class="ref" data-v="Psalms 119:11">Psalm 119:11</button></div></div><div class="grp"><h3>Justification</h3><span></span><div class="chips"><button class="ref" data-v="Romans 5:1">Romans 5:1</button><button class="ref" data-v="Galatians 2:16">Galatians 2:16</button><button class="ref" data-v="Titus 3:7">Titus 3:7</button></div></div><div class="grp"><h3>Resurrection</h3><span></span><div class="chips"><button class="ref" data-v="1 Corinthians 15:42-44">1 Corinthians 15:42-44</button><button class="ref" data-v="Romans 6:5">Romans 6:5</button><button class="ref" data-v="Philippians 3:21">Philippians 3:21</button></div></div><div class="grp"><h3>Glorified</h3><span></span><div class="chips"><button class="ref" data-v="Romans 8:30">Romans 8:30</button><button class="ref" data-v="1 Corinthians 1:30">1 Corinthians 1:30</button><button class="ref" data-v="Colossians 3:4">Colossians 3:4</button></div></div><div class="grp"><h3>Eternal life</h3><span></span><div class="chips"><button class="ref" data-v="John 10:28">John 10:28</button><button class="ref" data-v="Romans 6:23">Romans 6:23</button><button class="ref" data-v="1 John 5:11">1 John 5:11</button></div></div>
+  </div>
+</section>
+
+<!-- 32 -->
+<section class="slide" data-section="Parts 15-16 · Heaven and Hell" data-title="Heaven and Hell">
+  <div class="page">
+    <h2>Heaven and Hell</h2>
+    <div class="grp"><h3>The Doctrine of Heaven (Part 15)</h3><span></span><div class="chips"><button class="ref" data-v="Revelation 21:1-4">Revelation 21:1-4</button><button class="ref" data-v="John 14:2">John 14:2</button><button class="ref" data-v="2 Corinthians 5:1">2 Corinthians 5:1</button><button class="ref" data-v="Philippians 3:20">Philippians 3:20</button></div></div><div class="grp"><h3>The Doctrine of Hell (Part 16)</h3><span></span><div class="chips"><button class="ref" data-v="Matthew 16:18">Matthew 16:18</button><button class="ref" data-v="Matthew 25:41">Matthew 25:41</button><button class="ref" data-v="Luke 9:26">Luke 9:26</button><button class="ref" data-v="Luke 16:1-31">Luke 16:1-31</button><button class="ref" data-v="Revelation 20:14-15">Revelation 20:14-15</button></div></div>
+  </div>
+</section>
+
+<!-- 33 -->
+<section class="slide" data-section="Parts 17-19" data-title="Love, Friendship and Soul-winning">
+  <div class="page">
+    <h2>Love, Friendship and Soul-winning</h2>
+    <div class="timeline"><div><span class="n">Part 17</span><span class="lbl">What is Love?</span></div><div><span class="n">Part 18</span><span class="lbl">The Doctrine of Friendship</span></div><div><span class="n">Part 19</span><span class="lbl">The Doctrine of Soul-winning</span></div></div>
+  </div>
+</section>
+
+<!-- 34 -->
+<section class="slide" data-section="Further reading" data-title="The Lessons of the Class">
+  <div class="page">
+    <div class="kicker">Further reading</div>
+    <h2>The Lessons of the Class</h2>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-doctrine-week-1-importance-of-doctrine" target="_blank" rel="noopener">The Importance of Doctrine ↗</a><a class="ref lesson-link" href="../../studies/#lesson-doctrine-week-2-how-god-reveals-himself" target="_blank" rel="noopener">How God Reveals Himself ↗</a><a class="ref lesson-link" href="../../studies/#lesson-doctrine-week-3-doctrine-of-scripture" target="_blank" rel="noopener">The Doctrine of Scripture ↗</a><a class="ref lesson-link" href="../../studies/#lesson-doctrine-week-4-importance-of-the-kjv" target="_blank" rel="noopener">The Importance of the King James Bible ↗</a><a class="ref lesson-link" href="../../studies/#lesson-doctrine-week-4-are-saved-or-being-saved" target="_blank" rel="noopener">“Are Saved” or “Being Saved”? ↗</a><a class="ref lesson-link" href="../../studies/#lesson-doctrine-week-7-doctrine-of-god" target="_blank" rel="noopener">The Doctrine of God ↗</a><a class="ref lesson-link" href="../../studies/#lesson-doctrine-week-8-doctrine-of-christ" target="_blank" rel="noopener">The Doctrine of Christ ↗</a><a class="ref lesson-link" href="../../studies/#lesson-doctrine-week-9-doctrine-of-the-holy-spirit" target="_blank" rel="noopener">The Doctrine of the Holy Spirit ↗</a><a class="ref lesson-link" href="../../studies/#lesson-doctrine-week-10-marriage-gods-plan" target="_blank" rel="noopener">Marriage: God’s Plan ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 Corinthians 10:16-17":[[16, "The cup of blessing which we bless, is it not the communion of the blood of Christ? The bread which we break, is it not the communion of the body of Christ?"], [17, "For we being many are one bread, and one body: for we are all partakers of that one bread."]],
+  "1 Corinthians 11:21-22":[[21, "For in eating every one taketh before other his own supper: and one is hungry, and another is drunken."], [22, "What? have ye not houses to eat and to drink in? or despise ye the church of God, and shame them that have not? What shall I say to you? shall I praise you in this? I praise you not."]],
+  "1 Corinthians 11:24-25":[[24, "And when he had given thanks, he brake it, and said, Take, eat: this is my body, which is broken for you: this do in remembrance of me."], [25, "After the same manner also he took the cup, when he had supped, saying, This cup is the new testament in my blood: this do ye, as oft as ye drink it, in remembrance of me."]],
+  "1 Corinthians 11:27-29":[[27, "Wherefore whosoever shall eat this bread, and drink this cup of the Lord, unworthily, shall be guilty of the body and blood of the Lord."], [28, "But let a man examine himself, and so let him eat of that bread, and drink of that cup."], [29, "For he that eateth and drinketh unworthily, eateth and drinketh damnation to himself, not discerning the Lord’s body."]],
+  "1 Corinthians 11:28-29":[[28, "But let a man examine himself, and so let him eat of that bread, and drink of that cup."], [29, "For he that eateth and drinketh unworthily, eateth and drinketh damnation to himself, not discerning the Lord’s body."]],
+  "1 Corinthians 11:3":[[3, "But I would have you know, that the head of every man is Christ; and the head of the woman is the man; and the head of Christ is God."]],
+  "1 Corinthians 12:13":[[13, "For by one Spirit are we all baptized into one body, whether we be Jews or Gentiles, whether we be bond or free; and have been all made to drink into one Spirit."]],
+  "1 Corinthians 12:27":[[27, "Now ye are the body of Christ, and members in particular."]],
+  "1 Corinthians 12:4-11":[[4, "Now there are diversities of gifts, but the same Spirit."], [5, "And there are differences of administrations, but the same Lord."], [6, "And there are diversities of operations, but it is the same God which worketh all in all."], [7, "But the manifestation of the Spirit is given to every man to profit withal."], [8, "For to one is given by the Spirit the word of wisdom; to another the word of knowledge by the same Spirit;"], [9, "To another faith by the same Spirit; to another the gifts of healing by the same Spirit;"], [10, "To another the working of miracles; to another prophecy; to another discerning of spirits; to another divers kinds of tongues; to another the interpretation of tongues:"], [11, "But all these worketh that one and the selfsame Spirit, dividing to every man severally as he will."]],
+  "1 Corinthians 12:7":[[7, "But the manifestation of the Spirit is given to every man to profit withal."]],
+  "1 Corinthians 15:21":[[21, "For since by man came death, by man came also the resurrection of the dead."]],
+  "1 Corinthians 15:22":[[22, "For as in Adam all die, even so in Christ shall all be made alive."]],
+  "1 Corinthians 15:42-44":[[42, "So also is the resurrection of the dead. It is sown in corruption; it is raised in incorruption:"], [43, "It is sown in dishonour; it is raised in glory: it is sown in weakness; it is raised in power:"], [44, "It is sown a natural body; it is raised a spiritual body. There is a natural body, and there is a spiritual body."]],
+  "1 Corinthians 1:30":[[30, "But of him are ye in Christ Jesus, who of God is made unto us wisdom, and righteousness, and sanctification, and redemption:"]],
+  "1 Corinthians 3:16":[[16, "Know ye not that ye are the temple of God, and that the Spirit of God dwelleth in you?"]],
+  "1 Corinthians 5:1-5":[[1, "It is reported commonly that there is fornication among you, and such fornication as is not so much as named among the Gentiles, that one should have his father’s wife."], [2, "And ye are puffed up, and have not rather mourned, that he that hath done this deed might be taken away from among you."], [3, "For I verily, as absent in body, but present in spirit, have judged already, as though I were present, concerning him that hath so done this deed,"], [4, "In the name of our Lord Jesus Christ, when ye are gathered together, and my spirit, with the power of our Lord Jesus Christ,"], [5, "To deliver such an one unto Satan for the destruction of the flesh, that the spirit may be saved in the day of the Lord Jesus."]],
+  "1 Corinthians 5:11-13":[[11, "But now I have written unto you not to keep company, if any man that is called a brother be a fornicator, or covetous, or an idolater, or a railer, or a drunkard, or an extortioner; with such an one no not to eat."], [12, "For what have I to do to judge them also that are without? do not ye judge them that are within?"], [13, "But them that are without God judgeth. Therefore put away from among yourselves that wicked person."]],
+  "1 Corinthians 6:1-8":[[1, "Dare any of you, having a matter against another, go to law before the unjust, and not before the saints?"], [2, "Do ye not know that the saints shall judge the world? and if the world shall be judged by you, are ye unworthy to judge the smallest matters?"], [3, "Know ye not that we shall judge angels? how much more things that pertain to this life?"], [4, "If then ye have judgments of things pertaining to this life, set them to judge who are least esteemed in the church."], [5, "I speak to your shame. Is it so, that there is not a wise man among you? no, not one that shall be able to judge between his brethren?"], [6, "But brother goeth to law with brother, and that before the unbelievers."], [7, "Now therefore there is utterly a fault among you, because ye go to law one with another. Why do ye not rather take wrong? why do ye not rather suffer yourselves to be defrauded?"], [8, "Nay, ye do wrong, and defraud, and that your brethren."]],
+  "1 Corinthians 6:18":[[18, "Flee fornication. Every sin that a man doeth is without the body; but he that committeth fornication sinneth against his own body."]],
+  "1 Corinthians 7:10-11":[[10, "And unto the married I command, yet not I, but the Lord, Let not the wife depart from her husband:"], [11, "But and if she depart, let her remain unmarried, or be reconciled to her husband: and let not the husband put away his wife."]],
+  "1 Corinthians 8:6":[[6, "But to us there is but one God, the Father, of whom are all things, and we in him; and one Lord Jesus Christ, by whom are all things, and we by him."]],
+  "1 Corinthians 9:9":[[9, "For it is written in the law of Moses, Thou shalt not muzzle the mouth of the ox that treadeth out the corn. Doth God take care for oxen?"]],
+  "1 John 3:10":[[10, "In this the children of God are manifest, and the children of the devil: whosoever doeth not righteousness is not of God, neither he that loveth not his brother."]],
+  "1 John 4:1":[[1, "Beloved, believe not every spirit, but try the spirits whether they are of God: because many false prophets are gone out into the world."]],
+  "1 John 4:8":[[8, "He that loveth not knoweth not God; for God is love."]],
+  "1 John 5:11":[[11, "And this is the record, that God hath given to us eternal life, and this life is in his Son."]],
+  "1 John 5:7":[[7, "For there are three that bear record in heaven, the Father, the Word, and the Holy Ghost: and these three are one."]],
+  "1 Peter 1:16":[[16, "Because it is written, Be ye holy; for I am holy."]],
+  "1 Peter 1:2":[[2, "Elect according to the foreknowledge of God the Father, through sanctification of the Spirit, unto obedience and sprinkling of the blood of Jesus Christ: Grace unto you, and peace, be multiplied."]],
+  "1 Peter 2:13-14":[[13, "Submit yourselves to every ordinance of man for the Lord’s sake: whether it be to the king, as supreme;"], [14, "Or unto governors, as unto them that are sent by him for the punishment of evildoers, and for the praise of them that do well."]],
+  "1 Peter 2:15":[[15, "For so is the will of God, that with well doing ye may put to silence the ignorance of foolish men:"]],
+  "1 Peter 2:18":[[18, "Servants, be subject to your masters with all fear; not only to the good and gentle, but also to the froward."]],
+  "1 Peter 3:1":[[1, "Likewise, ye wives, be in subjection to your own husbands; that, if any obey not the word, they also may without the word be won by the conversation of the wives;"]],
+  "1 Peter 3:7":[[7, "Likewise, ye husbands, dwell with them according to knowledge, giving honour unto the wife, as unto the weaker vessel, and as being heirs together of the grace of life; that your prayers be not hindered."]],
+  "1 Peter 4:10":[[10, "As every man hath received the gift, even so minister the same one to another, as good stewards of the manifold grace of God."]],
+  "1 Peter 5:2-3":[[2, "Feed the flock of God which is among you, taking the oversight thereof, not by constraint, but willingly; not for filthy lucre, but of a ready mind;"], [3, "Neither as being lords over God’s heritage, but being ensamples to the flock."]],
+  "1 Peter 5:6":[[6, "Humble yourselves therefore under the mighty hand of God, that he may exalt you in due time:"]],
+  "1 Peter 5:8":[[8, "Be sober, be vigilant; because your adversary the devil, as a roaring lion, walketh about, seeking whom he may devour:"]],
+  "1 Thessalonians 4:3":[[3, "For this is the will of God, even your sanctification, that ye should abstain from fornication:"]],
+  "1 Timothy 2:13":[[13, "For Adam was first formed, then Eve."]],
+  "1 Timothy 2:5":[[5, "For there is one God, and one mediator between God and men, the man Christ Jesus;"]],
+  "1 Timothy 3:1-7":[[1, "This is a true saying, If a man desire the office of a bishop, he desireth a good work."], [2, "A bishop then must be blameless, the husband of one wife, vigilant, sober, of good behaviour, given to hospitality, apt to teach;"], [3, "Not given to wine, no striker, not greedy of filthy lucre; but patient, not a brawler, not covetous;"], [4, "One that ruleth well his own house, having his children in subjection with all gravity;"], [5, "(For if a man know not how to rule his own house, how shall he take care of the church of God?)"], [6, "Not a novice, lest being lifted up with pride he fall into the condemnation of the devil."], [7, "Moreover he must have a good report of them which are without; lest he fall into reproach and the snare of the devil."]],
+  "1 Timothy 3:15":[[15, "But if I tarry long, that thou mayest know how thou oughtest to behave thyself in the house of God, which is the church of the living God, the pillar and ground of the truth."]],
+  "1 Timothy 3:8-13":[[8, "Likewise must the deacons be grave, not doubletongued, not given to much wine, not greedy of filthy lucre;"], [9, "Holding the mystery of the faith in a pure conscience."], [10, "And let these also first be proved; then let them use the office of a deacon, being found blameless."], [11, "Even so must their wives be grave, not slanderers, sober, faithful in all things."], [12, "Let the deacons be the husbands of one wife, ruling their children and their own houses well."], [13, "For they that have used the office of a deacon well purchase to themselves a good degree, and great boldness in the faith which is in Christ Jesus."]],
+  "1 Timothy 4:16":[[16, "Take heed unto thyself, and unto the doctrine; continue in them: for in doing this thou shalt both save thyself, and them that hear thee."]],
+  "1 Timothy 4:4":[[4, "For every creature of God is good, and nothing to be refused, if it be received with thanksgiving:"]],
+  "1 Timothy 4:6":[[6, "If thou put the brethren in remembrance of these things, thou shalt be a good minister of Jesus Christ, nourished up in the words of faith and of good doctrine, whereunto thou hast attained."]],
+  "1 Timothy 5:18":[[18, "For the scripture saith, Thou shalt not muzzle the ox that treadeth out the corn. And, The labourer is worthy of his reward."]],
+  "1 Timothy 5:3-4":[[3, "Honour widows that are widows indeed."], [4, "But if any widow have children or nephews, let them learn first to shew piety at home, and to requite their parents: for that is good and acceptable before God."]],
+  "2 Corinthians 10:4":[[4, "(For the weapons of our warfare are not carnal, but mighty through God to the pulling down of strong holds;)"]],
+  "2 Corinthians 13:14":[[14, "The grace of the Lord Jesus Christ, and the love of God, and the communion of the Holy Ghost, be with you all. Amen."]],
+  "2 Corinthians 13:5":[[5, "Examine yourselves, whether ye be in the faith; prove your own selves. Know ye not your own selves, how that Jesus Christ is in you, except ye be reprobates?"]],
+  "2 Corinthians 2:6-8":[[6, "Sufficient to such a man is this punishment, which was inflicted of many."], [7, "So that contrariwise ye ought rather to forgive him, and comfort him, lest perhaps such a one should be swallowed up with overmuch sorrow."], [8, "Wherefore I beseech you that ye would confirm your love toward him."]],
+  "2 Corinthians 2:7-8":[[7, "So that contrariwise ye ought rather to forgive him, and comfort him, lest perhaps such a one should be swallowed up with overmuch sorrow."], [8, "Wherefore I beseech you that ye would confirm your love toward him."]],
+  "2 Corinthians 3:6":[[6, "Who also hath made us able ministers of the new testament; not of the letter, but of the spirit: for the letter killeth, but the spirit giveth life."]],
+  "2 Corinthians 5:1":[[1, "For we know that if our earthly house of this tabernacle were dissolved, we have a building of God, an house not made with hands, eternal in the heavens."]],
+  "2 Corinthians 9:7":[[7, "Every man according as he purposeth in his heart, so let him give; not grudgingly, or of necessity: for God loveth a cheerful giver."]],
+  "2 Peter 1:20-21":[[20, "Knowing this first, that no prophecy of the scripture is of any private interpretation."], [21, "For the prophecy came not in old time by the will of man: but holy men of God spake as they were moved by the Holy Ghost."]],
+  "2 Peter 2:1-2":[[1, "But there were false prophets also among the people, even as there shall be false teachers among you, who privily shall bring in damnable heresies, even denying the Lord that bought them, and bring upon themselves swift destruction."], [2, "And many shall follow their pernicious ways; by reason of whom the way of truth shall be evil spoken of."]],
+  "2 Peter 3:15-16":[[15, "And account that the longsuffering of our Lord is salvation; even as our beloved brother Paul also according to the wisdom given unto him hath written unto you;"], [16, "As also in all his epistles, speaking in them of these things; in which are some things hard to be understood, which they that are unlearned and unstable wrest, as they do also the other scriptures, unto their own destruction."]],
+  "2 Thessalonians 2:13":[[13, "But we are bound to give thanks alway to God for you, brethren beloved of the Lord, because God hath from the beginning chosen you to salvation through sanctification of the Spirit and belief of the truth:"]],
+  "2 Thessalonians 3:6":[[6, "Now we command you, brethren, in the name of our Lord Jesus Christ, that ye withdraw yourselves from every brother that walketh disorderly, and not after the tradition which he received of us."]],
+  "2 Timothy 2:2":[[2, "And the things that thou hast heard of me among many witnesses, the same commit thou to faithful men, who shall be able to teach others also."]],
+  "2 Timothy 3:12":[[12, "Yea, and all that will live godly in Christ Jesus shall suffer persecution."]],
+  "2 Timothy 3:16-17":[[16, "All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness:"], [17, "That the man of God may be perfect, throughly furnished unto all good works."]],
+  "2 Timothy 3:5":[[5, "Having a form of godliness, but denying the power thereof: from such turn away."]],
+  "Acts 10:47":[[47, "Can any man forbid water, that these should not be baptized, which have received the Holy Ghost as well as we?"]],
+  "Acts 16:33":[[33, "And he took them the same hour of the night, and washed their stripes; and was baptized, he and all his, straightway."]],
+  "Acts 1:5":[[5, "For John truly baptized with water; but ye shall be baptized with the Holy Ghost not many days hence."]],
+  "Acts 1:8":[[8, "But ye shall receive power, after that the Holy Ghost is come upon you: and ye shall be witnesses unto me both in Jerusalem, and in all Judaea, and in Samaria, and unto the uttermost part of the earth."]],
+  "Acts 20:28":[[28, "Take heed therefore unto yourselves, and to all the flock, over the which the Holy Ghost hath made you overseers, to feed the church of God, which he hath purchased with his own blood."]],
+  "Acts 20:7":[[7, "And upon the first day of the week, when the disciples came together to break bread, Paul preached unto them, ready to depart on the morrow; and continued his speech until midnight."]],
+  "Acts 2:3-4":[[3, "And there appeared unto them cloven tongues like as of fire, and it sat upon each of them."], [4, "And they were all filled with the Holy Ghost, and began to speak with other tongues, as the Spirit gave them utterance."]],
+  "Acts 2:38":[[38, "Then Peter said unto them, Repent, and be baptized every one of you in the name of Jesus Christ for the remission of sins, and ye shall receive the gift of the Holy Ghost."]],
+  "Acts 2:42":[[42, "And they continued stedfastly in the apostles’ doctrine and fellowship, and in breaking of bread, and in prayers."]],
+  "Acts 2:46":[[46, "And they, continuing daily with one accord in the temple, and breaking bread from house to house, did eat their meat with gladness and singleness of heart,"]],
+  "Acts 4:12":[[12, "Neither is there salvation in any other: for there is none other name under heaven given among men, whereby we must be saved."]],
+  "Acts 5:29":[[29, "Then Peter and the other apostles answered and said, We ought to obey God rather than men."]],
+  "Acts 5:3-4":[[3, "But Peter said, Ananias, why hath Satan filled thine heart to lie to the Holy Ghost, and to keep back part of the price of the land?"], [4, "Whiles it remained, was it not thine own? and after it was sold, was it not in thine own power? why hast thou conceived this thing in thine heart? thou hast not lied unto men, but unto God."]],
+  "Acts 6:3":[[3, "Wherefore, brethren, look ye out among you seven men of honest report, full of the Holy Ghost and wisdom, whom we may appoint over this business."]],
+  "Acts 8:36":[[36, "And as they went on their way, they came unto a certain water: and the eunuch said, See, here is water; what doth hinder me to be baptized?"]],
+  "Colossians 1:14":[[14, "In whom we have redemption through his blood, even the forgiveness of sins:"]],
+  "Colossians 1:18":[[18, "And he is the head of the body, the church: who is the beginning, the firstborn from the dead; that in all things he might have the preeminence."]],
+  "Colossians 2:13":[[13, "And you, being dead in your sins and the uncircumcision of your flesh, hath he quickened together with him, having forgiven you all trespasses;"]],
+  "Colossians 2:9":[[9, "For in him dwelleth all the fulness of the Godhead bodily."]],
+  "Colossians 3:16":[[16, "Let the word of Christ dwell in you richly in all wisdom; teaching and admonishing one another in psalms and hymns and spiritual songs, singing with grace in your hearts to the Lord."]],
+  "Colossians 3:18":[[18, "Wives, submit yourselves unto your own husbands, as it is fit in the Lord."]],
+  "Colossians 3:19":[[19, "Husbands, love your wives, and be not bitter against them."]],
+  "Colossians 3:20":[[20, "Children, obey your parents in all things: for this is well pleasing unto the Lord."]],
+  "Colossians 3:22":[[22, "Servants, obey in all things your masters according to the flesh; not with eyeservice, as menpleasers; but in singleness of heart, fearing God:"]],
+  "Colossians 3:4":[[4, "When Christ, who is our life, shall appear, then shall ye also appear with him in glory."]],
+  "Colossians 3:6":[[6, "For which things’ sake the wrath of God cometh on the children of disobedience:"]],
+  "Daniel 3:16-18":[[16, "Shadrach, Meshach, and Abednego, answered and said to the king, O Nebuchadnezzar, we are not careful to answer thee in this matter."], [17, "If it be so, our God whom we serve is able to deliver us from the burning fiery furnace, and he will deliver us out of thine hand, O king."], [18, "But if not, be it known unto thee, O king, that we will not serve thy gods, nor worship the golden image which thou hast set up."]],
+  "Deuteronomy 10:17":[[17, "For the LORD your God is God of gods, and Lord of lords, a great God, a mighty, and a terrible, which regardeth not persons, nor taketh reward:"]],
+  "Deuteronomy 25:4":[[4, "Thou shalt not muzzle the ox when he treadeth out the corn."]],
+  "Deuteronomy 4:24":[[24, "For the LORD thy God is a consuming fire, even a jealous God."]],
+  "Deuteronomy 5:16":[[16, "Honour thy father and thy mother, as the LORD thy God hath commanded thee; that thy days may be prolonged, and that it may go well with thee, in the land which the LORD thy God giveth thee."]],
+  "Deuteronomy 5:29":[[29, "O that there were such an heart in them, that they would fear me, and keep all my commandments always, that it might be well with them, and with their children for ever!"]],
+  "Ephesians 1:5":[[5, "Having predestinated us unto the adoption of children by Jesus Christ to himself, according to the good pleasure of his will,"]],
+  "Ephesians 1:7":[[7, "In whom we have redemption through his blood, the forgiveness of sins, according to the riches of his grace;"]],
+  "Ephesians 2:1":[[1, "And you hath he quickened, who were dead in trespasses and sins;"]],
+  "Ephesians 2:2":[[2, "Wherein in time past ye walked according to the course of this world, according to the prince of the power of the air, the spirit that now worketh in the children of disobedience:"]],
+  "Ephesians 2:4":[[4, "But God, who is rich in mercy, for his great love wherewith he loved us,"]],
+  "Ephesians 2:8":[[8, "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:"]],
+  "Ephesians 2:8-9":[[8, "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:"], [9, "Not of works, lest any man should boast."]],
+  "Ephesians 4:11":[[11, "And he gave some, apostles; and some, prophets; and some, evangelists; and some, pastors and teachers;"]],
+  "Ephesians 4:11-12":[[11, "And he gave some, apostles; and some, prophets; and some, evangelists; and some, pastors and teachers;"], [12, "For the perfecting of the saints, for the work of the ministry, for the edifying of the body of Christ:"]],
+  "Ephesians 4:14":[[14, "That we henceforth be no more children, tossed to and fro, and carried about with every wind of doctrine, by the sleight of men, and cunning craftiness, whereby they lie in wait to deceive;"]],
+  "Ephesians 4:5":[[5, "One Lord, one faith, one baptism,"]],
+  "Ephesians 4:6":[[6, "One God and Father of all, who is above all, and through all, and in you all."]],
+  "Ephesians 5:18":[[18, "And be not drunk with wine, wherein is excess; but be filled with the Spirit;"]],
+  "Ephesians 5:22":[[22, "Wives, submit yourselves unto your own husbands, as unto the Lord."]],
+  "Ephesians 5:23":[[23, "For the husband is the head of the wife, even as Christ is the head of the church: and he is the saviour of the body."]],
+  "Ephesians 5:25":[[25, "Husbands, love your wives, even as Christ also loved the church, and gave himself for it;"]],
+  "Ephesians 5:26":[[26, "That he might sanctify and cleanse it with the washing of water by the word,"]],
+  "Ephesians 6:1":[[1, "Children, obey your parents in the Lord: for this is right."]],
+  "Ephesians 6:12":[[12, "For we wrestle not against flesh and blood, but against principalities, against powers, against the rulers of the darkness of this world, against spiritual wickedness in high places."]],
+  "Ephesians 6:2":[[2, "Honour thy father and mother; which is the first commandment with promise;"]],
+  "Ephesians 6:2-3":[[2, "Honour thy father and mother; which is the first commandment with promise;"], [3, "That it may be well with thee, and thou mayest live long on the earth."]],
+  "Ephesians 6:4":[[4, "And, ye fathers, provoke not your children to wrath: but bring them up in the nurture and admonition of the Lord."]],
+  "Ephesians 6:5-7":[[5, "Servants, be obedient to them that are your masters according to the flesh, with fear and trembling, in singleness of your heart, as unto Christ;"], [6, "Not with eyeservice, as menpleasers; but as the servants of Christ, doing the will of God from the heart;"], [7, "With good will doing service, as to the Lord, and not to men:"]],
+  "Exodus 1:17":[[17, "But the midwives feared God, and did not as the king of Egypt commanded them, but saved the men children alive."]],
+  "Exodus 20:12":[[12, "Honour thy father and thy mother: that thy days may be long upon the land which the LORD thy God giveth thee."]],
+  "Exodus 20:14":[[14, "Thou shalt not commit adultery."]],
+  "Exodus 34:14":[[14, "For thou shalt worship no other god: for the LORD, whose name is Jealous, is a jealous God:"]],
+  "Exodus 3:14":[[14, "And God said unto Moses, I AM THAT I AM: and he said, Thus shalt thou say unto the children of Israel, I AM hath sent me unto you."]],
+  "Exodus 7:1-25":[[1, "And the LORD said unto Moses, See, I have made thee a god to Pharaoh: and Aaron thy brother shall be thy prophet."], [2, "Thou shalt speak all that I command thee: and Aaron thy brother shall speak unto Pharaoh, that he send the children of Israel out of his land."], [3, "And I will harden Pharaoh’s heart, and multiply my signs and my wonders in the land of Egypt."], [4, "But Pharaoh shall not hearken unto you, that I may lay my hand upon Egypt, and bring forth mine armies, and my people the children of Israel, out of the land of Egypt by great judgments."], [5, "And the Egyptians shall know that I am the LORD, when I stretch forth mine hand upon Egypt, and bring out the children of Israel from among them."], [6, "And Moses and Aaron did as the LORD commanded them, so did they."], [7, "And Moses was fourscore years old, and Aaron fourscore and three years old, when they spake unto Pharaoh."], [8, "And the LORD spake unto Moses and unto Aaron, saying,"], [9, "When Pharaoh shall speak unto you, saying, Shew a miracle for you: then thou shalt say unto Aaron, Take thy rod, and cast it before Pharaoh, and it shall become a serpent."], [10, "And Moses and Aaron went in unto Pharaoh, and they did so as the LORD had commanded: and Aaron cast down his rod before Pharaoh, and before his servants, and it became a serpent."], [11, "Then Pharaoh also called the wise men and the sorcerers: now the magicians of Egypt, they also did in like manner with their enchantments."], [12, "For they cast down every man his rod, and they became serpents: but Aaron’s rod swallowed up their rods."], [13, "And he hardened Pharaoh’s heart, that he hearkened not unto them; as the LORD had said."], [14, "And the LORD said unto Moses, Pharaoh’s heart is hardened, he refuseth to let the people go."], [15, "Get thee unto Pharaoh in the morning; lo, he goeth out unto the water; and thou shalt stand by the river’s brink against he come; and the rod which was turned to a serpent shalt thou take in thine hand."], [16, "And thou shalt say unto him, The LORD God of the Hebrews hath sent me unto thee, saying, Let my people go, that they may serve me in the wilderness: and, behold, hitherto thou wouldest not hear."], [17, "Thus saith the LORD, In this thou shalt know that I am the LORD: behold, I will smite with the rod that is in mine hand upon the waters which are in the river, and they shall be turned to blood."], [18, "And the fish that is in the river shall die, and the river shall stink; and the Egyptians shall lothe to drink of the water of the river."], [19, "And the LORD spake unto Moses, Say unto Aaron, Take thy rod, and stretch out thine hand upon the waters of Egypt, upon their streams, upon their rivers, and upon their ponds, and upon all their pools of water, that they may become blood; and that there may be blood throughout all the land of Egypt, both in vessels of wood, and in vessels of stone."], [20, "And Moses and Aaron did so, as the LORD commanded; and he lifted up the rod, and smote the waters that were in the river, in the sight of Pharaoh, and in the sight of his servants; and all the waters that were in the river were turned to blood."], [21, "And the fish that was in the river died; and the river stank, and the Egyptians could not drink of the water of the river; and there was blood throughout all the land of Egypt."], [22, "And the magicians of Egypt did so with their enchantments: and Pharaoh’s heart was hardened, neither did he hearken unto them; as the LORD had said."], [23, "And Pharaoh turned and went into his house, neither did he set his heart to this also."], [24, "And all the Egyptians digged round about the river for water to drink; for they could not drink of the water of the river."], [25, "And seven days were fulfilled, after that the LORD had smitten the river."]],
+  "Exodus 8:1-32":[[1, "And the LORD spake unto Moses, Go unto Pharaoh, and say unto him, Thus saith the LORD, Let my people go, that they may serve me."], [2, "And if thou refuse to let them go, behold, I will smite all thy borders with frogs:"], [3, "And the river shall bring forth frogs abundantly, which shall go up and come into thine house, and into thy bedchamber, and upon thy bed, and into the house of thy servants, and upon thy people, and into thine ovens, and into thy kneadingtroughs:"], [4, "And the frogs shall come up both on thee, and upon thy people, and upon all thy servants."], [5, "And the LORD spake unto Moses, Say unto Aaron, Stretch forth thine hand with thy rod over the streams, over the rivers, and over the ponds, and cause frogs to come up upon the land of Egypt."], [6, "And Aaron stretched out his hand over the waters of Egypt; and the frogs came up, and covered the land of Egypt."], [7, "And the magicians did so with their enchantments, and brought up frogs upon the land of Egypt."], [8, "Then Pharaoh called for Moses and Aaron, and said, Intreat the LORD, that he may take away the frogs from me, and from my people; and I will let the people go, that they may do sacrifice unto the LORD."], [9, "And Moses said unto Pharaoh, Glory over me: when shall I intreat for thee, and for thy servants, and for thy people, to destroy the frogs from thee and thy houses, that they may remain in the river only?"], [10, "And he said, To morrow. And he said, Be it according to thy word: that thou mayest know that there is none like unto the LORD our God."], [11, "And the frogs shall depart from thee, and from thy houses, and from thy servants, and from thy people; they shall remain in the river only."], [12, "And Moses and Aaron went out from Pharaoh: and Moses cried unto the LORD because of the frogs which he had brought against Pharaoh."], [13, "And the LORD did according to the word of Moses; and the frogs died out of the houses, out of the villages, and out of the fields."], [14, "And they gathered them together upon heaps: and the land stank."], [15, "But when Pharaoh saw that there was respite, he hardened his heart, and hearkened not unto them; as the LORD had said."], [16, "And the LORD said unto Moses, Say unto Aaron, Stretch out thy rod, and smite the dust of the land, that it may become lice throughout all the land of Egypt."], [17, "And they did so; for Aaron stretched out his hand with his rod, and smote the dust of the earth, and it became lice in man, and in beast; all the dust of the land became lice throughout all the land of Egypt."], [18, "And the magicians did so with their enchantments to bring forth lice, but they could not: so there were lice upon man, and upon beast."], [19, "Then the magicians said unto Pharaoh, This is the finger of God: and Pharaoh’s heart was hardened, and he hearkened not unto them; as the LORD had said."], [20, "And the LORD said unto Moses, Rise up early in the morning, and stand before Pharaoh; lo, he cometh forth to the water; and say unto him, Thus saith the LORD, Let my people go, that they may serve me."], [21, "Else, if thou wilt not let my people go, behold, I will send swarms of flies upon thee, and upon thy servants, and upon thy people, and into thy houses: and the houses of the Egyptians shall be full of swarms of flies, and also the ground whereon they are."], [22, "And I will sever in that day the land of Goshen, in which my people dwell, that no swarms of flies shall be there; to the end thou mayest know that I am the LORD in the midst of the earth."], [23, "And I will put a division between my people and thy people: to morrow shall this sign be."], [24, "And the LORD did so; and there came a grievous swarm of flies into the house of Pharaoh, and into his servants’ houses, and into all the land of Egypt: the land was corrupted by reason of the swarm of flies."], [25, "And Pharaoh called for Moses and for Aaron, and said, Go ye, sacrifice to your God in the land."], [26, "And Moses said, It is not meet so to do; for we shall sacrifice the abomination of the Egyptians to the LORD our God: lo, shall we sacrifice the abomination of the Egyptians before their eyes, and will they not stone us?"], [27, "We will go three days’ journey into the wilderness, and sacrifice to the LORD our God, as he shall command us."], [28, "And Pharaoh said, I will let you go, that ye may sacrifice to the LORD your God in the wilderness; only ye shall not go very far away: intreat for me."], [29, "And Moses said, Behold, I go out from thee, and I will intreat the LORD that the swarms of flies may depart from Pharaoh, from his servants, and from his people, to morrow: but let not Pharaoh deal deceitfully any more in not letting the people go to sacrifice to the LORD."], [30, "And Moses went out from Pharaoh, and intreated the LORD."], [31, "And the LORD did according to the word of Moses; and he removed the swarms of flies from Pharaoh, from his servants, and from his people; there remained not one."], [32, "And Pharaoh hardened his heart at this time also, neither would he let the people go."]],
+  "Exodus 9:1-35":[[1, "Then the LORD said unto Moses, Go in unto Pharaoh, and tell him, Thus saith the LORD God of the Hebrews, Let my people go, that they may serve me."], [2, "For if thou refuse to let them go, and wilt hold them still,"], [3, "Behold, the hand of the LORD is upon thy cattle which is in the field, upon the horses, upon the asses, upon the camels, upon the oxen, and upon the sheep: there shall be a very grievous murrain."], [4, "And the LORD shall sever between the cattle of Israel and the cattle of Egypt: and there shall nothing die of all that is the children’s of Israel."], [5, "And the LORD appointed a set time, saying, To morrow the LORD shall do this thing in the land."], [6, "And the LORD did that thing on the morrow, and all the cattle of Egypt died: but of the cattle of the children of Israel died not one."], [7, "And Pharaoh sent, and, behold, there was not one of the cattle of the Israelites dead. And the heart of Pharaoh was hardened, and he did not let the people go."], [8, "And the LORD said unto Moses and unto Aaron, Take to you handfuls of ashes of the furnace, and let Moses sprinkle it toward the heaven in the sight of Pharaoh."], [9, "And it shall become small dust in all the land of Egypt, and shall be a boil breaking forth with blains upon man, and upon beast, throughout all the land of Egypt."], [10, "And they took ashes of the furnace, and stood before Pharaoh; and Moses sprinkled it up toward heaven; and it became a boil breaking forth with blains upon man, and upon beast."], [11, "And the magicians could not stand before Moses because of the boils; for the boil was upon the magicians, and upon all the Egyptians."], [12, "And the LORD hardened the heart of Pharaoh, and he hearkened not unto them; as the LORD had spoken unto Moses."], [13, "And the LORD said unto Moses, Rise up early in the morning, and stand before Pharaoh, and say unto him, Thus saith the LORD God of the Hebrews, Let my people go, that they may serve me."], [14, "For I will at this time send all my plagues upon thine heart, and upon thy servants, and upon thy people; that thou mayest know that there is none like me in all the earth."], [15, "For now I will stretch out my hand, that I may smite thee and thy people with pestilence; and thou shalt be cut off from the earth."], [16, "And in very deed for this cause have I raised thee up, for to shew in thee my power; and that my name may be declared throughout all the earth."], [17, "As yet exaltest thou thyself against my people, that thou wilt not let them go?"], [18, "Behold, to morrow about this time I will cause it to rain a very grievous hail, such as hath not been in Egypt since the foundation thereof even until now."], [19, "Send therefore now, and gather thy cattle, and all that thou hast in the field; for upon every man and beast which shall be found in the field, and shall not be brought home, the hail shall come down upon them, and they shall die."], [20, "He that feared the word of the LORD among the servants of Pharaoh made his servants and his cattle flee into the houses:"], [21, "And he that regarded not the word of the LORD left his servants and his cattle in the field."], [22, "And the LORD said unto Moses, Stretch forth thine hand toward heaven, that there may be hail in all the land of Egypt, upon man, and upon beast, and upon every herb of the field, throughout the land of Egypt."], [23, "And Moses stretched forth his rod toward heaven: and the LORD sent thunder and hail, and the fire ran along upon the ground; and the LORD rained hail upon the land of Egypt."], [24, "So there was hail, and fire mingled with the hail, very grievous, such as there was none like it in all the land of Egypt since it became a nation."], [25, "And the hail smote throughout all the land of Egypt all that was in the field, both man and beast; and the hail smote every herb of the field, and brake every tree of the field."], [26, "Only in the land of Goshen, where the children of Israel were, was there no hail."], [27, "And Pharaoh sent, and called for Moses and Aaron, and said unto them, I have sinned this time: the LORD is righteous, and I and my people are wicked."], [28, "Intreat the LORD (for it is enough) that there be no more mighty thunderings and hail; and I will let you go, and ye shall stay no longer."], [29, "And Moses said unto him, As soon as I am gone out of the city, I will spread abroad my hands unto the LORD; and the thunder shall cease, neither shall there be any more hail; that thou mayest know how that the earth is the LORD’s."], [30, "But as for thee and thy servants, I know that ye will not yet fear the LORD God."], [31, "And the flax and the barley was smitten: for the barley was in the ear, and the flax was bolled."], [32, "But the wheat and the rie were not smitten: for they were not grown up."], [33, "And Moses went out of the city from Pharaoh, and spread abroad his hands unto the LORD: and the thunders and hail ceased, and the rain was not poured upon the earth."], [34, "And when Pharaoh saw that the rain and the hail and the thunders were ceased, he sinned yet more, and hardened his heart, he and his servants."], [35, "And the heart of Pharaoh was hardened, neither would he let the children of Israel go; as the LORD had spoken by Moses."]],
+  "Ezekiel 28:13":[[13, "Thou hast been in Eden the garden of God; every precious stone was thy covering, the sardius, topaz, and the diamond, the beryl, the onyx, and the jasper, the sapphire, the emerald, and the carbuncle, and gold: the workmanship of thy tabrets and of thy pipes was prepared in thee in the day that thou wast created."]],
+  "Galatians 2:16":[[16, "Knowing that a man is not justified by the works of the law, but by the faith of Jesus Christ, even we have believed in Jesus Christ, that we might be justified by the faith of Christ, and not by the works of the law: for by the works of the law shall no flesh be justified."]],
+  "Galatians 3:24":[[24, "Wherefore the law was our schoolmaster to bring us unto Christ, that we might be justified by faith."]],
+  "Galatians 3:26":[[26, "For ye are all the children of God by faith in Christ Jesus."]],
+  "Galatians 4:5":[[5, "To redeem them that were under the law, that we might receive the adoption of sons."]],
+  "Galatians 5:16":[[16, "This I say then, Walk in the Spirit, and ye shall not fulfil the lust of the flesh."]],
+  "Galatians 5:22-23":[[22, "But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith,"], [23, "Meekness, temperance: against such there is no law."]],
+  "Galatians 6:1":[[1, "Brethren, if a man be overtaken in a fault, ye which are spiritual, restore such an one in the spirit of meekness; considering thyself, lest thou also be tempted."]],
+  "Galatians 6:10":[[10, "As we have therefore opportunity, let us do good unto all men, especially unto them who are of the household of faith."]],
+  "Genesis 12:1-4":[[1, "Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father’s house, unto a land that I will shew thee:"], [2, "And I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing:"], [3, "And I will bless them that bless thee, and curse him that curseth thee: and in thee shall all families of the earth be blessed."], [4, "So Abram departed, as the LORD had spoken unto him; and Lot went with him: and Abram was seventy and five years old when he departed out of Haran."]],
+  "Genesis 17:1":[[1, "And when Abram was ninety years old and nine, the LORD appeared to Abram, and said unto him, I am the Almighty God; walk before me, and be thou perfect."]],
+  "Genesis 1:1":[[1, "In the beginning God created the heaven and the earth."]],
+  "Genesis 1:26":[[26, "And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth."]],
+  "Genesis 1:26-27":[[26, "And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth."], [27, "So God created man in his own image, in the image of God created he him; male and female created he them."]],
+  "Genesis 1:31":[[31, "And God saw every thing that he had made, and, behold, it was very good. And the evening and the morning were the sixth day."]],
+  "Genesis 2:1-3":[[1, "Thus the heavens and the earth were finished, and all the host of them."], [2, "And on the seventh day God ended his work which he had made; and he rested on the seventh day from all his work which he had made."], [3, "And God blessed the seventh day, and sanctified it: because that in it he had rested from all his work which God created and made."]],
+  "Genesis 2:21-22":[[21, "And the LORD God caused a deep sleep to fall upon Adam, and he slept: and he took one of his ribs, and closed up the flesh instead thereof;"], [22, "And the rib, which the LORD God had taken from man, made he a woman, and brought her unto the man."]],
+  "Genesis 2:7":[[7, "And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul."]],
+  "Genesis 2:8-9":[[8, "And the LORD God planted a garden eastward in Eden; and there he put the man whom he had formed."], [9, "And out of the ground made the LORD God to grow every tree that is pleasant to the sight, and good for food; the tree of life also in the midst of the garden, and the tree of knowledge of good and evil."]],
+  "Genesis 3:1-24":[[1, "Now the serpent was more subtil than any beast of the field which the LORD God had made. And he said unto the woman, Yea, hath God said, Ye shall not eat of every tree of the garden?"], [2, "And the woman said unto the serpent, We may eat of the fruit of the trees of the garden:"], [3, "But of the fruit of the tree which is in the midst of the garden, God hath said, Ye shall not eat of it, neither shall ye touch it, lest ye die."], [4, "And the serpent said unto the woman, Ye shall not surely die:"], [5, "For God doth know that in the day ye eat thereof, then your eyes shall be opened, and ye shall be as gods, knowing good and evil."], [6, "And when the woman saw that the tree was good for food, and that it was pleasant to the eyes, and a tree to be desired to make one wise, she took of the fruit thereof, and did eat, and gave also unto her husband with her; and he did eat."], [7, "And the eyes of them both were opened, and they knew that they were naked; and they sewed fig leaves together, and made themselves aprons."], [8, "And they heard the voice of the LORD God walking in the garden in the cool of the day: and Adam and his wife hid themselves from the presence of the LORD God amongst the trees of the garden."], [9, "And the LORD God called unto Adam, and said unto him, Where art thou?"], [10, "And he said, I heard thy voice in the garden, and I was afraid, because I was naked; and I hid myself."], [11, "And he said, Who told thee that thou wast naked? Hast thou eaten of the tree, whereof I commanded thee that thou shouldest not eat?"], [12, "And the man said, The woman whom thou gavest to be with me, she gave me of the tree, and I did eat."], [13, "And the LORD God said unto the woman, What is this that thou hast done? And the woman said, The serpent beguiled me, and I did eat."], [14, "And the LORD God said unto the serpent, Because thou hast done this, thou art cursed above all cattle, and above every beast of the field; upon thy belly shalt thou go, and dust shalt thou eat all the days of thy life:"], [15, "And I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel."], [16, "Unto the woman he said, I will greatly multiply thy sorrow and thy conception; in sorrow thou shalt bring forth children; and thy desire shall be to thy husband, and he shall rule over thee."], [17, "And unto Adam he said, Because thou hast hearkened unto the voice of thy wife, and hast eaten of the tree, of which I commanded thee, saying, Thou shalt not eat of it: cursed is the ground for thy sake; in sorrow shalt thou eat of it all the days of thy life;"], [18, "Thorns also and thistles shall it bring forth to thee; and thou shalt eat the herb of the field;"], [19, "In the sweat of thy face shalt thou eat bread, till thou return unto the ground; for out of it wast thou taken: for dust thou art, and unto dust shalt thou return."], [20, "And Adam called his wife’s name Eve; because she was the mother of all living."], [21, "Unto Adam also and to his wife did the LORD God make coats of skins, and clothed them."], [22, "And the LORD God said, Behold, the man is become as one of us, to know good and evil: and now, lest he put forth his hand, and take also of the tree of life, and eat, and live for ever:"], [23, "Therefore the LORD God sent him forth from the garden of Eden, to till the ground from whence he was taken."], [24, "So he drove out the man; and he placed at the east of the garden of Eden Cherubims, and a flaming sword which turned every way, to keep the way of the tree of life."]],
+  "Genesis 3:15":[[15, "And I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel."]],
+  "Genesis 3:20":[[20, "And Adam called his wife’s name Eve; because she was the mother of all living."]],
+  "Genesis 3:6-7":[[6, "And when the woman saw that the tree was good for food, and that it was pleasant to the eyes, and a tree to be desired to make one wise, she took of the fruit thereof, and did eat, and gave also unto her husband with her; and he did eat."], [7, "And the eyes of them both were opened, and they knew that they were naked; and they sewed fig leaves together, and made themselves aprons."]],
+  "Genesis 3:7":[[7, "And the eyes of them both were opened, and they knew that they were naked; and they sewed fig leaves together, and made themselves aprons."]],
+  "Genesis 3:8":[[8, "And they heard the voice of the LORD God walking in the garden in the cool of the day: and Adam and his wife hid themselves from the presence of the LORD God amongst the trees of the garden."]],
+  "Genesis 4:25":[[25, "And Adam knew his wife again; and she bare a son, and called his name Seth: For God, said she, hath appointed me another seed instead of Abel, whom Cain slew."]],
+  "Genesis 4:5-7":[[5, "But unto Cain and to his offering he had not respect. And Cain was very wroth, and his countenance fell."], [6, "And the LORD said unto Cain, Why art thou wroth? and why is thy countenance fallen?"], [7, "If thou doest well, shalt thou not be accepted? and if thou doest not well, sin lieth at the door. And unto thee shall be his desire, and thou shalt rule over him."]],
+  "Genesis 5:3":[[3, "And Adam lived an hundred and thirty years, and begat a son in his own likeness, after his image; and called his name Seth:"]],
+  "Hebrews 10:10":[[10, "By the which will we are sanctified through the offering of the body of Jesus Christ once for all."]],
+  "Hebrews 10:25":[[25, "Not forsaking the assembling of ourselves together, as the manner of some is; but exhorting one another: and so much the more, as ye see the day approaching."]],
+  "Hebrews 10:7":[[7, "Then said I, Lo, I come (in the volume of the book it is written of me,) to do thy will, O God."]],
+  "Hebrews 11:4":[[4, "By faith Abel offered unto God a more excellent sacrifice than Cain, by which he obtained witness that he was righteous, God testifying of his gifts: and by it he being dead yet speaketh."]],
+  "Hebrews 12:9":[[9, "Furthermore we have had fathers of our flesh which corrected us, and we gave them reverence: shall we not much rather be in subjection unto the Father of spirits, and live?"]],
+  "Hebrews 13:4":[[4, "Marriage is honourable in all, and the bed undefiled: but whoremongers and adulterers God will judge."]],
+  "Hebrews 1:1-2":[[1, "God, who at sundry times and in divers manners spake in time past unto the fathers by the prophets,"], [2, "Hath in these last days spoken unto us by his Son, whom he hath appointed heir of all things, by whom also he made the worlds;"]],
+  "Hebrews 1:8":[[8, "But unto the Son he saith, Thy throne, O God, is for ever and ever: a sceptre of righteousness is the sceptre of thy kingdom."]],
+  "Hebrews 2:14":[[14, "Forasmuch then as the children are partakers of flesh and blood, he also himself likewise took part of the same; that through death he might destroy him that had the power of death, that is, the devil;"]],
+  "Hebrews 4:14":[[14, "Seeing then that we have a great high priest, that is passed into the heavens, Jesus the Son of God, let us hold fast our profession."]],
+  "Hebrews 9:12":[[12, "Neither by the blood of goats and calves, but by his own blood he entered in once into the holy place, having obtained eternal redemption for us."]],
+  "Hebrews 9:14":[[14, "How much more shall the blood of Christ, who through the eternal Spirit offered himself without spot to God, purge your conscience from dead works to serve the living God?"]],
+  "Isaiah 11:2":[[2, "And the spirit of the LORD shall rest upon him, the spirit of wisdom and understanding, the spirit of counsel and might, the spirit of knowledge and of the fear of the LORD;"]],
+  "Isaiah 40:8":[[8, "The grass withereth, the flower fadeth: but the word of our God shall stand for ever."]],
+  "Isaiah 48:16":[[16, "Come ye near unto me, hear ye this; I have not spoken in secret from the beginning; from the time that it was, there am I: and now the Lord GOD, and his Spirit, hath sent me."]],
+  "Isaiah 59:21":[[21, "As for me, this is my covenant with them, saith the LORD; My spirit that is upon thee, and my words which I have put in thy mouth, shall not depart out of thy mouth, nor out of the mouth of thy seed, nor out of the mouth of thy seed’s seed, saith the LORD, from henceforth and for ever."]],
+  "Isaiah 64:6":[[6, "But we are all as an unclean thing, and all our righteousnesses are as filthy rags; and we all do fade as a leaf; and our iniquities, like the wind, have taken us away."]],
+  "Isaiah 6:3":[[3, "And one cried unto another, and said, Holy, holy, holy, is the LORD of hosts: the whole earth is full of his glory."]],
+  "Isaiah 7:14":[[14, "Therefore the Lord himself shall give you a sign; Behold, a virgin shall conceive, and bear a son, and shall call his name Immanuel."]],
+  "Isaiah 9:6":[[6, "For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace."]],
+  "James 1:27":[[27, "Pure religion and undefiled before God and the Father is this, To visit the fatherless and widows in their affliction, and to keep himself unspotted from the world."]],
+  "James 1:5":[[5, "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him."]],
+  "James 2:1-26":[[1, "My brethren, have not the faith of our Lord Jesus Christ, the Lord of glory, with respect of persons."], [2, "For if there come unto your assembly a man with a gold ring, in goodly apparel, and there come in also a poor man in vile raiment;"], [3, "And ye have respect to him that weareth the gay clothing, and say unto him, Sit thou here in a good place; and say to the poor, Stand thou there, or sit here under my footstool:"], [4, "Are ye not then partial in yourselves, and are become judges of evil thoughts?"], [5, "Hearken, my beloved brethren, Hath not God chosen the poor of this world rich in faith, and heirs of the kingdom which he hath promised to them that love him?"], [6, "But ye have despised the poor. Do not rich men oppress you, and draw you before the judgment seats?"], [7, "Do not they blaspheme that worthy name by the which ye are called?"], [8, "If ye fulfil the royal law according to the scripture, Thou shalt love thy neighbour as thyself, ye do well:"], [9, "But if ye have respect to persons, ye commit sin, and are convinced of the law as transgressors."], [10, "For whosoever shall keep the whole law, and yet offend in one point, he is guilty of all."], [11, "For he that said, Do not commit adultery, said also, Do not kill. Now if thou commit no adultery, yet if thou kill, thou art become a transgressor of the law."], [12, "So speak ye, and so do, as they that shall be judged by the law of liberty."], [13, "For he shall have judgment without mercy, that hath shewed no mercy; and mercy rejoiceth against judgment."], [14, "What doth it profit, my brethren, though a man say he hath faith, and have not works? can faith save him?"], [15, "If a brother or sister be naked, and destitute of daily food,"], [16, "And one of you say unto them, Depart in peace, be ye warmed and filled; notwithstanding ye give them not those things which are needful to the body; what doth it profit?"], [17, "Even so faith, if it hath not works, is dead, being alone."], [18, "Yea, a man may say, Thou hast faith, and I have works: shew me thy faith without thy works, and I will shew thee my faith by my works."], [19, "Thou believest that there is one God; thou doest well: the devils also believe, and tremble."], [20, "But wilt thou know, O vain man, that faith without works is dead?"], [21, "Was not Abraham our father justified by works, when he had offered Isaac his son upon the altar?"], [22, "Seest thou how faith wrought with his works, and by works was faith made perfect?"], [23, "And the scripture was fulfilled which saith, Abraham believed God, and it was imputed unto him for righteousness: and he was called the Friend of God."], [24, "Ye see then how that by works a man is justified, and not by faith only."], [25, "Likewise also was not Rahab the harlot justified by works, when she had received the messengers, and had sent them out another way?"], [26, "For as the body without the spirit is dead, so faith without works is dead also."]],
+  "James 4:7":[[7, "Submit yourselves therefore to God. Resist the devil, and he will flee from you."]],
+  "Jeremiah 10:10":[[10, "But the LORD is the true God, he is the living God, and an everlasting king: at his wrath the earth shall tremble, and the nations shall not be able to abide his indignation."]],
+  "Jeremiah 32:17":[[17, "Ah Lord GOD! behold, thou hast made the heaven and the earth by thy great power and stretched out arm, and there is nothing too hard for thee:"]],
+  "Jeremiah 36:2":[[2, "Take thee a roll of a book, and write therein all the words that I have spoken unto thee against Israel, and against Judah, and against all the nations, from the day I spake unto thee, from the days of Josiah, even unto this day."]],
+  "Job 12:7-9":[[7, "But ask now the beasts, and they shall teach thee; and the fowls of the air, and they shall tell thee:"], [8, "Or speak to the earth, and it shall teach thee: and the fishes of the sea shall declare unto thee."], [9, "Who knoweth not in all these that the hand of the LORD hath wrought this?"]],
+  "Joel 2:28":[[28, "And it shall come to pass afterward, that I will pour out my spirit upon all flesh; and your sons and your daughters shall prophesy, your old men shall dream dreams, your young men shall see visions:"]],
+  "John 10:11":[[11, "I am the good shepherd: the good shepherd giveth his life for the sheep."]],
+  "John 10:28":[[28, "And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand."]],
+  "John 10:30":[[30, "I and my Father are one."]],
+  "John 13:14-15":[[14, "If I then, your Lord and Master, have washed your feet; ye also ought to wash one another’s feet."], [15, "For I have given you an example, that ye should do as I have done to you."]],
+  "John 14:16-17":[[16, "And I will pray the Father, and he shall give you another Comforter, that he may abide with you for ever;"], [17, "Even the Spirit of truth; whom the world cannot receive, because it seeth him not, neither knoweth him: but ye know him; for he dwelleth with you, and shall be in you."]],
+  "John 14:2":[[2, "In my Father’s house are many mansions: if it were not so, I would have told you. I go to prepare a place for you."]],
+  "John 14:6":[[6, "Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me."]],
+  "John 15:18":[[18, "If the world hate you, ye know that it hated me before it hated you."]],
+  "John 16:13":[[13, "Howbeit when he, the Spirit of truth, is come, he will guide you into all truth: for he shall not speak of himself; but whatsoever he shall hear, that shall he speak: and he will shew you things to come."]],
+  "John 17:17":[[17, "Sanctify them through thy truth: thy word is truth."]],
+  "John 1:1":[[1, "In the beginning was the Word, and the Word was with God, and the Word was God."]],
+  "John 1:1-2":[[1, "In the beginning was the Word, and the Word was with God, and the Word was God."], [2, "The same was in the beginning with God."]],
+  "John 1:12":[[12, "But as many as received him, to them gave he power to become the sons of God, even to them that believe on his name:"]],
+  "John 1:29":[[29, "The next day John seeth Jesus coming unto him, and saith, Behold the Lamb of God, which taketh away the sin of the world."]],
+  "John 1:3":[[3, "All things were made by him; and without him was not any thing made that was made."]],
+  "John 1:34":[[34, "And I saw, and bare record that this is the Son of God."]],
+  "John 3:16":[[16, "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."]],
+  "John 3:5":[[5, "Jesus answered, Verily, verily, I say unto thee, Except a man be born of water and of the Spirit, he cannot enter into the kingdom of God."]],
+  "John 4:25-26":[[25, "The woman saith unto him, I know that Messias cometh, which is called Christ: when he is come, he will tell us all things."], [26, "Jesus saith unto her, I that speak unto thee am he."]],
+  "John 5:21":[[21, "For as the Father raiseth up the dead, and quickeneth them; even so the Son quickeneth whom he will."]],
+  "John 6:27":[[27, "Labour not for the meat which perisheth, but for that meat which endureth unto everlasting life, which the Son of man shall give unto you: for him hath God the Father sealed."]],
+  "John 6:35":[[35, "And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst."]],
+  "John 6:38":[[38, "For I came down from heaven, not to do mine own will, but the will of him that sent me."]],
+  "John 8:12":[[12, "Then spake Jesus again unto them, saying, I am the light of the world: he that followeth me shall not walk in darkness, but shall have the light of life."]],
+  "John 8:44":[[44, "Ye are of your father the devil, and the lusts of your father ye will do. He was a murderer from the beginning, and abode not in the truth, because there is no truth in him. When he speaketh a lie, he speaketh of his own: for he is a liar, and the father of it."]],
+  "Jude 1:11":[[11, "Woe unto them! for they have gone in the way of Cain, and ran greedily after the error of Balaam for reward, and perished in the gainsaying of Core."]],
+  "Jude 1:12":[[12, "These are spots in your feasts of charity, when they feast with you, feeding themselves without fear: clouds they are without water, carried about of winds; trees whose fruit withereth, without fruit, twice dead, plucked up by the roots;"]],
+  "Leviticus 19:3":[[3, "Ye shall fear every man his mother, and his father, and keep my sabbaths: I am the LORD your God."]],
+  "Luke 15:7":[[7, "I say unto you, that likewise joy shall be in heaven over one sinner that repenteth, more than over ninety and nine just persons, which need no repentance."]],
+  "Luke 16:1-31":[[1, "And he said also unto his disciples, There was a certain rich man, which had a steward; and the same was accused unto him that he had wasted his goods."], [2, "And he called him, and said unto him, How is it that I hear this of thee? give an account of thy stewardship; for thou mayest be no longer steward."], [3, "Then the steward said within himself, What shall I do? for my lord taketh away from me the stewardship: I cannot dig; to beg I am ashamed."], [4, "I am resolved what to do, that, when I am put out of the stewardship, they may receive me into their houses."], [5, "So he called every one of his lord’s debtors unto him, and said unto the first, How much owest thou unto my lord?"], [6, "And he said, An hundred measures of oil. And he said unto him, Take thy bill, and sit down quickly, and write fifty."], [7, "Then said he to another, And how much owest thou? And he said, An hundred measures of wheat. And he said unto him, Take thy bill, and write fourscore."], [8, "And the lord commended the unjust steward, because he had done wisely: for the children of this world are in their generation wiser than the children of light."], [9, "And I say unto you, Make to yourselves friends of the mammon of unrighteousness; that, when ye fail, they may receive you into everlasting habitations."], [10, "He that is faithful in that which is least is faithful also in much: and he that is unjust in the least is unjust also in much."], [11, "If therefore ye have not been faithful in the unrighteous mammon, who will commit to your trust the true riches?"], [12, "And if ye have not been faithful in that which is another man’s, who shall give you that which is your own?"], [13, "No servant can serve two masters: for either he will hate the one, and love the other; or else he will hold to the one, and despise the other. Ye cannot serve God and mammon."], [14, "And the Pharisees also, who were covetous, heard all these things: and they derided him."], [15, "And he said unto them, Ye are they which justify yourselves before men; but God knoweth your hearts: for that which is highly esteemed among men is abomination in the sight of God."], [16, "The law and the prophets were until John: since that time the kingdom of God is preached, and every man presseth into it."], [17, "And it is easier for heaven and earth to pass, than one tittle of the law to fail."], [18, "Whosoever putteth away his wife, and marrieth another, committeth adultery: and whosoever marrieth her that is put away from her husband committeth adultery."], [19, "There was a certain rich man, which was clothed in purple and fine linen, and fared sumptuously every day:"], [20, "And there was a certain beggar named Lazarus, which was laid at his gate, full of sores,"], [21, "And desiring to be fed with the crumbs which fell from the rich man’s table: moreover the dogs came and licked his sores."], [22, "And it came to pass, that the beggar died, and was carried by the angels into Abraham’s bosom: the rich man also died, and was buried;"], [23, "And in hell he lift up his eyes, being in torments, and seeth Abraham afar off, and Lazarus in his bosom."], [24, "And he cried and said, Father Abraham, have mercy on me, and send Lazarus, that he may dip the tip of his finger in water, and cool my tongue; for I am tormented in this flame."], [25, "But Abraham said, Son, remember that thou in thy lifetime receivedst thy good things, and likewise Lazarus evil things: but now he is comforted, and thou art tormented."], [26, "And beside all this, between us and you there is a great gulf fixed: so that they which would pass from hence to you cannot; neither can they pass to us, that would come from thence."], [27, "Then he said, I pray thee therefore, father, that thou wouldest send him to my father’s house:"], [28, "For I have five brethren; that he may testify unto them, lest they also come into this place of torment."], [29, "Abraham saith unto him, They have Moses and the prophets; let them hear them."], [30, "And he said, Nay, father Abraham: but if one went unto them from the dead, they will repent."], [31, "And he said unto him, If they hear not Moses and the prophets, neither will they be persuaded, though one rose from the dead."]],
+  "Luke 22:19-20":[[19, "And he took bread, and gave thanks, and brake it, and gave unto them, saying, This is my body which is given for you: this do in remembrance of me."], [20, "Likewise also the cup after supper, saying, This cup is the new testament in my blood, which is shed for you."]],
+  "Luke 2:11":[[11, "For unto you is born this day in the city of David a Saviour, which is Christ the Lord."]],
+  "Luke 3:16":[[16, "John answered, saying unto them all, I indeed baptize you with water; but one mightier than I cometh, the latchet of whose shoes I am not worthy to unloose: he shall baptize you with the Holy Ghost and with fire:"]],
+  "Luke 3:38":[[38, "Which was the son of Enos, which was the son of Seth, which was the son of Adam, which was the son of God."]],
+  "Luke 6:38":[[38, "Give, and it shall be given unto you; good measure, pressed down, and shaken together, and running over, shall men give into your bosom. For with the same measure that ye mete withal it shall be measured to you again."]],
+  "Luke 9:26":[[26, "For whosoever shall be ashamed of me and of my words, of him shall the Son of man be ashamed, when he shall come in his own glory, and in his Father’s, and of the holy angels."]],
+  "Malachi 3:8-10":[[8, "Will a man rob God? Yet ye have robbed me. But ye say, Wherein have we robbed thee? In tithes and offerings."], [9, "Ye are cursed with a curse: for ye have robbed me, even this whole nation."], [10, "Bring ye all the tithes into the storehouse, that there may be meat in mine house, and prove me now herewith, saith the LORD of hosts, if I will not open you the windows of heaven, and pour you out a blessing, that there shall not be room enough to receive it."]],
+  "Mark 10:11-12":[[11, "And he saith unto them, Whosoever shall put away his wife, and marry another, committeth adultery against her."], [12, "And if a woman shall put away her husband, and be married to another, she committeth adultery."]],
+  "Mark 10:45":[[45, "For even the Son of man came not to be ministered unto, but to minister, and to give his life a ransom for many."]],
+  "Matthew 12:31-32":[[31, "Wherefore I say unto you, All manner of sin and blasphemy shall be forgiven unto men: but the blasphemy against the Holy Ghost shall not be forgiven unto men."], [32, "And whosoever speaketh a word against the Son of man, it shall be forgiven him: but whosoever speaketh against the Holy Ghost, it shall not be forgiven him, neither in this world, neither in the world to come."]],
+  "Matthew 13:38":[[38, "The field is the world; the good seed are the children of the kingdom; but the tares are the children of the wicked one;"]],
+  "Matthew 15:19":[[19, "For out of the heart proceed evil thoughts, murders, adulteries, fornications, thefts, false witness, blasphemies:"]],
+  "Matthew 15:4":[[4, "For God commanded, saying, Honour thy father and mother: and, He that curseth father or mother, let him die the death."]],
+  "Matthew 16:18":[[18, "And I say also unto thee, That thou art Peter, and upon this rock I will build my church; and the gates of hell shall not prevail against it."]],
+  "Matthew 16:27":[[27, "For the Son of man shall come in the glory of his Father with his angels; and then he shall reward every man according to his works."]],
+  "Matthew 18:15-17":[[15, "Moreover if thy brother shall trespass against thee, go and tell him his fault between thee and him alone: if he shall hear thee, thou hast gained thy brother."], [16, "But if he will not hear thee, then take with thee one or two more, that in the mouth of two or three witnesses every word may be established."], [17, "And if he shall neglect to hear them, tell it unto the church: but if he neglect to hear the church, let him be unto thee as an heathen man and a publican."]],
+  "Matthew 18:15-20":[[15, "Moreover if thy brother shall trespass against thee, go and tell him his fault between thee and him alone: if he shall hear thee, thou hast gained thy brother."], [16, "But if he will not hear thee, then take with thee one or two more, that in the mouth of two or three witnesses every word may be established."], [17, "And if he shall neglect to hear them, tell it unto the church: but if he neglect to hear the church, let him be unto thee as an heathen man and a publican."], [18, "Verily I say unto you, Whatsoever ye shall bind on earth shall be bound in heaven: and whatsoever ye shall loose on earth shall be loosed in heaven."], [19, "Again I say unto you, That if two of you shall agree on earth as touching any thing that they shall ask, it shall be done for them of my Father which is in heaven."], [20, "For where two or three are gathered together in my name, there am I in the midst of them."]],
+  "Matthew 18:20":[[20, "For where two or three are gathered together in my name, there am I in the midst of them."]],
+  "Matthew 19:6-9":[[6, "Wherefore they are no more twain, but one flesh. What therefore God hath joined together, let not man put asunder."], [7, "They say unto him, Why did Moses then command to give a writing of divorcement, and to put her away?"], [8, "He saith unto them, Moses because of the hardness of your hearts suffered you to put away your wives: but from the beginning it was not so."], [9, "And I say unto you, Whosoever shall put away his wife, except it be for fornication, and shall marry another, committeth adultery: and whoso marrieth her which is put away doth commit adultery."]],
+  "Matthew 1:21":[[21, "And she shall bring forth a son, and thou shalt call his name JESUS: for he shall save his people from their sins."]],
+  "Matthew 24:35":[[35, "Heaven and earth shall pass away, but my words shall not pass away."]],
+  "Matthew 25:41":[[41, "Then shall he say also unto them on the left hand, Depart from me, ye cursed, into everlasting fire, prepared for the devil and his angels:"]],
+  "Matthew 26:26-28":[[26, "And as they were eating, Jesus took bread, and blessed it, and brake it, and gave it to the disciples, and said, Take, eat; this is my body."], [27, "And he took the cup, and gave thanks, and gave it to them, saying, Drink ye all of it;"], [28, "For this is my blood of the new testament, which is shed for many for the remission of sins."]],
+  "Matthew 28:19":[[19, "Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost:"]],
+  "Matthew 28:19-20":[[19, "Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost:"], [20, "Teaching them to observe all things whatsoever I have commanded you: and, lo, I am with you alway, even unto the end of the world. Amen."]],
+  "Matthew 3:11":[[11, "I indeed baptize you with water unto repentance: but he that cometh after me is mightier than I, whose shoes I am not worthy to bear: he shall baptize you with the Holy Ghost, and with fire:"]],
+  "Matthew 3:16-17":[[16, "And Jesus, when he was baptized, went up straightway out of the water: and, lo, the heavens were opened unto him, and he saw the Spirit of God descending like a dove, and lighting upon him:"], [17, "And lo a voice from heaven, saying, This is my beloved Son, in whom I am well pleased."]],
+  "Matthew 5:10-12":[[10, "Blessed are they which are persecuted for righteousness’ sake: for theirs is the kingdom of heaven."], [11, "Blessed are ye, when men shall revile you, and persecute you, and shall say all manner of evil against you falsely, for my sake."], [12, "Rejoice, and be exceeding glad: for great is your reward in heaven: for so persecuted they the prophets which were before you."]],
+  "Matthew 5:18":[[18, "For verily I say unto you, Till heaven and earth pass, one jot or one tittle shall in no wise pass from the law, till all be fulfilled."]],
+  "Matthew 5:25":[[25, "Agree with thine adversary quickly, whiles thou art in the way with him; lest at any time the adversary deliver thee to the judge, and the judge deliver thee to the officer, and thou be cast into prison."]],
+  "Matthew 5:28":[[28, "But I say unto you, That whosoever looketh on a woman to lust after her hath committed adultery with her already in his heart."]],
+  "Micah 5:2":[[2, "But thou, Bethlehem Ephratah, though thou be little among the thousands of Judah, yet out of thee shall he come forth unto me that is to be ruler in Israel; whose goings forth have been from of old, from everlasting."]],
+  "Philippians 1:1":[[1, "Paul and Timotheus, the servants of Jesus Christ, to all the saints in Christ Jesus which are at Philippi, with the bishops and deacons:"]],
+  "Philippians 2:7":[[7, "But made himself of no reputation, and took upon him the form of a servant, and was made in the likeness of men:"]],
+  "Philippians 3:20":[[20, "For our conversation is in heaven; from whence also we look for the Saviour, the Lord Jesus Christ:"]],
+  "Philippians 3:21":[[21, "Who shall change our vile body, that it may be fashioned like unto his glorious body, according to the working whereby he is able even to subdue all things unto himself."]],
+  "Proverbs 22:6":[[6, "Train up a child in the way he should go: and when he is old, he will not depart from it."]],
+  "Proverbs 23:22":[[22, "Hearken unto thy father that begat thee, and despise not thy mother when she is old."]],
+  "Proverbs 25:9":[[9, "Debate thy cause with thy neighbour himself; and discover not a secret to another:"]],
+  "Proverbs 2:6":[[6, "For the LORD giveth wisdom: out of his mouth cometh knowledge and understanding."]],
+  "Proverbs 30:4":[[4, "Who hath ascended up into heaven, or descended? who hath gathered the wind in his fists? who hath bound the waters in a garment? who hath established all the ends of the earth? what is his name, and what is his son’s name, if thou canst tell?"]],
+  "Proverbs 6:16-19":[[16, "These six things doth the LORD hate: yea, seven are an abomination unto him:"], [17, "A proud look, a lying tongue, and hands that shed innocent blood,"], [18, "An heart that deviseth wicked imaginations, feet that be swift in running to mischief,"], [19, "A false witness that speaketh lies, and he that soweth discord among brethren."]],
+  "Proverbs 6:32":[[32, "But whoso committeth adultery with a woman lacketh understanding: he that doeth it destroyeth his own soul."]],
+  "Psalms 103:8":[[8, "The LORD is merciful and gracious, slow to anger, and plenteous in mercy."]],
+  "Psalms 104:24":[[24, "O LORD, how manifold are thy works! in wisdom hast thou made them all: the earth is full of thy riches."]],
+  "Psalms 119:104":[[104, "Through thy precepts I get understanding: therefore I hate every false way."]],
+  "Psalms 119:11":[[11, "Thy word have I hid in mine heart, that I might not sin against thee."]],
+  "Psalms 119:165":[[165, "Great peace have they which love thy law: and nothing shall offend them."]],
+  "Psalms 127:3":[[3, "Lo, children are an heritage of the LORD: and the fruit of the womb is his reward."]],
+  "Psalms 12:6-7":[[6, "The words of the LORD are pure words: as silver tried in a furnace of earth, purified seven times."], [7, "Thou shalt keep them, O LORD, thou shalt preserve them from this generation for ever."]],
+  "Psalms 139:14":[[14, "I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well."]],
+  "Psalms 139:7-10":[[7, "Whither shall I go from thy spirit? or whither shall I flee from thy presence?"], [8, "If I ascend up into heaven, thou art there: if I make my bed in hell, behold, thou art there."], [9, "If I take the wings of the morning, and dwell in the uttermost parts of the sea;"], [10, "Even there shall thy hand lead me, and thy right hand shall hold me."]],
+  "Psalms 19:1":[[1, "The heavens declare the glory of God; and the firmament sheweth his handywork."]],
+  "Psalms 19:7":[[7, "The law of the LORD is perfect, converting the soul: the testimony of the LORD is sure, making wise the simple."]],
+  "Psalms 23:1":[[1, "The LORD is my shepherd; I shall not want."]],
+  "Psalms 26:2":[[2, "Examine me, O LORD, and prove me; try my reins and my heart."]],
+  "Psalms 46:1":[[1, "God is our refuge and strength, a very present help in trouble."]],
+  "Psalms 51:5":[[5, "Behold, I was shapen in iniquity; and in sin did my mother conceive me."]],
+  "Psalms 7:11":[[11, "God judgeth the righteous, and God is angry with the wicked every day."]],
+  "Psalms 86:15":[[15, "But thou, O Lord, art a God full of compassion, and gracious, long suffering, and plenteous in mercy and truth."]],
+  "Revelation 19:15":[[15, "And out of his mouth goeth a sharp sword, that with it he should smite the nations: and he shall rule them with a rod of iron: and he treadeth the winepress of the fierceness and wrath of Almighty God."]],
+  "Revelation 19:16":[[16, "And he hath on his vesture and on his thigh a name written, KING OF KINGS, AND LORD OF LORDS."]],
+  "Revelation 19:6":[[6, "And I heard as it were the voice of a great multitude, and as the voice of many waters, and as the voice of mighty thunderings, saying, Alleluia: for the Lord God omnipotent reigneth."]],
+  "Revelation 1:4":[[4, "John to the seven churches which are in Asia: Grace be unto you, and peace, from him which is, and which was, and which is to come; and from the seven Spirits which are before his throne;"]],
+  "Revelation 1:8":[[8, "I am Alpha and Omega, the beginning and the ending, saith the Lord, which is, and which was, and which is to come, the Almighty."]],
+  "Revelation 20:14-15":[[14, "And death and hell were cast into the lake of fire. This is the second death."], [15, "And whosoever was not found written in the book of life was cast into the lake of fire."]],
+  "Revelation 21:1-4":[[1, "And I saw a new heaven and a new earth: for the first heaven and the first earth were passed away; and there was no more sea."], [2, "And I John saw the holy city, new Jerusalem, coming down from God out of heaven, prepared as a bride adorned for her husband."], [3, "And I heard a great voice out of heaven saying, Behold, the tabernacle of God is with men, and he will dwell with them, and they shall be his people, and God himself shall be with them, and be their God."], [4, "And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain: for the former things are passed away."]],
+  "Revelation 4:5":[[5, "And out of the throne proceeded lightnings and thunderings and voices: and there were seven lamps of fire burning before the throne, which are the seven Spirits of God."]],
+  "Romans 10:17":[[17, "So then faith cometh by hearing, and hearing by the word of God."]],
+  "Romans 10:9":[[9, "That if thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God hath raised him from the dead, thou shalt be saved."]],
+  "Romans 11:36":[[36, "For of him, and through him, and to him, are all things: to whom be glory for ever. Amen."]],
+  "Romans 12:2":[[2, "And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what is that good, and acceptable, and perfect, will of God."]],
+  "Romans 12:4-5":[[4, "For as we have many members in one body, and all members have not the same office:"], [5, "So we, being many, are one body in Christ, and every one members one of another."]],
+  "Romans 12:6-8":[[6, "Having then gifts differing according to the grace that is given to us, whether prophecy, let us prophesy according to the proportion of faith;"], [7, "Or ministry, let us wait on our ministering: or he that teacheth, on teaching;"], [8, "Or he that exhorteth, on exhortation: he that giveth, let him do it with simplicity; he that ruleth, with diligence; he that sheweth mercy, with cheerfulness."]],
+  "Romans 13:1":[[1, "Let every soul be subject unto the higher powers. For there is no power but of God: the powers that be are ordained of God."]],
+  "Romans 13:8":[[8, "Owe no man any thing, but to love one another: for he that loveth another hath fulfilled the law."]],
+  "Romans 15:16":[[16, "That I should be the minister of Jesus Christ to the Gentiles, ministering the gospel of God, that the offering up of the Gentiles might be acceptable, being sanctified by the Holy Ghost."]],
+  "Romans 16:17":[[17, "Now I beseech you, brethren, mark them which cause divisions and offences contrary to the doctrine which ye have learned; and avoid them."]],
+  "Romans 1:18":[[18, "For the wrath of God is revealed from heaven against all ungodliness and unrighteousness of men, who hold the truth in unrighteousness;"]],
+  "Romans 1:18-32":[[18, "For the wrath of God is revealed from heaven against all ungodliness and unrighteousness of men, who hold the truth in unrighteousness;"], [19, "Because that which may be known of God is manifest in them; for God hath shewed it unto them."], [20, "For the invisible things of him from the creation of the world are clearly seen, being understood by the things that are made, even his eternal power and Godhead; so that they are without excuse:"], [21, "Because that, when they knew God, they glorified him not as God, neither were thankful; but became vain in their imaginations, and their foolish heart was darkened."], [22, "Professing themselves to be wise, they became fools,"], [23, "And changed the glory of the uncorruptible God into an image made like to corruptible man, and to birds, and fourfooted beasts, and creeping things."], [24, "Wherefore God also gave them up to uncleanness through the lusts of their own hearts, to dishonour their own bodies between themselves:"], [25, "Who changed the truth of God into a lie, and worshipped and served the creature more than the Creator, who is blessed for ever. Amen."], [26, "For this cause God gave them up unto vile affections: for even their women did change the natural use into that which is against nature:"], [27, "And likewise also the men, leaving the natural use of the woman, burned in their lust one toward another; men with men working that which is unseemly, and receiving in themselves that recompence of their error which was meet."], [28, "And even as they did not like to retain God in their knowledge, God gave them over to a reprobate mind, to do those things which are not convenient;"], [29, "Being filled with all unrighteousness, fornication, wickedness, covetousness, maliciousness; full of envy, murder, debate, deceit, malignity; whisperers,"], [30, "Backbiters, haters of God, despiteful, proud, boasters, inventors of evil things, disobedient to parents,"], [31, "Without understanding, covenantbreakers, without natural affection, implacable, unmerciful:"], [32, "Who knowing the judgment of God, that they which commit such things are worthy of death, not only do the same, but have pleasure in them that do them."]],
+  "Romans 1:20":[[20, "For the invisible things of him from the creation of the world are clearly seen, being understood by the things that are made, even his eternal power and Godhead; so that they are without excuse:"]],
+  "Romans 3:20":[[20, "Therefore by the deeds of the law there shall no flesh be justified in his sight: for by the law is the knowledge of sin."]],
+  "Romans 4:1-25":[[1, "What shall we say then that Abraham our father, as pertaining to the flesh, hath found?"], [2, "For if Abraham were justified by works, he hath whereof to glory; but not before God."], [3, "For what saith the scripture? Abraham believed God, and it was counted unto him for righteousness."], [4, "Now to him that worketh is the reward not reckoned of grace, but of debt."], [5, "But to him that worketh not, but believeth on him that justifieth the ungodly, his faith is counted for righteousness."], [6, "Even as David also describeth the blessedness of the man, unto whom God imputeth righteousness without works,"], [7, "Saying, Blessed are they whose iniquities are forgiven, and whose sins are covered."], [8, "Blessed is the man to whom the Lord will not impute sin."], [9, "Cometh this blessedness then upon the circumcision only, or upon the uncircumcision also? for we say that faith was reckoned to Abraham for righteousness."], [10, "How was it then reckoned? when he was in circumcision, or in uncircumcision? Not in circumcision, but in uncircumcision."], [11, "And he received the sign of circumcision, a seal of the righteousness of the faith which he had yet being uncircumcised: that he might be the father of all them that believe, though they be not circumcised; that righteousness might be imputed unto them also:"], [12, "And the father of circumcision to them who are not of the circumcision only, but who also walk in the steps of that faith of our father Abraham, which he had being yet uncircumcised."], [13, "For the promise, that he should be the heir of the world, was not to Abraham, or to his seed, through the law, but through the righteousness of faith."], [14, "For if they which are of the law be heirs, faith is made void, and the promise made of none effect:"], [15, "Because the law worketh wrath: for where no law is, there is no transgression."], [16, "Therefore it is of faith, that it might be by grace; to the end the promise might be sure to all the seed; not to that only which is of the law, but to that also which is of the faith of Abraham; who is the father of us all,"], [17, "(As it is written, I have made thee a father of many nations,) before him whom he believed, even God, who quickeneth the dead, and calleth those things which be not as though they were."], [18, "Who against hope believed in hope, that he might become the father of many nations, according to that which was spoken, So shall thy seed be."], [19, "And being not weak in faith, he considered not his own body now dead, when he was about an hundred years old, neither yet the deadness of Sarah’s womb:"], [20, "He staggered not at the promise of God through unbelief; but was strong in faith, giving glory to God;"], [21, "And being fully persuaded that, what he had promised, he was able also to perform."], [22, "And therefore it was imputed to him for righteousness."], [23, "Now it was not written for his sake alone, that it was imputed to him;"], [24, "But for us also, to whom it shall be imputed, if we believe on him that raised up Jesus our Lord from the dead;"], [25, "Who was delivered for our offences, and was raised again for our justification."]],
+  "Romans 5:1":[[1, "Therefore being justified by faith, we have peace with God through our Lord Jesus Christ:"]],
+  "Romans 5:12":[[12, "Wherefore, as by one man sin entered into the world, and death by sin; and so death passed upon all men, for that all have sinned:"]],
+  "Romans 6:23":[[23, "For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord."]],
+  "Romans 6:3-4":[[3, "Know ye not, that so many of us as were baptized into Jesus Christ were baptized into his death?"], [4, "Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life."]],
+  "Romans 6:5":[[5, "For if we have been planted together in the likeness of his death, we shall be also in the likeness of his resurrection:"]],
+  "Romans 7:7":[[7, "What shall we say then? Is the law sin? God forbid. Nay, I had not known sin, but by the law: for I had not known lust, except the law had said, Thou shalt not covet."]],
+  "Romans 8:15":[[15, "For ye have not received the spirit of bondage again to fear; but ye have received the Spirit of adoption, whereby we cry, Abba, Father."]],
+  "Romans 8:16":[[16, "The Spirit itself beareth witness with our spirit, that we are the children of God:"]],
+  "Romans 8:26":[[26, "Likewise the Spirit also helpeth our infirmities: for we know not what we should pray for as we ought: but the Spirit itself maketh intercession for us with groanings which cannot be uttered."]],
+  "Romans 8:27":[[27, "And he that searcheth the hearts knoweth what is the mind of the Spirit, because he maketh intercession for the saints according to the will of God."]],
+  "Romans 8:30":[[30, "Moreover whom he did predestinate, them he also called: and whom he called, them he also justified: and whom he justified, them he also glorified."]],
+  "Romans 8:4":[[4, "That the righteousness of the law might be fulfilled in us, who walk not after the flesh, but after the Spirit."]],
+  "Romans 8:9":[[9, "But ye are not in the flesh, but in the Spirit, if so be that the Spirit of God dwell in you. Now if any man have not the Spirit of Christ, he is none of his."]],
+  "Titus 1:5-9":[[5, "For this cause left I thee in Crete, that thou shouldest set in order the things that are wanting, and ordain elders in every city, as I had appointed thee:"], [6, "If any be blameless, the husband of one wife, having faithful children not accused of riot or unruly."], [7, "For a bishop must be blameless, as the steward of God; not selfwilled, not soon angry, not given to wine, no striker, not given to filthy lucre;"], [8, "But a lover of hospitality, a lover of good men, sober, just, holy, temperate;"], [9, "Holding fast the faithful word as he hath been taught, that he may be able by sound doctrine both to exhort and to convince the gainsayers."]],
+  "Titus 1:9":[[9, "Holding fast the faithful word as he hath been taught, that he may be able by sound doctrine both to exhort and to convince the gainsayers."]],
+  "Titus 2:1":[[1, "But speak thou the things which become sound doctrine:"]],
+  "Titus 2:13":[[13, "Looking for that blessed hope, and the glorious appearing of the great God and our Saviour Jesus Christ;"]],
+  "Titus 3:1":[[1, "Put them in mind to be subject to principalities and powers, to obey magistrates, to be ready to every good work,"]],
+  "Titus 3:10":[[10, "A man that is an heretick after the first and second admonition reject;"]],
+  "Titus 3:5":[[5, "Not by works of righteousness which we have done, but according to his mercy he saved us, by the washing of regeneration, and renewing of the Holy Ghost;"]],
+  "Titus 3:7":[[7, "That being justified by his grace, we should be made heirs according to the hope of eternal life."]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
