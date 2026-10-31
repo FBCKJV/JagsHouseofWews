@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Justified Before Men – James 2</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Justified before God by faith, and before men by works: James 2 read beside Romans 4, from the teachings on salvation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Two kinds of justification" data-title="Justified Before Men">
+  <div class="page title-page">
+    <div class="overline">Doctrine · Salvation</div>
+    <h1>Justified Before Men</h1>
+    <p class="sub">We are justified before God by our faith and justified before men by our works.</p>
+    <div class="refs center"><button class="ref" data-v="James 2:18-23">James 2:18-23</button><button class="ref" data-v="Romans 4:1-5">Romans 4:1-5</button><button class="ref" data-v="1 Samuel 16:7">1 Samuel 16:7</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any gold reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Two kinds of justification" data-title="No contradiction, only context">
+  <div class="page">
+    <div class="kicker">The doctrine</div>
+    <h2>No contradiction, only context</h2>
+    <p class="lead">By comparing scripture with scripture we see that there is no contradiction, only context.</p>
+    <div class="vps"><div class="vp fig"><h3>Before God</h3><blockquote class="scripture" style="font-style:italic">For if Abraham were <mark class="w">justified</mark> by works, he hath whereof to glory; but not before God. For what saith the scripture? Abraham believed God, and it was counted unto him for righteousness.<cite>Romans 4:2-3</cite></blockquote></div><div class="vp fig"><h3>Before men</h3><blockquote class="scripture" style="font-style:italic">Yea, a man may say, Thou hast faith, and I have works: shew me thy faith without thy works, and I will shew thee my faith by my works.<cite>James 2:18</cite></blockquote></div></div>
+    <p>Paul is writing of justification before God in grace, while James is writing of justification before man, by doing good works in faith.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Two kinds of justification" data-title="The Lord looketh on the heart">
+  <div class="page">
+    <h2>The Lord looketh on the heart</h2>
+    <blockquote class="big-verse">But the <span class="lord">Lord</span> said unto Samuel, Look not on his countenance, or on the height of his stature; because I have refused him: for the <span class="lord">Lord</span> seeth not as man seeth; for <mark>man looketh on the outward appearance, but the <span class="lord">Lord</span> looketh on the heart</mark>.<cite>1 Samuel 16:7</cite></blockquote>
+    <p>This is an important doctrine, that reinforces the seeming dichotomy of <button class="ref" data-v="Romans 4:2-3">Romans 4</button> and <button class="ref" data-v="James 2:1">James 2</button> that so many struggle with. That we are justified before God by our faith and justified before men by our works. Our appearance. That men are respecters of persons.</p>
+    <div class="refs center"><button class="ref" data-v="James 2:1-4">James 2:1-4</button><button class="ref" data-v="John 7:24">John 7:24</button></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Reading James 2" data-title="Written to the brethren">
+  <div class="page">
+    <h2>Written to the brethren</h2>
+    <p class="lead">It is written to the brethren, the author assumes it is to those already saved, to exhort and edify, not to get them to believe.</p>
+    <p>Not to save them spiritually, but to those already saved, become more complete in their Christian life.</p>
+    <div class="callout"><p>We do not receive doctrine from rhetorical questions or “a man may say…” reasoning, stripped of context. We get them from clear statements that do not contradict others.</p></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Reading James 2" data-title="Dead faith">
+  <div class="page">
+    <h2>Dead faith</h2>
+    <blockquote class="scripture" style="font-style:italic">What doth it profit, my brethren, though a man say he hath faith, and have not works? can faith save him? If a brother or sister be naked, and destitute of daily food, And one of you say unto them, Depart in peace, be ye warmed and filled; notwithstanding ye give them not those things which are needful to the body; what doth it profit? Even so <mark>faith, if it hath not works, is dead, being alone</mark>.<cite>James 2:14-17</cite></blockquote>
+    <p>If someone is needy and you basically just say “thoughts and prayers!” it doesn’t profit them anything. It’s useless. Dead. It doesn’t do anyone any good.</p>
+    <p>Dead faith doesn’t mean it doesn’t exist, but that there’s no life in it. Nothing to indicate it, outwardly. It’s alone, profiting no one else. A dead body exists, but it just lays there.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Reading James 2" data-title="Doers of the word">
+  <div class="page">
+    <h2>Doers of the word</h2>
+    <p class="lead">The example of this rhetorical question <em>says</em> he has faith. This is important.</p>
+    <p>The same is the faith of a Christian who doesn’t exercise it to help the fatherless and widows and the poor. See the theme? Understand the larger context?</p>
+    <p>We aren’t judged by our works and sin, as the debtors are. We are free in Christ. James has already told us that we earn crowns of life for our deeds. But salvation is a gift, unmerited. Grace-mixing isn’t how any of it works.</p>
+    <div class="refs center"><button class="ref" data-v="James 1:12">James 1:12</button><button class="ref" data-v="James 1:22">James 1:22</button><button class="ref" data-v="James 1:27">James 1:27</button><button class="ref" data-v="James 2:12">James 2:12</button></div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Reading James 2" data-title="A man may say">
+  <div class="page">
+    <h2>A man may say</h2>
+    <blockquote class="scripture" style="font-style:italic">Yea, <mark>a man may say</mark>, Thou hast faith, and I have works: shew me thy faith without thy works, and I will shew thee my faith by my works. Thou believest that there is one God; thou doest well: the devils also believe, and tremble. But wilt thou know, O vain man, that faith without works is dead?<cite>James 2:18-20</cite></blockquote>
+    <p>A man may say this. What kind of man? Saved? Unsaved? A respecter of persons? Someone who could reasonably or unfairly doubt your profession of faith by your lack of visible works?</p>
+    <div class="callout honest"><p>It is not directly stated doctrine. A man may say all manner of things. For example, we know devils are not capable of coming to saving belief in Christ. Yet here it says, in this hypothetical man’s argument, that they believe and tremble!</p></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Abraham" data-title="Was not Abraham justified by works?">
+  <div class="page">
+    <h2>Was not Abraham justified by works?</h2>
+    <div class="vps"><div class="vp lit"><h3>The rhetorical question</h3><blockquote class="scripture" style="font-style:italic">Was not Abraham our father <mark class="w">justified</mark> by works, when he had offered Isaac his son upon the altar?<cite>James 2:21</cite></blockquote></div><div class="vp rev"><h3>Not before God</h3><blockquote class="scripture" style="font-style:italic">For if Abraham were <mark class="w">justified</mark> by works, he hath whereof to glory; but not before God. For what saith the scripture? Abraham believed God, and it was counted unto him for righteousness.<cite>Romans 4:2-3</cite></blockquote></div></div>
+    <p>The rhetorical question asked by a rhetorical man, “Was not Abraham justified by works?” is answered by the holy Spirit in <button class="ref" data-v="Romans 4:1-5">Romans 4</button> and <button class="ref" data-v="Genesis 15:6">Genesis 15</button>. Not before God, or he would have to glory. The boasting wouldn’t be excluded. The law of grace would become one of debt.</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Abraham" data-title="Justified before God, by faith alone">
+  <div class="page">
+    <h2>Justified before God, by faith alone</h2>
+    <p class="lead">Abraham was saved spiritually, justified before God, by his faith alone.</p>
+    <blockquote class="big-verse">And he believed in the <span class="lord">Lord</span>; and he counted it to him for righteousness.<cite>Genesis 15:6</cite></blockquote>
+    <p>Decades before his circumcision. Decades before bringing Isaac to the altar on the same mountain in Jerusalem where Jesus would later be crucified.</p>
+    <div class="refs center"><button class="ref" data-v="Romans 4:9-11">Romans 4:9-11</button><button class="ref" data-v="Romans 4:5">Romans 4:5</button></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Abraham" data-title="Justified before men, by works">
+  <div class="page">
+    <h2>Justified before men, by works</h2>
+    <blockquote class="scripture" style="font-style:italic">Was not Abraham our father <mark class="w">justified</mark> by works, when he had offered Isaac his son upon the altar? Seest thou how faith wrought with his works, and <mark>by works was faith made perfect</mark>? And the scripture was fulfilled which saith, Abraham believed God, and it was imputed unto him for righteousness: and he was called the Friend of God.<cite>James 2:21-23</cite></blockquote>
+    <p>But to be justified before man, that outward sign of his faith, made his faith more perfect. There was a visible tangible act of faith, works that a man may say that they’ve been shown his faith.</p>
+    <p class="sub center">A man may say that Abraham’s faith was shown in his works and thus he was justified to others. But we know that scripture says it was faith that justified Abraham to God.</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Abraham" data-title="The people justified God">
+  <div class="page">
+    <h2>The people justified God</h2>
+    <blockquote class="big-verse">And all the people that heard him, and the publicans, <mark class="w">justified</mark> God, being baptized with the baptism of John. But the Pharisees and lawyers rejected the counsel of God against themselves, being not baptized of him.<cite>Luke 7:29-30</cite></blockquote>
+    <p>Justified is also used in a legal sense, meaning vindication. To show that they believed the report, accepted the witness, agreed with the argument, they were baptized, justifying God.</p>
+    <div class="callout"><p>Baptism itself doesn’t save. It is a manifestation of the faith, the substance of things not seen, that can be seen of men.</p></div>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Faith shown to men" data-title="Saved by faith, shown by works">
+  <div class="page">
+    <h2>Saved by faith, shown by works</h2>
+    <p class="lead">We are saved by faith alone. We share that faith by how we live. And by being mindful of that, we get others saved.</p>
+    <p>We may be justified by the blood of Christ before God, but if we hide that faith under a bushel, or we bury that which we’ve been trusted rather than gain an increase for the Lord, our faith is fruitless. Dead.</p>
+    <p>The works God brings us to aren’t of ourselves. They’re almost always a blessing for others.</p>
+    <div class="refs center"><button class="ref" data-v="2 Corinthians 5:1-3">2 Corinthians 5:1-3</button><button class="ref" data-v="2 Corinthians 3:2">2 Corinthians 3:2</button><button class="ref" data-v="Matthew 5:16">Matthew 5:16</button></div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Faith shown to men" data-title="The snare of James 2">
+  <div class="page">
+    <h2>The snare of James 2</h2>
+    <div class="vps"><div class="vp lit"><h3>Ye are they which justify yourselves before men</h3><blockquote class="scripture" style="font-style:italic">And he said unto them, Ye are they which justify yourselves before men; but God knoweth your hearts: for that which is highly esteemed among men is abomination in the sight of God.<cite>Luke 16:15</cite></blockquote></div></div>
+    <div class="cols"><div class="panel cain"><h3>Works for justification</h3><p>Those that twist it to make works their means of justification before God, damn themselves and put Christ to an open shame, for their dead works are without faith.</p></div><div class="panel believers"><h3>The answer</h3><p>If you are trusting in your own works to get righteous or to maintain the righteousness given by God in Christ, you are damning yourself and being made debtor to the whole of the law which no one can keep perfectly. There are none righteous. Our only righteousness is imputed of Christ.</p></div></div>
+    <p class="sub center">Repent, and obey the Gospel.</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Summary" data-title="Justified before men">
+  <div class="page">
+    <div class="kicker">Summary</div>
+    <h2>Justified before men</h2>
+    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>Two kinds</strong>We are justified before God by our faith and justified before men by our works.</li><li><strong>Context</strong>Paul is writing of justification before God in grace, while James is writing of justification before man.</li><li><strong>To the brethren</strong>It is written to the brethren, to those already saved, to exhort and edify, not to get them to believe.</li><li><strong>Dead faith</strong>Dead faith doesn’t mean it doesn’t exist, but that there’s no life in it. It’s alone, profiting no one else.</li><li><strong>Abraham</strong>Justified before God, by his faith alone. To be justified before man, that outward sign of his faith, made his faith more perfect.</li><li><strong>Shown by works</strong>We are saved by faith alone. We share that faith by how we live.</li></ol></div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Summary" data-title="Read the teachings">
+  <div class="page">
+    <div class="kicker">In the app</div>
+    <h2>Read the teachings</h2>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-salvation~3557" target="_blank" rel="noopener">Abraham, before God and before men ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~10779" target="_blank" rel="noopener">Justified before God and before men ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~14024" target="_blank" rel="noopener">The Lord looketh on the heart ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~3555" target="_blank" rel="noopener">Dead faith is faith that profits no one ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~3554" target="_blank" rel="noopener">James 2 is no snare for works salvation ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~4116" target="_blank" rel="noopener">Saved by faith, shown by works ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~8722" target="_blank" rel="noopener">Faith Without Works Is Dead ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~9230" target="_blank" rel="noopener">The people justified God, being baptized ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 Samuel 16:7":[[7, "But the LORD said unto Samuel, Look not on his countenance, or on the height of his stature; because I have refused him: for the LORD seeth not as man seeth; for man looketh on the outward appearance, but the LORD looketh on the heart."]],
+  "2 Corinthians 3:2":[[2, "Ye are our epistle written in our hearts, known and read of all men:"]],
+  "2 Corinthians 5:1-3":[[1, "For we know that if our earthly house of this tabernacle were dissolved, we have a building of God, an house not made with hands, eternal in the heavens."], [2, "For in this we groan, earnestly desiring to be clothed upon with our house which is from heaven:"], [3, "If so be that being clothed we shall not be found naked."]],
+  "Genesis 15:6":[[6, "And he believed in the LORD; and he counted it to him for righteousness."]],
+  "James 1:12":[[12, "Blessed is the man that endureth temptation: for when he is tried, he shall receive the crown of life, which the Lord hath promised to them that love him."]],
+  "James 1:22":[[22, "But be ye doers of the word, and not hearers only, deceiving your own selves."]],
+  "James 1:27":[[27, "Pure religion and undefiled before God and the Father is this, To visit the fatherless and widows in their affliction, and to keep himself unspotted from the world."]],
+  "James 2:1":[[1, "My brethren, have not the faith of our Lord Jesus Christ, the Lord of glory, with respect of persons."]],
+  "James 2:1-4":[[1, "My brethren, have not the faith of our Lord Jesus Christ, the Lord of glory, with respect of persons."], [2, "For if there come unto your assembly a man with a gold ring, in goodly apparel, and there come in also a poor man in vile raiment;"], [3, "And ye have respect to him that weareth the gay clothing, and say unto him, Sit thou here in a good place; and say to the poor, Stand thou there, or sit here under my footstool:"], [4, "Are ye not then partial in yourselves, and are become judges of evil thoughts?"]],
+  "James 2:12":[[12, "So speak ye, and so do, as they that shall be judged by the law of liberty."]],
+  "James 2:18-23":[[18, "Yea, a man may say, Thou hast faith, and I have works: shew me thy faith without thy works, and I will shew thee my faith by my works."], [19, "Thou believest that there is one God; thou doest well: the devils also believe, and tremble."], [20, "But wilt thou know, O vain man, that faith without works is dead?"], [21, "Was not Abraham our father justified by works, when he had offered Isaac his son upon the altar?"], [22, "Seest thou how faith wrought with his works, and by works was faith made perfect?"], [23, "And the scripture was fulfilled which saith, Abraham believed God, and it was imputed unto him for righteousness: and he was called the Friend of God."]],
+  "John 7:24":[[24, "Judge not according to the appearance, but judge righteous judgment."]],
+  "Matthew 5:16":[[16, "Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven."]],
+  "Romans 4:1-5":[[1, "What shall we say then that Abraham our father, as pertaining to the flesh, hath found?"], [2, "For if Abraham were justified by works, he hath whereof to glory; but not before God."], [3, "For what saith the scripture? Abraham believed God, and it was counted unto him for righteousness."], [4, "Now to him that worketh is the reward not reckoned of grace, but of debt."], [5, "But to him that worketh not, but believeth on him that justifieth the ungodly, his faith is counted for righteousness."]],
+  "Romans 4:2-3":[[2, "For if Abraham were justified by works, he hath whereof to glory; but not before God."], [3, "For what saith the scripture? Abraham believed God, and it was counted unto him for righteousness."]],
+  "Romans 4:5":[[5, "But to him that worketh not, but believeth on him that justifieth the ungodly, his faith is counted for righteousness."]],
+  "Romans 4:9-11":[[9, "Cometh this blessedness then upon the circumcision only, or upon the uncircumcision also? for we say that faith was reckoned to Abraham for righteousness."], [10, "How was it then reckoned? when he was in circumcision, or in uncircumcision? Not in circumcision, but in uncircumcision."], [11, "And he received the sign of circumcision, a seal of the righteousness of the faith which he had yet being uncircumcised: that he might be the father of all them that believe, though they be not circumcised; that righteousness might be imputed unto them also:"]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>

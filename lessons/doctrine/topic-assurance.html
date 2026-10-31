@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Repentance and Assurance – Godly Sorrow, Confession, and the Believer Kept by God</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="An overview of the teaching on repentance and assurance: repentance as a change of mind, godly sorrow, confession, the chastening of sons, and the believer kept by God.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Repentance and Assurance">
+  <div class="page title-page">
+    <div class="overline">Doctrine · Assurance</div>
+    <h1>Repentance and Assurance</h1>
+    <p class="sub">Godly sorrow, confession, and the believer kept by God.</p>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move through the study. Tap any gold reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="That ye may know">
+  <div class="page">
+    <h2>That ye may know</h2>
+    <blockquote class="big-verse">These things have I written unto you that believe on the name of the Son of God; <mark>that ye may know that ye have eternal life</mark>, and that ye may believe on the name of the Son of God.<cite>1 John 5:13</cite></blockquote>
+    <p class="lead">God Who cannot lie promised before the foundation of the world that whosoever believes on Christ Jesus, calling upon His name for salvation, has eternal life, and are sealed and regenerated by the Spirit that you may KNOW you are a child of God.</p>
+    <p class="sub center">Eternal security. Once saved, always saved.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Repentance" data-title="Repent: a change of mind">
+  <div class="page">
+    <h2>Repent: a change of mind</h2>
+    <blockquote class="big-verse">And saying, Repent ye: for the kingdom of heaven is at hand.<cite>Matthew 3:2</cite></blockquote>
+    <p class="lead">Repent means to change your mind, to accept new information as true and have a change of heart, a conversion.</p>
+    <div class="cols"><div class="panel cain"><h3>Not this</h3><p>He is not saying "get your life together and stop sinning, the Kingdom of Heaven is here."</p></div><div class="panel believers"><h3>But this</h3><p>Repenting in relation to salvation is turning from a false belief in something to justify us before God, or turning from unbelief to believing His word.</p></div></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Repentance" data-title="Turning from sin follows">
+  <div class="page">
+    <h2>Turning from sin follows</h2>
+    <p>That discernment, if the new man created at salvation is fed, leads to a change in attitude towards sin. It becomes less desirable. The lusts of the flesh can lose their appeal.</p>
+    <p>If that new man isn't fed, and they continue walking in the flesh, they are still saved by the knowledge of the truth, but that discernment is dulled and God may have to chasten the person to work godly sorrow in their heart.</p>
+    <div class="callout"><p>Only faith in the risen Christ and belief in the promise of God that Jesus is the sole propitiation for all sin can save us.</p></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Godly sorrow" data-title="Godly sorrow and the sorrow of the world">
+  <div class="page">
+    <h2>Godly sorrow and the sorrow of the world</h2>
+    <blockquote class="big-verse">For godly sorrow worketh repentance to salvation not to be repented of: but the sorrow of the world worketh death.<cite>2 Corinthians 7:10</cite></blockquote>
+    <div class="cols"><div class="panel cain"><h3>Cain</h3><p>The burden Cain couldn't bear was the punishment, but he sorrowed not unto repentance. He never changed his mind about what he had done.</p></div><div class="panel believers"><h3>David</h3><p>David's sorrow is godly, he cannot bear his own iniquity and hates his sin that brought him low, rather than resenting the punishment he'd received.</p></div></div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Godly sorrow" data-title="The work of sorrow">
+  <div class="page">
+    <h2>The work of sorrow</h2>
+    <p class="lead">This sincere sorrow for sin is not itself repentance, but rather, repentance is the work of that sorrow.</p>
+    <blockquote class="scripture" style="font-style:italic">For behold this selfsame thing, that ye sorrowed after a godly sort, what <mark>carefulness</mark> it wrought in you, yea, what <mark>clearing of yourselves</mark>, yea, what <mark>indignation</mark>, yea, what <mark>fear</mark>, yea, what <mark>vehement desire</mark>, yea, what <mark>zeal</mark>, yea, what <mark>revenge</mark>! In all things ye have approved yourselves to be clear in this matter.<cite>2 Corinthians 7:11</cite></blockquote>
+    <p>This is a helpful list, both for those of us seeking to get right with God regarding sin in our life, and how we should act, and for judging rightly the sincerity, be it godly or earthly sorrow, of those who have wronged us.</p>
+    <p class="sub center">As many receive it in tears, many still receive the truth in joy.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Confession and forgiveness" data-title="If we confess our sins">
+  <div class="page">
+    <h2>If we confess our sins</h2>
+    <blockquote class="big-verse">If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.<cite>1 John 1:9</cite></blockquote>
+    <p>First John, the epistle, is written to the saved. Here the Bible tells us if we the saved, want fellowship with God and one another, to walk with God, to confess our sins to Him, and be forgiven them all by Christ, washed clean in His blood.</p>
+    <div class="callout"><p>This promise shows not only the faithfulness of God to forgive, but also that our sin in the flesh is not held against our ledger in Heaven.</p></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Confession and forgiveness" data-title="Restore unto me the joy of thy salvation">
+  <div class="page">
+    <h2>Restore unto me the joy of thy salvation</h2>
+    <blockquote class="big-verse">Restore unto me the joy of thy salvation; and uphold me with thy free spirit.<cite>Psalm 51:12</cite></blockquote>
+    <p>David is not writing that he is afraid to lose his salvation, but seeking the confidence in it again that has been marred by his transgressions and the fear from the chastening he has received.</p>
+    <p class="center">God wants to forgive us more than we want to be forgiven.</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Confession and forgiveness" data-title="Not earned by penance">
+  <div class="page">
+    <h2>Not earned by penance</h2>
+    <div class="cols"><div class="panel cain"><h3>Perfect contrition</h3><p>It requires the sinner to be 100% honest, 100% contrite, about 100% of their sins, that depends on the sinner alone, not the blood of Christ.</p></div><div class="panel believers"><h3>Grace</h3><p>We confess our sins to God knowing He's forgiven them already, that we have eternal grace that's never lost or taken away, in Christ Jesus.</p></div></div>
+    <p>Penance isn't how we earn forgiveness. Forgiveness is given by grace and mercy. Working to maintain God's grace makes grace no more grace. <button class="ref" data-v="Romans 11:6">Romans 11:6</button> <button class="ref" data-v="Isaiah 1:18">Isaiah 1:18</button></p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Confession and forgiveness" data-title="New every morning">
+  <div class="page">
+    <h2>New every morning</h2>
+    <blockquote class="big-verse">It is of the <span class="lord">Lord</span>’s mercies that we are not consumed, because his compassions fail not. They are new every morning: great is thy faithfulness.<cite>Lamentations 3:22-23</cite></blockquote>
+    <p>No matter how backslidden. No matter how snared in sin. No matter how the devil accuses you before God, in Christ Jesus you are forgiven.</p>
+    <div class="callout"><p>For a saved believer who has been sealed by the Spirit, it is never too late to turn back to God and away from your sins. Like the Prodigal son, returning to the Father.</p></div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Chastened as sons" data-title="Whom the Lord loveth he chasteneth">
+  <div class="page">
+    <h2>Whom the Lord loveth he chasteneth</h2>
+    <blockquote class="big-verse">For whom the Lord loveth he chasteneth, and scourgeth every son whom he receiveth.<cite>Hebrews 12:6</cite></blockquote>
+    <p>We are punished here on earth for our sins. Sometimes very harshly. Sometimes with death.</p>
+    <p>And so God punished David, yet He put away David's sin, because he had the imputed righteousness of Jesus Christ. His faith in God's word.</p>
+    <div class="refs center"><button class="ref" data-v="2 Samuel 12:13-14">2 Samuel 12:13-14</button><button class="ref" data-v="Luke 12:48">Luke 12:48</button></div>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Chastened as sons" data-title="Chastened, yet saved">
+  <div class="page">
+    <h2>Chastened, yet saved</h2>
+    <div class="cols"><div class="panel believers"><h3>Ananias and Sapphira</h3><p>Their being in Heaven when they die, justified by faith and Jesus' imputed righteousness didn't keep them from sinning, nor did it stop God from punishing them with their lives.</p></div><div class="panel believers"><h3>Delivered unto Satan</h3><p>God allows Satan to destroy us in the flesh. The hope in church discipline is that the person gets right. But if not, at least in death they are free from the sin and present with the Lord.</p></div></div>
+    <p>We saved are held to a higher standard than the unsaved, and we are punished here in this earth, sometimes more so than the unsaved, who are not God's children. <button class="ref" data-v="Acts 5:1-5">Acts 5:1-5</button> <button class="ref" data-v="1 Corinthians 5:5">1 Corinthians 5:5</button></p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Kept by God" data-title="None shall pluck them out">
+  <div class="page">
+    <h2>None shall pluck them out</h2>
+    <blockquote class="big-verse">And I give unto them eternal life; and <mark>they shall never perish</mark>, neither shall any man pluck them out of my hand. My Father, which gave them me, is greater than all; and no man is able to pluck them out of my Father’s hand.<cite>John 10:28-29</cite></blockquote>
+    <p>Once you are saved you are always saved, always His, always His sheep.</p>
+    <div class="callout"><p>Once saved always saved is not just a slogan, it is the truth of the Gospel and the crux of the Gospel, without which you cannot claim to have faith.</p></div>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Kept by God" data-title="Sealed unto the day of redemption">
+  <div class="page">
+    <h2>Sealed unto the day of redemption</h2>
+    <blockquote class="big-verse">And grieve not the holy Spirit of God, whereby ye are sealed unto the day of redemption.<cite>Ephesians 4:30</cite></blockquote>
+    <p>Once we believe we are sealed by the Holy Spirit as the earnest, the down payment as it were, until redemption, where God makes good on His promise, on the day of the Lord.</p>
+    <p>We who are saved know that we have the Holy Spirit testifying within us that we are the sons of God.</p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Kept by God" data-title="Answering the errors">
+  <div class="page">
+    <h2>Answering the errors</h2>
+    <div class="cols"><div class="panel cain"><h3>Falling away</h3><p>If someone chooses atheism after having full knowledge of salvation, they were never saved. They believed in vain.</p></div><div class="panel cain"><h3>Enduring to the end</h3><p>Too many false teachers assert that perseverance is for our spiritual salvation. It is for grace and protection during tribulation and persecution.</p></div></div>
+    <div class="cols"><div class="panel cain"><h3>Judas</h3><p>Not only wasn't Judas saved, he was a reprobate and Jesus knew this.</p></div><div class="panel believers"><h3>The answer</h3><p>Salvation cannot be lost, only refused.</p></div></div>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Summary" data-title="Summary">
+  <div class="page">
+    <h2>Summary</h2>
+    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>Repentance</strong>Repent means to change your mind, to accept new information as true and have a change of heart.</li><li><strong>Godly sorrow</strong>Sincere sorrow for sin is not itself repentance, but rather, repentance is the work of that sorrow.</li><li><strong>Confession</strong>If we are honest we confess our sins, and they are forgiven already in Christ.</li><li><strong>Mercy</strong>It is never too late to turn back to God and away from your sins.</li><li><strong>Chastening</strong>We are punished here on earth for our sins, yet He put away David's sin.</li><li><strong>Kept</strong>Once you are saved you are always saved, always His, always His sheep.</li><li><strong>Sealed</strong>We are sealed by the Holy Spirit as the earnest until redemption.</li></ol></div>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Summary" data-title="Read the teachings">
+  <div class="page">
+    <h2>Read the teachings</h2>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-assurance~14979" target="_blank" rel="noopener">Repent ye ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-assurance~17858" target="_blank" rel="noopener">Godly sorrow versus worldly sorrow ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-assurance~1677" target="_blank" rel="noopener">If we confess our sins ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-assurance~18022" target="_blank" rel="noopener">Restore unto me the joy of thy salvation ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-assurance~8698" target="_blank" rel="noopener">His mercies are new every morning ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-assurance~2535" target="_blank" rel="noopener">Ananias and Sapphira ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-assurance~1718" target="_blank" rel="noopener">None shall pluck them out of my hand ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-assurance~4581" target="_blank" rel="noopener">Sealed unto the day of redemption ↗</a></div>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Summary" data-title="The theme decks">
+  <div class="page">
+    <h2>The theme decks</h2>
+    <p class="center">Each theme of this doctrine has its own deck.</p>
+    <ul class="marks"><li><strong>Eternal Security</strong></li><li><strong>Sealed by the Spirit</strong></li><li><strong>Confession and Forgiveness</strong></li><li><strong>Chastened as Sons</strong></li><li><strong>Godly Sorrow</strong></li></ul>
+    <p class="sub center">Every teaching is on the <a class="ref lesson-link" href="../../studies/#doctrine-assurance" target="_blank" rel="noopener">Repentance &amp; assurance ↗</a> page.</p>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 Corinthians 5:5":[[5, "To deliver such an one unto Satan for the destruction of the flesh, that the spirit may be saved in the day of the Lord Jesus."]],
+  "2 Samuel 12:13-14":[[13, "And David said unto Nathan, I have sinned against the LORD. And Nathan said unto David, The LORD also hath put away thy sin; thou shalt not die."], [14, "Howbeit, because by this deed thou hast given great occasion to the enemies of the LORD to blaspheme, the child also that is born unto thee shall surely die."]],
+  "Acts 5:1-5":[[1, "But a certain man named Ananias, with Sapphira his wife, sold a possession,"], [2, "And kept back part of the price, his wife also being privy to it, and brought a certain part, and laid it at the apostles’ feet."], [3, "But Peter said, Ananias, why hath Satan filled thine heart to lie to the Holy Ghost, and to keep back part of the price of the land?"], [4, "Whiles it remained, was it not thine own? and after it was sold, was it not in thine own power? why hast thou conceived this thing in thine heart? thou hast not lied unto men, but unto God."], [5, "And Ananias hearing these words fell down, and gave up the ghost: and great fear came on all them that heard these things."]],
+  "Isaiah 1:18":[[18, "Come now, and let us reason together, saith the LORD: though your sins be as scarlet, they shall be as white as snow; though they be red like crimson, they shall be as wool."]],
+  "Luke 12:48":[[48, "But he that knew not, and did commit things worthy of stripes, shall be beaten with few stripes. For unto whomsoever much is given, of him shall be much required: and to whom men have committed much, of him they will ask the more."]],
+  "Romans 11:6":[[6, "And if by grace, then is it no more of works: otherwise grace is no more grace. But if it be of works, then is it no more grace: otherwise work is no more work."]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
