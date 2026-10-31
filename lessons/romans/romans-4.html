@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Romans 4 – Faith and Righteousness</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Romans 4 verse by verse, with a timeline of Abraham&#x27;s life and a chart of the lineage from Adam to the twelve sons of Jacob.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Romans 4" data-title="Romans Chapter 4">
+  <div class="page title-page">
+    <div class="overline">Romans Class</div>
+    <h1>Romans Chapter 4</h1>
+    <p class="sub">The Foundation of Righteousness by Faith</p>
+    <div class="refs center"><button class="ref" data-v="Romans 4:1-25">Romans 4:1-25</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Romans 4" data-title="Verses 1-8">
+  <div class="page">
+    <div class="kicker">Romans 4</div>
+    <h2>Verses 1-8</h2>
+    <blockquote class="scripture" style="font-style:italic">What shall we say then that Abraham our father, as pertaining to the flesh, hath found? For if Abraham were justified by works, he hath whereof to glory; but not before God. For what saith the scripture? <mark>Abraham believed God, and it was counted unto him for righteousness</mark>. Now to him that worketh is the reward not reckoned of grace, but of debt. But to him that <mark>worketh not, but believeth on him</mark> that justifieth the ungodly, his faith is counted for righteousness. Even as David also describeth the blessedness of the man, unto whom <mark>God imputeth righteousness without works</mark>, Saying, Blessed are they whose iniquities are forgiven, and whose sins are covered. Blessed is the man to whom the Lord will not impute sin.<cite>Romans 4:1-8</cite></blockquote>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Romans 4" data-title="Verses 9-12">
+  <div class="page">
+    <div class="kicker">Romans 4</div>
+    <h2>Verses 9-12</h2>
+    <blockquote class="scripture" style="font-style:italic">Cometh this blessedness then upon the circumcision only, or upon the uncircumcision also? for we say that <mark>faith was reckoned to Abraham for righteousness</mark>. How was it then reckoned? when he was in circumcision, or in uncircumcision? <mark>Not in circumcision, but in uncircumcision</mark>. And he received the sign of circumcision, a seal of the righteousness of the faith which he had yet being uncircumcised: that he might be the father of all them that believe, though they be not circumcised; that righteousness might be imputed unto them also: And the father of circumcision to them who are not of the circumcision only, but who also walk in the steps of that faith of our father Abraham, which he had being yet uncircumcised.<cite>Romans 4:9-12</cite></blockquote>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Romans 4" data-title="Verses 13-17">
+  <div class="page">
+    <div class="kicker">Romans 4</div>
+    <h2>Verses 13-17</h2>
+    <blockquote class="scripture" style="font-style:italic">For the promise, that he should be the heir of the world, <mark>was not to Abraham, or to his seed, through the law, but through the righteousness of faith</mark>. For if they which are of the law be heirs, faith is made void, and the promise made of none effect: Because the law worketh wrath: for where no law is, there is no transgression. Therefore it is of <mark>faith, that it might be by grace</mark>; to the end the promise might be sure to all the seed; <mark>not to that only which is of the law, but to that also which is of the faith of Abraham</mark>; who is the father of us all, (As it is written, I have made thee a father of many nations,) before him whom he believed, even God, who quickeneth the dead, and calleth those things which be not as though they were.<cite>Romans 4:13-17</cite></blockquote>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Romans 4" data-title="Verses 18-22">
+  <div class="page">
+    <div class="kicker">Romans 4</div>
+    <h2>Verses 18-22</h2>
+    <blockquote class="scripture" style="font-style:italic">Who against hope believed in hope, that he might become the father of many nations, according to that which was spoken, So shall thy seed be. And being not weak in faith, he considered not his own body now dead, when he was about an hundred years old, neither yet the deadness of Sarah’s womb: He staggered not at the promise of God through unbelief; but was strong in faith, giving glory to God; And being fully persuaded that, what he had promised, he was able also to perform. And therefore it was imputed to him for righteousness.<cite>Romans 4:18-22</cite></blockquote>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Romans 4" data-title="Verses 23-25">
+  <div class="page">
+    <div class="kicker">Romans 4</div>
+    <h2>Verses 23-25</h2>
+    <blockquote class="scripture" style="font-style:italic">Now it was not written for his sake alone, that it was imputed to him; But <mark>for us also, to whom it shall be imputed, if we believe on him that raised up Jesus our Lord from the dead</mark>; <mark>Who was delivered for our offences, and was raised again for our justification</mark>.<cite>Romans 4:23-25</cite></blockquote>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Abraham" data-title="Abraham">
+  <div class="page title-page later">
+    <div class="overline">Romans 4 • Abraham</div>
+    <h1>Abraham</h1>
+    <p class="sub">Believed God, and It Was Counted unto Him for Righteousness</p>
+    <div class="refs center"><button class="ref" data-v="Genesis 15:6">Genesis 15:6</button><button class="ref" data-v="Romans 4:3">Romans 4:3</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Abraham" data-title="Called Out of Ur">
+  <div class="page">
+    <div class="kicker">Abraham</div>
+    <h2>Called Out of Ur</h2>
+    <div class="steps"><div class="st"><span class="when">Before age 75 (while in Ur of the Chaldees, Mesopotamia)</span><div>The God of glory appeared to Abram and gave the first promise/call. <button class="ref" data-v="Genesis 12:1">Genesis 12:1</button>; <button class="ref" data-v="Acts 7:2-3">Acts 7:2-3</button></div></div><div class="st"><span class="when">Age unknown (but before 75)</span><div>Terah took Abram, Sarai, and Lot from Ur toward Canaan, but they settled in Haran. <button class="ref" data-v="Genesis 11:31">Genesis 11:31</button></div></div></div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Abraham" data-title="Age 75">
+  <div class="page">
+    <div class="kicker">Abraham</div>
+    <h2>Age 75</h2>
+    <div class="steps"><div class="st"><span class="when">Age 75</span><div>After Terah’s death in Haran, God renewed the call. Abram departed Haran for Canaan with Sarai and Lot.</div></div></div>
+    <blockquote class="scripture" style="font-style:italic">Now the <span class="lord">Lord</span> had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father’s house, unto a land that I will shew thee: And I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing: And I will bless them that bless thee, and curse him that curseth thee: and in thee shall all families of the earth be blessed.<cite>Genesis 12:1-3</cite></blockquote>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Abraham" data-title="Hebron and the War of the Kings">
+  <div class="page">
+    <div class="kicker">Abraham</div>
+    <h2>Hebron and the War of the Kings</h2>
+    <div class="steps"><div class="st"><span class="when">Age ~75–86</span><div>Settled near the plain of Moreh and then the oaks of Mamre at <strong>Hebron</strong>, building altars to the Lord. <button class="ref" data-v="Genesis 12:6-9">Genesis 12:6-9</button>; <button class="ref" data-v="Genesis 13:18">Genesis 13:18</button></div></div><div class="st"><span class="when">Age ~80–85</span><div>Participated in the <strong>War of the Kings</strong>, rescuing Lot after defeating Chedorlaomer and his allies; met Melchizedek, king of Salem, and gave him tithes. <button class="ref" data-v="Genesis 14:1-24">Genesis 14</button></div></div></div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Abraham" data-title="Ishmael, the Covenant and Isaac">
+  <div class="page">
+    <div class="kicker">Abraham</div>
+    <h2>Ishmael, the Covenant and Isaac</h2>
+    <div class="steps"><div class="st"><span class="when">Age 86</span><div>Ishmael born to Hagar, Sarai’s Egyptian handmaid. <button class="ref" data-v="Genesis 16:15-16">Genesis 16:15-16</button></div></div><div class="st"><span class="when">Age 99</span><div>God appeared to Abram, changed his name to <strong>Abraham</strong> (“father of many nations”) and Sarai’s to Sarah; instituted <strong>circumcision</strong> as the token of the covenant. Abraham, Ishmael (age 13), and all males in his household were circumcised. <button class="ref" data-v="Genesis 17:1-27">Genesis 17:1-27</button></div></div><div class="st"><span class="when">Age 100</span><div>Isaac born to Sarah. <button class="ref" data-v="Genesis 21:1-5">Genesis 21:1-5</button></div></div></div>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Abraham" data-title="Moriah and Machpelah">
+  <div class="page">
+    <div class="kicker">Abraham</div>
+    <h2>Moriah and Machpelah</h2>
+    <div class="steps"><div class="st"><span class="when">Age ~133 (Isaac ~33)</span><div>God commanded Abraham to offer Isaac as a burnt offering on Mount Moriah. Abraham obeyed, but the angel of the Lord stopped him and provided a ram instead. God renewed the covenant promises because Abraham did not withhold his son. <button class="ref" data-v="Genesis 22:1-19">Genesis 22:1-19</button>; <button class="ref" data-v="Hebrews 11:17-19">Hebrews 11:17-19</button></div></div><div class="st"><span class="when">Age 175</span><div>Abraham died and was buried in the cave of Machpelah near Hebron. <button class="ref" data-v="Genesis 25:7-10">Genesis 25:7-10</button></div></div></div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Lineage" data-title="Biblical Patriarchal Lineage">
+  <div class="page title-page later">
+    <div class="overline">Romans 4 • Lineage Chart</div>
+    <h1>Biblical Patriarchal Lineage</h1>
+    <p class="sub">From Adam to the Twelve Sons of Jacob (Israel)</p>
+    <p class="sub center">Using King James Bible names and notes • A simple reference chart for Sunday School</p>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Lineage" data-title="From Adam to Noah">
+  <div class="page">
+    <div class="kicker">Genesis 5</div>
+    <h2>From Adam to Noah</h2>
+    <div class="steps"><div class="st"><span class="when">Adam</span><div></div></div><div class="st"><span class="when">Seth</span><div></div></div><div class="st"><span class="when">Enos</span><div></div></div><div class="st"><span class="when">Cainan</span><div></div></div><div class="st"><span class="when">Mahalaleel</span><div></div></div><div class="st"><span class="when">Jared</span><div></div></div><div class="st"><span class="when">Enoch</span><div>walked with God: and he was not; for God took him</div></div><div class="st"><span class="when">Methuselah</span><div></div></div><div class="st"><span class="when">Lamech</span><div></div></div><div class="st"><span class="when">Noah</span><div>begat Shem, Ham, and Japheth</div></div></div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Lineage" data-title="From Noah to Abraham">
+  <div class="page">
+    <div class="kicker">Shem’s Line • Genesis 11</div>
+    <h2>From Noah to Abraham</h2>
+    <div class="steps"><div class="st"><span class="when">Shem</span><div></div></div><div class="st"><span class="when">Arphaxad</span><div>(begat Shelah)</div></div><div class="st"><span class="when">Shelah</span><div>(begat Eber)</div></div><div class="st"><span class="when">Eber</span><div>(begat Peleg and Joktan)</div></div><div class="st"><span class="when">Peleg</span><div>in whose days the earth was divided</div></div><div class="st"><span class="when">Reu</span><div></div></div><div class="st"><span class="when">Serug</span><div></div></div><div class="st"><span class="when">Nahor</span><div></div></div><div class="st"><span class="when">Terah</span><div>(begat Abram, Nahor, and Haran)</div></div><div class="st"><span class="when">Abram</span><div>(later called Abraham)</div></div></div>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Lineage" data-title="The Covenant Line Continues">
+  <div class="page">
+    <h2>The Covenant Line Continues</h2>
+    <div class="steps"><div class="st"><span class="when">Abraham</span><div></div></div><div class="st"><span class="when">Isaac</span><div></div></div><div class="st"><span class="when">Jacob</span><div>(also called Israel)</div></div></div>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Lineage" data-title="The Twelve Sons of Jacob (Israel)">
+  <div class="page">
+    <h2>The Twelve Sons of Jacob (Israel)</h2>
+    <p class="sub">Founders of the Twelve Tribes</p>
+    <div class="timeline"><div><span class="n">Reuben</span><span class="lbl"></span></div><div><span class="n">Simeon</span><span class="lbl"></span></div><div><span class="n">Levi</span><span class="lbl"></span></div><div><span class="n">Judah</span><span class="lbl"></span></div><div><span class="n">Dan</span><span class="lbl"></span></div><div><span class="n">Naphtali</span><span class="lbl"></span></div><div><span class="n">Gad</span><span class="lbl"></span></div><div><span class="n">Asher</span><span class="lbl"></span></div><div><span class="n">Issachar</span><span class="lbl"></span></div><div><span class="n">Zebulun</span><span class="lbl"></span></div><div><span class="n">Joseph</span><span class="lbl"></span></div><div><span class="n">Benjamin</span><span class="lbl"></span></div></div>
+    <p class="center">These twelve sons became the ancestors of the Twelve Tribes of Israel.</p>
+    <p class="sub center">(Listed in birth order — Genesis 29–30, 35)</p>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "Acts 7:2-3":[[2, "And he said, Men, brethren, and fathers, hearken; The God of glory appeared unto our father Abraham, when he was in Mesopotamia, before he dwelt in Charran,"], [3, "And said unto him, Get thee out of thy country, and from thy kindred, and come into the land which I shall shew thee."]],
+  "Genesis 11:31":[[31, "And Terah took Abram his son, and Lot the son of Haran his son’s son, and Sarai his daughter in law, his son Abram’s wife; and they went forth with them from Ur of the Chaldees, to go into the land of Canaan; and they came unto Haran, and dwelt there."]],
+  "Genesis 12:1":[[1, "Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father’s house, unto a land that I will shew thee:"]],
+  "Genesis 12:6-9":[[6, "And Abram passed through the land unto the place of Sichem, unto the plain of Moreh. And the Canaanite was then in the land."], [7, "And the LORD appeared unto Abram, and said, Unto thy seed will I give this land: and there builded he an altar unto the LORD, who appeared unto him."], [8, "And he removed from thence unto a mountain on the east of Bethel, and pitched his tent, having Bethel on the west, and Hai on the east: and there he builded an altar unto the LORD, and called upon the name of the LORD."], [9, "And Abram journeyed, going on still toward the south."]],
+  "Genesis 13:18":[[18, "Then Abram removed his tent, and came and dwelt in the plain of Mamre, which is in Hebron, and built there an altar unto the LORD."]],
+  "Genesis 14:1-24":[[1, "And it came to pass in the days of Amraphel king of Shinar, Arioch king of Ellasar, Chedorlaomer king of Elam, and Tidal king of nations;"], [2, "That these made war with Bera king of Sodom, and with Birsha king of Gomorrah, Shinab king of Admah, and Shemeber king of Zeboiim, and the king of Bela, which is Zoar."], [3, "All these were joined together in the vale of Siddim, which is the salt sea."], [4, "Twelve years they served Chedorlaomer, and in the thirteenth year they rebelled."], [5, "And in the fourteenth year came Chedorlaomer, and the kings that were with him, and smote the Rephaims in Ashteroth Karnaim, and the Zuzims in Ham, and the Emims in Shaveh Kiriathaim,"], [6, "And the Horites in their mount Seir, unto Elparan, which is by the wilderness."], [7, "And they returned, and came to Enmishpat, which is Kadesh, and smote all the country of the Amalekites, and also the Amorites, that dwelt in Hazezontamar."], [8, "And there went out the king of Sodom, and the king of Gomorrah, and the king of Admah, and the king of Zeboiim, and the king of Bela (the same is Zoar;) and they joined battle with them in the vale of Siddim;"], [9, "With Chedorlaomer the king of Elam, and with Tidal king of nations, and Amraphel king of Shinar, and Arioch king of Ellasar; four kings with five."], [10, "And the vale of Siddim was full of slimepits; and the kings of Sodom and Gomorrah fled, and fell there; and they that remained fled to the mountain."], [11, "And they took all the goods of Sodom and Gomorrah, and all their victuals, and went their way."], [12, "And they took Lot, Abram’s brother’s son, who dwelt in Sodom, and his goods, and departed."], [13, "And there came one that had escaped, and told Abram the Hebrew; for he dwelt in the plain of Mamre the Amorite, brother of Eshcol, and brother of Aner: and these were confederate with Abram."], [14, "And when Abram heard that his brother was taken captive, he armed his trained servants, born in his own house, three hundred and eighteen, and pursued them unto Dan."], [15, "And he divided himself against them, he and his servants, by night, and smote them, and pursued them unto Hobah, which is on the left hand of Damascus."], [16, "And he brought back all the goods, and also brought again his brother Lot, and his goods, and the women also, and the people."], [17, "And the king of Sodom went out to meet him after his return from the slaughter of Chedorlaomer, and of the kings that were with him, at the valley of Shaveh, which is the king’s dale."], [18, "And Melchizedek king of Salem brought forth bread and wine: and he was the priest of the most high God."], [19, "And he blessed him, and said, Blessed be Abram of the most high God, possessor of heaven and earth:"], [20, "And blessed be the most high God, which hath delivered thine enemies into thy hand. And he gave him tithes of all."], [21, "And the king of Sodom said unto Abram, Give me the persons, and take the goods to thyself."], [22, "And Abram said to the king of Sodom, I have lift up mine hand unto the LORD, the most high God, the possessor of heaven and earth,"], [23, "That I will not take from a thread even to a shoelatchet, and that I will not take any thing that is thine, lest thou shouldest say, I have made Abram rich:"], [24, "Save only that which the young men have eaten, and the portion of the men which went with me, Aner, Eshcol, and Mamre; let them take their portion."]],
+  "Genesis 15:6":[[6, "And he believed in the LORD; and he counted it to him for righteousness."]],
+  "Genesis 16:15-16":[[15, "And Hagar bare Abram a son: and Abram called his son’s name, which Hagar bare, Ishmael."], [16, "And Abram was fourscore and six years old, when Hagar bare Ishmael to Abram."]],
+  "Genesis 17:1-27":[[1, "And when Abram was ninety years old and nine, the LORD appeared to Abram, and said unto him, I am the Almighty God; walk before me, and be thou perfect."], [2, "And I will make my covenant between me and thee, and will multiply thee exceedingly."], [3, "And Abram fell on his face: and God talked with him, saying,"], [4, "As for me, behold, my covenant is with thee, and thou shalt be a father of many nations."], [5, "Neither shall thy name any more be called Abram, but thy name shall be Abraham; for a father of many nations have I made thee."], [6, "And I will make thee exceeding fruitful, and I will make nations of thee, and kings shall come out of thee."], [7, "And I will establish my covenant between me and thee and thy seed after thee in their generations for an everlasting covenant, to be a God unto thee, and to thy seed after thee."], [8, "And I will give unto thee, and to thy seed after thee, the land wherein thou art a stranger, all the land of Canaan, for an everlasting possession; and I will be their God."], [9, "And God said unto Abraham, Thou shalt keep my covenant therefore, thou, and thy seed after thee in their generations."], [10, "This is my covenant, which ye shall keep, between me and you and thy seed after thee; Every man child among you shall be circumcised."], [11, "And ye shall circumcise the flesh of your foreskin; and it shall be a token of the covenant betwixt me and you."], [12, "And he that is eight days old shall be circumcised among you, every man child in your generations, he that is born in the house, or bought with money of any stranger, which is not of thy seed."], [13, "He that is born in thy house, and he that is bought with thy money, must needs be circumcised: and my covenant shall be in your flesh for an everlasting covenant."], [14, "And the uncircumcised man child whose flesh of his foreskin is not circumcised, that soul shall be cut off from his people; he hath broken my covenant."], [15, "And God said unto Abraham, As for Sarai thy wife, thou shalt not call her name Sarai, but Sarah shall her name be."], [16, "And I will bless her, and give thee a son also of her: yea, I will bless her, and she shall be a mother of nations; kings of people shall be of her."], [17, "Then Abraham fell upon his face, and laughed, and said in his heart, Shall a child be born unto him that is an hundred years old? and shall Sarah, that is ninety years old, bear?"], [18, "And Abraham said unto God, O that Ishmael might live before thee!"], [19, "And God said, Sarah thy wife shall bear thee a son indeed; and thou shalt call his name Isaac: and I will establish my covenant with him for an everlasting covenant, and with his seed after him."], [20, "And as for Ishmael, I have heard thee: Behold, I have blessed him, and will make him fruitful, and will multiply him exceedingly; twelve princes shall he beget, and I will make him a great nation."], [21, "But my covenant will I establish with Isaac, which Sarah shall bear unto thee at this set time in the next year."], [22, "And he left off talking with him, and God went up from Abraham."], [23, "And Abraham took Ishmael his son, and all that were born in his house, and all that were bought with his money, every male among the men of Abraham’s house; and circumcised the flesh of their foreskin in the selfsame day, as God had said unto him."], [24, "And Abraham was ninety years old and nine, when he was circumcised in the flesh of his foreskin."], [25, "And Ishmael his son was thirteen years old, when he was circumcised in the flesh of his foreskin."], [26, "In the selfsame day was Abraham circumcised, and Ishmael his son."], [27, "And all the men of his house, born in the house, and bought with money of the stranger, were circumcised with him."]],
+  "Genesis 21:1-5":[[1, "And the LORD visited Sarah as he had said, and the LORD did unto Sarah as he had spoken."], [2, "For Sarah conceived, and bare Abraham a son in his old age, at the set time of which God had spoken to him."], [3, "And Abraham called the name of his son that was born unto him, whom Sarah bare to him, Isaac."], [4, "And Abraham circumcised his son Isaac being eight days old, as God had commanded him."], [5, "And Abraham was an hundred years old, when his son Isaac was born unto him."]],
+  "Genesis 22:1-19":[[1, "And it came to pass after these things, that God did tempt Abraham, and said unto him, Abraham: and he said, Behold, here I am."], [2, "And he said, Take now thy son, thine only son Isaac, whom thou lovest, and get thee into the land of Moriah; and offer him there for a burnt offering upon one of the mountains which I will tell thee of."], [3, "And Abraham rose up early in the morning, and saddled his ass, and took two of his young men with him, and Isaac his son, and clave the wood for the burnt offering, and rose up, and went unto the place of which God had told him."], [4, "Then on the third day Abraham lifted up his eyes, and saw the place afar off."], [5, "And Abraham said unto his young men, Abide ye here with the ass; and I and the lad will go yonder and worship, and come again to you."], [6, "And Abraham took the wood of the burnt offering, and laid it upon Isaac his son; and he took the fire in his hand, and a knife; and they went both of them together."], [7, "And Isaac spake unto Abraham his father, and said, My father: and he said, Here am I, my son. And he said, Behold the fire and the wood: but where is the lamb for a burnt offering?"], [8, "And Abraham said, My son, God will provide himself a lamb for a burnt offering: so they went both of them together."], [9, "And they came to the place which God had told him of; and Abraham built an altar there, and laid the wood in order, and bound Isaac his son, and laid him on the altar upon the wood."], [10, "And Abraham stretched forth his hand, and took the knife to slay his son."], [11, "And the angel of the LORD called unto him out of heaven, and said, Abraham, Abraham: and he said, Here am I."], [12, "And he said, Lay not thine hand upon the lad, neither do thou any thing unto him: for now I know that thou fearest God, seeing thou hast not withheld thy son, thine only son from me."], [13, "And Abraham lifted up his eyes, and looked, and behold behind him a ram caught in a thicket by his horns: and Abraham went and took the ram, and offered him up for a burnt offering in the stead of his son."], [14, "And Abraham called the name of that place Jehovahjireh: as it is said to this day, In the mount of the LORD it shall be seen."], [15, "And the angel of the LORD called unto Abraham out of heaven the second time,"], [16, "And said, By myself have I sworn, saith the LORD, for because thou hast done this thing, and hast not withheld thy son, thine only son:"], [17, "That in blessing I will bless thee, and in multiplying I will multiply thy seed as the stars of the heaven, and as the sand which is upon the sea shore; and thy seed shall possess the gate of his enemies;"], [18, "And in thy seed shall all the nations of the earth be blessed; because thou hast obeyed my voice."], [19, "So Abraham returned unto his young men, and they rose up and went together to Beersheba; and Abraham dwelt at Beersheba."]],
+  "Genesis 25:7-10":[[7, "And these are the days of the years of Abraham’s life which he lived, an hundred threescore and fifteen years."], [8, "Then Abraham gave up the ghost, and died in a good old age, an old man, and full of years; and was gathered to his people."], [9, "And his sons Isaac and Ishmael buried him in the cave of Machpelah, in the field of Ephron the son of Zohar the Hittite, which is before Mamre;"], [10, "The field which Abraham purchased of the sons of Heth: there was Abraham buried, and Sarah his wife."]],
+  "Hebrews 11:17-19":[[17, "By faith Abraham, when he was tried, offered up Isaac: and he that had received the promises offered up his only begotten son,"], [18, "Of whom it was said, That in Isaac shall thy seed be called:"], [19, "Accounting that God was able to raise him up, even from the dead; from whence also he received him in a figure."]],
+  "Romans 4:1-25":[[1, "What shall we say then that Abraham our father, as pertaining to the flesh, hath found?"], [2, "For if Abraham were justified by works, he hath whereof to glory; but not before God."], [3, "For what saith the scripture? Abraham believed God, and it was counted unto him for righteousness."], [4, "Now to him that worketh is the reward not reckoned of grace, but of debt."], [5, "But to him that worketh not, but believeth on him that justifieth the ungodly, his faith is counted for righteousness."], [6, "Even as David also describeth the blessedness of the man, unto whom God imputeth righteousness without works,"], [7, "Saying, Blessed are they whose iniquities are forgiven, and whose sins are covered."], [8, "Blessed is the man to whom the Lord will not impute sin."], [9, "Cometh this blessedness then upon the circumcision only, or upon the uncircumcision also? for we say that faith was reckoned to Abraham for righteousness."], [10, "How was it then reckoned? when he was in circumcision, or in uncircumcision? Not in circumcision, but in uncircumcision."], [11, "And he received the sign of circumcision, a seal of the righteousness of the faith which he had yet being uncircumcised: that he might be the father of all them that believe, though they be not circumcised; that righteousness might be imputed unto them also:"], [12, "And the father of circumcision to them who are not of the circumcision only, but who also walk in the steps of that faith of our father Abraham, which he had being yet uncircumcised."], [13, "For the promise, that he should be the heir of the world, was not to Abraham, or to his seed, through the law, but through the righteousness of faith."], [14, "For if they which are of the law be heirs, faith is made void, and the promise made of none effect:"], [15, "Because the law worketh wrath: for where no law is, there is no transgression."], [16, "Therefore it is of faith, that it might be by grace; to the end the promise might be sure to all the seed; not to that only which is of the law, but to that also which is of the faith of Abraham; who is the father of us all,"], [17, "(As it is written, I have made thee a father of many nations,) before him whom he believed, even God, who quickeneth the dead, and calleth those things which be not as though they were."], [18, "Who against hope believed in hope, that he might become the father of many nations, according to that which was spoken, So shall thy seed be."], [19, "And being not weak in faith, he considered not his own body now dead, when he was about an hundred years old, neither yet the deadness of Sarah’s womb:"], [20, "He staggered not at the promise of God through unbelief; but was strong in faith, giving glory to God;"], [21, "And being fully persuaded that, what he had promised, he was able also to perform."], [22, "And therefore it was imputed to him for righteousness."], [23, "Now it was not written for his sake alone, that it was imputed to him;"], [24, "But for us also, to whom it shall be imputed, if we believe on him that raised up Jesus our Lord from the dead;"], [25, "Who was delivered for our offences, and was raised again for our justification."]],
+  "Romans 4:3":[[3, "For what saith the scripture? Abraham believed God, and it was counted unto him for righteousness."]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>

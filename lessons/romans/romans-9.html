@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Romans 9: God's Word Has Not Failed</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Romans 9 verse by verse, with side studies on Jacob and Esau, God&#x27;s pattern of choosing the weak, the parallels in Galatians 3-4, and a recap of Romans 1-8.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Romans 9" data-title="Romans 9: God&#x27;s Word Has Not Failed">
+  <div class="page title-page">
+    <div class="overline">Romans Chapter 9</div>
+    <h1>Romans 9: God's Word Has Not Failed</h1>
+    <p class="sub">God's Word Has Not Failed • Mercy According to His Purpose</p>
+    <p class="sub center">A dramatic visual reference for Young Adult Sunday School • Based on the King James Bible</p>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Romans 9" data-title="Paul&#x27;s sorrow for Israel">
+  <div class="page">
+    <div class="kicker">Romans 9:1-5</div>
+    <h2>Paul's sorrow for Israel</h2>
+    <blockquote class="scripture" style="font-style:italic">I say the truth in Christ, I lie not, my conscience also bearing me witness in the Holy Ghost, That I have great heaviness and continual sorrow in my heart. For I could wish that myself were accursed from Christ for my brethren, my kinsmen according to the flesh: Who are Israelites; to whom pertaineth the adoption, and the glory, and the covenants, and the giving of the law, and the service of God, and the promises; Whose are the fathers, and of whom as concerning the flesh Christ came, who is over all, God blessed for ever. Amen.<cite>Romans 9:1-5</cite></blockquote>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Romans 9" data-title="Not all Israel">
+  <div class="page">
+    <div class="kicker">Romans 9:6-9</div>
+    <h2>Not all Israel</h2>
+    <blockquote class="scripture" style="font-style:italic">Not as though the word of God hath taken none effect. For they are not all Israel, which are of Israel: Neither, because they are the seed of Abraham, are they all children: but, In Isaac shall thy seed be called. That is, They which are the children of the flesh, these are not the children of God: but the children of the promise are counted for the seed. For this is the word of promise, At this time will I come, and Sarah shall have a son.<cite>Romans 9:6-9</cite></blockquote>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Romans 9" data-title="Jacob and Esau">
+  <div class="page">
+    <div class="kicker">Romans 9:10-13</div>
+    <h2>Jacob and Esau</h2>
+    <blockquote class="scripture" style="font-style:italic">And not only this; but when Rebecca also had conceived by one, even by our father Isaac; (For the children being not yet born, neither having done any good or evil, that the purpose of God according to election might stand, not of works, but of him that calleth;) It was said unto her, The elder shall serve the younger. As it is written, Jacob have I loved, but Esau have I hated.<cite>Romans 9:10-13</cite></blockquote>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Romans 9" data-title="Mercy and hardening">
+  <div class="page">
+    <div class="kicker">Romans 9:14-18</div>
+    <h2>Mercy and hardening</h2>
+    <blockquote class="scripture" style="font-style:italic">What shall we say then? Is there unrighteousness with God? God forbid. For he saith to Moses, I will have mercy on whom I will have mercy, and I will have compassion on whom I will have compassion. So then it is not of him that willeth, nor of him that runneth, but of God that sheweth mercy. For the scripture saith unto Pharaoh, Even for this same purpose have I raised thee up, that I might shew my power in thee, and that my name might be declared throughout all the earth. Therefore hath he mercy on whom he will have mercy, and whom he will he hardeneth.<cite>Romans 9:14-18</cite></blockquote>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Romans 9" data-title="The potter and the clay">
+  <div class="page">
+    <div class="kicker">Romans 9:19-24</div>
+    <h2>The potter and the clay</h2>
+    <blockquote class="scripture" style="font-style:italic">Thou wilt say then unto me, Why doth he yet find fault? For who hath resisted his will? Nay but, O man, who art thou that repliest against God? Shall the thing formed say to him that formed it, Why hast thou made me thus? Hath not the potter power over the clay, of the same lump to make one vessel unto honour, and another unto dishonour?<cite>Romans 9:19-21</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">What if God, willing to shew his wrath, and to make his power known, endured with much longsuffering the vessels of wrath fitted to destruction: And that he might make known the riches of his glory on the vessels of mercy, which he had afore prepared unto glory, Even us, whom he hath called, not of the Jews only, but also of the Gentiles?<cite>Romans 9:22-24</cite></blockquote>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Romans 9" data-title="A remnant">
+  <div class="page">
+    <div class="kicker">Romans 9:25-29</div>
+    <h2>A remnant</h2>
+    <blockquote class="scripture" style="font-style:italic">As he saith also in Osee, I will call them my people, which were not my people; and her beloved, which was not beloved. And it shall come to pass, that in the place where it was said unto them, Ye are not my people; there shall they be called the children of the living God.<cite>Romans 9:25-26</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Esaias also crieth concerning Israel, Though the number of the children of Israel be as the sand of the sea, a remnant shall be saved: For he will finish the work, and cut it short in righteousness: because a short work will the Lord make upon the earth. And as Esaias said before, Except the Lord of Sabaoth had left us a seed, we had been as Sodoma, and been made like unto Gomorrha.<cite>Romans 9:27-29</cite></blockquote>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Romans 9" data-title="The stumblingstone">
+  <div class="page">
+    <div class="kicker">Romans 9:30-33</div>
+    <h2>The stumblingstone</h2>
+    <blockquote class="scripture" style="font-style:italic">What shall we say then? That the Gentiles, which followed not after righteousness, have attained to righteousness, even the righteousness which is of faith. But Israel, which followed after the law of righteousness, hath not attained to the law of righteousness.<cite>Romans 9:30-31</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Wherefore? Because they sought it not by faith, but as it were by the works of the law. For they stumbled at that stumblingstone; As it is written, Behold, I lay in Sion a stumblingstone and rock of offence: and whosoever believeth on him shall not be ashamed.<cite>Romans 9:32-33</cite></blockquote>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Jacob loved, Esau hated" data-title="Malachi 1 &amp; Romans 9: Jacob Loved, Esau Hated">
+  <div class="page title-page later">
+    <div class="overline">Malachi 1 &amp; Romans 9</div>
+    <h1>Malachi 1 &amp; Romans 9: Jacob Loved, Esau Hated</h1>
+    <p class="sub">Jacob Loved, Esau Hated • Nations, Not Individuals</p>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Jacob loved, Esau hated" data-title="Malachi 1:1-3">
+  <div class="page">
+    <h2>Malachi 1:1-3</h2>
+    <blockquote class="scripture" style="font-style:italic">The burden of the word of the <span class="lord">Lord</span> to Israel by Malachi. I have loved you, saith the <span class="lord">Lord</span>. Yet ye say, Wherein hast thou loved us? Was not Esau Jacob’s brother? saith the <span class="lord">Lord</span>: yet I loved Jacob, And I hated Esau, and laid his mountains and his heritage waste for the dragons of the wilderness.<cite>Malachi 1:1-3</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">As it is written, Jacob have I loved, but Esau have I hated.<cite>Romans 9:13</cite></blockquote>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Jacob loved, Esau hated" data-title="Genesis 25:21-23: The Prophecy">
+  <div class="page">
+    <h2>Genesis 25:21-23: The Prophecy</h2>
+    <blockquote class="scripture" style="font-style:italic">And Isaac intreated the <span class="lord">Lord</span> for his wife, because she was barren: and the <span class="lord">Lord</span> was intreated of him, and Rebekah his wife conceived. And the children struggled together within her; and she said, If it be so, why am I thus? And she went to enquire of the <span class="lord">Lord</span>. And the <span class="lord">Lord</span> said unto her, Two nations are in thy womb, and two manner of people shall be separated from thy bowels; and the one people shall be stronger than the other people; and the elder shall serve the younger.<cite>Genesis 25:21-23</cite></blockquote>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Jacob loved, Esau hated" data-title="The Meaning of &quot;Loved&quot; and &quot;Hated&quot;">
+  <div class="page">
+    <h2>The Meaning of "Loved" and "Hated"</h2>
+    <p>In Scripture, "loved" and "hated" often mean preferred over or chosen above the other, not absolute personal hatred or despising as we use the words today.</p>
+    <p>Jesus said:</p>
+    <blockquote class="scripture" style="font-style:italic">If any man come to me, and hate not his father, and mother, and wife, and children, and brethren, and sisters, yea, and his own life also, he cannot be my disciple.<cite>Luke 14:26</cite></blockquote>
+    <p>This does not mean literal hatred or despising of family, but to love and prefer Christ more than all others — to place Him first.</p>
+    <p>In the same way, "I loved Jacob, but Esau have I hated" means God preferred/chose Jacob's line over Esau's — not that He personally despised Esau as an individual.</p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Jacob loved, Esau hated" data-title="The Context: Nations, Not Individuals">
+  <div class="page">
+    <h2>The Context: Nations, Not Individuals</h2>
+    <ul class="marks"><li>The reference is not to the individual twins at birth in Genesis 25.</li><li>It is not about God hating and condemning Esau personally in the womb.</li><li>Esau was reconciled with Jacob, received his own blessing from Isaac, and lived prosperously (Genesis 33; 36).</li><li>The statement concerns the nations that came from them: Israel (Jacob) vs. Edom (Esau).</li><li>Edom (the nation) fell away, refused to help Israel in the wilderness, rejoiced in Judah’s captivity, and was ultimately destroyed ~1400 years later (Obadiah; <button class="ref" data-v="Malachi 1:4">Malachi 1:4</button>).</li><li>Paul uses this to show: God’s choice of one nation/line over another (by grace, not works) is consistent — just as Gentiles are now grafted in while partial hardness came to unbelieving Jews (Romans 11).</li></ul>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Jacob loved, Esau hated" data-title="God Judges Individuals by Faith • Nations by Works">
+  <div class="page">
+    <h2>God Judges Individuals by Faith • Nations by Works</h2>
+    <ul class="marks"><li>God judges individuals according to faith — whether they believe and call upon the Lord (<button class="ref" data-v="Romans 10:13">Romans 10:13</button>; <button class="ref" data-v="Genesis 4:26">Genesis 4:26</button>).</li><li>Nations are judged here on earth according to their works and collective actions — obedience or rebellion, mercy or enmity (e.g., Edom’s treatment of Israel led to national judgment).</li></ul>
+    <p>Esau personally was blessed and reconciled; Edom as a nation was judged for its unbelief and hostility.</p>
+    <p>The same principle applies in Romans: believing Jews and Gentiles are saved by faith; the unbelieving nation faced hardening and partial blindness.</p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Jacob loved, Esau hated" data-title="Jacob and Esau in summary">
+  <div class="page">
+    <h2>Jacob and Esau in summary</h2>
+    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>Preferred, not despised</strong>The phrase "Jacob have I loved, but Esau have I hated" refers to God’s preference of one nation over another — not personal hatred of Esau as an individual.</li><li><strong>"Loved" and "hated"</strong>Here they mean preferred/chosen above, just as Jesus taught to "hate" family in comparison to loving Him supremely.</li><li><strong>Faith and works</strong>Individuals are judged by faith; nations are judged here on earth by their works.</li></ol></div>
+    <p class="take">Paul’s point: God’s choice of lines/nations by grace is biblical — consistent with the gospel to the Gentiles and the pattern throughout Scripture.</p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="God&#x27;s pattern in Scripture" data-title="God&#x27;s Pattern in Scripture">
+  <div class="page title-page later">
+    <div class="overline">God's Pattern of Choosing the Weak &amp; Foolish</div>
+    <h1>God's Pattern in Scripture</h1>
+    <p class="sub">Choosing the Weak, the Foolish, the Younger, the Unexpected</p>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="God&#x27;s pattern in Scripture" data-title="God hath chosen">
+  <div class="page">
+    <h2>God hath chosen</h2>
+    <blockquote class="scripture" style="font-style:italic">But God hath chosen the foolish things of the world to confound the wise; and God hath chosen the weak things of the world to confound the things which are mighty; And base things of the world, and things which are despised, hath God chosen, yea, and things which are not, to bring to nought things that are: That no flesh should glory in his presence.<cite>1 Corinthians 1:27-29</cite></blockquote>
+    <p>Throughout Scripture we see the same repeated pattern: God deliberately chooses what man considers weak, foolish, or unlikely, so that His power and purpose are unmistakably displayed and all boasting is excluded.</p>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="God&#x27;s pattern in Scripture" data-title="Chosen: the firstborn and the older (1)">
+  <div class="page">
+    <h2>Chosen: the firstborn and the older (1)</h2>
+    <div class="tbl"><table><thead><tr><th>What Man Expects / Esteems</th><th>What God Chooses</th><th>Key Reference</th></tr></thead><tbody><tr><td>Cain (firstborn)</td><td>Abel, then Seth</td><td>Genesis 4:4-5; 4:25</td></tr><tr><td>Ishmael (firstborn son of Abraham)</td><td>Isaac</td><td>Genesis 17:18-21; 21:12; Romans 9:7-9</td></tr><tr><td>Esau (firstborn, stronger)</td><td>Jacob</td><td>Genesis 25:23; Malachi 1:2-3; Romans 9:10-13</td></tr><tr><td>Zerah (hand came out first)</td><td>Perez</td><td>Genesis 38:27-30</td></tr><tr><td>Reuben, Simeon, Levi (older brothers)</td><td>Judah (kingship) &amp; Joseph (birthright)</td><td>Genesis 49:3-10; 1 Chronicles 5:1-2</td></tr><tr><td>Manasseh (firstborn of Joseph)</td><td>Ephraim</td><td>Genesis 48:13-20</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="God&#x27;s pattern in Scripture" data-title="Chosen: leaders and kings (2)">
+  <div class="page">
+    <h2>Chosen: leaders and kings (2)</h2>
+    <div class="tbl"><table><thead><tr><th>What Man Expects / Esteems</th><th>What God Chooses</th><th>Key Reference</th></tr></thead><tbody><tr><td>Aaron (older brother)</td><td>Moses (as primary leader)</td><td>Exodus 4:14-16; 7:1-2</td></tr><tr><td>Firstborn sons of Israel</td><td>Levites</td><td>Numbers 3:12-13; 8:16-18</td></tr><tr><td>Eliab &amp; older brothers of David</td><td>David (youngest shepherd)</td><td>1 Samuel 16:6-13</td></tr><tr><td>Saul (tall, kingly stature)</td><td>David</td><td>1 Samuel 9-16</td></tr><tr><td>Adonijah (older, attempted throne)</td><td>Solomon</td><td>1 Kings 1:5-53; 2:15</td></tr><tr><td>Vashti (queen)</td><td>Esther (Jewish orphan)</td><td>Esther 1-2</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="God&#x27;s pattern in Scripture" data-title="Chosen: the parables and Christ (3)">
+  <div class="page">
+    <h2>Chosen: the parables and Christ (3)</h2>
+    <div class="tbl"><table><thead><tr><th>What Man Expects / Esteems</th><th>What God Chooses</th><th>Key Reference</th></tr></thead><tbody><tr><td>Early laborers (worked longer)</td><td>Late hires receive same reward</td><td>Matthew 20:1-16</td></tr><tr><td>Rejected stone</td><td>Becomes cornerstone</td><td>Psalm 118:22; Matthew 21:42</td></tr><tr><td>Original wedding guests</td><td>Outsiders from highways</td><td>Matthew 22:1-14</td></tr><tr><td>Chief priests &amp; elders</td><td>Publicans &amp; harlots enter first</td><td>Matthew 21:31</td></tr><tr><td>Children of the kingdom (by birth)</td><td>New believing nation</td><td>Matthew 21:43; 8:11-12</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="God&#x27;s pattern in Scripture" data-title="Chosen: humble and last (4)">
+  <div class="page">
+    <h2>Chosen: humble and last (4)</h2>
+    <div class="tbl"><table><thead><tr><th>What Man Expects / Esteems</th><th>What God Chooses</th><th>Key Reference</th></tr></thead><tbody><tr><td>Pharisee</td><td>Publican (tax collector) justified</td><td>Luke 18:9-14</td></tr><tr><td>Rich man</td><td>Lazarus (beggar) comforted</td><td>Luke 16:19-31</td></tr><tr><td>Elder brother</td><td>Prodigal younger son welcomed</td><td>Luke 15:11-32</td></tr><tr><td>Israel after the flesh</td><td>Children of the promise</td><td>Romans 9:6-8; Galatians 4:28-31</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="God&#x27;s pattern in Scripture" data-title="More examples, in rough biblical order (1)">
+  <div class="page">
+    <h2>More examples, in rough biblical order (1)</h2>
+    <p>This theme of God choosing the weak, foolish, and unexpected runs throughout the entire Bible.</p>
+    <p>Here are many more examples in rough biblical order:</p>
+    <ul class="marks"><li>Japheth &gt; Shem (blessing order – Gen 9)</li><li>Leah &gt; Rachel in fruitfulness (Gen 29–30)</li><li>First wilderness generation &gt; Second generation (entered land – Num/Deut)</li><li>Pharaoh's firstborn &gt; Israel's firstborn spared (Ex 12)</li><li>Egypt &gt; Exodus nation freed (Ex)</li><li>Northern Kingdom (larger) &gt; Southern Kingdom (Judah preserved – history/Kings)</li><li>Othniel &gt; Judahite elders (Judg 1)</li><li>Ehud &gt; Previous leaders (Judg 3)</li><li>Sisera/Barak &gt; Deborah &amp; Jael (Judg 4–5)</li><li>Gideon &gt; Midianite oppressors (Judg 6–8)</li><li>Jephthah &gt; His elder brothers &amp; Ammon (Judg 11)</li><li>Samson &gt; Parents' expectations &amp; Philistines (Judg 13–16)</li></ul>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="God&#x27;s pattern in Scripture" data-title="More examples (2)">
+  <div class="page">
+    <h2>More examples (2)</h2>
+    <ul class="marks"><li>Nearer kinsman &gt; Boaz as redeemer (Ruth)</li><li>Michal &gt; Abigail as favored wife (1–2 Sam)</li><li>Nabal &gt; David (1 Sam 25)</li><li>Saul's house &gt; David's (1–2 Sam)</li><li>Eli's priestly line &gt; Samuel &amp; Zadok (1 Sam)</li><li>Benjamites &gt; Judah royal line (history)</li><li>Jeroboam’s line &gt; Baasha &gt; Zimri &gt; Omri &gt; Jehu (1–2 Kings)</li><li>Ahaziah/Athaliah &gt; Joash preserved (2 Kings)</li><li>Amon &gt; Josiah (2 Kings)</li><li>Various wicked kings &gt; Godly successors (Kings/Chronicles)</li><li>Elijah &gt; Elisha (double portion – 2 Kings 2)</li><li>Abiathar &gt; Zadok (priestly line)</li><li>Hophni/Phinehas &gt; Faithful line</li><li>Unworthy priests &gt; Samuel</li></ul>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="God&#x27;s pattern in Scripture" data-title="More examples (3)">
+  <div class="page">
+    <h2>More examples (3)</h2>
+    <ul class="marks"><li>Jonah's desire &gt; Nineveh repents (Jonah)</li><li>False prophets &gt; True prophets (prophets)</li><li>"Divorced" Northern Israel &gt; Judah warned (prophets)</li><li>Corporate Israel &gt; Remnant (Isaiah etc.)</li><li>Babylon/tyrants &gt; Persia/Cyrus as anointed (Isa 45)</li><li>Dry bones &gt; Revived army (Ezek 37)</li><li>Bad figs &gt; Good figs preserved (Jer 24)</li><li>Unfruitful vineyard &gt; New keepers (Isa 5; parables)</li><li>Old covenant shadows &gt; New covenant reality (Hebrews)</li><li>High places &gt; Lowly exalted (teaching)</li><li>Exalted humbled &gt; Humble exalted</li><li>Greatest &gt; Servant/child</li><li>Dominant tribes &gt; Various judges</li><li>Jebusites &gt; David conquering Jerusalem</li><li>And many more throughout the Word...</li></ul>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="God&#x27;s pattern in Scripture" data-title="The glory goes to Him alone">
+  <div class="page">
+    <h2>The glory goes to Him alone</h2>
+    <p class="lead">The Bible consistently shows God delighting to use what the world counts as nothing so that all the glory goes to Him alone and no flesh can boast.</p>
+    <p class="take">The first shall be last and the last shall be first.</p>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="slide" data-section="Galatians 3-4: parallels to Romans 9-11" data-title="Galatians 3–4">
+  <div class="page title-page later">
+    <div class="overline">Galatians 3–4</div>
+    <h1>Galatians 3–4</h1>
+    <p class="sub">Children of Promise • Justified by Faith • Heirs Through Christ</p>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 27 -->
+<section class="slide" data-section="Galatians 3-4: parallels to Romans 9-11" data-title="Parallel teaching to Romans 9–11">
+  <div class="page">
+    <h2>Parallel teaching to Romans 9–11</h2>
+    <p><strong>Parallel Teaching to Romans 9–11:</strong></p>
+    <p class="center"><strong>Israel After the Flesh &amp; the Law</strong></p>
+    <p class="center">vs.</p>
+    <p class="center"><strong>Spiritual Israel &amp; the Children of Faith</strong></p>
+  </div>
+</section>
+
+<!-- 28 -->
+<section class="slide" data-section="Galatians 3-4: parallels to Romans 9-11" data-title="Galatians 3:6-14 (the blessing of Abraham)">
+  <div class="page">
+    <div class="kicker">Galatians 3:6-14</div>
+    <h2>Galatians 3:6-14 (the blessing of Abraham)</h2>
+    <blockquote class="scripture" style="font-style:italic">Even as Abraham believed God, and it was accounted to him for righteousness. Know ye therefore that they which are of faith, the same are the children of Abraham. And the scripture, foreseeing that God would justify the heathen through faith, preached before the gospel unto Abraham, saying, In thee shall all nations be blessed. So then they which be of faith are blessed with faithful Abraham.<cite>Galatians 3:6-9</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">For as many as are of the works of the law are under the curse: for it is written, Cursed is every one that continueth not in all things which are written in the book of the law to do them. But that no man is justified by the law in the sight of God, it is evident: for, The just shall live by faith. And the law is not of faith: but, The man that doeth them shall live in them.<cite>Galatians 3:10-12</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Christ hath redeemed us from the curse of the law, being made a curse for us: for it is written, Cursed is every one that hangeth on a tree: That the blessing of Abraham might come on the Gentiles through Jesus Christ; that we might receive the promise of the Spirit through faith.<cite>Galatians 3:13-14</cite></blockquote>
+  </div>
+</section>
+
+<!-- 29 -->
+<section class="slide" data-section="Galatians 3-4: parallels to Romans 9-11" data-title="Galatians 3:15-29 (the promise and the law)">
+  <div class="page">
+    <div class="kicker">Galatians 3:15-29</div>
+    <h2>Galatians 3:15-29 (the promise and the law)</h2>
+    <blockquote class="scripture" style="font-style:italic">Brethren, I speak after the manner of men; Though it be but a man’s covenant, yet if it be confirmed, no man disannulleth, or addeth thereto. Now to Abraham and his seed were the promises made. He saith not, And to seeds, as of many; but as of one, And to thy seed, which is Christ.<cite>Galatians 3:15-16</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">And this I say, that the covenant, that was confirmed before of God in Christ, the law, which was four hundred and thirty years after, cannot disannul, that it should make the promise of none effect. For if the inheritance be of the law, it is no more of promise: but God gave it to Abraham by promise.<cite>Galatians 3:17-18</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Wherefore then serveth the law? It was added because of transgressions, till the seed should come to whom the promise was made; and it was ordained by angels in the hand of a mediator. Now a mediator is not a mediator of one, but God is one. Is the law then against the promises of God? God forbid: for if there had been a law given which could have given life, verily righteousness should have been by the law.<cite>Galatians 3:19-21</cite></blockquote>
+  </div>
+</section>
+
+<!-- 30 -->
+<section class="slide" data-section="Galatians 3-4: parallels to Romans 9-11" data-title="Galatians 3:22-29 (the schoolmaster)">
+  <div class="page">
+    <div class="kicker">Galatians 3:15-29</div>
+    <h2>Galatians 3:22-29 (the schoolmaster)</h2>
+    <blockquote class="scripture" style="font-style:italic">But the scripture hath concluded all under sin, that the promise by faith of Jesus Christ might be given to them that believe. But before faith came, we were kept under the law, shut up unto the faith which should afterwards be revealed. Wherefore the law was our schoolmaster to bring us unto Christ, that we might be justified by faith. But after that faith is come, we are no longer under a schoolmaster.<cite>Galatians 3:22-25</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">For ye are all the children of God by faith in Christ Jesus. For as many of you as have been baptized into Christ have put on Christ. There is neither Jew nor Greek, there is neither bond nor free, there is neither male nor female: for ye are all one in Christ Jesus. And if ye be Christ’s, then are ye Abraham’s seed, and heirs according to the promise.<cite>Galatians 3:26-29</cite></blockquote>
+  </div>
+</section>
+
+<!-- 31 -->
+<section class="slide" data-section="Galatians 3-4: parallels to Romans 9-11" data-title="Galatians 4:1-11 (sons, not servants)">
+  <div class="page">
+    <div class="kicker">Galatians 4:1-11</div>
+    <h2>Galatians 4:1-11 (sons, not servants)</h2>
+    <blockquote class="scripture" style="font-style:italic">Now I say, That the heir, as long as he is a child, differeth nothing from a servant, though he be lord of all; But is under tutors and governors until the time appointed of the father. Even so we, when we were children, were in bondage under the elements of the world: But when the fulness of the time was come, God sent forth his Son, made of a woman, made under the law, To redeem them that were under the law, that we might receive the adoption of sons.<cite>Galatians 4:1-5</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">And because ye are sons, God hath sent forth the Spirit of his Son into your hearts, crying, Abba, Father. Wherefore thou art no more a servant, but a son; and if a son, then an heir of God through Christ.<cite>Galatians 4:6-7</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Howbeit then, when ye knew not God, ye did service unto them which by nature are no gods. But now, after that ye have known God, or rather are known of God, how turn ye again to the weak and beggarly elements, whereunto ye desire again to be in bondage? Ye observe days, and months, and times, and years. I am afraid of you, lest I have bestowed upon you labour in vain.<cite>Galatians 4:8-11</cite></blockquote>
+  </div>
+</section>
+
+<!-- 32 -->
+<section class="slide" data-section="Galatians 3-4: parallels to Romans 9-11" data-title="Galatians 4:21-31 (the two covenants)">
+  <div class="page">
+    <div class="kicker">Galatians 4:21-31</div>
+    <h2>Galatians 4:21-31 (the two covenants)</h2>
+    <blockquote class="scripture" style="font-style:italic">Tell me, ye that desire to be under the law, do ye not hear the law? For it is written, that Abraham had two sons, the one by a bondmaid, the other by a freewoman. But he who was of the bondwoman was born after the flesh; but he of the freewoman was by promise.<cite>Galatians 4:21-23</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Which things are an allegory: for these are the two covenants; the one from the mount Sinai, which gendereth to bondage, which is Agar. For this Agar is mount Sinai in Arabia, and answereth to Jerusalem which now is, and is in bondage with her children. But Jerusalem which is above is free, which is the mother of us all.<cite>Galatians 4:24-26</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">For it is written, Rejoice, thou barren that bearest not; break forth and cry, thou that travailest not: for the desolate hath many more children than she which hath an husband. Now we, brethren, as Isaac was, are the children of promise. But as then he that was born after the flesh persecuted him that was born after the Spirit, even so it is now.<cite>Galatians 4:27-29</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Nevertheless what saith the scripture? Cast out the bondwoman and her son: for the son of the bondwoman shall not be heir with the son of the freewoman. So then, brethren, we are not children of the bondwoman, but of the free.<cite>Galatians 4:30-31</cite></blockquote>
+  </div>
+</section>
+
+<!-- 33 -->
+<section class="slide" data-section="Recap: Romans 1-8" data-title="Romans • Jews &amp; Gentiles">
+  <div class="page title-page later">
+    <div class="overline">Recap of Romans 1–8</div>
+    <h1>Romans • Jews &amp; Gentiles</h1>
+    <p class="sub">One Righteousness • By Faith, Not Flesh</p>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 34 -->
+<section class="slide" data-section="Recap: Romans 1-8" data-title="Romans 1">
+  <div class="page">
+    <div class="kicker">Romans 1</div>
+    <h2>Romans 1</h2>
+    <blockquote class="scripture" style="font-style:italic">Paul, a servant of Jesus Christ, called to be an apostle, separated unto the gospel of God, (Which he had promised afore by his prophets in the holy scriptures,) Concerning his Son Jesus Christ our Lord, which was made of the seed of David according to the flesh; And declared to be the Son of God with power, according to the spirit of holiness, by the resurrection from the dead: By whom we have received grace and apostleship, for obedience to the faith among all nations, for his name: Among whom are ye also the called of Jesus Christ: To all that be in Rome, beloved of God, called to be saints: Grace to you and peace from God our Father, and the Lord Jesus Christ.<cite>Romans 1:1-7</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">For I am not ashamed of the gospel of Christ: for it is the power of God unto salvation to every one that believeth; to the Jew first, and also to the Greek. For therein is the righteousness of God revealed from faith to faith: as it is written, The just shall live by faith. For the wrath of God is revealed from heaven against all ungodliness and unrighteousness of men, who hold the truth in unrighteousness; Because that which may be known of God is manifest in them; for God hath shewed it unto them. For the invisible things of him from the creation of the world are clearly seen, being understood by the things that are made, even his eternal power and Godhead; so that they are without excuse:<cite>Romans 1:16-20</cite></blockquote>
+  </div>
+</section>
+
+<!-- 35 -->
+<section class="slide" data-section="Recap: Romans 1-8" data-title="Romans 2">
+  <div class="page">
+    <div class="kicker">Romans 2</div>
+    <h2>Romans 2</h2>
+    <blockquote class="scripture" style="font-style:italic">Tribulation and anguish, upon every soul of man that doeth evil, of the Jew first, and also of the Gentile; But glory, honour, and peace, to every man that worketh good, to the Jew first, and also to the Gentile: For there is no respect of persons with God. For as many as have sinned without law shall also perish without law: and as many as have sinned in the law shall be judged by the law;<cite>Romans 2:9-12</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">For when the Gentiles, which have not the law, do by nature the things contained in the law, these, having not the law, are a law unto themselves:<cite>Romans 2:14</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Behold, thou art called a Jew, and restest in the law, and makest thy boast of God,<cite>Romans 2:17</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Thou that makest thy boast of the law, through breaking the law dishonourest thou God? For the name of God is blasphemed among the Gentiles through you, as it is written.<cite>Romans 2:23-24</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">For he is not a Jew, which is one outwardly; neither is that circumcision, which is outward in the flesh: But he is a Jew, which is one inwardly; and circumcision is that of the heart, in the spirit, and not in the letter; whose praise is not of men, but of God.<cite>Romans 2:28-29</cite></blockquote>
+  </div>
+</section>
+
+<!-- 36 -->
+<section class="slide" data-section="Recap: Romans 1-8" data-title="Romans 3">
+  <div class="page">
+    <div class="kicker">Romans 3</div>
+    <h2>Romans 3</h2>
+    <blockquote class="scripture" style="font-style:italic">What advantage then hath the Jew? or what profit is there of circumcision? Much every way: chiefly, because that unto them were committed the oracles of God. For what if some did not believe? shall their unbelief make the faith of God without effect? God forbid: yea, let God be true, but every man a liar; as it is written, That thou mightest be justified in thy sayings, and mightest overcome when thou art judged.<cite>Romans 3:1-4</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">What then? are we better than they? No, in no wise: for we have before proved both Jews and Gentiles, that they are all under sin; As it is written, There is none righteous, no, not one:<cite>Romans 3:9-10</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Therefore by the deeds of the law there shall no flesh be justified in his sight: for by the law is the knowledge of sin. But now the righteousness of God without the law is manifested, being witnessed by the law and the prophets; Even the righteousness of God which is by faith of Jesus Christ unto all and upon all them that believe: for there is no difference: For all have sinned, and come short of the glory of God; Being justified freely by his grace through the redemption that is in Christ Jesus:<cite>Romans 3:20-24</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Is he the God of the Jews only? is he not also of the Gentiles? Yes, of the Gentiles also: Seeing it is one God, which shall justify the circumcision by faith, and uncircumcision through faith. Do we then make void the law through faith? God forbid: yea, we establish the law.<cite>Romans 3:29-31</cite></blockquote>
+  </div>
+</section>
+
+<!-- 37 -->
+<section class="slide" data-section="Recap: Romans 1-8" data-title="Romans 4">
+  <div class="page">
+    <div class="kicker">Romans 4</div>
+    <h2>Romans 4</h2>
+    <blockquote class="scripture" style="font-style:italic">For what saith the scripture? Abraham believed God, and it was counted unto him for righteousness. Now to him that worketh is the reward not reckoned of grace, but of debt. But to him that worketh not, but believeth on him that justifieth the ungodly, his faith is counted for righteousness.<cite>Romans 4:3-5</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Blessed is the man to whom the Lord will not impute sin. Cometh this blessedness then upon the circumcision only, or upon the uncircumcision also? for we say that faith was reckoned to Abraham for righteousness. How was it then reckoned? when he was in circumcision, or in uncircumcision? Not in circumcision, but in uncircumcision. And he received the sign of circumcision, a seal of the righteousness of the faith which he had yet being uncircumcised: that he might be the father of all them that believe, though they be not circumcised; that righteousness might be imputed unto them also: And the father of circumcision to them who are not of the circumcision only, but who also walk in the steps of that faith of our father Abraham, which he had being yet uncircumcised. For the promise, that he should be the heir of the world, was not to Abraham, or to his seed, through the law, but through the righteousness of faith. For if they which are of the law be heirs, faith is made void, and the promise made of none effect:<cite>Romans 4:8-14</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Because the law worketh wrath: for where no law is, there is no transgression. Therefore it is of faith, that it might be by grace; to the end the promise might be sure to all the seed; not to that only which is of the law, but to that also which is of the faith of Abraham; who is the father of us all,<cite>Romans 4:15-16</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Now it was not written for his sake alone, that it was imputed to him; But for us also, to whom it shall be imputed, if we believe on him that raised up Jesus our Lord from the dead;<cite>Romans 4:23-24</cite></blockquote>
+  </div>
+</section>
+
+<!-- 38 -->
+<section class="slide" data-section="Recap: Romans 1-8" data-title="Romans 5, 7 and 8">
+  <div class="page">
+    <div class="kicker">Romans 5, 7 and 8</div>
+    <h2>Romans 5, 7 and 8</h2>
+    <blockquote class="scripture" style="font-style:italic">But God commendeth his love toward us, in that, while we were yet sinners, Christ died for us. Much more then, being now justified by his blood, we shall be saved from wrath through him. For if, when we were enemies, we were reconciled to God by the death of his Son, much more, being reconciled, we shall be saved by his life.<cite>Romans 5:8-10</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Know ye not, brethren, (for I speak to them that know the law,) how that the law hath dominion over a man as long as he liveth? For the woman which hath an husband is bound by the law to her husband so long as he liveth; but if the husband be dead, she is loosed from the law of her husband. So then if, while her husband liveth, she be married to another man, she shall be called an adulteress: but if her husband be dead, she is free from that law; so that she is no adulteress, though she be married to another man. Wherefore, my brethren, ye also are become dead to the law by the body of Christ; that ye should be married to another, even to him who is raised from the dead, that we should bring forth fruit unto God.<cite>Romans 7:1-4</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">The Spirit itself beareth witness with our spirit, that we are the children of God: And if children, then heirs; heirs of God, and joint-heirs with Christ; if so be that we suffer with him, that we may be also glorified together.<cite>Romans 8:16-17</cite></blockquote>
+    <p class="sub center">A dramatic visual reference for Young Adult Sunday School • Based on the King James Bible</p>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "Genesis 4:26":[[26, "And to Seth, to him also there was born a son; and he called his name Enos: then began men to call upon the name of the LORD."]],
+  "Malachi 1:4":[[4, "Whereas Edom saith, We are impoverished, but we will return and build the desolate places; thus saith the LORD of hosts, They shall build, but I will throw down; and they shall call them, The border of wickedness, and, The people against whom the LORD hath indignation for ever."]],
+  "Romans 10:13":[[13, "For whosoever shall call upon the name of the Lord shall be saved."]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
