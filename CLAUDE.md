@@ -35,7 +35,10 @@ in the repo, without publishing artifacts or building a separate page:
 7. Open a PR and wait for the user to say "merge".
 - **Daily studies written in Google Drive.** The author saves new studies as Google Docs and announces the link here for
   the app. Read the doc with the Google Drive tools, then add it to `review/refile.json` under `"drive"`:
-  `{"to": "Psalms 52", "title": "Doeg", "date": "YYYY-MM-DD", "id": "psalms-52-doeg", "text": "<study text>"}`.
+  `{"to": "Psalms 53", "id": "psalms-53", "date": "YYYY-MM-DD", "series": true, "scripture": "<chapter text>", "text": "<study>"}`
+  for the day's study in the series (it becomes the chapter's study and "Latest in the series"; put the chapter's KJV
+  text, built from the KJV, in "scripture"), or `{"to": "Psalms 52", "title": "Doeg", "date": ..., "id": ..., "text": ...}`
+  for a stand-alone study that sits as its own titled tab beside the chapter's study.
   Never store or publish the Drive link or file id anywhere in the repo, in commit messages or in pull requests.
   In the text, put each quoted passage as `**Ref**` on one line and the verse in italics on the next (`*verse*`),
   and compare every quoted verse to the KJV text (fix only punctuation and plain slips). Leave the author's wording.
