@@ -445,9 +445,15 @@ def apply_refile(src):
         pid = 'added-drive-' + job['id']
         if any(str(p['id']) == pid for s in passes for p in s['posts']):
             continue
-        study = {'date': job['date'][:10], 'series': False, 'link': None, 'study_chars': 0, 'primary': False,
-                 'title': job['title'], 'source': 'drive',
-                 'posts': [{'id': pid, 'date': job['date'][:10] + 'T00:00', 'kind': 'study', 'text': job['text'], 'added': True}]}
+        # "series": true makes it the chapter's study in the daily series (the newest series study is the one shown);
+        # without it, or with a "title", it is another tab on the chapter. "scripture" is the chapter text posted first.
+        posts = []
+        if job.get('scripture'):
+            posts.append({'id': pid + '-text', 'date': job['date'][:10] + 'T00:00', 'kind': 'scripture', 'text': job['scripture']})
+        posts.append({'id': pid, 'date': job['date'][:10] + 'T00:01', 'kind': 'study', 'text': job['text'], 'added': True})
+        study = {'date': job['date'][:10], 'series': bool(job.get('series')), 'link': None, 'study_chars': 0,
+                 'primary': False, 'source': 'drive', **({'title': job['title']} if job.get('title') else {}),
+                 'posts': posts}
         recount(study)
         passes.append(study)
         n += 1
@@ -533,9 +539,10 @@ def main():
                 res['range'] = r
             if study.get('label'):
                 res['label'] = study['label']
-            if study.get('title'):                 # a study written in Google Drive: no Telegram link
+            if study.get('title'):                 # a titled study written in Google Drive: shown as its own tab
                 res['title'] = study['title']
-                res['source'] = study.get('source')
+            if study.get('source'):
+                res['source'] = study['source']
             return res
 
         for ch_s in sorted(chapters, key=int):
