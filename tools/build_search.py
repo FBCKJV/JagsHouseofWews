@@ -52,6 +52,7 @@ def refs(text):
 def plain(text):
     text = re.sub(r'\[([^\]]*)\]\([^)]*\)', r'\1', text)
     text = re.sub(r'https?://\S+', '', text)
+    text = re.sub(r'(?:www\.)?(?:t\.me|telegram\.me)/\S+', '', text)
     return re.sub(r'\s+', ' ', text.replace('*', '')).strip()
 
 
