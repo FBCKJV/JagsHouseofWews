@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Conditional Covenants and the Forfeited Promises of Ezekiel’s Temple</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="A book-by-book analysis of God’s merciful winnowing: unconditional and conditional promises, human choices and changed outcomes, from Cain to Ezekiel’s temple and the “new nation” of believers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Conditional Covenants and the Forfeited Promises of Ezekiel’s Temple">
+  <div class="page title-page">
+    <div class="overline">Prophecy &amp; the covenants</div>
+    <h1>Conditional Covenants and the Forfeited Promises of Ezekiel’s Temple</h1>
+    <p class="sub">A Book-by-Book Analysis of God’s Merciful Winnowing: Promises, Conditions, Choices, and Changed Outcomes</p>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any gold reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="God’s Merciful Winnowing">
+  <div class="page">
+    <h2>God’s Merciful Winnowing</h2>
+    <p class="lead">The Bible reveals God’s redemptive plan through a dynamic interplay of unconditional promises, fulfilled in Christ, and conditional promises, contingent on human obedience, within a merciful winnowing process rooted in His love.</p>
+    <div class="cols"><div class="panel believers"><h3>Individual</h3><p>Judgment by faith. <button class="ref" data-v="Romans 4:3">Romans 4:3</button></p></div><div class="panel cain"><h3>National</h3><p>Judgment by works. <button class="ref" data-v="Obadiah 1:10">e.g., Obadiah 1:10</button></p></div></div>
+    <p>This framework distinguishes individual judgment by faith from national judgment by works, emphasizing God’s longsuffering, free will, and clear presentation of choices between life and death.</p>
+    <blockquote class="big-verse">I call heaven and earth to record this day against you, that <mark>I have set before you life and death, blessing and cursing: therefore choose life</mark>, that both thou and thy seed may live:<cite>Deuteronomy 30:19</cite></blockquote>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Introduction" data-title="Foreknowledge and the “New Nation”">
+  <div class="page">
+    <h2>Foreknowledge and the “New Nation”</h2>
+    <p>God’s foreknowledge (<button class="ref" data-v="Isaiah 46:9-10">Isaiah 46:9-10</button>) enables Him to offer conditional promises, respecting human choices, while adapting His plan when conditions are unmet, redirecting blessings to others, such as the “new nation” of believers (<button class="ref" data-v="1 Peter 2:9">1 Peter 2:9</button>).</p>
+    <p>This article applies this lens in a book-by-book analysis, detailing examples of promises, conditions, human choices, and changed outcomes, expanding on cases like Saul’s loss of a dynasty and Jesus’ lineage, and incorporating additional instances to develop the theory comprehensively.</p>
+    <figure class="pic"><img src="conditional-covenants-ezekiel-temple-pattern.svg" alt="The pattern in every book: Promises and Conditions, then Choices and Outcomes, then Changed Promises; when conditions are unmet, blessings are redirected to others, such as the new nation of believers" loading="lazy"><figcaption>The pattern traced in every book</figcaption></figure>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Introduction" data-title="Unconditional and Conditional">
+  <div class="page">
+    <div class="kicker">The promises at a glance</div>
+    <h2>Unconditional and Conditional</h2>
+    <div class="tbl"><table><thead><tr><th>Promise</th><th>Unconditional or conditional</th></tr></thead><tbody><tr><td>A Redeemer <button class="ref" data-v="Genesis 3:15">Genesis 3:15</button></td><td><strong>Unconditional</strong>, fulfilled in Christ</td></tr><tr><td>Abraham’s Covenant <button class="ref" data-v="Genesis 12:2-3">Genesis 12:2-3</button></td><td>The salvation aspect is <strong>unconditional</strong> <button class="ref" data-v="Galatians 3:16">Galatians 3:16</button>; the land’s immediate possession <strong>requires obedience</strong></td></tr><tr><td>Deliverance from Egypt and Canaan <button class="ref" data-v="Exodus 6:8">Exodus 6:8</button></td><td>The condition is <strong>covenantal obedience</strong> <button class="ref" data-v="Exodus 19:5">Exodus 19:5</button></td></tr><tr><td>Saul’s dynasty <button class="ref" data-v="1 Samuel 13:13">1 Samuel 13:13</button></td><td>The condition is <strong>obedience</strong></td></tr><tr><td>The Davidic Covenant <button class="ref" data-v="2 Samuel 7:16">2 Samuel 7:16</button></td><td><strong>Unconditional</strong> in Christ but <strong>conditional</strong> for immediate blessings</td></tr><tr><td>Jeroboam’s dynasty <button class="ref" data-v="1 Kings 11:38">1 Kings 11:38</button></td><td>The condition is <strong>obedience</strong></td></tr><tr><td>Ezekiel’s temple and land <button class="ref" data-v="Ezekiel 43:10-11">Ezekiel 43:10-11</button></td><td><strong>Contingent on repentance</strong></td></tr><tr><td>The New Covenant <button class="ref" data-v="Hebrews 8:13">Hebrews 8:13</button></td><td><strong>Unconditional</strong> in Christ’s priesthood <button class="ref" data-v="Hebrews 7:24-25">Hebrews 7:24-25</button></td></tr><tr><td>The millennial kingdom <button class="ref" data-v="Revelation 20:4-6">Revelation 20:4-6</button></td><td><strong>Unconditional</strong> for believers but <strong>conditional</strong> for nations <button class="ref" data-v="Revelation 20:7-9">Revelation 20:7-9</button></td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="The Law" data-title="The Foundation of Winnowing">
+  <div class="page">
+    <div class="kicker">Genesis</div>
+    <h2>The Foundation of Winnowing</h2>
+    <p>Genesis establishes God’s pattern of offering conditional promises alongside human free will. After the Fall, God promises a Redeemer (<button class="ref" data-v="Genesis 3:15">Genesis 3:15</button>), an unconditional promise fulfilled in Christ. However, other promises are conditional:</p>
+    <div class="cols"><div class="panel believers"><h3>Cain’s Offering</h3><p>God promises acceptance if Cain obeys (<button class="ref" data-v="Genesis 4:7">Genesis 4:7</button>). The condition is a right sacrifice, reflecting faith and obedience.</p></div><div class="panel believers"><h3>Abraham’s Covenant</h3><p>God promises a great nation and land (<button class="ref" data-v="Genesis 12:2-3">Genesis 12:2-3</button>). While the salvation aspect is unconditional (<button class="ref" data-v="Galatians 3:16">Galatians 3:16</button>), the land’s immediate possession requires obedience.</p></div></div>
+    <blockquote class="scripture" style="font-style:italic">If thou doest well, shalt thou not be accepted? and if thou doest not well, sin lieth at the door. And unto thee shall be his desire, and thou shalt rule over him.<cite>Genesis 4:7</cite></blockquote>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="The Law" data-title="Genesis: Choices and Outcomes">
+  <div class="page">
+    <div class="kicker">Genesis</div>
+    <h2>Genesis: Choices and Outcomes</h2>
+    <div class="steps"><div class="st"><span class="when">Cain’s Rejection</span><div>Cain chooses disobedience, offering improperly and murdering Abel (<button class="ref" data-v="Genesis 4:5-8">Genesis 4:5-8</button>). God’s longsuffering offers a second chance, but Cain’s refusal leads to exile (<button class="ref" data-v="Genesis 4:12">Genesis 4:12</button>), winnowing him from the faithful line through Seth.</div></div><div class="st"><span class="when">Abraham’s Delay</span><div>Abraham’s lack of faith, deceiving Pharaoh in Egypt (<button class="ref" data-v="Genesis 12:10-13">Genesis 12:10-13</button>), delays the promise’s fulfillment (<button class="ref" data-v="Genesis 12:17">Genesis 12:17</button>). God mercifully restores him, but the choice sets a precedent for Israel’s later failures.</div></div><div class="st"><span class="when">Lot’s Choice</span><div>Lot chooses the plain of Jordan, near Sodom (<button class="ref" data-v="Genesis 13:10-11">Genesis 13:10-11</button>), prioritizing wealth over righteousness. His proximity to sin leads to captivity (<button class="ref" data-v="Genesis 14:12">Genesis 14:12</button>) and eventual loss (<button class="ref" data-v="Genesis 19:30-38">Genesis 19:30-38</button>), winnowing him from Abraham’s blessed line.</div></div></div>
+    <div class="callout"><p><strong>Changed Promises:</strong> Cain’s forfeiture shifts the godly line to Seth (<button class="ref" data-v="Genesis 4:25">Genesis 4:25</button>). Abraham’s delay does not nullify the covenant but postpones its realization, requiring further obedience (<button class="ref" data-v="Genesis 15:7">Genesis 15:7</button>). Lot’s descendants, Moab and Ammon (<button class="ref" data-v="Genesis 19:37-38">Genesis 19:37-38</button>), receive no covenantal blessing, illustrating God’s redirection.</p></div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="The Law" data-title="National Promises and Individual Choices">
+  <div class="page">
+    <div class="kicker">Exodus</div>
+    <h2>National Promises and Individual Choices</h2>
+    <p>God promises to deliver Israel from Egypt and give them Canaan (<button class="ref" data-v="Exodus 6:8">Exodus 6:8</button>). The condition is covenantal obedience:</p>
+    <blockquote class="big-verse">Now therefore, <mark>if ye will obey my voice indeed, and keep my covenant</mark>, then ye shall be a peculiar treasure unto me above all people: for all the earth is mine:<cite>Exodus 19:5</cite></blockquote>
+    <div class="cols"><div class="panel believers"><h3>Moses’ Leadership</h3><p>God promises Moses the privilege of leading Israel into Canaan (<button class="ref" data-v="Exodus 3:8">Exodus 3:8</button>). The condition is unwavering obedience.</p></div><div class="panel believers"><h3>Pharaoh’s Opportunity</h3><p>God offers Pharaoh multiple chances to release Israel, with warnings of plagues (<button class="ref" data-v="Exodus 7:16">Exodus 7:16</button>).</p></div></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="The Law" data-title="Exodus: Choices and Outcomes">
+  <div class="page">
+    <div class="kicker">Exodus</div>
+    <h2>Exodus: Choices and Outcomes</h2>
+    <div class="steps"><div class="st"><span class="when">Pharaoh’s Defiance</span><div>Pharaoh’s ten refusals (Exodus 7:13-12:30) harden his heart (<button class="ref" data-v="Exodus 9:12">Exodus 9:12</button>). God’s longsuffering delays judgment, but Pharaoh’s choices lead to Egypt’s destruction (<button class="ref" data-v="Exodus 12:29-30">Exodus 12:29-30</button>), winnowing Egypt from God’s plan.</div></div><div class="st"><span class="when">Israel’s Murmuring</span><div>Israel’s unbelief at the Red Sea (<button class="ref" data-v="Exodus 14:11-12">Exodus 14:11-12</button>) and complaints (<button class="ref" data-v="Exodus 16:3">Exodus 16:3</button>) test God’s patience. His mercy sustains them, but sets the stage for later forfeiture.</div></div><div class="st"><span class="when">Moses’ Disobedience</span><div>Moses strikes the rock twice, disobeying God’s command to speak (<button class="ref" data-v="Numbers 20:11-12">Numbers 20:11-12</button>). He forfeits entering Canaan.</div></div></div>
+    <div class="callout"><p><strong>Changed Promises:</strong> Pharaoh’s rejection elevates Israel as God’s chosen nation. Israel’s failures delay the promise, foreshadowing Kadeshbarnea. Moses’ disqualification shifts leadership to Joshua (<button class="ref" data-v="Deuteronomy 34:9">Deuteronomy 34:9</button>), illustrating personal winnowing within God’s plan.</p></div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="The Law" data-title="Priesthood and National Holiness">
+  <div class="page">
+    <div class="kicker">Leviticus</div>
+    <h2>Priesthood and National Holiness</h2>
+    <p>God promises Israel a holy status if they obey His laws (<button class="ref" data-v="Leviticus 20:26">Leviticus 20:26</button>). The priesthood is conditionally offered to the firstborn, later specified to Levi (<button class="ref" data-v="Numbers 3:12-13">Numbers 3:12-13</button>), based on faithfulness.</p>
+    <div class="steps"><div class="st"><span class="when">Golden Calf</span><div>Israel’s idolatry (<button class="ref" data-v="Exodus 32:1-6">Exodus 32:1-6</button>) violates the covenant. The Levites’ loyalty (<button class="ref" data-v="Exodus 32:26-29">Exodus 32:26-29</button>) wins them the priesthood, winnowing them from other tribes.</div></div><div class="st"><span class="when">Nadab and Abihu</span><div>Aaron’s sons offer “strange fire” (<button class="ref" data-v="Leviticus 10:1-2">Leviticus 10:1-2</button>), disobeying God’s commands. Their death forfeits their priestly role, redirecting it to Eleazar and Ithamar.</div></div></div>
+    <div class="callout"><p><strong>Changed Promises:</strong> The priesthood shifts from the firstborn to Levi (<button class="ref" data-v="Numbers 3:12">Numbers 3:12</button>), a national winnowing. Nadab and Abihu’s forfeiture narrows the priesthood within Levi, illustrating God’s precision in judging works.</p></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="The Law" data-title="Forfeiture of the Promised Land">
+  <div class="page">
+    <div class="kicker">Numbers</div>
+    <h2>Forfeiture of the Promised Land</h2>
+    <p>God reaffirms the land promise (<button class="ref" data-v="Numbers 13:2">Numbers 13:2</button>), conditioned on trust and obedience. The spies’ mission tests Israel’s faith.</p>
+    <div class="steps"><div class="st"><span class="when">Kadeshbarnea Rebellion</span><div>Ten spies’ unbelief (<button class="ref" data-v="Numbers 13:31-33">Numbers 13:31-33</button>) incites rebellion (<button class="ref" data-v="Numbers 14:1-4">Numbers 14:1-4</button>). God declares:</div></div></div>
+    <blockquote class="scripture" style="font-style:italic">Because all those men which have seen my glory, and my miracles, which I did in Egypt and in the wilderness, and have tempted me now these ten times, and have not hearkened to my voice; Surely they shall not see the land which I sware unto their fathers, neither shall any of them that provoked me see it:<cite>Numbers 14:22-23</cite></blockquote>
+    <p>That generation dies in the wilderness (<button class="ref" data-v="Hebrews 3:17-19">Hebrews 3:17-19</button>).</p>
+    <div class="steps"><div class="st"><span class="when">Korah’s Rebellion</span><div>Korah challenges Moses’ leadership (<button class="ref" data-v="Numbers 16:3">Numbers 16:3</button>), seeking priestly authority. His destruction (<button class="ref" data-v="Numbers 16:31-35">Numbers 16:31-35</button>) winnows him from God’s plan.</div></div></div>
+    <div class="callout"><p><strong>Changed Promises:</strong> The land promise is delayed to the next generation under Joshua (<button class="ref" data-v="Numbers 14:31">Numbers 14:31</button>). Korah’s line is excluded from priesthood, reinforcing Levi’s role.</p></div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="The Law" data-title="Clear Choices and National Judgment">
+  <div class="page">
+    <div class="kicker">Deuteronomy</div>
+    <h2>Clear Choices and National Judgment</h2>
+    <p>God outlines blessings for obedience and curses for disobedience (<button class="ref" data-v="Deuteronomy 28:1-68">Deuteronomy 28:1-68</button>). <button class="ref" data-v="Deuteronomy 30:19">Deuteronomy 30:19</button> summarizes:</p>
+    <blockquote class="big-verse">I call heaven and earth to record this day against you, that <mark>I have set before you life and death, blessing and cursing: therefore choose life</mark>, that both thou and thy seed may live:<cite>Deuteronomy 30:19</cite></blockquote>
+    <div class="steps"><div class="st"><span class="when">Covenant Renewal</span><div>Israel recommits to obedience (<button class="ref" data-v="Deuteronomy 29:12-13">Deuteronomy 29:12-13</button>), but God foreknows their rebellion (<button class="ref" data-v="Deuteronomy 31:16">Deuteronomy 31:16</button>). Their later idolatry triggers curses (<button class="ref" data-v="2 Kings 17:7-23">2 Kings 17:7-23</button>).</div></div><div class="st"><span class="when">Moses’ Final Warning</span><div>Moses’ exclusion from Canaan (<button class="ref" data-v="Deuteronomy 34:4-5">Deuteronomy 34:4-5</button>) serves as a warning to Israel.</div></div></div>
+    <div class="callout"><p><strong>Changed Promises:</strong> The promise persists for future generations, but national disobedience leads to exile, redirecting blessings to a remnant (<button class="ref" data-v="Deuteronomy 30:1-5">Deuteronomy 30:1-5</button>).</p></div>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="The land and the kings" data-title="Fulfillment and Continued Conditions">
+  <div class="page">
+    <div class="kicker">Joshua</div>
+    <h2>Fulfillment and Continued Conditions</h2>
+    <p>The land promise is fulfilled. Continued possession requires obedience (<button class="ref" data-v="Joshua 23:6">Joshua 23:6</button>).</p>
+    <blockquote class="scripture" style="font-style:italic">And the <span class="lord">Lord</span> gave unto Israel all the land which he sware to give unto their fathers; and they possessed it, and dwelt therein. And the <span class="lord">Lord</span> gave them rest round about, according to all that he sware unto their fathers: and there stood not a man of all their enemies before them; the <span class="lord">Lord</span> delivered all their enemies into their hand. <mark>There failed not ought of any good thing which the <span class="lord">Lord</span> had spoken unto the house of Israel</mark>; <mark>all came to pass</mark>.<cite>Joshua 21:43-45</cite></blockquote>
+    <div class="steps"><div class="st"><span class="when">Achan’s Sin</span><div>Achan’s theft (<button class="ref" data-v="Joshua 7:1">Joshua 7:1</button>) violates God’s command, causing defeat at Ai (<button class="ref" data-v="Joshua 7:4-5">Joshua 7:4-5</button>). His death (<button class="ref" data-v="Joshua 7:25">Joshua 7:25</button>) restores blessing, winnowing him from Israel.</div></div><div class="st"><span class="when">Tribes’ Negligence</span><div>Failure to fully expel Canaanites (<button class="ref" data-v="Joshua 16:10">Joshua 16:10</button>) leads to future idolatry (<button class="ref" data-v="Judges 2:1-3">Judges 2:1-3</button>).</div></div></div>
+    <div class="callout"><p><strong>Changed Promises:</strong> The land is secured, but incomplete obedience plants seeds for future judgment, redirecting full blessing to a faithful remnant.</p></div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="The land and the kings" data-title="Cycles of Disobedience and Mercy">
+  <div class="page">
+    <div class="kicker">Judges</div>
+    <h2>Cycles of Disobedience and Mercy</h2>
+    <p>God promises deliverance if Israel repents (<button class="ref" data-v="Judges 2:16">Judges 2:16</button>). Obedience is the condition for peace.</p>
+    <div class="steps"><div class="st"><span class="when">Idolatry Cycles</span><div>Israel’s repeated idolatry (<button class="ref" data-v="Judges 2:11-13">Judges 2:11-13</button>) leads to oppression. God’s longsuffering raises judges (e.g., Gideon, <button class="ref" data-v="Judges 6:11-14">Judges 6:11-14</button>), but disobedience persists.</div></div><div class="st"><span class="when">Samson’s Failure</span><div>Samson’s promise as a deliverer (<button class="ref" data-v="Judges 13:5">Judges 13:5</button>) is conditional on Nazirite vows. His violations (<button class="ref" data-v="Judges 14:8-9">Judges 14:8-9</button>; <button class="ref" data-v="Judges 16:17">16:17</button>) lead to captivity, limiting his impact.</div></div></div>
+    <div class="callout"><p><strong>Changed Promises:</strong> Deliverance is temporary, redirecting God’s plan to a monarchy (<button class="ref" data-v="Judges 17:6">Judges 17:6</button>).</p></div>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="The land and the kings" data-title="Saul’s Forfeited Lineage">
+  <div class="page">
+    <div class="kicker">1 Samuel</div>
+    <h2>Saul’s Forfeited Lineage</h2>
+    <p>God promises Saul a lasting dynasty. The condition is obedience, with the potential for Saul’s line to include the Messiah.</p>
+    <blockquote class="big-verse">And Samuel said to Saul, Thou hast done foolishly: thou hast not kept the commandment of the <span class="lord">Lord</span> thy God, which he commanded thee: for now <mark>would the <span class="lord">Lord</span> have established thy kingdom upon Israel for ever</mark>.<cite>1 Samuel 13:13</cite></blockquote>
+    <div class="steps"><div class="st"><span class="when">Saul’s Disobedience</span><div>Saul’s unlawful sacrifice (<button class="ref" data-v="1 Samuel 13:8-13">1 Samuel 13:8-13</button>) and sparing Amalek (<button class="ref" data-v="1 Samuel 15:9">1 Samuel 15:9</button>) violate God’s commands. God rejects him (<button class="ref" data-v="1 Samuel 15:26">1 Samuel 15:26</button>). He forfeits not only a dynasty but the honor of being in Jesus’ lineage (<button class="ref" data-v="Matthew 1:1-6">Matthew 1:1-6</button>, tracing through David).</div></div><div class="st"><span class="when">Michal’s Barrenness</span><div>Saul’s daughter Michal, married to David (<button class="ref" data-v="1 Samuel 18:27">1 Samuel 18:27</button>), could have linked Saul’s line to the Messiah. Her disdain for David’s worship (<button class="ref" data-v="2 Samuel 6:16">2 Samuel 6:16</button>, <button class="ref" data-v="2 Samuel 6:23">23</button>) ends this opportunity.</div></div></div>
+    <div class="callout"><p><strong>Changed Promises:</strong> The Messianic lineage shifts to David (<button class="ref" data-v="1 Samuel 16:13">1 Samuel 16:13</button>), fulfilling the Davidic Covenant (<button class="ref" data-v="2 Samuel 7:16">2 Samuel 7:16</button>).</p></div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="The land and the kings" data-title="Saul and Michal">
+  <div class="page">
+    <div class="kicker">1 Samuel</div>
+    <h2>Saul and Michal</h2>
+    <blockquote class="scripture" style="font-style:italic">And Samuel said unto Saul, I will not return with thee: for thou hast rejected the word of the <span class="lord">Lord</span>, and the <span class="lord">Lord</span> hath rejected thee from being king over Israel.<cite>1 Samuel 15:26</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Therefore Michal the daughter of Saul had no child unto the day of her death.<cite>2 Samuel 6:23</cite></blockquote>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="The land and the kings" data-title="David’s Forfeited Temple">
+  <div class="page">
+    <div class="kicker">2 Samuel and 1 Chronicles</div>
+    <h2>David’s Forfeited Temple</h2>
+    <p>God permits David to plan the temple (<button class="ref" data-v="1 Chronicles 28:2-3">1 Chronicles 28:2-3</button>), conditioned on personal holiness. The Davidic Covenant promises an eternal throne (<button class="ref" data-v="2 Samuel 7:16">2 Samuel 7:16</button>), unconditional in Christ but conditional for immediate blessings.</p>
+    <div class="steps"><div class="st"><span class="when">David’s Bloodshed</span><div>David’s wars disqualify him (<button class="ref" data-v="1 Chronicles 22:8">1 Chronicles 22:8</button>). He forfeits building the temple.</div></div><div class="st"><span class="when">Adultery and Murder</span><div>David’s sin with Bathsheba (<button class="ref" data-v="2 Samuel 11:2-17">2 Samuel 11:2-17</button>) brings judgment (<button class="ref" data-v="2 Samuel 12:10-12">2 Samuel 12:10-12</button>), delaying kingdom stability.</div></div></div>
+    <div class="callout"><p><strong>Changed Promises:</strong> Solomon builds the temple (<button class="ref" data-v="1 Kings 6:1">1 Kings 6:1</button>), and the Messianic promise persists through David’s line (<button class="ref" data-v="Luke 1:32-33">Luke 1:32-33</button>).</p></div>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="The land and the kings" data-title="Jeroboam’s Lost Dynasty">
+  <div class="page">
+    <div class="kicker">1 Kings</div>
+    <h2>Jeroboam’s Lost Dynasty</h2>
+    <p>God promises Jeroboam a dynasty like David’s. The condition is obedience.</p>
+    <blockquote class="big-verse">And it shall be, if thou wilt hearken unto all that I command thee, and wilt walk in my ways, and do that is right in my sight, to keep my statutes and my commandments, as David my servant did; that I will be with thee, and <mark>build thee a sure house, as I built for David</mark>, and will give Israel unto thee.<cite>1 Kings 11:38</cite></blockquote>
+    <div class="steps"><div class="st"><span class="when">Jeroboam’s Idolatry</span><div>Jeroboam erects golden calves (<button class="ref" data-v="1 Kings 12:28-30">1 Kings 12:28-30</button>), leading Israel into sin. God declares (<button class="ref" data-v="1 Kings 14:10">1 Kings 14:10</button>), ending his line:</div></div></div>
+    <blockquote class="scripture" style="font-style:italic">Therefore, behold, <mark>I will bring evil upon the house of Jeroboam</mark>, and will cut off from Jeroboam him that pisseth against the wall, and him that is shut up and left in Israel, and will take away the remnant of the house of Jeroboam, as a man taketh away dung, till it be all gone.<cite>1 Kings 14:10</cite></blockquote>
+    <div class="callout"><p><strong>Changed Promises:</strong> The promise shifts to Judah’s line, preserving David’s dynasty (<button class="ref" data-v="1 Kings 11:36">1 Kings 11:36</button>).</p></div>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="The land and the kings" data-title="Northern Kingdom’s Exile">
+  <div class="page">
+    <div class="kicker">2 Kings</div>
+    <h2>Northern Kingdom’s Exile</h2>
+    <p>God promises protection if Israel obeys (<button class="ref" data-v="Deuteronomy 28:1-14">Deuteronomy 28:1-14</button>). Idolatry violates this (<button class="ref" data-v="2 Kings 17:7-8">2 Kings 17:7-8</button>).</p>
+    <div class="steps"><div class="st"><span class="when">Persistent Idolatry</span><div>The Northern Kingdom’s sins lead to exile (<button class="ref" data-v="2 Kings 17:23">2 Kings 17:23</button>). God’s longsuffering sends prophets, but rejection prevails.</div></div></div>
+    <div class="callout"><p><strong>Changed Promises:</strong> Blessings redirect to Judah, then to a remnant (<button class="ref" data-v="2 Kings 19:30-31">2 Kings 19:30-31</button>).</p></div>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="The prophets" data-title="Judgment of Nations by Works">
+  <div class="page">
+    <div class="kicker">Isaiah</div>
+    <h2>Judgment of Nations by Works</h2>
+    <p>God promises judgment on nations based on works (<button class="ref" data-v="Isaiah 13:11">Isaiah 13:11</button>). Israel’s restoration is conditional:</p>
+    <blockquote class="big-verse">If ye be willing and obedient, ye shall eat the good of the land:<cite>Isaiah 1:19</cite></blockquote>
+    <div class="steps"><div class="st"><span class="when">Babylon’s Pride</span><div>Babylon’s arrogance (<button class="ref" data-v="Isaiah 14:13-14">Isaiah 14:13-14</button>) leads to destruction (<button class="ref" data-v="Isaiah 14:22">Isaiah 14:22</button>).</div></div><div class="st"><span class="when">Israel’s Rebellion</span><div>Disobedience brings exile (<button class="ref" data-v="Isaiah 39:6-7">Isaiah 39:6-7</button>), but God’s mercy offers restoration (<button class="ref" data-v="Isaiah 40:1-2">Isaiah 40:1-2</button>).</div></div></div>
+    <div class="callout"><p><strong>Changed Promises:</strong> A remnant returns (<button class="ref" data-v="Isaiah 10:20-22">Isaiah 10:20-22</button>), foreshadowing the “new nation” (<button class="ref" data-v="1 Peter 2:9">1 Peter 2:9</button>).</p></div>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="The prophets" data-title="Reprobate Silver">
+  <div class="page">
+    <div class="kicker">Jeremiah</div>
+    <h2>Reprobate Silver</h2>
+    <p>God promises restoration if Judah repents:</p>
+    <blockquote class="big-verse">Thus saith the <span class="lord">Lord</span> of hosts, the God of Israel, Amend your ways and your doings, and I will cause you to dwell in this place.<cite>Jeremiah 7:3</cite></blockquote>
+    <div class="steps"><div class="st"><span class="when">Judah’s Rejection</span><div>Persistent idolatry (<button class="ref" data-v="Jeremiah 7:18">Jeremiah 7:18</button>) renders them “reprobate silver” (<button class="ref" data-v="Jeremiah 6:30">Jeremiah 6:30</button>).</div></div></div>
+    <blockquote class="scripture" style="font-style:italic">Reprobate silver shall men call them, because the <span class="lord">Lord</span> hath rejected them.<cite>Jeremiah 6:30</cite></blockquote>
+    <div class="callout"><p><strong>Changed Promises:</strong> A remnant is preserved (<button class="ref" data-v="Jeremiah 29:11">Jeremiah 29:11</button>), redirecting to the New Covenant (<button class="ref" data-v="Jeremiah 31:31-34">Jeremiah 31:31-34</button>).</p></div>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="The prophets" data-title="Forfeited Temple and Land">
+  <div class="page">
+    <div class="kicker">Ezekiel</div>
+    <h2>Forfeited Temple and Land</h2>
+    <p>Ezekiel 40-48 promises a restored temple and land, contingent on repentance. The land allotment is conditional (<button class="ref" data-v="Ezekiel 45:1-8">Ezekiel 45:1-8</button>).</p>
+    <blockquote class="scripture" style="font-style:italic">Thou son of man, shew the house to the house of Israel, <mark>that they may be ashamed of their iniquities</mark>: and let them measure the pattern. And <mark>if they be ashamed of all that they have done</mark>, shew them the form of the house, and the fashion thereof, and the goings out thereof, and the comings in thereof, and all the forms thereof, and all the ordinances thereof, and all the forms thereof, and all the laws thereof: and write it in their sight, that they may keep the whole form thereof, and all the ordinances thereof, and do them.<cite>Ezekiel 43:10-11</cite></blockquote>
+    <div class="steps"><div class="st"><span class="when">Israel’s Rebellion</span><div>Failure to repent (<button class="ref" data-v="Ezekiel 2:3-5">Ezekiel 2:3-5</button>) forfeits the vision, rendering it “what could have been.”</div></div><div class="st"><span class="when">Gog and Magog</span><div>Ezekiel 38-39’s battle, conditional on Israel’s obedience, shifts to <button class="ref" data-v="Revelation 20:7-9">Revelation 20:7-9</button> for the “new nation.”</div></div></div>
+    <div class="callout"><p><strong>Changed Promises:</strong> The temple’s role is fulfilled spiritually (<button class="ref" data-v="1 Corinthians 3:16">1 Corinthians 3:16</button>), and land promises redirect to believers (<button class="ref" data-v="Romans 11:17-24">Romans 11:17-24</button>).</p></div>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="The prophets" data-title="Edom’s Judgment by Works">
+  <div class="page">
+    <div class="kicker">Obadiah</div>
+    <h2>Edom’s Judgment by Works</h2>
+    <p>Edom faces judgment for violence:</p>
+    <blockquote class="big-verse">For thy violence against thy brother Jacob shame shall cover thee, and thou shalt be cut off for ever.<cite>Obadiah 10</cite></blockquote>
+    <div class="steps"><div class="st"><span class="when">Edom’s Pride</span><div>Pride and betrayal (<button class="ref" data-v="Obadiah 1:3-4">Obadiah 3-4</button>) lead to destruction.</div></div></div>
+    <div class="callout"><p><strong>Changed Promises:</strong> Israel’s remnant inherits Edom’s land (<button class="ref" data-v="Obadiah 1:17">Obadiah 17</button>), redirecting blessings.</p></div>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="The prophets" data-title="Nineveh’s Temporary Repentance">
+  <div class="page">
+    <div class="kicker">Jonah</div>
+    <h2>Nineveh’s Temporary Repentance</h2>
+    <p>God promises Nineveh’s destruction unless they repent:</p>
+    <blockquote class="big-verse">And Jonah began to enter into the city a day’s journey, and he cried, and said, Yet forty days, and Nineveh shall be overthrown.<cite>Jonah 3:4</cite></blockquote>
+    <div class="steps"><div class="st"><span class="when">Nineveh’s Repentance</span><div>They repent (<button class="ref" data-v="Jonah 3:5-10">Jonah 3:5-10</button>), sparing the city temporarily. Later relapse (<button class="ref" data-v="Nahum 3:1-7">Nahum 3:1-7</button>) brings judgment.</div></div></div>
+    <div class="callout"><p><strong>Changed Promises:</strong> God’s mercy delays judgment, but Nineveh’s works determine their fate.</p></div>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="The prophets" data-title="Conditional Eschatology">
+  <div class="page">
+    <div class="kicker">Zechariah</div>
+    <h2>Conditional Eschatology</h2>
+    <p><button class="ref" data-v="Zechariah 6:12-15">Zechariah 6:12-15</button> promises a kingdom “if ye will diligently obey.” <button class="ref" data-v="Zechariah 14:16-19">Zechariah 14:16-19</button> ties worship to blessing, with judgment for noncompliance.</p>
+    <blockquote class="scripture" style="font-style:italic">And they that are far off shall come and build in the temple of the <span class="lord">Lord</span>, and ye shall know that the <span class="lord">Lord</span> of hosts hath sent me unto you. And this shall come to pass, <mark>if ye will diligently obey</mark> the voice of the <span class="lord">Lord</span> your God.<cite>Zechariah 6:15</cite></blockquote>
+    <div class="steps"><div class="st"><span class="when">Israel’s Rejection</span><div>Failure to obey (<button class="ref" data-v="Zechariah 7:11-12">Zechariah 7:11-12</button>) forfeits these promises.</div></div></div>
+    <div class="callout"><p><strong>Changed Promises:</strong> Blessings redirect to the “new nation” (<button class="ref" data-v="Revelation 20:4-6">Revelation 20:4-6</button>).</p></div>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="The New Testament" data-title="Kingdom Offer Rejected">
+  <div class="page">
+    <div class="kicker">Matthew</div>
+    <h2>Kingdom Offer Rejected</h2>
+    <p>Jesus offers the kingdom, conditioned on repentance.</p>
+    <blockquote class="big-verse">From that time Jesus began to preach, and to say, Repent: for the kingdom of heaven is at hand.<cite>Matthew 4:17</cite></blockquote>
+    <div class="steps"><div class="st"><span class="when">Pharisees’ Blasphemy</span><div>Accusing Jesus of demonic power (<button class="ref" data-v="Matthew 12:24">Matthew 12:24</button>) hardens hearts.</div></div><div class="st"><span class="when">Crucifixion</span><div>The cry (<button class="ref" data-v="Matthew 27:25">Matthew 27:25</button>) invokes judgment, despite Jesus’ prayer (<button class="ref" data-v="Luke 23:34">Luke 23:34</button>).</div></div></div>
+    <blockquote class="scripture" style="font-style:italic">Then answered all the people, and said, His blood be on us, and on our children.<cite>Matthew 27:25</cite></blockquote>
+    <div class="callout"><p><strong>Changed Promises:</strong> The kingdom is given to a “new nation” (<button class="ref" data-v="Matthew 21:43">Matthew 21:43</button>).</p></div>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="slide" data-section="The New Testament" data-title="Final Rejection">
+  <div class="page">
+    <div class="kicker">Acts</div>
+    <h2>Final Rejection</h2>
+    <p>Peter offers restoration (<button class="ref" data-v="Acts 3:19-21">Acts 3:19-21</button>).</p>
+    <blockquote class="scripture" style="font-style:italic">Repent ye therefore, and be converted, that your sins may be blotted out, when the times of refreshing shall come from the presence of the Lord;<cite>Acts 3:19</cite></blockquote>
+    <div class="steps"><div class="st"><span class="when">Stephen’s Martyrdom</span><div>Israel’s rejection (<button class="ref" data-v="Acts 7:51">Acts 7:51</button>) finalizes their winnowing (<button class="ref" data-v="Acts 7:58">Acts 7:58</button>).</div></div></div>
+    <blockquote class="scripture" style="font-style:italic">Ye stiffnecked and uncircumcised in heart and ears, ye do always resist the Holy Ghost: as your fathers did, so do ye.<cite>Acts 7:51</cite></blockquote>
+    <div class="callout"><p><strong>Changed Promises:</strong> The gospel goes to the Gentiles (<button class="ref" data-v="Acts 13:46">Acts 13:46</button>), forming the “new nation” (<button class="ref" data-v="Romans 11:17-24">Romans 11:17-24</button>).</p></div>
+  </div>
+</section>
+
+<!-- 27 -->
+<section class="slide" data-section="The New Testament" data-title="New Covenant Nation">
+  <div class="page">
+    <div class="kicker">Romans</div>
+    <h2>New Covenant Nation</h2>
+    <p><button class="ref" data-v="Romans 11:17-24">Romans 11:17-24</button> describes Gentiles grafted into Israel’s promises, conditioned on faith (<button class="ref" data-v="Romans 11:20">Romans 11:20</button>).</p>
+    <div class="steps"><div class="st"><span class="when">Israel’s Unbelief</span><div>Their rejection (<button class="ref" data-v="Romans 11:15">Romans 11:15</button>) opens salvation to Gentiles.</div></div><div class="st"><span class="when">Gentile Faith</span><div>Acceptance by faith (<button class="ref" data-v="Romans 11:23">Romans 11:23</button>) secures blessings.</div></div></div>
+    <div class="callout"><p><strong>Changed Promises:</strong> The “new nation” inherits spiritual promises (<button class="ref" data-v="Galatians 3:28-29">Galatians 3:28-29</button>).</p></div>
+  </div>
+</section>
+
+<!-- 28 -->
+<section class="slide" data-section="The New Testament" data-title="Superior Covenant">
+  <div class="page">
+    <div class="kicker">Hebrews</div>
+    <h2>Superior Covenant</h2>
+    <p>The New Covenant replaces the old, unconditional in Christ’s priesthood (<button class="ref" data-v="Hebrews 7:24-25">Hebrews 7:24-25</button>).</p>
+    <blockquote class="big-verse">In that he saith, A new covenant, he hath made the first old. Now that which decayeth and waxeth old is ready to vanish away.<cite>Hebrews 8:13</cite></blockquote>
+    <div class="steps"><div class="st"><span class="when">Israel’s Failure</span><div>Rejection of Christ (<button class="ref" data-v="Hebrews 3:12">Hebrews 3:12</button>) forfeits OT promises.</div></div><div class="st"><span class="when">Believers’ Faith</span><div>Acceptance fulfills spiritual roles (<button class="ref" data-v="Hebrews 10:10">Hebrews 10:10</button>).</div></div></div>
+    <div class="callout"><p><strong>Changed Promises:</strong> Christ’s sacrifice ends OT ordinances, redirecting to believers (<button class="ref" data-v="1 Peter 2:5">1 Peter 2:5</button>).</p></div>
+  </div>
+</section>
+
+<!-- 29 -->
+<section class="slide" data-section="The New Testament" data-title="Millennial Fulfillment">
+  <div class="page">
+    <div class="kicker">Revelation</div>
+    <h2>Millennial Fulfillment</h2>
+    <p>A millennial kingdom is promised (<button class="ref" data-v="Revelation 20:4-6">Revelation 20:4-6</button>), unconditional for believers but conditional for nations (<button class="ref" data-v="Revelation 20:7-9">Revelation 20:7-9</button>).</p>
+    <div class="steps"><div class="st"><span class="when">Satan’s Rebellion</span><div>Nations’ rebellion (<button class="ref" data-v="Revelation 20:8">Revelation 20:8</button>) leads to judgment.</div></div><div class="st"><span class="when">Believers’ Faith</span><div>The faithful reign with Christ (<button class="ref" data-v="Revelation 20:4">Revelation 20:4</button>).</div></div></div>
+    <div class="callout"><p><strong>Changed Promises:</strong> The eternal state follows (<button class="ref" data-v="Revelation 21:1">Revelation 21:1</button>), fulfilling all promises in Christ.</p></div>
+  </div>
+</section>
+
+<!-- 30 -->
+<section class="slide" data-section="Conclusion" data-title="Forfeited and Redirected">
+  <div class="page">
+    <div class="kicker">The winnowing, book by book</div>
+    <h2>Forfeited and Redirected</h2>
+    <div class="tbl"><table><thead><tr><th>Forfeited</th><th>Redirected to</th></tr></thead><tbody><tr><td>Cain <button class="ref" data-v="Genesis 4:25">Genesis 4:25</button></td><td>The godly line through Seth</td></tr><tr><td>The firstborn <button class="ref" data-v="Numbers 3:12">Numbers 3:12</button></td><td>The priesthood to Levi</td></tr><tr><td>Nadab and Abihu <button class="ref" data-v="Leviticus 10:1-2">Leviticus 10:1-2</button></td><td>Eleazar and Ithamar</td></tr><tr><td>Moses <button class="ref" data-v="Deuteronomy 34:9">Deuteronomy 34:9</button></td><td>Leadership to Joshua</td></tr><tr><td>That generation <button class="ref" data-v="Numbers 14:31">Numbers 14:31</button></td><td>The next generation under Joshua</td></tr><tr><td>Saul <button class="ref" data-v="1 Samuel 16:13">1 Samuel 16:13</button></td><td>The Messianic lineage to David</td></tr><tr><td>David, building the temple <button class="ref" data-v="1 Kings 6:1">1 Kings 6:1</button></td><td>Solomon builds the temple</td></tr><tr><td>Jeroboam <button class="ref" data-v="1 Kings 11:36">1 Kings 11:36</button></td><td>Judah’s line, preserving David’s dynasty</td></tr><tr><td>The Northern Kingdom <button class="ref" data-v="2 Kings 19:30-31">2 Kings 19:30-31</button></td><td>Judah, then a remnant</td></tr><tr><td>Edom <button class="ref" data-v="Obadiah 1:17">Obadiah 17</button></td><td>Israel’s remnant inherits Edom’s land</td></tr><tr><td>Israel <button class="ref" data-v="Matthew 21:43">Matthew 21:43</button></td><td>The kingdom is given to a “new nation”</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- 31 -->
+<section class="slide" data-section="Conclusion" data-title="Conclusion">
+  <div class="page">
+    <h2>Conclusion</h2>
+    <p>This book-by-book analysis demonstrates God’s merciful winnowing, offering conditional promises, respecting free will, and adapting His plan when conditions are unmet.</p>
+    <p>From Cain’s rejection to Israel’s forfeiture of Ezekiel’s Temple, God’s love provides clear choices (<button class="ref" data-v="Deuteronomy 30:19">Deuteronomy 30:19</button>), repeated opportunities (<button class="ref" data-v="2 Peter 3:9">2 Peter 3:9</button>), and judgments based on faith for individuals and works for nations.</p>
+    <p>The fulfilled land promise (<button class="ref" data-v="Joshua 21:43-45">Joshua 21:43-45</button>) and redirected blessings to the “new nation” (<button class="ref" data-v="1 Peter 2:9">1 Peter 2:9</button>) refute alternative views, affirming God’s sovereignty (<button class="ref" data-v="Isaiah 46:10">Isaiah 46:10</button>) and desire for all to choose life.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-ot-prophecy-conditional" target="_blank" rel="noopener">OT Prophecy: God’s Grace in a Conditional Promise ↗</a><a class="ref lesson-link" href="../../studies/#lesson-doctrine-covenants-rightly-dividing" target="_blank" rel="noopener">Outline of the Covenants: Rightly Dividing ↗</a><a class="ref lesson-link" href="../../studies/#lesson-conditional-promises-rightly-dividing" target="_blank" rel="noopener">Conditional Promises and Covenant Shifts ↗</a><a class="ref lesson-link" href="../../studies/#lesson-post-trib-pre-wrath-timeline" target="_blank" rel="noopener">Post-Tribulation, Pre-Wrath Timeline ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 Chronicles 22:8":[[8, "But the word of the LORD came to me, saying, Thou hast shed blood abundantly, and hast made great wars: thou shalt not build an house unto my name, because thou hast shed much blood upon the earth in my sight."]],
+  "1 Chronicles 28:2-3":[[2, "Then David the king stood up upon his feet, and said, Hear me, my brethren, and my people: As for me, I had in mine heart to build an house of rest for the ark of the covenant of the LORD, and for the footstool of our God, and had made ready for the building:"], [3, "But God said unto me, Thou shalt not build an house for my name, because thou hast been a man of war, and hast shed blood."]],
+  "1 Corinthians 3:16":[[16, "Know ye not that ye are the temple of God, and that the Spirit of God dwelleth in you?"]],
+  "1 Kings 11:36":[[36, "And unto his son will I give one tribe, that David my servant may have a light alway before me in Jerusalem, the city which I have chosen me to put my name there."]],
+  "1 Kings 11:38":[[38, "And it shall be, if thou wilt hearken unto all that I command thee, and wilt walk in my ways, and do that is right in my sight, to keep my statutes and my commandments, as David my servant did; that I will be with thee, and build thee a sure house, as I built for David, and will give Israel unto thee."]],
+  "1 Kings 12:28-30":[[28, "Whereupon the king took counsel, and made two calves of gold, and said unto them, It is too much for you to go up to Jerusalem: behold thy gods, O Israel, which brought thee up out of the land of Egypt."], [29, "And he set the one in Bethel, and the other put he in Dan."], [30, "And this thing became a sin: for the people went to worship before the one, even unto Dan."]],
+  "1 Kings 14:10":[[10, "Therefore, behold, I will bring evil upon the house of Jeroboam, and will cut off from Jeroboam him that pisseth against the wall, and him that is shut up and left in Israel, and will take away the remnant of the house of Jeroboam, as a man taketh away dung, till it be all gone."]],
+  "1 Kings 6:1":[[1, "And it came to pass in the four hundred and eightieth year after the children of Israel were come out of the land of Egypt, in the fourth year of Solomon’s reign over Israel, in the month Zif, which is the second month, that he began to build the house of the LORD."]],
+  "1 Peter 2:5":[[5, "Ye also, as lively stones, are built up a spiritual house, an holy priesthood, to offer up spiritual sacrifices, acceptable to God by Jesus Christ."]],
+  "1 Peter 2:9":[[9, "But ye are a chosen generation, a royal priesthood, an holy nation, a peculiar people; that ye should shew forth the praises of him who hath called you out of darkness into his marvellous light:"]],
+  "1 Samuel 13:13":[[13, "And Samuel said to Saul, Thou hast done foolishly: thou hast not kept the commandment of the LORD thy God, which he commanded thee: for now would the LORD have established thy kingdom upon Israel for ever."]],
+  "1 Samuel 13:8-13":[[8, "And he tarried seven days, according to the set time that Samuel had appointed: but Samuel came not to Gilgal; and the people were scattered from him."], [9, "And Saul said, Bring hither a burnt offering to me, and peace offerings. And he offered the burnt offering."], [10, "And it came to pass, that as soon as he had made an end of offering the burnt offering, behold, Samuel came; and Saul went out to meet him, that he might salute him."], [11, "And Samuel said, What hast thou done? And Saul said, Because I saw that the people were scattered from me, and that thou camest not within the days appointed, and that the Philistines gathered themselves together at Michmash;"], [12, "Therefore said I, The Philistines will come down now upon me to Gilgal, and I have not made supplication unto the LORD: I forced myself therefore, and offered a burnt offering."], [13, "And Samuel said to Saul, Thou hast done foolishly: thou hast not kept the commandment of the LORD thy God, which he commanded thee: for now would the LORD have established thy kingdom upon Israel for ever."]],
+  "1 Samuel 15:26":[[26, "And Samuel said unto Saul, I will not return with thee: for thou hast rejected the word of the LORD, and the LORD hath rejected thee from being king over Israel."]],
+  "1 Samuel 15:9":[[9, "But Saul and the people spared Agag, and the best of the sheep, and of the oxen, and of the fatlings, and the lambs, and all that was good, and would not utterly destroy them: but every thing that was vile and refuse, that they destroyed utterly."]],
+  "1 Samuel 16:13":[[13, "Then Samuel took the horn of oil, and anointed him in the midst of his brethren: and the Spirit of the LORD came upon David from that day forward. So Samuel rose up, and went to Ramah."]],
+  "1 Samuel 18:27":[[27, "Wherefore David arose and went, he and his men, and slew of the Philistines two hundred men; and David brought their foreskins, and they gave them in full tale to the king, that he might be the king’s son in law. And Saul gave him Michal his daughter to wife."]],
+  "2 Kings 17:23":[[23, "Until the LORD removed Israel out of his sight, as he had said by all his servants the prophets. So was Israel carried away out of their own land to Assyria unto this day."]],
+  "2 Kings 17:7-23":[[7, "For so it was, that the children of Israel had sinned against the LORD their God, which had brought them up out of the land of Egypt, from under the hand of Pharaoh king of Egypt, and had feared other gods,"], [8, "And walked in the statutes of the heathen, whom the LORD cast out from before the children of Israel, and of the kings of Israel, which they had made."], [9, "And the children of Israel did secretly those things that were not right against the LORD their God, and they built them high places in all their cities, from the tower of the watchmen to the fenced city."], [10, "And they set them up images and groves in every high hill, and under every green tree:"], [11, "And there they burnt incense in all the high places, as did the heathen whom the LORD carried away before them; and wrought wicked things to provoke the LORD to anger:"], [12, "For they served idols, whereof the LORD had said unto them, Ye shall not do this thing."], [13, "Yet the LORD testified against Israel, and against Judah, by all the prophets, and by all the seers, saying, Turn ye from your evil ways, and keep my commandments and my statutes, according to all the law which I commanded your fathers, and which I sent to you by my servants the prophets."], [14, "Notwithstanding they would not hear, but hardened their necks, like to the neck of their fathers, that did not believe in the LORD their God."], [15, "And they rejected his statutes, and his covenant that he made with their fathers, and his testimonies which he testified against them; and they followed vanity, and became vain, and went after the heathen that were round about them, concerning whom the LORD had charged them, that they should not do like them."], [16, "And they left all the commandments of the LORD their God, and made them molten images, even two calves, and made a grove, and worshipped all the host of heaven, and served Baal."], [17, "And they caused their sons and their daughters to pass through the fire, and used divination and enchantments, and sold themselves to do evil in the sight of the LORD, to provoke him to anger."], [18, "Therefore the LORD was very angry with Israel, and removed them out of his sight: there was none left but the tribe of Judah only."], [19, "Also Judah kept not the commandments of the LORD their God, but walked in the statutes of Israel which they made."], [20, "And the LORD rejected all the seed of Israel, and afflicted them, and delivered them into the hand of spoilers, until he had cast them out of his sight."], [21, "For he rent Israel from the house of David; and they made Jeroboam the son of Nebat king: and Jeroboam drave Israel from following the LORD, and made them sin a great sin."], [22, "For the children of Israel walked in all the sins of Jeroboam which he did; they departed not from them;"], [23, "Until the LORD removed Israel out of his sight, as he had said by all his servants the prophets. So was Israel carried away out of their own land to Assyria unto this day."]],
+  "2 Kings 17:7-8":[[7, "For so it was, that the children of Israel had sinned against the LORD their God, which had brought them up out of the land of Egypt, from under the hand of Pharaoh king of Egypt, and had feared other gods,"], [8, "And walked in the statutes of the heathen, whom the LORD cast out from before the children of Israel, and of the kings of Israel, which they had made."]],
+  "2 Kings 19:30-31":[[30, "And the remnant that is escaped of the house of Judah shall yet again take root downward, and bear fruit upward."], [31, "For out of Jerusalem shall go forth a remnant, and they that escape out of mount Zion: the zeal of the LORD of hosts shall do this."]],
+  "2 Peter 3:9":[[9, "The Lord is not slack concerning his promise, as some men count slackness; but is longsuffering to us-ward, not willing that any should perish, but that all should come to repentance."]],
+  "2 Samuel 11:2-17":[[2, "And it came to pass in an eveningtide, that David arose from off his bed, and walked upon the roof of the king’s house: and from the roof he saw a woman washing herself; and the woman was very beautiful to look upon."], [3, "And David sent and enquired after the woman. And one said, Is not this Bathsheba, the daughter of Eliam, the wife of Uriah the Hittite?"], [4, "And David sent messengers, and took her; and she came in unto him, and he lay with her; for she was purified from her uncleanness: and she returned unto her house."], [5, "And the woman conceived, and sent and told David, and said, I am with child."], [6, "And David sent to Joab, saying, Send me Uriah the Hittite. And Joab sent Uriah to David."], [7, "And when Uriah was come unto him, David demanded of him how Joab did, and how the people did, and how the war prospered."], [8, "And David said to Uriah, Go down to thy house, and wash thy feet. And Uriah departed out of the king’s house, and there followed him a mess of meat from the king."], [9, "But Uriah slept at the door of the king’s house with all the servants of his lord, and went not down to his house."], [10, "And when they had told David, saying, Uriah went not down unto his house, David said unto Uriah, Camest thou not from thy journey? why then didst thou not go down unto thine house?"], [11, "And Uriah said unto David, The ark, and Israel, and Judah, abide in tents; and my lord Joab, and the servants of my lord, are encamped in the open fields; shall I then go into mine house, to eat and to drink, and to lie with my wife? as thou livest, and as thy soul liveth, I will not do this thing."], [12, "And David said to Uriah, Tarry here to day also, and to morrow I will let thee depart. So Uriah abode in Jerusalem that day, and the morrow."], [13, "And when David had called him, he did eat and drink before him; and he made him drunk: and at even he went out to lie on his bed with the servants of his lord, but went not down to his house."], [14, "And it came to pass in the morning, that David wrote a letter to Joab, and sent it by the hand of Uriah."], [15, "And he wrote in the letter, saying, Set ye Uriah in the forefront of the hottest battle, and retire ye from him, that he may be smitten, and die."], [16, "And it came to pass, when Joab observed the city, that he assigned Uriah unto a place where he knew that valiant men were."], [17, "And the men of the city went out, and fought with Joab: and there fell some of the people of the servants of David; and Uriah the Hittite died also."]],
+  "2 Samuel 12:10-12":[[10, "Now therefore the sword shall never depart from thine house; because thou hast despised me, and hast taken the wife of Uriah the Hittite to be thy wife."], [11, "Thus saith the LORD, Behold, I will raise up evil against thee out of thine own house, and I will take thy wives before thine eyes, and give them unto thy neighbour, and he shall lie with thy wives in the sight of this sun."], [12, "For thou didst it secretly: but I will do this thing before all Israel, and before the sun."]],
+  "2 Samuel 6:16":[[16, "And as the ark of the LORD came into the city of David, Michal Saul’s daughter looked through a window, and saw king David leaping and dancing before the LORD; and she despised him in her heart."]],
+  "2 Samuel 6:23":[[23, "Therefore Michal the daughter of Saul had no child unto the day of her death."]],
+  "2 Samuel 7:16":[[16, "And thine house and thy kingdom shall be established for ever before thee: thy throne shall be established for ever."]],
+  "Acts 13:46":[[46, "Then Paul and Barnabas waxed bold, and said, It was necessary that the word of God should first have been spoken to you: but seeing ye put it from you, and judge yourselves unworthy of everlasting life, lo, we turn to the Gentiles."]],
+  "Acts 3:19-21":[[19, "Repent ye therefore, and be converted, that your sins may be blotted out, when the times of refreshing shall come from the presence of the Lord;"], [20, "And he shall send Jesus Christ, which before was preached unto you:"], [21, "Whom the heaven must receive until the times of restitution of all things, which God hath spoken by the mouth of all his holy prophets since the world began."]],
+  "Acts 7:51":[[51, "Ye stiffnecked and uncircumcised in heart and ears, ye do always resist the Holy Ghost: as your fathers did, so do ye."]],
+  "Acts 7:58":[[58, "And cast him out of the city, and stoned him: and the witnesses laid down their clothes at a young man’s feet, whose name was Saul."]],
+  "Deuteronomy 28:1-14":[[1, "And it shall come to pass, if thou shalt hearken diligently unto the voice of the LORD thy God, to observe and to do all his commandments which I command thee this day, that the LORD thy God will set thee on high above all nations of the earth:"], [2, "And all these blessings shall come on thee, and overtake thee, if thou shalt hearken unto the voice of the LORD thy God."], [3, "Blessed shalt thou be in the city, and blessed shalt thou be in the field."], [4, "Blessed shall be the fruit of thy body, and the fruit of thy ground, and the fruit of thy cattle, the increase of thy kine, and the flocks of thy sheep."], [5, "Blessed shall be thy basket and thy store."], [6, "Blessed shalt thou be when thou comest in, and blessed shalt thou be when thou goest out."], [7, "The LORD shall cause thine enemies that rise up against thee to be smitten before thy face: they shall come out against thee one way, and flee before thee seven ways."], [8, "The LORD shall command the blessing upon thee in thy storehouses, and in all that thou settest thine hand unto; and he shall bless thee in the land which the LORD thy God giveth thee."], [9, "The LORD shall establish thee an holy people unto himself, as he hath sworn unto thee, if thou shalt keep the commandments of the LORD thy God, and walk in his ways."], [10, "And all people of the earth shall see that thou art called by the name of the LORD; and they shall be afraid of thee."], [11, "And the LORD shall make thee plenteous in goods, in the fruit of thy body, and in the fruit of thy cattle, and in the fruit of thy ground, in the land which the LORD sware unto thy fathers to give thee."], [12, "The LORD shall open unto thee his good treasure, the heaven to give the rain unto thy land in his season, and to bless all the work of thine hand: and thou shalt lend unto many nations, and thou shalt not borrow."], [13, "And the LORD shall make thee the head, and not the tail; and thou shalt be above only, and thou shalt not be beneath; if that thou hearken unto the commandments of the LORD thy God, which I command thee this day, to observe and to do them:"], [14, "And thou shalt not go aside from any of the words which I command thee this day, to the right hand, or to the left, to go after other gods to serve them."]],
+  "Deuteronomy 28:1-68":[[1, "And it shall come to pass, if thou shalt hearken diligently unto the voice of the LORD thy God, to observe and to do all his commandments which I command thee this day, that the LORD thy God will set thee on high above all nations of the earth:"], [2, "And all these blessings shall come on thee, and overtake thee, if thou shalt hearken unto the voice of the LORD thy God."], [3, "Blessed shalt thou be in the city, and blessed shalt thou be in the field."], [4, "Blessed shall be the fruit of thy body, and the fruit of thy ground, and the fruit of thy cattle, the increase of thy kine, and the flocks of thy sheep."], [5, "Blessed shall be thy basket and thy store."], [6, "Blessed shalt thou be when thou comest in, and blessed shalt thou be when thou goest out."], [7, "The LORD shall cause thine enemies that rise up against thee to be smitten before thy face: they shall come out against thee one way, and flee before thee seven ways."], [8, "The LORD shall command the blessing upon thee in thy storehouses, and in all that thou settest thine hand unto; and he shall bless thee in the land which the LORD thy God giveth thee."], [9, "The LORD shall establish thee an holy people unto himself, as he hath sworn unto thee, if thou shalt keep the commandments of the LORD thy God, and walk in his ways."], [10, "And all people of the earth shall see that thou art called by the name of the LORD; and they shall be afraid of thee."], [11, "And the LORD shall make thee plenteous in goods, in the fruit of thy body, and in the fruit of thy cattle, and in the fruit of thy ground, in the land which the LORD sware unto thy fathers to give thee."], [12, "The LORD shall open unto thee his good treasure, the heaven to give the rain unto thy land in his season, and to bless all the work of thine hand: and thou shalt lend unto many nations, and thou shalt not borrow."], [13, "And the LORD shall make thee the head, and not the tail; and thou shalt be above only, and thou shalt not be beneath; if that thou hearken unto the commandments of the LORD thy God, which I command thee this day, to observe and to do them:"], [14, "And thou shalt not go aside from any of the words which I command thee this day, to the right hand, or to the left, to go after other gods to serve them."], [15, "But it shall come to pass, if thou wilt not hearken unto the voice of the LORD thy God, to observe to do all his commandments and his statutes which I command thee this day; that all these curses shall come upon thee, and overtake thee:"], [16, "Cursed shalt thou be in the city, and cursed shalt thou be in the field."], [17, "Cursed shall be thy basket and thy store."], [18, "Cursed shall be the fruit of thy body, and the fruit of thy land, the increase of thy kine, and the flocks of thy sheep."], [19, "Cursed shalt thou be when thou comest in, and cursed shalt thou be when thou goest out."], [20, "The LORD shall send upon thee cursing, vexation, and rebuke, in all that thou settest thine hand unto for to do, until thou be destroyed, and until thou perish quickly; because of the wickedness of thy doings, whereby thou hast forsaken me."], [21, "The LORD shall make the pestilence cleave unto thee, until he have consumed thee from off the land, whither thou goest to possess it."], [22, "The LORD shall smite thee with a consumption, and with a fever, and with an inflammation, and with an extreme burning, and with the sword, and with blasting, and with mildew; and they shall pursue thee until thou perish."], [23, "And thy heaven that is over thy head shall be brass, and the earth that is under thee shall be iron."], [24, "The LORD shall make the rain of thy land powder and dust: from heaven shall it come down upon thee, until thou be destroyed."], [25, "The LORD shall cause thee to be smitten before thine enemies: thou shalt go out one way against them, and flee seven ways before them: and shalt be removed into all the kingdoms of the earth."], [26, "And thy carcase shall be meat unto all fowls of the air, and unto the beasts of the earth, and no man shall fray them away."], [27, "The LORD will smite thee with the botch of Egypt, and with the emerods, and with the scab, and with the itch, whereof thou canst not be healed."], [28, "The LORD shall smite thee with madness, and blindness, and astonishment of heart:"], [29, "And thou shalt grope at noonday, as the blind gropeth in darkness, and thou shalt not prosper in thy ways: and thou shalt be only oppressed and spoiled evermore, and no man shall save thee."], [30, "Thou shalt betroth a wife, and another man shall lie with her: thou shalt build an house, and thou shalt not dwell therein: thou shalt plant a vineyard, and shalt not gather the grapes thereof."], [31, "Thine ox shall be slain before thine eyes, and thou shalt not eat thereof: thine ass shall be violently taken away from before thy face, and shall not be restored to thee: thy sheep shall be given unto thine enemies, and thou shalt have none to rescue them."], [32, "Thy sons and thy daughters shall be given unto another people, and thine eyes shall look, and fail with longing for them all the day long: and there shall be no might in thine hand:"], [33, "The fruit of thy land, and all thy labours, shall a nation which thou knowest not eat up; and thou shalt be only oppressed and crushed alway:"], [34, "So that thou shalt be mad for the sight of thine eyes which thou shalt see."], [35, "The LORD shall smite thee in the knees, and in the legs, with a sore botch that cannot be healed, from the sole of thy foot unto the top of thy head."], [36, "The LORD shall bring thee, and thy king which thou shalt set over thee, unto a nation which neither thou nor thy fathers have known; and there shalt thou serve other gods, wood and stone."], [37, "And thou shalt become an astonishment, a proverb, and a byword, among all nations whither the LORD shall lead thee."], [38, "Thou shalt carry much seed out into the field, and shalt gather but little in; for the locust shall consume it."], [39, "Thou shalt plant vineyards, and dress them, but shalt neither drink of the wine, nor gather the grapes; for the worms shall eat them."], [40, "Thou shalt have olive trees throughout all thy coasts, but thou shalt not anoint thyself with the oil; for thine olive shall cast his fruit."], [41, "Thou shalt beget sons and daughters, but thou shalt not enjoy them; for they shall go into captivity."], [42, "All thy trees and fruit of thy land shall the locust consume."], [43, "The stranger that is within thee shall get up above thee very high; and thou shalt come down very low."], [44, "He shall lend to thee, and thou shalt not lend to him: he shall be the head, and thou shalt be the tail."], [45, "Moreover all these curses shall come upon thee, and shall pursue thee, and overtake thee, till thou be destroyed; because thou hearkenedst not unto the voice of the LORD thy God, to keep his commandments and his statutes which he commanded thee:"], [46, "And they shall be upon thee for a sign and for a wonder, and upon thy seed for ever."], [47, "Because thou servedst not the LORD thy God with joyfulness, and with gladness of heart, for the abundance of all things;"], [48, "Therefore shalt thou serve thine enemies which the LORD shall send against thee, in hunger, and in thirst, and in nakedness, and in want of all things: and he shall put a yoke of iron upon thy neck, until he have destroyed thee."], [49, "The LORD shall bring a nation against thee from far, from the end of the earth, as swift as the eagle flieth; a nation whose tongue thou shalt not understand;"], [50, "A nation of fierce countenance, which shall not regard the person of the old, nor shew favour to the young:"], [51, "And he shall eat the fruit of thy cattle, and the fruit of thy land, until thou be destroyed: which also shall not leave thee either corn, wine, or oil, or the increase of thy kine, or flocks of thy sheep, until he have destroyed thee."], [52, "And he shall besiege thee in all thy gates, until thy high and fenced walls come down, wherein thou trustedst, throughout all thy land: and he shall besiege thee in all thy gates throughout all thy land, which the LORD thy God hath given thee."], [53, "And thou shalt eat the fruit of thine own body, the flesh of thy sons and of thy daughters, which the LORD thy God hath given thee, in the siege, and in the straitness, wherewith thine enemies shall distress thee:"], [54, "So that the man that is tender among you, and very delicate, his eye shall be evil toward his brother, and toward the wife of his bosom, and toward the remnant of his children which he shall leave:"], [55, "So that he will not give to any of them of the flesh of his children whom he shall eat: because he hath nothing left him in the siege, and in the straitness, wherewith thine enemies shall distress thee in all thy gates."], [56, "The tender and delicate woman among you, which would not adventure to set the sole of her foot upon the ground for delicateness and tenderness, her eye shall be evil toward the husband of her bosom, and toward her son, and toward her daughter,"], [57, "And toward her young one that cometh out from between her feet, and toward her children which she shall bear: for she shall eat them for want of all things secretly in the siege and straitness, wherewith thine enemy shall distress thee in thy gates."], [58, "If thou wilt not observe to do all the words of this law that are written in this book, that thou mayest fear this glorious and fearful name, THE LORD THY GOD;"], [59, "Then the LORD will make thy plagues wonderful, and the plagues of thy seed, even great plagues, and of long continuance, and sore sicknesses, and of long continuance."], [60, "Moreover he will bring upon thee all the diseases of Egypt, which thou wast afraid of; and they shall cleave unto thee."], [61, "Also every sickness, and every plague, which is not written in the book of this law, them will the LORD bring upon thee, until thou be destroyed."], [62, "And ye shall be left few in number, whereas ye were as the stars of heaven for multitude; because thou wouldest not obey the voice of the LORD thy God."], [63, "And it shall come to pass, that as the LORD rejoiced over you to do you good, and to multiply you; so the LORD will rejoice over you to destroy you, and to bring you to nought; and ye shall be plucked from off the land whither thou goest to possess it."], [64, "And the LORD shall scatter thee among all people, from the one end of the earth even unto the other; and there thou shalt serve other gods, which neither thou nor thy fathers have known, even wood and stone."], [65, "And among these nations shalt thou find no ease, neither shall the sole of thy foot have rest: but the LORD shall give thee there a trembling heart, and failing of eyes, and sorrow of mind:"], [66, "And thy life shall hang in doubt before thee; and thou shalt fear day and night, and shalt have none assurance of thy life:"], [67, "In the morning thou shalt say, Would God it were even! and at even thou shalt say, Would God it were morning! for the fear of thine heart wherewith thou shalt fear, and for the sight of thine eyes which thou shalt see."], [68, "And the LORD shall bring thee into Egypt again with ships, by the way whereof I spake unto thee, Thou shalt see it no more again: and there ye shall be sold unto your enemies for bondmen and bondwomen, and no man shall buy you."]],
+  "Deuteronomy 29:12-13":[[12, "That thou shouldest enter into covenant with the LORD thy God, and into his oath, which the LORD thy God maketh with thee this day:"], [13, "That he may establish thee to day for a people unto himself, and that he may be unto thee a God, as he hath said unto thee, and as he hath sworn unto thy fathers, to Abraham, to Isaac, and to Jacob."]],
+  "Deuteronomy 30:1-5":[[1, "And it shall come to pass, when all these things are come upon thee, the blessing and the curse, which I have set before thee, and thou shalt call them to mind among all the nations, whither the LORD thy God hath driven thee,"], [2, "And shalt return unto the LORD thy God, and shalt obey his voice according to all that I command thee this day, thou and thy children, with all thine heart, and with all thy soul;"], [3, "That then the LORD thy God will turn thy captivity, and have compassion upon thee, and will return and gather thee from all the nations, whither the LORD thy God hath scattered thee."], [4, "If any of thine be driven out unto the outmost parts of heaven, from thence will the LORD thy God gather thee, and from thence will he fetch thee:"], [5, "And the LORD thy God will bring thee into the land which thy fathers possessed, and thou shalt possess it; and he will do thee good, and multiply thee above thy fathers."]],
+  "Deuteronomy 30:19":[[19, "I call heaven and earth to record this day against you, that I have set before you life and death, blessing and cursing: therefore choose life, that both thou and thy seed may live:"]],
+  "Deuteronomy 31:16":[[16, "And the LORD said unto Moses, Behold, thou shalt sleep with thy fathers; and this people will rise up, and go a whoring after the gods of the strangers of the land, whither they go to be among them, and will forsake me, and break my covenant which I have made with them."]],
+  "Deuteronomy 34:4-5":[[4, "And the LORD said unto him, This is the land which I sware unto Abraham, unto Isaac, and unto Jacob, saying, I will give it unto thy seed: I have caused thee to see it with thine eyes, but thou shalt not go over thither."], [5, "So Moses the servant of the LORD died there in the land of Moab, according to the word of the LORD."]],
+  "Deuteronomy 34:9":[[9, "And Joshua the son of Nun was full of the spirit of wisdom; for Moses had laid his hands upon him: and the children of Israel hearkened unto him, and did as the LORD commanded Moses."]],
+  "Exodus 12:29-30":[[29, "And it came to pass, that at midnight the LORD smote all the firstborn in the land of Egypt, from the firstborn of Pharaoh that sat on his throne unto the firstborn of the captive that was in the dungeon; and all the firstborn of cattle."], [30, "And Pharaoh rose up in the night, he, and all his servants, and all the Egyptians; and there was a great cry in Egypt; for there was not a house where there was not one dead."]],
+  "Exodus 14:11-12":[[11, "And they said unto Moses, Because there were no graves in Egypt, hast thou taken us away to die in the wilderness? wherefore hast thou dealt thus with us, to carry us forth out of Egypt?"], [12, "Is not this the word that we did tell thee in Egypt, saying, Let us alone, that we may serve the Egyptians? For it had been better for us to serve the Egyptians, than that we should die in the wilderness."]],
+  "Exodus 16:3":[[3, "And the children of Israel said unto them, Would to God we had died by the hand of the LORD in the land of Egypt, when we sat by the flesh pots, and when we did eat bread to the full; for ye have brought us forth into this wilderness, to kill this whole assembly with hunger."]],
+  "Exodus 19:5":[[5, "Now therefore, if ye will obey my voice indeed, and keep my covenant, then ye shall be a peculiar treasure unto me above all people: for all the earth is mine:"]],
+  "Exodus 32:1-6":[[1, "And when the people saw that Moses delayed to come down out of the mount, the people gathered themselves together unto Aaron, and said unto him, Up, make us gods, which shall go before us; for as for this Moses, the man that brought us up out of the land of Egypt, we wot not what is become of him."], [2, "And Aaron said unto them, Break off the golden earrings, which are in the ears of your wives, of your sons, and of your daughters, and bring them unto me."], [3, "And all the people brake off the golden earrings which were in their ears, and brought them unto Aaron."], [4, "And he received them at their hand, and fashioned it with a graving tool, after he had made it a molten calf: and they said, These be thy gods, O Israel, which brought thee up out of the land of Egypt."], [5, "And when Aaron saw it, he built an altar before it; and Aaron made proclamation, and said, To morrow is a feast to the LORD."], [6, "And they rose up early on the morrow, and offered burnt offerings, and brought peace offerings; and the people sat down to eat and to drink, and rose up to play."]],
+  "Exodus 32:26-29":[[26, "Then Moses stood in the gate of the camp, and said, Who is on the LORD’s side? let him come unto me. And all the sons of Levi gathered themselves together unto him."], [27, "And he said unto them, Thus saith the LORD God of Israel, Put every man his sword by his side, and go in and out from gate to gate throughout the camp, and slay every man his brother, and every man his companion, and every man his neighbour."], [28, "And the children of Levi did according to the word of Moses: and there fell of the people that day about three thousand men."], [29, "For Moses had said, Consecrate yourselves today to the LORD, even every man upon his son, and upon his brother; that he may bestow upon you a blessing this day."]],
+  "Exodus 3:8":[[8, "And I am come down to deliver them out of the hand of the Egyptians, and to bring them up out of that land unto a good land and a large, unto a land flowing with milk and honey; unto the place of the Canaanites, and the Hittites, and the Amorites, and the Perizzites, and the Hivites, and the Jebusites."]],
+  "Exodus 6:8":[[8, "And I will bring you in unto the land, concerning the which I did swear to give it to Abraham, to Isaac, and to Jacob; and I will give it you for an heritage: I am the LORD."]],
+  "Exodus 7:16":[[16, "And thou shalt say unto him, The LORD God of the Hebrews hath sent me unto thee, saying, Let my people go, that they may serve me in the wilderness: and, behold, hitherto thou wouldest not hear."]],
+  "Exodus 9:12":[[12, "And the LORD hardened the heart of Pharaoh, and he hearkened not unto them; as the LORD had spoken unto Moses."]],
+  "Ezekiel 2:3-5":[[3, "And he said unto me, Son of man, I send thee to the children of Israel, to a rebellious nation that hath rebelled against me: they and their fathers have transgressed against me, even unto this very day."], [4, "For they are impudent children and stiffhearted. I do send thee unto them; and thou shalt say unto them, Thus saith the Lord GOD."], [5, "And they, whether they will hear, or whether they will forbear, (for they are a rebellious house,) yet shall know that there hath been a prophet among them."]],
+  "Ezekiel 43:10-11":[[10, "Thou son of man, shew the house to the house of Israel, that they may be ashamed of their iniquities: and let them measure the pattern."], [11, "And if they be ashamed of all that they have done, shew them the form of the house, and the fashion thereof, and the goings out thereof, and the comings in thereof, and all the forms thereof, and all the ordinances thereof, and all the forms thereof, and all the laws thereof: and write it in their sight, that they may keep the whole form thereof, and all the ordinances thereof, and do them."]],
+  "Ezekiel 45:1-8":[[1, "Moreover, when ye shall divide by lot the land for inheritance, ye shall offer an oblation unto the LORD, an holy portion of the land: the length shall be the length of five and twenty thousand reeds, and the breadth shall be ten thousand. This shall be holy in all the borders thereof round about."], [2, "Of this there shall be for the sanctuary five hundred in length, with five hundred in breadth, square round about; and fifty cubits round about for the suburbs thereof."], [3, "And of this measure shalt thou measure the length of five and twenty thousand, and the breadth of ten thousand: and in it shall be the sanctuary and the most holy place."], [4, "The holy portion of the land shall be for the priests the ministers of the sanctuary, which shall come near to minister unto the LORD: and it shall be a place for their houses, and an holy place for the sanctuary."], [5, "And the five and twenty thousand of length, and the ten thousand of breadth, shall also the Levites, the ministers of the house, have for themselves, for a possession for twenty chambers."], [6, "And ye shall appoint the possession of the city five thousand broad, and five and twenty thousand long, over against the oblation of the holy portion: it shall be for the whole house of Israel."], [7, "And a portion shall be for the prince on the one side and on the other side of the oblation of the holy portion, and of the possession of the city, before the oblation of the holy portion, and before the possession of the city, from the west side westward, and from the east side eastward: and the length shall be over against one of the portions, from the west border unto the east border."], [8, "In the land shall be his possession in Israel: and my princes shall no more oppress my people; and the rest of the land shall they give to the house of Israel according to their tribes."]],
+  "Galatians 3:16":[[16, "Now to Abraham and his seed were the promises made. He saith not, And to seeds, as of many; but as of one, And to thy seed, which is Christ."]],
+  "Galatians 3:28-29":[[28, "There is neither Jew nor Greek, there is neither bond nor free, there is neither male nor female: for ye are all one in Christ Jesus."], [29, "And if ye be Christ’s, then are ye Abraham’s seed, and heirs according to the promise."]],
+  "Genesis 12:10-13":[[10, "And there was a famine in the land: and Abram went down into Egypt to sojourn there; for the famine was grievous in the land."], [11, "And it came to pass, when he was come near to enter into Egypt, that he said unto Sarai his wife, Behold now, I know that thou art a fair woman to look upon:"], [12, "Therefore it shall come to pass, when the Egyptians shall see thee, that they shall say, This is his wife: and they will kill me, but they will save thee alive."], [13, "Say, I pray thee, thou art my sister: that it may be well with me for thy sake; and my soul shall live because of thee."]],
+  "Genesis 12:17":[[17, "And the LORD plagued Pharaoh and his house with great plagues because of Sarai Abram’s wife."]],
+  "Genesis 12:2-3":[[2, "And I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing:"], [3, "And I will bless them that bless thee, and curse him that curseth thee: and in thee shall all families of the earth be blessed."]],
+  "Genesis 13:10-11":[[10, "And Lot lifted up his eyes, and beheld all the plain of Jordan, that it was well watered every where, before the LORD destroyed Sodom and Gomorrah, even as the garden of the LORD, like the land of Egypt, as thou comest unto Zoar."], [11, "Then Lot chose him all the plain of Jordan; and Lot journeyed east: and they separated themselves the one from the other."]],
+  "Genesis 14:12":[[12, "And they took Lot, Abram’s brother’s son, who dwelt in Sodom, and his goods, and departed."]],
+  "Genesis 15:7":[[7, "And he said unto him, I am the LORD that brought thee out of Ur of the Chaldees, to give thee this land to inherit it."]],
+  "Genesis 19:30-38":[[30, "And Lot went up out of Zoar, and dwelt in the mountain, and his two daughters with him; for he feared to dwell in Zoar: and he dwelt in a cave, he and his two daughters."], [31, "And the firstborn said unto the younger, Our father is old, and there is not a man in the earth to come in unto us after the manner of all the earth:"], [32, "Come, let us make our father drink wine, and we will lie with him, that we may preserve seed of our father."], [33, "And they made their father drink wine that night: and the firstborn went in, and lay with her father; and he perceived not when she lay down, nor when she arose."], [34, "And it came to pass on the morrow, that the firstborn said unto the younger, Behold, I lay yesternight with my father: let us make him drink wine this night also; and go thou in, and lie with him, that we may preserve seed of our father."], [35, "And they made their father drink wine that night also: and the younger arose, and lay with him; and he perceived not when she lay down, nor when she arose."], [36, "Thus were both the daughters of Lot with child by their father."], [37, "And the first born bare a son, and called his name Moab: the same is the father of the Moabites unto this day."], [38, "And the younger, she also bare a son, and called his name Benammi: the same is the father of the children of Ammon unto this day."]],
+  "Genesis 19:37-38":[[37, "And the first born bare a son, and called his name Moab: the same is the father of the Moabites unto this day."], [38, "And the younger, she also bare a son, and called his name Benammi: the same is the father of the children of Ammon unto this day."]],
+  "Genesis 3:15":[[15, "And I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel."]],
+  "Genesis 4:12":[[12, "When thou tillest the ground, it shall not henceforth yield unto thee her strength; a fugitive and a vagabond shalt thou be in the earth."]],
+  "Genesis 4:25":[[25, "And Adam knew his wife again; and she bare a son, and called his name Seth: For God, said she, hath appointed me another seed instead of Abel, whom Cain slew."]],
+  "Genesis 4:5-8":[[5, "But unto Cain and to his offering he had not respect. And Cain was very wroth, and his countenance fell."], [6, "And the LORD said unto Cain, Why art thou wroth? and why is thy countenance fallen?"], [7, "If thou doest well, shalt thou not be accepted? and if thou doest not well, sin lieth at the door. And unto thee shall be his desire, and thou shalt rule over him."], [8, "And Cain talked with Abel his brother: and it came to pass, when they were in the field, that Cain rose up against Abel his brother, and slew him."]],
+  "Genesis 4:7":[[7, "If thou doest well, shalt thou not be accepted? and if thou doest not well, sin lieth at the door. And unto thee shall be his desire, and thou shalt rule over him."]],
+  "Hebrews 10:10":[[10, "By the which will we are sanctified through the offering of the body of Jesus Christ once for all."]],
+  "Hebrews 3:12":[[12, "Take heed, brethren, lest there be in any of you an evil heart of unbelief, in departing from the living God."]],
+  "Hebrews 3:17-19":[[17, "But with whom was he grieved forty years? was it not with them that had sinned, whose carcases fell in the wilderness?"], [18, "And to whom sware he that they should not enter into his rest, but to them that believed not?"], [19, "So we see that they could not enter in because of unbelief."]],
+  "Hebrews 7:24-25":[[24, "But this man, because he continueth ever, hath an unchangeable priesthood."], [25, "Wherefore he is able also to save them to the uttermost that come unto God by him, seeing he ever liveth to make intercession for them."]],
+  "Hebrews 8:13":[[13, "In that he saith, A new covenant, he hath made the first old. Now that which decayeth and waxeth old is ready to vanish away."]],
+  "Isaiah 10:20-22":[[20, "And it shall come to pass in that day, that the remnant of Israel, and such as are escaped of the house of Jacob, shall no more again stay upon him that smote them; but shall stay upon the LORD, the Holy One of Israel, in truth."], [21, "The remnant shall return, even the remnant of Jacob, unto the mighty God."], [22, "For though thy people Israel be as the sand of the sea, yet a remnant of them shall return: the consumption decreed shall overflow with righteousness."]],
+  "Isaiah 13:11":[[11, "And I will punish the world for their evil, and the wicked for their iniquity; and I will cause the arrogancy of the proud to cease, and will lay low the haughtiness of the terrible."]],
+  "Isaiah 14:13-14":[[13, "For thou hast said in thine heart, I will ascend into heaven, I will exalt my throne above the stars of God: I will sit also upon the mount of the congregation, in the sides of the north:"], [14, "I will ascend above the heights of the clouds; I will be like the most High."]],
+  "Isaiah 14:22":[[22, "For I will rise up against them, saith the LORD of hosts, and cut off from Babylon the name, and remnant, and son, and nephew, saith the LORD."]],
+  "Isaiah 39:6-7":[[6, "Behold, the days come, that all that is in thine house, and that which thy fathers have laid up in store until this day, shall be carried to Babylon: nothing shall be left, saith the LORD."], [7, "And of thy sons that shall issue from thee, which thou shalt beget, shall they take away; and they shall be eunuchs in the palace of the king of Babylon."]],
+  "Isaiah 40:1-2":[[1, "Comfort ye, comfort ye my people, saith your God."], [2, "Speak ye comfortably to Jerusalem, and cry unto her, that her warfare is accomplished, that her iniquity is pardoned: for she hath received of the LORD’s hand double for all her sins."]],
+  "Isaiah 46:10":[[10, "Declaring the end from the beginning, and from ancient times the things that are not yet done, saying, My counsel shall stand, and I will do all my pleasure:"]],
+  "Isaiah 46:9-10":[[9, "Remember the former things of old: for I am God, and there is none else; I am God, and there is none like me,"], [10, "Declaring the end from the beginning, and from ancient times the things that are not yet done, saying, My counsel shall stand, and I will do all my pleasure:"]],
+  "Jeremiah 29:11":[[11, "For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end."]],
+  "Jeremiah 31:31-34":[[31, "Behold, the days come, saith the LORD, that I will make a new covenant with the house of Israel, and with the house of Judah:"], [32, "Not according to the covenant that I made with their fathers in the day that I took them by the hand to bring them out of the land of Egypt; which my covenant they brake, although I was an husband unto them, saith the LORD:"], [33, "But this shall be the covenant that I will make with the house of Israel; After those days, saith the LORD, I will put my law in their inward parts, and write it in their hearts; and will be their God, and they shall be my people."], [34, "And they shall teach no more every man his neighbour, and every man his brother, saying, Know the LORD: for they shall all know me, from the least of them unto the greatest of them, saith the LORD: for I will forgive their iniquity, and I will remember their sin no more."]],
+  "Jeremiah 6:30":[[30, "Reprobate silver shall men call them, because the LORD hath rejected them."]],
+  "Jeremiah 7:18":[[18, "The children gather wood, and the fathers kindle the fire, and the women knead their dough, to make cakes to the queen of heaven, and to pour out drink offerings unto other gods, that they may provoke me to anger."]],
+  "Jonah 3:5-10":[[5, "So the people of Nineveh believed God, and proclaimed a fast, and put on sackcloth, from the greatest of them even to the least of them."], [6, "For word came unto the king of Nineveh, and he arose from his throne, and he laid his robe from him, and covered him with sackcloth, and sat in ashes."], [7, "And he caused it to be proclaimed and published through Nineveh by the decree of the king and his nobles, saying, Let neither man nor beast, herd nor flock, taste any thing: let them not feed, nor drink water:"], [8, "But let man and beast be covered with sackcloth, and cry mightily unto God: yea, let them turn every one from his evil way, and from the violence that is in their hands."], [9, "Who can tell if God will turn and repent, and turn away from his fierce anger, that we perish not?"], [10, "And God saw their works, that they turned from their evil way; and God repented of the evil, that he had said that he would do unto them; and he did it not."]],
+  "Joshua 16:10":[[10, "And they drave not out the Canaanites that dwelt in Gezer: but the Canaanites dwell among the Ephraimites unto this day, and serve under tribute."]],
+  "Joshua 21:43-45":[[43, "And the LORD gave unto Israel all the land which he sware to give unto their fathers; and they possessed it, and dwelt therein."], [44, "And the LORD gave them rest round about, according to all that he sware unto their fathers: and there stood not a man of all their enemies before them; the LORD delivered all their enemies into their hand."], [45, "There failed not ought of any good thing which the LORD had spoken unto the house of Israel; all came to pass."]],
+  "Joshua 23:6":[[6, "Be ye therefore very courageous to keep and to do all that is written in the book of the law of Moses, that ye turn not aside therefrom to the right hand or to the left;"]],
+  "Joshua 7:1":[[1, "But the children of Israel committed a trespass in the accursed thing: for Achan, the son of Carmi, the son of Zabdi, the son of Zerah, of the tribe of Judah, took of the accursed thing: and the anger of the LORD was kindled against the children of Israel."]],
+  "Joshua 7:25":[[25, "And Joshua said, Why hast thou troubled us? the LORD shall trouble thee this day. And all Israel stoned him with stones, and burned them with fire, after they had stoned them with stones."]],
+  "Joshua 7:4-5":[[4, "So there went up thither of the people about three thousand men: and they fled before the men of Ai."], [5, "And the men of Ai smote of them about thirty and six men: for they chased them from before the gate even unto Shebarim, and smote them in the going down: wherefore the hearts of the people melted, and became as water."]],
+  "Judges 13:5":[[5, "For, lo, thou shalt conceive, and bear a son; and no razor shall come on his head: for the child shall be a Nazarite unto God from the womb: and he shall begin to deliver Israel out of the hand of the Philistines."]],
+  "Judges 14:8-9":[[8, "And after a time he returned to take her, and he turned aside to see the carcase of the lion: and, behold, there was a swarm of bees and honey in the carcase of the lion."], [9, "And he took thereof in his hands, and went on eating, and came to his father and mother, and he gave them, and they did eat: but he told not them that he had taken the honey out of the carcase of the lion."]],
+  "Judges 16:17":[[17, "That he told her all his heart, and said unto her, There hath not come a razor upon mine head; for I have been a Nazarite unto God from my mother’s womb: if I be shaven, then my strength will go from me, and I shall become weak, and be like any other man."]],
+  "Judges 17:6":[[6, "In those days there was no king in Israel, but every man did that which was right in his own eyes."]],
+  "Judges 2:1-3":[[1, "And an angel of the LORD came up from Gilgal to Bochim, and said, I made you to go up out of Egypt, and have brought you unto the land which I sware unto your fathers; and I said, I will never break my covenant with you."], [2, "And ye shall make no league with the inhabitants of this land; ye shall throw down their altars: but ye have not obeyed my voice: why have ye done this?"], [3, "Wherefore I also said, I will not drive them out from before you; but they shall be as thorns in your sides, and their gods shall be a snare unto you."]],
+  "Judges 2:11-13":[[11, "And the children of Israel did evil in the sight of the LORD, and served Baalim:"], [12, "And they forsook the LORD God of their fathers, which brought them out of the land of Egypt, and followed other gods, of the gods of the people that were round about them, and bowed themselves unto them, and provoked the LORD to anger."], [13, "And they forsook the LORD, and served Baal and Ashtaroth."]],
+  "Judges 2:16":[[16, "Nevertheless the LORD raised up judges, which delivered them out of the hand of those that spoiled them."]],
+  "Judges 6:11-14":[[11, "And there came an angel of the LORD, and sat under an oak which was in Ophrah, that pertained unto Joash the Abiezrite: and his son Gideon threshed wheat by the winepress, to hide it from the Midianites."], [12, "And the angel of the LORD appeared unto him, and said unto him, The LORD is with thee, thou mighty man of valour."], [13, "And Gideon said unto him, Oh my Lord, if the LORD be with us, why then is all this befallen us? and where be all his miracles which our fathers told us of, saying, Did not the LORD bring us up from Egypt? but now the LORD hath forsaken us, and delivered us into the hands of the Midianites."], [14, "And the LORD looked upon him, and said, Go in this thy might, and thou shalt save Israel from the hand of the Midianites: have not I sent thee?"]],
+  "Leviticus 10:1-2":[[1, "And Nadab and Abihu, the sons of Aaron, took either of them his censer, and put fire therein, and put incense thereon, and offered strange fire before the LORD, which he commanded them not."], [2, "And there went out fire from the LORD, and devoured them, and they died before the LORD."]],
+  "Leviticus 20:26":[[26, "And ye shall be holy unto me: for I the LORD am holy, and have severed you from other people, that ye should be mine."]],
+  "Luke 1:32-33":[[32, "He shall be great, and shall be called the Son of the Highest: and the Lord God shall give unto him the throne of his father David:"], [33, "And he shall reign over the house of Jacob for ever; and of his kingdom there shall be no end."]],
+  "Luke 23:34":[[34, "Then said Jesus, Father, forgive them; for they know not what they do. And they parted his raiment, and cast lots."]],
+  "Matthew 12:24":[[24, "But when the Pharisees heard it, they said, This fellow doth not cast out devils, but by Beelzebub the prince of the devils."]],
+  "Matthew 1:1-6":[[1, "The book of the generation of Jesus Christ, the son of David, the son of Abraham."], [2, "Abraham begat Isaac; and Isaac begat Jacob; and Jacob begat Judas and his brethren;"], [3, "And Judas begat Phares and Zara of Thamar; and Phares begat Esrom; and Esrom begat Aram;"], [4, "And Aram begat Aminadab; and Aminadab begat Naasson; and Naasson begat Salmon;"], [5, "And Salmon begat Booz of Rachab; and Booz begat Obed of Ruth; and Obed begat Jesse;"], [6, "And Jesse begat David the king; and David the king begat Solomon of her that had been the wife of Urias;"]],
+  "Matthew 21:43":[[43, "Therefore say I unto you, The kingdom of God shall be taken from you, and given to a nation bringing forth the fruits thereof."]],
+  "Matthew 27:25":[[25, "Then answered all the people, and said, His blood be on us, and on our children."]],
+  "Nahum 3:1-7":[[1, "Woe to the bloody city! it is all full of lies and robbery; the prey departeth not;"], [2, "The noise of a whip, and the noise of the rattling of the wheels, and of the pransing horses, and of the jumping chariots."], [3, "The horseman lifteth up both the bright sword and the glittering spear: and there is a multitude of slain, and a great number of carcases; and there is none end of their corpses; they stumble upon their corpses:"], [4, "Because of the multitude of the whoredoms of the wellfavoured harlot, the mistress of witchcrafts, that selleth nations through her whoredoms, and families through her witchcrafts."], [5, "Behold, I am against thee, saith the LORD of hosts; and I will discover thy skirts upon thy face, and I will shew the nations thy nakedness, and the kingdoms thy shame."], [6, "And I will cast abominable filth upon thee, and make thee vile, and will set thee as a gazingstock."], [7, "And it shall come to pass, that all they that look upon thee shall flee from thee, and say, Nineveh is laid waste: who will bemoan her? whence shall I seek comforters for thee?"]],
+  "Numbers 13:2":[[2, "Send thou men, that they may search the land of Canaan, which I give unto the children of Israel: of every tribe of their fathers shall ye send a man, every one a ruler among them."]],
+  "Numbers 13:31-33":[[31, "But the men that went up with him said, We be not able to go up against the people; for they are stronger than we."], [32, "And they brought up an evil report of the land which they had searched unto the children of Israel, saying, The land, through which we have gone to search it, is a land that eateth up the inhabitants thereof; and all the people that we saw in it are men of a great stature."], [33, "And there we saw the giants, the sons of Anak, which come of the giants: and we were in our own sight as grasshoppers, and so we were in their sight."]],
+  "Numbers 14:1-4":[[1, "And all the congregation lifted up their voice, and cried; and the people wept that night."], [2, "And all the children of Israel murmured against Moses and against Aaron: and the whole congregation said unto them, Would God that we had died in the land of Egypt! or would God we had died in this wilderness!"], [3, "And wherefore hath the LORD brought us unto this land, to fall by the sword, that our wives and our children should be a prey? were it not better for us to return into Egypt?"], [4, "And they said one to another, Let us make a captain, and let us return into Egypt."]],
+  "Numbers 14:31":[[31, "But your little ones, which ye said should be a prey, them will I bring in, and they shall know the land which ye have despised."]],
+  "Numbers 16:3":[[3, "And they gathered themselves together against Moses and against Aaron, and said unto them, Ye take too much upon you, seeing all the congregation are holy, every one of them, and the LORD is among them: wherefore then lift ye up yourselves above the congregation of the LORD?"]],
+  "Numbers 16:31-35":[[31, "And it came to pass, as he had made an end of speaking all these words, that the ground clave asunder that was under them:"], [32, "And the earth opened her mouth, and swallowed them up, and their houses, and all the men that appertained unto Korah, and all their goods."], [33, "They, and all that appertained to them, went down alive into the pit, and the earth closed upon them: and they perished from among the congregation."], [34, "And all Israel that were round about them fled at the cry of them: for they said, Lest the earth swallow us up also."], [35, "And there came out a fire from the LORD, and consumed the two hundred and fifty men that offered incense."]],
+  "Numbers 20:11-12":[[11, "And Moses lifted up his hand, and with his rod he smote the rock twice: and the water came out abundantly, and the congregation drank, and their beasts also."], [12, "And the LORD spake unto Moses and Aaron, Because ye believed me not, to sanctify me in the eyes of the children of Israel, therefore ye shall not bring this congregation into the land which I have given them."]],
+  "Numbers 3:12":[[12, "And I, behold, I have taken the Levites from among the children of Israel instead of all the firstborn that openeth the matrix among the children of Israel: therefore the Levites shall be mine;"]],
+  "Numbers 3:12-13":[[12, "And I, behold, I have taken the Levites from among the children of Israel instead of all the firstborn that openeth the matrix among the children of Israel: therefore the Levites shall be mine;"], [13, "Because all the firstborn are mine; for on the day that I smote all the firstborn in the land of Egypt I hallowed unto me all the firstborn in Israel, both man and beast: mine shall they be: I am the LORD."]],
+  "Obadiah 1:10":[[10, "For thy violence against thy brother Jacob shame shall cover thee, and thou shalt be cut off for ever."]],
+  "Obadiah 1:17":[[17, "But upon mount Zion shall be deliverance, and there shall be holiness; and the house of Jacob shall possess their possessions."]],
+  "Obadiah 1:3-4":[[3, "The pride of thine heart hath deceived thee, thou that dwellest in the clefts of the rock, whose habitation is high; that saith in his heart, Who shall bring me down to the ground?"], [4, "Though thou exalt thyself as the eagle, and though thou set thy nest among the stars, thence will I bring thee down, saith the LORD."]],
+  "Revelation 20:4":[[4, "And I saw thrones, and they sat upon them, and judgment was given unto them: and I saw the souls of them that were beheaded for the witness of Jesus, and for the word of God, and which had not worshipped the beast, neither his image, neither had received his mark upon their foreheads, or in their hands; and they lived and reigned with Christ a thousand years."]],
+  "Revelation 20:4-6":[[4, "And I saw thrones, and they sat upon them, and judgment was given unto them: and I saw the souls of them that were beheaded for the witness of Jesus, and for the word of God, and which had not worshipped the beast, neither his image, neither had received his mark upon their foreheads, or in their hands; and they lived and reigned with Christ a thousand years."], [5, "But the rest of the dead lived not again until the thousand years were finished. This is the first resurrection."], [6, "Blessed and holy is he that hath part in the first resurrection: on such the second death hath no power, but they shall be priests of God and of Christ, and shall reign with him a thousand years."]],
+  "Revelation 20:7-9":[[7, "And when the thousand years are expired, Satan shall be loosed out of his prison,"], [8, "And shall go out to deceive the nations which are in the four quarters of the earth, Gog and Magog, to gather them together to battle: the number of whom is as the sand of the sea."], [9, "And they went up on the breadth of the earth, and compassed the camp of the saints about, and the beloved city: and fire came down from God out of heaven, and devoured them."]],
+  "Revelation 20:8":[[8, "And shall go out to deceive the nations which are in the four quarters of the earth, Gog and Magog, to gather them together to battle: the number of whom is as the sand of the sea."]],
+  "Revelation 21:1":[[1, "And I saw a new heaven and a new earth: for the first heaven and the first earth were passed away; and there was no more sea."]],
+  "Romans 11:15":[[15, "For if the casting away of them be the reconciling of the world, what shall the receiving of them be, but life from the dead?"]],
+  "Romans 11:17-24":[[17, "And if some of the branches be broken off, and thou, being a wild olive tree, wert graffed in among them, and with them partakest of the root and fatness of the olive tree;"], [18, "Boast not against the branches. But if thou boast, thou bearest not the root, but the root thee."], [19, "Thou wilt say then, The branches were broken off, that I might be graffed in."], [20, "Well; because of unbelief they were broken off, and thou standest by faith. Be not highminded, but fear:"], [21, "For if God spared not the natural branches, take heed lest he also spare not thee."], [22, "Behold therefore the goodness and severity of God: on them which fell, severity; but toward thee, goodness, if thou continue in his goodness: otherwise thou also shalt be cut off."], [23, "And they also, if they abide not still in unbelief, shall be graffed in: for God is able to graff them in again."], [24, "For if thou wert cut out of the olive tree which is wild by nature, and wert graffed contrary to nature into a good olive tree: how much more shall these, which be the natural branches, be graffed into their own olive tree?"]],
+  "Romans 11:20":[[20, "Well; because of unbelief they were broken off, and thou standest by faith. Be not highminded, but fear:"]],
+  "Romans 11:23":[[23, "And they also, if they abide not still in unbelief, shall be graffed in: for God is able to graff them in again."]],
+  "Romans 4:3":[[3, "For what saith the scripture? Abraham believed God, and it was counted unto him for righteousness."]],
+  "Zechariah 14:16-19":[[16, "And it shall come to pass, that every one that is left of all the nations which came against Jerusalem shall even go up from year to year to worship the King, the LORD of hosts, and to keep the feast of tabernacles."], [17, "And it shall be, that whoso will not come up of all the families of the earth unto Jerusalem to worship the King, the LORD of hosts, even upon them shall be no rain."], [18, "And if the family of Egypt go not up, and come not, that have no rain; there shall be the plague, wherewith the LORD will smite the heathen that come not up to keep the feast of tabernacles."], [19, "This shall be the punishment of Egypt, and the punishment of all nations that come not up to keep the feast of tabernacles."]],
+  "Zechariah 6:12-15":[[12, "And speak unto him, saying, Thus speaketh the LORD of hosts, saying, Behold the man whose name is The BRANCH; and he shall grow up out of his place, and he shall build the temple of the LORD:"], [13, "Even he shall build the temple of the LORD; and he shall bear the glory, and shall sit and rule upon his throne; and he shall be a priest upon his throne: and the counsel of peace shall be between them both."], [14, "And the crowns shall be to Helem, and to Tobijah, and to Jedaiah, and to Hen the son of Zephaniah, for a memorial in the temple of the LORD."], [15, "And they that are far off shall come and build in the temple of the LORD, and ye shall know that the LORD of hosts hath sent me unto you. And this shall come to pass, if ye will diligently obey the voice of the LORD your God."]],
+  "Zechariah 7:11-12":[[11, "But they refused to hearken, and pulled away the shoulder, and stopped their ears, that they should not hear."], [12, "Yea, they made their hearts as an adamant stone, lest they should hear the law, and the words which the LORD of hosts hath sent in his spirit by the former prophets: therefore came a great wrath from the LORD of hosts."]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
