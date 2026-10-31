@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Obadiah Holmes – A Testimony of Perseverance in Christ</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="The life of Obadiah Holmes, from his youth in Lancashire to his conversion and Baptist convictions, and the steadfast faith he showed when he was whipped on Boston Common in 1651.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Obadiah Holmes">
+  <div class="page title-page">
+    <div class="overline">Baptist &amp; church history</div>
+    <h1>Obadiah Holmes</h1>
+    <p class="sub">The Steadfast Faith of Obadiah Holmes: A Testimony of Perseverance in Christ</p>
+    <div class="refs center"><button class="ref" data-v="Acts 5:29">Acts 5:29</button><button class="ref" data-v="Acts 5:41">Acts 5:41</button><button class="ref" data-v="Galatians 6:17">Galatians 6:17</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move through the slides. Tap any gold reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="A beacon for all Baptists">
+  <div class="page">
+    <h2>A beacon for all Baptists</h2>
+    <p class="lead">Let us consider the life of Obadiah Holmes, a man whose unyielding commitment to the Gospel of Jesus Christ serves as a beacon for all Baptists.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Lancashire" data-title="A humble farming family">
+  <div class="page">
+    <h2>A humble farming family</h2>
+    <div class="steps"><div class="st"><span class="when">c. 1610</span><div>Born around 1610 in Reddish, Lancashire, England, near Manchester, Holmes grew up in a humble farming family.</div></div><div class="st"><span class="when">March 18, 1609/10</span><div>Baptized on March 18, 1609/10 at Didsbury Chapel, he was the son of Robert Hulme, a husbandman, and Katherine Johnson.</div></div></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Lancashire" data-title="Folly and vanity">
+  <div class="page">
+    <h2>Folly and vanity</h2>
+    <p>As a youth, Holmes described himself as rebellious and wayward, immersed in “folly and vanity,” admitting in his later testimony that he “minded nothing but folly and vanity... I was not only rebellious against my parents but against the Lord... continuing in such a course for four or five years.”</p>
+    <p>He blamed his disobedient acts for hastening his mother’s death around 1630, an event that sparked a profound spiritual awakening. Reflecting on this, he wrote,</p>
+    <blockquote>It struck me that my disobedient acts caused her death, which forced me to confess the same to her—my evil ways.<cite>Obadiah Holmes, his testimony</cite></blockquote>
+    <div class="callout"><p>This turning point led him to embrace repentance and faith in Christ, transforming his life from rebellion to devotion.</p></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Lancashire" data-title="Marriage and the voyage">
+  <div class="page">
+    <h2>Marriage and the voyage</h2>
+    <div class="steps"><div class="st"><span class="when">Nov. 20, 1630</span><div>At age 20, on November 20, 1630, Holmes married Katherine Hyde at the Collegiate Church in Manchester. They had nine children, though their infant son John died in England in 1633.</div></div><div class="st"><span class="when">c. 1638</span><div>Holmes worked as a weaver and glassmaker, skills that would later sustain his family in the New World. Seeking religious freedom amid England’s turbulent spiritual climate, the couple emigrated during the Great Puritan Migration, enduring a stormy six-week voyage to arrive in Boston around 1638.</div></div></div>
+    <p class="sub center">Tradition holds they brought the first tall-case grandfather clock to America.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Salem and Rehoboth" data-title="Salem">
+  <div class="page">
+    <h2>Salem</h2>
+    <p>Settling first in Salem, Massachusetts Bay Colony, Holmes joined two others—Ananias Concklin and Lawrence Southwick—in establishing what may have been America’s first glass-making operation, producing window glass.</p>
+    <p>He received land grants, served on juries, and became a freeman in 1640, joining the First Church of Salem. Yet, even here, his growing convictions began to stir unrest.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Salem and Rehoboth" data-title="Believer’s baptism">
+  <div class="page">
+    <h2>Believer’s baptism</h2>
+    <p class="lead">By 1645, religious tensions mounted as Holmes increasingly opposed the Puritan practice of infant baptism, embracing instead “believer’s baptism” by immersion—a hallmark of Baptist faith.</p>
+    <p>In his testimony, he reflected on this shift:</p>
+    <blockquote>After many years in death and darkness, this good news of salvation brought light in my soul.<cite>Obadiah Holmes, his testimony</cite></blockquote>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Salem and Rehoboth" data-title="Loathsome heretics">
+  <div class="page">
+    <h2>Loathsome heretics</h2>
+    <p>The Puritans viewed Baptists with deep suspicion, labeling them as “loathsome” heretics and “incendiaries of commonwealths, and the infectors of persons in main matters of religion, and the troublers of churches in all places where they have been.”</p>
+    <p>They accused Baptists of holding “other errors or heresies” alongside rejecting infant baptism, often concealing these until an opportunity to “vent them, by way of question or scruple.”</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Salem and Rehoboth" data-title="Rehoboth">
+  <div class="page">
+    <h2>Rehoboth</h2>
+    <p>Seeking a more tolerant environment, he relocated his family to Rehoboth in Plymouth Colony (now Seekonk, Massachusetts), where he became a freeman in 1648 and soon became involved in the local church under pastor Samuel Newman.</p>
+    <p>However, doctrinal differences quickly emerged, dividing the congregation over issues like infant baptism and church authority, with Holmes growing dissatisfied with the rigidity of the established Puritan practices.</p>
+    <p>Influenced by Baptist ideas from nearby Rhode Island, Holmes and eight others underwent “new baptism” by immersion, marking their formal separation from the official church. This led to a prolonged schism that took about three years to fully manifest, splitting the church on doctrinal and legal lines.</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Salem and Rehoboth" data-title="The Schismists">
+  <div class="page">
+    <h2>The Schismists</h2>
+    <p>Holmes emerged as the leader of this dissenting faction, known as the “Schismists” or “Schismatists,” a group of about 14 individuals including John Hazell, Edward Smith and his wife, Joseph Tory and his wife, the wife of James Mann, William Devell and his wife, and others.</p>
+    <p>Clashes arose with the established church’s pastor, Samuel Newman, escalating personal and religious tensions.</p>
+    <div class="cols"><div class="panel cain"><h3>The charge</h3><p>The Schismists were accused of setting up an unauthorized, irregular church meeting in opposition to Newman’s orderly, approved congregation, holding separate gatherings on the Lord’s Day from house to house, baptizing adults, ordaining officers, and breaking bread together—actions seen as direct challenges to Puritan orthodoxy and social order.</p></div></div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Salem and Rehoboth" data-title="Before Plymouth’s court">
+  <div class="page">
+    <h2>Before Plymouth’s court</h2>
+    <div class="steps"><div class="st"><span class="when">Oct. 1649</span><div>In October 1649, Holmes sued Newman for slander, seeking £100 in damages after Newman publicly accused him of taking a false oath in court—essentially perjury—though Newman later confessed in court that his accusation was based solely on hearsay from others, not personal knowledge, leading to Holmes winning the case.</div></div><div class="st"><span class="when">June 1650</span><div>The conflict intensified in June 1650 when a multi-part petition was brought against Holmes and the Schismists before Plymouth’s General Court, urging that all such “schismatical activity” cease.</div></div><div class="st"><span class="when">Oct. 2, 1650</span><div>On October 2, 1650, a grand jury—including Plymouth leaders like William Bradford, John Alden, and Miles Standish—indicted Holmes and his followers for holding unauthorized Sunday meetings from house to house “contrary to the order of the court” and promoting Baptist views.</div></div></div>
+    <blockquote>to desist, and neither to ordain officers, nor to baptize, nor to break bread together, nor yet to meet upon the first day of the week.<cite>The court’s order, October 2, 1650</cite></blockquote>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Excommunicated" data-title="Excommunicated">
+  <div class="page">
+    <h2>Excommunicated</h2>
+    <p class="lead">Newman excommunicated Holmes, a severe ecclesiastical penalty that, in the theocratic context of colonial New England, carried profound civil and social implications.</p>
+    <p>In Plymouth Colony, freeman status signified full citizenship, granting adult males the right to vote in colonial elections, hold public office, own and transfer land without restriction, participate in town meetings to shape laws, and serve on juries—privileges essential for influencing governance and community affairs.</p>
+    <p>Unlike the stricter Massachusetts Bay Colony, where church membership was mandatory for freemanship, Plymouth did not explicitly require it; instead, candidates were elected by the General Court after demonstrating moral character, economic stability, and loyalty to the colony’s Puritan-influenced laws.</p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Excommunicated" data-title="Church and state blurred">
+  <div class="page">
+    <h2>Church and state blurred</h2>
+    <p>However, excommunication for religious dissent like Holmes’s often blurred the lines between church and state, leading to significant repercussions. It branded the individual as a moral and spiritual outcast, eroding social standing through community ostracism, loss of business opportunities, and familial strains.</p>
+    <div class="cols"><div class="panel cain"><h3>Politically</h3><p>While not automatically revoking freemanship in Plymouth, it could prompt civil authorities to view the excommunicated as “opposers of the good and wholesome laws of the Colony” or threats to social order, potentially resulting in the denial of voting rights, disqualification from office, confiscation of property, or even banishment.</p></div><div class="panel cain"><h3>For Holmes</h3><p>This excommunication amplified the court’s indictment, diminishing his ability to engage fully in colonial politics, defend his interests in legal matters, or maintain economic security, as dissenters risked being sidelined from land grants and civic roles.</p></div></div>
+    <div class="callout"><p>Amid the ongoing persecution, Holmes refused to comply, declaring his obedience to Christ above man-made laws. <button class="ref" data-v="Acts 5:29">Acts 5:29</button></p></div>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Lynn and Boston" data-title="Newport and Lynn">
+  <div class="page">
+    <h2>Newport and Lynn</h2>
+    <div class="steps"><div class="st"><span class="when">1650</span><div>In 1650, Holmes and his family fled to Newport, Rhode Island, a refuge for dissenters founded on tolerance by Roger Williams. Here, his Baptist convictions deepened, leading to one of early America’s most infamous acts of religious persecution.</div></div><div class="st"><span class="when">July 16, 1651</span><div>Holmes joined Baptist leaders Rev. John Clarke (physician and founder of Newport’s church) and John Crandall on a pastoral visit to elderly, blind Baptist William Witter in Lynn, Massachusetts.</div></div><div class="st"><span class="when">The next day</span><div>During a private worship service at Witter’s home—where “the word was proclaimed, converts were baptized, and the elements of the Lord’s Supper were served”—constables burst in, arresting the men as “erroneous persons” and “strangers” promoting heresy.</div></div></div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Lynn and Boston" data-title="The charges">
+  <div class="page">
+    <h2>The charges</h2>
+    <p>The Puritan authorities condemned Holmes specifically</p>
+    <ul class="marks"><li>for meeting at Witter’s house to preach and baptize privately,</li><li>for keeping his hat on during prayer in “disrespect to the ordinance of God and his worship,”</li><li>for receiving the sacrament while excommunicated,</li><li>for rebaptizing those previously baptized (thereby denying prior baptisms as invalid and churches as nullities),</li><li>and for denying the lawfulness of infant baptism.</li></ul>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Lynn and Boston" data-title="Seducing the subjects">
+  <div class="page">
+    <h2>Seducing the subjects</h2>
+    <p>They charged that all this</p>
+    <blockquote>tends to the dishonor of God, the despising the ordinances of God among us, the peace of the churches, and seducing the subjects of this commonwealth from the truth of the gospel of Jesus Christ, and perverting the straight ways of the Lord.<cite>The Puritan authorities’ charge</cite></blockquote>
+    <p>A court found them guilty of “a half-dozen crimes of heresy,” with Magistrate Encrease Nowell retorting to Holmes’s claim of suffering for his faith,</p>
+    <blockquote>No, it is for your error and going about to seduce the people.<cite>Magistrate Encrease Nowell</cite></blockquote>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Lynn and Boston" data-title="Worthy to suffer">
+  <div class="page">
+    <h2>Worthy to suffer</h2>
+    <p>Imprisoned in Boston for nearly a month, they were tried before the Court of Assistants.</p>
+    <div class="dims"><div><span class="n">£20</span><span class="lbl">John Clarke</span></div><div><span class="n">£5</span><span class="lbl">John Crandall</span></div><div><span class="n">£30</span><span class="lbl">Obadiah Holmes</span></div></div>
+    <p>The court fined Clarke £20, Crandall £5, and Holmes £30—a sum equivalent to much of his estate—with non-payment yielding whipping. Friends paid for Clarke and Crandall, but Holmes refused, proclaiming,</p>
+    <blockquote>I bless God, that I am worthy to suffer for the name of Jesus.<cite>Obadiah Holmes</cite></blockquote>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Lynn and Boston" data-title="Reliance on God alone">
+  <div class="page">
+    <h2>Reliance on God alone</h2>
+    <p class="lead">He declined wine or comforts before punishment, resolving “not to drink wine nor strong drink that day, until his punishment was over,” lest others claim the “strength and comfort of the creature” sustained him, instead showing reliance on God alone.</p>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Lynn and Boston" data-title="Boston Common">
+  <div class="page">
+    <div class="kicker">September 5, 1651</div>
+    <h2>Boston Common</h2>
+    <p class="lead">On September 5, 1651, stripped to the waist on Boston Common, he endured 30 lashes from a three-corded whip wielded by executioner James Smith with full force.</p>
+    <p>Witnesses noted Smith spitting on his hands for grip. Holmes neither cried out nor showed pain but preached to the crowd, declaring,</p>
+    <blockquote>The Lord, having manifested his love towards me, in giving me repentance towards God and faith in Christ, and so to be baptized in water by a messenger of Jesus, into the name of the Father, Son, and Holy Spirit, wherein I have fellowship with him in his death, burial, and resurrection, I am now come to be baptized in afflictions by your hands, that so I may have further fellowship with my Lord, and am not ashamed of his sufferings, for by His stripes am I healed.<cite>Obadiah Holmes, on Boston Common</cite></blockquote>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Lynn and Boston" data-title="My God would not fail">
+  <div class="page">
+    <h2>My God would not fail</h2>
+    <p>As the flogging began, he affirmed,</p>
+    <blockquote>Though my flesh should fail, and my spirit should fail, yet my God would not fail.<cite>Obadiah Holmes</cite></blockquote>
+    <p>and broke forth praying “unto the Lord not to lay this sin to their charge,” feeling such a “spiritual manifestation of God’s presence” that the pain was “removed” and “easy to me.”</p>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Lynn and Boston" data-title="Struck as with roses">
+  <div class="page title-page later">
+    <h1>Struck as with roses</h1>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p>As the scourging ended, a bleeding Holmes turned and said,</p>
+    <blockquote>You have struck me as with roses.<cite>Obadiah Holmes</cite></blockquote>
+    <p>adding to the magistrates,</p>
+    <blockquote>Although the Lord hath made it easy to me, yet I pray God it may not be laid to your charge.<cite>Obadiah Holmes</cite></blockquote>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Like the apostles" data-title="Acts 5">
+  <div class="page">
+    <h2>Acts 5</h2>
+    <p class="lead">Holmes’s suffering echoes the trials of the early apostles in <button class="ref" data-v="Acts 5:26-42">Acts 5:26-42</button>, where Peter and others faced persecution for preaching Christ.</p>
+    <p>The captain and officers, fearing the people, brought them <button class="ref" data-v="Acts 5:26">“without violence”</button> before the council, who were enraged that the apostles defied their orders to stop teaching in Jesus’s name, saying (Acts 5:26, 28),</p>
+    <blockquote class="scripture" style="font-style:italic">Saying, Did not we straitly command you that ye should not teach in this name? and, behold, <mark>ye have filled Jerusalem with your doctrine, and intend to bring this man’s blood upon us</mark>.<cite>Acts 5:28</cite></blockquote>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Like the apostles" data-title="We ought to obey God">
+  <div class="page">
+    <h2>We ought to obey God</h2>
+    <blockquote class="big-verse">Then Peter and the other apostles answered and said, <mark>We ought to obey God rather than men</mark>.<cite>Acts 5:29</cite></blockquote>
+    <p>Peter boldly replied, <button class="ref" data-v="Acts 5:29">“We ought to obey God rather than men”</button> (Acts 5:29), proclaiming Christ’s resurrection and exaltation.</p>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="Like the apostles" data-title="Rejoicing">
+  <div class="page">
+    <h2>Rejoicing</h2>
+    <p>The council, cut to the heart, sought to slay them, but Gamaliel’s counsel prevailed, urging restraint lest they <button class="ref" data-v="Acts 5:39">“be found even to fight against God”</button> (Acts 5:39). Still, they beat the apostles, commanding them not to speak in Jesus’s name.</p>
+    <p>Yet, the apostles (Acts 5:41-42)</p>
+    <blockquote class="scripture" style="font-style:italic">And they <mark>departed from the presence of the council, rejoicing that they were counted worthy to suffer shame for his name</mark>. And daily in the temple, and in every house, they <mark>ceased not to teach and preach Jesus Christ</mark>.<cite>Acts 5:41-42</cite></blockquote>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="Like the apostles" data-title="Fellowship with His sufferings">
+  <div class="page">
+    <h2>Fellowship with His sufferings</h2>
+    <p>Like Holmes, they faced imprisonment and scourging for their faith, yet rejoiced, seeing it as fellowship with Christ’s sufferings.</p>
+    <div class="callout"><p>Holmes’s cry, “You have struck me as with roses,” mirrors their joy in persecution, his resolve to obey God over man reflecting Peter’s stand.</p></div>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="slide" data-section="Like the apostles" data-title="The Apostle Paul">
+  <div class="page">
+    <h2>The Apostle Paul</h2>
+    <blockquote class="big-verse">From henceforth let no man trouble me: for I bear <mark>in my body the marks of the Lord Jesus</mark>.<cite>Galatians 6:17</cite></blockquote>
+    <p>So too, the Apostle Paul bore <button class="ref" data-v="Galatians 6:17">“in my body the marks of the Lord Jesus”</button> (Galatians 6:17), enduring stripes for the Gospel, as he wrote (2 Corinthians 11:25),</p>
+    <blockquote class="scripture" style="font-style:italic"><mark>Thrice was I beaten with rods, once was I stoned</mark>, thrice I suffered shipwreck, a night and a day I have been in the deep;<cite>2 Corinthians 11:25</cite></blockquote>
+    <p>counting it all joy to suffer for Christ.</p>
+  </div>
+</section>
+
+<!-- 27 -->
+<section class="slide" data-section="Like the apostles" data-title="Stephen">
+  <div class="page">
+    <h2>Stephen</h2>
+    <blockquote class="big-verse">And he kneeled down, and cried with a loud voice, <mark>Lord, lay not this sin to their charge</mark>. And when he had said this, he fell asleep.<cite>Acts 7:60</cite></blockquote>
+    <p>Stephen, the first martyr, faced death for his bold testimony, praying as stones fell, <button class="ref" data-v="Acts 7:60">“Lord, lay not this sin to their charge”</button> (Acts 7:60), a plea Holmes echoed in his own affliction, beseeching God to forgive his persecutors.</p>
+  </div>
+</section>
+
+<!-- 28 -->
+<section class="slide" data-section="Like the apostles" data-title="A good soldier">
+  <div class="page">
+    <h2>A good soldier</h2>
+    <p>These saints, like Holmes, stood firm, their trials proving that (2 Timothy 2:3)</p>
+    <blockquote class="big-verse">Thou therefore endure hardness, as a good soldier of Jesus Christ.<cite>2 Timothy 2:3</cite></blockquote>
+  </div>
+</section>
+
+<!-- 29 -->
+<section class="slide" data-section="The outcry" data-title="Tyranny and persecutions">
+  <div class="page">
+    <h2>Tyranny and persecutions</h2>
+    <p>Governor John Endecott reportedly declared Clarke “deserved death and was worthy to be hanged,” underscoring Puritan intolerance for Baptists, viewed as threats to social order.</p>
+    <p>Roger Williams protested in a letter to Endecott, decrying the “tyranny and persecutions.”</p>
+    <div class="callout"><p>The event drew international scrutiny when Clarke published <em>Ill Newes from New England</em> (1652) in London, including Holmes’s account. English Puritan Richard Saltonstall criticized the colony’s “tyranny and persecutions in New England,” and it influenced Harvard’s first president, Henry Dunster, to adopt Baptist views, refusing infant baptism for his son in 1653 and leading to his dismissal.</p></div>
+  </div>
+</section>
+
+<!-- 30 -->
+<section class="slide" data-section="Newport" data-title="Pastor at Newport">
+  <div class="page">
+    <h2>Pastor at Newport</h2>
+    <div class="steps"><div class="st"><span class="when">1652</span><div>Returning to Newport in 1652, Holmes was ordained and succeeded Clarke as pastor of America’s second Baptist church (now First Baptist Church in Newport), serving faithfully for 30 years.</div></div><div class="st"><span class="when">Middletown</span><div>A respected civic leader, he acquired extensive waterfront land in Middletown along the Sakonnet River, shaping the area’s development.</div></div><div class="st"><span class="when">1665</span><div>In 1665, he subscribed to the Monmouth Patent for lands in New Jersey, assigning a house lot in Middletown (lot #20); sons Jonathan and Obadiah Jr. settled there, the latter becoming a judge and sheriff.</div></div><div class="st"><span class="when">1675–1676</span><div>During King Philip’s War (1675–1676), Rhode Island’s General Court sought his “advice and concurrence” as one of 16 “most judicious inhabitants.”</div></div></div>
+  </div>
+</section>
+
+<!-- 31 -->
+<section class="slide" data-section="Newport" data-title="To his children">
+  <div class="page">
+    <h2>To his children</h2>
+    <p>In 1675, at age 69, Holmes penned a heartfelt letter to his children and 42 grandchildren, exhorting biblical living tied to their names—e.g., urging son Joseph to emulate the “bold” Joseph of Arimathea who claimed Christ’s body.</p>
+    <p>He reflected on faith’s trials:</p>
+    <blockquote>God in His own time chose a people to Himself and gave them His laws and statutes in a special manner, though He had always His chosen ones in every generation.<cite>Obadiah Holmes, letter to his children, 1675</cite></blockquote>
+  </div>
+</section>
+
+<!-- 32 -->
+<section class="slide" data-section="Newport" data-title="His death">
+  <div class="page">
+    <h2>His death</h2>
+    <p class="lead">Holmes died October 15, 1682, in Newport, buried on his Middletown farm in the Holmes Burial Ground, his gravestone reading:</p>
+    <blockquote>In Memory of the Rev. Obadiah Holmes Baptist Minister from Great Britain who died October 15th 1682 in the 76th year of his age.<cite>His gravestone</cite></blockquote>
+    <p>Katherine died shortly after. His will, dated April 9, 1682, and witnessed by prominent Rhode Islanders, provided for his family while affirming his legacy.</p>
+  </div>
+</section>
+
+<!-- 33 -->
+<section class="slide" data-section="Legacy" data-title="A champion of soul liberty">
+  <div class="page">
+    <h2>A champion of soul liberty</h2>
+    <p class="lead">Holmes’s endurance advanced the cause of individual soul liberty, securing Rhode Island’s 1663 royal charter under Charles II, granting tolerance that influenced America’s First Amendment.</p>
+    <p>Remembered as an “eminent citizen—a champion of soul liberty,” he is a direct ancestor of Abraham Lincoln through daughter Lydia.</p>
+  </div>
+</section>
+
+<!-- 34 -->
+<section class="slide" data-section="Close" data-title="By his stripes">
+  <div class="page title-page later">
+    <div class="overline">Baptist &amp; church history</div>
+    <h1>By his stripes</h1>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="center">His <em>Last Will and Testimony</em>, a cherished Baptist exhortation, reminds us: Persecution refines faith, for “by his stripes am I healed.”</p>
+    <p class="take">May we, like Holmes, count suffering for Christ as joy, holding fast to the promise that faithfulness endures eternal reward.</p>
+    <div class="refs center"><button class="ref" data-v="Acts 5:29">Acts 5:29</button><button class="ref" data-v="Acts 5:41">Acts 5:41</button><button class="ref" data-v="Acts 7:60">Acts 7:60</button><button class="ref" data-v="Galatians 6:17">Galatians 6:17</button><button class="ref" data-v="2 Timothy 2:3">2 Timothy 2:3</button></div>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-early-american-baptists" target="_blank" rel="noopener">Early American Baptists ↗</a><a class="ref lesson-link" href="../../studies/#lesson-daniel-merrill" target="_blank" rel="noopener">Daniel Merrill, A Forgotten Baptist ↗</a><a class="ref lesson-link" href="../../studies/#lesson-baptist-names-in-history" target="_blank" rel="noopener">Baptist Names in History ↗</a><a class="ref lesson-link" href="../../studies/#lesson-baptist-perpetuity" target="_blank" rel="noopener">Baptist Perpetuity ↗</a><a class="ref lesson-link" href="../../studies/#lesson-doctrine-week-5-trail-of-blood-and-baptist-history" target="_blank" rel="noopener">Week 5: A Trail of Blood and Being Baptist ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "2 Timothy 2:3":[[3, "Thou therefore endure hardness, as a good soldier of Jesus Christ."]],
+  "Acts 5:26":[[26, "Then went the captain with the officers, and brought them without violence: for they feared the people, lest they should have been stoned."]],
+  "Acts 5:26-42":[[26, "Then went the captain with the officers, and brought them without violence: for they feared the people, lest they should have been stoned."], [27, "And when they had brought them, they set them before the council: and the high priest asked them,"], [28, "Saying, Did not we straitly command you that ye should not teach in this name? and, behold, ye have filled Jerusalem with your doctrine, and intend to bring this man’s blood upon us."], [29, "Then Peter and the other apostles answered and said, We ought to obey God rather than men."], [30, "The God of our fathers raised up Jesus, whom ye slew and hanged on a tree."], [31, "Him hath God exalted with his right hand to be a Prince and a Saviour, for to give repentance to Israel, and forgiveness of sins."], [32, "And we are his witnesses of these things; and so is also the Holy Ghost, whom God hath given to them that obey him."], [33, "When they heard that, they were cut to the heart, and took counsel to slay them."], [34, "Then stood there up one in the council, a Pharisee, named Gamaliel, a doctor of the law, had in reputation among all the people, and commanded to put the apostles forth a little space;"], [35, "And said unto them, Ye men of Israel, take heed to yourselves what ye intend to do as touching these men."], [36, "For before these days rose up Theudas, boasting himself to be somebody; to whom a number of men, about four hundred, joined themselves: who was slain; and all, as many as obeyed him, were scattered, and brought to nought."], [37, "After this man rose up Judas of Galilee in the days of the taxing, and drew away much people after him: he also perished; and all, even as many as obeyed him, were dispersed."], [38, "And now I say unto you, Refrain from these men, and let them alone: for if this counsel or this work be of men, it will come to nought:"], [39, "But if it be of God, ye cannot overthrow it; lest haply ye be found even to fight against God."], [40, "And to him they agreed: and when they had called the apostles, and beaten them, they commanded that they should not speak in the name of Jesus, and let them go."], [41, "And they departed from the presence of the council, rejoicing that they were counted worthy to suffer shame for his name."], [42, "And daily in the temple, and in every house, they ceased not to teach and preach Jesus Christ."]],
+  "Acts 5:29":[[29, "Then Peter and the other apostles answered and said, We ought to obey God rather than men."]],
+  "Acts 5:39":[[39, "But if it be of God, ye cannot overthrow it; lest haply ye be found even to fight against God."]],
+  "Acts 5:41":[[41, "And they departed from the presence of the council, rejoicing that they were counted worthy to suffer shame for his name."]],
+  "Acts 7:60":[[60, "And he kneeled down, and cried with a loud voice, Lord, lay not this sin to their charge. And when he had said this, he fell asleep."]],
+  "Galatians 6:17":[[17, "From henceforth let no man trouble me: for I bear in my body the marks of the Lord Jesus."]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>

@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>I Reject the Nicene Creed</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Why an independent fundamental Baptist rejects the Nicene Creed: its Greek terms such as begotten, consubstantial and proceeds brought new errors in answering Arianism, while Scripture alone is sufficient.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Summary" data-title="I Reject the Nicene Creed">
+  <div class="page title-page">
+    <div class="overline">Baptist &amp; church history</div>
+    <h1>I Reject the Nicene Creed</h1>
+    <p class="sub">Critique of the Nicene Creed</p>
+    <div class="refs center"><button class="ref" data-v="Colossians 2:8">Colossians 2:8</button><button class="ref" data-v="John 1:1">John 1:1</button><button class="ref" data-v="Micah 5:2">Micah 5:2</button><button class="ref" data-v="John 8:58">John 8:58</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move through the slides. Tap any gold reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Summary" data-title="The word of God alone">
+  <div class="page">
+    <div class="kicker">Summary of my rejection of the Nicene Creed</div>
+    <h2>The word of God alone</h2>
+    <p class="lead">As an independent fundamental Baptist standing on the word of God alone—no church fathers, no reformers, no councils, no vain philosophy (<button class="ref" data-v="Colossians 2:8">Colossians 2:8</button>), I reject the Nicene Creed outright.</p>
+    <p>In trying to fight Arian heresy (the idea that the Son was created and not eternal God), the council of men in 325/381 imported Greek terms and logic that actually birthed new errors.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Summary" data-title="The conflict">
+  <div class="page">
+    <h2>The conflict</h2>
+    <p>By calling the Father the “unbegotten” source and the Son “begotten” of Him, the Creed establishes a hierarchy of origin rather than of role. Even if they call the Sonship “eternal,” the language implies the Son is derivative.</p>
+    <p>If the Father is the “One God” (the Monarchia), and the Son is “from” Him, the Creed essentially describes a “process,” which by definition, becomes a characteristic of the Son’s creation, not a description of a static, eternal Godhead.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Summary" data-title="Homoousios">
+  <div class="page">
+    <h2>Homoousios</h2>
+    <p>The Creed uses <em>Homoousios</em> (of the same substance) to try to fix the “creational flow” problem this language introduces.</p>
+    <p>But this brings another problem; the Bible doesn’t say they are of the same substance, but fully and eternally the Godhead, one God Who is three persons.</p>
+    <div class="callout"><p>Not one God the Father and a Son <em>made</em>, or begotten, of the same substance <em>by</em> the Father.</p></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Summary" data-title="Begotten, through him, issued from">
+  <div class="page">
+    <h2>Begotten, through him, issued from</h2>
+    <p>Use of the word “begotten” (implying origin and derivation) denies the eternal nature of Jesus, while the use of “through him” for the Creation (making the Son sound like a secondary tool used by the Father), creates confusion.</p>
+    <p>Add to this the Creed’s assertion that the Spirit is <em>issued from</em> the Father and Son, rather than the Spirit being coeternally God as well, further complicates what the Bible describes.</p>
+    <p>The introduction of this “Filioque” false dichotomy (Orthodox; Spirit issued only by the Father, vs Rome; issued by both) gives the unbiblical understanding that the Spirit, rather than being God, co-equal in the Godhead as God, is a created being.</p>
+    <div class="callout"><p>All of this rationalizing use of “begotten,” “consubstantial” and “proceeds” becomes non-biblical philosophy of men, turning the Godhead into a chain of ontological origin rather than the biblical triune God.</p></div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Summary" data-title="“From” denotes source">
+  <div class="page">
+    <h2>“From” denotes source</h2>
+    <p class="lead">If the Creed says the Son is “from the Father’s substance” (the very wording behind “begotten… consubstantial”), then by the plain meaning of language He is derived. There is no honest way around it.</p>
+    <p>“From” denotes source. “Substance” denotes something He is taken out of or issued from. That is the definition of “made,” no matter how many qualifiers like “eternally,” “not made,” or “before all ages” you stack on top.</p>
+    <div class="callout"><p>You cannot escape the logic: something taken from another thing is secondary to it.</p></div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Summary" data-title="Church and sacrament">
+  <div class="page">
+    <h2>Church and sacrament</h2>
+    <p>The men at Nicaea also chose to elevate faith in a visible “holy catholic and apostolic Church” and in their “sacrament” of water baptism “for the forgiveness of sins,” to salvific essentials that must be professed, alongside their re-definition of Who and What God <em>is</em>.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Summary" data-title="The result?">
+  <div class="page">
+    <h2>The result?</h2>
+    <p>The result? A creed that claims to defend biblical truth but subtly subordinates the Son and Spirit through implied creational hierarchy, rather than a hierarchy of roles, contradicts its own “not made” claim with creational-flow language, and adds extra-biblical requirements that damn by vain tradition.</p>
+    <p class="lead">Creeds aren’t necessary. Scripture alone is sufficient: the eternal, co-equal, co-eternal triune Godhead (Father, Word, Holy Ghost, these three are one) needs no conciliar patch. <button class="ref" data-v="1 John 5:7">1 John 5:7</button></p>
+    <div class="callout"><p>The Creed didn’t refute heresy, it dressed up a different version of the same root error, and passed it off as truth.</p></div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Begotten" data-title="1. “Begotten” implies origin">
+  <div class="page">
+    <div class="kicker">1. The Creed’s use of “begotten” implies origin, creating a contradiction</div>
+    <h2>1. “Begotten” implies origin</h2>
+    <blockquote>the Only Begotten Son of God, <strong>born of</strong> the Father before all ages... begotten, not made, consubstantial with the Father<cite>Creed language</cite></blockquote>
+    <div class="cols"><div class="panel cain"><h3>The argument</h3><p>“Begotten” is a term of origin or source, implying a “before” and “after.” This introduces a creational hierarchy that contradicts the denial of creation (“not made”) and suggests the Son is derivative rather than fully co-eternal God.</p></div></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Begotten" data-title="Begotten in time">
+  <div class="page">
+    <h2>Begotten in time</h2>
+    <p>Scripture ties “begotten” to time-bound events, such as the resurrection, rather than an eternal pre-temporal state:</p>
+    <blockquote class="scripture" style="font-style:italic">God hath fulfilled the same unto us their children, in that he hath raised up Jesus again; as it is also written in the second psalm, <mark>Thou art my Son, this day have I begotten thee</mark>.<cite>Acts 13:33</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">For unto which of the angels said he at any time, <mark>Thou art my Son, this day have I begotten thee</mark>? And again, I will be to him a Father, and he shall be to me a Son?<cite>Hebrews 1:5</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">And from Jesus Christ, who is the faithful witness, and <mark>the first begotten of the dead</mark>, and the prince of the kings of the earth. Unto him that loved us, and washed us from our sins in his own blood,<cite>Revelation 1:5</cite></blockquote>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Begotten" data-title="Eternal deity">
+  <div class="page">
+    <h2>Eternal deity</h2>
+    <p>Verses asserting the eternal deity of Christ without “begotten” origin language:</p>
+    <blockquote class="scripture" style="font-style:italic">In the beginning was the Word, and the Word was with God, and the Word was God.<cite>John 1:1</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Jesus said unto them, Verily, verily, I say unto you, <mark>Before Abraham was, I am</mark>.<cite>John 8:58</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">But thou, Bethlehem Ephratah, though thou be little among the thousands of Judah, yet out of thee shall he come forth unto me that is to be ruler in Israel; <mark>whose goings forth have been from of old, from everlasting</mark>.<cite>Micah 5:2</cite></blockquote>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Through him" data-title="2. “Through him” subordinates the Son">
+  <div class="page">
+    <div class="kicker">2. Framing creation “through him” subordinates the Son</div>
+    <h2>2. “Through him” subordinates the Son</h2>
+    <blockquote>through him all things were made.<cite>Creed language</cite></blockquote>
+    <div class="cols"><div class="panel cain"><h3>The argument</h3><p>While creation by Christ is biblical, the Creed’s wording makes the Son sound like a secondary agent or instrument of the Father. Scripture presents all three Persons as directly and equally involved (“by him”).</p></div></div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Through him" data-title="By him">
+  <div class="page">
+    <h2>By him</h2>
+    <blockquote class="scripture" style="font-style:italic">All things were made <mark>by him</mark>; and without him was not any thing made that was made.<cite>John 1:3</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic"><mark>For by him</mark> were all things created, that are in heaven, and that are in earth, visible and invisible, whether they be thrones, or dominions, or principalities, or powers: all things were created <mark>by him, and for him</mark>:<cite>Colossians 1:16</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Hath in these last days spoken unto us by his Son, whom he hath appointed heir of all things, <mark>by whom also he made the worlds</mark>;<cite>Hebrews 1:2</cite></blockquote>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Same substance" data-title="3. Homoousios and procession">
+  <div class="page">
+    <div class="kicker">3. “Homoousios” and procession language introduce non-biblical philosophy</div>
+    <h2>3. Homoousios and procession</h2>
+    <blockquote>consubstantial with the Father; who proceeds from the Father and the Son<cite>Creed language</cite></blockquote>
+    <div class="cols"><div class="panel cain"><h3>The argument</h3><p>The Bible does not use terms like “same substance” or describe ontological “processions.” These terms turn the Godhead into a chain of origin. Scripture teaches three co-equal Persons in one Godhead with functional roles but no ontological derivation.</p></div></div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Same substance" data-title="KJV support">
+  <div class="page">
+    <h2>KJV support</h2>
+    <blockquote class="scripture" style="font-style:italic">For in him dwelleth all the fulness of the Godhead bodily.<cite>Colossians 2:9</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">For there are three that bear record in heaven, the Father, the Word, and the Holy Ghost: and these three are one.<cite>1 John 5:7</cite></blockquote>
+    <p class="sub center">Note: <button class="ref" data-v="John 15:26">John 15:26</button> refers to a “sending” role, not an eternal ontological origin.</p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Church and baptism" data-title="4. Church and baptism made essentials">
+  <div class="page">
+    <div class="kicker">4. Elevation of the visible church and baptism to salvific essentials</div>
+    <h2>4. Church and baptism made essentials</h2>
+    <blockquote>I believe in one, holy, catholic and apostolic Church; I confess one Baptism for the forgiveness of sins<cite>Creed language</cite></blockquote>
+    <div class="cols"><div class="panel cain"><h3>The argument</h3><p>This equates institutional membership and water baptism with core doctrines of the Godhead, suggesting they are essential for salvation. Scripture teaches that the church is a spiritual body and baptism is a symbolic ordinance following faith.</p></div></div>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Church and baptism" data-title="Church as a spiritual body">
+  <div class="page">
+    <div class="kicker">Church as a spiritual body</div>
+    <h2>Church as a spiritual body</h2>
+    <blockquote class="scripture" style="font-style:italic">And hath put all things under his feet, and gave him to be the head over all things to <mark>the church</mark>, <mark>Which is his body, the fulness of him that filleth all in all</mark>.<cite>Ephesians 1:22-23</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic"><mark>Know ye not, that so many of us as were baptized into Jesus Christ were baptized into his death</mark>? <mark>Therefore we are buried with him by baptism into death</mark>: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life.<cite>Romans 6:3-4</cite></blockquote>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Church and baptism" data-title="Baptism of the Spirit">
+  <div class="page">
+    <div class="kicker">Baptism of the Spirit</div>
+    <h2>Baptism of the Spirit</h2>
+    <blockquote class="scripture" style="font-style:italic">In whom ye also trusted, after that ye heard the word of truth, the gospel of your salvation: in whom also after that ye believed, <mark>ye were sealed with that holy Spirit of promise</mark>,<cite>Ephesians 1:13</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Not by works of righteousness which we have done, but according to his mercy he saved us, by the washing of regeneration, and renewing of the Holy Ghost;<cite>Titus 3:5</cite></blockquote>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Why this matters" data-title="Human wisdom backfired">
+  <div class="page">
+    <div class="kicker">Final summary: why this matters</div>
+    <h2>Human wisdom backfired</h2>
+    <p class="lead">In the end, the Nicene Creed’s attempt to combat Arianism with human wisdom and philosophy (instead of pure Scripture) backfired.</p>
+    <p>By forcing “begotten” onto eternity, it creates a logical contradiction: a term of origin (“source” and “result”) while denying any creation happened. Framing creation as “through” the Son after calling the Father the primary “maker” subtly demotes Him to an instrument.</p>
+    <p>Terms like “consubstantial” and “proceeds from the Father and the Son” (Filioque) introduce non-biblical chains of derivation, turning co-equal Persons into a hierarchy.</p>
+    <div class="callout"><p>Then it compounds the error by confessing “one holy catholic and apostolic Church” and “one Baptism for the forgiveness of sins” as if these are on par with the doctrine of God—elevating institution and ritual over the blood of Christ and Spirit regeneration.</p></div>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Why this matters" data-title="The whole package">
+  <div class="page">
+    <h2>The whole package</h2>
+    <p>Once you bind people to the Creed as a test of orthodoxy (as the council and every creed-affirming denomination does), you force them to swallow the whole package:</p>
+    <div class="cols"><div class="panel cain"><h3>The Son</h3><p>The Son becomes a kind of eternal demiurge—continually “begotten” out of the Father’s substance, never created yet never fully self-existent in the same way the Father is.</p></div><div class="panel cain"><h3>The Spirit</h3><p>The Spirit is reduced to something “proceeding from” or “issued by” the Father and the Son (Filioque) or just the Father (Eastern version)—either way, not the co-equal, co-eternal, complete Person the Bible presents, but a derived breath or influence.</p></div></div>
+    <div class="cols"><div class="panel cain"><h3>The church</h3><p>You must confess the visible “one holy catholic and apostolic Church” (their denomination or communion) as an article of saving faith.</p></div><div class="panel cain"><h3>Baptism</h3><p>You must confess “one baptism for the forgiveness of sins” as the act that actually remits sin, not the symbolic testimony that follows the remission already granted by faith and the baptism of the Holy Ghost.</p></div></div>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Why this matters" data-title="Not one word">
+  <div class="page title-page later">
+    <h1>Not one word</h1>
+    <p class="lead">None of that is in the Bible. Not one word.</p>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Why this matters" data-title="The danger of creedalism">
+  <div class="page">
+    <h2>The danger of creedalism</h2>
+    <p class="lead">This is the danger of creedalism: good intentions against one heresy open the door to others.</p>
+    <p>Protestants who wave “Sola Scriptura” as a fig leaf while leaning on councils and fathers miss the point. I stand on the Book alone—the living God doesn’t need men’s improvements.</p>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Close" data-title="The Book alone">
+  <div class="page title-page later">
+    <div class="overline">Baptist &amp; church history</div>
+    <h1>The Book alone</h1>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="center">The Bible reveals the simple, eternal Jehovah: three co-equal Persons, one God, no origins, no processions, no add-ons required for salvation.</p>
+    <p class="center">The Nicene Creed codifies error under the guise of orthodoxy.</p>
+    <p class="take">I’ll take the KJV over Nicaea every time. Amen.</p>
+    <div class="refs center"><button class="ref" data-v="Colossians 2:8">Colossians 2:8</button><button class="ref" data-v="Colossians 2:9">Colossians 2:9</button><button class="ref" data-v="1 John 5:7">1 John 5:7</button><button class="ref" data-v="John 1:1">John 1:1</button></div>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-heresies-that-rock-was-christ" target="_blank" rel="noopener">That Rock Was Christ, Not Peter ↗</a><a class="ref lesson-link" href="../../studies/#lesson-doctrine-week-5-trail-of-blood-and-baptist-history" target="_blank" rel="noopener">Week 5: A Trail of Blood and Being Baptist ↗</a><a class="ref lesson-link" href="../../studies/#lesson-relics-vigilantius-jerome" target="_blank" rel="noopener">Relics Heresy: Vigilantius vs. Jerome ↗</a><a class="ref lesson-link" href="../../studies/#lesson-baptist-perpetuity" target="_blank" rel="noopener">Baptist Perpetuity ↗</a><a class="ref lesson-link" href="../../studies/#lesson-early-american-baptists" target="_blank" rel="noopener">Early American Baptists ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 John 5:7":[[7, "For there are three that bear record in heaven, the Father, the Word, and the Holy Ghost: and these three are one."]],
+  "Colossians 2:8":[[8, "Beware lest any man spoil you through philosophy and vain deceit, after the tradition of men, after the rudiments of the world, and not after Christ."]],
+  "Colossians 2:9":[[9, "For in him dwelleth all the fulness of the Godhead bodily."]],
+  "John 15:26":[[26, "But when the Comforter is come, whom I will send unto you from the Father, even the Spirit of truth, which proceedeth from the Father, he shall testify of me:"]],
+  "John 1:1":[[1, "In the beginning was the Word, and the Word was with God, and the Word was God."]],
+  "John 8:58":[[58, "Jesus said unto them, Verily, verily, I say unto you, Before Abraham was, I am."]],
+  "Micah 5:2":[[2, "But thou, Bethlehem Ephratah, though thou be little among the thousands of Judah, yet out of thee shall he come forth unto me that is to be ruler in Israel; whose goings forth have been from of old, from everlasting."]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
