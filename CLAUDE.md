@@ -33,8 +33,18 @@ in the repo, without publishing artifacts or building a separate page:
 6. Check the deck at desktop and phone width (long words must not run off the screen), bump `APP_VERSION` in
    `studies/app.js` and the cache name in `studies/sw.js`, and send the user the full changed files.
 7. Open a PR and wait for the user to say "merge".
+- **Daily studies written in Google Drive.** The author saves new studies as Google Docs and announces the link here for
+  the app. Read the doc with the Google Drive tools, then add it to `review/refile.json` under `"drive"`:
+  `{"to": "Psalms 52", "title": "Doeg", "date": "YYYY-MM-DD", "id": "psalms-52-doeg", "text": "<study text>"}`.
+  Never store or publish the Drive link or file id anywhere in the repo, in commit messages or in pull requests.
+  In the text, put each quoted passage as `**Ref**` on one line and the verse in italics on the next (`*verse*`),
+  and compare every quoted verse to the KJV text (fix only punctuation and plain slips). Leave the author's wording.
+  Run `python3 tools/clean_studies.py`, bump the version, open a PR, and merge only on "merge" (or when the author
+  says to add it and merge). The study appears as another tab on that chapter, with no Telegram link.
 - Whenever a file is changed, give the user the full file (SendUserFile), not fragments.
 - Links go one way only: nothing is ever added to fbckjv.app.
+- The "View on Telegram" buttons are off (`TELEGRAM_LINKS` in `studies/app.js`) because the text is in the app. The 69
+  photos, a video and an animation that exist only on Telegram keep their link until they are saved here.
 - Do not change the KJV language. Non-KJV pastes are corrected to the KJV.
 - Fix the user's typos, but otherwise leave their wording. Do not change their historical claims, doctrine or tone.
   Correct only basic spelling and plain date or number slips.
