@@ -39,7 +39,7 @@ builder, no fact-checking of the author's views. Order:
 
 1. ~~Standalone posts (6)~~ done
 2. ~~Answering error (9)~~ done
-3. Baptist & church history (10)
+3. ~~Baptist & church history (10)~~ done
 4. Prophecy (4), the Doctrine class notes (3), Bible lessons (2)
 5. Sermons (16)
 6. From other preachers (3): only if the author asks, since it is other men's material
