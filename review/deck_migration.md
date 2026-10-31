@@ -30,6 +30,20 @@ The election chart becomes a table slide.
 Each chapter has a main page plus several side pages, recaps, charts and worksheets. Following the Week 5 model, fold each chapter into ONE deck and retire the side pages. This is the biggest piece, so it goes last and chapter by chapter.
 
 
+## Next: decks for the notes-only lessons
+
+Chapter-by-chapter decks are made only as a book is taught. The deck work now goes to the doctrine topics (salvation
+and assurance first) and then to the 53 lessons that are notes, posts or sermons with no slides yet. The notes stay as
+the lesson's secondary part; the deck becomes its "Slides" part. Same rules: the author's own wording, KJV from the
+builder, no fact-checking of the author's views. Order:
+
+1. Standalone posts (6)
+2. Answering error (9)
+3. Baptist & church history (10)
+4. Prophecy (4), the Doctrine class notes (3), Bible lessons (2)
+5. Sermons (16)
+6. From other preachers (3): only if the author asks, since it is other men's material
+
 ## Done
 
 - [x] **Romans: Who Is Paul, and How Romans Argues** (`romans-class-romans-intro`)

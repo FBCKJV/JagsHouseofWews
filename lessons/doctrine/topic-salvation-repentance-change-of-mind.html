@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Repentance Is a Change of Mind – Turning to God</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Biblical repentance is a change of mind toward God and belief of His word, not turning from sins to be saved.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="The doctrine" data-title="Repentance Is a Change of Mind">
+  <div class="page title-page">
+    <div class="overline">Doctrine · Salvation</div>
+    <h1>Repentance Is a Change of Mind</h1>
+    <p class="sub">Repentance means a change of heart, to believe something that we hadn’t before.</p>
+    <div class="refs center"><button class="ref" data-v="Acts 26:20">Acts 26:20</button><button class="ref" data-v="Acts 11:18">Acts 11:18</button><button class="ref" data-v="Hebrews 6:1">Hebrews 6:1</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move through the study. Tap any gold reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="The doctrine" data-title="Repent and turn to God">
+  <div class="page">
+    <div class="kicker">The doctrine</div>
+    <h2>Repent and turn to God</h2>
+    <blockquote class="big-verse">But shewed first unto them of Damascus, and at Jerusalem, and throughout all the coasts of Judaea, and then to the Gentiles, that they should <mark><mark class="w">repent</mark> and turn to God</mark>, and do works meet for <mark class="w">repentance</mark>.<cite>Acts 26:20</cite></blockquote>
+    <p class="lead">We must turn from false beliefs regarding righteousness, and turn to believing God’s report, obeying the Gospel, by trusting in Jesus Christ alone as the sole propitiation for our sins. This is what the Bible says <strong>repent</strong> means.</p>
+    <p>It is turning your trust from false beliefs, your own works, false gods and idols, and towards God. And once saved doing works suitable and proper for such a turning.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="The doctrine" data-title="Metanoia">
+  <div class="page">
+    <h2>Metanoia</h2>
+    <p class="lead"><em>Metanoia</em>, the Greek word translated in our King James Bible as “repentance,” is a changing of the mind.</p>
+    <p>“Meta” comes from the root for “after” or “beyond,” while “noeo” is “to think.” So metanoeo means to reconsider or to rethink something. At its root, repentance is about changing one’s mind.</p>
+    <p>That’s why in scripture, again and again, repentance and belief are used in tandem to express conversion, by believing on Jesus and receiving the gift of eternal life promised by God.</p>
+    <div class="callout"><p>Repentance is a changing of mind or turning from one thing to another.</p></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="The Bible defines itself" data-title="God repented">
+  <div class="page">
+    <h2>God repented</h2>
+    <blockquote class="big-verse">And <mark>God saw their works, that they turned from their evil way</mark>; and <mark>God <mark class="w">repented</mark></mark> of the evil, that he had said that he would do unto them; and he did it not.<cite>Jonah 3:10</cite></blockquote>
+    <p>Here we get the biblical definition of repent, God changing His mind, AND the acknowledgement that “turning from their evil ways” ie “Repenting of sin” = works.</p>
+    <p>So in one verse you have evidence that repenting of sin is a work, and that repentance does not always mean of sin, because God does it.</p>
+    <p class="sub center">No one would say God repented of his sin because God is sinless. The Bible defines itself.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="The Bible defines itself" data-title="Repentance unto life">
+  <div class="page">
+    <div class="kicker">Acts 11</div>
+    <h2>Repentance unto life</h2>
+    <blockquote class="scripture" style="font-style:italic">When they heard these things, they held their peace, and glorified God, saying, Then hath God also to the Gentiles <mark>granted <mark class="w">repentance</mark> unto life</mark>.<cite>Acts 11:18</cite></blockquote><blockquote class="scripture" style="font-style:italic">And the hand of the Lord was with them: and a great number believed, and <mark>turned unto the Lord</mark>.<cite>Acts 11:21</cite></blockquote>
+    <p>Note that verse 18 and 21, both quoted above, state similar things. 18 using “repentance,” 21 “turned unto.”</p>
+    <div class="callout"><p>They have identical meaning. There is no implied “...from sin.” It is Biblical repentance, <em>turning to the Lord.</em></p></div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="The Bible defines itself" data-title="That ye might believe him">
+  <div class="page">
+    <div class="kicker">Matthew 21</div>
+    <h2>That ye might believe him</h2>
+    <blockquote class="big-verse">For John came unto you in the way of righteousness, and ye believed him not: but the publicans and the harlots believed him: and ye, when ye had seen it, <mark><mark class="w">repented</mark> not afterward, that ye might believe him</mark>.<cite>Matthew 21:32</cite></blockquote>
+    <p>A certain man with two sons, orders them to work his vineyard. One refuses, but changes his mind and goes to work.</p>
+    <p>We see again, Biblical repentance is a turning towards belief in what God tells us is His will. Faith in His word.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="The Bible defines itself" data-title="Behave, or believe?">
+  <div class="page">
+    <h2>Behave, or believe?</h2>
+    <blockquote class="big-verse">From that time Jesus began to preach, and to say, <mark class="w">Repent</mark>: for the kingdom of heaven is at hand.<cite>Matthew 4:17</cite></blockquote>
+    <div class="cols"><div class="panel cain"><h3>“Behave”</h3><p>Would He be telling Jews to clean up their acts …</p></div><div class="panel believers"><h3>“Believe”</h3><p>… or to believe they need salvation, and that that salvation, promised by God, was at hand?</p></div></div>
+    <p>John the Baptist is saying “Reconsider what you know and believe me.” He is not saying “get your life together and stop sinning, the Kingdom of Heaven is here.” <button class="ref" data-v="Matthew 3:1-2">Matthew 3:1-2</button></p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="The Bible defines itself" data-title="We go to the doctor to be healed">
+  <div class="page">
+    <h2>We go to the doctor to be healed</h2>
+    <blockquote class="big-verse">And Jesus answering said unto them, They that are whole need not a physician; but they that are sick. I came not to call the righteous, but <mark>sinners to <mark class="w">repentance</mark></mark>.<cite>Luke 5:31-32</cite></blockquote>
+    <p>When Jesus says to repent, He isn’t talking about cleaning up your life, and trying to live more in line with the law. That’s the false religion of the Pharisee that He repeatedly condemns.</p>
+    <p>He calls sinners to repentance, towards God. The remission of sins that is the result of repentance unto faith. Then the healing of the body. Then the turning from sin.</p>
+    <div class="callout"><p>We go to the doctor to be healed. We don’t get healed to see the doctor.</p></div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="What we repent of" data-title="I changed my mind">
+  <div class="page">
+    <h2>I changed my mind</h2>
+    <p class="lead">I didn’t repent of sin to be saved because I’ve never thought sin was good or right. I’ve never changed my mind about that, I’ve always known it’s wrong.</p>
+    <p>But thank God and praise Jesus, I changed my mind about what I needed to do to be saved, and believed on the blood of the Lamb that washes away sins, and the gift of eternal life. That’s real repentance in order to be born again.</p>
+    <p>What people most often repent of are the false beliefs they have about God. About His judgment. About their own righteousness or how they can escape punishment for their sins.</p>
+    <div class="timeline"><div><span class="n">“</span><span class="lbl">Oh I thought idols would save me.</span></div><div><span class="n">“</span><span class="lbl">I thought the law would save me.</span></div><div><span class="n">“</span><span class="lbl">I thought maybe hell wasn’t real.</span></div><div><span class="n">“</span><span class="lbl">I didn’t know my works weren’t enough.</span></div></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="What we repent of" data-title="Turning from sin is a work">
+  <div class="page">
+    <h2>Turning from sin is a work</h2>
+    <div class="cols"><div class="panel cain"><h3>The false gospel</h3><p>If you are trusting in your ability to turn over a new leaf, to be reformed from sin, even your subjective “willingness” to “repent of sin”, or anything else that you might do in order to be saved, other than believe, you’re perishing.</p></div><div class="panel believers"><h3>The Bible</h3><p>The phrase “repent of sin” doesn’t appear in scripture, nor does any similar implied doctrine regarding salvation. What we see over and over is belief, faith, that saved.</p></div></div>
+    <p>Everyone turns from sin at various points in their lives. None of that saves. Only faith in the risen Christ and belief in the promise of God that Jesus is the sole propitiation for all sin can save us.</p>
+    <div class="refs center"><button class="ref" data-v="1 John 3:4">1 John 3:4</button><button class="ref" data-v="Romans 3:20">Romans 3:20</button><button class="ref" data-v="Romans 3:28">Romans 3:28</button></div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="What we repent of" data-title="The verses in context">
+  <div class="page">
+    <h2>The verses in context</h2>
+    <p class="lead">It’s easy to understand, by looking at verses commonly cited as supporting the false damnable heresy of repentance of sin for salvation, to see precisely what is being repented of in each.</p>
+    <ul class="xr"><li><button class="ref" data-v="2 Chronicles 7:14">2 Chronicles 7:14</button><span>Nation turning from sin. Not about salvation.</span></li><li><button class="ref" data-v="Ezekiel 14:6">Ezekiel 14:6</button><span>Directed at the nation of Israel which had put their faith in idols.</span></li><li><button class="ref" data-v="Luke 13:3">Luke 13:3</button><span>They are as sinful as those they are judging; repent of that misunderstanding.</span></li><li><button class="ref" data-v="Acts 3:19">Acts 3:19</button><span>Repent of being ignorant of who Christ was that they and their leaders had killed.</span></li><li><button class="ref" data-v="Acts 17:30">Acts 17:30</button><span>Repent of the ignorance God had winked at: worshipping false gods.</span></li><li><button class="ref" data-v="Revelation 9:20-21">Revelation 9:20-21</button><span>The unbelieving didn’t repent of their unbelief, to be saved physically from the wrath.</span></li><li><button class="ref" data-v="Revelation 2:5">Revelation 2:5</button><span>Already saved church members, turn from being slack in doing the first works.</span></li></ul>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="What we repent of" data-title="Repent, and be baptized">
+  <div class="page">
+    <div class="kicker">Acts 2</div>
+    <h2>Repent, and be baptized</h2>
+    <blockquote class="scripture" style="font-style:italic">Therefore let all the house of Israel know assuredly, that God hath made that same Jesus, whom ye have crucified, both Lord and Christ. Now when they heard this, they were pricked in their heart, and said unto Peter and to the rest of the apostles, Men and brethren, what shall we do? Then Peter said unto them, <mark class="w">Repent</mark>, and be baptized every one of you in the name of Jesus Christ for the remission of sins, and ye shall receive the gift of the Holy Ghost.<cite>Acts 2:36-38</cite></blockquote>
+    <p>Note the order of things. Peter gives them the Gospel. They ask what they now must do. Peter tells them repent, or change their mind. Not “of sin” but of what they, <em>in ignorance</em> and <em>unbelief</em> did, participating in His death. That they believe. Then they should be baptized in Jesus’ name.</p>
+    <p class="sub center">They that received the good news and believed were then baptized. (Again note the order of operations.)</p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Sorrow is not the change of mind" data-title="Judas repented">
+  <div class="page">
+    <h2>Judas repented</h2>
+    <div class="vps"><div class="vp lit"><h3>Judas repented himself</h3><blockquote class="scripture" style="font-style:italic">Then Judas, which had betrayed him, when he saw that he was condemned, <mark class="w">repented</mark> himself, and brought again the thirty pieces of silver to the chief priests and elders, Saying, I have sinned in that I have betrayed the innocent blood. And they said, What is that to us? see thou to that. And he cast down the pieces of silver in the temple, and departed, and went and hanged himself.<cite>Matthew 27:3-5</cite></blockquote><p>Repenting of a wrong done doesn’t equate with believing on Christ for salvation.</p></div></div>
+    <p>In modern translations, they remove the word “repented” here, and replace it with “felt remorse,” because the idea that Judas repented would conflict with the false teaching of turning from sin to be saved, rather than faith in Christ.</p>
+    <p class="sub center">Bad doctrine begets bad doctrine and confusion. <button class="ref" data-v="Acts 1:25">Acts 1:25</button></p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Sorrow is not the change of mind" data-title="Godly sorrow and saving repentance">
+  <div class="page">
+    <h2>Godly sorrow and saving repentance</h2>
+    <p class="lead">It is the conflating of regret/godly sorrow/understanding of our sinful nature and the wages of death earned by it, with the actual change of mind, turning to faith in God, in Christ for our salvation, upon which bad doctrine and damnable heresies are founded.</p>
+    <div class="cols"><div class="panel believers"><h3>Recognizing we are sinners</h3><p>Before we repent and believe, we have to first recognize we are sinners in need of salvation, damned without Christ. This is <em>not the same</em> as repentance, although it could be <em>the reason</em> for repenting.</p></div><div class="panel believers"><h3>Godly sorrow</h3><p>These may work us to the change of heart and towards faith, but they aren’t requirements for salvation, which is to believe on Jesus Christ, that He was raised from the dead. <button class="ref" data-v="2 Corinthians 7:10">2 Corinthians 7:10</button></p></div></div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Sorrow is not the change of mind" data-title="When he came to himself">
+  <div class="page">
+    <div class="kicker">Luke 15</div>
+    <h2>When he came to himself</h2>
+    <blockquote class="scripture" style="font-style:italic">And <mark>when he came to himself</mark>, he said, How many hired servants of my father’s have bread enough and to spare, and I perish with hunger! I will arise and go to my father, and will say unto him, Father, I have sinned against heaven, and before thee, And am no more worthy to be called thy son: make me as one of thy hired servants. And <mark>he arose, and came to his father</mark>. But when he was yet a great way off, his father saw him, and had compassion, and ran, and fell on his neck, and kissed him.<cite>Luke 15:17-20</cite></blockquote>
+    <p>It was that turning towards the Father that shows repentance. Not his sorrow and regret. Not his willingness to work, or wanting to make his father his lord.</p>
+    <p>That is biblical repentance. It’s all God asks of us. That we turn to Him and allow Him to clothe us in righteousness that we did not earn or expect or deserve.</p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Sorrow is not the change of mind" data-title="Believers who repented of a sin">
+  <div class="page">
+    <h2>Believers who repented of a sin</h2>
+    <div class="vps"><div class="vp fig"><h3>Simon</h3><blockquote class="scripture" style="font-style:italic"><mark class="w">Repent</mark> therefore of this thy wickedness, and pray God, if perhaps the thought of thine heart may be forgiven thee.<cite>Acts 8:22</cite></blockquote><p>Simon was already saved. He believed on Jesus already. He did something wicked, but his repentance isn’t for righteousness but as a believer who has sinned.</p></div><div class="vp fig"><h3>The Corinthians</h3><blockquote class="scripture" style="font-style:italic">Now I rejoice, not that ye were made sorry, but that ye sorrowed to <mark class="w">repentance</mark>: for ye were made sorry after a godly manner, that ye might receive damage by us in nothing.<cite>2 Corinthians 7:9</cite></blockquote><p>Paul isn’t telling the Corinthians that their turning from the sin he pointed out among them is how they were saved, for they were already.</p></div></div>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="What it breeds" data-title="More saved than others?">
+  <div class="page">
+    <h2>More saved than others?</h2>
+    <div class="cols-3"><div class="panel cain"><h3>Resentment</h3><p>The promotion of the idea that we must repent of our sins to be saved feeds that resentment, and can make a repentant heart grow bitter over time.</p></div><div class="panel cain"><h3>A caste</h3><p>By placing the emphasis on what was turned from, rather than the testimony of what is turned to, it creates an almost inevitable form of a caste system within a church. Of respecters of persons, who in hypocrisy see themselves as <em>more saved</em> than others.</p></div><div class="panel believers"><h3>The answer</h3><p>We should not glory in the fact that those more sinful than we were saved. We should glory in God that he would save any of us. We were all equally damned. We all had to turn to believe the same thing to gain life.</p></div></div>
+    <p class="sub center">There are many who are raised Christian, in godly homes, and can’t even tell you when they believed. <button class="ref" data-v="Matthew 20:9-12">Matthew 20:9-12</button></p>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="What it breeds" data-title="After salvation">
+  <div class="page">
+    <h2>After salvation</h2>
+    <p class="lead">That discernment, if the new man created at salvation is fed, leads to a change in attitude towards sin. It becomes less desirable.</p>
+    <div class="cols"><div class="panel cain"><h3>“Real repentance WILL mean you turn from sin”</h3><p>Saying “real repentance WILL mean you turn from sin, and WILL walk in the Spirit,” is false. We must pick up our cross daily. It is a choice to engage in sanctification.</p></div><div class="panel believers"><h3>Out of love for God</h3><p>Having been saved, we still should turn from the sin that we did while perishing under the law. But this again isn’t repenting of sin to be saved. It is turning from sin out of love for God.</p></div></div>
+    <p>It is being born again, quickened in spirit, that leads us from sin. <button class="ref" data-v="Romans 6:1-2">Romans 6:1-2</button></p>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Summary" data-title="Summary">
+  <div class="page">
+    <h2>Summary</h2>
+    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>A change of mind</strong>Repentance is a changing of mind or turning from one thing to another.</li><li><strong>The Bible defines itself</strong>Here we get the biblical definition of repent, God changing His mind.</li><li><strong>Turned unto the Lord</strong>They have identical meaning. There is no implied “...from sin.”</li><li><strong>What we repent of</strong>What people most often repent of are the false beliefs they have about God.</li><li><strong>Sorrow may lead there</strong>Not of sin, though godly sorrow for sin may lead us there. It was their faith that saves them.</li><li><strong>Then turn from sin</strong>It is turning from sin out of love for God.</li></ol></div>
+    <p class="take">If you have placed your trust in anything else besides the perfect work of Christ Jesus, this is what you must repent of.</p>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Summary" data-title="Read the teachings">
+  <div class="page">
+    <h2>Read the teachings</h2>
+    <p class="lead">The full teachings on repentance, in the app.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-salvation~804" target="_blank" rel="noopener">What the Bible means by repent ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~2839" target="_blank" rel="noopener">Repentance unto life ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~5444" target="_blank" rel="noopener">I changed my mind ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~5459" target="_blank" rel="noopener">Godly sorrow and repentance ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~5439" target="_blank" rel="noopener">Verses misused ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~2395" target="_blank" rel="noopener">Repent and be baptized ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~1680" target="_blank" rel="noopener">What repent means: Acts 26:20 ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~12062" target="_blank" rel="noopener">Metanoia: a change of mind ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 John 3:4":[[4, "Whosoever committeth sin transgresseth also the law: for sin is the transgression of the law."]],
+  "2 Chronicles 7:14":[[14, "If my people, which are called by my name, shall humble themselves, and pray, and seek my face, and turn from their wicked ways; then will I hear from heaven, and will forgive their sin, and will heal their land."]],
+  "2 Corinthians 7:10":[[10, "For godly sorrow worketh repentance to salvation not to be repented of: but the sorrow of the world worketh death."]],
+  "Acts 11:18":[[18, "When they heard these things, they held their peace, and glorified God, saying, Then hath God also to the Gentiles granted repentance unto life."]],
+  "Acts 17:30":[[30, "And the times of this ignorance God winked at; but now commandeth all men every where to repent:"]],
+  "Acts 1:25":[[25, "That he may take part of this ministry and apostleship, from which Judas by transgression fell, that he might go to his own place."]],
+  "Acts 26:20":[[20, "But shewed first unto them of Damascus, and at Jerusalem, and throughout all the coasts of Judaea, and then to the Gentiles, that they should repent and turn to God, and do works meet for repentance."]],
+  "Acts 3:19":[[19, "Repent ye therefore, and be converted, that your sins may be blotted out, when the times of refreshing shall come from the presence of the Lord;"]],
+  "Ezekiel 14:6":[[6, "Therefore say unto the house of Israel, Thus saith the Lord GOD; Repent, and turn yourselves from your idols; and turn away your faces from all your abominations."]],
+  "Hebrews 6:1":[[1, "Therefore leaving the principles of the doctrine of Christ, let us go on unto perfection; not laying again the foundation of repentance from dead works, and of faith toward God,"]],
+  "Luke 13:3":[[3, "I tell you, Nay: but, except ye repent, ye shall all likewise perish."]],
+  "Matthew 20:9-12":[[9, "And when they came that were hired about the eleventh hour, they received every man a penny."], [10, "But when the first came, they supposed that they should have received more; and they likewise received every man a penny."], [11, "And when they had received it, they murmured against the goodman of the house,"], [12, "Saying, These last have wrought but one hour, and thou hast made them equal unto us, which have borne the burden and heat of the day."]],
+  "Matthew 3:1-2":[[1, "In those days came John the Baptist, preaching in the wilderness of Judaea,"], [2, "And saying, Repent ye: for the kingdom of heaven is at hand."]],
+  "Revelation 2:5":[[5, "Remember therefore from whence thou art fallen, and repent, and do the first works; or else I will come unto thee quickly, and will remove thy candlestick out of his place, except thou repent."]],
+  "Revelation 9:20-21":[[20, "And the rest of the men which were not killed by these plagues yet repented not of the works of their hands, that they should not worship devils, and idols of gold, and silver, and brass, and stone, and of wood: which neither can see, nor hear, nor walk:"], [21, "Neither repented they of their murders, nor of their sorceries, nor of their fornication, nor of their thefts."]],
+  "Romans 3:20":[[20, "Therefore by the deeds of the law there shall no flesh be justified in his sight: for by the law is the knowledge of sin."]],
+  "Romans 3:28":[[28, "Therefore we conclude that a man is justified by faith without the deeds of the law."]],
+  "Romans 6:1-2":[[1, "What shall we say then? Shall we continue in sin, that grace may abound?"], [2, "God forbid. How shall we, that are dead to sin, live any longer therein?"]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saved by Grace Through Faith – The Doctrine of Salvation</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Saved by grace through faith in Christ, without works: an overview of the teaching on salvation in the King James Bible, from sin and the gospel to the blood, imputed righteousness, repentance, James 2 and adoption.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Saved by Grace Through Faith">
+  <div class="page title-page">
+    <div class="overline">Doctrine · Salvation</div>
+    <h1>Saved by Grace Through Faith</h1>
+    <p class="sub">Saved by grace through faith in Christ, without works.</p>
+    <div class="refs center"><button class="ref" data-v="Ephesians 2:8-9">Ephesians 2:8-9</button><button class="ref" data-v="John 3:16">John 3:16</button><button class="ref" data-v="Romans 10:13">Romans 10:13</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any gold reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="The doctrine">
+  <div class="page">
+    <h2>The doctrine</h2>
+    <blockquote class="big-verse"><mark>For by grace are ye saved through faith</mark>; and that not of yourselves: it is the gift of God: Not of works, lest any man should boast.<cite>Ephesians 2:8-9</cite></blockquote>
+    <p class="lead">There is no doubt we are saved from our sins and Hell by faith alone, by grace alone, in Christ alone. That God’s grace extends to all men.</p>
+    <p>This is the Gospel. There is nothing more to it. There can be nothing less.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="All have sinned" data-title="None righteous, no, not one">
+  <div class="page">
+    <h2>None righteous, no, not one</h2>
+    <blockquote class="scripture" style="font-style:italic">As it is written, There is none righteous, no, not one: There is none that understandeth, there is none that seeketh after God. They are all gone out of the way, they are together become unprofitable; there is none that doeth good, no, not one.<cite>Romans 3:10-12</cite></blockquote>
+    <p>It serves as a universal appeal to the need for the gospel, and the reconciliation of fallen men with a holy God. There is none good but God. All have gone astray.</p>
+    <div class="timeline"><div><span class="n">1</span><span class="lbl">All have sinned.</span></div><div><span class="n">2</span><span class="lbl">All deserve death.</span></div><div><span class="n">3</span><span class="lbl">Jews under the law.</span></div><div><span class="n">4</span><span class="lbl">Gentiles without the law.</span></div></div>
+    <div class="refs center"><button class="ref" data-v="Romans 3:23">Romans 3:23</button><button class="ref" data-v="Romans 6:23">Romans 6:23</button></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="The gospel that must be believed" data-title="What one must understand to be saved">
+  <div class="page">
+    <h2>What one must understand to be saved</h2>
+    <ul class="marks"><li>If you don’t believe you are a sinner, or that as a sinner you deserve Hell and death, you won’t accept the Gospel.</li><li>If you don’t believe that salvation from the wages of your sin, Hell and death, is a free gift, given by God’s grace and not of yourself, you cannot turn to believe the Gospel.</li><li>If you don’t believe that Jesus is the Son of God, Who was made flesh, lived a sinless life, was crucified, buried and risen again, that we may have remission of sin and eternal life, you can’t believe and be saved.</li><li>If you don’t accept the gift from God in Jesus name, calling upon the name of the Lord to forgive you, a sinner, you cannot be saved.</li></ul>
+    <div class="callout"><p>The gospel of grace and reconciliation by which we believe and are saved, is a concrete understandable and specific thing, spelled out by God hundreds of different ways throughout the Bible. <button class="ref" data-v="1 Corinthians 15:3-4">1 Corinthians 15:3-4</button></p></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="The gospel that must be believed" data-title="What must I do to be saved?">
+  <div class="page">
+    <h2>What must I do to be saved?</h2>
+    <blockquote class="scripture" style="font-style:italic">And brought them out, and said, Sirs, what must I do to be saved? And they said, <mark>Believe on the Lord Jesus Christ, and thou shalt be saved</mark>, and thy house.<cite>Acts 16:30-31</cite></blockquote>
+    <p>This is the fundamental question. This is the doctrine of the Gospel being asked for, and Paul answers, not with long-winded theological points or esoteric hints at salvation being some sort of Gnostic journey.</p>
+    <p>We are saved by faith alone, plus nothing minus nothing.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Grace, not works" data-title="To him that worketh not">
+  <div class="page">
+    <h2>To him that worketh not</h2>
+    <blockquote class="big-verse">But to him that worketh not, but believeth on him that justifieth the ungodly, his faith is counted for righteousness.<cite>Romans 4:5</cite></blockquote>
+    <p>Works has nothing to do with salvation. God doesn’t owe us salvation. Our works, no matter how good we think they are, can never offset our sin, and the wages thereof.</p>
+    <p>Grace is the unearned, unmerited, undeserved gift given by God from His mercy and love. <strong>Debt is deserved. Grace is undeserved.</strong></p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Grace, not works" data-title="Trusting anything but Christ">
+  <div class="page">
+    <h2>Trusting anything but Christ</h2>
+    <div class="cols-3"><div class="panel cain"><h3>Anything else</h3><p>If you are trusting in traditions, rites, your sacrifices, prayers to saints, carnal ordinances and sacraments, doing good works or turning from your sins to save you, you are assuredly perishing.</p></div><div class="panel cain"><h3>Even partially</h3><p>If they trust in their circumcision to justify them, even partially, then Christ will profit them nothing. <button class="ref" data-v="Galatians 5:2-4">Galatians 5:2-4</button></p></div><div class="panel believers"><h3>The finished work of Christ</h3><p>The only salvation is by grace of God, the unmerited favor He extends to all, that whosoever believes on His Son… Period. Plus nothing. Minus nothing.</p></div></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="The blood atonement" data-title="Only the blood atones">
+  <div class="page">
+    <h2>Only the blood atones</h2>
+    <div class="cols"><div class="panel cain"><h3>None of these</h3><p>Turning your life around, repenting of sin, joining a church, getting water baptized, making Jesus the Lord of your life, seeing real change, sacraments and good deeds... None of these things satisfy the price of sin.</p></div></div>
+    <blockquote class="big-verse">Whom God hath set forth to be a <mark>propitiation through faith in his blood</mark>, to declare his righteousness for the remission of sins that are past, through the forbearance of God;<cite>Romans 3:25</cite></blockquote>
+    <p>Only the blood of a holy God offered in our place and sprinkled on the mercy seat can atone for our sin and justify us before God. That is the only propitiation. <button class="ref" data-v="Hebrews 9:12">Hebrews 9:12</button> <button class="ref" data-v="Hebrews 9:22">Hebrews 9:22</button></p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="The blood atonement" data-title="While we were yet sinners">
+  <div class="page">
+    <h2>While we were yet sinners</h2>
+    <blockquote class="big-verse">But God commendeth his love toward us, in that, while we were yet sinners, Christ died for us.<cite>Romans 5:8</cite></blockquote>
+    <p>That when we were still enemies, working iniquities, dead in sin, God reconciled us through the death of His Son. God loved His enemies, and offered the free gift of salvation by the shedding of blood of His only begotten Son.</p>
+    <p>Think about this, for in it is the righteousness of God. <button class="ref" data-v="Romans 5:9-10">Romans 5:9-10</button></p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Imputed righteousness" data-title="An exchange">
+  <div class="page">
+    <h2>An exchange</h2>
+    <blockquote class="big-verse">For he hath made him to be sin for us, who knew no sin; that we might be made the righteousness of God in him.<cite>2 Corinthians 5:21</cite></blockquote>
+    <p>Jesus took on our sin and paid the price for all of it. He was the propitiation. The ransom. The sacrifice.</p>
+    <p>By believing this, we take on His righteousness. His blood washes us clean. We are clothed in white of his perfection, our sins forgotten.</p>
+    <p class="take">It is an exchange. That is the testament.</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Imputed righteousness" data-title="Abraham believed God">
+  <div class="page">
+    <h2>Abraham believed God</h2>
+    <div class="vps"><div class="vp fig"><h3>Counted unto him for righteousness</h3><blockquote class="scripture" style="font-style:italic">And he believed in the <span class="lord">Lord</span>; and he counted it to him for righteousness.<cite>Genesis 15:6</cite></blockquote><blockquote class="scripture" style="font-style:italic">For what saith the scripture? Abraham believed God, and it was counted unto him for righteousness.<cite>Romans 4:3</cite></blockquote></div></div>
+    <p>If it were of works, that means God would be indebted to us. To pay us for our works. That we were owed.</p>
+    <p>Abraham did not receive the ordinance of circumcision until decades after his believing God’s promise, and being saved by that faith. <button class="ref" data-v="Romans 4:10-11">Romans 4:10-11</button></p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Repentance is a change of mind" data-title="What the Bible means by repent">
+  <div class="page">
+    <h2>What the Bible means by repent</h2>
+    <div class="vps"><div class="vp lit"><h3>“Repent of your sins”</h3><blockquote class="scripture" style="font-style:italic">And God saw their works, that they turned from their evil way; and God repented of the evil, that he had said that he would do unto them; and he did it not.<cite>Jonah 3:10</cite></blockquote><p>Here we get the biblical definition of repent, God changing His mind, AND the acknowledgement that “turning from their evil ways” ie “Repenting of sin” = works.</p></div><div class="vp rev"><h3>Turning to the Lord</h3><blockquote class="scripture" style="font-style:italic">When they heard these things, they held their peace, and glorified God, saying, Then hath God also to the Gentiles granted repentance unto life.<cite>Acts 11:18</cite></blockquote><blockquote class="scripture" style="font-style:italic">And the hand of the Lord was with them: and a great number believed, and turned unto the Lord.<cite>Acts 11:21</cite></blockquote><p>They have identical meaning. There is no implied “...from sin.” It is Biblical repentance, <em>turning to the Lord.</em></p></div></div>
+    <p>There is no clear verse that spells out a Doctrine that says that we must give up sin or be willing to give up sin in order to believe and be saved. Repentance is a changing of mind or turning from one thing to another.</p>
+    <div class="callout"><p>Biblical repentance in relation to salvation is always this; turning from whatever else you are relying on, or whatever delusion that you hold that conflicts with the good news of Jesus Christ, and turning towards God and acceptance of this truth.</p></div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Repentance is a change of mind" data-title="Saved, though still sinners">
+  <div class="page">
+    <h2>Saved, though still sinners</h2>
+    <p>Saying “real repentance WILL mean you turn from sin, and WILL walk in the Spirit,” is false. We must pick up our cross daily. It is a choice to engage in sanctification. But salvation is of Christ, not ourselves.</p>
+    <p>The spirit does work in us the more we grow closer to God, to help remove the thorns in our hearts as we become more sanctified, praise God! But we are saved just as we are, though we still are sinners.</p>
+    <div class="callout honest"><p>Don’t let the misunderstanding about repentance be the stumbling block that keeps you from His grace.</p></div>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Justified before men" data-title="James 2 and Romans 4">
+  <div class="page">
+    <h2>James 2 and Romans 4</h2>
+    <div class="vps"><div class="vp lit"><h3>Justified by works?</h3><blockquote class="scripture" style="font-style:italic">Was not Abraham our father justified by works, when he had offered Isaac his son upon the altar?<cite>James 2:21</cite></blockquote><p>The misuse of James 2 to teach a false gospel of works is one of the great stumbling blocks to salvation and faith.</p></div><div class="vp rev"><h3>Not before God</h3><blockquote class="scripture" style="font-style:italic">For if Abraham were justified by works, he hath whereof to glory; but not before God. For what saith the scripture? Abraham believed God, and it was counted unto him for righteousness.<cite>Romans 4:2-3</cite></blockquote><p>Scripture says it was faith that justified Abraham to God.</p></div></div>
+    <p>By comparing scripture with scripture we see that there is no contradiction, only context. That Paul is writing of justification before God in grace, while James is writing of justification before man, by doing good works in faith.</p>
+    <p>This is the Biblical Doctrine of good works. That they which <em>have believed</em>, past tense, might do them and be profitable to others. <button class="ref" data-v="Titus 3:8">Titus 3:8</button></p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Adopted sons and heirs" data-title="The sons of God">
+  <div class="page">
+    <h2>The sons of God</h2>
+    <blockquote class="big-verse">But as many as received him, to them gave he power to become the sons of God, even to them that believe on his name:<cite>John 1:12</cite></blockquote>
+    <p>We who are saved by grace through faith are adopted as sons of God, heirs to His promise and the Kingdom of Heaven.</p>
+    <p>Our entrance to the kingdom is free, for we are at Liberty in Christ. We pay nothing, not our works or labors or deeds. It is a gift of God given to all who believe. <button class="ref" data-v="Matthew 17:25-26">Matthew 17:25-26</button> <button class="ref" data-v="Romans 8:16-17">Romans 8:16-17</button></p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Adopted sons and heirs" data-title="Passed from death unto life">
+  <div class="page">
+    <h2>Passed from death unto life</h2>
+    <blockquote class="big-verse">Verily, verily, I say unto you, He that heareth my word, and believeth on him that sent me, hath everlasting life, and shall not come into condemnation; but is passed from death unto life.<cite>John 5:24</cite></blockquote>
+    <p>This is why we who believe on Him that is faithful and true may know we have eternal life. That we are sealed unto redemption by His Spirit. That He testifies within us. That we may have that blessed assurance. Eternally adopted sons and daughters of God.</p>
+    <div class="cols"><div class="panel cain"><h3>Lose the gift?</h3><p>If you think that anything you do can justify you, or to lose that free gift, given by God by grace through faith in Christ, you aren’t saved.</p></div></div>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Closing" data-title="Confess and believe">
+  <div class="page">
+    <h2>Confess and believe</h2>
+    <blockquote class="scripture" style="font-style:italic">That if thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God hath raised him from the dead, thou shalt be saved. For with the heart man believeth unto righteousness; and with the mouth confession is made unto salvation.<cite>Romans 10:9-10</cite></blockquote>
+    <p>If you believe in your heart that God loved you so much, He sent His only begotten son to die for your sin and be raised again, then confess this with your mouth in prayer, calling upon Jesus’ name, and be saved. Knowing that blessed assurance of eternal security, never to be lost or taken away.</p>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Closing" data-title="Saved by grace through faith">
+  <div class="page">
+    <h2>Saved by grace through faith</h2>
+    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>All have sinned</strong>There is none good but God. All have gone astray.</li><li><strong>The gospel</strong>Christ made flesh, sinless, crucified, buried and risen again, that we may have remission of sin and eternal life.</li><li><strong>Grace, not works</strong>Works has nothing to do with salvation. God doesn’t owe us salvation.</li><li><strong>The blood</strong>Only the blood of a holy God offered in our place can atone for our sin.</li><li><strong>Imputed righteousness</strong>It is an exchange. That is the testament.</li><li><strong>Repentance</strong>A changing of mind, turning towards God.</li><li><strong>James 2</strong>Justified before God by faith, before men by works.</li><li><strong>Adopted sons</strong>A gift of God given to all who believe, never to be lost or taken away.</li></ol></div>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Closing" data-title="The themes, one deck each">
+  <div class="page">
+    <h2>The themes, one deck each</h2>
+    <div class="timeline"><div><span class="n">1</span><span class="lbl"><strong>Grace, not works</strong></span></div><div><span class="n">2</span><span class="lbl"><strong>Imputed righteousness</strong></span></div><div><span class="n">3</span><span class="lbl"><strong>Repentance is a change of mind</strong></span></div><div><span class="n">4</span><span class="lbl"><strong>All have sinned</strong></span></div><div><span class="n">5</span><span class="lbl"><strong>The gospel that must be believed</strong></span></div><div><span class="n">6</span><span class="lbl"><strong>Justified before men: James 2</strong></span></div><div><span class="n">7</span><span class="lbl"><strong>The blood atonement</strong></span></div><div><span class="n">8</span><span class="lbl"><strong>Adopted sons and heirs</strong></span></div></div>
+    <p class="sub center">Each theme of this doctrine has its own deck in the Lessons.</p>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Closing" data-title="Read the teachings">
+  <div class="page">
+    <h2>Read the teachings</h2>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-salvation~6040" target="_blank" rel="noopener">Not by works of righteousness ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~10750" target="_blank" rel="noopener">Without the deeds of the law ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~11404" target="_blank" rel="noopener">What one must understand ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~1714" target="_blank" rel="noopener">Made him to be sin for us ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~16360" target="_blank" rel="noopener">Only the blood atones ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~2839" target="_blank" rel="noopener">Repentance unto life ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~10779" target="_blank" rel="noopener">Before God and before men ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~6578" target="_blank" rel="noopener">Who are the sons of God? ↗</a></div>
+    <p class="sub center">The whole doctrine: <a class="ref lesson-link" href="../../studies/#doctrine-salvation" target="_blank" rel="noopener">Salvation by grace through faith ↗</a></p>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 Corinthians 15:3-4":[[3, "For I delivered unto you first of all that which I also received, how that Christ died for our sins according to the scriptures;"], [4, "And that he was buried, and that he rose again the third day according to the scriptures:"]],
+  "Ephesians 2:8-9":[[8, "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:"], [9, "Not of works, lest any man should boast."]],
+  "Galatians 5:2-4":[[2, "Behold, I Paul say unto you, that if ye be circumcised, Christ shall profit you nothing."], [3, "For I testify again to every man that is circumcised, that he is a debtor to do the whole law."], [4, "Christ is become of no effect unto you, whosoever of you are justified by the law; ye are fallen from grace."]],
+  "Hebrews 9:12":[[12, "Neither by the blood of goats and calves, but by his own blood he entered in once into the holy place, having obtained eternal redemption for us."]],
+  "Hebrews 9:22":[[22, "And almost all things are by the law purged with blood; and without shedding of blood is no remission."]],
+  "John 3:16":[[16, "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."]],
+  "Matthew 17:25-26":[[25, "He saith, Yes. And when he was come into the house, Jesus prevented him, saying, What thinkest thou, Simon? of whom do the kings of the earth take custom or tribute? of their own children, or of strangers?"], [26, "Peter saith unto him, Of strangers. Jesus saith unto him, Then are the children free."]],
+  "Romans 10:13":[[13, "For whosoever shall call upon the name of the Lord shall be saved."]],
+  "Romans 3:23":[[23, "For all have sinned, and come short of the glory of God;"]],
+  "Romans 4:10-11":[[10, "How was it then reckoned? when he was in circumcision, or in uncircumcision? Not in circumcision, but in uncircumcision."], [11, "And he received the sign of circumcision, a seal of the righteousness of the faith which he had yet being uncircumcised: that he might be the father of all them that believe, though they be not circumcised; that righteousness might be imputed unto them also:"]],
+  "Romans 5:9-10":[[9, "Much more then, being now justified by his blood, we shall be saved from wrath through him."], [10, "For if, when we were enemies, we were reconciled to God by the death of his Son, much more, being reconciled, we shall be saved by his life."]],
+  "Romans 6:23":[[23, "For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord."]],
+  "Romans 8:16-17":[[16, "The Spirit itself beareth witness with our spirit, that we are the children of God:"], [17, "And if children, then heirs; heirs of God, and joint-heirs with Christ; if so be that we suffer with him, that we may be also glorified together."]],
+  "Titus 3:8":[[8, "This is a faithful saying, and these things I will that thou affirm constantly, that they which have believed in God might be careful to maintain good works. These things are good and profitable unto men."]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>

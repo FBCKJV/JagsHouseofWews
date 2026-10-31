@@ -46,10 +46,11 @@ Source format, one element per line (blank lines are ignored, # starts a comment
   table: Head A | Head B   then tr: a | b lines  a table (cells may hold [[verse]] buttons and **bold**)
   image: lessons/x/pic.png | alt text | caption  a picture, saved next to the deck (use the same file name)
   highlight: believ                              (meta, top of the file) stems highlighted in every quoted verse
-  read: obadiah-holmes | Obadiah Holmes        a row of links to other lessons in the app (consecutive lines make one row)
+  read: obadiah-holmes | Obadiah Holmes        a row of links to other lessons in the app (consecutive lines make one row);
+                                               read: app:doctrine-salvation~123 | title links to a teaching or study
 
 Inline, in any text:  [[John 3:16]] or [[John 3:16|label]] is a tap-to-read verse, [[lesson:daniel-merrill|label]]
-links to a lesson in the app, {Lord} is
+links to a lesson in the app, [[app:doctrine-salvation~123|label]] or [[app:Romans-4|Romans 4]] to any page of it, {Lord} is
 LORD in small capitals, **bold**, *italic*.
 """
 import glob, html, json, os, re, sys
@@ -124,6 +125,9 @@ def inline(s):
         if m.group(1).startswith('lesson:'):
             out.append(lesson_link(m.group(1)[7:].strip(), m.group(2)))
             last = m.end(); continue
+        if m.group(1).startswith('app:'):
+            out.append(lesson_link(m.group(1).strip(), m.group(2)))
+            last = m.end(); continue
         k = key_of(m.group(1)); USED[k] = verses(m.group(1))
         out.append(f'<button class="ref" data-v="{esc(k)}">{esc(m.group(2) or label_of(m.group(1)))}</button>')
         last = m.end()
@@ -132,7 +136,9 @@ def inline(s):
 
 
 def lesson_link(lid, label=None):
-    return (f'<a class="ref lesson-link" href="{UP}studies/#lesson-{esc(lid)}" target="_blank" rel="noopener">'
+    # "app:doctrine-salvation~123" links to any page of the app (a teaching, a chapter study); otherwise a lesson id
+    target = lid[4:].lstrip('#') if lid.startswith('app:') else 'lesson-' + lid
+    return (f'<a class="ref lesson-link" href="{UP}studies/#{esc(target)}" target="_blank" rel="noopener">'
             f'{esc(label or lid)} ↗</a>')
 
 
