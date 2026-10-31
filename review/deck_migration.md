@@ -33,7 +33,7 @@ Each chapter has a main page plus several side pages, recaps, charts and workshe
 ## Next: decks for the notes-only lessons
 
 Chapter-by-chapter decks are made only as a book is taught. The deck work now goes to the doctrine topics (salvation
-and assurance first) and then to the 53 lessons that are notes, posts or sermons with no slides yet. The notes stay as
+and assurance first) and then to the lessons that are notes or posts with no slides yet. The notes stay as
 the lesson's secondary part; the deck becomes its "Slides" part. Same rules: the author's own wording, KJV from the
 builder, no fact-checking of the author's views. Order:
 
@@ -41,8 +41,8 @@ builder, no fact-checking of the author's views. Order:
 2. ~~Answering error (9)~~ done
 3. ~~Baptist & church history (10)~~ done
 4. Prophecy (4), the Doctrine class notes (3), Bible lessons (2)
-5. Sermons (16)
-6. From other preachers (3): only if the author asks, since it is other men's material
+
+Sermons and the lessons from other preachers do not get decks. They stay as notes.
 
 ## Done
 
