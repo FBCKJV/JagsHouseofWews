@@ -7,7 +7,7 @@
 
   const KJV_APP = 'https://fbckjv.app/KJVBible/';
   // Shown on the About page. Started at v1.17 (after 17 merged updates); each merged update adds one.
-  const APP_VERSION = '1.54', APP_DATE = '2026-10-28';
+  const APP_VERSION = '1.56', APP_DATE = '2026-10-28';
   const view = document.getElementById('view');
   const crumbs = document.getElementById('crumbs');
   let INDEX = null;
@@ -36,14 +36,6 @@
     return KJV_APP + '#' + book.split(' ').map(encodeURIComponent).join('+') + '+' + ch;
   }
 
-  // The text of every study and teaching now lives in the app, so the "View on Telegram" buttons are off.
-  // Photos and videos that exist only on Telegram keep their link until they are saved here.
-  // Set to true to bring the buttons back.
-  const TELEGRAM_LINKS = false;
-
-  function telegramPost(studyLink, id) {
-    return studyLink.replace(/\/\d+$/, '/' + id);
-  }
 
   // "Psalm 23", like the KJV app; every other book is just "Book N"
   function chapterName(book, ch) {
@@ -106,7 +98,7 @@
   }
 
   // KJV text from the Bible app's published data. If it can't be reached (offline, or the
-  // file moved) the study falls back to the chapter text that was posted on Telegram.
+  // file moved) the study falls back to the chapter text that was posted with the study.
   function loadKJV(slug) {
     return kjvCache[slug] || (kjvCache[slug] = getJSON(KJV_APP + 'bible/' + slug + '.json')
       .catch(() => { delete kjvCache[slug]; return null; }));
@@ -188,7 +180,7 @@
       let body = '';
       if (p.media) {
         const what = { photo: 'Photo', video_file: 'Video', animation: 'Animation' }[p.media] || 'Media';
-        body += `<a class="media" href="${esc(telegramPost(study.link, p.id))}" target="_blank" rel="noopener">📷 ${what} — view on Telegram ↗</a>`;
+        body += `<p class="media">📷 ${what} with this post, not yet added to the app</p>`;
       }
       if (p.text) body += render(p.text, p.kind === 'scripture');
       if (body && p.topics) body += filedUnder(p.topics);
@@ -240,7 +232,12 @@
           <strong>${esc(chapterName(L.book, L.chapter))}</strong><em>${esc(fmtDate(L.date))}</em></a>` : ''}
       </div>
       ${testament('OT', 'Old Testament', 'Genesis – Malachi')}
-      ${testament('NT', 'New Testament', 'Matthew – Revelation')}`;
+      ${testament('NT', 'New Testament', 'Matthew – Revelation')}
+      <nav class="home-sections" aria-label="More in the app">
+        <a href="#doctrines"><strong>Doctrines</strong><span>Teachings filed by topic</span></a>
+        <a href="#lessons"><strong>Lessons</strong><span>Slides, notes and sermons</span></a>
+        <a href="#pictures"><strong>Memes</strong><span>Charts and memes by topic</span></a>
+      </nav>`;
     // Each testament folds; the choice is remembered on this device.
     view.querySelectorAll('details.testament').forEach(d => d.addEventListener('toggle', () => {
       try { localStorage.setItem('wews_open_' + d.dataset.t, d.open ? '1' : '0'); } catch (e) {}
@@ -420,7 +417,6 @@
         <div class="post" data-lazy="${x.id}"></div>
         <p class="actions">
           ${studyLinks}
-          ${TELEGRAM_LINKS && x.link ? `<a class="btn" href="${esc(x.link)}" target="_blank" rel="noopener">View on Telegram ↗</a>` : ''}
         </p>
         ${also.length ? `<p class="filed">Also under ${also.join(' · ')}</p>` : ''}
       </div>
@@ -669,7 +665,7 @@
     }
     const posts = fallbackStudy ? fallbackStudy.posts.filter(p => p.kind === 'scripture') : [];
     if (!posts.length) return '';
-    return '<p class="from-post">Chapter text as posted on Telegram (the KJV Bible app couldn\'t be reached).</p>' +
+    return '<p class="from-post">Chapter text as posted with the study (the KJV Bible app couldn\'t be reached).</p>' +
       posts.map(p => `<div class="post">${render(p.text, true)}</div>`).join('');
   }
 
@@ -724,7 +720,6 @@
       : decks.length ? `<a class="btn" href="#lessons-here" data-jump="lessons-here">Class slides (${decks.length}) ↓</a>` : '';
     const actions = `<div class="actions">
         <a class="btn primary" href="${esc(kjvHref)}" target="_blank" rel="noopener">Read in the KJV app ↗</a>
-        ${TELEGRAM_LINKS && shownStudy ? `<a class="btn" id="tg-link" href="${esc(shownStudy.link || '#')}" target="_blank" rel="noopener"${shownStudy.link ? '' : ' hidden'}>View on Telegram ↗</a>` : ''}
         ${slidesBtn}
         ${studies.length ? '<a class="btn" href="#commentary" data-jump="commentary">Skip to commentary ↓</a>' : ''}
       </div>`;
@@ -801,8 +796,6 @@
       });
       document.getElementById('commentary-body').innerHTML = commentary(s);
       document.getElementById('study-date').textContent = studyWhen(s);
-      const tg = document.getElementById('tg-link');
-      if (tg) { tg.hidden = !s.link; if (s.link) tg.href = s.link; }
     });
     view.querySelectorAll('[data-jump]').forEach(jump => jump.onclick = e => {
       e.preventDefault();

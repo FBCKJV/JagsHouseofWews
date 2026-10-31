@@ -94,6 +94,18 @@ def own_words(text):
     return sum(len(l) for l in text.split('\n') if l.strip() and not QUOTE_LINE.match(l) and not REF_ONLY.match(l))
 
 
+TG_TITLED = re.compile(r'\[([^\]]+)\]\((?:https?://)?(?:www\.)?(?:t\.me|telegram\.me)/[^)]*\)', re.I)
+
+
+def no_telegram(text):
+    """The app carries no links to Telegram: a [titled](t.me link) keeps its words, a bare one is removed."""
+    out = TG_TITLED.sub(r'\1', text)
+    out = re.sub(r'(?:https?://)?(?:www\.)?(?:t\.me|telegram\.me)/[^\s)\]]*', '', out, flags=re.I)
+    out = re.sub(r'\(\s*\)', '', out)
+    out = re.sub(r'[ \t]+\n', '\n', out)
+    return re.sub(r'[ \t]{2,}', ' ', out).strip()
+
+
 def strip_links(text):
     out = RAW_URL.sub('', text)
     out = re.sub(r'[ \t]+\n', '\n', out)
@@ -252,10 +264,9 @@ def write_topics(topics, posts_by_id):
                 filed[tid].append({
                     'id': p['id'], 'title': a.get('title', ''), 'theme': a.get('theme', '') if i == 0 else '',
                     'summary': a.get('summary', ''), 'date': p['date'][:10], 'book': book, 'slug': slug(book),
-                    'ch': ch, 'link': study['link'] if str(p['id']).startswith('added-')   # pasted in: no post of its own
-                    else study['link'].rsplit('/', 1)[0] + '/' + str(p['id']),
+                    'ch': ch,
                     'refs': references(p['text']), 'also': [t for t in a['topics'] if t != tid and t in names],
-                    'text': p['text']})
+                    'text': no_telegram(p['text'])})
     # standalone teachings (not part of a chapter study): their own group under each topic
     standalone = json.load(open(STANDALONE, encoding='utf-8'))['teachings'] if os.path.exists(STANDALONE) else []
     for x in standalone:
@@ -269,8 +280,8 @@ def write_topics(topics, posts_by_id):
                 filed[tid].append({
                     'id': x['id'], 'title': x['title'], 'theme': 'Standalone teachings' if i == 0 else '',
                     'summary': x.get('summary', ''), 'date': x['date'][:10], 'book': None, 'slug': None, 'ch': None,
-                    'chapters': chs, 'link': x.get('link'), 'refs': references(x['text']) or x.get('verses', []),
-                    'also': [t for t in x['topics'] if t != tid and t in names], 'text': x['text']})
+                    'chapters': chs, 'refs': references(x['text']) or x.get('verses', []),
+                    'also': [t for t in x['topics'] if t != tid and t in names], 'text': no_telegram(x['text'])})
     index = []
     for t in topics['topics']:
         items = filed.get(t['id'], [])
@@ -507,7 +518,7 @@ def main():
                         continue
                 elif post_dec.get(pid) == 'drop':
                     continue
-                out = {'id': p['id'], 'date': p['date'][:16], 'kind': p['kind'], 'text': text}
+                out = {'id': p['id'], 'date': p['date'][:16], 'kind': p['kind'], 'text': no_telegram(text)}
                 if p.get('media'):
                     out['media'] = p['media']
                 filed = topics['posts'].get(pid)
@@ -516,7 +527,7 @@ def main():
                 posts.append(out)
                 posts_by_id.setdefault(pid, (book, ch, study, out))
             chars = sum(own_words(p['text']) for p in posts if p['kind'] == 'study')
-            res = {'date': study['date'], 'series': study['series'], 'link': study['link'], 'chars': chars, 'posts': posts}
+            res = {'date': study['date'], 'series': study['series'], 'chars': chars, 'posts': posts}
             r = verse_range(study)
             if r and not study.get('gathered'):
                 res['range'] = r
