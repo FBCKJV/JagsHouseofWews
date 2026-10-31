@@ -37,8 +37,8 @@ and assurance first) and then to the 53 lessons that are notes, posts or sermons
 the lesson's secondary part; the deck becomes its "Slides" part. Same rules: the author's own wording, KJV from the
 builder, no fact-checking of the author's views. Order:
 
-1. Standalone posts (6)
-2. Answering error (9)
+1. ~~Standalone posts (6)~~ done
+2. ~~Answering error (9)~~ done
 3. Baptist & church history (10)
 4. Prophecy (4), the Doctrine class notes (3), Bible lessons (2)
 5. Sermons (16)
