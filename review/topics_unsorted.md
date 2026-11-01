@@ -1,6 +1,6 @@
 # Teachings not filed under a topic yet
 
-18 posts chain verses from several books to build a point but aren't in `review/topics.json` yet. Add each under `"posts"` with its topics, theme, title and summary (or `"teaching": false` to leave it out), then rerun `python3 tools/clean_studies.py`.
+19 posts chain verses from several books to build a point but aren't in `review/topics.json` yet. Add each under `"posts"` with its topics, theme, title and summary (or `"teaching": false` to leave it out), then rerun `python3 tools/clean_studies.py`.
 
 Regenerated on every run; don't edit it.
 
@@ -40,3 +40,5 @@ Regenerated on every run; don't edit it.
   > Romans 10:8-9 But what saith it? The word is nigh thee, even in thy mouth, and in thy heart: that is, the word of faith, which we preach; that if thou
 - `17310` · 2026-03-21 · Proverbs 25 · 2 Kings 18:4, Luke 14:8-10, Romans 12:18
   > Continuing in Proverbs 25; the instruction for a holy king and kingdom, recorded under the command of King Hezekiah. Take away the wicked from before 
+- `added-drive-psalms-55` · 2026-11-01 · Psalms 55 · 2 Samuel 17:23, Isaiah 1:15, Lamentations 3:44, Psalm 55:16
+  > Psalm 55 is a Psalm of David, but it isn't given to us when or who it is about. We can make a guess from the context that it may have been during the 
