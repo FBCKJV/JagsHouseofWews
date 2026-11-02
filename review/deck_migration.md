@@ -45,7 +45,8 @@ builder, no fact-checking of the author's views. Order:
    deck per theme (the user's call). Salvation and assurance keep their theme decks. Small topics that overlap
    (angels, creation, history) may share a deck.
    - [x] The reprobate mind
-   - [ ] God, Christ & the Holy Ghost, then The Word of God, the church, history, soul winning, the walk, trust,
+   - [x] God, Christ & the Holy Ghost
+   - [ ] The Word of God, then the church, history, soul winning, the walk, trust,
      prayer, wisdom, family, the law, Christ in the Old Testament, Israel, prophecy, judgment, false teaching,
      nations, creation, angels
 
@@ -111,6 +112,7 @@ Sermons and the lessons from other preachers do not get decks. They stay as note
 - [x] **Daniel 11** (`daniel-11`)
 - [x] **John: That Ye Might Believe** (`john-that-ye-might-believe`)
 - [x] **The Reprobate Mind – Given Over of God** (`topic-reprobate`)
+- [x] **God, Christ & the Holy Ghost – These Three Are One** (`topic-godhead`)
 
 ## Standing decisions
 

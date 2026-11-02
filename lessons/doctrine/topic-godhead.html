@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>God, Christ &amp; the Holy Ghost – These Three Are One</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="The one true God, the deity of Christ, and the Comforter: who God is, Jesus fully God and fully man, and the work of the Holy Ghost, from the teachings on the Godhead.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="God, Christ &amp; the Holy Ghost">
+  <div class="page title-page">
+    <div class="overline">Doctrine · The Godhead</div>
+    <h1>These Three Are One</h1>
+    <p class="sub">The one true God, the deity of Christ, and the Comforter.</p>
+    <div class="refs center"><button class="ref" data-v="1 John 5:7">1 John 5:7</button><button class="ref" data-v="Isaiah 45:5">Isaiah 45:5</button><button class="ref" data-v="John 1:1">John 1:1</button><button class="ref" data-v="John 14:26">John 14:26</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any gold reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="Three that bear record">
+  <div class="page">
+    <h2>Three that bear record</h2>
+    <blockquote class="big-verse">For there are three that bear record in heaven, <mark>the Father, the Word, and the Holy Ghost: and these three are one</mark>.<cite>1 John 5:7</cite></blockquote>
+    <p class="lead">The Bible does not demand that we figure out the metaphysical mechanics of how three can be one. It simply states the fact of their heavenly record and their absolute unity, leaving no room for human rationalization.</p>
+    <p>It identifies them by their revealed biblical names: Father, Word, and Holy Ghost, and the undeniable fact that these three are one.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Introduction" data-title="Great is the mystery of godliness">
+  <div class="page">
+    <h2>Great is the mystery of godliness</h2>
+    <blockquote class="big-verse">And without controversy <mark>great is the mystery of godliness</mark>: God was manifest in the flesh, justified in the Spirit, seen of angels, preached unto the Gentiles, believed on in the world, received up into glory.<cite>1 Timothy 3:16</cite></blockquote>
+    <p>Where the text of scripture presents mystery, the fundamentalist stops, where the philosopher and the theologian continue, pressing on in their vain imagination.</p>
+    <p>Always search the scripture to see if it is so. And if you cannot draw a clear, direct understanding of a doctrine from plain language and context, then it is ok and in fact wise, to leave it to faith and admit your ignorance as fallible, finite man.</p>
+    <div class="callout"><p>Each member of the Godhead has His own will, are their own person, Father, the Son and the Spirit. But these three are one and obey the will of God the Father.</p></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Introduction" data-title="The fulness of the Godhead bodily">
+  <div class="page">
+    <h2>The fulness of the Godhead bodily</h2>
+    <blockquote class="scripture" style="font-style:italic">Beware lest any man spoil you through philosophy and vain deceit, after the tradition of men, after the rudiments of the world, and not after Christ. <mark>For in him dwelleth all the fulness of the Godhead bodily</mark>.<cite>Colossians 2:8-9</cite></blockquote>
+    <p>The fulness of the Godhead is stated as a fact, <em>in</em> Christ. The scripture does not seek to define His “essence,” substance, or the mechanics of that fulness. God's word simply declares it, its truth, and then warns against the very methods that later generations of men would use to elaborate it.</p>
+    <p class="take">There is no need to explain what we know is true. It is just true.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-godhead~18028" target="_blank" rel="noopener">Biblical fundamentalism and the Trinity ↗</a></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="There is none else" data-title="I am the Lord, and there is none else">
+  <div class="page">
+    <div class="kicker">There is none else</div>
+    <h2>I am the Lord, and there is none else</h2>
+    <blockquote class="big-verse"><mark>I am the <span class="lord">Lord</span>, and there is none else</mark>, there is no God beside me: I girded thee, though thou hast not known me: That they may know from the rising of the sun, and from the west, that there is none beside me. <mark>I am the <span class="lord">Lord</span>, and there is none else</mark>.<cite>Isaiah 45:5-6</cite></blockquote>
+    <p>God says He has named Cyrus as deliverer, more than a century off in the future. And just as sure and specific and certain as this prophecy is for Cyrus, so it is for the Messiah.</p>
+    <p>God calls all His shots beforehand, and we see the results are true. And if these things are sure and true, then know the promise of salvation and eternal life in Christ Jesus is as well.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="There is none else" data-title="The true and living God">
+  <div class="page">
+    <div class="kicker">There is none else</div>
+    <h2>The true and living God</h2>
+    <blockquote class="big-verse">But <mark>the <span class="lord">Lord</span> is the true God, he is the living God</mark>, and an everlasting king: at his wrath the earth shall tremble, and the nations shall not be able to abide his indignation.<cite>Jeremiah 10:10</cite></blockquote>
+    <p>The Lord is consistently pointing out the vanity, the utter uselessness of false gods. How foolish it is to bow and serve dead things as gods, that cannot save anyone. They are an invention of man's own vain imagination.</p>
+    <p>We worship the living God, through Whom all things were made. The heathen in their fear worship the sun, the moon, the stars. Idols made of wood and stone and molten metals.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="There is none else" data-title="God is love, and God is holy">
+  <div class="page">
+    <div class="kicker">There is none else</div>
+    <h2>God is love, and God is holy</h2>
+    <p class="lead">The Bible says God is love. In no uncertain terms He is love.</p>
+    <p>God so loved the world He gave His only begotten Son, Who so loved us that He gave His life for us. While we were yet sinners, He died for us. And because God loves His children, He hates that which is against us. His is a perfect hatred.</p>
+    <p>The Lord is separate from sin. Singular in His perfect ways. Where <em>we can</em> love, He <em>is</em> love. Where we are called <em>to be</em> holy, He <em>is</em> holy.</p>
+    <div class="refs center"><button class="ref" data-v="1 John 4:8-10">1 John 4:8-10</button><button class="ref" data-v="Isaiah 6:3">Isaiah 6:3</button><button class="ref" data-v="1 Peter 1:16">1 Peter 1:16</button></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="There is none else" data-title="Righteous, faithful and just">
+  <div class="page">
+    <div class="kicker">There is none else</div>
+    <h2>Righteous, faithful and just</h2>
+    <blockquote class="big-verse">He is the Rock, his work is perfect: for all his ways are judgment: <mark>a God of truth and without iniquity, just and right is he</mark>.<cite>Deuteronomy 32:4</cite></blockquote>
+    <p>God is love. God is holy. God is righteous in all His ways. Faithful. True. God is just. God is not a respecter of persons. He shows no favor or bias.</p>
+    <div class="cols"><div class="panel believers"><h3>Mercy</h3><p>the withholding of what we deserve; Hell and death.</p></div><div class="panel believers"><h3>Grace</h3><p>being given that which we don't deserve; Heaven and eternal life.</p></div></div>
+    <div class="refs center"><button class="ref" data-v="Numbers 23:19">Numbers 23:19</button><button class="ref" data-v="Lamentations 3:22-23">Lamentations 3:22-23</button><button class="ref" data-v="Psalms 145:17">Psalm 145:17</button></div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="There is none else" data-title="Jealous is His name">
+  <div class="page">
+    <div class="kicker">There is none else</div>
+    <h2>Jealous is His name</h2>
+    <blockquote class="scripture" style="font-style:italic">And the <span class="lord">Lord</span> passed by before him, and proclaimed, The <span class="lord">Lord</span>, The <span class="lord">Lord</span> God, <mark>merciful and gracious, longsuffering, and abundant in goodness and truth</mark>, Keeping mercy for thousands, forgiving iniquity and transgression and sin, and that will by no means clear the guilty; visiting the iniquity of the fathers upon the children, and upon the children’s children, unto the third and to the fourth generation.<cite>Exodus 34:6-7</cite></blockquote>
+    <p>We learn a name for God and it is Jealous. Jealousy is not envy or covetousness. It is fiercely protecting that which one owns. God is saying in this covenant He owns them, they are His people.</p>
+    <p>There is no other rock than the Lord. There is no other name given but Jesus.</p>
+    <div class="refs center"><button class="ref" data-v="Exodus 34:14">Exodus 34:14</button><button class="ref" data-v="Psalms 18:31">Psalm 18:31</button></div>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-godhead~15880" target="_blank" rel="noopener">I am the LORD, there is none else ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-godhead~8912" target="_blank" rel="noopener">The Nature of God: God Is Holy ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-godhead~8933" target="_blank" rel="noopener">Righteous, Faithful and Just ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-godhead~10409" target="_blank" rel="noopener">Merciful and gracious, and Jealous ↗</a></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="The deity of Christ" data-title="In the beginning was the Word">
+  <div class="page">
+    <div class="kicker">The deity of Christ</div>
+    <h2>In the beginning was the Word</h2>
+    <blockquote class="scripture" style="font-style:italic">In the beginning was the Word, and the Word was with God, and <mark>the Word was God</mark>. The same was in the beginning with God. All things were made by him; and without him was not any thing made that was made. In him was life; and the life was the light of men. And the light shineth in darkness; and the darkness comprehended it not.<cite>John 1:1-5</cite></blockquote>
+    <p>John hits the ground running. No human genealogies. Not the human birth of Christ, but the divine godhead of Jesus.</p>
+    <p>5 verses that dispel modalism, oneness heresy. Dispel the “Jesus didn't exist until he was born” heresy. The “Jesus isn't God” heresy. 5 verses that lay a foundation for the faith.</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="The deity of Christ" data-title="I am">
+  <div class="page">
+    <div class="kicker">The deity of Christ</div>
+    <h2>I am</h2>
+    <p class="lead">In the Gospel of John, Jesus is quoted 7 times making affirmation of who He is, using the divine “<em>I am</em>,” as God the Father said to Moses from the burning bush.</p>
+    <ul class="xr"><li><button class="ref" data-v="John 6:48">John 6:48</button><span>I am that bread of life</span></li><li><button class="ref" data-v="John 8:12">John 8:12</button><span>I am the light of the world</span></li><li><button class="ref" data-v="John 10:9">John 10:9</button><span>I am the door</span></li><li><button class="ref" data-v="John 10:11">John 10:11</button><span>I am the good shepherd</span></li><li><button class="ref" data-v="John 11:25">John 11:25</button><span>I am the resurrection, and the life</span></li><li><button class="ref" data-v="John 14:6">John 14:6</button><span>I am the way, the truth, and the life</span></li><li><button class="ref" data-v="John 15:1">John 15:1</button><span>I am the true vine</span></li></ul>
+    <blockquote class="big-verse">Jesus said unto them, Verily, verily, I say unto you, <mark>Before Abraham was, I am</mark>.<cite>John 8:58</cite></blockquote>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="The deity of Christ" data-title="The image of the invisible God">
+  <div class="page">
+    <div class="kicker">The deity of Christ</div>
+    <h2>The image of the invisible God</h2>
+    <blockquote class="scripture" style="font-style:italic">Who is <mark>the image of the invisible God</mark>, the firstborn of every creature: For by him were all things created, that are in heaven, and that are in earth, visible and invisible, whether they be thrones, or dominions, or principalities, or powers: all things were created by him, and for him: And he is before all things, and by him all things consist.<cite>Colossians 1:15-17</cite></blockquote>
+    <p>Jesus is the express image of God the Father, and made through Jesus, all that has been created is His, who was before all things.</p>
+    <p>Jesus forgiving the sins of the man with palsy, and then healing his flesh in opposition to the scribes questioning in their hearts His authority, gives a definitive statement of the divinity of Christ. “Who can forgive sins but God only?” Exactly.</p>
+    <div class="refs center"><button class="ref" data-v="Mark 2:7">Mark 2:7</button><button class="ref" data-v="Hebrews 1:3">Hebrews 1:3</button></div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="The deity of Christ" data-title="Son of David and Son of God">
+  <div class="page">
+    <div class="kicker">The deity of Christ</div>
+    <h2>Son of David and Son of God</h2>
+    <p class="lead">It is these two sonships that Jesus was born into. Fully God. Fully man.</p>
+    <p>Being the son of Joseph, even adopted, places Jesus in line for the throne of David, fulfilling the prophets' sayings. The Son of David. But to those called by the Spirit, and given understanding of scripture, the savior of their souls and heir to the Heavenly Kingdom. The Son of God.</p>
+    <blockquote class="big-verse">For David himself said by the Holy Ghost, <mark>The <span class="lord">Lord</span> said to my Lord</mark>, Sit thou on my right hand, till I make thine enemies thy footstool. David therefore himself calleth him Lord; and whence is he then his son? And the common people heard him gladly.<cite>Mark 12:36-37</cite></blockquote>
+    <p>Jesus asks how can a physical son be called Lord by David, himself a king at the writing of the Psalm.</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="The deity of Christ" data-title="Made a little lower than the angels">
+  <div class="page">
+    <div class="kicker">The deity of Christ</div>
+    <h2>Made a little lower than the angels</h2>
+    <blockquote class="big-verse">But we see Jesus, who was <mark>made a little lower than the angels for the suffering of death</mark>, crowned with glory and honour; that he by the grace of God should taste death for every man.<cite>Hebrews 2:9</cite></blockquote>
+    <p>That the Creator became as the created that he may bring us to glory. And in all things He was like us, tempted of the flesh that He may know our struggles and understand our pain.</p>
+    <p>Jesus, being fully man and fully God, was born as we are. He grew as we do. He waxed in spirit and filled with wisdom, meaning He grew into these things. Jesus as man had to, at every step of His life, choose to do the will of the Father.</p>
+    <p>And so, Jesus wept. And then raised Lazarus from the dead.</p>
+    <div class="refs center"><button class="ref" data-v="Luke 2:52">Luke 2:52</button><button class="ref" data-v="Hebrews 4:15">Hebrews 4:15</button><button class="ref" data-v="John 11:35">John 11:35</button></div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="The deity of Christ" data-title="He that descended is the same also that ascended">
+  <div class="page">
+    <div class="kicker">The deity of Christ</div>
+    <h2>He that descended is the same also that ascended</h2>
+    <blockquote class="scripture" style="font-style:italic">Wherefore he saith, When he ascended up on high, <mark>he led captivity captive</mark>, and gave gifts unto men. (Now that he ascended, what is it but that he also descended first into the lower parts of the earth? He that descended is the same also that ascended up far above all heavens, that he might fill all things.)<cite>Ephesians 4:8-10</cite></blockquote>
+    <p>Jesus died for our sins, went to Hell for our sins, and after 3 days and 3 nights, rose again from the dead in triumph. His soul was not left in Hell, neither did His flesh see corruption.</p>
+    <p>In a like manner, Jesus who was captive in Hell for 3 days and 3 nights, rose from the dead, bodily, led captivity captive, as He had victory and took power over death and Hell. He freed mankind from the bonds of death and Hell. He took captive His captors.</p>
+    <div class="refs center"><button class="ref" data-v="Revelation 1:18">Revelation 1:18</button><button class="ref" data-v="Hebrews 2:14-15">Hebrews 2:14-15</button><button class="ref" data-v="Acts 2:31">Acts 2:31</button></div>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="The deity of Christ" data-title="The names of Christ">
+  <div class="page">
+    <div class="kicker">The deity of Christ</div>
+    <h2>The names of Christ</h2>
+    <p>The inspired revelation gives us more names of Jesus, that we may worship Him.</p>
+    <div class="tbl"><table><thead><tr><th>Name</th><th>Revelation</th></tr></thead><tbody><tr><td>Faithful Witness</td><td><button class="ref" data-v="Revelation 1:5">Revelation 1:5</button></td></tr><tr><td>Alpha and Omega</td><td><button class="ref" data-v="Revelation 1:8">Revelation 1:8</button></td></tr><tr><td>Son of God</td><td><button class="ref" data-v="Revelation 2:18">Revelation 2:18</button></td></tr><tr><td>He That Hath the Key of David</td><td><button class="ref" data-v="Revelation 3:7">Revelation 3:7</button></td></tr><tr><td>Lion of the Tribe of Juda</td><td><button class="ref" data-v="Revelation 5:5">Revelation 5:5</button></td></tr><tr><td>King of Kings, Lord of Lords</td><td><button class="ref" data-v="Revelation 17:14">Revelation 17:14</button></td></tr><tr><td>The Word of God</td><td><button class="ref" data-v="Revelation 19:13">Revelation 19:13</button></td></tr><tr><td>The Bright and Morning Star</td><td><button class="ref" data-v="Revelation 22:16">Revelation 22:16</button></td></tr></tbody></table></div>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-godhead~1272" target="_blank" rel="noopener">In the beginning was the Word ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-godhead~1471" target="_blank" rel="noopener">The I am sayings of Jesus ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-godhead~8503" target="_blank" rel="noopener">Made a Little Lower Than the Angels ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-godhead~8302" target="_blank" rel="noopener">The Names of Christ in Revelation ↗</a></div>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="The Holy Ghost the Comforter" data-title="The Comforter shall teach you all things">
+  <div class="page">
+    <div class="kicker">The Holy Ghost the Comforter</div>
+    <h2>The Comforter shall teach you all things</h2>
+    <blockquote class="big-verse">But the Comforter, which is the Holy Ghost, whom the Father will send in my name, <mark>he shall teach you all things</mark>, and bring all things to your remembrance, whatsoever I have said unto you.<cite>John 14:26</cite></blockquote>
+    <p>Jesus tells them the nature of the 3rd person of the trinity, the Holy Ghost. The Comforter. Who, dwelling within us gives us discernment to understand the word, as He teaches us all things and brings to remembrance those doctrines and scripture we've been taught.</p>
+    <p>In Him is peace, to not be troubled or afraid.</p>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="The Holy Ghost the Comforter" data-title="He will reprove the world">
+  <div class="page">
+    <div class="kicker">The Holy Ghost the Comforter</div>
+    <h2>He will reprove the world</h2>
+    <blockquote class="scripture" style="font-style:italic">And when he is come, <mark>he will reprove the world of sin, and of righteousness, and of judgment</mark>: Of sin, because they believe not on me; Of righteousness, because I go to my Father, and ye see me no more; Of judgment, because the prince of this world is judged.<cite>John 16:8-11</cite></blockquote>
+    <p>All men are called by the Spirit, God the Father having lifted up the Son, because the Spirit of the Comforter works to reprove the world of sin, righteousness and judgment. That they may know they need salvation, and believe.</p>
+    <p>When the Holy Spirit talks to you, have an ear to listen. That comes from prayer and reading and reflecting on God's word throughout the day.</p>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="The Holy Ghost the Comforter" data-title="Sealed unto the day of redemption">
+  <div class="page">
+    <div class="kicker">The Holy Ghost the Comforter</div>
+    <h2>Sealed unto the day of redemption</h2>
+    <blockquote class="scripture" style="font-style:italic">In whom ye also trusted, after that ye heard the word of truth, the gospel of your salvation: in whom also after that ye believed, ye were sealed with that holy Spirit of promise, Which is the earnest of our inheritance until the redemption of the purchased possession, unto the praise of his glory.<cite>Ephesians 1:13-14</cite></blockquote>
+    <p>Earnest is money, sometimes called a “good faith deposit,” a sum that is included with your offer to purchase something to show your seriousness of intent to go through with the purchase, which is also called redemption. The Spirit is the earnest of God, given in Christ, sealing us as His until the resurrection, whereby we are redeemed.</p>
+    <div class="refs center"><button class="ref" data-v="Ephesians 4:30">Ephesians 4:30</button><button class="ref" data-v="Romans 8:16">Romans 8:16</button></div>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="The Holy Ghost the Comforter" data-title="The Spirit maketh intercession">
+  <div class="page">
+    <div class="kicker">The Holy Ghost the Comforter</div>
+    <h2>The Spirit maketh intercession</h2>
+    <blockquote class="big-verse">Likewise the Spirit also helpeth our infirmities: for we know not what we should pray for as we ought: but <mark>the Spirit itself maketh intercession for us</mark> with groanings which cannot be uttered.<cite>Romans 8:26</cite></blockquote>
+    <p>The Spirit, if we let Him, works on our infirmities, helps us with removing the thorns in our hearts that otherwise lead us to sin. He heals us as we walk in the Spirit.</p>
+    <p>But more, the Spirit is an intercessor, bringing our needs before the Father, even that which we don't know we have, that His will be done through us.</p>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="The Holy Ghost the Comforter" data-title="Spiritually discerned">
+  <div class="page">
+    <div class="kicker">The Holy Ghost the Comforter</div>
+    <h2>Spiritually discerned</h2>
+    <blockquote class="big-verse">But the natural man receiveth not the things of the Spirit of God: for they are foolishness unto him: neither can he know them, <mark>because they are spiritually discerned</mark>.<cite>1 Corinthians 2:14</cite></blockquote>
+    <p>Without first believing the Gospel, preached by the power of the word of God, and the understanding by the Spirit, the things of God are foolishness to man. The Holy Ghost teaches, not the wisdom of men, not of the world, but the spiritual things of God. Comparing spiritual things with spiritual.</p>
+    <p>As we seek, so too He gives wisdom and understanding freely, through the Spirit within us.</p>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="The Holy Ghost the Comforter" data-title="Oil and living waters">
+  <div class="page">
+    <div class="kicker">The Holy Ghost the Comforter</div>
+    <h2>Oil and living waters</h2>
+    <p class="lead">In scripture, oil is almost always a picture of the holy Spirit.</p>
+    <div class="cols-3"><div class="panel believers"><h3>The widow's oil</h3><p>Just as we who are saved are filled with the Spirit, and we can fill others, as vessels, infinitely. It never runs out. <button class="ref" data-v="2 Kings 4:1-7">2 Kings 4:1-7</button></p></div><div class="panel believers"><h3>The ten virgins</h3><p>The oil is the Holy Spirit, the lamps, our hearts. It is not the wise's to give or share. Each must get their own from Christ. <button class="ref" data-v="Matthew 25:1-13">Matthew 25:1-13</button></p></div><div class="panel believers"><h3>Rivers of living water</h3><p>If you are like the believer in John 7, you are a tree bearing fruit, and from you flows the Spirit, living waters, His word. <button class="ref" data-v="John 7:38-39">John 7:38-39</button></p></div></div>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-godhead~12761" target="_blank" rel="noopener">The work of the Holy Ghost ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-godhead~10837" target="_blank" rel="noopener">The Spirit maketh intercession for us ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-godhead~12781" target="_blank" rel="noopener">The things of God are spiritually discerned ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-godhead~14588" target="_blank" rel="noopener">The widow's oil that never ran out ↗</a></div>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="The name above every name" data-title="The excellent name of the Lord">
+  <div class="page">
+    <div class="kicker">The name above every name</div>
+    <h2>The excellent name of the Lord</h2>
+    <blockquote class="big-verse">Wherefore God also hath highly exalted him, and given him <mark>a name which is above every name</mark>: That at the name of Jesus every knee should bow, of things in heaven, and things in earth, and things under the earth; And that every tongue should confess that Jesus Christ is Lord, to the glory of God the Father.<cite>Philippians 2:9-11</cite></blockquote>
+    <p>Jesus is the name of the Lord. Of the great I Am. No other name is given by God to be worshipped as God.</p>
+    <blockquote class="big-verse">Neither is there salvation in any other: for there is <mark>none other name under heaven given among men, whereby we must be saved</mark>.<cite>Acts 4:12</cite></blockquote>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="The name above every name" data-title="Thou art the Christ">
+  <div class="page title-page later">
+    <div class="overline">God, Christ &amp; the Holy Ghost</div>
+    <h1>Thou art the Christ</h1>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="center">Faith in this truth is what is required of man to be saved.</p>
+    <blockquote class="big-verse"><mark>Whosoever believeth that Jesus is the Christ is born of God</mark>: and every one that loveth him that begat loveth him also that is begotten of him.<cite>1 John 5:1</cite></blockquote>
+    <p class="center">God Himself testifies with us the truth of His Son. Amen.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-doctrine-week-7-doctrine-of-god" target="_blank" rel="noopener">Week 7: The Doctrine of God ↗</a><a class="ref lesson-link" href="../../studies/#lesson-doctrine-week-8-doctrine-of-christ" target="_blank" rel="noopener">Week 8: The Doctrine of Christ ↗</a><a class="ref lesson-link" href="../../studies/#lesson-doctrine-week-9-doctrine-of-the-holy-spirit" target="_blank" rel="noopener">Week 9: The Holy Spirit ↗</a><a class="ref lesson-link" href="../../studies/#lesson-topic-reprobate" target="_blank" rel="noopener">The Reprobate Mind ↗</a></div>
+    <p class="sub center">Every teaching is on the <a class="ref lesson-link" href="../../studies/#doctrine-godhead" target="_blank" rel="noopener">God, Christ &amp; the Holy Ghost ↗</a> page.</p>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 John 4:8-10":[[8, "He that loveth not knoweth not God; for God is love."], [9, "In this was manifested the love of God toward us, because that God sent his only begotten Son into the world, that we might live through him."], [10, "Herein is love, not that we loved God, but that he loved us, and sent his Son to be the propitiation for our sins."]],
+  "1 John 5:7":[[7, "For there are three that bear record in heaven, the Father, the Word, and the Holy Ghost: and these three are one."]],
+  "1 Peter 1:16":[[16, "Because it is written, Be ye holy; for I am holy."]],
+  "2 Kings 4:1-7":[[1, "Now there cried a certain woman of the wives of the sons of the prophets unto Elisha, saying, Thy servant my husband is dead; and thou knowest that thy servant did fear the LORD: and the creditor is come to take unto him my two sons to be bondmen."], [2, "And Elisha said unto her, What shall I do for thee? tell me, what hast thou in the house? And she said, Thine handmaid hath not any thing in the house, save a pot of oil."], [3, "Then he said, Go, borrow thee vessels abroad of all thy neighbours, even empty vessels; borrow not a few."], [4, "And when thou art come in, thou shalt shut the door upon thee and upon thy sons, and shalt pour out into all those vessels, and thou shalt set aside that which is full."], [5, "So she went from him, and shut the door upon her and upon her sons, who brought the vessels to her; and she poured out."], [6, "And it came to pass, when the vessels were full, that she said unto her son, Bring me yet a vessel. And he said unto her, There is not a vessel more. And the oil stayed."], [7, "Then she came and told the man of God. And he said, Go, sell the oil, and pay thy debt, and live thou and thy children of the rest."]],
+  "Acts 2:31":[[31, "He seeing this before spake of the resurrection of Christ, that his soul was not left in hell, neither his flesh did see corruption."]],
+  "Ephesians 4:30":[[30, "And grieve not the holy Spirit of God, whereby ye are sealed unto the day of redemption."]],
+  "Exodus 34:14":[[14, "For thou shalt worship no other god: for the LORD, whose name is Jealous, is a jealous God:"]],
+  "Hebrews 1:3":[[3, "Who being the brightness of his glory, and the express image of his person, and upholding all things by the word of his power, when he had by himself purged our sins, sat down on the right hand of the Majesty on high;"]],
+  "Hebrews 2:14-15":[[14, "Forasmuch then as the children are partakers of flesh and blood, he also himself likewise took part of the same; that through death he might destroy him that had the power of death, that is, the devil;"], [15, "And deliver them who through fear of death were all their lifetime subject to bondage."]],
+  "Hebrews 4:15":[[15, "For we have not an high priest which cannot be touched with the feeling of our infirmities; but was in all points tempted like as we are, yet without sin."]],
+  "Isaiah 45:5":[[5, "I am the LORD, and there is none else, there is no God beside me: I girded thee, though thou hast not known me:"]],
+  "Isaiah 6:3":[[3, "And one cried unto another, and said, Holy, holy, holy, is the LORD of hosts: the whole earth is full of his glory."]],
+  "John 10:11":[[11, "I am the good shepherd: the good shepherd giveth his life for the sheep."]],
+  "John 10:9":[[9, "I am the door: by me if any man enter in, he shall be saved, and shall go in and out, and find pasture."]],
+  "John 11:25":[[25, "Jesus said unto her, I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live:"]],
+  "John 11:35":[[35, "Jesus wept."]],
+  "John 14:26":[[26, "But the Comforter, which is the Holy Ghost, whom the Father will send in my name, he shall teach you all things, and bring all things to your remembrance, whatsoever I have said unto you."]],
+  "John 14:6":[[6, "Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me."]],
+  "John 15:1":[[1, "I am the true vine, and my Father is the husbandman."]],
+  "John 1:1":[[1, "In the beginning was the Word, and the Word was with God, and the Word was God."]],
+  "John 6:48":[[48, "I am that bread of life."]],
+  "John 7:38-39":[[38, "He that believeth on me, as the scripture hath said, out of his belly shall flow rivers of living water."], [39, "(But this spake he of the Spirit, which they that believe on him should receive: for the Holy Ghost was not yet given; because that Jesus was not yet glorified.)"]],
+  "John 8:12":[[12, "Then spake Jesus again unto them, saying, I am the light of the world: he that followeth me shall not walk in darkness, but shall have the light of life."]],
+  "Lamentations 3:22-23":[[22, "It is of the LORD’s mercies that we are not consumed, because his compassions fail not."], [23, "They are new every morning: great is thy faithfulness."]],
+  "Luke 2:52":[[52, "And Jesus increased in wisdom and stature, and in favour with God and man."]],
+  "Mark 2:7":[[7, "Why doth this man thus speak blasphemies? who can forgive sins but God only?"]],
+  "Matthew 25:1-13":[[1, "Then shall the kingdom of heaven be likened unto ten virgins, which took their lamps, and went forth to meet the bridegroom."], [2, "And five of them were wise, and five were foolish."], [3, "They that were foolish took their lamps, and took no oil with them:"], [4, "But the wise took oil in their vessels with their lamps."], [5, "While the bridegroom tarried, they all slumbered and slept."], [6, "And at midnight there was a cry made, Behold, the bridegroom cometh; go ye out to meet him."], [7, "Then all those virgins arose, and trimmed their lamps."], [8, "And the foolish said unto the wise, Give us of your oil; for our lamps are gone out."], [9, "But the wise answered, saying, Not so; lest there be not enough for us and you: but go ye rather to them that sell, and buy for yourselves."], [10, "And while they went to buy, the bridegroom came; and they that were ready went in with him to the marriage: and the door was shut."], [11, "Afterward came also the other virgins, saying, Lord, Lord, open to us."], [12, "But he answered and said, Verily I say unto you, I know you not."], [13, "Watch therefore, for ye know neither the day nor the hour wherein the Son of man cometh."]],
+  "Numbers 23:19":[[19, "God is not a man, that he should lie; neither the son of man, that he should repent: hath he said, and shall he not do it? or hath he spoken, and shall he not make it good?"]],
+  "Psalms 145:17":[[17, "The LORD is righteous in all his ways, and holy in all his works."]],
+  "Psalms 18:31":[[31, "For who is God save the LORD? or who is a rock save our God?"]],
+  "Revelation 17:14":[[14, "These shall make war with the Lamb, and the Lamb shall overcome them: for he is Lord of lords, and King of kings: and they that are with him are called, and chosen, and faithful."]],
+  "Revelation 19:13":[[13, "And he was clothed with a vesture dipped in blood: and his name is called The Word of God."]],
+  "Revelation 1:18":[[18, "I am he that liveth, and was dead; and, behold, I am alive for evermore, Amen; and have the keys of hell and of death."]],
+  "Revelation 1:5":[[5, "And from Jesus Christ, who is the faithful witness, and the first begotten of the dead, and the prince of the kings of the earth. Unto him that loved us, and washed us from our sins in his own blood,"]],
+  "Revelation 1:8":[[8, "I am Alpha and Omega, the beginning and the ending, saith the Lord, which is, and which was, and which is to come, the Almighty."]],
+  "Revelation 22:16":[[16, "I Jesus have sent mine angel to testify unto you these things in the churches. I am the root and the offspring of David, and the bright and morning star."]],
+  "Revelation 2:18":[[18, "And unto the angel of the church in Thyatira write; These things saith the Son of God, who hath his eyes like unto a flame of fire, and his feet are like fine brass;"]],
+  "Revelation 3:7":[[7, "And to the angel of the church in Philadelphia write; These things saith he that is holy, he that is true, he that hath the key of David, he that openeth, and no man shutteth; and shutteth, and no man openeth;"]],
+  "Revelation 5:5":[[5, "And one of the elders saith unto me, Weep not: behold, the Lion of the tribe of Juda, the Root of David, hath prevailed to open the book, and to loose the seven seals thereof."]],
+  "Romans 8:16":[[16, "The Spirit itself beareth witness with our spirit, that we are the children of God:"]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
