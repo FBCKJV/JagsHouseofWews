@@ -41,6 +41,13 @@ builder, no fact-checking of the author's views. Order:
 2. ~~Answering error (9)~~ done
 3. ~~Baptist & church history (10)~~ done
 4. ~~Prophecy (4), the Doctrine class notes (3), Bible lessons (2)~~ done
+5. Doctrine by topic, the other 20 topics: one deck per topic, each theme given the same weight, instead of a
+   deck per theme (the user's call). Salvation and assurance keep their theme decks. Small topics that overlap
+   (angels, creation, history) may share a deck.
+   - [x] The reprobate mind
+   - [ ] God, Christ & the Holy Ghost, then The Word of God, the church, history, soul winning, the walk, trust,
+     prayer, wisdom, family, the law, Christ in the Old Testament, Israel, prophecy, judgment, false teaching,
+     nations, creation, angels
 
 Sermons and the lessons from other preachers do not get decks. They stay as notes.
 
@@ -103,6 +110,7 @@ Sermons and the lessons from other preachers do not get decks. They stay as note
 - [x] **Early American Baptists: Establishment, Disestablishment and Soul Liberty** (`early-american-baptists`)
 - [x] **Daniel 11** (`daniel-11`)
 - [x] **John: That Ye Might Believe** (`john-that-ye-might-believe`)
+- [x] **The Reprobate Mind – Given Over of God** (`topic-reprobate`)
 
 ## Standing decisions
 
