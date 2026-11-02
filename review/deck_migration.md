@@ -51,8 +51,10 @@ builder, no fact-checking of the author's views. Order:
    - [x] History: no deck of its own. Most teachings were already in the church, Word of God, Didache, Septuagint,
      Augustine and St. Patrick decks; the rest were folded into Baptist Names in History (the Bonosians), Week 5
      (the desire for a king, Ezra 4, the Lamb shall overcome), and Fundamentalism vs. Vain Philosophy (the five
-     fundamentals). The post on freedom of religion in the Kingdom waits on the user.
-   - [ ] Soul winning, then the walk, trust,
+     fundamentals). The post on freedom of religion in the Kingdom (13037) goes in the nations deck,
+     read as the user put it: soul liberty now, and no false religion in the Millennium.
+   - [x] Soul winning
+   - [ ] The walk, then trust,
      prayer, wisdom, family, the law, Christ in the Old Testament, Israel, prophecy, judgment, false teaching,
      nations, creation, angels
 
@@ -121,6 +123,7 @@ Sermons and the lessons from other preachers do not get decks. They stay as note
 - [x] **God, Christ & the Holy Ghost – These Three Are One** (`topic-godhead`)
 - [x] **The Word of God – Inspired, Preserved, Understood** (`topic-scripture`)
 - [x] **The Church – A Called Out Assembly of Believers** (`topic-church`)
+- [x] **Soul Winning – He That Winneth Souls Is Wise** (`topic-soulwinning`)
 
 ## Standing decisions
 
