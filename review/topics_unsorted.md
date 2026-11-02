@@ -1,6 +1,6 @@
 # Teachings not filed under a topic yet
 
-19 posts chain verses from several books to build a point but aren't in `review/topics.json` yet. Add each under `"posts"` with its topics, theme, title and summary (or `"teaching": false` to leave it out), then rerun `python3 tools/clean_studies.py`.
+20 posts chain verses from several books to build a point but aren't in `review/topics.json` yet. Add each under `"posts"` with its topics, theme, title and summary (or `"teaching": false` to leave it out), then rerun `python3 tools/clean_studies.py`.
 
 Regenerated on every run; don't edit it.
 
@@ -42,3 +42,5 @@ Regenerated on every run; don't edit it.
   > Continuing in Proverbs 25; the instruction for a holy king and kingdom, recorded under the command of King Hezekiah. Take away the wicked from before 
 - `added-drive-psalms-55` · 2026-11-01 · Psalms 55 · 2 Samuel 17:23, Isaiah 1:15, Lamentations 3:44, Psalm 55:16
   > Psalm 55 is a Psalm of David, but it isn't given to us when or who it is about. We can make a guess from the context that it may have been during the 
+- `added-drive-psalms-56` · 2026-11-02 · Psalms 56 · Isaiah 41:10, Matthew 10:28, Psalm 56:4, 1 Samuel 21:10-13
+  > Psalm 56 was written commemorating the flight of David from Saul, when it seemed all Israel was against him and sought David's life. He prays for merc
