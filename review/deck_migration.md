@@ -48,7 +48,11 @@ builder, no fact-checking of the author's views. Order:
    - [x] God, Christ & the Holy Ghost
    - [x] The Word of God
    - [x] The church
-   - [ ] History, then soul winning, the walk, trust,
+   - [x] History: no deck of its own. Most teachings were already in the church, Word of God, Didache, Septuagint,
+     Augustine and St. Patrick decks; the rest were folded into Baptist Names in History (the Bonosians), Week 5
+     (the desire for a king, Ezra 4, the Lamb shall overcome), and Fundamentalism vs. Vain Philosophy (the five
+     fundamentals). The post on freedom of religion in the Kingdom waits on the user.
+   - [ ] Soul winning, then the walk, trust,
      prayer, wisdom, family, the law, Christ in the Old Testament, Israel, prophecy, judgment, false teaching,
      nations, creation, angels
 
