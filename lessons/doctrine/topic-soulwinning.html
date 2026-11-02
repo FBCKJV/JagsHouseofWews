@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Soul Winning – He That Winneth Souls Is Wise</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Preaching the gospel to every creature: the harvest is plentiful, saved men sent to save men, whosoever will may come, not ashamed of the gospel, soul winning as soul warning, and going door to door with the King James Bible, from the teachings on soul winning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Soul Winning">
+  <div class="page title-page">
+    <div class="overline">Doctrine · Soul winning</div>
+    <h1>He That Winneth Souls Is Wise</h1>
+    <p class="sub">Preaching the gospel to every creature.</p>
+    <div class="refs center"><button class="ref" data-v="Proverbs 11:30">Proverbs 11:30</button><button class="ref" data-v="Mark 16:15">Mark 16:15</button><button class="ref" data-v="Romans 10:14-15">Romans 10:14-15</button><button class="ref" data-v="Luke 10:2">Luke 10:2</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any gold reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="Saved to save people">
+  <div class="page">
+    <h2>Saved to save people</h2>
+    <blockquote class="big-verse">The fruit of the righteous is a tree of life; and <mark>he that winneth souls is wise</mark>.<cite>Proverbs 11:30</cite></blockquote>
+    <p class="lead">“Fruit” in the Biblical sense, means people who've been led to the Lord. Those saved by hearing the gospel from someone else who is saved.</p>
+    <p>It doesn't mean doing good works or following the commandments. We do good works and follow the commandments so that we may bear more fruit.</p>
+    <p class="take">This is our calling. We are saved to save people.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="The harvest is plentiful" data-title="The labourers are few">
+  <div class="page">
+    <div class="kicker">The harvest is plentiful</div>
+    <h2>The labourers are few</h2>
+    <blockquote class="big-verse">Therefore said he unto them, <mark>The harvest truly is great, but the labourers are few</mark>: pray ye therefore the Lord of the harvest, that he would send forth labourers into his harvest.<cite>Luke 10:2</cite></blockquote>
+    <p>Jesus says that while the harvest is great, there are too few laborers to bring it all in. This remains true, especially today.</p>
+    <p>If you aren't in a position to go out yourself, pray that you can be. Work towards it. But pray without ceasing for those who are, and that more may come. If Jesus tells us to pray, then pray.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="The harvest is plentiful" data-title="One soweth, another reapeth">
+  <div class="page">
+    <div class="kicker">The harvest is plentiful</div>
+    <h2>One soweth, another reapeth</h2>
+    <blockquote class="scripture" style="font-style:italic">Say not ye, There are yet four months, and then cometh harvest? behold, I say unto you, Lift up your eyes, and look on the fields; for <mark>they are white already to harvest</mark>. And he that reapeth receiveth wages, and gathereth fruit unto life eternal: that both he that soweth and he that reapeth may rejoice together. And herein is that saying true, <mark>One soweth, and another reapeth</mark>.<cite>John 4:35-37</cite></blockquote>
+    <p>In our labors for Christ, some of us will sow seeds and never see if they germinate and grow to fruit ripe for harvesting. Some of us water the seeds sown by others. Some are blessed to reap. All will rejoice in Heaven when we meet those we've helped win to the Lord.</p>
+    <p>The fruit we bear are converted and saved Christians, who like a branch of a vine then produce more fruit, and so on. One long vine back to Him, the true vine (<button class="ref" data-v="John 15:5">John 15:5</button>).</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="The harvest is plentiful" data-title="Two by two">
+  <div class="page">
+    <div class="kicker">The harvest is plentiful</div>
+    <h2>Two by two</h2>
+    <blockquote class="big-verse">After these things the <span class="lord">Lord</span> appointed other seventy also, and <mark>sent them two and two before his face</mark> into every city and place, whither he himself would come.<cite>Luke 10:1</cite></blockquote>
+    <p>We note the pattern of evangelism given throughout the new testament. Going forth in pairs, taking with them no provision other than what they carried on their backs, and the word of God. Preaching that the Kingdom of God is nigh.</p>
+    <p>And the message to the soul winners to be of good courage remains true. Like the twelve spies sent to bring of the fruit of the land, the first ripe grapes (<button class="ref" data-v="Numbers 13:20">Numbers 13:20</button>).</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="The harvest is plentiful" data-title="The Christian&#x27;s mission statement">
+  <div class="page">
+    <div class="kicker">The harvest is plentiful</div>
+    <h2>The Christian's mission statement</h2>
+    <blockquote class="scripture" style="font-style:italic">The Spirit of the Lord is upon me, because <mark>he hath anointed me to preach the gospel to the poor</mark>; he hath sent me to heal the brokenhearted, to preach deliverance to the captives, and recovering of sight to the blind, to set at liberty them that are bruised, To preach the acceptable year of the Lord.<cite>Luke 4:18-19</cite></blockquote>
+    <p>Not only does this proclamation give witness to His ministry, but it also serves as a mission statement for all Christians. In Him, we are filled with the Spirit. We are anointed Priests of the Lord. We are His Ministers, in Christ.</p>
+    <p>Do we do everything in our meager power to show compassion on the spiritually sick that they may be healed? The best of us fall short. Most of us don't really even try.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~9333" target="_blank" rel="noopener">Sent two by two into the harvest ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~9335" target="_blank" rel="noopener">Pray the Lord of the harvest for labourers ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~13892" target="_blank" rel="noopener">What fruit means ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~15975" target="_blank" rel="noopener">Isaiah 61, the Christian's mission statement ↗</a></div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Saved men sent to save men" data-title="Not angels, but men">
+  <div class="page">
+    <div class="kicker">Saved men sent to save men</div>
+    <h2>Not angels, but men</h2>
+    <p class="lead">The angels and visions and even the glorified appearance of Jesus, none give the gospel but rather send saved men to preach the word and get other men saved.</p>
+    <div class="cols"><div class="panel believers"><h3>Saul and Ananias</h3><p>While Jesus appeared and struck Saul blind, He doesn't give Saul the answer to what he must do, but rather a man must go to him and bring him to Christ. <button class="ref" data-v="Acts 9:6">Acts 9:6</button></p></div><div class="panel believers"><h3>Cornelius and Peter</h3><p>An angel tells him to send men to bring Peter to him, that “<em>he shall tell thee what thou oughtest to do.</em>” <button class="ref" data-v="Acts 10:5-6">Acts 10:5-6</button></p></div></div>
+    <p class="take">It is by man acting as agents for God, a royal priesthood sharing the Gospel, that by hearing man may come to believe.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Saved men sent to save men" data-title="How can I, except some man guide me?">
+  <div class="page">
+    <div class="kicker">Saved men sent to save men</div>
+    <h2>How can I, except some man guide me?</h2>
+    <blockquote class="scripture" style="font-style:italic">And Philip ran thither to him, and heard him read the prophet Esaias, and said, Understandest thou what thou readest? And he said, <mark>How can I, except some man should guide me</mark>? And he desired Philip that he would come up and sit with him.<cite>Acts 8:30-31</cite></blockquote>
+    <p>Philip asks the eunuch if he understands the scripture he's reading, and the reply is so true; unsaved people need saved people to explain scripture.</p>
+    <p>This is an excellent example of how God will move heaven and earth to get the gospel to someone earnestly contending for the truth that is written in every man's heart.</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Saved men sent to save men" data-title="How shall they hear without a preacher?">
+  <div class="page">
+    <div class="kicker">Saved men sent to save men</div>
+    <h2>How shall they hear without a preacher?</h2>
+    <blockquote class="scripture" style="font-style:italic">How then shall they call on him in whom they have not believed? and how shall they believe in him of whom they have not heard? and <mark>how shall they hear without a preacher</mark>? And how shall they preach, except they be sent? as it is written, <mark>How beautiful are the feet of them that preach the gospel of peace</mark>, and bring glad tidings of good things!<cite>Romans 10:14-15</cite></blockquote>
+    <p>The Spirit is ploughing the hearts and minds of the world. And so when Jesus says the harvest is plentiful, but the laborers few, he is talking to us.</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Saved men sent to save men" data-title="Ambassadors for Christ">
+  <div class="page">
+    <div class="kicker">Saved men sent to save men</div>
+    <h2>Ambassadors for Christ</h2>
+    <blockquote class="big-verse"><mark>Now then we are ambassadors for Christ</mark>, as though God did beseech you by us: we pray you in Christ’s stead, be ye reconciled to God.<cite>2 Corinthians 5:20</cite></blockquote>
+    <p>We are a new man, contained in the earthen vessels of the old, but reconciled with God in Jesus, and so, given the ministry, being a servant, to spreading that reconciliation to others. Ambassadors.</p>
+    <p>Every prayer for the lost is a prayer that the Spirit not only softens the heart of the unsaved, but that He also brings soulwinners into their lives to show them the gospel from scripture.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~2709" target="_blank" rel="noopener">Ananias sent to Saul ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~2762" target="_blank" rel="noopener">Peter sent to Cornelius ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~2656" target="_blank" rel="noopener">How can I, except some man guide me ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~4115" target="_blank" rel="noopener">Ambassadors of reconciliation ↗</a></div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Whosoever will may come" data-title="The word is nigh thee">
+  <div class="page">
+    <div class="kicker">Whosoever will may come</div>
+    <h2>The word is nigh thee</h2>
+    <blockquote class="scripture" style="font-style:italic">That if thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God hath raised him from the dead, thou shalt be saved. For with the heart man believeth unto righteousness; and with the mouth confession is made unto salvation. For the scripture saith, Whosoever believeth on him shall not be ashamed. For there is no difference between the Jew and the Greek: for the same Lord over all is rich unto all that call upon him. <mark>For whosoever shall call upon the name of the Lord shall be saved</mark>.<cite>Romans 10:9-13</cite></blockquote>
+    <p>That's the simplicity of the Gospel. There are no works, no special status, no secret traditions, ordinances, sacraments or other deeds of the law. And knowing this, then we must preach this glad tiding, that others may by the power of God's word, hear, believe and confess unto salvation.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Whosoever will may come" data-title="The Romans Road">
+  <div class="page">
+    <div class="kicker">Whosoever will may come</div>
+    <h2>The Romans Road</h2>
+    <p>A short but direct use of scripture, used by evangelists to win souls to the Lord for generations.</p>
+    <ul class="xr"><li><button class="ref" data-v="John 3:16">John 3:16</button><span>God so loved the world</span></li><li><button class="ref" data-v="Romans 3:23">Romans 3:23</button><span>All have sinned, and come short of the glory of God</span></li><li><button class="ref" data-v="Romans 6:23">Romans 6:23</button><span>The wages of sin is death; but the gift of God is eternal life</span></li><li><button class="ref" data-v="Romans 5:8">Romans 5:8</button><span>While we were yet sinners, Christ died for us</span></li><li><button class="ref" data-v="Romans 10:9-10">Romans 10:9-10</button><span>Confess with thy mouth, believe in thine heart</span></li><li><button class="ref" data-v="Romans 10:13">Romans 10:13</button><span>Whosoever shall call upon the name of the Lord shall be saved</span></li></ul>
+    <p>It is not the only means of giving the Gospel, but it is one of the most effective. It covers all the bases.</p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Whosoever will may come" data-title="At the door">
+  <div class="page">
+    <div class="kicker">Whosoever will may come</div>
+    <h2>At the door</h2>
+    <div class="cols"><div class="panel believers"><h3>“I'm a good person”</h3><p>Most experienced soulwinners will turn to Revelation 21:8, and highlight “all liars,” making the sincere appeal, “We have all told lies.” This will often break the impasse. <button class="ref" data-v="Revelation 21:8">Revelation 21:8</button> <button class="ref" data-v="Proverbs 24:9">Proverbs 24:9</button></p></div><div class="panel believers"><h3>“Have you ever cried out to the Lord for help?”</h3><p>Nearly all will say “Yes” if they're being honest. From there, it becomes easier to lead them to the truth that they need to call upon the name of the Lord specifically to save them, eternally. <button class="ref" data-v="Psalms 12:1">Psalm 12:1</button></p></div></div>
+    <p>Some will pushback to any gospel presentation with scorn. We shake the dust and move on (<button class="ref" data-v="Luke 9:5">Luke 9:5</button>).</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Whosoever will may come" data-title="Compel them to come in">
+  <div class="page">
+    <div class="kicker">Whosoever will may come</div>
+    <h2>Compel them to come in</h2>
+    <blockquote class="big-verse">And the lord said unto the servant, <mark>Go out into the highways and hedges, and compel them to come in</mark>, that my house may be filled.<cite>Luke 14:23</cite></blockquote>
+    <p>Just as with Hezekiah's letters to all Israel, many made excuses, or mocked the invitation. But many were compelled to come, turning their heart to the Lord. Both bad and good.</p>
+    <p>The leper believes, and calls upon Jesus to heal him, and Jesus, moved with compassion does so. <em>If thou wilt, thou canst make me clean</em> (<button class="ref" data-v="Mark 1:40-41">Mark 1:40-41</button>).</p>
+    <blockquote class="big-verse">And the Spirit and the bride say, Come. And let him that heareth say, Come. And let him that is athirst come. And <mark>whosoever will, let him take the water of life freely</mark>.<cite>Revelation 22:17</cite></blockquote>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~11308" target="_blank" rel="noopener">The Romans Road gospel presentation ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~17283" target="_blank" rel="noopener">When they say they are a good person ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~17705" target="_blank" rel="noopener">Have you ever cried out to the Lord for help ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~17180" target="_blank" rel="noopener">Wisdom's feast and the gospel invitation ↗</a></div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Not ashamed of the gospel" data-title="The power of God unto salvation">
+  <div class="page">
+    <div class="kicker">Not ashamed of the gospel</div>
+    <h2>The power of God unto salvation</h2>
+    <blockquote class="big-verse"><mark>For I am not ashamed of the gospel of Christ: for it is the power of God unto salvation</mark> to every one that believeth; to the Jew first, and also to the Greek.<cite>Romans 1:16</cite></blockquote>
+    <p>When we share the Gospel to others, we are an instrument that reveals the nature of God to others. His righteousness. We cannot be afraid to share the good news. We can't hide our light under a bushel.</p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Not ashamed of the gospel" data-title="The power is in the word">
+  <div class="page">
+    <div class="kicker">Not ashamed of the gospel</div>
+    <h2>The power is in the word</h2>
+    <blockquote class="big-verse">So then <mark>faith cometh by hearing, and hearing by the word of God</mark>.<cite>Romans 10:17</cite></blockquote>
+    <p>The power to save men's souls is in God's word. Not our logical arguments, not in our boasts or testimonials. But by scripture.</p>
+    <p>You see Philip with the eunuch expounds on who Christ is from scripture. When Paul and Silas were with the Philippian jailer, <em>they spake unto him the word of the Lord</em> (<button class="ref" data-v="Acts 16:31-32">Acts 16:31-32</button>). The scriptures are a rock. They do not change.</p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Not ashamed of the gospel" data-title="Soul winning is soul warning">
+  <div class="page">
+    <div class="kicker">Not ashamed of the gospel</div>
+    <h2>Soul winning is soul warning</h2>
+    <blockquote class="scripture" style="font-style:italic">But if the watchman see the sword come, and blow not the trumpet, and the people be not warned; if the sword come, and take any person from among them, he is taken away in his iniquity; but <mark>his blood will I require at the watchman’s hand</mark>.<cite>Ezekiel 33:6</cite></blockquote>
+    <p>Only the person you're warning can take the gospel you give them, the Spirit working on them, and believe. But we can and must warn them.</p>
+    <p>If you passed the home of strangers, and saw a fire spreading, wouldn't you bang on the door to get them to evacuate? Or would you pass on by, leaving them to burn?</p>
+    <blockquote class="big-verse">Wherefore I take you to record this day, that <mark>I am pure from the blood of all men</mark>.<cite>Acts 20:26</cite></blockquote>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Not ashamed of the gospel" data-title="Excuses">
+  <div class="page">
+    <div class="kicker">Not ashamed of the gospel</div>
+    <h2>Excuses</h2>
+    <p class="lead">For many of us, for much of our lives, we are like Moses. We have every excuse in the book not to go.</p>
+    <p>We fear no one will believe us. That we don't have the skills. That we aren't capable. But God has already told us, “<em>lo, I am with you alway, even unto the end of the world.</em>” (<button class="ref" data-v="Matthew 28:20">Matthew 28:20</button>)</p>
+    <p>How often are we Jonahs, running from the calling? The wicked who may seek your life cannot do anything but threaten you with Heaven.</p>
+    <div class="refs center"><button class="ref" data-v="Exodus 4:10-12">Exodus 4:10-12</button><button class="ref" data-v="Jonah 1:3">Jonah 1:3</button><button class="ref" data-v="Psalms 27:1">Psalm 27:1</button></div>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~10874" target="_blank" rel="noopener">Faith cometh by hearing the word ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~16119" target="_blank" rel="noopener">Soul winning is soul warning ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~16326" target="_blank" rel="noopener">Be pure of the blood of all men ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~9945" target="_blank" rel="noopener">Moses full of excuses ↗</a></div>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Sowing the seed of the word" data-title="The seed groweth, he knoweth not how">
+  <div class="page">
+    <div class="kicker">Sowing the seed of the word</div>
+    <h2>The seed groweth, he knoweth not how</h2>
+    <blockquote class="scripture" style="font-style:italic">And he said, So is the kingdom of God, as if a man should cast seed into the ground; And should sleep, and rise night and day, and <mark>the seed should spring and grow up, he knoweth not how</mark>. For the earth bringeth forth fruit of herself; first the blade, then the ear, after that the full corn in the ear.<cite>Mark 4:26-28</cite></blockquote>
+    <p>The seed is the word, Jesus tells us. God doesn't dictate to the seed that it germinate, that it sprout, when it should flower and bud, that it bear fruit. Only that it will as it will, and in due season be ready for harvest.</p>
+    <p>We can trace our lineage in terms of believers who led others to Christ, who led still others, who eventually were those who brought us to salvation. Like a family tree, stretching back to the seed that was sown.</p>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Sowing the seed of the word" data-title="Cast thy bread upon the waters">
+  <div class="page">
+    <div class="kicker">Sowing the seed of the word</div>
+    <h2>Cast thy bread upon the waters</h2>
+    <blockquote class="big-verse"><mark>Cast thy bread upon the waters</mark>: for thou shalt find it after many days.<cite>Ecclesiastes 11:1</cite></blockquote>
+    <p><em>He that observeth the wind shall not sow; and he that regardeth the clouds shall not reap.</em> Sow your seed in the morning and evening and at every opportunity, and give the rest to God. Be ready at any opportunity to give the gospel.</p>
+    <blockquote class="big-verse">So shall my word be that goeth forth out of my mouth: <mark>it shall not return unto me void</mark>, but it shall accomplish that which I please, and it shall prosper in the thing whereto I sent it.<cite>Isaiah 55:11</cite></blockquote>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Sowing the seed of the word" data-title="The way side, and building up">
+  <div class="page">
+    <div class="kicker">Sowing the seed of the word</div>
+    <h2>The way side, and building up</h2>
+    <p>Naaman confesses there is no other God, and in the same breath asks pardon to bow in the house of Rimmon. In many ways, this is the experience many have when given the Gospel. They are like the seed sown on the pathway in the parable of the Sower (<button class="ref" data-v="Matthew 13:19">Matthew 13:19</button>).</p>
+    <p>A reminder that it is not just saving souls that we should do, but then building upon that salvation, encouraging and edifying babes in Christ, as we would our own children, to walk a Christian walk.</p>
+    <div class="refs center"><button class="ref" data-v="2 Kings 5:17-19">2 Kings 5:17-19</button><button class="ref" data-v="1 Thessalonians 2:11-12">1 Thessalonians 2:11-12</button></div>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~6136" target="_blank" rel="noopener">The seed groweth, he knoweth not how ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~17539" target="_blank" rel="noopener">Cast thy bread upon the waters ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~14599" target="_blank" rel="noopener">Naaman and the seed by the way side ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~5649" target="_blank" rel="noopener">Not only saving souls but building them up ↗</a></div>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Choose ye this day" data-title="How long halt ye between two opinions?">
+  <div class="page">
+    <div class="kicker">Choose ye this day</div>
+    <h2>How long halt ye between two opinions?</h2>
+    <blockquote class="big-verse">And Elijah came unto all the people, and said, <mark>How long halt ye between two opinions</mark>? if the <span class="lord">Lord</span> be God, follow him: but if Baal, then follow him. And the people answered him not a word.<cite>1 Kings 18:21</cite></blockquote>
+    <p>There are saved people in the world. There is a vast majority of those who are caught between, often in indecision. Soul-winning, giving the gospel to the unbelievers, forces them to make this choice. And many receive it gladly.</p>
+    <blockquote class="big-verse">And if it seem evil unto you to serve the <span class="lord">Lord</span>, <mark>choose you this day whom ye will serve</mark>; whether the gods which your fathers served that were on the other side of the flood, or the gods of the Amorites, in whose land ye dwell: but as for me and my house, we will serve the <span class="lord">Lord</span>.<cite>Joshua 24:15</cite></blockquote>
+    <p>Our job is to go work the harvest. To make people decide if they choose life or death.</p>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Choose ye this day" data-title="Not peace, but division">
+  <div class="page">
+    <div class="kicker">Choose ye this day</div>
+    <h2>Not peace, but division</h2>
+    <blockquote class="big-verse">Suppose ye that I am come to give peace on earth? I tell you, <mark>Nay</mark>; <mark>but rather division</mark>:<cite>Luke 12:51</cite></blockquote>
+    <p>We all have had loved ones, family, friends, who we have shared the gospel with, but we hesitate to push the issue. Sometimes, it's embarrassment at our own sins being evident to those who know us best. But often, it is the understanding that pushing the issue may push them away.</p>
+    <p>Christians are often so afraid that our loved ones will perish, but at the same time are scared we could be the cause of it.</p>
+    <div class="refs center"><button class="ref" data-v="Matthew 10:37">Matthew 10:37</button><button class="ref" data-v="Deuteronomy 30:19">Deuteronomy 30:19</button></div>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~14523" target="_blank" rel="noopener">How long halt ye between two opinions ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~14716" target="_blank" rel="noopener">Revival forces men to choose life or death ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-soulwinning~14717" target="_blank" rel="noopener">Not peace but division ↗</a></div>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="Go" data-title="Revival starts at the door">
+  <div class="page">
+    <div class="kicker">Go</div>
+    <h2>Revival starts at the door</h2>
+    <p class="lead">Revival doesn't start by some magical change of heart among the heathen!</p>
+    <p>Revival starts with a knock on the door by a saved Christian with the King James Bible in their hand and the love of God in their heart.</p>
+    <p>Organized door knocking is more profitable, and having a place to send the souls won to be taught all things and be baptized is crucial. If you go to church, and they don't have soul-winning, ask the pastor to start a program. Offer to organize it.</p>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="Go" data-title="Do the first works">
+  <div class="page">
+    <div class="kicker">Go</div>
+    <h2>Do the first works</h2>
+    <blockquote class="scripture" style="font-style:italic">Nevertheless I have somewhat against thee, because <mark>thou hast left thy first love</mark>. Remember therefore from whence thou art fallen, and repent, and <mark>do the first works</mark>; or else I will come unto thee quickly, and will remove thy candlestick out of his place, except thou repent.<cite>Revelation 2:4-5</cite></blockquote>
+    <p>The first love of any church is the winning of souls to Christ. The joy of our salvation when fresh leads to our telling everyone about the good news. Churches grow from giving the Gospel. But many successful churches plateau and settle in with who they have.</p>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="slide" data-section="Go" data-title="Don&#x27;t wait for persecution">
+  <div class="page">
+    <div class="kicker">Go</div>
+    <h2>Don't wait for persecution</h2>
+    <blockquote class="scripture" style="font-style:italic">And Saul was consenting unto his death. And at that time there was a great persecution against the church which was at Jerusalem; and they were all scattered abroad throughout the regions of Judaea and Samaria, except the apostles. And devout men carried Stephen to his burial, and made great lamentation over him. As for Saul, he made havock of the church, entering into every house, and haling men and women committed them to prison. Therefore <mark>they that were scattered abroad went every where preaching the word</mark>.<cite>Acts 8:1-4</cite></blockquote>
+    <p>Jesus told them to go out to the world and spread the Gospel to every creature. And instead they stayed in Jerusalem. So the Lord brought tribulation and persecution, scattering the saints abroad, so that they would preach everywhere. Are you waiting for the tribulation to go out into all the world and preach?</p>
+    <p>Instead of prepping for doomsday and hiding our light under a bushel in some mountainous retreat, we should be winning souls. Jeremiah isn't in the wilderness far away from the people, but in Jerusalem, the heart of darkness.</p>
+  </div>
+</section>
+
+<!-- 27 -->
+<section class="slide" data-section="Go" data-title="Go soul winning">
+  <div class="page title-page later">
+    <div class="overline">Soul winning</div>
+    <h1>Go Ye Into All the World</h1>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="center">If you know the love Jesus has for you, if you have felt that love, how can you not scream it from the rooftops? How can you not go out into the highways and hedges to let everyone know that Jesus loves them?</p>
+    <blockquote class="big-verse">And he said unto them, <mark>Go ye into all the world, and preach the gospel to every creature</mark>.<cite>Mark 16:15</cite></blockquote>
+    <p class="center">The great commission is a command. Soul winning is an act of faith and love.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-topic-church" target="_blank" rel="noopener">The Church: a called out assembly ↗</a><a class="ref lesson-link" href="../../studies/#lesson-topic-salvation-gospel-believed" target="_blank" rel="noopener">The gospel that must be believed ↗</a><a class="ref lesson-link" href="../../studies/#lesson-saved-christian-now-what" target="_blank" rel="noopener">So You're a Saved Christian, Now What? ↗</a><a class="ref lesson-link" href="../../studies/#lesson-topic-reprobate" target="_blank" rel="noopener">The Reprobate Mind ↗</a></div>
+    <p class="sub center">Every teaching is on the <a class="ref lesson-link" href="../../studies/#doctrine-soulwinning" target="_blank" rel="noopener">Soul winning ↗</a> page.</p>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 Thessalonians 2:11-12":[[11, "As ye know how we exhorted and comforted and charged every one of you, as a father doth his children,"], [12, "That ye would walk worthy of God, who hath called you unto his kingdom and glory."]],
+  "2 Kings 5:17-19":[[17, "And Naaman said, Shall there not then, I pray thee, be given to thy servant two mules’ burden of earth? for thy servant will henceforth offer neither burnt offering nor sacrifice unto other gods, but unto the LORD."], [18, "In this thing the LORD pardon thy servant, that when my master goeth into the house of Rimmon to worship there, and he leaneth on my hand, and I bow myself in the house of Rimmon: when I bow down myself in the house of Rimmon, the LORD pardon thy servant in this thing."], [19, "And he said unto him, Go in peace. So he departed from him a little way."]],
+  "Acts 10:5-6":[[5, "And now send men to Joppa, and call for one Simon, whose surname is Peter:"], [6, "He lodgeth with one Simon a tanner, whose house is by the sea side: he shall tell thee what thou oughtest to do."]],
+  "Acts 16:31-32":[[31, "And they said, Believe on the Lord Jesus Christ, and thou shalt be saved, and thy house."], [32, "And they spake unto him the word of the Lord, and to all that were in his house."]],
+  "Acts 9:6":[[6, "And he trembling and astonished said, Lord, what wilt thou have me to do? And the Lord said unto him, Arise, and go into the city, and it shall be told thee what thou must do."]],
+  "Deuteronomy 30:19":[[19, "I call heaven and earth to record this day against you, that I have set before you life and death, blessing and cursing: therefore choose life, that both thou and thy seed may live:"]],
+  "Exodus 4:10-12":[[10, "And Moses said unto the LORD, O my LORD, I am not eloquent, neither heretofore, nor since thou hast spoken unto thy servant: but I am slow of speech, and of a slow tongue."], [11, "And the LORD said unto him, Who hath made man’s mouth? or who maketh the dumb, or deaf, or the seeing, or the blind? have not I the LORD?"], [12, "Now therefore go, and I will be with thy mouth, and teach thee what thou shalt say."]],
+  "John 15:5":[[5, "I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing."]],
+  "John 3:16":[[16, "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."]],
+  "Jonah 1:3":[[3, "But Jonah rose up to flee unto Tarshish from the presence of the LORD, and went down to Joppa; and he found a ship going to Tarshish: so he paid the fare thereof, and went down into it, to go with them unto Tarshish from the presence of the LORD."]],
+  "Luke 10:2":[[2, "Therefore said he unto them, The harvest truly is great, but the labourers are few: pray ye therefore the Lord of the harvest, that he would send forth labourers into his harvest."]],
+  "Luke 9:5":[[5, "And whosoever will not receive you, when ye go out of that city, shake off the very dust from your feet for a testimony against them."]],
+  "Mark 16:15":[[15, "And he said unto them, Go ye into all the world, and preach the gospel to every creature."]],
+  "Mark 1:40-41":[[40, "And there came a leper to him, beseeching him, and kneeling down to him, and saying unto him, If thou wilt, thou canst make me clean."], [41, "And Jesus, moved with compassion, put forth his hand, and touched him, and saith unto him, I will; be thou clean."]],
+  "Matthew 10:37":[[37, "He that loveth father or mother more than me is not worthy of me: and he that loveth son or daughter more than me is not worthy of me."]],
+  "Matthew 13:19":[[19, "When any one heareth the word of the kingdom, and understandeth it not, then cometh the wicked one, and catcheth away that which was sown in his heart. This is he which received seed by the way side."]],
+  "Matthew 28:20":[[20, "Teaching them to observe all things whatsoever I have commanded you: and, lo, I am with you alway, even unto the end of the world. Amen."]],
+  "Numbers 13:20":[[20, "And what the land is, whether it be fat or lean, whether there be wood therein, or not. And be ye of good courage, and bring of the fruit of the land. Now the time was the time of the firstripe grapes."]],
+  "Proverbs 11:30":[[30, "The fruit of the righteous is a tree of life; and he that winneth souls is wise."]],
+  "Proverbs 24:9":[[9, "The thought of foolishness is sin: and the scorner is an abomination to men."]],
+  "Psalms 12:1":[[1, "Help, LORD; for the godly man ceaseth; for the faithful fail from among the children of men."]],
+  "Psalms 27:1":[[1, "The LORD is my light and my salvation; whom shall I fear? the LORD is the strength of my life; of whom shall I be afraid?"]],
+  "Revelation 21:8":[[8, "But the fearful, and unbelieving, and the abominable, and murderers, and whoremongers, and sorcerers, and idolaters, and all liars, shall have their part in the lake which burneth with fire and brimstone: which is the second death."]],
+  "Romans 10:13":[[13, "For whosoever shall call upon the name of the Lord shall be saved."]],
+  "Romans 10:14-15":[[14, "How then shall they call on him in whom they have not believed? and how shall they believe in him of whom they have not heard? and how shall they hear without a preacher?"], [15, "And how shall they preach, except they be sent? as it is written, How beautiful are the feet of them that preach the gospel of peace, and bring glad tidings of good things!"]],
+  "Romans 10:9-10":[[9, "That if thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God hath raised him from the dead, thou shalt be saved."], [10, "For with the heart man believeth unto righteousness; and with the mouth confession is made unto salvation."]],
+  "Romans 3:23":[[23, "For all have sinned, and come short of the glory of God;"]],
+  "Romans 5:8":[[8, "But God commendeth his love toward us, in that, while we were yet sinners, Christ died for us."]],
+  "Romans 6:23":[[23, "For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord."]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
