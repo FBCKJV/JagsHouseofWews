@@ -47,7 +47,8 @@ builder, no fact-checking of the author's views. Order:
    - [x] The reprobate mind
    - [x] God, Christ & the Holy Ghost
    - [x] The Word of God
-   - [ ] The church, then history, soul winning, the walk, trust,
+   - [x] The church
+   - [ ] History, then soul winning, the walk, trust,
      prayer, wisdom, family, the law, Christ in the Old Testament, Israel, prophecy, judgment, false teaching,
      nations, creation, angels
 
@@ -115,6 +116,7 @@ Sermons and the lessons from other preachers do not get decks. They stay as note
 - [x] **The Reprobate Mind – Given Over of God** (`topic-reprobate`)
 - [x] **God, Christ & the Holy Ghost – These Three Are One** (`topic-godhead`)
 - [x] **The Word of God – Inspired, Preserved, Understood** (`topic-scripture`)
+- [x] **The Church – A Called Out Assembly of Believers** (`topic-church`)
 
 ## Standing decisions
 

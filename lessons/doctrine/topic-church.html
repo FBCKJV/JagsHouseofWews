@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Church – A Called Out Assembly of Believers</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="The church as the called out assembly of believers from Abel to today: the church in the wilderness, entering the house of God, Christ the foundation, local independent New Testament churches, pastors and deacons, the two ordinances, and not forsaking the assembling together.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="A called out assembly" data-title="The Church">
+  <div class="page title-page">
+    <div class="overline">Doctrine · The church</div>
+    <h1>A Called Out Assembly of Believers</h1>
+    <p class="sub">The church Christ founded, the pastor, and assembling together.</p>
+    <div class="refs center"><button class="ref" data-v="Matthew 16:18">Matthew 16:18</button><button class="ref" data-v="Acts 7:38">Acts 7:38</button><button class="ref" data-v="1 Timothy 3:15">1 Timothy 3:15</button><button class="ref" data-v="Hebrews 10:25">Hebrews 10:25</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any gold reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="A called out assembly" data-title="What a church is">
+  <div class="page">
+    <h2>What a church is</h2>
+    <p class="lead">Church is a called out assembly of believers. The people of God are required to come when called together. This was true in the OT and it is true in the New.</p>
+    <p>“A church is not a place it's a people!” So true, but the people need a place to gather, and having one fixed location and time makes that possible.</p>
+    <p><em>For where two or three are gathered together in my name, there am I in the midst of them.</em> Wonderful promise of the Lord. This presupposes you are actually gathering.</p>
+    <div class="refs center"><button class="ref" data-v="Matthew 18:20">Matthew 18:20</button><button class="ref" data-v="Judges 21:8-10">Judges 21:8-10</button></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="From Abel to today" data-title="A line of believers stretching back to Adam">
+  <div class="page">
+    <div class="kicker">From Abel to today</div>
+    <h2>A line of believers stretching back to Adam</h2>
+    <p class="lead">I am a saved Christian. Born again by the faith that was shared to me by another saved Christian, who in turn believed and was converted by yet another saved Christian. A line of succession going back to the beginning of the world.</p>
+    <p>A line of believers stretching back to Adam. To Abel. To Seth and Enos. The same faith of Abraham who believed the Lord and it was counted unto him for righteousness. The same faith that makes up the record of the “Hall of faith,” in Hebrews chapter 11.</p>
+    <blockquote class="big-verse">And to Seth, to him also there was born a son; and he called his name Enos: <mark>then began men to call upon the name of the <span class="lord">Lord</span></mark>.<cite>Genesis 4:26</cite></blockquote>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="From Abel to today" data-title="Before Abraham, before the law">
+  <div class="page">
+    <div class="kicker">From Abel to today</div>
+    <h2>Before Abraham, before the law</h2>
+    <p>The idea of the worship of God originating with Abraham, and only his seed after the flesh, is incorrect. There were many following the flood and the dispersion of nations out from Babel, that called upon the name of the Lord for salvation.</p>
+    <p>We see the greatest man on Earth at this moment, according to God, Job, who feared Him, eschewing evil, offering sacrifices to sanctify himself and his family. Without the law. Without the temple. Without a priesthood.</p>
+    <p class="take">Salvation has always been by grace alone through faith in the Lord, calling upon his name. And that salvation was always offered to all people.</p>
+    <div class="refs center"><button class="ref" data-v="Job 1:1">Job 1:1</button><button class="ref" data-v="Job 1:5">Job 1:5</button><button class="ref" data-v="Hebrews 11:4">Hebrews 11:4</button></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="From Abel to today" data-title="Bethel, the house of God">
+  <div class="page">
+    <div class="kicker">From Abel to today</div>
+    <h2>Bethel, the house of God</h2>
+    <blockquote class="scripture" style="font-style:italic">And Jacob awaked out of his sleep, and he said, Surely the <span class="lord">Lord</span> is in this place; and I knew it not. And he was afraid, and said, How dreadful is this place! <mark>this is none other but the house of God</mark>, and this is the gate of heaven.<cite>Genesis 28:16-17</cite></blockquote>
+    <p>Jacob stacks the rocks he'd slept on into a pillar, and anoints it with oil, renaming the place Bethel. This is the first time we see the concept of a house of God. And he vows to give the tenth unto the Lord.</p>
+    <blockquote class="big-verse">But if I tarry long, that thou mayest know how thou oughtest to behave thyself in <mark>the house of God, which is the church of the living God, the pillar and ground of the truth</mark>.<cite>1 Timothy 3:15</cite></blockquote>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="From Abel to today" data-title="The general assembly and church of the firstborn">
+  <div class="page">
+    <div class="kicker">From Abel to today</div>
+    <h2>The general assembly and church of the firstborn</h2>
+    <blockquote class="scripture" style="font-style:italic">But ye are come unto mount Sion, and unto the city of the living God, the heavenly Jerusalem, and to an innumerable company of angels, <mark>To the general assembly and church of the firstborn, which are written in heaven</mark>, and to God the Judge of all, and to the spirits of just men made perfect, And to Jesus the mediator of the new covenant, and to the blood of sprinkling, that speaketh better things than that of Abel.<cite>Hebrews 12:22-24</cite></blockquote>
+    <p>We aren't under the covenant of Sinai, but of Zion. We are of the new covenant of a Heavenly Zion, which established life, in the continued presence of the Lord.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-salvation~12266" target="_blank" rel="noopener">A trail of blood of believers ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-salvation~16841" target="_blank" rel="noopener">Job: faith in God before Abraham ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-church~7254" target="_blank" rel="noopener">Bethel, the pillar and the house of God ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-law~8757" target="_blank" rel="noopener">Not Sinai but Mount Sion ↗</a></div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="The church in the wilderness" data-title="The church in the wilderness">
+  <div class="page">
+    <div class="kicker">The church in the wilderness</div>
+    <h2>The church in the wilderness</h2>
+    <blockquote class="big-verse">This is he, that was in <mark>the church in the wilderness</mark> with the angel which spake to him in the mount Sina, and with our fathers: who received the lively oracles to give unto us:<cite>Acts 7:38</cite></blockquote>
+    <p>Stephen calls Israel gathered under Moses at Sinai <em>the church in the wilderness</em>, who <em>received the lively oracles to give unto us.</em></p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="The church in the wilderness" data-title="The Tabernacle of the congregation">
+  <div class="page">
+    <div class="kicker">The church in the wilderness</div>
+    <h2>The Tabernacle of the congregation</h2>
+    <blockquote class="scripture" style="font-style:italic">And Moses took the tabernacle, and pitched it without the camp, afar off from the camp, and <mark>called it the Tabernacle of the congregation</mark>. And it came to pass, that <mark>every one which sought the <span class="lord">Lord</span> went out unto the tabernacle of the congregation</mark>, which was without the camp.<cite>Exodus 33:7</cite></blockquote>
+    <p>The Tabernacle without the camp, the church in the wilderness. This is the representation of the local church, the gathering of the congregation of those seeking the Lord. It represents both spiritual separation, and the physical assembly of believers that is our community church.</p>
+    <p>This is the pattern God showed Moses, and the pattern He gives us throughout the NT in the epistles. Local, independent churches that have fellowship in the Lord.</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="The church in the wilderness" data-title="Every Levite given his charge">
+  <div class="page">
+    <div class="kicker">The church in the wilderness</div>
+    <h2>Every Levite given his charge</h2>
+    <p><strong>Numbers 4</strong> sees God lay out the calling to each family of the Levites for ministering to the Tabernacle. And each man of each clan given a role, specific to them. With the whole given to the purpose of God.</p>
+    <p>Just as today, we who are saved are given different ways to be ministers of the faith and to edify the church, carrying that which is holy forth, into the world. Whatever you are called to contribute, do with cheer that the church may grow, and move out into the wilderness bringing others to Christ.</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="The church in the wilderness" data-title="Without the camp">
+  <div class="page">
+    <div class="kicker">The church in the wilderness</div>
+    <h2>Without the camp</h2>
+    <p>The unclean were put without the camp that their uncleanliness doesn't affect others. Physically they are instructions to keep diseases from spreading. Spiritually, all are a picture of sin, and the exile similar to church discipline, the removal of leaven that can spoil a whole lump.</p>
+    <p>Even today, in our churches, there are those that give a bad report, who sow discord among the brethren. We are called to a different spirit, like Caleb. Don't be a burden or a stumbling block for others in church. Be a blessing. Seek to build.</p>
+    <div class="refs center"><button class="ref" data-v="Numbers 5:2-3">Numbers 5:2-3</button><button class="ref" data-v="Numbers 14:24">Numbers 14:24</button><button class="ref" data-v="Proverbs 6:19">Proverbs 6:19</button></div>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#Exodus-33" target="_blank" rel="noopener">Exodus 33: the Tabernacle of the congregation ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-church~12424" target="_blank" rel="noopener">Every Levite given his charge ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-church~12553" target="_blank" rel="noopener">God hates them that sow discord ↗</a></div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Entering into the house of God" data-title="Standing for the reading of the Word">
+  <div class="page">
+    <div class="kicker">Entering into the house of God</div>
+    <h2>Standing for the reading of the Word</h2>
+    <blockquote class="scripture" style="font-style:italic">And Ezra opened the book in the sight of all the people; (for he was above all the people;) <mark>and when he opened it, all the people stood up</mark>: And Ezra blessed the <span class="lord">Lord</span>, the great God. And all the people answered, Amen, Amen, with lifting up their hands: and they bowed their heads, and worshipped the <span class="lord">Lord</span> with their faces to the ground.<cite>Nehemiah 8:5-6</cite></blockquote>
+    <p>Here is the tradition we Baptists have, of standing out of respect for God's word as the man of God preaches from the pulpit.</p>
+    <p>This is the purpose of the called out assembly. To give understanding to the people, reading from the Law of God distinctly. Notice the people were outside. They made booths of branches. It was simple and about God and His word.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Entering into the house of God" data-title="As His custom was">
+  <div class="page">
+    <div class="kicker">Entering into the house of God</div>
+    <h2>As His custom was</h2>
+    <blockquote class="big-verse">And he came to Nazareth, where he had been brought up: and, <mark>as his custom was, he went into the synagogue on the sabbath day</mark>, and stood up for to read.<cite>Luke 4:16</cite></blockquote>
+    <p>In these times, synagogues were the local churches of those who worshipped God. And Luke tells us that going to these houses of worship was Jesus' custom. It was His routine.</p>
+    <p>I am sure Jesus Christ Himself sat through boring sermons, by dull preachers who were wrong on doctrine, in congregations of people who were sinners and hypocrites or holier than thous. But it was Jesus' custom. And so, to begin His work, Jesus went to church. We should too.</p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Entering into the house of God" data-title="He entered not into the temple">
+  <div class="page">
+    <div class="kicker">Entering into the house of God</div>
+    <h2>He entered not into the temple</h2>
+    <blockquote class="big-verse">And he did that which was right in the sight of the <span class="lord">Lord</span>, according to all that his father Uzziah did: <mark>howbeit he entered not into the temple of the <span class="lord">Lord</span></mark>. And the people did yet corruptly.<cite>2 Chronicles 27:2</cite></blockquote>
+    <p>Jotham did that which is right in the sight of the Lord, but he did not enter into the temple. And the people were yet corrupt. How much more had he done had he not forsaken the assembly. If he had gone to church?</p>
+    <blockquote class="big-verse">Ye looked for much, and lo, it came to little; and when ye brought it home, I did blow upon it. Why? saith the <span class="lord">Lord</span> of hosts. <mark>Because of mine house that is waste, and ye run every man unto his own house</mark>.<cite>Haggai 1:9</cite></blockquote>
+    <p>How relevant a verse for us today, where there are empty churches, dying congregations of senior saints, and no young people there building the local church up.</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Entering into the house of God" data-title="In the midst of the congregation">
+  <div class="page">
+    <div class="kicker">Entering into the house of God</div>
+    <h2>In the midst of the congregation</h2>
+    <blockquote class="big-verse">I will declare thy name unto my brethren: <mark>in the midst of the congregation will I praise thee</mark>.<cite>Psalm 22:22</cite></blockquote>
+    <p>We cannot lift up our voice in praise to the congregation, to declare His name unto the brethren, if we avoid church.</p>
+    <p>When the armies of Ammon and Moab assemble against Jerusalem, Jehoshaphat calls the people together. A called out assembly in fast, and prayer, and singing songs in praise of God. Calling on Him to remember His promise, showing they have faith in His word.</p>
+    <div class="refs center"><button class="ref" data-v="2 Chronicles 20:4">2 Chronicles 20:4</button><button class="ref" data-v="2 Chronicles 20:21-22">2 Chronicles 20:21-22</button></div>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-church~16757" target="_blank" rel="noopener">Standing for the reading of the Word ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-church~9125" target="_blank" rel="noopener">As His custom was: Jesus went to church ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-church~15215" target="_blank" rel="noopener">Jotham entered not into the temple ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-church~16492" target="_blank" rel="noopener">Mine house is waste ↗</a></div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Christ the foundation" data-title="Upon this rock">
+  <div class="page">
+    <div class="kicker">Christ the foundation</div>
+    <h2>Upon this rock</h2>
+    <blockquote class="scripture" style="font-style:italic">He saith unto them, But whom say ye that I am? And Simon Peter answered and said, <mark>Thou art the Christ, the Son of the living God</mark>. And Jesus answered and said unto him, Blessed art thou, Simon Barjona: for flesh and blood hath not revealed it unto thee, but my Father which is in heaven. And I say also unto thee, That thou art Peter, and <mark>upon this rock I will build my church</mark>; and the gates of hell shall not prevail against it.<cite>Matthew 16:15-18</cite></blockquote>
+    <p>Jesus, in confirming Peter's profession of faith, that Jesus is the Christ, the Son of God, says that this truth revealed to Peter by God, and to all of us through His word and received by faith, is the rock upon which Jesus is building his church.</p>
+    <p>Cephas or Peter, which translated means a stone (<button class="ref" data-v="John 1:42">John 1:42</button>). It is this confession of the faith that Jesus says the gates of Hell shall not prevail against.</p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Christ the foundation" data-title="Lively stones">
+  <div class="page">
+    <div class="kicker">Christ the foundation</div>
+    <h2>Lively stones</h2>
+    <blockquote class="big-verse">For <mark>other foundation can no man lay than that is laid, which is Jesus Christ</mark>.<cite>1 Corinthians 3:11</cite></blockquote>
+    <blockquote class="big-verse"><mark>Ye also, as lively stones, are built up a spiritual house, an holy priesthood</mark>, to offer up spiritual sacrifices, acceptable to God by Jesus Christ.<cite>1 Peter 2:5</cite></blockquote>
+    <p>We who believe, as Peter says in his Epistles, are as lively stones like him, making up the edification, the building up of the church.</p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Christ the foundation" data-title="We are the tabernacle">
+  <div class="page">
+    <div class="kicker">Christ the foundation</div>
+    <h2>We are the tabernacle</h2>
+    <p class="lead">In Christ, we are the Tabernacle, we are the temple. Our bodies the house of the Lord.</p>
+    <p>Jesus IS the Temple, the Lord God Almighty is the Temple. The church built upon the truth of the Gospel, that Jesus is Christ, are the pillars of that Temple.</p>
+    <p>Jesus left us the Gospel. God's word. He builds His church from the pillars that are saved believers. Adopted sons of God.</p>
+    <div class="refs center"><button class="ref" data-v="1 Corinthians 3:16">1 Corinthians 3:16</button><button class="ref" data-v="Revelation 3:12">Revelation 3:12</button><button class="ref" data-v="Revelation 21:22">Revelation 21:22</button></div>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-church~12564" target="_blank" rel="noopener">Upon this rock: Matthew 16 ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-church~14406" target="_blank" rel="noopener">Upon this rock I will build my church ↗</a><a class="ref lesson-link" href="../../studies/#lesson-heresies-that-rock-was-christ" target="_blank" rel="noopener">That Rock Was Christ, Not Peter ↗</a></div>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Local, independent churches" data-title="Local, independent, Jesus-led">
+  <div class="page">
+    <div class="kicker">Local, independent churches</div>
+    <h2>Local, independent, Jesus-led</h2>
+    <p class="lead">Biblical churches planted by the Apostles were local, independent, Jesus-led, via a pastor aka a bishop.</p>
+    <p>Elders of the church sent evangelists out to start new independent churches, and members were sent out as the priesthood of believers to win souls locally. They had one Gospel, the doctrine came directly from scripture and had no hidden or extra-biblical offices, rites or oral tradition.</p>
+    <p>Yes, churches is plural. That's the NT Christian perspective on a church. A fellowship of like-minded churches. Not a universal church on earth.</p>
+    <div class="refs center"><button class="ref" data-v="Romans 16:16">Romans 16:16</button><button class="ref" data-v="Galatians 1:2">Galatians 1:2</button><button class="ref" data-v="Revelation 1:11">Revelation 1:11</button></div>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Local, independent churches" data-title="No top-down denominations">
+  <div class="page">
+    <div class="kicker">Local, independent churches</div>
+    <h2>No top-down denominations</h2>
+    <p class="lead">There is no biblical basis for top down denominational structure of a church.</p>
+    <p>Large institutions of men where power is consolidated always will drift into apostasy, and when it does it takes down huge swaths of people. An independent church might falter or pick up a strange doctrine, but the people within can leave and often just go across town to another independent Bible believing church.</p>
+    <div class="timeline"><div><span class="n">I</span><span class="lbl">independent of any denomination</span></div><div><span class="n">F</span><span class="lbl">fundamentalist by inclination and practice</span></div><div><span class="n">B</span><span class="lbl">Baptist because they agree on the first two</span></div></div>
+    <p class="take">It's amazing how God's system for churches is so much superior to man's.</p>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Local, independent churches" data-title="The candlesticks are the churches">
+  <div class="page">
+    <div class="kicker">Local, independent churches</div>
+    <h2>The candlesticks are the churches</h2>
+    <blockquote class="big-verse">The mystery of the seven stars which thou sawest in my right hand, and the seven golden candlesticks. The seven stars are the angels of the seven churches: and <mark>the seven candlesticks which thou sawest are the seven churches</mark>.<cite>Revelation 1:20</cite></blockquote>
+    <p>These are literal places and people, real actual churches, and the lessons given are to serve as a model for our churches today. Even the worst had members who were right with God.</p>
+    <p>When faced with a lukewarm church, the answer isn't to become cold to church and drop out, it is to become red hot for the Lord and heat things up. Zeal is contagious.</p>
+    <div class="refs center"><button class="ref" data-v="Revelation 2:4-5">Revelation 2:4-5</button><button class="ref" data-v="Revelation 3:15-16">Revelation 3:15-16</button></div>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Local, independent churches" data-title="The churches the Apostles planted">
+  <div class="page">
+    <div class="kicker">Local, independent churches</div>
+    <h2>The churches the Apostles planted</h2>
+    <p class="lead">My church traces its doctrine directly back to the Apostles, who founded local independent churches.</p>
+    <p>In Jerusalem, Antioch, Athens, Berea, Caesarea, Cenchrea, Colossae, Corinth, Crete, Damascus, Derbe, Ephesus, Iconium, Joppa, Laodicea, Lystra, Pergamum, Philadelphia, Philippi, Rome, Sardis, Smyrna, Thessalonica, Thyatira, and Troas...</p>
+    <p>My pastor has been trained directly by the Apostles, to uphold the same traditions those first century churches held to, as God documents in His scriptures.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-church~972" target="_blank" rel="noopener">The New Testament church: local, independent and Jesus-led ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-church~8726" target="_blank" rel="noopener">No Top-Down Denominations ↗</a><a class="ref lesson-link" href="../../studies/#Revelation-2" target="_blank" rel="noopener">The churches of Revelation 2 and 3 ↗</a><a class="ref lesson-link" href="../../studies/#lesson-doctrine-week-5-trail-of-blood-and-baptist-history" target="_blank" rel="noopener">Week 5: A Trail of Blood and Being Baptist ↗</a></div>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Pastors and deacons" data-title="Two offices">
+  <div class="page">
+    <div class="kicker">Pastors and deacons</div>
+    <h2>Two offices</h2>
+    <p class="lead">The only two biblical church offices; Bishop and Deacon. Bishop being the pastor, or head of a local independent NT church, and deacon being an assistive role, aiding the pastor in the administration of the church.</p>
+    <blockquote class="scripture" style="font-style:italic">Wherefore, brethren, look ye out among you <mark>seven men of honest report, full of the Holy Ghost and wisdom</mark>, whom we may appoint over this business. But <mark>we will give ourselves continually to prayer, and to the ministry of the word</mark>.<cite>Acts 6:3-4</cite></blockquote>
+    <p>They should be Christ-led, pastor in charge, deacons serving the pastor, as the Bible lays out.</p>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Pastors and deacons" data-title="The qualifications of a bishop">
+  <div class="page">
+    <div class="kicker">Pastors and deacons</div>
+    <h2>The qualifications of a bishop</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>A bishop then must be blameless, the husband of one wife</mark>, vigilant, sober, of good behaviour, given to hospitality, apt to teach; Not given to wine, no striker, not greedy of filthy lucre; but patient, not a brawler, not covetous; One that ruleth well his own house, having his children in subjection with all gravity; (For if a man know not how to rule his own house, how shall he take care of the church of God?) Not a novice, lest being lifted up with pride he fall into the condemnation of the devil. Moreover he must have a good report of them which are without; lest he fall into reproach and the snare of the devil.<cite>1 Timothy 3:2-7</cite></blockquote>
+    <p>Not that he, his wife or kids must be perfect, but that the pastors and deacons be in control at home.</p>
+    <p>Telegram isn't church. Discord isn't church. I am not a pastor. Unless someone leads an actual assembly of believers, in real life, they are not a pastor.</p>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="Pastors and deacons" data-title="A royal priesthood">
+  <div class="page">
+    <div class="kicker">Pastors and deacons</div>
+    <h2>A royal priesthood</h2>
+    <blockquote class="big-verse">But ye are a chosen generation, <mark>a royal priesthood</mark>, an holy nation, a peculiar people; that ye should shew forth the praises of him who hath called you out of darkness into his marvellous light:<cite>1 Peter 2:9</cite></blockquote>
+    <p>Every saved believer is of the priesthood of Christ. Giving the gospel that others become part of that holy priesthood of believers. There is <em>one mediator between God and men, the man Christ Jesus</em> (<button class="ref" data-v="1 Timothy 2:5">1 Timothy 2:5</button>).</p>
+    <p>A saved woman is called to give the gospel and save souls and use their gifts to the edification of the church, just as a man is. But in church, under the leadership of a man of God, the pastor, they are to learn in silence. It isn't the role but the goal.</p>
+    <div class="refs center"><button class="ref" data-v="1 Timothy 2:12">1 Timothy 2:12</button><button class="ref" data-v="Romans 16:1-2">Romans 16:1-2</button></div>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="Pastors and deacons" data-title="The labourer is worthy of his reward">
+  <div class="page">
+    <div class="kicker">Pastors and deacons</div>
+    <h2>The labourer is worthy of his reward</h2>
+    <blockquote class="big-verse">Let the elders that rule well be counted worthy of double honour, especially they who labour in the word and doctrine. For the scripture saith, Thou shalt not muzzle the ox that treadeth out the corn. And, <mark>The labourer is worthy of his reward</mark>.<cite>1 Timothy 5:17-18</cite></blockquote>
+    <p>It's a pretty clear line between being paid for the ministry with enough to live on, and taking advantage of the position to become rich from it. Tithes and supporting a pastor are a good thing. Pastors are to not take advantage of their flock.</p>
+    <p>And accusations against an elder should be handled with respect, requiring witnesses, but publicly rebuked if they don't repent. By not being respecters of persons in these matters, an active lively church can avoid these pitfalls.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-church~5803" target="_blank" rel="noopener">Qualifications of bishop and deacon ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-church~2572" target="_blank" rel="noopener">Acts 6: the office of deacon ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-church~11326" target="_blank" rel="noopener">Telegram isn't church ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-church~16748" target="_blank" rel="noopener">A pastor is worthy of his hire ↗</a></div>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="slide" data-section="One body, two ordinances" data-title="Baptized into one body">
+  <div class="page">
+    <div class="kicker">One body, two ordinances</div>
+    <h2>Baptized into one body</h2>
+    <blockquote class="big-verse">For <mark>by one Spirit are we all baptized into one body</mark>, whether we be Jews or Gentiles, whether we be bond or free; and have been all made to drink into one Spirit.<cite>1 Corinthians 12:13</cite></blockquote>
+    <p>By the Spirit of God that has baptized us into the body of Christ, a spiritual baptism, we become partakers of the gifts given every man, according to the purpose of God. Christ as the head.</p>
+    <p>These passages are not about the gifts, but about the hearts of Christians regarding them. That we all work as one body, under the head that is Christ.</p>
+  </div>
+</section>
+
+<!-- 27 -->
+<section class="slide" data-section="One body, two ordinances" data-title="A little leaven">
+  <div class="page">
+    <div class="kicker">One body, two ordinances</div>
+    <h2>A little leaven</h2>
+    <blockquote class="big-verse">Your glorying is not good. Know ye not that <mark>a little leaven leaveneth the whole lump</mark>? Purge out therefore the old leaven, that ye may be a new lump, as ye are unleavened. For even Christ our passover is sacrificed for us:<cite>1 Corinthians 5:6-7</cite></blockquote>
+    <p>Jesus taught of church discipline in <strong>Matthew 18</strong>, first alone, then with witness, then before the entire church if the person won't take the reproach. Far too many churches today, even doctrinally sound ones full of believers, fail at this simple task.</p>
+    <p>And when a brother or sister in Christ comes into your congregation, their past bondage should not be held against them. Their sins are as forgiven as yours. <em>Thou shalt not oppress him.</em></p>
+    <div class="refs center"><button class="ref" data-v="Matthew 18:15-17">Matthew 18:15-17</button><button class="ref" data-v="Deuteronomy 23:15-16">Deuteronomy 23:15-16</button></div>
+  </div>
+</section>
+
+<!-- 28 -->
+<section class="slide" data-section="One body, two ordinances" data-title="Believer&#x27;s baptism">
+  <div class="page">
+    <div class="kicker">One body, two ordinances</div>
+    <h2>Believer's baptism</h2>
+    <p class="lead">There are two new ordinances made to which we should adhere. Baptism and the Lord's supper. Just as the ordinances of the OT held no actual power to forgive sin or earn grace, but were a picture of the Christ to come, so too the ordinances we are told to keep are an image of Christ.</p>
+    <p>In baptism, the believer is immersed in water, dead, buried and risen in the manner reminiscent of Jesus. Baptism not being the putting away of sin, but the answer of a good conscience by those who have called upon the name of the Lord.</p>
+    <blockquote class="big-verse">The like figure whereunto even baptism doth also now save us (<mark>not the putting away of the filth of the flesh, but the answer of a good conscience toward God</mark>,) by the resurrection of Jesus Christ:<cite>1 Peter 3:21</cite></blockquote>
+    <div class="refs center"><button class="ref" data-v="Acts 8:36-38">Acts 8:36-38</button><button class="ref" data-v="Romans 6:4">Romans 6:4</button></div>
+  </div>
+</section>
+
+<!-- 29 -->
+<section class="slide" data-section="One body, two ordinances" data-title="This do in remembrance of me">
+  <div class="page">
+    <div class="kicker">One body, two ordinances</div>
+    <h2>This do in remembrance of me</h2>
+    <blockquote class="big-verse">And he took bread, and gave thanks, and brake it, and gave unto them, saying, This is my body which is given for you: <mark>this do in remembrance of me</mark>.<cite>Luke 22:19</cite></blockquote>
+    <p>The Lord's supper is a continuation of Passover, which pictured Jesus. Jesus is that lamb, who takes away the sins of the world. The bread now, represents His body. The cup poured out, His blood. It is a memorial and a picture of Christ.</p>
+    <p>Done within the congregation of believers, using the breaking of unleavened bread and the pouring out of the unfermented juice of the vine, done in memory of Jesus. It is not a means of obtaining grace or salvation.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-church~12798" target="_blank" rel="noopener">Baptized by one Spirit into one body ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-church~3699" target="_blank" rel="noopener">A little leaven leaveneth the whole lump ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-church~9192" target="_blank" rel="noopener">Baptism and the Lord's supper are pictures ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-church~9754" target="_blank" rel="noopener">The Lord's supper is a memorial, not a sacrament ↗</a></div>
+  </div>
+</section>
+
+<!-- 30 -->
+<section class="slide" data-section="Assembling together" data-title="Not forsaking the assembling">
+  <div class="page">
+    <div class="kicker">Assembling together</div>
+    <h2>Not forsaking the assembling</h2>
+    <blockquote class="scripture" style="font-style:italic">Let us hold fast the profession of our faith without wavering; (for he is faithful that promised;) And let us consider one another to provoke unto love and to good works: <mark>Not forsaking the assembling of ourselves together</mark>, as the manner of some is; but exhorting one another: and so much the more, as ye see the day approaching.<cite>Hebrews 10:23-25</cite></blockquote>
+    <p>This is an appeal to go to church. Note, not for salvation, not just because it's sin not to, not because you can lose your salvation if you don't. But like all good works, to the benefit of others and a reflection of the love God has shown us in our salvation.</p>
+    <p>This appeal is explicitly about what we should do because things are getting worse, not an excuse not to.</p>
+  </div>
+</section>
+
+<!-- 31 -->
+<section class="slide" data-section="Assembling together" data-title="White-knuckle Christianity">
+  <div class="page">
+    <div class="kicker">Assembling together</div>
+    <h2>White-knuckle Christianity</h2>
+    <p class="lead">For many Christians, they are living what can only be described as “white-knuckle Christianity.”</p>
+    <p>They are trying to get right without any guidance. Without accountability. Without a church. Without real life brethren to hold them accountable. Without guidance from older and more mature Christians that know them personally.</p>
+    <p>They are easily taken in by people who seem to have more knowledge. People that they don't know personally. And they tend to be carried away by strange doctrines.</p>
+  </div>
+</section>
+
+<!-- 32 -->
+<section class="slide" data-section="Assembling together" data-title="Many hands make light work">
+  <div class="page">
+    <div class="kicker">Assembling together</div>
+    <h2>Many hands make light work</h2>
+    <p class="lead">All hands on deck is how we should approach the local church. If you have a talent or skill or even time, you should pitch in.</p>
+    <p>It is where the works of God are done. Edifying others, praying as a group, singing Psalms and hymns, giving one to another, learning under a pastor, and most importantly, soul winning and evangelizing of some kind, even if it's just invitations and tracts.</p>
+    <div class="refs center"><button class="ref" data-v="Nehemiah 4:6">Nehemiah 4:6</button><button class="ref" data-v="Ephesians 4:11-12">Ephesians 4:11-12</button><button class="ref" data-v="Colossians 3:16">Colossians 3:16</button></div>
+  </div>
+</section>
+
+<!-- 33 -->
+<section class="slide" data-section="Assembling together" data-title="Bring them to church">
+  <div class="page">
+    <div class="kicker">Assembling together</div>
+    <h2>Bring them to church</h2>
+    <p class="lead">Every saved believer has a difficult time preaching to their loved ones, and getting friends and relatives saved.</p>
+    <blockquote class="big-verse">But Jesus said unto them, <mark>A prophet is not without honour, but in his own country</mark>, and among his own kin, and in his own house.<cite>Mark 6:4</cite></blockquote>
+    <p>If the Lord Jesus Christ had a hard time reaching those who knew Him best, it is natural that we do too. But church-goers? Where the word is preached? There is a solution: Inviting them to services. Christmas, Easter, potluck, perhaps your own baptism, or just because.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-church~16571" target="_blank" rel="noopener">Assembling together and not falling away ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-church~11313" target="_blank" rel="noopener">White-knuckle Christianity ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-church~16743" target="_blank" rel="noopener">Many hands make light work ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-church~15404" target="_blank" rel="noopener">Why join a local church ↗</a></div>
+  </div>
+</section>
+
+<!-- 34 -->
+<section class="slide" data-section="Go to church" data-title="Go to church">
+  <div class="page title-page later">
+    <div class="overline">The church</div>
+    <h1>Build Up the Church</h1>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="center">Plug in and pitch in. Build the church of Jesus by building up your local church, and winning souls to Christ.</p>
+    <blockquote class="big-verse">And many people shall go and say, <mark>Come ye, and let us go up to the mountain of the <span class="lord">Lord</span>, to the house of the God of Jacob</mark>; and he will teach us of his ways, and we will walk in his paths: for out of Zion shall go forth the law, and the word of the <span class="lord">Lord</span> from Jerusalem.<cite>Isaiah 2:3</cite></blockquote>
+    <p class="center">Him that overcometh will I make a pillar in the temple of my God (<button class="ref" data-v="Revelation 3:12">Revelation 3:12</button>).</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-doctrine-week-5-trail-of-blood-and-baptist-history" target="_blank" rel="noopener">A Trail of Blood ↗</a><a class="ref lesson-link" href="../../studies/#lesson-baptist-perpetuity" target="_blank" rel="noopener">Baptist Perpetuity ↗</a><a class="ref lesson-link" href="../../studies/#lesson-baptist-voices" target="_blank" rel="noopener">Baptist Voices ↗</a><a class="ref lesson-link" href="../../studies/#lesson-sermon-haggai-the-prophet" target="_blank" rel="noopener">Haggai the Prophet ↗</a></div>
+    <p class="sub center">Every teaching is on the <a class="ref lesson-link" href="../../studies/#doctrine-church" target="_blank" rel="noopener">The church ↗</a> page.</p>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 Corinthians 3:16":[[16, "Know ye not that ye are the temple of God, and that the Spirit of God dwelleth in you?"]],
+  "1 Timothy 2:12":[[12, "But I suffer not a woman to teach, nor to usurp authority over the man, but to be in silence."]],
+  "1 Timothy 2:5":[[5, "For there is one God, and one mediator between God and men, the man Christ Jesus;"]],
+  "1 Timothy 3:15":[[15, "But if I tarry long, that thou mayest know how thou oughtest to behave thyself in the house of God, which is the church of the living God, the pillar and ground of the truth."]],
+  "2 Chronicles 20:21-22":[[21, "And when he had consulted with the people, he appointed singers unto the LORD, and that should praise the beauty of holiness, as they went out before the army, and to say, Praise the LORD; for his mercy endureth for ever."], [22, "And when they began to sing and to praise, the LORD set ambushments against the children of Ammon, Moab, and mount Seir, which were come against Judah; and they were smitten."]],
+  "2 Chronicles 20:4":[[4, "And Judah gathered themselves together, to ask help of the LORD: even out of all the cities of Judah they came to seek the LORD."]],
+  "Acts 7:38":[[38, "This is he, that was in the church in the wilderness with the angel which spake to him in the mount Sina, and with our fathers: who received the lively oracles to give unto us:"]],
+  "Acts 8:36-38":[[36, "And as they went on their way, they came unto a certain water: and the eunuch said, See, here is water; what doth hinder me to be baptized?"], [37, "And Philip said, If thou believest with all thine heart, thou mayest. And he answered and said, I believe that Jesus Christ is the Son of God."], [38, "And he commanded the chariot to stand still: and they went down both into the water, both Philip and the eunuch; and he baptized him."]],
+  "Colossians 3:16":[[16, "Let the word of Christ dwell in you richly in all wisdom; teaching and admonishing one another in psalms and hymns and spiritual songs, singing with grace in your hearts to the Lord."]],
+  "Deuteronomy 23:15-16":[[15, "Thou shalt not deliver unto his master the servant which is escaped from his master unto thee:"], [16, "He shall dwell with thee, even among you, in that place which he shall choose in one of thy gates, where it liketh him best: thou shalt not oppress him."]],
+  "Ephesians 4:11-12":[[11, "And he gave some, apostles; and some, prophets; and some, evangelists; and some, pastors and teachers;"], [12, "For the perfecting of the saints, for the work of the ministry, for the edifying of the body of Christ:"]],
+  "Galatians 1:2":[[2, "And all the brethren which are with me, unto the churches of Galatia:"]],
+  "Hebrews 10:25":[[25, "Not forsaking the assembling of ourselves together, as the manner of some is; but exhorting one another: and so much the more, as ye see the day approaching."]],
+  "Hebrews 11:4":[[4, "By faith Abel offered unto God a more excellent sacrifice than Cain, by which he obtained witness that he was righteous, God testifying of his gifts: and by it he being dead yet speaketh."]],
+  "Job 1:1":[[1, "There was a man in the land of Uz, whose name was Job; and that man was perfect and upright, and one that feared God, and eschewed evil."]],
+  "Job 1:5":[[5, "And it was so, when the days of their feasting were gone about, that Job sent and sanctified them, and rose up early in the morning, and offered burnt offerings according to the number of them all: for Job said, It may be that my sons have sinned, and cursed God in their hearts. Thus did Job continually."]],
+  "John 1:42":[[42, "And he brought him to Jesus. And when Jesus beheld him, he said, Thou art Simon the son of Jona: thou shalt be called Cephas, which is by interpretation, A stone."]],
+  "Judges 21:8-10":[[8, "And they said, What one is there of the tribes of Israel that came not up to Mizpeh to the LORD? And, behold, there came none to the camp from Jabeshgilead to the assembly."], [9, "For the people were numbered, and, behold, there were none of the inhabitants of Jabeshgilead there."], [10, "And the congregation sent thither twelve thousand men of the valiantest, and commanded them, saying, Go and smite the inhabitants of Jabeshgilead with the edge of the sword, with the women and the children."]],
+  "Matthew 16:18":[[18, "And I say also unto thee, That thou art Peter, and upon this rock I will build my church; and the gates of hell shall not prevail against it."]],
+  "Matthew 18:15-17":[[15, "Moreover if thy brother shall trespass against thee, go and tell him his fault between thee and him alone: if he shall hear thee, thou hast gained thy brother."], [16, "But if he will not hear thee, then take with thee one or two more, that in the mouth of two or three witnesses every word may be established."], [17, "And if he shall neglect to hear them, tell it unto the church: but if he neglect to hear the church, let him be unto thee as an heathen man and a publican."]],
+  "Matthew 18:20":[[20, "For where two or three are gathered together in my name, there am I in the midst of them."]],
+  "Nehemiah 4:6":[[6, "So built we the wall; and all the wall was joined together unto the half thereof: for the people had a mind to work."]],
+  "Numbers 14:24":[[24, "But my servant Caleb, because he had another spirit with him, and hath followed me fully, him will I bring into the land whereinto he went; and his seed shall possess it."]],
+  "Numbers 5:2-3":[[2, "Command the children of Israel, that they put out of the camp every leper, and every one that hath an issue, and whosoever is defiled by the dead:"], [3, "Both male and female shall ye put out, without the camp shall ye put them; that they defile not their camps, in the midst whereof I dwell."]],
+  "Proverbs 6:19":[[19, "A false witness that speaketh lies, and he that soweth discord among brethren."]],
+  "Revelation 1:11":[[11, "Saying, I am Alpha and Omega, the first and the last: and, What thou seest, write in a book, and send it unto the seven churches which are in Asia; unto Ephesus, and unto Smyrna, and unto Pergamos, and unto Thyatira, and unto Sardis, and unto Philadelphia, and unto Laodicea."]],
+  "Revelation 21:22":[[22, "And I saw no temple therein: for the Lord God Almighty and the Lamb are the temple of it."]],
+  "Revelation 2:4-5":[[4, "Nevertheless I have somewhat against thee, because thou hast left thy first love."], [5, "Remember therefore from whence thou art fallen, and repent, and do the first works; or else I will come unto thee quickly, and will remove thy candlestick out of his place, except thou repent."]],
+  "Revelation 3:12":[[12, "Him that overcometh will I make a pillar in the temple of my God, and he shall go no more out: and I will write upon him the name of my God, and the name of the city of my God, which is new Jerusalem, which cometh down out of heaven from my God: and I will write upon him my new name."]],
+  "Revelation 3:15-16":[[15, "I know thy works, that thou art neither cold nor hot: I would thou wert cold or hot."], [16, "So then because thou art lukewarm, and neither cold nor hot, I will spue thee out of my mouth."]],
+  "Romans 16:1-2":[[1, "I commend unto you Phebe our sister, which is a servant of the church which is at Cenchrea:"], [2, "That ye receive her in the Lord, as becometh saints, and that ye assist her in whatsoever business she hath need of you: for she hath been a succourer of many, and of myself also."]],
+  "Romans 16:16":[[16, "Salute one another with an holy kiss. The churches of Christ salute you."]],
+  "Romans 6:4":[[4, "Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life."]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
