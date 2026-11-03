@@ -128,6 +128,18 @@ mark.w{border-bottom:0}
 /* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
 @media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
 .pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
 #picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
 #picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
 .pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
@@ -174,7 +186,7 @@ ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(-
 /* Title slide */
 .title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
 .title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
-.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
 .title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
 .hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
 
@@ -295,6 +307,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 @media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
 /* title slides after the first carry a smaller heading */
 .title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
 @media print{
   body{overflow:visible;background:#fff;color:#000}
   .bar{display:none}
@@ -331,44 +344,75 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="page">
     <h2>The Promise of Christ</h2>
     <p class="lead">From the Garden onward, Scripture points forward to one coming Deliverer.</p>
-    <div class="vps"><div class="vp fig"><h3>The first prophecy of Christ</h3><blockquote class="scripture" style="font-style:italic">And I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel.<cite>Genesis 3:15</cite></blockquote><p>The first prophecy of Christ, as a coming deliverer.</p></div><div class="vp fig"><h3>The promise to Abraham</h3><blockquote class="scripture" style="font-style:italic">Now the <span class="lord">Lord</span> had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father’s house, unto a land that I will shew thee: And I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing: And I will bless them that bless thee, and curse him that curseth thee: and in thee shall all families of the earth be blessed. So Abram departed, as the <span class="lord">Lord</span> had spoken unto him; and Lot went with him: and Abram was seventy and five years old when he departed out of Haran.<cite>Genesis 12:1-4</cite></blockquote><p>The promise to Abraham, through whom the Messiah would come.</p></div></div>
+    <div class="vps"><div class="vp fig"><h3>The first prophecy of Christ</h3><blockquote class="scripture" style="font-style:italic">And I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel.<cite>Genesis 3:15</cite></blockquote><p>The first prophecy of Christ, as a coming deliverer.</p></div></div>
   </div>
 </section>
 
 <!-- 4 -->
-<section class="slide" data-section="I. The Promise of Christ" data-title="The Promise of Christ, continued">
+<section class="slide" data-section="I. The Promise of Christ" data-title="The Promise of Christ, part 2">
   <div class="page">
-    <h2>The Promise of Christ, continued</h2>
-    <div class="vps"><div class="vp fig"><h3>The virgin birth foretold</h3><blockquote class="scripture" style="font-style:italic">Therefore the Lord himself shall give you a sign; Behold, a virgin shall conceive, and bear a son, and shall call his name Immanuel.<cite>Isaiah 7:14</cite></blockquote><p>A prophecy of the virgin birth of Christ.</p></div><div class="vp fig"><h3>Bethlehem &amp; His eternal nature</h3><blockquote class="scripture" style="font-style:italic">But thou, Bethlehem Ephratah, though thou be little among the thousands of Judah, yet out of thee shall he come forth unto me that is to be ruler in Israel; whose goings forth have been from of old, from everlasting.<cite>Micah 5:2</cite></blockquote><p>A prophecy of Christ’s birthplace and eternal nature.</p></div></div>
+    <h2>The Promise of Christ, part 2</h2>
+    <div class="vps"><div class="vp fig"><h3>The promise to Abraham</h3><blockquote class="scripture" style="font-style:italic">Now the <span class="lord">Lord</span> had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father’s house, unto a land that I will shew thee: And I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing: And I will bless them that bless thee, and curse him that curseth thee: and in thee shall all families of the earth be blessed. So Abram departed, as the <span class="lord">Lord</span> had spoken unto him; and Lot went with him: and Abram was seventy and five years old when he departed out of Haran.<cite>Genesis 12:1-4</cite></blockquote><p>The promise to Abraham, through whom the Messiah would come.</p></div></div>
   </div>
 </section>
 
 <!-- 5 -->
-<section class="slide" data-section="II. Theophanies / Christophanies" data-title="Theophanies / Christophanies">
+<section class="slide" data-section="I. The Promise of Christ" data-title="The Promise of Christ, part 3">
   <div class="page">
-    <h2>Theophanies / Christophanies</h2>
-    <p class="lead">Old Testament appearances of Jesus — the “Angel of the <span class="lord">Lord</span>” and other pre-incarnate visitations widely understood as the Son of God, seen before Bethlehem.</p>
-    <div class="vps"><div class="vp fig"><h3>The Angel of the <span class="lord">Lord</span> and Hagar</h3><blockquote class="scripture" style="font-style:italic">And the angel of the <span class="lord">Lord</span> found her by a fountain of water in the wilderness, by the fountain in the way to Shur. And he said, Hagar, Sarai’s maid, whence camest thou? and whither wilt thou go? And she said, I flee from the face of my mistress Sarai. And the angel of the <span class="lord">Lord</span> said unto her, Return to thy mistress, and submit thyself under her hands. And the angel of the <span class="lord">Lord</span> said unto her, I will multiply thy seed exceedingly, that it shall not be numbered for multitude. And the angel of the <span class="lord">Lord</span> said unto her, Behold, thou art with child, and shalt bear a son, and shalt call his name Ishmael; because the <span class="lord">Lord</span> hath heard thy affliction. And he will be a wild man; his hand will be against every man, and every man’s hand against him; and he shall dwell in the presence of all his brethren. And she called the name of the <span class="lord">Lord</span> that spake unto her, Thou God seest me: for she said, Have I also here looked after him that seeth me?<cite>Genesis 16:7-13</cite></blockquote><p>The “Angel of the <span class="lord">Lord</span>” is often seen as a pre-incarnate appearance of Jesus, here appearing to the bondwoman of Abraham and Sarah.</p></div></div>
+    <h2>The Promise of Christ, part 3</h2>
+    <div class="vps"><div class="vp fig"><h3>The virgin birth foretold</h3><blockquote class="scripture" style="font-style:italic">Therefore the Lord himself shall give you a sign; Behold, a virgin shall conceive, and bear a son, and shall call his name Immanuel.<cite>Isaiah 7:14</cite></blockquote><p>A prophecy of the virgin birth of Christ.</p></div><div class="vp fig"><h3>Bethlehem &amp; His eternal nature</h3><blockquote class="scripture" style="font-style:italic">But thou, Bethlehem Ephratah, though thou be little among the thousands of Judah, yet out of thee shall he come forth unto me that is to be ruler in Israel; whose goings forth have been from of old, from everlasting.<cite>Micah 5:2</cite></blockquote><p>A prophecy of Christ’s birthplace and eternal nature.</p></div></div>
   </div>
 </section>
 
 <!-- 6 -->
-<section class="slide" data-section="II. Theophanies / Christophanies" data-title="The LORD at Mamre">
+<section class="slide" data-section="II. Theophanies / Christophanies" data-title="Theophanies / Christophanies">
   <div class="page">
-    <h2>The LORD at Mamre</h2>
-    <div class="vps"><div class="vp fig"><h3>The <span class="lord">Lord</span> at Mamre</h3><blockquote class="scripture" style="font-style:italic">And the <span class="lord">Lord</span> appeared unto him in the plains of Mamre: and he sat in the tent door in the heat of the day; And he lift up his eyes and looked, and, lo, three men stood by him: and when he saw them, he ran to meet them from the tent door, and bowed himself toward the ground,<cite>Genesis 18:1-2</cite></blockquote><p>The <span class="lord">Lord</span> appearing to Abraham as a man.</p></div><div class="vp fig"><h3>Captain of the <span class="lord">Lord</span>’s host</h3><blockquote class="scripture" style="font-style:italic">And it came to pass, when Joshua was by Jericho, that he lifted up his eyes and looked, and, behold, there stood a man over against him with his sword drawn in his hand: and Joshua went unto him, and said unto him, Art thou for us, or for our adversaries? And he said, Nay; but as captain of the host of the <span class="lord">Lord</span> am I now come. And Joshua fell on his face to the earth, and did worship, and said unto him, What saith my lord unto his servant? And the captain of the <span class="lord">Lord</span>’s host said unto Joshua, Loose thy shoe from off thy foot; for the place whereon thou standest is holy. And Joshua did so.<cite>Joshua 5:13-15</cite></blockquote><p>Widely understood as a pre-incarnate appearance of Jesus.</p></div></div>
+    <h2>Theophanies / Christophanies</h2>
+    <p class="lead">Old Testament appearances of Jesus — the “Angel of the <span class="lord">Lord</span>” and other pre-incarnate visitations widely understood as the Son of God, seen before Bethlehem.</p>
   </div>
 </section>
 
 <!-- 7 -->
-<section class="slide" data-section="II. Theophanies / Christophanies" data-title="Melchizedek and the fourth man">
+<section class="slide" data-section="II. Theophanies / Christophanies" data-title="Theophanies / Christophanies, continued">
   <div class="page">
-    <h2>Melchizedek and the fourth man</h2>
-    <div class="vps"><div class="vp fig"><h3>Melchizedek, King of Salem</h3><blockquote class="scripture" style="font-style:italic">And Melchizedek king of Salem brought forth bread and wine: and he was the priest of the most high God. And he blessed him, and said, Blessed be Abram of the most high God, possessor of heaven and earth: And blessed be the most high God, which hath delivered thine enemies into thy hand. And he gave him tithes of all.<cite>Genesis 14:18-20</cite></blockquote><blockquote class="scripture" style="font-style:italic">For this Melchisedec, king of Salem, priest of the most high God, who met Abraham returning from the slaughter of the kings, and blessed him; To whom also Abraham gave a tenth part of all; first being by interpretation King of righteousness, and after that also King of Salem, which is, King of peace; Without father, without mother, without descent, having neither beginning of days, nor end of life; but made like unto the Son of God; abideth a priest continually.<cite>Hebrews 7:1-3</cite></blockquote><p>The appearance of Melchizedek is seen as a type of Christ.</p></div><div class="vp fig"><h3>The fourth man in the fire</h3><blockquote class="scripture" style="font-style:italic">Then Nebuchadnezzar the king was astonied, and rose up in haste, and spake, and said unto his counsellors, Did not we cast three men bound into the midst of the fire? They answered and said unto the king, True, O king. He answered and said, Lo, I see four men loose, walking in the midst of the fire, and they have no hurt; and the form of the fourth is like the Son of God.<cite>Daniel 3:24-25</cite></blockquote><p>A powerful visual appearance of Jesus to protect His followers.</p></div></div>
+    <h2>Theophanies / Christophanies, continued</h2>
+    <div class="vps"><div class="vp fig"><h3>The Angel of the <span class="lord">Lord</span> and Hagar</h3><blockquote class="scripture" style="font-style:italic">And the angel of the <span class="lord">Lord</span> found her by a fountain of water in the wilderness, by the fountain in the way to Shur. And he said, Hagar, Sarai’s maid, whence camest thou? and whither wilt thou go? And she said, I flee from the face of my mistress Sarai. And the angel of the <span class="lord">Lord</span> said unto her, Return to thy mistress, and submit thyself under her hands. And the angel of the <span class="lord">Lord</span> said unto her, I will multiply thy seed exceedingly, that it shall not be numbered for multitude. And the angel of the <span class="lord">Lord</span> said unto her, Behold, thou art with child, and shalt bear a son, and shalt call his name Ishmael; because the <span class="lord">Lord</span> hath heard thy affliction. And he will be a wild man; his hand will be against every man, and every man’s hand against him; and he shall dwell in the presence of all his brethren. And she called the name of the <span class="lord">Lord</span> that spake unto her, Thou God seest me: for she said, Have I also here looked after him that seeth me?<cite>Genesis 16:7-13</cite></blockquote><p>The “Angel of the <span class="lord">Lord</span>” is often seen as a pre-incarnate appearance of Jesus, here appearing to the bondwoman of Abraham and Sarah.</p></div></div>
   </div>
 </section>
 
 <!-- 8 -->
+<section class="slide" data-section="II. Theophanies / Christophanies" data-title="The LORD at Mamre">
+  <div class="page">
+    <h2>The LORD at Mamre</h2>
+    <div class="vps"><div class="vp fig"><h3>The <span class="lord">Lord</span> at Mamre</h3><blockquote class="scripture" style="font-style:italic">And the <span class="lord">Lord</span> appeared unto him in the plains of Mamre: and he sat in the tent door in the heat of the day; And he lift up his eyes and looked, and, lo, three men stood by him: and when he saw them, he ran to meet them from the tent door, and bowed himself toward the ground,<cite>Genesis 18:1-2</cite></blockquote><p>The <span class="lord">Lord</span> appearing to Abraham as a man.</p></div></div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="II. Theophanies / Christophanies" data-title="The LORD at Mamre, continued">
+  <div class="page">
+    <h2>The LORD at Mamre, continued</h2>
+    <div class="vps"><div class="vp fig"><h3>Captain of the <span class="lord">Lord</span>’s host</h3><blockquote class="scripture" style="font-style:italic">And it came to pass, when Joshua was by Jericho, that he lifted up his eyes and looked, and, behold, there stood a man over against him with his sword drawn in his hand: and Joshua went unto him, and said unto him, Art thou for us, or for our adversaries? And he said, Nay; but as captain of the host of the <span class="lord">Lord</span> am I now come. And Joshua fell on his face to the earth, and did worship, and said unto him, What saith my lord unto his servant? And the captain of the <span class="lord">Lord</span>’s host said unto Joshua, Loose thy shoe from off thy foot; for the place whereon thou standest is holy. And Joshua did so.<cite>Joshua 5:13-15</cite></blockquote><p>Widely understood as a pre-incarnate appearance of Jesus.</p></div></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="II. Theophanies / Christophanies" data-title="Melchizedek and the fourth man">
+  <div class="page">
+    <h2>Melchizedek and the fourth man</h2>
+    <div class="vps"><div class="vp fig"><h3>Melchizedek, King of Salem</h3><blockquote class="scripture" style="font-style:italic">And Melchizedek king of Salem brought forth bread and wine: and he was the priest of the most high God. And he blessed him, and said, Blessed be Abram of the most high God, possessor of heaven and earth: And blessed be the most high God, which hath delivered thine enemies into thy hand. And he gave him tithes of all.<cite>Genesis 14:18-20</cite></blockquote><blockquote class="scripture" style="font-style:italic">For this Melchisedec, king of Salem, priest of the most high God, who met Abraham returning from the slaughter of the kings, and blessed him; To whom also Abraham gave a tenth part of all; first being by interpretation King of righteousness, and after that also King of Salem, which is, King of peace; Without father, without mother, without descent, having neither beginning of days, nor end of life; but made like unto the Son of God; abideth a priest continually.<cite>Hebrews 7:1-3</cite></blockquote><p>The appearance of Melchizedek is seen as a type of Christ.</p></div></div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="II. Theophanies / Christophanies" data-title="Melchizedek and the fourth man, continued">
+  <div class="page">
+    <h2>Melchizedek and the fourth man, continued</h2>
+    <div class="vps"><div class="vp fig"><h3>The fourth man in the fire</h3><blockquote class="scripture" style="font-style:italic">Then Nebuchadnezzar the king was astonied, and rose up in haste, and spake, and said unto his counsellors, Did not we cast three men bound into the midst of the fire? They answered and said unto the king, True, O king. He answered and said, Lo, I see four men loose, walking in the midst of the fire, and they have no hurt; and the form of the fourth is like the Son of God.<cite>Daniel 3:24-25</cite></blockquote><p>A powerful visual appearance of Jesus to protect His followers.</p></div></div>
+  </div>
+</section>
+
+<!-- 12 -->
 <section class="slide" data-section="III. Jesus as Creator of All Things" data-title="Jesus as Creator of All Things">
   <div class="page">
     <h2>Jesus as Creator of All Things</h2>
@@ -377,7 +421,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 9 -->
+<!-- 13 -->
 <section class="slide" data-section="III. Jesus as Creator of All Things" data-title="Heir of all things">
   <div class="page">
     <h2>Heir of all things</h2>
@@ -385,16 +429,24 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 10 -->
+<!-- 14 -->
 <section class="slide" data-section="IV. Eternal Sonship" data-title="Eternal Sonship">
   <div class="page">
     <h2>Eternal Sonship</h2>
     <p class="lead">Jesus as the eternal Word, co-existent with the Father before time began.</p>
-    <div class="vps"><div class="vp fig"><h3>The Word was God</h3><blockquote class="scripture" style="font-style:italic">In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God.<cite>John 1:1-2</cite></blockquote><p>Jesus as the eternal Word, co-existent with the Father.</p></div><div class="vp fig"><h3>Thy throne, O God, is for ever</h3><blockquote class="scripture" style="font-style:italic">But unto the Son he saith, Thy throne, O God, is for ever and ever: a sceptre of righteousness is the sceptre of thy kingdom.<cite>Hebrews 1:8</cite></blockquote><p>The Son is called “God,” and His throne is eternal.</p></div><div class="vp fig"><h3>What is his Son’s name?</h3><blockquote class="scripture" style="font-style:italic">Who hath ascended up into heaven, or descended? who hath gathered the wind in his fists? who hath bound the waters in a garment? who hath established all the ends of the earth? what is his name, and what is his son’s name, if thou canst tell?<cite>Proverbs 30:4</cite></blockquote><p>A foreshadowing of the Father and the Son in the Old Testament.</p></div></div>
+    <div class="vps"><div class="vp fig"><h3>The Word was God</h3><blockquote class="scripture" style="font-style:italic">In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God.<cite>John 1:1-2</cite></blockquote><p>Jesus as the eternal Word, co-existent with the Father.</p></div><div class="vp fig"><h3>Thy throne, O God, is for ever</h3><blockquote class="scripture" style="font-style:italic">But unto the Son he saith, Thy throne, O God, is for ever and ever: a sceptre of righteousness is the sceptre of thy kingdom.<cite>Hebrews 1:8</cite></blockquote><p>The Son is called “God,” and His throne is eternal.</p></div></div>
   </div>
 </section>
 
-<!-- 11 -->
+<!-- 15 -->
+<section class="slide" data-section="IV. Eternal Sonship" data-title="Eternal Sonship, continued">
+  <div class="page">
+    <h2>Eternal Sonship, continued</h2>
+    <div class="vps"><div class="vp fig"><h3>What is his Son’s name?</h3><blockquote class="scripture" style="font-style:italic">Who hath ascended up into heaven, or descended? who hath gathered the wind in his fists? who hath bound the waters in a garment? who hath established all the ends of the earth? what is his name, and what is his son’s name, if thou canst tell?<cite>Proverbs 30:4</cite></blockquote><p>A foreshadowing of the Father and the Son in the Old Testament.</p></div></div>
+  </div>
+</section>
+
+<!-- 16 -->
 <section class="slide" data-section="V. The Deity of Jesus" data-title="The Deity of Jesus">
   <div class="page">
     <h2>The Deity of Jesus</h2>
@@ -403,7 +455,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 12 -->
+<!-- 17 -->
 <section class="slide" data-section="VI. The Seven “I Am” Statements" data-title="The Seven “I Am” Statements">
   <div class="page">
     <h2>The Seven “I Am” Statements</h2>
@@ -412,7 +464,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 13 -->
+<!-- 18 -->
 <section class="slide" data-section="VI. The Seven “I Am” Statements" data-title="The Seven “I Am” Statements, continued">
   <div class="page">
     <h2>The Seven “I Am” Statements, continued</h2>
@@ -420,7 +472,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 14 -->
+<!-- 19 -->
 <section class="slide" data-section="VI. The Seven “I Am” Statements" data-title="Before Abraham was, I am">
   <div class="page">
     <div class="kicker">The most direct claim of all</div>
@@ -430,7 +482,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 15 -->
+<!-- 20 -->
 <section class="slide" data-section="VII. The Humanity of Jesus" data-title="The Humanity of Jesus">
   <div class="page">
     <h2>The Humanity of Jesus</h2>
@@ -439,15 +491,23 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 16 -->
-<section class="slide" data-section="VII. The Humanity of Jesus" data-title="The Humanity of Jesus, continued">
+<!-- 21 -->
+<section class="slide" data-section="VII. The Humanity of Jesus" data-title="The Humanity of Jesus, part 2">
   <div class="page">
-    <h2>The Humanity of Jesus, continued</h2>
-    <div class="vps"><div class="vp fig"><h3>Made like unto His brethren</h3><blockquote class="scripture" style="font-style:italic">For verily he took not on him the nature of angels; but he took on him the seed of Abraham. Wherefore in all things it behoved him to be made like unto his brethren, that he might be a merciful and faithful high priest in things pertaining to God, to make reconciliation for the sins of the people. For in that he himself hath suffered being tempted, he is able to succour them that are tempted.<cite>Hebrews 2:16-18</cite></blockquote></div><div class="vp fig"><h3>Tempted like as we are, yet without sin</h3><blockquote class="scripture" style="font-style:italic">For we have not an high priest which cannot be touched with the feeling of our infirmities; but was in all points tempted like as we are, yet without sin.<cite>Hebrews 4:15</cite></blockquote></div><div class="vp fig"><h3>The man Christ Jesus</h3><blockquote class="scripture" style="font-style:italic">For there is one God, and one mediator between God and men, the man Christ Jesus;<cite>1 Timothy 2:5</cite></blockquote><p>Jesus is the sole mediator, a man, for humanity.</p></div></div>
+    <h2>The Humanity of Jesus, part 2</h2>
+    <div class="vps"><div class="vp fig"><h3>Made like unto His brethren</h3><blockquote class="scripture" style="font-style:italic">For verily he took not on him the nature of angels; but he took on him the seed of Abraham. Wherefore in all things it behoved him to be made like unto his brethren, that he might be a merciful and faithful high priest in things pertaining to God, to make reconciliation for the sins of the people. For in that he himself hath suffered being tempted, he is able to succour them that are tempted.<cite>Hebrews 2:16-18</cite></blockquote></div></div>
   </div>
 </section>
 
-<!-- 17 -->
+<!-- 22 -->
+<section class="slide" data-section="VII. The Humanity of Jesus" data-title="The Humanity of Jesus, part 3">
+  <div class="page">
+    <h2>The Humanity of Jesus, part 3</h2>
+    <div class="vps"><div class="vp fig"><h3>Tempted like as we are, yet without sin</h3><blockquote class="scripture" style="font-style:italic">For we have not an high priest which cannot be touched with the feeling of our infirmities; but was in all points tempted like as we are, yet without sin.<cite>Hebrews 4:15</cite></blockquote></div><div class="vp fig"><h3>The man Christ Jesus</h3><blockquote class="scripture" style="font-style:italic">For there is one God, and one mediator between God and men, the man Christ Jesus;<cite>1 Timothy 2:5</cite></blockquote><p>Jesus is the sole mediator, a man, for humanity.</p></div></div>
+  </div>
+</section>
+
+<!-- 23 -->
 <section class="slide" data-section="VIII. Salvation in Jesus" data-title="Salvation in Jesus">
   <div class="page">
     <h2>Salvation in Jesus</h2>
@@ -456,24 +516,32 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 18 -->
+<!-- 24 -->
 <section class="slide" data-section="IX. The Names of Christ" data-title="The Names of Christ">
   <div class="page">
     <h2>The Names of Christ</h2>
     <p class="lead">Tap a verse to read where Scripture calls Him by each name.</p>
-    <div class="tbl"><table><thead><tr><th>Name</th><th>Verse</th></tr></thead><tbody><tr><td><strong>The Word</strong></td><td><button class="ref" data-v="John 1:1">John 1:1</button></td></tr><tr><td><strong>Immanuel</strong></td><td><button class="ref" data-v="Isaiah 7:14">Isaiah 7:14</button></td></tr><tr><td><strong>The Son of God</strong></td><td><button class="ref" data-v="John 1:34">John 1:34</button></td></tr><tr><td><strong>The Son of Man</strong></td><td><button class="ref" data-v="Matthew 16:27">Matthew 16:27</button></td></tr><tr><td><strong>The Son of David</strong></td><td><button class="ref" data-v="Matthew 1:1">Matthew 1:1</button></td></tr><tr><td><strong>The Lamb of God</strong></td><td><button class="ref" data-v="John 1:29">John 1:29</button></td></tr><tr><td><strong>The Savior</strong></td><td><button class="ref" data-v="Luke 2:11">Luke 2:11</button></td></tr><tr><td><strong>Messiah / Christ</strong></td><td><button class="ref" data-v="John 4:25-26">John 4:25-26</button></td></tr><tr><td><strong>Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace</strong></td><td><button class="ref" data-v="Isaiah 9:6">Isaiah 9:6</button></td></tr></tbody></table></div>
+    <div class="tbl"><table><thead><tr><th>Name</th><th>Verse</th></tr></thead><tbody><tr><td><strong>The Word</strong></td><td><button class="ref" data-v="John 1:1">John 1:1</button></td></tr><tr><td><strong>Immanuel</strong></td><td><button class="ref" data-v="Isaiah 7:14">Isaiah 7:14</button></td></tr><tr><td><strong>The Son of God</strong></td><td><button class="ref" data-v="John 1:34">John 1:34</button></td></tr><tr><td><strong>The Son of Man</strong></td><td><button class="ref" data-v="Matthew 16:27">Matthew 16:27</button></td></tr></tbody></table></div>
   </div>
 </section>
 
-<!-- 19 -->
-<section class="slide" data-section="IX. The Names of Christ" data-title="The Names of Christ, continued">
+<!-- 25 -->
+<section class="slide" data-section="IX. The Names of Christ" data-title="The Names of Christ, part 2">
   <div class="page">
-    <h2>The Names of Christ, continued</h2>
+    <h2>The Names of Christ, part 2</h2>
+    <div class="tbl"><table><thead><tr><th>Name</th><th>Verse</th></tr></thead><tbody><tr><td><strong>The Son of David</strong></td><td><button class="ref" data-v="Matthew 1:1">Matthew 1:1</button></td></tr><tr><td><strong>The Lamb of God</strong></td><td><button class="ref" data-v="John 1:29">John 1:29</button></td></tr><tr><td><strong>The Savior</strong></td><td><button class="ref" data-v="Luke 2:11">Luke 2:11</button></td></tr><tr><td><strong>Messiah / Christ</strong></td><td><button class="ref" data-v="John 4:25-26">John 4:25-26</button></td></tr><tr><td><strong>Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace</strong></td><td><button class="ref" data-v="Isaiah 9:6">Isaiah 9:6</button></td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="slide" data-section="IX. The Names of Christ" data-title="The Names of Christ, part 3">
+  <div class="page">
+    <h2>The Names of Christ, part 3</h2>
     <div class="tbl"><table><thead><tr><th>Name</th><th>Verse</th></tr></thead><tbody><tr><td><strong>The King of kings and the Lord of lords</strong></td><td><button class="ref" data-v="Revelation 19:16">Revelation 19:16</button></td></tr><tr><td><strong>Alpha and Omega</strong></td><td><button class="ref" data-v="Revelation 1:8">Revelation 1:8</button></td></tr><tr><td><strong>The Good Shepherd</strong></td><td><button class="ref" data-v="John 10:11">John 10:11</button></td></tr><tr><td><strong>The Bread of Life</strong></td><td><button class="ref" data-v="John 6:35">John 6:35</button></td></tr><tr><td><strong>The Light of the World</strong></td><td><button class="ref" data-v="John 8:12">John 8:12</button></td></tr><tr><td><strong>The Way, the Truth, and the Life</strong></td><td><button class="ref" data-v="John 14:6">John 14:6</button></td></tr><tr><td><strong>The Sole Mediator</strong></td><td><button class="ref" data-v="1 Timothy 2:5">1 Timothy 2:5</button></td></tr><tr><td><strong>The High Priest</strong></td><td><button class="ref" data-v="Hebrews 4:14">Hebrews 4:14</button></td></tr></tbody></table></div>
   </div>
 </section>
 
-<!-- 20 -->
+<!-- 27 -->
 <section class="slide" data-section="Summary" data-title="Key truths and names of Jesus">
   <div class="page">
     <h2>Key truths and names of Jesus</h2>
@@ -481,7 +549,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 21 -->
+<!-- 28 -->
 <section class="slide" data-section="Summary" data-title="Key truths and names of Jesus, continued">
   <div class="page">
     <h2>Key truths and names of Jesus, continued</h2>
@@ -653,7 +721,7 @@ document.addEventListener("click", e => {
   if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
   if (b) {
     const keys = b.dataset.v;
-    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
     openVerse(keys, label);
     return;
   }

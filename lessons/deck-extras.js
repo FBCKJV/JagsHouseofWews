@@ -61,6 +61,7 @@
     'html.proj h3{font-size:1.15em;font-weight:700}' +
     'html.proj .title-page h1{font-size:3.4em}' +
     'html.proj .title-page.later h1{font-size:2.6em}' +
+    'html.proj .title-page.long h1{font-size:2.5em}' +
     'html.proj .pic img{max-height:62vh}' +
     'html.proj blockquote{font-weight:500}' +
     'html.proj blockquote cite,html.proj .title-page .overline,html.proj .scripture sup{font-weight:700}' +

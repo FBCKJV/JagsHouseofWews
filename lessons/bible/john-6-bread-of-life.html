@@ -128,6 +128,18 @@ mark.w{border-bottom:0}
 /* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
 @media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
 .pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
 #picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
 #picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
 .pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
@@ -174,7 +186,7 @@ ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(-
 /* Title slide */
 .title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
 .title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
-.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
 .title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
 .hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
 
@@ -295,6 +307,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 @media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
 /* title slides after the first carry a smaller heading */
 .title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
 @media print{
   body{overflow:visible;background:#fff;color:#000}
   .bar{display:none}
@@ -350,13 +363,21 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
     <p class="lead">The crowd asks for a sign and points to the manna (<button class="ref" data-v="John 6:30-31">John 6:30-31</button>). Jesus answers that Moses never gave the true bread (<button class="ref" data-v="John 6:32">John 6:32</button>). The Father gives it, and the bread is a Person:</p>
     <blockquote class="scripture" style="font-style:italic">For the bread of God is he which cometh down from heaven, and giveth life unto the world.<cite>John 6:33</cite></blockquote>
     <p>They still hear loaves: “Lord, evermore give us this bread” (<button class="ref" data-v="John 6:34">John 6:34</button>), just as the woman at the well asked for water so she would not have to draw again (<button class="ref" data-v="John 4:15">John 4:15</button>). So Jesus defines the figure in the same breath He uses it:</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="II. The True Bread" data-title="The True Bread, continued">
+  <div class="page">
+    <div class="kicker">II · <button class="ref" data-v="John 6:30-36">John 6:30-36</button></div>
+    <h2>The True Bread, continued</h2>
     <blockquote class="big-verse">And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that <mark class="w">believeth</mark> on me shall never thirst.<cite>John 6:35</cite></blockquote>
     <div class="cols"><div class="panel believers"><h3>To eat</h3><p>is to come to Him</p></div><div class="panel believers"><h3>To drink</h3><p>is to believe on Him</p></div></div>
     <p class="take">Verse 36 names what the crowd lacked: “ye also have seen me, and believe not” (<button class="ref" data-v="John 6:36">John 6:36</button>).</p>
   </div>
 </section>
 
-<!-- 5 -->
+<!-- 6 -->
 <section class="slide" data-section="II. The True Bread" data-title="Never hunger, never thirst">
   <div class="page">
     <div class="kicker">II · The True Bread</div>
@@ -368,7 +389,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 6 -->
+<!-- 7 -->
 <section class="slide" data-section="III. Kept by the Son" data-title="Kept by the Son">
   <div class="page">
     <div class="kicker">III · <button class="ref" data-v="John 6:37-40">John 6:37-40</button></div>
@@ -382,7 +403,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 7 -->
+<!-- 8 -->
 <section class="slide" data-section="IV. Taught of God" data-title="Taught of God">
   <div class="page">
     <div class="kicker">IV · <button class="ref" data-v="John 6:41-47">John 6:41-47</button></div>
@@ -391,12 +412,20 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
     <blockquote class="scripture" style="font-style:italic">No man can come to me, except the Father which hath sent me draw him: and I will raise him up at the last day.<cite>John 6:44</cite></blockquote>
     <p>He immediately explains that drawing by quoting the prophet:</p>
     <blockquote class="big-verse">It is written in the prophets, And they shall be all taught of God. Every man therefore that hath heard, and hath learned of the Father, cometh unto me.<cite>John 6:45</cite></blockquote>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="IV. Taught of God" data-title="Taught of God, continued">
+  <div class="page">
+    <div class="kicker">IV · <button class="ref" data-v="John 6:41-47">John 6:41-47</button></div>
+    <h2>Taught of God, continued</h2>
     <p>The Father draws through His word. Those who had truly heard and learned from the Father in the scriptures recognized His Son and came readily.</p>
     <ul class="xr"><li><button class="ref" data-v="Isaiah 54:13">Isaiah 54:13</button><span>The promise Jesus quotes: all thy children shall be taught of the <span class="lord">Lord</span>.</span></li><li><button class="ref" data-v="John 5:46-47">John 5:46-47</button><span>Believing Moses leads to believing Christ. Rejecting Moses’ writings means rejecting His words.</span></li><li><button class="ref" data-v="John 12:32">John 12:32</button><span>Once lifted up on the cross, He draws all men unto Him.</span></li></ul>
   </div>
 </section>
 
-<!-- 8 -->
+<!-- 10 -->
 <section class="slide" data-section="IV. Taught of God" data-title="Believing is eating">
   <div class="page">
     <div class="kicker">IV · Taught of God</div>
@@ -408,7 +437,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 9 -->
+<!-- 11 -->
 <section class="slide" data-section="V. Flesh and Blood" data-title="Flesh and Blood">
   <div class="page">
     <div class="kicker">V · <button class="ref" data-v="John 6:48-58">John 6:48-58</button></div>
@@ -420,7 +449,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 10 -->
+<!-- 12 -->
 <section class="slide" data-section="V. Flesh and Blood" data-title="The same misunderstanding">
   <div class="page">
     <div class="kicker">V · Flesh and Blood</div>
@@ -431,7 +460,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 11 -->
+<!-- 13 -->
 <section class="slide" data-section="V. Flesh and Blood" data-title="Born twice">
   <div class="page">
     <div class="kicker">V · Flesh and Blood</div>
@@ -444,18 +473,27 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 12 -->
+<!-- 14 -->
 <section class="slide" data-section="V. Flesh and Blood" data-title="Said, then said plainly">
   <div class="page">
     <div class="kicker">V · Flesh and Blood</div>
     <h2>Said, then said plainly</h2>
     <p class="lead">John records the pattern throughout his gospel: a figure, a misunderstanding, then the meaning given outright.</p>
-    <ul class="xr"><li><button class="ref" data-v="John 2:19-21">John 2:19-21</button><span>“Destroy this temple.” The Jews think of the building. John explains He spoke of the temple of His body.</span></li><li><button class="ref" data-v="John 4:32-34">John 4:32-34</button><span>“I have meat to eat that ye know not of.” The disciples wonder who brought Him food. His meat is to do the Father’s will.</span></li><li><button class="ref" data-v="John 10:6-9">John 10:6-9</button><span>John calls the sheepfold a parable they did not understand, so Jesus speaks again: “I am the door.”</span></li><li><button class="ref" data-v="John 11:11-14">John 11:11-14</button><span>“Lazarus sleepeth.” The disciples think of rest, so Jesus tells them plainly, Lazarus is dead.</span></li><li><button class="ref" data-v="John 12:32-33">John 12:32-33</button><span>“Lifted up,” and John adds that it signified what death He should die.</span></li><li><button class="ref" data-v="John 16:25">John 16:25</button><span>Jesus says He has spoken in proverbs.</span></li><li><button class="ref" data-v="John 16:29">John 16:29</button><span>The disciples answer that now He speaks plainly.</span></li></ul>
+    <ul class="xr"><li><button class="ref" data-v="John 2:19-21">John 2:19-21</button><span>“Destroy this temple.” The Jews think of the building. John explains He spoke of the temple of His body.</span></li><li><button class="ref" data-v="John 4:32-34">John 4:32-34</button><span>“I have meat to eat that ye know not of.” The disciples wonder who brought Him food. His meat is to do the Father’s will.</span></li><li><button class="ref" data-v="John 10:6-9">John 10:6-9</button><span>John calls the sheepfold a parable they did not understand, so Jesus speaks again: “I am the door.”</span></li></ul>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="V. Flesh and Blood" data-title="Said, then said plainly, continued">
+  <div class="page">
+    <div class="kicker">V · Flesh and Blood</div>
+    <h2>Said, then said plainly, continued</h2>
+    <ul class="xr"><li><button class="ref" data-v="John 11:11-14">John 11:11-14</button><span>“Lazarus sleepeth.” The disciples think of rest, so Jesus tells them plainly, Lazarus is dead.</span></li><li><button class="ref" data-v="John 12:32-33">John 12:32-33</button><span>“Lifted up,” and John adds that it signified what death He should die.</span></li><li><button class="ref" data-v="John 16:25">John 16:25</button><span>Jesus says He has spoken in proverbs.</span></li><li><button class="ref" data-v="John 16:29">John 16:29</button><span>The disciples answer that now He speaks plainly.</span></li></ul>
     <p class="take">Jesus Himself called His sayings proverbs. Reading John 6 as a figure follows His own description of how He taught.</p>
   </div>
 </section>
 
-<!-- 13 -->
+<!-- 16 -->
 <section class="slide" data-section="V. Flesh and Blood" data-title="Two ways of saying one thing">
   <div class="page">
     <div class="kicker">V · Flesh and Blood</div>
@@ -466,7 +504,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 14 -->
+<!-- 17 -->
 <section class="slide" data-section="V. Flesh and Blood" data-title="The text marks the figure">
   <div class="page">
     <div class="kicker">V · Flesh and Blood</div>
@@ -477,7 +515,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 15 -->
+<!-- 18 -->
 <section class="slide" data-section="VI. Spirit and Life" data-title="Spirit and Life">
   <div class="page">
     <div class="kicker">VI · <button class="ref" data-v="John 6:59-65">John 6:59-65</button></div>
@@ -485,6 +523,14 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
     <p class="lead">In the synagogue at Capernaum, even many disciples object: “This is an hard saying; who can hear it?” (<button class="ref" data-v="John 6:60">John 6:60</button>). Jesus answers in two steps.</p>
     <p>First, they would see the Son of man ascend up where He was before (<button class="ref" data-v="John 6:62">John 6:62</button>). His flesh was going back to heaven. Second, He gives the interpretation of everything He has said:</p>
     <blockquote class="big-verse">It is the spirit that quickeneth; the flesh profiteth nothing: the words that I speak unto you, they are spirit, and they are life.<cite>John 6:63</cite></blockquote>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="VI. Spirit and Life" data-title="Spirit and Life, continued">
+  <div class="page">
+    <div class="kicker">VI · <button class="ref" data-v="John 6:59-65">John 6:59-65</button></div>
+    <h2>Spirit and Life, continued</h2>
     <p>Then He names the real problem. It was not a hard teaching but unbelief:</p>
     <blockquote class="scripture" style="font-style:italic">But there are some of you that <mark class="w">believe</mark> not. For Jesus knew from the beginning who they were that <mark class="w">believed</mark> not, and who should betray him.<cite>John 6:64</cite></blockquote>
     <p>No man comes unless it is given him of the Father (<button class="ref" data-v="John 6:65">John 6:65</button>), and from that time many went back (<button class="ref" data-v="John 6:66">John 6:66</button>).</p>
@@ -492,7 +538,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 16 -->
+<!-- 20 -->
 <section class="slide" data-section="VII. The Words of Eternal Life" data-title="The Words of Eternal Life">
   <div class="page">
     <div class="kicker">VII · <button class="ref" data-v="John 6:66-71">John 6:66-71</button></div>
@@ -504,7 +550,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 17 -->
+<!-- 21 -->
 <section class="slide" data-section="VII. The Words of Eternal Life" data-title="Near the bread, never fed">
   <div class="page">
     <div class="kicker">VII · The Words of Eternal Life</div>
@@ -515,17 +561,25 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 18 -->
+<!-- 22 -->
 <section class="slide" data-section="Summary" data-title="Believe, nine times">
   <div class="page">
     <h2>Believe, nine times</h2>
     <p class="lead">The word runs through the whole discourse, from the opening question to Peter’s confession. Tap a mark to read the verse. The line runs from verse 26 to verse 71.</p>
-    <div class="steps"><div class="st"><span class="when"><button class="ref" data-v="John 6:29">John 6:29</button></span><div>The work of God is to believe.</div></div><div class="st"><span class="when"><button class="ref" data-v="John 6:30">John 6:30</button></span><div>The crowd asks for a sign so they may believe.</div></div><div class="st"><span class="when"><button class="ref" data-v="John 6:35">John 6:35</button></span><div>He that believeth shall never thirst.</div></div><div class="st"><span class="when"><button class="ref" data-v="John 6:36">John 6:36</button></span><div>Ye have seen me, and believe not.</div></div><div class="st"><span class="when"><button class="ref" data-v="John 6:40">John 6:40</button></span><div>Every one that believeth may have everlasting life.</div></div><div class="st"><span class="when"><button class="ref" data-v="John 6:47">John 6:47</button></span><div>He that believeth hath everlasting life.</div></div><div class="st"><span class="when"><button class="ref" data-v="John 6:64">John 6:64</button></span><div>Some of you believe not, twice over.</div></div><div class="st"><span class="when"><button class="ref" data-v="John 6:69">John 6:69</button></span><div>We believe and are sure.</div></div></div>
+    <div class="steps"><div class="st"><span class="when"><button class="ref" data-v="John 6:29">John 6:29</button></span><div>The work of God is to believe.</div></div><div class="st"><span class="when"><button class="ref" data-v="John 6:30">John 6:30</button></span><div>The crowd asks for a sign so they may believe.</div></div><div class="st"><span class="when"><button class="ref" data-v="John 6:35">John 6:35</button></span><div>He that believeth shall never thirst.</div></div><div class="st"><span class="when"><button class="ref" data-v="John 6:36">John 6:36</button></span><div>Ye have seen me, and believe not.</div></div></div>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Summary" data-title="Believe, nine times, continued">
+  <div class="page">
+    <h2>Believe, nine times, continued</h2>
+    <div class="steps"><div class="st"><span class="when"><button class="ref" data-v="John 6:40">John 6:40</button></span><div>Every one that believeth may have everlasting life.</div></div><div class="st"><span class="when"><button class="ref" data-v="John 6:47">John 6:47</button></span><div>He that believeth hath everlasting life.</div></div><div class="st"><span class="when"><button class="ref" data-v="John 6:64">John 6:64</button></span><div>Some of you believe not, twice over.</div></div><div class="st"><span class="when"><button class="ref" data-v="John 6:69">John 6:69</button></span><div>We believe and are sure.</div></div></div>
     <p class="take">The discourse opens with believing, turns on believing, explains departure as not believing, and closes with believing. The eating language sits inside that frame.</p>
   </div>
 </section>
 
-<!-- 19 -->
+<!-- 24 -->
 <section class="slide" data-section="Summary" data-title="The plain reading">
   <div class="page">
     <h2>The plain reading</h2>
@@ -718,7 +772,7 @@ document.addEventListener("click", e => {
   if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
   if (b) {
     const keys = b.dataset.v;
-    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
     openVerse(keys, label);
     return;
   }

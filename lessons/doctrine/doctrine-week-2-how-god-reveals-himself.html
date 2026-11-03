@@ -128,6 +128,18 @@ mark.w{border-bottom:0}
 /* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
 @media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
 .pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
 #picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
 #picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
 .pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
@@ -174,7 +186,7 @@ ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(-
 /* Title slide */
 .title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
 .title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
-.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
 .title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
 .hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
 
@@ -295,6 +307,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 @media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
 /* title slides after the first carry a smaller heading */
 .title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
 @media print{
   body{overflow:visible;background:#fff;color:#000}
   .bar{display:none}
@@ -313,13 +326,27 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
     <div class="overline">Adult Sunday School · Week 2</div>
     <h1>How God Reveals Himself to Man</h1>
     <p class="sub">General Revelation vs. Specific Revelation: how God speaks through nature, His actions, and His Word</p>
-    <blockquote class="big-verse">The heavens declare the glory of God; and the firmament sheweth his handywork. Day unto day uttereth speech, and night unto night sheweth knowledge. There is no speech nor language, where their voice is not heard. Their line is gone out through all the earth, and their words to the end of the world. In them hath he set a tabernacle for the sun,<cite>Psalm 19:1-4</cite></blockquote>
     <span class="fleuron">✦ ✦ ✦</span>
-    <p class="hint">Use the arrow keys or swipe to move through the lesson. Tap any gold reference to read the verse. The Contents button lists every section.</p>
   </div>
 </section>
 
 <!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="How God Reveals Himself to Man, continued">
+  <div class="page">
+    <h2>How God Reveals Himself to Man, continued</h2>
+    <blockquote class="big-verse">The heavens declare the glory of God; and the firmament sheweth his handywork. Day unto day uttereth speech, and night unto night sheweth knowledge. There is no speech nor language, where their voice is not heard. Their line is gone out through all the earth, and their words to the end of the world. In them hath he set a tabernacle for the sun,<cite>Psalm 19:1-4</cite></blockquote>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Introduction" data-title="How God Reveals Himself to Man, continued">
+  <div class="page">
+    <h2>How God Reveals Himself to Man, continued</h2>
+    <p class="hint">Use the arrow keys or swipe to move through the lesson. Tap any gold reference to read the verse. The Contents button lists every section.</p>
+  </div>
+</section>
+
+<!-- 4 -->
 <section class="slide" data-section="I. General &amp; Specific Revelation" data-title="General &amp; Specific Revelation">
   <div class="page">
     <h2>General &amp; Specific Revelation</h2>
@@ -327,36 +354,60 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 3 -->
+<!-- 5 -->
 <section class="slide" data-section="I. General &amp; Specific Revelation" data-title="General Revelation: Available to All">
   <div class="page">
     <h2>General Revelation: Available to All</h2>
     <p>God revealing Himself through creation and the human conscience, His law written on men’s hearts. Universal, non-verbal: it points to God’s existence but not to the specifics of salvation. All creation is a parable for us to know God.</p>
-    <div class="vps"><div class="vp fig"><h3>Without Excuse</h3><blockquote class="scripture" style="font-style:italic">For the wrath of God is revealed from heaven against all ungodliness and unrighteousness of men, who hold the truth in unrighteousness; Because that which may be known of God is manifest in them; for God hath shewed it unto them. For the invisible things of him from the creation of the world are clearly seen, being understood by the things that are made, even his eternal power and Godhead; so that they are without excuse:<cite>Romans 1:18-20</cite></blockquote></div><div class="vp fig"><h3>The Heavens Declare His Glory</h3><blockquote class="scripture" style="font-style:italic">The heavens declare the glory of God; and the firmament sheweth his handywork. Day unto day uttereth speech, and night unto night sheweth knowledge. There is no speech nor language, where their voice is not heard. Their line is gone out through all the earth, and their words to the end of the world. In them hath he set a tabernacle for the sun,<cite>Psalm 19:1-4</cite></blockquote></div><div class="vp fig"><h3>The Law Written on Their Hearts</h3><blockquote class="scripture" style="font-style:italic">For when the Gentiles, which have not the law, do by nature the things contained in the law, these, having not the law, are a law unto themselves: Which shew the work of the law written in their hearts, their conscience also bearing witness, and their thoughts the mean while accusing or else excusing one another;)<cite>Romans 2:14-15</cite></blockquote><p>This internal moral compass, the conscience, is part of General Revelation.</p></div></div>
-    <div class="callout"><p>What about that guy on that deserted island? What about people who have never heard of Jesus?</p></div>
-  </div>
-</section>
-
-<!-- 4 -->
-<section class="slide" data-section="I. General &amp; Specific Revelation" data-title="Specific Revelation: Through the Word">
-  <div class="page">
-    <h2>Specific Revelation: Through the Word</h2>
-    <p>God revealing Himself through direct means: His Word, the prophets, and Jesus Christ. Detailed and verbal, it reveals God’s plan for salvation, His commandments, and prophecy for times past and times to come. Specific Revelation builds on General Revelation, giving clarity so that we might know God’s will, collectively and individually.</p>
-    <div class="vps"><div class="vp fig"><h3>God Hath Spoken by His Son</h3><blockquote class="scripture" style="font-style:italic">God, who at sundry times and in divers manners spake in time past unto the fathers by the prophets, Hath in these last days spoken unto us by his Son, whom he hath appointed heir of all things, by whom also he made the worlds;<cite>Hebrews 1:1-2</cite></blockquote></div><div class="vp fig"><h3>In the Beginning Was the Word</h3><blockquote class="scripture" style="font-style:italic">In the beginning was the Word, and the Word was with God, and the Word was God.<cite>John 1:1</cite></blockquote><p>Jesus is God’s ultimate revelation.</p></div><div class="vp fig"><h3>Profitable for Doctrine</h3><blockquote class="scripture" style="font-style:italic">All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness: That the man of God may be perfect, throughly furnished unto all good works.<cite>2 Timothy 3:16-17</cite></blockquote></div></div>
-  </div>
-</section>
-
-<!-- 5 -->
-<section class="slide" data-section="II. Revelation Through Creation" data-title="Revelation Through Creation">
-  <div class="page">
-    <h2>Revelation Through Creation</h2>
-    <p class="lead">Creation (sky, stars, nature, animals) declares God’s glory, power, and wisdom, leaving mankind without excuse.</p>
-    <div class="vps"><div class="vp fig"><h3>Day Unto Day Uttereth Speech</h3><blockquote class="scripture" style="font-style:italic">The heavens declare the glory of God; and the firmament sheweth his handywork. Day unto day uttereth speech, and night unto night sheweth knowledge. There is no speech nor language, where their voice is not heard.<cite>Psalm 19:1-3</cite></blockquote></div><div class="vp fig"><h3>Clearly Seen, Understood by the Things Made</h3><blockquote class="scripture" style="font-style:italic">For the invisible things of him from the creation of the world are clearly seen, being understood by the things that are made, even his eternal power and Godhead; so that they are without excuse:<cite>Romans 1:20</cite></blockquote></div><div class="vp fig"><h3>Ask Now the Beasts</h3><blockquote class="scripture" style="font-style:italic">But ask now the beasts, and they shall teach thee; and the fowls of the air, and they shall tell thee: Or speak to the earth, and it shall teach thee: and the fishes of the sea shall declare unto thee. Who knoweth not in all these that the hand of the <span class="lord">Lord</span> hath wrought this?<cite>Job 12:7-9</cite></blockquote></div></div>
-    <p>A bird’s migration shows God’s design. The miracle of birth, the intricacy of DNA: all of nature is a parable pointing back to its Maker.</p>
+    <div class="vps"><div class="vp fig"><h3>Without Excuse</h3><blockquote class="scripture" style="font-style:italic">For the wrath of God is revealed from heaven against all ungodliness and unrighteousness of men, who hold the truth in unrighteousness; Because that which may be known of God is manifest in them; for God hath shewed it unto them. For the invisible things of him from the creation of the world are clearly seen, being understood by the things that are made, even his eternal power and Godhead; so that they are without excuse:<cite>Romans 1:18-20</cite></blockquote></div></div>
   </div>
 </section>
 
 <!-- 6 -->
+<section class="slide" data-section="I. General &amp; Specific Revelation" data-title="General Revelation: Available to All, continued">
+  <div class="page">
+    <h2>General Revelation: Available to All, continued</h2>
+    <div class="vps"><div class="vp fig"><h3>The Heavens Declare His Glory</h3><blockquote class="scripture" style="font-style:italic">The heavens declare the glory of God; and the firmament sheweth his handywork. Day unto day uttereth speech, and night unto night sheweth knowledge. There is no speech nor language, where their voice is not heard. Their line is gone out through all the earth, and their words to the end of the world. In them hath he set a tabernacle for the sun,<cite>Psalm 19:1-4</cite></blockquote></div><div class="vp fig"><h3>The Law Written on Their Hearts</h3><blockquote class="scripture" style="font-style:italic">For when the Gentiles, which have not the law, do by nature the things contained in the law, these, having not the law, are a law unto themselves: Which shew the work of the law written in their hearts, their conscience also bearing witness, and their thoughts the mean while accusing or else excusing one another;)<cite>Romans 2:14-15</cite></blockquote><p>This internal moral compass, the conscience, is part of General Revelation.</p></div></div>
+    <div class="callout"><p>What about that guy on that deserted island? What about people who have never heard of Jesus?</p></div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="I. General &amp; Specific Revelation" data-title="Specific Revelation: Through the Word">
+  <div class="page">
+    <h2>Specific Revelation: Through the Word</h2>
+    <p>God revealing Himself through direct means: His Word, the prophets, and Jesus Christ. Detailed and verbal, it reveals God’s plan for salvation, His commandments, and prophecy for times past and times to come. Specific Revelation builds on General Revelation, giving clarity so that we might know God’s will, collectively and individually.</p>
+    <div class="vps"><div class="vp fig"><h3>God Hath Spoken by His Son</h3><blockquote class="scripture" style="font-style:italic">God, who at sundry times and in divers manners spake in time past unto the fathers by the prophets, Hath in these last days spoken unto us by his Son, whom he hath appointed heir of all things, by whom also he made the worlds;<cite>Hebrews 1:1-2</cite></blockquote></div></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="I. General &amp; Specific Revelation" data-title="Specific Revelation: Through the Word, continued">
+  <div class="page">
+    <h2>Specific Revelation: Through the Word, continued</h2>
+    <div class="vps"><div class="vp fig"><h3>In the Beginning Was the Word</h3><blockquote class="scripture" style="font-style:italic">In the beginning was the Word, and the Word was with God, and the Word was God.<cite>John 1:1</cite></blockquote><p>Jesus is God’s ultimate revelation.</p></div><div class="vp fig"><h3>Profitable for Doctrine</h3><blockquote class="scripture" style="font-style:italic">All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness: That the man of God may be perfect, throughly furnished unto all good works.<cite>2 Timothy 3:16-17</cite></blockquote></div></div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="II. Revelation Through Creation" data-title="Revelation Through Creation">
+  <div class="page">
+    <h2>Revelation Through Creation</h2>
+    <p class="lead">Creation (sky, stars, nature, animals) declares God’s glory, power, and wisdom, leaving mankind without excuse.</p>
+    <div class="vps"><div class="vp fig"><h3>Day Unto Day Uttereth Speech</h3><blockquote class="scripture" style="font-style:italic">The heavens declare the glory of God; and the firmament sheweth his handywork. Day unto day uttereth speech, and night unto night sheweth knowledge. There is no speech nor language, where their voice is not heard.<cite>Psalm 19:1-3</cite></blockquote></div><div class="vp fig"><h3>Clearly Seen, Understood by the Things Made</h3><blockquote class="scripture" style="font-style:italic">For the invisible things of him from the creation of the world are clearly seen, being understood by the things that are made, even his eternal power and Godhead; so that they are without excuse:<cite>Romans 1:20</cite></blockquote></div></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="II. Revelation Through Creation" data-title="Revelation Through Creation, continued">
+  <div class="page">
+    <h2>Revelation Through Creation, continued</h2>
+    <div class="vps"><div class="vp fig"><h3>Ask Now the Beasts</h3><blockquote class="scripture" style="font-style:italic">But ask now the beasts, and they shall teach thee; and the fowls of the air, and they shall tell thee: Or speak to the earth, and it shall teach thee: and the fishes of the sea shall declare unto thee. Who knoweth not in all these that the hand of the <span class="lord">Lord</span> hath wrought this?<cite>Job 12:7-9</cite></blockquote></div></div>
+    <p>A bird’s migration shows God’s design. The miracle of birth, the intricacy of DNA: all of nature is a parable pointing back to its Maker.</p>
+  </div>
+</section>
+
+<!-- 11 -->
 <section class="slide" data-section="III. Revelation Through Wrath" data-title="Revelation Through Wrath">
   <div class="page">
     <h2>Revelation Through Wrath</h2>
@@ -365,38 +416,61 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 7 -->
+<!-- 12 -->
 <section class="slide" data-section="III. Revelation Through Wrath" data-title="Wrath on the Nations">
   <div class="page">
     <h2>Wrath on the Nations</h2>
     <div class="vps"><div class="vp lit"><h3>The <span class="lord">Lord</span> Hath a Controversy with the Nations</h3><blockquote class="scripture" style="font-style:italic">A noise shall come even to the ends of the earth; for the <span class="lord">Lord</span> hath a controversy with the nations, he will plead with all flesh; he will give them that are wicked to the sword, saith the <span class="lord">Lord</span>. Thus saith the <span class="lord">Lord</span> of hosts, Behold, evil shall go forth from nation to nation, and a great whirlwind shall be raised up from the coasts of the earth.<cite>Jeremiah 25:31-32</cite></blockquote></div><div class="vp lit"><h3>Abhor That Which Is Evil</h3><blockquote class="scripture" style="font-style:italic">Let love be without dissimulation. Abhor that which is evil; cleave to that which is good.<cite>Romans 12:9</cite></blockquote></div></div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="III. Revelation Through Wrath" data-title="Wrath on the Nations, continued">
+  <div class="page">
+    <h2>Wrath on the Nations, continued</h2>
     <p>Seeing wrath fall on the wicked, even natural consequences of sin, teaches unbelievers that there is a just Creator. Even the secular idea of “karma” points to a moral order only a just God could establish. God judges nations, not only individuals, by their works.</p>
     <div class="callout"><p>How does knowing God judges fairly affect our view of Him?</p></div>
     <div class="callout"><p>Why is it important to teach about God’s wrath alongside His love?</p></div>
   </div>
 </section>
 
-<!-- 8 -->
+<!-- 14 -->
 <section class="slide" data-section="IV. Revelation Through Mercy" data-title="Revelation Through Mercy">
   <div class="page">
     <h2>Revelation Through Mercy</h2>
     <p class="lead">Where wrath reveals God’s justice, mercy reveals His love: slow to anger, rich in compassion toward the undeserving.</p>
-    <div class="vps"><div class="vp fig"><h3>Merciful and Gracious, Slow to Anger</h3><blockquote class="scripture" style="font-style:italic">The <span class="lord">Lord</span> is merciful and gracious, slow to anger, and plenteous in mercy.<cite>Psalm 103:8</cite></blockquote></div><div class="vp fig"><h3>Rich in Mercy, Great Love</h3><blockquote class="scripture" style="font-style:italic">But God, who is rich in mercy, for his great love wherewith he loved us,<cite>Ephesians 2:4</cite></blockquote></div><div class="vp fig"><h3>That They Also May Obtain Mercy</h3><blockquote class="scripture" style="font-style:italic">For as ye in times past have not believed God, yet have now obtained mercy through their unbelief: Even so have these also now not believed, that through your mercy they also may obtain mercy.<cite>Romans 11:30-31</cite></blockquote></div></div>
+    <div class="vps"><div class="vp fig"><h3>Merciful and Gracious, Slow to Anger</h3><blockquote class="scripture" style="font-style:italic">The <span class="lord">Lord</span> is merciful and gracious, slow to anger, and plenteous in mercy.<cite>Psalm 103:8</cite></blockquote></div><div class="vp fig"><h3>Rich in Mercy, Great Love</h3><blockquote class="scripture" style="font-style:italic">But God, who is rich in mercy, for his great love wherewith he loved us,<cite>Ephesians 2:4</cite></blockquote></div></div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="IV. Revelation Through Mercy" data-title="Revelation Through Mercy, continued">
+  <div class="page">
+    <h2>Revelation Through Mercy, continued</h2>
+    <div class="vps"><div class="vp fig"><h3>That They Also May Obtain Mercy</h3><blockquote class="scripture" style="font-style:italic">For as ye in times past have not believed God, yet have now obtained mercy through their unbelief: Even so have these also now not believed, that through your mercy they also may obtain mercy.<cite>Romans 11:30-31</cite></blockquote></div></div>
     <p>When we show others the mercy and grace God has shown us, it reveals His nature to them. They hear our praise for answered prayer, or see a changed life, and come to a better understanding of His longsuffering, and He receives the glory for loving His people.</p>
     <div class="callout"><p>Leader: share a brief story of God’s mercy, personal or biblical, such as the Prodigal Son.</p></div>
   </div>
 </section>
 
-<!-- 9 -->
+<!-- 16 -->
 <section class="slide" data-section="V. Revelation Through the Word" data-title="Revelation Through the Word">
   <div class="page">
     <h2>Revelation Through the Word</h2>
     <p class="lead">God spoke through the prophets in ages past; now He has spoken through His Son, and given us Scripture, breathed out by His Spirit.</p>
-    <div class="vps"><div class="vp fig"><h3>By Whom Also He Made the Worlds</h3><blockquote class="scripture" style="font-style:italic">God, who at sundry times and in divers manners spake in time past unto the fathers by the prophets, Hath in these last days spoken unto us by his Son, whom he hath appointed heir of all things, by whom also he made the worlds;<cite>Hebrews 1:1-2</cite></blockquote></div><div class="vp fig"><h3>All Things Were Made by Him</h3><blockquote class="scripture" style="font-style:italic">In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God. All things were made by him; and without him was not any thing made that was made.<cite>John 1:1-3</cite></blockquote></div><div class="vp fig"><h3>Moved by the Holy Ghost</h3><blockquote class="scripture" style="font-style:italic">Knowing this first, that no prophecy of the scripture is of any private interpretation. For the prophecy came not in old time by the will of man: but holy men of God spake as they were moved by the Holy Ghost.<cite>2 Peter 1:20-21</cite></blockquote><p>Prophets were the pen, God the Author: the burden of the <span class="lord">Lord</span>, delivered faithfully.</p></div></div>
+    <div class="vps"><div class="vp fig"><h3>By Whom Also He Made the Worlds</h3><blockquote class="scripture" style="font-style:italic">God, who at sundry times and in divers manners spake in time past unto the fathers by the prophets, Hath in these last days spoken unto us by his Son, whom he hath appointed heir of all things, by whom also he made the worlds;<cite>Hebrews 1:1-2</cite></blockquote></div></div>
   </div>
 </section>
 
-<!-- 10 -->
+<!-- 17 -->
+<section class="slide" data-section="V. Revelation Through the Word" data-title="Revelation Through the Word, continued">
+  <div class="page">
+    <h2>Revelation Through the Word, continued</h2>
+    <div class="vps"><div class="vp fig"><h3>All Things Were Made by Him</h3><blockquote class="scripture" style="font-style:italic">In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God. All things were made by him; and without him was not any thing made that was made.<cite>John 1:1-3</cite></blockquote></div><div class="vp fig"><h3>Moved by the Holy Ghost</h3><blockquote class="scripture" style="font-style:italic">Knowing this first, that no prophecy of the scripture is of any private interpretation. For the prophecy came not in old time by the will of man: but holy men of God spake as they were moved by the Holy Ghost.<cite>2 Peter 1:20-21</cite></blockquote><p>Prophets were the pen, God the Author: the burden of the <span class="lord">Lord</span>, delivered faithfully.</p></div></div>
+  </div>
+</section>
+
+<!-- 18 -->
 <section class="slide" data-section="V. Revelation Through the Word" data-title="Scripture Is God-Breathed">
   <div class="page">
     <h2>Scripture Is God-Breathed</h2>
@@ -526,7 +600,7 @@ document.addEventListener("click", e => {
   if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
   if (b) {
     const keys = b.dataset.v;
-    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
     openVerse(keys, label);
     return;
   }

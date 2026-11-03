@@ -128,6 +128,18 @@ mark.w{border-bottom:0}
 /* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
 @media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
 .pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
 #picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
 #picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
 .pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
@@ -174,7 +186,7 @@ ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(-
 /* Title slide */
 .title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
 .title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
-.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
 .title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
 .hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
 
@@ -295,6 +307,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 @media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
 /* title slides after the first carry a smaller heading */
 .title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
 @media print{
   body{overflow:visible;background:#fff;color:#000}
   .bar{display:none}
@@ -503,13 +516,22 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="page">
     <div class="kicker">Answering the proof texts</div>
     <h2>The verses used to defend drinking</h2>
-    <div class="tbl"><table><thead><tr><th>The verse</th><th>The answer</th></tr></thead><tbody><tr><td><button class="ref" data-v="John 2:9-10">John 2:9-10</button></td><td>Would Jesus get people drunken, when the Bible <em>is</em> clear that's a sin to even look upon it?</td></tr><tr><td><button class="ref" data-v="Isaiah 65:8">Isaiah 65:8</button></td><td>A parable of Judah spared for the line of David. New <mark class="w">wine</mark> in the cluster is fresh juice.</td></tr><tr><td><button class="ref" data-v="Isaiah 25:6">Isaiah 25:6</button></td><td><mark class="w">Wines</mark> on the lees <em>well refined</em>: filtered, its strength broken.</td></tr><tr><td><button class="ref" data-v="Numbers 28:7">Numbers 28:7</button></td><td>Poured out with the burnt offering, a libation for God. The prohibition against the priests' consumption of strong <mark class="w">wine</mark> (<button class="ref" data-v="Leviticus 10:9">Leviticus 10:9</button>) presents a problem for those seeking to use this verse to justify it.</td></tr><tr><td><button class="ref" data-v="Proverbs 31:6">Proverbs 31:6</button></td><td>Strong drink for him that is ready to perish: for the dying and the miserable, not for kings and princes.</td></tr></tbody></table></div>
+    <div class="tbl"><table><thead><tr><th>The verse</th><th>The answer</th></tr></thead><tbody><tr><td><button class="ref" data-v="John 2:9-10">John 2:9-10</button></td><td>Would Jesus get people drunken, when the Bible <em>is</em> clear that's a sin to even look upon it?</td></tr><tr><td><button class="ref" data-v="Isaiah 65:8">Isaiah 65:8</button></td><td>A parable of Judah spared for the line of David. New <mark class="w">wine</mark> in the cluster is fresh juice.</td></tr><tr><td><button class="ref" data-v="Isaiah 25:6">Isaiah 25:6</button></td><td><mark class="w">Wines</mark> on the lees <em>well refined</em>: filtered, its strength broken.</td></tr><tr><td><button class="ref" data-v="Numbers 28:7">Numbers 28:7</button></td><td>Poured out with the burnt offering, a libation for God. The prohibition against the priests' consumption of strong <mark class="w">wine</mark> (<button class="ref" data-v="Leviticus 10:9">Leviticus 10:9</button>) presents a problem for those seeking to use this verse to justify it.</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Answering the proof texts" data-title="The verses used to defend drinking, continued">
+  <div class="page">
+    <div class="kicker">Answering the proof texts</div>
+    <h2>The verses used to defend drinking, continued</h2>
+    <div class="tbl"><table><thead><tr><th>The verse</th><th>The answer</th></tr></thead><tbody><tr><td><button class="ref" data-v="Proverbs 31:6">Proverbs 31:6</button></td><td>Strong drink for him that is ready to perish: for the dying and the miserable, not for kings and princes.</td></tr></tbody></table></div>
     <p>Without getting into the cope many professing Christians use to justify their drinking, the plain meaning of the text is undeniable.</p>
     <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-walk~1322" target="_blank" rel="noopener">Wine in the Bible and the Lord's supper ↗</a><a class="ref lesson-link" href="../../studies/#Numbers-28" target="_blank" rel="noopener">Numbers 28: the drink offering ↗</a></div>
   </div>
 </section>
 
-<!-- 19 -->
+<!-- 20 -->
 <section class="slide" data-section="Filled with the Spirit" data-title="Be filled with the Spirit">
   <div class="page title-page later">
     <div class="overline">The walk</div>
@@ -663,7 +685,7 @@ document.addEventListener("click", e => {
   if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
   if (b) {
     const keys = b.dataset.v;
-    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
     openVerse(keys, label);
     return;
   }
