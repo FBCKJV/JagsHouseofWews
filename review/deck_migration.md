@@ -70,8 +70,9 @@ builder, no fact-checking of the author's views. Order:
    - [x] End times & prophecy (`topic-prophecy`)
    - [x] Judgment, hell & the resurrection (`topic-judgment`)
    - [x] False doctrine (`topic-false`)
+   - [x] Nations (`topic-nations`)
    - [ ] Then
-     nations, creation, angels
+     creation, angels
 
 Sermons and the lessons from other preachers do not get decks. They stay as notes.
 
@@ -154,6 +155,7 @@ Sermons and the lessons from other preachers do not get decks. They stay as note
 - [x] **After the Tribulation – End Times and Prophecy** (`topic-prophecy`)
 - [x] **The Judgment Seat – Judgment, Hell and the Resurrection** (`topic-judgment`)
 - [x] **Another Gospel – False Doctrine Answered** (`topic-false`)
+- [x] **Righteousness Exalteth a Nation – Nations and the Believer** (`topic-nations`)
 
 ## Standing decisions
 
