@@ -63,7 +63,8 @@ builder, no fact-checking of the author's views. Order:
    - [x] Trusting God in trouble (`topic-trust`)
    - [x] Prayer, praise & worship (`topic-prayer`)
    - [x] Wisdom & the fear of the LORD (`topic-wisdom`)
-   - [ ] Then family, the law, Christ in the Old Testament, Israel, prophecy, judgment, false teaching,
+   - [x] Marriage, family & the home (`topic-family`)
+   - [ ] Then the law, Christ in the Old Testament, Israel, prophecy, judgment, false teaching,
      nations, creation, angels
 
 Sermons and the lessons from other preachers do not get decks. They stay as notes.
@@ -140,6 +141,7 @@ Sermons and the lessons from other preachers do not get decks. They stay as note
 - [x] **A Very Present Help – Trusting God in Trouble** (`topic-trust`)
 - [x] **Unto Thee Will I Pray – Prayer, Praise and Worship** (`topic-prayer`)
 - [x] **The Beginning of Wisdom – Wisdom and the Fear of the LORD** (`topic-wisdom`)
+- [x] **As for Me and My House – Marriage, Family and the Home** (`topic-family`)
 
 ## Standing decisions
 
