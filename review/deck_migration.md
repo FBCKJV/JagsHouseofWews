@@ -68,7 +68,8 @@ builder, no fact-checking of the author's views. Order:
    - [x] Christ in the Old Testament (`topic-christ-ot`)
    - [x] Israel & the Israel of God (`topic-israel`)
    - [x] End times & prophecy (`topic-prophecy`)
-   - [ ] Then judgment, false teaching,
+   - [x] Judgment, hell & the resurrection (`topic-judgment`)
+   - [ ] Then false teaching,
      nations, creation, angels
 
 Sermons and the lessons from other preachers do not get decks. They stay as notes.
@@ -150,6 +151,7 @@ Sermons and the lessons from other preachers do not get decks. They stay as note
 - [x] **They Testify of Me – Christ in the Old Testament** (`topic-christ-ot`)
 - [x] **The Israel of God – Israel, the Church and Zionism** (`topic-israel`)
 - [x] **After the Tribulation – End Times and Prophecy** (`topic-prophecy`)
+- [x] **The Judgment Seat – Judgment, Hell and the Resurrection** (`topic-judgment`)
 
 ## Standing decisions
 
