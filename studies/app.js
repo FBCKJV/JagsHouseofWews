@@ -7,7 +7,7 @@
 
   const KJV_APP = 'https://fbckjv.app/KJVBible/';
   // Shown on the About page. Started at v1.17 (after 17 merged updates); each merged update adds one.
-  const APP_VERSION = '1.89', APP_DATE = '2026-11-03';
+  const APP_VERSION = '1.90', APP_DATE = '2026-11-03';
   const view = document.getElementById('view');
   const crumbs = document.getElementById('crumbs');
   let INDEX = null;
@@ -230,12 +230,15 @@
           <strong>${esc(chapterName(last.book.book, last.ch))}</strong></a>` : ''}
         ${L ? `<a class="continue" href="#${L.slug}-${L.chapter}"><span class="label">Latest in the series</span>
           <strong>${esc(chapterName(L.book, L.chapter))}</strong><em>${esc(fmtDate(L.date))}</em></a>` : ''}
+        <a class="continue" href="#doctrines"><span class="label">Learn the doctrines</span>
+          <strong>Slides by subject</strong><em>Salvation, the Word of God, the church and more</em></a>
       </div>
       ${testament('OT', 'Old Testament', 'Genesis – Malachi')}
       ${testament('NT', 'New Testament', 'Matthew – Revelation')}
+      <div id="home-doctrines"></div>
       <nav class="home-sections" aria-label="More in the app">
-        <a href="#doctrines"><strong>Doctrines</strong><span>Teachings filed by topic</span></a>
-        <a href="#lessons"><strong>Lessons</strong><span>Slides, notes and sermons</span></a>
+        <a href="#doctrines"><strong>Doctrines</strong><span>Slides first, then the teachings</span></a>
+        <a href="#lessons"><strong>Lessons</strong><span>Doctrine slides, classes and the archive</span></a>
         <a href="#pictures"><strong>Memes</strong><span>Charts and memes by topic</span></a>
       </nav>`;
     // Each testament folds; the choice is remembered on this device.
@@ -243,6 +246,31 @@
       try { localStorage.setItem('wews_open_' + d.dataset.t, d.open ? '1' : '0'); } catch (e) {}
     }));
     wireJump(view, hash => { location.hash = hash; });
+    homeDoctrines();
+  }
+
+  // Below the Bible studies, the way into the doctrines: each one with its slides.
+  async function homeDoctrines() {
+    const [t, lib] = await Promise.all([loadTopics(), loadLessons()]);
+    const slot = document.getElementById('home-doctrines');
+    if (!slot || location.hash.replace('#', '') !== '') return;
+    const cards = t.topics.filter(x => x.count).map(x => {
+      const own = lib.lessons.filter(l => l.shelf === 'topics' && l.topics[0] === x.id);
+      const n = lib.lessons.filter(l => l.topics.includes(x.id)).length;
+      const deck = own.length === 1 ? own[0].title.split(' – ')[0] : own.length ? `${own.length} slide decks` : '';
+      return `<a class="topic" href="#doctrine-${esc(x.id)}">
+        <span class="book-name">${esc(x.name)}</span>
+        ${deck ? `<span class="topic-about">Slides: ${esc(deck)}</span>` : `<span class="topic-about">${esc(x.about)}</span>`}
+        <span class="book-count">${n ? `${n} lesson${n === 1 ? '' : 's'} · ` : ''}${x.count} teaching${x.count === 1 ? '' : 's'}</span></a>`;
+    }).join('');
+    const withSlides = t.topics.filter(x => lib.lessons.some(l => l.shelf === 'topics' && l.topics[0] === x.id)).length;
+    slot.innerHTML = `<details class="testament" data-t="DOC"${isOpen('DOC') ? ' open' : ''}>
+      <summary class="section-header"><h2>The doctrines</h2><span>Slides by subject</span>
+        <em>${withSlides} of ${t.topics.filter(x => x.count).length} doctrines have their slides so far</em></summary>
+      <div class="topic-grid">${cards}</div></details>`;
+    slot.querySelector('details').addEventListener('toggle', e => {
+      try { localStorage.setItem('wews_open_DOC', e.target.open ? '1' : '0'); } catch (err) {}
+    });
   }
 
   // Testaments start open; after that they stay the way they were left.
