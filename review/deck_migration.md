@@ -64,7 +64,8 @@ builder, no fact-checking of the author's views. Order:
    - [x] Prayer, praise & worship (`topic-prayer`)
    - [x] Wisdom & the fear of the LORD (`topic-wisdom`)
    - [x] Marriage, family & the home (`topic-family`)
-   - [ ] Then the law, Christ in the Old Testament, Israel, prophecy, judgment, false teaching,
+   - [x] The law & the covenants (`topic-law`)
+   - [ ] Then Christ in the Old Testament, Israel, prophecy, judgment, false teaching,
      nations, creation, angels
 
 Sermons and the lessons from other preachers do not get decks. They stay as notes.
@@ -142,6 +143,7 @@ Sermons and the lessons from other preachers do not get decks. They stay as note
 - [x] **Unto Thee Will I Pray – Prayer, Praise and Worship** (`topic-prayer`)
 - [x] **The Beginning of Wisdom – Wisdom and the Fear of the LORD** (`topic-wisdom`)
 - [x] **As for Me and My House – Marriage, Family and the Home** (`topic-family`)
+- [x] **The Law Is Good – The Law and the Covenants** (`topic-law`)
 
 ## Standing decisions
 
