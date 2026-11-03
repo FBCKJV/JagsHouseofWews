@@ -174,7 +174,7 @@ ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(-
 /* Title slide */
 .title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
 .title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
-.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
 .title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
 .hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
 
@@ -295,6 +295,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 @media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
 /* title slides after the first carry a smaller heading */
 .title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
 @media print{
   body{overflow:visible;background:#fff;color:#000}
   .bar{display:none}
@@ -427,12 +428,21 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
     <div class="kicker">The deity of Christ</div>
     <h2>I am</h2>
     <p class="lead">In the Gospel of John, Jesus is quoted 7 times making affirmation of who He is, using the divine “<em>I am</em>,” as God the Father said to Moses from the burning bush.</p>
-    <ul class="xr"><li><button class="ref" data-v="John 6:48">John 6:48</button><span>I am that bread of life</span></li><li><button class="ref" data-v="John 8:12">John 8:12</button><span>I am the light of the world</span></li><li><button class="ref" data-v="John 10:9">John 10:9</button><span>I am the door</span></li><li><button class="ref" data-v="John 10:11">John 10:11</button><span>I am the good shepherd</span></li><li><button class="ref" data-v="John 11:25">John 11:25</button><span>I am the resurrection, and the life</span></li><li><button class="ref" data-v="John 14:6">John 14:6</button><span>I am the way, the truth, and the life</span></li><li><button class="ref" data-v="John 15:1">John 15:1</button><span>I am the true vine</span></li></ul>
-    <blockquote class="big-verse">Jesus said unto them, Verily, verily, I say unto you, <mark>Before Abraham was, I am</mark>.<cite>John 8:58</cite></blockquote>
+    <ul class="xr"><li><button class="ref" data-v="John 6:48">John 6:48</button><span>I am that bread of life</span></li><li><button class="ref" data-v="John 8:12">John 8:12</button><span>I am the light of the world</span></li><li><button class="ref" data-v="John 10:9">John 10:9</button><span>I am the door</span></li></ul>
   </div>
 </section>
 
 <!-- 12 -->
+<section class="slide" data-section="The deity of Christ" data-title="I am, continued">
+  <div class="page">
+    <div class="kicker">The deity of Christ</div>
+    <h2>I am, continued</h2>
+    <ul class="xr"><li><button class="ref" data-v="John 10:11">John 10:11</button><span>I am the good shepherd</span></li><li><button class="ref" data-v="John 11:25">John 11:25</button><span>I am the resurrection, and the life</span></li><li><button class="ref" data-v="John 14:6">John 14:6</button><span>I am the way, the truth, and the life</span></li><li><button class="ref" data-v="John 15:1">John 15:1</button><span>I am the true vine</span></li></ul>
+    <blockquote class="big-verse">Jesus said unto them, Verily, verily, I say unto you, <mark>Before Abraham was, I am</mark>.<cite>John 8:58</cite></blockquote>
+  </div>
+</section>
+
+<!-- 13 -->
 <section class="slide" data-section="The deity of Christ" data-title="The image of the invisible God">
   <div class="page">
     <div class="kicker">The deity of Christ</div>
@@ -444,7 +454,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 13 -->
+<!-- 14 -->
 <section class="slide" data-section="The deity of Christ" data-title="Son of David and Son of God">
   <div class="page">
     <div class="kicker">The deity of Christ</div>
@@ -456,7 +466,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 14 -->
+<!-- 15 -->
 <section class="slide" data-section="The deity of Christ" data-title="Made a little lower than the angels">
   <div class="page">
     <div class="kicker">The deity of Christ</div>
@@ -469,7 +479,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 15 -->
+<!-- 16 -->
 <section class="slide" data-section="The deity of Christ" data-title="He that descended is the same also that ascended">
   <div class="page">
     <div class="kicker">The deity of Christ</div>
@@ -481,18 +491,27 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 16 -->
+<!-- 17 -->
 <section class="slide" data-section="The deity of Christ" data-title="The names of Christ">
   <div class="page">
     <div class="kicker">The deity of Christ</div>
     <h2>The names of Christ</h2>
     <p>The inspired revelation gives us more names of Jesus, that we may worship Him.</p>
-    <div class="tbl"><table><thead><tr><th>Name</th><th>Revelation</th></tr></thead><tbody><tr><td>Faithful Witness</td><td><button class="ref" data-v="Revelation 1:5">Revelation 1:5</button></td></tr><tr><td>Alpha and Omega</td><td><button class="ref" data-v="Revelation 1:8">Revelation 1:8</button></td></tr><tr><td>Son of God</td><td><button class="ref" data-v="Revelation 2:18">Revelation 2:18</button></td></tr><tr><td>He That Hath the Key of David</td><td><button class="ref" data-v="Revelation 3:7">Revelation 3:7</button></td></tr><tr><td>Lion of the Tribe of Juda</td><td><button class="ref" data-v="Revelation 5:5">Revelation 5:5</button></td></tr><tr><td>King of Kings, Lord of Lords</td><td><button class="ref" data-v="Revelation 17:14">Revelation 17:14</button></td></tr><tr><td>The Word of God</td><td><button class="ref" data-v="Revelation 19:13">Revelation 19:13</button></td></tr><tr><td>The Bright and Morning Star</td><td><button class="ref" data-v="Revelation 22:16">Revelation 22:16</button></td></tr></tbody></table></div>
+    <div class="tbl"><table><thead><tr><th>Name</th><th>Revelation</th></tr></thead><tbody><tr><td>Faithful Witness</td><td><button class="ref" data-v="Revelation 1:5">Revelation 1:5</button></td></tr><tr><td>Alpha and Omega</td><td><button class="ref" data-v="Revelation 1:8">Revelation 1:8</button></td></tr><tr><td>Son of God</td><td><button class="ref" data-v="Revelation 2:18">Revelation 2:18</button></td></tr><tr><td>He That Hath the Key of David</td><td><button class="ref" data-v="Revelation 3:7">Revelation 3:7</button></td></tr><tr><td>Lion of the Tribe of Juda</td><td><button class="ref" data-v="Revelation 5:5">Revelation 5:5</button></td></tr><tr><td>King of Kings, Lord of Lords</td><td><button class="ref" data-v="Revelation 17:14">Revelation 17:14</button></td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="The deity of Christ" data-title="The names of Christ, continued">
+  <div class="page">
+    <div class="kicker">The deity of Christ</div>
+    <h2>The names of Christ, continued</h2>
+    <div class="tbl"><table><thead><tr><th>Name</th><th>Revelation</th></tr></thead><tbody><tr><td>The Word of God</td><td><button class="ref" data-v="Revelation 19:13">Revelation 19:13</button></td></tr><tr><td>The Bright and Morning Star</td><td><button class="ref" data-v="Revelation 22:16">Revelation 22:16</button></td></tr></tbody></table></div>
     <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-godhead~1272" target="_blank" rel="noopener">In the beginning was the Word ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-godhead~1471" target="_blank" rel="noopener">The I am sayings of Jesus ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-godhead~8503" target="_blank" rel="noopener">Made a Little Lower Than the Angels ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-godhead~8302" target="_blank" rel="noopener">The Names of Christ in Revelation ↗</a></div>
   </div>
 </section>
 
-<!-- 17 -->
+<!-- 19 -->
 <section class="slide" data-section="The Holy Ghost the Comforter" data-title="The Comforter shall teach you all things">
   <div class="page">
     <div class="kicker">The Holy Ghost the Comforter</div>
@@ -503,7 +522,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 18 -->
+<!-- 20 -->
 <section class="slide" data-section="The Holy Ghost the Comforter" data-title="He will reprove the world">
   <div class="page">
     <div class="kicker">The Holy Ghost the Comforter</div>
@@ -514,7 +533,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 19 -->
+<!-- 21 -->
 <section class="slide" data-section="The Holy Ghost the Comforter" data-title="Sealed unto the day of redemption">
   <div class="page">
     <div class="kicker">The Holy Ghost the Comforter</div>
@@ -525,7 +544,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 20 -->
+<!-- 22 -->
 <section class="slide" data-section="The Holy Ghost the Comforter" data-title="The Spirit maketh intercession">
   <div class="page">
     <div class="kicker">The Holy Ghost the Comforter</div>
@@ -536,7 +555,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 21 -->
+<!-- 23 -->
 <section class="slide" data-section="The Holy Ghost the Comforter" data-title="Spiritually discerned">
   <div class="page">
     <div class="kicker">The Holy Ghost the Comforter</div>
@@ -547,7 +566,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 22 -->
+<!-- 24 -->
 <section class="slide" data-section="The Holy Ghost the Comforter" data-title="Oil and living waters">
   <div class="page">
     <div class="kicker">The Holy Ghost the Comforter</div>
@@ -558,7 +577,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 23 -->
+<!-- 25 -->
 <section class="slide" data-section="The name above every name" data-title="The excellent name of the Lord">
   <div class="page">
     <div class="kicker">The name above every name</div>
@@ -569,7 +588,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 24 -->
+<!-- 26 -->
 <section class="slide" data-section="The name above every name" data-title="Thou art the Christ">
   <div class="page title-page later">
     <div class="overline">God, Christ &amp; the Holy Ghost</div>

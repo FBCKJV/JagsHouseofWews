@@ -174,7 +174,7 @@ ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(-
 /* Title slide */
 .title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
 .title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
-.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
 .title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
 .hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
 
@@ -295,6 +295,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 @media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
 /* title slides after the first carry a smaller heading */
 .title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
 @media print{
   body{overflow:visible;background:#fff;color:#000}
   .bar{display:none}
@@ -398,19 +399,27 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="page">
     <h2>The Names of God</h2>
     <p class="lead">Tap a verse to read it. Each name is shown with its meaning and the verse where it first appears.</p>
-    <div class="tbl"><table><thead><tr><th>Name</th><th>Meaning and verse</th></tr></thead><tbody><tr><td><strong>Elohim</strong></td><td>God as the Creator. A plural name, showing God’s majesty and power <button class="ref" data-v="Genesis 1:1">Genesis 1:1</button></td></tr><tr><td><strong>I AM THAT I AM</strong></td><td>God’s self-existence and eternal nature <button class="ref" data-v="Exodus 3:14">Exodus 3:14</button>. The Hebrew here is <em>’ehyeh ’asher ’ehyeh</em>; the name YHWH (the Tetragrammaton) is given in <button class="ref" data-v="Exodus 3:15">Exodus 3:15</button></td></tr><tr><td><strong>Almighty God (El Shaddai)</strong></td><td>God as the all-powerful and all-sufficient One <button class="ref" data-v="Genesis 17:1">Genesis 17:1</button></td></tr><tr><td><strong>The LORD (Jehovah)</strong></td><td>God as our provider, covenant keeper, and shepherd <button class="ref" data-v="Psalms 23:1">Psalm 23:1</button></td></tr><tr><td><strong>Jealous (Jehovah Qanna)</strong></td><td>God’s intolerance for competition and demand for exclusive loyalty <button class="ref" data-v="Exodus 34:14">Exodus 34:14</button></td></tr><tr><td><strong>A consuming fire</strong></td><td>God’s holiness and judgment against sin <button class="ref" data-v="Deuteronomy 4:24">Deuteronomy 4:24</button></td></tr></tbody></table></div>
+    <div class="tbl"><table><thead><tr><th>Name</th><th>Meaning and verse</th></tr></thead><tbody><tr><td><strong>Elohim</strong></td><td>God as the Creator. A plural name, showing God’s majesty and power <button class="ref" data-v="Genesis 1:1">Genesis 1:1</button></td></tr><tr><td><strong>I AM THAT I AM</strong></td><td>God’s self-existence and eternal nature <button class="ref" data-v="Exodus 3:14">Exodus 3:14</button>. The Hebrew here is <em>’ehyeh ’asher ’ehyeh</em>; the name YHWH (the Tetragrammaton) is given in <button class="ref" data-v="Exodus 3:15">Exodus 3:15</button></td></tr></tbody></table></div>
   </div>
 </section>
 
 <!-- 12 -->
-<section class="slide" data-section="IV. The Names of God" data-title="The Names of God, continued">
+<section class="slide" data-section="IV. The Names of God" data-title="The Names of God, part 2">
   <div class="page">
-    <h2>The Names of God, continued</h2>
-    <div class="tbl"><table><thead><tr><th>Name</th><th>Meaning and verse</th></tr></thead><tbody><tr><td><strong>God is our refuge and strength (El Ma’oz)</strong></td><td>God as our strong, safe place <button class="ref" data-v="Psalms 46:1">Psalm 46:1</button></td></tr><tr><td><strong>Immanuel</strong></td><td>God with us <button class="ref" data-v="Isaiah 7:14">Isaiah 7:14</button></td></tr><tr><td><strong>Lord of lords</strong></td><td>God’s supreme authority over all other rulers and gods <button class="ref" data-v="Deuteronomy 10:17">Deuteronomy 10:17</button></td></tr><tr><td><strong>The living God</strong></td><td>God as the source of all life, in contrast to dead idols <button class="ref" data-v="Jeremiah 10:10">Jeremiah 10:10</button></td></tr><tr><td><strong>Jesus</strong></td><td>The Savior <button class="ref" data-v="Matthew 1:21">Matthew 1:21</button></td></tr></tbody></table></div>
+    <h2>The Names of God, part 2</h2>
+    <div class="tbl"><table><thead><tr><th>Name</th><th>Meaning and verse</th></tr></thead><tbody><tr><td><strong>Almighty God (El Shaddai)</strong></td><td>God as the all-powerful and all-sufficient One <button class="ref" data-v="Genesis 17:1">Genesis 17:1</button></td></tr><tr><td><strong>The LORD (Jehovah)</strong></td><td>God as our provider, covenant keeper, and shepherd <button class="ref" data-v="Psalms 23:1">Psalm 23:1</button></td></tr><tr><td><strong>Jealous (Jehovah Qanna)</strong></td><td>God’s intolerance for competition and demand for exclusive loyalty <button class="ref" data-v="Exodus 34:14">Exodus 34:14</button></td></tr><tr><td><strong>A consuming fire</strong></td><td>God’s holiness and judgment against sin <button class="ref" data-v="Deuteronomy 4:24">Deuteronomy 4:24</button></td></tr></tbody></table></div>
   </div>
 </section>
 
 <!-- 13 -->
+<section class="slide" data-section="IV. The Names of God" data-title="The Names of God, part 3">
+  <div class="page">
+    <h2>The Names of God, part 3</h2>
+    <div class="tbl"><table><thead><tr><th>Name</th><th>Meaning and verse</th></tr></thead><tbody><tr><td><strong>God is our refuge and strength (El Ma’oz)</strong></td><td>God as our strong, safe place <button class="ref" data-v="Psalms 46:1">Psalm 46:1</button></td></tr><tr><td><strong>Immanuel</strong></td><td>God with us <button class="ref" data-v="Isaiah 7:14">Isaiah 7:14</button></td></tr><tr><td><strong>Lord of lords</strong></td><td>God’s supreme authority over all other rulers and gods <button class="ref" data-v="Deuteronomy 10:17">Deuteronomy 10:17</button></td></tr><tr><td><strong>The living God</strong></td><td>God as the source of all life, in contrast to dead idols <button class="ref" data-v="Jeremiah 10:10">Jeremiah 10:10</button></td></tr><tr><td><strong>Jesus</strong></td><td>The Savior <button class="ref" data-v="Matthew 1:21">Matthew 1:21</button></td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- 14 -->
 <section class="slide" data-section="V. The Godhead / Trinity" data-title="The Godhead / Trinity">
   <div class="page">
     <h2>The Godhead / Trinity</h2>
@@ -419,7 +428,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 14 -->
+<!-- 15 -->
 <section class="slide" data-section="V. The Godhead / Trinity" data-title="The Godhead in Scripture">
   <div class="page">
     <h2>The Godhead in Scripture</h2>
@@ -427,7 +436,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 15 -->
+<!-- 16 -->
 <section class="slide" data-section="VI. The Nature of the Father" data-title="The Nature of the Father">
   <div class="page">
     <h2>The Nature of the Father</h2>
@@ -436,7 +445,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 16 -->
+<!-- 17 -->
 <section class="slide" data-section="VI. The Nature of the Father" data-title="The Father over all">
   <div class="page">
     <h2>The Father over all</h2>
@@ -444,7 +453,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 17 -->
+<!-- 18 -->
 <section class="slide" data-section="Summary" data-title="God the Father at a glance">
   <div class="page">
     <h2>God the Father at a glance</h2>
@@ -452,7 +461,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 18 -->
+<!-- 19 -->
 <section class="slide" data-section="Summary" data-title="God the Father at a glance, continued">
   <div class="page">
     <h2>God the Father at a glance, continued</h2>

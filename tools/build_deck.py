@@ -344,6 +344,9 @@ def build(src):
             at = next((n for n, x in enumerate(parts) if x.startswith(('<p class="hint"', '<p class="center"', '<p>', '<div style'))), len(parts))
             parts.insert(at, '<span class="fleuron">✦ ✦ ✦</span>')
         page = ('page title-page' + (' later' if i > 1 else '')) if title_page else 'page'
+        h1 = next((re.sub(r'<[^>]+>', '', x) for x in parts if x.startswith('<h1')), '')
+        if title_page and len(h1) > 36:   # a long title takes a smaller size so it fits a laptop screen
+            page += ' long'
         body.append(f'<!-- {i} -->\n<section class="slide" data-section="{html.escape(s["section"])}" '
                     f'data-title="{html.escape(s["title"])}">\n  <div class="{page}">\n    '
                     + '\n    '.join(parts) + '\n  </div>\n</section>\n')
