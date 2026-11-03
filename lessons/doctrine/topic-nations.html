@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Righteousness Exalteth a Nation – Nations and the Believer</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="God&#x27;s judgment on nations, and the believer in them: nations judged by their works and individuals by faith, God&#x27;s law for nations, judgment for innocent blood, sodomy an abomination, nations judged by the works of Christians among them, subject to the higher powers, and liberty that comes only from Christ, from the teachings on nations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Righteousness Exalteth a Nation">
+  <div class="page title-page">
+    <div class="overline">Doctrine · Righteousness exalteth a nation</div>
+    <h1>Nations and the Believer</h1>
+    <p class="sub">God's judgment on nations, and the believer in them.</p>
+    <div class="refs center"><button class="ref" data-v="Proverbs 14:34">Proverbs 14:34</button><button class="ref" data-v="2 Chronicles 7:14">2 Chronicles 7:14</button><button class="ref" data-v="Matthew 5:13">Matthew 5:13</button><button class="ref" data-v="Romans 13:1">Romans 13:1</button><button class="ref" data-v="Galatians 5:1">Galatians 5:1</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any gold reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="Nations by works, individuals by faith">
+  <div class="page">
+    <h2>Nations by works, individuals by faith</h2>
+    <blockquote class="big-verse"><mark>Righteousness exalteth a <mark class="w">nation</mark></mark>: but sin is a reproach to any people.<cite>Proverbs 14:34</cite></blockquote>
+    <p>God judges nations based on their works. Even as He judges individuals based on their faith. It's an important distinction to keep in mind as we rightly divide the word of God.</p>
+    <p>All of God's covenants with the Hebrew are if/then (<button class="ref" data-v="Exodus 15:26">Exodus 15:26</button>). This is the covenant with nations, with the people on this earth. God judges us as individuals spiritually by faith, but God judges nations on earth by their works.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Introduction" data-title="Judged here on this earth">
+  <div class="page">
+    <h2>Judged here on this earth</h2>
+    <blockquote class="big-verse"><mark>Seek ye the <span class="lord">Lord</span>, all ye meek of the earth</mark>, which have wrought his judgment; seek righteousness, seek meekness: it may be ye shall be hid in the day of the <span class="lord">Lord</span>’s anger.<cite>Zephaniah 2:3</cite></blockquote>
+    <p>The judgment of man comes after our physical death (<em>and it is appointed unto men once to die, but after this the judgment</em>, <button class="ref" data-v="Hebrews 9:27">Hebrews 9:27</button>). But the judgment of nations is here on this earth, and is a collective judgment of the people in their land.</p>
+    <p>The prophets are sent by God with warnings and rebuke, calling the lost to repentance, nations to reform, kings to fear the Lord.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="God&#x27;s law for nations" data-title="Babel: scattered into nations">
+  <div class="page">
+    <div class="kicker">God's law for nations</div>
+    <h2>Babel: scattered into nations</h2>
+    <blockquote class="big-verse">So <mark>the <span class="lord">Lord</span> scattered them abroad from thence upon the face of all the earth</mark>: and they left off to build the city.<cite>Genesis 11:8</cite></blockquote>
+    <p>The people imagined a vain thing. A tower to Heaven. That they could work their way to Heaven and be like God.</p>
+    <p>We are meant to be in nations. Nations by clan. By blood. Not one world government, full of vanity. Not even by a civic nationalism of paper and statutes that erases who we are, <em>making a name for ourselves</em>.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="God&#x27;s law for nations" data-title="God&#x27;s commands for the king">
+  <div class="page">
+    <div class="kicker">God's law for nations</div>
+    <h2>God's commands for the king</h2>
+    <blockquote class="big-verse">Thou shalt in any wise set him king over thee, whom the <span class="lord">Lord</span> thy God shall choose: <mark>one from among thy brethren shalt thou set king over thee</mark>: thou mayest not set a stranger over thee, which is not thy brother.<cite>Deuteronomy 17:15</cite></blockquote>
+    <p>The king shall be one He chooses, not a stranger or foreign influence. A brother. In modern practice, this would preclude putting a non-believer in charge.</p>
+    <p>He shall not multiply horses to himself, a cavalry that is a false sense of security, emboldening the people to turn from trusting in God's mighty hand to defend them.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="God&#x27;s law for nations" data-title="The law of God is perfect">
+  <div class="page">
+    <div class="kicker">God's law for nations</div>
+    <h2>The law of God is perfect</h2>
+    <blockquote class="big-verse">Ye shall therefore keep all my statutes, and all my judgments, and do them: <mark>that the <mark class="w">land</mark>, whither I bring you to dwell therein, spue you not out</mark>.<cite>Leviticus 20:22</cite></blockquote>
+    <p>The purpose was to separate the people unto God and away from the error, whoredoms and abominations of the other nations. To be holy because He is holy.</p>
+    <p>The law of God is perfect. His judgments are righteous. A just nation seeking after the Lord, who have the fear of God, would implement these strictures and punishments, that their nation not be judged. These laws give us insight to the perfect will of God for a people.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="God&#x27;s law for nations" data-title="Restitution, and judgment speedily">
+  <div class="page">
+    <div class="kicker">God's law for nations</div>
+    <h2>Restitution, and judgment speedily</h2>
+    <blockquote class="big-verse"><mark>Because sentence against an evil work is not executed speedily</mark>, therefore the heart of the sons of men is fully set in them to do evil.<cite>Ecclesiastes 8:11</cite></blockquote>
+    <p>Robbery was punished by restitution plus a fifth part, and a trespass offering. That's it (<button class="ref" data-v="Leviticus 6:4-5">Leviticus 6:4-5</button>).</p>
+    <p>The refusal to judge rightly and swiftly is why crime and perversion are rampant today. It all starts with shielding the wicked from the consequence of their actions. This keeps them from fearing God.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-nations~6700" target="_blank" rel="noopener">Babel: God scattered them into nations ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-nations~11425" target="_blank" rel="noopener">God's civil law still judges nations ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-nations~11096" target="_blank" rel="noopener">Restitution, not prisons: God's just law ↗</a></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Judgment for innocent blood" data-title="Blood defileth the land">
+  <div class="page">
+    <div class="kicker">Judgment for innocent blood</div>
+    <h2>Blood defileth the land</h2>
+    <blockquote class="big-verse">So ye shall not pollute the <mark class="w">land</mark> wherein ye are: <mark>for blood it defileth the <mark class="w">land</mark></mark>: and the <mark class="w">land</mark> cannot be cleansed of the blood that is shed therein, but by the blood of him that shed it.<cite>Numbers 35:33</cite></blockquote>
+    <p>The foundation of God's law is justice, and the avoidance of shedding innocent blood. His mercy is extended to His people, who if they receive it must make provision for the innocent, and punish those who subvert the system.</p>
+    <p>If a murderer seeks sanctuary falsely, he is turned over to die the death, because that is how the blood of the innocent is atoned. <em>Whoso sheddeth man’s blood, by man shall his blood be shed</em> (<button class="ref" data-v="Genesis 9:6">Genesis 9:6</button>).</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Judgment for innocent blood" data-title="Through the fire to Molech">
+  <div class="page">
+    <div class="kicker">Judgment for innocent blood</div>
+    <h2>Through the fire to Molech</h2>
+    <blockquote class="big-verse">And <mark>thou shalt not let any of thy seed pass through the fire to Molech</mark>, neither shalt thou profane the name of thy God: I am the <span class="lord">Lord</span>.<cite>Leviticus 18:21</cite></blockquote>
+    <p>Sacrifice of children to false gods was a common practice in every age and nation. Today it is done through abortion. In Canaan, they sacrificed to Moloch. Today, it is often Mammon. It is horribly wicked.</p>
+    <p>Again and again we see God's judgment poured out on nations that shed innocent blood, child sacrifice as part of worshiping false gods being the worst example of this (<button class="ref" data-v="Jeremiah 32:35">Jeremiah 32:35</button>).</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Judgment for innocent blood" data-title="The fields of the fatherless">
+  <div class="page">
+    <div class="kicker">Judgment for innocent blood</div>
+    <h2>The fields of the fatherless</h2>
+    <blockquote class="big-verse">Remove not the old <mark class="w">landmark</mark>; and enter not into the fields of the fatherless: For their redeemer is mighty; he shall plead their cause with thee.<cite>Proverbs 23:10-11</cite></blockquote>
+    <p>Taking land from the fatherless, stealing the inheritance of those who have no one to stand for their cause. This evil will be rewarded by God; He shall plead their cause.</p>
+    <p>Jezebel killed Naboth by false witnesses for his vineyard. God sends Elijah: dogs will lick Ahab's blood where they licked Naboth's (<button class="ref" data-v="1 Kings 21:19">1 Kings 21:19</button>).</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-nations~13101" target="_blank" rel="noopener">Put away the guilt of innocent blood ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-nations~11373" target="_blank" rel="noopener">Abortion: passing children through the fire ↗</a></div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Sodomy an abomination" data-title="The land vomiteth out her inhabitants">
+  <div class="page">
+    <div class="kicker">Sodomy an abomination</div>
+    <h2>The land vomiteth out her inhabitants</h2>
+    <blockquote class="big-verse">Defile not ye yourselves in any of these things: for in all these the <mark class="w">nations</mark> are defiled which I cast out before you: And the <mark class="w">land</mark> is defiled: therefore I do visit the iniquity thereof upon it, and <mark>the <mark class="w">land</mark> itself vomiteth out her inhabitants</mark>.<cite>Leviticus 18:24-25</cite></blockquote>
+    <p>God tells us specifically the acts, sexual perversions, fornication, adultery, incest, bestiality, sodomy, that cause the land itself to visit the iniquity on the people, and spew them out.</p>
+    <p>Child sacrifice, worshiping false gods, sodomy, sexual depravity. These are the causes of nations being destroyed.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Sodomy an abomination" data-title="Sodomites in the land">
+  <div class="page">
+    <div class="kicker">Sodomy an abomination</div>
+    <h2>Sodomites in the land</h2>
+    <blockquote class="big-verse">And <mark>there were also sodomites in the <mark class="w">land</mark></mark>: and they did according to all the abominations of the <mark class="w">nations</mark> which the <span class="lord">Lord</span> cast out before the children of Israel.<cite>1 Kings 14:24</cite></blockquote>
+    <p>Whenever people fall away from the true God and take up false gods and idols, even under the guise of worshiping Him, it provokes the Lord. But allowing sodomites to exist and commit their filthy abominations is even more wicked, and God punishes nations for it.</p>
+    <p>Some teach falsely that this is only about temple prostitution, a contrivance to justify sodomites. The verse is clear. Whores and sodomites are not allowed among the children of Israel (<button class="ref" data-v="Deuteronomy 23:17">Deuteronomy 23:17</button>).</p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Sodomy an abomination" data-title="Benjamin protected them">
+  <div class="page">
+    <div class="kicker">Sodomy an abomination</div>
+    <h2>Benjamin protected them</h2>
+    <blockquote class="big-verse">In those days there was no king in Israel: <mark>every man did that which was right in his own eyes</mark>.<cite>Judges 21:25</cite></blockquote>
+    <p>Judges 19–21 deals directly with the evil of allowing sodomites free reign in a nation. The Levite's concubine, defiled and slain by these dogs, became a national outrage.</p>
+    <p>The tribe of Benjamin protected the sodomites, and God gave the others of Israel victory over them for condoning and protecting these wicked sons of Belial. It is very illustrative of the times we live in.</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Sodomy an abomination" data-title="Josiah broke down their houses">
+  <div class="page">
+    <div class="kicker">Sodomy an abomination</div>
+    <h2>Josiah broke down their houses</h2>
+    <blockquote class="big-verse">And <mark>he brake down the houses of the sodomites</mark>, that were by the house of the <span class="lord">Lord</span>, where the women wove hangings for the grove.<cite>2 Kings 23:7</cite></blockquote>
+    <p>Good kings came occasionally, and did what was right in the sight of the Lord, and when they did, they bought their people reprieve, as God repented for a time of the evil He was to do.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-nations~11375" target="_blank" rel="noopener">The land vomiteth out her inhabitants ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-nations~10559" target="_blank" rel="noopener">Benjamin protected the sodomites ↗</a></div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Nations judged by their works" data-title="The potter&#x27;s power over nations">
+  <div class="page">
+    <div class="kicker">Nations judged by their works</div>
+    <h2>The potter's power over nations</h2>
+    <blockquote class="big-verse">At what instant I shall speak concerning a <mark class="w">nation</mark>, and concerning a kingdom, to pluck up, and to pull down, and to destroy it; <mark>If that <mark class="w">nation</mark>, against whom I have pronounced, turn from their evil, I will repent of the evil</mark> that I thought to do unto them.<cite>Jeremiah 18:7-8</cite></blockquote>
+    <p>While many take the potter analogy and make it about us as individuals, because God does shape us for His purpose, the primary application here, and in <button class="ref" data-v="Romans 1:9">Romans 1:9</button>, is about nations, specifically the physical nation of Israel.</p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Nations judged by their works" data-title="God hates idols among His people">
+  <div class="page">
+    <div class="kicker">Nations judged by their works</div>
+    <h2>God hates idols among His people</h2>
+    <blockquote class="big-verse"><mark>Ye shall make you no idols nor graven image</mark>, neither rear you up a standing image, neither shall ye set up any image of stone in your <mark class="w">land</mark>, to bow down unto it: for I am the <span class="lord">Lord</span> your God.<cite>Leviticus 26:1</cite></blockquote>
+    <p>Those who call themselves by His name who bow before statues of stone, molten and graven idols, are what spark His wrath. Open idolatry is worse than secret (<button class="ref" data-v="Ezekiel 8:12">Ezekiel 8:12</button>).</p>
+    <p>Catholicism and Orthodox Christianity, so called, the apostates who reject salvation by grace and set up images to be served and bowed before, are the leading reason why Europe and America are suffering today.</p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Nations judged by their works" data-title="Children are their princes">
+  <div class="page">
+    <div class="kicker">Nations judged by their works</div>
+    <h2>Children are their princes</h2>
+    <blockquote class="big-verse">And <mark>I will give children to be their princes</mark>, and babes shall rule over them.<cite>Isaiah 3:4</cite></blockquote>
+    <p>A lack of righteous judges and men of honor, of prophets and wise elders. In their place are children. And the children rise up against their elders, and promote the base, the morally wicked.</p>
+    <p>When a people have turned from the true faith, even the most performative forms of worship become a burden to them. <em>When will the new moon be gone, that we may sell corn?</em> (<button class="ref" data-v="Amos 8:5">Amos 8:5</button>). We see that today in America.</p>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Nations judged by their works" data-title="Ahab humbled himself">
+  <div class="page">
+    <div class="kicker">Nations judged by their works</div>
+    <h2>Ahab humbled himself</h2>
+    <blockquote class="big-verse">Seest thou how Ahab humbleth himself before me? <mark>because he humbleth himself before me, I will not bring the evil in his days</mark>: but in his son’s days will I bring the evil upon his house.<cite>1 Kings 21:29</cite></blockquote>
+    <p>Ahab, upon hearing the judgment of the Lord, humbled himself before God. And God does soften His judgment, forestalling His wrath during Ahab's time.</p>
+    <p>But the wine cup of God's fury came on Judah and all the nations of the region, Babylon serving as God's tool to pour out His wrath (<button class="ref" data-v="Jeremiah 25:15">Jeremiah 25:15</button>).</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-nations~12265" target="_blank" rel="noopener">Nations judged by works, individuals by faith ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-nations~11546" target="_blank" rel="noopener">God hates idols among His people ↗</a></div>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Judged by Christians&#x27; works" data-title="If my people">
+  <div class="page">
+    <div class="kicker">Nations judged by Christians' works</div>
+    <h2>If my people</h2>
+    <blockquote class="big-verse"><mark>If my people, which are called by my name, shall humble themselves</mark>, and pray, and seek my face, and turn from their wicked ways; then will I hear from heaven, and will forgive their sin, and will <mark>heal their <mark class="w">land</mark></mark>.<cite>2 Chronicles 7:14</cite></blockquote>
+    <p>The judgment of nations is by their works, and more, the fruit of those among them that call themselves by His name.</p>
+    <p>This promise is extended to every nation that has Christians living in it. And every nation on earth has saved Christians among them. Or those apostates calling themselves by His name, yet chasing idols and drunk on the fornications of their mother church.</p>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Judged by Christians&#x27; works" data-title="Ye are the salt of the earth">
+  <div class="page">
+    <div class="kicker">Nations judged by Christians' works</div>
+    <h2>Ye are the salt of the earth</h2>
+    <blockquote class="big-verse"><mark>Ye are the salt of the earth: but if the salt have lost his savour</mark>, wherewith shall it be salted? it is thenceforth good for nothing, but to be cast out, and to be trodden under foot of men.<cite>Matthew 5:13</cite></blockquote>
+    <p>We are given eternal life by faith in Christ Jesus alone. But our lives on this earth are judged by the good that we do.</p>
+    <p>What other nation has been made as fair as America? Shot up like the cedars, <em>his heart is lifted up in his height</em> (<button class="ref" data-v="Ezekiel 31:10">Ezekiel 31:10</button>). When judgment comes is entirely up to saved believers. We are the salt of the earth, but so many have lost their savour.</p>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Judged by Christians&#x27; works" data-title="Noah, Daniel, and Job">
+  <div class="page">
+    <div class="kicker">Nations judged by Christians' works</div>
+    <h2>Noah, Daniel, and Job</h2>
+    <blockquote class="big-verse"><mark>Though these three men, Noah, Daniel, and Job, were in it</mark>, they should deliver but their own souls by their righteousness, saith the Lord <span class="lord">God</span>.<cite>Ezekiel 14:14</cite></blockquote>
+    <p>As Abraham argued with the Lord concerning Sodom, the presence of the righteous is generally sufficient to stave off judgment, at least for a time. We preserve the world. But a land as backslidden as Judah: only the righteous themselves are saved.</p>
+    <p><em>Come now, and let us reason together, saith the LORD</em> (<button class="ref" data-v="Isaiah 1:18">Isaiah 1:18</button>). We are the righteous remnant.</p>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Judged by Christians&#x27; works" data-title="Hezekiah&#x27;s revival">
+  <div class="page">
+    <div class="kicker">Nations judged by Christians' works</div>
+    <h2>Hezekiah's revival</h2>
+    <blockquote class="big-verse">For if ye turn again unto the <span class="lord">Lord</span>, your brethren and your children shall find compassion before them that lead them captive, so that they shall come again into this <mark class="w">land</mark>: for <mark>the <span class="lord">Lord</span> your God is gracious and merciful, and will not turn away his face from you, if ye return unto him</mark>.<cite>2 Chronicles 30:9</cite></blockquote>
+    <p>A standing promise to Christians, from a God who cannot lie, who runs to meet the prodigals coming home to Him.</p>
+    <p>The turning towards the Lord by all the people, and their zeal, results in smashing the idols in the land (<button class="ref" data-v="2 Chronicles 31:1">2 Chronicles 31:1</button>).</p>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Judged by Christians&#x27; works" data-title="Revival starts with the children of light">
+  <div class="page">
+    <div class="kicker">Nations judged by Christians' works</div>
+    <h2>Revival starts with the children of light</h2>
+    <blockquote class="big-verse">For ye were sometimes darkness, but now are ye light in the Lord: <mark>walk as children of light</mark>:<cite>Ephesians 5:8</cite></blockquote>
+    <p>Why as a nation are we failing, slouching to Gomorrah? Is it the children of darkness? Or is it the people who call themselves by His name, not shining the light but walking after the ways of the unbelieving? Compromising, and so being compromised.</p>
+    <p>If you want that judgment to reverse or slow down even a little, it doesn't depend on what the degenerate unsaved people do. It depends on what the saved Bible believing Christians do. And the primary thing is winning souls to Christ.</p>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="Judged by Christians&#x27; works" data-title="Turning toward the Lord is all we have">
+  <div class="page">
+    <div class="kicker">Nations judged by Christians' works</div>
+    <h2>Turning toward the Lord is all we have</h2>
+    <blockquote class="big-verse"><mark>To open their eyes, and to turn them from darkness to light</mark>, and from the power of Satan unto God, that they may receive forgiveness of sins, and inheritance among them which are sanctified by faith that is in me.<cite>Acts 26:18</cite></blockquote>
+    <p>All other methods of delaying the wrath that America deserves are vanity. We cannot vote our way out. We cannot shoot our way out. We cannot riot and exact our own vengeance.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-nations~17851" target="_blank" rel="noopener">Ye are the salt of the earth ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-nations~1833" target="_blank" rel="noopener">Nations blessed or bred out by God ↗</a></div>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="Subject to the higher powers" data-title="The powers that be are ordained of God">
+  <div class="page">
+    <div class="kicker">Subject to the higher powers</div>
+    <h2>The powers that be are ordained of God</h2>
+    <blockquote class="big-verse"><mark>Let every soul be subject unto the higher powers</mark>. For there is no power but of God: the powers that be are ordained of God.<cite>Romans 13:1</cite></blockquote>
+    <p>God puts the people in power over us, to His purpose. Even the wicked. God uses good rulers and bad rulers to enact judgment on the people for their sin, collectively.</p>
+    <p>Of course we are to follow the higher law of God when earthly authority contradicts it; we ought to obey God rather than men (<button class="ref" data-v="Acts 5:29">Acts 5:29</button>). Think of Daniel. He never compromised what was right, yet even under evil powers, he prospered.</p>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="slide" data-section="Subject to the higher powers" data-title="Render to Caesar">
+  <div class="page">
+    <div class="kicker">Subject to the higher powers</div>
+    <h2>Render to Caesar</h2>
+    <blockquote class="big-verse">And Jesus answering said unto them, <mark>Render to Caesar the things that are Caesar’s, and to God the things that are God’s</mark>. And they marvelled at him.<cite>Mark 12:17</cite></blockquote>
+    <p>Not paying taxes and breaking the law regarding how they are administered, even to a church, is a sin. You can pray they be lowered. You can be thankful God has made your church exempt.</p>
+    <p>But a so-called pastor in a living room church, refusing to obey the law and encouraging others to do the same, almost always is a false prophet (<button class="ref" data-v="Romans 13:7">Romans 13:7</button>).</p>
+  </div>
+</section>
+
+<!-- 27 -->
+<section class="slide" data-section="Subject to the higher powers" data-title="Not weak: Paul in chains">
+  <div class="page">
+    <div class="kicker">Subject to the higher powers</div>
+    <h2>Not weak: Paul in chains</h2>
+    <blockquote class="big-verse">But Paul cried with a loud voice, saying, <mark>Do thyself no harm: for we are all here</mark>.<cite>Acts 16:28</cite></blockquote>
+    <p>Paul was stoned, snuck out of cities in baskets lest the mobs led by Jews tear him apart, and wrote most of his epistles from chains. He could have escaped the Philippian jail, but stayed to get the jailer saved. To glory in persecution for His name's sake isn't “compromised and weak”; it's the only way we win.</p>
+    <p>We live of no offense. Paying tribute. Paying custom. Not breaking the law, until the law is explicitly anti-Christ. Make them say your salvation is hate.</p>
+  </div>
+</section>
+
+<!-- 28 -->
+<section class="slide" data-section="Subject to the higher powers" data-title="Live worthy of a godly nation">
+  <div class="page">
+    <div class="kicker">Subject to the higher powers</div>
+    <h2>Live worthy of a godly nation</h2>
+    <blockquote class="big-verse">It is an abomination to kings to commit wickedness: for <mark>the throne is established by righteousness</mark>.<cite>Proverbs 16:12</cite></blockquote>
+    <p>When I hear the fearful and angry calling for insurrection, I see their lack of faith. And of this sin, I am chief.</p>
+    <p>Live worthy of a godly nation, and remember that God's wrath is in His time. The biggest delay is having a people worth saving because they turned to the Lord. That's on you. That's on me.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-nations~10971" target="_blank" rel="noopener">Let every soul be subject unto the higher powers ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-nations~9017" target="_blank" rel="noopener">Paul's subjection and boldness ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-nations~10974" target="_blank" rel="noopener">Render tribute: not paying taxes is sin ↗</a></div>
+  </div>
+</section>
+
+<!-- 29 -->
+<section class="slide" data-section="Liberty comes from Christ" data-title="No liberty outside of Christ">
+  <div class="page">
+    <div class="kicker">Liberty comes from Christ</div>
+    <h2>No liberty outside of Christ</h2>
+    <blockquote class="big-verse"><mark>Stand fast therefore in the liberty wherewith Christ hath made us free</mark>, and be not entangled again with the yoke of bondage.<cite>Galatians 5:1</cite></blockquote>
+    <p>The blessings of liberty come from the liberty found in Christ. There is no liberty outside of Christ. It isn't a concept to be understood and maintained in a secular setting. It has no meaning without the Gospel, the beautiful law of liberty.</p>
+  </div>
+</section>
+
+<!-- 30 -->
+<section class="slide" data-section="Liberty comes from Christ" data-title="Not every man right in his own eyes">
+  <div class="page">
+    <div class="kicker">Liberty comes from Christ</div>
+    <h2>Not every man right in his own eyes</h2>
+    <blockquote class="big-verse">Ye shall not do after all the things that we do here this day, <mark>every man whatsoever is right in his own eyes</mark>.<cite>Deuteronomy 12:8</cite></blockquote>
+    <p>The blessings of liberty come from those who believe on the Lord, know His word and follow it. Not from every man doing what is right in their own eyes.</p>
+    <p>There are Internet theologians who claim the law of Israel was libertarian. That is a lie. God has laws. God puts government in place. The more godly the people, the greater the blessings of liberty. The freer we are. The more moral and just.</p>
+  </div>
+</section>
+
+<!-- 31 -->
+<section class="slide" data-section="Liberty comes from Christ" data-title="No political solution to a spiritual problem">
+  <div class="page">
+    <div class="kicker">Liberty comes from Christ</div>
+    <h2>No political solution to a spiritual problem</h2>
+    <blockquote class="big-verse"><mark>For the transgression of a <mark class="w">land</mark> many are the princes thereof</mark>: but by a man of understanding and knowledge the state thereof shall be prolonged.<cite>Proverbs 28:2</cite></blockquote>
+    <p>The iniquity and sin in a country results in <em>many princes</em>: more and more oppression and rules and rulers. A sinful people get the leadership they deserve.</p>
+    <p>The means of government is incidental to the hearts of the people. Monarchy, democracy, socialism, a dictatorship: none of it matters if we are not a godly people (<button class="ref" data-v="1 Samuel 12:24-25">1 Samuel 12:24-25</button>). We cannot vote our way out.</p>
+  </div>
+</section>
+
+<!-- 32 -->
+<section class="slide" data-section="Liberty comes from Christ" data-title="Everything is downstream from God">
+  <div class="page">
+    <div class="kicker">Liberty comes from Christ</div>
+    <h2>Everything is downstream from God</h2>
+    <blockquote class="big-verse"><mark>Ye shall walk after the <span class="lord">Lord</span> your God, and fear him</mark>, and keep his commandments, and obey his voice, and ye shall serve him, and cleave unto him.<cite>Deuteronomy 13:4</cite></blockquote>
+    <p>Everything is downstream from a people's relationship with God. He judges individuals by His grace and their faith, and nations by their works.</p>
+    <p>Free speech in a society Christian enough that unbelievers feel uncomfortable challenging basic decency, works. Where Christians are a looked down upon remnant, it doesn't. The blessings that allow these freedoms come from liberty in Christ.</p>
+  </div>
+</section>
+
+<!-- 33 -->
+<section class="slide" data-section="Liberty comes from Christ" data-title="No freedom of religion in the Kingdom">
+  <div class="page">
+    <div class="kicker">Liberty comes from Christ</div>
+    <h2>No freedom of religion in the Kingdom</h2>
+    <blockquote class="big-verse"><mark>Thou shalt have no other gods before me</mark>.<cite>Exodus 20:3</cite></blockquote>
+    <p>There is no “freedom of religion” in the Kingdom of Heaven (<button class="ref" data-v="Deuteronomy 13:6-9">Deuteronomy 13:6-9</button>). No one can force conversion by the sword, only by the word. Freedom from state religion is good, and right.</p>
+    <p>But idolatrous sects, pagans, Jews, satanic cults, perverse groups who reject the God of our fathers, should never have been given the freedom to spread their abominations. This will be enforced in the Millennium. Amen.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-nations~13037" target="_blank" rel="noopener">No freedom of religion in the Kingdom ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-nations~13043" target="_blank" rel="noopener">Everything is downstream from God ↗</a></div>
+  </div>
+</section>
+
+<!-- 34 -->
+<section class="slide" data-section="If my people" data-title="Heal Their Land">
+  <div class="page title-page later">
+    <div class="overline">Nations &amp; the believer</div>
+    <h1>Heal Their Land</h1>
+    <blockquote class="big-verse">If my people, which are called by my name, shall humble themselves, and pray, and seek my face, and turn from their wicked ways; <mark>then will I hear from heaven, and will forgive their sin, and will heal their <mark class="w">land</mark></mark>.<cite>2 Chronicles 7:14</cite></blockquote>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="center">Turning to the right or left leads to destruction. Turning towards the Lord is all we have.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-topic-judgment" target="_blank" rel="noopener">The Judgment Seat – Judgment, Hell and the Resurrection ↗</a></div>
+    <p class="sub center">Every teaching is on the <a class="ref lesson-link" href="../../studies/#doctrine-nations" target="_blank" rel="noopener">Nations &amp; the believer ↗</a> page.</p>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 Kings 21:19":[[19, "And thou shalt speak unto him, saying, Thus saith the LORD, Hast thou killed, and also taken possession? And thou shalt speak unto him, saying, Thus saith the LORD, In the place where dogs licked the blood of Naboth shall dogs lick thy blood, even thine."]],
+  "1 Samuel 12:24-25":[[24, "Only fear the LORD, and serve him in truth with all your heart: for consider how great things he hath done for you."], [25, "But if ye shall still do wickedly, ye shall be consumed, both ye and your king."]],
+  "2 Chronicles 31:1":[[1, "Now when all this was finished, all Israel that were present went out to the cities of Judah, and brake the images in pieces, and cut down the groves, and threw down the high places and the altars out of all Judah and Benjamin, in Ephraim also and Manasseh, until they had utterly destroyed them all. Then all the children of Israel returned, every man to his possession, into their own cities."]],
+  "2 Chronicles 7:14":[[14, "If my people, which are called by my name, shall humble themselves, and pray, and seek my face, and turn from their wicked ways; then will I hear from heaven, and will forgive their sin, and will heal their land."]],
+  "Acts 5:29":[[29, "Then Peter and the other apostles answered and said, We ought to obey God rather than men."]],
+  "Amos 8:5":[[5, "Saying, When will the new moon be gone, that we may sell corn? and the sabbath, that we may set forth wheat, making the ephah small, and the shekel great, and falsifying the balances by deceit?"]],
+  "Deuteronomy 13:6-9":[[6, "If thy brother, the son of thy mother, or thy son, or thy daughter, or the wife of thy bosom, or thy friend, which is as thine own soul, entice thee secretly, saying, Let us go and serve other gods, which thou hast not known, thou, nor thy fathers;"], [7, "Namely, of the gods of the people which are round about you, nigh unto thee, or far off from thee, from the one end of the earth even unto the other end of the earth;"], [8, "Thou shalt not consent unto him, nor hearken unto him; neither shall thine eye pity him, neither shalt thou spare, neither shalt thou conceal him:"], [9, "But thou shalt surely kill him; thine hand shall be first upon him to put him to death, and afterwards the hand of all the people."]],
+  "Deuteronomy 23:17":[[17, "There shall be no whore of the daughters of Israel, nor a sodomite of the sons of Israel."]],
+  "Exodus 15:26":[[26, "And said, If thou wilt diligently hearken to the voice of the LORD thy God, and wilt do that which is right in his sight, and wilt give ear to his commandments, and keep all his statutes, I will put none of these diseases upon thee, which I have brought upon the Egyptians: for I am the LORD that healeth thee."]],
+  "Ezekiel 31:10":[[10, "Therefore thus saith the Lord GOD; Because thou hast lifted up thyself in height, and he hath shot up his top among the thick boughs, and his heart is lifted up in his height;"]],
+  "Ezekiel 8:12":[[12, "Then said he unto me, Son of man, hast thou seen what the ancients of the house of Israel do in the dark, every man in the chambers of his imagery? for they say, The LORD seeth us not; the LORD hath forsaken the earth."]],
+  "Galatians 5:1":[[1, "Stand fast therefore in the liberty wherewith Christ hath made us free, and be not entangled again with the yoke of bondage."]],
+  "Genesis 9:6":[[6, "Whoso sheddeth man’s blood, by man shall his blood be shed: for in the image of God made he man."]],
+  "Hebrews 9:27":[[27, "And as it is appointed unto men once to die, but after this the judgment:"]],
+  "Isaiah 1:18":[[18, "Come now, and let us reason together, saith the LORD: though your sins be as scarlet, they shall be as white as snow; though they be red like crimson, they shall be as wool."]],
+  "Jeremiah 25:15":[[15, "For thus saith the LORD God of Israel unto me; Take the wine cup of this fury at my hand, and cause all the nations, to whom I send thee, to drink it."]],
+  "Jeremiah 32:35":[[35, "And they built the high places of Baal, which are in the valley of the son of Hinnom, to cause their sons and their daughters to pass through the fire unto Molech; which I commanded them not, neither came it into my mind, that they should do this abomination, to cause Judah to sin."]],
+  "Leviticus 6:4-5":[[4, "Then it shall be, because he hath sinned, and is guilty, that he shall restore that which he took violently away, or the thing which he hath deceitfully gotten, or that which was delivered him to keep, or the lost thing which he found,"], [5, "Or all that about which he hath sworn falsely; he shall even restore it in the principal, and shall add the fifth part more thereto, and give it unto him to whom it appertaineth, in the day of his trespass offering."]],
+  "Matthew 5:13":[[13, "Ye are the salt of the earth: but if the salt have lost his savour, wherewith shall it be salted? it is thenceforth good for nothing, but to be cast out, and to be trodden under foot of men."]],
+  "Proverbs 14:34":[[34, "Righteousness exalteth a nation: but sin is a reproach to any people."]],
+  "Romans 13:1":[[1, "Let every soul be subject unto the higher powers. For there is no power but of God: the powers that be are ordained of God."]],
+  "Romans 13:7":[[7, "Render therefore to all their dues: tribute to whom tribute is due; custom to whom custom; fear to whom fear; honour to whom honour."]],
+  "Romans 1:9":[[9, "For God is my witness, whom I serve with my spirit in the gospel of his Son, that without ceasing I make mention of you always in my prayers;"]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
