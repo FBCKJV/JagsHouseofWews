@@ -281,6 +281,9 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 .dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
 .dlg-body h4:first-child{margin-top:0}
 .dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body .say-cite{font-size:.85rem;font-style:italic;color:var(--vellum-dim);border-top:1px solid var(--rule);padding-top:.6rem;margin-top:1rem}
+.ref.say{border-bottom-style:dashed}
+.ref.say::before{content:"\201C";margin-right:.15em}
 .dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
 .toc-list{list-style:none;padding:0;margin:0}
 .toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
@@ -420,6 +423,9 @@ const V = {
   "Romans 12:9-21":[[9, "Let love be without dissimulation. Abhor that which is evil; cleave to that which is good."], [10, "Be kindly affectioned one to another with brotherly love; in honour preferring one another;"], [11, "Not slothful in business; fervent in spirit; serving the Lord;"], [12, "Rejoicing in hope; patient in tribulation; continuing instant in prayer;"], [13, "Distributing to the necessity of saints; given to hospitality."], [14, "Bless them which persecute you: bless, and curse not."], [15, "Rejoice with them that do rejoice, and weep with them that weep."], [16, "Be of the same mind one toward another. Mind not high things, but condescend to men of low estate. Be not wise in your own conceits."], [17, "Recompense to no man evil for evil. Provide things honest in the sight of all men."], [18, "If it be possible, as much as lieth in you, live peaceably with all men."], [19, "Dearly beloved, avenge not yourselves, but rather give place unto wrath: for it is written, Vengeance is mine; I will repay, saith the Lord."], [20, "Therefore if thine enemy hunger, feed him; if he thirst, give him drink: for in so doing thou shalt heap coals of fire on his head."], [21, "Be not overcome of evil, but overcome evil with good."]]
 };
 
+// Quotations from other writings (say: in the deck): their words open like a verse.
+const Q = {};
+
 function refTitle(key){
   const i = key.lastIndexOf(" ");
   const book = key.slice(0, i), cv = key.slice(i + 1);
@@ -506,6 +512,14 @@ function openVerse(keys, label){
 document.addEventListener("click", e => {
   const b = e.target.closest(".ref");
   if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b && b.dataset.q) {
+    const q = Q[b.dataset.q];
+    verseTitle.textContent = q ? q.t : b.textContent.trim();
+    verseBody.innerHTML = q ? q.h : "<p>Not loaded.</p>";
+    verseDlg.showModal();
+    verseBody.scrollTop = 0;
+    return;
+  }
   if (b) {
     const keys = b.dataset.v;
     const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));

@@ -50,6 +50,10 @@ Source format, one element per line (blank lines are ignored, # starts a comment
                                                a numbered dot on the picture above (x, y and size in % of its width/
                                                height/width) that opens its verses; a key of the dots follows the picture
   highlight: believ                              (meta, top of the file) stems highlighted in every quoted verse
+  say: melito | Melito of Sardis | Eusebius, Church History 4.26 (trans. McGiffert)     [| poem]
+  > words of the quotation, one or more lines …   a quotation that opens like a verse pop-up, from [[say:melito|label]]
+  >                                             a line of only ">" starts a new paragraph; "> ## heading" a heading;
+                                               with "| poem" every line keeps its own line
   read: obadiah-holmes | Obadiah Holmes        a row of links to other lessons in the app (consecutive lines make one row);
                                                read: app:doctrine-salvation~123 | title links to a teaching or study
 
@@ -113,6 +117,25 @@ def verses(ref):
 
 
 USED = {}
+SAYS, SAID = {}, set()   # quotations that open as pop-ups (say:), and those the slides use
+
+
+def say_html(q):
+    """A quotation's words as HTML: paragraphs, ## headings, and poem lines kept line by line."""
+    out, para = [], []
+    def flush():
+        if para:
+            out.append('<p>' + ('<br>' if q['poem'] else ' ').join(fmt(esc(x)) for x in para) + '</p>')
+            para.clear()
+    for x in q['lines']:
+        if not x.strip():
+            flush()
+        elif x.startswith('## '):
+            flush(); out.append(f'<h4>{fmt(esc(x[3:].strip()))}</h4>')
+        else:
+            para.append(x.strip())
+    flush()
+    return ''.join(out) + f'<p class="say-cite">{fmt(esc(q["cite"]))}</p>'
 UP = ''   # path from the deck's folder back to the repo root, set per deck, for links into the app
 
 
@@ -128,6 +151,13 @@ def inline(s):
         out.append(fmt(esc(s[last:m.start()])))
         if m.group(1).startswith('lesson:'):
             out.append(lesson_link(m.group(1)[7:].strip(), m.group(2)))
+            last = m.end(); continue
+        if m.group(1).startswith('say:'):
+            q = m.group(1)[4:].strip()
+            if q not in SAYS:
+                raise SystemExit(f'No "say: {q}" is defined for [[{m.group(1)}]]')
+            SAID.add(q)
+            out.append(f'<button class="ref say" data-q="{esc(q)}">{fmt(esc(m.group(2) or SAYS[q]["title"]))}</button>')
             last = m.end(); continue
         if m.group(1).startswith('app:'):
             out.append(lesson_link(m.group(1).strip(), m.group(2)))
@@ -198,10 +228,18 @@ def verse_block(refs, big=False):
 def build(src):
     meta, sections, slide = {}, None, None
     slides = []
+    say = None
     for raw in open(src, encoding='utf-8'):
         line = raw.rstrip('\n')
+        if say is not None and (line == '>' or line.startswith('> ')):
+            say['lines'].append(line[2:]); continue
+        say = None
         if not line.strip() or line.lstrip().startswith('#'):
             continue
+        if line.startswith('say:'):
+            bits = [x.strip() for x in line[4:].split('|')]
+            say = {'title': bits[1], 'cite': bits[2] if len(bits) > 2 else '', 'poem': 'poem' in bits[3:], 'lines': []}
+            SAYS[bits[0]] = say; continue
         if line.startswith('=== '):
             sections = line[4:].strip(); continue
         if line.startswith('--- '):
@@ -384,12 +422,16 @@ def build(src):
     out = (tpl.replace('{{TITLE}}', html.escape(meta['title'], quote=False))
               .replace('{{DESCRIPTION}}', html.escape(meta.get('description', ''), quote=True))
               .replace('{{EXTRAS}}', os.path.relpath(os.path.join(ROOT, 'lessons', 'deck-extras.js'), os.path.dirname(os.path.join(ROOT, meta['output']))))
-              .replace('{{SLIDES}}', '\n'.join(body)).replace('{{VERSES}}', vmap))
+              .replace('{{SLIDES}}', '\n'.join(body)).replace('{{VERSES}}', vmap)
+              .replace('{{SAYINGS}}', json.dumps({q: {'t': SAYS[q]['title'], 'h': say_html(SAYS[q])} for q in sorted(SAID)},
+                                                 ensure_ascii=False)))
     dest = os.path.join(ROOT, meta['output'])
     with open(dest, 'w', encoding='utf-8') as f:
         f.write(out)
-    print(f'{meta["output"]}: {len(slides)} slides, {len(USED)} verse pop-ups')
-    USED.clear()
+    unused = sorted(set(SAYS) - SAID)
+    print(f'{meta["output"]}: {len(slides)} slides, {len(USED)} verse pop-ups'
+          + (f', {len(SAID)} quotation pop-ups' if SAID else '') + (f' (not used: {", ".join(unused)})' if unused else ''))
+    USED.clear(); SAYS.clear(); SAID.clear()
 
 
 if __name__ == '__main__':

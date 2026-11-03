@@ -281,6 +281,9 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 .dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
 .dlg-body h4:first-child{margin-top:0}
 .dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body .say-cite{font-size:.85rem;font-style:italic;color:var(--vellum-dim);border-top:1px solid var(--rule);padding-top:.6rem;margin-top:1rem}
+.ref.say{border-bottom-style:dashed}
+.ref.say::before{content:"\201C";margin-right:.15em}
 .dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
 .toc-list{list-style:none;padding:0;margin:0}
 .toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
@@ -568,6 +571,9 @@ const V = {
   "Nehemiah 9:6-15":[[6, "Thou, even thou, art LORD alone; thou hast made heaven, the heaven of heavens, with all their host, the earth, and all things that are therein, the seas, and all that is therein, and thou preservest them all; and the host of heaven worshippeth thee."], [7, "Thou art the LORD the God, who didst choose Abram, and broughtest him forth out of Ur of the Chaldees, and gavest him the name of Abraham;"], [8, "And foundest his heart faithful before thee, and madest a covenant with him to give the land of the Canaanites, the Hittites, the Amorites, and the Perizzites, and the Jebusites, and the Girgashites, to give it, I say, to his seed, and hast performed thy words; for thou art righteous:"], [9, "And didst see the affliction of our fathers in Egypt, and heardest their cry by the Red sea;"], [10, "And shewedst signs and wonders upon Pharaoh, and on all his servants, and on all the people of his land: for thou knewest that they dealt proudly against them. So didst thou get thee a name, as it is this day."], [11, "And thou didst divide the sea before them, so that they went through the midst of the sea on the dry land; and their persecutors thou threwest into the deeps, as a stone into the mighty waters."], [12, "Moreover thou leddest them in the day by a cloudy pillar; and in the night by a pillar of fire, to give them light in the way wherein they should go."], [13, "Thou camest down also upon mount Sinai, and spakest with them from heaven, and gavest them right judgments, and true laws, good statutes and commandments:"], [14, "And madest known unto them thy holy sabbath, and commandedst them precepts, statutes, and laws, by the hand of Moses thy servant:"], [15, "And gavest them bread from heaven for their hunger, and broughtest forth water for them out of the rock for their thirst, and promisedst them that they should go in to possess the land which thou hadst sworn to give them."]]
 };
 
+// Quotations from other writings (say: in the deck): their words open like a verse.
+const Q = {};
+
 function refTitle(key){
   const i = key.lastIndexOf(" ");
   const book = key.slice(0, i), cv = key.slice(i + 1);
@@ -654,6 +660,14 @@ function openVerse(keys, label){
 document.addEventListener("click", e => {
   const b = e.target.closest(".ref");
   if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b && b.dataset.q) {
+    const q = Q[b.dataset.q];
+    verseTitle.textContent = q ? q.t : b.textContent.trim();
+    verseBody.innerHTML = q ? q.h : "<p>Not loaded.</p>";
+    verseDlg.showModal();
+    verseBody.scrollTop = 0;
+    return;
+  }
   if (b) {
     const keys = b.dataset.v;
     const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));

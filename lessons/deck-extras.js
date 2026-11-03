@@ -63,6 +63,12 @@
     'html.proj .title-page.later h1{font-size:2.6em}' +
     'html.proj .title-page.long h1{font-size:2.5em}' +
     'html.proj .pic img{max-height:62vh}' +
+    /* verse and quotation pop-ups, read aloud from the back of the room */
+    'html.proj dialog{width:min(1250px,94vw);max-height:92vh}' +
+    'html.proj .dlg-head h3{font-size:clamp(1.2rem,2.6vh,1.9rem)}' +
+    'html.proj .dlg-body p{font-size:clamp(1.3rem,3vh,2.2rem);line-height:1.5;font-weight:500}' +
+    'html.proj .dlg-body h4{font-size:clamp(1rem,2.2vh,1.5rem)}' +
+    'html.proj .dlg-body .say-cite{font-size:clamp(.9rem,1.8vh,1.2rem)}' +
     'html.proj blockquote{font-weight:500}' +
     'html.proj blockquote cite,html.proj .title-page .overline,html.proj .scripture sup{font-weight:700}' +
     'html.proj mark{font-weight:700;border-bottom-width:3px}' +
