@@ -7,7 +7,7 @@
 
   const KJV_APP = 'https://fbckjv.app/KJVBible/';
   // Shown on the About page. Started at v1.17 (after 17 merged updates); each merged update adds one.
-  const APP_VERSION = '1.80', APP_DATE = '2026-11-02';
+  const APP_VERSION = '1.81', APP_DATE = '2026-11-03';
   const view = document.getElementById('view');
   const crumbs = document.getElementById('crumbs');
   let INDEX = null;
@@ -289,7 +289,8 @@
     ['Read in the KJV app', 'Opens that chapter in the KJV Bible app in a new tab, so your place here stays put.'],
     ['Doctrines & Teachings', 'Teachings that compare scripture with scripture, sorted by topic. Tap a verse to open it in the KJV Bible app, or open the chapter study it came from.'],
     ['Install the app', 'On Android choose Install app from the browser menu; on iPhone use Share, then Add to Home Screen. It then opens full screen like the KJV Bible app.'],
-    ['Lessons & Classes', 'Slides, notes and handouts from the classes. Slides open in a new tab; notes open right on the page. Tap a meme to see it full size.'],
+    ['Lessons & Classes', 'Slides, notes and handouts from the classes. Slides open in a new tab; notes open right on the page.'],
+    ['Memes', 'The Memes tab at the bottom shows the memes and charts by topic. Tap one to see it full size. The KJV Bible app is a tap away from any verse in a study.'],
     ['Search', 'Tap the magnifying glass at the top to search every study, teaching and lesson. Type a verse like “john 3:16” to see everywhere it is taught.'],
     ['The chapter grid', 'Solid squares are series studies, dashed squares are earlier one-off studies, and dim squares are chapters not yet studied.']
   ];
@@ -635,7 +636,7 @@
 
   async function picturesView() {
     document.title = 'Memes — Lessons & Classes';
-    setCrumbs([['Home', '#'], ['Lessons', '#lessons'], ['Memes', '#pictures']]);
+    setCrumbs([['Home', '#'], ['Memes', '#pictures']]);
     view.classList.add('wide');
     const [lib, t] = await Promise.all([loadLessons(), loadTopics()]);
     if (location.hash !== '#pictures') return;
@@ -1234,7 +1235,7 @@
 
   function markTab(h) {
     const tab = h === 'about' || h === 'heaven' || h.startsWith('search') ? '' : (h === 'doctrines' || h.startsWith('doctrine-')) ? 'doctrines'
-      : (h === 'lessons' || h === 'pictures' || h.startsWith('lesson-')) ? 'lessons' : 'books';
+      : h === 'pictures' ? 'pictures' : (h === 'lessons' || h.startsWith('lesson-')) ? 'lessons' : 'books';
     document.getElementById('about-btn').classList.toggle('on', h === 'about');
     document.getElementById('search-btn').classList.toggle('on', h.startsWith('search'));
     document.querySelectorAll('#tabbar .tab[data-tab]').forEach(a => {
