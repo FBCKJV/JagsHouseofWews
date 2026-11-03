@@ -66,7 +66,8 @@ builder, no fact-checking of the author's views. Order:
    - [x] Marriage, family & the home (`topic-family`)
    - [x] The law & the covenants (`topic-law`)
    - [x] Christ in the Old Testament (`topic-christ-ot`)
-   - [ ] Then Israel, prophecy, judgment, false teaching,
+   - [x] Israel & the Israel of God (`topic-israel`)
+   - [ ] Then prophecy, judgment, false teaching,
      nations, creation, angels
 
 Sermons and the lessons from other preachers do not get decks. They stay as notes.
@@ -146,6 +147,7 @@ Sermons and the lessons from other preachers do not get decks. They stay as note
 - [x] **As for Me and My House – Marriage, Family and the Home** (`topic-family`)
 - [x] **The Law Is Good – The Law and the Covenants** (`topic-law`)
 - [x] **They Testify of Me – Christ in the Old Testament** (`topic-christ-ot`)
+- [x] **The Israel of God – Israel, the Church and Zionism** (`topic-israel`)
 
 ## Standing decisions
 

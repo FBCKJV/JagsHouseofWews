@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Israel of God – Israel, the Church and Zionism</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Israel and the Israel of God: Abraham&#x27;s seed is Christ, all believers of all time are the Israel of God, continuation not replacement, all Israel saved in Christ, Zionism and dispensationalism refuted, and the judgment on unbelieving Jerusalem, from the teachings on Israel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="The Israel of God">
+  <div class="page title-page">
+    <div class="overline">Doctrine · Israel &amp; the Israel of God</div>
+    <h1>The Israel of God</h1>
+    <p class="sub">Who Israel is, the church, and Zionism.</p>
+    <div class="refs center"><button class="ref" data-v="Galatians 6:16">Galatians 6:16</button><button class="ref" data-v="Galatians 3:29">Galatians 3:29</button><button class="ref" data-v="Romans 9:6-8">Romans 9:6-8</button><button class="ref" data-v="Romans 2:28-29">Romans 2:28-29</button><button class="ref" data-v="Romans 11:26">Romans 11:26</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any gold reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="He is a Jew, which is one inwardly">
+  <div class="page">
+    <h2>He is a Jew, which is one inwardly</h2>
+    <blockquote class="big-verse">For he is not a Jew, which is one outwardly; neither is that circumcision, which is outward in the flesh: But <mark>he is a Jew, which is one inwardly</mark>; <mark>and circumcision is that of the heart</mark>, in the spirit, and not in the letter; whose praise is not of men, but of God.<cite>Romans 2:28-29</cite></blockquote>
+    <p>Jews, modern people calling themselves Jews, are defined by their rejection of Jesus as the Christ. Regardless of genetic background, origin story, current ideology or religion, a Jew is defined by their utter rejection of Christ and the God of their fathers.</p>
+    <p>And by this, they are as the unfaithful wife, gone a whoring after false gods, Whose Husband has put them away and taken to Him another people, who believe on His word (<button class="ref" data-v="Jeremiah 3:8">Jeremiah 3:8</button>).</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-israel~11588" target="_blank" rel="noopener">A Jew is defined by rejecting Christ ↗</a></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Abraham&#x27;s seed is Christ" data-title="To thy seed, which is Christ">
+  <div class="page">
+    <div class="kicker">Abraham's seed</div>
+    <h2>To thy seed, which is Christ</h2>
+    <blockquote class="big-verse">Now to Abraham and his <mark class="w">seed</mark> were the promises made. He saith not, And to <mark class="w">seeds</mark>, as of many; but as of one, <mark>And to thy <mark class="w">seed</mark>, which is Christ</mark>.<cite>Galatians 3:16</cite></blockquote>
+    <p>The promise to Abraham was both for the land, and the Christ. Long before the exodus, before Isaac was ever born. The blessings were made to him and his seed. Not seeds, plural. Jesus Christ.</p>
+    <p>Zionism is a modern political ideology that takes the promise to Abraham, and rather than give the inheritance to Christ and all who are in Christ, gives it to unbelieving, apostate Jews. This is the promise to Abraham. Not for the modern Jew. Not for the apostate and wicked modern state calling itself Israel.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Abraham&#x27;s seed is Christ" data-title="If ye be Christ&#x27;s">
+  <div class="page">
+    <div class="kicker">Abraham's seed</div>
+    <h2>If ye be Christ's</h2>
+    <blockquote class="big-verse">There is neither Jew nor Greek, there is neither bond nor free, there is neither male nor female: for ye are all one in Christ Jesus. And <mark>if ye be Christ’s, then are ye Abraham’s <mark class="w">seed</mark>, and heirs according to the promise</mark>.<cite>Galatians 3:28-29</cite></blockquote>
+    <p>All of the nations in the world descended from Abraham, and intermarried, and spread out on the Earth (<button class="ref" data-v="1 Chronicles 1:27-34">1 Chronicles 1:27-34</button>). And the blessing of Abraham's seed was to Christ, and if you be in Christ, you are of Abraham's seed. There is no Jew or Greek. All men are called.</p>
+    <p>Circumcision of the flesh was a picture of the sealing of a soul by the Holy Spirit to come. The circumcision of the heart, made without hands (<button class="ref" data-v="Colossians 2:11">Colossians 2:11</button>).</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Abraham&#x27;s seed is Christ" data-title="Fellowheirs">
+  <div class="page">
+    <div class="kicker">Abraham's seed</div>
+    <h2>Fellowheirs</h2>
+    <blockquote class="big-verse"><mark>That the Gentiles should be fellowheirs, and of the same body</mark>, and partakers of his promise in Christ by the gospel:<cite>Ephesians 3:6</cite></blockquote>
+    <p>The mystery: how God would bless all nations in Abraham's seed, Jesus. Paul puts to bed the notion that Gentile believers are somehow less-than in their inheritance. We are the second born who received the full inheritance and blessing.</p>
+    <p>Even in Ezekiel's vision the strangers among them receive the same inheritance (<button class="ref" data-v="Ezekiel 47:22-23">Ezekiel 47:22-23</button>). It was never exclusive to the Jews. Never. It was always about those circumcised of the heart and believing on Christ.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-israel~4437" target="_blank" rel="noopener">Abraham's seed is Christ, and believers are heirs ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-israel~14832" target="_blank" rel="noopener">All nations from Abraham, and his seed is Christ ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-israel~16480" target="_blank" rel="noopener">The inheritance was never exclusive to the Jews ↗</a></div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="All believers, the Israel of God" data-title="A remnant according to the election of grace">
+  <div class="page">
+    <div class="kicker">The Israel of God</div>
+    <h2>A remnant according to the election of grace</h2>
+    <blockquote class="big-verse">Even so then at this present time also <mark>there is a remnant according to the election of grace</mark>.<cite>Romans 11:5</cite></blockquote>
+    <p>It isn't by ethnicity or nation that God saves or condemns, but by belief and unbelieving. <em>God hath not cast away his people which he foreknew</em> (<button class="ref" data-v="Romans 11:2">Romans 11:2</button>) is conditional: His people that are saved.</p>
+    <p>Under the Old Testament there were periods where, of the millions of Israelites, as few as 7,000 had called upon the name of the Lord and were saved (<button class="ref" data-v="1 Kings 19:18">1 Kings 19:18</button>). Strait is the gate and narrow the way and few there are that find it.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="All believers, the Israel of God" data-title="And so all Israel shall be saved">
+  <div class="page">
+    <div class="kicker">The Israel of God</div>
+    <h2>And so all Israel shall be saved</h2>
+    <blockquote class="big-verse">Not as though the word of God hath taken none effect. <mark>For they are not all <mark class="w">Israel</mark>, which are of <mark class="w">Israel</mark></mark>: Neither, because they are the <mark class="w">seed</mark> of Abraham, are they all children: but, In Isaac shall thy <mark class="w">seed</mark> be called. That is, They which are the children of the flesh, these are not the children of God: but <mark>the children of the promise are counted for the <mark class="w">seed</mark></mark>.<cite>Romans 9:6-8</cite></blockquote>
+    <p>Here is the crux of the dispensationalist heresy. Their main proof text. “All Israel shall be saved” (<button class="ref" data-v="Romans 11:26">Romans 11:26</button>). But this is not Israel of the flesh. A deliverer comes out of Zion, to turn away ungodliness from Jacob. That is Christ Jesus.</p>
+    <p>God's promises were kept in Christ. The remnant is in Christ. All Israel was saved, in Christ. The Kingdom, the land that was promised, is through Christ. The blessings were to the seed, and that seed is singular.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="All believers, the Israel of God" data-title="Broken off, grafted in">
+  <div class="page">
+    <div class="kicker">The Israel of God</div>
+    <h2>Broken off, grafted in</h2>
+    <blockquote class="big-verse">Well; <mark>because of unbelief they were broken off, and thou standest by faith</mark>. Be not highminded, but fear:<cite>Romans 11:20</cite></blockquote>
+    <p>Old Testament Israel and New Testament Israel, Hebrew or Gentile, all were saved by faith. Wild olive branches grafted in to the root. Boast not against the branches. We shouldn't fall to the same arrogance as the unbelieving Jews. There is no Jew or Greek in Christ.</p>
+    <p>Note the conditional statements. IF we continue in belief, we remain in His goodness, and IF the Jew abides not in unbelief, they will be graft back in (<button class="ref" data-v="Romans 11:22-23">Romans 11:22-23</button>). Provoked to jealousy by the mercy shown believers, <em>that I might save some of them</em> (<button class="ref" data-v="Romans 11:14">Romans 11:14</button>).</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="All believers, the Israel of God" data-title="Continuation, not replacement">
+  <div class="page">
+    <div class="kicker">The Israel of God</div>
+    <h2>Continuation, not replacement</h2>
+    <blockquote class="big-verse"><mark>I am the vine, ye are the branches</mark>: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing. If a man abide not in me, he is cast forth as a branch, and is withered; and men gather them, and cast them into the fire, and they are burned.<cite>John 15:5-6</cite></blockquote>
+    <p>They call it “replacement theology,” but it is actually a continuation theology, the same promise offered by the same grace, through faith in the same Christ. There is no replacement theology, only the continuation of the covenant made to Abraham, which is to all nations (<button class="ref" data-v="Romans 4:16">Romans 4:16</button>).</p>
+    <p>All believers of all time, Old Testament and New, are the Israel of God, the same as the congregation, the called out assembly of believers. Not a capital-C Church that replaced Israel or became it. The idea of their being chosen as a race, outside of Christ, is unbiblical fiction.</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="All believers, the Israel of God" data-title="The vineyard given to others">
+  <div class="page">
+    <div class="kicker">The Israel of God</div>
+    <h2>The vineyard given to others</h2>
+    <blockquote class="big-verse">He shall come and destroy these husbandmen, <mark>and shall give the vineyard to others</mark>. And when they heard it, they said, God forbid.<cite>Luke 20:16</cite></blockquote>
+    <p>The vineyard, being His covenant, and the fruit thereof His people: the care of that covenant taken from the rebellious husbandmen and given to others. It is not some newfound doctrine, or some Pauline heresy. It is the will of God the Father.</p>
+    <p>The fig tree withered from the roots: the taking away of the Kingdom for failing to provide fruit (<button class="ref" data-v="Mark 11:20">Mark 11:20</button>). The Bible is a book of winnowing. The eldest may receive the inheritance of earthly things, but the Kingdom of Heaven is only inherited by faith.</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="All believers, the Israel of God" data-title="Spiritually Edom">
+  <div class="page">
+    <div class="kicker">The Israel of God</div>
+    <h2>Spiritually Edom</h2>
+    <blockquote class="big-verse">Lest there be any fornicator, or profane person, as Esau, <mark>who for one morsel of meat sold his birthright</mark>. For ye know how that afterward, when he would have inherited the blessing, he was rejected: for he found no place of repentance, though he sought it carefully with tears.<cite>Hebrews 12:16-17</cite></blockquote>
+    <p>Like Esau, Jews sought an earthly kingdom from an earthly messiah, to satisfy their fleshly desires. They sold their birthright by choosing to kill Christ. The Jews who killed Jesus and the prophets are spiritually Edom. The wrath of God abides upon them to the uttermost.</p>
+    <p>Dispensationalist Christians who give them honor as “older brothers” so despise their birthright in Christ they are willing to give it up to Jews for a morsel. For less than a bowl of pottage. There is no genetic or ethnic role in salvation.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="All believers, the Israel of God" data-title="Surnamed by the name of Israel">
+  <div class="page">
+    <div class="kicker">The Israel of God</div>
+    <h2>Surnamed by the name of Israel</h2>
+    <blockquote class="big-verse">One shall say, I am the <span class="lord">Lord</span>’s; and another shall call himself by the name of Jacob; and another shall subscribe with his hand unto the <span class="lord">Lord</span>, and <mark>surname himself by the name of <mark class="w">Israel</mark></mark>.<cite>Isaiah 44:5</cite></blockquote>
+    <p>A prophecy of Christians, made sons of God and co-heirs with Christ. Those called by His name. We become the elect of Israel by adoption (<button class="ref" data-v="Romans 8:15-17">Romans 8:15-17</button>).</p>
+    <p>The only “Zionism” that matters is Christ Jesus on His throne. Zion, like believers stained crimson in sin, has a redeemer, and is His bride (<button class="ref" data-v="Revelation 21:2">Revelation 21:2</button>). The spirit of Esau lives in Christians who for political expediency seek to give the inheritance away.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-israel~12372" target="_blank" rel="noopener">And so all Israel shall be saved ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-israel~10891" target="_blank" rel="noopener">Until the fulness of the Gentiles be come in ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-israel~11712" target="_blank" rel="noopener">Continuation theology, not replacement theology ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-israel~7193" target="_blank" rel="noopener">Dispensationalists selling the birthright to spiritual Edom ↗</a></div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Zionism refuted" data-title="If ye will obey">
+  <div class="page">
+    <div class="kicker">Zionism refuted</div>
+    <h2>If ye will obey</h2>
+    <blockquote class="big-verse">Not according to the covenant that I made with their fathers in the day when I took them by the hand to lead them out of the land of Egypt; <mark>because they continued not in my covenant, and I regarded them not, saith the Lord</mark>.<cite>Hebrews 8:9</cite></blockquote>
+    <p>God judges nations on earth by their works. He judges people as individuals by their faith. His promises to nations are conditional, if/then (<button class="ref" data-v="Exodus 19:5">Exodus 19:5</button>). Hebrews 8:9 is one of many silver bullets. The Jews continued not in His covenant AND I REGARDED THEM NOT.</p>
+    <p>So many dispensationalists rest their Zionism on “God keeps His promises!” with no understanding that covenants have conditions. Edom was given Seir, and God took their land and made it desolate (<button class="ref" data-v="Obadiah 1:10">Obadiah 10</button>).</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Zionism refuted" data-title="For David&#x27;s sake and Jerusalem&#x27;s">
+  <div class="page">
+    <div class="kicker">Zionism refuted</div>
+    <h2>For David's sake and Jerusalem's</h2>
+    <blockquote class="big-verse">Howbeit I will not rend away all the kingdom; but will give one tribe to thy son <mark>for David my servant’s sake, and for Jerusalem’s sake which I have chosen</mark>.<cite>1 Kings 11:13</cite></blockquote>
+    <p>Notice that it is not the Judeans whom God is concerned with. The covenant the Lord made is with David, and His concern is with keeping Jerusalem because that is where God chose to place His name; Christ Jesus.</p>
+    <p>God is not bound to always be with Israel after the flesh. The times that the Lord saved Israel after the flesh were solely due to Christ, His Seed. Nothing else made them any different from the other peoples of the earth (<button class="ref" data-v="1 Samuel 4:3-11">1 Samuel 4:3-11</button>).</p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Zionism refuted" data-title="Not 1948">
+  <div class="page">
+    <div class="kicker">Zionism refuted</div>
+    <h2>Not 1948</h2>
+    <blockquote class="big-verse">Therefore prophesy and say unto them, Thus saith the Lord <span class="lord">God</span>; Behold, O my people, <mark>I will open your graves, and cause you to come up out of your graves</mark>, and bring you into the land of <mark class="w">Israel</mark>. And ye shall know that I am the <span class="lord">Lord</span>, when I have opened your graves, O my people, and brought you up out of your graves, And shall put my spirit in you, and ye shall live, and I shall place you in your own land: then shall ye know that I the <span class="lord">Lord</span> have spoken it, and performed it, saith the <span class="lord">Lord</span>.<cite>Ezekiel 37:12-14</cite></blockquote>
+    <p>The valley of dry bones is one of the clearest prophecies of the resurrection and millennial kingdom of believers, ruled as one nation under <em>David my servant</em>, Christ Jesus (<button class="ref" data-v="Ezekiel 37:24">Ezekiel 37:24</button>).</p>
+    <p>The new heart is not fulfilled by the UN creating the modern state of Israel. They have not gotten a new heart. They have not accepted Christ (<button class="ref" data-v="Ezekiel 36:26">Ezekiel 36:26</button>). <em>Abraham was one... but we are many</em> (<button class="ref" data-v="Ezekiel 33:24">Ezekiel 33:24</button>) is the argument made by Jews today. The basis of Zionism.</p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Zionism refuted" data-title="The Jews were never the heroes">
+  <div class="page">
+    <div class="kicker">Zionism refuted</div>
+    <h2>The Jews were never the heroes</h2>
+    <blockquote class="big-verse"><mark>Ye stiffnecked and uncircumcised in heart and ears, ye do always resist the Holy Ghost</mark>: as your fathers did, so do ye.<cite>Acts 7:51</cite></blockquote>
+    <p>It is impossible to read the prophets and come away with the idea that the Jews are generally the good guys. They were always a stiff-necked rebellious people who needed to be punished to do right, and even then rarely repented.</p>
+    <p>The modern form of Jewish ethnic supremacy, that as God's chosen people it is because of their own qualities and holiness, is wicked. God is not a respecter of persons (<button class="ref" data-v="Romans 2:11">Romans 2:11</button>).</p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Zionism refuted" data-title="Shouldest thou help the ungodly?">
+  <div class="page">
+    <div class="kicker">Zionism refuted</div>
+    <h2>Shouldest thou help the ungodly?</h2>
+    <blockquote class="big-verse">And Jehu the son of Hanani the seer went out to meet him, and said to king Jehoshaphat, <mark>Shouldest thou help the ungodly, and love them that hate the <span class="lord">Lord</span>?</mark> therefore is wrath upon thee from before the <span class="lord">Lord</span>.<cite>2 Chronicles 19:2</cite></blockquote>
+    <p>If God's wrath is upon unbelieving Jews to the uttermost, how much more those that place them as our “greatest allies”? Zionist evangelical Republican types are ultranationalists, but for a foreign people, not their own.</p>
+    <p>They give another gospel, a dispensation of race to a people the Bible calls a synagogue of Satan (<button class="ref" data-v="Revelation 2:9">Revelation 2:9</button>). HINT: they call themselves Jews and meet in synagogues. The tribulation they gave the early churches has never stopped.</p>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Zionism refuted" data-title="No third temple, no role in the end">
+  <div class="page">
+    <div class="kicker">Zionism refuted</div>
+    <h2>No third temple, no role in the end</h2>
+    <blockquote class="big-verse">I know thy works, and tribulation, and poverty, (but thou art rich) and I know the blasphemy of them <mark>which say they are Jews, and are not, but are the synagogue of Satan</mark>.<cite>Revelation 2:9</cite></blockquote>
+    <p>Forget everything you've ever heard about the Jews and their role in end times prophecy, and let the Bible speak. God isn't waiting on them to build a third temple. The third temple is Christ and the body of believers. Anything they build will be an abomination.</p>
+    <p>The woman of Revelation 12 is not modern Israel; Scofield, that viper, is a primary source of this, and his notes have deceived millions. What unbelieving Jews and Muslims do on the temple mount doesn't matter. It is the Lord's and He will repay.</p>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Zionism refuted" data-title="Dispensationalism falls apart">
+  <div class="page">
+    <div class="kicker">Zionism refuted</div>
+    <h2>Dispensationalism falls apart</h2>
+    <blockquote class="big-verse"><mark>Is he the God of the Jews only? is he not also of the Gentiles?</mark> Yes, of the Gentiles also: Seeing it is one God, which shall justify the circumcision by faith, and uncircumcision through faith.<cite>Romans 3:29-30</cite></blockquote>
+    <p>Anyone who tries to justify Dispensationalism has to make each argument in a vacuum, stripping proof texts from their surrounding meaning. When we compare scripture to scripture, their doctrines fall apart. It is why their false teachers discourage reading the Bible yourself.</p>
+    <p>The alms for Jerusalem went to the saved believers in a famine, not to just any Jews (<button class="ref" data-v="Acts 11:28-30">Acts 11:28-30</button>). Do not get your doctrine from people who are vehemently anti-God and who despise Jesus.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-israel~8633" target="_blank" rel="noopener">I Regarded Them Not ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-israel~16386" target="_blank" rel="noopener">The dry bones are the resurrection, not 1948 ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-israel~12228" target="_blank" rel="noopener">The Jews have no role in end times prophecy ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-israel~12373" target="_blank" rel="noopener">Dispensationalism falls apart by comparing scripture ↗</a></div>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Judgment on unbelieving Jerusalem" data-title="A bill of divorcement">
+  <div class="page">
+    <div class="kicker">Unbelieving Jerusalem</div>
+    <h2>A bill of divorcement</h2>
+    <blockquote class="big-verse">As I live, saith the Lord <span class="lord">God</span>, <mark>Sodom thy sister hath not done, she nor her daughters, as thou hast done</mark>, thou and thy daughters.<cite>Ezekiel 16:48</cite></blockquote>
+    <p>Ezekiel 16 reads as a writ of divorce. God breaking up with her, in a spiritual metaphor. This is a bill of divorcement, and should give the Zionist dispensationalist crowd cause to repent.</p>
+    <p>The Lord rejected ALL the seed of Israel (<button class="ref" data-v="2 Kings 17:20">2 Kings 17:20</button>). Judah was kept from utter destruction only until the promise of Christ came.</p>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Judgment on unbelieving Jerusalem" data-title="His blood be on us">
+  <div class="page">
+    <div class="kicker">Unbelieving Jerusalem</div>
+    <h2>His blood be on us</h2>
+    <blockquote class="big-verse">Then answered all the people, and said, <mark>His blood be on us, and on our children</mark>.<cite>Matthew 27:25</cite></blockquote>
+    <p>The multitudes of the Jews brought Jesus to Pilate that the Romans may kill Him for them. This Biblical truth is considered “antisemitic blood libel” today, in many supposed Christian churches. Priests and pastors blame the Romans for the death of Christ.</p>
+    <p><em>Behold, your house is left unto you desolate</em> (<button class="ref" data-v="Luke 13:35">Luke 13:35</button>). The lie that the disciples stole His body <em>is commonly reported among the Jews until this day</em> (<button class="ref" data-v="Matthew 28:15">Matthew 28:15</button>). They've formed an entire identity and religion out of denying the resurrection.</p>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Judgment on unbelieving Jerusalem" data-title="Wrath to the uttermost">
+  <div class="page">
+    <div class="kicker">Unbelieving Jerusalem</div>
+    <h2>Wrath to the uttermost</h2>
+    <blockquote class="big-verse">Who both killed the Lord Jesus, and their own prophets, and have persecuted us; and they please not God, and are contrary to all men: Forbidding us to speak to the Gentiles that they might be saved, to fill up their sins alway: <mark>for the wrath is come upon them to the uttermost</mark>.<cite>1 Thessalonians 2:15-16</cite></blockquote>
+    <p>This is still true of the Jews today, regardless of the origin story we might believe. Edomite, Khazarian, Ashkenaz, Cain, Canaanite; Adamic or not. God's wrath is upon them to the uttermost, because they do not please Him, and forbid us to speak to the Gentiles. They are a synagogue of Satan.</p>
+    <p>Crucified in 30 AD; forty years later, 70 AD, Jerusalem destroyed. A generation left to die in the wilderness (<button class="ref" data-v="Numbers 14:33-34">Numbers 14:33-34</button>; <button class="ref" data-v="Luke 21:20-22">Luke 21:20-22</button>).</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-israel~16186" target="_blank" rel="noopener">God's writ of divorce to Jerusalem ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-israel~9804" target="_blank" rel="noopener">His blood be on us: the Jews crucified Christ ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-israel~5650" target="_blank" rel="noopener">Wrath is come upon them to the uttermost ↗</a></div>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Peace upon the Israel of God" data-title="The Israel of God">
+  <div class="page title-page later">
+    <div class="overline">Israel &amp; the Israel of God</div>
+    <h1>Peace upon the Israel of God</h1>
+    <blockquote class="big-verse">For in Christ Jesus neither circumcision availeth any thing, nor uncircumcision, but a new creature. And as many as walk according to this rule, <mark>peace be on them, and mercy, and upon the <mark class="w">Israel</mark> of God</mark>.<cite>Galatians 6:15-16</cite></blockquote>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="center">The promise is to the faithful. There is no Jew or Greek. Whosoever believeth on Him shall not be ashamed.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-topic-christ-ot" target="_blank" rel="noopener">They Testify of Me – Christ in the Old Testament ↗</a><a class="ref lesson-link" href="../../studies/#lesson-topic-law" target="_blank" rel="noopener">The Law Is Good – The Law and the Covenants ↗</a></div>
+    <p class="sub center">Every teaching is on the <a class="ref lesson-link" href="../../studies/#doctrine-israel" target="_blank" rel="noopener">Israel &amp; the Israel of God ↗</a> page.</p>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 Chronicles 1:27-34":[[27, "Abram; the same is Abraham."], [28, "The sons of Abraham; Isaac, and Ishmael."], [29, "These are their generations: The firstborn of Ishmael, Nebaioth; then Kedar, and Adbeel, and Mibsam,"], [30, "Mishma, and Dumah, Massa, Hadad, and Tema,"], [31, "Jetur, Naphish, and Kedemah. These are the sons of Ishmael."], [32, "Now the sons of Keturah, Abraham’s concubine: she bare Zimran, and Jokshan, and Medan, and Midian, and Ishbak, and Shuah. And the sons of Jokshan; Sheba, and Dedan."], [33, "And the sons of Midian; Ephah, and Epher, and Henoch, and Abida, and Eldaah. All these are the sons of Keturah."], [34, "And Abraham begat Isaac. The sons of Isaac; Esau and Israel."]],
+  "1 Kings 19:18":[[18, "Yet I have left me seven thousand in Israel, all the knees which have not bowed unto Baal, and every mouth which hath not kissed him."]],
+  "1 Samuel 4:3-11":[[3, "And when the people were come into the camp, the elders of Israel said, Wherefore hath the LORD smitten us to day before the Philistines? Let us fetch the ark of the covenant of the LORD out of Shiloh unto us, that, when it cometh among us, it may save us out of the hand of our enemies."], [4, "So the people sent to Shiloh, that they might bring from thence the ark of the covenant of the LORD of hosts, which dwelleth between the cherubims: and the two sons of Eli, Hophni and Phinehas, were there with the ark of the covenant of God."], [5, "And when the ark of the covenant of the LORD came into the camp, all Israel shouted with a great shout, so that the earth rang again."], [6, "And when the Philistines heard the noise of the shout, they said, What meaneth the noise of this great shout in the camp of the Hebrews? And they understood that the ark of the LORD was come into the camp."], [7, "And the Philistines were afraid, for they said, God is come into the camp. And they said, Woe unto us! for there hath not been such a thing heretofore."], [8, "Woe unto us! who shall deliver us out of the hand of these mighty Gods? these are the Gods that smote the Egyptians with all the plagues in the wilderness."], [9, "Be strong, and quit yourselves like men, O ye Philistines, that ye be not servants unto the Hebrews, as they have been to you: quit yourselves like men, and fight."], [10, "And the Philistines fought, and Israel was smitten, and they fled every man into his tent: and there was a very great slaughter; for there fell of Israel thirty thousand footmen."], [11, "And the ark of God was taken; and the two sons of Eli, Hophni and Phinehas, were slain."]],
+  "2 Kings 17:20":[[20, "And the LORD rejected all the seed of Israel, and afflicted them, and delivered them into the hand of spoilers, until he had cast them out of his sight."]],
+  "Acts 11:28-30":[[28, "And there stood up one of them named Agabus, and signified by the Spirit that there should be great dearth throughout all the world: which came to pass in the days of Claudius Caesar."], [29, "Then the disciples, every man according to his ability, determined to send relief unto the brethren which dwelt in Judaea:"], [30, "Which also they did, and sent it to the elders by the hands of Barnabas and Saul."]],
+  "Colossians 2:11":[[11, "In whom also ye are circumcised with the circumcision made without hands, in putting off the body of the sins of the flesh by the circumcision of Christ:"]],
+  "Exodus 19:5":[[5, "Now therefore, if ye will obey my voice indeed, and keep my covenant, then ye shall be a peculiar treasure unto me above all people: for all the earth is mine:"]],
+  "Ezekiel 33:24":[[24, "Son of man, they that inhabit those wastes of the land of Israel speak, saying, Abraham was one, and he inherited the land: but we are many; the land is given us for inheritance."]],
+  "Ezekiel 36:26":[[26, "A new heart also will I give you, and a new spirit will I put within you: and I will take away the stony heart out of your flesh, and I will give you an heart of flesh."]],
+  "Ezekiel 37:24":[[24, "And David my servant shall be king over them; and they all shall have one shepherd: they shall also walk in my judgments, and observe my statutes, and do them."]],
+  "Ezekiel 47:22-23":[[22, "And it shall come to pass, that ye shall divide it by lot for an inheritance unto you, and to the strangers that sojourn among you, which shall beget children among you: and they shall be unto you as born in the country among the children of Israel; they shall have inheritance with you among the tribes of Israel."], [23, "And it shall come to pass, that in what tribe the stranger sojourneth, there shall ye give him his inheritance, saith the Lord GOD."]],
+  "Galatians 3:29":[[29, "And if ye be Christ’s, then are ye Abraham’s seed, and heirs according to the promise."]],
+  "Galatians 6:16":[[16, "And as many as walk according to this rule, peace be on them, and mercy, and upon the Israel of God."]],
+  "Jeremiah 3:8":[[8, "And I saw, when for all the causes whereby backsliding Israel committed adultery I had put her away, and given her a bill of divorce; yet her treacherous sister Judah feared not, but went and played the harlot also."]],
+  "Luke 13:35":[[35, "Behold, your house is left unto you desolate: and verily I say unto you, Ye shall not see me, until the time come when ye shall say, Blessed is he that cometh in the name of the Lord."]],
+  "Luke 21:20-22":[[20, "And when ye shall see Jerusalem compassed with armies, then know that the desolation thereof is nigh."], [21, "Then let them which are in Judaea flee to the mountains; and let them which are in the midst of it depart out; and let not them that are in the countries enter thereinto."], [22, "For these be the days of vengeance, that all things which are written may be fulfilled."]],
+  "Mark 11:20":[[20, "And in the morning, as they passed by, they saw the fig tree dried up from the roots."]],
+  "Matthew 28:15":[[15, "So they took the money, and did as they were taught: and this saying is commonly reported among the Jews until this day."]],
+  "Numbers 14:33-34":[[33, "And your children shall wander in the wilderness forty years, and bear your whoredoms, until your carcases be wasted in the wilderness."], [34, "After the number of the days in which ye searched the land, even forty days, each day for a year, shall ye bear your iniquities, even forty years, and ye shall know my breach of promise."]],
+  "Obadiah 1:10":[[10, "For thy violence against thy brother Jacob shame shall cover thee, and thou shalt be cut off for ever."]],
+  "Revelation 21:2":[[2, "And I John saw the holy city, new Jerusalem, coming down from God out of heaven, prepared as a bride adorned for her husband."]],
+  "Revelation 2:9":[[9, "I know thy works, and tribulation, and poverty, (but thou art rich) and I know the blasphemy of them which say they are Jews, and are not, but are the synagogue of Satan."]],
+  "Romans 11:14":[[14, "If by any means I may provoke to emulation them which are my flesh, and might save some of them."]],
+  "Romans 11:2":[[2, "God hath not cast away his people which he foreknew. Wot ye not what the scripture saith of Elias? how he maketh intercession to God against Israel, saying,"]],
+  "Romans 11:22-23":[[22, "Behold therefore the goodness and severity of God: on them which fell, severity; but toward thee, goodness, if thou continue in his goodness: otherwise thou also shalt be cut off."], [23, "And they also, if they abide not still in unbelief, shall be graffed in: for God is able to graff them in again."]],
+  "Romans 11:26":[[26, "And so all Israel shall be saved: as it is written, There shall come out of Sion the Deliverer, and shall turn away ungodliness from Jacob:"]],
+  "Romans 2:11":[[11, "For there is no respect of persons with God."]],
+  "Romans 2:28-29":[[28, "For he is not a Jew, which is one outwardly; neither is that circumcision, which is outward in the flesh:"], [29, "But he is a Jew, which is one inwardly; and circumcision is that of the heart, in the spirit, and not in the letter; whose praise is not of men, but of God."]],
+  "Romans 4:16":[[16, "Therefore it is of faith, that it might be by grace; to the end the promise might be sure to all the seed; not to that only which is of the law, but to that also which is of the faith of Abraham; who is the father of us all,"]],
+  "Romans 8:15-17":[[15, "For ye have not received the spirit of bondage again to fear; but ye have received the Spirit of adoption, whereby we cry, Abba, Father."], [16, "The Spirit itself beareth witness with our spirit, that we are the children of God:"], [17, "And if children, then heirs; heirs of God, and joint-heirs with Christ; if so be that we suffer with him, that we may be also glorified together."]],
+  "Romans 9:6-8":[[6, "Not as though the word of God hath taken none effect. For they are not all Israel, which are of Israel:"], [7, "Neither, because they are the seed of Abraham, are they all children: but, In Isaac shall thy seed be called."], [8, "That is, They which are the children of the flesh, these are not the children of God: but the children of the promise are counted for the seed."]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
