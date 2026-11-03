@@ -125,6 +125,11 @@ mark.w{border-bottom:0}
 @media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
 .pic{margin:1rem 0;text-align:center}
 .pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
 .pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
 .take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
 mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
@@ -413,12 +418,20 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="page">
     <h2>Faith in the Old Testament</h2>
     <p class="lead">The Old Testament itself critiques leaning on sacrifice for spiritual standing. God sought faith and obedience over the blood of bulls and goats.</p>
-    <div class="vps"><div class="vp lit"><h3>Counted for righteousness</h3><blockquote class="scripture" style="font-style:italic">And he believed in the <span class="lord">Lord</span>; and he counted it to him for righteousness.<cite>Genesis 15:6</cite></blockquote></div><div class="vp lit"><h3>The just shall live by faith</h3><blockquote class="scripture" style="font-style:italic">Behold, his soul which is lifted up is not upright in him: but the just shall live by his faith.<cite>Habakkuk 2:4</cite></blockquote></div><div class="vp fig"><h3>A broken and contrite heart</h3><blockquote class="scripture" style="font-style:italic">For thou desirest not sacrifice; else would I give it: thou delightest not in burnt offering. The sacrifices of God are a broken spirit: a broken and a contrite heart, O God, thou wilt not despise.<cite>Psalm 51:16-17</cite></blockquote></div><div class="vp fig"><h3>Cease to do evil</h3><blockquote class="scripture" style="font-style:italic">To what purpose is the multitude of your sacrifices unto me? saith the <span class="lord">Lord</span>: I am full of the burnt offerings of rams, and the fat of fed beasts; and I delight not in the blood of bullocks, or of lambs, or of he goats.<cite>Isaiah 1:11</cite></blockquote><blockquote class="scripture" style="font-style:italic">Wash you, make you clean; put away the evil of your doings from before mine eyes; cease to do evil; Learn to do well; seek judgment, relieve the oppressed, judge the fatherless, plead for the widow.<cite>Isaiah 1:16-17</cite></blockquote></div></div>
-    <div class="refs center"><button class="ref" data-v="Hebrews 10:4-6">Hebrews 10:4-6</button><button class="ref" data-v="Hosea 6:6">Hosea 6:6</button></div>
+    <div class="vps"><div class="vp lit"><h3>Counted for righteousness</h3><blockquote class="scripture" style="font-style:italic">And he believed in the <span class="lord">Lord</span>; and he counted it to him for righteousness.<cite>Genesis 15:6</cite></blockquote></div><div class="vp lit"><h3>The just shall live by faith</h3><blockquote class="scripture" style="font-style:italic">Behold, his soul which is lifted up is not upright in him: but the just shall live by his faith.<cite>Habakkuk 2:4</cite></blockquote></div></div>
   </div>
 </section>
 
 <!-- 13 -->
+<section class="slide" data-section="III. Salvation by faith" data-title="Faith in the Old Testament, continued">
+  <div class="page">
+    <h2>Faith in the Old Testament, continued</h2>
+    <div class="vps"><div class="vp fig"><h3>A broken and contrite heart</h3><blockquote class="scripture" style="font-style:italic">For thou desirest not sacrifice; else would I give it: thou delightest not in burnt offering. The sacrifices of God are a broken spirit: a broken and a contrite heart, O God, thou wilt not despise.<cite>Psalm 51:16-17</cite></blockquote></div><div class="vp fig"><h3>Cease to do evil</h3><blockquote class="scripture" style="font-style:italic">To what purpose is the multitude of your sacrifices unto me? saith the <span class="lord">Lord</span>: I am full of the burnt offerings of rams, and the fat of fed beasts; and I delight not in the blood of bullocks, or of lambs, or of he goats.<cite>Isaiah 1:11</cite></blockquote><blockquote class="scripture" style="font-style:italic">Wash you, make you clean; put away the evil of your doings from before mine eyes; cease to do evil; Learn to do well; seek judgment, relieve the oppressed, judge the fatherless, plead for the widow.<cite>Isaiah 1:16-17</cite></blockquote></div></div>
+    <div class="refs center"><button class="ref" data-v="Hebrews 10:4-6">Hebrews 10:4-6</button><button class="ref" data-v="Hosea 6:6">Hosea 6:6</button></div>
+  </div>
+</section>
+
+<!-- 14 -->
 <section class="slide" data-section="III. Salvation by faith" data-title="Christ fulfills the law">
   <div class="page">
     <h2>Christ fulfills the law</h2>
@@ -427,7 +440,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 14 -->
+<!-- 15 -->
 <section class="slide" data-section="III. Salvation by faith" data-title="Saved by faith today">
   <div class="page">
     <h2>Saved by faith today</h2>
@@ -437,7 +450,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 15 -->
+<!-- 16 -->
 <section class="slide" data-section="IV. The new heaven and new earth" data-title="No temple needed">
   <div class="page">
     <h2>No temple needed</h2>
@@ -448,7 +461,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 16 -->
+<!-- 17 -->
 <section class="slide" data-section="IV. The new heaven and new earth" data-title="We are His temple">
   <div class="page">
     <h2>We are His temple</h2>
@@ -457,7 +470,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 17 -->
+<!-- 18 -->
 <section class="slide" data-section="V. Application" data-title="Key takeaways">
   <div class="page">
     <h2>Key takeaways</h2>
@@ -466,7 +479,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 18 -->
+<!-- 19 -->
 <section class="slide" data-section="VI. Conclusion" data-title="Conclusion">
   <div class="page">
     <h2>Conclusion</h2>
@@ -494,6 +507,8 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
   <div class="dlg-body" id="verseBody"></div>
 </dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
 
 <dialog id="tocDlg" aria-labelledby="tocTitle">
   <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
@@ -569,7 +584,16 @@ document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
 
 const verseDlg = document.getElementById("verseDlg");
 const tocDlg = document.getElementById("tocDlg");
-function anyOpen(){ return verseDlg.open || tocDlg.open; }
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
 
 document.addEventListener("keydown", e => {
   if (anyOpen()) return;

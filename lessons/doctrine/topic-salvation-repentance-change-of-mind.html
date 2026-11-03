@@ -125,6 +125,11 @@ mark.w{border-bottom:0}
 @media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
 .pic{margin:1rem 0;text-align:center}
 .pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
 .pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
 .take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
 mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
@@ -492,12 +497,20 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="Summary" data-title="Summary">
   <div class="page">
     <h2>Summary</h2>
-    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>A change of mind</strong>Repentance is a changing of mind or turning from one thing to another.</li><li><strong>The Bible defines itself</strong>Here we get the biblical definition of repent, God changing His mind.</li><li><strong>Turned unto the Lord</strong>They have identical meaning. There is no implied “...from sin.”</li><li><strong>What we repent of</strong>What people most often repent of are the false beliefs they have about God.</li><li><strong>Sorrow may lead there</strong>Not of sin, though godly sorrow for sin may lead us there. It was their faith that saves them.</li><li><strong>Then turn from sin</strong>It is turning from sin out of love for God.</li></ol></div>
-    <p class="take">If you have placed your trust in anything else besides the perfect work of Christ Jesus, this is what you must repent of.</p>
+    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>A change of mind</strong>Repentance is a changing of mind or turning from one thing to another.</li><li><strong>The Bible defines itself</strong>Here we get the biblical definition of repent, God changing His mind.</li><li><strong>Turned unto the Lord</strong>They have identical meaning. There is no implied “...from sin.”</li></ol></div>
   </div>
 </section>
 
 <!-- 20 -->
+<section class="slide" data-section="Summary" data-title="Summary, continued">
+  <div class="page">
+    <h2>Summary, continued</h2>
+    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>What we repent of</strong>What people most often repent of are the false beliefs they have about God.</li><li><strong>Sorrow may lead there</strong>Not of sin, though godly sorrow for sin may lead us there. It was their faith that saves them.</li><li><strong>Then turn from sin</strong>It is turning from sin out of love for God.</li></ol></div>
+    <p class="take">If you have placed your trust in anything else besides the perfect work of Christ Jesus, this is what you must repent of.</p>
+  </div>
+</section>
+
+<!-- 21 -->
 <section class="slide" data-section="Summary" data-title="Read the teachings">
   <div class="page">
     <h2>Read the teachings</h2>
@@ -523,6 +536,8 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
   <div class="dlg-body" id="verseBody"></div>
 </dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
 
 <dialog id="tocDlg" aria-labelledby="tocTitle">
   <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
@@ -588,7 +603,16 @@ document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
 
 const verseDlg = document.getElementById("verseDlg");
 const tocDlg = document.getElementById("tocDlg");
-function anyOpen(){ return verseDlg.open || tocDlg.open; }
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
 
 document.addEventListener("keydown", e => {
   if (anyOpen()) return;
