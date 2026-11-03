@@ -60,8 +60,8 @@ builder, no fact-checking of the author's views. Order:
      - [x] Wine and strong drink, gathered from across the archive (`topic-walk-wine`)
      - [x] Serving and loving others, with a good witness before men (`topic-walk-serving`)
      - [x] The heart, not outward religion; words and vows; submitting to authority (`topic-walk-heart`)
-   - [ ] Then trust,
-     prayer, wisdom, family, the law, Christ in the Old Testament, Israel, prophecy, judgment, false teaching,
+   - [x] Trusting God in trouble (`topic-trust`)
+   - [ ] Then prayer, wisdom, family, the law, Christ in the Old Testament, Israel, prophecy, judgment, false teaching,
      nations, creation, angels
 
 Sermons and the lessons from other preachers do not get decks. They stay as notes.
@@ -135,6 +135,7 @@ Sermons and the lessons from other preachers do not get decks. They stay as note
 - [x] **Wine Is a Mocker – Wine and Strong Drink** (`topic-walk-wine`)
 - [x] **Servant of All – Serving and Loving Others** (`topic-walk-serving`)
 - [x] **Out of the Heart – Words, Vows and Authority** (`topic-walk-heart`)
+- [x] **A Very Present Help – Trusting God in Trouble** (`topic-trust`)
 
 ## Standing decisions
 
