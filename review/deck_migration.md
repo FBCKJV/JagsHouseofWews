@@ -69,7 +69,8 @@ builder, no fact-checking of the author's views. Order:
    - [x] Israel & the Israel of God (`topic-israel`)
    - [x] End times & prophecy (`topic-prophecy`)
    - [x] Judgment, hell & the resurrection (`topic-judgment`)
-   - [ ] Then false teaching,
+   - [x] False doctrine (`topic-false`)
+   - [ ] Then
      nations, creation, angels
 
 Sermons and the lessons from other preachers do not get decks. They stay as notes.
@@ -152,6 +153,7 @@ Sermons and the lessons from other preachers do not get decks. They stay as note
 - [x] **The Israel of God – Israel, the Church and Zionism** (`topic-israel`)
 - [x] **After the Tribulation – End Times and Prophecy** (`topic-prophecy`)
 - [x] **The Judgment Seat – Judgment, Hell and the Resurrection** (`topic-judgment`)
+- [x] **Another Gospel – False Doctrine Answered** (`topic-false`)
 
 ## Standing decisions
 
@@ -159,6 +161,8 @@ Sermons and the lessons from other preachers do not get decks. They stay as note
   Judaism and Jews of every stripe who deny Christ, Islam, Calvinism and the rest), sodomites, adulterers and the like
   is biblical fundamentalism and stays in, in the author's words. Leave out only slurs and crude language, which
   dilute the teaching.
+- Crude language (the author, 2026-11-03): rather than leaving a sharp point out, keep it and put a less crude word in
+  place of the crude one. Name the false teachers; keep the sharpness of the point.
 
 - Where this is going (the author, 2026-11-03), three things in the end:
   1. The chapter-by-chapter studies, each with its own slides, to be read or taught.
