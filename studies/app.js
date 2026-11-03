@@ -7,7 +7,7 @@
 
   const KJV_APP = 'https://fbckjv.app/KJVBible/';
   // Shown on the About page. Started at v1.17 (after 17 merged updates); each merged update adds one.
-  const APP_VERSION = '2.05', APP_DATE = '2026-11-03';
+  const APP_VERSION = '2.06', APP_DATE = '2026-11-03';
   const view = document.getElementById('view');
   const crumbs = document.getElementById('crumbs');
   let INDEX = null;
@@ -197,8 +197,6 @@
     const total = INDEX.books.reduce((n, b) => n + b.chapters, 0);
     const done = INDEX.books.reduce((n, b) => n + studiedCount(b), 0);
     const L = INDEX.latest;
-    const last = lastOpened();
-    const showLast = last && !(L && last.book.slug === L.slug && last.ch === L.chapter);
     const books = t => INDEX.books.filter(b => b.testament === t);
     const tiles = t => books(t).map(b => {
       const n = studiedCount(b), pct = Math.round(100 * n / b.chapters);
@@ -225,9 +223,8 @@
       </div>
       <a class="gospel-line" href="#heaven">How to know for sure you’re going to Heaven <span aria-hidden="true">→</span></a>
       ${jumpBox('home-jump', true)}
+      ${recentPanel()}
       <div class="continue-row">
-        ${showLast ? `<a class="continue" href="#${last.book.slug}-${last.ch}"><span class="label">Where you left off</span>
-          <strong>${esc(chapterName(last.book.book, last.ch))}</strong></a>` : ''}
         ${L ? `<a class="continue" href="#${L.slug}-${L.chapter}"><span class="label">Latest in the series</span>
           <strong>${esc(chapterName(L.book, L.chapter))}</strong><em>${esc(fmtDate(L.date))}</em></a>` : ''}
         <a class="continue" href="#doctrines"><span class="label">Learn the doctrines</span>
@@ -313,7 +310,7 @@
     ['Prev and Next', 'The buttons at the bottom of a study walk through the whole Bible. Press and hold one to skip past chapters not yet studied.'],
     ['Go to a chapter', 'Type a reference like “ps 23”, “1 cor 13” or “rev” in the Go to a chapter box.'],
     ['Back button', 'Your phone’s Back button closes the chapter picker first, then steps back through the pages you came from.'],
-    ['Where you left off', 'The home page remembers the last study you opened on this device. Tap Old Testament or New Testament to fold its books away.'],
+    ['Where you left off', 'The home page lists the last five places you opened on this device: chapter studies, lessons and slides, doctrines and teachings. Tap one to go back. For slides it shows the slide you reached, and Open the slides on that page continues from there. Tap Old Testament or New Testament to fold its books away.'],
     ['Read in the KJV app', 'Opens that chapter in the KJV Bible app in a new tab, so your place here stays put.'],
     ['Doctrines & Teachings', 'Each doctrine opens with its slides, then the other lessons on it. Below them, under Further reading, are the teachings from the chapter studies it was built from. Tap a verse to open it in the KJV Bible app.'],
     ['Install the app', 'On Android choose Install app from the browser menu; on iPhone use Share, then Add to Home Screen. It then opens full screen like the KJV Bible app.'],
@@ -474,6 +471,9 @@
     const pics = lib.pictures.filter(p => p.topics.includes(id));
     if (!location.hash.startsWith('#doctrine-' + id)) return;
     document.title = topic.name + ' — Doctrines & Teachings';
+    const taught = openId && topic.teachings.find(x => String(x.id) === openId);
+    if (taught) notePlace(`#doctrine-${id}~${openId}`, 'teaching', taught.title);
+    else notePlace('#doctrine-' + id, 'doctrine', topic.name);
     setCrumbs([['Home', '#'], ['Doctrines', '#doctrines'], [topic.name, '#doctrine-' + id]]);
     view.classList.remove('wide');
     const groups = [];
@@ -668,6 +668,8 @@
     const title = plainTitle(l.title), week = weekOf(l.title);
     document.title = title + ' — Lessons & Classes';
     setCrumbs([['Home', '#'], ['Lessons', '#lessons'], [title, '#lesson-' + id]]);
+    const deck = l.parts.find(p => p.label === 'Slides' && p.kind === 'page');
+    notePlace('#lesson-' + id, deck ? 'slides' : 'lesson', title, deck ? new URL(deck.href, location.href).pathname : '');
     view.classList.remove('wide');
     const opens = l.parts.filter(p => p.kind !== 'notes');
     const notes = l.parts.filter(p => p.kind === 'notes');
@@ -760,6 +762,7 @@
     view.innerHTML = '<p class="loading">Loading ' + esc(title) + '…</p>';
     setFab(b, ch);
     remember(b, ch);
+    notePlace(`#${b.slug}-${ch}`, 'study', title);
 
     const [data, kjv, , lib] = await Promise.all([loadBook(b.slug), loadKJV(b.slug), loadTopics(), loadLessons()]);
     const base = `#${b.slug}-${ch}`;
@@ -990,6 +993,51 @@
   // ---------- last study opened (this browser only) ----------
   function remember(b, ch) {
     try { localStorage.setItem('wews_last', JSON.stringify({ slug: b.slug, ch })); } catch (e) { /* storage blocked */ }
+  }
+
+  // ---------- the last five places visited (this browser only) ----------
+  // A place is a chapter study, a lesson or slides (its launch page), a doctrine or a teaching.
+  const RECENT_KEY = 'wews_recent', RECENT_MAX = 5;
+  const PLACE_KIND = { study: 'Chapter study', lesson: 'Lesson', slides: 'Slides', doctrine: 'Doctrine', teaching: 'Teaching' };
+
+  function recentPlaces() {
+    let list = [];
+    try { list = JSON.parse(localStorage.getItem(RECENT_KEY) || '[]'); } catch (e) { list = []; }
+    list = Array.isArray(list) ? list.filter(x => x && typeof x.h === 'string' && x.h.startsWith('#') && x.n && PLACE_KIND[x.k]) : [];
+    if (!list.length && INDEX) {    // a visit made before this list existed
+      const old = lastOpened();
+      if (old) list = [{ h: `#${old.book.slug}-${old.ch}`, k: 'study', n: chapterName(old.book.book, old.ch) }];
+    }
+    return list.slice(0, RECENT_MAX);
+  }
+
+  // d: for slides, the address of the deck, so the list can show the slide you reached
+  function notePlace(h, k, n, d) {
+    let list = [];
+    try { list = JSON.parse(localStorage.getItem(RECENT_KEY) || '[]'); } catch (e) { /* start again */ }
+    list = (Array.isArray(list) ? list : []).filter(x => x && x.h !== h);
+    list.unshift(d ? { h, k, n, d, t: Date.now() } : { h, k, n, t: Date.now() });
+    try { localStorage.setItem(RECENT_KEY, JSON.stringify(list.slice(0, RECENT_MAX))); } catch (e) { /* storage blocked */ }
+  }
+
+  // The slide a deck last reached is kept by the deck itself (lessons/deck-extras.js).
+  function deckProgress(path) {
+    try {
+      const v = JSON.parse(localStorage.getItem('kjv_resume:' + path) || 'null');
+      return v && v.s > 1 && (!v.t || v.s < v.t) ? (v.t ? `slide ${v.s} of ${v.t}` : `slide ${v.s}`) : '';
+    } catch (e) { return ''; }
+  }
+
+  function recentPanel() {
+    const items = recentPlaces();
+    if (!items.length) return '';
+    return `<section class="recent" aria-label="Where you left off">
+      <span class="label">Where you left off</span>
+      <ol>${items.map(x => {
+        const prog = x.d ? deckProgress(x.d) : '';
+        return `<li><a href="${esc(x.h)}"><span class="kind">${esc(PLACE_KIND[x.k])}</span>
+          <strong>${esc(x.n)}</strong>${prog ? `<em>${esc(prog)}</em>` : ''}</a></li>`;
+      }).join('')}</ol></section>`;
   }
 
   function lastOpened() {
