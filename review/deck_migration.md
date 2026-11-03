@@ -56,7 +56,7 @@ builder, no fact-checking of the author's views. Order:
    - [x] Soul winning
    - The walk, in five decks (the user's call, 415 teachings):
      - [x] Walking with God, the old man and the new, the cost of discipleship (`topic-walk-with-god`)
-     - [ ] Separation from the world, with liberty and the weaker brother
+     - [x] Separation from the world, with liberty and the weaker brother (`topic-walk-separation`)
      - [ ] Wine and strong drink (pulled out of Separation)
      - [ ] Serving and loving others, with a good witness before men
      - [ ] The heart, not outward religion; words and vows; submitting to authority
@@ -131,6 +131,7 @@ Sermons and the lessons from other preachers do not get decks. They stay as note
 - [x] **The Church – A Called Out Assembly of Believers** (`topic-church`)
 - [x] **Soul Winning – He That Winneth Souls Is Wise** (`topic-soulwinning`)
 - [x] **Walking with God – The Old Man and the New** (`topic-walk-with-god`)
+- [x] **Separated unto God – Liberty and the Weaker Brother** (`topic-walk-separation`)
 
 ## Standing decisions
 
