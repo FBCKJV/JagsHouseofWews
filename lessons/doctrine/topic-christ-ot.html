@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>They Are They Which Testify of Me – Christ in the Old Testament</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Christ in the Old Testament: the promise from the garden, the pictures of Christ in the patriarchs, the tabernacle and the sacrifices, the feasts fulfilled, Christ our King and High Priest, and Christ and His bride, from the teachings on Christ in the Old Testament.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="They Are They Which Testify of Me">
+  <div class="page title-page">
+    <div class="overline">Doctrine · Christ in the Old Testament</div>
+    <h1>They Testify of Me</h1>
+    <p class="sub">Types, shadows and prophecies fulfilled in Christ.</p>
+    <div class="refs center"><button class="ref" data-v="John 5:39">John 5:39</button><button class="ref" data-v="Luke 24:27">Luke 24:27</button><button class="ref" data-v="Acts 10:43">Acts 10:43</button><button class="ref" data-v="Hebrews 10:1">Hebrews 10:1</button><button class="ref" data-v="Revelation 13:8">Revelation 13:8</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any gold reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="It is entirely about Him">
+  <div class="page">
+    <h2>It is entirely about Him</h2>
+    <blockquote class="big-verse">And beginning at Moses and all the prophets, <mark>he expounded unto them in all the scriptures the things concerning himself</mark>.<cite>Luke 24:27</cite></blockquote>
+    <p>Many argue that Jesus wasn't known in the Old Testament, that salvation by faith didn't exist. There is no anachronism when we see Christ in the Old Testament. It is entirely about Him. He is the Lamb slain before the foundation of the world (<button class="ref" data-v="Revelation 13:8">Revelation 13:8</button>).</p>
+    <p>Moses and the prophets all gave witness to His coming. And though they saw it afar off, most dying in faith having not seen Him, but persuaded of Him, many waited, watching for Him (<button class="ref" data-v="Hebrews 11:13">Hebrews 11:13</button>).</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-christ-ot~16871" target="_blank" rel="noopener">Seeing Christ in Job is no anachronism ↗</a></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Christ foretold" data-title="The seed of the woman">
+  <div class="page">
+    <div class="kicker">Christ foretold</div>
+    <h2>The seed of the woman</h2>
+    <blockquote class="big-verse">And I will put enmity between thee and the woman, and between thy seed and her seed; <mark>it shall bruise thy head, and thou shalt bruise his heel</mark>.<cite>Genesis 3:15</cite></blockquote>
+    <p>God the Father who loves man offers the first promise of Christ, while laying out the consequences of bringing sin into the world. The seed who bruises Satan's head, and whom Satan bruises the heel, is Christ. And He covered them with coats of skins (<button class="ref" data-v="Genesis 3:21">Genesis 3:21</button>).</p>
+    <p>Revelation 12 is the fulfilment: the woman bringing forth the man child who will crush Satan's head, the dragon seeking to devour Him as soon as He was born (<button class="ref" data-v="Revelation 12:4-5">Revelation 12:4-5</button>). The seed of Satan are his spawn, reprobates. Sons of Belial. Vipers.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Christ foretold" data-title="God will provide himself a lamb">
+  <div class="page">
+    <div class="kicker">Christ foretold</div>
+    <h2>God will provide himself a lamb</h2>
+    <blockquote class="big-verse">And Abraham said, My son, <mark>God will provide himself a <mark class="w">lamb</mark> for a burnt offering</mark>: so they went both of them together.<cite>Genesis 22:8</cite></blockquote>
+    <p>Take thine only son to the land of Moriah, which is where Jerusalem is (<button class="ref" data-v="2 Chronicles 3:1">2 Chronicles 3:1</button>), for a burnt offering. On the third day Abraham lifted up his eyes. The wood, carried up the mount. The thicket of thorns on the ram, offered in place of the son by God.</p>
+    <p>Jerusalem is where God chose to place His name. Where His name would be killed for our transgressions. God did not require the sacrifice of man, but gave His only begotten Son. Jehovahjireh (<button class="ref" data-v="Genesis 22:14">Genesis 22:14</button>).</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Christ foretold" data-title="A Prophet like Moses, a Son of David">
+  <div class="page">
+    <div class="kicker">Christ foretold</div>
+    <h2>A Prophet like Moses, a Son of David</h2>
+    <blockquote class="big-verse"><mark>The <span class="lord">Lord</span> thy God will raise up unto thee a Prophet from the midst of thee, of thy brethren, like unto me</mark>; unto him ye shall hearken;<cite>Deuteronomy 18:15</cite></blockquote>
+    <p>God tells David, through Nathan, that his son will build the house, and the son of David will rule forever. This is a clear picture of Christ (<button class="ref" data-v="1 Chronicles 17:11-14">1 Chronicles 17:11-14</button>).</p>
+    <p>To the secular, this places Jesus in line to be an earthly king. To those called by the Spirit, He is the savior of their souls and heir to the Heavenly Kingdom. The Son of David, and the Son of God (<button class="ref" data-v="Luke 3:38">Luke 3:38</button>).</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Christ foretold" data-title="Psalm 22 and the cross">
+  <div class="page">
+    <div class="kicker">Christ foretold</div>
+    <h2>Psalm 22 and the cross</h2>
+    <blockquote class="big-verse">For dogs have compassed me: the assembly of the wicked have inclosed me: <mark>they pierced my hands and my feet</mark>. I may tell all my bones: they look and stare upon me. <mark>They part my garments among them, and cast lots upon my vesture</mark>.<cite>Psalm 22:16-18</cite></blockquote>
+    <p>In the 9th hour, Jesus cried out from the cross the opening line of a song penned by David centuries earlier (<button class="ref" data-v="Matthew 27:46">Matthew 27:46</button>). Compassed about by dogs, the Roman soldiers doing the work of the Jews, piercing Jesus' hands and feet. Splayed out upon the cross, His joints distended.</p>
+    <p><em>As a sheep before her shearers is dumb, so he openeth not his mouth</em> (<button class="ref" data-v="Isaiah 53:7">Isaiah 53:7</button>). Pilate could be excused for not knowing the prophecy. Herod, King of the Jews, and the priests and scribes should have.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Christ foretold" data-title="Bethlehem, the ass, thirty pieces of silver">
+  <div class="page">
+    <div class="kicker">Christ foretold</div>
+    <h2>Bethlehem, the ass, thirty pieces of silver</h2>
+    <div class="tbl"><table><thead><tr><th>The prophecy</th><th>Fulfilled in Christ</th></tr></thead><tbody><tr><td><button class="ref" data-v="Micah 5:2">Micah 5:2</button></td><td>Born in Bethlehem, whose goings forth have been from of old, from everlasting</td></tr><tr><td><button class="ref" data-v="Hosea 11:1">Hosea 11:1</button></td><td>Out of Egypt have I called my son</td></tr><tr><td><button class="ref" data-v="Zechariah 9:9">Zechariah 9:9</button></td><td>Thy King cometh, lowly, and riding upon an ass</td></tr><tr><td><button class="ref" data-v="Zechariah 11:12-13">Zechariah 11:12-13</button></td><td>Thirty pieces of silver cast to the potter</td></tr><tr><td><button class="ref" data-v="Zechariah 13:6-7">Zechariah 13:6-7</button></td><td>The wounds in His hands; smite the shepherd</td></tr><tr><td><button class="ref" data-v="Daniel 9:25-26">Daniel 9:25-26</button></td><td>The seventy weeks: Messiah cut off</td></tr></tbody></table></div>
+    <p>Micah 5 hardly needs any commentary, it is so clear. God dropped a prophecy hundreds of years earlier, nailing the timing of His Son's arrival and sacrifice.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Christ foretold" data-title="The stone and the sign of Jonas">
+  <div class="page">
+    <div class="kicker">Christ foretold</div>
+    <h2>The stone and the sign of Jonas</h2>
+    <blockquote class="big-verse">Thou sawest till that <mark>a stone was cut out without hands</mark>, which smote the image upon his feet that were of iron and clay, and brake them to pieces. Then was the iron, the clay, the brass, the silver, and the gold, broken to pieces together, and became like the chaff of the summer threshingfloors; and the wind carried them away, that no place was found for them: and the stone that smote the image became a great mountain, and filled the whole earth.<cite>Daniel 2:34-35</cite></blockquote>
+    <p>The cornerstone laid before the foundation (<button class="ref" data-v="Job 38:6">Job 38:6</button>). The stone cut out without hands that becomes a great mountain and fills the whole earth.</p>
+    <p>Three days and nights in the heart of the earth (<button class="ref" data-v="Matthew 12:40">Matthew 12:40</button>). The timing is a minor doctrine, and yet its corruption leads to heresy: that Jesus didn't suffer in Hell as a burnt offering for sin, or not for 3 days and nights as the Bible says. <em>This day is this scripture fulfilled in your ears</em> (<button class="ref" data-v="Luke 4:21">Luke 4:21</button>).</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-christ-ot~6501" target="_blank" rel="noopener">Coats of skins: the first promise of Christ ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-christ-ot~7116" target="_blank" rel="noopener">God will provide Himself a lamb ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-christ-ot~17753" target="_blank" rel="noopener">Psalm 22 and the sufferings of the cross ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-christ-ot~16055" target="_blank" rel="noopener">The seventy weeks point to Jesus ↗</a></div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Old Testament pictures of Christ" data-title="The LORD appeared">
+  <div class="page">
+    <div class="kicker">Pictures of Christ</div>
+    <h2>The LORD appeared</h2>
+    <blockquote class="big-verse"><mark>And the <span class="lord">Lord</span> appeared unto him</mark> in the plains of Mamre: and he sat in the tent door in the heat of the day;<cite>Genesis 18:1</cite></blockquote>
+    <p>This is an Old Testament manifestation of Christ Jesus, appearing with two angels before Abraham on their way to judge Sodom. <em>No man hath seen God at any time, the only begotten Son... he hath declared him</em> (<button class="ref" data-v="John 1:18">John 1:18</button>).</p>
+    <p>Jacob wrestled with a man until the breaking of the day (<button class="ref" data-v="Genesis 32:30">Genesis 32:30</button>). The angel sent before Moses was Christ, God with us: <em>My presence shall go with thee, and I will give thee rest</em> (<button class="ref" data-v="Exodus 33:14">Exodus 33:14</button>).</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Old Testament pictures of Christ" data-title="The serpent, the rock, the bread">
+  <div class="page">
+    <div class="kicker">Pictures of Christ</div>
+    <h2>The serpent, the rock, the bread</h2>
+    <blockquote class="big-verse">And <mark>as Moses lifted up the serpent in the wilderness, even so must the Son of man be lifted up</mark>:<cite>John 3:14</cite></blockquote>
+    <p>“If God be real, why bad stuff happen?” They are spoiled by their own lack of faith and gratitude. And God gives them the brazen serpent, lifted up, that whoever looked upon it lived (<button class="ref" data-v="Numbers 21:8-9">Numbers 21:8-9</button>).</p>
+    <p>The rock smitten once, then only to be spoken to (<button class="ref" data-v="Numbers 20:8-12">Numbers 20:8-12</button>; <button class="ref" data-v="1 Corinthians 10:4">1 Corinthians 10:4</button>). Manna, the bread which came down from heaven (<button class="ref" data-v="John 6:32-35">John 6:32-35</button>). Like the entire story of Exodus, a picture of salvation in Christ.</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Old Testament pictures of Christ" data-title="Joseph and his brethren">
+  <div class="page">
+    <div class="kicker">Pictures of Christ</div>
+    <h2>Joseph and his brethren</h2>
+    <blockquote class="big-verse">And his brethren said to him, Shalt thou indeed reign over us? or shalt thou indeed have dominion over us? <mark>And they hated him yet the more for his dreams</mark>, and for his words.<cite>Genesis 37:8</cite></blockquote>
+    <p>They hate the favoritism Jacob gives Joseph, and that he's tattled on their sin. In parallel to Christ we see the resentment. Like the Jews' resentment of Christians, the older hating the younger because of the prophecy of who will reign.</p>
+    <p>Daniel saw a glorified Jesus by the river, eyes as lamps of fire, arms and feet as polished brass (<button class="ref" data-v="Daniel 10:5-6">Daniel 10:5-6</button>; <button class="ref" data-v="Revelation 1:13-15">Revelation 1:13-15</button>). Not Gabriel: Daniel had already met that angel.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-christ-ot~6976" target="_blank" rel="noopener">The Judge of all the earth at Abraham's tent ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-christ-ot~12636" target="_blank" rel="noopener">The brazen serpent lifted up ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-christ-ot~7462" target="_blank" rel="noopener">Joseph's Brothers Hated Him as the Jews Hated Christ ↗</a></div>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="The tabernacle and the sacrifices" data-title="A pattern of heavenly things">
+  <div class="page">
+    <div class="kicker">The tabernacle</div>
+    <h2>A pattern of heavenly things</h2>
+    <blockquote class="big-verse"><mark>Who serve unto the example and shadow of heavenly things</mark>, as Moses was admonished of God when he was about to make the tabernacle: for, See, saith he, that thou make all things according to the pattern shewed to thee in the mount.<cite>Hebrews 8:5</cite></blockquote>
+    <p>Everything in the tabernacle is a picture of Christ. It may seem like an Ikea assembly manual, and in the view of modern theologies that strip Christ from the “Jewish Bible,” the Old Testament becomes meaningless. But every aspect matters. Blue, purple and scarlet: the colors of the bruises and blood of Christ (<button class="ref" data-v="Exodus 26:1">Exodus 26:1</button>).</p>
+    <p>Why did Christ die in this manner? Man by our nature knows sin requires a sacrifice for atonement. Every animal sacrificed, from Adam and Eve to Abel to Noah to Moses, were pictures of the actual sacrifice to come.</p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="The tabernacle and the sacrifices" data-title="The burnt offering and the scapegoat">
+  <div class="page">
+    <div class="kicker">The tabernacle</div>
+    <h2>The burnt offering and the scapegoat</h2>
+    <blockquote class="big-verse">If his offering be a burnt sacrifice of the herd, let him offer a male without blemish: he shall offer it <mark>of his own voluntary will</mark> at the door of the tabernacle of the congregation before the <span class="lord">Lord</span>. And he shall put his hand upon the head of the burnt offering; and <mark>it shall be accepted for him to make atonement for him</mark>.<cite>Leviticus 1:3-4</cite></blockquote>
+    <p>The burnt offering is both of a man's own free will, and is an offering for substitutionary atonement. Not a man chosen before time by God. Not some elect men, drawn and compelled. But by his own voluntary will.</p>
+    <p>The sin offering a picture of Jesus; the scapegoat a picture of the remission of sin, <em>all their transgressions in all their sins</em>, carried away into the wilderness to be remembered no more (<button class="ref" data-v="Leviticus 16:21-22">Leviticus 16:21-22</button>).</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="The tabernacle and the sacrifices" data-title="Cedar, scarlet and hyssop">
+  <div class="page">
+    <div class="kicker">The tabernacle</div>
+    <h2>Cedar, scarlet and hyssop</h2>
+    <blockquote class="big-verse">Then shall the priest command to take for him that is to be cleansed <mark>two birds alive and clean, and cedar wood, and scarlet, and hyssop</mark>:<cite>Leviticus 14:4</cite></blockquote>
+    <p>We see the wood of the cross, the scarlet of the blood, and the hyssop, the same used by the Roman guard to give Jesus the vinegar to drink (<button class="ref" data-v="John 19:29">John 19:29</button>). Leprosy is a picture of sin, and its miraculous healing, of the saving grace of God.</p>
+    <p>The red heifer without blemish, slain and burned without the camp with cedar, hyssop and scarlet, is an explicit picture of Christ (<button class="ref" data-v="Numbers 19:2-6">Numbers 19:2-6</button>; <button class="ref" data-v="Hebrews 13:12">Hebrews 13:12</button>). The burnt offerings were all a picture of Christ Jesus. Not a prophecy of the Jews today.</p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="The tabernacle and the sacrifices" data-title="The camp laid out as a cross">
+  <div class="page">
+    <div class="kicker">The tabernacle</div>
+    <h2>The camp laid out as a cross</h2>
+    <blockquote class="big-verse"><mark>How goodly are thy tents, O Jacob</mark>, and thy tabernacles, O Israel!<cite>Numbers 24:5</cite></blockquote>
+    <p>The camps surround the Tabernacle, the throne of God: Judah to the East, larger than the others; West a bit smaller; North and South almost equal (<button class="ref" data-v="Numbers 2:2-3">Numbers 2:2-3</button>). While we cannot know with 100% certainty that the layout was a cross, it certainly is what is described, in my opinion.</p>
+    <p>Balaam looked down on the camp and marveled. Four standards, as the four faces of the cherubim about the throne of God: a lion, an ox, a man and an eagle (<button class="ref" data-v="Ezekiel 1:10">Ezekiel 1:10</button>). Nothing in the Bible is incidental, accidental or coincidental.</p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="The tabernacle and the sacrifices" data-title="He sat down">
+  <div class="page">
+    <div class="kicker">The tabernacle</div>
+    <h2>He sat down</h2>
+    <blockquote class="big-verse">And every priest standeth daily ministering and offering oftentimes the same sacrifices, which can never take away sins: But this man, after he had offered one sacrifice for sins for ever, <mark>sat down on the right hand of God</mark>;<cite>Hebrews 10:11-12</cite></blockquote>
+    <p>In the Tabernacle there were no chairs. A priest could never sit down because his job was never done. But Jesus, the author and finisher of our faith, sat down. Not a bone of Him broken, the Passover lamb (<button class="ref" data-v="Psalms 34:20">Psalm 34:20</button>; <button class="ref" data-v="John 19:36">John 19:36</button>).</p>
+    <p>Not a cracker. Not a wafer. The blood of Christ was shed on that hill in Jerusalem; it isn't in a cup of juice or wine. Ordinances are a memorial. They themselves have no power (<button class="ref" data-v="1 Corinthians 11:24-26">1 Corinthians 11:24-26</button>).</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-christ-ot~10263" target="_blank" rel="noopener">The tabernacle, a pattern of heavenly things ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-christ-ot~11049" target="_blank" rel="noopener">The burnt offering: free will and substitution ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-christ-ot~12399" target="_blank" rel="noopener">The camp of Israel laid out as a cross ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-christ-ot~17816" target="_blank" rel="noopener">The priests stood, but Christ sat down ↗</a></div>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="The feasts fulfilled in Christ" data-title="Christ our passover">
+  <div class="page">
+    <div class="kicker">The feasts fulfilled</div>
+    <h2>Christ our passover</h2>
+    <blockquote class="big-verse">Purge out therefore the old leaven, that ye may be a new lump, as ye are unleavened. <mark>For even <mark class="w">Christ</mark> our passover is sacrificed for us</mark>:<cite>1 Corinthians 5:7</cite></blockquote>
+    <p>Passover and the Feast of Unleavened Bread, First Fruits, and the Feast of Weeks, Pentecost, were given as a picture of Christ's first coming. The Passover lamb, Christ's sacrifice. The purging of the leaven, the remission of sin. First Fruits, His resurrection.</p>
+    <p>The lamb without blemish brought before the people on the 10th day, slain on the 14th, the blood upon the wooden door posts (<button class="ref" data-v="Exodus 12:3-7">Exodus 12:3-7</button>). Three days without work, as Jesus does it all. We can do nothing.</p>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="The feasts fulfilled in Christ" data-title="Pentecost and the fall feasts">
+  <div class="page">
+    <div class="kicker">The feasts fulfilled</div>
+    <h2>Pentecost and the fall feasts</h2>
+    <blockquote class="big-verse">Speak unto the children of Israel, saying, In the seventh month, in the first day of the month, shall ye have a sabbath, <mark>a memorial of blowing of trumpets</mark>, an holy convocation.<cite>Leviticus 23:24</cite></blockquote>
+    <p>Pentecost, the Feast of Harvest, the day the gospel was preached and the firstfruits gathered in (<button class="ref" data-v="Acts 2:1">Acts 2:1</button>). The spring feasts picture His first coming; the fall feasts, trumpets, atonement and tabernacles, His second.</p>
+    <p>On these sabbaths NO WORK was to be done. The reinforcement of His grace in giving us a free gift of salvation in Jesus, who is the Sabbath. Those who did any work were cut off (<button class="ref" data-v="Leviticus 23:30">Leviticus 23:30</button>). So too will it be in the second coming.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-christ-ot~13747" target="_blank" rel="noopener">The feasts of the LORD, Passover and the word Easter ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-christ-ot~7743" target="_blank" rel="noopener">The Fall Feasts Picture the Second Coming ↗</a></div>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Christ our King and High Priest" data-title="After the order of Melchisedec">
+  <div class="page">
+    <div class="kicker">King and High Priest</div>
+    <h2>After the order of Melchisedec</h2>
+    <blockquote class="big-verse">And <mark>Melchizedek king of Salem brought forth bread and wine: and he was the priest of the most high God</mark>.<cite>Genesis 14:18</cite></blockquote>
+    <p>Melchizedek is seen as an early appearance of Jesus, the king of peace, without beginning or end, <em>made like unto the Son of God; abideth a priest continually</em> (<button class="ref" data-v="Hebrews 7:3">Hebrews 7:3</button>).</p>
+    <p>Joshua the high priest crowned: <em>The BRANCH... shall be a priest upon his throne</em> (<button class="ref" data-v="Zechariah 6:12-13">Zechariah 6:12-13</button>). Both King and Priest. They who were under the law have no need of the human priests given by Moses.</p>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Christ our King and High Priest" data-title="Aaron&#x27;s rod, the covenant of salt, the veil">
+  <div class="page">
+    <div class="kicker">King and High Priest</div>
+    <h2>Aaron's rod, the covenant of salt, the veil</h2>
+    <blockquote class="big-verse"><mark>Let us therefore come boldly unto the throne of grace</mark>, that we may obtain mercy, and find grace to help in time of need.<cite>Hebrews 4:16</cite></blockquote>
+    <p>Aaron's rod, a dead branch brought to life, is a clear and obvious picture of Christ Jesus (<button class="ref" data-v="Numbers 17:8">Numbers 17:8</button>). The covenant of salt is bestowed on a priesthood and a kingdom (<button class="ref" data-v="Numbers 18:19">Numbers 18:19</button>; <button class="ref" data-v="2 Chronicles 13:5">2 Chronicles 13:5</button>). Both fulfilled in Christ Jesus.</p>
+    <p>The high priest entered behind the veil once a year. But when Christ died, that veil was torn (<button class="ref" data-v="Matthew 27:51">Matthew 27:51</button>). There is no calling on a “saint,” or “Mary” to intercede. There is only faith in God's word and His perfect work.</p>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Christ our King and High Priest" data-title="Mephibosheth at the king&#x27;s table">
+  <div class="page">
+    <div class="kicker">King and High Priest</div>
+    <h2>Mephibosheth at the king's table</h2>
+    <blockquote class="big-verse">So Mephibosheth dwelt in Jerusalem: for <mark>he did eat continually at the king’s table</mark>; and was lame on both his feet.<cite>2 Samuel 9:13</cite></blockquote>
+    <p>Mephibosheth is a picture of a sinner, seeking grace in the eyes of the King. He was crippled in youth, as we are in sin. Custom would have the heirs of the previous king killed, yet David pardons him and sets him up as an adopted son, welcome at his table forever.</p>
+    <p><em>Why do the heathen rage?</em> (<button class="ref" data-v="Psalms 2:1-2">Psalm 2:1-2</button>) Kings and rulers, presidents and popes, all seek to be freed from the ways of the Lord. <em>Kiss the Son, lest he be angry</em> (<button class="ref" data-v="Psalms 2:12">Psalm 2:12</button>).</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-christ-ot~6814" target="_blank" rel="noopener">Melchizedek, a picture of Christ ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-christ-ot~12581" target="_blank" rel="noopener">Aaron's rod that budded ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-christ-ot~14225" target="_blank" rel="noopener">Mephibosheth at the king's table ↗</a></div>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Christ and His bride" data-title="The kinsman redeemer">
+  <div class="page">
+    <div class="kicker">Christ and His bride</div>
+    <h2>The kinsman redeemer</h2>
+    <blockquote class="big-verse">And he said, Who art thou? And she answered, I am Ruth thine handmaid: <mark>spread therefore thy skirt over thine handmaid</mark>; <mark>for thou art a near kinsman</mark>.<cite>Ruth 3:9</cite></blockquote>
+    <p>The nearer kinsman could redeem the land, but not Ruth, to raise the name of the dead. This is a picture of the Law itself. By the Law the people could keep their inheritance, but the Law is unable to redeem the person, and raise their name from the dead. The law could not redeem. Boaz could (<button class="ref" data-v="Ruth 4:6-10">Ruth 4:6-10</button>).</p>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Christ and His bride" data-title="Hosea buys back the adulteress">
+  <div class="page">
+    <div class="kicker">Christ and His bride</div>
+    <h2>Hosea buys back the adulteress</h2>
+    <blockquote class="big-verse">And it shall be at that day, saith the <span class="lord">Lord</span>, that <mark>thou shalt call me Ishi</mark>; <mark>and shalt call me no more Baali</mark>.<cite>Hosea 2:16</cite></blockquote>
+    <p>The Lord instructed the prophet to love a woman who is an adulteress, just as Israel played the harlot to their God. The people wickedly left His protection for wine and idols, as an unfaithful wife (<button class="ref" data-v="Hosea 3:1-2">Hosea 3:1-2</button>).</p>
+    <p>And yet, from the wilderness, <em>the valley of Achor for a door of hope</em> (<button class="ref" data-v="Hosea 2:15">Hosea 2:15</button>). Why one? <em>That he might seek a godly seed</em> (<button class="ref" data-v="Malachi 2:15">Malachi 2:15</button>). The promise was always Christ.</p>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="Christ and His bride" data-title="Song of Solomon">
+  <div class="page">
+    <div class="kicker">Christ and His bride</div>
+    <h2>Song of Solomon</h2>
+    <blockquote class="big-verse">My beloved spake, and said unto me, <mark>Rise up, my love, my fair one, and come away</mark>.<cite>Song of Solomon 2:10</cite></blockquote>
+    <p>The clear allegory of Christ and His beloved, the saved. He is the tree of life, over a precious flower among the thorns. She seeks him in the night, as at the empty tomb, and finds <em>him whom my soul loveth</em> (<button class="ref" data-v="Song of Solomon 3:4">Song of Solomon 3:4</button>).</p>
+    <p>Battered by the watchmen, she still sings his praise: <em>This is my beloved, and this is my friend</em> (<button class="ref" data-v="Song of Solomon 5:16">Song of Solomon 5:16</button>). Unsaved people who see Christians suffer for Christ and still preach His love are often baffled, but sometimes moved. <em>Set me as a seal upon thine heart</em> (<button class="ref" data-v="Song of Solomon 8:6">Song of Solomon 8:6</button>).</p>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="Christ and His bride" data-title="The King&#x27;s daughter">
+  <div class="page">
+    <div class="kicker">Christ and His bride</div>
+    <h2>The King's daughter</h2>
+    <blockquote class="big-verse">Hearken, O daughter, and consider, and incline thine ear; <mark>forget also thine own people, and thy father’s house</mark>; So shall the king greatly desire thy beauty: for he is thy Lord; and worship thou him.<cite>Psalm 45:10-11</cite></blockquote>
+    <p>Psalm 45 is a doctrine-rich wedding song that speaks clearly of the Lord Jesus, a bride brought to Him. At His right hand stands the queen, decked in gold of Ophir. Her beauty provided by the King, to set apart the bride. The church.</p>
+    <p><em>Thou shalt be called Hephzibah, and thy land Beulah</em> (<button class="ref" data-v="Isaiah 62:4">Isaiah 62:4</button>). The New Jerusalem coming down from Heaven, decked as a bride (<button class="ref" data-v="Revelation 21:2">Revelation 21:2</button>).</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-christ-ot~13879" target="_blank" rel="noopener">The law could not redeem, Boaz could ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-christ-ot~15279" target="_blank" rel="noopener">Hosea buys back the adulteress ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-christ-ot~17562" target="_blank" rel="noopener">I am black, but comely: Christ and His beloved ↗</a></div>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="slide" data-section="The scarlet thread" data-title="The Scarlet Thread">
+  <div class="page title-page later">
+    <div class="overline">Christ in the Old Testament</div>
+    <h1>The Scarlet Thread</h1>
+    <blockquote class="big-verse">Search the scriptures; for in them ye think ye have eternal life: and <mark>they are they which testify of me</mark>.<cite>John 5:39</cite></blockquote>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="center">Nothing in Scripture is incidental, accidental or coincidental. And ultimately, everything points to Jesus.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-topic-law" target="_blank" rel="noopener">The Law Is Good – The Law and the Covenants ↗</a><a class="ref lesson-link" href="../../studies/#lesson-topic-godhead" target="_blank" rel="noopener">God, Christ &amp; the Holy Ghost – These Three Are One ↗</a></div>
+    <p class="sub center">Every teaching is on the <a class="ref lesson-link" href="../../studies/#doctrine-christ-ot" target="_blank" rel="noopener">Christ in the Old Testament ↗</a> page.</p>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 Chronicles 17:11-14":[[11, "And it shall come to pass, when thy days be expired that thou must go to be with thy fathers, that I will raise up thy seed after thee, which shall be of thy sons; and I will establish his kingdom."], [12, "He shall build me an house, and I will stablish his throne for ever."], [13, "I will be his father, and he shall be my son: and I will not take my mercy away from him, as I took it from him that was before thee:"], [14, "But I will settle him in mine house and in my kingdom for ever: and his throne shall be established for evermore."]],
+  "1 Corinthians 10:4":[[4, "And did all drink the same spiritual drink: for they drank of that spiritual Rock that followed them: and that Rock was Christ."]],
+  "1 Corinthians 11:24-26":[[24, "And when he had given thanks, he brake it, and said, Take, eat: this is my body, which is broken for you: this do in remembrance of me."], [25, "After the same manner also he took the cup, when he had supped, saying, This cup is the new testament in my blood: this do ye, as oft as ye drink it, in remembrance of me."], [26, "For as often as ye eat this bread, and drink this cup, ye do shew the Lord’s death till he come."]],
+  "2 Chronicles 13:5":[[5, "Ought ye not to know that the LORD God of Israel gave the kingdom over Israel to David for ever, even to him and to his sons by a covenant of salt?"]],
+  "2 Chronicles 3:1":[[1, "Then Solomon began to build the house of the LORD at Jerusalem in mount Moriah, where the Lord appeared unto David his father, in the place that David had prepared in the threshingfloor of Ornan the Jebusite."]],
+  "Acts 10:43":[[43, "To him give all the prophets witness, that through his name whosoever believeth in him shall receive remission of sins."]],
+  "Acts 2:1":[[1, "And when the day of Pentecost was fully come, they were all with one accord in one place."]],
+  "Daniel 10:5-6":[[5, "Then I lifted up mine eyes, and looked, and behold a certain man clothed in linen, whose loins were girded with fine gold of Uphaz:"], [6, "His body also was like the beryl, and his face as the appearance of lightning, and his eyes as lamps of fire, and his arms and his feet like in colour to polished brass, and the voice of his words like the voice of a multitude."]],
+  "Daniel 9:25-26":[[25, "Know therefore and understand, that from the going forth of the commandment to restore and to build Jerusalem unto the Messiah the Prince shall be seven weeks, and threescore and two weeks: the street shall be built again, and the wall, even in troublous times."], [26, "And after threescore and two weeks shall Messiah be cut off, but not for himself: and the people of the prince that shall come shall destroy the city and the sanctuary; and the end thereof shall be with a flood, and unto the end of the war desolations are determined."]],
+  "Exodus 12:3-7":[[3, "Speak ye unto all the congregation of Israel, saying, In the tenth day of this month they shall take to them every man a lamb, according to the house of their fathers, a lamb for an house:"], [4, "And if the household be too little for the lamb, let him and his neighbour next unto his house take it according to the number of the souls; every man according to his eating shall make your count for the lamb."], [5, "Your lamb shall be without blemish, a male of the first year: ye shall take it out from the sheep, or from the goats:"], [6, "And ye shall keep it up until the fourteenth day of the same month: and the whole assembly of the congregation of Israel shall kill it in the evening."], [7, "And they shall take of the blood, and strike it on the two side posts and on the upper door post of the houses, wherein they shall eat it."]],
+  "Exodus 26:1":[[1, "Moreover thou shalt make the tabernacle with ten curtains of fine twined linen, and blue, and purple, and scarlet: with cherubims of cunning work shalt thou make them."]],
+  "Exodus 33:14":[[14, "And he said, My presence shall go with thee, and I will give thee rest."]],
+  "Ezekiel 1:10":[[10, "As for the likeness of their faces, they four had the face of a man, and the face of a lion, on the right side: and they four had the face of an ox on the left side; they four also had the face of an eagle."]],
+  "Genesis 22:14":[[14, "And Abraham called the name of that place Jehovahjireh: as it is said to this day, In the mount of the LORD it shall be seen."]],
+  "Genesis 32:30":[[30, "And Jacob called the name of the place Peniel: for I have seen God face to face, and my life is preserved."]],
+  "Genesis 3:21":[[21, "Unto Adam also and to his wife did the LORD God make coats of skins, and clothed them."]],
+  "Hebrews 10:1":[[1, "For the law having a shadow of good things to come, and not the very image of the things, can never with those sacrifices which they offered year by year continually make the comers thereunto perfect."]],
+  "Hebrews 11:13":[[13, "These all died in faith, not having received the promises, but having seen them afar off, and were persuaded of them, and embraced them, and confessed that they were strangers and pilgrims on the earth."]],
+  "Hebrews 13:12":[[12, "Wherefore Jesus also, that he might sanctify the people with his own blood, suffered without the gate."]],
+  "Hebrews 7:3":[[3, "Without father, without mother, without descent, having neither beginning of days, nor end of life; but made like unto the Son of God; abideth a priest continually."]],
+  "Hosea 11:1":[[1, "When Israel was a child, then I loved him, and called my son out of Egypt."]],
+  "Hosea 2:15":[[15, "And I will give her her vineyards from thence, and the valley of Achor for a door of hope: and she shall sing there, as in the days of her youth, and as in the day when she came up out of the land of Egypt."]],
+  "Hosea 3:1-2":[[1, "Then said the LORD unto me, Go yet, love a woman beloved of her friend, yet an adulteress, according to the love of the LORD toward the children of Israel, who look to other gods, and love flagons of wine."], [2, "So I bought her to me for fifteen pieces of silver, and for an homer of barley, and an half homer of barley:"]],
+  "Isaiah 53:7":[[7, "He was oppressed, and he was afflicted, yet he opened not his mouth: he is brought as a lamb to the slaughter, and as a sheep before her shearers is dumb, so he openeth not his mouth."]],
+  "Isaiah 62:4":[[4, "Thou shalt no more be termed Forsaken; neither shall thy land any more be termed Desolate: but thou shalt be called Hephzibah, and thy land Beulah: for the LORD delighteth in thee, and thy land shall be married."]],
+  "Job 38:6":[[6, "Whereupon are the foundations thereof fastened? or who laid the corner stone thereof;"]],
+  "John 19:29":[[29, "Now there was set a vessel full of vinegar: and they filled a spunge with vinegar, and put it upon hyssop, and put it to his mouth."]],
+  "John 19:36":[[36, "For these things were done, that the scripture should be fulfilled, A bone of him shall not be broken."]],
+  "John 1:18":[[18, "No man hath seen God at any time; the only begotten Son, which is in the bosom of the Father, he hath declared him."]],
+  "John 5:39":[[39, "Search the scriptures; for in them ye think ye have eternal life: and they are they which testify of me."]],
+  "John 6:32-35":[[32, "Then Jesus said unto them, Verily, verily, I say unto you, Moses gave you not that bread from heaven; but my Father giveth you the true bread from heaven."], [33, "For the bread of God is he which cometh down from heaven, and giveth life unto the world."], [34, "Then said they unto him, Lord, evermore give us this bread."], [35, "And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst."]],
+  "Leviticus 16:21-22":[[21, "And Aaron shall lay both his hands upon the head of the live goat, and confess over him all the iniquities of the children of Israel, and all their transgressions in all their sins, putting them upon the head of the goat, and shall send him away by the hand of a fit man into the wilderness:"], [22, "And the goat shall bear upon him all their iniquities unto a land not inhabited: and he shall let go the goat in the wilderness."]],
+  "Leviticus 23:30":[[30, "And whatsoever soul it be that doeth any work in that same day, the same soul will I destroy from among his people."]],
+  "Luke 24:27":[[27, "And beginning at Moses and all the prophets, he expounded unto them in all the scriptures the things concerning himself."]],
+  "Luke 3:38":[[38, "Which was the son of Enos, which was the son of Seth, which was the son of Adam, which was the son of God."]],
+  "Luke 4:21":[[21, "And he began to say unto them, This day is this scripture fulfilled in your ears."]],
+  "Malachi 2:15":[[15, "And did not he make one? Yet had he the residue of the spirit. And wherefore one? That he might seek a godly seed. Therefore take heed to your spirit, and let none deal treacherously against the wife of his youth."]],
+  "Matthew 12:40":[[40, "For as Jonas was three days and three nights in the whale’s belly; so shall the Son of man be three days and three nights in the heart of the earth."]],
+  "Matthew 27:46":[[46, "And about the ninth hour Jesus cried with a loud voice, saying, Eli, Eli, lama sabachthani? that is to say, My God, my God, why hast thou forsaken me?"]],
+  "Matthew 27:51":[[51, "And, behold, the veil of the temple was rent in twain from the top to the bottom; and the earth did quake, and the rocks rent;"]],
+  "Micah 5:2":[[2, "But thou, Bethlehem Ephratah, though thou be little among the thousands of Judah, yet out of thee shall he come forth unto me that is to be ruler in Israel; whose goings forth have been from of old, from everlasting."]],
+  "Numbers 17:8":[[8, "And it came to pass, that on the morrow Moses went into the tabernacle of witness; and, behold, the rod of Aaron for the house of Levi was budded, and brought forth buds, and bloomed blossoms, and yielded almonds."]],
+  "Numbers 18:19":[[19, "All the heave offerings of the holy things, which the children of Israel offer unto the LORD, have I given thee, and thy sons and thy daughters with thee, by a statute for ever: it is a covenant of salt for ever before the LORD unto thee and to thy seed with thee."]],
+  "Numbers 19:2-6":[[2, "This is the ordinance of the law which the LORD hath commanded, saying, Speak unto the children of Israel, that they bring thee a red heifer without spot, wherein is no blemish, and upon which never came yoke:"], [3, "And ye shall give her unto Eleazar the priest, that he may bring her forth without the camp, and one shall slay her before his face:"], [4, "And Eleazar the priest shall take of her blood with his finger, and sprinkle of her blood directly before the tabernacle of the congregation seven times:"], [5, "And one shall burn the heifer in his sight; her skin, and her flesh, and her blood, with her dung, shall he burn:"], [6, "And the priest shall take cedar wood, and hyssop, and scarlet, and cast it into the midst of the burning of the heifer."]],
+  "Numbers 20:8-12":[[8, "Take the rod, and gather thou the assembly together, thou, and Aaron thy brother, and speak ye unto the rock before their eyes; and it shall give forth his water, and thou shalt bring forth to them water out of the rock: so thou shalt give the congregation and their beasts drink."], [9, "And Moses took the rod from before the LORD, as he commanded him."], [10, "And Moses and Aaron gathered the congregation together before the rock, and he said unto them, Hear now, ye rebels; must we fetch you water out of this rock?"], [11, "And Moses lifted up his hand, and with his rod he smote the rock twice: and the water came out abundantly, and the congregation drank, and their beasts also."], [12, "And the LORD spake unto Moses and Aaron, Because ye believed me not, to sanctify me in the eyes of the children of Israel, therefore ye shall not bring this congregation into the land which I have given them."]],
+  "Numbers 21:8-9":[[8, "And the LORD said unto Moses, Make thee a fiery serpent, and set it upon a pole: and it shall come to pass, that every one that is bitten, when he looketh upon it, shall live."], [9, "And Moses made a serpent of brass, and put it upon a pole, and it came to pass, that if a serpent had bitten any man, when he beheld the serpent of brass, he lived."]],
+  "Numbers 2:2-3":[[2, "Every man of the children of Israel shall pitch by his own standard, with the ensign of their father’s house: far off about the tabernacle of the congregation shall they pitch."], [3, "And on the east side toward the rising of the sun shall they of the standard of the camp of Judah pitch throughout their armies: and Nahshon the son of Amminadab shall be captain of the children of Judah."]],
+  "Psalms 2:1-2":[[1, "Why do the heathen rage, and the people imagine a vain thing?"], [2, "The kings of the earth set themselves, and the rulers take counsel together, against the LORD, and against his anointed, saying,"]],
+  "Psalms 2:12":[[12, "Kiss the Son, lest he be angry, and ye perish from the way, when his wrath is kindled but a little. Blessed are all they that put their trust in him."]],
+  "Psalms 34:20":[[20, "He keepeth all his bones: not one of them is broken."]],
+  "Revelation 12:4-5":[[4, "And his tail drew the third part of the stars of heaven, and did cast them to the earth: and the dragon stood before the woman which was ready to be delivered, for to devour her child as soon as it was born."], [5, "And she brought forth a man child, who was to rule all nations with a rod of iron: and her child was caught up unto God, and to his throne."]],
+  "Revelation 13:8":[[8, "And all that dwell upon the earth shall worship him, whose names are not written in the book of life of the Lamb slain from the foundation of the world."]],
+  "Revelation 1:13-15":[[13, "And in the midst of the seven candlesticks one like unto the Son of man, clothed with a garment down to the foot, and girt about the paps with a golden girdle."], [14, "His head and his hairs were white like wool, as white as snow; and his eyes were as a flame of fire;"], [15, "And his feet like unto fine brass, as if they burned in a furnace; and his voice as the sound of many waters."]],
+  "Revelation 21:2":[[2, "And I John saw the holy city, new Jerusalem, coming down from God out of heaven, prepared as a bride adorned for her husband."]],
+  "Ruth 4:6-10":[[6, "And the kinsman said, I cannot redeem it for myself, lest I mar mine own inheritance: redeem thou my right to thyself; for I cannot redeem it."], [7, "Now this was the manner in former time in Israel concerning redeeming and concerning changing, for to confirm all things; a man plucked off his shoe, and gave it to his neighbour: and this was a testimony in Israel."], [8, "Therefore the kinsman said unto Boaz, Buy it for thee. So he drew off his shoe."], [9, "And Boaz said unto the elders, and unto all the people, Ye are witnesses this day, that I have bought all that was Elimelech’s, and all that was Chilion’s and Mahlon’s, of the hand of Naomi."], [10, "Moreover Ruth the Moabitess, the wife of Mahlon, have I purchased to be my wife, to raise up the name of the dead upon his inheritance, that the name of the dead be not cut off from among his brethren, and from the gate of his place: ye are witnesses this day."]],
+  "Song of Solomon 3:4":[[4, "It was but a little that I passed from them, but I found him whom my soul loveth: I held him, and would not let him go, until I had brought him into my mother’s house, and into the chamber of her that conceived me."]],
+  "Song of Solomon 5:16":[[16, "His mouth is most sweet: yea, he is altogether lovely. This is my beloved, and this is my friend, O daughters of Jerusalem."]],
+  "Song of Solomon 8:6":[[6, "Set me as a seal upon thine heart, as a seal upon thine arm: for love is strong as death; jealousy is cruel as the grave: the coals thereof are coals of fire, which hath a most vehement flame."]],
+  "Zechariah 11:12-13":[[12, "And I said unto them, If ye think good, give me my price; and if not, forbear. So they weighed for my price thirty pieces of silver."], [13, "And the LORD said unto me, Cast it unto the potter: a goodly price that I was prised at of them. And I took the thirty pieces of silver, and cast them to the potter in the house of the LORD."]],
+  "Zechariah 13:6-7":[[6, "And one shall say unto him, What are these wounds in thine hands? Then he shall answer, Those with which I was wounded in the house of my friends."], [7, "Awake, O sword, against my shepherd, and against the man that is my fellow, saith the LORD of hosts: smite the shepherd, and the sheep shall be scattered: and I will turn mine hand upon the little ones."]],
+  "Zechariah 6:12-13":[[12, "And speak unto him, saying, Thus speaketh the LORD of hosts, saying, Behold the man whose name is The BRANCH; and he shall grow up out of his place, and he shall build the temple of the LORD:"], [13, "Even he shall build the temple of the LORD; and he shall bear the glory, and shall sit and rule upon his throne; and he shall be a priest upon his throne: and the counsel of peace shall be between them both."]],
+  "Zechariah 9:9":[[9, "Rejoice greatly, O daughter of Zion; shout, O daughter of Jerusalem: behold, thy King cometh unto thee: he is just, and having salvation; lowly, and riding upon an ass, and upon a colt the foal of an ass."]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
