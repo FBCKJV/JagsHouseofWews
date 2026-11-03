@@ -318,7 +318,7 @@
     ['Doctrines & Teachings', 'Each doctrine opens with its slides, then the other lessons on it. Below them, under Further reading, are the teachings from the chapter studies it was built from. Tap a verse to open it in the KJV Bible app.'],
     ['Install the app', 'On Android choose Install app from the browser menu; on iPhone use Share, then Add to Home Screen. It then opens full screen like the KJV Bible app.'],
     ['Lessons & Classes', 'The doctrine slides come first, then the classes week by week, then the archive of sermons, history and answering error. Slides open in a new tab; notes open right on the page.'],
-    ['Teaching from the slides', 'On a computer or projector, press P (or tap Projector at the top of a slide deck) for dark words on a light page, made as large as the screen allows. Press F for full screen; the arrow keys or a clicker move the slides. Press P again for the usual look.'],
+    ['Teaching from the slides', 'At the top of every slide deck: Projector (or the P key) makes the words sturdier, brighter and as large as the screen allows, for a dim projector. Day and Night (or D) switch between bright words on a dark screen and dark words on a light page. Full screen (or F) hides the browser bar. The arrow keys or a clicker move the slides.'],
     ['Memes', 'The Memes tab at the bottom shows the memes and charts by topic. Tap one to see it full size. The KJV Bible app is a tap away from any verse in a study.'],
     ['Search', 'Tap the magnifying glass at the top to search every study, teaching and lesson. Type a verse like “john 3:16” to see everywhere it is taught.'],
     ['The chapter grid', 'Solid squares are series studies, dashed squares are earlier one-off studies, and dim squares are chapters not yet studied.']
