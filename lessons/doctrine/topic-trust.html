@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A Very Present Help – Trusting God in Trouble</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Trusting God in trouble: what affliction is for, God our refuge and strength, waiting on the Lord, fear is a lack of faith, and vengeance is the Lord&#x27;s, from the teachings on trusting God in trouble.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="A Very Present Help">
+  <div class="page title-page">
+    <div class="overline">Doctrine · Trusting God in trouble</div>
+    <h1>A Very Present Help</h1>
+    <p class="sub">Affliction, comfort, and waiting on the Lord.</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 46:1">Psalm 46:1</button><button class="ref" data-v="Romans 8:28">Romans 8:28</button><button class="ref" data-v="Isaiah 40:31">Isaiah 40:31</button><button class="ref" data-v="Philippians 4:6-7">Philippians 4:6-7</button><button class="ref" data-v="Romans 12:19">Romans 12:19</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any gold reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="God is our refuge and strength">
+  <div class="page">
+    <h2>God is our refuge and strength</h2>
+    <blockquote class="big-verse">God is our refuge and strength, <mark>a very present help in trouble</mark>.<cite>Psalm 46:1</cite></blockquote>
+    <ul class="xr"><li><button class="ref" data-v="Proverbs 18:10">Proverbs 18:10</button><span>The name of the LORD is a strong tower: the righteous runneth into it, and is safe.</span></li><li><button class="ref" data-v="Isaiah 41:10">Isaiah 41:10</button><span>Fear thou not; for I am with thee: be not dismayed; for I am thy God.</span></li><li><button class="ref" data-v="Nahum 1:7">Nahum 1:7</button><span>The LORD is good, a strong hold in the day of trouble.</span></li></ul>
+    <p>These are not platitudes or empty promises. These are real and observable and heartfelt understandings and expressions of faith, forged in troubled times. And in any Christian life, given enough time, this is proven to us again and again.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-trust~17949" target="_blank" rel="noopener">God is our refuge and strength ↗</a></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Affliction and its purpose" data-title="Counted as sheep for the slaughter">
+  <div class="page">
+    <div class="kicker">Affliction</div>
+    <h2>Counted as sheep for the slaughter</h2>
+    <blockquote class="big-verse">As it is written, For thy sake we are killed all the day long; we are accounted as sheep for the slaughter. Nay, in all these things <mark>we are more than conquerors through him that loved us</mark>.<cite>Romans 8:36-37</cite></blockquote>
+    <p>What makes Psalm 44 so jarring is that the congregation is stating they are not being punished for apostasy (<button class="ref" data-v="Psalms 44:17">Psalm 44:17</button>). Travails come upon the just. Upon the faithful who have placed their trust in the Lord.</p>
+    <p>Because man is naturally going to complain in the best of times, we need to be prepared for the proper attitude in the worst. To be persuaded that nothing can separate us from the love of Christ. Even when things are bleak.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Affliction and its purpose" data-title="Why art thou cast down?">
+  <div class="page">
+    <div class="kicker">Affliction</div>
+    <h2>Why art thou cast down?</h2>
+    <blockquote class="big-verse">Why art thou cast down, O my soul? and why art thou disquieted within me? <mark>hope thou in God: for I shall yet praise him</mark>, who is the health of my countenance, and my God.<cite>Psalm 42:11</cite></blockquote>
+    <p>It is a comfort to any believer to realize that remembering past deliverances doesn't automatically cure present depression. As Pastor Jack Hyles often preached, you can't have unshakable faith unless your faith has been shaken.</p>
+    <p>Faith isn't the absence of trouble; it is the stubborn decision to anchor oneself to the Rock when you feel like you are drowning. In the moment, it's okay to <em>say unto God my rock, Why hast thou forgotten me?</em> Just don't take this feeling as an excuse to forget God.</p>
+    <p>Aaron held his peace, but he was still grieved (<button class="ref" data-v="Leviticus 10:19-20">Leviticus 10:19-20</button>). God is understanding that sometimes the truth of His word is bitter to us, in the flesh. He is patient.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Affliction and its purpose" data-title="Neither hath this man sinned">
+  <div class="page">
+    <div class="kicker">Affliction</div>
+    <h2>Neither hath this man sinned</h2>
+    <blockquote class="big-verse">Jesus answered, <mark>Neither hath this man sinned, nor his parents: but that the works of God should be made manifest in him</mark>.<cite>John 9:3</cite></blockquote>
+    <p>Man has the gift of pattern recognition, and it is hard not to see that the fates that befall others must be in answer to their sin. Jesus rebuked the people doing this (<button class="ref" data-v="Luke 13:1-5">Luke 13:1-5</button>). Some things are just chance (<button class="ref" data-v="Ecclesiastes 9:11">Ecclesiastes 9:11</button>).</p>
+    <p>Job's friends defend retribution theology rigorously, the idea of karma in God's doings. This line of thought is just as common today. But not God's (<button class="ref" data-v="Job 42:7">Job 42:7</button>). We shouldn't assume every bad thing that happens to another is for their own sin. Lazarus' suffering on earth wasn't in vain (<button class="ref" data-v="Luke 16:25">Luke 16:25</button>).</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Affliction and its purpose" data-title="My grace is sufficient">
+  <div class="page">
+    <div class="kicker">Affliction</div>
+    <h2>My grace is sufficient</h2>
+    <blockquote class="big-verse">And he said unto me, <mark>My grace is sufficient for thee: for my strength is made perfect in weakness</mark>. Most gladly therefore will I rather glory in my infirmities, that the power of Christ may rest upon me.<cite>2 Corinthians 12:9</cite></blockquote>
+    <p><em>Shall we receive good at the hand of God, and shall we not receive evil?</em> And Job sinned not with his lips (<button class="ref" data-v="Job 2:10">Job 2:10</button>). Whether we are blessed or cursed, all is to His glory.</p>
+    <p>This. I cannot tell you what this truth of God's word feels like, you have to experience it. When there is trouble and you think you cannot go on, you turn to the Lord and He carries you there, to where you need to be.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Affliction and its purpose" data-title="Tribulation worketh patience">
+  <div class="page">
+    <div class="kicker">Affliction</div>
+    <h2>Tribulation worketh patience</h2>
+    <blockquote class="big-verse">And not only so, but we glory in tribulations also: <mark>knowing that tribulation worketh patience</mark>; And patience, experience; and experience, hope:<cite>Romans 5:3-4</cite></blockquote>
+    <p>The harder the times, the more likely the people turn to the Lord. The better the times, the quicker they fall away (<button class="ref" data-v="Judges 3:1-4">Judges 3:1-4</button>). God uses tribulation to prove us. That we may learn to trust Him more.</p>
+    <p><em>Many are the afflictions of the righteous: but the LORD delivereth him out of them all</em> (<button class="ref" data-v="Psalms 34:19">Psalm 34:19</button>). We are not promised a carefree life. You cannot be delivered by God from tribulation, without tribulation.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Affliction and its purpose" data-title="Whom the Lord loveth">
+  <div class="page">
+    <div class="kicker">Affliction</div>
+    <h2>Whom the Lord loveth</h2>
+    <blockquote class="big-verse">My son, despise not the chastening of the <span class="lord">Lord</span>; neither be weary of his correction: <mark>For whom the <span class="lord">Lord</span> loveth he correcteth</mark>; even as a father the son in whom he delighteth.<cite>Proverbs 3:11-12</cite></blockquote>
+    <p>Many new Christians become frustrated that when they got saved, they still had to endure the pain and hard work of getting up out of the hole their old man had dug for them with their sin. But that hole was a grave. And God has given us the rope to climb out of it.</p>
+    <p>Where we slip, know it is God's correction, rebuking those sons whom He loves. We must not despise the rod of correction given us by our Father, but take joy in that He loves us (<button class="ref" data-v="Hebrews 12:1-2">Hebrews 12:1-2</button>).</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Affliction and its purpose" data-title="The more they afflicted them">
+  <div class="page">
+    <div class="kicker">Affliction</div>
+    <h2>The more they afflicted them</h2>
+    <blockquote class="big-verse">But <mark>the more they afflicted them, the more they multiplied and grew</mark>. And they were grieved because of the children of Israel.<cite>Exodus 1:12</cite></blockquote>
+    <p>In the days of the Hebrews in Egypt, of Jesus' ministry on Earth, of the early churches, persecution led to the greatest gains for God. We are given trials because God has considered us worthy to endure (<button class="ref" data-v="2 Corinthians 4:8-9">2 Corinthians 4:8-9</button>).</p>
+    <p>In our tribulations we have comfort, given by God's grace, and in that comfort, the ability to give the same comfort to others in need (<button class="ref" data-v="2 Corinthians 1:4">2 Corinthians 1:4</button>).</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Affliction and its purpose" data-title="A sweet savour of Christ">
+  <div class="page">
+    <div class="kicker">Affliction</div>
+    <h2>A sweet savour of Christ</h2>
+    <blockquote class="big-verse">Yea, and <mark>all that will live godly in Christ Jesus shall suffer persecution</mark>.<cite>2 Timothy 3:12</cite></blockquote>
+    <p>A younger sister in Christ just won someone to the Lord, and within a few days was being afflicted from all sides. It was good to give her this perspective. To patiently endure it, and see her faith grow.</p>
+    <p>The elders of Israel said to Moses, <em>ye have made our savour to be abhorred in the eyes of Pharaoh</em> (<button class="ref" data-v="Exodus 5:21">Exodus 5:21</button>). To the world, we stink like death, because we remind them that they are perishing, but our obedience to God in Christ is a sweet savour unto the Lord (<button class="ref" data-v="2 Corinthians 2:15-16">2 Corinthians 2:15-16</button>).</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Affliction and its purpose" data-title="Hands held up">
+  <div class="page">
+    <div class="kicker">Affliction</div>
+    <h2>Hands held up</h2>
+    <blockquote class="big-verse">But Moses’ hands were heavy; and they took a stone, and put it under him, and he sat thereon; and <mark>Aaron and Hur stayed up his hands</mark>, the one on the one side, and the other on the other side; and his hands were steady until the going down of the sun.<cite>Exodus 17:12</cite></blockquote>
+    <p>We may grow weary. Our arms may fall. But surrounding ourselves with fellow believers, the brethren who will help hold up our arms, and the rock that is Jesus Christ, to rest on, we will be victorious.</p>
+    <p>We often face betrayal at the most inopportune times. Jesus knows what it is like to be betrayed by those closest to Him (<button class="ref" data-v="John 13:18">John 13:18</button>). <em>There is a friend that sticketh closer than a brother</em> (<button class="ref" data-v="Proverbs 18:24">Proverbs 18:24</button>). That friend is Jesus Christ.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-trust~17926" target="_blank" rel="noopener">Counted as sheep for the slaughter, yet faithful ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-trust~17883" target="_blank" rel="noopener">Why art thou cast down, O my soul ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-trust~16853" target="_blank" rel="noopener">Retribution theology is man's, not God's ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-trust~9864" target="_blank" rel="noopener">The more they afflicted them, the more they grew ↗</a></div>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="God our refuge" data-title="The Lord is my shepherd">
+  <div class="page">
+    <div class="kicker">God our refuge</div>
+    <h2>The Lord is my shepherd</h2>
+    <blockquote class="big-verse">Yea, though I walk through the valley of the shadow of death, <mark>I will fear no evil: for thou art with me</mark>; thy rod and thy staff they comfort me.<cite>Psalm 23:4</cite></blockquote>
+    <p>What the unsaved world uses as a false comfort in death should be a comfort in this life for saved believers. We may be in a low point in our lives, a valley, and feel the shadow of death, but the strength to fear no evil comes from knowing the good Shepherd is with us.</p>
+    <p><em>Surely goodness and mercy shall follow me all the days of my life.</em> Goodness and mercy follow us, today (<button class="ref" data-v="Psalms 23:6">Psalm 23:6</button>).</p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="God our refuge" data-title="Some trust in chariots">
+  <div class="page">
+    <div class="kicker">God our refuge</div>
+    <h2>Some trust in chariots</h2>
+    <blockquote class="big-verse">Some <mark class="w">trust</mark> in chariots, and some in horses: <mark>but we will remember the name of the <span class="lord">Lord</span> our God</mark>.<cite>Psalm 20:7</cite></blockquote>
+    <p>This verse is often quoted, but in practice it can be difficult. We often seek reassurance from our material, wealth and position. In our battles, even if we are seemingly overmatched by our enemy, we are still victorious in God.</p>
+    <p><em>The rich man's wealth is his strong city</em> (<button class="ref" data-v="Proverbs 18:11">Proverbs 18:11</button>). Humble yourself to recognize, God is the only shelter you need.</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="God our refuge" data-title="Egypt a broken reed">
+  <div class="page">
+    <div class="kicker">God our refuge</div>
+    <h2>Egypt a broken reed</h2>
+    <blockquote class="big-verse">And all the inhabitants of Egypt shall know that I am the <span class="lord">Lord</span>, because <mark>they have been a staff of reed to the house of Israel</mark>. When they took hold of thee by thy hand, thou didst break, and rend all their shoulder: and when they leaned upon thee, thou brakest, and madest all their loins to be at a stand.<cite>Ezekiel 29:6-7</cite></blockquote>
+    <p>Egypt represents the old, unsaved life, under bondage to sin. We should look at the world's solutions to our problems the same way. Weak and insufficient. Trusting in Egypt is death (<button class="ref" data-v="Isaiah 30:2-3">Isaiah 30:2-3</button>).</p>
+    <p>Asa sought the physicians, not the Lord (<button class="ref" data-v="2 Chronicles 16:12">2 Chronicles 16:12</button>). There's nothing wrong with using doctors, medicines, but first go to God in prayer. Those men and things may be the tools with which God heals you, but it is God's mighty hand that we need.</p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="God our refuge" data-title="The battle is the Lord&#x27;s">
+  <div class="page">
+    <div class="kicker">God our refuge</div>
+    <h2>The battle is the Lord's</h2>
+    <blockquote class="big-verse">And all this assembly shall know that the <span class="lord">Lord</span> saveth not with sword and spear: <mark>for the battle is the <span class="lord">Lord</span>’s</mark>, and he will give you into our hands.<cite>1 Samuel 17:47</cite></blockquote>
+    <p>It wasn't David who overcame Goliath, but the Lord. Increased faith doesn't mean relying more and more upon yourself, but rather leaning more and more upon Him. No one would think that 300 men blowing trumpets and smashing pots could rout tens of thousands. But they had already been delivered into Gideon's hands (<button class="ref" data-v="Judges 7:7">Judges 7:7</button>).</p>
+    <p><em>Be of good courage, and let us play the men for our people</em> (<button class="ref" data-v="2 Samuel 10:12">2 Samuel 10:12</button>). Too often today, professing Christian men come off as afraid. That's the secret to winning. To win souls and obey God, live righteously and trust in Him when the battle comes.</p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="God our refuge" data-title="The still small voice">
+  <div class="page">
+    <div class="kicker">God our refuge</div>
+    <h2>The still small voice</h2>
+    <blockquote class="big-verse">And after the earthquake a fire; but the <span class="lord">Lord</span> was not in the fire: and <mark>after the fire a still small voice</mark>.<cite>1 Kings 19:12</cite></blockquote>
+    <p>The triumph that should have led to revival brought depression and fear in the prophet. But the Lord corrects him: <em>Yet I have left me seven thousand in Israel</em> (<button class="ref" data-v="1 Kings 19:18">1 Kings 19:18</button>).</p>
+    <p>Even after great triumphs of faith, it isn't unusual to feel a sense of letdown. To feel alone. But there is always a righteous remnant. God is not in the wind. He is in the still small voice, heard in our spirit, and He has work for us to do.</p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="God our refuge" data-title="Yet I will rejoice">
+  <div class="page">
+    <div class="kicker">God our refuge</div>
+    <h2>Yet I will rejoice</h2>
+    <blockquote class="big-verse">Although the fig tree shall not blossom, neither shall fruit be in the vines; the labour of the olive shall fail, and the fields shall yield no meat; the flock shall be cut off from the fold, and there shall be no herd in the stalls: <mark>Yet I will rejoice in the <span class="lord">Lord</span>, I will joy in the God of my salvation</mark>.<cite>Habakkuk 3:17-18</cite></blockquote>
+    <p>This is a great illustration of the way we, as saved believers, should approach the Great Tribulation should it come in our day, or even individual troubles. In the midst of days, the Lord remembers His mercy.</p>
+    <p>Jehoshaphat called the people together in fast, prayer and singing songs in praise of God, and the Lord confounded their enemies (<button class="ref" data-v="2 Chronicles 20:21-22">2 Chronicles 20:21-22</button>). When we are at the end of our rope, the Lord hears us. Even at the depths of the sea (<button class="ref" data-v="Jonah 2:2">Jonah 2:2</button>).</p>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="God our refuge" data-title="Never alone">
+  <div class="page">
+    <div class="kicker">God our refuge</div>
+    <h2>Never alone</h2>
+    <blockquote class="big-verse">And Elisha prayed, and said, <span class="lord">Lord</span>, I pray thee, open his eyes, that he may see. And the <span class="lord">Lord</span> opened the eyes of the young man; and he saw: and, behold, <mark>the mountain was full of horses and chariots of fire round about Elisha</mark>.<cite>2 Kings 6:17</cite></blockquote>
+    <p>Anyone who has been a saved Christian for any meaningful length of time will testify that the Lord places angels over us, protecting us, often from ourselves (<button class="ref" data-v="Genesis 32:1-2">Genesis 32:1-2</button>; <button class="ref" data-v="Hebrews 1:14">Hebrews 1:14</button>).</p>
+    <p>Two are better than one (<button class="ref" data-v="Ecclesiastes 4:9-10">Ecclesiastes 4:9-10</button>). With Christ, we are never alone. We have the Comforter (<button class="ref" data-v="John 14:16">John 14:16</button>). So, <em>be of good cheer: for I believe God, that it shall be even as it was told me</em> (<button class="ref" data-v="Acts 27:25">Acts 27:25</button>).</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-trust~17760" target="_blank" rel="noopener">The Lord is my shepherd in this life ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-trust~16299" target="_blank" rel="noopener">Egypt a broken reed ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-trust~13632" target="_blank" rel="noopener">The battle is already won ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-trust~14751" target="_blank" rel="noopener">Yet I will rejoice in the Lord ↗</a></div>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Waiting on the Lord" data-title="They that wait upon the LORD">
+  <div class="page">
+    <div class="kicker">Waiting on the Lord</div>
+    <h2>They that wait upon the LORD</h2>
+    <blockquote class="big-verse">But <mark>they that wait upon the <span class="lord">Lord</span> shall renew their strength</mark>; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.<cite>Isaiah 40:31</cite></blockquote>
+    <p>Psalm 13 captures a very real feeling of the Christian life, the impatient waiting for God's perfect timing, turning into an acknowledgement that He has dealt bountifully with us (<button class="ref" data-v="Psalms 13:5-6">Psalm 13:5-6</button>).</p>
+    <p><em>The Lord is not slack concerning his promise, as some men count slackness</em> (<button class="ref" data-v="2 Peter 3:9">2 Peter 3:9</button>). In our patience, God gives us added strength. They that wait on Him shall not be ashamed (<button class="ref" data-v="Psalms 25:3">Psalm 25:3</button>).</p>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Waiting on the Lord" data-title="New every morning">
+  <div class="page">
+    <div class="kicker">Waiting on the Lord</div>
+    <h2>New every morning</h2>
+    <blockquote class="big-verse">It is of the <span class="lord">Lord</span>’s mercies that we are not consumed, because his compassions fail not. <mark>They are new every morning: great is thy faithfulness</mark>.<cite>Lamentations 3:22-23</cite></blockquote>
+    <p>We are called to pick up our cross every day, so if we stumble and backslide, if we turn to the left or the right, God is merciful in calling us back to the straight paths.</p>
+    <p><em>It is good that a man should both hope and quietly wait for the salvation of the Lord</em> (<button class="ref" data-v="Lamentations 3:26">Lamentations 3:26</button>).</p>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Waiting on the Lord" data-title="Not forcing the issue">
+  <div class="page">
+    <div class="kicker">Waiting on the Lord</div>
+    <h2>Not forcing the issue</h2>
+    <blockquote class="big-verse">And the <span class="lord">Lord</span> said unto me, Say unto them, <mark>Go not up, neither fight</mark>; <mark>for I am not among you</mark>; lest ye be smitten before your enemies.<cite>Deuteronomy 1:42</cite></blockquote>
+    <p>Rather than accept the chastisement, they tried to defeat the Amorites themselves, only to be driven out, as bees do. When their children went to war, 38 years later, on God's schedule, they easily defeated them (<button class="ref" data-v="Numbers 21:23-24">Numbers 21:23-24</button>).</p>
+    <p>It is entirely about faith, patience and meekness. Not taking matters into our own hands. Accepting that the Lord may deny us something now, that we have something better later.</p>
+    <p>There is also a fine line between faith and tempting God (<button class="ref" data-v="Ezra 8:22">Ezra 8:22</button>; <button class="ref" data-v="Matthew 4:7">Matthew 4:7</button>). Maybe the offer of help itself came from God.</p>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Waiting on the Lord" data-title="How long, O Lord?">
+  <div class="page">
+    <div class="kicker">Waiting on the Lord</div>
+    <h2>How long, O Lord?</h2>
+    <blockquote class="big-verse">And they cried with a loud voice, saying, How long, O Lord, holy and true, dost thou not judge and avenge our blood on them that dwell on the earth? And white robes were given unto every one of them; and it was said unto them, <mark>that they should rest yet for a little season</mark>, until their fellowservants also and their brethren, that should be killed as they were, should be fulfilled.<cite>Revelation 6:10-11</cite></blockquote>
+    <p>Many, frustrated by the world, express impatience with those of us who profess Christ. That we should <em>do something!</em> They complain that God is too long suffering for them.</p>
+    <p>The saints slain for the word plead with God to pour out His wrath on the wicked, and are told to rest a while more, and they do. We should learn to be a bit more patient with God.</p>
+    <p><em>There failed not ought of any good thing which the LORD had spoken</em> (<button class="ref" data-v="Joshua 21:45">Joshua 21:45</button>).</p>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Waiting on the Lord" data-title="Not sedition, but faith">
+  <div class="page">
+    <div class="kicker">Waiting on the Lord</div>
+    <h2>Not sedition, but faith</h2>
+    <blockquote class="big-verse">And we know that <mark>all things work together for good to them that love God</mark>, to them who are the called according to his purpose.<cite>Romans 8:28</cite></blockquote>
+    <p>We need not sow sedition or take up arms or anything else but have faith in God. Often Christians get impatient with God, and try to take vengeance into their own hands. Reactionary spirals, further worsening the conditions we face. Dancing to the devil's tune.</p>
+    <p>There is no liberty outside of Christ. If you truly believed that when they threaten your life, they are threatening you with Heaven, you wouldn't be afraid.</p>
+    <p>The more you are willing to suffer and yet trust Him, the more you will gain (<button class="ref" data-v="Matthew 19:29">Matthew 19:29</button>). I have seen it. I have been so blessed. Let go. Have faith.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-trust~17711" target="_blank" rel="noopener">Waiting on God's perfect timing ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-trust~12880" target="_blank" rel="noopener">Not forcing the issue: waiting on God ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-trust~3859" target="_blank" rel="noopener">Patience with God and the saints under the altar ↗</a></div>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="Fear not" data-title="Be careful for nothing">
+  <div class="page">
+    <div class="kicker">Fear is a lack of faith</div>
+    <h2>Be careful for nothing</h2>
+    <blockquote class="big-verse"><mark>Be careful for nothing</mark>; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God. And <mark>the peace of God, which passeth all understanding</mark>, shall keep your hearts and minds through Christ Jesus.<cite>Philippians 4:6-7</cite></blockquote>
+    <p>This should be the default state of your Christian life. Joy, not worrying and fearful for the cares of this world but trusting, in prayer and supplication, in thanksgiving.</p>
+    <p>For me, it was fear and concerns of this world that led me consistently to misery, anger and resentment. Fear for family, work, relationships with others... all things work for good when you love God and trust Him, thankful regardless of outcome. Just have to let go.</p>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="Fear not" data-title="Fret not">
+  <div class="page">
+    <div class="kicker">Fear is a lack of faith</div>
+    <h2>Fret not</h2>
+    <blockquote class="big-verse"><mark>Fret not thyself because of evildoers</mark>, neither be thou envious against the workers of iniquity.<cite>Psalm 37:1</cite></blockquote>
+    <p>God has built us in a way that makes our gratitude for what we have the source for being less anxious. It is impossible for those that are truly grateful to God for their station in life, and the protection of His mighty hand, to fret.</p>
+    <p><em>In every thing give thanks</em> (<button class="ref" data-v="1 Thessalonians 5:18">1 Thessalonians 5:18</button>). This one exercise will change your life as profoundly as anything short of salvation. I testify to it, God is my witness.</p>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="slide" data-section="Fear not" data-title="Help thou mine unbelief">
+  <div class="page">
+    <div class="kicker">Fear is a lack of faith</div>
+    <h2>Help thou mine unbelief</h2>
+    <blockquote class="big-verse">And straightway the father of the child cried out, and said with tears, <mark>Lord, I believe</mark>; <mark>help thou mine unbelief</mark>.<cite>Mark 9:24</cite></blockquote>
+    <p>We often search for faith in our tribulation, not because we doubt God, but we have doubts about ourselves. Gideon wanted a sign, and the Lord said, <em>have not I sent thee?</em> (<button class="ref" data-v="Judges 6:14">Judges 6:14</button>) How often, when we know the right thing to do, but are afraid, do we place the burden on the Lord to show us a sign?</p>
+    <p>Gideon tore down his father's altar, by night, <em>because he feared his father's household</em> (<button class="ref" data-v="Judges 6:27">Judges 6:27</button>). Often the only hindrance to doing something great for the Lord is our own fear.</p>
+  </div>
+</section>
+
+<!-- 27 -->
+<section class="slide" data-section="Fear not" data-title="Running with the footmen">
+  <div class="page">
+    <div class="kicker">Fear is a lack of faith</div>
+    <h2>Running with the footmen</h2>
+    <blockquote class="big-verse"><mark>If thou hast run with the footmen, and they have wearied thee, then how canst thou contend with horses?</mark> and if in the land of peace, wherein thou <mark class="w">trustedst</mark>, they wearied thee, then how wilt thou do in the swelling of Jordan?<cite>Jeremiah 12:5</cite></blockquote>
+    <p>If we, in the land of peace wherein we've trusted, can't handle things, what will we do when the river floods? So many Christians constantly complain about how “persecuted” they feel.</p>
+    <p>If you are walking the best you can in the spirit, and still find yourself fearful and angry all the time, snapping at others, there's something wrong with your Christian walk. If what you're consuming online leaves you more afraid, stop engaging in it. Fear is a sin.</p>
+  </div>
+</section>
+
+<!-- 28 -->
+<section class="slide" data-section="Fear not" data-title="Faith over fear">
+  <div class="page">
+    <div class="kicker">Fear is a lack of faith</div>
+    <h2>Faith over fear</h2>
+    <blockquote class="big-verse">And they overcame him by the blood of the Lamb, and by the word of their testimony; and <mark>they loved not their lives unto the death</mark>.<cite>Revelation 12:11</cite></blockquote>
+    <p>We may be cut off from buying and selling for refusing the mark of the beast. All our preparing and stockpiling won't save us. But faith can.</p>
+    <p>It's easy to fall into fear at being cast out into the wilderness. But there in the wilderness is where God provides. Manna from heaven. Fed by ravens. Water from flint (<button class="ref" data-v="Revelation 12:14">Revelation 12:14</button>). Faith over fear.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-trust~4810" target="_blank" rel="noopener">Be careful for nothing ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-trust~17850" target="_blank" rel="noopener">Fret not: gratitude casts out anxiety ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-trust~13617" target="_blank" rel="noopener">Have not I sent thee? ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-trust~1260" target="_blank" rel="noopener">Fear is a sin: step away from what feeds it ↗</a></div>
+  </div>
+</section>
+
+<!-- 29 -->
+<section class="slide" data-section="Vengeance is the Lord&#x27;s" data-title="A just man falleth seven times">
+  <div class="page">
+    <div class="kicker">Vengeance is the Lord's</div>
+    <h2>A just man falleth seven times</h2>
+    <blockquote class="big-verse">For <mark>a just man falleth seven times, and riseth up again</mark>: but the wicked shall fall into mischief. <mark>Rejoice not when thine enemy falleth</mark>, and let not thine heart be glad when he stumbleth:<cite>Proverbs 24:16-17</cite></blockquote>
+    <p>We may fall in our Christian walk, multiple times, but we rise up again. Knowing this, we are admonished against taking pleasure in the fall of the wicked. In their fall is revealed His wrath, but it also is the opportunity to show His mercy and give the truth of the gospel, through us.</p>
+    <p>We should not worry and fret about what evil men do, nor be envious of the wicked. God will repay.</p>
+  </div>
+</section>
+
+<!-- 30 -->
+<section class="slide" data-section="Vengeance is the Lord&#x27;s" data-title="We are the servants of God">
+  <div class="page">
+    <div class="kicker">Vengeance is the Lord's</div>
+    <h2>We are the servants of God</h2>
+    <blockquote class="big-verse">And thus they returned us answer, saying, <mark>We are the servants of the God of heaven and earth</mark>, and build the house that was builded these many years ago, which a great king of Israel builded and set up.<cite>Ezra 5:11</cite></blockquote>
+    <p>When we are accused, we should not be afraid, nor proudly stand up, nor in fear kowtow and cease our efforts. Humbly and honestly stand for what we believe in. When an apartment manager threatens to call the police on soul winners, don't argue. Trust Him to deliver you.</p>
+    <p>God in His grace and love promises us one more thing; vengeance. He will repay (<button class="ref" data-v="2 Thessalonians 1:6-7">2 Thessalonians 1:6-7</button>). We aren't floor mats to be trampled on. God will always deliver.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-trust~17292" target="_blank" rel="noopener">A just man falleth seven times and riseth ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-trust~16691" target="_blank" rel="noopener">We are the servants of God ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-trust~10970" target="_blank" rel="noopener">God will repay those who persecute His saints ↗</a></div>
+  </div>
+</section>
+
+<!-- 31 -->
+<section class="slide" data-section="Great is thy faithfulness" data-title="Great Is Thy Faithfulness">
+  <div class="page title-page later">
+    <div class="overline">Trusting God in trouble</div>
+    <h1>Great Is Thy Faithfulness</h1>
+    <blockquote class="big-verse"><mark>Fear thou not</mark>; <mark>for I am with thee</mark>: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness.<cite>Isaiah 41:10</cite></blockquote>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="center">The Lord God is my strength. Whatever is troubling you, He is there to help you.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-topic-walk-heart" target="_blank" rel="noopener">The walk, part five: Out of the Heart ↗</a><a class="ref lesson-link" href="../../studies/#lesson-topic-walk-with-god" target="_blank" rel="noopener">The walk, part one: Walking with God ↗</a></div>
+    <p class="sub center">Every teaching is on the <a class="ref lesson-link" href="../../studies/#doctrine-trust" target="_blank" rel="noopener">Trusting God in trouble ↗</a> page.</p>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 Kings 19:18":[[18, "Yet I have left me seven thousand in Israel, all the knees which have not bowed unto Baal, and every mouth which hath not kissed him."]],
+  "1 Thessalonians 5:18":[[18, "In every thing give thanks: for this is the will of God in Christ Jesus concerning you."]],
+  "2 Chronicles 16:12":[[12, "And Asa in the thirty and ninth year of his reign was diseased in his feet, until his disease was exceeding great: yet in his disease he sought not to the LORD, but to the physicians."]],
+  "2 Chronicles 20:21-22":[[21, "And when he had consulted with the people, he appointed singers unto the LORD, and that should praise the beauty of holiness, as they went out before the army, and to say, Praise the LORD; for his mercy endureth for ever."], [22, "And when they began to sing and to praise, the LORD set ambushments against the children of Ammon, Moab, and mount Seir, which were come against Judah; and they were smitten."]],
+  "2 Corinthians 1:4":[[4, "Who comforteth us in all our tribulation, that we may be able to comfort them which are in any trouble, by the comfort wherewith we ourselves are comforted of God."]],
+  "2 Corinthians 2:15-16":[[15, "For we are unto God a sweet savour of Christ, in them that are saved, and in them that perish:"], [16, "To the one we are the savour of death unto death; and to the other the savour of life unto life. And who is sufficient for these things?"]],
+  "2 Corinthians 4:8-9":[[8, "We are troubled on every side, yet not distressed; we are perplexed, but not in despair;"], [9, "Persecuted, but not forsaken; cast down, but not destroyed;"]],
+  "2 Peter 3:9":[[9, "The Lord is not slack concerning his promise, as some men count slackness; but is longsuffering to us-ward, not willing that any should perish, but that all should come to repentance."]],
+  "2 Samuel 10:12":[[12, "Be of good courage, and let us play the men for our people, and for the cities of our God: and the LORD do that which seemeth him good."]],
+  "2 Thessalonians 1:6-7":[[6, "Seeing it is a righteous thing with God to recompense tribulation to them that trouble you;"], [7, "And to you who are troubled rest with us, when the Lord Jesus shall be revealed from heaven with his mighty angels,"]],
+  "Acts 27:25":[[25, "Wherefore, sirs, be of good cheer: for I believe God, that it shall be even as it was told me."]],
+  "Ecclesiastes 4:9-10":[[9, "Two are better than one; because they have a good reward for their labour."], [10, "For if they fall, the one will lift up his fellow: but woe to him that is alone when he falleth; for he hath not another to help him up."]],
+  "Ecclesiastes 9:11":[[11, "I returned, and saw under the sun, that the race is not to the swift, nor the battle to the strong, neither yet bread to the wise, nor yet riches to men of understanding, nor yet favour to men of skill; but time and chance happeneth to them all."]],
+  "Exodus 5:21":[[21, "And they said unto them, The LORD look upon you, and judge; because ye have made our savour to be abhorred in the eyes of Pharaoh, and in the eyes of his servants, to put a sword in their hand to slay us."]],
+  "Ezra 8:22":[[22, "For I was ashamed to require of the king a band of soldiers and horsemen to help us against the enemy in the way: because we had spoken unto the king, saying, The hand of our God is upon all them for good that seek him; but his power and his wrath is against all them that forsake him."]],
+  "Genesis 32:1-2":[[1, "And Jacob went on his way, and the angels of God met him."], [2, "And when Jacob saw them, he said, This is God’s host: and he called the name of that place Mahanaim."]],
+  "Hebrews 12:1-2":[[1, "Wherefore seeing we also are compassed about with so great a cloud of witnesses, let us lay aside every weight, and the sin which doth so easily beset us, and let us run with patience the race that is set before us,"], [2, "Looking unto Jesus the author and finisher of our faith; who for the joy that was set before him endured the cross, despising the shame, and is set down at the right hand of the throne of God."]],
+  "Hebrews 1:14":[[14, "Are they not all ministering spirits, sent forth to minister for them who shall be heirs of salvation?"]],
+  "Isaiah 30:2-3":[[2, "That walk to go down into Egypt, and have not asked at my mouth; to strengthen themselves in the strength of Pharaoh, and to trust in the shadow of Egypt!"], [3, "Therefore shall the strength of Pharaoh be your shame, and the trust in the shadow of Egypt your confusion."]],
+  "Isaiah 40:31":[[31, "But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint."]],
+  "Isaiah 41:10":[[10, "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness."]],
+  "Job 2:10":[[10, "But he said unto her, Thou speakest as one of the foolish women speaketh. What? shall we receive good at the hand of God, and shall we not receive evil? In all this did not Job sin with his lips."]],
+  "Job 42:7":[[7, "And it was so, that after the LORD had spoken these words unto Job, the LORD said to Eliphaz the Temanite, My wrath is kindled against thee, and against thy two friends: for ye have not spoken of me the thing that is right, as my servant Job hath."]],
+  "John 13:18":[[18, "I speak not of you all: I know whom I have chosen: but that the scripture may be fulfilled, He that eateth bread with me hath lifted up his heel against me."]],
+  "John 14:16":[[16, "And I will pray the Father, and he shall give you another Comforter, that he may abide with you for ever;"]],
+  "Jonah 2:2":[[2, "And said, I cried by reason of mine affliction unto the LORD, and he heard me; out of the belly of hell cried I, and thou heardest my voice."]],
+  "Joshua 21:45":[[45, "There failed not ought of any good thing which the LORD had spoken unto the house of Israel; all came to pass."]],
+  "Judges 3:1-4":[[1, "Now these are the nations which the LORD left, to prove Israel by them, even as many of Israel as had not known all the wars of Canaan;"], [2, "Only that the generations of the children of Israel might know, to teach them war, at the least such as before knew nothing thereof;"], [3, "Namely, five lords of the Philistines, and all the Canaanites, and the Sidonians, and the Hivites that dwelt in mount Lebanon, from mount Baalhermon unto the entering in of Hamath."], [4, "And they were to prove Israel by them, to know whether they would hearken unto the commandments of the LORD, which he commanded their fathers by the hand of Moses."]],
+  "Judges 6:14":[[14, "And the LORD looked upon him, and said, Go in this thy might, and thou shalt save Israel from the hand of the Midianites: have not I sent thee?"]],
+  "Judges 6:27":[[27, "Then Gideon took ten men of his servants, and did as the LORD had said unto him: and so it was, because he feared his father’s household, and the men of the city, that he could not do it by day, that he did it by night."]],
+  "Judges 7:7":[[7, "And the LORD said unto Gideon, By the three hundred men that lapped will I save you, and deliver the Midianites into thine hand: and let all the other people go every man unto his place."]],
+  "Lamentations 3:26":[[26, "It is good that a man should both hope and quietly wait for the salvation of the LORD."]],
+  "Leviticus 10:19-20":[[19, "And Aaron said unto Moses, Behold, this day have they offered their sin offering and their burnt offering before the LORD; and such things have befallen me: and if I had eaten the sin offering to day, should it have been accepted in the sight of the LORD?"], [20, "And when Moses heard that, he was content."]],
+  "Luke 13:1-5":[[1, "There were present at that season some that told him of the Galilaeans, whose blood Pilate had mingled with their sacrifices."], [2, "And Jesus answering said unto them, Suppose ye that these Galilaeans were sinners above all the Galilaeans, because they suffered such things?"], [3, "I tell you, Nay: but, except ye repent, ye shall all likewise perish."], [4, "Or those eighteen, upon whom the tower in Siloam fell, and slew them, think ye that they were sinners above all men that dwelt in Jerusalem?"], [5, "I tell you, Nay: but, except ye repent, ye shall all likewise perish."]],
+  "Luke 16:25":[[25, "But Abraham said, Son, remember that thou in thy lifetime receivedst thy good things, and likewise Lazarus evil things: but now he is comforted, and thou art tormented."]],
+  "Matthew 19:29":[[29, "And every one that hath forsaken houses, or brethren, or sisters, or father, or mother, or wife, or children, or lands, for my name’s sake, shall receive an hundredfold, and shall inherit everlasting life."]],
+  "Matthew 4:7":[[7, "Jesus said unto him, It is written again, Thou shalt not tempt the Lord thy God."]],
+  "Nahum 1:7":[[7, "The LORD is good, a strong hold in the day of trouble; and he knoweth them that trust in him."]],
+  "Numbers 21:23-24":[[23, "And Sihon would not suffer Israel to pass through his border: but Sihon gathered all his people together, and went out against Israel into the wilderness: and he came to Jahaz, and fought against Israel."], [24, "And Israel smote him with the edge of the sword, and possessed his land from Arnon unto Jabbok, even unto the children of Ammon: for the border of the children of Ammon was strong."]],
+  "Philippians 4:6-7":[[6, "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God."], [7, "And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus."]],
+  "Proverbs 18:10":[[10, "The name of the LORD is a strong tower: the righteous runneth into it, and is safe."]],
+  "Proverbs 18:11":[[11, "The rich man’s wealth is his strong city, and as an high wall in his own conceit."]],
+  "Proverbs 18:24":[[24, "A man that hath friends must shew himself friendly: and there is a friend that sticketh closer than a brother."]],
+  "Psalms 13:5-6":[[5, "But I have trusted in thy mercy; my heart shall rejoice in thy salvation."], [6, "I will sing unto the LORD, because he hath dealt bountifully with me."]],
+  "Psalms 23:6":[[6, "Surely goodness and mercy shall follow me all the days of my life: and I will dwell in the house of the LORD for ever."]],
+  "Psalms 25:3":[[3, "Yea, let none that wait on thee be ashamed: let them be ashamed which transgress without cause."]],
+  "Psalms 34:19":[[19, "Many are the afflictions of the righteous: but the LORD delivereth him out of them all."]],
+  "Psalms 44:17":[[17, "All this is come upon us; yet have we not forgotten thee, neither have we dealt falsely in thy covenant."]],
+  "Psalms 46:1":[[1, "God is our refuge and strength, a very present help in trouble."]],
+  "Revelation 12:14":[[14, "And to the woman were given two wings of a great eagle, that she might fly into the wilderness, into her place, where she is nourished for a time, and times, and half a time, from the face of the serpent."]],
+  "Romans 12:19":[[19, "Dearly beloved, avenge not yourselves, but rather give place unto wrath: for it is written, Vengeance is mine; I will repay, saith the Lord."]],
+  "Romans 8:28":[[28, "And we know that all things work together for good to them that love God, to them who are the called according to his purpose."]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
