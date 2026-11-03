@@ -1,6 +1,6 @@
 # Flagged study posts
 
-72 posts flagged, 69 still undecided. Undecided posts are currently **hidden** in the app (`flagged_default` in decisions.json).
+72 posts flagged, 68 still undecided. Undecided posts are currently **hidden** in the app (`flagged_default` in decisions.json).
 
 To decide, add the post id to `review/decisions.json` under `"posts"` as `"keep"` or `"drop"`, then rerun `python3 tools/clean_studies.py`. Your choices survive a re-export.
 
@@ -194,7 +194,7 @@ This file is regenerated on every run; don't edit it.
 
 ### Jeremiah 26
 
-- `11934` · 2023-09-13 · [post](https://t.me/HouseOfWews2/11934) · aimed at critics or other people ("cope") · undecided
+- `11934` · 2023-09-13 · [post](https://t.me/HouseOfWews2/11934) · aimed at critics or other people ("cope") · **keep**
   > Remember! Wine in the Bible is not always alcohol, in fact it usually just means fresh or preserved juice of the vine. The lie that juice wasn't invented until …
 
 ## Hosea
