@@ -45,6 +45,10 @@ Source format, one element per line (blank lines are ignored, # starts a comment
   take: …                                        a closing italic line
   table: Head A | Head B   then tr: a | b lines  a table (cells may hold [[verse]] buttons and **bold**)
   image: lessons/x/pic.png | alt text | caption  a picture, saved next to the deck (use the same file name)
+  spot: 27 | 46.8 | 30.2 | 2.4 | Abomination of Desolation | Daniel 9:27; Matthew 24:15
+  keyside: yes                                   (after the spots) the key sits beside a tall picture on a wide screen
+                                               a numbered dot on the picture above (x, y and size in % of its width/
+                                               height/width) that opens its verses; a key of the dots follows the picture
   highlight: believ                              (meta, top of the file) stems highlighted in every quoted verse
   read: obadiah-holmes | Obadiah Holmes        a row of links to other lessons in the app (consecutive lines make one row);
                                                read: app:doctrine-salvation~123 | title links to a teaching or study
@@ -320,6 +324,26 @@ def build(src):
                 src_, alt, cap = (v.split('|') + ['', ''])[:3]
                 parts.append(f'<figure class="pic"><img src="{esc(os.path.basename(src_.strip()))}" alt="{html.escape(alt.strip())}" loading="lazy">'
                              + (f'<figcaption>{inline(cap.strip())}</figcaption>' if cap.strip() else '') + '</figure>')
+            elif k == 'spot':   # spot: n | x% | y% | size% | label | refs     a tappable numbered dot on the last picture
+                n_, x_, y_, d_, lab_, refs_ = [t.strip() for t in v.split('|', 5)]
+                keys = []
+                for r in refs_.split(';'):
+                    kk = key_of(r.strip()); USED[kk] = verses(r.strip()); keys.append(kk)
+                at = max(n for n, x in enumerate(parts) if x.startswith(('<figure class="pic">', '<div class="chartwrap')))
+                fig = parts[at]
+                if '<!--spots-->' not in fig:
+                    fig = re.sub(r'(<img [^>]*>)', r'<span class="pw">\1<!--spots--></span>', fig, count=1)
+                    fig = '<div class="chartwrap">' + fig + '<div class="spotkey"><!--keys--></div></div>'
+                title_ = f'{n_}. {lab_}'
+                btn = (f'<button class="ref spot" data-v="{esc("|".join(keys))}" data-label="{html.escape(title_)}" '
+                       f'style="left:{x_}%;top:{y_}%;width:{d_}%" aria-label="{html.escape(title_)}">{esc(n_)}</button>')
+                key = (f'<button class="ref" data-v="{esc("|".join(keys))}" data-label="{html.escape(title_)}">'
+                       f'<b>{esc(n_)}</b> {inline(lab_)}</button>')
+                fig = fig.replace('<!--spots-->', btn + '<!--spots-->', 1).replace('<!--keys-->', key + '<!--keys-->', 1)
+                parts[at] = fig
+            elif k == 'keyside':   # keyside: yes     the key of dots beside a tall picture on a wide screen
+                at = max(n for n, x in enumerate(parts) if x.startswith('<div class="chartwrap'))
+                parts[at] = parts[at].replace('<div class="chartwrap">', '<div class="chartwrap side">', 1)
             elif k == 'xr':   # xr: John 6:28-29 | the words      a list of references with a line each
                 parts.append('<ul class="xr">' + ''.join(
                     f'<li>{inline("[[" + a.strip() + "]]")}<span>{inline(b.strip())}</span></li>'
@@ -340,6 +364,9 @@ def build(src):
             else:
                 raise SystemExit(f'{src}: slide "{s["title"]}": unknown line "{k}:"')
             j += 1
+        for n, x in enumerate(parts):   # a picture with many dots (a whole chart) keeps the dots but not the long key
+            if '<div class="spotkey">' in x and x.count('class="ref spot"') > 12:
+                parts[n] = re.sub(r'<div class="spotkey">.*?<!--keys--></div>', '', x, flags=re.S)
         if title_page:   # the ornament goes after the heading block, before the body text
             at = next((n for n, x in enumerate(parts) if x.startswith(('<p class="hint"', '<p class="center"', '<p>', '<div style'))), len(parts))
             parts.insert(at, '<span class="fleuron">✦ ✦ ✦</span>')

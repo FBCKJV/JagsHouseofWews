@@ -158,6 +158,7 @@ Sermons and the lessons from other preachers do not get decks. They stay as note
 - [x] **Righteousness Exalteth a Nation – Nations and the Believer** (`topic-nations`)
 - [x] **The Heavens Declare – Creation and the Creator** (`topic-creation`)
 - [x] **Sons of God – Angels, Satan and the Sons of God** (`topic-angels`)
+- [x] **Daniel’s 70th Week – The Chart, Step by Step** (`revelation-daniels-70th-week-chart`, deck `daniels-70th-week`): the chart in parts, every numbered dot opening its verses; built by `tools/make_daniels_70th_week.py`
 
 ## Standing decisions
 
