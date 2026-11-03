@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Beginning of Wisdom – Wisdom and the Fear of the LORD</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Wisdom and the fear of the LORD: God&#x27;s wisdom, not man&#x27;s; the righteous and the wicked; the tongue; wisdom and the strange woman; and true riches, from the teachings on Proverbs and the wisdom that leads to Christ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.8rem,8vw,6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="The Beginning of Wisdom">
+  <div class="page title-page">
+    <div class="overline">Doctrine · Wisdom &amp; the fear of the LORD</div>
+    <h1>The Beginning of Wisdom</h1>
+    <p class="sub">Proverbs and the wisdom that leads to Christ.</p>
+    <div class="refs center"><button class="ref" data-v="Proverbs 9:10">Proverbs 9:10</button><button class="ref" data-v="Proverbs 3:5-6">Proverbs 3:5-6</button><button class="ref" data-v="Colossians 2:3">Colossians 2:3</button><button class="ref" data-v="Ecclesiastes 12:13">Ecclesiastes 12:13</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any gold reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="The fear of the Lord">
+  <div class="page">
+    <h2>The fear of the Lord</h2>
+    <blockquote class="big-verse"><mark>The fear of the <span class="lord">Lord</span> is the beginning of knowledge</mark>: but fools despise <mark class="w">wisdom</mark> and instruction.<cite>Proverbs 1:7</cite></blockquote>
+    <p>It is astounding how we, as men, can hear God's word, know His word, study it, hear it preached, and yet still lean on our own understanding.</p>
+    <p>God's word should lead us to fear Him. To respect His holiness, power, mercy and justice. His wrath and His judgments. This is what makes a man wise. And it is every parent's responsibility to teach it to our children. It is the greatest inheritance we can give them (<button class="ref" data-v="Proverbs 1:8-9">Proverbs 1:8-9</button>).</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-wisdom~17142" target="_blank" rel="noopener">The fear of the Lord the beginning of knowledge ↗</a></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="God&#x27;s wisdom, not man&#x27;s" data-title="Lean not unto thine own understanding">
+  <div class="page">
+    <div class="kicker">God's wisdom, not man's</div>
+    <h2>Lean not unto thine own understanding</h2>
+    <blockquote class="big-verse">Trust in the <span class="lord">Lord</span> with all thine heart; and <mark>lean not unto thine own understanding</mark>. In all thy ways acknowledge him, and <mark>he shall direct thy paths</mark>.<cite>Proverbs 3:5-6</cite></blockquote>
+    <p>This is the key verse of Proverbs. The foundational understanding. Remember it, sing it, say it. And in everything acknowledge God first.</p>
+    <p>Don't think to blaze your own trails and beat down your own paths. There is nothing new under the Sun and God's ways are the best ways. The old paths, tried and true.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="God&#x27;s wisdom, not man&#x27;s" data-title="A way that seemeth right">
+  <div class="page">
+    <div class="kicker">God's wisdom, not man's</div>
+    <h2>A way that seemeth right</h2>
+    <blockquote class="big-verse"><mark>There is a way which seemeth right unto a man, but the end thereof are the ways of death</mark>.<cite>Proverbs 14:12</cite></blockquote>
+    <p>Man is able to rationalize any transgression, every petty sin and idle thought. But man's ways are not God's (<button class="ref" data-v="Isaiah 55:8-9">Isaiah 55:8-9</button>).</p>
+    <p><em>Every way of a man is right in his own eyes: but the LORD pondereth the hearts</em> (<button class="ref" data-v="Proverbs 21:2">Proverbs 21:2</button>). Often we can do the right things for the wrong reasons. A man can do good for bad reasons, he can do evil with good intentions. God knows our hearts.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="God&#x27;s wisdom, not man&#x27;s" data-title="Jesus, the vein of wisdom">
+  <div class="page">
+    <div class="kicker">God's wisdom, not man's</div>
+    <h2>Jesus, the vein of wisdom</h2>
+    <blockquote class="big-verse"><mark>In whom are hid all the treasures of <mark class="w">wisdom</mark> and knowledge</mark>.<cite>Colossians 2:3</cite></blockquote>
+    <p>Job describes the relative ease of finding silver and gold, compared to the wisdom of God (<button class="ref" data-v="Job 28:12-13">Job 28:12-13</button>). In Christ is all God's wisdom and knowledge. Jesus is the vein of wisdom, through the fear of God.</p>
+    <p><em>But we have the mind of Christ</em> (<button class="ref" data-v="1 Corinthians 2:16">1 Corinthians 2:16</button>). But our flesh is at enmity with the spirit, and so when we walk in the carnal, we have less access to the wisdom of God. The root of the righteous, that is Christ Jesus, shall not be moved (<button class="ref" data-v="Proverbs 12:3">Proverbs 12:3</button>). All wisdom leads to Christ.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="God&#x27;s wisdom, not man&#x27;s" data-title="The foolishness of God">
+  <div class="page">
+    <div class="kicker">God's wisdom, not man's</div>
+    <h2>The foolishness of God</h2>
+    <blockquote class="big-verse">For <mark>the preaching of the cross is to them that perish foolishness</mark>; but unto us which are saved it is the power of God.<cite>1 Corinthians 1:18</cite></blockquote>
+    <p>Despite all his knowledge and wisdom, Solomon recognized the ways of God are still far above him (<button class="ref" data-v="Ecclesiastes 8:17">Ecclesiastes 8:17</button>). Not by man's wisdom. But by His Spirit.</p>
+    <p>We all know people today who are constantly looking for supernatural signs from God before they can commit to believing, or who seek to impose their own logic on matters that are spiritual, and who scoff at the simplicity of the Gospel. What many see as foolishness, or weakness, is actually the wisdom of God.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="God&#x27;s wisdom, not man&#x27;s" data-title="True things, false points">
+  <div class="page">
+    <div class="kicker">God's wisdom, not man's</div>
+    <h2>True things, false points</h2>
+    <blockquote class="big-verse"><mark>Shall mortal man be more just than God?</mark> shall a man be more pure than his maker?<cite>Job 4:17</cite></blockquote>
+    <p>Eliphaz uses true things to make false points. Many times the greatest lies are based on a misrepresentation or misapplication of the greatest truths.</p>
+    <p>Just because you believe something about the world to be true, doesn't make it Biblical doctrine. Literal creation is a primary doctrine. The shape of the earth isn't Biblical doctrine. Don't project your opinions of the worldly onto scripture. If you think you know for certain anything other than Christ and him crucified, you're a fool (<button class="ref" data-v="1 Corinthians 2:2">1 Corinthians 2:2</button>).</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="God&#x27;s wisdom, not man&#x27;s" data-title="The whole duty of man">
+  <div class="page">
+    <div class="kicker">God's wisdom, not man's</div>
+    <h2>The whole duty of man</h2>
+    <blockquote class="big-verse">Let us hear the conclusion of the whole matter: <mark>Fear God, and keep his commandments: for this is the whole duty of man</mark>.<cite>Ecclesiastes 12:13</cite></blockquote>
+    <p>Solomon the Wise comes to the ultimate conclusion that the purpose of life isn't gathering riches, or pleasure or mirth. It is only to fear God and keep His commandments.</p>
+    <p><em>Turn not to the right hand nor to the left</em> (<button class="ref" data-v="Proverbs 4:27">Proverbs 4:27</button>). Don't get caught up in the false binary presented by the beast. The true third position is the path of righteousness and steadfast faith in God alone.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-wisdom~17153" target="_blank" rel="noopener">Trust in the Lord, lean not on thine own understanding ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-wisdom~16980" target="_blank" rel="noopener">Jesus the vein of wisdom ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-wisdom~3653" target="_blank" rel="noopener">Primary doctrine and incidental opinions ↗</a></div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="The righteous and the wicked" data-title="How the fool, the wise and the righteous learn">
+  <div class="page">
+    <div class="kicker">The righteous and the wicked</div>
+    <h2>How the fool, the wise and the righteous learn</h2>
+    <div class="tbl"><table><thead><tr><th>Who</th><th>How they learn right from wrong</th></tr></thead><tbody><tr><td>The fool</td><td>Never learns from experience. They do the same foolishness over and over again and expect it to work out differently “this time.”</td></tr><tr><td>The average person</td><td>From their own experience, imperfectly.</td></tr><tr><td>The <mark class="w">wise</mark></td><td>Not only from their own, but by others' experiences.</td></tr><tr><td>The righteous</td><td>From God's word, and believe Him when He says something is so.</td></tr><tr><td>The wicked</td><td>Know right from wrong and do it anyway.</td></tr><tr><td>The hypocrite</td><td>Knows it, and holds it against others who fall short, while failing to maintain it themselves.</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="The righteous and the wicked" data-title="The fear of God divides them">
+  <div class="page">
+    <div class="kicker">The righteous and the wicked</div>
+    <h2>The fear of God divides them</h2>
+    <blockquote class="big-verse">The transgression of the wicked saith within my heart, that <mark>there is no fear of God before his eyes</mark>.<cite>Psalm 36:1</cite></blockquote>
+    <p>The contrast between the wicked and righteous is the fear of the Lord. The love of truth and abhorring evil. The prideful versus the humility of falling before God.</p>
+    <p><em>A scorner seeketh wisdom, and findeth it not</em> (<button class="ref" data-v="Proverbs 14:6">Proverbs 14:6</button>). How can they, without the fear of God? <em>Ever learning, and never able to come to the knowledge of the truth</em> (<button class="ref" data-v="2 Timothy 3:7">2 Timothy 3:7</button>). God grants us wisdom by His word and by the rod of reproof (<button class="ref" data-v="Proverbs 1:23">Proverbs 1:23</button>).</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="The righteous and the wicked" data-title="Pride goeth before destruction">
+  <div class="page">
+    <div class="kicker">The righteous and the wicked</div>
+    <h2>Pride goeth before destruction</h2>
+    <blockquote class="big-verse"><mark>Pride goeth before destruction</mark>, and an haughty spirit before a fall.<cite>Proverbs 16:18</cite></blockquote>
+    <p>The things God hates are the things we are called to hate, and pride is one of the things God hates most (<button class="ref" data-v="Proverbs 6:16-19">Proverbs 6:16-19</button>). It is why the sodomites use the term. They defy God by announcing their pride, against His judgments.</p>
+    <p><em>But wisdom is justified of her children</em> (<button class="ref" data-v="Matthew 11:19">Matthew 11:19</button>). What people think to give as their opinion is shown to be true or not by what following it begets. The fruit that wisdom bears.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="The righteous and the wicked" data-title="The wise son">
+  <div class="page">
+    <div class="kicker">The righteous and the wicked</div>
+    <h2>The wise son</h2>
+    <blockquote class="big-verse">The proverbs of Solomon. <mark>A <mark class="w">wise</mark> son maketh a glad father</mark>: but a foolish son is the heaviness of his mother.<cite>Proverbs 10:1</cite></blockquote>
+    <p>God blesses those that prepare, gathering in the summer against the winter. Sleeping through the harvest is a shame (<button class="ref" data-v="Proverbs 10:5">Proverbs 10:5</button>). The harvest analogy is not just for earthly goals, but the sharing of the gospel. Go soul-winning! He that winneth souls is wise.</p>
+    <p><em>The way of the LORD is strength to the upright: but destruction shall be to the workers of iniquity</em> (<button class="ref" data-v="Proverbs 10:29">Proverbs 10:29</button>).</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-wisdom~11239" target="_blank" rel="noopener">How the fool, wise and righteous learn ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-wisdom~17201" target="_blank" rel="noopener">The scorner seeketh wisdom and findeth it not ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-wisdom~10571" target="_blank" rel="noopener">Pride goes before destruction ↗</a></div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="The tongue" data-title="Death and life">
+  <div class="page">
+    <div class="kicker">The tongue</div>
+    <h2>Death and life</h2>
+    <blockquote class="big-verse"><mark>Death and life are in the power of the tongue</mark>: and they that love it shall eat the fruit thereof.<cite>Proverbs 18:21</cite></blockquote>
+    <p>Imagine every foolish or wicked thing you've ever said in anger, read aloud by the holy God for all to hear (<button class="ref" data-v="Matthew 12:36">Matthew 12:36</button>). I thank God for His great salvation, that spares me from such utter humiliation.</p>
+    <p><em>A soft answer turneth away wrath</em> (<button class="ref" data-v="Proverbs 15:1">Proverbs 15:1</button>). <em>A word spoken in due season, how good is it!</em> (<button class="ref" data-v="Proverbs 15:23">Proverbs 15:23</button>) How good it is to hear the joy of a brother when we are feeling down!</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="The tongue" data-title="A bridle on the mouth">
+  <div class="page">
+    <div class="kicker">The tongue</div>
+    <h2>A bridle on the mouth</h2>
+    <blockquote class="big-verse">I said, I will take heed to my ways, that I sin not with my tongue: <mark>I will keep my mouth with a bridle</mark>, while the wicked is before me.<cite>Psalm 39:1</cite></blockquote>
+    <p>Parents with adult children, or pastors with a flock, should recognize this feeling. When we see people we love being led away, and we know if we speak out in anger, that we'd do more harm than good. <em>My heart was hot within me</em> (<button class="ref" data-v="Psalms 39:3">Psalm 39:3</button>).</p>
+    <p><em>A fool uttereth all his mind: but a wise man keepeth it in till afterwards</em> (<button class="ref" data-v="Proverbs 29:11">Proverbs 29:11</button>). Blabbing every idle thought that comes into your head is vain (<button class="ref" data-v="James 3:2-5">James 3:2-5</button>).</p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="The tongue" data-title="Talebearers and evil surmising">
+  <div class="page">
+    <div class="kicker">The tongue</div>
+    <h2>Talebearers and evil surmising</h2>
+    <blockquote class="big-verse">Where no wood is, there the fire goeth out: so <mark>where there is no talebearer, the strife ceaseth</mark>.<cite>Proverbs 26:20</cite></blockquote>
+    <p>Evil surmising is harboring unproven, malicious suspicions, assuming the worst motives about others without evidence (<button class="ref" data-v="1 Timothy 6:4-5">1 Timothy 6:4-5</button>). They take innocent actions and invent malicious intent, spreading rumors to poison others. Don't be one, but also don't fall victim to one by listening to their talebearing.</p>
+    <p>The words we say are a window to our heart (<button class="ref" data-v="Matthew 12:34">Matthew 12:34</button>). <em>The eyes of the LORD are in every place, beholding the evil and the good</em> (<button class="ref" data-v="Proverbs 15:3">Proverbs 15:3</button>).</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-wisdom~17235" target="_blank" rel="noopener">Death and life in the power of the tongue ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-wisdom~17330" target="_blank" rel="noopener">Talebearers, evil surmising and discord ↗</a></div>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Wisdom and the strange woman" data-title="The strange woman">
+  <div class="page">
+    <div class="kicker">The strange woman</div>
+    <h2>The strange woman</h2>
+    <blockquote class="big-verse">For the lips of a strange woman drop as an honeycomb, and her mouth is smoother than oil: But <mark>her end is bitter as wormwood</mark>, sharp as a two-edged sword. Her feet go down to death; her steps take hold on hell.<cite>Proverbs 5:3-5</cite></blockquote>
+    <p>The analogy of adultery serves as both a metaphor and practical application. The strange woman of folly speaks sweet sayings, but her end is bitter. God's paths are straight and knowable, but her ways are moveable. Sin will take you further than you want to go, keep you longer than you want to stay, and cost you more than you want to pay.</p>
+    <p>She says the goodman is gone a long journey (<button class="ref" data-v="Proverbs 7:19-20">Proverbs 7:19-20</button>). There is an allegory here: the temptation that judgment of God is afar off. <em>Stolen waters are sweet</em> (<button class="ref" data-v="Proverbs 9:17">Proverbs 9:17</button>). But her guests are in the depths of Hell.</p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Wisdom and the strange woman" data-title="The wife of thy youth">
+  <div class="page">
+    <div class="kicker">The strange woman</div>
+    <h2>The wife of thy youth</h2>
+    <blockquote class="big-verse">Let thy fountain be blessed: and <mark>rejoice with the wife of thy youth</mark>.<cite>Proverbs 5:18</cite></blockquote>
+    <p><em>King Solomon loved many strange women... and his wives turned away his heart</em> (<button class="ref" data-v="1 Kings 11:1-4">1 Kings 11:1-4</button>). The wisest man in history fell prey to the very thing he counseled against. It is often true that the preacher preaches what he needs to hear, more than the audience.</p>
+    <p><em>Give not thy strength unto women, nor thy ways to that which destroyeth kings</em> (<button class="ref" data-v="Proverbs 31:3">Proverbs 31:3</button>). Women were not just problems Solomon carried, but a downfall for his father David, as well.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-wisdom~17166" target="_blank" rel="noopener">The strange woman and the wife of thy youth ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-wisdom~17172" target="_blank" rel="noopener">The harlot's snare and the goodman gone ↗</a></div>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="True riches" data-title="Riches profit not">
+  <div class="page">
+    <div class="kicker">True riches</div>
+    <h2>Riches profit not</h2>
+    <blockquote class="big-verse"><mark>Riches profit not in the day of wrath: but righteousness delivereth from death</mark>.<cite>Proverbs 11:4</cite></blockquote>
+    <p>Wise men die, likewise the fool and the brutish person perish, and leave their wealth to others (<button class="ref" data-v="Psalms 49:10">Psalm 49:10</button>). The man trusting his riches cannot redeem himself or his brother. But the precious redemption of the soul is of God, through faith in Christ.</p>
+    <p><em>Give me neither poverty nor riches</em> (<button class="ref" data-v="Proverbs 30:8-9">Proverbs 30:8-9</button>).</p>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="True riches" data-title="Rich yet nothing, poor yet rich">
+  <div class="page">
+    <div class="kicker">True riches</div>
+    <h2>Rich yet nothing, poor yet rich</h2>
+    <blockquote class="big-verse">There is that maketh himself rich, yet hath nothing: <mark>there is that maketh himself poor, yet hath great riches</mark>.<cite>Proverbs 13:7</cite></blockquote>
+    <p>God is not opposed to earthly riches. Job and Abraham and Solomon were incredibly wealthy in their day. It isn't the wealth we gain but what we do with it. It isn't the riches but where your treasure is.</p>
+    <p>The love of money is the root of all evil (<button class="ref" data-v="1 Timothy 6:10">1 Timothy 6:10</button>). Be satisfied with what God blessed you with, even if it is subsistence, knowing that if you win souls, your riches in Heaven will be greater.</p>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="True riches" data-title="Low time preference">
+  <div class="page">
+    <div class="kicker">True riches</div>
+    <h2>Low time preference</h2>
+    <blockquote class="big-verse">Wealth gotten by vanity shall be diminished: but <mark>he that gathereth by labour shall increase</mark>.<cite>Proverbs 13:11</cite></blockquote>
+    <p>Low time preference is the tendency to delay immediate gratification in favor of future, long-term rewards. It reflects a patient, disciplined, and forward-thinking mindset, and it is a sign of wisdom.</p>
+    <p><em>Be thou diligent to know the state of thy flocks</em> (<button class="ref" data-v="Proverbs 27:23">Proverbs 27:23</button>). But <em>he that hasteth to be rich hath an evil eye</em> (<button class="ref" data-v="Proverbs 28:22">Proverbs 28:22</button>). The “Prosperity Gospel” scam artists take as much advantage of this tendency in man as the street corner swindler.</p>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="True riches" data-title="The borrower is servant">
+  <div class="page">
+    <div class="kicker">True riches</div>
+    <h2>The borrower is servant</h2>
+    <blockquote class="big-verse">The rich ruleth over the poor, and <mark>the borrower is servant to the lender</mark>.<cite>Proverbs 22:7</cite></blockquote>
+    <p>We complain about the “unfair” reality of billionaires and the power of usury, while we rack up debt. We will contribute to the rich for things we don't need, while neglecting the brother at church who is struggling to pay for basic necessities.</p>
+    <p><em>Boast not thyself of to morrow</em> (<button class="ref" data-v="Proverbs 27:1">Proverbs 27:1</button>). Now is the day of salvation (<button class="ref" data-v="2 Corinthians 6:2">2 Corinthians 6:2</button>). Be prudent and plan, without worry. Don't put off till tomorrow what can be done today.</p>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="True riches" data-title="Rich toward God">
+  <div class="page">
+    <div class="kicker">True riches</div>
+    <h2>Rich toward God</h2>
+    <blockquote class="big-verse">And I say unto you, <mark>Make to yourselves friends of the mammon of unrighteousness</mark>; that, when ye fail, they may receive you into everlasting habitations.<cite>Luke 16:9</cite></blockquote>
+    <p>Make friends with your wealth. Spend it to others' benefit. Forgive them debts, that those you've helped may hear the Gospel. If we can't be just with unrighteous Mammon, how will we expect to be just with others' souls?</p>
+    <p>You can't take it with you (<button class="ref" data-v="Ecclesiastes 5:15">Ecclesiastes 5:15</button>). But the works we do for the Lord are never in vain (<button class="ref" data-v="1 Corinthians 15:58">1 Corinthians 15:58</button>). All good things are of God, and it's okay to enjoy those things. They are a gift.</p>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="True riches" data-title="Say not the former days were better">
+  <div class="page">
+    <div class="kicker">True riches</div>
+    <h2>Say not the former days were better</h2>
+    <blockquote class="big-verse"><mark>Say not thou, What is the cause that the former days were better than these?</mark> for thou dost not enquire <mark class="w">wisely</mark> concerning this.<cite>Ecclesiastes 7:10</cite></blockquote>
+    <p>Appeals to the “better days” of the past prey upon the inclination to see the former days as better, especially given the evil we see all around us. For we all feel like Lot at times.</p>
+    <p>There is no political solution to a spiritual problem. Revival is a continuous process. The need for revival is never greater than now. No matter when “now” is.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-wisdom~17985" target="_blank" rel="noopener">The vanity of riches before death ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-wisdom~17196" target="_blank" rel="noopener">Low time preference is a sign of wisdom ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-wisdom~9522" target="_blank" rel="noopener">Make friends of the mammon of unrighteousness ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-wisdom~17497" target="_blank" rel="noopener">Say not the former days were better ↗</a></div>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="Wisdom leads to Christ" data-title="Get Wisdom">
+  <div class="page title-page later">
+    <div class="overline">Wisdom &amp; the fear of the LORD</div>
+    <h1>Get Wisdom</h1>
+    <blockquote class="big-verse"><mark><mark class="w">Wisdom</mark> is the principal thing</mark>; <mark>therefore get <mark class="w">wisdom</mark></mark>: and with all thy getting get understanding.<cite>Proverbs 4:7</cite></blockquote>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="center">Life is a gift from God, and an abundant life is in service of Him. All wisdom leads to Christ.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-topic-prayer" target="_blank" rel="noopener">Unto Thee Will I Pray – Prayer, Praise and Worship ↗</a><a class="ref lesson-link" href="../../studies/#lesson-topic-walk-heart" target="_blank" rel="noopener">The walk, part five: Out of the Heart ↗</a></div>
+    <p class="sub center">Every teaching is on the <a class="ref lesson-link" href="../../studies/#doctrine-wisdom" target="_blank" rel="noopener">Wisdom &amp; the fear of the LORD ↗</a> page.</p>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 Corinthians 15:58":[[58, "Therefore, my beloved brethren, be ye stedfast, unmoveable, always abounding in the work of the Lord, forasmuch as ye know that your labour is not in vain in the Lord."]],
+  "1 Corinthians 2:16":[[16, "For who hath known the mind of the Lord, that he may instruct him? But we have the mind of Christ."]],
+  "1 Corinthians 2:2":[[2, "For I determined not to know any thing among you, save Jesus Christ, and him crucified."]],
+  "1 Kings 11:1-4":[[1, "But king Solomon loved many strange women, together with the daughter of Pharaoh, women of the Moabites, Ammonites, Edomites, Zidonians, and Hittites;"], [2, "Of the nations concerning which the LORD said unto the children of Israel, Ye shall not go in to them, neither shall they come in unto you: for surely they will turn away your heart after their gods: Solomon clave unto these in love."], [3, "And he had seven hundred wives, princesses, and three hundred concubines: and his wives turned away his heart."], [4, "For it came to pass, when Solomon was old, that his wives turned away his heart after other gods: and his heart was not perfect with the LORD his God, as was the heart of David his father."]],
+  "1 Timothy 6:10":[[10, "For the love of money is the root of all evil: which while some coveted after, they have erred from the faith, and pierced themselves through with many sorrows."]],
+  "1 Timothy 6:4-5":[[4, "He is proud, knowing nothing, but doting about questions and strifes of words, whereof cometh envy, strife, railings, evil surmisings,"], [5, "Perverse disputings of men of corrupt minds, and destitute of the truth, supposing that gain is godliness: from such withdraw thyself."]],
+  "2 Corinthians 6:2":[[2, "(For he saith, I have heard thee in a time accepted, and in the day of salvation have I succoured thee: behold, now is the accepted time; behold, now is the day of salvation.)"]],
+  "2 Timothy 3:7":[[7, "Ever learning, and never able to come to the knowledge of the truth."]],
+  "Colossians 2:3":[[3, "In whom are hid all the treasures of wisdom and knowledge."]],
+  "Ecclesiastes 12:13":[[13, "Let us hear the conclusion of the whole matter: Fear God, and keep his commandments: for this is the whole duty of man."]],
+  "Ecclesiastes 5:15":[[15, "As he came forth of his mother’s womb, naked shall he return to go as he came, and shall take nothing of his labour, which he may carry away in his hand."]],
+  "Ecclesiastes 8:17":[[17, "Then I beheld all the work of God, that a man cannot find out the work that is done under the sun: because though a man labour to seek it out, yet he shall not find it; yea farther; though a wise man think to know it, yet shall he not be able to find it."]],
+  "Isaiah 55:8-9":[[8, "For my thoughts are not your thoughts, neither are your ways my ways, saith the LORD."], [9, "For as the heavens are higher than the earth, so are my ways higher than your ways, and my thoughts than your thoughts."]],
+  "James 3:2-5":[[2, "For in many things we offend all. If any man offend not in word, the same is a perfect man, and able also to bridle the whole body."], [3, "Behold, we put bits in the horses’ mouths, that they may obey us; and we turn about their whole body."], [4, "Behold also the ships, which though they be so great, and are driven of fierce winds, yet are they turned about with a very small helm, whithersoever the governor listeth."], [5, "Even so the tongue is a little member, and boasteth great things. Behold, how great a matter a little fire kindleth!"]],
+  "Job 28:12-13":[[12, "But where shall wisdom be found? and where is the place of understanding?"], [13, "Man knoweth not the price thereof; neither is it found in the land of the living."]],
+  "Matthew 11:19":[[19, "The Son of man came eating and drinking, and they say, Behold a man gluttonous, and a winebibber, a friend of publicans and sinners. But wisdom is justified of her children."]],
+  "Matthew 12:34":[[34, "O generation of vipers, how can ye, being evil, speak good things? for out of the abundance of the heart the mouth speaketh."]],
+  "Matthew 12:36":[[36, "But I say unto you, That every idle word that men shall speak, they shall give account thereof in the day of judgment."]],
+  "Proverbs 10:29":[[29, "The way of the LORD is strength to the upright: but destruction shall be to the workers of iniquity."]],
+  "Proverbs 10:5":[[5, "He that gathereth in summer is a wise son: but he that sleepeth in harvest is a son that causeth shame."]],
+  "Proverbs 12:3":[[3, "A man shall not be established by wickedness: but the root of the righteous shall not be moved."]],
+  "Proverbs 14:6":[[6, "A scorner seeketh wisdom, and findeth it not: but knowledge is easy unto him that understandeth."]],
+  "Proverbs 15:1":[[1, "A soft answer turneth away wrath: but grievous words stir up anger."]],
+  "Proverbs 15:23":[[23, "A man hath joy by the answer of his mouth: and a word spoken in due season, how good is it!"]],
+  "Proverbs 15:3":[[3, "The eyes of the LORD are in every place, beholding the evil and the good."]],
+  "Proverbs 1:23":[[23, "Turn you at my reproof: behold, I will pour out my spirit unto you, I will make known my words unto you."]],
+  "Proverbs 1:8-9":[[8, "My son, hear the instruction of thy father, and forsake not the law of thy mother:"], [9, "For they shall be an ornament of grace unto thy head, and chains about thy neck."]],
+  "Proverbs 21:2":[[2, "Every way of a man is right in his own eyes: but the LORD pondereth the hearts."]],
+  "Proverbs 27:1":[[1, "Boast not thyself of to morrow; for thou knowest not what a day may bring forth."]],
+  "Proverbs 27:23":[[23, "Be thou diligent to know the state of thy flocks, and look well to thy herds."]],
+  "Proverbs 28:22":[[22, "He that hasteth to be rich hath an evil eye, and considereth not that poverty shall come upon him."]],
+  "Proverbs 29:11":[[11, "A fool uttereth all his mind: but a wise man keepeth it in till afterwards."]],
+  "Proverbs 30:8-9":[[8, "Remove far from me vanity and lies: give me neither poverty nor riches; feed me with food convenient for me:"], [9, "Lest I be full, and deny thee, and say, Who is the LORD? or lest I be poor, and steal, and take the name of my God in vain."]],
+  "Proverbs 31:3":[[3, "Give not thy strength unto women, nor thy ways to that which destroyeth kings."]],
+  "Proverbs 3:5-6":[[5, "Trust in the LORD with all thine heart; and lean not unto thine own understanding."], [6, "In all thy ways acknowledge him, and he shall direct thy paths."]],
+  "Proverbs 4:27":[[27, "Turn not to the right hand nor to the left: remove thy foot from evil."]],
+  "Proverbs 6:16-19":[[16, "These six things doth the LORD hate: yea, seven are an abomination unto him:"], [17, "A proud look, a lying tongue, and hands that shed innocent blood,"], [18, "An heart that deviseth wicked imaginations, feet that be swift in running to mischief,"], [19, "A false witness that speaketh lies, and he that soweth discord among brethren."]],
+  "Proverbs 7:19-20":[[19, "For the goodman is not at home, he is gone a long journey:"], [20, "He hath taken a bag of money with him, and will come home at the day appointed."]],
+  "Proverbs 9:10":[[10, "The fear of the LORD is the beginning of wisdom: and the knowledge of the holy is understanding."]],
+  "Proverbs 9:17":[[17, "Stolen waters are sweet, and bread eaten in secret is pleasant."]],
+  "Psalms 39:3":[[3, "My heart was hot within me, while I was musing the fire burned: then spake I with my tongue,"]],
+  "Psalms 49:10":[[10, "For he seeth that wise men die, likewise the fool and the brutish person perish, and leave their wealth to others."]]
+};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open; }
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b) {
+    const keys = b.dataset.v;
+    const label = keys.includes("|") ? b.textContent.trim() : refTitle(keys);
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>

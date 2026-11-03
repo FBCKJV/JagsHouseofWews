@@ -7,7 +7,7 @@
 
   const KJV_APP = 'https://fbckjv.app/KJVBible/';
   // Shown on the About page. Started at v1.17 (after 17 merged updates); each merged update adds one.
-  const APP_VERSION = '1.87', APP_DATE = '2026-11-03';
+  const APP_VERSION = '1.90', APP_DATE = '2026-11-03';
   const view = document.getElementById('view');
   const crumbs = document.getElementById('crumbs');
   let INDEX = null;
@@ -230,12 +230,15 @@
           <strong>${esc(chapterName(last.book.book, last.ch))}</strong></a>` : ''}
         ${L ? `<a class="continue" href="#${L.slug}-${L.chapter}"><span class="label">Latest in the series</span>
           <strong>${esc(chapterName(L.book, L.chapter))}</strong><em>${esc(fmtDate(L.date))}</em></a>` : ''}
+        <a class="continue" href="#doctrines"><span class="label">Learn the doctrines</span>
+          <strong>Slides by subject</strong><em>Salvation, the Word of God, the church and more</em></a>
       </div>
       ${testament('OT', 'Old Testament', 'Genesis – Malachi')}
       ${testament('NT', 'New Testament', 'Matthew – Revelation')}
+      <div id="home-doctrines"></div>
       <nav class="home-sections" aria-label="More in the app">
-        <a href="#doctrines"><strong>Doctrines</strong><span>Teachings filed by topic</span></a>
-        <a href="#lessons"><strong>Lessons</strong><span>Slides, notes and sermons</span></a>
+        <a href="#doctrines"><strong>Doctrines</strong><span>Slides first, then the teachings</span></a>
+        <a href="#lessons"><strong>Lessons</strong><span>Doctrine slides, classes and the archive</span></a>
         <a href="#pictures"><strong>Memes</strong><span>Charts and memes by topic</span></a>
       </nav>`;
     // Each testament folds; the choice is remembered on this device.
@@ -243,6 +246,31 @@
       try { localStorage.setItem('wews_open_' + d.dataset.t, d.open ? '1' : '0'); } catch (e) {}
     }));
     wireJump(view, hash => { location.hash = hash; });
+    homeDoctrines();
+  }
+
+  // Below the Bible studies, the way into the doctrines: each one with its slides.
+  async function homeDoctrines() {
+    const [t, lib] = await Promise.all([loadTopics(), loadLessons()]);
+    const slot = document.getElementById('home-doctrines');
+    if (!slot || location.hash.replace('#', '') !== '') return;
+    const cards = t.topics.filter(x => x.count).map(x => {
+      const own = lib.lessons.filter(l => l.shelf === 'topics' && l.topics[0] === x.id);
+      const n = lib.lessons.filter(l => l.topics.includes(x.id)).length;
+      const deck = own.length === 1 ? own[0].title.split(' – ')[0] : own.length ? `${own.length} slide decks` : '';
+      return `<a class="topic" href="#doctrine-${esc(x.id)}">
+        <span class="book-name">${esc(x.name)}</span>
+        ${deck ? `<span class="topic-about">Slides: ${esc(deck)}</span>` : `<span class="topic-about">${esc(x.about)}</span>`}
+        <span class="book-count">${n ? `${n} lesson${n === 1 ? '' : 's'} · ` : ''}${x.count} teaching${x.count === 1 ? '' : 's'}</span></a>`;
+    }).join('');
+    const withSlides = t.topics.filter(x => lib.lessons.some(l => l.shelf === 'topics' && l.topics[0] === x.id)).length;
+    slot.innerHTML = `<details class="testament" data-t="DOC"${isOpen('DOC') ? ' open' : ''}>
+      <summary class="section-header"><h2>The doctrines</h2><span>Slides by subject</span>
+        <em>${withSlides} of ${t.topics.filter(x => x.count).length} doctrines have their slides so far</em></summary>
+      <div class="topic-grid">${cards}</div></details>`;
+    slot.querySelector('details').addEventListener('toggle', e => {
+      try { localStorage.setItem('wews_open_DOC', e.target.open ? '1' : '0'); } catch (err) {}
+    });
   }
 
   // Testaments start open; after that they stay the way they were left.
@@ -287,9 +315,9 @@
     ['Back button', 'Your phone’s Back button closes the chapter picker first, then steps back through the pages you came from.'],
     ['Where you left off', 'The home page remembers the last study you opened on this device. Tap Old Testament or New Testament to fold its books away.'],
     ['Read in the KJV app', 'Opens that chapter in the KJV Bible app in a new tab, so your place here stays put.'],
-    ['Doctrines & Teachings', 'Teachings that compare scripture with scripture, sorted by topic. Tap a verse to open it in the KJV Bible app, or open the chapter study it came from.'],
+    ['Doctrines & Teachings', 'Each doctrine opens with its slides, then the other lessons on it. Below them, under Further reading, are the teachings from the chapter studies it was built from. Tap a verse to open it in the KJV Bible app.'],
     ['Install the app', 'On Android choose Install app from the browser menu; on iPhone use Share, then Add to Home Screen. It then opens full screen like the KJV Bible app.'],
-    ['Lessons & Classes', 'Slides, notes and handouts from the classes. Slides open in a new tab; notes open right on the page.'],
+    ['Lessons & Classes', 'The doctrine slides come first, then the classes week by week, then the archive of sermons, history and answering error. Slides open in a new tab; notes open right on the page.'],
     ['Memes', 'The Memes tab at the bottom shows the memes and charts by topic. Tap one to see it full size. The KJV Bible app is a tap away from any verse in a study.'],
     ['Search', 'Tap the magnifying glass at the top to search every study, teaching and lesson. Type a verse like “john 3:16” to see everywhere it is taught.'],
     ['The chapter grid', 'Solid squares are series studies, dashed squares are earlier one-off studies, and dim squares are chapters not yet studied.']
@@ -384,19 +412,20 @@
     document.title = 'Doctrines & Teachings — Jag\'s House of Wews';
     setCrumbs([['Home', '#'], ['Doctrines & Teachings', '#doctrines']]);
     view.classList.add('wide');
-    const t = await loadTopics();
+    const [t, lib] = await Promise.all([loadTopics(), loadLessons()]);
     if (location.hash !== '#doctrines') return;
+    const lessonsOn = id => lib.lessons.filter(l => l.topics.includes(id)).length;
     const total = t.topics.reduce((n, x) => n + x.count, 0);
     view.innerHTML = `
       <div class="hero">
         <h1>Doctrines &amp; Teachings</h1>
-        <p>Teachings where scripture is compared with scripture to set out one truth, gathered from the chapter studies and sorted by topic.</p>
+        <p>Each doctrine opens with its slides, then the other lessons on it, then the teachings from the chapter studies as further reading.</p>
       </div>
       <div class="topic-grid">${t.topics.filter(x => x.count).map(x => `
         <a class="topic" href="#doctrine-${esc(x.id)}">
           <span class="book-name">${esc(x.name)}</span>
           <span class="topic-about">${esc(x.about)}</span>
-          <span class="book-count">${x.count} teaching${x.count === 1 ? '' : 's'}</span>
+          <span class="book-count">${lessonsOn(x.id) ? `${lessonsOn(x.id)} lesson${lessonsOn(x.id) === 1 ? '' : 's'} · ` : ''}${x.count} teaching${x.count === 1 ? '' : 's'}</span>
         </a>`).join('')}</div>
       <p class="fineprint">${total} entries. A teaching that sets out two doctrines is listed under both.</p>`;
   }
@@ -427,6 +456,9 @@
   async function topicView(id, openId, line) {
     const [t, topic, lib] = await Promise.all([loadTopics(), loadTopic(id), loadLessons()]);
     const onTopic = lib.lessons.filter(l => l.topics.includes(id));
+    const own = onTopic.filter(l => l.shelf === 'topics' && l.topics[0] === id);   // the deck(s) made for this doctrine
+    const more = onTopic.filter(l => !own.includes(l));
+    const shelfOf = l => lib.shelves.find(s => s.id === l.shelf);
     const pics = lib.pictures.filter(p => p.topics.includes(id));
     if (!location.hash.startsWith('#doctrine-' + id)) return;
     document.title = topic.name + ' — Doctrines & Teachings';
@@ -456,16 +488,21 @@
           return `<li>${esc(step.step)}${refs ? `<span class="refs">${refs}</span>` : ''}</li>`;
         }).join('')}</ol>
         ${topic.chart ? `<p class="chart-link"><a href="${esc(topic.chart.url)}" target="_blank" rel="noopener">See the full chart: ${esc(topic.chart.label)} ↗</a></p>` : ''}</section>` : ''}
-      ${onTopic.length ? `<div class="section-header"><h2>Lessons on this topic</h2><span>${onTopic.length}</span></div>
-        <div class="lesson-list">${onTopic.map(lessonCard).join('')}</div>` : ''}
-      ${pics.length ? `<div class="section-header"><h2>Memes</h2><span>${pics.length}</span></div>
-        ${pictureGrid(pics)}` : ''}
-      ${onTopic.length || pics.length ? `<div class="section-header"><h2>From the chapter studies</h2><span>${topic.teachings.length}</span></div>` : ''}
+      ${own.length ? `<div class="section-header"><h2>Start here: the slides</h2></div>
+        <div class="lesson-list lead${own.length > 2 ? ' many' : ''}">${own.map(l => lessonCard(l)).join('')}</div>` : ''}
+      ${more.length ? `<div class="section-header"><h2>${own.length ? 'More lessons on this doctrine' : 'Lessons on this doctrine'}</h2><span>${more.length}</span></div>
+        <div class="lesson-list">${more.map(l => lessonCard(l, shelfOf(l))).join('')}</div>` : ''}
+      ${onTopic.length ? `<details class="shelf further" id="further"${openId ? ' open' : ''}>
+        <summary class="section-header"><h2>Further reading: the teachings</h2><span>${topic.teachings.length}</span>
+          <em>The posts from the chapter studies that these lessons are built from, by theme. Open any one to read it in full.</em></summary>` : ''}
       ${groups.length > 1 ? `<nav class="theme-chips" aria-label="Themes">${groups.map(g =>
         `<a href="#doctrine-${esc(id)}" data-theme="${slugify(g.name)}">${esc(g.name)} <span>${g.items.length}</span></a>`).join('')}</nav>` : ''}
       ${groups.map(g => `<section id="theme-${slugify(g.name)}">
         <div class="section-header"><h2>${esc(g.name)}</h2><span>${g.items.length}</span></div>
-        ${g.items.map(x => teachingHTML(x, false)).join('')}</section>`).join('')}`;
+        ${g.items.map(x => teachingHTML(x, false)).join('')}</section>`).join('')}
+      ${onTopic.length ? '</details>' : ''}
+      ${pics.length ? `<div class="section-header"><h2>Memes</h2><span>${pics.length}</span></div>
+        ${pictureGrid(pics)}` : ''}`;
     // The full post is built when a teaching is opened, so a topic with hundreds stays quick.
     const byId = new Map(topic.teachings.map(x => [String(x.id), x]));
     view.querySelectorAll('details.teaching').forEach(d => d.addEventListener('toggle', () => {
@@ -487,6 +524,8 @@
     }
     view.querySelectorAll('[data-theme]').forEach(a => a.onclick = e => {
       e.preventDefault();
+      const fold = document.getElementById('further');
+      if (fold) fold.open = true;
       document.getElementById('theme-' + a.dataset.theme).scrollIntoView({ behavior: 'smooth' });
     });
   }
@@ -494,11 +533,19 @@
   // ---------- lessons & classes, and the teaching pictures ----------
   const PART_VERB = { page: 'Open', pdf: 'Open', notes: 'Read' };
 
-  function lessonCard(l) {
+  // "Week 5: A Trail of Blood" is week 5 of the Doctrine class; anywhere else it is just "A Trail of Blood".
+  const WEEK = /^Week (\d+):\s*/;
+  const plainTitle = t => t.replace(WEEK, '');
+  const weekOf = t => (t.match(WEEK) || [])[1];
+
+  // from: the shelf it comes from, named on the card (on a doctrine page or a chapter page)
+  function lessonCard(l, from) {
     const kinds = [...new Set(l.parts.map(p => p.label))].join(' · ');
+    const week = weekOf(l.title);
+    const where = from ? [from.name, week && 'week ' + week].filter(Boolean).join(', ') : week && 'Week ' + week;
     return `<a class="lesson-card" href="#lesson-${esc(l.id)}">
-      <span class="label">${esc(kinds)}</span>
-      <strong>${esc(l.title)}</strong>
+      <span class="label">${esc([where, kinds].filter(Boolean).join(' · '))}</span>
+      <strong>${esc(plainTitle(l.title))}</strong>
       ${l.summary ? `<em>${esc(l.summary)}</em>` : ''}
       ${l.by ? `<small>From ${esc(l.by)}</small>` : ''}
     </a>`;
@@ -557,27 +604,37 @@
   }
 
   // Shelves start folded, so the page reads as a list of what's there.
-  function shelfOpen(id) {
-    try { return localStorage.getItem('wews_shelf_' + id) === '1'; } catch (e) { return false; }
+  function shelfOpen(id, byDefault) {
+    try { const v = localStorage.getItem('wews_shelf_' + id); return v === null ? !!byDefault : v === '1'; } catch (e) { return !!byDefault; }
   }
 
   async function lessonsView() {
     document.title = 'Lessons & Classes — Jag\'s House of Wews';
     setCrumbs([['Home', '#'], ['Lessons & Classes', '#lessons']]);
     view.classList.add('wide');
-    const [lib] = await Promise.all([loadLessons(), loadTopics()]);
+    const [lib, topics] = await Promise.all([loadLessons(), loadTopics()]);
     if (location.hash !== '#lessons') return;
-    const shelves = lib.shelves.map(s => ({ ...s, items: lib.lessons.filter(l => l.shelf === s.id) })).filter(s => s.items.length);
+    const topicOrder = id => { const i = topics.topics.findIndex(x => x.id === id); return i < 0 ? 99 : i; };
+    const shelves = lib.shelves.map(s => {
+      const items = lib.lessons.filter(l => l.shelf === s.id);
+      if (s.group === 'doctrines') items.sort((a, b) => topicOrder(a.topics[0]) - topicOrder(b.topics[0]) || a.order - b.order);
+      return { ...s, items };
+    }).filter(s => s.items.length);
+    const GROUPS = [['doctrines', 'The doctrines'], ['classes', 'Classes'], ['archive', 'The archive']];
+    const shelfHTML = s => `<details class="shelf" id="shelf-${esc(s.id)}" data-shelf-id="${esc(s.id)}"${shelfOpen(s.id, s.group === 'doctrines') ? ' open' : ''}>
+        <summary class="section-header"><h2>${esc(s.name)}</h2><span>${s.items.length}</span>
+          ${s.about ? `<em>${esc(s.about)}</em>` : ''}</summary>
+        <div class="lesson-list">${s.items.map(l => lessonCard(l)).join('')}</div></details>`;
     view.innerHTML = `
       <div class="hero">
         <h1>Lessons &amp; Classes</h1>
-        <p>Slides, notes and handouts from the Sunday classes and other studies, and the memes. Each one is filed under its topics and the chapters it teaches on.</p>
+        <p>The slides for each doctrine, the classes week by week, and the archive of sermons, history and other studies. Each one is filed under its doctrines and the chapters it teaches on.</p>
       </div>
       ${lib.pictures.length ? `<nav class="theme-chips" aria-label="Memes"><a href="#pictures">Memes <span>${lib.pictures.length}</span></a></nav>` : ''}
-      ${shelves.map(s => `<details class="shelf" id="shelf-${esc(s.id)}" data-shelf-id="${esc(s.id)}"${shelfOpen(s.id) ? ' open' : ''}>
-        <summary class="section-header"><h2>${esc(s.name)}</h2><span>${s.items.length}</span>
-          ${s.about ? `<em>${esc(s.about)}</em>` : ''}</summary>
-        <div class="lesson-list">${s.items.map(lessonCard).join('')}</div></details>`).join('')}
+      ${GROUPS.map(([g, name]) => {
+        const here = shelves.filter(s => (s.group || 'archive') === g);
+        return here.length ? `<h2 class="shelf-group">${name}</h2>${here.map(shelfHTML).join('')}` : '';
+      }).join('')}
 `;
     // Each shelf folds; the choice is remembered on this device.
     view.querySelectorAll('details.shelf').forEach(d => d.addEventListener('toggle', () => {
@@ -596,16 +653,17 @@
       return;
     }
     const shelf = lib.shelves.find(s => s.id === l.shelf) || { name: 'Lessons' };
-    document.title = l.title + ' — Lessons & Classes';
-    setCrumbs([['Home', '#'], ['Lessons', '#lessons'], [l.title, '#lesson-' + id]]);
+    const title = plainTitle(l.title), week = weekOf(l.title);
+    document.title = title + ' — Lessons & Classes';
+    setCrumbs([['Home', '#'], ['Lessons', '#lessons'], [title, '#lesson-' + id]]);
     view.classList.remove('wide');
     const opens = l.parts.filter(p => p.kind !== 'notes');
     const notes = l.parts.filter(p => p.kind === 'notes');
     const chapters = l.chapters.map(c => `<a class="btn" href="#${esc(c.slug)}-${c.ch}">${esc(chapterName(c.book, c.ch))} study →</a>`);
     view.innerHTML = `
       <div class="chapter-head">
-        <span class="label">${esc(shelf.name)}</span>
-        <h1 class="page-title">${esc(l.title)}</h1>
+        <span class="label">${esc(shelf.name)}${week ? ` · Week ${esc(week)}` : ''}</span>
+        <h1 class="page-title">${esc(title)}</h1>
         ${l.by ? `<p class="by">From ${esc(l.by)}</p>` : ''}
         ${l.summary ? `<p class="teaching-sum">${esc(l.summary)}</p>` : ''}
         ${opens.length ? `<div class="actions">${opens.map((p, i) =>
@@ -761,7 +819,7 @@
     const chPics = lib.pictures.filter(p => p.chapters.some(c => c.slug === b.slug && c.ch === ch));
     if (onChapter.length || chPics.length) {
       body += `<div class="section-header" id="lessons-here"><h2>Lessons on ${esc(title)}</h2><span>${onChapter.length + chPics.length}</span></div>
-        ${onChapter.length ? `<div class="lesson-list">${onChapter.map(lessonCard).join('')}</div>` : ''}
+        ${onChapter.length ? `<div class="lesson-list">${onChapter.map(l => lessonCard(l, lib.shelves.find(s => s.id === l.shelf))).join('')}</div>` : ''}
         ${chPics.length ? pictureGrid(chPics) : ''}`;
     }
 
