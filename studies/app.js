@@ -7,7 +7,7 @@
 
   const KJV_APP = 'https://fbckjv.app/KJVBible/';
   // Shown on the About page. Started at v1.17 (after 17 merged updates); each merged update adds one.
-  const APP_VERSION = '2.01', APP_DATE = '2026-11-03';
+  const APP_VERSION = '2.02', APP_DATE = '2026-11-03';
   const view = document.getElementById('view');
   const crumbs = document.getElementById('crumbs');
   let INDEX = null;
@@ -318,6 +318,7 @@
     ['Doctrines & Teachings', 'Each doctrine opens with its slides, then the other lessons on it. Below them, under Further reading, are the teachings from the chapter studies it was built from. Tap a verse to open it in the KJV Bible app.'],
     ['Install the app', 'On Android choose Install app from the browser menu; on iPhone use Share, then Add to Home Screen. It then opens full screen like the KJV Bible app.'],
     ['Lessons & Classes', 'The doctrine slides come first, then the classes week by week, then the archive of sermons, history and answering error. Slides open in a new tab; notes open right on the page.'],
+    ['Teaching from the slides', 'On a computer or projector, press P (or tap Projector at the top of a slide deck) for dark words on a light page, made as large as the screen allows. Press F for full screen; the arrow keys or a clicker move the slides. Press P again for the usual look.'],
     ['Memes', 'The Memes tab at the bottom shows the memes and charts by topic. Tap one to see it full size. The KJV Bible app is a tap away from any verse in a study.'],
     ['Search', 'Tap the magnifying glass at the top to search every study, teaching and lesson. Type a verse like “john 3:16” to see everywhere it is taught.'],
     ['The chapter grid', 'Solid squares are series studies, dashed squares are earlier one-off studies, and dim squares are chapters not yet studied.']
@@ -334,6 +335,17 @@
     if (hint) hint.hidden = true;
   });
   window.addEventListener('appinstalled', () => { installPrompt = null; if (location.hash === '#about') route(); });
+  // In the installed app, slide decks open inside the app's own window (no browser bar);
+  // each deck has a Back button there to return to this page.
+  document.addEventListener('click', e => {
+    const a = e.target.closest && e.target.closest('a[target="_blank"]');
+    if (!a || !standalone() || e.ctrlKey || e.metaKey || e.shiftKey) return;
+    let u;
+    try { u = new URL(a.href, location.href); } catch (err) { return; }
+    if (u.origin !== location.origin || !/\/JagsHouseofWews\/lessons\/[^?#]+\.html$/.test(u.pathname)) return;
+    e.preventDefault();
+    location.href = u.href;
+  });
 
   function installCard() {
     if (standalone()) return '';

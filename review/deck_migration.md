@@ -26,8 +26,8 @@ The election chart becomes a table slide.
 `baptist-groups-compared` has an SVG chart; rebuild as comparison slides.
 
 
-### 6. Romans class (17 lessons, about 50 pages)
-Each chapter has a main page plus several side pages, recaps, charts and worksheets. Following the Week 5 model, fold each chapter into ONE deck and retire the side pages. This is the biggest piece, so it goes last and chapter by chapter.
+### 6. ~~Romans class (17 lessons, about 50 pages)~~ done
+Each chapter was folded into ONE deck (the intro and Romans 1–16), and the side pages were retired. All 17 are under Done below.
 
 
 ## Next: decks for the notes-only lessons
