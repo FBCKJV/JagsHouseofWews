@@ -125,6 +125,11 @@ mark.w{border-bottom:0}
 @media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
 .pic{margin:1rem 0;text-align:center}
 .pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
 .pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
 .take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
 mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
@@ -425,11 +430,19 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
 <section class="slide" data-section="IV. Precision in Translation" data-title="Pronouns in the KJV Bible: Singular">
   <div class="page">
     <h2>Pronouns in the KJV Bible: Singular</h2>
-    <div class="tbl"><table><thead><tr><th>Pronoun</th><th>Type</th><th>Number</th></tr></thead><tbody><tr><td>I</td><td>Personal (subject)</td><td>Singular</td></tr><tr><td>Me</td><td>Personal (object)</td><td>Singular</td></tr><tr><td>My / Mine</td><td>Possessive</td><td>Singular</td></tr><tr><td><strong>Thou</strong></td><td>Personal (subject)</td><td>Singular</td></tr><tr><td><strong>Thee</strong></td><td>Personal (object)</td><td>Singular</td></tr><tr><td><strong>Thy / Thine</strong></td><td>Possessive</td><td>Singular</td></tr><tr><td>He</td><td>Personal (subject)</td><td>Singular</td></tr><tr><td>Him</td><td>Personal (object)</td><td>Singular</td></tr><tr><td>His</td><td>Possessive</td><td>Singular</td></tr><tr><td>She</td><td>Personal (subject)</td><td>Singular</td></tr><tr><td>Her / Hers</td><td>Personal (object) / Possessive</td><td>Singular</td></tr><tr><td>It</td><td>Personal</td><td>Singular</td></tr><tr><td>Its</td><td>Possessive</td><td>Singular</td></tr></tbody></table></div>
+    <div class="tbl"><table><thead><tr><th>Pronoun</th><th>Type</th><th>Number</th></tr></thead><tbody><tr><td>I</td><td>Personal (subject)</td><td>Singular</td></tr><tr><td>Me</td><td>Personal (object)</td><td>Singular</td></tr><tr><td>My / Mine</td><td>Possessive</td><td>Singular</td></tr><tr><td><strong>Thou</strong></td><td>Personal (subject)</td><td>Singular</td></tr><tr><td><strong>Thee</strong></td><td>Personal (object)</td><td>Singular</td></tr><tr><td><strong>Thy / Thine</strong></td><td>Possessive</td><td>Singular</td></tr></tbody></table></div>
   </div>
 </section>
 
 <!-- 15 -->
+<section class="slide" data-section="IV. Precision in Translation" data-title="Pronouns in the KJV Bible: Singular, continued">
+  <div class="page">
+    <h2>Pronouns in the KJV Bible: Singular, continued</h2>
+    <div class="tbl"><table><thead><tr><th>Pronoun</th><th>Type</th><th>Number</th></tr></thead><tbody><tr><td>He</td><td>Personal (subject)</td><td>Singular</td></tr><tr><td>Him</td><td>Personal (object)</td><td>Singular</td></tr><tr><td>His</td><td>Possessive</td><td>Singular</td></tr><tr><td>She</td><td>Personal (subject)</td><td>Singular</td></tr><tr><td>Her / Hers</td><td>Personal (object) / Possessive</td><td>Singular</td></tr><tr><td>It</td><td>Personal</td><td>Singular</td></tr><tr><td>Its</td><td>Possessive</td><td>Singular</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- 16 -->
 <section class="slide" data-section="IV. Precision in Translation" data-title="Pronouns in the KJV Bible: Plural">
   <div class="page">
     <h2>Pronouns in the KJV Bible: Plural</h2>
@@ -437,7 +450,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 16 -->
+<!-- 17 -->
 <section class="slide" data-section="V. Fun Bible Facts" data-title="Fun Bible Facts (1 of 4)">
   <div class="page">
     <h2>Fun Bible Facts (1 of 4)</h2>
@@ -445,7 +458,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 17 -->
+<!-- 18 -->
 <section class="slide" data-section="V. Fun Bible Facts" data-title="Fun Bible Facts (2 of 4)">
   <div class="page">
     <h2>Fun Bible Facts (2 of 4)</h2>
@@ -453,7 +466,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 18 -->
+<!-- 19 -->
 <section class="slide" data-section="V. Fun Bible Facts" data-title="Fun Bible Facts (3 of 4)">
   <div class="page">
     <h2>Fun Bible Facts (3 of 4)</h2>
@@ -461,7 +474,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 19 -->
+<!-- 20 -->
 <section class="slide" data-section="V. Fun Bible Facts" data-title="Fun Bible Facts (4 of 4)">
   <div class="page">
     <h2>Fun Bible Facts (4 of 4)</h2>
@@ -469,7 +482,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 20 -->
+<!-- 21 -->
 <section class="slide" data-section="VI. How the KJV Bible Is Broken Down" data-title="How the KJV Bible Is Broken Down: Old Testament">
   <div class="page">
     <h2>How the KJV Bible Is Broken Down: Old Testament</h2>
@@ -478,7 +491,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 21 -->
+<!-- 22 -->
 <section class="slide" data-section="VI. How the KJV Bible Is Broken Down" data-title="How the KJV Bible Is Broken Down: New Testament">
   <div class="page">
     <h2>How the KJV Bible Is Broken Down: New Testament</h2>
@@ -486,7 +499,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 22 -->
+<!-- 23 -->
 <section class="slide" data-section="Purified Seven Times" data-title="Purified Seven Times">
   <div class="page">
     <h2>Purified Seven Times</h2>
@@ -511,6 +524,8 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
   <div class="dlg-body" id="verseBody"></div>
 </dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
 
 <dialog id="tocDlg" aria-labelledby="tocTitle">
   <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
@@ -567,7 +582,16 @@ document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
 
 const verseDlg = document.getElementById("verseDlg");
 const tocDlg = document.getElementById("tocDlg");
-function anyOpen(){ return verseDlg.open || tocDlg.open; }
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
 
 document.addEventListener("keydown", e => {
   if (anyOpen()) return;

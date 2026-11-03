@@ -61,6 +61,7 @@
     'html.proj h3{font-size:1.15em;font-weight:700}' +
     'html.proj .title-page h1{font-size:3.4em}' +
     'html.proj .title-page.later h1{font-size:2.6em}' +
+    'html.proj .pic img{max-height:62vh}' +
     'html.proj blockquote{font-weight:500}' +
     'html.proj blockquote cite,html.proj .title-page .overline,html.proj .scripture sup{font-weight:700}' +
     'html.proj mark{font-weight:700;border-bottom-width:3px}' +
@@ -78,13 +79,26 @@
     fitQueued = false;
     var s = document.querySelector('.slide.active'), pg = s && s.querySelector('.page');
     if (!pg) return;
-    if (!proj) { pg.style.fontSize = ''; return; }
+    function over() { return s.scrollHeight > s.clientHeight + 1 || s.scrollWidth > s.clientWidth + 1; }
+    /* A picture with words beside it gives up height, a step at a time, before the slide would scroll
+       (on a computer, TV or projector; a phone scrolls as usual). Tap the picture to see it full size. */
+    function shrinkPics() {
+      var ims = s.querySelectorAll('.pic img');
+      ims.forEach(function (im) { im.style.maxHeight = ''; });
+      if (!ims.length || innerWidth < 700 || !over()) return;
+      for (var vh = 60; vh >= 25; vh -= 5) {
+        ims.forEach(function (im) { im.style.maxHeight = (vh / ims.length) + 'vh'; });
+        if (!over()) return;
+      }
+    }
+    if (!proj) { pg.style.fontSize = ''; shrinkPics(); return; }
     /* Never smaller than can be read from the back of the room: a crowded chart scrolls instead. */
     var lo = Math.max(16, Math.min(innerHeight * 0.024, innerWidth * 0.018)), hi = Math.max(lo, Math.min(innerHeight * 0.05, innerWidth * 0.03));
-    function fits(px) { pg.style.fontSize = px + 'px'; return s.scrollHeight <= s.clientHeight + 1 && s.scrollWidth <= s.clientWidth + 1; }
+    function fits(px) { pg.style.fontSize = px + 'px'; return !over(); }
+    s.querySelectorAll('.pic img').forEach(function (im) { im.style.maxHeight = ''; });
     if (fits(hi)) return;
     for (var i = 0; i < 9; i++) { var m = (lo + hi) / 2; if (fits(m)) lo = m; else hi = m; }
-    fits(lo);
+    if (!fits(lo)) shrinkPics();
   }
   function fit() { if (!fitQueued) { fitQueued = true; requestAnimationFrame(fitNow); } }
   function setProj(on) {
@@ -229,6 +243,8 @@
       addEventListener('resize', function () { document.querySelectorAll('.slide .page').forEach(function (p) { p.style.fontSize = ''; }); fit(); });
       if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
       addEventListener('load', fit);
+      /* Pictures load when their slide is shown: size the slide again once one arrives. */
+      document.addEventListener('load', function (e) { if (e.target && e.target.tagName === 'IMG') fit(); }, true);
       document.addEventListener('keydown', function (e) {
         if (e.ctrlKey || e.metaKey || e.altKey || document.querySelector('dialog[open]')) return;
         if (e.key === 'p' || e.key === 'P') { setProj(!proj); }

@@ -125,6 +125,11 @@ mark.w{border-bottom:0}
 @media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
 .pic{margin:1rem 0;text-align:center}
 .pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
 .pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
 .take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
 mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
@@ -309,13 +314,20 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
     <h1>One History, Many Witnesses</h1>
     <p class="lead">The Old Testament’s narrative, God’s covenant with Abraham, the Exodus, the wilderness, the kings and the prophets, is not told once and set aside. It is retold again and again across Scripture, always to teach the grace and mercy of God, His longsuffering towards His people, and the tendency of those people to be prone to wander, to become puffed up, to harden their hearts and stiffen their necks, and to disobey God and provoke Him.</p>
     <blockquote class="scripture" style="font-style:italic">Now all these things happened unto them for ensamples: and <mark>they are written for our admonition</mark>, upon whom the ends of the world are come.<cite>1 Corinthians 10:11</cite></blockquote>
-    <p class="lead">This lesson follows <strong>four</strong> of those retellings, chosen because, read in order, they trace a single arc: confession, accusation, repetition, and redemption.</p>
-    <div class="steps"><div class="st"><span class="when">I. Confession</span><div>Nehemiah 9</div></div><div class="st"><span class="when">II. Accusation</span><div>Acts 7, Stephen</div></div><div class="st"><span class="when">III. Repetition</span><div>Acts 13, Paul</div></div><div class="st"><span class="when">IV. Redemption</span><div>Hebrews 11</div></div></div>
     <span class="fleuron">✦ ✦ ✦</span>
   </div>
 </section>
 
 <!-- 2 -->
+<section class="slide" data-section="Premise" data-title="One History, Many Witnesses, continued">
+  <div class="page">
+    <h2>One History, Many Witnesses, continued</h2>
+    <p class="lead">This lesson follows <strong>four</strong> of those retellings, chosen because, read in order, they trace a single arc: confession, accusation, repetition, and redemption.</p>
+    <div class="steps"><div class="st"><span class="when">I. Confession</span><div>Nehemiah 9</div></div><div class="st"><span class="when">II. Accusation</span><div>Acts 7, Stephen</div></div><div class="st"><span class="when">III. Repetition</span><div>Acts 13, Paul</div></div><div class="st"><span class="when">IV. Redemption</span><div>Hebrews 11</div></div></div>
+  </div>
+</section>
+
+<!-- 3 -->
 <section class="slide" data-section="Premise" data-title="The Pattern in Scripture">
   <div class="page">
     <h2>The Pattern in Scripture</h2>
@@ -325,40 +337,65 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 3 -->
+<!-- 4 -->
 <section class="slide" data-section="I. Confession" data-title="Nehemiah’s Confession">
   <div class="page">
     <div class="kicker">I. Confession</div>
     <h2>Nehemiah’s Confession</h2>
     <p class="lead">Generations before Stephen ever stood trial, the returned remnant stands in Jerusalem, reads the Law aloud, and confesses this same history as their own failure, verse for verse.</p>
-    <div class="steps"><div class="st"><span class="when">The Exodus and the Wilderness</span><div>God chose Abraham, delivered Israel from Egypt with signs and wonders, and led them by cloud and fire to Sinai, giving them the Law, manna, and water. <button class="ref" data-v="Nehemiah 9:6-15">Nehemiah 9:6-15</button></div></div><div class="st"><span class="when">The Golden Calf and God’s Mercy</span><div>They hardened their necks and made a molten calf, yet God’s mercy did not depart from them, and He brought them in to possess the land. <button class="ref" data-v="Nehemiah 9:16-25">Nehemiah 9:16-25</button></div></div><div class="st"><span class="when">The Cycle of Rebellion</span><div>In the land, the pattern repeats for generations: they rebel, God delivers them to their enemies, they cry out, and He hears and saves them again. <button class="ref" data-v="Nehemiah 9:26-31">Nehemiah 9:26-31</button></div></div><div class="st"><span class="when">The Confession</span><div>The prayer ends by justifying God and condemning themselves. <button class="ref" data-v="Nehemiah 9:32-37">Nehemiah 9:32-37</button></div></div></div>
+    <div class="steps"><div class="st"><span class="when">The Exodus and the Wilderness</span><div>God chose Abraham, delivered Israel from Egypt with signs and wonders, and led them by cloud and fire to Sinai, giving them the Law, manna, and water. <button class="ref" data-v="Nehemiah 9:6-15">Nehemiah 9:6-15</button></div></div><div class="st"><span class="when">The Golden Calf and God’s Mercy</span><div>They hardened their necks and made a molten calf, yet God’s mercy did not depart from them, and He brought them in to possess the land. <button class="ref" data-v="Nehemiah 9:16-25">Nehemiah 9:16-25</button></div></div></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="I. Confession" data-title="Nehemiah’s Confession, continued">
+  <div class="page">
+    <div class="kicker">I. Confession</div>
+    <h2>Nehemiah’s Confession, continued</h2>
+    <div class="steps"><div class="st"><span class="when">The Cycle of Rebellion</span><div>In the land, the pattern repeats for generations: they rebel, God delivers them to their enemies, they cry out, and He hears and saves them again. <button class="ref" data-v="Nehemiah 9:26-31">Nehemiah 9:26-31</button></div></div><div class="st"><span class="when">The Confession</span><div>The prayer ends by justifying God and condemning themselves. <button class="ref" data-v="Nehemiah 9:32-37">Nehemiah 9:32-37</button></div></div></div>
     <blockquote class="scripture" style="font-style:italic">Howbeit thou art just in all that is brought upon us; for <mark>thou hast done right, but we have done wickedly</mark>:<cite>Nehemiah 9:33</cite></blockquote>
   </div>
 </section>
 
-<!-- 4 -->
+<!-- 6 -->
 <section class="slide" data-section="II. Accusation" data-title="Stephen’s Accusation: Abraham to Moses">
   <div class="page">
     <div class="kicker">II. Accusation</div>
     <h2>Stephen’s Accusation: Abraham to Moses</h2>
     <p class="lead">Brought before the council of Jews in Jerusalem, Stephen uses the very history Nehemiah’s generation confessed as an accusation against his accusers. Indicting them for their rejection of God’s Messiah, Christ Jesus.</p>
     <div class="steps"><div class="st"><span class="when">Abraham</span><div>Called out of his own country to a land and an inheritance he never lived to receive. <button class="ref" data-v="Acts 7:2-8">Acts 7:2-8</button></div></div><div class="st"><span class="when">Joseph</span><div>Sold by his own brothers in envy, yet God was with him, and made him ruler over Egypt. <button class="ref" data-v="Acts 7:9-16">Acts 7:9-16</button></div></div><div class="st"><span class="when">Moses</span><div>Rejected the first time he tried to deliver his people on his own, but forty years later, was chosen by God to lead them from captivity. <button class="ref" data-v="Acts 7:17-34">Acts 7:17-34</button></div></div></div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="II. Accusation" data-title="Stephen’s Accusation: Abraham to Moses, continued">
+  <div class="page">
+    <div class="kicker">II. Accusation</div>
+    <h2>Stephen’s Accusation: Abraham to Moses, continued</h2>
     <div class="vps"><div class="vp fig"><h3>Genesis 12:1–3</h3><blockquote class="scripture" style="font-style:italic">Now the <span class="lord">Lord</span> had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father’s house, unto a land that I will shew thee: And I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing: And I will bless them that bless thee, and curse him that curseth thee: and in thee shall all families of the earth be blessed.<cite>Genesis 12:1-3</cite></blockquote><p>mark: Get thee out of thy country</p></div><div class="vp fig"><h3>Exodus 3:5, 7, 10</h3><blockquote class="scripture" style="font-style:italic">And he said, Draw not nigh hither: put off thy shoes from off thy feet, for the place whereon thou standest is holy ground.<cite>Exodus 3:5</cite></blockquote><blockquote class="scripture" style="font-style:italic">And the <span class="lord">Lord</span> said, I have surely seen the affliction of my people which are in Egypt, and have heard their cry by reason of their taskmasters; for I know their sorrows;<cite>Exodus 3:7</cite></blockquote><blockquote class="scripture" style="font-style:italic">Come now therefore, and I will send thee unto Pharaoh, that thou mayest bring forth my people the children of Israel out of Egypt.<cite>Exodus 3:10</cite></blockquote></div></div>
   </div>
 </section>
 
-<!-- 5 -->
+<!-- 8 -->
 <section class="slide" data-section="II. Accusation" data-title="Stephen’s Accusation: Idols, the Temple, and the Indictment">
   <div class="page">
     <div class="kicker">II. Accusation</div>
     <h2>Stephen’s Accusation: Idols, the Temple, and the Indictment</h2>
     <div class="steps"><div class="st"><span class="when">Idols</span><div>The same Moses who delivered them was refused again. While he was on the mountain, Israel turned back to Egypt’s idols and built a golden calf. <button class="ref" data-v="Acts 7:35-43">Acts 7:35-43</button></div></div><div class="st"><span class="when">The Temple</span><div>David wanted to build God a house but was denied because he was a man of war and had shed blood (<button class="ref" data-v="1 Chronicles 28:3">1 Chronicles 28:3</button>); his son Solomon was given the role instead. “The most High dwelleth not in temples made with hands”: the building was never the point, but a shadow of good things to come. <button class="ref" data-v="Acts 7:44-50">Acts 7:44-50</button></div></div></div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="II. Accusation" data-title="Stephen’s Accusation: Idols, the Temple, and the Indictment, continued">
+  <div class="page">
+    <div class="kicker">II. Accusation</div>
+    <h2>Stephen’s Accusation: Idols, the Temple, and the Indictment, continued</h2>
     <div class="vps"><div class="vp fig"><h3>Stephen quotes Amos 5:25–27</h3><blockquote class="scripture" style="font-style:italic">Have ye offered unto me sacrifices and offerings in the wilderness forty years, O house of Israel? But ye have borne the tabernacle of your Moloch and Chiun your images, the star of your god, which ye made to yourselves. Therefore will I cause you to go into captivity beyond Damascus, saith the <span class="lord">Lord</span>, whose name is The God of hosts.<cite>Amos 5:25-27</cite></blockquote><p>mark: beyond Damascus</p></div><div class="vp fig"><h3>Stephen quotes Isaiah 66:1–2</h3><blockquote class="scripture" style="font-style:italic">Thus saith the <span class="lord">Lord</span>, The heaven is my throne, and the earth is my footstool: where is the house that ye build unto me? and where is the place of my rest? For all those things hath mine hand made, and all those things have been, saith the <span class="lord">Lord</span>: but to this man will I look, even to him that is poor and of a contrite spirit, and trembleth at my word.<cite>Isaiah 66:1-2</cite></blockquote><p>mark: where is the house that ye build unto me</p></div></div>
     <div class="steps"><div class="st"><span class="when">The Indictment</span><div>“Ye stiffnecked... which of the prophets have not your fathers persecuted?” The same history Nehemiah confessed, Stephen turns into a charge. <button class="ref" data-v="Acts 7:51-53">Acts 7:51-53</button></div></div></div>
   </div>
 </section>
 
-<!-- 6 -->
+<!-- 10 -->
 <section class="slide" data-section="II. Accusation" data-title="Saul, Consenting">
   <div class="page">
     <div class="kicker">II. Accusation</div>
@@ -370,7 +407,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 7 -->
+<!-- 11 -->
 <section class="slide" data-section="III. Repetition" data-title="Paul’s Repetition: The Second Witness">
   <div class="page">
     <div class="kicker">III. Repetition</div>
@@ -382,7 +419,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 8 -->
+<!-- 12 -->
 <section class="slide" data-section="Interlude" data-title="A Rejection as Old as the Prophets">
   <div class="page">
     <div class="kicker">Interlude</div>
@@ -393,7 +430,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 9 -->
+<!-- 13 -->
 <section class="slide" data-section="IV. Redemption" data-title="Hebrews’ Redemption: By Faith">
   <div class="page">
     <div class="kicker">IV. Redemption</div>
@@ -405,7 +442,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 10 -->
+<!-- 14 -->
 <section class="slide" data-section="IV. Redemption" data-title="Hebrews’ Redemption: “Time Would Fail Me”">
   <div class="page">
     <div class="kicker">IV. Redemption</div>
@@ -416,7 +453,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 11 -->
+<!-- 15 -->
 <section class="slide" data-section="The lesson" data-title="The Lesson">
   <div class="page">
     <div class="kicker">V</div>
@@ -445,6 +482,8 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
   <div class="dlg-body" id="verseBody"></div>
 </dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
 
 <dialog id="tocDlg" aria-labelledby="tocTitle">
   <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
@@ -510,7 +549,16 @@ document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
 
 const verseDlg = document.getElementById("verseDlg");
 const tocDlg = document.getElementById("tocDlg");
-function anyOpen(){ return verseDlg.open || tocDlg.open; }
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
 
 document.addEventListener("keydown", e => {
   if (anyOpen()) return;

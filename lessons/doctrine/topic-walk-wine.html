@@ -125,6 +125,11 @@ mark.w{border-bottom:0}
 @media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
 .pic{margin:1rem 0;text-align:center}
 .pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
 .pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
 .take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
 mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
@@ -536,6 +541,8 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="dlg-body" id="verseBody"></div>
 </dialog>
 
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
+
 <dialog id="tocDlg" aria-labelledby="tocTitle">
   <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
   <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
@@ -603,7 +610,16 @@ document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
 
 const verseDlg = document.getElementById("verseDlg");
 const tocDlg = document.getElementById("tocDlg");
-function anyOpen(){ return verseDlg.open || tocDlg.open; }
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
 
 document.addEventListener("keydown", e => {
   if (anyOpen()) return;

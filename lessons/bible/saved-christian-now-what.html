@@ -125,6 +125,11 @@ mark.w{border-bottom:0}
 @media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
 .pic{margin:1rem 0;text-align:center}
 .pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
 .pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
 .take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
 mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
@@ -309,14 +314,20 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
     <h1>So You’re Saved… Now What?</h1>
     <p class="sub">Seven sessions for the new believer: the gospel, baptism, witnessing, prayer, Bible study, a life that pleases God, and the hope of glory.</p>
     <blockquote class="big-verse">As newborn babes, desire the sincere milk of the word, that ye may grow thereby:<cite>1 Peter 2:2</cite></blockquote>
-    <figure class="pic"><img src="saved-christian-now-what-title.jpg" alt="So you’re saved… Now What? A Beginner’s Guide to Christian Living" loading="lazy"><figcaption>KJVO Sunday School Resources · Fundamental Foundations Training</figcaption></figure>
     <span class="fleuron">✦ ✦ ✦</span>
     <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse. The Contents button lists every session.</p>
-    <figure class="pic"><img src="saved-christian-now-what-title.jpg" alt="So you’re saved… Now What? A Beginner’s Guide to Christian Living" loading="lazy"><figcaption>KJVO Sunday School Resources · Fundamental Foundations Training</figcaption></figure>
   </div>
 </section>
 
 <!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="A Beginner’s Guide to Christian Living">
+  <div class="page">
+    <h2>A Beginner’s Guide to Christian Living</h2>
+    <figure class="pic"><img src="saved-christian-now-what-title.jpg" alt="So you’re saved… Now What? A Beginner’s Guide to Christian Living" loading="lazy"><figcaption>KJVO Sunday School Resources · Fundamental Foundations Training</figcaption></figure>
+  </div>
+</section>
+
+<!-- 3 -->
 <section class="slide" data-section="I. The Gospel Confirmed" data-title="Session One: the gospel confirmed">
   <div class="page">
     <div class="kicker">Session one</div>
@@ -325,7 +336,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 3 -->
+<!-- 4 -->
 <section class="slide" data-section="I. The Gospel Confirmed" data-title="The Gospel in a verse">
   <div class="page">
     <h2>The Gospel in a verse</h2>
@@ -334,7 +345,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 4 -->
+<!-- 5 -->
 <section class="slide" data-section="I. The Gospel Confirmed" data-title="The Romans Road">
   <div class="page">
     <h2>The Romans Road</h2>
@@ -343,7 +354,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 5 -->
+<!-- 6 -->
 <section class="slide" data-section="I. The Gospel Confirmed" data-title="You can know you have eternal life">
   <div class="page">
     <h2>You can know you have eternal life</h2>
@@ -352,7 +363,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 6 -->
+<!-- 7 -->
 <section class="slide" data-section="I. The Gospel Confirmed" data-title="Eternal security: once saved, kept">
   <div class="page">
     <h2>Eternal security: once saved, kept</h2>
@@ -362,7 +373,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 7 -->
+<!-- 8 -->
 <section class="slide" data-section="II. Baptism, an outward sign" data-title="Baptism: an outward sign">
   <div class="page">
     <div class="kicker">Session two</div>
@@ -371,7 +382,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 8 -->
+<!-- 9 -->
 <section class="slide" data-section="II. Baptism, an outward sign" data-title="Two reasons to be baptized">
   <div class="page">
     <h2>Two reasons to be baptized</h2>
@@ -379,7 +390,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 9 -->
+<!-- 10 -->
 <section class="slide" data-section="II. Baptism, an outward sign" data-title="What the picture means">
   <div class="page">
     <h2>What the picture means</h2>
@@ -388,7 +399,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 10 -->
+<!-- 11 -->
 <section class="slide" data-section="II. Baptism, an outward sign" data-title="A new believer gets baptized: the Ethiopian">
   <div class="page">
     <h2>A new believer gets baptized: the Ethiopian</h2>
@@ -397,7 +408,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 11 -->
+<!-- 12 -->
 <section class="slide" data-section="II. Baptism, an outward sign" data-title="What doth hinder me to be baptized?">
   <div class="page">
     <h2>What doth hinder me to be baptized?</h2>
@@ -406,7 +417,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 12 -->
+<!-- 13 -->
 <section class="slide" data-section="II. Baptism, an outward sign" data-title="Going on toward maturity">
   <div class="page">
     <h2>Going on toward maturity</h2>
@@ -415,7 +426,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 13 -->
+<!-- 14 -->
 <section class="slide" data-section="III. Every believer a witness" data-title="Every believer a witness">
   <div class="page">
     <div class="kicker">Session three</div>
@@ -425,7 +436,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 14 -->
+<!-- 15 -->
 <section class="slide" data-section="III. Every believer a witness" data-title="The woman at the well">
   <div class="page">
     <h2>The woman at the well</h2>
@@ -434,7 +445,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 15 -->
+<!-- 16 -->
 <section class="slide" data-section="III. Every believer a witness" data-title="She does not wait">
   <div class="page">
     <h2>She does not wait</h2>
@@ -443,7 +454,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 16 -->
+<!-- 17 -->
 <section class="slide" data-section="III. Every believer a witness" data-title="The Great Commission">
   <div class="page">
     <h2>The Great Commission</h2>
@@ -453,7 +464,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 17 -->
+<!-- 18 -->
 <section class="slide" data-section="III. Every believer a witness" data-title="Living so your witness isn’t undone">
   <div class="page">
     <h2>Living so your witness isn’t undone</h2>
@@ -462,7 +473,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 18 -->
+<!-- 19 -->
 <section class="slide" data-section="III. Every believer a witness" data-title="Conversation means conduct">
   <div class="page">
     <h2>Conversation means conduct</h2>
@@ -470,7 +481,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 19 -->
+<!-- 20 -->
 <section class="slide" data-section="IV. Prayer, talking with the Father" data-title="Prayer: talking with the Father">
   <div class="page">
     <div class="kicker">Session four</div>
@@ -479,7 +490,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 20 -->
+<!-- 21 -->
 <section class="slide" data-section="IV. Prayer, talking with the Father" data-title="The model prayer">
   <div class="page">
     <h2>The model prayer</h2>
@@ -488,7 +499,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 21 -->
+<!-- 22 -->
 <section class="slide" data-section="IV. Prayer, talking with the Father" data-title="The ACTS pattern">
   <div class="page">
     <h2>The ACTS pattern</h2>
@@ -497,7 +508,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 22 -->
+<!-- 23 -->
 <section class="slide" data-section="IV. Prayer, talking with the Father" data-title="Psalms for the pattern: A and C">
   <div class="page">
     <h2>Psalms for the pattern: A and C</h2>
@@ -506,7 +517,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 23 -->
+<!-- 24 -->
 <section class="slide" data-section="IV. Prayer, talking with the Father" data-title="Psalms for the pattern: T and S">
   <div class="page">
     <h2>Psalms for the pattern: T and S</h2>
@@ -514,7 +525,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 24 -->
+<!-- 25 -->
 <section class="slide" data-section="IV. Prayer, talking with the Father" data-title="When you don’t know how to pray">
   <div class="page">
     <h2>When you don’t know how to pray</h2>
@@ -523,7 +534,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 25 -->
+<!-- 26 -->
 <section class="slide" data-section="IV. Prayer, talking with the Father" data-title="Asking amiss, and a Father who gives">
   <div class="page">
     <h2>Asking amiss, and a Father who gives</h2>
@@ -531,7 +542,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 26 -->
+<!-- 27 -->
 <section class="slide" data-section="V. Bible study, feeding on the word" data-title="Bible study: feeding on the word">
   <div class="page">
     <div class="kicker">Session five</div>
@@ -542,7 +553,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 27 -->
+<!-- 28 -->
 <section class="slide" data-section="V. Bible study, feeding on the word" data-title="Desire, meditate, walk by the light">
   <div class="page">
     <h2>Desire, meditate, walk by the light</h2>
@@ -550,7 +561,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 28 -->
+<!-- 29 -->
 <section class="slide" data-section="V. Bible study, feeding on the word" data-title="A simple start">
   <div class="page">
     <h2>A simple start</h2>
@@ -559,7 +570,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 29 -->
+<!-- 30 -->
 <section class="slide" data-section="VI. A life that pleases God" data-title="A life that pleases God">
   <div class="page">
     <div class="kicker">Session six</div>
@@ -570,7 +581,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 30 -->
+<!-- 31 -->
 <section class="slide" data-section="VI. A life that pleases God" data-title="The benefit is the point">
   <div class="page">
     <h2>The benefit is the point</h2>
@@ -580,7 +591,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 31 -->
+<!-- 32 -->
 <section class="slide" data-section="VI. A life that pleases God" data-title="Your life is an open book test">
   <div class="page">
     <h2>Your life is an open book test</h2>
@@ -589,7 +600,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 32 -->
+<!-- 33 -->
 <section class="slide" data-section="VI. A life that pleases God" data-title="Known and read of all men">
   <div class="page">
     <h2>Known and read of all men</h2>
@@ -597,7 +608,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 33 -->
+<!-- 34 -->
 <section class="slide" data-section="VI. A life that pleases God" data-title="The Book is open to you">
   <div class="page">
     <h2>The Book is open to you</h2>
@@ -607,16 +618,24 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 34 -->
+<!-- 35 -->
 <section class="slide" data-section="VI. A life that pleases God" data-title="Expect trouble, and a way through it">
   <div class="page">
     <h2>Expect trouble, and a way through it</h2>
     <p>Godly living was never promised to be easy. Christ said it plainly, and Paul confirmed it: living for Him will bring resistance, sometimes from the last people you’d expect.</p>
-    <div class="vps"><div class="vp fig"><h3>All that will live godly shall suffer persecution</h3><blockquote class="scripture" style="font-style:italic">Yea, and all that will live godly in Christ Jesus shall suffer persecution.<cite>2 Timothy 3:12</cite></blockquote></div><div class="vp fig"><h3>A way to escape temptation</h3><blockquote class="scripture" style="font-style:italic">There hath no temptation taken you but such as is common to man: but God is faithful, who will not suffer you to be tempted above that ye are able; but will with the temptation also make a way to escape, that ye may be able to bear it.<cite>1 Corinthians 10:13</cite></blockquote></div><div class="vp fig"><h3>A sword, not always peace</h3><blockquote class="scripture" style="font-style:italic">Think not that I am come to send peace on earth: I came not to send peace, but a sword. For I am come to set a man at variance against his father, and the daughter against her mother, and the daughter in law against her mother in law. And a man’s foes shall be they of his own household.<cite>Matthew 10:34-36</cite></blockquote></div><div class="vp fig"><h3>Division, even in a household</h3><blockquote class="scripture" style="font-style:italic">Suppose ye that I am come to give peace on earth? I tell you, Nay; but rather division: For from henceforth there shall be five in one house divided, three against two, and two against three. The father shall be divided against the son, and the son against the father; the mother against the daughter, and the daughter against the mother; the mother in law against her daughter in law, and the daughter in law against her mother in law.<cite>Luke 12:51-53</cite></blockquote></div></div>
+    <div class="vps"><div class="vp fig"><h3>All that will live godly shall suffer persecution</h3><blockquote class="scripture" style="font-style:italic">Yea, and all that will live godly in Christ Jesus shall suffer persecution.<cite>2 Timothy 3:12</cite></blockquote></div><div class="vp fig"><h3>A way to escape temptation</h3><blockquote class="scripture" style="font-style:italic">There hath no temptation taken you but such as is common to man: but God is faithful, who will not suffer you to be tempted above that ye are able; but will with the temptation also make a way to escape, that ye may be able to bear it.<cite>1 Corinthians 10:13</cite></blockquote></div></div>
   </div>
 </section>
 
-<!-- 35 -->
+<!-- 36 -->
+<section class="slide" data-section="VI. A life that pleases God" data-title="Expect trouble, and a way through it, continued">
+  <div class="page">
+    <h2>Expect trouble, and a way through it, continued</h2>
+    <div class="vps"><div class="vp fig"><h3>A sword, not always peace</h3><blockquote class="scripture" style="font-style:italic">Think not that I am come to send peace on earth: I came not to send peace, but a sword. For I am come to set a man at variance against his father, and the daughter against her mother, and the daughter in law against her mother in law. And a man’s foes shall be they of his own household.<cite>Matthew 10:34-36</cite></blockquote></div><div class="vp fig"><h3>Division, even in a household</h3><blockquote class="scripture" style="font-style:italic">Suppose ye that I am come to give peace on earth? I tell you, Nay; but rather division: For from henceforth there shall be five in one house divided, three against two, and two against three. The father shall be divided against the son, and the son against the father; the mother against the daughter, and the daughter against the mother; the mother in law against her daughter in law, and the daughter in law against her mother in law.<cite>Luke 12:51-53</cite></blockquote></div></div>
+  </div>
+</section>
+
+<!-- 37 -->
 <section class="slide" data-section="VI. A life that pleases God" data-title="When family pushes back">
   <div class="page">
     <h2>When family pushes back</h2>
@@ -624,7 +643,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 36 -->
+<!-- 38 -->
 <section class="slide" data-section="VI. A life that pleases God" data-title="Love, in every direction">
   <div class="page">
     <h2>Love, in every direction</h2>
@@ -633,7 +652,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 37 -->
+<!-- 39 -->
 <section class="slide" data-section="VI. A life that pleases God" data-title="When you sin (because you will)">
   <div class="page">
     <h2>When you sin (because you will)</h2>
@@ -643,7 +662,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 38 -->
+<!-- 40 -->
 <section class="slide" data-section="VI. A life that pleases God" data-title="No condemnation">
   <div class="page">
     <h2>No condemnation</h2>
@@ -652,7 +671,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 39 -->
+<!-- 41 -->
 <section class="slide" data-section="VI. A life that pleases God" data-title="New every morning">
   <div class="page">
     <h2>New every morning</h2>
@@ -661,7 +680,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 40 -->
+<!-- 42 -->
 <section class="slide" data-section="VI. A life that pleases God" data-title="Every sin, past, present and future, already covered">
   <div class="page">
     <h2>Every sin, past, present and future, already covered</h2>
@@ -672,7 +691,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 41 -->
+<!-- 43 -->
 <section class="slide" data-section="VI. A life that pleases God" data-title="Walking in the Spirit">
   <div class="page">
     <h2>Walking in the Spirit</h2>
@@ -682,7 +701,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 42 -->
+<!-- 44 -->
 <section class="slide" data-section="VI. A life that pleases God" data-title="Don’t do this alone">
   <div class="page">
     <h2>Don’t do this alone</h2>
@@ -691,7 +710,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 43 -->
+<!-- 45 -->
 <section class="slide" data-section="VI. A life that pleases God" data-title="Sober and vigilant">
   <div class="page">
     <h2>Sober and vigilant</h2>
@@ -700,7 +719,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 44 -->
+<!-- 46 -->
 <section class="slide" data-section="VII. The hope of glory" data-title="The hope of glory">
   <div class="page">
     <div class="kicker">Session seven</div>
@@ -709,7 +728,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 45 -->
+<!-- 47 -->
 <section class="slide" data-section="VII. The hope of glory" data-title="The resurrection">
   <div class="page">
     <h2>The resurrection</h2>
@@ -717,7 +736,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 46 -->
+<!-- 48 -->
 <section class="slide" data-section="VII. The hope of glory" data-title="Caught up together">
   <div class="page">
     <h2>Caught up together</h2>
@@ -726,7 +745,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 47 -->
+<!-- 49 -->
 <section class="slide" data-section="VII. The hope of glory" data-title="Rule and reign">
   <div class="page">
     <h2>Rule and reign</h2>
@@ -734,7 +753,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 48 -->
+<!-- 50 -->
 <section class="slide" data-section="VII. The hope of glory" data-title="New heaven, new earth">
   <div class="page">
     <h2>New heaven, new earth</h2>
@@ -742,7 +761,7 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   </div>
 </section>
 
-<!-- 49 -->
+<!-- 51 -->
 <section class="slide" data-section="VII. The hope of glory" data-title="We shall be like Him">
   <div class="page">
     <h2>We shall be like Him</h2>
@@ -768,6 +787,8 @@ dialog::backdrop{background:rgba(5,4,2,.78)}
   <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
   <div class="dlg-body" id="verseBody"></div>
 </dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
 
 <dialog id="tocDlg" aria-labelledby="tocTitle">
   <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
@@ -837,7 +858,16 @@ document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
 
 const verseDlg = document.getElementById("verseDlg");
 const tocDlg = document.getElementById("tocDlg");
-function anyOpen(){ return verseDlg.open || tocDlg.open; }
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
 
 document.addEventListener("keydown", e => {
   if (anyOpen()) return;
