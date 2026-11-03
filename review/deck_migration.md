@@ -147,6 +147,11 @@ Sermons and the lessons from other preachers do not get decks. They stay as note
 
 ## Standing decisions
 
+- What stays in the slides (the author, 2026-11-03): naming false teachers and false religions (Catholicism,
+  Judaism and Jews of every stripe who deny Christ, Islam, Calvinism and the rest), sodomites, adulterers and the like
+  is biblical fundamentalism and stays in, in the author's words. Leave out only slurs and crude language, which
+  dilute the teaching.
+
 - Where this is going (the author, 2026-11-03), three things in the end:
   1. The chapter-by-chapter studies, each with its own slides, to be read or taught.
   2. The doctrine slides, taught in class, built on the writings archived from Telegram.
