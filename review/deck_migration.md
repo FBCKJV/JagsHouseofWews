@@ -41,7 +41,7 @@ builder, no fact-checking of the author's views. Order:
 2. ~~Answering error (9)~~ done
 3. ~~Baptist & church history (10)~~ done
 4. ~~Prophecy (4), the Doctrine class notes (3), Bible lessons (2)~~ done
-5. Doctrine by topic, the other 20 topics: one deck per topic, each theme given the same weight, instead of a
+5. ~~Doctrine by topic~~ done. The other 20 topics: one deck per topic, each theme given the same weight, instead of a
    deck per theme (the user's call). Salvation and assurance keep their theme decks. Small topics that overlap
    (angels, creation, history) may share a deck.
    - [x] The reprobate mind
@@ -72,8 +72,7 @@ builder, no fact-checking of the author's views. Order:
    - [x] False doctrine (`topic-false`)
    - [x] Nations (`topic-nations`)
    - [x] Creation (`topic-creation`)
-   - [ ] Then
-     angels
+   - [x] Angels and the sons of God (`topic-angels`)
 
 Sermons and the lessons from other preachers do not get decks. They stay as notes.
 
@@ -158,6 +157,7 @@ Sermons and the lessons from other preachers do not get decks. They stay as note
 - [x] **Another Gospel – False Doctrine Answered** (`topic-false`)
 - [x] **Righteousness Exalteth a Nation – Nations and the Believer** (`topic-nations`)
 - [x] **The Heavens Declare – Creation and the Creator** (`topic-creation`)
+- [x] **Sons of God – Angels, Satan and the Sons of God** (`topic-angels`)
 
 ## Standing decisions
 
