@@ -63,7 +63,8 @@ builder, no fact-checking of the author's views. Order:
    - [x] Trusting God in trouble (`topic-trust`)
    - [x] Prayer, praise & worship (`topic-prayer`)
    - [x] Wisdom & the fear of the LORD (`topic-wisdom`)
-   - [ ] Then family, the law, Christ in the Old Testament, Israel, prophecy, judgment, false teaching,
+   - [x] Marriage, family & the home (`topic-family`)
+   - [ ] Then the law, Christ in the Old Testament, Israel, prophecy, judgment, false teaching,
      nations, creation, angels
 
 Sermons and the lessons from other preachers do not get decks. They stay as notes.
@@ -140,8 +141,16 @@ Sermons and the lessons from other preachers do not get decks. They stay as note
 - [x] **A Very Present Help – Trusting God in Trouble** (`topic-trust`)
 - [x] **Unto Thee Will I Pray – Prayer, Praise and Worship** (`topic-prayer`)
 - [x] **The Beginning of Wisdom – Wisdom and the Fear of the LORD** (`topic-wisdom`)
+- [x] **As for Me and My House – Marriage, Family and the Home** (`topic-family`)
 
 ## Standing decisions
+
+- Where this is going (the author, 2026-11-03), three things in the end:
+  1. The chapter-by-chapter studies, each with its own slides, to be read or taught.
+  2. The doctrine slides, taught in class, built on the writings archived from Telegram.
+  3. The archive: the Telegram posts, and the memes.
+  The home page leads with the Bible studies; each doctrine page leads with its slides, then other lessons, then the
+  teachings as further reading. The exact layout is still the author's to settle.
 
 - Verses are blocks with the reference below (John 3:16-18), no inline verse numbers. The builder pulls the KJV text.
 - Each finished deck gets the shared resume and Share script automatically.
