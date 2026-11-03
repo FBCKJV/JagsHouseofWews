@@ -143,6 +143,13 @@ Sermons and the lessons from other preachers do not get decks. They stay as note
 
 ## Standing decisions
 
+- Where this is going (the author, 2026-11-03), three things in the end:
+  1. The chapter-by-chapter studies, each with its own slides, to be read or taught.
+  2. The doctrine slides, taught in class, built on the writings archived from Telegram.
+  3. The archive: the Telegram posts, and the memes.
+  The home page leads with the Bible studies; each doctrine page leads with its slides, then other lessons, then the
+  teachings as further reading. The exact layout is still the author's to settle.
+
 - Verses are blocks with the reference below (John 3:16-18), no inline verse numbers. The builder pulls the KJV text.
 - Each finished deck gets the shared resume and Share script automatically.
 - Fact-check against primary sources; mark traditions; ask the user about anything that is opinion or doctrine.
