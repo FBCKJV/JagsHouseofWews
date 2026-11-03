@@ -15,7 +15,9 @@
     'html.proj body{background:#fffdf7;font-weight:500}' +
     'html.proj .slide{padding-left:2.5vw;padding-right:2.5vw;padding-top:calc(env(safe-area-inset-top,0px) + 50px)}' +
     'html.proj .page,html.proj .page.wide{max-width:min(96vw,175vh);background:#fffdf7}' +
-    'html.proj .vp,html.proj .panel{background:#f7f0e1}' +
+    'html.proj .vp,html.proj .panel,html.proj .lineage span,html.proj .tally div,html.proj .dims div,html.proj .timeline div,html.proj .chart th{background:#f4ecda}' +
+    'html.proj .callout,html.proj ol.order li.focus{background:#f8e4df}' +
+    'html.proj .callout.honest,html.proj .chart td.angels{background:#e4ebf7}' +
     'html.proj h2{font-size:1.75em;font-weight:700}' +
     'html.proj h3{font-size:1.15em;font-weight:700}' +
     'html.proj .title-page h1{font-size:3.4em;text-shadow:none}' +
@@ -41,7 +43,8 @@
     var s = document.querySelector('.slide.active'), pg = s && s.querySelector('.page');
     if (!pg) return;
     if (!proj) { pg.style.fontSize = ''; return; }
-    var lo = 14, hi = Math.max(lo, Math.min(innerHeight * 0.05, innerWidth * 0.03));
+    /* Never smaller than can be read from the back of the room: a crowded chart scrolls instead. */
+    var lo = Math.max(16, Math.min(innerHeight * 0.024, innerWidth * 0.018)), hi = Math.max(lo, Math.min(innerHeight * 0.05, innerWidth * 0.03));
     function fits(px) { pg.style.fontSize = px + 'px'; return s.scrollHeight <= s.clientHeight + 1 && s.scrollWidth <= s.clientWidth + 1; }
     if (fits(hi)) return;
     for (var i = 0; i < 9; i++) { var m = (lo + hi) / 2; if (fits(m)) lo = m; else hi = m; }
@@ -54,7 +57,7 @@
     try { localStorage.setItem(PKEY, on ? '1' : '0'); } catch (e) {}
     document.querySelectorAll('.slide .page').forEach(function (p) { p.style.fontSize = ''; });
     var b = document.querySelector('.xproj');
-    if (b) { b.textContent = on ? 'Screen' : 'Projector'; b.setAttribute('aria-pressed', String(on)); }
+    if (b) { b.textContent = on ? 'Projector ✓' : 'Projector'; b.setAttribute('aria-pressed', String(on)); }
     fit();
   }
 
