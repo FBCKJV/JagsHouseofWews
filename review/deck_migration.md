@@ -58,7 +58,7 @@ builder, no fact-checking of the author's views. Order:
      - [x] Walking with God, the old man and the new, the cost of discipleship (`topic-walk-with-god`)
      - [x] Separation from the world, with liberty and the weaker brother (`topic-walk-separation`)
      - [x] Wine and strong drink, gathered from across the archive (`topic-walk-wine`)
-     - [ ] Serving and loving others, with a good witness before men
+     - [x] Serving and loving others, with a good witness before men (`topic-walk-serving`)
      - [ ] The heart, not outward religion; words and vows; submitting to authority
    - [ ] Then trust,
      prayer, wisdom, family, the law, Christ in the Old Testament, Israel, prophecy, judgment, false teaching,
@@ -133,6 +133,7 @@ Sermons and the lessons from other preachers do not get decks. They stay as note
 - [x] **Walking with God – The Old Man and the New** (`topic-walk-with-god`)
 - [x] **Separated unto God – Liberty and the Weaker Brother** (`topic-walk-separation`)
 - [x] **Wine Is a Mocker – Wine and Strong Drink** (`topic-walk-wine`)
+- [x] **Servant of All – Serving and Loving Others** (`topic-walk-serving`)
 
 ## Standing decisions
 
