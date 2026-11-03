@@ -54,7 +54,13 @@ builder, no fact-checking of the author's views. Order:
      fundamentals). The post on freedom of religion in the Kingdom (13037) goes in the nations deck,
      read as the user put it: soul liberty now, and no false religion in the Millennium.
    - [x] Soul winning
-   - [ ] The walk, then trust,
+   - The walk, in five decks (the user's call, 415 teachings):
+     - [x] Walking with God, the old man and the new, the cost of discipleship (`topic-walk-with-god`)
+     - [ ] Separation from the world, with liberty and the weaker brother
+     - [ ] Wine and strong drink (pulled out of Separation)
+     - [ ] Serving and loving others, with a good witness before men
+     - [ ] The heart, not outward religion; words and vows; submitting to authority
+   - [ ] Then trust,
      prayer, wisdom, family, the law, Christ in the Old Testament, Israel, prophecy, judgment, false teaching,
      nations, creation, angels
 
@@ -124,6 +130,7 @@ Sermons and the lessons from other preachers do not get decks. They stay as note
 - [x] **The Word of God – Inspired, Preserved, Understood** (`topic-scripture`)
 - [x] **The Church – A Called Out Assembly of Believers** (`topic-church`)
 - [x] **Soul Winning – He That Winneth Souls Is Wise** (`topic-soulwinning`)
+- [x] **Walking with God – The Old Man and the New** (`topic-walk-with-god`)
 
 ## Standing decisions
 
