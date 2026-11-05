@@ -1,6 +1,6 @@
 # Teachings not filed under a topic yet
 
-20 posts chain verses from several books to build a point but aren't in `review/topics.json` yet. Add each under `"posts"` with its topics, theme, title and summary (or `"teaching": false` to leave it out), then rerun `python3 tools/clean_studies.py`.
+21 posts chain verses from several books to build a point but aren't in `review/topics.json` yet. Add each under `"posts"` with its topics, theme, title and summary (or `"teaching": false` to leave it out), then rerun `python3 tools/clean_studies.py`.
 
 Regenerated on every run; don't edit it.
 
@@ -44,3 +44,5 @@ Regenerated on every run; don't edit it.
   > Psalm 55 is a Psalm of David, but it isn't given to us when or who it is about. We can make a guess from the context that it may have been during the 
 - `added-drive-psalms-56` · 2026-11-02 · Psalms 56 · Isaiah 41:10, Matthew 10:28, Psalm 56:4, 1 Samuel 21:10-13
   > Psalm 56 was written commemorating the flight of David from Saul, when it seemed all Israel was against him and sought David's life. He prays for merc
+- `added-drive-psalms-57` · 2026-11-05 · Psalms 57 · Hebrews 11:1-2, Romans 8:24-25, Psalm 57:5, Hebrews 4:15-16
+  > Psalm 57 is yet another song written by David during his flight from King Saul, when he fled from Saul in the cave. The psalmist cries out for mercy, 
