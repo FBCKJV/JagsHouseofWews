@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Job 1–2: The Trial Begins</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="The Job class, part 1 of 5: Job in the land of Uz, the sons of God and Satan before the LORD, the losses of one day, Job&#x27;s worship, his wife, and the coming of his three friends, from the Job 1 and 2 studies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body .say-cite{font-size:.85rem;font-style:italic;color:var(--vellum-dim);border-top:1px solid var(--rule);padding-top:.6rem;margin-top:1rem}
+.ref.say{border-bottom-style:dashed}
+.ref.say::before{content:"\201C";margin-right:.15em}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Job 1–2">
+  <div class="page title-page">
+    <div class="overline">The Job class · Part 1 of 5</div>
+    <h1>Job 1–2: The Trial Begins</h1>
+    <p class="sub">The greatest man on Earth at this moment, according to God.</p>
+    <div class="refs center"><button class="ref" data-v="Job 1:1">Job 1:1</button><button class="ref" data-v="Job 1:21">Job 1:21</button><button class="ref" data-v="Job 2:10">Job 2:10</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any gold reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="Where we are">
+  <div class="page">
+    <h2>Where we are: Part 1, Job 1–2</h2>
+    <div class="timeline"><div><span class="n">1–2</span><span class="lbl">The trial begins</span></div><div><span class="n">3–31</span><span class="lbl">Job and his three friends</span></div><div><span class="n">32–37</span><span class="lbl">Elihu speaks</span></div><div><span class="n">38–41</span><span class="lbl">Out of the whirlwind</span></div><div><span class="n">42</span><span class="lbl">The latter end of Job</span></div></div>
+    <p>If the Book of Job was one chapter, the lesson is present and clear. But as we'll see, there is so many more lessons to learn than simple perseverance in faith.</p>
+    <p class="take">The Book of Job is the finest example of literature ever written.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="A man in the land of Uz" data-title="There was a man in the land of Uz">
+  <div class="page">
+    <div class="kicker">Job 1</div>
+    <h2>There was a man in the land of Uz</h2>
+    <blockquote class="scripture" style="font-style:italic">There was a man in the land of Uz, whose name was Job; and <mark>that man was perfect and upright, and one that feared God, and eschewed evil</mark>. And there were born unto him seven sons and three daughters. His substance also was seven thousand sheep, and three thousand camels, and five hundred yoke of oxen, and five hundred she asses, and a very great household; so that this man was the greatest of all the men of the east.<cite>Job 1:1-3</cite></blockquote>
+    <p>The Book of Job begins with the introduction of a man in the land of Uz, the titular character; Job. Uz, from the biblical clues appears to be a fertile plain in the Arabian peninsula, near where Edom would be. The time frame, many believe, is during the era of the patriarchs; Abraham, Isaac, and Jacob.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="A man in the land of Uz" data-title="Before Abraham&#x27;s seed">
+  <div class="page">
+    <div class="kicker">Job 1</div>
+    <h2>Before Abraham's seed</h2>
+    <p>It would be good to note that, Abraham, or Abram, was a Chaldean, a nation who are mentioned here in this chapter located in what is modern Iraq. Where the seat of Babylonian power would be. And he was called out from the city of Ur there, to go unto Hebron by God.</p>
+    <p>And, as mentioned throughout his story and his sons', there were people in this post flood era who feared the Lord, and offered sacrifices unto him.</p>
+    <p>Of course we know about Melchizedek, King of Salem, and high priest, and the tenth of the spoils offered by Abram to Melchizedek. Many consider him to be a pre-incarnate appearance of Jesus.</p>
+    <div class="callout"><p>All this to say that the idea of the worship of God originating with Abraham, and only his seed after the flesh, is incorrect. There were many following the flood and the dispersion of nations out from Babel, that called upon the name of the Lord for salvation, and sought to offer the blood as a picture of their faith in Him, as we see Job does for himself and his family.</p></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="A man in the land of Uz" data-title="Salvation always offered to all people">
+  <div class="page">
+    <div class="kicker">Job 1</div>
+    <h2>Salvation always offered to all people</h2>
+    <p>One of the conceits of modern Zionism and dispensationalism holds that only the sons of Israel after the flesh were special, and that they invented monotheism. But throughout the Bible we find people who were not of that line, and not given to idols and false gods. It's important to understand that salvation has always been by grace alone through faith in the Lord, calling upon his name. And that salvation was always offered to all people.</p>
+    <p>We will see in Exodus the mixed multitudes that followed Israel into the wilderness from Egypt. We will see high priests of other nations that fear the Lord. There will be people like Ruth and Rahab and others who have the faith.</p>
+    <p>The distinction for Israel was that they were given the oracles of God. That they had the prophets and the word of God delivered directly to them, and given the law of the Lord that they may be perfect, complete, and a light unto the Gentiles. The other nations. Calling all men to repentance.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="A man in the land of Uz" data-title="Thus did Job continually">
+  <div class="page">
+    <div class="kicker">Job 1</div>
+    <h2>Thus did Job continually</h2>
+    <blockquote class="scripture" style="font-style:italic">And his sons went and feasted in their houses, every one his day; and sent and called for their three sisters to eat and to drink with them. And it was so, when the days of their feasting were gone about, that Job sent and sanctified them, and rose up early in the morning, and offered burnt offerings according to the number of them all: for Job said, It may be that my sons have sinned, and cursed God in their hearts. <mark>Thus did Job continually</mark>.<cite>Job 1:4-5</cite></blockquote>
+    <p>But we see the greatest man on Earth at this moment, according to God, who feared Him, eschewing evil, offering sacrifices to sanctify himself and his family. Without the law. Without the temple. Without a priesthood. Without the oracles of God, knowing by the faith of his fathers what was expected.</p>
+    <p>And so we find Job, faithfully keeping the sanctification of sacrifices for himself and his children, and he has been blessed beyond measure by God.</p>
+    <p>10 children, seven sons and three daughters. Incredible wealth and cattle and livestock. Great land and a great house. And all his adult children successful in that they were established in their own homes to have their own feasts. Having established all of this, the Bible shifts focus to the throne of God in Heaven.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Before the Lord" data-title="The sons of God came">
+  <div class="page">
+    <div class="kicker">Job 1</div>
+    <h2>The sons of God came</h2>
+    <blockquote class="big-verse">Now there was a day when <mark>the sons of God came to present themselves before the <span class="lord">Lord</span></mark>, and <mark>Satan came also among them</mark>.<cite>Job 1:6</cite></blockquote>
+    <p>I've covered this multiple times in other studies, but the sons of God here refers to the spirits of those saved by faith in Christ. The same as the sons of God in <button class="ref" data-v="Genesis 6:2">Genesis 6</button> being the children of obedience, through Seth. Because the only way to become A son of God, is by faith in THE Son of God.</p>
+    <p>So, not to belabor the point, but at no time has God called angels His sons. And further evidence of this is in the text itself, in verse 6. Satan came also among them.</p>
+    <p>Satan is an angel. A rebellious angel, a cherub. Perhaps a prominent angel but, an angel nonetheless. And he came among them, as a separate entity than them. Not as one of them.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Before the Lord" data-title="Believers in heaven, not angels">
+  <div class="page">
+    <div class="kicker">The sons of God</div>
+    <h2>Believers in heaven, not angels</h2>
+    <blockquote class="big-verse">For <mark>unto which of the angels said he at any time, Thou art my Son</mark>, this day have I begotten thee? And again, I will be to him a Father, and he shall be to me a Son?<cite>Hebrews 1:5</cite></blockquote>
+    <p>They're in heaven, so they must be believers—only the redeemed go there (<button class="ref" data-v="Hebrews 12:22-23">Hebrews 12:22-23</button>). Satan's "among them" but not one of them; he's the accuser, not a son. The repetition in <button class="ref" data-v="Job 2:1">Job 2:1</button> changes nothing—same believers, same contrast with Satan.</p>
+    <p>The Bible makes it clear how one becomes a "son of God": through faith in the Lord. This is the foundation—sonship is granted to humans who believe in Christ.</p>
+    <div class="refs center"><button class="ref" data-v="John 1:12">John 1:12</button><button class="ref" data-v="Romans 8:14">Romans 8:14</button><button class="ref" data-v="Galatians 3:26">Galatians 3:26</button></div>
+    <p class="take">God is not the author of confusion. If your interpretation of scripture causes a contradiction, creates a question that cannot be answered by comparing scripture to scripture, then it's wrong.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#doctrine-angels~15859" target="_blank" rel="noopener">The sons of God are believers, never angels ↗</a><a class="ref lesson-link" href="../../studies/#lesson-genesis-6-sons-of-god" target="_blank" rel="noopener">Genesis 6: Sons of God ↗</a></div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Before the Lord" data-title="To and fro in the earth">
+  <div class="page">
+    <div class="kicker">Job 1</div>
+    <h2>To and fro in the earth</h2>
+    <blockquote class="scripture" style="font-style:italic">And the <span class="lord">Lord</span> said unto Satan, Whence comest thou? Then Satan answered the <span class="lord">Lord</span>, and said, <mark>From going to and fro in the earth, and from walking up and down in it</mark>.<cite>Job 1:7</cite></blockquote>
+    <p>And God asks him where he's been, and he says going to and fro in the earth and walking up and down in it.</p>
+    <blockquote class="big-verse">Be sober, be vigilant; because <mark>your adversary the devil, as a roaring lion, walketh about</mark>, seeking whom he may devour:<cite>1 Peter 5:8</cite></blockquote>
+    <p>Christians should remember that Satan continues this practice today. And like his appearance before God, to accuse Job, he does the same of us even now.</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Before the Lord" data-title="The accuser of our brethren">
+  <div class="page">
+    <div class="kicker">Job 1</div>
+    <h2>The accuser of our brethren</h2>
+    <blockquote class="scripture" style="font-style:italic">And the great dragon was cast out, that old serpent, called the Devil, and Satan, which deceiveth the whole world: he was cast out into the earth, and his angels were cast out with him. And I heard a loud voice saying in heaven, Now is come salvation, and strength, and the kingdom of our God, and the power of his Christ: for <mark>the accuser of our brethren is cast down, which accused them before our God day and night</mark>. And they overcame him by the blood of the Lamb, and by the word of their testimony; and they loved not their lives unto the death.<cite>Revelation 12:9-11</cite></blockquote>
+    <p>Satan is our adversary, the god of this world, and our accuser before the Lord.</p>
+    <p>I sometimes wonder if he even bothers with the unsaved, beyond giving them power that they can afflict those who are saved. His resentment is in those sons of God, that God so loved us that He gave His only begotten Son for us, knowing that hell was created for him and the angels he deceived.</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Hast thou considered my servant Job?" data-title="Hast thou considered my servant Job?">
+  <div class="page">
+    <div class="kicker">Job 1</div>
+    <h2>Hast thou considered my servant Job?</h2>
+    <blockquote class="scripture" style="font-style:italic">And the <span class="lord">Lord</span> said unto Satan, <mark>Hast thou considered my servant Job</mark>, that there is none like him in the earth, a perfect and an upright man, one that feareth God, and escheweth evil? Then Satan answered the <span class="lord">Lord</span>, and said, <mark>Doth Job fear God for nought?</mark> Hast not thou made an hedge about him, and about his house, and about all that he hath on every side? thou hast blessed the work of his hands, and his substance is increased in the land. But put forth thine hand now, and touch all that he hath, and he will curse thee to thy face.<cite>Job 1:8-11</cite></blockquote>
+    <p>Now God knows who Satan is and what he does and His pointing out Job is deliberate, and in so many ways this is done for our admonition, upon whom the end of the world has come.</p>
+    <p>If a man as upright and perfect in his ways can be sorely tempted by the persecution of Satan against him, If the hedge of protection may be lifted, to show the glory of God for such a man as Job, how can we expect the small tragedies that befall us as believers to be any less to His glory?</p>
+    <p>And in our darkest moments, the voices of the scoffers cut like a knife. Satan uses them to attack our faith, as he sought to shake Job's.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Hast thou considered my servant Job?" data-title="Blessed or cursed">
+  <div class="page">
+    <div class="kicker">Job 1</div>
+    <h2>Blessed or cursed</h2>
+    <p>Satan of course credits the hedge of protection God has placed around Job and his family and the blessings of the holdings that he's acquired which are gifts of God, as the only reason Job's faith is so strong. He says to God that if He put forth His hand now and touched all that he had, Job would curse Him to his face.</p>
+    <div class="cols"><div class="panel believers"><h3>Only the wicked prosper?</h3><p>I have seen an error among people similar to this, that says only the wicked prosper. Job shows this isn't the case and that wealth in itself is not a bad thing, but that all we have is a gift of God.</p></div><div class="panel cain"><h3>The prosperity Gospel</h3><p>Then there's the prosperity Gospel types, who falsely say that if you're not successful and you're not succeeding, that you're not right with God.</p></div></div>
+    <p>But here we humbly learn that whether we are blessed or cursed, all is to His glory. As Paul writes:</p>
+    <blockquote class="big-verse">I know both how to be abased, and I know how to abound: every where and in all things I am instructed both to be full and to be hungry, <mark>both to abound and to suffer need</mark>.<cite>Philippians 4:12</cite></blockquote>
+    <p class="take">Whether you're in good times or bad times or the mix most of us find ourselves in, it's all to the glory of God. His grace is sufficient.</p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Hast thou considered my servant Job?" data-title="All that he hath is in thy power">
+  <div class="page">
+    <div class="kicker">Job 1</div>
+    <h2>All that he hath is in thy power</h2>
+    <blockquote class="scripture" style="font-style:italic">And the <span class="lord">Lord</span> said unto Satan, Behold, <mark>all that he hath is in thy power</mark>; <mark>only upon himself put not forth thine hand</mark>. So Satan went forth from the presence of the <span class="lord">Lord</span>.<cite>Job 1:12</cite></blockquote>
+    <p>Now the Lord says to Satan, <em>behold all that he hath is in thy power</em> but bars him from doing harm to Job physically.</p>
+    <p>The prime interpretation of this is that God has granted Satan special permission to afflict Job, And that is a fair reading of the text, especially in light of the hedge of protection Satan says God has placed about Job. But, as I've mentioned, the Bible says that Satan is the god of this world, That he is the prince of the power of the air, ruler of this world. Not as God, but as having influence and power over the things of this Earth.</p>
+    <p>So is the Lord reminding Satan, or enabling him? It's difficult to say. But we should keep it in mind always.</p>
+    <blockquote class="big-verse">For we wrestle not against flesh and blood, but against principalities, against powers, <mark>against the rulers of the darkness of this world</mark>, against spiritual wickedness in high places.<cite>Ephesians 6:12</cite></blockquote>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="In one day" data-title="In one day, he does his worst">
+  <div class="page">
+    <div class="kicker">Job 1</div>
+    <h2>In one day, he does his worst</h2>
+    <p>But regardless, Satan is given the power to affect all that Job has, if not his person. And in one day, he does his worst. First we see that his sons and his daughters were eating and drinking wine and in the eldest brother's house, this detail is given before the rest, creating tension in the reader.</p>
+    <div class="steps"><div class="st"><span class="when">The Sabeans</span><div>Then the messengers begin to arrive. One tells of the oxen and asses killed by marauding Sabeans, who are from the south, where modern Yemen is.</div></div><div class="st"><span class="when">The fire of God</span><div>Then another arrives to say that the fire of God rained from Heaven on the sheep and the servants and consumed them.</div></div><div class="st"><span class="when">The Chaldeans</span><div>Before the second messenger can finish, a third arrives and says the Chaldeans made out three bands and fell upon the camels and slaying the servants. Of course this is a raiding party from the north, striking simultaneously with those from the south.</div></div><div class="st"><span class="when">A great wind</span><div>Finally as the third messenger is conveying his report, A fourth arrives and says that while Job's sons and daughters were eating and drinking a great wind came from the wilderness and smote the four corners of the house and it fell on them and they are all dead.</div></div></div>
+    <div class="refs center"><button class="ref" data-v="Job 1:13-15">Job 1:13-15</button><button class="ref" data-v="Job 1:16">Job 1:16</button><button class="ref" data-v="Job 1:17">Job 1:17</button><button class="ref" data-v="Job 1:18-19">Job 1:18-19</button></div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="In one day" data-title="Fire from heaven">
+  <div class="page">
+    <div class="kicker">Job 1</div>
+    <h2>Fire from heaven</h2>
+    <p>When God gave permission to Satan to do what he will, he gave him access to the fire of God that rains from Heaven.</p>
+    <blockquote class="scripture" style="font-style:italic">And I beheld another beast coming up out of the earth; and he had two horns like a lamb, and he spake as a dragon. And he exerciseth all the power of the first beast before him, and causeth the earth and them which dwell therein to worship the first beast, whose deadly wound was healed. And he doeth great wonders, so that <mark>he maketh fire come down from heaven on the earth in the sight of men</mark>,<cite>Revelation 13:11-13</cite></blockquote>
+    <p>The false prophet of the Antichrist will have this power and ability, And it will cause the unsaved to worship the beast and his image.</p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="In one day" data-title="Surrounded by evil">
+  <div class="page">
+    <div class="kicker">Job 1</div>
+    <h2>Surrounded by evil</h2>
+    <p class="lead">Job was beset from the south, from above, from the north and from all four corners, surrounded by evil. And the devil allowed a sole survivor from each.</p>
+    <p>The coordination and power and influence that the devil has where he can have two different armies attack at the same time, controlling fire from heaven, and the winds of the air, that the sole survivors of each would arrive one after the other, to absolutely devastate Job, shows Satan's cunning wickedness. Each blow would be sufficient to cripple most men. To have them come one after the other after the other after the other, in quick succession is unimaginable.</p>
+    <div class="refs center"><button class="ref" data-v="Job 1:15">Job 1:15</button><button class="ref" data-v="Job 1:16">Job 1:16</button><button class="ref" data-v="Job 1:17">Job 1:17</button><button class="ref" data-v="Job 1:19">Job 1:19</button></div>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="In one day" data-title="And worshipped">
+  <div class="page">
+    <div class="kicker">Job 1</div>
+    <h2>And worshipped</h2>
+    <blockquote class="scripture" style="font-style:italic">Then Job arose, and rent his mantle, and shaved his head, and <mark>fell down upon the ground, and worshipped</mark>, And said, Naked came I out of my mother’s womb, and naked shall I return thither: <mark>the <span class="lord">Lord</span> gave, and the <span class="lord">Lord</span> hath taken away</mark>; <mark>blessed be the name of the <span class="lord">Lord</span></mark>. <mark>In all this Job sinned not, nor charged God foolishly</mark>.<cite>Job 1:20-22</cite></blockquote>
+    <p>These were the manner and customs throughout the Old Testament for mourning. We see here that worship is defined as falling to your knees or bowing down. Job in absolute sorrow tears his clothes, shaves his head for the dead, and lays face first down upon the ground.</p>
+    <p>And the prayer Job makes contains two statements that have both become idioms even among the secular world.</p>
+    <p class="take">And despite all of this tragedy, despite all of the cause Satan gave him to sin, Job sinned not. And he didn't blame God, but rather blessed His name.</p>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="In one day" data-title="Naked shall I return thither">
+  <div class="page">
+    <div class="kicker">Job 1</div>
+    <h2>Naked shall I return thither</h2>
+    <p>“Naked came I… naked shall I return thither” – “Thither” or shām in the Hebrew means, “to that place." Clearly Job doesn't mean the womb. The return is to what then? What is thither? The grave? "Sheol" and nothingness?</p>
+    <p>We're going to see that Job's faith is redemption through the Lord. Not that empty meaning that many give in their Old Testament interpretations.</p>
+    <p>Either way, Job sees life as lease, not ownership, that all is from God, Who is blessed forever. It's humbling and something we should always keep in mind. Life is a vapor.</p>
+    <blockquote class="big-verse">In the sweat of thy face shalt thou eat bread, till thou return unto the ground; for out of it wast thou taken: <mark>for dust thou art, and unto dust shalt thou return</mark>.<cite>Genesis 3:19</cite></blockquote>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="In one day" data-title="The finest example of literature">
+  <div class="page">
+    <div class="kicker">Job 1</div>
+    <h2>The finest example of literature</h2>
+    <p class="lead">Thematically, as prose, this setup creates tension in the reader. I'll probably say this multiple times throughout this study, but the Book of Job is the finest example of literature ever written.</p>
+    <p>While its exact date of composition isn't known, it likely found its final form during the Babylonian captivity. Shortly thereafter, in the Hellenistic world, the Greek drama became a literary style. Acted out by people, to tell a story either from a monologue or a soliloquy or a troupe of performers.</p>
+    <p>Because we are gifted with the King James version, and its eloquent prose in what many would say is Shakespearean English, it's easy to picture the Book of Job as a play. And it is possible to perform, and many have. And it is greater than all of the plays the Bard penned.</p>
+    <p class="take">Isn't it interesting that it was put to pen under the inspiration of God, separate from and before the Greek tragedies and comedies that the world now considers classic literature?</p>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Skin for skin" data-title="Again before the Lord">
+  <div class="page">
+    <div class="kicker">Job 2</div>
+    <h2>Again before the Lord</h2>
+    <p>The Book of Job continues into chapter 2. I've often thought that, had Job been confined to just the first chapter it would serve as a great lesson in patience and understanding in the faith. But in the wisdom of God it continues, bringing many other lessons to us.</p>
+    <blockquote class="scripture" style="font-style:italic">Again there was a day when the sons of God came to present themselves before the <span class="lord">Lord</span>, and Satan came also among them to present himself before the <span class="lord">Lord</span>. And the <span class="lord">Lord</span> said unto Satan, From whence comest thou? And Satan answered the <span class="lord">Lord</span>, and said, From going to and fro in the earth, and from walking up and down in it. And the <span class="lord">Lord</span> said unto Satan, Hast thou considered my servant Job, that there is none like him in the earth, a perfect and an upright man, one that feareth God, and escheweth evil? and <mark>still he holdeth fast his integrity, although thou movedst me against him, to destroy him without cause</mark>.<cite>Job 2:1-3</cite></blockquote>
+    <p>Again, the spirits of the righteous men in Heaven come before God, and among them the devil comes. And again he's been to and fro in the Earth, and walking up and down it.</p>
+    <p>And the Lord said unto Satan hast thou considered Job? That there's none like him the perfect and upright man, who is still holding fast his integrity even though Satan had moved God to destroy him without a cause.</p>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Skin for skin" data-title="Touch his bone and his flesh">
+  <div class="page">
+    <div class="kicker">Job 2</div>
+    <h2>Touch his bone and his flesh</h2>
+    <blockquote class="scripture" style="font-style:italic">And Satan answered the <span class="lord">Lord</span>, and said, <mark>Skin for skin, yea, all that a man hath will he give for his life</mark>. But put forth thine hand now, and touch his bone and his flesh, and he will curse thee to thy face. And the <span class="lord">Lord</span> said unto Satan, Behold, he is in thine hand; <mark>but save his life</mark>. So went Satan forth from the presence of the <span class="lord">Lord</span>, and smote Job with sore boils from the sole of his foot unto his crown. And he took him a potsherd to scrape himself withal; and he sat down among the ashes.<cite>Job 2:4-8</cite></blockquote>
+    <p>And Satan says that a man will give up anything for his life. He calls God to afflict Job by touching his bone and flesh and says that he will curse God to His face. And so God agrees, saying only take not his life. And Satan afflicts Job with pustulant boils from the soles of his feet to the crown of his head.</p>
+    <p>Poor Job sits in ash, mourning, And now is taking a shard of pottery to his skin to scrape himself of the sores. Miserable, having lost everything and now afflicted with a painful and disgusting curse.</p>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Skin for skin" data-title="Curse God, and die">
+  <div class="page">
+    <div class="kicker">Job 2</div>
+    <h2>Curse God, and die</h2>
+    <blockquote class="scripture" style="font-style:italic">Then said his wife unto him, Dost thou still retain thine integrity? <mark>curse God, and die</mark>. But he said unto her, Thou speakest as one of the foolish women speaketh. What? <mark>shall we receive good at the hand of God, and shall we not receive evil?</mark> <mark>In all this did not Job sin with his lips</mark>.<cite>Job 2:9-10</cite></blockquote>
+    <p>His wife is disgusted with his continued faith, and says curse God and die. But he said that this is foolish. That if we receive good at the hands of God shall we not receive evil?</p>
+    <p>And Job sinned not with his lips.</p>
+    <p class="take">The continued patience of Job is a testament that we should seek to emulate. As bad as things are we've all been blessed beyond anything we deserve by God's grace. His grace is sufficient.</p>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Skin for skin" data-title="My grace is sufficient for thee">
+  <div class="page">
+    <div class="kicker">Job 2</div>
+    <h2>My grace is sufficient for thee</h2>
+    <p>Paul, similarly had bemoaned a thorn in his flesh, appealing to God three times saying that he would be so much more useful in the cause of Christ if he had it removed. It took him a while to understand.</p>
+    <blockquote class="scripture" style="font-style:italic">For though I would desire to glory, I shall not be a fool; for I will say the truth: but now I forbear, lest any man should think of me above that which he seeth me to be, or that he heareth of me. And lest I should be exalted above measure through the abundance of the revelations, there was given to me a thorn in the flesh, the messenger of Satan to buffet me, lest I should be exalted above measure. For this thing I besought the Lord thrice, that it might depart from me. And he said unto me, <mark>My grace is sufficient for thee: for my strength is made perfect in weakness</mark>. Most gladly therefore will I rather glory in my infirmities, that the power of Christ may rest upon me.<cite>2 Corinthians 12:6-9</cite></blockquote>
+    <p>Our suffering exists for many reasons, but ultimately it is to give glory to God for His grace and His mercy. That while we are weak He is strong and our strength. Even if it's just to humble us that we glory not in ourselves.</p>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="Skin for skin" data-title="Job&#x27;s three friends">
+  <div class="page">
+    <div class="kicker">Job 2</div>
+    <h2>Job's three friends</h2>
+    <blockquote class="scripture" style="font-style:italic">Now when Job’s three friends heard of all this evil that was come upon him, they came every one from his own place; <mark>Eliphaz the Temanite, and Bildad the Shuhite, and Zophar the Naamathite</mark>: for they had made an appointment together to come to mourn with him and to comfort him. And when they lifted up their eyes afar off, and knew him not, they lifted up their voice, and wept; and they rent every one his mantle, and sprinkled dust upon their heads toward heaven. So they sat down with him upon the ground <mark>seven days and seven nights</mark>, and none spake a word unto him: for they saw that his grief was very great.<cite>Job 2:11-13</cite></blockquote>
+    <div class="cols-3"><div class="panel believers"><h3>Eliphaz</h3><p>the Temanite</p></div><div class="panel believers"><h3>Bildad</h3><p>the Shuhite</p></div><div class="panel believers"><h3>Zophar</h3><p>the Naamathite</p></div></div>
+    <p>And so the scene shifts as three of Job's friends arrive from far off, barely recognizing him. They enter and sit down with him on the ground, for 7 days and seven nights and none speak to him for they saw that his grief was very great.</p>
+    <p class="take">We will learn more about each as the story progresses.</p>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="What we have seen" data-title="What we have seen">
+  <div class="page">
+    <h2>What we have seen</h2>
+    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>The greatest man on Earth</strong>Without the law. Without the temple. Without a priesthood. Without the oracles of God, knowing by the faith of his fathers what was expected.</li><li><strong>The sons of God</strong>The only way to become A son of God, is by faith in THE Son of God.</li><li><strong>The accuser</strong>Satan is our adversary, the god of this world, and our accuser before the Lord.</li><li><strong>Blessed or cursed</strong>Whether we are blessed or cursed, all is to His glory. His grace is sufficient.</li><li><strong>Job sinned not</strong>Despite all of the cause Satan gave him to sin, Job sinned not. And he didn't blame God, but rather blessed His name.</li></ol></div>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-job-3-31-job-and-his-friends" target="_blank" rel="noopener">Part 2: Job 3–31: Job and His Three Friends ↗</a></div>
+    <p class="sub center">Related</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#Job-1" target="_blank" rel="noopener">Job 1 study ↗</a><a class="ref lesson-link" href="../../studies/#Job-2" target="_blank" rel="noopener">Job 2 study ↗</a><a class="ref lesson-link" href="../../studies/#lesson-topic-angels" target="_blank" rel="noopener">Sons of God – Angels, Satan and the Sons of God ↗</a><a class="ref lesson-link" href="../../studies/#lesson-genesis-6-sons-of-god" target="_blank" rel="noopener">Genesis 6: Sons of God ↗</a><a class="ref lesson-link" href="../../studies/#lesson-topic-trust" target="_blank" rel="noopener">A Very Present Help – Trusting God in Trouble ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "Galatians 3:26":[[26, "For ye are all the children of God by faith in Christ Jesus."]],
+  "Genesis 6:2":[[2, "That the sons of God saw the daughters of men that they were fair; and they took them wives of all which they chose."]],
+  "Hebrews 12:22-23":[[22, "But ye are come unto mount Sion, and unto the city of the living God, the heavenly Jerusalem, and to an innumerable company of angels,"], [23, "To the general assembly and church of the firstborn, which are written in heaven, and to God the Judge of all, and to the spirits of just men made perfect,"]],
+  "Job 1:1":[[1, "There was a man in the land of Uz, whose name was Job; and that man was perfect and upright, and one that feared God, and eschewed evil."]],
+  "Job 1:13-15":[[13, "And there was a day when his sons and his daughters were eating and drinking wine in their eldest brother’s house:"], [14, "And there came a messenger unto Job, and said, The oxen were plowing, and the asses feeding beside them:"], [15, "And the Sabeans fell upon them, and took them away; yea, they have slain the servants with the edge of the sword; and I only am escaped alone to tell thee."]],
+  "Job 1:15":[[15, "And the Sabeans fell upon them, and took them away; yea, they have slain the servants with the edge of the sword; and I only am escaped alone to tell thee."]],
+  "Job 1:16":[[16, "While he was yet speaking, there came also another, and said, The fire of God is fallen from heaven, and hath burned up the sheep, and the servants, and consumed them; and I only am escaped alone to tell thee."]],
+  "Job 1:17":[[17, "While he was yet speaking, there came also another, and said, The Chaldeans made out three bands, and fell upon the camels, and have carried them away, yea, and slain the servants with the edge of the sword; and I only am escaped alone to tell thee."]],
+  "Job 1:18-19":[[18, "While he was yet speaking, there came also another, and said, Thy sons and thy daughters were eating and drinking wine in their eldest brother’s house:"], [19, "And, behold, there came a great wind from the wilderness, and smote the four corners of the house, and it fell upon the young men, and they are dead; and I only am escaped alone to tell thee."]],
+  "Job 1:19":[[19, "And, behold, there came a great wind from the wilderness, and smote the four corners of the house, and it fell upon the young men, and they are dead; and I only am escaped alone to tell thee."]],
+  "Job 1:21":[[21, "And said, Naked came I out of my mother’s womb, and naked shall I return thither: the LORD gave, and the LORD hath taken away; blessed be the name of the LORD."]],
+  "Job 2:1":[[1, "Again there was a day when the sons of God came to present themselves before the LORD, and Satan came also among them to present himself before the LORD."]],
+  "Job 2:10":[[10, "But he said unto her, Thou speakest as one of the foolish women speaketh. What? shall we receive good at the hand of God, and shall we not receive evil? In all this did not Job sin with his lips."]],
+  "John 1:12":[[12, "But as many as received him, to them gave he power to become the sons of God, even to them that believe on his name:"]],
+  "Romans 8:14":[[14, "For as many as are led by the Spirit of God, they are the sons of God."]]
+};
+
+// Quotations from other writings (say: in the deck): their words open like a verse.
+const Q = {};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b && b.dataset.q) {
+    const q = Q[b.dataset.q];
+    verseTitle.textContent = q ? q.t : b.textContent.trim();
+    verseBody.innerHTML = q ? q.h : "<p>Not loaded.</p>";
+    verseDlg.showModal();
+    verseBody.scrollTop = 0;
+    return;
+  }
+  if (b) {
+    const keys = b.dataset.v;
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
