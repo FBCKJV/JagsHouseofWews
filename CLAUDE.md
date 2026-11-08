@@ -44,6 +44,8 @@ in the repo, without publishing artifacts or building a separate page:
   and compare every quoted verse to the KJV text (fix only punctuation and plain slips). Leave the author's wording.
   Run `python3 tools/clean_studies.py`, bump the version, open a PR, and merge only on "merge" (or when the author
   says to add it and merge). The study appears as another tab on that chapter, with no Telegram link.
+- **Running notes.** The author's to-do list is `review/todo.md`. When the author says they want to do something
+  later (a study to write, a chapter to redo), add it there; check items off when they are done.
 - Whenever a file is changed, give the user the full file (SendUserFile), not fragments.
 - Links go one way only: nothing is ever added to fbckjv.app.
 - The "View on Telegram" buttons are off (`TELEGRAM_LINKS` in `studies/app.js`) because the text is in the app. The 69
