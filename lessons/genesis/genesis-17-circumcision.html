@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Genesis 17 – The Covenant of Circumcision</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="A verse-by-verse study of Genesis 17: Abram becomes Abraham, circumcision given as the token of the covenant, a picture of the circumcision of the heart, and Isaac promised.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body .say-cite{font-size:.85rem;font-style:italic;color:var(--vellum-dim);border-top:1px solid var(--rule);padding-top:.6rem;margin-top:1rem}
+.ref.say{border-bottom-style:dashed}
+.ref.say::before{content:"\201C";margin-right:.15em}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Genesis Chapter 17">
+  <div class="page title-page long">
+    <div class="overline">Young Adult Sunday School • Genesis Series</div>
+    <h1>Genesis 17: The Covenant of Circumcision</h1>
+    <p class="sub">Abram Becomes Abraham • The Token • Isaac Promised</p>
+    <div class="refs center"><button class="ref" data-v="Genesis 17:1-27">Genesis 17:1-27</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="A father of many nations" data-title="I Am the Almighty God">
+  <div class="page">
+    <div class="kicker">vv. 1–2</div>
+    <h2>I Am the Almighty God</h2>
+    <p class="sub">Walk Before Me, and Be Thou Perfect</p>
+    <blockquote class="scripture" style="font-style:italic">And when Abram was ninety years old and nine, the <span class="lord">Lord</span> appeared to Abram, and said unto him, I am the Almighty God; walk before me, and be thou perfect. And I will make my covenant between me and thee, and will multiply thee exceedingly.<cite>Genesis 17:1-2</cite></blockquote>
+    <p>Now Abram becomes Abraham, decades after his salvation by calling upon the name of the <span class="lord">Lord</span>, and is given the physical sign of the covenant, circumcision of the flesh. <button class="ref" data-v="Genesis 12:8">Genesis 12:8</button></p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="A father of many nations" data-title="Thy Name Shall Be Abraham">
+  <div class="page">
+    <div class="kicker">vv. 3–8</div>
+    <h2>Thy Name Shall Be Abraham</h2>
+    <p class="sub">A Father of Many Nations Have I Made Thee</p>
+    <blockquote class="scripture" style="font-style:italic">And Abram fell on his face: and God talked with him, saying, As for me, behold, my covenant is with thee, and thou shalt be a father of many nations. Neither shall thy name any more be called Abram, but <mark>thy name shall be Abraham</mark>; <mark>for a father of many nations have I made thee</mark>. And I will make thee exceeding fruitful, and I will make nations of thee, and kings shall come out of thee. And I will establish my covenant between me and thee and thy seed after thee in their generations for an everlasting covenant, to be a God unto thee, and to thy seed after thee. And I will give unto thee, and to thy seed after thee, the land wherein thou art a stranger, all the land of Canaan, for an everlasting possession; and I will be their God.<cite>Genesis 17:3-8</cite></blockquote>
+    <p>Of the name changes: Abram means “exalted father,” while Abraham, “because I give you to be father of many nations.”</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="The token of the covenant" data-title="The Token of the Covenant">
+  <div class="page">
+    <div class="kicker">vv. 9–11</div>
+    <h2>The Token of the Covenant</h2>
+    <p class="sub">Every Man Child Among You Shall Be Circumcised</p>
+    <blockquote class="scripture" style="font-style:italic">And God said unto Abraham, Thou shalt keep my covenant therefore, thou, and thy seed after thee in their generations. This is my covenant, which ye shall keep, between me and you and thy seed after thee; Every man child among you shall be circumcised. And ye shall circumcise the flesh of your foreskin; and <mark>it shall be a token of the covenant betwixt me and you</mark>.<cite>Genesis 17:9-11</cite></blockquote>
+    <p>Of course, this physical act of obedience was a picture of the sealing of a soul by the Holy Spirit to come. The circumcision of the heart.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="The token of the covenant" data-title="An Everlasting Covenant">
+  <div class="page">
+    <div class="kicker">vv. 12–14</div>
+    <h2>An Everlasting Covenant</h2>
+    <p class="sub">He That Is Born in the House, or Bought with Money</p>
+    <blockquote class="scripture" style="font-style:italic">And he that is eight days old shall be circumcised among you, every man child in your generations, he that is born in the house, or bought with money of any stranger, which is not of thy seed. He that is born in thy house, and he that is bought with thy money, must needs be circumcised: and my covenant shall be in your flesh for an everlasting covenant. And the uncircumcised man child whose flesh of his foreskin is not circumcised, that soul shall be cut off from his people; he hath broken my covenant.<cite>Genesis 17:12-14</cite></blockquote>
+    <p>While the descendants of Abraham kept the circumcision as an ordinance, to remember their covenant with God that brought about Christ Jesus in the flesh, to preserve the seed, even as strangers and bondsmen were added to the nation, in case any forgot God’s promise, the circumcision of the heart, which is found in believers, is to us who are saved a reminder of our salvation and belonging to the body of Christ.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="The token of the covenant" data-title="The Circumcision of the Heart">
+  <div class="page">
+    <div class="kicker">Cross references • Genesis 17:11</div>
+    <h2>The Circumcision of the Heart</h2>
+    <div class="vps"><div class="vp fig"><h3>Romans 2:28-29</h3><blockquote class="scripture" style="font-style:italic">For he is not a Jew, which is one outwardly; neither is that circumcision, which is outward in the flesh: But he is a Jew, which is one inwardly; and circumcision is that of the heart, in the spirit, and not in the letter; whose praise is not of men, but of God.<cite>Romans 2:28-29</cite></blockquote></div><div class="vp fig"><h3>Colossians 2:11</h3><blockquote class="scripture" style="font-style:italic">In whom also ye are circumcised with the circumcision made without hands, in putting off the body of the sins of the flesh by the circumcision of Christ:<cite>Colossians 2:11</cite></blockquote></div></div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="The token of the covenant" data-title="The Circumcision of the Heart, continued">
+  <div class="page">
+    <div class="kicker">Cross references • Genesis 17:11</div>
+    <h2>The Circumcision of the Heart, continued</h2>
+    <div class="vps"><div class="vp fig"><h3>Romans 4:10-11</h3><blockquote class="scripture" style="font-style:italic">How was it then reckoned? when he was in circumcision, or in uncircumcision? Not in circumcision, but in uncircumcision. And he received the sign of circumcision, a seal of the righteousness of the faith which he had yet being uncircumcised: that he might be the father of all them that believe, though they be not circumcised; that righteousness might be imputed unto them also:<cite>Romans 4:10-11</cite></blockquote><p>Abraham was saved by faith decades before (<button class="ref" data-v="Genesis 12:8">Genesis 12:8</button>; <button class="ref" data-v="Genesis 15:6">Genesis 15:6</button>), being yet uncircumcised. The sign was a seal of the righteousness of the faith he already had.</p></div></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Sarah and Isaac" data-title="Sarah Shall Her Name Be">
+  <div class="page">
+    <div class="kicker">vv. 15–16</div>
+    <h2>Sarah Shall Her Name Be</h2>
+    <p class="sub">She Shall Be a Mother of Nations</p>
+    <blockquote class="scripture" style="font-style:italic">And God said unto Abraham, As for Sarai thy wife, thou shalt not call her name Sarai, but <mark>Sarah shall her name be</mark>. And I will bless her, and give thee a son also of her: yea, I will bless her, and she shall be a mother of nations; kings of people shall be of her.<cite>Genesis 17:15-16</cite></blockquote>
+    <p>Sarai and Sarah both mean “princess,” or a mighty woman, but Sarai is the possessive form, meaning Abram called her “my princess.” As Sarah, now she is just <em>the</em> princess. The queen of the multitudes of nations, essentially. We see the name changes by God as something He does, whether it is Jesus renaming the apostles or Saul becoming Paul. Neither incidental nor coincidental. Everything is done for a purpose. <button class="ref" data-v="John 1:42">John 1:42</button> <button class="ref" data-v="Acts 13:9">Acts 13:9</button></p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Sarah and Isaac" data-title="Abraham Fell upon His Face, and Laughed">
+  <div class="page">
+    <div class="kicker">vv. 17–19</div>
+    <h2>Abraham Fell upon His Face, and Laughed</h2>
+    <p class="sub">Thou Shalt Call His Name Isaac</p>
+    <blockquote class="scripture" style="font-style:italic">Then Abraham fell upon his face, and <mark>laughed</mark>, and said in his heart, Shall a child be born unto him that is an hundred years old? and shall Sarah, that is ninety years old, bear? And Abraham said unto God, O that Ishmael might live before thee! And God said, Sarah thy wife shall bear thee a son indeed; and <mark>thou shalt call his name Isaac</mark>: and I will establish my covenant with him for an everlasting covenant, and with his seed after him.<cite>Genesis 17:17-19</cite></blockquote>
+    <p>And again, despite his deep faith and willingness to obey, Abraham was human, second guessing the power of God and His faithfulness to keep His promises. God assures Abraham that within the year Sarai, now Sarah, will bear a son, and he shall name him Isaac.</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Sarah and Isaac" data-title="As for Ishmael">
+  <div class="page">
+    <div class="kicker">vv. 20–22</div>
+    <h2>As for Ishmael</h2>
+    <p class="sub">But My Covenant Will I Establish with Isaac</p>
+    <blockquote class="scripture" style="font-style:italic">And as for Ishmael, I have heard thee: Behold, I have blessed him, and will make him fruitful, and will multiply him exceedingly; twelve princes shall he beget, and I will make him a great nation. <mark>But my covenant will I establish with Isaac</mark>, which Sarah shall bear unto thee at this set time in the next year. And he left off talking with him, and God went up from Abraham.<cite>Genesis 17:20-22</cite></blockquote>
+    <p>To satisfy the prayer for Ishmael from Abraham, God says He will bless the elder son, from a bondwoman, but the elder will be blessed by the younger. And like Esau and Jacob, <em>the elder shall serve the younger</em>. <button class="ref" data-v="Genesis 25:23">Genesis 25:23</button> <a class="ref lesson-link" href="../../studies/#lesson-genesis-16-hagar-and-ishmael" target="_blank" rel="noopener">Genesis 16 ↗</a></p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="The selfsame day" data-title="In the Selfsame Day">
+  <div class="page">
+    <div class="kicker">vv. 23–27</div>
+    <h2>In the Selfsame Day</h2>
+    <p class="sub">Ishmael His Son Was Thirteen Years Old</p>
+    <blockquote class="scripture" style="font-style:italic">And Abraham took Ishmael his son, and all that were born in his house, and all that were bought with his money, every male among the men of Abraham’s house; and circumcised the flesh of their foreskin <mark>in the selfsame day</mark>, as God had said unto him. And Abraham was ninety years old and nine, when he was circumcised in the flesh of his foreskin. And <mark>Ishmael his son was thirteen years old</mark>, when he was circumcised in the flesh of his foreskin. In the selfsame day was Abraham circumcised, and Ishmael his son. And all the men of his house, born in the house, and bought with money of the stranger, were circumcised with him.<cite>Genesis 17:23-27</cite></blockquote>
+    <p>Another lesson to take from this is how quickly Abraham obeys the <span class="lord">Lord</span> in something that seems crazy, I’m sure. But not only does he obey, he makes all the men of his household obey, including his 13 year old son.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="The selfsame day" data-title="Pray to Be a Father Like Abraham">
+  <div class="page">
+    <div class="kicker">Application • Genesis 17:23</div>
+    <h2>Pray to Be a Father Like Abraham</h2>
+    <p class="sub">All the Men of His House</p>
+    <p>Parents today say things like, it’s so hard to get my teenager to not watch inappropriate material, or to dress modestly, or to go to church. Here Abraham is telling his 13 year old son that he’s got to cut off his foreskin, and not only the 13 year old son, but all the men of his house, including servants, herdsmen and slaves. <button class="ref" data-v="Genesis 18:19">Genesis 18:19</button></p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="The selfsame day" data-title="A Father Like Abraham">
+  <div class="page">
+    <h2>A Father Like Abraham</h2>
+    <p class="center">Abraham believed God and was saved long before the token of the covenant, and when God spoke, he obeyed in the selfsame day, and led his whole house to obey. Pray to be a father like Abraham.</p>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "Acts 13:9":[[9, "Then Saul, (who also is called Paul,) filled with the Holy Ghost, set his eyes on him,"]],
+  "Genesis 12:8":[[8, "And he removed from thence unto a mountain on the east of Bethel, and pitched his tent, having Bethel on the west, and Hai on the east: and there he builded an altar unto the LORD, and called upon the name of the LORD."]],
+  "Genesis 15:6":[[6, "And he believed in the LORD; and he counted it to him for righteousness."]],
+  "Genesis 17:1-27":[[1, "And when Abram was ninety years old and nine, the LORD appeared to Abram, and said unto him, I am the Almighty God; walk before me, and be thou perfect."], [2, "And I will make my covenant between me and thee, and will multiply thee exceedingly."], [3, "And Abram fell on his face: and God talked with him, saying,"], [4, "As for me, behold, my covenant is with thee, and thou shalt be a father of many nations."], [5, "Neither shall thy name any more be called Abram, but thy name shall be Abraham; for a father of many nations have I made thee."], [6, "And I will make thee exceeding fruitful, and I will make nations of thee, and kings shall come out of thee."], [7, "And I will establish my covenant between me and thee and thy seed after thee in their generations for an everlasting covenant, to be a God unto thee, and to thy seed after thee."], [8, "And I will give unto thee, and to thy seed after thee, the land wherein thou art a stranger, all the land of Canaan, for an everlasting possession; and I will be their God."], [9, "And God said unto Abraham, Thou shalt keep my covenant therefore, thou, and thy seed after thee in their generations."], [10, "This is my covenant, which ye shall keep, between me and you and thy seed after thee; Every man child among you shall be circumcised."], [11, "And ye shall circumcise the flesh of your foreskin; and it shall be a token of the covenant betwixt me and you."], [12, "And he that is eight days old shall be circumcised among you, every man child in your generations, he that is born in the house, or bought with money of any stranger, which is not of thy seed."], [13, "He that is born in thy house, and he that is bought with thy money, must needs be circumcised: and my covenant shall be in your flesh for an everlasting covenant."], [14, "And the uncircumcised man child whose flesh of his foreskin is not circumcised, that soul shall be cut off from his people; he hath broken my covenant."], [15, "And God said unto Abraham, As for Sarai thy wife, thou shalt not call her name Sarai, but Sarah shall her name be."], [16, "And I will bless her, and give thee a son also of her: yea, I will bless her, and she shall be a mother of nations; kings of people shall be of her."], [17, "Then Abraham fell upon his face, and laughed, and said in his heart, Shall a child be born unto him that is an hundred years old? and shall Sarah, that is ninety years old, bear?"], [18, "And Abraham said unto God, O that Ishmael might live before thee!"], [19, "And God said, Sarah thy wife shall bear thee a son indeed; and thou shalt call his name Isaac: and I will establish my covenant with him for an everlasting covenant, and with his seed after him."], [20, "And as for Ishmael, I have heard thee: Behold, I have blessed him, and will make him fruitful, and will multiply him exceedingly; twelve princes shall he beget, and I will make him a great nation."], [21, "But my covenant will I establish with Isaac, which Sarah shall bear unto thee at this set time in the next year."], [22, "And he left off talking with him, and God went up from Abraham."], [23, "And Abraham took Ishmael his son, and all that were born in his house, and all that were bought with his money, every male among the men of Abraham’s house; and circumcised the flesh of their foreskin in the selfsame day, as God had said unto him."], [24, "And Abraham was ninety years old and nine, when he was circumcised in the flesh of his foreskin."], [25, "And Ishmael his son was thirteen years old, when he was circumcised in the flesh of his foreskin."], [26, "In the selfsame day was Abraham circumcised, and Ishmael his son."], [27, "And all the men of his house, born in the house, and bought with money of the stranger, were circumcised with him."]],
+  "Genesis 18:19":[[19, "For I know him, that he will command his children and his household after him, and they shall keep the way of the LORD, to do justice and judgment; that the LORD may bring upon Abraham that which he hath spoken of him."]],
+  "Genesis 25:23":[[23, "And the LORD said unto her, Two nations are in thy womb, and two manner of people shall be separated from thy bowels; and the one people shall be stronger than the other people; and the elder shall serve the younger."]],
+  "John 1:42":[[42, "And he brought him to Jesus. And when Jesus beheld him, he said, Thou art Simon the son of Jona: thou shalt be called Cephas, which is by interpretation, A stone."]]
+};
+
+// Quotations from other writings (say: in the deck): their words open like a verse.
+const Q = {};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b && b.dataset.q) {
+    const q = Q[b.dataset.q];
+    verseTitle.textContent = q ? q.t : b.textContent.trim();
+    verseBody.innerHTML = q ? q.h : "<p>Not loaded.</p>";
+    verseDlg.showModal();
+    verseBody.scrollTop = 0;
+    return;
+  }
+  if (b) {
+    const keys = b.dataset.v;
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>

@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Genesis 11 – The Tower of Babel</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="A verse-by-verse study of Genesis 11: the tower of Babel, the nations scattered, the generations of Shem to Abram, and how God judges nations and heals their land.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body .say-cite{font-size:.85rem;font-style:italic;color:var(--vellum-dim);border-top:1px solid var(--rule);padding-top:.6rem;margin-top:1rem}
+.ref.say{border-bottom-style:dashed}
+.ref.say::before{content:"\201C";margin-right:.15em}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Genesis Chapter 11">
+  <div class="page title-page">
+    <div class="overline">Young Adult Sunday School • Genesis Series</div>
+    <h1>Genesis 11: The Tower of Babel</h1>
+    <p class="sub">One Language • The Tower • Scattered • Shem to Abram</p>
+    <div class="refs center"><button class="ref" data-v="Genesis 11:1-32">Genesis 11:1-32</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="The tower" data-title="One Language, and One Speech">
+  <div class="page">
+    <div class="kicker">vv. 1–4</div>
+    <h2>One Language, and One Speech</h2>
+    <p class="sub">Let Us Make Us a Name</p>
+    <blockquote class="scripture" style="font-style:italic">And the whole earth was of one language, and of one speech. And it came to pass, as they journeyed from the east, that they found a plain in the land of Shinar; and they dwelt there. And they said one to another, Go to, let us make brick, and burn them thoroughly. And they had brick for stone, and slime had they for morter. And they said, Go to, <mark>let us build us a city and a tower, whose top may reach unto heaven</mark>; <mark>and let us make us a name</mark>, lest we be scattered abroad upon the face of the whole earth.<cite>Genesis 11:1-4</cite></blockquote>
+    <p>About 100 years after the flood, in the year of Peleg’s birth (<em>for in his days was the earth divided</em>), the people imagined a vain thing. A tower to Heaven. That they could work their way to Heaven and be like God. <button class="ref" data-v="Genesis 10:25">Genesis 10:25</button></p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="The tower" data-title="The {Lord} Came Down">
+  <div class="page">
+    <div class="kicker">vv. 5–7</div>
+    <h2>The <span class="lord">Lord</span> Came Down</h2>
+    <p class="sub">Go To, Let Us Go Down</p>
+    <blockquote class="scripture" style="font-style:italic">And the <span class="lord">Lord</span> came down to see the city and the tower, which the children of men builded. And the <span class="lord">Lord</span> said, Behold, the people is one, and they have all one language; and this they begin to do: and <mark>now nothing will be restrained from them, which they have imagined to do</mark>. <mark>Go to, let us go down</mark>, and there confound their language, that they may not understand one another’s speech.<cite>Genesis 11:5-7</cite></blockquote>
+    <p>The <span class="lord">Lord</span> God, the Father, says, “<em>let us go down</em>…” <button class="ref" data-v="Genesis 1:26">Genesis 1:26</button></p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="The tower" data-title="The {Lord} Scattered Them">
+  <div class="page">
+    <div class="kicker">vv. 8–9</div>
+    <h2>The <span class="lord">Lord</span> Scattered Them</h2>
+    <p class="sub">Therefore Is the Name of It Called Babel</p>
+    <blockquote class="scripture" style="font-style:italic"><mark>So the <span class="lord">Lord</span> scattered them abroad from thence upon the face of all the earth</mark>: and they left off to build the city. Therefore is the name of it called Babel; because the <span class="lord">Lord</span> did there confound the language of all the earth: and from thence did the <span class="lord">Lord</span> scatter them abroad upon the face of all the earth.<cite>Genesis 11:8-9</cite></blockquote>
+    <p>And they scattered the people and confused their language. We are meant to be in nations. Nations by clan. By blood. Not one world government, full of vanity. Not even by a civic nationalism of paper and statutes that erases who we are, <em>making a name for ourselves, lest we be scattered abroad upon the face of the whole earth</em>.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="The tower" data-title="That They All May Be One">
+  <div class="page">
+    <div class="kicker">Cross references • Genesis 11:6</div>
+    <h2>That They All May Be One</h2>
+    <div class="vps"><div class="vp fig"><h3>John 17:20-21</h3><blockquote class="scripture" style="font-style:italic">Neither pray I for these alone, but for them also which shall believe on me through their word; That they all may be one; as thou, Father, art in me, and I in thee, that they also may be one in us: that the world may believe that thou hast sent me.<cite>John 17:20-21</cite></blockquote><p>Not the people made one in vanity to make a name for themselves, but those which believe on Him through His word, one in the Father and the Son.</p></div><div class="vp fig"><h3>John 17:22-23</h3><blockquote class="scripture" style="font-style:italic">And the glory which thou gavest me I have given them; that they may be one, even as we are one: I in them, and thou in me, that they may be made perfect in one; and that the world may know that thou hast sent me, and hast loved them, as thou hast loved me.<cite>John 17:22-23</cite></blockquote></div></div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="The tower" data-title="Nimrod">
+  <div class="page">
+    <div class="kicker">Genesis 10:8–10 • The Founder of Babel</div>
+    <h2>Nimrod</h2>
+    <p class="sub">A Mighty Hunter Before the <span class="lord">Lord</span></p>
+    <blockquote class="scripture" style="font-style:italic">And Cush begat Nimrod: he began to be a mighty one in the earth. He was a mighty hunter before the <span class="lord">Lord</span>: wherefore it is said, Even as Nimrod the mighty hunter before the <span class="lord">Lord</span>. And <mark>the beginning of his kingdom was Babel</mark>, and Erech, and Accad, and Calneh, in the land of Shinar.<cite>Genesis 10:8-10</cite></blockquote>
+    <p>Nimrod gets a bad rap. Having founded Babel and being a mighty man, a hunter before the <span class="lord">Lord</span>, it is assumed he’s the impetus for the construction of the tower. Most of the assumption is based on his proximity, greatness, being a <em>gibbor</em> or mighty man, and his lineage forming the great cities listed in Genesis 10: Babel, Erech, Accad, and Calneh, in the land of Shinar. Some translate his name as “deserter,” others “he rebelled,” and take this to build an entire story around him, the tower, and great wickedness against God. Yet scripture doesn’t give a negative accounting of him.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="The generations of Shem" data-title="The Generations of Shem">
+  <div class="page">
+    <div class="kicker">vv. 10–11</div>
+    <h2>The Generations of Shem</h2>
+    <p class="sub">Shem Begat Arphaxad Two Years After the Flood</p>
+    <blockquote class="scripture" style="font-style:italic">These are the generations of Shem: Shem was an hundred years old, and begat Arphaxad two years after the flood: And Shem lived after he begat Arphaxad five hundred years, and begat sons and daughters.<cite>Genesis 11:10-11</cite></blockquote>
+    <p>And then we are given the generations of Shem. The genealogy of man after the flood is again given to establish where and when we are for the next phase of the story being told: the origins and chronology of the people whom God dealt with. Adam to Noah. Noah to Abram. <button class="ref" data-v="Genesis 5:1">Genesis 5:1</button></p>
+    <div class="callout"><p>Many overlook this as simply a history or chronological device, and try to extract much deeper meaning from it than is there, often at the expense of believing it literally, especially the timing of years.</p></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="The generations of Shem" data-title="Arphaxad, Salah, and Eber">
+  <div class="page">
+    <div class="kicker">vv. 12–17</div>
+    <h2>Arphaxad, Salah, and Eber</h2>
+    <p class="sub">The Line of Shem Continues</p>
+    <blockquote class="scripture" style="font-style:italic">And Arphaxad lived five and thirty years, and begat Salah: And Arphaxad lived after he begat Salah four hundred and three years, and begat sons and daughters. And Salah lived thirty years, and begat Eber: And Salah lived after he begat Eber four hundred and three years, and begat sons and daughters. And Eber lived four and thirty years, and begat Peleg: And Eber lived after he begat Peleg four hundred and thirty years, and begat sons and daughters.<cite>Genesis 11:12-17</cite></blockquote>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="The generations of Shem" data-title="Peleg, Reu, and Serug">
+  <div class="page">
+    <div class="kicker">vv. 18–23</div>
+    <h2>Peleg, Reu, and Serug</h2>
+    <p class="sub">In His Days Was the Earth Divided</p>
+    <blockquote class="scripture" style="font-style:italic">And Peleg lived thirty years, and begat Reu: And Peleg lived after he begat Reu two hundred and nine years, and begat sons and daughters. And Reu lived two and thirty years, and begat Serug: And Reu lived after he begat Serug two hundred and seven years, and begat sons and daughters. And Serug lived thirty years, and begat Nahor: And Serug lived after he begat Nahor two hundred years, and begat sons and daughters.<cite>Genesis 11:18-23</cite></blockquote>
+    <p class="sub center">Peleg: “for in his days was the earth divided.” <button class="ref" data-v="Genesis 10:25">Genesis 10:25</button></p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="The generations of Shem" data-title="Nahor and Terah">
+  <div class="page">
+    <div class="kicker">vv. 24–26</div>
+    <h2>Nahor and Terah</h2>
+    <p class="sub">The Life Spans of Man Shrinking</p>
+    <blockquote class="scripture" style="font-style:italic">And Nahor lived nine and twenty years, and begat Terah: And Nahor lived after he begat Terah an hundred and nineteen years, and begat sons and daughters. And Terah lived seventy years, and begat Abram, Nahor, and Haran.<cite>Genesis 11:24-26</cite></blockquote>
+    <p>Note that the life spans of man are shrinking as we go from Shem to Abram, approaching the 120 year average God decided back in Genesis 6. Abraham would be 175 when he died. A shadow of the 900 years most of the earlier patriarchs lived to. <button class="ref" data-v="Genesis 6:3">Genesis 6:3</button> <button class="ref" data-v="Genesis 25:7">Genesis 25:7</button></p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="The generations of Shem" data-title="The Generations of Terah">
+  <div class="page">
+    <div class="kicker">vv. 27–32</div>
+    <h2>The Generations of Terah</h2>
+    <p class="sub">Terah, Father of Abram</p>
+    <blockquote class="scripture" style="font-style:italic">Now these are the generations of Terah: <mark>Terah begat Abram, Nahor, and Haran</mark>; <mark>and Haran begat Lot</mark>. And Haran died before his father Terah in the land of his nativity, in Ur of the Chaldees. And Abram and Nahor took them wives: the name of Abram’s wife was Sarai; and the name of Nahor’s wife, Milcah, the daughter of Haran, the father of Milcah, and the father of Iscah. But Sarai was barren; she had no child. And Terah took Abram his son, and Lot the son of Haran his son’s son, and Sarai his daughter in law, his son Abram’s wife; and they went forth with them from Ur of the Chaldees, to go into the land of Canaan; and they came unto Haran, and dwelt there. And the days of Terah were two hundred and five years: and Terah died in Haran.<cite>Genesis 11:27-32</cite></blockquote>
+    <p>The generations of Shem lead to Terah, father of Abraham and grandfather of Lot.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="The generations of Shem" data-title="From Adam to Jesus">
+  <div class="page">
+    <div class="kicker">Cross references • Genesis 11:10</div>
+    <h2>From Adam to Jesus</h2>
+    <div class="vps"><div class="vp fig"><h3>Luke 3:38</h3><blockquote class="scripture" style="font-style:italic">Which was the son of Enos, which was the son of Seth, which was the son of Adam, which was the son of God.<cite>Luke 3:38</cite></blockquote><p>In like manner, the Gospels have similar genealogies, bringing us to Jesus Christ (<button class="ref" data-v="Luke 3:23-38">Luke 3:23-38</button>), that we have a lineage and time frame from Adam to Jesus’ earthly incarnation.</p></div><div class="vp fig"><h3>Matthew 1:17</h3><blockquote class="scripture" style="font-style:italic">So all the generations from Abraham to David are fourteen generations; and from David until the carrying away into Babylon are fourteen generations; and from the carrying away into Babylon unto Christ are fourteen generations.<cite>Matthew 1:17</cite></blockquote></div></div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="God judges nations" data-title="God Is No Respecter of Persons">
+  <div class="page">
+    <div class="kicker">Application • Nations</div>
+    <h2>God Is No Respecter of Persons</h2>
+    <p class="sub">The Same Offer of Salvation to All</p>
+    <blockquote class="scripture" style="font-style:italic">Then Peter opened his mouth, and said, Of a truth I perceive that God is no respecter of persons: But in every nation he that feareth him, and worketh righteousness, is accepted with him.<cite>Acts 10:34-35</cite></blockquote>
+    <p>God is not a respecter of persons, the Bible says repeatedly. He does not care if you are great or small, rich or poor, man or woman, Greek or Jew, where you’re from or who your parents are. He gives us all the same offer of salvation and adoption in Christ. As individuals, we have free will.</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="God judges nations" data-title="God Does Judge Nations">
+  <div class="page">
+    <div class="kicker">Application • Nations</div>
+    <h2>God Does Judge Nations</h2>
+    <p class="sub">Judging Ungodly Nations, Including Our Own</p>
+    <p>God does judge nations. He does favor some over others at times, and destroys many who go too far astray. He curses the land stained by blood of violence, sodomy, fornication. Of people, collectively, to the fourth generation. <button class="ref" data-v="Numbers 35:33">Numbers 35:33</button> <button class="ref" data-v="Exodus 34:7">Exodus 34:7</button></p>
+    <div class="callout"><p>We are to know the judgment of God and emulate it. Not being a respecter of persons, giving the Gospel to whomever we meet, but judging ungodly nations for what they are. Including our own. Every nation carries that burden, where the godly among them must turn towards God so that He may heal their land.</p></div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="God judges nations" data-title="Having Not the Son">
+  <div class="page">
+    <div class="kicker">Application • Nations</div>
+    <h2>Having Not the Son</h2>
+    <p class="sub">Founded on Rejecting Christ</p>
+    <p>Jews, from the most Orthodox to the most liberal Reformed to the atheists, all draw their identity not of blood (none can tell you their tribe or origin), not of true ethnicity. They draw their identity directly from rejecting Christ Jesus as the Messiah, and having not the Son, have not the Father. Being liars who are antichrists. Being reprobate <em>is</em> their identity. No other nation or ethnicity is founded on this lie and pride in rejecting God. <button class="ref" data-v="1 John 2:22-23">1 John 2:22-23</button></p>
+    <div class="callout"><p>And because they don’t wish to retain God in their knowledge, <em>He hath blinded their eyes, and hardened their heart; that they should not see with their eyes, nor understand with their heart, and be converted, and I should heal them.</em> And so, Romans 1 applies to them as it applies to all that go the way of the Pharaoh. <button class="ref" data-v="John 12:40">John 12:40</button> <button class="ref" data-v="Romans 1:28">Romans 1:28</button></p></div>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="God judges nations" data-title="Scattered Among the Heathen">
+  <div class="page">
+    <div class="kicker">Cross references • Genesis 11:8</div>
+    <h2>Scattered Among the Heathen</h2>
+    <div class="vps"><div class="vp fig"><h3>Leviticus 26:33</h3><blockquote class="scripture" style="font-style:italic">And I will scatter you among the heathen, and will draw out a sword after you: and your land shall be desolate, and your cities waste.<cite>Leviticus 26:33</cite></blockquote></div><div class="vp fig"><h3>Deuteronomy 4:26-27</h3><blockquote class="scripture" style="font-style:italic">I call heaven and earth to witness against you this day, that ye shall soon utterly perish from off the land whereunto ye go over Jordan to possess it; ye shall not prolong your days upon it, but shall utterly be destroyed. And the <span class="lord">Lord</span> shall scatter you among the nations, and ye shall be left few in number among the heathen, whither the <span class="lord">Lord</span> shall lead you.<cite>Deuteronomy 4:26-27</cite></blockquote></div></div>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="God judges nations" data-title="Scattered Among the Heathen, continued">
+  <div class="page">
+    <div class="kicker">Cross references • Genesis 11:8</div>
+    <h2>Scattered Among the Heathen, continued</h2>
+    <div class="vps"><div class="vp fig"><h3>Ezekiel 36:19</h3><blockquote class="scripture" style="font-style:italic">And I scattered them among the heathen, and they were dispersed through the countries: according to their way and according to their doings I judged them.<cite>Ezekiel 36:19</cite></blockquote></div><div class="vp fig"><h3>Ezekiel 6:8</h3><blockquote class="scripture" style="font-style:italic">Yet will I leave a remnant, that ye may have some that shall escape the sword among the nations, when ye shall be scattered through the countries.<cite>Ezekiel 6:8</cite></blockquote></div></div>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="God judges nations" data-title="Scattered Among the Heathen, continued">
+  <div class="page">
+    <div class="kicker">Cross references • Genesis 11:8</div>
+    <h2>Scattered Among the Heathen, continued</h2>
+    <div class="vps"><div class="vp fig"><h3>Jeremiah 3:13</h3><blockquote class="scripture" style="font-style:italic">Only acknowledge thine iniquity, that thou hast transgressed against the <span class="lord">Lord</span> thy God, and hast scattered thy ways to the strangers under every green tree, and ye have not obeyed my voice, saith the <span class="lord">Lord</span>.<cite>Jeremiah 3:13</cite></blockquote></div><div class="vp fig"><h3>Lamentations 4:16</h3><blockquote class="scripture" style="font-style:italic">The anger of the <span class="lord">Lord</span> hath divided them; he will no more regard them: they respected not the persons of the priests, they favoured not the elders.<cite>Lamentations 4:16</cite></blockquote></div></div>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="God judges nations" data-title="A Remnant According to the Election of Grace">
+  <div class="page">
+    <div class="kicker">Cross references • Genesis 11:8</div>
+    <h2>A Remnant According to the Election of Grace</h2>
+    <div class="vps"><div class="vp fig"><h3>Romans 11:5</h3><blockquote class="scripture" style="font-style:italic">Even so then at this present time also there is a remnant according to the election of grace.<cite>Romans 11:5</cite></blockquote></div><div class="vp fig"><h3>Romans 11:7-8</h3><blockquote class="scripture" style="font-style:italic">What then? Israel hath not obtained that which he seeketh for; but the election hath obtained it, and the rest were blinded. (According as it is written, God hath given them the spirit of slumber, eyes that they should not see, and ears that they should not hear;) unto this day.<cite>Romans 11:7-8</cite></blockquote></div></div>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="God judges nations" data-title="A Remnant According to the Election of Grace, continued">
+  <div class="page">
+    <div class="kicker">Cross references • Genesis 11:8</div>
+    <h2>A Remnant According to the Election of Grace, continued</h2>
+    <div class="vps"><div class="vp fig"><h3>Jeremiah 6:30</h3><blockquote class="scripture" style="font-style:italic">Reprobate silver shall men call them, because the <span class="lord">Lord</span> hath rejected them.<cite>Jeremiah 6:30</cite></blockquote><p>Speaking specifically of the Jews who would reject the coming Messiah. It is their national identity. By their individual free will. Collectively judged. <button class="ref" data-v="1 Thessalonians 2:14-16">1 Thessalonians 2:14-16</button></p></div></div>
+    <p class="sub center">The whole doctrine is in <a class="ref lesson-link" href="../../studies/#lesson-topic-reprobate" target="_blank" rel="noopener">The Reprobate Mind ↗</a>.</p>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="If my people" data-title="If My People">
+  <div class="page">
+    <div class="kicker">Application • 2 Chronicles 7:14</div>
+    <h2>If My People</h2>
+    <p class="sub">How We Save Our Nation</p>
+    <blockquote class="scripture" style="font-style:italic">If my people, which are called by my name, shall humble themselves, and pray, and seek my face, and turn from their wicked ways; then will I hear from heaven, and will forgive their sin, and will heal their land.<cite>2 Chronicles 7:14</cite></blockquote>
+    <p>Unsaved men often criticize born again believers as “doing nothing,” or that we are “weak,” “afraid” or “cowardly,” because we aren’t running around in panic, getting sucked into reactionary spirals by the provocations of the rulers of the darkness of this world. They rail and demand we join seditions and take vengeance for ourselves. But God is clear on how we save our nation and get His blessings for our people.</p>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="If my people" data-title="This Is Not “Doing Nothing”">
+  <div class="page">
+    <div class="kicker">Application • 2 Chronicles 7:14</div>
+    <h2>This Is Not “Doing Nothing”</h2>
+    <p class="sub">Discipline, Motivation and Perseverance</p>
+    <p>Have faith. Obey the commandments. As much as possible, live peaceably among men. Be a godly husband, raise godly children and share the gospel, winning souls. Give comfort to those mourning, be a good judge for the fatherless and true widows. <button class="ref" data-v="Romans 12:18">Romans 12:18</button></p>
+    <div class="callout"><p>This is not “doing nothing.” It is hard work, or else it wouldn’t be so difficult to get people to do it. Like most effective things, it requires discipline, motivation and perseverance. It’s easier to express impotent outrage online.</p></div>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="If my people" data-title="We Wrestle Not Against Flesh and Blood">
+  <div class="page">
+    <div class="kicker">Application • Ephesians 6:12</div>
+    <h2>We Wrestle Not Against Flesh and Blood</h2>
+    <p class="sub">Fearful for Nothing Except God</p>
+    <blockquote class="scripture" style="font-style:italic">For we wrestle not against flesh and blood, but against principalities, against powers, against the rulers of the darkness of this world, against spiritual wickedness in high places.<cite>Ephesians 6:12</cite></blockquote>
+    <p>The frustrations and provocations assailing us are how Satan tempts us, so he can accuse the saints before God: to make us sin over it, so that we can be persecuted for those sins by the powers that be. As a people, if Christians turn towards God and obeying Him, fearful for nothing except God, He will hear us and heal our land, and bring blessings to all our nation, believers or not. <button class="ref" data-v="Revelation 12:10">Revelation 12:10</button></p>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="If my people" data-title="Stop Doing Nothing and Believe">
+  <div class="page">
+    <h2>Stop Doing Nothing and Believe</h2>
+    <p class="center">Just being loving and kind, while maintaining the separation and sanctification God asks of us, is a dissident, revolutionary act. When we live blamelessly, it heaps coals upon their heads. But that all requires our faith. So stop doing nothing and believe. <button class="ref" data-v="Romans 12:20">Romans 12:20</button></p>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 John 2:22-23":[[22, "Who is a liar but he that denieth that Jesus is the Christ? He is antichrist, that denieth the Father and the Son."], [23, "Whosoever denieth the Son, the same hath not the Father: he that acknowledgeth the Son hath the Father also."]],
+  "1 Thessalonians 2:14-16":[[14, "For ye, brethren, became followers of the churches of God which in Judaea are in Christ Jesus: for ye also have suffered like things of your own countrymen, even as they have of the Jews:"], [15, "Who both killed the Lord Jesus, and their own prophets, and have persecuted us; and they please not God, and are contrary to all men:"], [16, "Forbidding us to speak to the Gentiles that they might be saved, to fill up their sins alway: for the wrath is come upon them to the uttermost."]],
+  "Exodus 34:7":[[7, "Keeping mercy for thousands, forgiving iniquity and transgression and sin, and that will by no means clear the guilty; visiting the iniquity of the fathers upon the children, and upon the children’s children, unto the third and to the fourth generation."]],
+  "Genesis 10:25":[[25, "And unto Eber were born two sons: the name of one was Peleg; for in his days was the earth divided; and his brother’s name was Joktan."]],
+  "Genesis 11:1-32":[[1, "And the whole earth was of one language, and of one speech."], [2, "And it came to pass, as they journeyed from the east, that they found a plain in the land of Shinar; and they dwelt there."], [3, "And they said one to another, Go to, let us make brick, and burn them thoroughly. And they had brick for stone, and slime had they for morter."], [4, "And they said, Go to, let us build us a city and a tower, whose top may reach unto heaven; and let us make us a name, lest we be scattered abroad upon the face of the whole earth."], [5, "And the LORD came down to see the city and the tower, which the children of men builded."], [6, "And the LORD said, Behold, the people is one, and they have all one language; and this they begin to do: and now nothing will be restrained from them, which they have imagined to do."], [7, "Go to, let us go down, and there confound their language, that they may not understand one another’s speech."], [8, "So the LORD scattered them abroad from thence upon the face of all the earth: and they left off to build the city."], [9, "Therefore is the name of it called Babel; because the LORD did there confound the language of all the earth: and from thence did the LORD scatter them abroad upon the face of all the earth."], [10, "These are the generations of Shem: Shem was an hundred years old, and begat Arphaxad two years after the flood:"], [11, "And Shem lived after he begat Arphaxad five hundred years, and begat sons and daughters."], [12, "And Arphaxad lived five and thirty years, and begat Salah:"], [13, "And Arphaxad lived after he begat Salah four hundred and three years, and begat sons and daughters."], [14, "And Salah lived thirty years, and begat Eber:"], [15, "And Salah lived after he begat Eber four hundred and three years, and begat sons and daughters."], [16, "And Eber lived four and thirty years, and begat Peleg:"], [17, "And Eber lived after he begat Peleg four hundred and thirty years, and begat sons and daughters."], [18, "And Peleg lived thirty years, and begat Reu:"], [19, "And Peleg lived after he begat Reu two hundred and nine years, and begat sons and daughters."], [20, "And Reu lived two and thirty years, and begat Serug:"], [21, "And Reu lived after he begat Serug two hundred and seven years, and begat sons and daughters."], [22, "And Serug lived thirty years, and begat Nahor:"], [23, "And Serug lived after he begat Nahor two hundred years, and begat sons and daughters."], [24, "And Nahor lived nine and twenty years, and begat Terah:"], [25, "And Nahor lived after he begat Terah an hundred and nineteen years, and begat sons and daughters."], [26, "And Terah lived seventy years, and begat Abram, Nahor, and Haran."], [27, "Now these are the generations of Terah: Terah begat Abram, Nahor, and Haran; and Haran begat Lot."], [28, "And Haran died before his father Terah in the land of his nativity, in Ur of the Chaldees."], [29, "And Abram and Nahor took them wives: the name of Abram’s wife was Sarai; and the name of Nahor’s wife, Milcah, the daughter of Haran, the father of Milcah, and the father of Iscah."], [30, "But Sarai was barren; she had no child."], [31, "And Terah took Abram his son, and Lot the son of Haran his son’s son, and Sarai his daughter in law, his son Abram’s wife; and they went forth with them from Ur of the Chaldees, to go into the land of Canaan; and they came unto Haran, and dwelt there."], [32, "And the days of Terah were two hundred and five years: and Terah died in Haran."]],
+  "Genesis 1:26":[[26, "And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth."]],
+  "Genesis 25:7":[[7, "And these are the days of the years of Abraham’s life which he lived, an hundred threescore and fifteen years."]],
+  "Genesis 5:1":[[1, "This is the book of the generations of Adam. In the day that God created man, in the likeness of God made he him;"]],
+  "Genesis 6:3":[[3, "And the LORD said, My spirit shall not always strive with man, for that he also is flesh: yet his days shall be an hundred and twenty years."]],
+  "John 12:40":[[40, "He hath blinded their eyes, and hardened their heart; that they should not see with their eyes, nor understand with their heart, and be converted, and I should heal them."]],
+  "Luke 3:23-38":[[23, "And Jesus himself began to be about thirty years of age, being (as was supposed) the son of Joseph, which was the son of Heli,"], [24, "Which was the son of Matthat, which was the son of Levi, which was the son of Melchi, which was the son of Janna, which was the son of Joseph,"], [25, "Which was the son of Mattathias, which was the son of Amos, which was the son of Naum, which was the son of Esli, which was the son of Nagge,"], [26, "Which was the son of Maath, which was the son of Mattathias, which was the son of Semei, which was the son of Joseph, which was the son of Juda,"], [27, "Which was the son of Joanna, which was the son of Rhesa, which was the son of Zorobabel, which was the son of Salathiel, which was the son of Neri,"], [28, "Which was the son of Melchi, which was the son of Addi, which was the son of Cosam, which was the son of Elmodam, which was the son of Er,"], [29, "Which was the son of Jose, which was the son of Eliezer, which was the son of Jorim, which was the son of Matthat, which was the son of Levi,"], [30, "Which was the son of Simeon, which was the son of Juda, which was the son of Joseph, which was the son of Jonan, which was the son of Eliakim,"], [31, "Which was the son of Melea, which was the son of Menan, which was the son of Mattatha, which was the son of Nathan, which was the son of David,"], [32, "Which was the son of Jesse, which was the son of Obed, which was the son of Booz, which was the son of Salmon, which was the son of Naasson,"], [33, "Which was the son of Aminadab, which was the son of Aram, which was the son of Esrom, which was the son of Phares, which was the son of Juda,"], [34, "Which was the son of Jacob, which was the son of Isaac, which was the son of Abraham, which was the son of Thara, which was the son of Nachor,"], [35, "Which was the son of Saruch, which was the son of Ragau, which was the son of Phalec, which was the son of Heber, which was the son of Sala,"], [36, "Which was the son of Cainan, which was the son of Arphaxad, which was the son of Sem, which was the son of Noe, which was the son of Lamech,"], [37, "Which was the son of Mathusala, which was the son of Enoch, which was the son of Jared, which was the son of Maleleel, which was the son of Cainan,"], [38, "Which was the son of Enos, which was the son of Seth, which was the son of Adam, which was the son of God."]],
+  "Numbers 35:33":[[33, "So ye shall not pollute the land wherein ye are: for blood it defileth the land: and the land cannot be cleansed of the blood that is shed therein, but by the blood of him that shed it."]],
+  "Revelation 12:10":[[10, "And I heard a loud voice saying in heaven, Now is come salvation, and strength, and the kingdom of our God, and the power of his Christ: for the accuser of our brethren is cast down, which accused them before our God day and night."]],
+  "Romans 12:18":[[18, "If it be possible, as much as lieth in you, live peaceably with all men."]],
+  "Romans 12:20":[[20, "Therefore if thine enemy hunger, feed him; if he thirst, give him drink: for in so doing thou shalt heap coals of fire on his head."]],
+  "Romans 1:28":[[28, "And even as they did not like to retain God in their knowledge, God gave them over to a reprobate mind, to do those things which are not convenient;"]]
+};
+
+// Quotations from other writings (say: in the deck): their words open like a verse.
+const Q = {};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b && b.dataset.q) {
+    const q = Q[b.dataset.q];
+    verseTitle.textContent = q ? q.t : b.textContent.trim();
+    verseBody.innerHTML = q ? q.h : "<p>Not loaded.</p>";
+    verseDlg.showModal();
+    verseBody.scrollTop = 0;
+    return;
+  }
+  if (b) {
+    const keys = b.dataset.v;
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
