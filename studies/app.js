@@ -7,7 +7,7 @@
 
   const KJV_APP = 'https://fbckjv.app/KJVBible/';
   // Shown on the About page. Started at v1.17 (after 17 merged updates); each merged update adds one.
-  const APP_VERSION = '2.17', APP_DATE = '2026-11-08';
+  const APP_VERSION = '2.18', APP_DATE = '2026-11-08';
   const view = document.getElementById('view');
   const crumbs = document.getElementById('crumbs');
   let INDEX = null;
@@ -793,10 +793,20 @@
     const shownStudy = studies[current] || main;
     const kjvHref = kjvAppLink(b.book, ch);
 
+    // Chapters posted together: the chapters that point at one study ("with") plus that study's own chapter.
+    const groupOf = target => {
+      const cs = Object.keys(data.studies).map(Number)
+        .filter(c => data.studies[String(c)].status === 'with' && data.studies[String(c)].with === `${b.book} ${target}`);
+      return cs.length ? [Math.min(...cs, target), Math.max(...cs, target)] : null;
+    };
+    const [withBook, withCh] = entry.status === 'with' ? splitRef(entry.with) : [null, null];
+    const shared = entry.status === 'with' && withBook === b.book && data.studies[String(withCh)] ? data.studies[String(withCh)].main : null;
+    const span = groupOf(entry.status === 'with' && shared ? Number(withCh) : ch);
+    const spanName = span ? `${chapterName(b.book, span[0]).replace(/\s+\d+$/, '')} ${span[0]}–${span[1]}` : '';
     let tag = '', meta = '';
     if (entry.status === 'series') tag = '<span class="tag">Series study</span>';
     else if (entry.status === 'earlier') tag = '<span class="tag gold">Earlier study</span>';
-    else if (entry.status === 'with') tag = '<span class="tag gold">Scripture</span>';
+    else if (entry.status === 'with') tag = `<span class="tag gold">${shared ? 'Studied as ' + esc(spanName) : 'Scripture'}</span>`;
     else tag = '<span class="tag gold">Not yet studied</span>';
     if (main) meta = `<span>Posted ${esc(fmtDate(main.date))}${main.range ? ' · ' + esc(main.range) : ''}</span>`;
     if (studies.length > 1) meta += `<span>${studies.length} studies</span>`;
@@ -811,7 +821,7 @@
     const actions = `<div class="actions">
         <a class="btn primary" href="${esc(kjvHref)}" target="_blank" rel="noopener">Read in the KJV app ↗</a>
         ${slidesBtn}
-        ${studies.length ? '<a class="btn" href="#commentary" data-jump="commentary">Skip to commentary ↓</a>' : ''}
+        ${studies.length || shared ? '<a class="btn" href="#commentary" data-jump="commentary">Skip to commentary ↓</a>' : ''}
       </div>`;
 
     let body = '';
@@ -827,7 +837,11 @@
           <div class="kjv${long ? ' folded' : ''}" id="kjv">${text}</div>
           ${long ? '<button class="btn unfold" id="unfold">Show the whole chapter</button>' : ''}`;
       }
-      if (entry.status === 'with') {
+      if (entry.status === 'with' && shared) {
+        body += `<div class="section-header" id="commentary"><h2>Commentary on ${esc(spanName)}</h2><span>${esc(studyWhen(shared))}</span></div>
+          <p class="note-line">${esc(spanName)} were studied together as one passage; this commentary covers all of them.</p>
+          <div id="commentary-body">${commentary(shared)}</div>`;
+      } else if (entry.status === 'with') {
         const [wb, wc] = splitRef(entry.with);
         const target = bookByName(wb);
         body += `<div class="notice"><strong>Commentary posted with ${esc(entry.with)}</strong>
@@ -835,7 +849,7 @@
           <div class="actions"><a class="btn" href="#${target ? target.slug : b.slug}-${wc}">Go to the ${esc(entry.with)} study →</a></div></div>`;
       }
       if (studies.length) {
-        body += `<div class="section-header" id="commentary"><h2>Commentary</h2><span id="study-date">${esc(studyWhen(shownStudy))}</span></div>
+        body += `<div class="section-header" id="commentary"><h2>${span && entry.status !== 'with' ? 'Commentary on ' + esc(spanName) : 'Commentary'}</h2><span id="study-date">${esc(studyWhen(shownStudy))}</span></div>
           ${studies.length > 1 || studies.some(x => x.label) ? `<nav class="study-tabs" aria-label="Studies of ${esc(title)}">${studies.map((s, i) => studyTab(s, i, i === current, base)).join('')}</nav>` : ''}
           <div id="commentary-body">${commentary(shownStudy)}</div>`;
       }
