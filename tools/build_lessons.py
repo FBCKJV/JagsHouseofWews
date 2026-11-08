@@ -78,7 +78,8 @@ def main():
                          'src': '../' + x['file'], 'w': x.get('w'), 'h': x.get('h'),
                          'topics': check_topics(x.get('topics', []), where),
                          'chapters': [c for c in (chapter(r, where) for r in x.get('chapters', [])) if c],
-                         'verses': x.get('verses', [])})
+                         'verses': x.get('verses', []),
+                         **({'theme': x['theme']} if x.get('theme') else {})})
 
     order = {s['id']: i for i, s in enumerate(cat['shelves'])}
     lessons.sort(key=lambda l: (order.get(l['shelf'], 99), l['order'], l['title'].lower()))
