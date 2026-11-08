@@ -7,7 +7,7 @@
 
   const KJV_APP = 'https://fbckjv.app/KJVBible/';
   // Shown on the About page. Started at v1.17 (after 17 merged updates); each merged update adds one.
-  const APP_VERSION = '2.16', APP_DATE = '2026-11-08';
+  const APP_VERSION = '2.17', APP_DATE = '2026-11-08';
   const view = document.getElementById('view');
   const crumbs = document.getElementById('crumbs');
   let INDEX = null;
@@ -514,7 +514,7 @@
         ${g.items.map(x => teachingHTML(x, false)).join('')}</section>`).join('')}
       ${onTopic.length ? '</details>' : ''}
       ${pics.length ? `<div class="section-header"><h2>Memes</h2><span>${pics.length}</span></div>
-        ${pictureGrid(pics)}` : ''}`;
+        ${themedPictures(pics, id, groups.map(g => g.name))}` : ''}`;
     // The full post is built when a teaching is opened, so a topic with hundreds stays quick.
     const byId = new Map(topic.teachings.map(x => [String(x.id), x]));
     view.querySelectorAll('details.teaching').forEach(d => d.addEventListener('toggle', () => {
@@ -568,6 +568,22 @@
       const href = kjvRefLink(r);
       return href ? `<a class="ref" href="${esc(href)}" target="_blank" rel="noopener">${esc(r)}</a>` : `<span class="ref">${esc(r)}</span>`;
     }).join('');
+  }
+
+  // Memes grouped under the themes of a topic (in the topic's own order), the unthemed last under "More".
+  function themedPictures(pics, topicId, themes) {
+    const groups = [];
+    pics.forEach(p => {
+      const name = (p.topics[0] === topicId && p.theme) || '';
+      let g = groups.find(x => x.name === name);
+      if (!g) groups.push(g = { name, pics: [] });
+      g.pics.push(p);
+    });
+    if (groups.length < 2) return pictureGrid(pics);
+    const rank = n => n ? ((themes || []).indexOf(n) + 1 || 900) : 999;
+    groups.sort((a, b) => rank(a.name) - rank(b.name));
+    return groups.map(g => `<h3 class="pic-theme">${esc(g.name || 'More')} <span>${g.pics.length}</span></h3>
+      ${pictureGrid(g.pics)}`).join('');
   }
 
   function pictureGrid(pics) {
@@ -722,7 +738,7 @@
         `<a href="#pictures" data-shelf="${esc(g.id)}">${esc(g.name)} <span>${g.pics.length}</span></a>`).join('')}</nav>
       ${groups.map(g => `<section id="shelf-${esc(g.id)}">
         <div class="section-header"><h2><a href="#doctrine-${esc(g.id)}">${esc(g.name)}</a></h2><span>${g.pics.length}</span></div>
-        ${pictureGrid(g.pics)}</section>`).join('')}`;
+        ${themedPictures(g.pics, g.id, g.themes)}</section>`).join('')}`;
     wirePictures(view, lib.pictures);
     view.querySelectorAll('[data-shelf]').forEach(a => a.onclick = e => {
       e.preventDefault();
