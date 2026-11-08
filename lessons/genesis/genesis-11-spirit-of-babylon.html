@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Genesis 11 – The Spirit of Babylon</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="A study from Genesis 11: Babel as the first one-world, works-based religion, spiritual whoredom against a jealous God, and the whore of Babylon at the end.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body .say-cite{font-size:.85rem;font-style:italic;color:var(--vellum-dim);border-top:1px solid var(--rule);padding-top:.6rem;margin-top:1rem}
+.ref.say{border-bottom-style:dashed}
+.ref.say::before{content:"\201C";margin-right:.15em}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="The Spirit of Babylon">
+  <div class="page title-page">
+    <div class="overline">A study from Genesis 11</div>
+    <h1>The Spirit of Babylon</h1>
+    <p class="sub">Works religion as spiritual whoredom, from the tower of Babel to the whore of Babylon.</p>
+    <div class="refs center"><button class="ref" data-v="Genesis 11:4">Genesis 11:4</button><button class="ref" data-v="Revelation 17:5">Revelation 17:5</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Introduction" data-title="The context">
+  <div class="page">
+    <h2>The context</h2>
+    <p class="lead">The study of Revelation 17, the whore of Babylon and the fall of that wicked city, has a lot of context coming from scripture.</p>
+    <ul class="marks"><li>The faithfulness of God.</li><li>The betrothal to His people.</li><li>The eventual marriage of the Lamb. <button class="ref" data-v="Revelation 19:7-9">Revelation 19:7-9</button></li></ul>
+    <p class="center">There are many chapters and verses on this. These should give you some ideas of this major theme throughout the Bible.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="A jealous God" data-title="Whose name is Jealous">
+  <div class="page">
+    <h2>Whose name is Jealous</h2>
+    <blockquote class="scripture" style="font-style:italic">Take heed to thyself, lest thou make a covenant with the inhabitants of the land whither thou goest, lest it be for a snare in the midst of thee: But ye shall destroy their altars, break their images, and cut down their groves: For thou shalt worship no other god: for <mark>the <span class="lord">Lord</span>, whose name is Jealous, is a jealous God</mark>: Lest thou make a covenant with the inhabitants of the land, and they <mark>go a whoring after their gods</mark>, and do sacrifice unto their gods, and one call thee, and thou eat of his sacrifice; And thou take of their daughters unto thy sons, and their daughters <mark>go a whoring after their gods</mark>, and make thy sons go a whoring after their gods. Thou shalt make thee no molten gods.<cite>Exodus 34:12-17</cite></blockquote>
+    <p>God has given us His law regarding marriage as a picture of His relationship with the saved. He is a jealous God. He speaks against idolatry and having other gods, the blasphemy of worshipping graven and molten images or other creatures in His stead, as fornication. Whoredoms. Harlotry.</p>
+    <div class="refs center"><button class="ref" data-v="Exodus 34:6-7">Exodus 34:6-7</button></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="A jealous God" data-title="The spirit of jealousy">
+  <div class="page">
+    <h2>The spirit of jealousy</h2>
+    <blockquote class="scripture" style="font-style:italic">Or when <mark>the spirit of jealousy</mark> cometh upon him, and he be jealous over his wife, and shall set the woman before the <span class="lord">Lord</span>, and the priest shall execute upon her all this law.<cite>Numbers 5:30</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">There shall be no whore of the daughters of Israel, nor a sodomite of the sons of Israel.<cite>Deuteronomy 23:17</cite></blockquote>
+    <p>He draws a parallel to actual whores: allowing the daughters of your land to commit fornication destroys a nation, as destruction is visited on those who forsake Him to chase after strange gods.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Jerusalem the harlot" data-title="Thy birth is of the land of Canaan">
+  <div class="page">
+    <div class="kicker">Ezekiel 16</div>
+    <h2>Thy birth is of the land of Canaan</h2>
+    <blockquote class="scripture" style="font-style:italic">Son of man, cause Jerusalem to know her abominations, And say, Thus saith the Lord <span class="lord">God</span> unto Jerusalem; Thy birth and thy nativity is of the land of Canaan; thy father was an Amorite, and thy mother an Hittite. And as for thy nativity, in the day thou wast born thy navel was not cut, neither wast thou washed in water to supple thee; thou wast not salted at all, nor swaddled at all. None eye pitied thee, to do any of these unto thee, to have compassion upon thee; but thou wast cast out in the open field, to the lothing of thy person, in the day that thou wast born. And when I passed by thee, and saw thee polluted in thine own blood, I said unto thee when thou wast in thy blood, <mark>Live</mark>; yea, I said unto thee when thou wast in thy blood, Live.<cite>Ezekiel 16:2-6</cite></blockquote>
+    <p>God found her cast out in the open field, polluted in her own blood, and said unto her, Live.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Jerusalem the harlot" data-title="Thou becamest mine">
+  <div class="page">
+    <h2>Thou becamest mine</h2>
+    <blockquote class="scripture" style="font-style:italic">Now when I passed by thee, and looked upon thee, behold, thy time was the time of love; and I spread my skirt over thee, and covered thy nakedness: yea, I sware unto thee, and <mark>entered into a covenant with thee, saith the Lord <span class="lord">God</span>, and thou becamest mine</mark>. Then washed I thee with water; yea, I throughly washed away thy blood from thee, and I anointed thee with oil. I clothed thee also with broidered work, and shod thee with badgers’ skin, and I girded thee about with fine linen, and I covered thee with silk. I decked thee also with ornaments, and I put bracelets upon thy hands, and a chain on thy neck. And I put a jewel on thy forehead, and earrings in thine ears, and a beautiful crown upon thine head. Thus wast thou decked with gold and silver; and thy raiment was of fine linen, and silk, and broidered work; thou didst eat fine flour, and honey, and oil: and thou wast exceeding beautiful, and thou didst prosper into a kingdom. And thy renown went forth among the heathen for thy beauty: for it was perfect through my comeliness, which I had put upon thee, saith the Lord <span class="lord">God</span>.<cite>Ezekiel 16:8-14</cite></blockquote>
+    <p class="center">The covenant, the washing, the clothing and the crown: all His comeliness, which He put upon her.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Jerusalem the harlot" data-title="But thou didst trust in thine own beauty">
+  <div class="page">
+    <h2>But thou didst trust in thine own beauty</h2>
+    <blockquote class="scripture" style="font-style:italic">But <mark>thou didst trust in thine own beauty, and playedst the harlot</mark> because of thy renown, and pouredst out thy fornications on every one that passed by; his it was. And of thy garments thou didst take, and deckedst thy high places with divers colours, and playedst the harlot thereupon: the like things shall not come, neither shall it be so. Thou hast also taken thy fair jewels of my gold and of my silver, which I had given thee, and madest to thyself images of men, and didst commit whoredom with them,<cite>Ezekiel 16:15-17</cite></blockquote>
+    <div class="cols"><div class="panel cain"><h3>Images of men</h3><p>Taking His gold and silver to make idols. <button class="ref" data-v="Ezekiel 16:17">Ezekiel 16:17</button></p></div><div class="panel cain"><h3>Her children</h3><p>Sacrificing the sons and daughters born unto Him. <button class="ref" data-v="Ezekiel 16:20-21">Ezekiel 16:20-21</button></p></div></div>
+    <div class="refs center"><button class="ref" data-v="Ezekiel 16:18-22">Ezekiel 16:18-22</button></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Jerusalem the harlot" data-title="As a wife that committeth adultery">
+  <div class="page">
+    <h2>As a wife that committeth adultery</h2>
+    <blockquote class="scripture" style="font-style:italic">How weak is thine heart, saith the <span class="lord">Lord</span> <span class="lord">God</span>, seeing thou doest all these things, the work of an imperious whorish woman; In that thou buildest thine eminent place in the head of every way, and makest thine high place in every street; and hast not been as an harlot, in that thou scornest hire; But <mark>as a wife that committeth adultery, which taketh strangers instead of her husband</mark>! They give gifts to all whores: but thou givest thy gifts to all thy lovers, and hirest them, that they may come unto thee on every side for thy whoredom. And the contrary is in thee from other women in thy whoredoms, whereas none followeth thee to commit whoredoms: and in that thou givest a reward, and no reward is given unto thee, therefore thou art contrary.<cite>Ezekiel 16:30-34</cite></blockquote>
+    <div class="refs center"><button class="ref" data-v="Ezekiel 16:26-29">Ezekiel 16:26-29</button></div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Jerusalem the harlot" data-title="Judged as women that break wedlock">
+  <div class="page">
+    <h2>Judged as women that break wedlock</h2>
+    <blockquote class="scripture" style="font-style:italic">Wherefore, O harlot, hear the word of the <span class="lord">Lord</span>: Thus saith the Lord <span class="lord">God</span>; Because thy filthiness was poured out, and thy nakedness discovered through thy whoredoms with thy lovers, and with all the idols of thy abominations, and by the blood of thy children, which thou didst give unto them; Behold, therefore I will gather all thy lovers, with whom thou hast taken pleasure, and all them that thou hast loved, with all them that thou hast hated; I will even gather them round about against thee, and will discover thy nakedness unto them, that they may see all thy nakedness. And <mark>I will judge thee, as women that break wedlock</mark> and shed blood are judged; and I will give thee blood in fury and jealousy.<cite>Ezekiel 16:35-38</cite></blockquote>
+    <div class="refs center"><button class="ref" data-v="Ezekiel 16:39-43">Ezekiel 16:39-43</button></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Jerusalem the harlot" data-title="Thy sister Sodom">
+  <div class="page">
+    <h2>Thy sister Sodom</h2>
+    <blockquote class="scripture" style="font-style:italic">And thine elder sister is Samaria, she and her daughters that dwell at thy left hand: and thy younger sister, that dwelleth at thy right hand, is Sodom and her daughters. Yet hast thou not walked after their ways, nor done after their abominations: but, as if that were a very little thing, thou wast corrupted more than they in all thy ways. As I live, saith the Lord <span class="lord">God</span>, Sodom thy sister hath not done, she nor her daughters, as thou hast done, thou and thy daughters. Behold, this was the iniquity of thy sister Sodom, <mark>pride, fulness of bread, and abundance of idleness</mark> was in her and in her daughters, neither did she strengthen the hand of the poor and needy. And they were haughty, and committed abomination before me: therefore I took them away as I saw good.<cite>Ezekiel 16:46-50</cite></blockquote>
+    <div class="refs center"><button class="ref" data-v="Ezekiel 16:51-52">Ezekiel 16:51-52</button></div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Jerusalem the harlot" data-title="Yet I will remember my covenant">
+  <div class="page">
+    <h2>Yet I will remember my covenant</h2>
+    <blockquote class="scripture" style="font-style:italic">For thus saith the Lord <span class="lord">God</span>; I will even deal with thee as thou hast done, which hast despised the oath in breaking the covenant. Nevertheless <mark>I will remember my covenant with thee in the days of thy youth</mark>, and I will establish unto thee an everlasting covenant. Then thou shalt remember thy ways, and be ashamed, when thou shalt receive thy sisters, thine elder and thy younger: and I will give them unto thee for daughters, but not by thy covenant. And I will establish my covenant with thee; and thou shalt know that I am the <span class="lord">Lord</span>: That thou mayest remember, and be confounded, and never open thy mouth any more because of thy shame, when I am pacified toward thee for all that thou hast done, saith the Lord <span class="lord">God</span>.<cite>Ezekiel 16:59-63</cite></blockquote>
+    <p class="center">“I will establish unto thee an everlasting covenant.”</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="The spirit of Babel" data-title="Adultery, fornication, whoredoms">
+  <div class="page">
+    <h2>Adultery, fornication, whoredoms</h2>
+    <p class="lead">The spirit of Babel, which is Babylon, and the empires and kingdoms that followed it, is one of adultery. Fornication. Whoredoms.</p>
+    <blockquote class="big-verse">And they said, Go to, <mark>let us build us a city and a tower, whose top may reach unto heaven</mark>; <mark>and let us make us a name</mark>, lest we be scattered abroad upon the face of the whole earth.<cite>Genesis 11:4</cite></blockquote>
+    <p>The original sin of the first one-world religion and government, just years after the flood, was to blaspheme God by building a tower to Heaven. Working their way to righteousness, that they may become as gods. <button class="ref" data-v="Genesis 3:5">Genesis 3:5</button> <a class="ref lesson-link" href="../../studies/#lesson-genesis-11-tower-of-babel" target="_blank" rel="noopener">The Tower of Babel ↗</a></p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="The spirit of Babel" data-title="A symbol of all works religion">
+  <div class="page">
+    <h2>A symbol of all works religion</h2>
+    <div class="cols"><div class="panel believers"><h3>The Tower of Babel</h3><p>A symbol of all works-based false religion. Its destruction, a picture of the end times.</p></div><div class="panel believers"><h3>Babylon the empire</h3><p>Nebuchadnezzar and his idol, a picture of the beast and his abomination. <button class="ref" data-v="Daniel 3:1-6">Daniel 3:1-6</button> <button class="ref" data-v="Revelation 13:14-15">Revelation 13:14-15</button></p></div></div>
+    <div class="callout"><p>This spirit of Babylon and its whore of self-righteous works religion, bowing to idols, worshipping the created more than the Creator, is fornication. Harlots, taking from God what is His, leading man to fornication. <button class="ref" data-v="Romans 1:25">Romans 1:25</button></p></div>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="The spirit of Babel" data-title="Mystery, Babylon the Great">
+  <div class="page">
+    <h2>Mystery, Babylon the Great</h2>
+    <blockquote class="big-verse">And upon her forehead was a name written, <mark>MYSTERY, BABYLON THE GREAT, THE MOTHER OF HARLOTS</mark> AND ABOMINATIONS OF THE EARTH.<cite>Revelation 17:5</cite></blockquote>
+    <div class="refs center"><button class="ref" data-v="Revelation 17:1-2">Revelation 17:1-2</button><button class="ref" data-v="Revelation 18:2-4">Revelation 18:2-4</button></div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Put away for fornication" data-title="Except it be for fornication">
+  <div class="page">
+    <h2>Except it be for fornication</h2>
+    <blockquote class="big-verse">And I say unto you, Whosoever shall put away his wife, <mark>except it be for fornication</mark>, and shall marry another, committeth adultery: and whoso marrieth her which is put away doth commit adultery.<cite>Matthew 19:9</cite></blockquote>
+    <p>God’s law says that a betrothed groom can only put away his intended bride for fornication. And no man may then marry her that has been put away.</p>
+    <p class="sub center">This is the context, fulfilled in the end times prophecy. <a class="ref lesson-link" href="../../studies/#lesson-pulled-israel-put-away" target="_blank" rel="noopener">Israel Put Away ↗</a></p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Put away for fornication" data-title="The Bride, the Lamb’s wife">
+  <div class="page">
+    <h2>The Bride, the Lamb’s wife</h2>
+    <blockquote class="big-verse">Let us be glad and rejoice, and give honour to him: for <mark>the marriage of the Lamb is come, and his wife hath made herself ready</mark>. And to her was granted that she should be arrayed in fine linen, clean and white: for the fine linen is the righteousness of saints.<cite>Revelation 19:7-8</cite></blockquote>
+    <div class="refs center"><button class="ref" data-v="Revelation 21:9">Revelation 21:9</button><button class="ref" data-v="2 Corinthians 11:2">2 Corinthians 11:2</button></div>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Close" data-title="Come out of her">
+  <div class="page title-page later">
+    <div class="overline">Genesis 11 and Revelation 17</div>
+    <h1>Come out of her</h1>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>A jealous God</strong>He calls idolatry and works religion what it is: whoredom.</li><li><strong>Babel to Babylon</strong>The tower was the first one-world, works-based false religion, and its fall pictures the end.</li><li><strong>The Bride</strong>Kept for the Lamb, espoused as a chaste virgin to Christ. <button class="ref" data-v="2 Corinthians 11:2">2 Corinthians 11:2</button></li><li><strong>Come out of her, my people</strong>That ye be not partakers of her sins. <button class="ref" data-v="Revelation 18:4">Revelation 18:4</button></li></ol></div>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Close" data-title="Further study">
+  <div class="page">
+    <h2>Further study</h2>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-genesis-11-tower-of-babel" target="_blank" rel="noopener">Genesis 11: The Tower of Babel ↗</a><a class="ref lesson-link" href="../../studies/#lesson-pulled-israel-put-away" target="_blank" rel="noopener">Israel Put Away ↗</a><a class="ref lesson-link" href="../../studies/#lesson-topic-false" target="_blank" rel="noopener">Another Gospel ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "2 Corinthians 11:2":[[2, "For I am jealous over you with godly jealousy: for I have espoused you to one husband, that I may present you as a chaste virgin to Christ."]],
+  "Daniel 3:1-6":[[1, "Nebuchadnezzar the king made an image of gold, whose height was threescore cubits, and the breadth thereof six cubits: he set it up in the plain of Dura, in the province of Babylon."], [2, "Then Nebuchadnezzar the king sent to gather together the princes, the governors, and the captains, the judges, the treasurers, the counsellors, the sheriffs, and all the rulers of the provinces, to come to the dedication of the image which Nebuchadnezzar the king had set up."], [3, "Then the princes, the governors, and captains, the judges, the treasurers, the counsellors, the sheriffs, and all the rulers of the provinces, were gathered together unto the dedication of the image that Nebuchadnezzar the king had set up; and they stood before the image that Nebuchadnezzar had set up."], [4, "Then an herald cried aloud, To you it is commanded, O people, nations, and languages,"], [5, "That at what time ye hear the sound of the cornet, flute, harp, sackbut, psaltery, dulcimer, and all kinds of musick, ye fall down and worship the golden image that Nebuchadnezzar the king hath set up:"], [6, "And whoso falleth not down and worshippeth shall the same hour be cast into the midst of a burning fiery furnace."]],
+  "Exodus 34:6-7":[[6, "And the LORD passed by before him, and proclaimed, The LORD, The LORD God, merciful and gracious, longsuffering, and abundant in goodness and truth,"], [7, "Keeping mercy for thousands, forgiving iniquity and transgression and sin, and that will by no means clear the guilty; visiting the iniquity of the fathers upon the children, and upon the children’s children, unto the third and to the fourth generation."]],
+  "Ezekiel 16:17":[[17, "Thou hast also taken thy fair jewels of my gold and of my silver, which I had given thee, and madest to thyself images of men, and didst commit whoredom with them,"]],
+  "Ezekiel 16:18-22":[[18, "And tookest thy broidered garments, and coveredst them: and thou hast set mine oil and mine incense before them."], [19, "My meat also which I gave thee, fine flour, and oil, and honey, wherewith I fed thee, thou hast even set it before them for a sweet savour: and thus it was, saith the Lord GOD."], [20, "Moreover thou hast taken thy sons and thy daughters, whom thou hast borne unto me, and these hast thou sacrificed unto them to be devoured. Is this of thy whoredoms a small matter,"], [21, "That thou hast slain my children, and delivered them to cause them to pass through the fire for them?"], [22, "And in all thine abominations and thy whoredoms thou hast not remembered the days of thy youth, when thou wast naked and bare, and wast polluted in thy blood."]],
+  "Ezekiel 16:20-21":[[20, "Moreover thou hast taken thy sons and thy daughters, whom thou hast borne unto me, and these hast thou sacrificed unto them to be devoured. Is this of thy whoredoms a small matter,"], [21, "That thou hast slain my children, and delivered them to cause them to pass through the fire for them?"]],
+  "Ezekiel 16:26-29":[[26, "Thou hast also committed fornication with the Egyptians thy neighbours, great of flesh; and hast increased thy whoredoms, to provoke me to anger."], [27, "Behold, therefore I have stretched out my hand over thee, and have diminished thine ordinary food, and delivered thee unto the will of them that hate thee, the daughters of the Philistines, which are ashamed of thy lewd way."], [28, "Thou hast played the whore also with the Assyrians, because thou wast unsatiable; yea, thou hast played the harlot with them, and yet couldest not be satisfied."], [29, "Thou hast moreover multiplied thy fornication in the land of Canaan unto Chaldea; and yet thou wast not satisfied herewith."]],
+  "Ezekiel 16:39-43":[[39, "And I will also give thee into their hand, and they shall throw down thine eminent place, and shall break down thy high places: they shall strip thee also of thy clothes, and shall take thy fair jewels, and leave thee naked and bare."], [40, "They shall also bring up a company against thee, and they shall stone thee with stones, and thrust thee through with their swords."], [41, "And they shall burn thine houses with fire, and execute judgments upon thee in the sight of many women: and I will cause thee to cease from playing the harlot, and thou also shalt give no hire any more."], [42, "So will I make my fury toward thee to rest, and my jealousy shall depart from thee, and I will be quiet, and will be no more angry."], [43, "Because thou hast not remembered the days of thy youth, but hast fretted me in all these things; behold, therefore I also will recompense thy way upon thine head, saith the Lord GOD: and thou shalt not commit this lewdness above all thine abominations."]],
+  "Ezekiel 16:51-52":[[51, "Neither hath Samaria committed half of thy sins; but thou hast multiplied thine abominations more than they, and hast justified thy sisters in all thine abominations which thou hast done."], [52, "Thou also, which hast judged thy sisters, bear thine own shame for thy sins that thou hast committed more abominable than they: they are more righteous than thou: yea, be thou confounded also, and bear thy shame, in that thou hast justified thy sisters."]],
+  "Genesis 11:4":[[4, "And they said, Go to, let us build us a city and a tower, whose top may reach unto heaven; and let us make us a name, lest we be scattered abroad upon the face of the whole earth."]],
+  "Genesis 3:5":[[5, "For God doth know that in the day ye eat thereof, then your eyes shall be opened, and ye shall be as gods, knowing good and evil."]],
+  "Revelation 13:14-15":[[14, "And deceiveth them that dwell on the earth by the means of those miracles which he had power to do in the sight of the beast; saying to them that dwell on the earth, that they should make an image to the beast, which had the wound by a sword, and did live."], [15, "And he had power to give life unto the image of the beast, that the image of the beast should both speak, and cause that as many as would not worship the image of the beast should be killed."]],
+  "Revelation 17:1-2":[[1, "And there came one of the seven angels which had the seven vials, and talked with me, saying unto me, Come hither; I will shew unto thee the judgment of the great whore that sitteth upon many waters:"], [2, "With whom the kings of the earth have committed fornication, and the inhabitants of the earth have been made drunk with the wine of her fornication."]],
+  "Revelation 17:5":[[5, "And upon her forehead was a name written, MYSTERY, BABYLON THE GREAT, THE MOTHER OF HARLOTS AND ABOMINATIONS OF THE EARTH."]],
+  "Revelation 18:2-4":[[2, "And he cried mightily with a strong voice, saying, Babylon the great is fallen, is fallen, and is become the habitation of devils, and the hold of every foul spirit, and a cage of every unclean and hateful bird."], [3, "For all nations have drunk of the wine of the wrath of her fornication, and the kings of the earth have committed fornication with her, and the merchants of the earth are waxed rich through the abundance of her delicacies."], [4, "And I heard another voice from heaven, saying, Come out of her, my people, that ye be not partakers of her sins, and that ye receive not of her plagues."]],
+  "Revelation 18:4":[[4, "And I heard another voice from heaven, saying, Come out of her, my people, that ye be not partakers of her sins, and that ye receive not of her plagues."]],
+  "Revelation 19:7-9":[[7, "Let us be glad and rejoice, and give honour to him: for the marriage of the Lamb is come, and his wife hath made herself ready."], [8, "And to her was granted that she should be arrayed in fine linen, clean and white: for the fine linen is the righteousness of saints."], [9, "And he saith unto me, Write, Blessed are they which are called unto the marriage supper of the Lamb. And he saith unto me, These are the true sayings of God."]],
+  "Revelation 21:9":[[9, "And there came unto me one of the seven angels which had the seven vials full of the seven last plagues, and talked with me, saying, Come hither, I will shew thee the bride, the Lamb’s wife."]],
+  "Romans 1:25":[[25, "Who changed the truth of God into a lie, and worshipped and served the creature more than the Creator, who is blessed for ever. Amen."]]
+};
+
+// Quotations from other writings (say: in the deck): their words open like a verse.
+const Q = {};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b && b.dataset.q) {
+    const q = Q[b.dataset.q];
+    verseTitle.textContent = q ? q.t : b.textContent.trim();
+    verseBody.innerHTML = q ? q.h : "<p>Not loaded.</p>";
+    verseDlg.showModal();
+    verseBody.scrollTop = 0;
+    return;
+  }
+  if (b) {
+    const keys = b.dataset.v;
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>

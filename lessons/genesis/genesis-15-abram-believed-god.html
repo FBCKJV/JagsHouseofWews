@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Genesis 15 – Abram Believed God</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="A study in Genesis 15: the word of the LORD came to Abram, he believed and it was counted to him for righteousness, the covenant of the pieces, and the promise fulfilled in Christ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body .say-cite{font-size:.85rem;font-style:italic;color:var(--vellum-dim);border-top:1px solid var(--rule);padding-top:.6rem;margin-top:1rem}
+.ref.say{border-bottom-style:dashed}
+.ref.say::before{content:"\201C";margin-right:.15em}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Abram Believed God">
+  <div class="page title-page">
+    <div class="overline">A study in Genesis 15</div>
+    <h1>Abram Believed God</h1>
+    <p class="sub">Counted for righteousness, and the promise fulfilled in Christ.</p>
+    <div class="refs center"><button class="ref" data-v="Genesis 15:6">Genesis 15:6</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="The word of the Lord" data-title="The word came to Abram in a vision">
+  <div class="page">
+    <h2>The word of the <span class="lord">Lord</span> came</h2>
+    <blockquote class="scripture" style="font-style:italic">After these things the word of the <span class="lord">Lord</span> came unto Abram in a vision, saying, <mark>Fear not, Abram: I am thy shield, and thy exceeding great reward</mark>.<cite>Genesis 15:1</cite></blockquote>
+    <blockquote class="big-verse">In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God.<cite>John 1:1-2</cite></blockquote>
+    <p class="center">The Bible tells us who the word of God is. It is Jesus. <button class="ref" data-v="John 1:14">John 1:14</button></p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="The word of the Lord" data-title="Lord God, what wilt thou give me?">
+  <div class="page">
+    <h2><span class="lord">Lord</span> God, what wilt thou give me?</h2>
+    <blockquote class="scripture" style="font-style:italic">And Abram said, <span class="lord">Lord</span> God, what wilt thou give me, seeing I go childless, and the steward of my house is this Eliezer of Damascus? And Abram said, Behold, to me thou hast given no seed: and, lo, one born in my house is mine heir. And, behold, the word of the <span class="lord">Lord</span> came unto him, saying, This shall not be thine heir; but <mark>he that shall come forth out of thine own bowels shall be thine heir</mark>. And he brought him forth abroad, and said, Look now toward heaven, and tell the stars, if thou be able to number them: and he said unto him, <mark>So shall thy seed be</mark>.<cite>Genesis 15:2-5</cite></blockquote>
+    <p>Abram, old when he called upon the name of the <span class="lord">Lord</span> and received blessings and promises, now even older and without a true heir, questions the <span class="lord">Lord</span>. His faith tested, the word of God brings him forth to number the stars.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="The word of the Lord" data-title="Counted for righteousness">
+  <div class="page title-page later">
+    <div class="overline">Genesis 15:6</div>
+    <h1>Counted for righteousness</h1>
+    <blockquote class="big-verse">And <mark>he believed in the <span class="lord">Lord</span></mark>; and he <mark>counted it to him for righteousness</mark>.<cite>Genesis 15:6</cite></blockquote>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="The word of the Lord" data-title="Not of works">
+  <div class="page">
+    <h2>Not of works</h2>
+    <blockquote class="scripture" style="font-style:italic">What shall we say then that Abraham our father, as pertaining to the flesh, hath found? For if Abraham were justified by works, he hath whereof to glory; but not before God. For what saith the scripture? Abraham believed God, and it was counted unto him for righteousness. Now to him that worketh is the reward not reckoned of grace, but of debt. But <mark>to him that worketh not, but believeth</mark> on him that justifieth the ungodly, his faith is counted for righteousness.<cite>Romans 4:1-5</cite></blockquote>
+    <blockquote class="big-verse">And the scripture was fulfilled which saith, Abraham believed God, and it was imputed unto him for righteousness: and he was called the Friend of God.<cite>James 2:23</cite></blockquote>
+    <p>The promise was made when <em>he believed in the <span class="lord">Lord</span>; and he counted it to him for righteousness</em>. His righteousness was imputed for that faith, by a gracious God. And it was faith in that seed to be given by the <span class="lord">Lord</span>. <a class="ref lesson-link" href="../../studies/#lesson-post-abraham-justified-by-faith-james-2" target="_blank" rel="noopener">Abraham and James 2 ↗</a></p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="The seed of Abraham" data-title="Even as Abraham believed God">
+  <div class="page">
+    <h2>Even as Abraham believed God</h2>
+    <blockquote class="scripture" style="font-style:italic">Even as Abraham believed God, and it was accounted to him for righteousness. Know ye therefore that <mark>they which are of faith, the same are the children of Abraham</mark>. And the scripture, foreseeing that God would justify the heathen through faith, <mark>preached before the gospel unto Abraham</mark>, saying, In thee shall all nations be blessed. So then they which be of faith are blessed with faithful Abraham.<cite>Galatians 3:6-9</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Now to Abraham and his seed were the promises made. He saith not, And to seeds, as of many; but as of one, <mark>And to thy seed, which is Christ</mark>.<cite>Galatians 3:16</cite></blockquote>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="The seed of Abraham" data-title="The law cannot disannul it">
+  <div class="page">
+    <h2>The law cannot disannul it</h2>
+    <blockquote class="scripture" style="font-style:italic">And this I say, that the covenant, that was confirmed before of God in Christ, the law, which was <mark>four hundred and thirty years after, cannot disannul</mark>, that it should make the promise of none effect. For if the inheritance be of the law, it is no more of promise: but God gave it to Abraham by promise.<cite>Galatians 3:17-18</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Wherefore the law was our schoolmaster to bring us unto Christ, that we might be justified by faith. But after that faith is come, we are no longer under a schoolmaster. For ye are all the children of God by faith in Christ Jesus.<cite>Galatians 3:24-26</cite></blockquote>
+    <p class="center">“And if ye be Christ’s, then are ye Abraham’s seed, and heirs according to the promise.” <button class="ref" data-v="Galatians 3:29">Galatians 3:29</button></p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="The seed of Abraham" data-title="As the stars of heaven">
+  <div class="page">
+    <h2>As the stars of heaven</h2>
+    <p class="lead">We see in scripture that this promise was kept, his seed being one, Jesus Christ. And in Him the promise of a nation innumerable, like the stars in the sky, is fulfilled in Revelation 7.</p>
+    <blockquote class="scripture" style="font-style:italic">After this I beheld, and, lo, <mark>a great multitude, which no man could number, of all nations</mark>, and kindreds, and people, and tongues, stood before the throne, and before the Lamb, clothed with white robes, and palms in their hands; And cried with a loud voice, saying, Salvation to our God which sitteth upon the throne, and unto the Lamb.<cite>Revelation 7:9-10</cite></blockquote>
+    <p>Following the tribulation and the rapture, there are saints redeemed in the blood of Christ: 144,000 Old Testament saints, 12,000 from each of the tribes listed (not Jews, but Israelites), and <em>a great multitude, which no man could number, of all nations, and kindreds, and people, and tongues</em>. <button class="ref" data-v="1 Thessalonians 4:16-17">1 Thessalonians 4:16-17</button> <button class="ref" data-v="Revelation 7:4">Revelation 7:4</button></p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="The seed of Abraham" data-title="The promise to Abraham">
+  <div class="page">
+    <h2>The promise to Abraham</h2>
+    <div class="callout"><p>This is the promise to Abraham. Not for the modern Jew. Not for the apostate and wicked modern state calling itself Israel. But of Christ and Him crucified, with the power to make the elect heirs to the Kingdom of Heaven: whosoever will call upon the name of the <span class="lord">Lord</span>.</p></div>
+    <p class="center">Old Testament. New Testament. The same dispensation. The same promise. The same faith. <button class="ref" data-v="Hebrews 11:39-40">Hebrews 11:39-40</button></p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="The seed of Abraham" data-title="They do not understand what they affirm">
+  <div class="page">
+    <h2>They do not understand what they affirm</h2>
+    <p>Dispensationalist Christians who say “God doesn’t break His promises!” don’t understand what the promises are, and don’t believe they are fulfilled in Christ. They cannot rightly divide the word of God, for whatever reason, and they allow wicked men with a Satanic agenda to tell them what it all means.</p>
+    <div class="cols"><div class="panel cain"><h3>Knots</h3><p>They twist themselves into knots trying to square the wicked doctrines of different paths to righteousness, one of works, one of blood, one of faith; the wicked doctrine of the pre-trib rapture; the invention that the millennial Kingdom is for the modern Jew.</p></div></div>
+    <div class="refs center"><button class="ref" data-v="1 Timothy 1:7">1 Timothy 1:7</button></div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="The covenant of the pieces" data-title="Whereby shall I know?">
+  <div class="page">
+    <h2>Whereby shall I know?</h2>
+    <blockquote class="scripture" style="font-style:italic">And he said unto him, I am the <span class="lord">Lord</span> that brought thee out of Ur of the Chaldees, to give thee this land to inherit it. And he said, <span class="lord">Lord</span> God, <mark>whereby shall I know that I shall inherit it</mark>? And he said unto him, Take me an heifer of three years old, and a she goat of three years old, and a ram of three years old, and a turtledove, and a young pigeon. And he took unto him all these, and divided them in the midst, and laid each piece one against another: but the birds divided he not. And when the fowls came down upon the carcases, Abram drove them away.<cite>Genesis 15:7-11</cite></blockquote>
+    <p>The word of God tells him to offer an heifer, a she goat and a ram of three years old, a turtledove and a young pigeon. Each a sign or a picture of Christ, as established in the Levitical laws 400 years and more from when this is happening, to show the mercy of God in redemption by faith: the blood offerings, the sin offerings, the burnt offerings. A testament necessitates a blood offering. These were a symbol of Christ’s. <button class="ref" data-v="Hebrews 9:16-22">Hebrews 9:16-22</button></p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="The covenant of the pieces" data-title="A stranger in a land not theirs">
+  <div class="page">
+    <h2>A stranger in a land not theirs</h2>
+    <blockquote class="scripture" style="font-style:italic">And when the sun was going down, a deep sleep fell upon Abram; and, lo, an horror of great darkness fell upon him. And he said unto Abram, Know of a surety that <mark>thy seed shall be a stranger in a land that is not theirs</mark>, and shall serve them; and they shall afflict them <mark>four hundred years</mark>; And also that nation, whom they shall serve, will I judge: and afterward shall they come out with great substance.<cite>Genesis 15:12-14</cite></blockquote>
+    <p>In a deep sleep, a horror of great darkness fell upon Abram, and the word of God prophesied the sojourning in Egypt and enslavement. <em>And also that nation, whom they shall serve, will I judge: and afterward shall they come out with great substance.</em> Moses writing in the Spirit the prophecy of Exodus given to Abraham. <button class="ref" data-v="Exodus 12:40-41">Exodus 12:40-41</button></p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="The covenant of the pieces" data-title="The iniquity of the Amorites">
+  <div class="page">
+    <h2>The iniquity of the Amorites</h2>
+    <blockquote class="scripture" style="font-style:italic">And thou shalt go to thy fathers in peace; thou shalt be buried in a good old age. But in the fourth generation they shall come hither again: for <mark>the iniquity of the Amorites is not yet full</mark>.<cite>Genesis 15:15-16</cite></blockquote>
+    <p>Abram himself will die knowing peace, but the land will not be given unto his descendants until the wickedness of the Amorites comes in. They are going to purge the land of Canaan of the wicked, as an instrument of the <span class="lord">Lord</span>. <button class="ref" data-v="Leviticus 18:24-25">Leviticus 18:24-25</button></p>
+    <div class="refs center"><button class="ref" data-v="Genesis 15:19-21">Genesis 15:19-21</button></div>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="The covenant of the pieces" data-title="A burning lamp">
+  <div class="page">
+    <h2>A burning lamp</h2>
+    <blockquote class="scripture" style="font-style:italic">And it came to pass, that, when the sun went down, and it was dark, behold <mark>a smoking furnace, and a burning lamp that passed between those pieces</mark>. In the same day the <span class="lord">Lord</span> made a covenant with Abram, saying, Unto thy seed have I given this land, from the river of Egypt unto the great river, the river Euphrates:<cite>Genesis 15:17-18</cite></blockquote>
+    <p class="center">A furnace and a lamp passing between the pieces of the offering: a testament signed by God.</p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="The covenant of the pieces" data-title="From the river of Egypt to Euphrates">
+  <div class="page">
+    <h2>From the river of Egypt to Euphrates</h2>
+    <p class="lead">The Jews, so-called, will today say they rightly own “Greater Israel,” from the river to the sea, citing Genesis 15:18. From the Red Sea to the Euphrates, including Syria, parts of Jordan, Saudi Arabia and Iraq. They claim it is their birthright, to be secured by whatever means necessary.</p>
+    <div class="callout"><p><strong>But that’s not for them.</strong> <button class="ref" data-v="Revelation 21:1-3">Revelation 21:1-3</button></p></div>
+    <blockquote class="scripture" style="font-style:italic">And I saw no temple therein: for the Lord God Almighty and the Lamb are the temple of it. And the city had no need of the sun, neither of the moon, to shine in it: for the glory of God did lighten it, and the Lamb is the light thereof. And the nations of them which are saved shall walk in the light of it: and the kings of the earth do bring their glory and honour into it. And the gates of it shall not be shut at all by day: for there shall be no night there. And they shall bring the glory and honour of the nations into it. And there shall in no wise enter into it any thing that defileth, neither whatsoever worketh abomination, or maketh a lie: but <mark>they which are written in the Lamb’s book of life</mark>.<cite>Revelation 21:22-27</cite></blockquote>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="The reprobate doctrine" data-title="Full of iniquity">
+  <div class="page">
+    <h2>Full of iniquity</h2>
+    <p class="lead">One of the most important doctrines, which touches both the spiritual nature of man and a warning to heed here on earth, is the reprobate doctrine. It is taught throughout both the Old and New Testament.</p>
+    <p>Reprobation, the final and utter rejection by God of those who have finally and utterly rejected His overtures of grace, the call to Christ and the prodding and patience of the Holy Ghost, is one of the three spiritual states of man. <button class="ref" data-v="Romans 1:28">Romans 1:28</button> <button class="ref" data-v="Jeremiah 6:30">Jeremiah 6:30</button></p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="The reprobate doctrine" data-title="The three spiritual states of man">
+  <div class="page">
+    <h2>The three spiritual states of man</h2>
+    <div class="cols-3"><div class="panel believers"><h3>The unregenerate sinner</h3><p>Dead in spirit but with the conscience of God within, who until death could hear the call and believe on Jesus Christ and be saved. The children of disobedience. <button class="ref" data-v="Ephesians 2:1-3">Ephesians 2:1-3</button></p></div><div class="panel believers"><h3>The saved</h3><p>Those who call upon the name of the <span class="lord">Lord</span>, believing God’s testimony, spirit quickened. Born again believers, called the sons of God. <button class="ref" data-v="John 1:12">John 1:12</button></p></div><div class="panel cain"><h3>The reprobate</h3><p>Twice dead. Conscience seared. Hearts hardened, ears dulled. Unable to come to the knowledge of the truth. Rejected of God, given up. Clouds without water. The children of the devil. <button class="ref" data-v="Jude 1:12-13">Jude 12-13</button> <button class="ref" data-v="1 Timothy 4:2">1 Timothy 4:2</button> <button class="ref" data-v="2 Timothy 3:7-8">2 Timothy 3:7-8</button></p></div></div>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="The reprobate doctrine" data-title="Lumped in with the common sinner">
+  <div class="page">
+    <h2>Lumped in with the common sinner</h2>
+    <p>Often Christians, seeking to be kind and show mercy, thinking they are doing the right thing, will completely ignore the final group, lumping them in with the common sinner. Holding out hope, even when they reveal their wickedness in ways exactly as God’s word tells us they will.</p>
+    <p>Evil often isn’t an outward appearance of malevolence, like a comic book super villain. It’s often someone who is a miserable human being. We take pity on them, and they use our good-natured inclination for mercy and grace to take advantage of us. They are the false teachers, the false prophets bringing doctrines of damnation, with the appearance of holiness, whited sepulchres. <button class="ref" data-v="Matthew 23:27-33">Matthew 23:27-33</button> <button class="ref" data-v="2 Peter 2:1">2 Peter 2:1</button></p>
+    <p class="sub center">Study the whole doctrine in <a class="ref lesson-link" href="../../studies/#lesson-topic-reprobate" target="_blank" rel="noopener">The Reprobate Mind ↗</a>, to better defend yourself, your family and your community.</p>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Close" data-title="The same promise, the same faith">
+  <div class="page title-page later">
+    <div class="overline">Genesis 15</div>
+    <h1>The same promise, the same faith</h1>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order"><li><strong>The Word came to Abram</strong>Fear not: I am thy shield, and thy exceeding great reward.</li><li><strong>He believed</strong>And it was counted to him for righteousness, without works.</li><li><strong>The seed is Christ</strong>Heirs as the stars, a great multitude of all nations, in Him.</li><li><strong>God’s timing</strong>The iniquity of the Amorites was not yet full. God judges in His time.</li></ol></div>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Close" data-title="Further study">
+  <div class="page">
+    <h2>Further study</h2>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-genesis-14-melchizedek" target="_blank" rel="noopener">Genesis 14: Melchizedek ↗</a><a class="ref lesson-link" href="../../studies/#lesson-genesis-16-hagar-and-ishmael" target="_blank" rel="noopener">Genesis 16: Hagar and Ishmael ↗</a><a class="ref lesson-link" href="../../studies/#lesson-romans-class-romans-4" target="_blank" rel="noopener">Romans 4: Abraham Believed God ↗</a><a class="ref lesson-link" href="../../studies/#lesson-topic-israel" target="_blank" rel="noopener">The Israel of God ↗</a><a class="ref lesson-link" href="../../studies/#lesson-topic-reprobate" target="_blank" rel="noopener">The Reprobate Mind ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 Thessalonians 4:16-17":[[16, "For the Lord himself shall descend from heaven with a shout, with the voice of the archangel, and with the trump of God: and the dead in Christ shall rise first:"], [17, "Then we which are alive and remain shall be caught up together with them in the clouds, to meet the Lord in the air: and so shall we ever be with the Lord."]],
+  "1 Timothy 1:7":[[7, "Desiring to be teachers of the law; understanding neither what they say, nor whereof they affirm."]],
+  "1 Timothy 4:2":[[2, "Speaking lies in hypocrisy; having their conscience seared with a hot iron;"]],
+  "2 Peter 2:1":[[1, "But there were false prophets also among the people, even as there shall be false teachers among you, who privily shall bring in damnable heresies, even denying the Lord that bought them, and bring upon themselves swift destruction."]],
+  "2 Timothy 3:7-8":[[7, "Ever learning, and never able to come to the knowledge of the truth."], [8, "Now as Jannes and Jambres withstood Moses, so do these also resist the truth: men of corrupt minds, reprobate concerning the faith."]],
+  "Ephesians 2:1-3":[[1, "And you hath he quickened, who were dead in trespasses and sins;"], [2, "Wherein in time past ye walked according to the course of this world, according to the prince of the power of the air, the spirit that now worketh in the children of disobedience:"], [3, "Among whom also we all had our conversation in times past in the lusts of our flesh, fulfilling the desires of the flesh and of the mind; and were by nature the children of wrath, even as others."]],
+  "Exodus 12:40-41":[[40, "Now the sojourning of the children of Israel, who dwelt in Egypt, was four hundred and thirty years."], [41, "And it came to pass at the end of the four hundred and thirty years, even the selfsame day it came to pass, that all the hosts of the LORD went out from the land of Egypt."]],
+  "Galatians 3:29":[[29, "And if ye be Christ’s, then are ye Abraham’s seed, and heirs according to the promise."]],
+  "Genesis 15:19-21":[[19, "The Kenites, and the Kenizzites, and the Kadmonites,"], [20, "And the Hittites, and the Perizzites, and the Rephaims,"], [21, "And the Amorites, and the Canaanites, and the Girgashites, and the Jebusites."]],
+  "Genesis 15:6":[[6, "And he believed in the LORD; and he counted it to him for righteousness."]],
+  "Hebrews 11:39-40":[[39, "And these all, having obtained a good report through faith, received not the promise:"], [40, "God having provided some better thing for us, that they without us should not be made perfect."]],
+  "Hebrews 9:16-22":[[16, "For where a testament is, there must also of necessity be the death of the testator."], [17, "For a testament is of force after men are dead: otherwise it is of no strength at all while the testator liveth."], [18, "Whereupon neither the first testament was dedicated without blood."], [19, "For when Moses had spoken every precept to all the people according to the law, he took the blood of calves and of goats, with water, and scarlet wool, and hyssop, and sprinkled both the book, and all the people,"], [20, "Saying, This is the blood of the testament which God hath enjoined unto you."], [21, "Moreover he sprinkled with blood both the tabernacle, and all the vessels of the ministry."], [22, "And almost all things are by the law purged with blood; and without shedding of blood is no remission."]],
+  "Jeremiah 6:30":[[30, "Reprobate silver shall men call them, because the LORD hath rejected them."]],
+  "John 1:12":[[12, "But as many as received him, to them gave he power to become the sons of God, even to them that believe on his name:"]],
+  "John 1:14":[[14, "And the Word was made flesh, and dwelt among us, (and we beheld his glory, the glory as of the only begotten of the Father,) full of grace and truth."]],
+  "Jude 1:12-13":[[12, "These are spots in your feasts of charity, when they feast with you, feeding themselves without fear: clouds they are without water, carried about of winds; trees whose fruit withereth, without fruit, twice dead, plucked up by the roots;"], [13, "Raging waves of the sea, foaming out their own shame; wandering stars, to whom is reserved the blackness of darkness for ever."]],
+  "Leviticus 18:24-25":[[24, "Defile not ye yourselves in any of these things: for in all these the nations are defiled which I cast out before you:"], [25, "And the land is defiled: therefore I do visit the iniquity thereof upon it, and the land itself vomiteth out her inhabitants."]],
+  "Matthew 23:27-33":[[27, "Woe unto you, scribes and Pharisees, hypocrites! for ye are like unto whited sepulchres, which indeed appear beautiful outward, but are within full of dead men’s bones, and of all uncleanness."], [28, "Even so ye also outwardly appear righteous unto men, but within ye are full of hypocrisy and iniquity."], [29, "Woe unto you, scribes and Pharisees, hypocrites! because ye build the tombs of the prophets, and garnish the sepulchres of the righteous,"], [30, "And say, If we had been in the days of our fathers, we would not have been partakers with them in the blood of the prophets."], [31, "Wherefore ye be witnesses unto yourselves, that ye are the children of them which killed the prophets."], [32, "Fill ye up then the measure of your fathers."], [33, "Ye serpents, ye generation of vipers, how can ye escape the damnation of hell?"]],
+  "Revelation 21:1-3":[[1, "And I saw a new heaven and a new earth: for the first heaven and the first earth were passed away; and there was no more sea."], [2, "And I John saw the holy city, new Jerusalem, coming down from God out of heaven, prepared as a bride adorned for her husband."], [3, "And I heard a great voice out of heaven saying, Behold, the tabernacle of God is with men, and he will dwell with them, and they shall be his people, and God himself shall be with them, and be their God."]],
+  "Revelation 7:4":[[4, "And I heard the number of them which were sealed: and there were sealed an hundred and forty and four thousand of all the tribes of the children of Israel."]],
+  "Romans 1:28":[[28, "And even as they did not like to retain God in their knowledge, God gave them over to a reprobate mind, to do those things which are not convenient;"]]
+};
+
+// Quotations from other writings (say: in the deck): their words open like a verse.
+const Q = {};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b && b.dataset.q) {
+    const q = Q[b.dataset.q];
+    verseTitle.textContent = q ? q.t : b.textContent.trim();
+    verseBody.innerHTML = q ? q.h : "<p>Not loaded.</p>";
+    verseDlg.showModal();
+    verseBody.scrollTop = 0;
+    return;
+  }
+  if (b) {
+    const keys = b.dataset.v;
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
