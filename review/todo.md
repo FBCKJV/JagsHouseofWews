@@ -21,7 +21,7 @@ As of November 8, 2026 (studies/data/books.json), 24 chapters outside the Psalms
 - [ ] **Jeremiah 49**
 - [ ] **Genesis 26, 35 and 48** (see below)
 
-The Psalms series itself still has 90 chapters to go: 58–71, 73–102, 104–118 and 120–150 (72, 103 and 119 have
+The Psalms series itself still has 89 chapters to go: 59–71, 73–102, 104–118 and 120–150 (72, 103 and 119 have
 earlier one-off studies, which the series will replace as the chapter's main study).
 
 
