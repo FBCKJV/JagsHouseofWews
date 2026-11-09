@@ -82,6 +82,15 @@ a:hover { color: var(--gold-l); }
 }
 .hbtn.on { color: var(--gold); border-color: var(--gold-d); }
 .hbtn:hover { background: var(--bg3); color: var(--gold); border-color: var(--gold-d); }
+.hbtn[hidden] { display: none; }
+.share-toast {
+  position: fixed; left: 50%; bottom: 84px; transform: translateX(-50%); z-index: 60;
+  padding: 10px 16px; max-width: 92vw; border-radius: 8px;
+  background: var(--bg3); color: var(--gold-t); border: 1px solid var(--gold-d);
+  box-shadow: 0 4px 14px var(--shadow); font-size: 14px; pointer-events: none;
+}
+.share-toast[hidden] { display: none; }
+@media print { #share-btn, .share-toast { display: none; } }
 
 /* BREADCRUMBS: a quiet line under the header */
 .crumbs {
@@ -754,3 +763,6 @@ details.notes { margin-top: 10px; }
 .study-tab.on { border-color: var(--gold); box-shadow: inset 0 -2px 0 var(--gold); }
 .study-tab.on b { color: var(--gold); }
 .fineprint.version { margin-top: 6px; opacity: .8; }
+
+/* Narrow phones: four header buttons leave no room for the small "Studies" word. */
+@media (max-width: 420px) { #logo .logo-sub { display: none; } }

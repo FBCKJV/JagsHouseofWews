@@ -7,7 +7,7 @@
 
   const KJV_APP = 'https://fbckjv.app/KJVBible/';
   // Shown on the About page. Started at v1.17 (after 17 merged updates); each merged update adds one.
-  const APP_VERSION = '2.20', APP_DATE = '2026-11-09';
+  const APP_VERSION = '2.21', APP_DATE = '2026-11-09';
   const view = document.getElementById('view');
   const crumbs = document.getElementById('crumbs');
   let INDEX = null;
@@ -1392,10 +1392,42 @@
     });
   }
 
+  // ---------- share: a link to whatever page is open (studies, lessons, doctrines...). The memes
+  // page has none: each picture there is already easy to copy and paste. ----------
+  const shareBtn = document.getElementById('share-btn');
+  const shareToast = document.createElement('div');
+  shareToast.className = 'share-toast'; shareToast.hidden = true;
+  shareToast.setAttribute('role', 'status');
+  document.body.appendChild(shareToast);
+  let shareTimer = 0;
+  function shareSay(msg) {
+    shareToast.textContent = msg; shareToast.hidden = false;
+    clearTimeout(shareTimer);
+    shareTimer = setTimeout(() => { shareToast.hidden = true; }, 1800);
+  }
+  shareBtn.addEventListener('click', () => {
+    const url = location.href;
+    if (navigator.share && matchMedia('(pointer:coarse)').matches) {
+      navigator.share({ title: document.title, url }).catch(() => {});
+      return;
+    }
+    const fallback = () => {
+      const t = document.createElement('textarea');
+      t.value = url; t.style.position = 'fixed'; t.style.opacity = '0';
+      document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); shareSay('Link copied'); } catch (e) { shareSay('Copy failed'); }
+      t.remove();
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(() => shareSay('Link copied'), fallback);
+    } else fallback();
+  });
+
   // ---------- router: (empty)  #Psalms  #Psalms-23  #doctrines  #doctrine-x  #lessons  #lesson-x  #pictures ----------
   async function route() {
     const h = decodeURIComponent(location.hash.slice(1));
     markTab(h);
+    shareBtn.hidden = h === 'pictures';
     try {
       if (!INDEX) INDEX = await getJSON('data/books.json');
       if (!sheet.hidden) hideSheet();
