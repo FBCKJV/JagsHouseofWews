@@ -1,6 +1,6 @@
 # Teachings not filed under a topic yet
 
-22 posts chain verses from several books to build a point but aren't in `review/topics.json` yet. Add each under `"posts"` with its topics, theme, title and summary (or `"teaching": false` to leave it out), then rerun `python3 tools/clean_studies.py`.
+23 posts chain verses from several books to build a point but aren't in `review/topics.json` yet. Add each under `"posts"` with its topics, theme, title and summary (or `"teaching": false` to leave it out), then rerun `python3 tools/clean_studies.py`.
 
 Regenerated on every run; don't edit it.
 
@@ -48,3 +48,5 @@ Regenerated on every run; don't edit it.
   > Psalm 57 is yet another song written by David during his flight from King Saul, when he fled from Saul in the cave. The psalmist cries out for mercy, 
 - `added-drive-psalms-58` · 2026-11-09 · Psalms 58 · Psalm 58:1, Psalm 58:2, Matthew 12:30, Psalm 58:6
   > Psalm 58 serves not only as another example of imprecatory prayer, but as it's meant to be read or sung among the congregation, it serves as an exampl
+- `added-drive-psalms-59` · 2026-11-10 · Psalms 59 · 1 Samuel 19:10-18, Matthew 26:39, Hebrews 12:2, Matthew 26:53
+  > We often forget the flights of David were the impetus of so many Psalms. Psalm 59 was written as Saul, David's King and father in law sent men to Davi
