@@ -1,6 +1,6 @@
 # Teachings not filed under a topic yet
 
-23 posts chain verses from several books to build a point but aren't in `review/topics.json` yet. Add each under `"posts"` with its topics, theme, title and summary (or `"teaching": false` to leave it out), then rerun `python3 tools/clean_studies.py`.
+24 posts chain verses from several books to build a point but aren't in `review/topics.json` yet. Add each under `"posts"` with its topics, theme, title and summary (or `"teaching": false` to leave it out), then rerun `python3 tools/clean_studies.py`.
 
 Regenerated on every run; don't edit it.
 
@@ -50,3 +50,5 @@ Regenerated on every run; don't edit it.
   > Psalm 58 serves not only as another example of imprecatory prayer, but as it's meant to be read or sung among the congregation, it serves as an exampl
 - `added-drive-psalms-59` · 2026-11-10 · Psalms 59 · 1 Samuel 19:10-18, Matthew 26:39, Hebrews 12:2, Matthew 26:53
   > We often forget the flights of David were the impetus of so many Psalms. Psalm 59 was written as Saul, David's King and father in law sent men to Davi
+- `added-drive-psalms-60` · 2026-11-12 · Psalms 60 · 1 Chronicles 18:3-7, 1 Chronicles 18:12-15, 1 Chronicles 18:7-8, 11, 2 Samuel 10:1-7
+  > Psalm 60 presents an interesting perspective of events during the reign of King David. It was written to commemorate the time of war, when Joab strove
