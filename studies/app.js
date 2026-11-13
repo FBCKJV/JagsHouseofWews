@@ -7,7 +7,7 @@
 
   const KJV_APP = 'https://fbckjv.app/KJVBible/';
   // Shown on the About page. Started at v1.17 (after 17 merged updates); each merged update adds one.
-  const APP_VERSION = '2.26', APP_DATE = '2026-11-12';
+  const APP_VERSION = '2.28', APP_DATE = '2026-11-13';
   const view = document.getElementById('view');
   const crumbs = document.getElementById('crumbs');
   let INDEX = null;
@@ -38,24 +38,6 @@
 
 
   // "Psalm 23", like the KJV app; every other book is just "Book N"
-  // Share: the phone's share sheet where there is one, otherwise copy the page's address.
-  const SHARE_BTN = '<button class="btn" type="button" data-share>Share</button>';
-  document.addEventListener('click', e => {
-    const b = e.target.closest('[data-share]');
-    if (!b) return;
-    const url = location.href, title = document.title;
-    const said = text => {
-      const t = document.createElement('div');
-      t.className = 'share-toast'; t.setAttribute('role', 'status'); t.textContent = text;
-      document.body.appendChild(t); setTimeout(() => t.remove(), 2200);
-    };
-    if (navigator.share && matchMedia('(pointer:coarse)').matches) {
-      navigator.share({ title, url }).catch(() => {});
-    } else if (navigator.clipboard) {
-      navigator.clipboard.writeText(url).then(() => said('Link copied'), () => said(url));
-    } else said(url);
-  });
-
   function chapterName(book, ch) {
     return (book === 'Psalms' ? 'Psalm' : book) + ' ' + ch;
   }
@@ -506,7 +488,6 @@
       <div class="hero">
         <h1>${esc(topic.name)}</h1>
         <p>${esc(topic.about)}</p>
-        <div class="actions">${SHARE_BTN}</div>
       </div>
       ${topic.timeline ? `<section class="timeline-card" aria-label="The order of events">
         <span class="label">The order of events</span>
@@ -715,8 +696,8 @@
         <h1 class="page-title">${esc(title)}</h1>
         ${l.by ? `<p class="by">From ${esc(l.by)}</p>` : ''}
         ${l.summary ? `<p class="teaching-sum">${esc(l.summary)}</p>` : ''}
-        <div class="actions">${opens.map((p, i) =>
-          `<a class="btn${i ? '' : ' primary'}" href="${esc(p.href)}" target="_blank" rel="noopener">${PART_VERB[p.kind]} the ${esc(p.label.toLowerCase())} ↗</a>`).join('')}${SHARE_BTN}</div>
+        ${opens.length ? `<div class="actions">${opens.map((p, i) =>
+          `<a class="btn${i ? '' : ' primary'}" href="${esc(p.href)}" target="_blank" rel="noopener">${PART_VERB[p.kind]} the ${esc(p.label.toLowerCase())} ↗</a>`).join('')}</div>` : ''}
         ${l.verses.length ? `<div class="refs" aria-label="Scripture">${refChips(l.verses)}</div>` : ''}
         ${filedUnder(l.topics)}
       </div>
@@ -841,7 +822,6 @@
         <a class="btn primary" href="${esc(kjvHref)}" target="_blank" rel="noopener">Read in the KJV app ↗</a>
         ${slidesBtn}
         ${studies.length || shared ? '<a class="btn" href="#commentary" data-jump="commentary">Skip to commentary ↓</a>' : ''}
-        ${SHARE_BTN}
       </div>`;
 
     let body = '';
@@ -1412,10 +1392,42 @@
     });
   }
 
+  // ---------- share: a link to whatever page is open (studies, lessons, doctrines...). The memes
+  // page has none: each picture there is already easy to copy and paste. ----------
+  const shareBtn = document.getElementById('share-btn');
+  const shareToast = document.createElement('div');
+  shareToast.className = 'share-toast'; shareToast.hidden = true;
+  shareToast.setAttribute('role', 'status');
+  document.body.appendChild(shareToast);
+  let shareTimer = 0;
+  function shareSay(msg) {
+    shareToast.textContent = msg; shareToast.hidden = false;
+    clearTimeout(shareTimer);
+    shareTimer = setTimeout(() => { shareToast.hidden = true; }, 1800);
+  }
+  shareBtn.addEventListener('click', () => {
+    const url = location.href;
+    if (navigator.share && matchMedia('(pointer:coarse)').matches) {
+      navigator.share({ title: document.title, url }).catch(() => {});
+      return;
+    }
+    const fallback = () => {
+      const t = document.createElement('textarea');
+      t.value = url; t.style.position = 'fixed'; t.style.opacity = '0';
+      document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); shareSay('Link copied'); } catch (e) { shareSay('Copy failed'); }
+      t.remove();
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(() => shareSay('Link copied'), fallback);
+    } else fallback();
+  });
+
   // ---------- router: (empty)  #Psalms  #Psalms-23  #doctrines  #doctrine-x  #lessons  #lesson-x  #pictures ----------
   async function route() {
     const h = decodeURIComponent(location.hash.slice(1));
     markTab(h);
+    shareBtn.hidden = h === 'pictures';
     try {
       if (!INDEX) INDEX = await getJSON('data/books.json');
       if (!sheet.hidden) hideSheet();
