@@ -13,7 +13,7 @@ clean_studies.py applies on every run. Checks:
 
 Reads:
   telegram_chapter_studies/chapter_studies.json
-  the KJV text from the KJV Bible app (https://fbckjv.app/KJVBible/bible/<Book>.json),
+  the KJV text from the KJVBible repo (FBCKJV/kjvbible, bible/<Book>.json),
     cached in tools/.kjv-cache/ after the first run
   review/corrections.json (fixes already approved are not proposed again)
 Writes:
