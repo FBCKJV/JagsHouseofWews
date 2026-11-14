@@ -13,7 +13,7 @@ clean_studies.py applies on every run. Checks:
 
 Reads:
   telegram_chapter_studies/chapter_studies.json
-  the KJV text from the KJV Bible app (https://fbckjv.app/KJVBible/bible/<Book>.json),
+  the KJV text from the KJVBible repo (FBCKJV/kjvbible, bible/<Book>.json),
     cached in tools/.kjv-cache/ after the first run
   review/corrections.json (fixes already approved are not proposed again)
 Writes:
@@ -33,7 +33,8 @@ from clean_studies import BOOKS, slug, load_corrections, apply_corrections  # no
 SRC = os.path.join(ROOT, 'telegram_chapter_studies', 'chapter_studies.json')
 OUT = os.path.join(ROOT, 'review', 'proposed_corrections.md')
 CACHE = os.path.join(ROOT, 'tools', '.kjv-cache')
-KJV_URL = 'https://fbckjv.app/KJVBible/bible/{}.json'
+# The KJV text stored in the KJVBible repo (bible/<Book>.json), the same copy the KJV Bible app uses.
+KJV_URL = 'https://raw.githubusercontent.com/FBCKJV/kjvbible/main/bible/{}.json'
 
 ALIASES = {b.lower(): b for b in BOOKS}
 ALIASES.update({'psalm': 'Psalms', 'song of songs': 'Song of Solomon', 'revelations': 'Revelation'})
