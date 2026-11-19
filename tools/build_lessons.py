@@ -19,6 +19,30 @@ def load(path):
         return json.load(f)
 
 
+def section_starts(path, refs):
+    """For a slide deck that teaches several chapters, the slide where each chapter's own section starts:
+    {"Psalms-2": 12}. A section counts when its name is the chapter ("Psalm 2", "John 3") or ends with it
+    ("The window · Psalm 59"). The app opens the deck there from that chapter's page."""
+    try:
+        with open(os.path.join(ROOT, path), encoding='utf-8') as f:
+            names = re.findall(r'<section class="slide" data-section="([^"]*)"', f.read())
+    except OSError:
+        return {}
+    out = {}
+    for ref in refs:
+        m = re.match(r'^(.*\S)\s+(\d+)$', ref.strip())
+        if not m:
+            continue
+        book = 'Psalms' if m.group(1) in ('Psalm', 'Psalms') else m.group(1)
+        label = ('Psalm' if book == 'Psalms' else book) + ' ' + m.group(2)
+        for i, n in enumerate(names, 1):
+            n = n.replace('&amp;', '&')
+            if n == label or n.endswith(' · ' + label):
+                out[book.replace(' ', '') + '-' + m.group(2)] = i
+                break
+    return out
+
+
 def main():
     cat = load('review/lessons.json')
     topics = {t['id'] for t in load('review/topics.json')['topics']}
@@ -62,7 +86,12 @@ def main():
                    'pdf' if p['file'].endswith('.pdf') else 'page'
             # the app lives in studies/, so notes load from data/… and pages open from ../
             href = p['file'][len('studies/'):] if kind == 'notes' else '../' + p['file']
-            parts.append({'label': p['label'], 'kind': kind, 'href': href})
+            part = {'label': p['label'], 'kind': kind, 'href': href}
+            if kind == 'page' and p['file'].endswith('.html'):
+                st = section_starts(p['file'], x.get('chapters', []))
+                if st:
+                    part['starts'] = st
+            parts.append(part)
         lessons.append({
             'id': x['id'], 'title': x['title'], 'shelf': x['shelf'], 'order': x.get('order', 0),
             'summary': x.get('summary', ''), 'by': x.get('by'),
