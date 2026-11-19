@@ -35,8 +35,9 @@ earlier one-off studies, which the series will replace as the chapter's main stu
   shared heading then fall away chapter by chapter.
 - [x] **Chapter panel on Genesis and Psalms.** On for Psalm 51 and John: That Ye Might Believe, then every Genesis
   deck, Psalms 22 and 50, and David's Flight 1-3 (Nov 2026).
-- [ ] **Chapter panel on the rest**, a group at a time: Job, then John 6 and John I Am, then Daniel. Romans last
-  (a closed lesson plan, already taught).
+- [x] **Chapter panel on John 6, John I Am, the five Job decks, and the Daniel decks** (Daniel 11, Daniel 8-12
+  timeline, Daniel's 70th Week) (Nov 2026).
+- [ ] **Chapter panel on Romans**, last (a closed lesson plan, already taught).
 - [x] **Psalms decks from the series studies.** Every series study from Psalm 1 to Psalm 63 has slides (Nov 2026):
   Psalms 1-5, 6-8, 9-10, 11-12, 13-15, 16-17, 18-20, 21-25, 26-30, 31-32, 33-35, 36-37, 38-40, 41-43, 44, 45, 46-47,
   48, 49, 50, 51, 53-55, 58-60, 61-63, 22, and David's Flight (34, 52, 54, 56, 57, 59). As new daily studies come in,
