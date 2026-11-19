@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Psalm 51: Have Mercy upon Me, O God</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Psalm 51, David&#x27;s cry of contrition when Nathan the prophet came unto him: confession, the false doctrine of original sin guilt, the washing of forgiveness, the joy of salvation restored, and the broken and contrite heart God will not despise, in the King James Bible.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body .say-cite{font-size:.85rem;font-style:italic;color:var(--vellum-dim);border-top:1px solid var(--rule);padding-top:.6rem;margin-top:1rem}
+.ref.say{border-bottom-style:dashed}
+.ref.say::before{content:"\201C";margin-right:.15em}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Have Mercy upon Me, O God">
+  <div class="page title-page">
+    <div class="overline">A Psalm of David</div>
+    <h1>Psalm 51: Have Mercy upon Me, O God</h1>
+    <p class="sub">Confession • Mercy • Forgiveness • The Joy of Salvation • A Contrite Heart</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 51:1">Psalm 51:1</button><button class="ref" data-v="2 Samuel 12:7">2 Samuel 12:7</button><button class="ref" data-v="1 John 1:9">1 John 1:9</button><button class="ref" data-v="Psalms 51:17">Psalm 51:17</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="David at his lowest" data-title="The clearest cry of contrition">
+  <div class="page">
+    <div class="kicker">Psalm 51 · David at his lowest</div>
+    <h2>The clearest cry of contrition</h2>
+    <p><strong>Psalm 51</strong> is the clearest and most sober cry of contrition and supplication for forgiveness by a believer, in the face of a judgment by the Almighty God, that we have in Scripture.</p>
+    <p>It is David at his lowest. "A Psalm of David, when Nathan the prophet came unto him, after he had gone in to Bath-sheba."</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="David at his lowest" data-title="We know the story">
+  <div class="page">
+    <div class="kicker">2 Samuel 11 · Bathsheba</div>
+    <h2>We know the story</h2>
+    <p>We know the story. David doesn't go off to war as kings were expected to. He stays at his place and sees Bathsheba, the wife of his soldier, Uriah the Hittite, bathing on her nearby roof. Filled with lust, he has her. And as a consequence of that adultery, David conspired to have Uriah killed in battle, and wed his pregnant widow.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="David at his lowest" data-title="Thou art the man">
+  <div class="page">
+    <div class="kicker">2 Samuel 12 · Nathan</div>
+    <h2>Thou art the man</h2>
+    <p>Nathan confronts the King, and the Lord curses David for his sin;</p>
+    <blockquote class="scripture" style="font-style:italic">And Nathan said to David, <mark>Thou art the man</mark>. Thus saith the <span class="lord">Lord</span> God of Israel, I anointed thee king over Israel, and I delivered thee out of the hand of Saul; And I gave thee thy master’s house, and thy master’s wives into thy bosom, and gave thee the house of Israel and of Judah; and if that had been too little, I would moreover have given unto thee such and such things. Wherefore hast thou despised the commandment of the <span class="lord">Lord</span>, to do evil in his sight? thou hast killed Uriah the Hittite with the sword, and hast taken his wife to be thy wife, and hast slain him with the sword of the children of Ammon. Now therefore the sword shall never depart from thine house; because thou hast despised me, and hast taken the wife of Uriah the Hittite to be thy wife.<cite>2 Samuel 12:7-10</cite></blockquote>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="David at his lowest" data-title="The child shall surely die">
+  <div class="page">
+    <div class="kicker">2 Samuel 12 · Nathan</div>
+    <h2>The child shall surely die</h2>
+    <p>The judgment of God was given, the child should die.</p>
+    <blockquote class="scripture" style="font-style:italic">Howbeit, because by this deed thou hast given great occasion to the enemies of the <span class="lord">Lord</span> to blaspheme, <mark>the child also that is born unto thee shall surely die</mark>. And Nathan departed unto his house. And the <span class="lord">Lord</span> struck the child that Uriah’s wife bare unto David, and it was very sick.<cite>2 Samuel 12:14-15</cite></blockquote>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="David at his lowest" data-title="Is the child dead?">
+  <div class="page">
+    <div class="kicker">2 Samuel 12 · Nathan</div>
+    <h2>Is the child dead?</h2>
+    <p>David fasts and prays and stays by the child's side, but in the end the illness takes the boy.</p>
+    <blockquote class="scripture" style="font-style:italic">And it came to pass on the seventh day, that the child died. And the servants of David feared to tell him that the child was dead: for they said, Behold, while the child was yet alive, we spake unto him, and he would not hearken unto our voice: how will he then vex himself, if we tell him that the child is dead? But when David saw that his servants whispered, David perceived that the child was dead: therefore David said unto his servants, Is the child dead? And they said, He is dead.<cite>2 Samuel 12:18-19</cite></blockquote>
+    <p>David, devastated, cleans himself and goes into the house of the Lord to worship. It is in this context that this Psalm was written.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Have mercy upon me" data-title="According to thy lovingkindness">
+  <div class="page">
+    <div class="kicker">Psalm 51 · Have mercy upon me</div>
+    <h2>According to thy lovingkindness</h2>
+    <blockquote class="big-verse">Have mercy upon me, O God, <mark>according to thy lovingkindness</mark>: according unto <mark>the multitude of thy tender mercies</mark> blot out my transgressions.<cite>Psalm 51:1</cite></blockquote>
+    <p>Rather than a root of bitterness against the judgement of God, as many are tempted to take on in the face of such fierce judgement, David concedes and comes to the Lord, asking for mercy. As he has so often in <strong>Psalms</strong>, he begins in worship, praising God for His lovingkindness and mercy. Reminding himself, and the Lord of His great qualities, and appeals to the ultimate judge to blot out his transgressions.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Have mercy upon me" data-title="A formula of prayer">
+  <div class="page">
+    <div class="kicker">Application • A formula of prayer</div>
+    <h2>A formula of prayer</h2>
+    <p>This is a formula of prayer that we should commit to our prayer life. Under better circumstances and joyous events, or in grave repentance and regret for whatever sins we have committed, the Lord should be approached in humility and meekness of spirit. Hallowing His holy name.</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Have mercy upon me" data-title="Faithful to forgive">
+  <div class="page">
+    <div class="kicker">Psalm 51 · Wash me throughly</div>
+    <h2>Faithful to forgive</h2>
+    <blockquote class="big-verse">Wash me throughly from mine iniquity, and cleanse me from my sin.<cite>Psalm 51:2</cite></blockquote>
+    <p>The request is to forgive the confessed transgressions, knowing He is merciful and faithful to forgive His children.</p>
+    <blockquote class="big-verse">If we confess our sins, <mark>he is faithful and just to forgive us our sins</mark>, and to cleanse us from all unrighteousness.<cite>1 John 1:9</cite></blockquote>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Have mercy upon me" data-title="Even the sins of the level of David">
+  <div class="page">
+    <div class="kicker">Psalm 51 · Wash me throughly</div>
+    <h2>Even the sins of the level of David</h2>
+    <p>This same promise applies to believers, today. The sure knowledge that our heavenly Father is faithful to forgive us, even the sins of the level of David. To wash us throughly, to cleanse us. To blot the iniquity from our record, and heal us, and our relationship with God.</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Have mercy upon me" data-title="If we confess our sins">
+  <div class="page">
+    <div class="kicker">Psalm 51 · I acknowledge my transgressions</div>
+    <h2>If we confess our sins</h2>
+    <blockquote class="big-verse">For <mark>I acknowledge my transgressions</mark>: and my sin is ever before me.<cite>Psalm 51:3</cite></blockquote>
+    <p>But note, it is if we confess our sins. David acknowledged his transgressions. We cannot lie to God and we should not lie to ourselves. We cannot hide from our sin when we've faced judgment, and our conscience keeps the sin ever before us in guilt.</p>
+    <p>The joy and benefit of the forgiveness of God comes in relief from that burden, and removing the fear of chastening, that comes from a contrite heart seeking His mercy.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Against thee, thee only" data-title="That thou mightest be justified">
+  <div class="page">
+    <div class="kicker">Psalm 51 · Against thee, thee only</div>
+    <h2>That thou mightest be justified</h2>
+    <blockquote class="big-verse"><mark>Against thee, thee only, have I sinned</mark>, and done this evil in thy sight: <mark>that thou mightest be justified when thou speakest</mark>, and be clear when thou judgest.<cite>Psalm 51:4</cite></blockquote>
+    <p>David confesses that it is the transgression towards God that put him in judgment, and so he admits to God that not only has he sinned against Him, but that David acknowledges his understanding that God's judgments are right and deserved.</p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Against thee, thee only" data-title="The better way">
+  <div class="page">
+    <div class="kicker">Application • Bitterness or confession</div>
+    <h2>The better way</h2>
+    <p>Again, it is very common to see people in sin, when facing the judgment of God for it, to grow to resent Him and despise His judgements. To make excuses for their acts, to deny their intent, to place what has resulted from their wicked ways on the shoulders of a God whom they reject as judge.</p>
+    <p>These people are destroyed with their bitterness, wracked with guilt, have a broken relationship with the God that bought them, and are often called home early, the result of their being incapable of being honest and appealing to His mercy.</p>
+    <p>But David shows us the better way.</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Shapen in iniquity" data-title="A sinner, born of a sinner">
+  <div class="page">
+    <div class="kicker">Psalm 51 · Shapen in iniquity</div>
+    <h2>A sinner, born of a sinner</h2>
+    <p>David continues his confession;</p>
+    <blockquote class="big-verse">Behold, I was shapen in iniquity; and in sin did my mother conceive me.<cite>Psalm 51:5</cite></blockquote>
+    <p>He uses hyperbolic language to say that he is a sinner, born of a sinner, in his appeal for mercy.</p>
+    <p>There is much made of this passage, and all manner of doctrines that have been spun out of it. The primary being "original sin" as the idea that babies are born guilty, and condemned.</p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Shapen in iniquity" data-title="I shall go to him">
+  <div class="page">
+    <div class="kicker">2 Samuel 12 · The child</div>
+    <h2>I shall go to him</h2>
+    <p>But the very account being mentioned shows that David did not believe any such thing.</p>
+    <blockquote class="scripture" style="font-style:italic">Then said his servants unto him, What thing is this that thou hast done? thou didst fast and weep for the child, while it was alive; but when the child was dead, thou didst rise and eat bread. And he said, While the child was yet alive, I fasted and wept: for I said, Who can tell whether <span class="lord">God</span> will be gracious to me, that the child may live? But now he is dead, wherefore should I fast? can I bring him back again? <mark>I shall go to him, but he shall not return to me</mark>.<cite>2 Samuel 12:21-23</cite></blockquote>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Shapen in iniquity" data-title="Scripture with scripture">
+  <div class="page">
+    <div class="kicker">2 Samuel 12 · The child</div>
+    <h2>Scripture with scripture</h2>
+    <p>David, who knew he was redeemed by God, saved by faith, under the grace of the Lord, states plainly that he will go to be with his dead child in the end. That Heaven is their home.</p>
+    <p>While Psalms are dripping with doctrine, we should still always compare scripture with scripture, and gain understanding by the totality of the Bible, rather than out of context proof texts.</p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Truth in the inward parts" data-title="The honest confession of a righteous man">
+  <div class="page">
+    <div class="kicker">Psalm 51 · Truth in the inward parts</div>
+    <h2>The honest confession of a righteous man</h2>
+    <p>Continuing in <strong>Psalm 51</strong>, having established the context and getting the contention on the false doctrine of original sin guilt that comes from a shallow reading of the text, we see the purpose of the Psalm is the honest confession of a righteous man.</p>
+    <p>David is not placing the blame of what he has done on anyone else, and accepts full responsibility for whatever God judges against him. His fear of the Lord has led him to Godly repentance and reconciliation.</p>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Truth in the inward parts" data-title="Thou desirest truth">
+  <div class="page">
+    <div class="kicker">Psalm 51 · Truth in the inward parts</div>
+    <h2>Thou desirest truth</h2>
+    <blockquote class="big-verse">Behold, <mark>thou desirest truth in the inward parts</mark>: and in the hidden part thou shalt make me to know wisdom.<cite>Psalm 51:6</cite></blockquote>
+    <p>This is the meekness and honesty about our sin that God seeks, that in it, we can actually learn from Him and grow.</p>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Truth in the inward parts" data-title="Not sacrifices and burnt offerings">
+  <div class="page">
+    <div class="kicker">Psalm 51 · Thou desirest not sacrifice</div>
+    <h2>Not sacrifices and burnt offerings</h2>
+    <p>We discussed in the previous <a class="ref lesson-link" href="../../studies/#lesson-psalm-50" target="_blank" rel="noopener">Psalm 50 ↗</a> study that God doesn't seek the sacrifices and burnt offerings, but a meek and contrite heart. He is pleased as a Father when we come to Him for restitution and forgiveness. His mercy and grace are limitless, all He asks for is honesty in our heart.</p>
+    <blockquote class="big-verse">For <mark>thou desirest not sacrifice</mark>; else would I give it: thou delightest not in burnt offering.<cite>Psalm 51:16</cite></blockquote>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Purge me with hyssop" data-title="Whiter than snow">
+  <div class="page">
+    <div class="kicker">Psalm 51 · Purge me with hyssop</div>
+    <h2>Whiter than snow</h2>
+    <blockquote class="big-verse"><mark>Purge me with hyssop</mark>, and I shall be clean: wash me, and I shall be <mark>whiter than snow</mark>.<cite>Psalm 51:7</cite></blockquote>
+    <p>David confesses, and calls upon the Lord to purge him with hyssop, the sponge like plant that was used to apply the blood on the posts during the first passover, the same that was present when the Lord was crucified and they gave Him gall to drink.</p>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Purge me with hyssop" data-title="White as snow">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 51:7</div>
+    <h2>White as snow</h2>
+    <p>The washing of forgiveness by the blood of Christ is ours, that we become white as snow.</p>
+    <blockquote class="big-verse">Come now, and let us reason together, saith the <span class="lord">Lord</span>: though your sins be as scarlet, <mark>they shall be as white as snow</mark>; though they be red like crimson, they shall be as wool.<cite>Isaiah 1:18</cite></blockquote>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Purge me with hyssop" data-title="Joy and gladness">
+  <div class="page">
+    <div class="kicker">Psalm 51 · Make me to hear joy and gladness</div>
+    <h2>Joy and gladness</h2>
+    <blockquote class="big-verse">Make me to hear joy and gladness; that the bones which thou hast broken may rejoice.<cite>Psalm 51:8</cite></blockquote>
+    <p>David pleads to be made to hear joy and gladness, to be cheered by the power of God's word to heal the brokenness he feels from the Father's chastening.</p>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Purge me with hyssop" data-title="Hide thy face from my sins">
+  <div class="page">
+    <div class="kicker">Psalm 51 · Blot out all mine iniquities</div>
+    <h2>Hide thy face from my sins</h2>
+    <blockquote class="big-verse">Hide thy face from my sins, and blot out all mine iniquities.<cite>Psalm 51:9</cite></blockquote>
+    <p>He asks God to hide His face from David's sins. To see them and remember them no more. To blot out his iniquity.</p>
+    <p>We know as saved Christians that this promise of God, to forgive our sins past, present and future, that He will remember them no more and place them as far from us as east is from west, is our blessed hope in the redemption that is found in Christ.</p>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="Purge me with hyssop" data-title="We take comfort">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 51:9</div>
+    <h2>We take comfort</h2>
+    <p>We take comfort in this truth when we are faithful to confess to Him;</p>
+    <blockquote class="scripture" style="font-style:italic">But if we walk in the light, as he is in the light, we have fellowship one with another, and <mark>the blood of Jesus Christ his Son cleanseth us from all sin</mark>. If we say that we have no sin, we deceive ourselves, and the truth is not in us. <mark>If we confess our sins</mark>, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness. If we say that we have not sinned, we make him a liar, and his word is not in us.<cite>1 John 1:7-10</cite></blockquote>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="Purge me with hyssop" data-title="Not imputed">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 51:9</div>
+    <h2>Not imputed</h2>
+    <p>This promise shows not only the faithfulness of God to forgive, but also that our sin in the flesh is not held against our ledger in Heaven. It is not imputed against those that are in Christ.</p>
+    <blockquote class="big-verse">Whosoever is born of God doth not commit sin; for his seed remaineth in him: and <mark>he cannot sin, because he is born of God</mark>.<cite>1 John 3:9</cite></blockquote>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="slide" data-section="Purge me with hyssop" data-title="Not the new man, but the flesh">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 51:9</div>
+    <h2>Not the new man, but the flesh</h2>
+    <p>John is not contradicting himself by saying if we say we have no sin, we are liars and simultaneously saying we cannot sin, being born of God.</p>
+    <p>He is describing the same feelings from the failure of the flesh David writes about here.</p>
+    <p>When we sin, it is not the new man, created in Christ, but the flesh.</p>
+    <blockquote class="scripture" style="font-style:italic">For that which I do I allow not: for what I would, that do I not; but what I hate, that do I. If then I do that which I would not, I consent unto the law that it is good. Now then <mark>it is no more I that do it, but sin that dwelleth in me</mark>.<cite>Romans 7:15-17</cite></blockquote>
+  </div>
+</section>
+
+<!-- 27 -->
+<section class="slide" data-section="Purge me with hyssop" data-title="Nailed to the cross">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 51:9</div>
+    <h2>Nailed to the cross</h2>
+    <p>Our flesh sins. If we deny that, we are liars. But by being born again in Christ, we do not sin. The difference is that the flesh, which we can mortify to sin, and restrain from our lusts, is dead. Nailed to the cross with Christ.</p>
+    <blockquote class="scripture" style="font-style:italic">And they that are Christ’s <mark>have crucified the flesh</mark> with the affections and lusts. If we live in the Spirit, let us also walk in the Spirit.<cite>Galatians 5:24-25</cite></blockquote>
+  </div>
+</section>
+
+<!-- 28 -->
+<section class="slide" data-section="Restore unto me the joy" data-title="A right spirit">
+  <div class="page">
+    <div class="kicker">Psalm 51 · Create in me a clean heart</div>
+    <h2>A right spirit</h2>
+    <blockquote class="big-verse">Create in me a clean heart, O God; and renew a right spirit within me.<cite>Psalm 51:10</cite></blockquote>
+    <p>Our spirit is quickened and covered by the imputed righteousness of Christ Jesus. It is His righteousness that covers our transgressions and the Spirit that seals us unto redemption.</p>
+    <p>So David, in his sorrow and remorse reminds God of this truth, and by doing so, reminds himself.</p>
+  </div>
+</section>
+
+<!-- 29 -->
+<section class="slide" data-section="Restore unto me the joy" data-title="The joy of thy salvation">
+  <div class="page">
+    <div class="kicker">Psalm 51 · Restore unto me the joy</div>
+    <h2>The joy of thy salvation</h2>
+    <blockquote class="scripture" style="font-style:italic">Cast me not away from thy presence; and take not thy holy spirit from me. <mark>Restore unto me the joy of thy salvation</mark>; and uphold me with thy free spirit.<cite>Psalm 51:11-12</cite></blockquote>
+    <p>David is not writing that he is afraid to lose his salvation, but seeking the confidence in it again that has been marred by his transgressions and the fear from the chastening he has received.</p>
+    <p>He is seeking to renew his relationship with God through his confession and appeals to mercy.</p>
+  </div>
+</section>
+
+<!-- 30 -->
+<section class="slide" data-section="Then will I teach transgressors" data-title="And the purpose?">
+  <div class="page">
+    <div class="kicker">Psalm 51 · Then will I teach transgressors</div>
+    <h2>And the purpose?</h2>
+    <p>And the purpose? Is it to selfish ends of not wanting to feel guilty and to get back on the blessings side of God? No.</p>
+    <blockquote class="big-verse"><mark>Then will I teach transgressors thy ways</mark>; and sinners shall be converted unto thee.<cite>Psalm 51:13</cite></blockquote>
+    <p>It is the mercy God shows us as His children that leads us to share His praise to others, that the lost see His light upon us and they glorify Him in Heaven. It is not only the wrath that leaves the world without excuse, but the peace that passes understanding we are given by getting right with the Lord.</p>
+  </div>
+</section>
+
+<!-- 31 -->
+<section class="slide" data-section="Then will I teach transgressors" data-title="Sing aloud of thy righteousness">
+  <div class="page">
+    <div class="kicker">Psalm 51 · My tongue shall sing aloud</div>
+    <h2>Sing aloud of thy righteousness</h2>
+    <blockquote class="scripture" style="font-style:italic">Deliver me from bloodguiltiness, O God, thou God of my salvation: and <mark>my tongue shall sing aloud of thy righteousness</mark>. O Lord, open thou my lips; and my mouth shall shew forth thy praise.<cite>Psalm 51:14-15</cite></blockquote>
+    <p>When He delivers us from our guilt, forgiving our sin, restoring our relationship as sons, we cannot help but sing aloud of His righteousness.</p>
+  </div>
+</section>
+
+<!-- 32 -->
+<section class="slide" data-section="Then will I teach transgressors" data-title="Joy in heaven">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 51:13</div>
+    <h2>Joy in heaven</h2>
+    <p>The sinner who trusts Christ is celebrated in Heaven by all the hosts of God...</p>
+    <blockquote class="big-verse">I say unto you, that likewise <mark>joy shall be in heaven over one sinner that repenteth</mark>, more than over ninety and nine just persons, which need no repentance.<cite>Luke 15:7</cite></blockquote>
+  </div>
+</section>
+
+<!-- 33 -->
+<section class="slide" data-section="Then will I teach transgressors" data-title="The prodigal son">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 51:13</div>
+    <h2>The prodigal son</h2>
+    <p>...How much more the prodigal son who returns to his Father?</p>
+    <blockquote class="scripture" style="font-style:italic">I will arise and go to my father, and will say unto him, Father, I have sinned against heaven, and before thee, And am no more worthy to be called thy son: make me as one of thy hired servants. And he arose, and came to his father. But when he was yet a great way off, <mark>his father saw him, and had compassion, and ran</mark>, and fell on his neck, and kissed him.<cite>Luke 15:18-20</cite></blockquote>
+  </div>
+</section>
+
+<!-- 34 -->
+<section class="slide" data-section="Then will I teach transgressors" data-title="God wants to forgive us">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 51:13</div>
+    <h2>God wants to forgive us</h2>
+    <p>The Father runs to meet his returning son, showering him with love. Before any confession of guilt or offer of penance or anything other than turning back towards God, the Father goes to him in compassion and restitution of their relationship.</p>
+    <p>God wants to forgive us more than we want to be forgiven. And we rejoice in His grace, that we may shew forth His praise.</p>
+  </div>
+</section>
+
+<!-- 35 -->
+<section class="slide" data-section="A broken and a contrite heart" data-title="The sacrifices of God">
+  <div class="page">
+    <div class="kicker">Psalm 51 · A broken and a contrite heart</div>
+    <h2>The sacrifices of God</h2>
+    <p>Again, God doesn't want sacrifice. He doesn't want our works of penance and vows to change. He takes no delight in the ritual formulas of burnt offerings, and performative acts of contrition.</p>
+    <blockquote class="big-verse">The sacrifices of God are a broken spirit: <mark>a broken and a contrite heart, O God, thou wilt not despise</mark>.<cite>Psalm 51:17</cite></blockquote>
+    <p>It is the healing of a loving relationship that He wants for us. Even at our lowest, we should remember this, and turn to Him again.</p>
+  </div>
+</section>
+
+<!-- 36 -->
+<section class="slide" data-section="A broken and a contrite heart" data-title="Then shalt thou be pleased">
+  <div class="page">
+    <div class="kicker">Psalm 51 · The sacrifices of righteousness</div>
+    <h2>Then shalt thou be pleased</h2>
+    <blockquote class="scripture" style="font-style:italic">Do good in thy good pleasure unto Zion: build thou the walls of Jerusalem. <mark>Then shalt thou be pleased with the sacrifices of righteousness</mark>, with burnt offering and whole burnt offering: then shall they offer bullocks upon thine altar.<cite>Psalm 51:18-19</cite></blockquote>
+    <p>It is then, in reconciliation and peace with God, through Christ Jesus our Lord, that the works we do and the praise we sing will please Him. Then will our religion match our hearts, in healing and in service to the mighty God. Amen</p>
+  </div>
+</section>
+
+<!-- 37 -->
+<section class="slide" data-section="A broken and a contrite heart" data-title="Read on">
+  <div class="page">
+    <div class="kicker">Psalm 51</div>
+    <h2>Read on</h2>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-psalm-50" target="_blank" rel="noopener">Psalm 50: God Is Judge ↗</a><a class="ref lesson-link" href="../../studies/#lesson-sermon-psalm-32" target="_blank" rel="noopener">Psalm 32: The Blessedness of Forgiveness ↗</a></div>
+    <p class="sub center">The studies</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#Psalms-51" target="_blank" rel="noopener">Psalm 51 ↗</a><a class="ref lesson-link" href="../../studies/#doctrine-walk~4068" target="_blank" rel="noopener">Restoring the joy of salvation ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "1 John 1:9":[[9, "If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness."]],
+  "2 Samuel 12:7":[[7, "And Nathan said to David, Thou art the man. Thus saith the LORD God of Israel, I anointed thee king over Israel, and I delivered thee out of the hand of Saul;"]],
+  "Psalms 51:1":[[1, "Have mercy upon me, O God, according to thy lovingkindness: according unto the multitude of thy tender mercies blot out my transgressions."]],
+  "Psalms 51:17":[[17, "The sacrifices of God are a broken spirit: a broken and a contrite heart, O God, thou wilt not despise."]]
+};
+
+// Quotations from other writings (say: in the deck): their words open like a verse.
+const Q = {};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b && b.dataset.q) {
+    const q = Q[b.dataset.q];
+    verseTitle.textContent = q ? q.t : b.textContent.trim();
+    verseBody.innerHTML = q ? q.h : "<p>Not loaded.</p>";
+    verseDlg.showModal();
+    verseBody.scrollTop = 0;
+    return;
+  }
+  if (b) {
+    const keys = b.dataset.v;
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
