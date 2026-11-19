@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Psalm 49: Dark Sayings upon the Harp</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Psalm 49 in the King James Bible: the futility of riches when death awaits all, Solomon&#x27;s Ecclesiastes and Proverbs, none can redeem his brother, but God will redeem my soul from the power of the grave, and the dark sayings and parables made plain in Christ, from the Psalms series study.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body .say-cite{font-size:.85rem;font-style:italic;color:var(--vellum-dim);border-top:1px solid var(--rule);padding-top:.6rem;margin-top:1rem}
+.ref.say{border-bottom-style:dashed}
+.ref.say::before{content:"\201C";margin-right:.15em}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Dark Sayings upon the Harp" data-ctx="">
+  <div class="page title-page">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalm 49</h1>
+    <p class="sub">The futility of riches • God will redeem my soul • Dark sayings made plain</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 49:4">Psalm 49:4</button><button class="ref" data-v="Psalms 49:15">Psalm 49:15</button><button class="ref" data-v="Psalms 49:20">Psalm 49:20</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse. Press C for the whole chapter.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Riches and the grave" data-title="Hear this, all ye people" data-ctx="Psalms 49:1-4">
+  <div class="page">
+    <div class="kicker">Psalm 49 · Rich and poor</div>
+    <h2>Hear this, all ye people</h2>
+    <blockquote class="scripture" style="font-style:italic">Hear this, all ye people; give ear, all ye inhabitants of the world: <mark>Both low and high, rich and poor, together</mark>. My mouth shall speak of wisdom; and the meditation of my heart shall be of understanding. I will incline mine ear to a parable: <mark>I will open my dark saying upon the harp</mark>.<cite>Psalm 49:1-4</cite></blockquote>
+    <p>Psalm 49 is a meditation on the futility of life, in the building of riches, honor and name, when death awaits everyone, rich or poor, wise or fool.</p>
+    <p>This reflection on life's vanities ties to Solomon's writings in <strong>Ecclesiastes</strong>, from the call to harken to the preacher to the vanity of life and the only remedy, fearing the Lord and receiving His blessing.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Riches and the grave" data-title="How dieth the wise man?" data-ctx="Ecclesiastes 2:16|Psalms 49:10|Ecclesiastes 5:15">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 49:10</div>
+    <h2>How dieth the wise man?</h2>
+    <blockquote class="big-verse">For there is no remembrance of the wise more than of the fool for ever; seeing that which now is in the days to come shall all be forgotten. <mark>And how dieth the wise man? as the fool</mark>.<cite>Ecclesiastes 2:16</cite></blockquote>
+    <p>This echoes the same sentiment found in verse 10;</p>
+    <blockquote class="big-verse">For he seeth that wise men die, likewise the fool and the brutish person perish, and leave their wealth to others.<cite>Psalm 49:10</cite></blockquote>
+    <blockquote class="big-verse">As he came forth of his mother’s womb, <mark>naked shall he return to go as he came</mark>, and shall take nothing of his labour, which he may carry away in his hand.<cite>Ecclesiastes 5:15</cite></blockquote>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Riches and the grave" data-title="Get wisdom" data-ctx="Proverbs 4:7">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 49:3–4</div>
+    <h2>Get wisdom</h2>
+    <p>Solomon learned at the feet of his father, and after careful study of all the things his wealth and power availed him of, with the wisdom above other men, granted by God's grace, he would come to the same conclusions David sang of.</p>
+    <p>The call to incline your ear to hear wisdom, to listen to the dark sayings and parables. To seek understanding is a major theme of Solomon's <strong>Proverbs</strong>;</p>
+    <blockquote class="big-verse"><mark>Wisdom is the principal thing</mark>; therefore get wisdom: and with all thy getting get understanding.<cite>Proverbs 4:7</cite></blockquote>
+    <p>David teaches us the same lessons in Psalms. The wisdom of God is most valuable, because in that knowledge we may find eternal life.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Riches and the grave" data-title="The iniquity of my heels" data-ctx="Psalms 49:5">
+  <div class="page">
+    <div class="kicker">Psalm 49 · Wherefore should I fear?</div>
+    <h2>The iniquity of my heels</h2>
+    <blockquote class="big-verse">Wherefore should I fear in the days of evil, when the iniquity of my heels shall compass me about?<cite>Psalm 49:5</cite></blockquote>
+    <p>David expresses confidence in his salvation. He is not afraid when the time comes to be given the wages of his sin, the iniquity of his heels, the death that awaits us all, the consequences of our own making.</p>
+    <p>Why should we fear in the days of evil, that comes our own making? He knows his redemption is a gift of God. But the man trusting his riches has no hope at all in that day. They cannot redeem themselves or their brothers, and cannot pay the ransom due God for their sins.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Riches and the grave" data-title="None can redeem his brother" data-ctx="Psalms 49:6-9|Proverbs 11:4|Proverbs 27:24">
+  <div class="page">
+    <div class="kicker">Psalm 49 · The ransom</div>
+    <h2>None can redeem his brother</h2>
+    <blockquote class="scripture" style="font-style:italic">They that trust in their wealth, and boast themselves in the multitude of their riches; <mark>None of them can by any means redeem his brother, nor give to God a ransom for him</mark>: (For the redemption of their soul is precious, and it ceaseth for ever:) That he should still live for ever, and not see corruption.<cite>Psalm 49:6-9</cite></blockquote>
+    <p>Again, this idea that man's riches are worthless in the judgment, that they do nothing for the dead, is repeated by Solomon;</p>
+    <blockquote class="big-verse"><mark>Riches profit not in the day of wrath</mark>: but righteousness delivereth from death.<cite>Proverbs 11:4</cite></blockquote>
+    <blockquote class="big-verse"><mark>For riches are not for ever</mark>: and doth the crown endure to every generation?<cite>Proverbs 27:24</cite></blockquote>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Riches and the grave" data-title="This their way is their folly" data-ctx="Psalms 49:11-14|1 Timothy 2:5-6">
+  <div class="page">
+    <div class="kicker">Psalm 49 · Like the beasts that perish</div>
+    <h2>This their way is their folly</h2>
+    <blockquote class="scripture" style="font-style:italic">Their inward thought is, that their houses shall continue for ever, and their dwelling places to all generations; they call their lands after their own names. Nevertheless man being in honour abideth not: he is like the beasts that perish. <mark>This their way is their folly</mark>: yet their posterity approve their sayings. Selah. Like sheep they are laid in the grave; death shall feed on them; and the upright shall have dominion over them in the morning; and their beauty shall consume in the grave from their dwelling.<cite>Psalm 49:11-14</cite></blockquote>
+    <p>Their way is folly. The wise man dies like the fool, like the brute, and all their wealth is left for others. But the precious redemption of the soul, that one lives forever and shall not see corruption, that is of God, through faith in the Lord Christ Jesus.</p>
+    <blockquote class="big-verse">For there is one God, and one mediator between God and men, the man Christ Jesus; <mark>Who gave himself a ransom for all</mark>, to be testified in due time.<cite>1 Timothy 2:5-6</cite></blockquote>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Riches and the grave" data-title="He shall carry nothing away" data-ctx="Psalms 49:16-18">
+  <div class="page">
+    <div class="kicker">Psalm 49 · Be not thou afraid</div>
+    <h2>He shall carry nothing away</h2>
+    <blockquote class="scripture" style="font-style:italic">Be not thou afraid when one is made rich, when the glory of his house is increased; <mark>For when he dieth he shall carry nothing away</mark>: his glory shall not descend after him. Though while he lived he blessed his soul: and men will praise thee, when thou doest well to thyself.<cite>Psalm 49:16-18</cite></blockquote>
+    <p>David laments the fact that worldly prosperity deceives the wealthy, their own riches fooling them into a false sense of security. This is the larger context of the preaching of Christ;</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Riches and the grave" data-title="The eye of a needle" data-ctx="Matthew 19:23-26|Proverbs 15:16">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 49:16–17</div>
+    <h2>The eye of a needle</h2>
+    <blockquote class="scripture" style="font-style:italic">Then said Jesus unto his disciples, Verily I say unto you, That a rich man shall hardly enter into the kingdom of heaven. And again I say unto you, It is easier for a camel to go through the eye of a needle, than for a rich man to enter into the kingdom of God. When his disciples heard it, they were exceedingly amazed, saying, Who then can be saved? But Jesus beheld them, and said unto them, With men this is impossible; but <mark>with God all things are possible</mark>.<cite>Matthew 19:23-26</cite></blockquote>
+    <p>The only hope of man, rich or poor, is God. Only in Him is salvation possible.</p>
+    <blockquote class="big-verse"><mark>Better is little with the fear of the <span class="lord">Lord</span></mark> than great treasure and trouble therewith.<cite>Proverbs 15:16</cite></blockquote>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Riches and the grave" data-title="Neither poverty nor riches" data-ctx="Proverbs 30:8-9">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 49:16–17</div>
+    <h2>Neither poverty nor riches</h2>
+    <p>The blessings of this life are not a hope for the next. The praise of men is vanity before the Throne of an almighty and holy God.</p>
+    <p>Agur's prayer in <strong>Proverbs</strong> directly addresses this wisdom;</p>
+    <blockquote class="scripture" style="font-style:italic">Remove far from me vanity and lies: <mark>give me neither poverty nor riches</mark>; feed me with food convenient for me: Lest I be full, and deny thee, and say, Who is the <span class="lord">Lord</span>? or lest I be poor, and steal, and take the name of my God in vain.<cite>Proverbs 30:8-9</cite></blockquote>
+    <p>Better to be satisfied with what the Lord has given us, and trust and fear Him, than to allow wealth to take us from fearing the Lord, or poverty that brings bitterness to our soul.</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Riches and the grave" data-title="God will redeem my soul" data-ctx="Psalms 49:15">
+  <div class="page">
+    <div class="kicker">Psalm 49 · From the power of the grave</div>
+    <h2>God will redeem my soul</h2>
+    <p><strong>Psalm 49</strong> perfectly encapsulates these wise sayings, showing that David's hope is not in riches, but in the salvation of the Lord.</p>
+    <blockquote class="big-verse"><mark>But God will redeem my soul from the power of the grave</mark>: for he shall receive me. Selah.<cite>Psalm 49:15</cite></blockquote>
+    <p>So, no matter the station you have been born to, or the prosperity you've been blessed with, fear God and follow His ways, seeking His wisdom and be blessed by His redemption. Learn from his dark sayings and parables, before it is too late.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Riches and the grave" data-title="Man that is in honour" data-ctx="Psalms 49:19-20">
+  <div class="page">
+    <div class="kicker">Psalm 49 · Understandeth not</div>
+    <h2>Man that is in honour</h2>
+    <blockquote class="scripture" style="font-style:italic">He shall go to the generation of his fathers; they shall never see light. <mark>Man that is in honour, and understandeth not, is like the beasts that perish</mark>.<cite>Psalm 49:19-20</cite></blockquote>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Dark sayings made plain" data-title="I will open my mouth in parables" data-ctx="Matthew 13:34-35">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 49:4</div>
+    <h2>I will open my mouth in parables</h2>
+    <p>The call by David to hear and understand his "dark sayings and parables," brings to mind the way Jesus taught in His ministry.</p>
+    <blockquote class="scripture" style="font-style:italic">All these things spake Jesus unto the multitude in parables; and without a parable spake he not unto them: That it might be fulfilled which was spoken by the prophet, saying, <mark>I will open my mouth in parables</mark>; I will utter things which have been kept secret from the foundation of the world.<cite>Matthew 13:34-35</cite></blockquote>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Dark sayings made plain" data-title="A spiritual filter" data-ctx="Matthew 13:10-13">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 49:4</div>
+    <h2>A spiritual filter</h2>
+    <p>Jesus revealed to His disciples that parables act as a spiritual filter. To the humble seeker of wisdom, they provide deeper understanding; to the spiritually blind, they remain obscure "dark sayings."</p>
+    <blockquote class="scripture" style="font-style:italic">And the disciples came, and said unto him, Why speakest thou unto them in parables? He answered and said unto them, Because <mark>it is given unto you to know the mysteries of the kingdom of heaven</mark>, but to them it is not given. For whosoever hath, to him shall be given, and he shall have more abundance: but whosoever hath not, from him shall be taken away even that he hath. Therefore speak I to them in parables: because they seeing see not; and hearing they hear not, neither do they understand.<cite>Matthew 13:10-13</cite></blockquote>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Dark sayings made plain" data-title="I shall shew you plainly" data-ctx="John 16:25">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 49:4</div>
+    <h2>I shall shew you plainly</h2>
+    <p>The unfolding revelation to man throughout scripture was never meant to keep wisdom hidden. Especially, not forever.</p>
+    <p>Unlike the religions of man, with their esoteric knowledge, vague and shallow sayings fed in dribs and drabs, with no clarity ever given, God's word opens itself up, and Jesus ultimately shows what all these "dark sayings" and prophetic parables actually mean.</p>
+    <blockquote class="big-verse">These things have I spoken unto you in proverbs: but the time cometh, when I shall no more speak unto you in proverbs, but <mark>I shall shew you plainly of the Father</mark>.<cite>John 16:25</cite></blockquote>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Dark sayings made plain" data-title="He expounded all things" data-ctx="Mark 4:33-34">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 49:4</div>
+    <h2>He expounded all things</h2>
+    <p>During His earthly ministry, even Jesus' most faithful disciples required His explanation of the parables He spoke in, to the crowds and Pharisees.</p>
+    <blockquote class="scripture" style="font-style:italic">And with many such parables spake he the word unto them, as they were able to hear it. But without a parable spake he not unto them: and when they were alone, <mark>he expounded all things to his disciples</mark>.<cite>Mark 4:33-34</cite></blockquote>
+    <p>But the full revelation of scripture came in the days following His resurrection, when all things were finally made known.</p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Dark sayings made plain" data-title="And in the psalms, concerning me" data-ctx="Luke 24:44-45">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 49:4</div>
+    <h2>And in the psalms, concerning me</h2>
+    <p>To the men He met on the way, in <strong>Luke 24</strong>, Jesus, <em>beginning at Moses and all the prophets, he expounded unto them in all the scriptures the things concerning himself</em>.</p>
+    <p>And to the gathering of the disciples, He did the same;</p>
+    <blockquote class="scripture" style="font-style:italic">And he said unto them, These are the words which I spake unto you, while I was yet with you, that all things must be fulfilled, which were written in the law of Moses, and in the prophets, <mark>and in the psalms, concerning me</mark>. <mark>Then opened he their understanding</mark>, that they might understand the scriptures,<cite>Luke 24:44-45</cite></blockquote>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Dark sayings made plain" data-title="The words of eternal life" data-ctx="Luke 24:44-45">
+  <div class="page">
+    <div class="kicker">Application • The scriptures</div>
+    <h2>The words of eternal life</h2>
+    <p>He explicitly references the three divisions of the Old Testament, (the Law, the Prophets, and the Psalms, like Psalm 49) and grants them the spiritually supernatural ability to finally see past the "dark sayings" to understand the plain truth of the Gospel.</p>
+    <p>These things are revealed to us by the Spirit, Who teaches us all things. We are able to see the entire picture, fully revealed in Christ, and the understanding imparted by the Apostles in the Epistles for added clarity and depth. Only the future Revelation of Christ Jesus is still through a glass darkly, (although the gist is pretty clear on timing and events).</p>
+    <p>We see that the Old Testament scriptures aren't an empty recitation of genealogy, geography and events. They aren't the vain contemplations of man. They are the words of eternal life, and all these were written to point the way to Jesus, and provide us with understanding.</p>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Dark sayings made plain" data-title="For our admonition" data-ctx="1 Corinthians 10:11">
+  <div class="page">
+    <div class="kicker">Application • The scriptures</div>
+    <h2>For our admonition</h2>
+    <blockquote class="big-verse">Now all these things happened unto them for ensamples: and <mark>they are written for our admonition</mark>, upon whom the ends of the world are come.<cite>1 Corinthians 10:11</cite></blockquote>
+    <p>Not only does God's word exist to show us His ways, but ultimately it is the tool He has given us to fulfill the Great Commission, leading others to the truth.</p>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Dark sayings made plain" data-title="Ye are witnesses" data-ctx="Luke 24:46-48">
+  <div class="page">
+    <div class="kicker">Application • The Great Commission</div>
+    <h2>Ye are witnesses</h2>
+    <blockquote class="scripture" style="font-style:italic">And said unto them, Thus it is written, and thus it behoved Christ to suffer, and to rise from the dead the third day: And that repentance and remission of sins should be preached in his name among all nations, beginning at Jerusalem. <mark>And ye are witnesses of these things</mark>.<cite>Luke 24:46-48</cite></blockquote>
+    <p>We are witnesses of these things. We have the testimony of God, revealed. We are given the wisdom and power of His word to teach repentance towards God and remission of sins by His Son, in Jesus' name.</p>
+    <p>Not in dark sayings and parables, although they help reveal the truth, but by the power of our witness that all is revealed in Christ. Amen.</p>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Dark sayings made plain" data-title="Read on" data-ctx="Luke 24:46-48">
+  <div class="page">
+    <div class="kicker">Psalm 49</div>
+    <h2>Read on</h2>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-psalm-48" target="_blank" rel="noopener">Psalm 48 ↗</a><a class="ref lesson-link" href="../../studies/#lesson-psalm-50" target="_blank" rel="noopener">Psalm 50: God Is Judge ↗</a><a class="ref lesson-link" href="../../studies/#lesson-john-that-ye-might-believe" target="_blank" rel="noopener">That Ye Might Believe: The Gospel of John ↗</a></div>
+    <p class="sub center">The chapter study</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#Psalms-49" target="_blank" rel="noopener">Psalm 49 ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "Psalms 49:15":[[15, "But God will redeem my soul from the power of the grave: for he shall receive me. Selah."]],
+  "Psalms 49:20":[[20, "Man that is in honour, and understandeth not, is like the beasts that perish."]],
+  "Psalms 49:4":[[4, "I will incline mine ear to a parable: I will open my dark saying upon the harp."]]
+};
+
+// The Chapter panel (key C): whole chapters, and each slide's verses in data-ctx. null when the deck has none.
+window.DECK_CTX = {"home": ["Psalms 49"], "ch": {"Psalms 49": [[1, "Hear this, all ye people; give ear, all ye inhabitants of the world:"], [2, "Both low and high, rich and poor, together."], [3, "My mouth shall speak of wisdom; and the meditation of my heart shall be of understanding."], [4, "I will incline mine ear to a parable: I will open my dark saying upon the harp."], [5, "Wherefore should I fear in the days of evil, when the iniquity of my heels shall compass me about?"], [6, "They that trust in their wealth, and boast themselves in the multitude of their riches;"], [7, "None of them can by any means redeem his brother, nor give to God a ransom for him:"], [8, "(For the redemption of their soul is precious, and it ceaseth for ever:)"], [9, "That he should still live for ever, and not see corruption."], [10, "For he seeth that wise men die, likewise the fool and the brutish person perish, and leave their wealth to others."], [11, "Their inward thought is, that their houses shall continue for ever, and their dwelling places to all generations; they call their lands after their own names."], [12, "Nevertheless man being in honour abideth not: he is like the beasts that perish."], [13, "This their way is their folly: yet their posterity approve their sayings. Selah."], [14, "Like sheep they are laid in the grave; death shall feed on them; and the upright shall have dominion over them in the morning; and their beauty shall consume in the grave from their dwelling."], [15, "But God will redeem my soul from the power of the grave: for he shall receive me. Selah."], [16, "Be not thou afraid when one is made rich, when the glory of his house is increased;"], [17, "For when he dieth he shall carry nothing away: his glory shall not descend after him."], [18, "Though while he lived he blessed his soul: and men will praise thee, when thou doest well to thyself."], [19, "He shall go to the generation of his fathers; they shall never see light."], [20, "Man that is in honour, and understandeth not, is like the beasts that perish."]], "Ecclesiastes 2": [[1, "I said in mine heart, Go to now, I will prove thee with mirth, therefore enjoy pleasure: and, behold, this also is vanity."], [2, "I said of laughter, It is mad: and of mirth, What doeth it?"], [3, "I sought in mine heart to give myself unto wine, yet acquainting mine heart with wisdom; and to lay hold on folly, till I might see what was that good for the sons of men, which they should do under the heaven all the days of their life."], [4, "I made me great works; I builded me houses; I planted me vineyards:"], [5, "I made me gardens and orchards, and I planted trees in them of all kind of fruits:"], [6, "I made me pools of water, to water therewith the wood that bringeth forth trees:"], [7, "I got me servants and maidens, and had servants born in my house; also I had great possessions of great and small cattle above all that were in Jerusalem before me:"], [8, "I gathered me also silver and gold, and the peculiar treasure of kings and of the provinces: I gat me men singers and women singers, and the delights of the sons of men, as musical instruments, and that of all sorts."], [9, "So I was great, and increased more than all that were before me in Jerusalem: also my wisdom remained with me."], [10, "And whatsoever mine eyes desired I kept not from them, I withheld not my heart from any joy; for my heart rejoiced in all my labour: and this was my portion of all my labour."], [11, "Then I looked on all the works that my hands had wrought, and on the labour that I had laboured to do: and, behold, all was vanity and vexation of spirit, and there was no profit under the sun."], [12, "And I turned myself to behold wisdom, and madness, and folly: for what can the man do that cometh after the king? even that which hath been already done."], [13, "Then I saw that wisdom excelleth folly, as far as light excelleth darkness."], [14, "The wise man’s eyes are in his head; but the fool walketh in darkness: and I myself perceived also that one event happeneth to them all."], [15, "Then said I in my heart, As it happeneth to the fool, so it happeneth even to me; and why was I then more wise? Then I said in my heart, that this also is vanity."], [16, "For there is no remembrance of the wise more than of the fool for ever; seeing that which now is in the days to come shall all be forgotten. And how dieth the wise man? as the fool."], [17, "Therefore I hated life; because the work that is wrought under the sun is grievous unto me: for all is vanity and vexation of spirit."], [18, "Yea, I hated all my labour which I had taken under the sun: because I should leave it unto the man that shall be after me."], [19, "And who knoweth whether he shall be a wise man or a fool? yet shall he have rule over all my labour wherein I have laboured, and wherein I have shewed myself wise under the sun. This is also vanity."], [20, "Therefore I went about to cause my heart to despair of all the labour which I took under the sun."], [21, "For there is a man whose labour is in wisdom, and in knowledge, and in equity; yet to a man that hath not laboured therein shall he leave it for his portion. This also is vanity and a great evil."], [22, "For what hath man of all his labour, and of the vexation of his heart, wherein he hath laboured under the sun?"], [23, "For all his days are sorrows, and his travail grief; yea, his heart taketh not rest in the night. This is also vanity."], [24, "There is nothing better for a man, than that he should eat and drink, and that he should make his soul enjoy good in his labour. This also I saw, that it was from the hand of God."], [25, "For who can eat, or who else can hasten hereunto, more than I?"], [26, "For God giveth to a man that is good in his sight wisdom, and knowledge, and joy: but to the sinner he giveth travail, to gather and to heap up, that he may give to him that is good before God. This also is vanity and vexation of spirit."]], "Ecclesiastes 5": [[1, "Keep thy foot when thou goest to the house of God, and be more ready to hear, than to give the sacrifice of fools: for they consider not that they do evil."], [2, "Be not rash with thy mouth, and let not thine heart be hasty to utter any thing before God: for God is in heaven, and thou upon earth: therefore let thy words be few."], [3, "For a dream cometh through the multitude of business; and a fool’s voice is known by multitude of words."], [4, "When thou vowest a vow unto God, defer not to pay it; for he hath no pleasure in fools: pay that which thou hast vowed."], [5, "Better is it that thou shouldest not vow, than that thou shouldest vow and not pay."], [6, "Suffer not thy mouth to cause thy flesh to sin; neither say thou before the angel, that it was an error: wherefore should God be angry at thy voice, and destroy the work of thine hands?"], [7, "For in the multitude of dreams and many words there are also divers vanities: but fear thou God."], [8, "If thou seest the oppression of the poor, and violent perverting of judgment and justice in a province, marvel not at the matter: for he that is higher than the highest regardeth; and there be higher than they."], [9, "Moreover the profit of the earth is for all: the king himself is served by the field."], [10, "He that loveth silver shall not be satisfied with silver; nor he that loveth abundance with increase: this is also vanity."], [11, "When goods increase, they are increased that eat them: and what good is there to the owners thereof, saving the beholding of them with their eyes?"], [12, "The sleep of a labouring man is sweet, whether he eat little or much: but the abundance of the rich will not suffer him to sleep."], [13, "There is a sore evil which I have seen under the sun, namely, riches kept for the owners thereof to their hurt."], [14, "But those riches perish by evil travail: and he begetteth a son, and there is nothing in his hand."], [15, "As he came forth of his mother’s womb, naked shall he return to go as he came, and shall take nothing of his labour, which he may carry away in his hand."], [16, "And this also is a sore evil, that in all points as he came, so shall he go: and what profit hath he that hath laboured for the wind?"], [17, "All his days also he eateth in darkness, and he hath much sorrow and wrath with his sickness."], [18, "Behold that which I have seen: it is good and comely for one to eat and to drink, and to enjoy the good of all his labour that he taketh under the sun all the days of his life, which God giveth him: for it is his portion."], [19, "Every man also to whom God hath given riches and wealth, and hath given him power to eat thereof, and to take his portion, and to rejoice in his labour; this is the gift of God."], [20, "For he shall not much remember the days of his life; because God answereth him in the joy of his heart."]], "Proverbs 4": [[1, "Hear, ye children, the instruction of a father, and attend to know understanding."], [2, "For I give you good doctrine, forsake ye not my law."], [3, "For I was my father’s son, tender and only beloved in the sight of my mother."], [4, "He taught me also, and said unto me, Let thine heart retain my words: keep my commandments, and live."], [5, "Get wisdom, get understanding: forget it not; neither decline from the words of my mouth."], [6, "Forsake her not, and she shall preserve thee: love her, and she shall keep thee."], [7, "Wisdom is the principal thing; therefore get wisdom: and with all thy getting get understanding."], [8, "Exalt her, and she shall promote thee: she shall bring thee to honour, when thou dost embrace her."], [9, "She shall give to thine head an ornament of grace: a crown of glory shall she deliver to thee."], [10, "Hear, O my son, and receive my sayings; and the years of thy life shall be many."], [11, "I have taught thee in the way of wisdom; I have led thee in right paths."], [12, "When thou goest, thy steps shall not be straitened; and when thou runnest, thou shalt not stumble."], [13, "Take fast hold of instruction; let her not go: keep her; for she is thy life."], [14, "Enter not into the path of the wicked, and go not in the way of evil men."], [15, "Avoid it, pass not by it, turn from it, and pass away."], [16, "For they sleep not, except they have done mischief; and their sleep is taken away, unless they cause some to fall."], [17, "For they eat the bread of wickedness, and drink the wine of violence."], [18, "But the path of the just is as the shining light, that shineth more and more unto the perfect day."], [19, "The way of the wicked is as darkness: they know not at what they stumble."], [20, "My son, attend to my words; incline thine ear unto my sayings."], [21, "Let them not depart from thine eyes; keep them in the midst of thine heart."], [22, "For they are life unto those that find them, and health to all their flesh."], [23, "Keep thy heart with all diligence; for out of it are the issues of life."], [24, "Put away from thee a froward mouth, and perverse lips put far from thee."], [25, "Let thine eyes look right on, and let thine eyelids look straight before thee."], [26, "Ponder the path of thy feet, and let all thy ways be established."], [27, "Turn not to the right hand nor to the left: remove thy foot from evil."]], "Proverbs 11": [[1, "A false balance is abomination to the LORD: but a just weight is his delight."], [2, "When pride cometh, then cometh shame: but with the lowly is wisdom."], [3, "The integrity of the upright shall guide them: but the perverseness of transgressors shall destroy them."], [4, "Riches profit not in the day of wrath: but righteousness delivereth from death."], [5, "The righteousness of the perfect shall direct his way: but the wicked shall fall by his own wickedness."], [6, "The righteousness of the upright shall deliver them: but transgressors shall be taken in their own naughtiness."], [7, "When a wicked man dieth, his expectation shall perish: and the hope of unjust men perisheth."], [8, "The righteous is delivered out of trouble, and the wicked cometh in his stead."], [9, "An hypocrite with his mouth destroyeth his neighbour: but through knowledge shall the just be delivered."], [10, "When it goeth well with the righteous, the city rejoiceth: and when the wicked perish, there is shouting."], [11, "By the blessing of the upright the city is exalted: but it is overthrown by the mouth of the wicked."], [12, "He that is void of wisdom despiseth his neighbour: but a man of understanding holdeth his peace."], [13, "A talebearer revealeth secrets: but he that is of a faithful spirit concealeth the matter."], [14, "Where no counsel is, the people fall: but in the multitude of counsellors there is safety."], [15, "He that is surety for a stranger shall smart for it: and he that hateth suretiship is sure."], [16, "A gracious woman retaineth honour: and strong men retain riches."], [17, "The merciful man doeth good to his own soul: but he that is cruel troubleth his own flesh."], [18, "The wicked worketh a deceitful work: but to him that soweth righteousness shall be a sure reward."], [19, "As righteousness tendeth to life: so he that pursueth evil pursueth it to his own death."], [20, "They that are of a froward heart are abomination to the LORD: but such as are upright in their way are his delight."], [21, "Though hand join in hand, the wicked shall not be unpunished: but the seed of the righteous shall be delivered."], [22, "As a jewel of gold in a swine’s snout, so is a fair woman which is without discretion."], [23, "The desire of the righteous is only good: but the expectation of the wicked is wrath."], [24, "There is that scattereth, and yet increaseth; and there is that withholdeth more than is meet, but it tendeth to poverty."], [25, "The liberal soul shall be made fat: and he that watereth shall be watered also himself."], [26, "He that withholdeth corn, the people shall curse him: but blessing shall be upon the head of him that selleth it."], [27, "He that diligently seeketh good procureth favour: but he that seeketh mischief, it shall come unto him."], [28, "He that trusteth in his riches shall fall; but the righteous shall flourish as a branch."], [29, "He that troubleth his own house shall inherit the wind: and the fool shall be servant to the wise of heart."], [30, "The fruit of the righteous is a tree of life; and he that winneth souls is wise."], [31, "Behold, the righteous shall be recompensed in the earth: much more the wicked and the sinner."]], "Proverbs 27": [[1, "Boast not thyself of to morrow; for thou knowest not what a day may bring forth."], [2, "Let another man praise thee, and not thine own mouth; a stranger, and not thine own lips."], [3, "A stone is heavy, and the sand weighty; but a fool’s wrath is heavier than them both."], [4, "Wrath is cruel, and anger is outrageous; but who is able to stand before envy?"], [5, "Open rebuke is better than secret love."], [6, "Faithful are the wounds of a friend; but the kisses of an enemy are deceitful."], [7, "The full soul loatheth an honeycomb; but to the hungry soul every bitter thing is sweet."], [8, "As a bird that wandereth from her nest, so is a man that wandereth from his place."], [9, "Ointment and perfume rejoice the heart: so doth the sweetness of a man’s friend by hearty counsel."], [10, "Thine own friend, and thy father’s friend, forsake not; neither go into thy brother’s house in the day of thy calamity: for better is a neighbour that is near than a brother far off."], [11, "My son, be wise, and make my heart glad, that I may answer him that reproacheth me."], [12, "A prudent man foreseeth the evil, and hideth himself; but the simple pass on, and are punished."], [13, "Take his garment that is surety for a stranger, and take a pledge of him for a strange woman."], [14, "He that blesseth his friend with a loud voice, rising early in the morning, it shall be counted a curse to him."], [15, "A continual dropping in a very rainy day and a contentious woman are alike."], [16, "Whosoever hideth her hideth the wind, and the ointment of his right hand, which bewrayeth itself."], [17, "Iron sharpeneth iron; so a man sharpeneth the countenance of his friend."], [18, "Whoso keepeth the fig tree shall eat the fruit thereof: so he that waiteth on his master shall be honoured."], [19, "As in water face answereth to face, so the heart of man to man."], [20, "Hell and destruction are never full; so the eyes of man are never satisfied."], [21, "As the fining pot for silver, and the furnace for gold; so is a man to his praise."], [22, "Though thou shouldest bray a fool in a mortar among wheat with a pestle, yet will not his foolishness depart from him."], [23, "Be thou diligent to know the state of thy flocks, and look well to thy herds."], [24, "For riches are not for ever: and doth the crown endure to every generation?"], [25, "The hay appeareth, and the tender grass sheweth itself, and herbs of the mountains are gathered."], [26, "The lambs are for thy clothing, and the goats are the price of the field."], [27, "And thou shalt have goats’ milk enough for thy food, for the food of thy household, and for the maintenance for thy maidens."]], "1 Timothy 2": [[1, "I exhort therefore, that, first of all, supplications, prayers, intercessions, and giving of thanks, be made for all men;"], [2, "For kings, and for all that are in authority; that we may lead a quiet and peaceable life in all godliness and honesty."], [3, "For this is good and acceptable in the sight of God our Saviour;"], [4, "Who will have all men to be saved, and to come unto the knowledge of the truth."], [5, "For there is one God, and one mediator between God and men, the man Christ Jesus;"], [6, "Who gave himself a ransom for all, to be testified in due time."], [7, "Whereunto I am ordained a preacher, and an apostle, (I speak the truth in Christ, and lie not;) a teacher of the Gentiles in faith and verity."], [8, "I will therefore that men pray every where, lifting up holy hands, without wrath and doubting."], [9, "In like manner also, that women adorn themselves in modest apparel, with shamefacedness and sobriety; not with broided hair, or gold, or pearls, or costly array;"], [10, "But (which becometh women professing godliness) with good works."], [11, "Let the woman learn in silence with all subjection."], [12, "But I suffer not a woman to teach, nor to usurp authority over the man, but to be in silence."], [13, "For Adam was first formed, then Eve."], [14, "And Adam was not deceived, but the woman being deceived was in the transgression."], [15, "Notwithstanding she shall be saved in childbearing, if they continue in faith and charity and holiness with sobriety."]], "Matthew 19": [[1, "And it came to pass, that when Jesus had finished these sayings, he departed from Galilee, and came into the coasts of Judaea beyond Jordan;"], [2, "And great multitudes followed him; and he healed them there."], [3, "The Pharisees also came unto him, tempting him, and saying unto him, Is it lawful for a man to put away his wife for every cause?"], [4, "And he answered and said unto them, Have ye not read, that he which made them at the beginning made them male and female,"], [5, "And said, For this cause shall a man leave father and mother, and shall cleave to his wife: and they twain shall be one flesh?"], [6, "Wherefore they are no more twain, but one flesh. What therefore God hath joined together, let not man put asunder."], [7, "They say unto him, Why did Moses then command to give a writing of divorcement, and to put her away?"], [8, "He saith unto them, Moses because of the hardness of your hearts suffered you to put away your wives: but from the beginning it was not so."], [9, "And I say unto you, Whosoever shall put away his wife, except it be for fornication, and shall marry another, committeth adultery: and whoso marrieth her which is put away doth commit adultery."], [10, "His disciples say unto him, If the case of the man be so with his wife, it is not good to marry."], [11, "But he said unto them, All men cannot receive this saying, save they to whom it is given."], [12, "For there are some eunuchs, which were so born from their mother’s womb: and there are some eunuchs, which were made eunuchs of men: and there be eunuchs, which have made themselves eunuchs for the kingdom of heaven’s sake. He that is able to receive it, let him receive it."], [13, "Then were there brought unto him little children, that he should put his hands on them, and pray: and the disciples rebuked them."], [14, "But Jesus said, Suffer little children, and forbid them not, to come unto me: for of such is the kingdom of heaven."], [15, "And he laid his hands on them, and departed thence."], [16, "And, behold, one came and said unto him, Good Master, what good thing shall I do, that I may have eternal life?"], [17, "And he said unto him, Why callest thou me good? there is none good but one, that is, God: but if thou wilt enter into life, keep the commandments."], [18, "He saith unto him, Which? Jesus said, Thou shalt do no murder, Thou shalt not commit adultery, Thou shalt not steal, Thou shalt not bear false witness,"], [19, "Honour thy father and thy mother: and, Thou shalt love thy neighbour as thyself."], [20, "The young man saith unto him, All these things have I kept from my youth up: what lack I yet?"], [21, "Jesus said unto him, If thou wilt be perfect, go and sell that thou hast, and give to the poor, and thou shalt have treasure in heaven: and come and follow me."], [22, "But when the young man heard that saying, he went away sorrowful: for he had great possessions."], [23, "Then said Jesus unto his disciples, Verily I say unto you, That a rich man shall hardly enter into the kingdom of heaven."], [24, "And again I say unto you, It is easier for a camel to go through the eye of a needle, than for a rich man to enter into the kingdom of God."], [25, "When his disciples heard it, they were exceedingly amazed, saying, Who then can be saved?"], [26, "But Jesus beheld them, and said unto them, With men this is impossible; but with God all things are possible."], [27, "Then answered Peter and said unto him, Behold, we have forsaken all, and followed thee; what shall we have therefore?"], [28, "And Jesus said unto them, Verily I say unto you, That ye which have followed me, in the regeneration when the Son of man shall sit in the throne of his glory, ye also shall sit upon twelve thrones, judging the twelve tribes of Israel."], [29, "And every one that hath forsaken houses, or brethren, or sisters, or father, or mother, or wife, or children, or lands, for my name’s sake, shall receive an hundredfold, and shall inherit everlasting life."], [30, "But many that are first shall be last; and the last shall be first."]], "Proverbs 15": [[1, "A soft answer turneth away wrath: but grievous words stir up anger."], [2, "The tongue of the wise useth knowledge aright: but the mouth of fools poureth out foolishness."], [3, "The eyes of the LORD are in every place, beholding the evil and the good."], [4, "A wholesome tongue is a tree of life: but perverseness therein is a breach in the spirit."], [5, "A fool despiseth his father’s instruction: but he that regardeth reproof is prudent."], [6, "In the house of the righteous is much treasure: but in the revenues of the wicked is trouble."], [7, "The lips of the wise disperse knowledge: but the heart of the foolish doeth not so."], [8, "The sacrifice of the wicked is an abomination to the LORD: but the prayer of the upright is his delight."], [9, "The way of the wicked is an abomination unto the LORD: but he loveth him that followeth after righteousness."], [10, "Correction is grievous unto him that forsaketh the way: and he that hateth reproof shall die."], [11, "Hell and destruction are before the LORD: how much more then the hearts of the children of men?"], [12, "A scorner loveth not one that reproveth him: neither will he go unto the wise."], [13, "A merry heart maketh a cheerful countenance: but by sorrow of the heart the spirit is broken."], [14, "The heart of him that hath understanding seeketh knowledge: but the mouth of fools feedeth on foolishness."], [15, "All the days of the afflicted are evil: but he that is of a merry heart hath a continual feast."], [16, "Better is little with the fear of the LORD than great treasure and trouble therewith."], [17, "Better is a dinner of herbs where love is, than a stalled ox and hatred therewith."], [18, "A wrathful man stirreth up strife: but he that is slow to anger appeaseth strife."], [19, "The way of the slothful man is as an hedge of thorns: but the way of the righteous is made plain."], [20, "A wise son maketh a glad father: but a foolish man despiseth his mother."], [21, "Folly is joy to him that is destitute of wisdom: but a man of understanding walketh uprightly."], [22, "Without counsel purposes are disappointed: but in the multitude of counsellors they are established."], [23, "A man hath joy by the answer of his mouth: and a word spoken in due season, how good is it!"], [24, "The way of life is above to the wise, that he may depart from hell beneath."], [25, "The LORD will destroy the house of the proud: but he will establish the border of the widow."], [26, "The thoughts of the wicked are an abomination to the LORD: but the words of the pure are pleasant words."], [27, "He that is greedy of gain troubleth his own house; but he that hateth gifts shall live."], [28, "The heart of the righteous studieth to answer: but the mouth of the wicked poureth out evil things."], [29, "The LORD is far from the wicked: but he heareth the prayer of the righteous."], [30, "The light of the eyes rejoiceth the heart: and a good report maketh the bones fat."], [31, "The ear that heareth the reproof of life abideth among the wise."], [32, "He that refuseth instruction despiseth his own soul: but he that heareth reproof getteth understanding."], [33, "The fear of the LORD is the instruction of wisdom; and before honour is humility."]], "Proverbs 30": [[1, "The words of Agur the son of Jakeh, even the prophecy: the man spake unto Ithiel, even unto Ithiel and Ucal,"], [2, "Surely I am more brutish than any man, and have not the understanding of a man."], [3, "I neither learned wisdom, nor have the knowledge of the holy."], [4, "Who hath ascended up into heaven, or descended? who hath gathered the wind in his fists? who hath bound the waters in a garment? who hath established all the ends of the earth? what is his name, and what is his son’s name, if thou canst tell?"], [5, "Every word of God is pure: he is a shield unto them that put their trust in him."], [6, "Add thou not unto his words, lest he reprove thee, and thou be found a liar."], [7, "Two things have I required of thee; deny me them not before I die:"], [8, "Remove far from me vanity and lies: give me neither poverty nor riches; feed me with food convenient for me:"], [9, "Lest I be full, and deny thee, and say, Who is the LORD? or lest I be poor, and steal, and take the name of my God in vain."], [10, "Accuse not a servant unto his master, lest he curse thee, and thou be found guilty."], [11, "There is a generation that curseth their father, and doth not bless their mother."], [12, "There is a generation that are pure in their own eyes, and yet is not washed from their filthiness."], [13, "There is a generation, O how lofty are their eyes! and their eyelids are lifted up."], [14, "There is a generation, whose teeth are as swords, and their jaw teeth as knives, to devour the poor from off the earth, and the needy from among men."], [15, "The horseleach hath two daughters, crying, Give, give. There are three things that are never satisfied, yea, four things say not, It is enough:"], [16, "The grave; and the barren womb; the earth that is not filled with water; and the fire that saith not, It is enough."], [17, "The eye that mocketh at his father, and despiseth to obey his mother, the ravens of the valley shall pick it out, and the young eagles shall eat it."], [18, "There be three things which are too wonderful for me, yea, four which I know not:"], [19, "The way of an eagle in the air; the way of a serpent upon a rock; the way of a ship in the midst of the sea; and the way of a man with a maid."], [20, "Such is the way of an adulterous woman; she eateth, and wipeth her mouth, and saith, I have done no wickedness."], [21, "For three things the earth is disquieted, and for four which it cannot bear:"], [22, "For a servant when he reigneth; and a fool when he is filled with meat;"], [23, "For an odious woman when she is married; and an handmaid that is heir to her mistress."], [24, "There be four things which are little upon the earth, but they are exceeding wise:"], [25, "The ants are a people not strong, yet they prepare their meat in the summer;"], [26, "The conies are but a feeble folk, yet make they their houses in the rocks;"], [27, "The locusts have no king, yet go they forth all of them by bands;"], [28, "The spider taketh hold with her hands, and is in kings’ palaces."], [29, "There be three things which go well, yea, four are comely in going:"], [30, "A lion which is strongest among beasts, and turneth not away for any;"], [31, "A greyhound; an he goat also; and a king, against whom there is no rising up."], [32, "If thou hast done foolishly in lifting up thyself, or if thou hast thought evil, lay thine hand upon thy mouth."], [33, "Surely the churning of milk bringeth forth butter, and the wringing of the nose bringeth forth blood: so the forcing of wrath bringeth forth strife."]], "Matthew 13": [[1, "The same day went Jesus out of the house, and sat by the sea side."], [2, "And great multitudes were gathered together unto him, so that he went into a ship, and sat; and the whole multitude stood on the shore."], [3, "And he spake many things unto them in parables, saying, Behold, a sower went forth to sow;"], [4, "And when he sowed, some seeds fell by the way side, and the fowls came and devoured them up:"], [5, "Some fell upon stony places, where they had not much earth: and forthwith they sprung up, because they had no deepness of earth:"], [6, "And when the sun was up, they were scorched; and because they had no root, they withered away."], [7, "And some fell among thorns; and the thorns sprung up, and choked them:"], [8, "But other fell into good ground, and brought forth fruit, some an hundredfold, some sixtyfold, some thirtyfold."], [9, "Who hath ears to hear, let him hear."], [10, "And the disciples came, and said unto him, Why speakest thou unto them in parables?"], [11, "He answered and said unto them, Because it is given unto you to know the mysteries of the kingdom of heaven, but to them it is not given."], [12, "For whosoever hath, to him shall be given, and he shall have more abundance: but whosoever hath not, from him shall be taken away even that he hath."], [13, "Therefore speak I to them in parables: because they seeing see not; and hearing they hear not, neither do they understand."], [14, "And in them is fulfilled the prophecy of Esaias, which saith, By hearing ye shall hear, and shall not understand; and seeing ye shall see, and shall not perceive:"], [15, "For this people’s heart is waxed gross, and their ears are dull of hearing, and their eyes they have closed; lest at any time they should see with their eyes and hear with their ears, and should understand with their heart, and should be converted, and I should heal them."], [16, "But blessed are your eyes, for they see: and your ears, for they hear."], [17, "For verily I say unto you, That many prophets and righteous men have desired to see those things which ye see, and have not seen them; and to hear those things which ye hear, and have not heard them."], [18, "Hear ye therefore the parable of the sower."], [19, "When any one heareth the word of the kingdom, and understandeth it not, then cometh the wicked one, and catcheth away that which was sown in his heart. This is he which received seed by the way side."], [20, "But he that received the seed into stony places, the same is he that heareth the word, and anon with joy receiveth it;"], [21, "Yet hath he not root in himself, but dureth for a while: for when tribulation or persecution ariseth because of the word, by and by he is offended."], [22, "He also that received seed among the thorns is he that heareth the word; and the care of this world, and the deceitfulness of riches, choke the word, and he becometh unfruitful."], [23, "But he that received seed into the good ground is he that heareth the word, and understandeth it; which also beareth fruit, and bringeth forth, some an hundredfold, some sixty, some thirty."], [24, "Another parable put he forth unto them, saying, The kingdom of heaven is likened unto a man which sowed good seed in his field:"], [25, "But while men slept, his enemy came and sowed tares among the wheat, and went his way."], [26, "But when the blade was sprung up, and brought forth fruit, then appeared the tares also."], [27, "So the servants of the householder came and said unto him, Sir, didst not thou sow good seed in thy field? from whence then hath it tares?"], [28, "He said unto them, An enemy hath done this. The servants said unto him, Wilt thou then that we go and gather them up?"], [29, "But he said, Nay; lest while ye gather up the tares, ye root up also the wheat with them."], [30, "Let both grow together until the harvest: and in the time of harvest I will say to the reapers, Gather ye together first the tares, and bind them in bundles to burn them: but gather the wheat into my barn."], [31, "Another parable put he forth unto them, saying, The kingdom of heaven is like to a grain of mustard seed, which a man took, and sowed in his field:"], [32, "Which indeed is the least of all seeds: but when it is grown, it is the greatest among herbs, and becometh a tree, so that the birds of the air come and lodge in the branches thereof."], [33, "Another parable spake he unto them; The kingdom of heaven is like unto leaven, which a woman took, and hid in three measures of meal, till the whole was leavened."], [34, "All these things spake Jesus unto the multitude in parables; and without a parable spake he not unto them:"], [35, "That it might be fulfilled which was spoken by the prophet, saying, I will open my mouth in parables; I will utter things which have been kept secret from the foundation of the world."], [36, "Then Jesus sent the multitude away, and went into the house: and his disciples came unto him, saying, Declare unto us the parable of the tares of the field."], [37, "He answered and said unto them, He that soweth the good seed is the Son of man;"], [38, "The field is the world; the good seed are the children of the kingdom; but the tares are the children of the wicked one;"], [39, "The enemy that sowed them is the devil; the harvest is the end of the world; and the reapers are the angels."], [40, "As therefore the tares are gathered and burned in the fire; so shall it be in the end of this world."], [41, "The Son of man shall send forth his angels, and they shall gather out of his kingdom all things that offend, and them which do iniquity;"], [42, "And shall cast them into a furnace of fire: there shall be wailing and gnashing of teeth."], [43, "Then shall the righteous shine forth as the sun in the kingdom of their Father. Who hath ears to hear, let him hear."], [44, "Again, the kingdom of heaven is like unto treasure hid in a field; the which when a man hath found, he hideth, and for joy thereof goeth and selleth all that he hath, and buyeth that field."], [45, "Again, the kingdom of heaven is like unto a merchant man, seeking goodly pearls:"], [46, "Who, when he had found one pearl of great price, went and sold all that he had, and bought it."], [47, "Again, the kingdom of heaven is like unto a net, that was cast into the sea, and gathered of every kind:"], [48, "Which, when it was full, they drew to shore, and sat down, and gathered the good into vessels, but cast the bad away."], [49, "So shall it be at the end of the world: the angels shall come forth, and sever the wicked from among the just,"], [50, "And shall cast them into the furnace of fire: there shall be wailing and gnashing of teeth."], [51, "Jesus saith unto them, Have ye understood all these things? They say unto him, Yea, Lord."], [52, "Then said he unto them, Therefore every scribe which is instructed unto the kingdom of heaven is like unto a man that is an householder, which bringeth forth out of his treasure things new and old."], [53, "And it came to pass, that when Jesus had finished these parables, he departed thence."], [54, "And when he was come into his own country, he taught them in their synagogue, insomuch that they were astonished, and said, Whence hath this man this wisdom, and these mighty works?"], [55, "Is not this the carpenter’s son? is not his mother called Mary? and his brethren, James, and Joses, and Simon, and Judas?"], [56, "And his sisters, are they not all with us? Whence then hath this man all these things?"], [57, "And they were offended in him. But Jesus said unto them, A prophet is not without honour, save in his own country, and in his own house."], [58, "And he did not many mighty works there because of their unbelief."]], "John 16": [[1, "These things have I spoken unto you, that ye should not be offended."], [2, "They shall put you out of the synagogues: yea, the time cometh, that whosoever killeth you will think that he doeth God service."], [3, "And these things will they do unto you, because they have not known the Father, nor me."], [4, "But these things have I told you, that when the time shall come, ye may remember that I told you of them. And these things I said not unto you at the beginning, because I was with you."], [5, "But now I go my way to him that sent me; and none of you asketh me, Whither goest thou?"], [6, "But because I have said these things unto you, sorrow hath filled your heart."], [7, "Nevertheless I tell you the truth; It is expedient for you that I go away: for if I go not away, the Comforter will not come unto you; but if I depart, I will send him unto you."], [8, "And when he is come, he will reprove the world of sin, and of righteousness, and of judgment:"], [9, "Of sin, because they believe not on me;"], [10, "Of righteousness, because I go to my Father, and ye see me no more;"], [11, "Of judgment, because the prince of this world is judged."], [12, "I have yet many things to say unto you, but ye cannot bear them now."], [13, "Howbeit when he, the Spirit of truth, is come, he will guide you into all truth: for he shall not speak of himself; but whatsoever he shall hear, that shall he speak: and he will shew you things to come."], [14, "He shall glorify me: for he shall receive of mine, and shall shew it unto you."], [15, "All things that the Father hath are mine: therefore said I, that he shall take of mine, and shall shew it unto you."], [16, "A little while, and ye shall not see me: and again, a little while, and ye shall see me, because I go to the Father."], [17, "Then said some of his disciples among themselves, What is this that he saith unto us, A little while, and ye shall not see me: and again, a little while, and ye shall see me: and, Because I go to the Father?"], [18, "They said therefore, What is this that he saith, A little while? we cannot tell what he saith."], [19, "Now Jesus knew that they were desirous to ask him, and said unto them, Do ye enquire among yourselves of that I said, A little while, and ye shall not see me: and again, a little while, and ye shall see me?"], [20, "Verily, verily, I say unto you, That ye shall weep and lament, but the world shall rejoice: and ye shall be sorrowful, but your sorrow shall be turned into joy."], [21, "A woman when she is in travail hath sorrow, because her hour is come: but as soon as she is delivered of the child, she remembereth no more the anguish, for joy that a man is born into the world."], [22, "And ye now therefore have sorrow: but I will see you again, and your heart shall rejoice, and your joy no man taketh from you."], [23, "And in that day ye shall ask me nothing. Verily, verily, I say unto you, Whatsoever ye shall ask the Father in my name, he will give it you."], [24, "Hitherto have ye asked nothing in my name: ask, and ye shall receive, that your joy may be full."], [25, "These things have I spoken unto you in proverbs: but the time cometh, when I shall no more speak unto you in proverbs, but I shall shew you plainly of the Father."], [26, "At that day ye shall ask in my name: and I say not unto you, that I will pray the Father for you:"], [27, "For the Father himself loveth you, because ye have loved me, and have believed that I came out from God."], [28, "I came forth from the Father, and am come into the world: again, I leave the world, and go to the Father."], [29, "His disciples said unto him, Lo, now speakest thou plainly, and speakest no proverb."], [30, "Now are we sure that thou knowest all things, and needest not that any man should ask thee: by this we believe that thou camest forth from God."], [31, "Jesus answered them, Do ye now believe?"], [32, "Behold, the hour cometh, yea, is now come, that ye shall be scattered, every man to his own, and shall leave me alone: and yet I am not alone, because the Father is with me."], [33, "These things I have spoken unto you, that in me ye might have peace. In the world ye shall have tribulation: but be of good cheer; I have overcome the world."]], "Mark 4": [[1, "And he began again to teach by the sea side: and there was gathered unto him a great multitude, so that he entered into a ship, and sat in the sea; and the whole multitude was by the sea on the land."], [2, "And he taught them many things by parables, and said unto them in his doctrine,"], [3, "Hearken; Behold, there went out a sower to sow:"], [4, "And it came to pass, as he sowed, some fell by the way side, and the fowls of the air came and devoured it up."], [5, "And some fell on stony ground, where it had not much earth; and immediately it sprang up, because it had no depth of earth:"], [6, "But when the sun was up, it was scorched; and because it had no root, it withered away."], [7, "And some fell among thorns, and the thorns grew up, and choked it, and it yielded no fruit."], [8, "And other fell on good ground, and did yield fruit that sprang up and increased; and brought forth, some thirty, and some sixty, and some an hundred."], [9, "And he said unto them, He that hath ears to hear, let him hear."], [10, "And when he was alone, they that were about him with the twelve asked of him the parable."], [11, "And he said unto them, Unto you it is given to know the mystery of the kingdom of God: but unto them that are without, all these things are done in parables:"], [12, "That seeing they may see, and not perceive; and hearing they may hear, and not understand; lest at any time they should be converted, and their sins should be forgiven them."], [13, "And he said unto them, Know ye not this parable? and how then will ye know all parables?"], [14, "The sower soweth the word."], [15, "And these are they by the way side, where the word is sown; but when they have heard, Satan cometh immediately, and taketh away the word that was sown in their hearts."], [16, "And these are they likewise which are sown on stony ground; who, when they have heard the word, immediately receive it with gladness;"], [17, "And have no root in themselves, and so endure but for a time: afterward, when affliction or persecution ariseth for the word’s sake, immediately they are offended."], [18, "And these are they which are sown among thorns; such as hear the word,"], [19, "And the cares of this world, and the deceitfulness of riches, and the lusts of other things entering in, choke the word, and it becometh unfruitful."], [20, "And these are they which are sown on good ground; such as hear the word, and receive it, and bring forth fruit, some thirtyfold, some sixty, and some an hundred."], [21, "And he said unto them, Is a candle brought to be put under a bushel, or under a bed? and not to be set on a candlestick?"], [22, "For there is nothing hid, which shall not be manifested; neither was any thing kept secret, but that it should come abroad."], [23, "If any man have ears to hear, let him hear."], [24, "And he said unto them, Take heed what ye hear: with what measure ye mete, it shall be measured to you: and unto you that hear shall more be given."], [25, "For he that hath, to him shall be given: and he that hath not, from him shall be taken even that which he hath."], [26, "And he said, So is the kingdom of God, as if a man should cast seed into the ground;"], [27, "And should sleep, and rise night and day, and the seed should spring and grow up, he knoweth not how."], [28, "For the earth bringeth forth fruit of herself; first the blade, then the ear, after that the full corn in the ear."], [29, "But when the fruit is brought forth, immediately he putteth in the sickle, because the harvest is come."], [30, "And he said, Whereunto shall we liken the kingdom of God? or with what comparison shall we compare it?"], [31, "It is like a grain of mustard seed, which, when it is sown in the earth, is less than all the seeds that be in the earth:"], [32, "But when it is sown, it groweth up, and becometh greater than all herbs, and shooteth out great branches; so that the fowls of the air may lodge under the shadow of it."], [33, "And with many such parables spake he the word unto them, as they were able to hear it."], [34, "But without a parable spake he not unto them: and when they were alone, he expounded all things to his disciples."], [35, "And the same day, when the even was come, he saith unto them, Let us pass over unto the other side."], [36, "And when they had sent away the multitude, they took him even as he was in the ship. And there were also with him other little ships."], [37, "And there arose a great storm of wind, and the waves beat into the ship, so that it was now full."], [38, "And he was in the hinder part of the ship, asleep on a pillow: and they awake him, and say unto him, Master, carest thou not that we perish?"], [39, "And he arose, and rebuked the wind, and said unto the sea, Peace, be still. And the wind ceased, and there was a great calm."], [40, "And he said unto them, Why are ye so fearful? how is it that ye have no faith?"], [41, "And they feared exceedingly, and said one to another, What manner of man is this, that even the wind and the sea obey him?"]], "Luke 24": [[1, "Now upon the first day of the week, very early in the morning, they came unto the sepulchre, bringing the spices which they had prepared, and certain others with them."], [2, "And they found the stone rolled away from the sepulchre."], [3, "And they entered in, and found not the body of the Lord Jesus."], [4, "And it came to pass, as they were much perplexed thereabout, behold, two men stood by them in shining garments:"], [5, "And as they were afraid, and bowed down their faces to the earth, they said unto them, Why seek ye the living among the dead?"], [6, "He is not here, but is risen: remember how he spake unto you when he was yet in Galilee,"], [7, "Saying, The Son of man must be delivered into the hands of sinful men, and be crucified, and the third day rise again."], [8, "And they remembered his words,"], [9, "And returned from the sepulchre, and told all these things unto the eleven, and to all the rest."], [10, "It was Mary Magdalene, and Joanna, and Mary the mother of James, and other women that were with them, which told these things unto the apostles."], [11, "And their words seemed to them as idle tales, and they believed them not."], [12, "Then arose Peter, and ran unto the sepulchre; and stooping down, he beheld the linen clothes laid by themselves, and departed, wondering in himself at that which was come to pass."], [13, "And, behold, two of them went that same day to a village called Emmaus, which was from Jerusalem about threescore furlongs."], [14, "And they talked together of all these things which had happened."], [15, "And it came to pass, that, while they communed together and reasoned, Jesus himself drew near, and went with them."], [16, "But their eyes were holden that they should not know him."], [17, "And he said unto them, What manner of communications are these that ye have one to another, as ye walk, and are sad?"], [18, "And the one of them, whose name was Cleopas, answering said unto him, Art thou only a stranger in Jerusalem, and hast not known the things which are come to pass there in these days?"], [19, "And he said unto them, What things? And they said unto him, Concerning Jesus of Nazareth, which was a prophet mighty in deed and word before God and all the people:"], [20, "And how the chief priests and our rulers delivered him to be condemned to death, and have crucified him."], [21, "But we trusted that it had been he which should have redeemed Israel: and beside all this, to day is the third day since these things were done."], [22, "Yea, and certain women also of our company made us astonished, which were early at the sepulchre;"], [23, "And when they found not his body, they came, saying, that they had also seen a vision of angels, which said that he was alive."], [24, "And certain of them which were with us went to the sepulchre, and found it even so as the women had said: but him they saw not."], [25, "Then he said unto them, O fools, and slow of heart to believe all that the prophets have spoken:"], [26, "Ought not Christ to have suffered these things, and to enter into his glory?"], [27, "And beginning at Moses and all the prophets, he expounded unto them in all the scriptures the things concerning himself."], [28, "And they drew nigh unto the village, whither they went: and he made as though he would have gone further."], [29, "But they constrained him, saying, Abide with us: for it is toward evening, and the day is far spent. And he went in to tarry with them."], [30, "And it came to pass, as he sat at meat with them, he took bread, and blessed it, and brake, and gave to them."], [31, "And their eyes were opened, and they knew him; and he vanished out of their sight."], [32, "And they said one to another, Did not our heart burn within us, while he talked with us by the way, and while he opened to us the scriptures?"], [33, "And they rose up the same hour, and returned to Jerusalem, and found the eleven gathered together, and them that were with them,"], [34, "Saying, The Lord is risen indeed, and hath appeared to Simon."], [35, "And they told what things were done in the way, and how he was known of them in breaking of bread."], [36, "And as they thus spake, Jesus himself stood in the midst of them, and saith unto them, Peace be unto you."], [37, "But they were terrified and affrighted, and supposed that they had seen a spirit."], [38, "And he said unto them, Why are ye troubled? and why do thoughts arise in your hearts?"], [39, "Behold my hands and my feet, that it is I myself: handle me, and see; for a spirit hath not flesh and bones, as ye see me have."], [40, "And when he had thus spoken, he shewed them his hands and his feet."], [41, "And while they yet believed not for joy, and wondered, he said unto them, Have ye here any meat?"], [42, "And they gave him a piece of a broiled fish, and of an honeycomb."], [43, "And he took it, and did eat before them."], [44, "And he said unto them, These are the words which I spake unto you, while I was yet with you, that all things must be fulfilled, which were written in the law of Moses, and in the prophets, and in the psalms, concerning me."], [45, "Then opened he their understanding, that they might understand the scriptures,"], [46, "And said unto them, Thus it is written, and thus it behoved Christ to suffer, and to rise from the dead the third day:"], [47, "And that repentance and remission of sins should be preached in his name among all nations, beginning at Jerusalem."], [48, "And ye are witnesses of these things."], [49, "And, behold, I send the promise of my Father upon you: but tarry ye in the city of Jerusalem, until ye be endued with power from on high."], [50, "And he led them out as far as to Bethany, and he lifted up his hands, and blessed them."], [51, "And it came to pass, while he blessed them, he was parted from them, and carried up into heaven."], [52, "And they worshipped him, and returned to Jerusalem with great joy:"], [53, "And were continually in the temple, praising and blessing God. Amen."]], "1 Corinthians 10": [[1, "Moreover, brethren, I would not that ye should be ignorant, how that all our fathers were under the cloud, and all passed through the sea;"], [2, "And were all baptized unto Moses in the cloud and in the sea;"], [3, "And did all eat the same spiritual meat;"], [4, "And did all drink the same spiritual drink: for they drank of that spiritual Rock that followed them: and that Rock was Christ."], [5, "But with many of them God was not well pleased: for they were overthrown in the wilderness."], [6, "Now these things were our examples, to the intent we should not lust after evil things, as they also lusted."], [7, "Neither be ye idolaters, as were some of them; as it is written, The people sat down to eat and drink, and rose up to play."], [8, "Neither let us commit fornication, as some of them committed, and fell in one day three and twenty thousand."], [9, "Neither let us tempt Christ, as some of them also tempted, and were destroyed of serpents."], [10, "Neither murmur ye, as some of them also murmured, and were destroyed of the destroyer."], [11, "Now all these things happened unto them for ensamples: and they are written for our admonition, upon whom the ends of the world are come."], [12, "Wherefore let him that thinketh he standeth take heed lest he fall."], [13, "There hath no temptation taken you but such as is common to man: but God is faithful, who will not suffer you to be tempted above that ye are able; but will with the temptation also make a way to escape, that ye may be able to bear it."], [14, "Wherefore, my dearly beloved, flee from idolatry."], [15, "I speak as to wise men; judge ye what I say."], [16, "The cup of blessing which we bless, is it not the communion of the blood of Christ? The bread which we break, is it not the communion of the body of Christ?"], [17, "For we being many are one bread, and one body: for we are all partakers of that one bread."], [18, "Behold Israel after the flesh: are not they which eat of the sacrifices partakers of the altar?"], [19, "What say I then? that the idol is any thing, or that which is offered in sacrifice to idols is any thing?"], [20, "But I say, that the things which the Gentiles sacrifice, they sacrifice to devils, and not to God: and I would not that ye should have fellowship with devils."], [21, "Ye cannot drink the cup of the Lord, and the cup of devils: ye cannot be partakers of the Lord’s table, and of the table of devils."], [22, "Do we provoke the Lord to jealousy? are we stronger than he?"], [23, "All things are lawful for me, but all things are not expedient: all things are lawful for me, but all things edify not."], [24, "Let no man seek his own, but every man another’s wealth."], [25, "Whatsoever is sold in the shambles, that eat, asking no question for conscience sake:"], [26, "For the earth is the Lord’s, and the fulness thereof."], [27, "If any of them that believe not bid you to a feast, and ye be disposed to go; whatsoever is set before you, eat, asking no question for conscience sake."], [28, "But if any man say unto you, This is offered in sacrifice unto idols, eat not for his sake that shewed it, and for conscience sake: for the earth is the Lord’s, and the fulness thereof:"], [29, "Conscience, I say, not thine own, but of the other: for why is my liberty judged of another man’s conscience?"], [30, "For if I by grace be a partaker, why am I evil spoken of for that for which I give thanks?"], [31, "Whether therefore ye eat, or drink, or whatsoever ye do, do all to the glory of God."], [32, "Give none offence, neither to the Jews, nor to the Gentiles, nor to the church of God:"], [33, "Even as I please all men in all things, not seeking mine own profit, but the profit of many, that they may be saved."]]}};
+
+// Quotations from other writings (say: in the deck): their words open like a verse.
+const Q = {};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b && b.dataset.q) {
+    const q = Q[b.dataset.q];
+    verseTitle.textContent = q ? q.t : b.textContent.trim();
+    verseBody.innerHTML = q ? q.h : "<p>Not loaded.</p>";
+    verseDlg.showModal();
+    verseBody.scrollTop = 0;
+    return;
+  }
+  if (b) {
+    const keys = b.dataset.v;
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
