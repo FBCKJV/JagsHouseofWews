@@ -52,8 +52,8 @@ in the repo, without publishing artifacts or building a separate page:
   has `context: <its chapter>` at the top (`context: Psalm 51`; `context: yes` when it walks a whole book, as the John
   deck does). C or the Chapter button then opens the whole chapter of the slide's passage at the right, its verses lit,
   with the deck's own chapter as a second tab on cross-reference slides. The builder takes each slide's chapter from
-  its `scripture:`, `big:`, `fig:` and `xr:` references, so nothing else is written by hand. Tried first on Psalm 51
-  and the John misunderstanding-motif deck (November 2026).
+  its `scripture:`, `big:`, `fig:` and `xr:` references, so nothing else is written by hand. On so far: Genesis,
+  Psalms (22, 50, 51, David's Flight) and the John misunderstanding-motif deck.
 - **A class keeps one pattern.** Every deck in a series follows the pattern of its first decks:
   - *Genesis class* (Genesis 1–5 and 8 on): title slide with overline "Young Adult Sunday School • Genesis Series",
     heading "Genesis N: Title", a `sub:` of themes joined by " • ", and the chapter as its `refs:`. Then the whole
