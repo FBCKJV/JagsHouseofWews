@@ -37,8 +37,9 @@ earlier one-off studies, which the series will replace as the chapter's main stu
   deck, Psalms 22 and 50, and David's Flight 1-3 (Nov 2026).
 - [ ] **Chapter panel on the rest**, a group at a time: Job, then John 6 and John I Am, then Daniel. Romans last
   (a closed lesson plan, already taught).
-- [ ] **Psalms decks from the series studies**, in small groups so each session stays manageable. Done: 22, 50, 51,
-  David's Flight (34, 52, 54, 56, 57, 59), Psalms 1-5, Psalms 6-8 and Psalms 9-10 (a deck a class night: 9 and
-  10 are a pair), Psalms 11-12, 13-15, 16-17, 18-20, 21-25, 26-30, 31-32, 33-35, 36-37, 38-40, 41-43, 44, 45, 46-47, 48 and 49 (50 and 51 were done before). Next groups, in order: 53-58, 60-63, skipping those done (52, 54, 56, 57 and 59 are in David's Flight).
+- [x] **Psalms decks from the series studies.** Every series study from Psalm 1 to Psalm 63 has slides (Nov 2026):
+  Psalms 1-5, 6-8, 9-10, 11-12, 13-15, 16-17, 18-20, 21-25, 26-30, 31-32, 33-35, 36-37, 38-40, 41-43, 44, 45, 46-47,
+  48, 49, 50, 51, 53-55, 58-60, 61-63, 22, and David's Flight (34, 52, 54, 56, 57, 59). As new daily studies come in,
+  add each new group of psalms the same way.
 - [x] **Psalm 8: two Christmas posts filed with it.** Left out of the deck, at the author's word (Nov 2026). Posts 15452 (Psalm 95:6-7) and 15454 (Matthew 1:18-25), from
   23 Dec 2024, show with the Psalm 8 study in the app.

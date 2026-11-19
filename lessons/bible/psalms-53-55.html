@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Psalms 53–55: The Fool, and Oh That I Had Wings like a Dove</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Psalms 53 and 55 in the King James Bible: the fool hath said in his heart, There is no God, the reprobate mind and the law written in the heart, and the betrayal of a familiar friend, cast thy burden upon the LORD, from the Psalms series studies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body .say-cite{font-size:.85rem;font-style:italic;color:var(--vellum-dim);border-top:1px solid var(--rule);padding-top:.6rem;margin-top:1rem}
+.ref.say{border-bottom-style:dashed}
+.ref.say::before{content:"\201C";margin-right:.15em}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Psalms 53–55" data-ctx="">
+  <div class="page title-page">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalms 53–55</h1>
+    <p class="sub">The fool hath said in his heart • Oh that I had wings like a dove • Cast thy burden upon the LORD</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 53:1">Psalm 53:1</button><button class="ref" data-v="Psalms 55:6">Psalm 55:6</button><button class="ref" data-v="Psalms 55:22">Psalm 55:22</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse. Press C for the whole chapter.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Psalm 53" data-title="Psalm 53" data-ctx="">
+  <div class="page title-page later">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalm 53</h1>
+    <p class="sub">The fool hath said in his heart, There is no God</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 53:1">Psalm 53:1</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Psalm 53" data-title="The nature of the atheist" data-ctx="Psalms 53:1">
+  <div class="page">
+    <div class="kicker">Psalm 53 · The fool</div>
+    <h2>The nature of the atheist</h2>
+    <blockquote class="big-verse"><mark>The fool hath said in his heart, There is no God</mark>. Corrupt are they, and have done abominable iniquity: there is none that doeth good.<cite>Psalm 53:1</cite></blockquote>
+    <p>Psalm 53 opens with one of the clearest and concise views of the nature of the atheist.</p>
+    <p>While it is, in context, about the man who denies God to do evil, lacking fear in Him who he cannot see, and so, unchecked and without fear proceeds to work iniquity, that is ultimately the driving force behind so-called "intellectual atheism" as well. The danger of this delusion leading to reprobation is very real.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Psalm 53" data-title="Given over" data-ctx="Psalms 53:1">
+  <div class="page">
+    <div class="kicker">Psalm 53 · The reprobate mind</div>
+    <h2>Given over</h2>
+    <p>The brute beast of man, ignoring the evidence of God; His wrath revealed from Heaven against the wicked, His mercy upon the faithful, the very creation that proclaims His power and glory, will engage in all manner of evil, justified within his desperately wicked heart, until God gives him up to his vile affections. Searing his conscience, giving him over to a reprobate mind, and he is filled with all unrighteousness.</p>
+    <p>Taken to the logical end, the fool who began by denying the existence of God, will ultimately become rejected utterly if they continue in their error.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Psalm 53" data-title="Without excuse" data-ctx="Romans 1:19-24">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 53:1</div>
+    <h2>Without excuse</h2>
+    <blockquote class="scripture" style="font-style:italic">Because that which may be known of God is manifest in them; for God hath shewed it unto them. For the invisible things of him from the creation of the world are clearly seen, being understood by the things that are made, even his eternal power and Godhead; <mark>so that they are without excuse</mark>: Because that, when they knew God, they glorified him not as God, neither were thankful; but became vain in their imaginations, and their foolish heart was darkened. <mark>Professing themselves to be wise, they became fools</mark>, And changed the glory of the uncorruptible God into an image made like to corruptible man, and to birds, and fourfooted beasts, and creeping things. Wherefore God also gave them up to uncleanness through the lusts of their own hearts, to dishonour their own bodies between themselves:<cite>Romans 1:19-24</cite></blockquote>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Psalm 53" data-title="There is none righteous" data-ctx="Romans 3:10-12">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 53:1–3</div>
+    <h2>There is none righteous</h2>
+    <p>But the general meaning here in Psalm 53 can apply to all men who don’t know or understand the truth. Well before their being made twice-dead. And it is a warning that can still prick at the heart of the lost, while there is yet time.</p>
+    <p>It is Paul’s paraphrase of this Psalm that we use when we give the gospel to people;</p>
+    <blockquote class="scripture" style="font-style:italic">As it is written, <mark>There is none righteous, no, not one</mark>: There is none that understandeth, there is none that seeketh after God. They are all gone out of the way, they are together become unprofitable; there is none that doeth good, no, not one.<cite>Romans 3:10-12</cite></blockquote>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Psalm 53" data-title="None that doeth good" data-ctx="Psalms 53:2-3">
+  <div class="page">
+    <div class="kicker">Psalm 53 · Every one of them is gone back</div>
+    <h2>None that doeth good</h2>
+    <blockquote class="scripture" style="font-style:italic">God looked down from heaven upon the children of men, to see if there were any that did understand, that did seek God. Every one of them is gone back: they are altogether become filthy; <mark>there is none that doeth good, no, not one</mark>.<cite>Psalm 53:2-3</cite></blockquote>
+    <p>This truth, that we are all sinners, is often sufficient to bring a person to at least hear the salvation plan. But first they have to acknowledge that God is.</p>
+    <p>Usually, if a person admits to the reality of God and does not try to excuse away His existence, getting them to admit they are a sinner is easy. They won’t disagree with the scripture when it says Every one of them is gone back: they are altogether become filthy; there is none that doeth good, no, not one.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Psalm 53" data-title="The law written in their hearts" data-ctx="Romans 2:14-15">
+  <div class="page">
+    <div class="kicker">Application • The atheist</div>
+    <h2>The law written in their hearts</h2>
+    <p>But the fool who denies God will balk at that characterization. The atheist will claim that they do not need fear of God to "do good." That they keep the commandment to love their neighbors, and reject that they are sinners.</p>
+    <p>Of course this is delusional. But even on the surface level, they are acknowledging a truth of the God who they reject existing, a morality that comes explicitly from Him, from the law written in our hearts, by the rebuke of the Spirit those who aren’t reprobate, feel.</p>
+    <blockquote class="scripture" style="font-style:italic">For when the Gentiles, which have not the law, do by nature the things contained in the law, these, having not the law, are a law unto themselves: Which shew <mark>the work of the law written in their hearts</mark>, their conscience also bearing witness, and their thoughts the mean while accusing or else excusing one another;)<cite>Romans 2:14-15</cite></blockquote>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Psalm 53" data-title="Fish who deny they are wet" data-ctx="Romans 2:1-3">
+  <div class="page">
+    <div class="kicker">Application • The atheist</div>
+    <h2>Fish who deny they are wet</h2>
+    <p>They are fish who deny they are wet.</p>
+    <p>And their judgment against others, accusing and excusing the sins of other men, betrays their own heart that denies the truth, by accepting God’s work in them, and His judgement.</p>
+    <blockquote class="scripture" style="font-style:italic"><mark>Therefore thou art inexcusable, O man</mark>, whosoever thou art that judgest: for wherein thou judgest another, thou condemnest thyself; for thou that judgest doest the same things. But we are sure that the judgment of God is according to truth against them which commit such things. And thinkest thou this, O man, that judgest them which do such things, and doest the same, that thou shalt escape the judgment of God?<cite>Romans 2:1-3</cite></blockquote>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Psalm 53" data-title="Before it is too late" data-ctx="Romans 2:1-3">
+  <div class="page">
+    <div class="kicker">Application • The atheist</div>
+    <h2>Before it is too late</h2>
+    <p>This internal conflict between their wicked hearts and the conscience of the Spirit will often bring the fool, the "intellectual atheist," out of it. The cognitive dissonance will trigger repentance for many. There are great Christians who were once seduced by the foolishness of their heart into denying His truth. Professing themselves to be wise, they became fools, but in their foolishness, God’s word preached unto them triggers a change of heart, and an acceptance of the reality of God, before it is "too late, reprobate."</p>
+    <p>But for many, they seek to deny the conflict in their hearts, and they seek to cauterize their conscience, and not wishing to retain God in their knowledge, they prefer to believe a lie.</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Psalm 53" data-title="In great fear, where no fear was" data-ctx="Psalms 53:4-5">
+  <div class="page">
+    <div class="kicker">Psalm 53 · The workers of iniquity</div>
+    <h2>In great fear, where no fear was</h2>
+    <blockquote class="scripture" style="font-style:italic">Have the workers of iniquity no knowledge? who eat up my people as they eat bread: they have not called upon God. <mark>There were they in great fear, where no fear was</mark>: for God hath scattered the bones of him that encampeth against thee: thou hast put them to shame, because <mark>God hath despised them</mark>.<cite>Psalm 53:4-5</cite></blockquote>
+    <p>The reprobate lives in constant fear. They know the truth somewhere in themselves, but have built up strong walls against it, hardening their hearts and ultimately God hardens it completely. They live in constant fear, trapped in a fight or flight mode. And it leads them to do evermore wicked things, as God scatters their bones.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Psalm 53" data-title="Haters of God" data-ctx="Romans 1:29-32">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 53:4–5</div>
+    <h2>Haters of God</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>Being filled with all unrighteousness</mark>, fornication, wickedness, covetousness, maliciousness; full of envy, murder, debate, deceit, malignity; whisperers, Backbiters, haters of God, despiteful, proud, boasters, inventors of evil things, disobedient to parents, Without understanding, covenantbreakers, without natural affection, implacable, unmerciful: Who knowing the judgment of God, that they which commit such things are worthy of death, not only do the same, but have pleasure in them that do them.<cite>Romans 1:29-32</cite></blockquote>
+    <p>God hath despised them.</p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Psalm 53" data-title="Wise as serpents" data-ctx="Romans 1:29-32">
+  <div class="page">
+    <div class="kicker">Application • The reprobate</div>
+    <h2>Wise as serpents</h2>
+    <p>We may lament, as David does here, wondering Have the workers of iniquity no knowledge? Do they not understand how God is already judging them? We often cannot comprehend the unsaved person’s refusal to see the truth, let alone one given up and given over to a reprobate mind. Don’t they see the sudden destruction they are headed for?</p>
+    <p>But our inability to think like they do shouldn’t keep us from understanding they exist. We are to be wise as serpents, Jesus said. And so, like righteous Lot, we are vexed by their filthy conversation.</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Psalm 53" data-title="Even so, come, Lord Jesus" data-ctx="Psalms 53:6">
+  <div class="page">
+    <div class="kicker">Psalm 53 · The salvation of Israel</div>
+    <h2>Even so, come, Lord Jesus</h2>
+    <blockquote class="big-verse"><mark>Oh that the salvation of Israel were come out of Zion!</mark> When God bringeth back the captivity of his people, Jacob shall rejoice, and Israel shall be glad.<cite>Psalm 53:6</cite></blockquote>
+    <p>The prayer of David that the deliverer come, the day of the Lord, the judgment of God’s wrath upon a wicked world, is the same prayer we have today for the coming again of Christ. Thy Kingdom come. Even so, come, Lord Jesus.</p>
+    <p>He will deal with the tares and the goats and all the fools who have denied God in their hearts. Come quickly, Lord Jesus. Amen</p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Psalm 53" data-title="Psalm 53 and Psalm 14" data-ctx="Psalms 53:6">
+  <div class="page">
+    <div class="kicker">Psalm 53 · A note</div>
+    <h2>Psalm 53 and Psalm 14</h2>
+    <p>It should be noted that Psalm 53 directly mirrors Psalm 14, the major difference is the Lord vs God in its language, while the content is close to identical.</p>
+    <p>We can draw application from this, that the LORD is God and vice versa. The foolish idea some propose that there are different Gods in the Old Testament, can be debunked strictly from this minor distinction within the same language and theme.</p>
+    <p>But we can also draw out the importance of understanding the heart and mind of those that not only reject God’s judgment against their wicked deeds, but their delusional heart that denies He even exists, in order to give them excuse for their evil.</p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Psalm 54" data-title="Psalm 54" data-ctx="Psalms 53:6">
+  <div class="page title-page later">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalm 54</h1>
+    <p class="sub">When the Ziphims came and said to Saul, Doth not David hide himself with us? Psalm 54 is taught in The Psalms of David's Flight.</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 54:1">Psalm 54:1</button></div>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-davids-flight-3-the-hunted-king" target="_blank" rel="noopener">The Psalms of David's Flight, Part 3 ↗</a></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Psalm 55" data-title="Psalm 55" data-ctx="Psalms 53:6">
+  <div class="page title-page later">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalm 55</h1>
+    <p class="sub">The betrayal of a familiar friend</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 55:1">Psalm 55:1</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Psalm 55" data-title="Hide not thyself" data-ctx="Psalms 55:1-2">
+  <div class="page">
+    <div class="kicker">Psalm 55 · Give ear to my prayer</div>
+    <h2>Hide not thyself</h2>
+    <blockquote class="scripture" style="font-style:italic">Give ear to my prayer, O God; and <mark>hide not thyself from my supplication</mark>. Attend unto me, and hear me: I mourn in my complaint, and make a noise;<cite>Psalm 55:1-2</cite></blockquote>
+    <p>Psalm 55 is a Psalm of David, but it isn't given to us when or who it is about.</p>
+    <p>We can make a guess from the context that it may have been during the time of Absalom's rebellion, that perhaps the man David considered an equal, a guide and acquaintance, who gave the King sweet counsel, sage advice, and who accompanied David to the Tabernacle to praise God, was the royal advisor, Ahithophel. Ahithophel betrayed David, took up the seditious plans of the King's son, and after his betrayal, and having his advice ignored by Absalom, went home and hanged himself.</p>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Psalm 55" data-title="Ahithophel" data-ctx="2 Samuel 17:23">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 55:13</div>
+    <h2>Ahithophel</h2>
+    <blockquote class="big-verse">And when Ahithophel saw that his counsel was not followed, he saddled his ass, and arose, and gat him home to his house, to his city, and put his household in order, <mark>and hanged himself</mark>, and died, and was buried in the sepulchre of his father.<cite>2 Samuel 17:23</cite></blockquote>
+    <p>Sadly, for David, the number of betrayals and those who met terrible ends for it, are many. While it is debatable whom this particular Psalm is about, what is clearly shown in its verse is the pain, the sting of betrayal, lies against his character, and the resulting death and destruction that came about by these evil works.</p>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Psalm 55" data-title="I will hide mine eyes" data-ctx="Isaiah 1:15">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 55:1</div>
+    <h2>I will hide mine eyes</h2>
+    <p>He opens, as he often does, petitioning God to hear his prayer. To not hide Himself from his supplication. We know the omnipotence and omniscience of God. His understanding is not bound by time or space. There is nothing He doesn't see or hear.</p>
+    <p>But we also know, at times and for His purpose, God turns a blind eye and a deaf ear to those under His judgement or caught in tribulation that serves a larger purpose.</p>
+    <p>God tells the people this, plainly;</p>
+    <blockquote class="big-verse">And when ye spread forth your hands, <mark>I will hide mine eyes from you</mark>: yea, when ye make many prayers, I will not hear: your hands are full of blood.<cite>Isaiah 1:15</cite></blockquote>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Psalm 55" data-title="A cloud" data-ctx="Lamentations 3:44">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 55:1</div>
+    <h2>A cloud</h2>
+    <p>And the people recognize its truth;</p>
+    <blockquote class="big-verse">Thou hast covered thyself with a cloud, that our prayer should not pass through.<cite>Lamentations 3:44</cite></blockquote>
+    <p>It can happen. The judgment of the Lord may be upon someone. But it also might simply feel that way in the midst of trouble. We may feel God is absent, His hand removed from our lives, tossed in the turmoil of the moment.</p>
+    <p>It is wise to not assume to know the mind of God, while seeking His involvement in the situation you're in. Like a subject going before the throne, David's petition is formal and proper, and without presumption.</p>
+    <p>That shows a healthy fear of the Lord.</p>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Psalm 55" data-title="They cast iniquity upon me" data-ctx="Psalms 55:3-5">
+  <div class="page">
+    <div class="kicker">Psalm 55 · The voice of the enemy</div>
+    <h2>They cast iniquity upon me</h2>
+    <blockquote class="scripture" style="font-style:italic">Because of the voice of the enemy, because of the oppression of the wicked: <mark>for they cast iniquity upon me, and in wrath they hate me</mark>. My heart is sore pained within me: and the terrors of death are fallen upon me. Fearfulness and trembling are come upon me, and horror hath overwhelmed me.<cite>Psalm 55:3-5</cite></blockquote>
+    <p>David lays out the complaint that has brought him to seek relief from the Lord. There are wicked men engaged in violence, and who cast the blame and cause for their actions on David, by means of slander, justifying their hatred of him and the evil they are doing, by falsely accusing him.</p>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Psalm 55" data-title="Violence and strife in the city" data-ctx="Psalms 55:9-11">
+  <div class="page">
+    <div class="kicker">Psalm 55 · Horror hath overwhelmed me</div>
+    <h2>Violence and strife in the city</h2>
+    <blockquote class="scripture" style="font-style:italic">Destroy, O Lord, and divide their tongues: for <mark>I have seen violence and strife in the city</mark>. Day and night they go about it upon the walls thereof: mischief also and sorrow are in the midst of it. Wickedness is in the midst thereof: deceit and guile depart not from her streets.<cite>Psalm 55:9-11</cite></blockquote>
+    <p>The horror of this has brought David to absolute despair. It has overwhelmed him in sorrow and grief.</p>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="Psalm 55" data-title="Readily applicable" data-ctx="Psalms 55:9-11">
+  <div class="page">
+    <div class="kicker">Application • Betrayal</div>
+    <h2>Readily applicable</h2>
+    <p>For modern Christians, living normal lives, in the relative safety of America, the extremes of intrigue and war that afflict a King in ancient Israel could seem to be unrelatable. We may feel far removed in our comfort from the high stakes and bloody acts being described.</p>
+    <p>But spiritually, the truth given us in these moments is readily applicable.</p>
+    <p>We may have been lied about at work, seen a family member turn on us out of the blue, had false assumptions made about our character, and seen the wicked take opportunity to gain for themselves at our expense. Lost and damaged relationships, people we love hurt by it, and the devastating feelings of loss and misery that comes from it all.</p>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="Psalm 55" data-title="Wings like a dove" data-ctx="Psalms 55:6-8">
+  <div class="page">
+    <div class="kicker">Psalm 55 · Fly away</div>
+    <h2>Wings like a dove</h2>
+    <blockquote class="scripture" style="font-style:italic">And I said, <mark>Oh that I had wings like a dove! for then would I fly away, and be at rest</mark>. Lo, then would I wander far off, and remain in the wilderness. Selah. I would hasten my escape from the windy storm and tempest.<cite>Psalm 55:6-8</cite></blockquote>
+    <p>We may, like David, wish we had wings to fly away from it all, we may imagine just fleeing it and finding peace in another place, in some other world.</p>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="slide" data-section="Psalm 55" data-title="Mine equal, my guide" data-ctx="Psalms 55:12-14">
+  <div class="page">
+    <div class="kicker">Psalm 55 · It was not an enemy</div>
+    <h2>Mine equal, my guide</h2>
+    <blockquote class="scripture" style="font-style:italic">For it was not an enemy that reproached me; then I could have borne it: neither was it he that hated me that did magnify himself against me; then I would have hid myself from him: <mark>But it was thou, a man mine equal, my guide, and mine acquaintance</mark>. We took sweet counsel together, and walked unto the house of God in company.<cite>Psalm 55:12-14</cite></blockquote>
+    <p>And then, in the midst of this sudden chaos caused by our enemies, a friend, a brother, a child, suddenly and without cause that you could have ever imagined, turns on you as well.</p>
+    <p>We may be overwhelmed, as David, especially looking at the fallout the betrayal causes. Guilt, hurt and loss, coupled with having people you trusted take up the cause of those against you, just when you need them the most.</p>
+  </div>
+</section>
+
+<!-- 27 -->
+<section class="slide" data-section="Psalm 55" data-title="Let death seize upon them" data-ctx="Psalms 55:15">
+  <div class="page">
+    <div class="kicker">Psalm 55 · Vengeance is the Lord's</div>
+    <h2>Let death seize upon them</h2>
+    <blockquote class="big-verse">Let death seize upon them, and let them go down quick into hell: for wickedness is in their dwellings, and among them.<cite>Psalm 55:15</cite></blockquote>
+    <p>David uses this insult upon injury to seek the Lord's help. That hurt is just cause for God to step in and punish them. To not only remove the threat and bring peace, but fiery vengeance on the wicked and the betrayer.</p>
+    <p>Better imprecatory prayers and recognition that vengeance is the Lord's, than bitterness and depression, guilt and wrath.</p>
+  </div>
+</section>
+
+<!-- 28 -->
+<section class="slide" data-section="Psalm 55" data-title="I will call upon God" data-ctx="Psalms 55:16">
+  <div class="page">
+    <div class="kicker">Psalm 55 · The Lord shall save me</div>
+    <h2>I will call upon God</h2>
+    <p>As always, following the pattern of prayer David lays out, as we desire God to get involved in our lives, we leave judgment to Him as we plead our case, our feelings and broken-hearted appeals, we leave judgment and deliverance to a perfect and holy God.</p>
+    <p>And that should lead us to close our prayer in the blessed hope we have placed our trust in. The peace that passes understanding in Christ.</p>
+    <blockquote class="big-verse">As for me, I will call upon God; and the <span class="lord">Lord</span> shall save me.<cite>Psalm 55:16</cite></blockquote>
+  </div>
+</section>
+
+<!-- 29 -->
+<section class="slide" data-section="Psalm 55" data-title="Evening, and morning, and at noon" data-ctx="Psalms 55:17-19">
+  <div class="page">
+    <div class="kicker">Psalm 55 · He shall hear my voice</div>
+    <h2>Evening, and morning, and at noon</h2>
+    <blockquote class="scripture" style="font-style:italic">Evening, and morning, and at noon, will I pray, and cry aloud: <mark>and he shall hear my voice</mark>. He hath delivered my soul in peace from the battle that was against me: for there were many with me. God shall hear, and afflict them, even he that abideth of old. Selah. Because they have no changes, therefore they fear not God.<cite>Psalm 55:17-19</cite></blockquote>
+    <p>God shall hear us, afflict the enemies, rescue His children, those that have repented to the truth and fear only Him, who call upon His name.</p>
+  </div>
+</section>
+
+<!-- 30 -->
+<section class="slide" data-section="Psalm 55" data-title="Smoother than butter" data-ctx="Psalms 55:20-21|Psalms 55:23">
+  <div class="page">
+    <div class="kicker">Psalm 55 · The betrayer</div>
+    <h2>Smoother than butter</h2>
+    <blockquote class="scripture" style="font-style:italic">He hath put forth his hands against such as be at peace with him: he hath broken his covenant. <mark>The words of his mouth were smoother than butter, but war was in his heart</mark>: his words were softer than oil, yet were they drawn swords.<cite>Psalm 55:20-21</cite></blockquote><blockquote class="scripture" style="font-style:italic">But thou, O God, shalt bring them down into the pit of destruction: bloody and deceitful men shall not live out half their days; <mark>but I will trust in thee</mark>.<cite>Psalm 55:23</cite></blockquote>
+    <p>The betrayer, who with feigned words and flattering tongue conspired to do evil, will be destroyed. The covenantbreakers and the mischief-making men will get their rewards. They will be brought low, to the pit of the grave, to the fires of Hell. They will be taken swiftly, while our trust is in the Lord.</p>
+  </div>
+</section>
+
+<!-- 31 -->
+<section class="slide" data-section="Psalm 55" data-title="Cast thy burden upon the Lord" data-ctx="Psalms 55:22|1 Peter 5:6-7">
+  <div class="page">
+    <div class="kicker">Psalm 55 · He shall sustain thee</div>
+    <h2>Cast thy burden upon the Lord</h2>
+    <blockquote class="big-verse">Cast thy burden upon the <span class="lord">Lord</span>, and he shall sustain thee: he shall never suffer the righteous to be moved.<cite>Psalm 55:22</cite></blockquote>
+    <p>The same promise quoted by Peter in the New Testament, showing the continuity of God's word.</p>
+    <blockquote class="scripture" style="font-style:italic">Humble yourselves therefore under the mighty hand of God, that he may exalt you in due time: <mark>Casting all your care upon him</mark>; <mark>for he careth for you</mark>.<cite>1 Peter 5:6-7</cite></blockquote>
+    <p>What a comfort. What a blessing. Praise God for His faithfulness. Amen</p>
+  </div>
+</section>
+
+<!-- 32 -->
+<section class="slide" data-section="Psalm 55" data-title="Read on" data-ctx="Psalms 55:22|1 Peter 5:6-7">
+  <div class="page">
+    <div class="kicker">Psalms 53–55</div>
+    <h2>Read on</h2>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-psalms-13-15" target="_blank" rel="noopener">Psalms 13–15 (Psalm 14) ↗</a><a class="ref lesson-link" href="../../studies/#lesson-davids-flight-3-the-hunted-king" target="_blank" rel="noopener">The Psalms of David's Flight, Part 3 (Psalm 54) ↗</a><a class="ref lesson-link" href="../../studies/#lesson-psalms-41-43" target="_blank" rel="noopener">Psalms 41–43 (Psalm 41, the familiar friend) ↗</a></div>
+    <p class="sub center">The chapter studies</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#Psalms-53" target="_blank" rel="noopener">Psalm 53 ↗</a><a class="ref lesson-link" href="../../studies/#Psalms-55" target="_blank" rel="noopener">Psalm 55 ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "Psalms 53:1":[[1, "The fool hath said in his heart, There is no God. Corrupt are they, and have done abominable iniquity: there is none that doeth good."]],
+  "Psalms 54:1":[[1, "Save me, O God, by thy name, and judge me by thy strength."]],
+  "Psalms 55:1":[[1, "Give ear to my prayer, O God; and hide not thyself from my supplication."]],
+  "Psalms 55:22":[[22, "Cast thy burden upon the LORD, and he shall sustain thee: he shall never suffer the righteous to be moved."]],
+  "Psalms 55:6":[[6, "And I said, Oh that I had wings like a dove! for then would I fly away, and be at rest."]]
+};
+
+// The Chapter panel (key C): whole chapters, and each slide's verses in data-ctx. null when the deck has none.
+window.DECK_CTX = {"home": [], "ch": {"Psalms 53": [[1, "The fool hath said in his heart, There is no God. Corrupt are they, and have done abominable iniquity: there is none that doeth good."], [2, "God looked down from heaven upon the children of men, to see if there were any that did understand, that did seek God."], [3, "Every one of them is gone back: they are altogether become filthy; there is none that doeth good, no, not one."], [4, "Have the workers of iniquity no knowledge? who eat up my people as they eat bread: they have not called upon God."], [5, "There were they in great fear, where no fear was: for God hath scattered the bones of him that encampeth against thee: thou hast put them to shame, because God hath despised them."], [6, "Oh that the salvation of Israel were come out of Zion! When God bringeth back the captivity of his people, Jacob shall rejoice, and Israel shall be glad."]], "Romans 1": [[1, "Paul, a servant of Jesus Christ, called to be an apostle, separated unto the gospel of God,"], [2, "(Which he had promised afore by his prophets in the holy scriptures,)"], [3, "Concerning his Son Jesus Christ our Lord, which was made of the seed of David according to the flesh;"], [4, "And declared to be the Son of God with power, according to the spirit of holiness, by the resurrection from the dead:"], [5, "By whom we have received grace and apostleship, for obedience to the faith among all nations, for his name:"], [6, "Among whom are ye also the called of Jesus Christ:"], [7, "To all that be in Rome, beloved of God, called to be saints: Grace to you and peace from God our Father, and the Lord Jesus Christ."], [8, "First, I thank my God through Jesus Christ for you all, that your faith is spoken of throughout the whole world."], [9, "For God is my witness, whom I serve with my spirit in the gospel of his Son, that without ceasing I make mention of you always in my prayers;"], [10, "Making request, if by any means now at length I might have a prosperous journey by the will of God to come unto you."], [11, "For I long to see you, that I may impart unto you some spiritual gift, to the end ye may be established;"], [12, "That is, that I may be comforted together with you by the mutual faith both of you and me."], [13, "Now I would not have you ignorant, brethren, that oftentimes I purposed to come unto you, (but was let hitherto,) that I might have some fruit among you also, even as among other Gentiles."], [14, "I am debtor both to the Greeks, and to the Barbarians; both to the wise, and to the unwise."], [15, "So, as much as in me is, I am ready to preach the gospel to you that are at Rome also."], [16, "For I am not ashamed of the gospel of Christ: for it is the power of God unto salvation to every one that believeth; to the Jew first, and also to the Greek."], [17, "For therein is the righteousness of God revealed from faith to faith: as it is written, The just shall live by faith."], [18, "For the wrath of God is revealed from heaven against all ungodliness and unrighteousness of men, who hold the truth in unrighteousness;"], [19, "Because that which may be known of God is manifest in them; for God hath shewed it unto them."], [20, "For the invisible things of him from the creation of the world are clearly seen, being understood by the things that are made, even his eternal power and Godhead; so that they are without excuse:"], [21, "Because that, when they knew God, they glorified him not as God, neither were thankful; but became vain in their imaginations, and their foolish heart was darkened."], [22, "Professing themselves to be wise, they became fools,"], [23, "And changed the glory of the uncorruptible God into an image made like to corruptible man, and to birds, and fourfooted beasts, and creeping things."], [24, "Wherefore God also gave them up to uncleanness through the lusts of their own hearts, to dishonour their own bodies between themselves:"], [25, "Who changed the truth of God into a lie, and worshipped and served the creature more than the Creator, who is blessed for ever. Amen."], [26, "For this cause God gave them up unto vile affections: for even their women did change the natural use into that which is against nature:"], [27, "And likewise also the men, leaving the natural use of the woman, burned in their lust one toward another; men with men working that which is unseemly, and receiving in themselves that recompence of their error which was meet."], [28, "And even as they did not like to retain God in their knowledge, God gave them over to a reprobate mind, to do those things which are not convenient;"], [29, "Being filled with all unrighteousness, fornication, wickedness, covetousness, maliciousness; full of envy, murder, debate, deceit, malignity; whisperers,"], [30, "Backbiters, haters of God, despiteful, proud, boasters, inventors of evil things, disobedient to parents,"], [31, "Without understanding, covenantbreakers, without natural affection, implacable, unmerciful:"], [32, "Who knowing the judgment of God, that they which commit such things are worthy of death, not only do the same, but have pleasure in them that do them."]], "Romans 3": [[1, "What advantage then hath the Jew? or what profit is there of circumcision?"], [2, "Much every way: chiefly, because that unto them were committed the oracles of God."], [3, "For what if some did not believe? shall their unbelief make the faith of God without effect?"], [4, "God forbid: yea, let God be true, but every man a liar; as it is written, That thou mightest be justified in thy sayings, and mightest overcome when thou art judged."], [5, "But if our unrighteousness commend the righteousness of God, what shall we say? Is God unrighteous who taketh vengeance? (I speak as a man)"], [6, "God forbid: for then how shall God judge the world?"], [7, "For if the truth of God hath more abounded through my lie unto his glory; why yet am I also judged as a sinner?"], [8, "And not rather, (as we be slanderously reported, and as some affirm that we say,) Let us do evil, that good may come? whose damnation is just."], [9, "What then? are we better than they? No, in no wise: for we have before proved both Jews and Gentiles, that they are all under sin;"], [10, "As it is written, There is none righteous, no, not one:"], [11, "There is none that understandeth, there is none that seeketh after God."], [12, "They are all gone out of the way, they are together become unprofitable; there is none that doeth good, no, not one."], [13, "Their throat is an open sepulchre; with their tongues they have used deceit; the poison of asps is under their lips:"], [14, "Whose mouth is full of cursing and bitterness:"], [15, "Their feet are swift to shed blood:"], [16, "Destruction and misery are in their ways:"], [17, "And the way of peace have they not known:"], [18, "There is no fear of God before their eyes."], [19, "Now we know that what things soever the law saith, it saith to them who are under the law: that every mouth may be stopped, and all the world may become guilty before God."], [20, "Therefore by the deeds of the law there shall no flesh be justified in his sight: for by the law is the knowledge of sin."], [21, "But now the righteousness of God without the law is manifested, being witnessed by the law and the prophets;"], [22, "Even the righteousness of God which is by faith of Jesus Christ unto all and upon all them that believe: for there is no difference:"], [23, "For all have sinned, and come short of the glory of God;"], [24, "Being justified freely by his grace through the redemption that is in Christ Jesus:"], [25, "Whom God hath set forth to be a propitiation through faith in his blood, to declare his righteousness for the remission of sins that are past, through the forbearance of God;"], [26, "To declare, I say, at this time his righteousness: that he might be just, and the justifier of him which believeth in Jesus."], [27, "Where is boasting then? It is excluded. By what law? of works? Nay: but by the law of faith."], [28, "Therefore we conclude that a man is justified by faith without the deeds of the law."], [29, "Is he the God of the Jews only? is he not also of the Gentiles? Yes, of the Gentiles also:"], [30, "Seeing it is one God, which shall justify the circumcision by faith, and uncircumcision through faith."], [31, "Do we then make void the law through faith? God forbid: yea, we establish the law."]], "Romans 2": [[1, "Therefore thou art inexcusable, O man, whosoever thou art that judgest: for wherein thou judgest another, thou condemnest thyself; for thou that judgest doest the same things."], [2, "But we are sure that the judgment of God is according to truth against them which commit such things."], [3, "And thinkest thou this, O man, that judgest them which do such things, and doest the same, that thou shalt escape the judgment of God?"], [4, "Or despisest thou the riches of his goodness and forbearance and longsuffering; not knowing that the goodness of God leadeth thee to repentance?"], [5, "But after thy hardness and impenitent heart treasurest up unto thyself wrath against the day of wrath and revelation of the righteous judgment of God;"], [6, "Who will render to every man according to his deeds:"], [7, "To them who by patient continuance in well doing seek for glory and honour and immortality, eternal life:"], [8, "But unto them that are contentious, and do not obey the truth, but obey unrighteousness, indignation and wrath,"], [9, "Tribulation and anguish, upon every soul of man that doeth evil, of the Jew first, and also of the Gentile;"], [10, "But glory, honour, and peace, to every man that worketh good, to the Jew first, and also to the Gentile:"], [11, "For there is no respect of persons with God."], [12, "For as many as have sinned without law shall also perish without law: and as many as have sinned in the law shall be judged by the law;"], [13, "(For not the hearers of the law are just before God, but the doers of the law shall be justified."], [14, "For when the Gentiles, which have not the law, do by nature the things contained in the law, these, having not the law, are a law unto themselves:"], [15, "Which shew the work of the law written in their hearts, their conscience also bearing witness, and their thoughts the mean while accusing or else excusing one another;)"], [16, "In the day when God shall judge the secrets of men by Jesus Christ according to my gospel."], [17, "Behold, thou art called a Jew, and restest in the law, and makest thy boast of God,"], [18, "And knowest his will, and approvest the things that are more excellent, being instructed out of the law;"], [19, "And art confident that thou thyself art a guide of the blind, a light of them which are in darkness,"], [20, "An instructor of the foolish, a teacher of babes, which hast the form of knowledge and of the truth in the law."], [21, "Thou therefore which teachest another, teachest thou not thyself? thou that preachest a man should not steal, dost thou steal?"], [22, "Thou that sayest a man should not commit adultery, dost thou commit adultery? thou that abhorrest idols, dost thou commit sacrilege?"], [23, "Thou that makest thy boast of the law, through breaking the law dishonourest thou God?"], [24, "For the name of God is blasphemed among the Gentiles through you, as it is written."], [25, "For circumcision verily profiteth, if thou keep the law: but if thou be a breaker of the law, thy circumcision is made uncircumcision."], [26, "Therefore if the uncircumcision keep the righteousness of the law, shall not his uncircumcision be counted for circumcision?"], [27, "And shall not uncircumcision which is by nature, if it fulfil the law, judge thee, who by the letter and circumcision dost transgress the law?"], [28, "For he is not a Jew, which is one outwardly; neither is that circumcision, which is outward in the flesh:"], [29, "But he is a Jew, which is one inwardly; and circumcision is that of the heart, in the spirit, and not in the letter; whose praise is not of men, but of God."]], "Psalms 55": [[1, "Give ear to my prayer, O God; and hide not thyself from my supplication."], [2, "Attend unto me, and hear me: I mourn in my complaint, and make a noise;"], [3, "Because of the voice of the enemy, because of the oppression of the wicked: for they cast iniquity upon me, and in wrath they hate me."], [4, "My heart is sore pained within me: and the terrors of death are fallen upon me."], [5, "Fearfulness and trembling are come upon me, and horror hath overwhelmed me."], [6, "And I said, Oh that I had wings like a dove! for then would I fly away, and be at rest."], [7, "Lo, then would I wander far off, and remain in the wilderness. Selah."], [8, "I would hasten my escape from the windy storm and tempest."], [9, "Destroy, O Lord, and divide their tongues: for I have seen violence and strife in the city."], [10, "Day and night they go about it upon the walls thereof: mischief also and sorrow are in the midst of it."], [11, "Wickedness is in the midst thereof: deceit and guile depart not from her streets."], [12, "For it was not an enemy that reproached me; then I could have borne it: neither was it he that hated me that did magnify himself against me; then I would have hid myself from him:"], [13, "But it was thou, a man mine equal, my guide, and mine acquaintance."], [14, "We took sweet counsel together, and walked unto the house of God in company."], [15, "Let death seize upon them, and let them go down quick into hell: for wickedness is in their dwellings, and among them."], [16, "As for me, I will call upon God; and the LORD shall save me."], [17, "Evening, and morning, and at noon, will I pray, and cry aloud: and he shall hear my voice."], [18, "He hath delivered my soul in peace from the battle that was against me: for there were many with me."], [19, "God shall hear, and afflict them, even he that abideth of old. Selah. Because they have no changes, therefore they fear not God."], [20, "He hath put forth his hands against such as be at peace with him: he hath broken his covenant."], [21, "The words of his mouth were smoother than butter, but war was in his heart: his words were softer than oil, yet were they drawn swords."], [22, "Cast thy burden upon the LORD, and he shall sustain thee: he shall never suffer the righteous to be moved."], [23, "But thou, O God, shalt bring them down into the pit of destruction: bloody and deceitful men shall not live out half their days; but I will trust in thee."]], "2 Samuel 17": [[1, "Moreover Ahithophel said unto Absalom, Let me now choose out twelve thousand men, and I will arise and pursue after David this night:"], [2, "And I will come upon him while he is weary and weak handed, and will make him afraid: and all the people that are with him shall flee; and I will smite the king only:"], [3, "And I will bring back all the people unto thee: the man whom thou seekest is as if all returned: so all the people shall be in peace."], [4, "And the saying pleased Absalom well, and all the elders of Israel."], [5, "Then said Absalom, Call now Hushai the Archite also, and let us hear likewise what he saith."], [6, "And when Hushai was come to Absalom, Absalom spake unto him, saying, Ahithophel hath spoken after this manner: shall we do after his saying? if not; speak thou."], [7, "And Hushai said unto Absalom, The counsel that Ahithophel hath given is not good at this time."], [8, "For, said Hushai, thou knowest thy father and his men, that they be mighty men, and they be chafed in their minds, as a bear robbed of her whelps in the field: and thy father is a man of war, and will not lodge with the people."], [9, "Behold, he is hid now in some pit, or in some other place: and it will come to pass, when some of them be overthrown at the first, that whosoever heareth it will say, There is a slaughter among the people that follow Absalom."], [10, "And he also that is valiant, whose heart is as the heart of a lion, shall utterly melt: for all Israel knoweth that thy father is a mighty man, and they which be with him are valiant men."], [11, "Therefore I counsel that all Israel be generally gathered unto thee, from Dan even to Beersheba, as the sand that is by the sea for multitude; and that thou go to battle in thine own person."], [12, "So shall we come upon him in some place where he shall be found, and we will light upon him as the dew falleth on the ground: and of him and of all the men that are with him there shall not be left so much as one."], [13, "Moreover, if he be gotten into a city, then shall all Israel bring ropes to that city, and we will draw it into the river, until there be not one small stone found there."], [14, "And Absalom and all the men of Israel said, The counsel of Hushai the Archite is better than the counsel of Ahithophel. For the LORD had appointed to defeat the good counsel of Ahithophel, to the intent that the LORD might bring evil upon Absalom."], [15, "Then said Hushai unto Zadok and to Abiathar the priests, Thus and thus did Ahithophel counsel Absalom and the elders of Israel; and thus and thus have I counselled."], [16, "Now therefore send quickly, and tell David, saying, Lodge not this night in the plains of the wilderness, but speedily pass over; lest the king be swallowed up, and all the people that are with him."], [17, "Now Jonathan and Ahimaaz stayed by Enrogel; for they might not be seen to come into the city: and a wench went and told them; and they went and told king David."], [18, "Nevertheless a lad saw them, and told Absalom: but they went both of them away quickly, and came to a man’s house in Bahurim, which had a well in his court; whither they went down."], [19, "And the woman took and spread a covering over the well’s mouth, and spread ground corn thereon; and the thing was not known."], [20, "And when Absalom’s servants came to the woman to the house, they said, Where is Ahimaaz and Jonathan? And the woman said unto them, They be gone over the brook of water. And when they had sought and could not find them, they returned to Jerusalem."], [21, "And it came to pass, after they were departed, that they came up out of the well, and went and told king David, and said unto David, Arise, and pass quickly over the water: for thus hath Ahithophel counselled against you."], [22, "Then David arose, and all the people that were with him, and they passed over Jordan: by the morning light there lacked not one of them that was not gone over Jordan."], [23, "And when Ahithophel saw that his counsel was not followed, he saddled his ass, and arose, and gat him home to his house, to his city, and put his household in order, and hanged himself, and died, and was buried in the sepulchre of his father."], [24, "Then David came to Mahanaim. And Absalom passed over Jordan, he and all the men of Israel with him."], [25, "And Absalom made Amasa captain of the host instead of Joab: which Amasa was a man’s son, whose name was Ithra an Israelite, that went in to Abigail the daughter of Nahash, sister to Zeruiah Joab’s mother."], [26, "So Israel and Absalom pitched in the land of Gilead."], [27, "And it came to pass, when David was come to Mahanaim, that Shobi the son of Nahash of Rabbah of the children of Ammon, and Machir the son of Ammiel of Lodebar, and Barzillai the Gileadite of Rogelim,"], [28, "Brought beds, and basons, and earthen vessels, and wheat, and barley, and flour, and parched corn, and beans, and lentiles, and parched pulse,"], [29, "And honey, and butter, and sheep, and cheese of kine, for David, and for the people that were with him, to eat: for they said, The people is hungry, and weary, and thirsty, in the wilderness."]], "Isaiah 1": [[1, "The vision of Isaiah the son of Amoz, which he saw concerning Judah and Jerusalem in the days of Uzziah, Jotham, Ahaz, and Hezekiah, kings of Judah."], [2, "Hear, O heavens, and give ear, O earth: for the LORD hath spoken, I have nourished and brought up children, and they have rebelled against me."], [3, "The ox knoweth his owner, and the ass his master’s crib: but Israel doth not know, my people doth not consider."], [4, "Ah sinful nation, a people laden with iniquity, a seed of evildoers, children that are corrupters: they have forsaken the LORD, they have provoked the Holy One of Israel unto anger, they are gone away backward."], [5, "Why should ye be stricken any more? ye will revolt more and more: the whole head is sick, and the whole heart faint."], [6, "From the sole of the foot even unto the head there is no soundness in it; but wounds, and bruises, and putrifying sores: they have not been closed, neither bound up, neither mollified with ointment."], [7, "Your country is desolate, your cities are burned with fire: your land, strangers devour it in your presence, and it is desolate, as overthrown by strangers."], [8, "And the daughter of Zion is left as a cottage in a vineyard, as a lodge in a garden of cucumbers, as a besieged city."], [9, "Except the LORD of hosts had left unto us a very small remnant, we should have been as Sodom, and we should have been like unto Gomorrah."], [10, "Hear the word of the LORD, ye rulers of Sodom; give ear unto the law of our God, ye people of Gomorrah."], [11, "To what purpose is the multitude of your sacrifices unto me? saith the LORD: I am full of the burnt offerings of rams, and the fat of fed beasts; and I delight not in the blood of bullocks, or of lambs, or of he goats."], [12, "When ye come to appear before me, who hath required this at your hand, to tread my courts?"], [13, "Bring no more vain oblations; incense is an abomination unto me; the new moons and sabbaths, the calling of assemblies, I cannot away with; it is iniquity, even the solemn meeting."], [14, "Your new moons and your appointed feasts my soul hateth: they are a trouble unto me; I am weary to bear them."], [15, "And when ye spread forth your hands, I will hide mine eyes from you: yea, when ye make many prayers, I will not hear: your hands are full of blood."], [16, "Wash you, make you clean; put away the evil of your doings from before mine eyes; cease to do evil;"], [17, "Learn to do well; seek judgment, relieve the oppressed, judge the fatherless, plead for the widow."], [18, "Come now, and let us reason together, saith the LORD: though your sins be as scarlet, they shall be as white as snow; though they be red like crimson, they shall be as wool."], [19, "If ye be willing and obedient, ye shall eat the good of the land:"], [20, "But if ye refuse and rebel, ye shall be devoured with the sword: for the mouth of the LORD hath spoken it."], [21, "How is the faithful city become an harlot! it was full of judgment; righteousness lodged in it; but now murderers."], [22, "Thy silver is become dross, thy wine mixed with water:"], [23, "Thy princes are rebellious, and companions of thieves: every one loveth gifts, and followeth after rewards: they judge not the fatherless, neither doth the cause of the widow come unto them."], [24, "Therefore saith the LORD, the LORD of hosts, the mighty One of Israel, Ah, I will ease me of mine adversaries, and avenge me of mine enemies:"], [25, "And I will turn my hand upon thee, and purely purge away thy dross, and take away all thy tin:"], [26, "And I will restore thy judges as at the first, and thy counsellors as at the beginning: afterward thou shalt be called, The city of righteousness, the faithful city."], [27, "Zion shall be redeemed with judgment, and her converts with righteousness."], [28, "And the destruction of the transgressors and of the sinners shall be together, and they that forsake the LORD shall be consumed."], [29, "For they shall be ashamed of the oaks which ye have desired, and ye shall be confounded for the gardens that ye have chosen."], [30, "For ye shall be as an oak whose leaf fadeth, and as a garden that hath no water."], [31, "And the strong shall be as tow, and the maker of it as a spark, and they shall both burn together, and none shall quench them."]], "Lamentations 3": [[1, "I AM the man that hath seen affliction by the rod of his wrath."], [2, "He hath led me, and brought me into darkness, but not into light."], [3, "Surely against me is he turned; he turneth his hand against me all the day."], [4, "My flesh and my skin hath he made old; he hath broken my bones."], [5, "He hath builded against me, and compassed me with gall and travail."], [6, "He hath set me in dark places, as they that be dead of old."], [7, "He hath hedged me about, that I cannot get out: he hath made my chain heavy."], [8, "Also when I cry and shout, he shutteth out my prayer."], [9, "He hath inclosed my ways with hewn stone, he hath made my paths crooked."], [10, "He was unto me as a bear lying in wait, and as a lion in secret places."], [11, "He hath turned aside my ways, and pulled me in pieces: he hath made me desolate."], [12, "He hath bent his bow, and set me as a mark for the arrow."], [13, "He hath caused the arrows of his quiver to enter into my reins."], [14, "I was a derision to all my people; and their song all the day."], [15, "He hath filled me with bitterness, he hath made me drunken with wormwood."], [16, "He hath also broken my teeth with gravel stones, he hath covered me with ashes."], [17, "And thou hast removed my soul far off from peace: I forgat prosperity."], [18, "And I said, My strength and my hope is perished from the LORD:"], [19, "Remembering mine affliction and my misery, the wormwood and the gall."], [20, "My soul hath them still in remembrance, and is humbled in me."], [21, "This I recall to my mind, therefore have I hope."], [22, "It is of the LORD’s mercies that we are not consumed, because his compassions fail not."], [23, "They are new every morning: great is thy faithfulness."], [24, "The LORD is my portion, saith my soul; therefore will I hope in him."], [25, "The LORD is good unto them that wait for him, to the soul that seeketh him."], [26, "It is good that a man should both hope and quietly wait for the salvation of the LORD."], [27, "It is good for a man that he bear the yoke in his youth."], [28, "He sitteth alone and keepeth silence, because he hath borne it upon him."], [29, "He putteth his mouth in the dust; if so be there may be hope."], [30, "He giveth his cheek to him that smiteth him: he is filled full with reproach."], [31, "For the LORD will not cast off for ever:"], [32, "But though he cause grief, yet will he have compassion according to the multitude of his mercies."], [33, "For he doth not afflict willingly nor grieve the children of men."], [34, "To crush under his feet all the prisoners of the earth,"], [35, "To turn aside the right of a man before the face of the most High,"], [36, "To subvert a man in his cause, the LORD approveth not."], [37, "Who is he that saith, and it cometh to pass, when the Lord commandeth it not?"], [38, "Out of the mouth of the most High proceedeth not evil and good?"], [39, "Wherefore doth a living man complain, a man for the punishment of his sins?"], [40, "Let us search and try our ways, and turn again to the LORD."], [41, "Let us lift up our heart with our hands unto God in the heavens."], [42, "We have transgressed and have rebelled: thou hast not pardoned."], [43, "Thou hast covered with anger, and persecuted us: thou hast slain, thou hast not pitied."], [44, "Thou hast covered thyself with a cloud, that our prayer should not pass through."], [45, "Thou hast made us as the offscouring and refuse in the midst of the people."], [46, "All our enemies have opened their mouths against us."], [47, "Fear and a snare is come upon us, desolation and destruction."], [48, "Mine eye runneth down with rivers of water for the destruction of the daughter of my people."], [49, "Mine eye trickleth down, and ceaseth not, without any intermission,"], [50, "Till the LORD look down, and behold from heaven."], [51, "Mine eye affecteth mine heart because of all the daughters of my city."], [52, "Mine enemies chased me sore, like a bird, without cause."], [53, "They have cut off my life in the dungeon, and cast a stone upon me."], [54, "Waters flowed over mine head; then I said, I am cut off."], [55, "I called upon thy name, O LORD, out of the low dungeon."], [56, "Thou hast heard my voice: hide not thine ear at my breathing, at my cry."], [57, "Thou drewest near in the day that I called upon thee: thou saidst, Fear not."], [58, "O LORD, thou hast pleaded the causes of my soul; thou hast redeemed my life."], [59, "O LORD, thou hast seen my wrong: judge thou my cause."], [60, "Thou hast seen all their vengeance and all their imaginations against me."], [61, "Thou hast heard their reproach, O LORD, and all their imaginations against me;"], [62, "The lips of those that rose up against me, and their device against me all the day."], [63, "Behold their sitting down, and their rising up; I am their musick."], [64, "Render unto them a recompence, O LORD, according to the work of their hands."], [65, "Give them sorrow of heart, thy curse unto them."], [66, "Persecute and destroy them in anger from under the heavens of the LORD."]], "1 Peter 5": [[1, "The elders which are among you I exhort, who am also an elder, and a witness of the sufferings of Christ, and also a partaker of the glory that shall be revealed:"], [2, "Feed the flock of God which is among you, taking the oversight thereof, not by constraint, but willingly; not for filthy lucre, but of a ready mind;"], [3, "Neither as being lords over God’s heritage, but being ensamples to the flock."], [4, "And when the chief Shepherd shall appear, ye shall receive a crown of glory that fadeth not away."], [5, "Likewise, ye younger, submit yourselves unto the elder. Yea, all of you be subject one to another, and be clothed with humility: for God resisteth the proud, and giveth grace to the humble."], [6, "Humble yourselves therefore under the mighty hand of God, that he may exalt you in due time:"], [7, "Casting all your care upon him; for he careth for you."], [8, "Be sober, be vigilant; because your adversary the devil, as a roaring lion, walketh about, seeking whom he may devour:"], [9, "Whom resist stedfast in the faith, knowing that the same afflictions are accomplished in your brethren that are in the world."], [10, "But the God of all grace, who hath called us unto his eternal glory by Christ Jesus, after that ye have suffered a while, make you perfect, stablish, strengthen, settle you."], [11, "To him be glory and dominion for ever and ever. Amen."], [12, "By Silvanus, a faithful brother unto you, as I suppose, I have written briefly, exhorting, and testifying that this is the true grace of God wherein ye stand."], [13, "The church that is at Babylon, elected together with you, saluteth you; and so doth Marcus my son."], [14, "Greet ye one another with a kiss of charity. Peace be with you all that are in Christ Jesus. Amen."]]}};
+
+// Quotations from other writings (say: in the deck): their words open like a verse.
+const Q = {};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b && b.dataset.q) {
+    const q = Q[b.dataset.q];
+    verseTitle.textContent = q ? q.t : b.textContent.trim();
+    verseBody.innerHTML = q ? q.h : "<p>Not loaded.</p>";
+    verseDlg.showModal();
+    verseBody.scrollTop = 0;
+    return;
+  }
+  if (b) {
+    const keys = b.dataset.v;
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>

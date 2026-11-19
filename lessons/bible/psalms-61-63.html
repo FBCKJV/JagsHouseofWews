@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Psalms 61–63: The Rock That Is Higher Than I</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Psalms 61-63 in the King James Bible: lead me to the rock that is higher than I, he only is my rock and my salvation, my soul thirsteth for thee in a dry and thirsty land, and David fleeing Absalom, from the Psalms series studies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body .say-cite{font-size:.85rem;font-style:italic;color:var(--vellum-dim);border-top:1px solid var(--rule);padding-top:.6rem;margin-top:1rem}
+.ref.say{border-bottom-style:dashed}
+.ref.say::before{content:"\201C";margin-right:.15em}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Psalms 61–63" data-ctx="">
+  <div class="page title-page">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalms 61–63</h1>
+    <p class="sub">The rock that is higher than I • He only is my rock • My soul thirsteth for thee</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 61:2">Psalm 61:2</button><button class="ref" data-v="Psalms 62:2">Psalm 62:2</button><button class="ref" data-v="Psalms 63:1">Psalm 63:1</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse. Press C for the whole chapter.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Psalm 61" data-title="Psalm 61" data-ctx="">
+  <div class="page title-page later">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalm 61</h1>
+    <p class="sub">The rock that is higher than I</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 61:1">Psalm 61:1</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Psalm 61" data-title="From the end of the earth" data-ctx="Psalms 61:1-2">
+  <div class="page">
+    <div class="kicker">Psalm 61 · Hear my cry, O God</div>
+    <h2>From the end of the earth</h2>
+    <blockquote class="scripture" style="font-style:italic">Hear my cry, O God; attend unto my prayer. From the end of the earth will I cry unto thee, when my heart is overwhelmed: <mark>lead me to the rock that is higher than I</mark>.<cite>Psalm 61:1-2</cite></blockquote>
+    <p>What a prayer of salvation and assurance. <strong>Psalm 61</strong> is a heartfelt and earnest song of deliverance and praise for the Christ. The King that reigns forever.</p>
+    <p>No matter where we are, from the ends of the earth physically or spiritually, God hears our cries to Him. When our heart is overwhelmed, there is a rock that is higher, that we can be placed upon by God.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Psalm 61" data-title="Higher ground" data-ctx="Psalms 61:1-2">
+  <div class="page">
+    <div class="kicker">Psalm 61 · The rock</div>
+    <h2>Higher ground</h2>
+    <blockquote>Lord, lift me up, and let me stand / By faith on heaven’s table land; / A higher plane than I have found, / Lord, plant my feet on higher ground.<cite>Higher Ground</cite></blockquote>
+    <p>That higher ground is a plane, a flat and steady surface built upon the rock that is Jesus. The foundation laid in Him. The cornerstone of our faith.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Psalm 61" data-title="A strong tower" data-ctx="Psalms 61:3|Psalms 61:4">
+  <div class="page">
+    <div class="kicker">Psalm 61 · A shelter</div>
+    <h2>A strong tower</h2>
+    <blockquote class="big-verse">For thou hast been a shelter for me, and <mark>a strong tower from the enemy</mark>.<cite>Psalm 61:3</cite></blockquote>
+    <p>We know He hears us and will bring us to that higher rock, because He has been a shelter and a strong tower, shielding those that trust in His holy name.</p>
+    <blockquote class="big-verse">I will abide in thy tabernacle for ever: <mark>I will trust in the covert of thy wings</mark>. Selah.<cite>Psalm 61:4</cite></blockquote>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Psalm 61" data-title="The heritage of those that fear thy name" data-ctx="Psalms 61:5">
+  <div class="page">
+    <div class="kicker">Psalm 61 · My vows</div>
+    <h2>The heritage of those that fear thy name</h2>
+    <blockquote class="big-verse">For thou, O God, hast heard my vows: <mark>thou hast given me the heritage of those that fear thy name</mark>.<cite>Psalm 61:5</cite></blockquote>
+    <p>David says that he knows God has heard his vows. The trust he has placed in the Lord, kept in his heart, means that his dedication to be a doer of the word and keep proper judgement and mercy, will be met.</p>
+    <p>We have been given the heritage of those that fear His name, if we have kept in mind that truth of the gospel. The patriarchs and prophets, David himself, the hall of the faithful who called out to God for salvation is that godly heritage, that great cloud of witnesses.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Psalm 61" data-title="He shall abide before God for ever" data-ctx="Psalms 61:6-7">
+  <div class="page">
+    <div class="kicker">Psalm 61 · The King</div>
+    <h2>He shall abide before God for ever</h2>
+    <blockquote class="scripture" style="font-style:italic">Thou wilt prolong the king’s life: and his years as many generations. <mark>He shall abide before God for ever</mark>: O prepare mercy and truth, which may preserve him.<cite>Psalm 61:6-7</cite></blockquote>
+    <p>The King's life, prolonged and his years spanning generations, is both a prayer for David, but also an acknowledgement of the King of kings. That Jesus shall reign eternally.</p>
+    <p>Being forever before God, kept by mercy and truth. Everlasting.</p>
+    <p>We have the same assurance, and by keeping that in mind, we can do great works for the Lord and sing His praises. Not to obtain salvation, but because of it.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Psalm 61" data-title="Daily perform my vows" data-ctx="Psalms 61:8">
+  <div class="page">
+    <div class="kicker">Psalm 61 · Praise</div>
+    <h2>Daily perform my vows</h2>
+    <blockquote class="big-verse">So will I sing praise unto thy name for ever, that I may daily perform my vows.<cite>Psalm 61:8</cite></blockquote>
+    <p class="center">Amen</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Psalm 62" data-title="Psalm 62" data-ctx="Psalms 61:8">
+  <div class="page title-page later">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalm 62</h1>
+    <p class="sub">He only is my rock and my salvation</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 62:1">Psalm 62:1</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Psalm 62" data-title="From him cometh my salvation" data-ctx="Psalms 62:1">
+  <div class="page">
+    <div class="kicker">Psalm 62 · Waiting upon God</div>
+    <h2>From him cometh my salvation</h2>
+    <blockquote class="big-verse">Truly my soul waiteth upon God: from him cometh my salvation.<cite>Psalm 62:1</cite></blockquote>
+    <p>David's <strong>Psalm 62</strong> is a meditation of faith as applicable to the Christian today waiting for our Savior, the rock of our salvation, as David was 3,000 years ago. It's the same faith and the same promise.</p>
+    <p>Jesus Christ.</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Psalm 62" data-title="I shall not be greatly moved" data-ctx="Psalms 62:2">
+  <div class="page">
+    <div class="kicker">Psalm 62 · He only is my rock</div>
+    <h2>I shall not be greatly moved</h2>
+    <blockquote class="big-verse">He only is my rock and my salvation; he is my defence; I shall not be greatly moved.<cite>Psalm 62:2</cite></blockquote>
+    <p>We wait patiently upon His coming. For our expectation is from Him. <em>I shall not be moved.</em></p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Psalm 62" data-title="A tottering fence" data-ctx="Psalms 62:3-4">
+  <div class="page">
+    <div class="kicker">Psalm 62 · They delight in lies</div>
+    <h2>A tottering fence</h2>
+    <blockquote class="scripture" style="font-style:italic">How long will ye imagine mischief against a man? ye shall be slain all of you: <mark>as a bowing wall shall ye be, and as a tottering fence</mark>. They only consult to cast him down from his excellency: they delight in lies: <mark>they bless with their mouth, but they curse inwardly</mark>. Selah.<cite>Psalm 62:3-4</cite></blockquote>
+    <p>The contrast of this faith in the Lord, the Messiah, the anointed One, the surety of His deliverance and steadfast faith in the promise, is held up against men who trust worldly institutions, their own vain imagination and mischief against their fellow man. Their end is death, they shall be slain and the frame they trusted will collapse like a tottering fence.</p>
+    <p>Who are these men? What do they do? They consult God only to cast Him down from His Excellency, they delight in lies, they bless with their mouth but curse Him inwardly. They trust earthly institutions of men, and political power, oppression and spoiling the riches of others.</p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Psalm 62" data-title="Christ is King" data-ctx="Psalms 62:3-4">
+  <div class="page">
+    <div class="kicker">Application • A church of men</div>
+    <h2>Christ is King</h2>
+    <p>Here in modern times, we see a rise of political schemers shouting "Christ is King," and belonging to a foreign institution, under a "pope," who they claim is the rock, an institution in which they place all their trust.</p>
+    <p>They held a conference this past weekend where a supposed Christian pastor welcomed a Roman Catholic propagandist to the stage, proclaiming a false gospel; that there is no salvation outside of his church.</p>
+    <p>They will fail for the same reason the hypocrites and thieves of David's day did.</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Psalm 62" data-title="My expectation is from him" data-ctx="Psalms 62:5-8">
+  <div class="page">
+    <div class="kicker">Psalm 62 · Wait thou only upon God</div>
+    <h2>My expectation is from him</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>My soul, wait thou only upon God</mark>; <mark>for my expectation is from him</mark>. He only is my rock and my salvation: he is my defence; I shall not be moved. In God is my salvation and my glory: the rock of my strength, and my refuge, is in God. Trust in him at all times; ye people, pour out your heart before him: God is a refuge for us. Selah.<cite>Psalm 62:5-8</cite></blockquote>
+    <p>Not a church of men. Not vain traditions and dead works. Not paying lip service to God, as these men of low degree do. The vain beliefs of men with high degree, theologians counting angels on the tip of a pin, and missing the truth of grace and mercy. David says if they were weighed in a balance, all of them would be lighter than vanity itself. Worthless. Hopeless.</p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Psalm 62" data-title="Lighter than vanity" data-ctx="Psalms 62:9-10">
+  <div class="page">
+    <div class="kicker">Psalm 62 · Men of low and high degree</div>
+    <h2>Lighter than vanity</h2>
+    <blockquote class="scripture" style="font-style:italic">Surely men of low degree are vanity, and men of high degree are a lie: <mark>to be laid in the balance, they are altogether lighter than vanity</mark>. Trust not in oppression, and become not vain in robbery: if riches increase, set not your heart upon them.<cite>Psalm 62:9-10</cite></blockquote>
+    <p>They seek power and fame, riches and accolades, to make merchandise of those foolish enough to get caught up with them, setting their hearts upon men, rather than God.</p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Psalm 62" data-title="Power belongeth unto God" data-ctx="Psalms 62:11">
+  <div class="page">
+    <div class="kicker">Psalm 62 · God hath spoken once</div>
+    <h2>Power belongeth unto God</h2>
+    <blockquote class="big-verse">God hath spoken once; twice have I heard this; that power belongeth unto God.<cite>Psalm 62:11</cite></blockquote>
+    <p>Amen! It is His power to save. His rock of defense we trust on. His truth and His way, forever.</p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Psalm 62" data-title="According to his work" data-ctx="Psalms 62:12|Matthew 16:27">
+  <div class="page">
+    <div class="kicker">Psalm 62 · Unto thee belongeth mercy</div>
+    <h2>According to his work</h2>
+    <blockquote class="big-verse">Also unto thee, O Lord, belongeth mercy: for thou renderest to every man according to his work.<cite>Psalm 62:12</cite></blockquote>
+    <p>Jesus will render to every man according to his works;</p>
+    <blockquote class="big-verse">For the Son of man shall come in the glory of his Father with his angels; and then <mark>he shall reward every man according to his works</mark>.<cite>Matthew 16:27</cite></blockquote>
+    <p>And His reward is great, for those that wait patiently, serving Him. Even so Lord, come quickly.</p>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Psalm 63" data-title="Psalm 63" data-ctx="Psalms 62:12|Matthew 16:27">
+  <div class="page title-page later">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalm 63</h1>
+    <p class="sub">In a dry and thirsty land</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 63:1">Psalm 63:1</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Psalm 63" data-title="In the wilderness of Judah" data-ctx="Psalms 62:12|Matthew 16:27">
+  <div class="page">
+    <div class="kicker">Psalm 63 · Two flights</div>
+    <h2>In the wilderness of Judah</h2>
+    <p><strong>Psalm 63</strong> is given us as a Psalm written when David <em>was in the wilderness of Judah</em>, something that happened twice in his life.</p>
+    <p>We have read of David's flight from Saul, the decade or so where the future King of Israel would be on the run from the mad King. Multiple Psalms address this period as we have seen.</p>
+    <p>But there was a second time David had to flee to the wilderness, a much older David, who had to leave Jerusalem due to the insurrection led by his son, Absalom.</p>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Psalm 63" data-title="Arise, and let us flee" data-ctx="2 Samuel 15:13-17">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 63</div>
+    <h2>Arise, and let us flee</h2>
+    <blockquote class="scripture" style="font-style:italic">And there came a messenger to David, saying, The hearts of the men of Israel are after Absalom. And David said unto all his servants that were with him at Jerusalem, <mark>Arise, and let us flee</mark>; for we shall not else escape from Absalom: make speed to depart, lest he overtake us suddenly, and bring evil upon us, and smite the city with the edge of the sword. And the king’s servants said unto the king, Behold, thy servants are ready to do whatsoever my lord the king shall appoint. And the king went forth, and all his household after him. And the king left ten women, which were concubines, to keep the house. And the king went forth, and all the people after him, and tarried in a place that was far off.<cite>2 Samuel 15:13-17</cite></blockquote>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Psalm 63" data-title="The king shall rejoice in God" data-ctx="Psalms 63:11">
+  <div class="page">
+    <div class="kicker">Psalm 63 · The king</div>
+    <h2>The king shall rejoice in God</h2>
+    <p>While the superscription of <strong>Psalm 63</strong> doesn't say which occasion this was written during, the context of verse 11 leads me to believe that it is this latter period of the King's life.</p>
+    <blockquote class="big-verse"><mark>But the king shall rejoice in God</mark>; every one that sweareth by him shall glory: but the mouth of them that speak lies shall be stopped.<cite>Psalm 63:11</cite></blockquote>
+    <p>During the lifetime of Saul, David did not claim the title. He would not presume to even harm the Lord's anointed. This final stanza seems to indicate that David was already King, the lies of those involved in the insurrection had forced him from his home.</p>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Psalm 63" data-title="The brook Kidron" data-ctx="2 Samuel 15:23">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 63</div>
+    <h2>The brook Kidron</h2>
+    <blockquote class="big-verse">And all the country wept with a loud voice, and all the people passed over: the king also himself passed over the brook Kidron, and all the people passed over, <mark>toward the way of the wilderness</mark>.<cite>2 Samuel 15:23</cite></blockquote>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Psalm 63" data-title="A dry and thirsty land" data-ctx="Psalms 63:1-2">
+  <div class="page">
+    <div class="kicker">Psalm 63 · Early will I seek thee</div>
+    <h2>A dry and thirsty land</h2>
+    <blockquote class="scripture" style="font-style:italic">O God, thou art my God; <mark>early will I seek thee: my soul thirsteth for thee</mark>, my flesh longeth for thee <mark>in a dry and thirsty land</mark>, where no water is; To see thy power and thy glory, so as I have seen thee in the sanctuary.<cite>Psalm 63:1-2</cite></blockquote>
+    <p>In his old age and facing the ultimate betrayal of a son rising up against the father, David is still praising God. He is still seeking the Lord early, thirsting for Him. Longing for Him. Especially here in the wilderness, a dry and thirsty land.</p>
+    <p>Spiritually he is as he is physically. And like a man in a desert seeks an oasis, David's heart seeks God.</p>
+    <p>David writes that he longs to see the power and glory of God as he has seen in the sanctuary. The Tabernacle. Given that longing, we may see what a man of faith he was.</p>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="Psalm 63" data-title="Carry back the ark of God" data-ctx="2 Samuel 15:24-27">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 63:2</div>
+    <h2>Carry back the ark of God</h2>
+    <p>As he fled, initially, the high priest Zadok came with the Levites carrying the Ark of the Covenant with them.</p>
+    <blockquote class="scripture" style="font-style:italic">And lo Zadok also, and all the Levites were with him, bearing the ark of the covenant of God: and they set down the ark of God; and Abiathar went up, until all the people had done passing out of the city. And the king said unto Zadok, <mark>Carry back the ark of God into the city</mark>: if I shall find favour in the eyes of the <span class="lord">Lord</span>, he will bring me again, and shew me both it, and his habitation: But if he thus say, I have no delight in thee; behold, here am I, let him do to me as seemeth good unto him. The king said also unto Zadok the priest, Art not thou a seer? return into the city in peace, and your two sons with you, Ahimaaz thy son, and Jonathan the son of Abiathar.<cite>2 Samuel 15:24-27</cite></blockquote>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="Psalm 63" data-title="In the place God had chosen" data-ctx="2 Samuel 15:24-27">
+  <div class="page">
+    <div class="kicker">Application • The sanctuary</div>
+    <h2>In the place God had chosen</h2>
+    <p>At a time where the King could use the power of the crown to bring the religious leaders and the Mercy Seat of God with him, depriving the Kingdom of the spiritual presence of God and His ministers, David chose rather to keep them in the place God had chosen to place His name. To allow others in Israel to avail themselves of His presence. To trust in God to deliver him back to the Tabernacle, the sanctuary again, to see His power and to sing His holy praise.</p>
+    <p>David was willing to sacrifice the carnal impulse to assert control of the state religion, to the spirit of peace he had in faith on the Lord.</p>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="slide" data-section="Psalm 63" data-title="Better than life" data-ctx="Psalms 63:3-4">
+  <div class="page">
+    <div class="kicker">Psalm 63 · Thy lovingkindness</div>
+    <h2>Better than life</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>Because thy lovingkindness is better than life</mark>, my lips shall praise thee. Thus will I bless thee while I live: I will lift up my hands in thy name.<cite>Psalm 63:3-4</cite></blockquote>
+    <p>David is as sure of his salvation in life, fleeing, in peril, as he was when he dwelt peacefully in Jerusalem. And he vows to offer praise to God while he lives, regardless of the circumstances.</p>
+    <p>God's grace is sufficient for him, and better to be absent from the body and be present with the Lord. We should value Him more than our very life.</p>
+  </div>
+</section>
+
+<!-- 27 -->
+<section class="slide" data-section="Psalm 63" data-title="Whosoever will lose his life" data-ctx="Matthew 16:24-26">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 63:3</div>
+    <h2>Whosoever will lose his life</h2>
+    <blockquote class="scripture" style="font-style:italic">Then said Jesus unto his disciples, If any man will come after me, let him deny himself, and take up his cross, and follow me. For whosoever will save his life shall lose it: and <mark>whosoever will lose his life for my sake shall find it</mark>. For what is a man profited, if he shall gain the whole world, and lose his own soul? or what shall a man give in exchange for his soul?<cite>Matthew 16:24-26</cite></blockquote>
+  </div>
+</section>
+
+<!-- 28 -->
+<section class="slide" data-section="Psalm 63" data-title="In the shadow of thy wings" data-ctx="Psalms 63:5-8">
+  <div class="page">
+    <div class="kicker">Psalm 63 · Satisfied</div>
+    <h2>In the shadow of thy wings</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>My soul shall be satisfied as with marrow and fatness</mark>; and my mouth shall praise thee with joyful lips: When I remember thee upon my bed, and meditate on thee in the night watches. Because thou hast been my help, therefore <mark>in the shadow of thy wings will I rejoice</mark>. My soul followeth hard after thee: thy right hand upholdeth me.<cite>Psalm 63:5-8</cite></blockquote>
+    <p>Be satisfied in the Spirit more than in the flesh. Praise Him for His lovingkindness, being full with His mercy, more than the marrow and fatness of succulent and abundant meats.</p>
+    <p>When we sleep and when we awake, when we are up in the middle of the night, sing His praises. Because He has been our help, our shelter, our Provider, under the shadow of His wings we have found peace and security. Rejoice!</p>
+  </div>
+</section>
+
+<!-- 29 -->
+<section class="slide" data-section="Psalm 63" data-title="A portion for foxes" data-ctx="Psalms 63:9-10">
+  <div class="page">
+    <div class="kicker">Psalm 63 · Those that seek my soul</div>
+    <h2>A portion for foxes</h2>
+    <blockquote class="scripture" style="font-style:italic">But those that seek my soul, to destroy it, shall go into the lower parts of the earth. They shall fall by the sword: <mark>they shall be a portion for foxes</mark>.<cite>Psalm 63:9-10</cite></blockquote>
+    <p>Part of the peace that passes all understanding is the knowledge that God's judgments and vengeance will fall on the wicked. They will be made portions for foxes, fed to the creatures of the wilderness when they fall to the sword they sought to use on us. That in the end, even the king shall rejoice in God, all who swear by Him, trusting in Christ shall glorify His holy name. And the mouths of those that speak lies shall be stopped. Amen</p>
+  </div>
+</section>
+
+<!-- 30 -->
+<section class="slide" data-section="Psalm 63" data-title="Read on" data-ctx="Psalms 63:9-10">
+  <div class="page">
+    <div class="kicker">Psalms 61–63</div>
+    <h2>Read on</h2>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-psalms-58-60" target="_blank" rel="noopener">Psalms 58–60 ↗</a><a class="ref lesson-link" href="../../studies/#lesson-davids-flight-1-the-flight-begins" target="_blank" rel="noopener">The Psalms of David's Flight ↗</a><a class="ref lesson-link" href="../../studies/#lesson-psalms-1-5" target="_blank" rel="noopener">Back to Psalms 1–5 ↗</a></div>
+    <p class="sub center">The chapter studies</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#Psalms-61" target="_blank" rel="noopener">Psalm 61 ↗</a><a class="ref lesson-link" href="../../studies/#Psalms-62" target="_blank" rel="noopener">Psalm 62 ↗</a><a class="ref lesson-link" href="../../studies/#Psalms-63" target="_blank" rel="noopener">Psalm 63 ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "Psalms 61:1":[[1, "Hear my cry, O God; attend unto my prayer."]],
+  "Psalms 61:2":[[2, "From the end of the earth will I cry unto thee, when my heart is overwhelmed: lead me to the rock that is higher than I."]],
+  "Psalms 62:1":[[1, "Truly my soul waiteth upon God: from him cometh my salvation."]],
+  "Psalms 62:2":[[2, "He only is my rock and my salvation; he is my defence; I shall not be greatly moved."]],
+  "Psalms 63:1":[[1, "O God, thou art my God; early will I seek thee: my soul thirsteth for thee, my flesh longeth for thee in a dry and thirsty land, where no water is;"]]
+};
+
+// The Chapter panel (key C): whole chapters, and each slide's verses in data-ctx. null when the deck has none.
+window.DECK_CTX = {"home": [], "ch": {"Psalms 61": [[1, "Hear my cry, O God; attend unto my prayer."], [2, "From the end of the earth will I cry unto thee, when my heart is overwhelmed: lead me to the rock that is higher than I."], [3, "For thou hast been a shelter for me, and a strong tower from the enemy."], [4, "I will abide in thy tabernacle for ever: I will trust in the covert of thy wings. Selah."], [5, "For thou, O God, hast heard my vows: thou hast given me the heritage of those that fear thy name."], [6, "Thou wilt prolong the king’s life: and his years as many generations."], [7, "He shall abide before God for ever: O prepare mercy and truth, which may preserve him."], [8, "So will I sing praise unto thy name for ever, that I may daily perform my vows."]], "Psalms 62": [[1, "Truly my soul waiteth upon God: from him cometh my salvation."], [2, "He only is my rock and my salvation; he is my defence; I shall not be greatly moved."], [3, "How long will ye imagine mischief against a man? ye shall be slain all of you: as a bowing wall shall ye be, and as a tottering fence."], [4, "They only consult to cast him down from his excellency: they delight in lies: they bless with their mouth, but they curse inwardly. Selah."], [5, "My soul, wait thou only upon God; for my expectation is from him."], [6, "He only is my rock and my salvation: he is my defence; I shall not be moved."], [7, "In God is my salvation and my glory: the rock of my strength, and my refuge, is in God."], [8, "Trust in him at all times; ye people, pour out your heart before him: God is a refuge for us. Selah."], [9, "Surely men of low degree are vanity, and men of high degree are a lie: to be laid in the balance, they are altogether lighter than vanity."], [10, "Trust not in oppression, and become not vain in robbery: if riches increase, set not your heart upon them."], [11, "God hath spoken once; twice have I heard this; that power belongeth unto God."], [12, "Also unto thee, O Lord, belongeth mercy: for thou renderest to every man according to his work."]], "Matthew 16": [[1, "The Pharisees also with the Sadducees came, and tempting desired him that he would shew them a sign from heaven."], [2, "He answered and said unto them, When it is evening, ye say, It will be fair weather: for the sky is red."], [3, "And in the morning, It will be foul weather to day: for the sky is red and lowring. O ye hypocrites, ye can discern the face of the sky; but can ye not discern the signs of the times?"], [4, "A wicked and adulterous generation seeketh after a sign; and there shall no sign be given unto it, but the sign of the prophet Jonas. And he left them, and departed."], [5, "And when his disciples were come to the other side, they had forgotten to take bread."], [6, "Then Jesus said unto them, Take heed and beware of the leaven of the Pharisees and of the Sadducees."], [7, "And they reasoned among themselves, saying, It is because we have taken no bread."], [8, "Which when Jesus perceived, he said unto them, O ye of little faith, why reason ye among yourselves, because ye have brought no bread?"], [9, "Do ye not yet understand, neither remember the five loaves of the five thousand, and how many baskets ye took up?"], [10, "Neither the seven loaves of the four thousand, and how many baskets ye took up?"], [11, "How is it that ye do not understand that I spake it not to you concerning bread, that ye should beware of the leaven of the Pharisees and of the Sadducees?"], [12, "Then understood they how that he bade them not beware of the leaven of bread, but of the doctrine of the Pharisees and of the Sadducees."], [13, "When Jesus came into the coasts of Caesarea Philippi, he asked his disciples, saying, Whom do men say that I the Son of man am?"], [14, "And they said, Some say that thou art John the Baptist: some, Elias; and others, Jeremias, or one of the prophets."], [15, "He saith unto them, But whom say ye that I am?"], [16, "And Simon Peter answered and said, Thou art the Christ, the Son of the living God."], [17, "And Jesus answered and said unto him, Blessed art thou, Simon Barjona: for flesh and blood hath not revealed it unto thee, but my Father which is in heaven."], [18, "And I say also unto thee, That thou art Peter, and upon this rock I will build my church; and the gates of hell shall not prevail against it."], [19, "And I will give unto thee the keys of the kingdom of heaven: and whatsoever thou shalt bind on earth shall be bound in heaven: and whatsoever thou shalt loose on earth shall be loosed in heaven."], [20, "Then charged he his disciples that they should tell no man that he was Jesus the Christ."], [21, "From that time forth began Jesus to shew unto his disciples, how that he must go unto Jerusalem, and suffer many things of the elders and chief priests and scribes, and be killed, and be raised again the third day."], [22, "Then Peter took him, and began to rebuke him, saying, Be it far from thee, Lord: this shall not be unto thee."], [23, "But he turned, and said unto Peter, Get thee behind me, Satan: thou art an offence unto me: for thou savourest not the things that be of God, but those that be of men."], [24, "Then said Jesus unto his disciples, If any man will come after me, let him deny himself, and take up his cross, and follow me."], [25, "For whosoever will save his life shall lose it: and whosoever will lose his life for my sake shall find it."], [26, "For what is a man profited, if he shall gain the whole world, and lose his own soul? or what shall a man give in exchange for his soul?"], [27, "For the Son of man shall come in the glory of his Father with his angels; and then he shall reward every man according to his works."], [28, "Verily I say unto you, There be some standing here, which shall not taste of death, till they see the Son of man coming in his kingdom."]], "2 Samuel 15": [[1, "And it came to pass after this, that Absalom prepared him chariots and horses, and fifty men to run before him."], [2, "And Absalom rose up early, and stood beside the way of the gate: and it was so, that when any man that had a controversy came to the king for judgment, then Absalom called unto him, and said, Of what city art thou? And he said, Thy servant is of one of the tribes of Israel."], [3, "And Absalom said unto him, See, thy matters are good and right; but there is no man deputed of the king to hear thee."], [4, "Absalom said moreover, Oh that I were made judge in the land, that every man which hath any suit or cause might come unto me, and I would do him justice!"], [5, "And it was so, that when any man came nigh to him to do him obeisance, he put forth his hand, and took him, and kissed him."], [6, "And on this manner did Absalom to all Israel that came to the king for judgment: so Absalom stole the hearts of the men of Israel."], [7, "And it came to pass after forty years, that Absalom said unto the king, I pray thee, let me go and pay my vow, which I have vowed unto the LORD, in Hebron."], [8, "For thy servant vowed a vow while I abode at Geshur in Syria, saying, If the LORD shall bring me again indeed to Jerusalem, then I will serve the LORD."], [9, "And the king said unto him, Go in peace. So he arose, and went to Hebron."], [10, "But Absalom sent spies throughout all the tribes of Israel, saying, As soon as ye hear the sound of the trumpet, then ye shall say, Absalom reigneth in Hebron."], [11, "And with Absalom went two hundred men out of Jerusalem, that were called; and they went in their simplicity, and they knew not any thing."], [12, "And Absalom sent for Ahithophel the Gilonite, David’s counsellor, from his city, even from Giloh, while he offered sacrifices. And the conspiracy was strong; for the people increased continually with Absalom."], [13, "And there came a messenger to David, saying, The hearts of the men of Israel are after Absalom."], [14, "And David said unto all his servants that were with him at Jerusalem, Arise, and let us flee; for we shall not else escape from Absalom: make speed to depart, lest he overtake us suddenly, and bring evil upon us, and smite the city with the edge of the sword."], [15, "And the king’s servants said unto the king, Behold, thy servants are ready to do whatsoever my lord the king shall appoint."], [16, "And the king went forth, and all his household after him. And the king left ten women, which were concubines, to keep the house."], [17, "And the king went forth, and all the people after him, and tarried in a place that was far off."], [18, "And all his servants passed on beside him; and all the Cherethites, and all the Pelethites, and all the Gittites, six hundred men which came after him from Gath, passed on before the king."], [19, "Then said the king to Ittai the Gittite, Wherefore goest thou also with us? return to thy place, and abide with the king: for thou art a stranger, and also an exile."], [20, "Whereas thou camest but yesterday, should I this day make thee go up and down with us? seeing I go whither I may, return thou, and take back thy brethren: mercy and truth be with thee."], [21, "And Ittai answered the king, and said, As the LORD liveth, and as my lord the king liveth, surely in what place my lord the king shall be, whether in death or life, even there also will thy servant be."], [22, "And David said to Ittai, Go and pass over. And Ittai the Gittite passed over, and all his men, and all the little ones that were with him."], [23, "And all the country wept with a loud voice, and all the people passed over: the king also himself passed over the brook Kidron, and all the people passed over, toward the way of the wilderness."], [24, "And lo Zadok also, and all the Levites were with him, bearing the ark of the covenant of God: and they set down the ark of God; and Abiathar went up, until all the people had done passing out of the city."], [25, "And the king said unto Zadok, Carry back the ark of God into the city: if I shall find favour in the eyes of the LORD, he will bring me again, and shew me both it, and his habitation:"], [26, "But if he thus say, I have no delight in thee; behold, here am I, let him do to me as seemeth good unto him."], [27, "The king said also unto Zadok the priest, Art not thou a seer? return into the city in peace, and your two sons with you, Ahimaaz thy son, and Jonathan the son of Abiathar."], [28, "See, I will tarry in the plain of the wilderness, until there come word from you to certify me."], [29, "Zadok therefore and Abiathar carried the ark of God again to Jerusalem: and they tarried there."], [30, "And David went up by the ascent of mount Olivet, and wept as he went up, and had his head covered, and he went barefoot: and all the people that was with him covered every man his head, and they went up, weeping as they went up."], [31, "And one told David, saying, Ahithophel is among the conspirators with Absalom. And David said, O LORD, I pray thee, turn the counsel of Ahithophel into foolishness."], [32, "And it came to pass, that when David was come to the top of the mount, where he worshipped God, behold, Hushai the Archite came to meet him with his coat rent, and earth upon his head:"], [33, "Unto whom David said, If thou passest on with me, then thou shalt be a burden unto me:"], [34, "But if thou return to the city, and say unto Absalom, I will be thy servant, O king; as I have been thy father’s servant hitherto, so will I now also be thy servant: then mayest thou for me defeat the counsel of Ahithophel."], [35, "And hast thou not there with thee Zadok and Abiathar the priests? therefore it shall be, that what thing soever thou shalt hear out of the king’s house, thou shalt tell it to Zadok and Abiathar the priests."], [36, "Behold, they have there with them their two sons, Ahimaaz Zadok’s son, and Jonathan Abiathar’s son; and by them ye shall send unto me every thing that ye can hear."], [37, "So Hushai David’s friend came into the city, and Absalom came into Jerusalem."]], "Psalms 63": [[1, "O God, thou art my God; early will I seek thee: my soul thirsteth for thee, my flesh longeth for thee in a dry and thirsty land, where no water is;"], [2, "To see thy power and thy glory, so as I have seen thee in the sanctuary."], [3, "Because thy lovingkindness is better than life, my lips shall praise thee."], [4, "Thus will I bless thee while I live: I will lift up my hands in thy name."], [5, "My soul shall be satisfied as with marrow and fatness; and my mouth shall praise thee with joyful lips:"], [6, "When I remember thee upon my bed, and meditate on thee in the night watches."], [7, "Because thou hast been my help, therefore in the shadow of thy wings will I rejoice."], [8, "My soul followeth hard after thee: thy right hand upholdeth me."], [9, "But those that seek my soul, to destroy it, shall go into the lower parts of the earth."], [10, "They shall fall by the sword: they shall be a portion for foxes."], [11, "But the king shall rejoice in God; every one that sweareth by him shall glory: but the mouth of them that speak lies shall be stopped."]]}};
+
+// Quotations from other writings (say: in the deck): their words open like a verse.
+const Q = {};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b && b.dataset.q) {
+    const q = Q[b.dataset.q];
+    verseTitle.textContent = q ? q.t : b.textContent.trim();
+    verseBody.innerHTML = q ? q.h : "<p>Not loaded.</p>";
+    verseDlg.showModal();
+    verseBody.scrollTop = 0;
+    return;
+  }
+  if (b) {
+    const keys = b.dataset.v;
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
