@@ -7,7 +7,7 @@
 
   const KJV_APP = 'https://fbckjv.app/KJVBible/';
   // Shown on the About page. Started at v1.17 (after 17 merged updates); each merged update adds one.
-  const APP_VERSION = '2.40', APP_DATE = '2026-11-19';
+  const APP_VERSION = '2.42', APP_DATE = '2026-11-19';
   const view = document.getElementById('view');
   const crumbs = document.getElementById('crumbs');
   let INDEX = null;
@@ -51,9 +51,15 @@
   }
 
   async function getJSON(url) {
-    const r = await fetch(url, { cache: 'no-cache' });   // always ask the server, so updates show at once
-    if (!r.ok) throw new Error(r.status + ' ' + url);
-    return r.json();
+    try {
+      const r = await fetch(url, { cache: 'no-cache' });   // always ask the server, so updates show at once
+      if (!r.ok) throw new Error(r.status + ' ' + url);
+      return await r.json();
+    } catch (err) {   // no connection, or the site mid-update: use the copy saved on this device, if there is one
+      const hit = window.caches && await caches.match(url, { ignoreSearch: true }).catch(() => null);
+      if (hit) return hit.json();
+      throw err;
+    }
   }
 
   function loadTopics() {
@@ -69,7 +75,7 @@
   let LESSONS = null;                    // lessons, slides and pictures (data/lessons.json), loaded when needed
   function loadLessons() {
     return LESSONS ? Promise.resolve(LESSONS)
-      : getJSON('data/lessons.json').then(l => (LESSONS = l)).catch(() => ({ shelves: [], lessons: [], pictures: [] }));
+      : getJSON('data/lessons.json').then(l => (LESSONS = l)).catch(() => ({ shelves: [], lessons: [], pictures: [], failed: true }));
   }
 
   function topicName(id) {
@@ -658,6 +664,8 @@
         <h1>Lessons &amp; Classes</h1>
         <p>The slides for each doctrine, the classes week by week, and the archive of sermons, history and other studies. Each one is filed under its doctrines and the chapters it teaches on.</p>
       </div>
+      ${lib.failed ? `<p class="hero-note" role="status">The lessons could not be loaded just now. Check the connection, then
+        <a class="btn" href="#lessons" onclick="location.reload(); return false">Try again</a></p>` : ''}
       ${lib.pictures.length ? `<nav class="theme-chips" aria-label="Memes"><a href="#pictures">Memes <span>${lib.pictures.length}</span></a></nav>` : ''}
       ${GROUPS.map(([g, name]) => {
         const here = shelves.filter(s => (s.group || 'archive') === g);
