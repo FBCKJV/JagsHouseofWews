@@ -38,4 +38,5 @@ earlier one-off studies, which the series will replace as the chapter's main stu
 - [ ] **Chapter panel on the rest**, a group at a time: Job, then John 6 and John I Am, then Daniel. Romans last
   (a closed lesson plan, already taught).
 - [ ] **Psalms decks from the series studies**, in small groups so each session stays manageable. Done: 22, 50, 51,
-  and David's Flight (34, 52, 54, 56, 57, 59). Next groups, in order: 1-5, 6-10, 11-15 … up to 63, skipping those done.
+  David's Flight (34, 52, 54, 56, 57, 59), and Psalms 1-5 (one deck, psalms-1-5). Next groups, in order: 6-10 (a
+  long group: about three times the text of 1-5), 11-15 … up to 63, skipping those done.

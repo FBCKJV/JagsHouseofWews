@@ -121,7 +121,9 @@
       var ims = s.querySelectorAll('.pic img');
       ims.forEach(function (im) { im.style.maxHeight = ''; });
       if (!ims.length || innerWidth < 700 || !over()) return;
-      for (var vh = 60; vh >= 25; vh -= 5) {
+      /* a title slide's picture is decoration: it may give up more height than a picture being taught from */
+      var floor = s.querySelector('.title-page') ? 15 : 25;
+      for (var vh = 60; vh >= floor; vh -= 5) {
         ims.forEach(function (im) { im.style.maxHeight = (vh / ims.length) + 'vh'; });
         if (!over()) return;
       }
