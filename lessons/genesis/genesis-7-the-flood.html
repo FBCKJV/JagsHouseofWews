@@ -125,6 +125,7 @@ mark.w{border-bottom:0}
 @media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
 .pic{margin:1rem 0;text-align:center}
 .pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
 /* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
 @media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
 .pic img{cursor:zoom-in}
@@ -508,6 +509,9 @@ const V = {
   "Hebrews 11:6":[[6, "But without faith it is impossible to please him: for he that cometh to God must believe that he is, and that he is a rewarder of them that diligently seek him."]],
   "Matthew 24:37-39":[[37, "But as the days of Noe were, so shall also the coming of the Son of man be."], [38, "For as in the days that were before the flood they were eating and drinking, marrying and giving in marriage, until the day that Noe entered into the ark,"], [39, "And knew not until the flood came, and took them all away; so shall also the coming of the Son of man be."]]
 };
+
+// The Chapter panel (key C): whole chapters, and each slide's verses in data-ctx. null when the deck has none.
+window.DECK_CTX = null;
 
 // Quotations from other writings (say: in the deck): their words open like a verse.
 const Q = {};

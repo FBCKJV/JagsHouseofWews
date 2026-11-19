@@ -50,6 +50,11 @@ Source format, one element per line (blank lines are ignored, # starts a comment
                                                a numbered dot on the picture above (x, y and size in % of its width/
                                                height/width) that opens its verses; a key of the dots follows the picture
   highlight: believ                              (meta, top of the file) stems highlighted in every quoted verse
+  context: Psalm 51                              (meta) the Chapter panel: C or the Chapter button opens, at the right, the
+                                               whole chapter of the passage on the slide (from its scripture:, big:, fig:,
+                                               xr: … references, else its [[verse]] buttons, else the slide before), with
+                                               the slide's verses lit. The chapters named here are the deck's own: they
+                                               are always a tab, and are shown on the title slides. "context: yes" names none.
   say: melito | Melito of Sardis | Eusebius, Church History 4.26 (trans. McGiffert)     [| poem]
   > words of the quotation, one or more lines …   a quotation that opens like a verse pop-up, from [[say:melito|label]]
   >                                             a line of only ">" starts a new paragraph; "> ## heading" a heading;
@@ -114,6 +119,53 @@ def label_of(ref):
 def verses(ref):
     book, ch, a, b = parse_ref(ref)
     return [(v, KJV[(book, ch, v)]) for v in range(a, b + 1)]
+
+
+def chapter_of(text):
+    """'Psalm 51' or 'John 3' -> ('Psalms', 51); the chapter a deck's "context:" line names."""
+    m = re.match(r'^(.*?\S)\s+(\d+)$', text.strip())
+    book = m and SHORT.get(m.group(1), m.group(1))
+    if not m or book not in BOOK_NAMES or (book, int(m.group(2)), 1) not in KJV:
+        raise SystemExit(f'Not a chapter: {text!r}')
+    return book, int(m.group(2))
+
+
+def chapter_text(book, ch):
+    out, v = [], 1
+    while (book, ch, v) in KJV:
+        out.append([v, KJV[(book, ch, v)]]); v += 1
+    return out
+
+
+VERSE_REF = re.compile(r'\[\[(?!lesson:|say:|app:)([^\]|]+)(?:\|[^\]]+)?\]\]')
+
+
+def slide_context(items):
+    """The references a slide teaches from: its passages and verse cards first, else its verse buttons."""
+    main, loose = [], []
+    for k, v in items:
+        if k in ('scripture', 'big'):
+            main += [r for r in v.split('|')[0].split(';') if r.strip()]
+        elif k in ('fig', 'lit', 'rev'):
+            r = (v.split('|') + ['', ''])[1]
+            main += [x for x in r.split(';') if x.strip()]
+        elif k == 'xr':
+            main.append(v.partition('|')[0])
+        elif k == 'group':
+            main += [x for x in (v.split('|') + ['', ''])[2].split(';') if x.strip()]
+        elif k == 'parallel':
+            for cell in v.split('|'):
+                main.append(cell.partition('·')[0])
+        loose += VERSE_REF.findall(v)
+    keys = []
+    for r in main or loose:
+        try:
+            k = key_of(r)
+        except SystemExit:
+            continue
+        if k not in keys:
+            keys.append(k)
+    return keys
 
 
 USED = {}
@@ -257,8 +309,24 @@ def build(src):
     HIGHLIGHT = [w.strip() for w in meta.get('highlight', '').split(';') if w.strip()]
     UP = '../' * len(os.path.dirname(meta['output']).split('/'))
     body = []
+    ctx_on = bool(meta.get('context'))
+    home = [] if meta.get('context', '').lower() in ('', 'yes', 'on') else \
+        [chapter_of(c) for c in meta['context'].split(';') if c.strip()]
+    chapters, last_ctx = {}, []
+    for b, c in home:
+        chapters[f'{b} {c}'] = chapter_text(b, c)
     for i, s in enumerate(slides, 1):
         title_page = s['kind'] == 'title'
+        ctx_attr = ''
+        if ctx_on:
+            ctx = [] if title_page and home else slide_context(s['items'])
+            if not ctx:
+                ctx = last_ctx if not (title_page and home) else []
+            last_ctx = ctx
+            for k in ctx:
+                b, c, _, _ = parse_ref(k)
+                chapters.setdefault(f'{b} {c}', chapter_text(b, c))
+            ctx_attr = f' data-ctx="{html.escape("|".join(ctx))}"'
         parts, j, items = [], 0, s['items']
         heading = next((v for k, v in items if k == 'heading'), s['title'])
         if title_page:
@@ -413,7 +481,7 @@ def build(src):
         if title_page and len(h1) > 36:   # a long title takes a smaller size so it fits a laptop screen
             page += ' long'
         body.append(f'<!-- {i} -->\n<section class="slide" data-section="{html.escape(s["section"])}" '
-                    f'data-title="{html.escape(s["title"])}">\n  <div class="{page}">\n    '
+                    f'data-title="{html.escape(s["title"])}"{ctx_attr}>\n  <div class="{page}">\n    '
                     + '\n    '.join(parts) + '\n  </div>\n</section>\n')
 
     tpl = open(os.path.join(ROOT, 'tools', 'deck', 'template.html'), encoding='utf-8').read()
@@ -423,6 +491,8 @@ def build(src):
               .replace('{{DESCRIPTION}}', html.escape(meta.get('description', ''), quote=True))
               .replace('{{EXTRAS}}', os.path.relpath(os.path.join(ROOT, 'lessons', 'deck-extras.js'), os.path.dirname(os.path.join(ROOT, meta['output']))))
               .replace('{{SLIDES}}', '\n'.join(body)).replace('{{VERSES}}', vmap)
+              .replace('{{CONTEXT}}', json.dumps({'home': [f'{b} {c}' for b, c in home], 'ch': chapters}, ensure_ascii=False)
+                       if ctx_on else 'null')
               .replace('{{SAYINGS}}', json.dumps({q: {'t': SAYS[q]['title'], 'h': say_html(SAYS[q])} for q in sorted(SAID)},
                                                  ensure_ascii=False)))
     dest = os.path.join(ROOT, meta['output'])

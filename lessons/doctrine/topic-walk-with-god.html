@@ -125,6 +125,7 @@ mark.w{border-bottom:0}
 @media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
 .pic{margin:1rem 0;text-align:center}
 .pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
 /* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
 @media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
 .pic img{cursor:zoom-in}
@@ -678,6 +679,9 @@ const V = {
   "Romans 8:31":[[31, "What shall we then say to these things? If God be for us, who can be against us?"]],
   "Song of Solomon 7:10-12":[[10, "I am my beloved’s, and his desire is toward me."], [11, "Come, my beloved, let us go forth into the field; let us lodge in the villages."], [12, "Let us get up early to the vineyards; let us see if the vine flourish, whether the tender grape appear, and the pomegranates bud forth: there will I give thee my loves."]]
 };
+
+// The Chapter panel (key C): whole chapters, and each slide's verses in data-ctx. null when the deck has none.
+window.DECK_CTX = null;
 
 // Quotations from other writings (say: in the deck): their words open like a verse.
 const Q = {};

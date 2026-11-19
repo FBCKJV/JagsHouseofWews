@@ -125,6 +125,7 @@ mark.w{border-bottom:0}
 @media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
 .pic{margin:1rem 0;text-align:center}
 .pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
 /* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
 @media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
 .pic img{cursor:zoom-in}
@@ -564,6 +565,9 @@ const V = {
   "Romans 11:6":[[6, "And if by grace, then is it no more of works: otherwise grace is no more grace. But if it be of works, then is it no more grace: otherwise work is no more work."]],
   "Romans 7:15-17":[[15, "For that which I do I allow not: for what I would, that do I not; but what I hate, that do I."], [16, "If then I do that which I would not, I consent unto the law that it is good."], [17, "Now then it is no more I that do it, but sin that dwelleth in me."]]
 };
+
+// The Chapter panel (key C): whole chapters, and each slide's verses in data-ctx. null when the deck has none.
+window.DECK_CTX = null;
 
 // Quotations from other writings (say: in the deck): their words open like a verse.
 const Q = {};

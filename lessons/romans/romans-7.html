@@ -125,6 +125,7 @@ mark.w{border-bottom:0}
 @media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
 .pic{margin:1rem 0;text-align:center}
 .pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
 /* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
 @media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
 .pic img{cursor:zoom-in}
@@ -480,6 +481,9 @@ const V = {
   "Romans 7:25":[[25, "I thank God through Jesus Christ our Lord. So then with the mind I myself serve the law of God; but with the flesh the law of sin."]],
   "Romans 7:7-13":[[7, "What shall we say then? Is the law sin? God forbid. Nay, I had not known sin, but by the law: for I had not known lust, except the law had said, Thou shalt not covet."], [8, "But sin, taking occasion by the commandment, wrought in me all manner of concupiscence. For without the law sin was dead."], [9, "For I was alive without the law once: but when the commandment came, sin revived, and I died."], [10, "And the commandment, which was ordained to life, I found to be unto death."], [11, "For sin, taking occasion by the commandment, deceived me, and by it slew me."], [12, "Wherefore the law is holy, and the commandment holy, and just, and good."], [13, "Was then that which is good made death unto me? God forbid. But sin, that it might appear sin, working death in me by that which is good; that sin by the commandment might become exceeding sinful."]]
 };
+
+// The Chapter panel (key C): whole chapters, and each slide's verses in data-ctx. null when the deck has none.
+window.DECK_CTX = null;
 
 // Quotations from other writings (say: in the deck): their words open like a verse.
 const Q = {};

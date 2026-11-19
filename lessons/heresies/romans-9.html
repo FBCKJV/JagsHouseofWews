@@ -125,6 +125,7 @@ mark.w{border-bottom:0}
 @media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
 .pic{margin:1rem 0;text-align:center}
 .pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
 /* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
 @media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
 .pic img{cursor:zoom-in}
@@ -520,6 +521,9 @@ const V = {
   "Romans 9:19":[[19, "Thou wilt say then unto me, Why doth he yet find fault? For who hath resisted his will?"]],
   "Romans 9:19-23":[[19, "Thou wilt say then unto me, Why doth he yet find fault? For who hath resisted his will?"], [20, "Nay but, O man, who art thou that repliest against God? Shall the thing formed say to him that formed it, Why hast thou made me thus?"], [21, "Hath not the potter power over the clay, of the same lump to make one vessel unto honour, and another unto dishonour?"], [22, "What if God, willing to shew his wrath, and to make his power known, endured with much longsuffering the vessels of wrath fitted to destruction:"], [23, "And that he might make known the riches of his glory on the vessels of mercy, which he had afore prepared unto glory,"]]
 };
+
+// The Chapter panel (key C): whole chapters, and each slide's verses in data-ctx. null when the deck has none.
+window.DECK_CTX = null;
 
 // Quotations from other writings (say: in the deck): their words open like a verse.
 const Q = {};

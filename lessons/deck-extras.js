@@ -4,7 +4,9 @@
    - Projector (button or P): sturdier type, the strongest contrast, and each slide grown to fill the screen,
      for a cheap projector on a wall in a half-lit room.
    - Day / Night (button or D): Night is bright words on a dark screen (the usual look); Day is dark words on a
-     light page. */
+     light page.
+   A deck built with a "context:" line also gets the Chapter panel (button or C), remembered for every deck: the whole
+   chapter of the passage on the slide at the right of the screen, the slide's verses lit, following the slides. */
 (function () {
   var PKEY = 'kjv_projector', DKEY = 'kjv_deck_day';
   var proj = false, day = false;
@@ -23,6 +25,9 @@
     document.head.appendChild(l);
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { fit(); });
   }
+
+  var CKEY = 'kjv_deck_chapter', ctxOpen = false;
+  try { ctxOpen = localStorage.getItem(CKEY) === '1'; } catch (e) {}
 
   var pcss = document.createElement('style');
   pcss.textContent =
@@ -75,7 +80,30 @@
     'html.proj .kicker{font-size:.8em;font-weight:700}' +
     'html.proj .ref{font-size:.8em;font-weight:700}' +
     'html.proj .sub{font-weight:500}' +
-    '@media (max-width:700px){.xproj{display:none}}';
+    '@media (max-width:700px){.xproj{display:none}}' +
+    /* The Chapter panel: the whole chapter at the right; the slide gives up that width while it is open */
+    ':root{--ctxw:clamp(20rem,32vw,38rem)}' +
+    '.xctx{position:fixed;top:0;right:0;bottom:var(--barh,3.2rem);width:var(--ctxw);z-index:6;display:none;flex-direction:column;' +
+    'background:var(--ink-2);border-left:1px solid var(--gold);box-shadow:-6px 0 18px rgba(0,0,0,.35)}' +
+    'html.ctx .xctx{display:flex}' +
+    'html.ctx .deck{right:var(--ctxw)}' +
+    '.xctx-head{display:flex;align-items:center;gap:.4rem;flex-wrap:wrap;padding:.6rem .8rem;border-bottom:1px solid var(--rule)}' +
+    '.xctx-tabs{display:flex;flex-wrap:wrap;gap:.35rem;flex:1;min-width:0}' +
+    '.xctx-head button{background:none;border:1px solid var(--rule);color:var(--gold);cursor:pointer;padding:.3rem .55rem;' +
+    'font-family:var(--display);font-size:.78rem;letter-spacing:.05em}' +
+    '.xctx-head button[aria-pressed="true"]{border-color:var(--gold);color:var(--gold-bright);background:rgba(201,162,75,.16)}' +
+    '.xctx-head .xctx-x{margin-left:auto}' +
+    '.xctx-body{flex:1;overflow-y:auto;padding:.8rem 1.1rem 1.4rem;font-size:1.08rem;line-height:1.55}' +
+    '.xctx-body h3{text-align:center;margin:.2rem 0 .7rem}' +
+    '.xctx-body p{margin:0 0 .45rem;padding:.1rem .4rem;border-left:3px solid transparent}' +
+    '.xctx-body p.on{background:rgba(201,162,75,.16);border-left-color:var(--gold)}' +
+    '.xctx-body sup{font-family:var(--display);font-size:.62em;color:var(--gold);margin-right:.3em}' +
+    'html.day .xctx-body p.on{background:#f1dfb4}' +
+    'html.proj .xctx-body{font-family:"Crimson Pro",var(--body);font-weight:500;font-size:clamp(1.05rem,2.4vh,1.75rem)}' +
+    'html.proj .xctx-body sup{font-weight:700}' +
+    'html.proj:not(.day) .xctx{background:#0b0b0b}' +
+    '@media (max-width:820px){:root{--ctxw:100vw}html.ctx .deck{right:0}.xctx{top:calc(env(safe-area-inset-top,0px) + 50px);border-top:1px solid var(--gold)}}' +
+    '@media print{.xctx{display:none!important}html.ctx .deck{right:0}}';
   document.head.appendChild(pcss);
   if (proj) { root.classList.add('proj'); loadFont(); }
   if (day) root.classList.add('day');
@@ -132,6 +160,7 @@
   function clear() { try { localStorage.removeItem(KEY); } catch (e) {} }
 
   var saved = read(), slide = 0, total = 0, resumed = '';
+  var ctxShow = null;   /* set once the Chapter panel is built */
   var mark = history.replaceState;
   var startsOn = /^#\d+$/.test(location.hash);
 
@@ -145,6 +174,7 @@
     var r = mark.apply(this, arguments);
     var m = /#(\d+)$/.exec(String(url || ''));
     if (m) { slide = +m[1]; write({ s: slide, t: total }); }
+    if (ctxShow) ctxShow();
     fit();
     return r;
   };
@@ -247,6 +277,82 @@
       bar.appendChild(db);
       setProj(proj);
       setDay(day);
+
+      /* The Chapter panel */
+      var CT = window.DECK_CTX;
+      var cb = null, setCtx = null;
+      if (CT && CT.ch) {
+        var slides = document.querySelectorAll('.slide');
+        var panel = document.createElement('aside');
+        panel.className = 'xctx'; panel.setAttribute('aria-label', 'The whole chapter');
+        panel.innerHTML = '<div class="xctx-head"><div class="xctx-tabs"></div>' +
+          '<button type="button" class="xctx-x" aria-label="Close the chapter (key C)" title="Close (key C)">✕</button></div>' +
+          '<div class="xctx-body"></div>';
+        document.body.appendChild(panel);
+        var tabs = panel.querySelector('.xctx-tabs'), cbody = panel.querySelector('.xctx-body');
+        var shownTabs = '', pick = null;
+        var name = function (c) { return c.replace(/^Psalms /, 'Psalm '); };
+        var sc = window.smallCaps || function (t) { return t; };
+        var navBar = document.querySelector('.bar');
+        var lit = function (keys, c) {   /* the verses of chapter c that the slide's references take in */
+          var on = {};
+          keys.forEach(function (k) {
+            var m = /^(.*) (\d+):(\d+)(?:-(\d+))?$/.exec(k);
+            if (!m || m[1] + ' ' + m[2] !== c) return;
+            for (var v = +m[3]; v <= +(m[4] || m[3]); v++) on[v] = true;
+          });
+          return on;
+        };
+        var render = function (c, keys) {
+          var on = lit(keys, c), h = '<h3>' + name(c) + '</h3>';
+          (CT.ch[c] || []).forEach(function (x) {
+            h += '<p' + (on[x[0]] ? ' class="on"' : '') + '><sup>' + x[0] + '</sup>' + sc(x[1]) + '</p>';
+          });
+          cbody.innerHTML = h;
+          tabs.querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.c === c)); });
+          var first = cbody.querySelector('p.on');
+          cbody.scrollTop = first ? Math.max(0, first.offsetTop - cbody.clientHeight / 4) : 0;
+        };
+        var keysNow = function () {
+          var s = slides[Math.max(0, (slide || 1) - 1)];
+          return s && s.dataset.ctx ? s.dataset.ctx.split('|') : [];
+        };
+        ctxShow = function () {
+          if (!ctxOpen) return;
+          var keys = keysNow(), list = [];
+          keys.forEach(function (k) { var c = k.replace(/:.*$/, ''); if (list.indexOf(c) < 0 && CT.ch[c]) list.push(c); });
+          (CT.home || []).forEach(function (c) { if (list.indexOf(c) < 0) list.push(c); });
+          if (!list.length) { cbody.innerHTML = '<p class="sub">No chapter on this slide.</p>'; tabs.innerHTML = ''; shownTabs = ''; return; }
+          if (list.join('|') !== shownTabs) {
+            shownTabs = list.join('|'); pick = null;
+            tabs.innerHTML = list.map(function (c) { return '<button type="button" data-c="' + c + '">' + name(c) + '</button>'; }).join('');
+          }
+          render(pick && list.indexOf(pick) >= 0 ? pick : list[0], keys);
+        };
+        tabs.addEventListener('click', function (e) {
+          var b = e.target.closest('button'); if (!b) return;
+          pick = b.dataset.c; render(pick, keysNow()); b.blur();
+        });
+        setCtx = function (on) {
+          ctxOpen = on;
+          try { localStorage.setItem(CKEY, on ? '1' : '0'); } catch (e) {}
+          if (navBar) root.style.setProperty('--barh', navBar.offsetHeight + 'px');
+          root.classList.toggle('ctx', on);
+          cb.textContent = on ? 'Chapter ✓' : 'Chapter';
+          cb.setAttribute('aria-pressed', String(on));
+          shownTabs = '';
+          ctxShow();
+          document.querySelectorAll('.slide .page').forEach(function (p) { p.style.fontSize = ''; });
+          fit();
+        };
+        cb = document.createElement('button');
+        cb.type = 'button'; cb.className = 'xshare xchap';
+        cb.title = 'The whole chapter beside the slide, its verses lit (key C)';
+        cb.addEventListener('click', function () { setCtx(!ctxOpen); cb.blur(); });
+        bar.appendChild(cb);
+        panel.querySelector('.xctx-x').addEventListener('click', function () { setCtx(false); });
+        setCtx(ctxOpen);
+      }
       addEventListener('resize', function () { document.querySelectorAll('.slide .page').forEach(function (p) { p.style.fontSize = ''; }); fit(); });
       if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
       addEventListener('load', fit);
@@ -257,6 +363,7 @@
         if (e.key === 'p' || e.key === 'P') { setProj(!proj); }
         else if (e.key === 'd' || e.key === 'D') { setDay(!day); }
         else if ((e.key === 'f' || e.key === 'F') && canFull) { toggleFull(); }
+        else if ((e.key === 'c' || e.key === 'C') && setCtx) { setCtx(!ctxOpen); }
       });
     }
 

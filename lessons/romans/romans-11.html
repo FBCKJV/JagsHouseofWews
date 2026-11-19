@@ -125,6 +125,7 @@ mark.w{border-bottom:0}
 @media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
 .pic{margin:1rem 0;text-align:center}
 .pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
 /* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
 @media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
 .pic img{cursor:zoom-in}
@@ -1100,6 +1101,9 @@ const V = {
   "Romans 9:30-33":[[30, "What shall we say then? That the Gentiles, which followed not after righteousness, have attained to righteousness, even the righteousness which is of faith."], [31, "But Israel, which followed after the law of righteousness, hath not attained to the law of righteousness."], [32, "Wherefore? Because they sought it not by faith, but as it were by the works of the law. For they stumbled at that stumblingstone;"], [33, "As it is written, Behold, I lay in Sion a stumblingstone and rock of offence: and whosoever believeth on him shall not be ashamed."]],
   "Romans 9:6-8":[[6, "Not as though the word of God hath taken none effect. For they are not all Israel, which are of Israel:"], [7, "Neither, because they are the seed of Abraham, are they all children: but, In Isaac shall thy seed be called."], [8, "That is, They which are the children of the flesh, these are not the children of God: but the children of the promise are counted for the seed."]]
 };
+
+// The Chapter panel (key C): whole chapters, and each slide's verses in data-ctx. null when the deck has none.
+window.DECK_CTX = null;
 
 // Quotations from other writings (say: in the deck): their words open like a verse.
 const Q = {};
