@@ -125,6 +125,7 @@ mark.w{border-bottom:0}
 @media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
 .pic{margin:1rem 0;text-align:center}
 .pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
 /* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
 @media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
 .pic img{cursor:zoom-in}
@@ -583,6 +584,9 @@ const V = {
   "John 19:30":[[30, "When Jesus therefore had received the vinegar, he said, It is finished: and he bowed his head, and gave up the ghost."]],
   "Romans 8:19-23":[[19, "For the earnest expectation of the creature waiteth for the manifestation of the sons of God."], [20, "For the creature was made subject to vanity, not willingly, but by reason of him who hath subjected the same in hope,"], [21, "Because the creature itself also shall be delivered from the bondage of corruption into the glorious liberty of the children of God."], [22, "For we know that the whole creation groaneth and travaileth in pain together until now."], [23, "And not only they, but ourselves also, which have the firstfruits of the Spirit, even we ourselves groan within ourselves, waiting for the adoption, to wit, the redemption of our body."]]
 };
+
+// The Chapter panel (key C): whole chapters, and each slide's verses in data-ctx. null when the deck has none.
+window.DECK_CTX = null;
 
 // Quotations from other writings (say: in the deck): their words open like a verse.
 const Q = {};

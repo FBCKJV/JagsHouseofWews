@@ -125,6 +125,7 @@ mark.w{border-bottom:0}
 @media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
 .pic{margin:1rem 0;text-align:center}
 .pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
 /* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
 @media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
 .pic img{cursor:zoom-in}
@@ -421,6 +422,9 @@ const V = {
   "Romans 2:6-9":[[6, "Who will render to every man according to his deeds:"], [7, "To them who by patient continuance in well doing seek for glory and honour and immortality, eternal life:"], [8, "But unto them that are contentious, and do not obey the truth, but obey unrighteousness, indignation and wrath,"], [9, "Tribulation and anguish, upon every soul of man that doeth evil, of the Jew first, and also of the Gentile;"]],
   "Romans 2:9-11":[[9, "Tribulation and anguish, upon every soul of man that doeth evil, of the Jew first, and also of the Gentile;"], [10, "But glory, honour, and peace, to every man that worketh good, to the Jew first, and also to the Gentile:"], [11, "For there is no respect of persons with God."]]
 };
+
+// The Chapter panel (key C): whole chapters, and each slide's verses in data-ctx. null when the deck has none.
+window.DECK_CTX = null;
 
 // Quotations from other writings (say: in the deck): their words open like a verse.
 const Q = {};

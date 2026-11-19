@@ -33,3 +33,6 @@ earlier one-off studies, which the series will replace as the chapter's main stu
   ("Commentary on Genesis 42–47") until each has its own study. When new studies come in from Drive, add them as
   the chapter's series study (review/refile.json "drive"); the "with" filing for 42–44 in refile.json and the
   shared heading then fall away chapter by chapter.
+- [ ] **Chapter panel on the other chapter decks.** Tried first on Psalm 51 and John: That Ye Might Believe (Nov 2026).
+  If it works well in class, add `context:` to the Genesis, Job, Psalms (22, 50, David's Flight), John 6, John I Am,
+  Romans and Daniel decks.
