@@ -7,7 +7,7 @@
 
   const KJV_APP = 'https://fbckjv.app/KJVBible/';
   // Shown on the About page. Started at v1.17 (after 17 merged updates); each merged update adds one.
-  const APP_VERSION = '2.43', APP_DATE = '2026-11-19';
+  const APP_VERSION = '2.45', APP_DATE = '2026-11-19';
   const view = document.getElementById('view');
   const crumbs = document.getElementById('crumbs');
   let INDEX = null;
@@ -819,12 +819,17 @@
     if (main) meta = `<span>Posted ${esc(fmtDate(main.date))}${main.range ? ' · ' + esc(main.range) : ''}</span>`;
     if (studies.length > 1) meta += `<span>${studies.length} studies</span>`;
 
-    // Class slides made for this chapter (its main chapter, listed first): one opens directly,
-    // more than one jumps to the lessons list at the bottom.
-    const decks = lib.lessons.filter(l => l.chapters[0] && l.chapters[0].slug === b.slug && l.chapters[0].ch === ch)
-      .map(l => ({ l, part: l.parts.find(p => p.kind === 'page') })).filter(x => x.part);
+    // Class slides made for this chapter: its main chapter (listed first), or a deck of several chapters
+    // with a section of its own for this one (opened at that section). One opens directly, more than one
+    // jumps to the lessons list at the bottom.
+    const here = b.slug + '-' + ch;
+    const decks = lib.lessons.map(l => ({ l, part: l.parts.find(p => p.kind === 'page') })).filter(x => x.part)
+      .filter(({ l, part }) => (l.chapters[0] && l.chapters[0].slug === b.slug && l.chapters[0].ch === ch)
+        || (part.starts && part.starts[here]));
+    const first = l => l.chapters[0] && l.chapters[0].slug === b.slug && l.chapters[0].ch === ch;
+    const deckHref = x => x.part.href + (!first(x.l) && x.part.starts && x.part.starts[here] > 1 ? '#' + x.part.starts[here] : '');
     const slidesBtn = decks.length === 1
-      ? `<a class="btn" href="${esc(decks[0].part.href)}" target="_blank" rel="noopener">Class slides ↗</a>`
+      ? `<a class="btn" href="${esc(deckHref(decks[0]))}" target="_blank" rel="noopener">Class slides ↗</a>`
       : decks.length ? `<a class="btn" href="#lessons-here" data-jump="lessons-here">Class slides (${decks.length}) ↓</a>` : '';
     const actions = `<div class="actions">
         <a class="btn primary" href="${esc(kjvHref)}" target="_blank" rel="noopener">Read in the KJV app ↗</a>
