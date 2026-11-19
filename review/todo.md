@@ -39,6 +39,6 @@ earlier one-off studies, which the series will replace as the chapter's main stu
   (a closed lesson plan, already taught).
 - [ ] **Psalms decks from the series studies**, in small groups so each session stays manageable. Done: 22, 50, 51,
   David's Flight (34, 52, 54, 56, 57, 59), Psalms 1-5, Psalms 6-8 and Psalms 9-10 (a deck a class night: 9 and
-  10 are a pair), Psalms 11-12, 13-15, 16-17, 18-20, 21-25 and 26-30. Next groups, in order: 31-35 … up to 63, skipping those done.
+  10 are a pair), Psalms 11-12, 13-15, 16-17, 18-20, 21-25, 26-30, 31-32 and 33-35. Next groups, in order: 36-40 … up to 63, skipping those done.
 - [x] **Psalm 8: two Christmas posts filed with it.** Left out of the deck, at the author's word (Nov 2026). Posts 15452 (Psalm 95:6-7) and 15454 (Matthew 1:18-25), from
   23 Dec 2024, show with the Psalm 8 study in the app.
