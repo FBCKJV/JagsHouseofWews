@@ -33,6 +33,9 @@ earlier one-off studies, which the series will replace as the chapter's main stu
   ("Commentary on Genesis 42–47") until each has its own study. When new studies come in from Drive, add them as
   the chapter's series study (review/refile.json "drive"); the "with" filing for 42–44 in refile.json and the
   shared heading then fall away chapter by chapter.
-- [ ] **Chapter panel on the other chapter decks.** Tried first on Psalm 51 and John: That Ye Might Believe (Nov 2026).
-  If it works well in class, add `context:` to the Genesis, Job, Psalms (22, 50, David's Flight), John 6, John I Am,
-  Romans and Daniel decks.
+- [x] **Chapter panel on Genesis and Psalms.** On for Psalm 51 and John: That Ye Might Believe, then every Genesis
+  deck, Psalms 22 and 50, and David's Flight 1-3 (Nov 2026).
+- [ ] **Chapter panel on the rest**, a group at a time: Job, then John 6 and John I Am, then Daniel. Romans last
+  (a closed lesson plan, already taught).
+- [ ] **Psalms decks from the series studies**, in small groups so each session stays manageable. Done: 22, 50, 51,
+  and David's Flight (34, 52, 54, 56, 57, 59). Next groups, in order: 1-5, 6-10, 11-15 … up to 63, skipping those done.
