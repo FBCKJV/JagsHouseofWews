@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Psalm 48: Beautiful for Situation, Mount Zion</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Psalm 48 in the King James Bible: mount Zion, the city of the great King, Sennacherib and Hezekiah, Zion holy because God chose it, Jerusalem as the bride, the promise to Abraham and his seed which is Christ, political Zionism and the spirit of Esau, and the kings that marvelled and hasted away, from the Psalms series study.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body .say-cite{font-size:.85rem;font-style:italic;color:var(--vellum-dim);border-top:1px solid var(--rule);padding-top:.6rem;margin-top:1rem}
+.ref.say{border-bottom-style:dashed}
+.ref.say::before{content:"\201C";margin-right:.15em}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Beautiful for Situation, Mount Zion" data-ctx="">
+  <div class="page title-page">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalm 48</h1>
+    <p class="sub">The city of the great King • Zion and the promise • The kings marvelled and hasted away</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 48:1-2">Psalm 48:1-2</button><button class="ref" data-v="Psalms 48:14">Psalm 48:14</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse. Press C for the whole chapter.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Mount Zion" data-title="The city of the great King" data-ctx="Psalms 48:1-2">
+  <div class="page">
+    <div class="kicker">Psalm 48 · Mount Zion</div>
+    <h2>The city of the great King</h2>
+    <blockquote class="scripture" style="font-style:italic">Great is the <span class="lord">Lord</span>, and greatly to be praised in the city of our God, in the mountain of his holiness. <mark>Beautiful for situation, the joy of the whole earth, is mount Zion</mark>, on the sides of the north, the city of the great King.<cite>Psalm 48:1-2</cite></blockquote>
+    <p>Mount Zion, Jerusalem, is often referenced and praised as the place God chose to place His name. His holy city, the mountain providing natural protection on 3 sides, situated perfectly. A river running through the fertile valley. The setting where Abraham brought Isaac. Where God prepared Himself a sacrifice. Where Jesus was slain and rose again, and where He will reign in the Kingdom to come.</p>
+    <p>The name, Zion, means a “monument; raised up; sepulcher,” the place of the tomb, hewn out of rock, the site of Christ's burial. Chosen by God.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Mount Zion" data-title="As the mountains are round about Jerusalem" data-ctx="Psalms 125:1-2">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 48:2</div>
+    <h2>As the mountains are round about Jerusalem</h2>
+    <p>Jerusalem, the city isn't a lonely peak, but rather a settlement nestled within a protective bowl of higher terrain, with Mt Moriah and the mount of Olives part of the limestone rings, defending the area.</p>
+    <blockquote class="scripture" style="font-style:italic">They that trust in the <span class="lord">Lord</span> shall be as mount Zion, which cannot be removed, but abideth for ever. <mark>As the mountains are round about Jerusalem, so the <span class="lord">Lord</span> is round about his people</mark> from henceforth even for ever.<cite>Psalm 125:1-2</cite></blockquote>
+    <p>Beautiful for situation, a perfect location, the city of the great King on its north face.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Mount Zion" data-title="The LORD hath chosen Zion" data-ctx="Psalms 132:13-14|1 Peter 2:5-6">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 48:2</div>
+    <h2>The LORD hath chosen Zion</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>For the <span class="lord">Lord</span> hath chosen Zion</mark>; he hath desired it for his habitation. This is my rest for ever: here will I dwell; for I have desired it.<cite>Psalm 132:13-14</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">Ye also, as lively stones, are built up a spiritual house, an holy priesthood, to offer up spiritual sacrifices, acceptable to God by Jesus Christ. Wherefore also it is contained in the scripture, <mark>Behold, I lay in Sion a chief corner stone</mark>, elect, precious: and he that believeth on him shall not be confounded.<cite>1 Peter 2:5-6</cite></blockquote>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Mount Zion" data-title="A Lamb stood on the mount Sion" data-ctx="Revelation 14:1">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 48:2</div>
+    <h2>A Lamb stood on the mount Sion</h2>
+    <p>The shelter of Zion, the cornerstone of which is Christ, is where Jesus returns to in the end times, with the 144,000 witnesses.</p>
+    <blockquote class="big-verse">And I looked, and, lo, <mark>a Lamb stood on the mount Sion</mark>, and with him an hundred forty and four thousand, having his Father’s name written in their foreheads.<cite>Revelation 14:1</cite></blockquote>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Mount Zion" data-title="Sennacherib" data-ctx="Revelation 14:1">
+  <div class="page">
+    <div class="kicker">Psalm 48 · The defense of Zion</div>
+    <h2>Sennacherib</h2>
+    <p>The defenses of this holy mountain were enough to dissuade kings and armies.</p>
+    <p>Sennacherib, of Assyria, the most powerful emperor of the ancient world, invaded Judah with a massive army of 185,000 soldiers.</p>
+    <p>He sent his top military commanders to the walls of Jerusalem, fiercely mocking King Hezekiah and blaspheming God, confidently expecting the city to fall just like every other nation before it.</p>
+    <p>Hezekiah called out to the Lord for protection of the city.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Mount Zion" data-title="Hezekiah&#x27;s prayer" data-ctx="2 Kings 19:16-19">
+  <div class="page">
+    <div class="kicker">Cross references • 2 Kings 19</div>
+    <h2>Hezekiah's prayer</h2>
+    <blockquote class="scripture" style="font-style:italic"><span class="lord">Lord</span>, bow down thine ear, and hear: open, <span class="lord">Lord</span>, thine eyes, and see: and hear the words of Sennacherib, which hath sent him to reproach the living God. Of a truth, <span class="lord">Lord</span>, the kings of Assyria have destroyed the nations and their lands, And have cast their gods into the fire: for they were no gods, but the work of men’s hands, wood and stone: therefore they have destroyed them. Now therefore, O <span class="lord">Lord</span> our God, I beseech thee, <mark>save thou us out of his hand, that all the kingdoms of the earth may know that thou art the <span class="lord">Lord</span> God</mark>, even thou only.<cite>2 Kings 19:16-19</cite></blockquote>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Mount Zion" data-title="For mine own sake" data-ctx="2 Kings 19:32-34">
+  <div class="page">
+    <div class="kicker">Cross references • 2 Kings 19</div>
+    <h2>For mine own sake</h2>
+    <p>And God harkened to the prayer, for His own purposes and will;</p>
+    <blockquote class="scripture" style="font-style:italic">Therefore thus saith the <span class="lord">Lord</span> concerning the king of Assyria, He shall not come into this city, nor shoot an arrow there, nor come before it with shield, nor cast a bank against it. By the way that he came, by the same shall he return, and shall not come into this city, saith the <span class="lord">Lord</span>. <mark>For I will defend this city, to save it, for mine own sake, and for my servant David’s sake</mark>.<cite>2 Kings 19:32-34</cite></blockquote>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Mount Zion" data-title="Out of Sion the Deliverer" data-ctx="Romans 11:26-27">
+  <div class="page">
+    <div class="kicker">Psalm 48 · The holy city</div>
+    <h2>Out of Sion the Deliverer</h2>
+    <p>Zion is defended for His own sake, because He placed His name there, and for the promise made to David that out of Zion shall come a King.</p>
+    <blockquote class="scripture" style="font-style:italic">And so all Israel shall be saved: as it is written, <mark>There shall come out of Sion the Deliverer</mark>, and shall turn away ungodliness from Jacob: For this is my covenant unto them, when I shall take away their sins.<cite>Romans 11:26-27</cite></blockquote>
+    <p>Zion is holy, because it has been separated unto the purposes of God.</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Mount Zion" data-title="Spiritually called Sodom and Egypt" data-ctx="Revelation 11:8|Matthew 23:37-38">
+  <div class="page">
+    <div class="kicker">Psalm 48 · Not holy for the people's sake</div>
+    <h2>Spiritually called Sodom and Egypt</h2>
+    <p>It is not holy because the people there are holy. God allowed Babylon to raze the city and remove the people. Jesus decreed that Jerusalem would fall, and in 70AD it did. With the end times approaching, the city is considered wicked;</p>
+    <blockquote class="big-verse">And their dead bodies shall lie in the street of the great city, <mark>which spiritually is called Sodom and Egypt</mark>, where also our Lord was crucified.<cite>Revelation 11:8</cite></blockquote>
+    <p>As Christ said;</p>
+    <blockquote class="scripture" style="font-style:italic">O Jerusalem, Jerusalem, thou that killest the prophets, and stonest them which are sent unto thee, how often would I have gathered thy children together, even as a hen gathereth her chickens under her wings, and ye would not! <mark>Behold, your house is left unto you desolate</mark>.<cite>Matthew 23:37-38</cite></blockquote>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Mount Zion" data-title="They build up Zion with blood" data-ctx="Micah 3:9-10|Lamentations 4:11-13">
+  <div class="page">
+    <div class="kicker">Psalm 48 · Not holy for the people's sake</div>
+    <h2>They build up Zion with blood</h2>
+    <p>The Jews cursed the land, building up Zion with blood of the righteous;</p>
+    <blockquote class="scripture" style="font-style:italic">Hear this, I pray you, ye heads of the house of Jacob, and princes of the house of Israel, that abhor judgment, and pervert all equity. <mark>They build up Zion with blood</mark>, and Jerusalem with iniquity.<cite>Micah 3:9-10</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic">The <span class="lord">Lord</span> hath accomplished his fury; he hath poured out his fierce anger, and hath kindled a fire in Zion, and it hath devoured the foundations thereof. The kings of the earth, and all the inhabitants of the world, would not have believed that the adversary and the enemy should have entered into the gates of Jerusalem. <mark>For the sins of her prophets, and the iniquities of her priests</mark>, that have shed the blood of the just in the midst of her,<cite>Lamentations 4:11-13</cite></blockquote>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="The bride" data-title="A bride adorneth herself" data-ctx="Isaiah 61:10">
+  <div class="page">
+    <div class="kicker">Psalm 48 · Zion redeemed</div>
+    <h2>A bride adorneth herself</h2>
+    <p>But, Zion, like believers, stained crimson in sin, has a redeemer. And, like His church, Jerusalem is His bride, made perfect and decked in the finest array, fit for the King.</p>
+    <blockquote class="big-verse">I will greatly rejoice in the <span class="lord">Lord</span>, my soul shall be joyful in my God; for he hath clothed me with the garments of salvation, he hath covered me with the robe of righteousness, as a bridegroom decketh himself with ornaments, and <mark>as a bride adorneth herself with her jewels</mark>.<cite>Isaiah 61:10</cite></blockquote>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="The bride" data-title="For Zion&#x27;s sake" data-ctx="Isaiah 62:1-3">
+  <div class="page">
+    <div class="kicker">Cross references • Isaiah 62</div>
+    <h2>For Zion's sake</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>For Zion’s sake will I not hold my peace</mark>, and for Jerusalem’s sake I will not rest, until the righteousness thereof go forth as brightness, and the salvation thereof as a lamp that burneth. And the Gentiles shall see thy righteousness, and all kings thy glory: and thou shalt be called by a new name, which the mouth of the <span class="lord">Lord</span> shall name. Thou shalt also be a crown of glory in the hand of the <span class="lord">Lord</span>, and a royal diadem in the hand of thy God.<cite>Isaiah 62:1-3</cite></blockquote>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="The bride" data-title="As the bridegroom rejoiceth over the bride" data-ctx="Isaiah 62:4-7">
+  <div class="page">
+    <div class="kicker">Cross references • Isaiah 62</div>
+    <h2>As the bridegroom rejoiceth over the bride</h2>
+    <blockquote class="scripture" style="font-style:italic">Thou shalt no more be termed Forsaken; neither shall thy land any more be termed Desolate: but thou shalt be called Hephzibah, and thy land Beulah: for the <span class="lord">Lord</span> delighteth in thee, and thy land shall be married. For as a young man marrieth a virgin, so shall thy sons marry thee: and <mark>as the bridegroom rejoiceth over the bride, so shall thy God rejoice over thee</mark>. I have set watchmen upon thy walls, O Jerusalem, which shall never hold their peace day nor night: ye that make mention of the <span class="lord">Lord</span>, keep not silence, And give him no rest, till he establish, and till he make Jerusalem a praise in the earth.<cite>Isaiah 62:4-7</cite></blockquote>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="The bride" data-title="Jealous for Jerusalem" data-ctx="Zechariah 1:14|Isaiah 54:5-7">
+  <div class="page">
+    <div class="kicker">Psalm 48 · A picture of the believer</div>
+    <h2>Jealous for Jerusalem</h2>
+    <p>Zion, and Jerusalem, are a picture of the believer. A bride of Christ, made precious by His redemption, protecting it like a jealous husband;</p>
+    <blockquote class="big-verse">So the angel that communed with me said unto me, Cry thou, saying, Thus saith the <span class="lord">Lord</span> of hosts; <mark>I am jealous for Jerusalem and for Zion with a great jealousy</mark>.<cite>Zechariah 1:14</cite></blockquote>
+    <blockquote class="scripture" style="font-style:italic"><mark>For thy Maker is thine husband</mark>; the <span class="lord">Lord</span> of hosts is his name; and thy Redeemer the Holy One of Israel; The God of the whole earth shall he be called. For the <span class="lord">Lord</span> hath called thee as a woman forsaken and grieved in spirit, and a wife of youth, when thou wast refused, saith thy God. For a small moment have I forsaken thee; but with great mercies will I gather thee.<cite>Isaiah 54:5-7</cite></blockquote>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="The bride" data-title="New Jerusalem" data-ctx="Revelation 21:1-2">
+  <div class="page">
+    <div class="kicker">Psalm 48 · The bride of Christ</div>
+    <h2>New Jerusalem</h2>
+    <p>In the end, we shall see New Jerusalem, upon his holy hill, Zion. Perfected as a picture of his people, His bride;</p>
+    <blockquote class="scripture" style="font-style:italic">And I saw a new heaven and a new earth: for the first heaven and the first earth were passed away; and there was no more sea. And I John saw the holy city, new Jerusalem, coming down from God out of heaven, <mark>prepared as a bride adorned for her husband</mark>.<cite>Revelation 21:1-2</cite></blockquote>
+    <p>This is the promise of his holy place, how much more so is it the promise for those who have trusted in Christ. In an unmovable Rock, the cornerstone laid in Zion. The Rock of our salvation, we who are the bride of Christ. Amen</p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Abraham and his seed" data-title="The promise to Abraham" data-ctx="Genesis 12:1-3">
+  <div class="page">
+    <div class="kicker">Psalm 48 · The holy land</div>
+    <h2>The promise to Abraham</h2>
+    <p><strong>Psalm 48</strong> broadly captures the grandeur and love of God towards His holy land. This love is seen long before Israel as a nation enters in, or even exists. It was in the beginning, when God promised a land to Abraham.</p>
+    <blockquote class="scripture" style="font-style:italic">Now the <span class="lord">Lord</span> had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father’s house, <mark>unto a land that I will shew thee</mark>: And I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing: And I will bless them that bless thee, and curse him that curseth thee: and <mark>in thee shall all families of the earth be blessed</mark>.<cite>Genesis 12:1-3</cite></blockquote>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Abraham and his seed" data-title="And to thy seed, which is Christ" data-ctx="Galatians 3:16">
+  <div class="page">
+    <div class="kicker">Psalm 48 · The holy land</div>
+    <h2>And to thy seed, which is Christ</h2>
+    <p>The promise to Abraham was both for the land, and the Christ. Long before the exodus. Long before the wandering. Before Isaac was ever born, the land that would become Israel, the province of Judah, the city of Jerusalem, in the mountains of Zion, was set apart for God.</p>
+    <p>The blessings and inheritance made to Abraham, who believed God and it was counted for righteousness, was made to him and his seed. Jesus Christ.</p>
+    <blockquote class="big-verse">Now to Abraham and his seed were the promises made. He saith not, And to seeds, as of many; but as of one, <mark>And to thy seed, which is Christ</mark>.<cite>Galatians 3:16</cite></blockquote>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Abraham and his seed" data-title="Zionism" data-ctx="Galatians 3:27-29">
+  <div class="page">
+    <div class="kicker">Application • Zionism</div>
+    <h2>Zionism</h2>
+    <p>Zionism is a modern political ideology that takes the promise to Abraham, and rather than give the inheritance and blessing to Christ, and all who are in Christ, gives it to unbelieving, apostate Jews.</p>
+    <blockquote class="scripture" style="font-style:italic">For as many of you as have been baptized into Christ have put on Christ. There is neither Jew nor Greek, there is neither bond nor free, there is neither male nor female: for ye are all one in Christ Jesus. <mark>And if ye be Christ’s, then are ye Abraham’s seed</mark>, and heirs according to the promise.<cite>Galatians 3:27-29</cite></blockquote>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Abraham and his seed" data-title="All came to pass" data-ctx="Joshua 21:43-45">
+  <div class="page">
+    <div class="kicker">Cross references • The land</div>
+    <h2>All came to pass</h2>
+    <p>The claim for the children of Israel to the land, by promise of God, was fulfilled in the time of Joshua.</p>
+    <blockquote class="scripture" style="font-style:italic">And the <span class="lord">Lord</span> gave unto Israel all the land which he sware to give unto their fathers; and they possessed it, and dwelt therein. And the <span class="lord">Lord</span> gave them rest round about, according to all that he sware unto their fathers: and there stood not a man of all their enemies before them; the <span class="lord">Lord</span> delivered all their enemies into their hand. <mark>There failed not ought of any good thing which the <span class="lord">Lord</span> had spoken unto the house of Israel</mark>; <mark>all came to pass</mark>.<cite>Joshua 21:43-45</cite></blockquote>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Abraham and his seed" data-title="Plucked from off the land" data-ctx="Deuteronomy 28:63-64">
+  <div class="page">
+    <div class="kicker">Cross references • The land</div>
+    <h2>Plucked from off the land</h2>
+    <p>The promise to Abraham was unconditional. But the promise made to Moses by God in the wilderness, for His people to occupy His land, was conditional.</p>
+    <blockquote class="scripture" style="font-style:italic">And it shall come to pass, that as the <span class="lord">Lord</span> rejoiced over you to do you good, and to multiply you; so the <span class="lord">Lord</span> will rejoice over you to destroy you, and to bring you to nought; and <mark>ye shall be plucked from off the land</mark> whither thou goest to possess it. And the <span class="lord">Lord</span> shall scatter thee among all people, from the one end of the earth even unto the other; and there thou shalt serve other gods, which neither thou nor thy fathers have known, even wood and stone.<cite>Deuteronomy 28:63-64</cite></blockquote>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Abraham and his seed" data-title="Cannot disannul" data-ctx="Galatians 3:17-18">
+  <div class="page">
+    <div class="kicker">Application • Zionism</div>
+    <h2>Cannot disannul</h2>
+    <p>Many Christians today will say "God keeps His promises! The Jews deserve this land!" They place political Zionism and the ethnic ultranationalism of the modern Jewish state as being part of an unconditional and irrevocable covenant with the people by heritage and genealogy.</p>
+    <p>But the Bible is clear, that the covenant made in the wilderness was explicitly conditional, that what was given to the people through Moses could not, by their failure, disannul the promise made to Abraham and his singular seed.</p>
+    <blockquote class="scripture" style="font-style:italic">And this I say, that the covenant, that was confirmed before of God in Christ, the law, which was four hundred and thirty years after, cannot disannul, that it should make the promise of none effect. For if the inheritance be of the law, it is no more of promise: but <mark>God gave it to Abraham by promise</mark>.<cite>Galatians 3:17-18</cite></blockquote>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Abraham and his seed" data-title="A new covenant" data-ctx="Hebrews 8:7-10">
+  <div class="page">
+    <div class="kicker">Cross references • The covenant</div>
+    <h2>A new covenant</h2>
+    <p>But the covenant made those 430 years after Abraham? It has faded away, replaced by a better covenant with better promises, to all who are in Christ, regardless of their ethnicity or origin.</p>
+    <blockquote class="scripture" style="font-style:italic">For if that first covenant had been faultless, then should no place have been sought for the second. For finding fault with them, he saith, Behold, the days come, saith the Lord, when <mark>I will make a new covenant</mark> with the house of Israel and with the house of Judah: Not according to the covenant that I made with their fathers in the day when I took them by the hand to lead them out of the land of Egypt; because they continued not in my covenant, and I regarded them not, saith the Lord. For this is the covenant that I will make with the house of Israel after those days, saith the Lord; I will put my laws into their mind, and write them in their hearts: and I will be to them a God, and they shall be to me a people:<cite>Hebrews 8:7-10</cite></blockquote>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="Abraham and his seed" data-title="Joint-heirs with Christ" data-ctx="Romans 8:14-17">
+  <div class="page">
+    <div class="kicker">Cross references • The inheritance</div>
+    <h2>Joint-heirs with Christ</h2>
+    <p>The promise to occupy the land will be fulfilled for the Old Testament believers, in the resurrection. The only "Zionism" that matters is Christ Jesus on His throne. The inheritance is passed to all who have put on Christ.</p>
+    <blockquote class="scripture" style="font-style:italic">For as many as are led by the Spirit of God, they are the sons of God. For ye have not received the spirit of bondage again to fear; but ye have received the Spirit of adoption, whereby we cry, Abba, Father. The Spirit itself beareth witness with our spirit, that we are the children of God: And if children, then heirs; <mark>heirs of God, and joint-heirs with Christ</mark>; if so be that we suffer with him, that we may be also glorified together.<cite>Romans 8:14-17</cite></blockquote>
+    <p>This promise, the inheritance and blessings, is the heritage of all believers, from Adam and Abel, Seth and Noah, through every professing Christian today.</p>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="Abraham and his seed" data-title="The spirit of Esau" data-ctx="Hebrews 12:14-17">
+  <div class="page">
+    <div class="kicker">Application • The birthright</div>
+    <h2>The spirit of Esau</h2>
+    <p>The spirit of Esau, who forsook his inheritance for a bowl of pottage, lives in Christians, who for political expediency seek to give it away.</p>
+    <blockquote class="scripture" style="font-style:italic">Follow peace with all men, and holiness, without which no man shall see the Lord: Looking diligently lest any man fail of the grace of God; lest any root of bitterness springing up trouble you, and thereby many be defiled; Lest there be any fornicator, or profane person, <mark>as Esau, who for one morsel of meat sold his birthright</mark>. For ye know how that afterward, when he would have inherited the blessing, he was rejected: for he found no place of repentance, though he sought it carefully with tears.<cite>Hebrews 12:14-17</cite></blockquote>
+    <p>This tearful repentance will be the case for many in the end times. Those who placed modern politics and bad theology above the joy unspeakable found in Jesus for all who believe, Jew or Gentile. Man or woman. Bond or free.</p>
+    <p class="sub center">This first half of this <strong>Psalm 48</strong> study is really a work of love, and allowed me to lay out a positive, biblical understanding of Zion and Zionism, that's not simply countering a Dispensationalist's claims.</p>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="slide" data-section="The kings marvelled" data-title="They hasted away" data-ctx="Psalms 48:3-6|Joshua 10:5">
+  <div class="page">
+    <div class="kicker">Psalm 48 · God is known for a refuge</div>
+    <h2>They hasted away</h2>
+    <blockquote class="scripture" style="font-style:italic">God is known in her palaces for a refuge. For, lo, the kings were assembled, they passed by together. <mark>They saw it, and so they marvelled</mark>; <mark>they were troubled, and hasted away</mark>. Fear took hold upon them there, and pain, as of a woman in travail.<cite>Psalm 48:3-6</cite></blockquote>
+    <p>This promise of God, to be a ready shelter for His people and to cause their enemies to marvel and fear His power, and flee, is demonstrated multiple times in scripture.</p>
+    <p>During the entry and conquest of the promised land, we see it happen to the 5 Kings and their armies.</p>
+    <blockquote class="big-verse">Therefore <mark>the five kings of the Amorites</mark>, the king of Jerusalem, the king of Hebron, the king of Jarmuth, the king of Lachish, the king of Eglon, gathered themselves together, and went up, they and all their hosts, and encamped before Gibeon, and made war against it.<cite>Joshua 10:5</cite></blockquote>
+  </div>
+</section>
+
+<!-- 27 -->
+<section class="slide" data-section="The kings marvelled" data-title="Fear them not" data-ctx="Joshua 10:8|Joshua 10:10">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 48:4–5</div>
+    <h2>Fear them not</h2>
+    <p>God promises Joshua that He will win them the victory.</p>
+    <blockquote class="big-verse">And the <span class="lord">Lord</span> said unto Joshua, <mark>Fear them not</mark>: for I have delivered them into thine hand; there shall not a man of them stand before thee.<cite>Joshua 10:8</cite></blockquote>
+    <p>And God kept His promise.</p>
+    <blockquote class="big-verse"><mark>And the <span class="lord">Lord</span> discomfited them before Israel</mark>, and slew them with a great slaughter at Gibeon, and chased them along the way that goeth up to Bethhoron, and smote them to Azekah, and unto Makkedah.<cite>Joshua 10:10</cite></blockquote>
+  </div>
+</section>
+
+<!-- 28 -->
+<section class="slide" data-section="The kings marvelled" data-title="The strong hold of Zion" data-ctx="2 Samuel 5:6-7">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 48:4–5</div>
+    <h2>The strong hold of Zion</h2>
+    <p>Ironically, despite the defeat of the King of Jerusalem, among all the others, Joshua was not able to conquer Jerusalem itself. This honor would fall on King David himself.</p>
+    <blockquote class="scripture" style="font-style:italic">And the king and his men went to Jerusalem unto the Jebusites, the inhabitants of the land: which spake unto David, saying, Except thou take away the blind and the lame, thou shalt not come in hither: thinking, David cannot come in hither. <mark>Nevertheless David took the strong hold of Zion</mark>: the same is the city of David.<cite>2 Samuel 5:6-7</cite></blockquote>
+    <p>But this was not the only example of God confounding the enemies of the people, especially in the defense of Zion.</p>
+  </div>
+</section>
+
+<!-- 29 -->
+<section class="slide" data-section="The kings marvelled" data-title="When Jehoshaphat was king" data-ctx="Psalms 48:7-8">
+  <div class="page">
+    <div class="kicker">Psalm 48 · Ships of Tarshish</div>
+    <h2>When Jehoshaphat was king</h2>
+    <blockquote class="scripture" style="font-style:italic">Thou breakest the ships of Tarshish with an east wind. As we have heard, so have we seen in the city of the <span class="lord">Lord</span> of hosts, in the city of our God: <mark>God will establish it for ever</mark>. Selah.<cite>Psalm 48:7-8</cite></blockquote>
+    <p>We've previously covered the attempted siege of Jerusalem by Sennacherib and the Assyrian Forces, from <strong>2 Kings 19</strong>, which is another example. But a more fitting instance occurred when Jehoshaphat was king.</p>
+    <p>A massive alliance of kings from Moab, Ammon, and Edom marched together to destroy Jerusalem.</p>
+  </div>
+</section>
+
+<!-- 30 -->
+<section class="slide" data-section="The kings marvelled" data-title="Art not thou our God?" data-ctx="2 Chronicles 20:3-7">
+  <div class="page">
+    <div class="kicker">Cross references • 2 Chronicles 20</div>
+    <h2>Art not thou our God?</h2>
+    <blockquote class="scripture" style="font-style:italic">And Jehoshaphat feared, and set himself to seek the <span class="lord">Lord</span>, and proclaimed a fast throughout all Judah. And Judah gathered themselves together, to ask help of the <span class="lord">Lord</span>: even out of all the cities of Judah they came to seek the <span class="lord">Lord</span>. And Jehoshaphat stood in the congregation of Judah and Jerusalem, in the house of the <span class="lord">Lord</span>, before the new court, And said, O <span class="lord">Lord</span> God of our fathers, art not thou God in heaven? and rulest not thou over all the kingdoms of the heathen? and in thine hand is there not power and might, so that none is able to withstand thee? <mark>Art not thou our God</mark>, who didst drive out the inhabitants of this land before thy people Israel, and gavest it to the seed of Abraham thy friend for ever?<cite>2 Chronicles 20:3-7</cite></blockquote>
+  </div>
+</section>
+
+<!-- 31 -->
+<section class="slide" data-section="The kings marvelled" data-title="The battle is not yours, but God&#x27;s" data-ctx="2 Chronicles 20:15-17">
+  <div class="page">
+    <div class="kicker">Cross references • 2 Chronicles 20</div>
+    <h2>The battle is not yours, but God's</h2>
+    <p>As all Jerusalem prays, the Spirit of the Lord comes upon Jahaziel the son of Zechariah;</p>
+    <blockquote class="scripture" style="font-style:italic">And he said, Hearken ye, all Judah, and ye inhabitants of Jerusalem, and thou king Jehoshaphat, Thus saith the <span class="lord">Lord</span> unto you, Be not afraid nor dismayed by reason of this great multitude; <mark>for the battle is not yours, but God’s</mark>. To morrow go ye down against them: behold, they come up by the cliff of Ziz; and ye shall find them at the end of the brook, before the wilderness of Jeruel. Ye shall not need to fight in this battle: set yourselves, <mark>stand ye still, and see the salvation of the <span class="lord">Lord</span></mark> with you, O Judah and Jerusalem: fear not, nor be dismayed; to morrow go out against them: for the <span class="lord">Lord</span> will be with you.<cite>2 Chronicles 20:15-17</cite></blockquote>
+  </div>
+</section>
+
+<!-- 32 -->
+<section class="slide" data-section="The kings marvelled" data-title="We have thought of thy lovingkindness" data-ctx="Psalms 48:9-11">
+  <div class="page">
+    <div class="kicker">Psalm 48 · Let mount Zion rejoice</div>
+    <h2>We have thought of thy lovingkindness</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>We have thought of thy lovingkindness, O God, in the midst of thy temple</mark>. According to thy name, O God, so is thy praise unto the ends of the earth: thy right hand is full of righteousness. Let mount Zion rejoice, let the daughters of Judah be glad, because of thy judgments.<cite>Psalm 48:9-11</cite></blockquote>
+    <p>The response by Jehoshaphat and the Levites, and all the people, was to trust in the Lord and sing His praises.</p>
+    <p>They thought of God's lovingkindness, they taught His word in the midst of the temple. They sang His praise to the ends of the earth. The mount of Zion rejoiced and Jerusalem's daughters were glad because of His judgements.</p>
+  </div>
+</section>
+
+<!-- 33 -->
+<section class="slide" data-section="The kings marvelled" data-title="When they began to sing" data-ctx="2 Chronicles 20:18-22">
+  <div class="page">
+    <div class="kicker">Cross references • 2 Chronicles 20</div>
+    <h2>When they began to sing</h2>
+    <blockquote class="scripture" style="font-style:italic">And Jehoshaphat bowed his head with his face to the ground: and all Judah and the inhabitants of Jerusalem fell before the <span class="lord">Lord</span>, worshipping the <span class="lord">Lord</span>. And the Levites, of the children of the Kohathites, and of the children of the Korhites, stood up to praise the <span class="lord">Lord</span> God of Israel with a loud voice on high. And they rose early in the morning, and went forth into the wilderness of Tekoa: and as they went forth, Jehoshaphat stood and said, Hear me, O Judah, and ye inhabitants of Jerusalem; Believe in the <span class="lord">Lord</span> your God, so shall ye be established; believe his prophets, so shall ye prosper. And when he had consulted with the people, he appointed singers unto the <span class="lord">Lord</span>, and that should praise the beauty of holiness, as they went out before the army, and to say, Praise the <span class="lord">Lord</span>; for his mercy endureth for ever. <mark>And when they began to sing and to praise, the <span class="lord">Lord</span> set ambushments</mark> against the children of Ammon, Moab, and mount Seir, which were come against Judah; and they were smitten.<cite>2 Chronicles 20:18-22</cite></blockquote>
+  </div>
+</section>
+
+<!-- 34 -->
+<section class="slide" data-section="The kings marvelled" data-title="Our guide even unto death" data-ctx="Psalms 48:12-14">
+  <div class="page">
+    <div class="kicker">Psalm 48 · Walk about Zion</div>
+    <h2>Our guide even unto death</h2>
+    <p>The battle won by the enemy being discomfited and confounded. They turned their own swords upon each other. Smitten by the power of the Lord.</p>
+    <p>As promised, the spoil of the armies was delivered into the hands of Judah. And the people there praised His name.</p>
+    <blockquote class="scripture" style="font-style:italic">Walk about Zion, and go round about her: tell the towers thereof. Mark ye well her bulwarks, consider her palaces; that ye may tell it to the generation following. <mark>For this God is our God for ever and ever: he will be our guide even unto death</mark>.<cite>Psalm 48:12-14</cite></blockquote>
+    <p class="center">Amen</p>
+  </div>
+</section>
+
+<!-- 35 -->
+<section class="slide" data-section="The kings marvelled" data-title="Read on" data-ctx="Psalms 48:12-14">
+  <div class="page">
+    <div class="kicker">Psalm 48</div>
+    <h2>Read on</h2>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-psalms-46-47" target="_blank" rel="noopener">Psalms 46–47 ↗</a><a class="ref lesson-link" href="../../studies/#lesson-psalm-49" target="_blank" rel="noopener">Psalm 49 ↗</a><a class="ref lesson-link" href="../../studies/#lesson-conditional-covenants-ezekiel-temple" target="_blank" rel="noopener">Conditional Covenants and Ezekiel's Temple ↗</a><a class="ref lesson-link" href="../../studies/#lesson-doctrine-covenants-rightly-dividing" target="_blank" rel="noopener">Outline of the Covenants: Rightly Dividing ↗</a></div>
+    <p class="sub center">The chapter study</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#Psalms-48" target="_blank" rel="noopener">Psalm 48 ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "Psalms 48:1-2":[[1, "Great is the LORD, and greatly to be praised in the city of our God, in the mountain of his holiness."], [2, "Beautiful for situation, the joy of the whole earth, is mount Zion, on the sides of the north, the city of the great King."]],
+  "Psalms 48:14":[[14, "For this God is our God for ever and ever: he will be our guide even unto death."]]
+};
+
+// The Chapter panel (key C): whole chapters, and each slide's verses in data-ctx. null when the deck has none.
+window.DECK_CTX = {"home": ["Psalms 48"], "ch": {"Psalms 48": [[1, "Great is the LORD, and greatly to be praised in the city of our God, in the mountain of his holiness."], [2, "Beautiful for situation, the joy of the whole earth, is mount Zion, on the sides of the north, the city of the great King."], [3, "God is known in her palaces for a refuge."], [4, "For, lo, the kings were assembled, they passed by together."], [5, "They saw it, and so they marvelled; they were troubled, and hasted away."], [6, "Fear took hold upon them there, and pain, as of a woman in travail."], [7, "Thou breakest the ships of Tarshish with an east wind."], [8, "As we have heard, so have we seen in the city of the LORD of hosts, in the city of our God: God will establish it for ever. Selah."], [9, "We have thought of thy lovingkindness, O God, in the midst of thy temple."], [10, "According to thy name, O God, so is thy praise unto the ends of the earth: thy right hand is full of righteousness."], [11, "Let mount Zion rejoice, let the daughters of Judah be glad, because of thy judgments."], [12, "Walk about Zion, and go round about her: tell the towers thereof."], [13, "Mark ye well her bulwarks, consider her palaces; that ye may tell it to the generation following."], [14, "For this God is our God for ever and ever: he will be our guide even unto death."]], "Psalms 125": [[1, "They that trust in the LORD shall be as mount Zion, which cannot be removed, but abideth for ever."], [2, "As the mountains are round about Jerusalem, so the LORD is round about his people from henceforth even for ever."], [3, "For the rod of the wicked shall not rest upon the lot of the righteous; lest the righteous put forth their hands unto iniquity."], [4, "Do good, O LORD, unto those that be good, and to them that are upright in their hearts."], [5, "As for such as turn aside unto their crooked ways, the LORD shall lead them forth with the workers of iniquity: but peace shall be upon Israel."]], "Psalms 132": [[1, "Lord, remember David, and all his afflictions:"], [2, "How he sware unto the LORD, and vowed unto the mighty God of Jacob;"], [3, "Surely I will not come into the tabernacle of my house, nor go up into my bed;"], [4, "I will not give sleep to mine eyes, or slumber to mine eyelids,"], [5, "Until I find out a place for the LORD, an habitation for the mighty God of Jacob."], [6, "Lo, we heard of it at Ephratah: we found it in the fields of the wood."], [7, "We will go into his tabernacles: we will worship at his footstool."], [8, "Arise, O LORD, into thy rest; thou, and the ark of thy strength."], [9, "Let thy priests be clothed with righteousness; and let thy saints shout for joy."], [10, "For thy servant David’s sake turn not away the face of thine anointed."], [11, "The LORD hath sworn in truth unto David; he will not turn from it; Of the fruit of thy body will I set upon thy throne."], [12, "If thy children will keep my covenant and my testimony that I shall teach them, their children shall also sit upon thy throne for evermore."], [13, "For the LORD hath chosen Zion; he hath desired it for his habitation."], [14, "This is my rest for ever: here will I dwell; for I have desired it."], [15, "I will abundantly bless her provision: I will satisfy her poor with bread."], [16, "I will also clothe her priests with salvation: and her saints shall shout aloud for joy."], [17, "There will I make the horn of David to bud: I have ordained a lamp for mine anointed."], [18, "His enemies will I clothe with shame: but upon himself shall his crown flourish."]], "1 Peter 2": [[1, "Wherefore laying aside all malice, and all guile, and hypocrisies, and envies, and all evil speakings,"], [2, "As newborn babes, desire the sincere milk of the word, that ye may grow thereby:"], [3, "If so be ye have tasted that the Lord is gracious."], [4, "To whom coming, as unto a living stone, disallowed indeed of men, but chosen of God, and precious,"], [5, "Ye also, as lively stones, are built up a spiritual house, an holy priesthood, to offer up spiritual sacrifices, acceptable to God by Jesus Christ."], [6, "Wherefore also it is contained in the scripture, Behold, I lay in Sion a chief corner stone, elect, precious: and he that believeth on him shall not be confounded."], [7, "Unto you therefore which believe he is precious: but unto them which be disobedient, the stone which the builders disallowed, the same is made the head of the corner,"], [8, "And a stone of stumbling, and a rock of offence, even to them which stumble at the word, being disobedient: whereunto also they were appointed."], [9, "But ye are a chosen generation, a royal priesthood, an holy nation, a peculiar people; that ye should shew forth the praises of him who hath called you out of darkness into his marvellous light:"], [10, "Which in time past were not a people, but are now the people of God: which had not obtained mercy, but now have obtained mercy."], [11, "Dearly beloved, I beseech you as strangers and pilgrims, abstain from fleshly lusts, which war against the soul;"], [12, "Having your conversation honest among the Gentiles: that, whereas they speak against you as evildoers, they may by your good works, which they shall behold, glorify God in the day of visitation."], [13, "Submit yourselves to every ordinance of man for the Lord’s sake: whether it be to the king, as supreme;"], [14, "Or unto governors, as unto them that are sent by him for the punishment of evildoers, and for the praise of them that do well."], [15, "For so is the will of God, that with well doing ye may put to silence the ignorance of foolish men:"], [16, "As free, and not using your liberty for a cloke of maliciousness, but as the servants of God."], [17, "Honour all men. Love the brotherhood. Fear God. Honour the king."], [18, "Servants, be subject to your masters with all fear; not only to the good and gentle, but also to the froward."], [19, "For this is thankworthy, if a man for conscience toward God endure grief, suffering wrongfully."], [20, "For what glory is it, if, when ye be buffeted for your faults, ye shall take it patiently? but if, when ye do well, and suffer for it, ye take it patiently, this is acceptable with God."], [21, "For even hereunto were ye called: because Christ also suffered for us, leaving us an example, that ye should follow his steps:"], [22, "Who did no sin, neither was guile found in his mouth:"], [23, "Who, when he was reviled, reviled not again; when he suffered, he threatened not; but committed himself to him that judgeth righteously:"], [24, "Who his own self bare our sins in his own body on the tree, that we, being dead to sins, should live unto righteousness: by whose stripes ye were healed."], [25, "For ye were as sheep going astray; but are now returned unto the Shepherd and Bishop of your souls."]], "Revelation 14": [[1, "And I looked, and, lo, a Lamb stood on the mount Sion, and with him an hundred forty and four thousand, having his Father’s name written in their foreheads."], [2, "And I heard a voice from heaven, as the voice of many waters, and as the voice of a great thunder: and I heard the voice of harpers harping with their harps:"], [3, "And they sung as it were a new song before the throne, and before the four beasts, and the elders: and no man could learn that song but the hundred and forty and four thousand, which were redeemed from the earth."], [4, "These are they which were not defiled with women; for they are virgins. These are they which follow the Lamb whithersoever he goeth. These were redeemed from among men, being the firstfruits unto God and to the Lamb."], [5, "And in their mouth was found no guile: for they are without fault before the throne of God."], [6, "And I saw another angel fly in the midst of heaven, having the everlasting gospel to preach unto them that dwell on the earth, and to every nation, and kindred, and tongue, and people,"], [7, "Saying with a loud voice, Fear God, and give glory to him; for the hour of his judgment is come: and worship him that made heaven, and earth, and the sea, and the fountains of waters."], [8, "And there followed another angel, saying, Babylon is fallen, is fallen, that great city, because she made all nations drink of the wine of the wrath of her fornication."], [9, "And the third angel followed them, saying with a loud voice, If any man worship the beast and his image, and receive his mark in his forehead, or in his hand,"], [10, "The same shall drink of the wine of the wrath of God, which is poured out without mixture into the cup of his indignation; and he shall be tormented with fire and brimstone in the presence of the holy angels, and in the presence of the Lamb:"], [11, "And the smoke of their torment ascendeth up for ever and ever: and they have no rest day nor night, who worship the beast and his image, and whosoever receiveth the mark of his name."], [12, "Here is the patience of the saints: here are they that keep the commandments of God, and the faith of Jesus."], [13, "And I heard a voice from heaven saying unto me, Write, Blessed are the dead which die in the Lord from henceforth: Yea, saith the Spirit, that they may rest from their labours; and their works do follow them."], [14, "And I looked, and behold a white cloud, and upon the cloud one sat like unto the Son of man, having on his head a golden crown, and in his hand a sharp sickle."], [15, "And another angel came out of the temple, crying with a loud voice to him that sat on the cloud, Thrust in thy sickle, and reap: for the time is come for thee to reap; for the harvest of the earth is ripe."], [16, "And he that sat on the cloud thrust in his sickle on the earth; and the earth was reaped."], [17, "And another angel came out of the temple which is in heaven, he also having a sharp sickle."], [18, "And another angel came out from the altar, which had power over fire; and cried with a loud cry to him that had the sharp sickle, saying, Thrust in thy sharp sickle, and gather the clusters of the vine of the earth; for her grapes are fully ripe."], [19, "And the angel thrust in his sickle into the earth, and gathered the vine of the earth, and cast it into the great winepress of the wrath of God."], [20, "And the winepress was trodden without the city, and blood came out of the winepress, even unto the horse bridles, by the space of a thousand and six hundred furlongs."]], "2 Kings 19": [[1, "And it came to pass, when king Hezekiah heard it, that he rent his clothes, and covered himself with sackcloth, and went into the house of the LORD."], [2, "And he sent Eliakim, which was over the household, and Shebna the scribe, and the elders of the priests, covered with sackcloth, to Isaiah the prophet the son of Amoz."], [3, "And they said unto him, Thus saith Hezekiah, This day is a day of trouble, and of rebuke, and blasphemy; for the children are come to the birth, and there is not strength to bring forth."], [4, "It may be the LORD thy God will hear all the words of Rabshakeh, whom the king of Assyria his master hath sent to reproach the living God; and will reprove the words which the LORD thy God hath heard: wherefore lift up thy prayer for the remnant that are left."], [5, "So the servants of king Hezekiah came to Isaiah."], [6, "And Isaiah said unto them, Thus shall ye say to your master, Thus saith the LORD, Be not afraid of the words which thou hast heard, with which the servants of the king of Assyria have blasphemed me."], [7, "Behold, I will send a blast upon him, and he shall hear a rumour, and shall return to his own land; and I will cause him to fall by the sword in his own land."], [8, "So Rabshakeh returned, and found the king of Assyria warring against Libnah: for he had heard that he was departed from Lachish."], [9, "And when he heard say of Tirhakah king of Ethiopia, Behold, he is come out to fight against thee: he sent messengers again unto Hezekiah, saying,"], [10, "Thus shall ye speak to Hezekiah king of Judah, saying, Let not thy God in whom thou trustest deceive thee, saying, Jerusalem shall not be delivered into the hand of the king of Assyria."], [11, "Behold, thou hast heard what the kings of Assyria have done to all lands, by destroying them utterly: and shalt thou be delivered?"], [12, "Have the gods of the nations delivered them which my fathers have destroyed; as Gozan, and Haran, and Rezeph, and the children of Eden which were in Thelasar?"], [13, "Where is the king of Hamath, and the king of Arpad, and the king of the city of Sepharvaim, of Hena, and Ivah?"], [14, "And Hezekiah received the letter of the hand of the messengers, and read it: and Hezekiah went up into the house of the LORD, and spread it before the LORD."], [15, "And Hezekiah prayed before the LORD, and said, O LORD God of Israel, which dwellest between the cherubims, thou art the God, even thou alone, of all the kingdoms of the earth; thou hast made heaven and earth."], [16, "LORD, bow down thine ear, and hear: open, LORD, thine eyes, and see: and hear the words of Sennacherib, which hath sent him to reproach the living God."], [17, "Of a truth, LORD, the kings of Assyria have destroyed the nations and their lands,"], [18, "And have cast their gods into the fire: for they were no gods, but the work of men’s hands, wood and stone: therefore they have destroyed them."], [19, "Now therefore, O LORD our God, I beseech thee, save thou us out of his hand, that all the kingdoms of the earth may know that thou art the LORD God, even thou only."], [20, "Then Isaiah the son of Amoz sent to Hezekiah, saying, Thus saith the LORD God of Israel, That which thou hast prayed to me against Sennacherib king of Assyria I have heard."], [21, "This is the word that the LORD hath spoken concerning him; The virgin the daughter of Zion hath despised thee, and laughed thee to scorn; the daughter of Jerusalem hath shaken her head at thee."], [22, "Whom hast thou reproached and blasphemed? and against whom hast thou exalted thy voice, and lifted up thine eyes on high? even against the Holy One of Israel."], [23, "By thy messengers thou hast reproached the LORD, and hast said, With the multitude of my chariots I am come up to the height of the mountains, to the sides of Lebanon, and will cut down the tall cedar trees thereof, and the choice fir trees thereof: and I will enter into the lodgings of his borders, and into the forest of his Carmel."], [24, "I have digged and drunk strange waters, and with the sole of my feet have I dried up all the rivers of besieged places."], [25, "Hast thou not heard long ago how I have done it, and of ancient times that I have formed it? now have I brought it to pass, that thou shouldest be to lay waste fenced cities into ruinous heaps."], [26, "Therefore their inhabitants were of small power, they were dismayed and confounded; they were as the grass of the field, and as the green herb, as the grass on the house tops, and as corn blasted before it be grown up."], [27, "But I know thy abode, and thy going out, and thy coming in, and thy rage against me."], [28, "Because thy rage against me and thy tumult is come up into mine ears, therefore I will put my hook in thy nose, and my bridle in thy lips, and I will turn thee back by the way by which thou camest."], [29, "And this shall be a sign unto thee, Ye shall eat this year such things as grow of themselves, and in the second year that which springeth of the same; and in the third year sow ye, and reap, and plant vineyards, and eat the fruits thereof."], [30, "And the remnant that is escaped of the house of Judah shall yet again take root downward, and bear fruit upward."], [31, "For out of Jerusalem shall go forth a remnant, and they that escape out of mount Zion: the zeal of the LORD of hosts shall do this."], [32, "Therefore thus saith the LORD concerning the king of Assyria, He shall not come into this city, nor shoot an arrow there, nor come before it with shield, nor cast a bank against it."], [33, "By the way that he came, by the same shall he return, and shall not come into this city, saith the LORD."], [34, "For I will defend this city, to save it, for mine own sake, and for my servant David’s sake."], [35, "And it came to pass that night, that the angel of the LORD went out, and smote in the camp of the Assyrians an hundred fourscore and five thousand: and when they arose early in the morning, behold, they were all dead corpses."], [36, "So Sennacherib king of Assyria departed, and went and returned, and dwelt at Nineveh."], [37, "And it came to pass, as he was worshipping in the house of Nisroch his god, that Adrammelech and Sharezer his sons smote him with the sword: and they escaped into the land of Armenia. And Esarhaddon his son reigned in his stead."]], "Romans 11": [[1, "I say then, Hath God cast away his people? God forbid. For I also am an Israelite, of the seed of Abraham, of the tribe of Benjamin."], [2, "God hath not cast away his people which he foreknew. Wot ye not what the scripture saith of Elias? how he maketh intercession to God against Israel, saying,"], [3, "Lord, they have killed thy prophets, and digged down thine altars; and I am left alone, and they seek my life."], [4, "But what saith the answer of God unto him? I have reserved to myself seven thousand men, who have not bowed the knee to the image of Baal."], [5, "Even so then at this present time also there is a remnant according to the election of grace."], [6, "And if by grace, then is it no more of works: otherwise grace is no more grace. But if it be of works, then is it no more grace: otherwise work is no more work."], [7, "What then? Israel hath not obtained that which he seeketh for; but the election hath obtained it, and the rest were blinded."], [8, "(According as it is written, God hath given them the spirit of slumber, eyes that they should not see, and ears that they should not hear;) unto this day."], [9, "And David saith, Let their table be made a snare, and a trap, and a stumblingblock, and a recompence unto them:"], [10, "Let their eyes be darkened, that they may not see, and bow down their back alway."], [11, "I say then, Have they stumbled that they should fall? God forbid: but rather through their fall salvation is come unto the Gentiles, for to provoke them to jealousy."], [12, "Now if the fall of them be the riches of the world, and the diminishing of them the riches of the Gentiles; how much more their fulness?"], [13, "For I speak to you Gentiles, inasmuch as I am the apostle of the Gentiles, I magnify mine office:"], [14, "If by any means I may provoke to emulation them which are my flesh, and might save some of them."], [15, "For if the casting away of them be the reconciling of the world, what shall the receiving of them be, but life from the dead?"], [16, "For if the firstfruit be holy, the lump is also holy: and if the root be holy, so are the branches."], [17, "And if some of the branches be broken off, and thou, being a wild olive tree, wert graffed in among them, and with them partakest of the root and fatness of the olive tree;"], [18, "Boast not against the branches. But if thou boast, thou bearest not the root, but the root thee."], [19, "Thou wilt say then, The branches were broken off, that I might be graffed in."], [20, "Well; because of unbelief they were broken off, and thou standest by faith. Be not highminded, but fear:"], [21, "For if God spared not the natural branches, take heed lest he also spare not thee."], [22, "Behold therefore the goodness and severity of God: on them which fell, severity; but toward thee, goodness, if thou continue in his goodness: otherwise thou also shalt be cut off."], [23, "And they also, if they abide not still in unbelief, shall be graffed in: for God is able to graff them in again."], [24, "For if thou wert cut out of the olive tree which is wild by nature, and wert graffed contrary to nature into a good olive tree: how much more shall these, which be the natural branches, be graffed into their own olive tree?"], [25, "For I would not, brethren, that ye should be ignorant of this mystery, lest ye should be wise in your own conceits; that blindness in part is happened to Israel, until the fulness of the Gentiles be come in."], [26, "And so all Israel shall be saved: as it is written, There shall come out of Sion the Deliverer, and shall turn away ungodliness from Jacob:"], [27, "For this is my covenant unto them, when I shall take away their sins."], [28, "As concerning the gospel, they are enemies for your sakes: but as touching the election, they are beloved for the fathers’ sakes."], [29, "For the gifts and calling of God are without repentance."], [30, "For as ye in times past have not believed God, yet have now obtained mercy through their unbelief:"], [31, "Even so have these also now not believed, that through your mercy they also may obtain mercy."], [32, "For God hath concluded them all in unbelief, that he might have mercy upon all."], [33, "O the depth of the riches both of the wisdom and knowledge of God! how unsearchable are his judgments, and his ways past finding out!"], [34, "For who hath known the mind of the Lord? or who hath been his counsellor?"], [35, "Or who hath first given to him, and it shall be recompensed unto him again?"], [36, "For of him, and through him, and to him, are all things: to whom be glory for ever. Amen."]], "Revelation 11": [[1, "And there was given me a reed like unto a rod: and the angel stood, saying, Rise, and measure the temple of God, and the altar, and them that worship therein."], [2, "But the court which is without the temple leave out, and measure it not; for it is given unto the Gentiles: and the holy city shall they tread under foot forty and two months."], [3, "And I will give power unto my two witnesses, and they shall prophesy a thousand two hundred and threescore days, clothed in sackcloth."], [4, "These are the two olive trees, and the two candlesticks standing before the God of the earth."], [5, "And if any man will hurt them, fire proceedeth out of their mouth, and devoureth their enemies: and if any man will hurt them, he must in this manner be killed."], [6, "These have power to shut heaven, that it rain not in the days of their prophecy: and have power over waters to turn them to blood, and to smite the earth with all plagues, as often as they will."], [7, "And when they shall have finished their testimony, the beast that ascendeth out of the bottomless pit shall make war against them, and shall overcome them, and kill them."], [8, "And their dead bodies shall lie in the street of the great city, which spiritually is called Sodom and Egypt, where also our Lord was crucified."], [9, "And they of the people and kindreds and tongues and nations shall see their dead bodies three days and an half, and shall not suffer their dead bodies to be put in graves."], [10, "And they that dwell upon the earth shall rejoice over them, and make merry, and shall send gifts one to another; because these two prophets tormented them that dwelt on the earth."], [11, "And after three days and an half the Spirit of life from God entered into them, and they stood upon their feet; and great fear fell upon them which saw them."], [12, "And they heard a great voice from heaven saying unto them, Come up hither. And they ascended up to heaven in a cloud; and their enemies beheld them."], [13, "And the same hour was there a great earthquake, and the tenth part of the city fell, and in the earthquake were slain of men seven thousand: and the remnant were affrighted, and gave glory to the God of heaven."], [14, "The second woe is past; and, behold, the third woe cometh quickly."], [15, "And the seventh angel sounded; and there were great voices in heaven, saying, The kingdoms of this world are become the kingdoms of our Lord, and of his Christ; and he shall reign for ever and ever."], [16, "And the four and twenty elders, which sat before God on their seats, fell upon their faces, and worshipped God,"], [17, "Saying, We give thee thanks, O LORD God Almighty, which art, and wast, and art to come; because thou hast taken to thee thy great power, and hast reigned."], [18, "And the nations were angry, and thy wrath is come, and the time of the dead, that they should be judged, and that thou shouldest give reward unto thy servants the prophets, and to the saints, and them that fear thy name, small and great; and shouldest destroy them which destroy the earth."], [19, "And the temple of God was opened in heaven, and there was seen in his temple the ark of his testament: and there were lightnings, and voices, and thunderings, and an earthquake, and great hail."]], "Matthew 23": [[1, "Then spake Jesus to the multitude, and to his disciples,"], [2, "Saying, The scribes and the Pharisees sit in Moses’ seat:"], [3, "All therefore whatsoever they bid you observe, that observe and do; but do not ye after their works: for they say, and do not."], [4, "For they bind heavy burdens and grievous to be borne, and lay them on men’s shoulders; but they themselves will not move them with one of their fingers."], [5, "But all their works they do for to be seen of men: they make broad their phylacteries, and enlarge the borders of their garments,"], [6, "And love the uppermost rooms at feasts, and the chief seats in the synagogues,"], [7, "And greetings in the markets, and to be called of men, Rabbi, Rabbi."], [8, "But be not ye called Rabbi: for one is your Master, even Christ; and all ye are brethren."], [9, "And call no man your father upon the earth: for one is your Father, which is in heaven."], [10, "Neither be ye called masters: for one is your Master, even Christ."], [11, "But he that is greatest among you shall be your servant."], [12, "And whosoever shall exalt himself shall be abased; and he that shall humble himself shall be exalted."], [13, "But woe unto you, scribes and Pharisees, hypocrites! for ye shut up the kingdom of heaven against men: for ye neither go in yourselves, neither suffer ye them that are entering to go in."], [14, "Woe unto you, scribes and Pharisees, hypocrites! for ye devour widows’ houses, and for a pretence make long prayer: therefore ye shall receive the greater damnation."], [15, "Woe unto you, scribes and Pharisees, hypocrites! for ye compass sea and land to make one proselyte, and when he is made, ye make him twofold more the child of hell than yourselves."], [16, "Woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing; but whosoever shall swear by the gold of the temple, he is a debtor!"], [17, "Ye fools and blind: for whether is greater, the gold, or the temple that sanctifieth the gold?"], [18, "And, Whosoever shall swear by the altar, it is nothing; but whosoever sweareth by the gift that is upon it, he is guilty."], [19, "Ye fools and blind: for whether is greater, the gift, or the altar that sanctifieth the gift?"], [20, "Whoso therefore shall swear by the altar, sweareth by it, and by all things thereon."], [21, "And whoso shall swear by the temple, sweareth by it, and by him that dwelleth therein."], [22, "And he that shall swear by heaven, sweareth by the throne of God, and by him that sitteth thereon."], [23, "Woe unto you, scribes and Pharisees, hypocrites! for ye pay tithe of mint and anise and cummin, and have omitted the weightier matters of the law, judgment, mercy, and faith: these ought ye to have done, and not to leave the other undone."], [24, "Ye blind guides, which strain at a gnat, and swallow a camel."], [25, "Woe unto you, scribes and Pharisees, hypocrites! for ye make clean the outside of the cup and of the platter, but within they are full of extortion and excess."], [26, "Thou blind Pharisee, cleanse first that which is within the cup and platter, that the outside of them may be clean also."], [27, "Woe unto you, scribes and Pharisees, hypocrites! for ye are like unto whited sepulchres, which indeed appear beautiful outward, but are within full of dead men’s bones, and of all uncleanness."], [28, "Even so ye also outwardly appear righteous unto men, but within ye are full of hypocrisy and iniquity."], [29, "Woe unto you, scribes and Pharisees, hypocrites! because ye build the tombs of the prophets, and garnish the sepulchres of the righteous,"], [30, "And say, If we had been in the days of our fathers, we would not have been partakers with them in the blood of the prophets."], [31, "Wherefore ye be witnesses unto yourselves, that ye are the children of them which killed the prophets."], [32, "Fill ye up then the measure of your fathers."], [33, "Ye serpents, ye generation of vipers, how can ye escape the damnation of hell?"], [34, "Wherefore, behold, I send unto you prophets, and wise men, and scribes: and some of them ye shall kill and crucify; and some of them shall ye scourge in your synagogues, and persecute them from city to city:"], [35, "That upon you may come all the righteous blood shed upon the earth, from the blood of righteous Abel unto the blood of Zacharias son of Barachias, whom ye slew between the temple and the altar."], [36, "Verily I say unto you, All these things shall come upon this generation."], [37, "O Jerusalem, Jerusalem, thou that killest the prophets, and stonest them which are sent unto thee, how often would I have gathered thy children together, even as a hen gathereth her chickens under her wings, and ye would not!"], [38, "Behold, your house is left unto you desolate."], [39, "For I say unto you, Ye shall not see me henceforth, till ye shall say, Blessed is he that cometh in the name of the Lord."]], "Micah 3": [[1, "And I said, Hear, I pray you, O heads of Jacob, and ye princes of the house of Israel; Is it not for you to know judgment?"], [2, "Who hate the good, and love the evil; who pluck off their skin from off them, and their flesh from off their bones;"], [3, "Who also eat the flesh of my people, and flay their skin from off them; and they break their bones, and chop them in pieces, as for the pot, and as flesh within the caldron."], [4, "Then shall they cry unto the LORD, but he will not hear them: he will even hide his face from them at that time, as they have behaved themselves ill in their doings."], [5, "Thus saith the LORD concerning the prophets that make my people err, that bite with their teeth, and cry, Peace; and he that putteth not into their mouths, they even prepare war against him."], [6, "Therefore night shall be unto you, that ye shall not have a vision; and it shall be dark unto you, that ye shall not divine; and the sun shall go down over the prophets, and the day shall be dark over them."], [7, "Then shall the seers be ashamed, and the diviners confounded: yea, they shall all cover their lips; for there is no answer of God."], [8, "But truly I am full of power by the spirit of the LORD, and of judgment, and of might, to declare unto Jacob his transgression, and to Israel his sin."], [9, "Hear this, I pray you, ye heads of the house of Jacob, and princes of the house of Israel, that abhor judgment, and pervert all equity."], [10, "They build up Zion with blood, and Jerusalem with iniquity."], [11, "The heads thereof judge for reward, and the priests thereof teach for hire, and the prophets thereof divine for money: yet will they lean upon the LORD, and say, Is not the LORD among us? none evil can come upon us."], [12, "Therefore shall Zion for your sake be plowed as a field, and Jerusalem shall become heaps, and the mountain of the house as the high places of the forest."]], "Lamentations 4": [[1, "How is the gold become dim! how is the most fine gold changed! the stones of the sanctuary are poured out in the top of every street."], [2, "The precious sons of Zion, comparable to fine gold, how are they esteemed as earthen pitchers, the work of the hands of the potter!"], [3, "Even the sea monsters draw out the breast, they give suck to their young ones: the daughter of my people is become cruel, like the ostriches in the wilderness."], [4, "The tongue of the sucking child cleaveth to the roof of his mouth for thirst: the young children ask bread, and no man breaketh it unto them."], [5, "They that did feed delicately are desolate in the streets: they that were brought up in scarlet embrace dunghills."], [6, "For the punishment of the iniquity of the daughter of my people is greater than the punishment of the sin of Sodom, that was overthrown as in a moment, and no hands stayed on her."], [7, "Her Nazarites were purer than snow, they were whiter than milk, they were more ruddy in body than rubies, their polishing was of sapphire:"], [8, "Their visage is blacker than a coal; they are not known in the streets: their skin cleaveth to their bones; it is withered, it is become like a stick."], [9, "They that be slain with the sword are better than they that be slain with hunger: for these pine away, stricken through for want of the fruits of the field."], [10, "The hands of the pitiful women have sodden their own children: they were their meat in the destruction of the daughter of my people."], [11, "The LORD hath accomplished his fury; he hath poured out his fierce anger, and hath kindled a fire in Zion, and it hath devoured the foundations thereof."], [12, "The kings of the earth, and all the inhabitants of the world, would not have believed that the adversary and the enemy should have entered into the gates of Jerusalem."], [13, "For the sins of her prophets, and the iniquities of her priests, that have shed the blood of the just in the midst of her,"], [14, "They have wandered as blind men in the streets, they have polluted themselves with blood, so that men could not touch their garments."], [15, "They cried unto them, Depart ye; it is unclean; depart, depart, touch not: when they fled away and wandered, they said among the heathen, They shall no more sojourn there."], [16, "The anger of the LORD hath divided them; he will no more regard them: they respected not the persons of the priests, they favoured not the elders."], [17, "As for us, our eyes as yet failed for our vain help: in our watching we have watched for a nation that could not save us."], [18, "They hunt our steps, that we cannot go in our streets: our end is near, our days are fulfilled; for our end is come."], [19, "Our persecutors are swifter than the eagles of the heaven: they pursued us upon the mountains, they laid wait for us in the wilderness."], [20, "The breath of our nostrils, the anointed of the LORD, was taken in their pits, of whom we said, Under his shadow we shall live among the heathen."], [21, "Rejoice and be glad, O daughter of Edom, that dwellest in the land of Uz; the cup also shall pass through unto thee: thou shalt be drunken, and shalt make thyself naked."], [22, "The punishment of thine iniquity is accomplished, O daughter of Zion; he will no more carry thee away into captivity: he will visit thine iniquity, O daughter of Edom; he will discover thy sins."]], "Isaiah 61": [[1, "The Spirit of the Lord GOD is upon me; because the LORD hath anointed me to preach good tidings unto the meek; he hath sent me to bind up the brokenhearted, to proclaim liberty to the captives, and the opening of the prison to them that are bound;"], [2, "To proclaim the acceptable year of the LORD, and the day of vengeance of our God; to comfort all that mourn;"], [3, "To appoint unto them that mourn in Zion, to give unto them beauty for ashes, the oil of joy for mourning, the garment of praise for the spirit of heaviness; that they might be called trees of righteousness, the planting of the LORD, that he might be glorified."], [4, "And they shall build the old wastes, they shall raise up the former desolations, and they shall repair the waste cities, the desolations of many generations."], [5, "And strangers shall stand and feed your flocks, and the sons of the alien shall be your plowmen and your vinedressers."], [6, "But ye shall be named the Priests of the LORD: men shall call you the Ministers of our God: ye shall eat the riches of the Gentiles, and in their glory shall ye boast yourselves."], [7, "For your shame ye shall have double; and for confusion they shall rejoice in their portion: therefore in their land they shall possess the double: everlasting joy shall be unto them."], [8, "For I the LORD love judgment, I hate robbery for burnt offering; and I will direct their work in truth, and I will make an everlasting covenant with them."], [9, "And their seed shall be known among the Gentiles, and their offspring among the people: all that see them shall acknowledge them, that they are the seed which the LORD hath blessed."], [10, "I will greatly rejoice in the LORD, my soul shall be joyful in my God; for he hath clothed me with the garments of salvation, he hath covered me with the robe of righteousness, as a bridegroom decketh himself with ornaments, and as a bride adorneth herself with her jewels."], [11, "For as the earth bringeth forth her bud, and as the garden causeth the things that are sown in it to spring forth; so the Lord GOD will cause righteousness and praise to spring forth before all the nations."]], "Isaiah 62": [[1, "For Zion’s sake will I not hold my peace, and for Jerusalem’s sake I will not rest, until the righteousness thereof go forth as brightness, and the salvation thereof as a lamp that burneth."], [2, "And the Gentiles shall see thy righteousness, and all kings thy glory: and thou shalt be called by a new name, which the mouth of the LORD shall name."], [3, "Thou shalt also be a crown of glory in the hand of the LORD, and a royal diadem in the hand of thy God."], [4, "Thou shalt no more be termed Forsaken; neither shall thy land any more be termed Desolate: but thou shalt be called Hephzibah, and thy land Beulah: for the LORD delighteth in thee, and thy land shall be married."], [5, "For as a young man marrieth a virgin, so shall thy sons marry thee: and as the bridegroom rejoiceth over the bride, so shall thy God rejoice over thee."], [6, "I have set watchmen upon thy walls, O Jerusalem, which shall never hold their peace day nor night: ye that make mention of the LORD, keep not silence,"], [7, "And give him no rest, till he establish, and till he make Jerusalem a praise in the earth."], [8, "The LORD hath sworn by his right hand, and by the arm of his strength, Surely I will no more give thy corn to be meat for thine enemies; and the sons of the stranger shall not drink thy wine, for the which thou hast laboured:"], [9, "But they that have gathered it shall eat it, and praise the LORD; and they that have brought it together shall drink it in the courts of my holiness."], [10, "Go through, go through the gates; prepare ye the way of the people; cast up, cast up the highway; gather out the stones; lift up a standard for the people."], [11, "Behold, the LORD hath proclaimed unto the end of the world, Say ye to the daughter of Zion, Behold, thy salvation cometh; behold, his reward is with him, and his work before him."], [12, "And they shall call them, The holy people, The redeemed of the LORD: and thou shalt be called, Sought out, A city not forsaken."]], "Zechariah 1": [[1, "In the eighth month, in the second year of Darius, came the word of the LORD unto Zechariah, the son of Berechiah, the son of Iddo the prophet, saying,"], [2, "The LORD hath been sore displeased with your fathers."], [3, "Therefore say thou unto them, Thus saith the LORD of hosts; Turn ye unto me, saith the LORD of hosts, and I will turn unto you, saith the LORD of hosts."], [4, "Be ye not as your fathers, unto whom the former prophets have cried, saying, Thus saith the LORD of hosts; Turn ye now from your evil ways, and from your evil doings: but they did not hear, nor hearken unto me, saith the LORD."], [5, "Your fathers, where are they? and the prophets, do they live for ever?"], [6, "But my words and my statutes, which I commanded my servants the prophets, did they not take hold of your fathers? and they returned and said, Like as the LORD of hosts thought to do unto us, according to our ways, and according to our doings, so hath he dealt with us."], [7, "Upon the four and twentieth day of the eleventh month, which is the month Sebat, in the second year of Darius, came the word of the LORD unto Zechariah, the son of Berechiah, the son of Iddo the prophet, saying,"], [8, "I saw by night, and behold a man riding upon a red horse, and he stood among the myrtle trees that were in the bottom; and behind him were there red horses, speckled, and white."], [9, "Then said I, O my lord, what are these? And the angel that talked with me said unto me, I will shew thee what these be."], [10, "And the man that stood among the myrtle trees answered and said, These are they whom the LORD hath sent to walk to and fro through the earth."], [11, "And they answered the angel of the LORD that stood among the myrtle trees, and said, We have walked to and fro through the earth, and, behold, all the earth sitteth still, and is at rest."], [12, "Then the angel of the LORD answered and said, O LORD of hosts, how long wilt thou not have mercy on Jerusalem and on the cities of Judah, against which thou hast had indignation these threescore and ten years?"], [13, "And the LORD answered the angel that talked with me with good words and comfortable words."], [14, "So the angel that communed with me said unto me, Cry thou, saying, Thus saith the LORD of hosts; I am jealous for Jerusalem and for Zion with a great jealousy."], [15, "And I am very sore displeased with the heathen that are at ease: for I was but a little displeased, and they helped forward the affliction."], [16, "Therefore thus saith the LORD; I am returned to Jerusalem with mercies: my house shall be built in it, saith the LORD of hosts, and a line shall be stretched forth upon Jerusalem."], [17, "Cry yet, saying, Thus saith the LORD of hosts; My cities through prosperity shall yet be spread abroad; and the LORD shall yet comfort Zion, and shall yet choose Jerusalem."], [18, "Then lifted I up mine eyes, and saw, and behold four horns."], [19, "And I said unto the angel that talked with me, What be these? And he answered me, These are the horns which have scattered Judah, Israel, and Jerusalem."], [20, "And the LORD shewed me four carpenters."], [21, "Then said I, What come these to do? And he spake, saying, These are the horns which have scattered Judah, so that no man did lift up his head: but these are come to fray them, to cast out the horns of the Gentiles, which lifted up their horn over the land of Judah to scatter it."]], "Isaiah 54": [[1, "Sing, O barren, thou that didst not bear; break forth into singing, and cry aloud, thou that didst not travail with child: for more are the children of the desolate than the children of the married wife, saith the LORD."], [2, "Enlarge the place of thy tent, and let them stretch forth the curtains of thine habitations: spare not, lengthen thy cords, and strengthen thy stakes;"], [3, "For thou shalt break forth on the right hand and on the left; and thy seed shall inherit the Gentiles, and make the desolate cities to be inhabited."], [4, "Fear not; for thou shalt not be ashamed: neither be thou confounded; for thou shalt not be put to shame: for thou shalt forget the shame of thy youth, and shalt not remember the reproach of thy widowhood any more."], [5, "For thy Maker is thine husband; the LORD of hosts is his name; and thy Redeemer the Holy One of Israel; The God of the whole earth shall he be called."], [6, "For the LORD hath called thee as a woman forsaken and grieved in spirit, and a wife of youth, when thou wast refused, saith thy God."], [7, "For a small moment have I forsaken thee; but with great mercies will I gather thee."], [8, "In a little wrath I hid my face from thee for a moment; but with everlasting kindness will I have mercy on thee, saith the LORD thy Redeemer."], [9, "For this is as the waters of Noah unto me: for as I have sworn that the waters of Noah should no more go over the earth; so have I sworn that I would not be wroth with thee, nor rebuke thee."], [10, "For the mountains shall depart, and the hills be removed; but my kindness shall not depart from thee, neither shall the covenant of my peace be removed, saith the LORD that hath mercy on thee."], [11, "O thou afflicted, tossed with tempest, and not comforted, behold, I will lay thy stones with fair colours, and lay thy foundations with sapphires."], [12, "And I will make thy windows of agates, and thy gates of carbuncles, and all thy borders of pleasant stones."], [13, "And all thy children shall be taught of the LORD; and great shall be the peace of thy children."], [14, "In righteousness shalt thou be established: thou shalt be far from oppression; for thou shalt not fear: and from terror; for it shall not come near thee."], [15, "Behold, they shall surely gather together, but not by me: whosoever shall gather together against thee shall fall for thy sake."], [16, "Behold, I have created the smith that bloweth the coals in the fire, and that bringeth forth an instrument for his work; and I have created the waster to destroy."], [17, "No weapon that is formed against thee shall prosper; and every tongue that shall rise against thee in judgment thou shalt condemn. This is the heritage of the servants of the LORD, and their righteousness is of me, saith the LORD."]], "Revelation 21": [[1, "And I saw a new heaven and a new earth: for the first heaven and the first earth were passed away; and there was no more sea."], [2, "And I John saw the holy city, new Jerusalem, coming down from God out of heaven, prepared as a bride adorned for her husband."], [3, "And I heard a great voice out of heaven saying, Behold, the tabernacle of God is with men, and he will dwell with them, and they shall be his people, and God himself shall be with them, and be their God."], [4, "And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain: for the former things are passed away."], [5, "And he that sat upon the throne said, Behold, I make all things new. And he said unto me, Write: for these words are true and faithful."], [6, "And he said unto me, It is done. I am Alpha and Omega, the beginning and the end. I will give unto him that is athirst of the fountain of the water of life freely."], [7, "He that overcometh shall inherit all things; and I will be his God, and he shall be my son."], [8, "But the fearful, and unbelieving, and the abominable, and murderers, and whoremongers, and sorcerers, and idolaters, and all liars, shall have their part in the lake which burneth with fire and brimstone: which is the second death."], [9, "And there came unto me one of the seven angels which had the seven vials full of the seven last plagues, and talked with me, saying, Come hither, I will shew thee the bride, the Lamb’s wife."], [10, "And he carried me away in the spirit to a great and high mountain, and shewed me that great city, the holy Jerusalem, descending out of heaven from God,"], [11, "Having the glory of God: and her light was like unto a stone most precious, even like a jasper stone, clear as crystal;"], [12, "And had a wall great and high, and had twelve gates, and at the gates twelve angels, and names written thereon, which are the names of the twelve tribes of the children of Israel:"], [13, "On the east three gates; on the north three gates; on the south three gates; and on the west three gates."], [14, "And the wall of the city had twelve foundations, and in them the names of the twelve apostles of the Lamb."], [15, "And he that talked with me had a golden reed to measure the city, and the gates thereof, and the wall thereof."], [16, "And the city lieth foursquare, and the length is as large as the breadth: and he measured the city with the reed, twelve thousand furlongs. The length and the breadth and the height of it are equal."], [17, "And he measured the wall thereof, an hundred and forty and four cubits, according to the measure of a man, that is, of the angel."], [18, "And the building of the wall of it was of jasper: and the city was pure gold, like unto clear glass."], [19, "And the foundations of the wall of the city were garnished with all manner of precious stones. The first foundation was jasper; the second, sapphire; the third, a chalcedony; the fourth, an emerald;"], [20, "The fifth, sardonyx; the sixth, sardius; the seventh, chrysolyte; the eighth, beryl; the ninth, a topaz; the tenth, a chrysoprasus; the eleventh, a jacinth; the twelfth, an amethyst."], [21, "And the twelve gates were twelve pearls: every several gate was of one pearl: and the street of the city was pure gold, as it were transparent glass."], [22, "And I saw no temple therein: for the Lord God Almighty and the Lamb are the temple of it."], [23, "And the city had no need of the sun, neither of the moon, to shine in it: for the glory of God did lighten it, and the Lamb is the light thereof."], [24, "And the nations of them which are saved shall walk in the light of it: and the kings of the earth do bring their glory and honour into it."], [25, "And the gates of it shall not be shut at all by day: for there shall be no night there."], [26, "And they shall bring the glory and honour of the nations into it."], [27, "And there shall in no wise enter into it any thing that defileth, neither whatsoever worketh abomination, or maketh a lie: but they which are written in the Lamb’s book of life."]], "Genesis 12": [[1, "Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father’s house, unto a land that I will shew thee:"], [2, "And I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing:"], [3, "And I will bless them that bless thee, and curse him that curseth thee: and in thee shall all families of the earth be blessed."], [4, "So Abram departed, as the LORD had spoken unto him; and Lot went with him: and Abram was seventy and five years old when he departed out of Haran."], [5, "And Abram took Sarai his wife, and Lot his brother’s son, and all their substance that they had gathered, and the souls that they had gotten in Haran; and they went forth to go into the land of Canaan; and into the land of Canaan they came."], [6, "And Abram passed through the land unto the place of Sichem, unto the plain of Moreh. And the Canaanite was then in the land."], [7, "And the LORD appeared unto Abram, and said, Unto thy seed will I give this land: and there builded he an altar unto the LORD, who appeared unto him."], [8, "And he removed from thence unto a mountain on the east of Bethel, and pitched his tent, having Bethel on the west, and Hai on the east: and there he builded an altar unto the LORD, and called upon the name of the LORD."], [9, "And Abram journeyed, going on still toward the south."], [10, "And there was a famine in the land: and Abram went down into Egypt to sojourn there; for the famine was grievous in the land."], [11, "And it came to pass, when he was come near to enter into Egypt, that he said unto Sarai his wife, Behold now, I know that thou art a fair woman to look upon:"], [12, "Therefore it shall come to pass, when the Egyptians shall see thee, that they shall say, This is his wife: and they will kill me, but they will save thee alive."], [13, "Say, I pray thee, thou art my sister: that it may be well with me for thy sake; and my soul shall live because of thee."], [14, "And it came to pass, that, when Abram was come into Egypt, the Egyptians beheld the woman that she was very fair."], [15, "The princes also of Pharaoh saw her, and commended her before Pharaoh: and the woman was taken into Pharaoh’s house."], [16, "And he entreated Abram well for her sake: and he had sheep, and oxen, and he asses, and menservants, and maidservants, and she asses, and camels."], [17, "And the LORD plagued Pharaoh and his house with great plagues because of Sarai Abram’s wife."], [18, "And Pharaoh called Abram, and said, What is this that thou hast done unto me? why didst thou not tell me that she was thy wife?"], [19, "Why saidst thou, She is my sister? so I might have taken her to me to wife: now therefore behold thy wife, take her, and go thy way."], [20, "And Pharaoh commanded his men concerning him: and they sent him away, and his wife, and all that he had."]], "Galatians 3": [[1, "O foolish Galatians, who hath bewitched you, that ye should not obey the truth, before whose eyes Jesus Christ hath been evidently set forth, crucified among you?"], [2, "This only would I learn of you, Received ye the Spirit by the works of the law, or by the hearing of faith?"], [3, "Are ye so foolish? having begun in the Spirit, are ye now made perfect by the flesh?"], [4, "Have ye suffered so many things in vain? if it be yet in vain."], [5, "He therefore that ministereth to you the Spirit, and worketh miracles among you, doeth he it by the works of the law, or by the hearing of faith?"], [6, "Even as Abraham believed God, and it was accounted to him for righteousness."], [7, "Know ye therefore that they which are of faith, the same are the children of Abraham."], [8, "And the scripture, foreseeing that God would justify the heathen through faith, preached before the gospel unto Abraham, saying, In thee shall all nations be blessed."], [9, "So then they which be of faith are blessed with faithful Abraham."], [10, "For as many as are of the works of the law are under the curse: for it is written, Cursed is every one that continueth not in all things which are written in the book of the law to do them."], [11, "But that no man is justified by the law in the sight of God, it is evident: for, The just shall live by faith."], [12, "And the law is not of faith: but, The man that doeth them shall live in them."], [13, "Christ hath redeemed us from the curse of the law, being made a curse for us: for it is written, Cursed is every one that hangeth on a tree:"], [14, "That the blessing of Abraham might come on the Gentiles through Jesus Christ; that we might receive the promise of the Spirit through faith."], [15, "Brethren, I speak after the manner of men; Though it be but a man’s covenant, yet if it be confirmed, no man disannulleth, or addeth thereto."], [16, "Now to Abraham and his seed were the promises made. He saith not, And to seeds, as of many; but as of one, And to thy seed, which is Christ."], [17, "And this I say, that the covenant, that was confirmed before of God in Christ, the law, which was four hundred and thirty years after, cannot disannul, that it should make the promise of none effect."], [18, "For if the inheritance be of the law, it is no more of promise: but God gave it to Abraham by promise."], [19, "Wherefore then serveth the law? It was added because of transgressions, till the seed should come to whom the promise was made; and it was ordained by angels in the hand of a mediator."], [20, "Now a mediator is not a mediator of one, but God is one."], [21, "Is the law then against the promises of God? God forbid: for if there had been a law given which could have given life, verily righteousness should have been by the law."], [22, "But the scripture hath concluded all under sin, that the promise by faith of Jesus Christ might be given to them that believe."], [23, "But before faith came, we were kept under the law, shut up unto the faith which should afterwards be revealed."], [24, "Wherefore the law was our schoolmaster to bring us unto Christ, that we might be justified by faith."], [25, "But after that faith is come, we are no longer under a schoolmaster."], [26, "For ye are all the children of God by faith in Christ Jesus."], [27, "For as many of you as have been baptized into Christ have put on Christ."], [28, "There is neither Jew nor Greek, there is neither bond nor free, there is neither male nor female: for ye are all one in Christ Jesus."], [29, "And if ye be Christ’s, then are ye Abraham’s seed, and heirs according to the promise."]], "Joshua 21": [[1, "Then came near the heads of the fathers of the Levites unto Eleazar the priest, and unto Joshua the son of Nun, and unto the heads of the fathers of the tribes of the children of Israel;"], [2, "And they spake unto them at Shiloh in the land of Canaan, saying, The LORD commanded by the hand of Moses to give us cities to dwell in, with the suburbs thereof for our cattle."], [3, "And the children of Israel gave unto the Levites out of their inheritance, at the commandment of the LORD, these cities and their suburbs."], [4, "And the lot came out for the families of the Kohathites: and the children of Aaron the priest, which were of the Levites, had by lot out of the tribe of Judah, and out of the tribe of Simeon, and out of the tribe of Benjamin, thirteen cities."], [5, "And the rest of the children of Kohath had by lot out of the families of the tribe of Ephraim, and out of the tribe of Dan, and out of the half tribe of Manasseh, ten cities."], [6, "And the children of Gershon had by lot out of the families of the tribe of Issachar, and out of the tribe of Asher, and out of the tribe of Naphtali, and out of the half tribe of Manasseh in Bashan, thirteen cities."], [7, "The children of Merari by their families had out of the tribe of Reuben, and out of the tribe of Gad, and out of the tribe of Zebulun, twelve cities."], [8, "And the children of Israel gave by lot unto the Levites these cities with their suburbs, as the LORD commanded by the hand of Moses."], [9, "And they gave out of the tribe of the children of Judah, and out of the tribe of the children of Simeon, these cities which are here mentioned by name,"], [10, "Which the children of Aaron, being of the families of the Kohathites, who were of the children of Levi, had: for theirs was the first lot."], [11, "And they gave them the city of Arba the father of Anak, which city is Hebron, in the hill country of Judah, with the suburbs thereof round about it."], [12, "But the fields of the city, and the villages thereof, gave they to Caleb the son of Jephunneh for his possession."], [13, "Thus they gave to the children of Aaron the priest Hebron with her suburbs, to be a city of refuge for the slayer; and Libnah with her suburbs,"], [14, "And Jattir with her suburbs, and Eshtemoa with her suburbs,"], [15, "And Holon with her suburbs, and Debir with her suburbs,"], [16, "And Ain with her suburbs, and Juttah with her suburbs, and Bethshemesh with her suburbs; nine cities out of those two tribes."], [17, "And out of the tribe of Benjamin, Gibeon with her suburbs, Geba with her suburbs,"], [18, "Anathoth with her suburbs, and Almon with her suburbs; four cities."], [19, "All the cities of the children of Aaron, the priests, were thirteen cities with their suburbs."], [20, "And the families of the children of Kohath, the Levites which remained of the children of Kohath, even they had the cities of their lot out of the tribe of Ephraim."], [21, "For they gave them Shechem with her suburbs in mount Ephraim, to be a city of refuge for the slayer; and Gezer with her suburbs,"], [22, "And Kibzaim with her suburbs, and Bethhoron with her suburbs; four cities."], [23, "And out of the tribe of Dan, Eltekeh with her suburbs, Gibbethon with her suburbs,"], [24, "Aijalon with her suburbs, Gathrimmon with her suburbs; four cities."], [25, "And out of the half tribe of Manasseh, Tanach with her suburbs, and Gathrimmon with her suburbs; two cities."], [26, "All the cities were ten with their suburbs for the families of the children of Kohath that remained."], [27, "And unto the children of Gershon, of the families of the Levites, out of the other half tribe of Manasseh they gave Golan in Bashan with her suburbs, to be a city of refuge for the slayer; and Beeshterah with her suburbs; two cities."], [28, "And out of the tribe of Issachar, Kishon with her suburbs, Dabareh with her suburbs,"], [29, "Jarmuth with her suburbs, Engannim with her suburbs; four cities."], [30, "And out of the tribe of Asher, Mishal with her suburbs, Abdon with her suburbs,"], [31, "Helkath with her suburbs, and Rehob with her suburbs; four cities."], [32, "And out of the tribe of Naphtali, Kedesh in Galilee with her suburbs, to be a city of refuge for the slayer; and Hammothdor with her suburbs, and Kartan with her suburbs; three cities."], [33, "All the cities of the Gershonites according to their families were thirteen cities with their suburbs."], [34, "And unto the families of the children of Merari, the rest of the Levites, out of the tribe of Zebulun, Jokneam with her suburbs, and Kartah with her suburbs,"], [35, "Dimnah with her suburbs, Nahalal with her suburbs; four cities."], [36, "And out of the tribe of Reuben, Bezer with her suburbs, and Jahazah with her suburbs,"], [37, "Kedemoth with her suburbs, and Mephaath with her suburbs; four cities."], [38, "And out of the tribe of Gad, Ramoth in Gilead with her suburbs, to be a city of refuge for the slayer; and Mahanaim with her suburbs,"], [39, "Heshbon with her suburbs, Jazer with her suburbs; four cities in all."], [40, "So all the cities for the children of Merari by their families, which were remaining of the families of the Levites, were by their lot twelve cities."], [41, "All the cities of the Levites within the possession of the children of Israel were forty and eight cities with their suburbs."], [42, "These cities were every one with their suburbs round about them: thus were all these cities."], [43, "And the LORD gave unto Israel all the land which he sware to give unto their fathers; and they possessed it, and dwelt therein."], [44, "And the LORD gave them rest round about, according to all that he sware unto their fathers: and there stood not a man of all their enemies before them; the LORD delivered all their enemies into their hand."], [45, "There failed not ought of any good thing which the LORD had spoken unto the house of Israel; all came to pass."]], "Deuteronomy 28": [[1, "And it shall come to pass, if thou shalt hearken diligently unto the voice of the LORD thy God, to observe and to do all his commandments which I command thee this day, that the LORD thy God will set thee on high above all nations of the earth:"], [2, "And all these blessings shall come on thee, and overtake thee, if thou shalt hearken unto the voice of the LORD thy God."], [3, "Blessed shalt thou be in the city, and blessed shalt thou be in the field."], [4, "Blessed shall be the fruit of thy body, and the fruit of thy ground, and the fruit of thy cattle, the increase of thy kine, and the flocks of thy sheep."], [5, "Blessed shall be thy basket and thy store."], [6, "Blessed shalt thou be when thou comest in, and blessed shalt thou be when thou goest out."], [7, "The LORD shall cause thine enemies that rise up against thee to be smitten before thy face: they shall come out against thee one way, and flee before thee seven ways."], [8, "The LORD shall command the blessing upon thee in thy storehouses, and in all that thou settest thine hand unto; and he shall bless thee in the land which the LORD thy God giveth thee."], [9, "The LORD shall establish thee an holy people unto himself, as he hath sworn unto thee, if thou shalt keep the commandments of the LORD thy God, and walk in his ways."], [10, "And all people of the earth shall see that thou art called by the name of the LORD; and they shall be afraid of thee."], [11, "And the LORD shall make thee plenteous in goods, in the fruit of thy body, and in the fruit of thy cattle, and in the fruit of thy ground, in the land which the LORD sware unto thy fathers to give thee."], [12, "The LORD shall open unto thee his good treasure, the heaven to give the rain unto thy land in his season, and to bless all the work of thine hand: and thou shalt lend unto many nations, and thou shalt not borrow."], [13, "And the LORD shall make thee the head, and not the tail; and thou shalt be above only, and thou shalt not be beneath; if that thou hearken unto the commandments of the LORD thy God, which I command thee this day, to observe and to do them:"], [14, "And thou shalt not go aside from any of the words which I command thee this day, to the right hand, or to the left, to go after other gods to serve them."], [15, "But it shall come to pass, if thou wilt not hearken unto the voice of the LORD thy God, to observe to do all his commandments and his statutes which I command thee this day; that all these curses shall come upon thee, and overtake thee:"], [16, "Cursed shalt thou be in the city, and cursed shalt thou be in the field."], [17, "Cursed shall be thy basket and thy store."], [18, "Cursed shall be the fruit of thy body, and the fruit of thy land, the increase of thy kine, and the flocks of thy sheep."], [19, "Cursed shalt thou be when thou comest in, and cursed shalt thou be when thou goest out."], [20, "The LORD shall send upon thee cursing, vexation, and rebuke, in all that thou settest thine hand unto for to do, until thou be destroyed, and until thou perish quickly; because of the wickedness of thy doings, whereby thou hast forsaken me."], [21, "The LORD shall make the pestilence cleave unto thee, until he have consumed thee from off the land, whither thou goest to possess it."], [22, "The LORD shall smite thee with a consumption, and with a fever, and with an inflammation, and with an extreme burning, and with the sword, and with blasting, and with mildew; and they shall pursue thee until thou perish."], [23, "And thy heaven that is over thy head shall be brass, and the earth that is under thee shall be iron."], [24, "The LORD shall make the rain of thy land powder and dust: from heaven shall it come down upon thee, until thou be destroyed."], [25, "The LORD shall cause thee to be smitten before thine enemies: thou shalt go out one way against them, and flee seven ways before them: and shalt be removed into all the kingdoms of the earth."], [26, "And thy carcase shall be meat unto all fowls of the air, and unto the beasts of the earth, and no man shall fray them away."], [27, "The LORD will smite thee with the botch of Egypt, and with the emerods, and with the scab, and with the itch, whereof thou canst not be healed."], [28, "The LORD shall smite thee with madness, and blindness, and astonishment of heart:"], [29, "And thou shalt grope at noonday, as the blind gropeth in darkness, and thou shalt not prosper in thy ways: and thou shalt be only oppressed and spoiled evermore, and no man shall save thee."], [30, "Thou shalt betroth a wife, and another man shall lie with her: thou shalt build an house, and thou shalt not dwell therein: thou shalt plant a vineyard, and shalt not gather the grapes thereof."], [31, "Thine ox shall be slain before thine eyes, and thou shalt not eat thereof: thine ass shall be violently taken away from before thy face, and shall not be restored to thee: thy sheep shall be given unto thine enemies, and thou shalt have none to rescue them."], [32, "Thy sons and thy daughters shall be given unto another people, and thine eyes shall look, and fail with longing for them all the day long: and there shall be no might in thine hand:"], [33, "The fruit of thy land, and all thy labours, shall a nation which thou knowest not eat up; and thou shalt be only oppressed and crushed alway:"], [34, "So that thou shalt be mad for the sight of thine eyes which thou shalt see."], [35, "The LORD shall smite thee in the knees, and in the legs, with a sore botch that cannot be healed, from the sole of thy foot unto the top of thy head."], [36, "The LORD shall bring thee, and thy king which thou shalt set over thee, unto a nation which neither thou nor thy fathers have known; and there shalt thou serve other gods, wood and stone."], [37, "And thou shalt become an astonishment, a proverb, and a byword, among all nations whither the LORD shall lead thee."], [38, "Thou shalt carry much seed out into the field, and shalt gather but little in; for the locust shall consume it."], [39, "Thou shalt plant vineyards, and dress them, but shalt neither drink of the wine, nor gather the grapes; for the worms shall eat them."], [40, "Thou shalt have olive trees throughout all thy coasts, but thou shalt not anoint thyself with the oil; for thine olive shall cast his fruit."], [41, "Thou shalt beget sons and daughters, but thou shalt not enjoy them; for they shall go into captivity."], [42, "All thy trees and fruit of thy land shall the locust consume."], [43, "The stranger that is within thee shall get up above thee very high; and thou shalt come down very low."], [44, "He shall lend to thee, and thou shalt not lend to him: he shall be the head, and thou shalt be the tail."], [45, "Moreover all these curses shall come upon thee, and shall pursue thee, and overtake thee, till thou be destroyed; because thou hearkenedst not unto the voice of the LORD thy God, to keep his commandments and his statutes which he commanded thee:"], [46, "And they shall be upon thee for a sign and for a wonder, and upon thy seed for ever."], [47, "Because thou servedst not the LORD thy God with joyfulness, and with gladness of heart, for the abundance of all things;"], [48, "Therefore shalt thou serve thine enemies which the LORD shall send against thee, in hunger, and in thirst, and in nakedness, and in want of all things: and he shall put a yoke of iron upon thy neck, until he have destroyed thee."], [49, "The LORD shall bring a nation against thee from far, from the end of the earth, as swift as the eagle flieth; a nation whose tongue thou shalt not understand;"], [50, "A nation of fierce countenance, which shall not regard the person of the old, nor shew favour to the young:"], [51, "And he shall eat the fruit of thy cattle, and the fruit of thy land, until thou be destroyed: which also shall not leave thee either corn, wine, or oil, or the increase of thy kine, or flocks of thy sheep, until he have destroyed thee."], [52, "And he shall besiege thee in all thy gates, until thy high and fenced walls come down, wherein thou trustedst, throughout all thy land: and he shall besiege thee in all thy gates throughout all thy land, which the LORD thy God hath given thee."], [53, "And thou shalt eat the fruit of thine own body, the flesh of thy sons and of thy daughters, which the LORD thy God hath given thee, in the siege, and in the straitness, wherewith thine enemies shall distress thee:"], [54, "So that the man that is tender among you, and very delicate, his eye shall be evil toward his brother, and toward the wife of his bosom, and toward the remnant of his children which he shall leave:"], [55, "So that he will not give to any of them of the flesh of his children whom he shall eat: because he hath nothing left him in the siege, and in the straitness, wherewith thine enemies shall distress thee in all thy gates."], [56, "The tender and delicate woman among you, which would not adventure to set the sole of her foot upon the ground for delicateness and tenderness, her eye shall be evil toward the husband of her bosom, and toward her son, and toward her daughter,"], [57, "And toward her young one that cometh out from between her feet, and toward her children which she shall bear: for she shall eat them for want of all things secretly in the siege and straitness, wherewith thine enemy shall distress thee in thy gates."], [58, "If thou wilt not observe to do all the words of this law that are written in this book, that thou mayest fear this glorious and fearful name, THE LORD THY GOD;"], [59, "Then the LORD will make thy plagues wonderful, and the plagues of thy seed, even great plagues, and of long continuance, and sore sicknesses, and of long continuance."], [60, "Moreover he will bring upon thee all the diseases of Egypt, which thou wast afraid of; and they shall cleave unto thee."], [61, "Also every sickness, and every plague, which is not written in the book of this law, them will the LORD bring upon thee, until thou be destroyed."], [62, "And ye shall be left few in number, whereas ye were as the stars of heaven for multitude; because thou wouldest not obey the voice of the LORD thy God."], [63, "And it shall come to pass, that as the LORD rejoiced over you to do you good, and to multiply you; so the LORD will rejoice over you to destroy you, and to bring you to nought; and ye shall be plucked from off the land whither thou goest to possess it."], [64, "And the LORD shall scatter thee among all people, from the one end of the earth even unto the other; and there thou shalt serve other gods, which neither thou nor thy fathers have known, even wood and stone."], [65, "And among these nations shalt thou find no ease, neither shall the sole of thy foot have rest: but the LORD shall give thee there a trembling heart, and failing of eyes, and sorrow of mind:"], [66, "And thy life shall hang in doubt before thee; and thou shalt fear day and night, and shalt have none assurance of thy life:"], [67, "In the morning thou shalt say, Would God it were even! and at even thou shalt say, Would God it were morning! for the fear of thine heart wherewith thou shalt fear, and for the sight of thine eyes which thou shalt see."], [68, "And the LORD shall bring thee into Egypt again with ships, by the way whereof I spake unto thee, Thou shalt see it no more again: and there ye shall be sold unto your enemies for bondmen and bondwomen, and no man shall buy you."]], "Hebrews 8": [[1, "Now of the things which we have spoken this is the sum: We have such an high priest, who is set on the right hand of the throne of the Majesty in the heavens;"], [2, "A minister of the sanctuary, and of the true tabernacle, which the Lord pitched, and not man."], [3, "For every high priest is ordained to offer gifts and sacrifices: wherefore it is of necessity that this man have somewhat also to offer."], [4, "For if he were on earth, he should not be a priest, seeing that there are priests that offer gifts according to the law:"], [5, "Who serve unto the example and shadow of heavenly things, as Moses was admonished of God when he was about to make the tabernacle: for, See, saith he, that thou make all things according to the pattern shewed to thee in the mount."], [6, "But now hath he obtained a more excellent ministry, by how much also he is the mediator of a better covenant, which was established upon better promises."], [7, "For if that first covenant had been faultless, then should no place have been sought for the second."], [8, "For finding fault with them, he saith, Behold, the days come, saith the Lord, when I will make a new covenant with the house of Israel and with the house of Judah:"], [9, "Not according to the covenant that I made with their fathers in the day when I took them by the hand to lead them out of the land of Egypt; because they continued not in my covenant, and I regarded them not, saith the Lord."], [10, "For this is the covenant that I will make with the house of Israel after those days, saith the Lord; I will put my laws into their mind, and write them in their hearts: and I will be to them a God, and they shall be to me a people:"], [11, "And they shall not teach every man his neighbour, and every man his brother, saying, Know the Lord: for all shall know me, from the least to the greatest."], [12, "For I will be merciful to their unrighteousness, and their sins and their iniquities will I remember no more."], [13, "In that he saith, A new covenant, he hath made the first old. Now that which decayeth and waxeth old is ready to vanish away."]], "Romans 8": [[1, "There is therefore now no condemnation to them which are in Christ Jesus, who walk not after the flesh, but after the Spirit."], [2, "For the law of the Spirit of life in Christ Jesus hath made me free from the law of sin and death."], [3, "For what the law could not do, in that it was weak through the flesh, God sending his own Son in the likeness of sinful flesh, and for sin, condemned sin in the flesh:"], [4, "That the righteousness of the law might be fulfilled in us, who walk not after the flesh, but after the Spirit."], [5, "For they that are after the flesh do mind the things of the flesh; but they that are after the Spirit the things of the Spirit."], [6, "For to be carnally minded is death; but to be spiritually minded is life and peace."], [7, "Because the carnal mind is enmity against God: for it is not subject to the law of God, neither indeed can be."], [8, "So then they that are in the flesh cannot please God."], [9, "But ye are not in the flesh, but in the Spirit, if so be that the Spirit of God dwell in you. Now if any man have not the Spirit of Christ, he is none of his."], [10, "And if Christ be in you, the body is dead because of sin; but the Spirit is life because of righteousness."], [11, "But if the Spirit of him that raised up Jesus from the dead dwell in you, he that raised up Christ from the dead shall also quicken your mortal bodies by his Spirit that dwelleth in you."], [12, "Therefore, brethren, we are debtors, not to the flesh, to live after the flesh."], [13, "For if ye live after the flesh, ye shall die: but if ye through the Spirit do mortify the deeds of the body, ye shall live."], [14, "For as many as are led by the Spirit of God, they are the sons of God."], [15, "For ye have not received the spirit of bondage again to fear; but ye have received the Spirit of adoption, whereby we cry, Abba, Father."], [16, "The Spirit itself beareth witness with our spirit, that we are the children of God:"], [17, "And if children, then heirs; heirs of God, and joint-heirs with Christ; if so be that we suffer with him, that we may be also glorified together."], [18, "For I reckon that the sufferings of this present time are not worthy to be compared with the glory which shall be revealed in us."], [19, "For the earnest expectation of the creature waiteth for the manifestation of the sons of God."], [20, "For the creature was made subject to vanity, not willingly, but by reason of him who hath subjected the same in hope,"], [21, "Because the creature itself also shall be delivered from the bondage of corruption into the glorious liberty of the children of God."], [22, "For we know that the whole creation groaneth and travaileth in pain together until now."], [23, "And not only they, but ourselves also, which have the firstfruits of the Spirit, even we ourselves groan within ourselves, waiting for the adoption, to wit, the redemption of our body."], [24, "For we are saved by hope: but hope that is seen is not hope: for what a man seeth, why doth he yet hope for?"], [25, "But if we hope for that we see not, then do we with patience wait for it."], [26, "Likewise the Spirit also helpeth our infirmities: for we know not what we should pray for as we ought: but the Spirit itself maketh intercession for us with groanings which cannot be uttered."], [27, "And he that searcheth the hearts knoweth what is the mind of the Spirit, because he maketh intercession for the saints according to the will of God."], [28, "And we know that all things work together for good to them that love God, to them who are the called according to his purpose."], [29, "For whom he did foreknow, he also did predestinate to be conformed to the image of his Son, that he might be the firstborn among many brethren."], [30, "Moreover whom he did predestinate, them he also called: and whom he called, them he also justified: and whom he justified, them he also glorified."], [31, "What shall we then say to these things? If God be for us, who can be against us?"], [32, "He that spared not his own Son, but delivered him up for us all, how shall he not with him also freely give us all things?"], [33, "Who shall lay any thing to the charge of God’s elect? It is God that justifieth."], [34, "Who is he that condemneth? It is Christ that died, yea rather, that is risen again, who is even at the right hand of God, who also maketh intercession for us."], [35, "Who shall separate us from the love of Christ? shall tribulation, or distress, or persecution, or famine, or nakedness, or peril, or sword?"], [36, "As it is written, For thy sake we are killed all the day long; we are accounted as sheep for the slaughter."], [37, "Nay, in all these things we are more than conquerors through him that loved us."], [38, "For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come,"], [39, "Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord."]], "Hebrews 12": [[1, "Wherefore seeing we also are compassed about with so great a cloud of witnesses, let us lay aside every weight, and the sin which doth so easily beset us, and let us run with patience the race that is set before us,"], [2, "Looking unto Jesus the author and finisher of our faith; who for the joy that was set before him endured the cross, despising the shame, and is set down at the right hand of the throne of God."], [3, "For consider him that endured such contradiction of sinners against himself, lest ye be wearied and faint in your minds."], [4, "Ye have not yet resisted unto blood, striving against sin."], [5, "And ye have forgotten the exhortation which speaketh unto you as unto children, My son, despise not thou the chastening of the Lord, nor faint when thou art rebuked of him:"], [6, "For whom the Lord loveth he chasteneth, and scourgeth every son whom he receiveth."], [7, "If ye endure chastening, God dealeth with you as with sons; for what son is he whom the father chasteneth not?"], [8, "But if ye be without chastisement, whereof all are partakers, then are ye bastards, and not sons."], [9, "Furthermore we have had fathers of our flesh which corrected us, and we gave them reverence: shall we not much rather be in subjection unto the Father of spirits, and live?"], [10, "For they verily for a few days chastened us after their own pleasure; but he for our profit, that we might be partakers of his holiness."], [11, "Now no chastening for the present seemeth to be joyous, but grievous: nevertheless afterward it yieldeth the peaceable fruit of righteousness unto them which are exercised thereby."], [12, "Wherefore lift up the hands which hang down, and the feeble knees;"], [13, "And make straight paths for your feet, lest that which is lame be turned out of the way; but let it rather be healed."], [14, "Follow peace with all men, and holiness, without which no man shall see the Lord:"], [15, "Looking diligently lest any man fail of the grace of God; lest any root of bitterness springing up trouble you, and thereby many be defiled;"], [16, "Lest there be any fornicator, or profane person, as Esau, who for one morsel of meat sold his birthright."], [17, "For ye know how that afterward, when he would have inherited the blessing, he was rejected: for he found no place of repentance, though he sought it carefully with tears."], [18, "For ye are not come unto the mount that might be touched, and that burned with fire, nor unto blackness, and darkness, and tempest,"], [19, "And the sound of a trumpet, and the voice of words; which voice they that heard intreated that the word should not be spoken to them any more:"], [20, "(For they could not endure that which was commanded, And if so much as a beast touch the mountain, it shall be stoned, or thrust through with a dart:"], [21, "And so terrible was the sight, that Moses said, I exceedingly fear and quake:)"], [22, "But ye are come unto mount Sion, and unto the city of the living God, the heavenly Jerusalem, and to an innumerable company of angels,"], [23, "To the general assembly and church of the firstborn, which are written in heaven, and to God the Judge of all, and to the spirits of just men made perfect,"], [24, "And to Jesus the mediator of the new covenant, and to the blood of sprinkling, that speaketh better things than that of Abel."], [25, "See that ye refuse not him that speaketh. For if they escaped not who refused him that spake on earth, much more shall not we escape, if we turn away from him that speaketh from heaven:"], [26, "Whose voice then shook the earth: but now he hath promised, saying, Yet once more I shake not the earth only, but also heaven."], [27, "And this word, Yet once more, signifieth the removing of those things that are shaken, as of things that are made, that those things which cannot be shaken may remain."], [28, "Wherefore we receiving a kingdom which cannot be moved, let us have grace, whereby we may serve God acceptably with reverence and godly fear:"], [29, "For our God is a consuming fire."]], "Joshua 10": [[1, "Now it came to pass, when Adonizedec king of Jerusalem had heard how Joshua had taken Ai, and had utterly destroyed it; as he had done to Jericho and her king, so he had done to Ai and her king; and how the inhabitants of Gibeon had made peace with Israel, and were among them;"], [2, "That they feared greatly, because Gibeon was a great city, as one of the royal cities, and because it was greater than Ai, and all the men thereof were mighty."], [3, "Wherefore Adonizedec king of Jerusalem sent unto Hoham king of Hebron, and unto Piram king of Jarmuth, and unto Japhia king of Lachish, and unto Debir king of Eglon, saying,"], [4, "Come up unto me, and help me, that we may smite Gibeon: for it hath made peace with Joshua and with the children of Israel."], [5, "Therefore the five kings of the Amorites, the king of Jerusalem, the king of Hebron, the king of Jarmuth, the king of Lachish, the king of Eglon, gathered themselves together, and went up, they and all their hosts, and encamped before Gibeon, and made war against it."], [6, "And the men of Gibeon sent unto Joshua to the camp to Gilgal, saying, Slack not thy hand from thy servants; come up to us quickly, and save us, and help us: for all the kings of the Amorites that dwell in the mountains are gathered together against us."], [7, "So Joshua ascended from Gilgal, he, and all the people of war with him, and all the mighty men of valour."], [8, "And the LORD said unto Joshua, Fear them not: for I have delivered them into thine hand; there shall not a man of them stand before thee."], [9, "Joshua therefore came unto them suddenly, and went up from Gilgal all night."], [10, "And the LORD discomfited them before Israel, and slew them with a great slaughter at Gibeon, and chased them along the way that goeth up to Bethhoron, and smote them to Azekah, and unto Makkedah."], [11, "And it came to pass, as they fled from before Israel, and were in the going down to Bethhoron, that the LORD cast down great stones from heaven upon them unto Azekah, and they died: they were more which died with hailstones than they whom the children of Israel slew with the sword."], [12, "Then spake Joshua to the LORD in the day when the LORD delivered up the Amorites before the children of Israel, and he said in the sight of Israel, Sun, stand thou still upon Gibeon; and thou, Moon, in the valley of Ajalon."], [13, "And the sun stood still, and the moon stayed, until the people had avenged themselves upon their enemies. Is not this written in the book of Jasher? So the sun stood still in the midst of heaven, and hasted not to go down about a whole day."], [14, "And there was no day like that before it or after it, that the LORD hearkened unto the voice of a man: for the LORD fought for Israel."], [15, "And Joshua returned, and all Israel with him, unto the camp to Gilgal."], [16, "But these five kings fled, and hid themselves in a cave at Makkedah."], [17, "And it was told Joshua, saying, The five kings are found hid in a cave at Makkedah."], [18, "And Joshua said, Roll great stones upon the mouth of the cave, and set men by it for to keep them:"], [19, "And stay ye not, but pursue after your enemies, and smite the hindmost of them; suffer them not to enter into their cities: for the LORD your God hath delivered them into your hand."], [20, "And it came to pass, when Joshua and the children of Israel had made an end of slaying them with a very great slaughter, till they were consumed, that the rest which remained of them entered into fenced cities."], [21, "And all the people returned to the camp to Joshua at Makkedah in peace: none moved his tongue against any of the children of Israel."], [22, "Then said Joshua, Open the mouth of the cave, and bring out those five kings unto me out of the cave."], [23, "And they did so, and brought forth those five kings unto him out of the cave, the king of Jerusalem, the king of Hebron, the king of Jarmuth, the king of Lachish, and the king of Eglon."], [24, "And it came to pass, when they brought out those kings unto Joshua, that Joshua called for all the men of Israel, and said unto the captains of the men of war which went with him, Come near, put your feet upon the necks of these kings. And they came near, and put their feet upon the necks of them."], [25, "And Joshua said unto them, Fear not, nor be dismayed, be strong and of good courage: for thus shall the LORD do to all your enemies against whom ye fight."], [26, "And afterward Joshua smote them, and slew them, and hanged them on five trees: and they were hanging upon the trees until the evening."], [27, "And it came to pass at the time of the going down of the sun, that Joshua commanded, and they took them down off the trees, and cast them into the cave wherein they had been hid, and laid great stones in the cave’s mouth, which remain until this very day."], [28, "And that day Joshua took Makkedah, and smote it with the edge of the sword, and the king thereof he utterly destroyed, them, and all the souls that were therein; he let none remain: and he did to the king of Makkedah as he did unto the king of Jericho."], [29, "Then Joshua passed from Makkedah, and all Israel with him, unto Libnah, and fought against Libnah:"], [30, "And the LORD delivered it also, and the king thereof, into the hand of Israel; and he smote it with the edge of the sword, and all the souls that were therein; he let none remain in it; but did unto the king thereof as he did unto the king of Jericho."], [31, "And Joshua passed from Libnah, and all Israel with him, unto Lachish, and encamped against it, and fought against it:"], [32, "And the LORD delivered Lachish into the hand of Israel, which took it on the second day, and smote it with the edge of the sword, and all the souls that were therein, according to all that he had done to Libnah."], [33, "Then Horam king of Gezer came up to help Lachish; and Joshua smote him and his people, until he had left him none remaining."], [34, "And from Lachish Joshua passed unto Eglon, and all Israel with him; and they encamped against it, and fought against it:"], [35, "And they took it on that day, and smote it with the edge of the sword, and all the souls that were therein he utterly destroyed that day, according to all that he had done to Lachish."], [36, "And Joshua went up from Eglon, and all Israel with him, unto Hebron; and they fought against it:"], [37, "And they took it, and smote it with the edge of the sword, and the king thereof, and all the cities thereof, and all the souls that were therein; he left none remaining, according to all that he had done to Eglon; but destroyed it utterly, and all the souls that were therein."], [38, "And Joshua returned, and all Israel with him, to Debir; and fought against it:"], [39, "And he took it, and the king thereof, and all the cities thereof; and they smote them with the edge of the sword, and utterly destroyed all the souls that were therein; he left none remaining: as he had done to Hebron, so he did to Debir, and to the king thereof; as he had done also to Libnah, and to her king."], [40, "So Joshua smote all the country of the hills, and of the south, and of the vale, and of the springs, and all their kings: he left none remaining, but utterly destroyed all that breathed, as the LORD God of Israel commanded."], [41, "And Joshua smote them from Kadeshbarnea even unto Gaza, and all the country of Goshen, even unto Gibeon."], [42, "And all these kings and their land did Joshua take at one time, because the LORD God of Israel fought for Israel."], [43, "And Joshua returned, and all Israel with him, unto the camp to Gilgal."]], "2 Samuel 5": [[1, "Then came all the tribes of Israel to David unto Hebron, and spake, saying, Behold, we are thy bone and thy flesh."], [2, "Also in time past, when Saul was king over us, thou wast he that leddest out and broughtest in Israel: and the LORD said to thee, Thou shalt feed my people Israel, and thou shalt be a captain over Israel."], [3, "So all the elders of Israel came to the king to Hebron; and king David made a league with them in Hebron before the LORD: and they anointed David king over Israel."], [4, "David was thirty years old when he began to reign, and he reigned forty years."], [5, "In Hebron he reigned over Judah seven years and six months: and in Jerusalem he reigned thirty and three years over all Israel and Judah."], [6, "And the king and his men went to Jerusalem unto the Jebusites, the inhabitants of the land: which spake unto David, saying, Except thou take away the blind and the lame, thou shalt not come in hither: thinking, David cannot come in hither."], [7, "Nevertheless David took the strong hold of Zion: the same is the city of David."], [8, "And David said on that day, Whosoever getteth up to the gutter, and smiteth the Jebusites, and the lame and the blind, that are hated of David’s soul, he shall be chief and captain. Wherefore they said, The blind and the lame shall not come into the house."], [9, "So David dwelt in the fort, and called it the city of David. And David built round about from Millo and inward."], [10, "And David went on, and grew great, and the LORD God of hosts was with him."], [11, "And Hiram king of Tyre sent messengers to David, and cedar trees, and carpenters, and masons: and they built David an house."], [12, "And David perceived that the LORD had established him king over Israel, and that he had exalted his kingdom for his people Israel’s sake."], [13, "And David took him more concubines and wives out of Jerusalem, after he was come from Hebron: and there were yet sons and daughters born to David."], [14, "And these be the names of those that were born unto him in Jerusalem; Shammuah, and Shobab, and Nathan, and Solomon,"], [15, "Ibhar also, and Elishua, and Nepheg, and Japhia,"], [16, "And Elishama, and Eliada, and Eliphalet."], [17, "But when the Philistines heard that they had anointed David king over Israel, all the Philistines came up to seek David; and David heard of it, and went down to the hold."], [18, "The Philistines also came and spread themselves in the valley of Rephaim."], [19, "And David enquired of the LORD, saying, Shall I go up to the Philistines? wilt thou deliver them into mine hand? And the LORD said unto David, Go up: for I will doubtless deliver the Philistines into thine hand."], [20, "And David came to Baalperazim, and David smote them there, and said, The LORD hath broken forth upon mine enemies before me, as the breach of waters. Therefore he called the name of that place Baalperazim."], [21, "And there they left their images, and David and his men burned them."], [22, "And the Philistines came up yet again, and spread themselves in the valley of Rephaim."], [23, "And when David enquired of the LORD, he said, Thou shalt not go up; but fetch a compass behind them, and come upon them over against the mulberry trees."], [24, "And let it be, when thou hearest the sound of a going in the tops of the mulberry trees, that then thou shalt bestir thyself: for then shall the LORD go out before thee, to smite the host of the Philistines."], [25, "And David did so, as the LORD had commanded him; and smote the Philistines from Geba until thou come to Gazer."]], "2 Chronicles 20": [[1, "It came to pass after this also, that the children of Moab, and the children of Ammon, and with them other beside the Ammonites, came against Jehoshaphat to battle."], [2, "Then there came some that told Jehoshaphat, saying, There cometh a great multitude against thee from beyond the sea on this side Syria; and, behold, they be in Hazazontamar, which is Engedi."], [3, "And Jehoshaphat feared, and set himself to seek the LORD, and proclaimed a fast throughout all Judah."], [4, "And Judah gathered themselves together, to ask help of the LORD: even out of all the cities of Judah they came to seek the LORD."], [5, "And Jehoshaphat stood in the congregation of Judah and Jerusalem, in the house of the LORD, before the new court,"], [6, "And said, O LORD God of our fathers, art not thou God in heaven? and rulest not thou over all the kingdoms of the heathen? and in thine hand is there not power and might, so that none is able to withstand thee?"], [7, "Art not thou our God, who didst drive out the inhabitants of this land before thy people Israel, and gavest it to the seed of Abraham thy friend for ever?"], [8, "And they dwelt therein, and have built thee a sanctuary therein for thy name, saying,"], [9, "If, when evil cometh upon us, as the sword, judgment, or pestilence, or famine, we stand before this house, and in thy presence, (for thy name is in this house,) and cry unto thee in our affliction, then thou wilt hear and help."], [10, "And now, behold, the children of Ammon and Moab and mount Seir, whom thou wouldest not let Israel invade, when they came out of the land of Egypt, but they turned from them, and destroyed them not;"], [11, "Behold, I say, how they reward us, to come to cast us out of thy possession, which thou hast given us to inherit."], [12, "O our God, wilt thou not judge them? for we have no might against this great company that cometh against us; neither know we what to do: but our eyes are upon thee."], [13, "And all Judah stood before the LORD, with their little ones, their wives, and their children."], [14, "Then upon Jahaziel the son of Zechariah, the son of Benaiah, the son of Jeiel, the son of Mattaniah, a Levite of the sons of Asaph, came the Spirit of the LORD in the midst of the congregation;"], [15, "And he said, Hearken ye, all Judah, and ye inhabitants of Jerusalem, and thou king Jehoshaphat, Thus saith the LORD unto you, Be not afraid nor dismayed by reason of this great multitude; for the battle is not yours, but God’s."], [16, "To morrow go ye down against them: behold, they come up by the cliff of Ziz; and ye shall find them at the end of the brook, before the wilderness of Jeruel."], [17, "Ye shall not need to fight in this battle: set yourselves, stand ye still, and see the salvation of the LORD with you, O Judah and Jerusalem: fear not, nor be dismayed; to morrow go out against them: for the LORD will be with you."], [18, "And Jehoshaphat bowed his head with his face to the ground: and all Judah and the inhabitants of Jerusalem fell before the LORD, worshipping the LORD."], [19, "And the Levites, of the children of the Kohathites, and of the children of the Korhites, stood up to praise the LORD God of Israel with a loud voice on high."], [20, "And they rose early in the morning, and went forth into the wilderness of Tekoa: and as they went forth, Jehoshaphat stood and said, Hear me, O Judah, and ye inhabitants of Jerusalem; Believe in the LORD your God, so shall ye be established; believe his prophets, so shall ye prosper."], [21, "And when he had consulted with the people, he appointed singers unto the LORD, and that should praise the beauty of holiness, as they went out before the army, and to say, Praise the LORD; for his mercy endureth for ever."], [22, "And when they began to sing and to praise, the LORD set ambushments against the children of Ammon, Moab, and mount Seir, which were come against Judah; and they were smitten."], [23, "For the children of Ammon and Moab stood up against the inhabitants of mount Seir, utterly to slay and destroy them: and when they had made an end of the inhabitants of Seir, every one helped to destroy another."], [24, "And when Judah came toward the watch tower in the wilderness, they looked unto the multitude, and, behold, they were dead bodies fallen to the earth, and none escaped."], [25, "And when Jehoshaphat and his people came to take away the spoil of them, they found among them in abundance both riches with the dead bodies, and precious jewels, which they stripped off for themselves, more than they could carry away: and they were three days in gathering of the spoil, it was so much."], [26, "And on the fourth day they assembled themselves in the valley of Berachah; for there they blessed the LORD: therefore the name of the same place was called, The valley of Berachah, unto this day."], [27, "Then they returned, every man of Judah and Jerusalem, and Jehoshaphat in the forefront of them, to go again to Jerusalem with joy; for the LORD had made them to rejoice over their enemies."], [28, "And they came to Jerusalem with psalteries and harps and trumpets unto the house of the LORD."], [29, "And the fear of God was on all the kingdoms of those countries, when they had heard that the LORD fought against the enemies of Israel."], [30, "So the realm of Jehoshaphat was quiet: for his God gave him rest round about."], [31, "And Jehoshaphat reigned over Judah: he was thirty and five years old when he began to reign, and he reigned twenty and five years in Jerusalem. And his mother’s name was Azubah the daughter of Shilhi."], [32, "And he walked in the way of Asa his father, and departed not from it, doing that which was right in the sight of the LORD."], [33, "Howbeit the high places were not taken away: for as yet the people had not prepared their hearts unto the God of their fathers."], [34, "Now the rest of the acts of Jehoshaphat, first and last, behold, they are written in the book of Jehu the son of Hanani, who is mentioned in the book of the kings of Israel."], [35, "And after this did Jehoshaphat king of Judah join himself with Ahaziah king of Israel, who did very wickedly:"], [36, "And he joined himself with him to make ships to go to Tarshish: and they made the ships in Eziongaber."], [37, "Then Eliezer the son of Dodavah of Mareshah prophesied against Jehoshaphat, saying, Because thou hast joined thyself with Ahaziah, the LORD hath broken thy works. And the ships were broken, that they were not able to go to Tarshish."]]}};
+
+// Quotations from other writings (say: in the deck): their words open like a verse.
+const Q = {};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b && b.dataset.q) {
+    const q = Q[b.dataset.q];
+    verseTitle.textContent = q ? q.t : b.textContent.trim();
+    verseBody.innerHTML = q ? q.h : "<p>Not loaded.</p>";
+    verseDlg.showModal();
+    verseBody.scrollTop = 0;
+    return;
+  }
+  if (b) {
+    const keys = b.dataset.v;
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
