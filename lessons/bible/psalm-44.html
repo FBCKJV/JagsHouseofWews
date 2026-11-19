@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Psalm 44: Our Fathers Have Told Us</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Psalm 44 in the King James Bible: the sons of Korah, our fathers have told us and the children asking and fathers telling of Deuteronomy 6, a communal lament in persecution, for thy sake are we killed all the day long and Romans 8, the faithful who have not forgotten God, and stand fast, from the Psalms series study.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body .say-cite{font-size:.85rem;font-style:italic;color:var(--vellum-dim);border-top:1px solid var(--rule);padding-top:.6rem;margin-top:1rem}
+.ref.say{border-bottom-style:dashed}
+.ref.say::before{content:"\201C";margin-right:.15em}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Our Fathers Have Told Us" data-ctx="">
+  <div class="page title-page">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalm 44</h1>
+    <p class="sub">Our fathers have told us • For thy sake are we killed all the day long • Arise for our help</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 44:1">Psalm 44:1</button><button class="ref" data-v="Psalms 44:22">Psalm 44:22</button><button class="ref" data-v="Psalms 44:26">Psalm 44:26</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse. Press C for the whole chapter.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Our fathers have told us" data-title="The sons of Korah" data-ctx="">
+  <div class="page">
+    <div class="kicker">Psalm 44 · A congregational lament</div>
+    <h2>The sons of Korah</h2>
+    <p><strong>Psalm 44</strong> is attributed to <em>the sons of Korah</em>, a Levitical family of temple musicians and gatekeepers. Faithful singers, who are credited with 12 Psalms in total, 42-49 and 84-85, 87-88, across multiple generations.</p>
+    <p><strong>Psalm 44</strong> itself is thought to be written during the Assyrian invasion and their siege of Jerusalem and general destruction of the Southern Kingdom of Judea.</p>
+    <p>It follows a similar pattern of congregational laments, as we saw in <strong>Psalm 42-43</strong>, and stresses the victories of the past that God has won for His people, while calling out for deliverance in the present.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Our fathers have told us" data-title="What work thou didst in their days" data-ctx="Psalms 44:1">
+  <div class="page">
+    <div class="kicker">Psalm 44 · Our fathers have told us</div>
+    <h2>What work thou didst in their days</h2>
+    <blockquote class="big-verse">We have heard with our ears, O God, <mark>our fathers have told us, what work thou didst in their days</mark>, in the times of old.<cite>Psalm 44:1</cite></blockquote>
+    <p>It opens with an acknowledgement of their knowledge of God's grace and might for His people, passed down by their fathers.</p>
+    <p><em>Our fathers have told us, what work thou didst in their days</em>. The importance of generational evangelism is incredibly important, for obvious reasons, we should tell our children about the importance of God moving in our lives, so that they may learn to trust in Him during hard times, and not be dismayed when tribulation comes.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Our fathers have told us" data-title="When thy son asketh thee" data-ctx="Deuteronomy 6:18-20">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 44:1</div>
+    <h2>When thy son asketh thee</h2>
+    <p>But the practice of children asking and fathers telling was legally commanded in the Law of Moses to ensure that the memory of the Exodus from Egypt was never forgotten.</p>
+    <blockquote class="scripture" style="font-style:italic">And thou shalt do that which is right and good in the sight of the <span class="lord">Lord</span>: that it may be well with thee, and that thou mayest go in and possess the good land which the <span class="lord">Lord</span> sware unto thy fathers, To cast out all thine enemies from before thee, as the <span class="lord">Lord</span> hath spoken. And <mark>when thy son asketh thee in time to come</mark>, saying, What mean the testimonies, and the statutes, and the judgments, which the <span class="lord">Lord</span> our God hath commanded you?<cite>Deuteronomy 6:18-20</cite></blockquote>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Our fathers have told us" data-title="Then thou shalt say unto thy son" data-ctx="Deuteronomy 6:21-23">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 44:1</div>
+    <h2>Then thou shalt say unto thy son</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>Then thou shalt say unto thy son</mark>, We were Pharaoh’s bondmen in Egypt; and the <span class="lord">Lord</span> brought us out of Egypt with a mighty hand: And the <span class="lord">Lord</span> shewed signs and wonders, great and sore, upon Egypt, upon Pharaoh, and upon all his household, before our eyes: And he brought us out from thence, that he might bring us in, to give us the land which he sware unto our fathers.<cite>Deuteronomy 6:21-23</cite></blockquote>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Our fathers have told us" data-title="Because thou hadst a favour unto them" data-ctx="Psalms 44:2-3">
+  <div class="page">
+    <div class="kicker">Psalm 44 · Not by their own sword</div>
+    <h2>Because thou hadst a favour unto them</h2>
+    <blockquote class="scripture" style="font-style:italic">How thou didst drive out the heathen with thy hand, and plantedst them; how thou didst afflict the people, and cast them out. For <mark>they got not the land in possession by their own sword</mark>, neither did their own arm save them: but thy right hand, and thine arm, and the light of thy countenance, <mark>because thou hadst a favour unto them</mark>.<cite>Psalm 44:2-3</cite></blockquote>
+    <p>The Psalm is not only stating their education as a fact, but is telling God in their prayer that their fathers obeyed and they listened, following His decree. That they were obedient in this thing He had said.</p>
+    <p>The victories they were given by His power and promise and by the light of His countenance - His divine grace towards them, is remembered and appreciated. That their fathers didn't trust their own swords, or their own strength, but wholly relied on the Lord, <em>because thou hadst a favour unto them</em>.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Our fathers have told us" data-title="Thou art my King, O God" data-ctx="Psalms 44:4-8">
+  <div class="page">
+    <div class="kicker">Psalm 44 · Command deliverances</div>
+    <h2>Thou art my King, O God</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>Thou art my King, O God: command deliverances for Jacob</mark>. Through thee will we push down our enemies: through thy name will we tread them under that rise up against us. <mark>For I will not trust in my bow</mark>, neither shall my sword save me. But thou hast saved us from our enemies, and hast put them to shame that hated us. In God we boast all the day long, and praise thy name for ever. Selah.<cite>Psalm 44:4-8</cite></blockquote>
+    <p>When we are in straits, and feeling hopeless, the remembrance of past deliverance, coupled with the thankful acknowledgement to the Lord for these things, leads the prayer, and gives weight to the petition for help in the present distress.</p>
+    <p>Thou art our Lord, command deliverance to thy people.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="But thou hast cast off" data-title="A communal prayer" data-ctx="Psalms 44:4-8">
+  <div class="page">
+    <div class="kicker">Psalm 44 · God's people</div>
+    <h2>A communal prayer</h2>
+    <p>While individual prayers can and should follow this pattern of recognition and thanksgiving of past actions, before requesting aid for the current troubles, this Psalm is specifically a communal prayer for God's people. Faithful Israel, the nation in the past, spiritual Israel today.</p>
+    <p>Collectively, Christians have faced persecution and tribulations, by the enemies of Christ. 1st century persecution by the Jews and the Romans, the Dark Ages martyrdom of believers at the hands of the Roman Catholic Church. The mass murder by Muslims against Nigerian Christians today.</p>
+    <p>The same will be suffered in the future, when the beast makes war on the saints during Tribulation.</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="But thou hast cast off" data-title="Hypothetical steadfastness" data-ctx="Psalms 44:4-8">
+  <div class="page">
+    <div class="kicker">Application • Tribulation</div>
+    <h2>Hypothetical steadfastness</h2>
+    <p>American Christians today may posture and pose about their hypothetical steadfastness during a supposed tribulation in their lifetime. That they will gladly offer their necks to the sword for Jesus. Boasting of their own willingness to sacrifice themselves as martyrs for the promised crowns in the post-trib pre-wrath time to come.</p>
+    <p>Or, like a vast majority of the brethren, believe fervently that they will actually be spared any persecution in the end times by being whisked away before it even starts. The pre-trib wishful thinking that dominates Christian churches today, leads to a false comfort that political solutions will forestall the inevitable that they've excused themselves from, rather than repentance and prayer, soul-winning and standards.</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="But thou hast cast off" data-title="Thou hast cast off" data-ctx="Psalms 44:9-12">
+  <div class="page">
+    <div class="kicker">Psalm 44 · Like sheep appointed for meat</div>
+    <h2>Thou hast cast off</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>But thou hast cast off, and put us to shame</mark>; and goest not forth with our armies. Thou makest us to turn back from the enemy: and they which hate us spoil for themselves. <mark>Thou hast given us like sheep appointed for meat</mark>; and hast scattered us among the heathen. Thou sellest thy people for nought, and dost not increase thy wealth by their price.<cite>Psalm 44:9-12</cite></blockquote>
+    <p>But either group may look upon the persecuted saints today, or the congregation at the time of <strong>Psalm 44</strong>, and see their plaintive questions against God, and His seeming abandonment of His people, and look down our noses at it.</p>
+    <p>"If it were us, in our day, we wouldn't blame God for allowing those that hate us to spoil for themselves! We wouldn't question why God has cast us off, and left us to die!"</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="But thou hast cast off" data-title="A byword among the heathen" data-ctx="Psalms 44:13-16">
+  <div class="page">
+    <div class="kicker">Psalm 44 · A reproach to our neighbours</div>
+    <h2>A byword among the heathen</h2>
+    <blockquote class="scripture" style="font-style:italic">Thou makest us a reproach to our neighbours, a scorn and a derision to them that are round about us. <mark>Thou makest us a byword among the heathen</mark>, a shaking of the head among the people. My confusion is continually before me, and the shame of my face hath covered me, For the voice of him that reproacheth and blasphemeth; by reason of the enemy and avenger.<cite>Psalm 44:13-16</cite></blockquote>
+    <p>The same Christians who cry out in pain at every "Happy holidays!" and sit on their couches when there are doors to knock and souls to save. Who prioritize football and recreation over church. Who bemoan the wickedness of the world, while living exactly like it.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="But thou hast cast off" data-title="The fiery trial" data-ctx="1 Peter 4:12-14">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 44:9–16</div>
+    <h2>The fiery trial</h2>
+    <blockquote class="scripture" style="font-style:italic">Beloved, <mark>think it not strange concerning the fiery trial</mark> which is to try you, as though some strange thing happened unto you: But rejoice, inasmuch as ye are partakers of Christ’s sufferings; that, when his glory shall be revealed, ye may be glad also with exceeding joy. If ye be reproached for the name of Christ, happy are ye; for the spirit of glory and of God resteth upon you: on their part he is evil spoken of, but on your part he is glorified.<cite>1 Peter 4:12-14</cite></blockquote>
+    <p>If the people who call themselves by His name were naturally like Stephen, standing up for the faith and being willing to suffer death for the truth while forgiving those that stoned him to death, the New Testament wouldn't be so full of warnings and encouragement.</p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="For thy sake" data-title="Counted as sheep for the slaughter" data-ctx="Psalms 44:22-24">
+  <div class="page">
+    <div class="kicker">Psalm 44 · Awake, why sleepest thou?</div>
+    <h2>Counted as sheep for the slaughter</h2>
+    <p>In <strong>Psalm 44:22–24</strong> they cry out desperately to God;</p>
+    <blockquote class="scripture" style="font-style:italic">Yea, <mark>for thy sake are we killed all the day long</mark>; we are counted as sheep for the slaughter. <mark>Awake, why sleepest thou, O Lord?</mark> arise, cast us not off for ever. Wherefore hidest thou thy face, and forgettest our affliction and our oppression?<cite>Psalm 44:22-24</cite></blockquote>
+    <p>The same lament is turned to edifying instruction in the New Testament;</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="For thy sake" data-title="More than conquerors" data-ctx="Romans 8:35-37">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 44:22</div>
+    <h2>More than conquerors</h2>
+    <blockquote class="scripture" style="font-style:italic">Who shall separate us from the love of Christ? shall tribulation, or distress, or persecution, or famine, or nakedness, or peril, or sword? <mark>As it is written, For thy sake we are killed all the day long</mark>; we are accounted as sheep for the slaughter. Nay, in all these things we are <mark>more than conquerors</mark> through him that loved us.<cite>Romans 8:35-37</cite></blockquote>
+    <p>Because man is naturally going to complain in the best of times, we need to be prepared for the proper attitude in the worst. To be persuaded that nothing can separate us from the love of Christ. Even when things are bleak.</p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="For thy sake" data-title="Be thou faithful unto death" data-ctx="Revelation 2:8-11">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 44:22</div>
+    <h2>Be thou faithful unto death</h2>
+    <p>Jesus Himself gave this encouragement to the church in Smyrna, who were facing real persecution at the hands of their enemies.</p>
+    <blockquote class="scripture" style="font-style:italic">And unto the angel of the church in Smyrna write; These things saith the first and the last, which was dead, and is alive; I know thy works, and tribulation, and poverty, (but thou art rich) and I know the blasphemy of them which say they are Jews, and are not, but are the synagogue of Satan. Fear none of those things which thou shalt suffer: behold, the devil shall cast some of you into prison, that ye may be tried; and ye shall have tribulation ten days: <mark>be thou faithful unto death, and I will give thee a crown of life</mark>. He that hath an ear, let him hear what the Spirit saith unto the churches; He that overcometh shall not be hurt of the second death.<cite>Revelation 2:8-11</cite></blockquote>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="For thy sake" data-title="Grown fat off His blessings" data-ctx="Revelation 2:8-11">
+  <div class="page">
+    <div class="kicker">Application • Tribulation</div>
+    <h2>Grown fat off His blessings</h2>
+    <p>Just as the instructions to live separated lives, to be holy as He is holy, is necessary because man does not by his fleshly nature do good works, even those who are saved, the same flesh tends to need reminders of past victory, while still may cry out "Why?" to their Saviour.</p>
+    <p>Righteous Job did. The best man of his generation, and yet he sought answers from God, and sinned not with his mouth while doing so, according to scripture.</p>
+    <p>Modern American Christians, made weak by the comforts and bounty God has graciously given our nation, grown fat off His blessings, will most assuredly cry out the same laments when the abomination of desolation is rolled out, and the armies of the beast strike us down.</p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="For thy sake" data-title="How long, O Lord?" data-ctx="Revelation 6:9-10">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 44:23</div>
+    <h2>How long, O Lord?</h2>
+    <p>Even the spirits of the martyrs in Great Tribulation will cry out, impatiently.</p>
+    <blockquote class="scripture" style="font-style:italic">And when he had opened the fifth seal, I saw under the altar the souls of them that were slain for the word of God, and for the testimony which they held: And they cried with a loud voice, saying, <mark>How long, O Lord, holy and true</mark>, dost thou not judge and avenge our blood on them that dwell on the earth?<cite>Revelation 6:9-10</cite></blockquote>
+    <p>We naturally may feel abandoned in the thick of it. Crying out, as the congregation does, is sadly expected.</p>
+    <p><em>Awake, why sleepest thou, O Lord? arise, cast us not off for ever. Wherefore hidest thou thy face, and forgettest our affliction and our oppression?</em></p>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="For thy sake" data-title="Bowed down to the dust" data-ctx="Psalms 44:25">
+  <div class="page">
+    <div class="kicker">Psalm 44 · Bowed down</div>
+    <h2>Bowed down to the dust</h2>
+    <blockquote class="big-verse">For <mark>our soul is bowed down to the dust</mark>: our belly cleaveth unto the earth.<cite>Psalm 44:25</cite></blockquote>
+    <p>We may be beaten down, bowed to the dust, despondent.</p>
+    <p>But remember the stories told by our fathers. Remember the victories God has given us. Remember that we have already overcome in Christ. That nothing will separate us from His love.</p>
+    <p>We may turn to the Lord in fear. We may be consumed by our enemies, and feel forgotten. We may be impatient in the face of the tribulation.</p>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="For thy sake" data-title="Arise for our help" data-ctx="Psalms 44:26">
+  <div class="page">
+    <div class="kicker">Psalm 44 · For thy mercies' sake</div>
+    <h2>Arise for our help</h2>
+    <p>But the key is to turn towards God in our prayers.</p>
+    <blockquote class="big-verse">Arise for our help, and redeem us for thy mercies’ sake.<cite>Psalm 44:26</cite></blockquote>
+    <p class="center">Amen.</p>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Yet have we not forgotten thee" data-title="Their innocence" data-ctx="Psalms 44:17-21">
+  <div class="page">
+    <div class="kicker">Psalm 44 · Not dealt falsely</div>
+    <h2>Their innocence</h2>
+    <blockquote class="scripture" style="font-style:italic">All this is come upon us; <mark>yet have we not forgotten thee, neither have we dealt falsely in thy covenant</mark>. Our heart is not turned back, neither have our steps declined from thy way; Though thou hast sore broken us in the place of dragons, and covered us with the shadow of death. If we have forgotten the name of our God, or stretched out our hands to a strange god; <mark>Shall not God search this out?</mark> for he knoweth the secrets of the heart.<cite>Psalm 44:17-21</cite></blockquote>
+    <p>What makes <strong>Psalm 44</strong> so jarring and often makes modern readers uncomfortable, is that the congregation is stating they are not being punished for apostasy or adultery or for being unfaithful.</p>
+    <p>In many other laments, Israel confesses their sins and acknowledges that their defeat is a righteous judgment from God. But here, they boldly declare their innocence:</p>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Yet have we not forgotten thee" data-title="Travails come upon the just" data-ctx="Psalms 44:17-21">
+  <div class="page">
+    <div class="kicker">Psalm 44 · The faithful</div>
+    <h2>Travails come upon the just</h2>
+    <p>Travails come upon the just. Upon the faithful who have placed their trust in the Lord.</p>
+    <p>The psalmists raise a relevant point today; believers may cry out to God and ask why they are suffering, knowing they have not fallen to apostasy.</p>
+    <p>These sons of Korah are believers, and believers cannot apostatize. They feel confident in asking God to search their hearts for any sign of adultery in worship of Him.</p>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Yet have we not forgotten thee" data-title="Still faithful" data-ctx="Psalms 44:17-21">
+  <div class="page">
+    <div class="kicker">Psalm 44 · The faithful</div>
+    <h2>Still faithful</h2>
+    <p>They may, amongst themselves, talk about how the northern kingdom of Israel which was also being afflicted in this time by the Assyrian empire, deserved it. They had fallen into the sin of Jeroboam and gone after strange gods.</p>
+    <p>But these faithful Levites could wonder what they themselves may have done to bring upon these attacks.</p>
+    <p>Whatever other sins they may have had in their lives or collectively, they still were faithful to the Lord.</p>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Yet have we not forgotten thee" data-title="Paul quotes Psalm 44" data-ctx="Psalms 44:17-21">
+  <div class="page">
+    <div class="kicker">Psalm 44 · Past lament, future hope</div>
+    <h2>Paul quotes Psalm 44</h2>
+    <p>They did exactly what Deuteronomy 6 commanded. They listened to their fathers. They trusted not in their own bows or swords. They kept the faith, yet they were still <em>scattered among the heathen</em> and <em>counted as sheep for the slaughter</em>, and yet still faced tribulation.</p>
+    <p>Paul quotes <strong>Psalm 44</strong> in <strong>Romans</strong> for exactly this reason. To show that God eventually does deliver the faithful. That we can count on him even when it seems like the entire world is against us.</p>
+    <p>Paul is using the same technique of teaching to the children the stories of the fathers, to bring us hope. Judah was delivered from the Assyrians. And the faithful were delivered by the promise of Christ being fulfilled.</p>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="Yet have we not forgotten thee" data-title="Stand fast" data-ctx="Psalms 44:17-21">
+  <div class="page">
+    <div class="kicker">Psalm 44 · Past lament, future hope</div>
+    <h2>Stand fast</h2>
+    <p>Using then a past lament to give future hope, and show the strength of God in keeping His promises is the entire point of the commandment.</p>
+    <p>We see the Deliverance of God's people into the promised land in the past used as hope for the people then present Jerusalem, and their cries are then given to us as hope today knowing that they were eventually delivered.</p>
+    <p>If we are scattered to the wilderness, to the place of dragons, or are led through the valley of the shadow of death, we have that hope within us. The call to have the patience of Job. The faith of the fathers. The understanding of Paul.</p>
+    <p>So stand fast and comfort one another with these words.</p>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="Yet have we not forgotten thee" data-title="Read on" data-ctx="Psalms 44:17-21">
+  <div class="page">
+    <div class="kicker">Psalm 44</div>
+    <h2>Read on</h2>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-psalms-41-43" target="_blank" rel="noopener">Psalms 41–43 ↗</a><a class="ref lesson-link" href="../../studies/#lesson-psalm-45" target="_blank" rel="noopener">Psalm 45 ↗</a><a class="ref lesson-link" href="../../studies/#lesson-believers-cannot-apostatize" target="_blank" rel="noopener">Believers Cannot Apostatize ↗</a><a class="ref lesson-link" href="../../studies/#lesson-post-trib-pre-wrath-timeline" target="_blank" rel="noopener">Post-Tribulation, Pre-Wrath Timeline ↗</a></div>
+    <p class="sub center">The chapter study</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#Psalms-44" target="_blank" rel="noopener">Psalm 44 ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "Psalms 44:1":[[1, "We have heard with our ears, O God, our fathers have told us, what work thou didst in their days, in the times of old."]],
+  "Psalms 44:22":[[22, "Yea, for thy sake are we killed all the day long; we are counted as sheep for the slaughter."]],
+  "Psalms 44:26":[[26, "Arise for our help, and redeem us for thy mercies’ sake."]]
+};
+
+// The Chapter panel (key C): whole chapters, and each slide's verses in data-ctx. null when the deck has none.
+window.DECK_CTX = {"home": ["Psalms 44"], "ch": {"Psalms 44": [[1, "We have heard with our ears, O God, our fathers have told us, what work thou didst in their days, in the times of old."], [2, "How thou didst drive out the heathen with thy hand, and plantedst them; how thou didst afflict the people, and cast them out."], [3, "For they got not the land in possession by their own sword, neither did their own arm save them: but thy right hand, and thine arm, and the light of thy countenance, because thou hadst a favour unto them."], [4, "Thou art my King, O God: command deliverances for Jacob."], [5, "Through thee will we push down our enemies: through thy name will we tread them under that rise up against us."], [6, "For I will not trust in my bow, neither shall my sword save me."], [7, "But thou hast saved us from our enemies, and hast put them to shame that hated us."], [8, "In God we boast all the day long, and praise thy name for ever. Selah."], [9, "But thou hast cast off, and put us to shame; and goest not forth with our armies."], [10, "Thou makest us to turn back from the enemy: and they which hate us spoil for themselves."], [11, "Thou hast given us like sheep appointed for meat; and hast scattered us among the heathen."], [12, "Thou sellest thy people for nought, and dost not increase thy wealth by their price."], [13, "Thou makest us a reproach to our neighbours, a scorn and a derision to them that are round about us."], [14, "Thou makest us a byword among the heathen, a shaking of the head among the people."], [15, "My confusion is continually before me, and the shame of my face hath covered me,"], [16, "For the voice of him that reproacheth and blasphemeth; by reason of the enemy and avenger."], [17, "All this is come upon us; yet have we not forgotten thee, neither have we dealt falsely in thy covenant."], [18, "Our heart is not turned back, neither have our steps declined from thy way;"], [19, "Though thou hast sore broken us in the place of dragons, and covered us with the shadow of death."], [20, "If we have forgotten the name of our God, or stretched out our hands to a strange god;"], [21, "Shall not God search this out? for he knoweth the secrets of the heart."], [22, "Yea, for thy sake are we killed all the day long; we are counted as sheep for the slaughter."], [23, "Awake, why sleepest thou, O Lord? arise, cast us not off for ever."], [24, "Wherefore hidest thou thy face, and forgettest our affliction and our oppression?"], [25, "For our soul is bowed down to the dust: our belly cleaveth unto the earth."], [26, "Arise for our help, and redeem us for thy mercies’ sake."]], "Deuteronomy 6": [[1, "Now these are the commandments, the statutes, and the judgments, which the LORD your God commanded to teach you, that ye might do them in the land whither ye go to possess it:"], [2, "That thou mightest fear the LORD thy God, to keep all his statutes and his commandments, which I command thee, thou, and thy son, and thy son’s son, all the days of thy life; and that thy days may be prolonged."], [3, "Hear therefore, O Israel, and observe to do it; that it may be well with thee, and that ye may increase mightily, as the LORD God of thy fathers hath promised thee, in the land that floweth with milk and honey."], [4, "Hear, O Israel: The LORD our God is one LORD:"], [5, "And thou shalt love the LORD thy God with all thine heart, and with all thy soul, and with all thy might."], [6, "And these words, which I command thee this day, shall be in thine heart:"], [7, "And thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thine house, and when thou walkest by the way, and when thou liest down, and when thou risest up."], [8, "And thou shalt bind them for a sign upon thine hand, and they shall be as frontlets between thine eyes."], [9, "And thou shalt write them upon the posts of thy house, and on thy gates."], [10, "And it shall be, when the LORD thy God shall have brought thee into the land which he sware unto thy fathers, to Abraham, to Isaac, and to Jacob, to give thee great and goodly cities, which thou buildedst not,"], [11, "And houses full of all good things, which thou filledst not, and wells digged, which thou diggedst not, vineyards and olive trees, which thou plantedst not; when thou shalt have eaten and be full;"], [12, "Then beware lest thou forget the LORD, which brought thee forth out of the land of Egypt, from the house of bondage."], [13, "Thou shalt fear the LORD thy God, and serve him, and shalt swear by his name."], [14, "Ye shall not go after other gods, of the gods of the people which are round about you;"], [15, "(For the LORD thy God is a jealous God among you) lest the anger of the LORD thy God be kindled against thee, and destroy thee from off the face of the earth."], [16, "Ye shall not tempt the LORD your God, as ye tempted him in Massah."], [17, "Ye shall diligently keep the commandments of the LORD your God, and his testimonies, and his statutes, which he hath commanded thee."], [18, "And thou shalt do that which is right and good in the sight of the LORD: that it may be well with thee, and that thou mayest go in and possess the good land which the LORD sware unto thy fathers,"], [19, "To cast out all thine enemies from before thee, as the LORD hath spoken."], [20, "And when thy son asketh thee in time to come, saying, What mean the testimonies, and the statutes, and the judgments, which the LORD our God hath commanded you?"], [21, "Then thou shalt say unto thy son, We were Pharaoh’s bondmen in Egypt; and the LORD brought us out of Egypt with a mighty hand:"], [22, "And the LORD shewed signs and wonders, great and sore, upon Egypt, upon Pharaoh, and upon all his household, before our eyes:"], [23, "And he brought us out from thence, that he might bring us in, to give us the land which he sware unto our fathers."], [24, "And the LORD commanded us to do all these statutes, to fear the LORD our God, for our good always, that he might preserve us alive, as it is at this day."], [25, "And it shall be our righteousness, if we observe to do all these commandments before the LORD our God, as he hath commanded us."]], "1 Peter 4": [[1, "Forasmuch then as Christ hath suffered for us in the flesh, arm yourselves likewise with the same mind: for he that hath suffered in the flesh hath ceased from sin;"], [2, "That he no longer should live the rest of his time in the flesh to the lusts of men, but to the will of God."], [3, "For the time past of our life may suffice us to have wrought the will of the Gentiles, when we walked in lasciviousness, lusts, excess of wine, revellings, banquetings, and abominable idolatries:"], [4, "Wherein they think it strange that ye run not with them to the same excess of riot, speaking evil of you:"], [5, "Who shall give account to him that is ready to judge the quick and the dead."], [6, "For for this cause was the gospel preached also to them that are dead, that they might be judged according to men in the flesh, but live according to God in the spirit."], [7, "But the end of all things is at hand: be ye therefore sober, and watch unto prayer."], [8, "And above all things have fervent charity among yourselves: for charity shall cover the multitude of sins."], [9, "Use hospitality one to another without grudging."], [10, "As every man hath received the gift, even so minister the same one to another, as good stewards of the manifold grace of God."], [11, "If any man speak, let him speak as the oracles of God; if any man minister, let him do it as of the ability which God giveth: that God in all things may be glorified through Jesus Christ, to whom be praise and dominion for ever and ever. Amen."], [12, "Beloved, think it not strange concerning the fiery trial which is to try you, as though some strange thing happened unto you:"], [13, "But rejoice, inasmuch as ye are partakers of Christ’s sufferings; that, when his glory shall be revealed, ye may be glad also with exceeding joy."], [14, "If ye be reproached for the name of Christ, happy are ye; for the spirit of glory and of God resteth upon you: on their part he is evil spoken of, but on your part he is glorified."], [15, "But let none of you suffer as a murderer, or as a thief, or as an evildoer, or as a busybody in other men’s matters."], [16, "Yet if any man suffer as a Christian, let him not be ashamed; but let him glorify God on this behalf."], [17, "For the time is come that judgment must begin at the house of God: and if it first begin at us, what shall the end be of them that obey not the gospel of God?"], [18, "And if the righteous scarcely be saved, where shall the ungodly and the sinner appear?"], [19, "Wherefore let them that suffer according to the will of God commit the keeping of their souls to him in well doing, as unto a faithful Creator."]], "Romans 8": [[1, "There is therefore now no condemnation to them which are in Christ Jesus, who walk not after the flesh, but after the Spirit."], [2, "For the law of the Spirit of life in Christ Jesus hath made me free from the law of sin and death."], [3, "For what the law could not do, in that it was weak through the flesh, God sending his own Son in the likeness of sinful flesh, and for sin, condemned sin in the flesh:"], [4, "That the righteousness of the law might be fulfilled in us, who walk not after the flesh, but after the Spirit."], [5, "For they that are after the flesh do mind the things of the flesh; but they that are after the Spirit the things of the Spirit."], [6, "For to be carnally minded is death; but to be spiritually minded is life and peace."], [7, "Because the carnal mind is enmity against God: for it is not subject to the law of God, neither indeed can be."], [8, "So then they that are in the flesh cannot please God."], [9, "But ye are not in the flesh, but in the Spirit, if so be that the Spirit of God dwell in you. Now if any man have not the Spirit of Christ, he is none of his."], [10, "And if Christ be in you, the body is dead because of sin; but the Spirit is life because of righteousness."], [11, "But if the Spirit of him that raised up Jesus from the dead dwell in you, he that raised up Christ from the dead shall also quicken your mortal bodies by his Spirit that dwelleth in you."], [12, "Therefore, brethren, we are debtors, not to the flesh, to live after the flesh."], [13, "For if ye live after the flesh, ye shall die: but if ye through the Spirit do mortify the deeds of the body, ye shall live."], [14, "For as many as are led by the Spirit of God, they are the sons of God."], [15, "For ye have not received the spirit of bondage again to fear; but ye have received the Spirit of adoption, whereby we cry, Abba, Father."], [16, "The Spirit itself beareth witness with our spirit, that we are the children of God:"], [17, "And if children, then heirs; heirs of God, and joint-heirs with Christ; if so be that we suffer with him, that we may be also glorified together."], [18, "For I reckon that the sufferings of this present time are not worthy to be compared with the glory which shall be revealed in us."], [19, "For the earnest expectation of the creature waiteth for the manifestation of the sons of God."], [20, "For the creature was made subject to vanity, not willingly, but by reason of him who hath subjected the same in hope,"], [21, "Because the creature itself also shall be delivered from the bondage of corruption into the glorious liberty of the children of God."], [22, "For we know that the whole creation groaneth and travaileth in pain together until now."], [23, "And not only they, but ourselves also, which have the firstfruits of the Spirit, even we ourselves groan within ourselves, waiting for the adoption, to wit, the redemption of our body."], [24, "For we are saved by hope: but hope that is seen is not hope: for what a man seeth, why doth he yet hope for?"], [25, "But if we hope for that we see not, then do we with patience wait for it."], [26, "Likewise the Spirit also helpeth our infirmities: for we know not what we should pray for as we ought: but the Spirit itself maketh intercession for us with groanings which cannot be uttered."], [27, "And he that searcheth the hearts knoweth what is the mind of the Spirit, because he maketh intercession for the saints according to the will of God."], [28, "And we know that all things work together for good to them that love God, to them who are the called according to his purpose."], [29, "For whom he did foreknow, he also did predestinate to be conformed to the image of his Son, that he might be the firstborn among many brethren."], [30, "Moreover whom he did predestinate, them he also called: and whom he called, them he also justified: and whom he justified, them he also glorified."], [31, "What shall we then say to these things? If God be for us, who can be against us?"], [32, "He that spared not his own Son, but delivered him up for us all, how shall he not with him also freely give us all things?"], [33, "Who shall lay any thing to the charge of God’s elect? It is God that justifieth."], [34, "Who is he that condemneth? It is Christ that died, yea rather, that is risen again, who is even at the right hand of God, who also maketh intercession for us."], [35, "Who shall separate us from the love of Christ? shall tribulation, or distress, or persecution, or famine, or nakedness, or peril, or sword?"], [36, "As it is written, For thy sake we are killed all the day long; we are accounted as sheep for the slaughter."], [37, "Nay, in all these things we are more than conquerors through him that loved us."], [38, "For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come,"], [39, "Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord."]], "Revelation 2": [[1, "Unto the angel of the church of Ephesus write; These things saith he that holdeth the seven stars in his right hand, who walketh in the midst of the seven golden candlesticks;"], [2, "I know thy works, and thy labour, and thy patience, and how thou canst not bear them which are evil: and thou hast tried them which say they are apostles, and are not, and hast found them liars:"], [3, "And hast borne, and hast patience, and for my name’s sake hast laboured, and hast not fainted."], [4, "Nevertheless I have somewhat against thee, because thou hast left thy first love."], [5, "Remember therefore from whence thou art fallen, and repent, and do the first works; or else I will come unto thee quickly, and will remove thy candlestick out of his place, except thou repent."], [6, "But this thou hast, that thou hatest the deeds of the Nicolaitanes, which I also hate."], [7, "He that hath an ear, let him hear what the Spirit saith unto the churches; To him that overcometh will I give to eat of the tree of life, which is in the midst of the paradise of God."], [8, "And unto the angel of the church in Smyrna write; These things saith the first and the last, which was dead, and is alive;"], [9, "I know thy works, and tribulation, and poverty, (but thou art rich) and I know the blasphemy of them which say they are Jews, and are not, but are the synagogue of Satan."], [10, "Fear none of those things which thou shalt suffer: behold, the devil shall cast some of you into prison, that ye may be tried; and ye shall have tribulation ten days: be thou faithful unto death, and I will give thee a crown of life."], [11, "He that hath an ear, let him hear what the Spirit saith unto the churches; He that overcometh shall not be hurt of the second death."], [12, "And to the angel of the church in Pergamos write; These things saith he which hath the sharp sword with two edges;"], [13, "I know thy works, and where thou dwellest, even where Satan’s seat is: and thou holdest fast my name, and hast not denied my faith, even in those days wherein Antipas was my faithful martyr, who was slain among you, where Satan dwelleth."], [14, "But I have a few things against thee, because thou hast there them that hold the doctrine of Balaam, who taught Balac to cast a stumblingblock before the children of Israel, to eat things sacrificed unto idols, and to commit fornication."], [15, "So hast thou also them that hold the doctrine of the Nicolaitanes, which thing I hate."], [16, "Repent; or else I will come unto thee quickly, and will fight against them with the sword of my mouth."], [17, "He that hath an ear, let him hear what the Spirit saith unto the churches; To him that overcometh will I give to eat of the hidden manna, and will give him a white stone, and in the stone a new name written, which no man knoweth saving he that receiveth it."], [18, "And unto the angel of the church in Thyatira write; These things saith the Son of God, who hath his eyes like unto a flame of fire, and his feet are like fine brass;"], [19, "I know thy works, and charity, and service, and faith, and thy patience, and thy works; and the last to be more than the first."], [20, "Notwithstanding I have a few things against thee, because thou sufferest that woman Jezebel, which calleth herself a prophetess, to teach and to seduce my servants to commit fornication, and to eat things sacrificed unto idols."], [21, "And I gave her space to repent of her fornication; and she repented not."], [22, "Behold, I will cast her into a bed, and them that commit adultery with her into great tribulation, except they repent of their deeds."], [23, "And I will kill her children with death; and all the churches shall know that I am he which searcheth the reins and hearts: and I will give unto every one of you according to your works."], [24, "But unto you I say, and unto the rest in Thyatira, as many as have not this doctrine, and which have not known the depths of Satan, as they speak; I will put upon you none other burden."], [25, "But that which ye have already hold fast till I come."], [26, "And he that overcometh, and keepeth my works unto the end, to him will I give power over the nations:"], [27, "And he shall rule them with a rod of iron; as the vessels of a potter shall they be broken to shivers: even as I received of my Father."], [28, "And I will give him the morning star."], [29, "He that hath an ear, let him hear what the Spirit saith unto the churches."]], "Revelation 6": [[1, "And I saw when the Lamb opened one of the seals, and I heard, as it were the noise of thunder, one of the four beasts saying, Come and see."], [2, "And I saw, and behold a white horse: and he that sat on him had a bow; and a crown was given unto him: and he went forth conquering, and to conquer."], [3, "And when he had opened the second seal, I heard the second beast say, Come and see."], [4, "And there went out another horse that was red: and power was given to him that sat thereon to take peace from the earth, and that they should kill one another: and there was given unto him a great sword."], [5, "And when he had opened the third seal, I heard the third beast say, Come and see. And I beheld, and lo a black horse; and he that sat on him had a pair of balances in his hand."], [6, "And I heard a voice in the midst of the four beasts say, A measure of wheat for a penny, and three measures of barley for a penny; and see thou hurt not the oil and the wine."], [7, "And when he had opened the fourth seal, I heard the voice of the fourth beast say, Come and see."], [8, "And I looked, and behold a pale horse: and his name that sat on him was Death, and Hell followed with him. And power was given unto them over the fourth part of the earth, to kill with sword, and with hunger, and with death, and with the beasts of the earth."], [9, "And when he had opened the fifth seal, I saw under the altar the souls of them that were slain for the word of God, and for the testimony which they held:"], [10, "And they cried with a loud voice, saying, How long, O Lord, holy and true, dost thou not judge and avenge our blood on them that dwell on the earth?"], [11, "And white robes were given unto every one of them; and it was said unto them, that they should rest yet for a little season, until their fellowservants also and their brethren, that should be killed as they were, should be fulfilled."], [12, "And I beheld when he had opened the sixth seal, and, lo, there was a great earthquake; and the sun became black as sackcloth of hair, and the moon became as blood;"], [13, "And the stars of heaven fell unto the earth, even as a fig tree casteth her untimely figs, when she is shaken of a mighty wind."], [14, "And the heaven departed as a scroll when it is rolled together; and every mountain and island were moved out of their places."], [15, "And the kings of the earth, and the great men, and the rich men, and the chief captains, and the mighty men, and every bondman, and every free man, hid themselves in the dens and in the rocks of the mountains;"], [16, "And said to the mountains and rocks, Fall on us, and hide us from the face of him that sitteth on the throne, and from the wrath of the Lamb:"], [17, "For the great day of his wrath is come; and who shall be able to stand?"]]}};
+
+// Quotations from other writings (say: in the deck): their words open like a verse.
+const Q = {};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b && b.dataset.q) {
+    const q = Q[b.dataset.q];
+    verseTitle.textContent = q ? q.t : b.textContent.trim();
+    verseBody.innerHTML = q ? q.h : "<p>Not loaded.</p>";
+    verseDlg.showModal();
+    verseBody.scrollTop = 0;
+    return;
+  }
+  if (b) {
+    const keys = b.dataset.v;
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
