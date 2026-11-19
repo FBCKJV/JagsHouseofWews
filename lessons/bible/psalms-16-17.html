@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Psalms 16–17: Thou Wilt Not Leave My Soul in Hell</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Psalms 16-17 in the King James Bible: the preservation of the saints, not Lordship salvation, the cup of the new testament, Thou wilt not leave my soul in hell, importunity and imprecatory prayer, the apple of the eye, and satisfied when I awake with thy likeness, from the Psalms series studies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body .say-cite{font-size:.85rem;font-style:italic;color:var(--vellum-dim);border-top:1px solid var(--rule);padding-top:.6rem;margin-top:1rem}
+.ref.say{border-bottom-style:dashed}
+.ref.say::before{content:"\201C";margin-right:.15em}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Psalms 16–17" data-ctx="">
+  <div class="page title-page">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalms 16–17</h1>
+    <p class="sub">Preserve me, O God • Thou wilt not leave my soul in hell • Keep me as the apple of the eye</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 16:10">Psalm 16:10</button><button class="ref" data-v="Psalms 17:8">Psalm 17:8</button><button class="ref" data-v="Psalms 17:15">Psalm 17:15</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse. Press C for the whole chapter.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Psalm 16" data-title="Psalm 16" data-ctx="">
+  <div class="page title-page later">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalm 16</h1>
+    <p class="sub">The preservation of the saints • The risen Christ</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 16:1">Psalm 16:1</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Psalm 16" data-title="Preserve me, O God" data-ctx="Psalms 16:1">
+  <div class="page">
+    <div class="kicker">Psalm 16 · Preserve me</div>
+    <h2>Preserve me, O God</h2>
+    <blockquote class="big-verse"><mark>Preserve me, O God</mark>: for in thee do I put my trust.<cite>Psalm 16:1</cite></blockquote>
+    <p><strong>Psalm 16</strong> presents another sacred hymn celebrating the Lord's salvation, the eternal security of the believer, and the promise of the risen Christ.</p>
+    <p>The preservation of the saints is the hope of all who place their trust in God. Our very being cries out to Him for salvation, recognizing He is Lord.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Psalm 16" data-title="Thou art my Lord" data-ctx="Psalms 16:2">
+  <div class="page">
+    <div class="kicker">Psalm 16 · Thou art my Lord</div>
+    <h2>Thou art my Lord</h2>
+    <blockquote class="big-verse">O my soul, thou hast said unto the <span class="lord">Lord</span>, <mark>Thou art my Lord</mark>: my goodness extendeth not to thee;<cite>Psalm 16:2</cite></blockquote>
+    <p>Note here that this isn't "Lordship salvation," a false gospel that says you must "make Jesus the Lord of your life" to be saved. It is saved believers, already trusting Him to save us, recognizing that He IS the Lord, as a statement of fact.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Psalm 16" data-title="To the saints that are in the earth" data-ctx="Psalms 16:3">
+  <div class="page">
+    <div class="kicker">Psalm 16 · The excellent</div>
+    <h2>To the saints that are in the earth</h2>
+    <blockquote class="big-verse">But <mark>to the saints that are in the earth</mark>, and to the excellent, in whom is all my delight.<cite>Psalm 16:3</cite></blockquote>
+    <p>David writes, <em>Thou art my Lord: my goodness extendeth not to thee; But to the saints that are in the earth, and to the excellent, in whom is all my delight.</em> The good that we do isn't for Him, it adds nothing to the holy and perfect God.</p>
+    <p>The idea that Jesus needs us to make Him Lord, that by our "turning from sin," we justify ourselves before God, is hubris. It's a false gospel.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Psalm 16" data-title="Let your light so shine" data-ctx="Matthew 5:16|Romans 10:3-4">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 16:3</div>
+    <h2>Let your light so shine</h2>
+    <p>The good we do comes from Him, and is poured out to the brothers and sisters, the saints. We benefit others, and they glorify God. We obey His judgements, to one another's profit.</p>
+    <blockquote class="big-verse">Let your light so shine before men, that they may see your good works, and <mark>glorify your Father which is in heaven</mark>.<cite>Matthew 5:16</cite></blockquote>
+    <p>We submit ourselves to the righteousness of God. We do not seek to establish our own righteousness, but to magnify His.</p>
+    <blockquote class="scripture" style="font-style:italic">For they being ignorant of God’s righteousness, and <mark>going about to establish their own righteousness</mark>, have not submitted themselves unto the righteousness of God. For Christ is the end of the law for righteousness to every one that believeth.<cite>Romans 10:3-4</cite></blockquote>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Psalm 16" data-title="That ye love one another" data-ctx="John 13:34-35|Galatians 6:9-10">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 16:3</div>
+    <h2>That ye love one another</h2>
+    <p>David's burden is for the saints in the earth, his delight is to the excellent of God. Just as we are commanded to.</p>
+    <blockquote class="scripture" style="font-style:italic">A new commandment I give unto you, <mark>That ye love one another</mark>; as I have loved you, that ye also love one another. By this shall all men know that ye are my disciples, if ye have love one to another.<cite>John 13:34-35</cite></blockquote>
+    <p>While we should seek to live peaceably with all men, we should especially look with love upon our fellow believers.</p>
+    <blockquote class="scripture" style="font-style:italic">And let us not be weary in well doing: for in due season we shall reap, if we faint not. As we have therefore opportunity, let us do good unto all men, <mark>especially unto them who are of the household of faith</mark>.<cite>Galatians 6:9-10</cite></blockquote>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Psalm 16" data-title="The message from the beginning" data-ctx="1 John 3:10-11">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 16:3</div>
+    <h2>The message from the beginning</h2>
+    <p>This is the message that we have heard from the beginning. It is our job as Christians. It is how we are to know one another. Not keeping to ourselves or seeking our own profit. Certainly not by hating our brothers.</p>
+    <blockquote class="scripture" style="font-style:italic">In this the children of God are manifest, and the children of the devil: whosoever doeth not righteousness is not of God, neither he that loveth not his brother. For this is the message that ye heard from the beginning, <mark>that we should love one another</mark>.<cite>1 John 3:10-11</cite></blockquote>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Psalm 16" data-title="To delight in others" data-ctx="1 John 3:10-11">
+  <div class="page">
+    <div class="kicker">Application • Humility</div>
+    <h2>To delight in others</h2>
+    <p>This is the mind of Christ, to be servants, one to another. To delight in others.</p>
+    <p>The ultimate expression of humility isn't thinking less of yourself, but not thinking of yourself at all. And the humbleness of submission to God's righteousness should naturally turn to our service for others. Not to add to God's goodness our filthy rags, but to glorify His goodness in us.</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Psalm 16" data-title="Drink offerings of blood" data-ctx="Psalms 16:4">
+  <div class="page">
+    <div class="kicker">Psalm 16 · Another god</div>
+    <h2>Drink offerings of blood</h2>
+    <blockquote class="big-verse">Their sorrows shall be multiplied that hasten after another god: <mark>their drink offerings of blood will I not offer</mark>, nor take up their names into my lips.<cite>Psalm 16:4</cite></blockquote>
+    <p>Continuing in <strong>Psalm 16</strong>, David calls out the vanity and ultimate end of those that call not upon the Lord for salvation. Who go after another god.</p>
+    <p>They make drink offerings of blood, and speak other names in their prayers.</p>
+    <p>The most prominent example of this today is Roman Catholicism. They make drink offerings, claiming it to be the blood of Christ, profaning His name, and bow to and serve idols representing their own gods.</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Psalm 16" data-title="The portion of my cup" data-ctx="Psalms 16:5|Luke 22:20">
+  <div class="page">
+    <div class="kicker">Psalm 16 · My inheritance</div>
+    <h2>The portion of my cup</h2>
+    <blockquote class="big-verse"><mark>The <span class="lord">Lord</span> is the portion of mine inheritance and of my cup</mark>: thou maintainest my lot.<cite>Psalm 16:5</cite></blockquote>
+    <p>But for the saved, the Lord is our inheritance, we are co-heirs with Christ the Bible says, and He is our cup, the blood shed for us on the cross:</p>
+    <blockquote class="big-verse">Likewise also the cup after supper, saying, <mark>This cup is the new testament in my blood</mark>, which is shed for you.<cite>Luke 22:20</cite></blockquote>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Psalm 16" data-title="Once for all" data-ctx="Hebrews 10:10-14">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 16:5</div>
+    <h2>Once for all</h2>
+    <p>The very new testament which we preach is founded upon the blood shed by Jesus. Not a chalice of gold held up by a priest to an image, sacrificing Jesus daily, as if that were possible or necessary, to call Him down from heaven again.</p>
+    <p>And it is God that maintains our lot. Who holds us by His power. Not carnal sacrifices made over and over again.</p>
+    <blockquote class="scripture" style="font-style:italic">By the which will we are sanctified through the offering of the body of Jesus Christ <mark>once for all</mark>. And every priest standeth daily ministering and offering oftentimes the same sacrifices, which can never take away sins: But this man, after he had offered one sacrifice for sins for ever, sat down on the right hand of God; From henceforth expecting till his enemies be made his footstool. For <mark>by one offering he hath perfected for ever them that are sanctified</mark>.<cite>Hebrews 10:10-14</cite></blockquote>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Psalm 16" data-title="A goodly heritage" data-ctx="Psalms 16:6-9">
+  <div class="page">
+    <div class="kicker">Psalm 16 · I shall not be moved</div>
+    <h2>A goodly heritage</h2>
+    <blockquote class="scripture" style="font-style:italic">The lines are fallen unto me in pleasant places; yea, <mark>I have a goodly heritage</mark>. I will bless the <span class="lord">Lord</span>, who hath given me counsel: my reins also instruct me in the night seasons. I have set the <span class="lord">Lord</span> always before me: <mark>because he is at my right hand, I shall not be moved</mark>. Therefore my heart is glad, and my glory rejoiceth: <mark>my flesh also shall rest in hope</mark>.<cite>Psalm 16:6-9</cite></blockquote>
+    <p>This is our goodly heritage. This is the promise of God. The Son at the right hand of the Father. We shall not be moved. And so we rejoice.</p>
+    <p>We rest in hope.</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Psalm 16" data-title="Thou wilt not leave my soul in hell" data-ctx="Psalms 16:10">
+  <div class="page">
+    <div class="kicker">Psalm 16 · The Holy One</div>
+    <h2>Thou wilt not leave my soul in hell</h2>
+    <blockquote class="big-verse">For thou wilt not leave my soul in hell; neither wilt thou suffer thine Holy One to see corruption.<cite>Psalm 16:10</cite></blockquote>
+    <p>The Psalm is quoted in the preaching of Peter before the crowds at Pentecost.</p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Psalm 16" data-title="David speaketh concerning him" data-ctx="Acts 2:25-28">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 16:10</div>
+    <h2>David speaketh concerning him</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>For David speaketh concerning him</mark>, I foresaw the Lord always before my face, for he is on my right hand, that I should not be moved: Therefore did my heart rejoice, and my tongue was glad; moreover also my flesh shall rest in hope: Because thou wilt not leave my soul in hell, neither wilt thou suffer thine Holy One to see corruption. Thou hast made known to me the ways of life; thou shalt make me full of joy with thy countenance.<cite>Acts 2:25-28</cite></blockquote>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Psalm 16" data-title="The path of life" data-ctx="Psalms 16:11">
+  <div class="page">
+    <div class="kicker">Psalm 16 · Fulness of joy</div>
+    <h2>The path of life</h2>
+    <blockquote class="big-verse"><mark>Thou wilt shew me the path of life</mark>: in thy presence is fulness of joy; at thy right hand there are pleasures for evermore.<cite>Psalm 16:11</cite></blockquote>
+    <p>The New Testament gives context to the Old, if it wasn't obvious already, the meaning in the psalm. We know David was speaking of Jesus. David, looking forward to the Christ, his savior and Lord. Seeing Jesus in all things, that blessed hope we rest in.</p>
+    <p>And because Jesus was not left in hell and His Holy One did not see corruption, we have the promise of eternal life, by His resurrection. So neither will we be left to Hell. We can rejoice knowing that He will forever be before us. Amen</p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Psalm 17" data-title="Psalm 17" data-ctx="Psalms 16:11">
+  <div class="page title-page later">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalm 17</h1>
+    <p class="sub">Importunity • The apple of the eye • Satisfied with thy likeness</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 17:1">Psalm 17:1</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Psalm 17" data-title="Hear the right, O Lord" data-ctx="Psalms 17:1">
+  <div class="page">
+    <div class="kicker">Psalm 17 · Importunity</div>
+    <h2>Hear the right, O Lord</h2>
+    <blockquote class="big-verse">Hear the right, O <span class="lord">Lord</span>, <mark>attend unto my cry</mark>, give ear unto my prayer, that goeth not out of feigned lips.<cite>Psalm 17:1</cite></blockquote>
+    <p><strong>Psalm 17</strong> again shows us the model of importunity in prayer.</p>
+    <p>Importunity is a noun that means asking for something over and over again in a strong, pushy, or annoying way. It is the act of persistent begging or making urgent demands that wear people down. David utilizes this in Psalms to great effect. Pursuing an answer from the throne of God, with repeated supplication.</p>
+    <p>It may seem contrary to the fear of the Lord and humility before Him, but scripture shows it is effective. Jesus taught us this as well.</p>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Psalm 17" data-title="Men ought always to pray" data-ctx="Luke 18:1-8">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 17:1</div>
+    <h2>Men ought always to pray</h2>
+    <blockquote class="scripture" style="font-style:italic">And he spake a parable unto them to this end, that <mark>men ought always to pray, and not to faint</mark>; Saying, There was in a city a judge, which feared not God, neither regarded man: And there was a widow in that city; and she came unto him, saying, Avenge me of mine adversary. And he would not for a while: but afterward he said within himself, Though I fear not God, nor regard man; Yet because this widow troubleth me, I will avenge her, lest by her continual coming she weary me. And the Lord said, Hear what the unjust judge saith. And shall not God avenge his own elect, which cry day and night unto him, though he bear long with them? I tell you that he will avenge them speedily. Nevertheless when the Son of man cometh, shall he find faith on the earth?<cite>Luke 18:1-8</cite></blockquote>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Psalm 17" data-title="Pray without fainting" data-ctx="Luke 18:1-8">
+  <div class="page">
+    <div class="kicker">Application • Importunity</div>
+    <h2>Pray without fainting</h2>
+    <p>We often find ourselves in difficult situations, where we have not because we ask not. We also tend to move on, rather than "bother God" with whatever it is we need of Him.</p>
+    <p>Praying without ceasing, staying strong in prayer because we are weak, this is pleasing to the Lord. So we should pray without fainting, and in doing so, exercise our faith that should Christ return in our time, He finds that faith upon the earth.</p>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Psalm 17" data-title="Imprecatory prayers are Biblical" data-ctx="Luke 18:1-8">
+  <div class="page">
+    <div class="kicker">Application • Imprecatory prayer</div>
+    <h2>Imprecatory prayers are Biblical</h2>
+    <p>Notice too, that the woman before the unjust judge is pleading for vengeance against her adversary, just as David is here in this psalm. Just as the martyred under the throne in Heaven plead with God for His wrath to pour out.</p>
+    <p>Imprecatory prayers are Biblical. Acknowledging God's ownership of vengeance, while suffering for His sake, is an act of great faith. And as we have seen previously in <strong>Psalms,</strong> patience is a virtue that leads us to godliness.</p>
+    <p>Importunity in prayer, and imprecatory prayer feels wrong to many. I have seen supposed Christian teachers make the claim that there is no room for this in the New Testament. But they are a mighty tool in our arsenal of faith.</p>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Psalm 17" data-title="Let my sentence come forth" data-ctx="Psalms 17:2">
+  <div class="page">
+    <div class="kicker">Psalm 17 · Judgment</div>
+    <h2>Let my sentence come forth</h2>
+    <blockquote class="big-verse"><mark>Let my sentence come forth from thy presence</mark>; let thine eyes behold the things that are equal.<cite>Psalm 17:2</cite></blockquote>
+    <p>The psalmist calls for the Lord's judgment, that His sentence be given against the wicked. But it is foolish to cry out for God's perfect justice to be administered, while you yourself are guilty.</p>
+    <p>It is like a thief going to the police because his partners robbed him of his share of their stolen things. Of a drug dealer complaining about being ripped off in a deal gone wrong.</p>
+    <p>And so, David wisely shows us the pattern of praying imprecatory prayers includes self-examination and willingness for God to judge him the same way he is judging others.</p>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Psalm 17" data-title="The paths of the destroyer" data-ctx="Psalms 17:3-4">
+  <div class="page">
+    <div class="kicker">Psalm 17 · Thou hast proved mine heart</div>
+    <h2>The paths of the destroyer</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>Thou hast proved mine heart</mark>; thou hast visited me in the night; thou hast tried me, and shalt find nothing; I am purposed that my mouth shall not transgress. Concerning the works of men, <mark>by the word of thy lips I have kept me from the paths of the destroyer</mark>.<cite>Psalm 17:3-4</cite></blockquote>
+    <p>David credits God's word to keep him from the <em>paths of the destroyer.</em> A key doctrine, that it is God's word that we judge ourselves and others by, not our own feelings or desires. We judge righteously when we allow God to tell us good from evil.</p>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="Psalm 17" data-title="Hold up my goings" data-ctx="Psalms 17:5">
+  <div class="page">
+    <div class="kicker">Psalm 17 · In thy paths</div>
+    <h2>Hold up my goings</h2>
+    <blockquote class="big-verse"><mark>Hold up my goings in thy paths</mark>, that my footsteps slip not.<cite>Psalm 17:5</cite></blockquote>
+    <p>David then calls for the Lord to hold up his goings, to keep him on the right path.</p>
+    <p>So we see that it isn't simply cursing your enemies and expecting God to overlook your sin. But praying for God's judgement, knowing He is just and seeking His confirmation that you are blameless in the matter. Also, praising Him for keeping you from sin in the first place.</p>
+    <p>All glory goes to God.</p>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="Psalm 17" data-title="At the heart of your prayer life" data-ctx="Psalms 17:5">
+  <div class="page">
+    <div class="kicker">Application • Humility in prayer</div>
+    <h2>At the heart of your prayer life</h2>
+    <p>Having the faith to be judged fairly by God, knowing that because of God you have walked in His ways, but accepting any fault of your own that He may find...this humility should be at the heart of your prayer life.</p>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="slide" data-section="Psalm 17" data-title="Thou wilt hear me" data-ctx="Psalms 17:6-7">
+  <div class="page">
+    <div class="kicker">Psalm 17 · Thy right hand</div>
+    <h2>Thou wilt hear me</h2>
+    <blockquote class="scripture" style="font-style:italic">I have called upon thee, <mark>for thou wilt hear me, O God</mark>: incline thine ear unto me, and hear my speech. Shew thy marvellous lovingkindness, <mark>O thou that savest by thy right hand</mark> them which put their trust in thee from those that rise up against them.<cite>Psalm 17:6-7</cite></blockquote>
+    <p>Continuing in <strong>Psalms 17</strong>, we see that David's importunity comes from his faith in God to hear those who call upon Him. That we may go boldly before the throne of grace, because He has shown us that He listens to our cries. The initial call for salvation in the Lord's name gives us the hope that He listens to us for far less important matters, such as our suffering in this life.</p>
+    <p>The Lord's lovingkindness is already apparent to those that put their trust in Him, that have been saved by His strong right-hand. Christ Jesus. We know that our Savior is at the right hand of the Father. The New Testament is clear on this. But David is writing hundreds of years earlier, showing that Old Testament saints knew and understood the concept, even if they didn't have the full revelation and details.</p>
+  </div>
+</section>
+
+<!-- 27 -->
+<section class="slide" data-section="Psalm 17" data-title="The apple of the eye" data-ctx="Psalms 17:8-9">
+  <div class="page">
+    <div class="kicker">Psalm 17 · Under the shadow of thy wings</div>
+    <h2>The apple of the eye</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>Keep me as the apple of the eye, hide me under the shadow of thy wings</mark>, From the wicked that oppress me, from my deadly enemies, who compass me about.<cite>Psalm 17:8-9</cite></blockquote>
+    <p>Keep me, O Lord. It is His power that keeps the children of God under His protection and secure in His promises. We shall not fear, because we are under His mighty wing, as a mother hen keeps her chicks.</p>
+    <p>Jesus laments the unfaithful Jews for refusing to be gathered thus.</p>
+  </div>
+</section>
+
+<!-- 28 -->
+<section class="slide" data-section="Psalm 17" data-title="As a hen gathereth her chickens" data-ctx="Matthew 23:37-39">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 17:8</div>
+    <h2>As a hen gathereth her chickens</h2>
+    <blockquote class="scripture" style="font-style:italic">O Jerusalem, Jerusalem, thou that killest the prophets, and stonest them which are sent unto thee, how often would I have gathered thy children together, <mark>even as a hen gathereth her chickens under her wings, and ye would not</mark>! Behold, your house is left unto you desolate. For I say unto you, Ye shall not see me henceforth, till ye shall say, Blessed is he that cometh in the name of the Lord.<cite>Matthew 23:37-39</cite></blockquote>
+  </div>
+</section>
+
+<!-- 29 -->
+<section class="slide" data-section="Psalm 17" data-title="They are His sword" data-ctx="Psalms 17:10-13">
+  <div class="page">
+    <div class="kicker">Psalm 17 · The wicked</div>
+    <h2>They are His sword</h2>
+    <blockquote class="scripture" style="font-style:italic">They are inclosed in their own fat: with their mouth they speak proudly. They have now compassed us in our steps: they have set their eyes bowing down to the earth; Like as a lion that is greedy of his prey, and as it were a young lion lurking in secret places. Arise, O <span class="lord">Lord</span>, disappoint him, cast him down: <mark>deliver my soul from the wicked, which is thy sword</mark>:<cite>Psalm 17:10-13</cite></blockquote>
+    <p>And His protection is needed in this world, where they hate us for His holy name. Where we are often at the mercy of forces beyond our reckoning. Where the judgment of God against our nation is executed by the hands of the wicked. They are His sword.</p>
+  </div>
+</section>
+
+<!-- 30 -->
+<section class="slide" data-section="Psalm 17" data-title="Their portion in this life" data-ctx="Psalms 17:14">
+  <div class="page">
+    <div class="kicker">Psalm 17 · Men of the world</div>
+    <h2>Their portion in this life</h2>
+    <blockquote class="big-verse">From men which are thy hand, O <span class="lord">Lord</span>, from men of the world, <mark>which have their portion in this life</mark>, and whose belly thou fillest with thy hid treasure: they are full of children, and leave the rest of their substance to their babes.<cite>Psalm 17:14</cite></blockquote>
+    <p>They may profit in this life. They may have riches, while we are poor. They may have children and an inheritance. But we have the eternal promise of Christ, which is far more precious than any treasure of this life.</p>
+  </div>
+</section>
+
+<!-- 31 -->
+<section class="slide" data-section="Psalm 17" data-title="When I awake, with thy likeness" data-ctx="Psalms 17:15">
+  <div class="page">
+    <div class="kicker">Psalm 17 · Satisfied</div>
+    <h2>When I awake, with thy likeness</h2>
+    <blockquote class="big-verse">As for me, I will behold thy face in righteousness: <mark>I shall be satisfied, when I awake, with thy likeness</mark>.<cite>Psalm 17:15</cite></blockquote>
+    <p>This is the eternal perspective that Christians should seek. That our satisfaction is in the resurrection, and the current, temporal troubles are nothing compared to the everlasting.</p>
+    <p>When we awake, when we are raised up, we will see Jesus, the express likeness of God. But, maybe David is also speaking of the glorified body we will receive in His likeness.</p>
+  </div>
+</section>
+
+<!-- 32 -->
+<section class="slide" data-section="Psalm 17" data-title="We shall be like him" data-ctx="1 John 3:1-2">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 17:15</div>
+    <h2>We shall be like him</h2>
+    <blockquote class="scripture" style="font-style:italic">Behold, what manner of love the Father hath bestowed upon us, that we should be called the sons of God: therefore the world knoweth us not, because it knew him not. Beloved, now are we the sons of God, and it doth not yet appear what we shall be: but we know that, when he shall appear, <mark>we shall be like him</mark>; <mark>for we shall see him as he is</mark>.<cite>1 John 3:1-2</cite></blockquote>
+    <p>This is our blessed hope. To awake into glory with Him. When we see Jesus as sons of God. Gathered up to the Lord, and with Him shall we ever be.</p>
+  </div>
+</section>
+
+<!-- 33 -->
+<section class="slide" data-section="Psalm 17" data-title="Peace in the next" data-ctx="1 John 3:1-2">
+  <div class="page">
+    <div class="kicker">Psalm 17 · Satisfied</div>
+    <h2>Peace in the next</h2>
+    <p>Ultimately, this is the only satisfaction we need. If our enemies prosper, if God allows them to have advantage over us, while we suffer them, we know His grace is sufficient. That ultimately, vengeance will be His. That in the Lord's love for us, we will see Him as He is, and be like Him.</p>
+    <p>That no matter what may come in this life, we have peace in the next. Amen</p>
+  </div>
+</section>
+
+<!-- 34 -->
+<section class="slide" data-section="Psalm 17" data-title="Read on" data-ctx="1 John 3:1-2">
+  <div class="page">
+    <div class="kicker">Psalms 16–17</div>
+    <h2>Read on</h2>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-psalms-13-15" target="_blank" rel="noopener">Psalms 13–15 ↗</a><a class="ref lesson-link" href="../../studies/#lesson-psalms-18-20" target="_blank" rel="noopener">Psalms 18–20 ↗</a><a class="ref lesson-link" href="../../studies/#lesson-perseverance-of-the-saints" target="_blank" rel="noopener">Perseverance of the Saints ↗</a></div>
+    <p class="sub center">The chapter studies</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#Psalms-16" target="_blank" rel="noopener">Psalm 16 ↗</a><a class="ref lesson-link" href="../../studies/#Psalms-17" target="_blank" rel="noopener">Psalm 17 ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "Psalms 16:1":[[1, "Preserve me, O God: for in thee do I put my trust."]],
+  "Psalms 16:10":[[10, "For thou wilt not leave my soul in hell; neither wilt thou suffer thine Holy One to see corruption."]],
+  "Psalms 17:1":[[1, "Hear the right, O LORD, attend unto my cry, give ear unto my prayer, that goeth not out of feigned lips."]],
+  "Psalms 17:15":[[15, "As for me, I will behold thy face in righteousness: I shall be satisfied, when I awake, with thy likeness."]],
+  "Psalms 17:8":[[8, "Keep me as the apple of the eye, hide me under the shadow of thy wings,"]]
+};
+
+// The Chapter panel (key C): whole chapters, and each slide's verses in data-ctx. null when the deck has none.
+window.DECK_CTX = {"home": [], "ch": {"Psalms 16": [[1, "Preserve me, O God: for in thee do I put my trust."], [2, "O my soul, thou hast said unto the LORD, Thou art my Lord: my goodness extendeth not to thee;"], [3, "But to the saints that are in the earth, and to the excellent, in whom is all my delight."], [4, "Their sorrows shall be multiplied that hasten after another god: their drink offerings of blood will I not offer, nor take up their names into my lips."], [5, "The LORD is the portion of mine inheritance and of my cup: thou maintainest my lot."], [6, "The lines are fallen unto me in pleasant places; yea, I have a goodly heritage."], [7, "I will bless the LORD, who hath given me counsel: my reins also instruct me in the night seasons."], [8, "I have set the LORD always before me: because he is at my right hand, I shall not be moved."], [9, "Therefore my heart is glad, and my glory rejoiceth: my flesh also shall rest in hope."], [10, "For thou wilt not leave my soul in hell; neither wilt thou suffer thine Holy One to see corruption."], [11, "Thou wilt shew me the path of life: in thy presence is fulness of joy; at thy right hand there are pleasures for evermore."]], "Matthew 5": [[1, "And seeing the multitudes, he went up into a mountain: and when he was set, his disciples came unto him:"], [2, "And he opened his mouth, and taught them, saying,"], [3, "Blessed are the poor in spirit: for theirs is the kingdom of heaven."], [4, "Blessed are they that mourn: for they shall be comforted."], [5, "Blessed are the meek: for they shall inherit the earth."], [6, "Blessed are they which do hunger and thirst after righteousness: for they shall be filled."], [7, "Blessed are the merciful: for they shall obtain mercy."], [8, "Blessed are the pure in heart: for they shall see God."], [9, "Blessed are the peacemakers: for they shall be called the children of God."], [10, "Blessed are they which are persecuted for righteousness’ sake: for theirs is the kingdom of heaven."], [11, "Blessed are ye, when men shall revile you, and persecute you, and shall say all manner of evil against you falsely, for my sake."], [12, "Rejoice, and be exceeding glad: for great is your reward in heaven: for so persecuted they the prophets which were before you."], [13, "Ye are the salt of the earth: but if the salt have lost his savour, wherewith shall it be salted? it is thenceforth good for nothing, but to be cast out, and to be trodden under foot of men."], [14, "Ye are the light of the world. A city that is set on an hill cannot be hid."], [15, "Neither do men light a candle, and put it under a bushel, but on a candlestick; and it giveth light unto all that are in the house."], [16, "Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven."], [17, "Think not that I am come to destroy the law, or the prophets: I am not come to destroy, but to fulfil."], [18, "For verily I say unto you, Till heaven and earth pass, one jot or one tittle shall in no wise pass from the law, till all be fulfilled."], [19, "Whosoever therefore shall break one of these least commandments, and shall teach men so, he shall be called the least in the kingdom of heaven: but whosoever shall do and teach them, the same shall be called great in the kingdom of heaven."], [20, "For I say unto you, That except your righteousness shall exceed the righteousness of the scribes and Pharisees, ye shall in no case enter into the kingdom of heaven."], [21, "Ye have heard that it was said by them of old time, Thou shalt not kill; and whosoever shall kill shall be in danger of the judgment:"], [22, "But I say unto you, That whosoever is angry with his brother without a cause shall be in danger of the judgment: and whosoever shall say to his brother, Raca, shall be in danger of the council: but whosoever shall say, Thou fool, shall be in danger of hell fire."], [23, "Therefore if thou bring thy gift to the altar, and there rememberest that thy brother hath ought against thee;"], [24, "Leave there thy gift before the altar, and go thy way; first be reconciled to thy brother, and then come and offer thy gift."], [25, "Agree with thine adversary quickly, whiles thou art in the way with him; lest at any time the adversary deliver thee to the judge, and the judge deliver thee to the officer, and thou be cast into prison."], [26, "Verily I say unto thee, Thou shalt by no means come out thence, till thou hast paid the uttermost farthing."], [27, "Ye have heard that it was said by them of old time, Thou shalt not commit adultery:"], [28, "But I say unto you, That whosoever looketh on a woman to lust after her hath committed adultery with her already in his heart."], [29, "And if thy right eye offend thee, pluck it out, and cast it from thee: for it is profitable for thee that one of thy members should perish, and not that thy whole body should be cast into hell."], [30, "And if thy right hand offend thee, cut it off, and cast it from thee: for it is profitable for thee that one of thy members should perish, and not that thy whole body should be cast into hell."], [31, "It hath been said, Whosoever shall put away his wife, let him give her a writing of divorcement:"], [32, "But I say unto you, That whosoever shall put away his wife, saving for the cause of fornication, causeth her to commit adultery: and whosoever shall marry her that is divorced committeth adultery."], [33, "Again, ye have heard that it hath been said by them of old time, Thou shalt not forswear thyself, but shalt perform unto the Lord thine oaths:"], [34, "But I say unto you, Swear not at all; neither by heaven; for it is God’s throne:"], [35, "Nor by the earth; for it is his footstool: neither by Jerusalem; for it is the city of the great King."], [36, "Neither shalt thou swear by thy head, because thou canst not make one hair white or black."], [37, "But let your communication be, Yea, yea; Nay, nay: for whatsoever is more than these cometh of evil."], [38, "Ye have heard that it hath been said, An eye for an eye, and a tooth for a tooth:"], [39, "But I say unto you, That ye resist not evil: but whosoever shall smite thee on thy right cheek, turn to him the other also."], [40, "And if any man will sue thee at the law, and take away thy coat, let him have thy cloak also."], [41, "And whosoever shall compel thee to go a mile, go with him twain."], [42, "Give to him that asketh thee, and from him that would borrow of thee turn not thou away."], [43, "Ye have heard that it hath been said, Thou shalt love thy neighbour, and hate thine enemy."], [44, "But I say unto you, Love your enemies, bless them that curse you, do good to them that hate you, and pray for them which despitefully use you, and persecute you;"], [45, "That ye may be the children of your Father which is in heaven: for he maketh his sun to rise on the evil and on the good, and sendeth rain on the just and on the unjust."], [46, "For if ye love them which love you, what reward have ye? do not even the publicans the same?"], [47, "And if ye salute your brethren only, what do ye more than others? do not even the publicans so?"], [48, "Be ye therefore perfect, even as your Father which is in heaven is perfect."]], "Romans 10": [[1, "Brethren, my heart’s desire and prayer to God for Israel is, that they might be saved."], [2, "For I bear them record that they have a zeal of God, but not according to knowledge."], [3, "For they being ignorant of God’s righteousness, and going about to establish their own righteousness, have not submitted themselves unto the righteousness of God."], [4, "For Christ is the end of the law for righteousness to every one that believeth."], [5, "For Moses describeth the righteousness which is of the law, That the man which doeth those things shall live by them."], [6, "But the righteousness which is of faith speaketh on this wise, Say not in thine heart, Who shall ascend into heaven? (that is, to bring Christ down from above:)"], [7, "Or, Who shall descend into the deep? (that is, to bring up Christ again from the dead.)"], [8, "But what saith it? The word is nigh thee, even in thy mouth, and in thy heart: that is, the word of faith, which we preach;"], [9, "That if thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God hath raised him from the dead, thou shalt be saved."], [10, "For with the heart man believeth unto righteousness; and with the mouth confession is made unto salvation."], [11, "For the scripture saith, Whosoever believeth on him shall not be ashamed."], [12, "For there is no difference between the Jew and the Greek: for the same Lord over all is rich unto all that call upon him."], [13, "For whosoever shall call upon the name of the Lord shall be saved."], [14, "How then shall they call on him in whom they have not believed? and how shall they believe in him of whom they have not heard? and how shall they hear without a preacher?"], [15, "And how shall they preach, except they be sent? as it is written, How beautiful are the feet of them that preach the gospel of peace, and bring glad tidings of good things!"], [16, "But they have not all obeyed the gospel. For Esaias saith, Lord, who hath believed our report?"], [17, "So then faith cometh by hearing, and hearing by the word of God."], [18, "But I say, Have they not heard? Yes verily, their sound went into all the earth, and their words unto the ends of the world."], [19, "But I say, Did not Israel know? First Moses saith, I will provoke you to jealousy by them that are no people, and by a foolish nation I will anger you."], [20, "But Esaias is very bold, and saith, I was found of them that sought me not; I was made manifest unto them that asked not after me."], [21, "But to Israel he saith, All day long I have stretched forth my hands unto a disobedient and gainsaying people."]], "John 13": [[1, "Now before the feast of the passover, when Jesus knew that his hour was come that he should depart out of this world unto the Father, having loved his own which were in the world, he loved them unto the end."], [2, "And supper being ended, the devil having now put into the heart of Judas Iscariot, Simon’s son, to betray him;"], [3, "Jesus knowing that the Father had given all things into his hands, and that he was come from God, and went to God;"], [4, "He riseth from supper, and laid aside his garments; and took a towel, and girded himself."], [5, "After that he poureth water into a bason, and began to wash the disciples’ feet, and to wipe them with the towel wherewith he was girded."], [6, "Then cometh he to Simon Peter: and Peter saith unto him, Lord, dost thou wash my feet?"], [7, "Jesus answered and said unto him, What I do thou knowest not now; but thou shalt know hereafter."], [8, "Peter saith unto him, Thou shalt never wash my feet. Jesus answered him, If I wash thee not, thou hast no part with me."], [9, "Simon Peter saith unto him, Lord, not my feet only, but also my hands and my head."], [10, "Jesus saith to him, He that is washed needeth not save to wash his feet, but is clean every whit: and ye are clean, but not all."], [11, "For he knew who should betray him; therefore said he, Ye are not all clean."], [12, "So after he had washed their feet, and had taken his garments, and was set down again, he said unto them, Know ye what I have done to you?"], [13, "Ye call me Master and Lord: and ye say well; for so I am."], [14, "If I then, your Lord and Master, have washed your feet; ye also ought to wash one another’s feet."], [15, "For I have given you an example, that ye should do as I have done to you."], [16, "Verily, verily, I say unto you, The servant is not greater than his lord; neither he that is sent greater than he that sent him."], [17, "If ye know these things, happy are ye if ye do them."], [18, "I speak not of you all: I know whom I have chosen: but that the scripture may be fulfilled, He that eateth bread with me hath lifted up his heel against me."], [19, "Now I tell you before it come, that, when it is come to pass, ye may believe that I am he."], [20, "Verily, verily, I say unto you, He that receiveth whomsoever I send receiveth me; and he that receiveth me receiveth him that sent me."], [21, "When Jesus had thus said, he was troubled in spirit, and testified, and said, Verily, verily, I say unto you, that one of you shall betray me."], [22, "Then the disciples looked one on another, doubting of whom he spake."], [23, "Now there was leaning on Jesus’ bosom one of his disciples, whom Jesus loved."], [24, "Simon Peter therefore beckoned to him, that he should ask who it should be of whom he spake."], [25, "He then lying on Jesus’ breast saith unto him, Lord, who is it?"], [26, "Jesus answered, He it is, to whom I shall give a sop, when I have dipped it. And when he had dipped the sop, he gave it to Judas Iscariot, the son of Simon."], [27, "And after the sop Satan entered into him. Then said Jesus unto him, That thou doest, do quickly."], [28, "Now no man at the table knew for what intent he spake this unto him."], [29, "For some of them thought, because Judas had the bag, that Jesus had said unto him, Buy those things that we have need of against the feast; or, that he should give something to the poor."], [30, "He then having received the sop went immediately out: and it was night."], [31, "Therefore, when he was gone out, Jesus said, Now is the Son of man glorified, and God is glorified in him."], [32, "If God be glorified in him, God shall also glorify him in himself, and shall straightway glorify him."], [33, "Little children, yet a little while I am with you. Ye shall seek me: and as I said unto the Jews, Whither I go, ye cannot come; so now I say to you."], [34, "A new commandment I give unto you, That ye love one another; as I have loved you, that ye also love one another."], [35, "By this shall all men know that ye are my disciples, if ye have love one to another."], [36, "Simon Peter said unto him, Lord, whither goest thou? Jesus answered him, Whither I go, thou canst not follow me now; but thou shalt follow me afterwards."], [37, "Peter said unto him, Lord, why cannot I follow thee now? I will lay down my life for thy sake."], [38, "Jesus answered him, Wilt thou lay down thy life for my sake? Verily, verily, I say unto thee, The cock shall not crow, till thou hast denied me thrice."]], "Galatians 6": [[1, "Brethren, if a man be overtaken in a fault, ye which are spiritual, restore such an one in the spirit of meekness; considering thyself, lest thou also be tempted."], [2, "Bear ye one another’s burdens, and so fulfil the law of Christ."], [3, "For if a man think himself to be something, when he is nothing, he deceiveth himself."], [4, "But let every man prove his own work, and then shall he have rejoicing in himself alone, and not in another."], [5, "For every man shall bear his own burden."], [6, "Let him that is taught in the word communicate unto him that teacheth in all good things."], [7, "Be not deceived; God is not mocked: for whatsoever a man soweth, that shall he also reap."], [8, "For he that soweth to his flesh shall of the flesh reap corruption; but he that soweth to the Spirit shall of the Spirit reap life everlasting."], [9, "And let us not be weary in well doing: for in due season we shall reap, if we faint not."], [10, "As we have therefore opportunity, let us do good unto all men, especially unto them who are of the household of faith."], [11, "Ye see how large a letter I have written unto you with mine own hand."], [12, "As many as desire to make a fair shew in the flesh, they constrain you to be circumcised; only lest they should suffer persecution for the cross of Christ."], [13, "For neither they themselves who are circumcised keep the law; but desire to have you circumcised, that they may glory in your flesh."], [14, "But God forbid that I should glory, save in the cross of our Lord Jesus Christ, by whom the world is crucified unto me, and I unto the world."], [15, "For in Christ Jesus neither circumcision availeth any thing, nor uncircumcision, but a new creature."], [16, "And as many as walk according to this rule, peace be on them, and mercy, and upon the Israel of God."], [17, "From henceforth let no man trouble me: for I bear in my body the marks of the Lord Jesus."], [18, "Brethren, the grace of our Lord Jesus Christ be with your spirit. Amen."]], "1 John 3": [[1, "Behold, what manner of love the Father hath bestowed upon us, that we should be called the sons of God: therefore the world knoweth us not, because it knew him not."], [2, "Beloved, now are we the sons of God, and it doth not yet appear what we shall be: but we know that, when he shall appear, we shall be like him; for we shall see him as he is."], [3, "And every man that hath this hope in him purifieth himself, even as he is pure."], [4, "Whosoever committeth sin transgresseth also the law: for sin is the transgression of the law."], [5, "And ye know that he was manifested to take away our sins; and in him is no sin."], [6, "Whosoever abideth in him sinneth not: whosoever sinneth hath not seen him, neither known him."], [7, "Little children, let no man deceive you: he that doeth righteousness is righteous, even as he is righteous."], [8, "He that committeth sin is of the devil; for the devil sinneth from the beginning. For this purpose the Son of God was manifested, that he might destroy the works of the devil."], [9, "Whosoever is born of God doth not commit sin; for his seed remaineth in him: and he cannot sin, because he is born of God."], [10, "In this the children of God are manifest, and the children of the devil: whosoever doeth not righteousness is not of God, neither he that loveth not his brother."], [11, "For this is the message that ye heard from the beginning, that we should love one another."], [12, "Not as Cain, who was of that wicked one, and slew his brother. And wherefore slew he him? Because his own works were evil, and his brother’s righteous."], [13, "Marvel not, my brethren, if the world hate you."], [14, "We know that we have passed from death unto life, because we love the brethren. He that loveth not his brother abideth in death."], [15, "Whosoever hateth his brother is a murderer: and ye know that no murderer hath eternal life abiding in him."], [16, "Hereby perceive we the love of God, because he laid down his life for us: and we ought to lay down our lives for the brethren."], [17, "But whoso hath this world’s good, and seeth his brother have need, and shutteth up his bowels of compassion from him, how dwelleth the love of God in him?"], [18, "My little children, let us not love in word, neither in tongue; but in deed and in truth."], [19, "And hereby we know that we are of the truth, and shall assure our hearts before him."], [20, "For if our heart condemn us, God is greater than our heart, and knoweth all things."], [21, "Beloved, if our heart condemn us not, then have we confidence toward God."], [22, "And whatsoever we ask, we receive of him, because we keep his commandments, and do those things that are pleasing in his sight."], [23, "And this is his commandment, That we should believe on the name of his Son Jesus Christ, and love one another, as he gave us commandment."], [24, "And he that keepeth his commandments dwelleth in him, and he in him. And hereby we know that he abideth in us, by the Spirit which he hath given us."]], "Luke 22": [[1, "Now the feast of unleavened bread drew nigh, which is called the Passover."], [2, "And the chief priests and scribes sought how they might kill him; for they feared the people."], [3, "Then entered Satan into Judas surnamed Iscariot, being of the number of the twelve."], [4, "And he went his way, and communed with the chief priests and captains, how he might betray him unto them."], [5, "And they were glad, and covenanted to give him money."], [6, "And he promised, and sought opportunity to betray him unto them in the absence of the multitude."], [7, "Then came the day of unleavened bread, when the passover must be killed."], [8, "And he sent Peter and John, saying, Go and prepare us the passover, that we may eat."], [9, "And they said unto him, Where wilt thou that we prepare?"], [10, "And he said unto them, Behold, when ye are entered into the city, there shall a man meet you, bearing a pitcher of water; follow him into the house where he entereth in."], [11, "And ye shall say unto the goodman of the house, The Master saith unto thee, Where is the guestchamber, where I shall eat the passover with my disciples?"], [12, "And he shall shew you a large upper room furnished: there make ready."], [13, "And they went, and found as he had said unto them: and they made ready the passover."], [14, "And when the hour was come, he sat down, and the twelve apostles with him."], [15, "And he said unto them, With desire I have desired to eat this passover with you before I suffer:"], [16, "For I say unto you, I will not any more eat thereof, until it be fulfilled in the kingdom of God."], [17, "And he took the cup, and gave thanks, and said, Take this, and divide it among yourselves:"], [18, "For I say unto you, I will not drink of the fruit of the vine, until the kingdom of God shall come."], [19, "And he took bread, and gave thanks, and brake it, and gave unto them, saying, This is my body which is given for you: this do in remembrance of me."], [20, "Likewise also the cup after supper, saying, This cup is the new testament in my blood, which is shed for you."], [21, "But, behold, the hand of him that betrayeth me is with me on the table."], [22, "And truly the Son of man goeth, as it was determined: but woe unto that man by whom he is betrayed!"], [23, "And they began to enquire among themselves, which of them it was that should do this thing."], [24, "And there was also a strife among them, which of them should be accounted the greatest."], [25, "And he said unto them, The kings of the Gentiles exercise lordship over them; and they that exercise authority upon them are called benefactors."], [26, "But ye shall not be so: but he that is greatest among you, let him be as the younger; and he that is chief, as he that doth serve."], [27, "For whether is greater, he that sitteth at meat, or he that serveth? is not he that sitteth at meat? but I am among you as he that serveth."], [28, "Ye are they which have continued with me in my temptations."], [29, "And I appoint unto you a kingdom, as my Father hath appointed unto me;"], [30, "That ye may eat and drink at my table in my kingdom, and sit on thrones judging the twelve tribes of Israel."], [31, "And the Lord said, Simon, Simon, behold, Satan hath desired to have you, that he may sift you as wheat:"], [32, "But I have prayed for thee, that thy faith fail not: and when thou art converted, strengthen thy brethren."], [33, "And he said unto him, Lord, I am ready to go with thee, both into prison, and to death."], [34, "And he said, I tell thee, Peter, the cock shall not crow this day, before that thou shalt thrice deny that thou knowest me."], [35, "And he said unto them, When I sent you without purse, and scrip, and shoes, lacked ye any thing? And they said, Nothing."], [36, "Then said he unto them, But now, he that hath a purse, let him take it, and likewise his scrip: and he that hath no sword, let him sell his garment, and buy one."], [37, "For I say unto you, that this that is written must yet be accomplished in me, And he was reckoned among the transgressors: for the things concerning me have an end."], [38, "And they said, Lord, behold, here are two swords. And he said unto them, It is enough."], [39, "And he came out, and went, as he was wont, to the mount of Olives; and his disciples also followed him."], [40, "And when he was at the place, he said unto them, Pray that ye enter not into temptation."], [41, "And he was withdrawn from them about a stone’s cast, and kneeled down, and prayed,"], [42, "Saying, Father, if thou be willing, remove this cup from me: nevertheless not my will, but thine, be done."], [43, "And there appeared an angel unto him from heaven, strengthening him."], [44, "And being in an agony he prayed more earnestly: and his sweat was as it were great drops of blood falling down to the ground."], [45, "And when he rose up from prayer, and was come to his disciples, he found them sleeping for sorrow,"], [46, "And said unto them, Why sleep ye? rise and pray, lest ye enter into temptation."], [47, "And while he yet spake, behold a multitude, and he that was called Judas, one of the twelve, went before them, and drew near unto Jesus to kiss him."], [48, "But Jesus said unto him, Judas, betrayest thou the Son of man with a kiss?"], [49, "When they which were about him saw what would follow, they said unto him, Lord, shall we smite with the sword?"], [50, "And one of them smote the servant of the high priest, and cut off his right ear."], [51, "And Jesus answered and said, Suffer ye thus far. And he touched his ear, and healed him."], [52, "Then Jesus said unto the chief priests, and captains of the temple, and the elders, which were come to him, Be ye come out, as against a thief, with swords and staves?"], [53, "When I was daily with you in the temple, ye stretched forth no hands against me: but this is your hour, and the power of darkness."], [54, "Then took they him, and led him, and brought him into the high priest’s house. And Peter followed afar off."], [55, "And when they had kindled a fire in the midst of the hall, and were set down together, Peter sat down among them."], [56, "But a certain maid beheld him as he sat by the fire, and earnestly looked upon him, and said, This man was also with him."], [57, "And he denied him, saying, Woman, I know him not."], [58, "And after a little while another saw him, and said, Thou art also of them. And Peter said, Man, I am not."], [59, "And about the space of one hour after another confidently affirmed, saying, Of a truth this fellow also was with him: for he is a Galilaean."], [60, "And Peter said, Man, I know not what thou sayest. And immediately, while he yet spake, the cock crew."], [61, "And the Lord turned, and looked upon Peter. And Peter remembered the word of the Lord, how he had said unto him, Before the cock crow, thou shalt deny me thrice."], [62, "And Peter went out, and wept bitterly."], [63, "And the men that held Jesus mocked him, and smote him."], [64, "And when they had blindfolded him, they struck him on the face, and asked him, saying, Prophesy, who is it that smote thee?"], [65, "And many other things blasphemously spake they against him."], [66, "And as soon as it was day, the elders of the people and the chief priests and the scribes came together, and led him into their council, saying,"], [67, "Art thou the Christ? tell us. And he said unto them, If I tell you, ye will not believe:"], [68, "And if I also ask you, ye will not answer me, nor let me go."], [69, "Hereafter shall the Son of man sit on the right hand of the power of God."], [70, "Then said they all, Art thou then the Son of God? And he said unto them, Ye say that I am."], [71, "And they said, What need we any further witness? for we ourselves have heard of his own mouth."]], "Hebrews 10": [[1, "For the law having a shadow of good things to come, and not the very image of the things, can never with those sacrifices which they offered year by year continually make the comers thereunto perfect."], [2, "For then would they not have ceased to be offered? because that the worshippers once purged should have had no more conscience of sins."], [3, "But in those sacrifices there is a remembrance again made of sins every year."], [4, "For it is not possible that the blood of bulls and of goats should take away sins."], [5, "Wherefore when he cometh into the world, he saith, Sacrifice and offering thou wouldest not, but a body hast thou prepared me:"], [6, "In burnt offerings and sacrifices for sin thou hast had no pleasure."], [7, "Then said I, Lo, I come (in the volume of the book it is written of me,) to do thy will, O God."], [8, "Above when he said, Sacrifice and offering and burnt offerings and offering for sin thou wouldest not, neither hadst pleasure therein; which are offered by the law;"], [9, "Then said he, Lo, I come to do thy will, O God. He taketh away the first, that he may establish the second."], [10, "By the which will we are sanctified through the offering of the body of Jesus Christ once for all."], [11, "And every priest standeth daily ministering and offering oftentimes the same sacrifices, which can never take away sins:"], [12, "But this man, after he had offered one sacrifice for sins for ever, sat down on the right hand of God;"], [13, "From henceforth expecting till his enemies be made his footstool."], [14, "For by one offering he hath perfected for ever them that are sanctified."], [15, "Whereof the Holy Ghost also is a witness to us: for after that he had said before,"], [16, "This is the covenant that I will make with them after those days, saith the Lord, I will put my laws into their hearts, and in their minds will I write them;"], [17, "And their sins and iniquities will I remember no more."], [18, "Now where remission of these is, there is no more offering for sin."], [19, "Having therefore, brethren, boldness to enter into the holiest by the blood of Jesus,"], [20, "By a new and living way, which he hath consecrated for us, through the veil, that is to say, his flesh;"], [21, "And having an high priest over the house of God;"], [22, "Let us draw near with a true heart in full assurance of faith, having our hearts sprinkled from an evil conscience, and our bodies washed with pure water."], [23, "Let us hold fast the profession of our faith without wavering; (for he is faithful that promised;)"], [24, "And let us consider one another to provoke unto love and to good works:"], [25, "Not forsaking the assembling of ourselves together, as the manner of some is; but exhorting one another: and so much the more, as ye see the day approaching."], [26, "For if we sin wilfully after that we have received the knowledge of the truth, there remaineth no more sacrifice for sins,"], [27, "But a certain fearful looking for of judgment and fiery indignation, which shall devour the adversaries."], [28, "He that despised Moses’ law died without mercy under two or three witnesses:"], [29, "Of how much sorer punishment, suppose ye, shall he be thought worthy, who hath trodden under foot the Son of God, and hath counted the blood of the covenant, wherewith he was sanctified, an unholy thing, and hath done despite unto the Spirit of grace?"], [30, "For we know him that hath said, Vengeance belongeth unto me, I will recompense, saith the Lord. And again, The Lord shall judge his people."], [31, "It is a fearful thing to fall into the hands of the living God."], [32, "But call to remembrance the former days, in which, after ye were illuminated, ye endured a great fight of afflictions;"], [33, "Partly, whilst ye were made a gazingstock both by reproaches and afflictions; and partly, whilst ye became companions of them that were so used."], [34, "For ye had compassion of me in my bonds, and took joyfully the spoiling of your goods, knowing in yourselves that ye have in heaven a better and an enduring substance."], [35, "Cast not away therefore your confidence, which hath great recompence of reward."], [36, "For ye have need of patience, that, after ye have done the will of God, ye might receive the promise."], [37, "For yet a little while, and he that shall come will come, and will not tarry."], [38, "Now the just shall live by faith: but if any man draw back, my soul shall have no pleasure in him."], [39, "But we are not of them who draw back unto perdition; but of them that believe to the saving of the soul."]], "Acts 2": [[1, "And when the day of Pentecost was fully come, they were all with one accord in one place."], [2, "And suddenly there came a sound from heaven as of a rushing mighty wind, and it filled all the house where they were sitting."], [3, "And there appeared unto them cloven tongues like as of fire, and it sat upon each of them."], [4, "And they were all filled with the Holy Ghost, and began to speak with other tongues, as the Spirit gave them utterance."], [5, "And there were dwelling at Jerusalem Jews, devout men, out of every nation under heaven."], [6, "Now when this was noised abroad, the multitude came together, and were confounded, because that every man heard them speak in his own language."], [7, "And they were all amazed and marvelled, saying one to another, Behold, are not all these which speak Galilaeans?"], [8, "And how hear we every man in our own tongue, wherein we were born?"], [9, "Parthians, and Medes, and Elamites, and the dwellers in Mesopotamia, and in Judaea, and Cappadocia, in Pontus, and Asia,"], [10, "Phrygia, and Pamphylia, in Egypt, and in the parts of Libya about Cyrene, and strangers of Rome, Jews and proselytes,"], [11, "Cretes and Arabians, we do hear them speak in our tongues the wonderful works of God."], [12, "And they were all amazed, and were in doubt, saying one to another, What meaneth this?"], [13, "Others mocking said, These men are full of new wine."], [14, "But Peter, standing up with the eleven, lifted up his voice, and said unto them, Ye men of Judaea, and all ye that dwell at Jerusalem, be this known unto you, and hearken to my words:"], [15, "For these are not drunken, as ye suppose, seeing it is but the third hour of the day."], [16, "But this is that which was spoken by the prophet Joel;"], [17, "And it shall come to pass in the last days, saith God, I will pour out of my Spirit upon all flesh: and your sons and your daughters shall prophesy, and your young men shall see visions, and your old men shall dream dreams:"], [18, "And on my servants and on my handmaidens I will pour out in those days of my Spirit; and they shall prophesy:"], [19, "And I will shew wonders in heaven above, and signs in the earth beneath; blood, and fire, and vapour of smoke:"], [20, "The sun shall be turned into darkness, and the moon into blood, before that great and notable day of the Lord come:"], [21, "And it shall come to pass, that whosoever shall call on the name of the Lord shall be saved."], [22, "Ye men of Israel, hear these words; Jesus of Nazareth, a man approved of God among you by miracles and wonders and signs, which God did by him in the midst of you, as ye yourselves also know:"], [23, "Him, being delivered by the determinate counsel and foreknowledge of God, ye have taken, and by wicked hands have crucified and slain:"], [24, "Whom God hath raised up, having loosed the pains of death: because it was not possible that he should be holden of it."], [25, "For David speaketh concerning him, I foresaw the Lord always before my face, for he is on my right hand, that I should not be moved:"], [26, "Therefore did my heart rejoice, and my tongue was glad; moreover also my flesh shall rest in hope:"], [27, "Because thou wilt not leave my soul in hell, neither wilt thou suffer thine Holy One to see corruption."], [28, "Thou hast made known to me the ways of life; thou shalt make me full of joy with thy countenance."], [29, "Men and brethren, let me freely speak unto you of the patriarch David, that he is both dead and buried, and his sepulchre is with us unto this day."], [30, "Therefore being a prophet, and knowing that God had sworn with an oath to him, that of the fruit of his loins, according to the flesh, he would raise up Christ to sit on his throne;"], [31, "He seeing this before spake of the resurrection of Christ, that his soul was not left in hell, neither his flesh did see corruption."], [32, "This Jesus hath God raised up, whereof we all are witnesses."], [33, "Therefore being by the right hand of God exalted, and having received of the Father the promise of the Holy Ghost, he hath shed forth this, which ye now see and hear."], [34, "For David is not ascended into the heavens: but he saith himself, The Lord said unto my Lord, Sit thou on my right hand,"], [35, "Until I make thy foes thy footstool."], [36, "Therefore let all the house of Israel know assuredly, that God hath made that same Jesus, whom ye have crucified, both Lord and Christ."], [37, "Now when they heard this, they were pricked in their heart, and said unto Peter and to the rest of the apostles, Men and brethren, what shall we do?"], [38, "Then Peter said unto them, Repent, and be baptized every one of you in the name of Jesus Christ for the remission of sins, and ye shall receive the gift of the Holy Ghost."], [39, "For the promise is unto you, and to your children, and to all that are afar off, even as many as the LORD our God shall call."], [40, "And with many other words did he testify and exhort, saying, Save yourselves from this untoward generation."], [41, "Then they that gladly received his word were baptized: and the same day there were added unto them about three thousand souls."], [42, "And they continued stedfastly in the apostles’ doctrine and fellowship, and in breaking of bread, and in prayers."], [43, "And fear came upon every soul: and many wonders and signs were done by the apostles."], [44, "And all that believed were together, and had all things common;"], [45, "And sold their possessions and goods, and parted them to all men, as every man had need."], [46, "And they, continuing daily with one accord in the temple, and breaking bread from house to house, did eat their meat with gladness and singleness of heart,"], [47, "Praising God, and having favour with all the people. And the Lord added to the church daily such as should be saved."]], "Psalms 17": [[1, "Hear the right, O LORD, attend unto my cry, give ear unto my prayer, that goeth not out of feigned lips."], [2, "Let my sentence come forth from thy presence; let thine eyes behold the things that are equal."], [3, "Thou hast proved mine heart; thou hast visited me in the night; thou hast tried me, and shalt find nothing; I am purposed that my mouth shall not transgress."], [4, "Concerning the works of men, by the word of thy lips I have kept me from the paths of the destroyer."], [5, "Hold up my goings in thy paths, that my footsteps slip not."], [6, "I have called upon thee, for thou wilt hear me, O God: incline thine ear unto me, and hear my speech."], [7, "Shew thy marvellous lovingkindness, O thou that savest by thy right hand them which put their trust in thee from those that rise up against them."], [8, "Keep me as the apple of the eye, hide me under the shadow of thy wings,"], [9, "From the wicked that oppress me, from my deadly enemies, who compass me about."], [10, "They are inclosed in their own fat: with their mouth they speak proudly."], [11, "They have now compassed us in our steps: they have set their eyes bowing down to the earth;"], [12, "Like as a lion that is greedy of his prey, and as it were a young lion lurking in secret places."], [13, "Arise, O LORD, disappoint him, cast him down: deliver my soul from the wicked, which is thy sword:"], [14, "From men which are thy hand, O LORD, from men of the world, which have their portion in this life, and whose belly thou fillest with thy hid treasure: they are full of children, and leave the rest of their substance to their babes."], [15, "As for me, I will behold thy face in righteousness: I shall be satisfied, when I awake, with thy likeness."]], "Luke 18": [[1, "And he spake a parable unto them to this end, that men ought always to pray, and not to faint;"], [2, "Saying, There was in a city a judge, which feared not God, neither regarded man:"], [3, "And there was a widow in that city; and she came unto him, saying, Avenge me of mine adversary."], [4, "And he would not for a while: but afterward he said within himself, Though I fear not God, nor regard man;"], [5, "Yet because this widow troubleth me, I will avenge her, lest by her continual coming she weary me."], [6, "And the Lord said, Hear what the unjust judge saith."], [7, "And shall not God avenge his own elect, which cry day and night unto him, though he bear long with them?"], [8, "I tell you that he will avenge them speedily. Nevertheless when the Son of man cometh, shall he find faith on the earth?"], [9, "And he spake this parable unto certain which trusted in themselves that they were righteous, and despised others:"], [10, "Two men went up into the temple to pray; the one a Pharisee, and the other a publican."], [11, "The Pharisee stood and prayed thus with himself, God, I thank thee, that I am not as other men are, extortioners, unjust, adulterers, or even as this publican."], [12, "I fast twice in the week, I give tithes of all that I possess."], [13, "And the publican, standing afar off, would not lift up so much as his eyes unto heaven, but smote upon his breast, saying, God be merciful to me a sinner."], [14, "I tell you, this man went down to his house justified rather than the other: for every one that exalteth himself shall be abased; and he that humbleth himself shall be exalted."], [15, "And they brought unto him also infants, that he would touch them: but when his disciples saw it, they rebuked them."], [16, "But Jesus called them unto him, and said, Suffer little children to come unto me, and forbid them not: for of such is the kingdom of God."], [17, "Verily I say unto you, Whosoever shall not receive the kingdom of God as a little child shall in no wise enter therein."], [18, "And a certain ruler asked him, saying, Good Master, what shall I do to inherit eternal life?"], [19, "And Jesus said unto him, Why callest thou me good? none is good, save one, that is, God."], [20, "Thou knowest the commandments, Do not commit adultery, Do not kill, Do not steal, Do not bear false witness, Honour thy father and thy mother."], [21, "And he said, All these have I kept from my youth up."], [22, "Now when Jesus heard these things, he said unto him, Yet lackest thou one thing: sell all that thou hast, and distribute unto the poor, and thou shalt have treasure in heaven: and come, follow me."], [23, "And when he heard this, he was very sorrowful: for he was very rich."], [24, "And when Jesus saw that he was very sorrowful, he said, How hardly shall they that have riches enter into the kingdom of God!"], [25, "For it is easier for a camel to go through a needle’s eye, than for a rich man to enter into the kingdom of God."], [26, "And they that heard it said, Who then can be saved?"], [27, "And he said, The things which are impossible with men are possible with God."], [28, "Then Peter said, Lo, we have left all, and followed thee."], [29, "And he said unto them, Verily I say unto you, There is no man that hath left house, or parents, or brethren, or wife, or children, for the kingdom of God’s sake,"], [30, "Who shall not receive manifold more in this present time, and in the world to come life everlasting."], [31, "Then he took unto him the twelve, and said unto them, Behold, we go up to Jerusalem, and all things that are written by the prophets concerning the Son of man shall be accomplished."], [32, "For he shall be delivered unto the Gentiles, and shall be mocked, and spitefully entreated, and spitted on:"], [33, "And they shall scourge him, and put him to death: and the third day he shall rise again."], [34, "And they understood none of these things: and this saying was hid from them, neither knew they the things which were spoken."], [35, "And it came to pass, that as he was come nigh unto Jericho, a certain blind man sat by the way side begging:"], [36, "And hearing the multitude pass by, he asked what it meant."], [37, "And they told him, that Jesus of Nazareth passeth by."], [38, "And he cried, saying, Jesus, thou son of David, have mercy on me."], [39, "And they which went before rebuked him, that he should hold his peace: but he cried so much the more, Thou son of David, have mercy on me."], [40, "And Jesus stood, and commanded him to be brought unto him: and when he was come near, he asked him,"], [41, "Saying, What wilt thou that I shall do unto thee? And he said, Lord, that I may receive my sight."], [42, "And Jesus said unto him, Receive thy sight: thy faith hath saved thee."], [43, "And immediately he received his sight, and followed him, glorifying God: and all the people, when they saw it, gave praise unto God."]], "Matthew 23": [[1, "Then spake Jesus to the multitude, and to his disciples,"], [2, "Saying, The scribes and the Pharisees sit in Moses’ seat:"], [3, "All therefore whatsoever they bid you observe, that observe and do; but do not ye after their works: for they say, and do not."], [4, "For they bind heavy burdens and grievous to be borne, and lay them on men’s shoulders; but they themselves will not move them with one of their fingers."], [5, "But all their works they do for to be seen of men: they make broad their phylacteries, and enlarge the borders of their garments,"], [6, "And love the uppermost rooms at feasts, and the chief seats in the synagogues,"], [7, "And greetings in the markets, and to be called of men, Rabbi, Rabbi."], [8, "But be not ye called Rabbi: for one is your Master, even Christ; and all ye are brethren."], [9, "And call no man your father upon the earth: for one is your Father, which is in heaven."], [10, "Neither be ye called masters: for one is your Master, even Christ."], [11, "But he that is greatest among you shall be your servant."], [12, "And whosoever shall exalt himself shall be abased; and he that shall humble himself shall be exalted."], [13, "But woe unto you, scribes and Pharisees, hypocrites! for ye shut up the kingdom of heaven against men: for ye neither go in yourselves, neither suffer ye them that are entering to go in."], [14, "Woe unto you, scribes and Pharisees, hypocrites! for ye devour widows’ houses, and for a pretence make long prayer: therefore ye shall receive the greater damnation."], [15, "Woe unto you, scribes and Pharisees, hypocrites! for ye compass sea and land to make one proselyte, and when he is made, ye make him twofold more the child of hell than yourselves."], [16, "Woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing; but whosoever shall swear by the gold of the temple, he is a debtor!"], [17, "Ye fools and blind: for whether is greater, the gold, or the temple that sanctifieth the gold?"], [18, "And, Whosoever shall swear by the altar, it is nothing; but whosoever sweareth by the gift that is upon it, he is guilty."], [19, "Ye fools and blind: for whether is greater, the gift, or the altar that sanctifieth the gift?"], [20, "Whoso therefore shall swear by the altar, sweareth by it, and by all things thereon."], [21, "And whoso shall swear by the temple, sweareth by it, and by him that dwelleth therein."], [22, "And he that shall swear by heaven, sweareth by the throne of God, and by him that sitteth thereon."], [23, "Woe unto you, scribes and Pharisees, hypocrites! for ye pay tithe of mint and anise and cummin, and have omitted the weightier matters of the law, judgment, mercy, and faith: these ought ye to have done, and not to leave the other undone."], [24, "Ye blind guides, which strain at a gnat, and swallow a camel."], [25, "Woe unto you, scribes and Pharisees, hypocrites! for ye make clean the outside of the cup and of the platter, but within they are full of extortion and excess."], [26, "Thou blind Pharisee, cleanse first that which is within the cup and platter, that the outside of them may be clean also."], [27, "Woe unto you, scribes and Pharisees, hypocrites! for ye are like unto whited sepulchres, which indeed appear beautiful outward, but are within full of dead men’s bones, and of all uncleanness."], [28, "Even so ye also outwardly appear righteous unto men, but within ye are full of hypocrisy and iniquity."], [29, "Woe unto you, scribes and Pharisees, hypocrites! because ye build the tombs of the prophets, and garnish the sepulchres of the righteous,"], [30, "And say, If we had been in the days of our fathers, we would not have been partakers with them in the blood of the prophets."], [31, "Wherefore ye be witnesses unto yourselves, that ye are the children of them which killed the prophets."], [32, "Fill ye up then the measure of your fathers."], [33, "Ye serpents, ye generation of vipers, how can ye escape the damnation of hell?"], [34, "Wherefore, behold, I send unto you prophets, and wise men, and scribes: and some of them ye shall kill and crucify; and some of them shall ye scourge in your synagogues, and persecute them from city to city:"], [35, "That upon you may come all the righteous blood shed upon the earth, from the blood of righteous Abel unto the blood of Zacharias son of Barachias, whom ye slew between the temple and the altar."], [36, "Verily I say unto you, All these things shall come upon this generation."], [37, "O Jerusalem, Jerusalem, thou that killest the prophets, and stonest them which are sent unto thee, how often would I have gathered thy children together, even as a hen gathereth her chickens under her wings, and ye would not!"], [38, "Behold, your house is left unto you desolate."], [39, "For I say unto you, Ye shall not see me henceforth, till ye shall say, Blessed is he that cometh in the name of the Lord."]]}};
+
+// Quotations from other writings (say: in the deck): their words open like a verse.
+const Q = {};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b && b.dataset.q) {
+    const q = Q[b.dataset.q];
+    verseTitle.textContent = q ? q.t : b.textContent.trim();
+    verseBody.innerHTML = q ? q.h : "<p>Not loaded.</p>";
+    verseDlg.showModal();
+    verseBody.scrollTop = 0;
+    return;
+  }
+  if (b) {
+    const keys = b.dataset.v;
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
