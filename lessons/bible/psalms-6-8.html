@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Psalms 6–8: How Long, O Lord? and the Excellent Name</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Psalms 6-8 in the King James Bible: persistent prayer and the Lord&#x27;s chastening, God judgeth the righteous and is angry with the wicked every day, and the excellent name of the Lord, Jesus, from the Psalms series studies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body .say-cite{font-size:.85rem;font-style:italic;color:var(--vellum-dim);border-top:1px solid var(--rule);padding-top:.6rem;margin-top:1rem}
+.ref.say{border-bottom-style:dashed}
+.ref.say::before{content:"\201C";margin-right:.15em}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Psalms 6–8" data-ctx="">
+  <div class="page title-page">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalms 6–8</h1>
+    <p class="sub">How long, O Lord? • God judgeth the righteous • How excellent is thy name</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 6:3">Psalm 6:3</button><button class="ref" data-v="Psalms 7:11">Psalm 7:11</button><button class="ref" data-v="Psalms 8:1">Psalm 8:1</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse. Press C for the whole chapter.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Psalm 6" data-title="Psalm 6" data-ctx="">
+  <div class="page title-page later">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalm 6</h1>
+    <p class="sub">Mercy, then judgment • Persistent prayer</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 6:1">Psalm 6:1</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Psalm 6" data-title="Rebuke me not in thine anger" data-ctx="Psalms 6:1">
+  <div class="page">
+    <div class="kicker">Psalm 6 · Mercy</div>
+    <h2>Rebuke me not in thine anger</h2>
+    <blockquote class="big-verse">O <span class="lord">Lord</span>, <mark>rebuke me not in thine anger</mark>, neither chasten me in thy hot displeasure.<cite>Psalm 6:1</cite></blockquote>
+    <p><strong>Psalm 6</strong> continues the prayer and plea theme, with David now up all night with sweat and tears and crying out to the Lord for mercy and for the destruction of his enemies.</p>
+    <p>Appealing to the mercies of the Lord, to not rebuke us in anger, to not chasten us while He is hot and fiery in His wrath, is wisdom that all Christians should take heed of.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Psalm 6" data-title="Heal me; for I am weak" data-ctx="Psalms 6:2">
+  <div class="page">
+    <div class="kicker">Psalm 6 · I am weak</div>
+    <h2>Heal me; for I am weak</h2>
+    <blockquote class="big-verse">Have mercy upon me, O <span class="lord">Lord</span>; <mark>for I am weak: O <span class="lord">Lord</span>, heal me</mark>; for my bones are vexed.<cite>Psalm 6:2</cite></blockquote>
+    <p>When we sin, when we have been goaded into a reaction by the temptations in our lives, our first instinct should be to ask God to forgive us.</p>
+    <p>The Devil knows our weaknesses. Our enemies know what buttons to push. How to frustrate us and to get us to react. We are weak. We need God to heal us.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Psalm 6" data-title="Praise, humility, mercy, then judgment" data-ctx="Psalms 6:2">
+  <div class="page">
+    <div class="kicker">Psalm 6 · I am weak</div>
+    <h2>Praise, humility, mercy, then judgment</h2>
+    <p>David is crying out that his body and soul are vexed and he is in real pain, and only the Lord can heal him.</p>
+    <p>Before anything else, the Psalmist has prioritized calling out to God, humbling himself spiritually, physically and mentally, admitting fault and dependency on God. This should be our starting position in prayer.</p>
+    <p>Praise, humility, mercy, then judgment.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Psalm 6" data-title="Deliver us from evil" data-ctx="Psalms 6:2">
+  <div class="page">
+    <div class="kicker">Application • Prayer</div>
+    <h2>Deliver us from evil</h2>
+    <p>Jesus taught us to pray; lead us not into temptation, but deliver us from evil. To bring an end to the tests and trials, and deliver us from the evil set against us.</p>
+    <p>Many of us may use prayer as a means of complaining, to gripe to God for whatever trouble there is in our life, and to whine about it being unfair that we are suffering at all. I think all Christians can fall into that during our despair. But the problem with this is it lacks the self-reflection and humility, and acknowledgement that we are to blame for many of our own problems. Begging for forgiveness, and forgiving others, recognizing our sin before God, and then asking for relief from His chastening puts the matter right in our heart.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Psalm 6" data-title="But thou, O Lord, how long?" data-ctx="Psalms 6:3">
+  <div class="page">
+    <div class="kicker">Psalm 6 · How long?</div>
+    <h2>But thou, O Lord, how long?</h2>
+    <blockquote class="big-verse">My soul is also sore vexed: but thou, O <span class="lord">Lord</span>, <mark>how long?</mark><cite>Psalm 6:3</cite></blockquote>
+    <p>And so, settling this, David transitions to judgment, asking how long will the Lord allow David's enemies to vex him? How long will the trials and temptations continue?</p>
+    <p>One of the effective means of prayer taught in Psalms, and reinforced by Jesus, is importunity. Persistent prayer. David will frequently ask the Lord to deliver his enemies and ask how long must he suffer the affliction in his life. There is nothing wrong with persistently going to God and asking for His resolution to the matter to come quickly.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Psalm 6" data-title="Men ought always to pray" data-ctx="Luke 18:1-8">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 6:3</div>
+    <h2>Men ought always to pray</h2>
+    <blockquote class="scripture" style="font-style:italic">And he spake a parable unto them to this end, that <mark>men ought always to pray, and not to faint</mark>; Saying, There was in a city a judge, which feared not God, neither regarded man: And there was a widow in that city; and she came unto him, saying, Avenge me of mine adversary. And he would not for a while: but afterward he said within himself, Though I fear not God, nor regard man; Yet because this widow troubleth me, I will avenge her, lest by her continual coming she weary me. And the Lord said, Hear what the unjust judge saith. And shall not God avenge his own elect, which cry day and night unto him, though he bear long with them? I tell you that he will avenge them speedily. Nevertheless when the Son of man cometh, shall he find faith on the earth?<cite>Luke 18:1-8</cite></blockquote>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Psalm 6" data-title="Persistent prayer" data-ctx="Luke 18:1-8">
+  <div class="page">
+    <div class="kicker">Application • Importunity</div>
+    <h2>Persistent prayer</h2>
+    <p>We should not be afraid to bother the Lord with long-standing issues, be it health, or work, or enemies or anything else. Praying for resolution of a matter, while understanding that His will be done, and resigning yourself for whatever the end of the matter is, is crucial in the Christian prayer life.</p>
+    <p>And often, settling it in your heart to be glad with whatever God has given you in terms of an answer will lead to Him blessing you with yet a better alternative or outcome.</p>
+    <p>I have personally experienced this. I have witnessed it in others. Persistent prayer and genuine gratitude for whatever His will is, can often work miracles and bring the Lord to not only give you mercy, but shower you with His grace.</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Psalm 6" data-title="For thy mercies&#x27; sake" data-ctx="Psalms 6:4-5">
+  <div class="page">
+    <div class="kicker">Psalm 6 · Return, O Lord</div>
+    <h2>For thy mercies' sake</h2>
+    <blockquote class="scripture" style="font-style:italic">Return, O <span class="lord">Lord</span>, deliver my soul: <mark>oh save me for thy mercies’ sake</mark>. For in death there is no remembrance of thee: in the grave who shall give thee thanks?<cite>Psalm 6:4-5</cite></blockquote>
+    <p>Here, David appeals to the promise of God to save us. To remind God of His word shows you actually know it, and trust in it. I think this is pleasing to the Lord.</p>
+    <p>He means the physical death here, but it has the same application spiritually. How are we to praise Him, if we are dead? How can we show the world His mercies if His promises aren't kept.</p>
+    <p>I wonder how many appeals to the throne David sat through, that showed him this pattern of petition.</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Psalm 6" data-title="Weary with my groaning" data-ctx="Psalms 6:6">
+  <div class="page">
+    <div class="kicker">Psalm 6 · All the night</div>
+    <h2>Weary with my groaning</h2>
+    <blockquote class="big-verse"><mark>I am weary with my groaning</mark>; all the night make I my bed to swim; I water my couch with my tears.<cite>Psalm 6:6</cite></blockquote>
+    <p>Letting God know how weary it has become, how the vexation has worn you down, is also an effective means of working it through yourself.</p>
+    <p>David says he is weary with his groaning. He's sick of hearing his own laments. It's all he thinks about, and it is destroying him. The desperate plea to God appeals to His love for us.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Psalm 6" data-title="Depart from me" data-ctx="Psalms 6:7-8">
+  <div class="page">
+    <div class="kicker">Psalm 6 · The Lord hath heard</div>
+    <h2>Depart from me</h2>
+    <blockquote class="scripture" style="font-style:italic">Mine eye is consumed because of grief; it waxeth old because of all mine enemies. <mark>Depart from me, all ye workers of iniquity</mark>; for the <span class="lord">Lord</span> hath heard the voice of my weeping.<cite>Psalm 6:7-8</cite></blockquote>
+    <p>He finishes this Psalm as he has others, letting his enemies know his faith in the Lord is unwavering and his confidence in God is strong.</p>
+    <p>No matter how weary we are, no matter how long we are vexed, no matter how long our temptations, we know we have already overcome in Christ.</p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Psalm 6" data-title="The Lord will receive my prayer" data-ctx="Psalms 6:9-10">
+  <div class="page">
+    <div class="kicker">Psalm 6 · The Lord hath heard</div>
+    <h2>The Lord will receive my prayer</h2>
+    <blockquote class="scripture" style="font-style:italic">The <span class="lord">Lord</span> hath heard my supplication; <mark>the <span class="lord">Lord</span> will receive my prayer</mark>. Let all mine enemies be ashamed and sore vexed: let them return and be ashamed suddenly.<cite>Psalm 6:9-10</cite></blockquote>
+    <p>The Lord has heard our plea. He promised, and so we know He has. He will receive our prayers. Our enemies will know He is with us, when we keep these models of prayer in mind, and humble ourselves to God's will. He will not make us ashamed.</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Psalm 7" data-title="Psalm 7" data-ctx="Psalms 6:9-10">
+  <div class="page title-page later">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalm 7</h1>
+    <p class="sub">Search me • God judgeth the righteous • The day of the Lord</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 7:1">Psalm 7:1</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Psalm 7" data-title="In thee do I put my trust" data-ctx="Psalms 7:1-2">
+  <div class="page">
+    <div class="kicker">Psalm 7 · Save me</div>
+    <h2>In thee do I put my trust</h2>
+    <blockquote class="scripture" style="font-style:italic">O <span class="lord">Lord</span> my God, <mark>in thee do I put my trust</mark>: save me from all them that persecute me, and deliver me: Lest he tear my soul like a lion, rending it in pieces, while there is none to deliver.<cite>Psalm 7:1-2</cite></blockquote>
+    <p>Again, David writes a prayerful song of faith in God to deliver him from evil. And again, the pattern of praise, plea, confession, and confidence in the Lord is present.</p>
+    <p>Because of their nature, the Psalms are dripping with doctrine. Here we see the faith and confidence in God lends itself to appealing to His mercy and holiness. We learn that we should ask Him to search us. To show us what sins we have in our life, that we may be cleansed and pleasing to Him.</p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Psalm 7" data-title="If I have done this" data-ctx="Psalms 7:3-5">
+  <div class="page">
+    <div class="kicker">Psalm 7 · If there be iniquity in my hands</div>
+    <h2>If I have done this</h2>
+    <blockquote class="scripture" style="font-style:italic">O <span class="lord">Lord</span> my God, if I have done this; <mark>if there be iniquity in my hands</mark>; If I have rewarded evil unto him that was at peace with me; (yea, I have delivered him that without cause is mine enemy:) Let the enemy persecute my soul, and take it; yea, let him tread down my life upon the earth, and lay mine honour in the dust. Selah.<cite>Psalm 7:3-5</cite></blockquote>
+    <p>David sings out to the Lord to allow the enemies that compass him about to destroy him, if there is anything he had done to deserve this.</p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Psalm 7" data-title="Self-examination" data-ctx="Psalms 7:3-5">
+  <div class="page">
+    <div class="kicker">Application • Self-examination</div>
+    <h2>Self-examination</h2>
+    <p>When we are being persecuted or falling into diverse temptations, tests and trials, self-examination should be on our mind. Dealing honestly with ourselves and with God, that maybe it is the result of something we have done. Chastening of the Lord for iniquity in our dealings with others. Sins against the Father. Confession is rewarded by God. He loves an honest soul, humbly seeking Him for forgiveness.</p>
+    <p>So, like David, call out in crisis, but be willing to accept our role in our calamity, and have a clean conscience towards God. Ask Him to judge you according to your integrity and righteousness, that we don't deceive ourselves. That we don't fall into a victim mentality.</p>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Psalm 7" data-title="My defence is of God" data-ctx="Psalms 7:10">
+  <div class="page">
+    <div class="kicker">Psalm 7 · My defence</div>
+    <h2>My defence is of God</h2>
+    <blockquote class="big-verse"><mark>My defence is of God</mark>, which saveth the upright in heart.<cite>Psalm 7:10</cite></blockquote>
+    <p>Pray for God's judgment, not only upon you, but your enemies. That His will be done on earth, and upon all people, that He will stand up the righteous and lay low the wicked. Knowing that our defense is of God.</p>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Psalm 7" data-title="Angry with the wicked every day" data-ctx="Psalms 7:11">
+  <div class="page">
+    <div class="kicker">Psalm 7 · God judgeth</div>
+    <h2>Angry with the wicked every day</h2>
+    <blockquote class="big-verse">God judgeth the righteous, and <mark>God is angry with the wicked every day</mark>.<cite>Psalm 7:11</cite></blockquote>
+    <p>This important doctrine is a necessary one, to develop a healthy fear of the Lord, the beginning of wisdom.</p>
+    <p>The same wisdom here that we find so often in David's son, Solomon and his Proverbs.</p>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Psalm 7" data-title="The pit he digged" data-ctx="Psalms 7:14-16">
+  <div class="page">
+    <div class="kicker">Psalm 7 · His mischief shall return</div>
+    <h2>The pit he digged</h2>
+    <blockquote class="scripture" style="font-style:italic">Behold, he travaileth with iniquity, and hath conceived mischief, and brought forth falsehood. He made a pit, and digged it, and <mark>is fallen into the ditch which he made</mark>. <mark>His mischief shall return upon his own head</mark>, and his violent dealing shall come down upon his own pate.<cite>Psalm 7:14-16</cite></blockquote>
+    <p>That those that deal in iniquity will fall victim to their own mischief. The pits they dig for others to fall in will swallow them up. His violence come back upon his own head.</p>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Psalm 7" data-title="He will whet his sword" data-ctx="Psalms 7:12-13">
+  <div class="page">
+    <div class="kicker">Psalm 7 · The wrath of God</div>
+    <h2>He will whet his sword</h2>
+    <blockquote class="scripture" style="font-style:italic">If he turn not, <mark>he will whet his sword</mark>; he hath bent his bow, and made it ready. He hath also prepared for him the instruments of death; he ordaineth his arrows against the persecutors.<cite>Psalm 7:12-13</cite></blockquote>
+    <p>This expectation of God's judgment is a key portion of our faith. Not only the Lord's mercy upon His children, but His wrath on evil-doers.</p>
+    <p>God is love. But God is also burning vengeance. His anger is kindled and wrath is stored against the wicked.</p>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Psalm 7" data-title="The righteous judgment of God" data-ctx="Romans 2:2-6">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 7:11</div>
+    <h2>The righteous judgment of God</h2>
+    <blockquote class="scripture" style="font-style:italic">But we are sure that the judgment of God is according to truth against them which commit such things. And thinkest thou this, O man, that judgest them which do such things, and doest the same, that thou shalt escape the judgment of God? Or despisest thou the riches of his goodness and forbearance and longsuffering; not knowing that the goodness of God leadeth thee to repentance? But after thy hardness and impenitent heart <mark>treasurest up unto thyself wrath against the day of wrath</mark> and revelation of the righteous judgment of God; Who will render to every man according to his deeds:<cite>Romans 2:2-6</cite></blockquote>
+    <p>This truth is as important for understanding God as His love. And is why He deserves our praise as we petition Him for our deliverance.</p>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Psalm 7" data-title="I will praise the Lord" data-ctx="Psalms 7:17">
+  <div class="page">
+    <div class="kicker">Psalm 7 · Praise</div>
+    <h2>I will praise the Lord</h2>
+    <blockquote class="big-verse"><mark>I will praise the <span class="lord">Lord</span> according to his righteousness</mark>: and will sing praise to the name of the <span class="lord">Lord</span> most high.<cite>Psalm 7:17</cite></blockquote>
+    <p class="center">Amen</p>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="Psalm 7" data-title="Arise, O Lord, in thine anger" data-ctx="Psalms 7:6-9">
+  <div class="page">
+    <div class="kicker">Psalm 7 · The day of the Lord</div>
+    <h2>Arise, O Lord, in thine anger</h2>
+    <blockquote class="scripture" style="font-style:italic">Arise, O <span class="lord">Lord</span>, in thine anger, lift up thyself because of the rage of mine enemies: and awake for me to the judgment that thou hast commanded. <mark>So shall the congregation of the people compass thee about</mark>: for their sakes therefore return thou on high. The <span class="lord">Lord</span> shall judge the people: judge me, O <span class="lord">Lord</span>, according to my righteousness, and according to mine integrity that is in me. Oh let the wickedness of the wicked come to an end; but establish the just: for the righteous God trieth the hearts and reins.<cite>Psalm 7:6-9</cite></blockquote>
+    <p>This passage in <strong>Psalms 7</strong> is prophetic to the day of the Lord, Jesus' second coming, the rapture and the wrath.</p>
+    <p>The congregation of the people, the resurrection of the saints, gathered together in the air to meet Him at His glorious coming.</p>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="Psalm 7" data-title="The coming of the Son of man" data-ctx="Matthew 24:27-31">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 7:7</div>
+    <h2>The coming of the Son of man</h2>
+    <blockquote class="scripture" style="font-style:italic">For as the lightning cometh out of the east, and shineth even unto the west; so shall also the coming of the Son of man be. For wheresoever the carcase is, there will the eagles be gathered together. Immediately after the tribulation of those days shall the sun be darkened, and the moon shall not give her light, and the stars shall fall from heaven, and the powers of the heavens shall be shaken: And then shall appear the sign of the Son of man in heaven: and then shall all the tribes of the earth mourn, and they shall see the Son of man coming in the clouds of heaven with power and great glory. And he shall send his angels with a great sound of a trumpet, and <mark>they shall gather together his elect from the four winds</mark>, from one end of heaven to the other.<cite>Matthew 24:27-31</cite></blockquote>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="slide" data-section="Psalm 7" data-title="Caught up together" data-ctx="1 Thessalonians 4:14-17">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 7:7</div>
+    <h2>Caught up together</h2>
+    <p>As eagles, carrion birds, circle a carcass, so will the risen saints "compass about" Jesus, as we meet Him in the air. When He returns with His own, the spirits of the dead, raising them first, and then those which are alive and remain:</p>
+    <blockquote class="scripture" style="font-style:italic">For if we believe that Jesus died and rose again, even so them also which sleep in Jesus will God bring with him. For this we say unto you by the word of the Lord, that we which are alive and remain unto the coming of the Lord shall not prevent them which are asleep. For the Lord himself shall descend from heaven with a shout, with the voice of the archangel, and with the trump of God: and the dead in Christ shall rise first: Then we which are alive and remain shall be <mark>caught up together with them in the clouds, to meet the Lord in the air</mark>: and so shall we ever be with the Lord.<cite>1 Thessalonians 4:14-17</cite></blockquote>
+  </div>
+</section>
+
+<!-- 27 -->
+<section class="slide" data-section="Psalm 7" data-title="The day of redemption" data-ctx="1 Thessalonians 4:14-17">
+  <div class="page">
+    <div class="kicker">Psalm 7 · The day of the Lord</div>
+    <h2>The day of redemption</h2>
+    <p>David looked forward to this day of judgement, the day of the Lord. The day of redemption.</p>
+    <p>The pre-trib rapture is so clearly false that it is a wonder it has persisted all this time.</p>
+    <p>"Jesus came to His own. Jesus will come for His own and then Jesus will come with His own!" literally describes 3 comings, yet those who use this will look you in the eye and say that it only describes two.</p>
+  </div>
+</section>
+
+<!-- 28 -->
+<section class="slide" data-section="Psalm 8" data-title="Psalm 8" data-ctx="1 Thessalonians 4:14-17">
+  <div class="page title-page later">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalm 8</h1>
+    <p class="sub">The excellent name of the Lord is Jesus</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 8:1">Psalm 8:1</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 29 -->
+<section class="slide" data-section="Psalm 8" data-title="How excellent is thy name" data-ctx="Psalms 8:1">
+  <div class="page">
+    <div class="kicker">Psalm 8 · The excellent name</div>
+    <h2>How excellent is thy name</h2>
+    <blockquote class="big-verse">O <span class="lord">Lord</span>, our Lord, <mark>how excellent is thy name in all the earth</mark>! who hast set thy glory above the heavens.<cite>Psalm 8:1</cite></blockquote>
+    <p>The excellent name of our Lord is Jesus.</p>
+    <p><strong>Psalm 8</strong> is a song of praise for the Christ. The name of the Lord, who has been set by the <span class="lord">Lord</span>, God the Father, over all things. Who also is God.</p>
+  </div>
+</section>
+
+<!-- 30 -->
+<section class="slide" data-section="Psalm 8" data-title="Ordained strength" data-ctx="Psalms 8:2">
+  <div class="page">
+    <div class="kicker">Psalm 8 · Babes and sucklings</div>
+    <h2>Ordained strength</h2>
+    <blockquote class="big-verse">Out of the mouth of babes and sucklings <mark>hast thou ordained strength</mark> because of thine enemies, that thou mightest still the enemy and the avenger.<cite>Psalm 8:2</cite></blockquote>
+    <p>Jesus is the anointed, Who is ordained to strength, and mighty.</p>
+  </div>
+</section>
+
+<!-- 31 -->
+<section class="slide" data-section="Psalm 8" data-title="But we see Jesus" data-ctx="Hebrews 2:4-9">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 8:4–6</div>
+    <h2>But we see Jesus</h2>
+    <blockquote class="scripture" style="font-style:italic">God also bearing them witness, both with signs and wonders, and with divers miracles, and gifts of the Holy Ghost, according to his own will? For unto the angels hath he not put in subjection the world to come, whereof we speak. But one in a certain place testified, saying, What is man, that thou art mindful of him? or the son of man, that thou visitest him? Thou madest him a little lower than the angels; thou crownedst him with glory and honour, and didst set him over the works of thy hands: Thou hast put all things in subjection under his feet. For in that he put all in subjection under him, he left nothing that is not put under him. But now we see not yet all things put under him. <mark>But we see Jesus, who was made a little lower than the angels</mark> for the suffering of death, crowned with glory and honour; that he by the grace of God should taste death for every man.<cite>Hebrews 2:4-9</cite></blockquote>
+  </div>
+</section>
+
+<!-- 32 -->
+<section class="slide" data-section="Psalm 8" data-title="Out of the mouth of babes" data-ctx="Matthew 21:15-17">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 8:2</div>
+    <h2>Out of the mouth of babes</h2>
+    <p>The New Testament reveals the intent and interpretation of the Old. We see Jesus using Psalm 8:2 against the Pharisees, showing that He is the name of God;</p>
+    <blockquote class="scripture" style="font-style:italic">And when the chief priests and scribes saw the wonderful things that he did, and the children crying in the temple, and saying, Hosanna to the son of David; they were sore displeased, And said unto him, Hearest thou what these say? And Jesus saith unto them, Yea; have ye never read, <mark>Out of the mouth of babes and sucklings thou hast perfected praise</mark>? And he left them, and went out of the city into Bethany; and he lodged there.<cite>Matthew 21:15-17</cite></blockquote>
+  </div>
+</section>
+
+<!-- 33 -->
+<section class="slide" data-section="Psalm 8" data-title="The work of thy fingers" data-ctx="Psalms 8:3|Colossians 1:16-17">
+  <div class="page">
+    <div class="kicker">Psalm 8 · The Creator</div>
+    <h2>The work of thy fingers</h2>
+    <blockquote class="big-verse">When I consider thy heavens, the work of thy fingers, the moon and the stars, which thou hast ordained;<cite>Psalm 8:3</cite></blockquote>
+    <p>Through His name was all creation made:</p>
+    <blockquote class="scripture" style="font-style:italic">For by him were all things created, that are in heaven, and that are in earth, visible and invisible, whether they be thrones, or dominions, or principalities, or powers: <mark>all things were created by him, and for him</mark>: And he is before all things, and by him all things consist.<cite>Colossians 1:16-17</cite></blockquote>
+  </div>
+</section>
+
+<!-- 34 -->
+<section class="slide" data-section="Psalm 8" data-title="In the beginning was the Word" data-ctx="John 1:1-3|Genesis 4:25-26">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 8:3</div>
+    <h2>In the beginning was the Word</h2>
+    <blockquote class="scripture" style="font-style:italic">In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God. All things were made by him; and without him was not any thing made that was made.<cite>John 1:1-3</cite></blockquote>
+    <p><em>The same was in the beginning</em>, when men first called upon the name of the Lord.</p>
+    <blockquote class="scripture" style="font-style:italic">And Adam knew his wife again; and she bare a son, and called his name Seth: For God, said she, hath appointed me another seed instead of Abel, whom Cain slew. And to Seth, to him also there was born a son; and he called his name Enos: <mark>then began men to call upon the name of the <span class="lord">Lord</span></mark>.<cite>Genesis 4:25-26</cite></blockquote>
+  </div>
+</section>
+
+<!-- 35 -->
+<section class="slide" data-section="Psalm 8" data-title="All things under his feet" data-ctx="Psalms 8:6-8|Ephesians 1:9-10">
+  <div class="page">
+    <div class="kicker">Psalm 8 · Dominion</div>
+    <h2>All things under his feet</h2>
+    <blockquote class="scripture" style="font-style:italic">Thou madest him to have dominion over the works of thy hands; <mark>thou hast put all things under his feet</mark>: All sheep and oxen, yea, and the beasts of the field; The fowl of the air, and the fish of the sea, and whatsoever passeth through the paths of the seas.<cite>Psalm 8:6-8</cite></blockquote>
+    <p>Jesus has been made to have dominion over all things, that the glory and honor be given to Him.</p>
+    <blockquote class="scripture" style="font-style:italic">Having made known unto us the mystery of his will, according to his good pleasure which he hath purposed in himself: That in the dispensation of the fulness of times <mark>he might gather together in one all things in Christ</mark>, both which are in heaven, and which are on earth; even in him:<cite>Ephesians 1:9-10</cite></blockquote>
+  </div>
+</section>
+
+<!-- 36 -->
+<section class="slide" data-section="Psalm 8" data-title="A name which is above every name" data-ctx="Philippians 2:9-11">
+  <div class="page">
+    <div class="kicker">Psalm 8 · The excellent name</div>
+    <h2>A name which is above every name</h2>
+    <p>And the excellency of His name is revealed in Christ Jesus.</p>
+    <blockquote class="scripture" style="font-style:italic">Wherefore God also hath highly exalted him, and given him <mark>a name which is above every name</mark>: That at the name of Jesus every knee should bow, of things in heaven, and things in earth, and things under the earth; And that every tongue should confess that Jesus Christ is Lord, to the glory of God the Father.<cite>Philippians 2:9-11</cite></blockquote>
+  </div>
+</section>
+
+<!-- 37 -->
+<section class="slide" data-section="Psalm 8" data-title="Before Abraham was, I am" data-ctx="John 8:56-58|Acts 4:12">
+  <div class="page">
+    <div class="kicker">Psalm 8 · The excellent name</div>
+    <h2>Before Abraham was, I am</h2>
+    <p>Jesus is the name of the Lord. Of the great I Am.</p>
+    <blockquote class="scripture" style="font-style:italic">Your father Abraham rejoiced to see my day: and he saw it, and was glad. Then said the Jews unto him, Thou art not yet fifty years old, and hast thou seen Abraham? Jesus said unto them, Verily, verily, I say unto you, <mark>Before Abraham was, I am</mark>.<cite>John 8:56-58</cite></blockquote>
+    <p>No other name is given by God to be worshipped as God.</p>
+    <blockquote class="big-verse">Neither is there salvation in any other: for there is <mark>none other name under heaven</mark> given among men, whereby we must be saved.<cite>Acts 4:12</cite></blockquote>
+  </div>
+</section>
+
+<!-- 38 -->
+<section class="slide" data-section="Psalm 8" data-title="To put his name there" data-ctx="Deuteronomy 12:5|Deuteronomy 12:11">
+  <div class="page">
+    <div class="kicker">Psalm 8 · Where He placed His name</div>
+    <h2>To put his name there</h2>
+    <p>Jerusalem, was chosen by God to "place His name";</p>
+    <blockquote class="scripture" style="font-style:italic">But unto the place which the <span class="lord">Lord</span> your God shall choose out of all your tribes <mark>to put his name there</mark>, even unto his habitation shall ye seek, and thither thou shalt come:<cite>Deuteronomy 12:5</cite></blockquote><blockquote class="scripture" style="font-style:italic">Then there shall be a place which the <span class="lord">Lord</span> your God shall choose <mark>to cause his name to dwell there</mark>; thither shall ye bring all that I command you; your burnt offerings, and your sacrifices, your tithes, and the heave offering of your hand, and all your choice vows which ye vow unto the <span class="lord">Lord</span>:<cite>Deuteronomy 12:11</cite></blockquote>
+  </div>
+</section>
+
+<!-- 39 -->
+<section class="slide" data-section="Psalm 8" data-title="He was wounded for our transgressions" data-ctx="Isaiah 53:3-5">
+  <div class="page">
+    <div class="kicker">Psalm 8 · Where He placed His name</div>
+    <h2>He was wounded for our transgressions</h2>
+    <p>The OT scriptures repeatedly say that Jerusalem is where God chose to place His name. Where the Son of God would be revealed. Where His name would be killed for our transgressions:</p>
+    <blockquote class="scripture" style="font-style:italic">He is despised and rejected of men; a man of sorrows, and acquainted with grief: and we hid as it were our faces from him; he was despised, and we esteemed him not. Surely he hath borne our griefs, and carried our sorrows: yet we did esteem him stricken, smitten of God, and afflicted. But <mark>he was wounded for our transgressions</mark>, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed.<cite>Isaiah 53:3-5</cite></blockquote>
+  </div>
+</section>
+
+<!-- 40 -->
+<section class="slide" data-section="Psalm 8" data-title="The land of Moriah" data-ctx="Genesis 22:2|Genesis 22:8">
+  <div class="page">
+    <div class="kicker">Psalm 8 · Where He placed His name</div>
+    <h2>The land of Moriah</h2>
+    <p>The same place Abraham was told to bring Isaac, at Mount Moriah, Zion:</p>
+    <blockquote class="big-verse">And he said, Take now thy son, thine only son Isaac, whom thou lovest, and get thee into <mark>the land of Moriah</mark>; and offer him there for a burnt offering upon one of the mountains which I will tell thee of.<cite>Genesis 22:2</cite></blockquote>
+    <p>But God did not require the sacrifice of man, but rather gave His only begotten Son:</p>
+    <blockquote class="big-verse">And Abraham said, My son, <mark>God will provide himself a lamb</mark> for a burnt offering: so they went both of them together.<cite>Genesis 22:8</cite></blockquote>
+  </div>
+</section>
+
+<!-- 41 -->
+<section class="slide" data-section="Psalm 8" data-title="Jehovahjireh" data-ctx="Genesis 22:14">
+  <div class="page">
+    <div class="kicker">Psalm 8 · Where He placed His name</div>
+    <h2>Jehovahjireh</h2>
+    <p>In this place, where the altar was made, and the son was to be sacrificed, where a ram without blemish was caught in the thick of thorns was provided, Abraham recognized it for what it was:</p>
+    <blockquote class="big-verse">And Abraham called the name of that place Jehovahjireh: as it is said to this day, <mark>In the mount of the <span class="lord">Lord</span> it shall be seen</mark>.<cite>Genesis 22:14</cite></blockquote>
+  </div>
+</section>
+
+<!-- 42 -->
+<section class="slide" data-section="Psalm 8" data-title="My name shall be there" data-ctx="1 Kings 8:28-29">
+  <div class="page">
+    <div class="kicker">Psalm 8 · Where He placed His name</div>
+    <h2>My name shall be there</h2>
+    <p>The place where the temple would be, pointing to the Messiah:</p>
+    <blockquote class="scripture" style="font-style:italic">Yet have thou respect unto the prayer of thy servant, and to his supplication, O <span class="lord">Lord</span> my God, to hearken unto the cry and to the prayer, which thy servant prayeth before thee to day: That thine eyes may be open toward this house night and day, even toward the place of which thou hast said, <mark>My name shall be there</mark>: that thou mayest hearken unto the prayer which thy servant shall make toward this place.<cite>1 Kings 8:28-29</cite></blockquote>
+  </div>
+</section>
+
+<!-- 43 -->
+<section class="slide" data-section="Psalm 8" data-title="For my servant David&#x27;s sake" data-ctx="Isaiah 37:34-35">
+  <div class="page">
+    <div class="kicker">Psalm 8 · Where He placed His name</div>
+    <h2>For my servant David's sake</h2>
+    <p>God says that His promise to David that the anointed one would come from his line, and His determined use of Jerusalem as the city where He would place His name, is the only reason He did not wipe out Judah as He did Israel.</p>
+    <blockquote class="scripture" style="font-style:italic">By the way that he came, by the same shall he return, and shall not come into this city, saith the <span class="lord">Lord</span>. For I will defend this city to save it for mine own sake, and <mark>for my servant David’s sake</mark>.<cite>Isaiah 37:34-35</cite></blockquote>
+  </div>
+</section>
+
+<!-- 44 -->
+<section class="slide" data-section="Psalm 8" data-title="Thy King cometh unto thee" data-ctx="Zechariah 9:9|Isaiah 9:6">
+  <div class="page">
+    <div class="kicker">Psalm 8 · Where He placed His name</div>
+    <h2>Thy King cometh unto thee</h2>
+    <blockquote class="big-verse">Rejoice greatly, O daughter of Zion; shout, O daughter of Jerusalem: <mark>behold, thy King cometh unto thee</mark>: he is just, and having salvation; lowly, and riding upon an ass, and upon a colt the foal of an ass.<cite>Zechariah 9:9</cite></blockquote>
+    <p>There, in Jerusalem would He place His name, Christ Jesus. The Alpha and Omega. The Lord of lords and King of kings.</p>
+    <blockquote class="big-verse">For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and <mark>his name shall be called Wonderful</mark>, Counsellor, The mighty God, The everlasting Father, The Prince of Peace.<cite>Isaiah 9:6</cite></blockquote>
+  </div>
+</section>
+
+<!-- 45 -->
+<section class="slide" data-section="Psalm 8" data-title="Concerning me" data-ctx="Luke 24:44-45">
+  <div class="page">
+    <div class="kicker">Psalm 8 · The name of the Lord is Jesus</div>
+    <h2>Concerning me</h2>
+    <p>The entire Old Testament is about Jesus, the Name of the Lord. And so when we see in Moses and the prophets and the Psalms, when they speak of the name of the Lord, we know that it is Jesus.</p>
+    <blockquote class="scripture" style="font-style:italic">And he said unto them, These are the words which I spake unto you, while I was yet with you, that all things must be fulfilled, which were written in the law of Moses, and in the prophets, <mark>and in the psalms, concerning me</mark>. Then opened he their understanding, that they might understand the scriptures,<cite>Luke 24:44-45</cite></blockquote>
+  </div>
+</section>
+
+<!-- 46 -->
+<section class="slide" data-section="Psalm 8" data-title="Through his name" data-ctx="Acts 10:43">
+  <div class="page">
+    <div class="kicker">Psalm 8 · The name of the Lord is Jesus</div>
+    <h2>Through his name</h2>
+    <blockquote class="big-verse">To him give all the prophets witness, that <mark>through his name whosoever believeth in him shall receive remission of sins</mark>.<cite>Acts 10:43</cite></blockquote>
+    <p>This witness is true, and revealed now, in the last times. That the name of the Lord is Jesus. Amen</p>
+  </div>
+</section>
+
+<!-- 47 -->
+<section class="slide" data-section="Psalm 8" data-title="What is man?" data-ctx="Psalms 8:4-5">
+  <div class="page">
+    <div class="kicker">Psalm 8 · A little lower than the angels</div>
+    <h2>What is man?</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>What is man, that thou art mindful of him?</mark> and the son of man, that thou visitest him? For thou hast made him <mark>a little lower than the angels</mark>, and hast crowned him with glory and honour.<cite>Psalm 8:4-5</cite></blockquote>
+    <p><strong>Psalm 8</strong> as a song of praise and worship for the Christ, the Messiah, Who was made a little lower than the angels, and was raised into glory, is a beautiful and heartfelt prayer.</p>
+    <p>When we consider all that the Lord has created and look upon ourselves, we stand in awe that God's grace would ever extend to us. That He would visit us at all, let alone become man and die for our sins.</p>
+  </div>
+</section>
+
+<!-- 48 -->
+<section class="slide" data-section="Psalm 8" data-title="Looking unto Jesus" data-ctx="Hebrews 12:2-3">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 8:5</div>
+    <h2>Looking unto Jesus</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>Looking unto Jesus the author and finisher of our faith</mark>; who for the joy that was set before him endured the cross, despising the shame, and is set down at the right hand of the throne of God. For consider him that endured such contradiction of sinners against himself, lest ye be wearied and faint in your minds.<cite>Hebrews 12:2-3</cite></blockquote>
+    <p>The awe we should feel in consideration of His grace and mercy - that He became as man, lived, tempted at all points as we are yet without sin, and then despised and brutalized for our sins, and raised again onto glory, that His name be exalted above all - is beautifully summarized in this brief song.</p>
+  </div>
+</section>
+
+<!-- 49 -->
+<section class="slide" data-section="Psalm 8" data-title="O Lord our Lord" data-ctx="Psalms 8:9">
+  <div class="page">
+    <div class="kicker">Psalm 8 · How excellent is thy name</div>
+    <h2>O Lord our Lord</h2>
+    <blockquote class="big-verse">O <span class="lord">Lord</span> our Lord, how excellent is thy name in all the earth!<cite>Psalm 8:9</cite></blockquote>
+  </div>
+</section>
+
+<!-- 50 -->
+<section class="slide" data-section="Psalm 8" data-title="Read on" data-ctx="Psalms 8:9">
+  <div class="page">
+    <div class="kicker">Psalms 6–8</div>
+    <h2>Read on</h2>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-psalms-1-5" target="_blank" rel="noopener">Psalms 1–5 ↗</a><a class="ref lesson-link" href="../../studies/#lesson-psalms-9-10" target="_blank" rel="noopener">Psalms 9–10 ↗</a><a class="ref lesson-link" href="../../studies/#lesson-john-i-am" target="_blank" rel="noopener">The I Am Sayings of John ↗</a></div>
+    <p class="sub center">The chapter studies</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#Psalms-6" target="_blank" rel="noopener">Psalm 6 ↗</a><a class="ref lesson-link" href="../../studies/#Psalms-7" target="_blank" rel="noopener">Psalm 7 ↗</a><a class="ref lesson-link" href="../../studies/#Psalms-8" target="_blank" rel="noopener">Psalm 8 ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "Psalms 6:1":[[1, "O LORD, rebuke me not in thine anger, neither chasten me in thy hot displeasure."]],
+  "Psalms 6:3":[[3, "My soul is also sore vexed: but thou, O LORD, how long?"]],
+  "Psalms 7:1":[[1, "O LORD my God, in thee do I put my trust: save me from all them that persecute me, and deliver me:"]],
+  "Psalms 7:11":[[11, "God judgeth the righteous, and God is angry with the wicked every day."]],
+  "Psalms 8:1":[[1, "O LORD, our Lord, how excellent is thy name in all the earth! who hast set thy glory above the heavens."]]
+};
+
+// The Chapter panel (key C): whole chapters, and each slide's verses in data-ctx. null when the deck has none.
+window.DECK_CTX = {"home": [], "ch": {"Psalms 6": [[1, "O LORD, rebuke me not in thine anger, neither chasten me in thy hot displeasure."], [2, "Have mercy upon me, O LORD; for I am weak: O LORD, heal me; for my bones are vexed."], [3, "My soul is also sore vexed: but thou, O LORD, how long?"], [4, "Return, O LORD, deliver my soul: oh save me for thy mercies’ sake."], [5, "For in death there is no remembrance of thee: in the grave who shall give thee thanks?"], [6, "I am weary with my groaning; all the night make I my bed to swim; I water my couch with my tears."], [7, "Mine eye is consumed because of grief; it waxeth old because of all mine enemies."], [8, "Depart from me, all ye workers of iniquity; for the LORD hath heard the voice of my weeping."], [9, "The LORD hath heard my supplication; the LORD will receive my prayer."], [10, "Let all mine enemies be ashamed and sore vexed: let them return and be ashamed suddenly."]], "Luke 18": [[1, "And he spake a parable unto them to this end, that men ought always to pray, and not to faint;"], [2, "Saying, There was in a city a judge, which feared not God, neither regarded man:"], [3, "And there was a widow in that city; and she came unto him, saying, Avenge me of mine adversary."], [4, "And he would not for a while: but afterward he said within himself, Though I fear not God, nor regard man;"], [5, "Yet because this widow troubleth me, I will avenge her, lest by her continual coming she weary me."], [6, "And the Lord said, Hear what the unjust judge saith."], [7, "And shall not God avenge his own elect, which cry day and night unto him, though he bear long with them?"], [8, "I tell you that he will avenge them speedily. Nevertheless when the Son of man cometh, shall he find faith on the earth?"], [9, "And he spake this parable unto certain which trusted in themselves that they were righteous, and despised others:"], [10, "Two men went up into the temple to pray; the one a Pharisee, and the other a publican."], [11, "The Pharisee stood and prayed thus with himself, God, I thank thee, that I am not as other men are, extortioners, unjust, adulterers, or even as this publican."], [12, "I fast twice in the week, I give tithes of all that I possess."], [13, "And the publican, standing afar off, would not lift up so much as his eyes unto heaven, but smote upon his breast, saying, God be merciful to me a sinner."], [14, "I tell you, this man went down to his house justified rather than the other: for every one that exalteth himself shall be abased; and he that humbleth himself shall be exalted."], [15, "And they brought unto him also infants, that he would touch them: but when his disciples saw it, they rebuked them."], [16, "But Jesus called them unto him, and said, Suffer little children to come unto me, and forbid them not: for of such is the kingdom of God."], [17, "Verily I say unto you, Whosoever shall not receive the kingdom of God as a little child shall in no wise enter therein."], [18, "And a certain ruler asked him, saying, Good Master, what shall I do to inherit eternal life?"], [19, "And Jesus said unto him, Why callest thou me good? none is good, save one, that is, God."], [20, "Thou knowest the commandments, Do not commit adultery, Do not kill, Do not steal, Do not bear false witness, Honour thy father and thy mother."], [21, "And he said, All these have I kept from my youth up."], [22, "Now when Jesus heard these things, he said unto him, Yet lackest thou one thing: sell all that thou hast, and distribute unto the poor, and thou shalt have treasure in heaven: and come, follow me."], [23, "And when he heard this, he was very sorrowful: for he was very rich."], [24, "And when Jesus saw that he was very sorrowful, he said, How hardly shall they that have riches enter into the kingdom of God!"], [25, "For it is easier for a camel to go through a needle’s eye, than for a rich man to enter into the kingdom of God."], [26, "And they that heard it said, Who then can be saved?"], [27, "And he said, The things which are impossible with men are possible with God."], [28, "Then Peter said, Lo, we have left all, and followed thee."], [29, "And he said unto them, Verily I say unto you, There is no man that hath left house, or parents, or brethren, or wife, or children, for the kingdom of God’s sake,"], [30, "Who shall not receive manifold more in this present time, and in the world to come life everlasting."], [31, "Then he took unto him the twelve, and said unto them, Behold, we go up to Jerusalem, and all things that are written by the prophets concerning the Son of man shall be accomplished."], [32, "For he shall be delivered unto the Gentiles, and shall be mocked, and spitefully entreated, and spitted on:"], [33, "And they shall scourge him, and put him to death: and the third day he shall rise again."], [34, "And they understood none of these things: and this saying was hid from them, neither knew they the things which were spoken."], [35, "And it came to pass, that as he was come nigh unto Jericho, a certain blind man sat by the way side begging:"], [36, "And hearing the multitude pass by, he asked what it meant."], [37, "And they told him, that Jesus of Nazareth passeth by."], [38, "And he cried, saying, Jesus, thou son of David, have mercy on me."], [39, "And they which went before rebuked him, that he should hold his peace: but he cried so much the more, Thou son of David, have mercy on me."], [40, "And Jesus stood, and commanded him to be brought unto him: and when he was come near, he asked him,"], [41, "Saying, What wilt thou that I shall do unto thee? And he said, Lord, that I may receive my sight."], [42, "And Jesus said unto him, Receive thy sight: thy faith hath saved thee."], [43, "And immediately he received his sight, and followed him, glorifying God: and all the people, when they saw it, gave praise unto God."]], "Psalms 7": [[1, "O LORD my God, in thee do I put my trust: save me from all them that persecute me, and deliver me:"], [2, "Lest he tear my soul like a lion, rending it in pieces, while there is none to deliver."], [3, "O LORD my God, if I have done this; if there be iniquity in my hands;"], [4, "If I have rewarded evil unto him that was at peace with me; (yea, I have delivered him that without cause is mine enemy:)"], [5, "Let the enemy persecute my soul, and take it; yea, let him tread down my life upon the earth, and lay mine honour in the dust. Selah."], [6, "Arise, O LORD, in thine anger, lift up thyself because of the rage of mine enemies: and awake for me to the judgment that thou hast commanded."], [7, "So shall the congregation of the people compass thee about: for their sakes therefore return thou on high."], [8, "The LORD shall judge the people: judge me, O LORD, according to my righteousness, and according to mine integrity that is in me."], [9, "Oh let the wickedness of the wicked come to an end; but establish the just: for the righteous God trieth the hearts and reins."], [10, "My defence is of God, which saveth the upright in heart."], [11, "God judgeth the righteous, and God is angry with the wicked every day."], [12, "If he turn not, he will whet his sword; he hath bent his bow, and made it ready."], [13, "He hath also prepared for him the instruments of death; he ordaineth his arrows against the persecutors."], [14, "Behold, he travaileth with iniquity, and hath conceived mischief, and brought forth falsehood."], [15, "He made a pit, and digged it, and is fallen into the ditch which he made."], [16, "His mischief shall return upon his own head, and his violent dealing shall come down upon his own pate."], [17, "I will praise the LORD according to his righteousness: and will sing praise to the name of the LORD most high."]], "Romans 2": [[1, "Therefore thou art inexcusable, O man, whosoever thou art that judgest: for wherein thou judgest another, thou condemnest thyself; for thou that judgest doest the same things."], [2, "But we are sure that the judgment of God is according to truth against them which commit such things."], [3, "And thinkest thou this, O man, that judgest them which do such things, and doest the same, that thou shalt escape the judgment of God?"], [4, "Or despisest thou the riches of his goodness and forbearance and longsuffering; not knowing that the goodness of God leadeth thee to repentance?"], [5, "But after thy hardness and impenitent heart treasurest up unto thyself wrath against the day of wrath and revelation of the righteous judgment of God;"], [6, "Who will render to every man according to his deeds:"], [7, "To them who by patient continuance in well doing seek for glory and honour and immortality, eternal life:"], [8, "But unto them that are contentious, and do not obey the truth, but obey unrighteousness, indignation and wrath,"], [9, "Tribulation and anguish, upon every soul of man that doeth evil, of the Jew first, and also of the Gentile;"], [10, "But glory, honour, and peace, to every man that worketh good, to the Jew first, and also to the Gentile:"], [11, "For there is no respect of persons with God."], [12, "For as many as have sinned without law shall also perish without law: and as many as have sinned in the law shall be judged by the law;"], [13, "(For not the hearers of the law are just before God, but the doers of the law shall be justified."], [14, "For when the Gentiles, which have not the law, do by nature the things contained in the law, these, having not the law, are a law unto themselves:"], [15, "Which shew the work of the law written in their hearts, their conscience also bearing witness, and their thoughts the mean while accusing or else excusing one another;)"], [16, "In the day when God shall judge the secrets of men by Jesus Christ according to my gospel."], [17, "Behold, thou art called a Jew, and restest in the law, and makest thy boast of God,"], [18, "And knowest his will, and approvest the things that are more excellent, being instructed out of the law;"], [19, "And art confident that thou thyself art a guide of the blind, a light of them which are in darkness,"], [20, "An instructor of the foolish, a teacher of babes, which hast the form of knowledge and of the truth in the law."], [21, "Thou therefore which teachest another, teachest thou not thyself? thou that preachest a man should not steal, dost thou steal?"], [22, "Thou that sayest a man should not commit adultery, dost thou commit adultery? thou that abhorrest idols, dost thou commit sacrilege?"], [23, "Thou that makest thy boast of the law, through breaking the law dishonourest thou God?"], [24, "For the name of God is blasphemed among the Gentiles through you, as it is written."], [25, "For circumcision verily profiteth, if thou keep the law: but if thou be a breaker of the law, thy circumcision is made uncircumcision."], [26, "Therefore if the uncircumcision keep the righteousness of the law, shall not his uncircumcision be counted for circumcision?"], [27, "And shall not uncircumcision which is by nature, if it fulfil the law, judge thee, who by the letter and circumcision dost transgress the law?"], [28, "For he is not a Jew, which is one outwardly; neither is that circumcision, which is outward in the flesh:"], [29, "But he is a Jew, which is one inwardly; and circumcision is that of the heart, in the spirit, and not in the letter; whose praise is not of men, but of God."]], "Matthew 24": [[1, "And Jesus went out, and departed from the temple: and his disciples came to him for to shew him the buildings of the temple."], [2, "And Jesus said unto them, See ye not all these things? verily I say unto you, There shall not be left here one stone upon another, that shall not be thrown down."], [3, "And as he sat upon the mount of Olives, the disciples came unto him privately, saying, Tell us, when shall these things be? and what shall be the sign of thy coming, and of the end of the world?"], [4, "And Jesus answered and said unto them, Take heed that no man deceive you."], [5, "For many shall come in my name, saying, I am Christ; and shall deceive many."], [6, "And ye shall hear of wars and rumours of wars: see that ye be not troubled: for all these things must come to pass, but the end is not yet."], [7, "For nation shall rise against nation, and kingdom against kingdom: and there shall be famines, and pestilences, and earthquakes, in divers places."], [8, "All these are the beginning of sorrows."], [9, "Then shall they deliver you up to be afflicted, and shall kill you: and ye shall be hated of all nations for my name’s sake."], [10, "And then shall many be offended, and shall betray one another, and shall hate one another."], [11, "And many false prophets shall rise, and shall deceive many."], [12, "And because iniquity shall abound, the love of many shall wax cold."], [13, "But he that shall endure unto the end, the same shall be saved."], [14, "And this gospel of the kingdom shall be preached in all the world for a witness unto all nations; and then shall the end come."], [15, "When ye therefore shall see the abomination of desolation, spoken of by Daniel the prophet, stand in the holy place, (whoso readeth, let him understand:)"], [16, "Then let them which be in Judaea flee into the mountains:"], [17, "Let him which is on the housetop not come down to take any thing out of his house:"], [18, "Neither let him which is in the field return back to take his clothes."], [19, "And woe unto them that are with child, and to them that give suck in those days!"], [20, "But pray ye that your flight be not in the winter, neither on the sabbath day:"], [21, "For then shall be great tribulation, such as was not since the beginning of the world to this time, no, nor ever shall be."], [22, "And except those days should be shortened, there should no flesh be saved: but for the elect’s sake those days shall be shortened."], [23, "Then if any man shall say unto you, Lo, here is Christ, or there; believe it not."], [24, "For there shall arise false Christs, and false prophets, and shall shew great signs and wonders; insomuch that, if it were possible, they shall deceive the very elect."], [25, "Behold, I have told you before."], [26, "Wherefore if they shall say unto you, Behold, he is in the desert; go not forth: behold, he is in the secret chambers; believe it not."], [27, "For as the lightning cometh out of the east, and shineth even unto the west; so shall also the coming of the Son of man be."], [28, "For wheresoever the carcase is, there will the eagles be gathered together."], [29, "Immediately after the tribulation of those days shall the sun be darkened, and the moon shall not give her light, and the stars shall fall from heaven, and the powers of the heavens shall be shaken:"], [30, "And then shall appear the sign of the Son of man in heaven: and then shall all the tribes of the earth mourn, and they shall see the Son of man coming in the clouds of heaven with power and great glory."], [31, "And he shall send his angels with a great sound of a trumpet, and they shall gather together his elect from the four winds, from one end of heaven to the other."], [32, "Now learn a parable of the fig tree; When his branch is yet tender, and putteth forth leaves, ye know that summer is nigh:"], [33, "So likewise ye, when ye shall see all these things, know that it is near, even at the doors."], [34, "Verily I say unto you, This generation shall not pass, till all these things be fulfilled."], [35, "Heaven and earth shall pass away, but my words shall not pass away."], [36, "But of that day and hour knoweth no man, no, not the angels of heaven, but my Father only."], [37, "But as the days of Noe were, so shall also the coming of the Son of man be."], [38, "For as in the days that were before the flood they were eating and drinking, marrying and giving in marriage, until the day that Noe entered into the ark,"], [39, "And knew not until the flood came, and took them all away; so shall also the coming of the Son of man be."], [40, "Then shall two be in the field; the one shall be taken, and the other left."], [41, "Two women shall be grinding at the mill; the one shall be taken, and the other left."], [42, "Watch therefore: for ye know not what hour your Lord doth come."], [43, "But know this, that if the goodman of the house had known in what watch the thief would come, he would have watched, and would not have suffered his house to be broken up."], [44, "Therefore be ye also ready: for in such an hour as ye think not the Son of man cometh."], [45, "Who then is a faithful and wise servant, whom his lord hath made ruler over his household, to give them meat in due season?"], [46, "Blessed is that servant, whom his lord when he cometh shall find so doing."], [47, "Verily I say unto you, That he shall make him ruler over all his goods."], [48, "But and if that evil servant shall say in his heart, My lord delayeth his coming;"], [49, "And shall begin to smite his fellowservants, and to eat and drink with the drunken;"], [50, "The lord of that servant shall come in a day when he looketh not for him, and in an hour that he is not aware of,"], [51, "And shall cut him asunder, and appoint him his portion with the hypocrites: there shall be weeping and gnashing of teeth."]], "1 Thessalonians 4": [[1, "Furthermore then we beseech you, brethren, and exhort you by the Lord Jesus, that as ye have received of us how ye ought to walk and to please God, so ye would abound more and more."], [2, "For ye know what commandments we gave you by the Lord Jesus."], [3, "For this is the will of God, even your sanctification, that ye should abstain from fornication:"], [4, "That every one of you should know how to possess his vessel in sanctification and honour;"], [5, "Not in the lust of concupiscence, even as the Gentiles which know not God:"], [6, "That no man go beyond and defraud his brother in any matter: because that the Lord is the avenger of all such, as we also have forewarned you and testified."], [7, "For God hath not called us unto uncleanness, but unto holiness."], [8, "He therefore that despiseth, despiseth not man, but God, who hath also given unto us his holy Spirit."], [9, "But as touching brotherly love ye need not that I write unto you: for ye yourselves are taught of God to love one another."], [10, "And indeed ye do it toward all the brethren which are in all Macedonia: but we beseech you, brethren, that ye increase more and more;"], [11, "And that ye study to be quiet, and to do your own business, and to work with your own hands, as we commanded you;"], [12, "That ye may walk honestly toward them that are without, and that ye may have lack of nothing."], [13, "But I would not have you to be ignorant, brethren, concerning them which are asleep, that ye sorrow not, even as others which have no hope."], [14, "For if we believe that Jesus died and rose again, even so them also which sleep in Jesus will God bring with him."], [15, "For this we say unto you by the word of the Lord, that we which are alive and remain unto the coming of the Lord shall not prevent them which are asleep."], [16, "For the Lord himself shall descend from heaven with a shout, with the voice of the archangel, and with the trump of God: and the dead in Christ shall rise first:"], [17, "Then we which are alive and remain shall be caught up together with them in the clouds, to meet the Lord in the air: and so shall we ever be with the Lord."], [18, "Wherefore comfort one another with these words."]], "Psalms 8": [[1, "O LORD, our Lord, how excellent is thy name in all the earth! who hast set thy glory above the heavens."], [2, "Out of the mouth of babes and sucklings hast thou ordained strength because of thine enemies, that thou mightest still the enemy and the avenger."], [3, "When I consider thy heavens, the work of thy fingers, the moon and the stars, which thou hast ordained;"], [4, "What is man, that thou art mindful of him? and the son of man, that thou visitest him?"], [5, "For thou hast made him a little lower than the angels, and hast crowned him with glory and honour."], [6, "Thou madest him to have dominion over the works of thy hands; thou hast put all things under his feet:"], [7, "All sheep and oxen, yea, and the beasts of the field;"], [8, "The fowl of the air, and the fish of the sea, and whatsoever passeth through the paths of the seas."], [9, "O LORD our Lord, how excellent is thy name in all the earth!"]], "Hebrews 2": [[1, "Therefore we ought to give the more earnest heed to the things which we have heard, lest at any time we should let them slip."], [2, "For if the word spoken by angels was stedfast, and every transgression and disobedience received a just recompence of reward;"], [3, "How shall we escape, if we neglect so great salvation; which at the first began to be spoken by the Lord, and was confirmed unto us by them that heard him;"], [4, "God also bearing them witness, both with signs and wonders, and with divers miracles, and gifts of the Holy Ghost, according to his own will?"], [5, "For unto the angels hath he not put in subjection the world to come, whereof we speak."], [6, "But one in a certain place testified, saying, What is man, that thou art mindful of him? or the son of man, that thou visitest him?"], [7, "Thou madest him a little lower than the angels; thou crownedst him with glory and honour, and didst set him over the works of thy hands:"], [8, "Thou hast put all things in subjection under his feet. For in that he put all in subjection under him, he left nothing that is not put under him. But now we see not yet all things put under him."], [9, "But we see Jesus, who was made a little lower than the angels for the suffering of death, crowned with glory and honour; that he by the grace of God should taste death for every man."], [10, "For it became him, for whom are all things, and by whom are all things, in bringing many sons unto glory, to make the captain of their salvation perfect through sufferings."], [11, "For both he that sanctifieth and they who are sanctified are all of one: for which cause he is not ashamed to call them brethren,"], [12, "Saying, I will declare thy name unto my brethren, in the midst of the church will I sing praise unto thee."], [13, "And again, I will put my trust in him. And again, Behold I and the children which God hath given me."], [14, "Forasmuch then as the children are partakers of flesh and blood, he also himself likewise took part of the same; that through death he might destroy him that had the power of death, that is, the devil;"], [15, "And deliver them who through fear of death were all their lifetime subject to bondage."], [16, "For verily he took not on him the nature of angels; but he took on him the seed of Abraham."], [17, "Wherefore in all things it behoved him to be made like unto his brethren, that he might be a merciful and faithful high priest in things pertaining to God, to make reconciliation for the sins of the people."], [18, "For in that he himself hath suffered being tempted, he is able to succour them that are tempted."]], "Matthew 21": [[1, "And when they drew nigh unto Jerusalem, and were come to Bethphage, unto the mount of Olives, then sent Jesus two disciples,"], [2, "Saying unto them, Go into the village over against you, and straightway ye shall find an ass tied, and a colt with her: loose them, and bring them unto me."], [3, "And if any man say ought unto you, ye shall say, The Lord hath need of them; and straightway he will send them."], [4, "All this was done, that it might be fulfilled which was spoken by the prophet, saying,"], [5, "Tell ye the daughter of Sion, Behold, thy King cometh unto thee, meek, and sitting upon an ass, and a colt the foal of an ass."], [6, "And the disciples went, and did as Jesus commanded them,"], [7, "And brought the ass, and the colt, and put on them their clothes, and they set him thereon."], [8, "And a very great multitude spread their garments in the way; others cut down branches from the trees, and strawed them in the way."], [9, "And the multitudes that went before, and that followed, cried, saying, Hosanna to the son of David: Blessed is he that cometh in the name of the Lord; Hosanna in the highest."], [10, "And when he was come into Jerusalem, all the city was moved, saying, Who is this?"], [11, "And the multitude said, This is Jesus the prophet of Nazareth of Galilee."], [12, "And Jesus went into the temple of God, and cast out all them that sold and bought in the temple, and overthrew the tables of the moneychangers, and the seats of them that sold doves,"], [13, "And said unto them, It is written, My house shall be called the house of prayer; but ye have made it a den of thieves."], [14, "And the blind and the lame came to him in the temple; and he healed them."], [15, "And when the chief priests and scribes saw the wonderful things that he did, and the children crying in the temple, and saying, Hosanna to the son of David; they were sore displeased,"], [16, "And said unto him, Hearest thou what these say? And Jesus saith unto them, Yea; have ye never read, Out of the mouth of babes and sucklings thou hast perfected praise?"], [17, "And he left them, and went out of the city into Bethany; and he lodged there."], [18, "Now in the morning as he returned into the city, he hungered."], [19, "And when he saw a fig tree in the way, he came to it, and found nothing thereon, but leaves only, and said unto it, Let no fruit grow on thee henceforward for ever. And presently the fig tree withered away."], [20, "And when the disciples saw it, they marvelled, saying, How soon is the fig tree withered away!"], [21, "Jesus answered and said unto them, Verily I say unto you, If ye have faith, and doubt not, ye shall not only do this which is done to the fig tree, but also if ye shall say unto this mountain, Be thou removed, and be thou cast into the sea; it shall be done."], [22, "And all things, whatsoever ye shall ask in prayer, believing, ye shall receive."], [23, "And when he was come into the temple, the chief priests and the elders of the people came unto him as he was teaching, and said, By what authority doest thou these things? and who gave thee this authority?"], [24, "And Jesus answered and said unto them, I also will ask you one thing, which if ye tell me, I in like wise will tell you by what authority I do these things."], [25, "The baptism of John, whence was it? from heaven, or of men? And they reasoned with themselves, saying, If we shall say, From heaven; he will say unto us, Why did ye not then believe him?"], [26, "But if we shall say, Of men; we fear the people; for all hold John as a prophet."], [27, "And they answered Jesus, and said, We cannot tell. And he said unto them, Neither tell I you by what authority I do these things."], [28, "But what think ye? A certain man had two sons; and he came to the first, and said, Son, go work to day in my vineyard."], [29, "He answered and said, I will not: but afterward he repented, and went."], [30, "And he came to the second, and said likewise. And he answered and said, I go, sir: and went not."], [31, "Whether of them twain did the will of his father? They say unto him, The first. Jesus saith unto them, Verily I say unto you, That the publicans and the harlots go into the kingdom of God before you."], [32, "For John came unto you in the way of righteousness, and ye believed him not: but the publicans and the harlots believed him: and ye, when ye had seen it, repented not afterward, that ye might believe him."], [33, "Hear another parable: There was a certain householder, which planted a vineyard, and hedged it round about, and digged a winepress in it, and built a tower, and let it out to husbandmen, and went into a far country:"], [34, "And when the time of the fruit drew near, he sent his servants to the husbandmen, that they might receive the fruits of it."], [35, "And the husbandmen took his servants, and beat one, and killed another, and stoned another."], [36, "Again, he sent other servants more than the first: and they did unto them likewise."], [37, "But last of all he sent unto them his son, saying, They will reverence my son."], [38, "But when the husbandmen saw the son, they said among themselves, This is the heir; come, let us kill him, and let us seize on his inheritance."], [39, "And they caught him, and cast him out of the vineyard, and slew him."], [40, "When the lord therefore of the vineyard cometh, what will he do unto those husbandmen?"], [41, "They say unto him, He will miserably destroy those wicked men, and will let out his vineyard unto other husbandmen, which shall render him the fruits in their seasons."], [42, "Jesus saith unto them, Did ye never read in the scriptures, The stone which the builders rejected, the same is become the head of the corner: this is the Lord’s doing, and it is marvellous in our eyes?"], [43, "Therefore say I unto you, The kingdom of God shall be taken from you, and given to a nation bringing forth the fruits thereof."], [44, "And whosoever shall fall on this stone shall be broken: but on whomsoever it shall fall, it will grind him to powder."], [45, "And when the chief priests and Pharisees had heard his parables, they perceived that he spake of them."], [46, "But when they sought to lay hands on him, they feared the multitude, because they took him for a prophet."]], "Colossians 1": [[1, "Paul, an apostle of Jesus Christ by the will of God, and Timotheus our brother,"], [2, "To the saints and faithful brethren in Christ which are at Colosse: Grace be unto you, and peace, from God our Father and the Lord Jesus Christ."], [3, "We give thanks to God and the Father of our Lord Jesus Christ, praying always for you,"], [4, "Since we heard of your faith in Christ Jesus, and of the love which ye have to all the saints,"], [5, "For the hope which is laid up for you in heaven, whereof ye heard before in the word of the truth of the gospel;"], [6, "Which is come unto you, as it is in all the world; and bringeth forth fruit, as it doth also in you, since the day ye heard of it, and knew the grace of God in truth:"], [7, "As ye also learned of Epaphras our dear fellowservant, who is for you a faithful minister of Christ;"], [8, "Who also declared unto us your love in the Spirit."], [9, "For this cause we also, since the day we heard it, do not cease to pray for you, and to desire that ye might be filled with the knowledge of his will in all wisdom and spiritual understanding;"], [10, "That ye might walk worthy of the Lord unto all pleasing, being fruitful in every good work, and increasing in the knowledge of God;"], [11, "Strengthened with all might, according to his glorious power, unto all patience and longsuffering with joyfulness;"], [12, "Giving thanks unto the Father, which hath made us meet to be partakers of the inheritance of the saints in light:"], [13, "Who hath delivered us from the power of darkness, and hath translated us into the kingdom of his dear Son:"], [14, "In whom we have redemption through his blood, even the forgiveness of sins:"], [15, "Who is the image of the invisible God, the firstborn of every creature:"], [16, "For by him were all things created, that are in heaven, and that are in earth, visible and invisible, whether they be thrones, or dominions, or principalities, or powers: all things were created by him, and for him:"], [17, "And he is before all things, and by him all things consist."], [18, "And he is the head of the body, the church: who is the beginning, the firstborn from the dead; that in all things he might have the preeminence."], [19, "For it pleased the Father that in him should all fulness dwell;"], [20, "And, having made peace through the blood of his cross, by him to reconcile all things unto himself; by him, I say, whether they be things in earth, or things in heaven."], [21, "And you, that were sometime alienated and enemies in your mind by wicked works, yet now hath he reconciled"], [22, "In the body of his flesh through death, to present you holy and unblameable and unreproveable in his sight:"], [23, "If ye continue in the faith grounded and settled, and be not moved away from the hope of the gospel, which ye have heard, and which was preached to every creature which is under heaven; whereof I Paul am made a minister;"], [24, "Who now rejoice in my sufferings for you, and fill up that which is behind of the afflictions of Christ in my flesh for his body’s sake, which is the church:"], [25, "Whereof I am made a minister, according to the dispensation of God which is given to me for you, to fulfil the word of God;"], [26, "Even the mystery which hath been hid from ages and from generations, but now is made manifest to his saints:"], [27, "To whom God would make known what is the riches of the glory of this mystery among the Gentiles; which is Christ in you, the hope of glory:"], [28, "Whom we preach, warning every man, and teaching every man in all wisdom; that we may present every man perfect in Christ Jesus:"], [29, "Whereunto I also labour, striving according to his working, which worketh in me mightily."]], "John 1": [[1, "In the beginning was the Word, and the Word was with God, and the Word was God."], [2, "The same was in the beginning with God."], [3, "All things were made by him; and without him was not any thing made that was made."], [4, "In him was life; and the life was the light of men."], [5, "And the light shineth in darkness; and the darkness comprehended it not."], [6, "There was a man sent from God, whose name was John."], [7, "The same came for a witness, to bear witness of the Light, that all men through him might believe."], [8, "He was not that Light, but was sent to bear witness of that Light."], [9, "That was the true Light, which lighteth every man that cometh into the world."], [10, "He was in the world, and the world was made by him, and the world knew him not."], [11, "He came unto his own, and his own received him not."], [12, "But as many as received him, to them gave he power to become the sons of God, even to them that believe on his name:"], [13, "Which were born, not of blood, nor of the will of the flesh, nor of the will of man, but of God."], [14, "And the Word was made flesh, and dwelt among us, (and we beheld his glory, the glory as of the only begotten of the Father,) full of grace and truth."], [15, "John bare witness of him, and cried, saying, This was he of whom I spake, He that cometh after me is preferred before me: for he was before me."], [16, "And of his fulness have all we received, and grace for grace."], [17, "For the law was given by Moses, but grace and truth came by Jesus Christ."], [18, "No man hath seen God at any time; the only begotten Son, which is in the bosom of the Father, he hath declared him."], [19, "And this is the record of John, when the Jews sent priests and Levites from Jerusalem to ask him, Who art thou?"], [20, "And he confessed, and denied not; but confessed, I am not the Christ."], [21, "And they asked him, What then? Art thou Elias? And he saith, I am not. Art thou that prophet? And he answered, No."], [22, "Then said they unto him, Who art thou? that we may give an answer to them that sent us. What sayest thou of thyself?"], [23, "He said, I am the voice of one crying in the wilderness, Make straight the way of the Lord, as said the prophet Esaias."], [24, "And they which were sent were of the Pharisees."], [25, "And they asked him, and said unto him, Why baptizest thou then, if thou be not that Christ, nor Elias, neither that prophet?"], [26, "John answered them, saying, I baptize with water: but there standeth one among you, whom ye know not;"], [27, "He it is, who coming after me is preferred before me, whose shoe’s latchet I am not worthy to unloose."], [28, "These things were done in Bethabara beyond Jordan, where John was baptizing."], [29, "The next day John seeth Jesus coming unto him, and saith, Behold the Lamb of God, which taketh away the sin of the world."], [30, "This is he of whom I said, After me cometh a man which is preferred before me: for he was before me."], [31, "And I knew him not: but that he should be made manifest to Israel, therefore am I come baptizing with water."], [32, "And John bare record, saying, I saw the Spirit descending from heaven like a dove, and it abode upon him."], [33, "And I knew him not: but he that sent me to baptize with water, the same said unto me, Upon whom thou shalt see the Spirit descending, and remaining on him, the same is he which baptizeth with the Holy Ghost."], [34, "And I saw, and bare record that this is the Son of God."], [35, "Again the next day after John stood, and two of his disciples;"], [36, "And looking upon Jesus as he walked, he saith, Behold the Lamb of God!"], [37, "And the two disciples heard him speak, and they followed Jesus."], [38, "Then Jesus turned, and saw them following, and saith unto them, What seek ye? They said unto him, Rabbi, (which is to say, being interpreted, Master,) where dwellest thou?"], [39, "He saith unto them, Come and see. They came and saw where he dwelt, and abode with him that day: for it was about the tenth hour."], [40, "One of the two which heard John speak, and followed him, was Andrew, Simon Peter’s brother."], [41, "He first findeth his own brother Simon, and saith unto him, We have found the Messias, which is, being interpreted, the Christ."], [42, "And he brought him to Jesus. And when Jesus beheld him, he said, Thou art Simon the son of Jona: thou shalt be called Cephas, which is by interpretation, A stone."], [43, "The day following Jesus would go forth into Galilee, and findeth Philip, and saith unto him, Follow me."], [44, "Now Philip was of Bethsaida, the city of Andrew and Peter."], [45, "Philip findeth Nathanael, and saith unto him, We have found him, of whom Moses in the law, and the prophets, did write, Jesus of Nazareth, the son of Joseph."], [46, "And Nathanael said unto him, Can there any good thing come out of Nazareth? Philip saith unto him, Come and see."], [47, "Jesus saw Nathanael coming to him, and saith of him, Behold an Israelite indeed, in whom is no guile!"], [48, "Nathanael saith unto him, Whence knowest thou me? Jesus answered and said unto him, Before that Philip called thee, when thou wast under the fig tree, I saw thee."], [49, "Nathanael answered and saith unto him, Rabbi, thou art the Son of God; thou art the King of Israel."], [50, "Jesus answered and said unto him, Because I said unto thee, I saw thee under the fig tree, believest thou? thou shalt see greater things than these."], [51, "And he saith unto him, Verily, verily, I say unto you, Hereafter ye shall see heaven open, and the angels of God ascending and descending upon the Son of man."]], "Genesis 4": [[1, "And Adam knew Eve his wife; and she conceived, and bare Cain, and said, I have gotten a man from the LORD."], [2, "And she again bare his brother Abel. And Abel was a keeper of sheep, but Cain was a tiller of the ground."], [3, "And in process of time it came to pass, that Cain brought of the fruit of the ground an offering unto the LORD."], [4, "And Abel, he also brought of the firstlings of his flock and of the fat thereof. And the LORD had respect unto Abel and to his offering:"], [5, "But unto Cain and to his offering he had not respect. And Cain was very wroth, and his countenance fell."], [6, "And the LORD said unto Cain, Why art thou wroth? and why is thy countenance fallen?"], [7, "If thou doest well, shalt thou not be accepted? and if thou doest not well, sin lieth at the door. And unto thee shall be his desire, and thou shalt rule over him."], [8, "And Cain talked with Abel his brother: and it came to pass, when they were in the field, that Cain rose up against Abel his brother, and slew him."], [9, "And the LORD said unto Cain, Where is Abel thy brother? And he said, I know not: Am I my brother’s keeper?"], [10, "And he said, What hast thou done? the voice of thy brother’s blood crieth unto me from the ground."], [11, "And now art thou cursed from the earth, which hath opened her mouth to receive thy brother’s blood from thy hand;"], [12, "When thou tillest the ground, it shall not henceforth yield unto thee her strength; a fugitive and a vagabond shalt thou be in the earth."], [13, "And Cain said unto the LORD, My punishment is greater than I can bear."], [14, "Behold, thou hast driven me out this day from the face of the earth; and from thy face shall I be hid; and I shall be a fugitive and a vagabond in the earth; and it shall come to pass, that every one that findeth me shall slay me."], [15, "And the LORD said unto him, Therefore whosoever slayeth Cain, vengeance shall be taken on him sevenfold. And the LORD set a mark upon Cain, lest any finding him should kill him."], [16, "And Cain went out from the presence of the LORD, and dwelt in the land of Nod, on the east of Eden."], [17, "And Cain knew his wife; and she conceived, and bare Enoch: and he builded a city, and called the name of the city, after the name of his son, Enoch."], [18, "And unto Enoch was born Irad: and Irad begat Mehujael: and Mehujael begat Methusael: and Methusael begat Lamech."], [19, "And Lamech took unto him two wives: the name of the one was Adah, and the name of the other Zillah."], [20, "And Adah bare Jabal: he was the father of such as dwell in tents, and of such as have cattle."], [21, "And his brother’s name was Jubal: he was the father of all such as handle the harp and organ."], [22, "And Zillah, she also bare Tubalcain, an instructer of every artificer in brass and iron: and the sister of Tubalcain was Naamah."], [23, "And Lamech said unto his wives, Adah and Zillah, Hear my voice; ye wives of Lamech, hearken unto my speech: for I have slain a man to my wounding, and a young man to my hurt."], [24, "If Cain shall be avenged sevenfold, truly Lamech seventy and sevenfold."], [25, "And Adam knew his wife again; and she bare a son, and called his name Seth: For God, said she, hath appointed me another seed instead of Abel, whom Cain slew."], [26, "And to Seth, to him also there was born a son; and he called his name Enos: then began men to call upon the name of the LORD."]], "Ephesians 1": [[1, "Paul, an apostle of Jesus Christ by the will of God, to the saints which are at Ephesus, and to the faithful in Christ Jesus:"], [2, "Grace be to you, and peace, from God our Father, and from the Lord Jesus Christ."], [3, "Blessed be the God and Father of our Lord Jesus Christ, who hath blessed us with all spiritual blessings in heavenly places in Christ:"], [4, "According as he hath chosen us in him before the foundation of the world, that we should be holy and without blame before him in love:"], [5, "Having predestinated us unto the adoption of children by Jesus Christ to himself, according to the good pleasure of his will,"], [6, "To the praise of the glory of his grace, wherein he hath made us accepted in the beloved."], [7, "In whom we have redemption through his blood, the forgiveness of sins, according to the riches of his grace;"], [8, "Wherein he hath abounded toward us in all wisdom and prudence;"], [9, "Having made known unto us the mystery of his will, according to his good pleasure which he hath purposed in himself:"], [10, "That in the dispensation of the fulness of times he might gather together in one all things in Christ, both which are in heaven, and which are on earth; even in him:"], [11, "In whom also we have obtained an inheritance, being predestinated according to the purpose of him who worketh all things after the counsel of his own will:"], [12, "That we should be to the praise of his glory, who first trusted in Christ."], [13, "In whom ye also trusted, after that ye heard the word of truth, the gospel of your salvation: in whom also after that ye believed, ye were sealed with that holy Spirit of promise,"], [14, "Which is the earnest of our inheritance until the redemption of the purchased possession, unto the praise of his glory."], [15, "Wherefore I also, after I heard of your faith in the Lord Jesus, and love unto all the saints,"], [16, "Cease not to give thanks for you, making mention of you in my prayers;"], [17, "That the God of our Lord Jesus Christ, the Father of glory, may give unto you the spirit of wisdom and revelation in the knowledge of him:"], [18, "The eyes of your understanding being enlightened; that ye may know what is the hope of his calling, and what the riches of the glory of his inheritance in the saints,"], [19, "And what is the exceeding greatness of his power to us-ward who believe, according to the working of his mighty power,"], [20, "Which he wrought in Christ, when he raised him from the dead, and set him at his own right hand in the heavenly places,"], [21, "Far above all principality, and power, and might, and dominion, and every name that is named, not only in this world, but also in that which is to come:"], [22, "And hath put all things under his feet, and gave him to be the head over all things to the church,"], [23, "Which is his body, the fulness of him that filleth all in all."]], "Philippians 2": [[1, "If there be therefore any consolation in Christ, if any comfort of love, if any fellowship of the Spirit, if any bowels and mercies,"], [2, "Fulfil ye my joy, that ye be likeminded, having the same love, being of one accord, of one mind."], [3, "Let nothing be done through strife or vainglory; but in lowliness of mind let each esteem other better than themselves."], [4, "Look not every man on his own things, but every man also on the things of others."], [5, "Let this mind be in you, which was also in Christ Jesus:"], [6, "Who, being in the form of God, thought it not robbery to be equal with God:"], [7, "But made himself of no reputation, and took upon him the form of a servant, and was made in the likeness of men:"], [8, "And being found in fashion as a man, he humbled himself, and became obedient unto death, even the death of the cross."], [9, "Wherefore God also hath highly exalted him, and given him a name which is above every name:"], [10, "That at the name of Jesus every knee should bow, of things in heaven, and things in earth, and things under the earth;"], [11, "And that every tongue should confess that Jesus Christ is Lord, to the glory of God the Father."], [12, "Wherefore, my beloved, as ye have always obeyed, not as in my presence only, but now much more in my absence, work out your own salvation with fear and trembling."], [13, "For it is God which worketh in you both to will and to do of his good pleasure."], [14, "Do all things without murmurings and disputings:"], [15, "That ye may be blameless and harmless, the sons of God, without rebuke, in the midst of a crooked and perverse nation, among whom ye shine as lights in the world;"], [16, "Holding forth the word of life; that I may rejoice in the day of Christ, that I have not run in vain, neither laboured in vain."], [17, "Yea, and if I be offered upon the sacrifice and service of your faith, I joy, and rejoice with you all."], [18, "For the same cause also do ye joy, and rejoice with me."], [19, "But I trust in the Lord Jesus to send Timotheus shortly unto you, that I also may be of good comfort, when I know your state."], [20, "For I have no man likeminded, who will naturally care for your state."], [21, "For all seek their own, not the things which are Jesus Christ’s."], [22, "But ye know the proof of him, that, as a son with the father, he hath served with me in the gospel."], [23, "Him therefore I hope to send presently, so soon as I shall see how it will go with me."], [24, "But I trust in the Lord that I also myself shall come shortly."], [25, "Yet I supposed it necessary to send to you Epaphroditus, my brother, and companion in labour, and fellowsoldier, but your messenger, and he that ministered to my wants."], [26, "For he longed after you all, and was full of heaviness, because that ye had heard that he had been sick."], [27, "For indeed he was sick nigh unto death: but God had mercy on him; and not on him only, but on me also, lest I should have sorrow upon sorrow."], [28, "I sent him therefore the more carefully, that, when ye see him again, ye may rejoice, and that I may be the less sorrowful."], [29, "Receive him therefore in the Lord with all gladness; and hold such in reputation:"], [30, "Because for the work of Christ he was nigh unto death, not regarding his life, to supply your lack of service toward me."]], "John 8": [[1, "Jesus went unto the mount of Olives."], [2, "And early in the morning he came again into the temple, and all the people came unto him; and he sat down, and taught them."], [3, "And the scribes and Pharisees brought unto him a woman taken in adultery; and when they had set her in the midst,"], [4, "They say unto him, Master, this woman was taken in adultery, in the very act."], [5, "Now Moses in the law commanded us, that such should be stoned: but what sayest thou?"], [6, "This they said, tempting him, that they might have to accuse him. But Jesus stooped down, and with his finger wrote on the ground, as though he heard them not."], [7, "So when they continued asking him, he lifted up himself, and said unto them, He that is without sin among you, let him first cast a stone at her."], [8, "And again he stooped down, and wrote on the ground."], [9, "And they which heard it, being convicted by their own conscience, went out one by one, beginning at the eldest, even unto the last: and Jesus was left alone, and the woman standing in the midst."], [10, "When Jesus had lifted up himself, and saw none but the woman, he said unto her, Woman, where are those thine accusers? hath no man condemned thee?"], [11, "She said, No man, Lord. And Jesus said unto her, Neither do I condemn thee: go, and sin no more."], [12, "Then spake Jesus again unto them, saying, I am the light of the world: he that followeth me shall not walk in darkness, but shall have the light of life."], [13, "The Pharisees therefore said unto him, Thou bearest record of thyself; thy record is not true."], [14, "Jesus answered and said unto them, Though I bear record of myself, yet my record is true: for I know whence I came, and whither I go; but ye cannot tell whence I come, and whither I go."], [15, "Ye judge after the flesh; I judge no man."], [16, "And yet if I judge, my judgment is true: for I am not alone, but I and the Father that sent me."], [17, "It is also written in your law, that the testimony of two men is true."], [18, "I am one that bear witness of myself, and the Father that sent me beareth witness of me."], [19, "Then said they unto him, Where is thy Father? Jesus answered, Ye neither know me, nor my Father: if ye had known me, ye should have known my Father also."], [20, "These words spake Jesus in the treasury, as he taught in the temple: and no man laid hands on him; for his hour was not yet come."], [21, "Then said Jesus again unto them, I go my way, and ye shall seek me, and shall die in your sins: whither I go, ye cannot come."], [22, "Then said the Jews, Will he kill himself? because he saith, Whither I go, ye cannot come."], [23, "And he said unto them, Ye are from beneath; I am from above: ye are of this world; I am not of this world."], [24, "I said therefore unto you, that ye shall die in your sins: for if ye believe not that I am he, ye shall die in your sins."], [25, "Then said they unto him, Who art thou? And Jesus saith unto them, Even the same that I said unto you from the beginning."], [26, "I have many things to say and to judge of you: but he that sent me is true; and I speak to the world those things which I have heard of him."], [27, "They understood not that he spake to them of the Father."], [28, "Then said Jesus unto them, When ye have lifted up the Son of man, then shall ye know that I am he, and that I do nothing of myself; but as my Father hath taught me, I speak these things."], [29, "And he that sent me is with me: the Father hath not left me alone; for I do always those things that please him."], [30, "As he spake these words, many believed on him."], [31, "Then said Jesus to those Jews which believed on him, If ye continue in my word, then are ye my disciples indeed;"], [32, "And ye shall know the truth, and the truth shall make you free."], [33, "They answered him, We be Abraham’s seed, and were never in bondage to any man: how sayest thou, Ye shall be made free?"], [34, "Jesus answered them, Verily, verily, I say unto you, Whosoever committeth sin is the servant of sin."], [35, "And the servant abideth not in the house for ever: but the Son abideth ever."], [36, "If the Son therefore shall make you free, ye shall be free indeed."], [37, "I know that ye are Abraham’s seed; but ye seek to kill me, because my word hath no place in you."], [38, "I speak that which I have seen with my Father: and ye do that which ye have seen with your father."], [39, "They answered and said unto him, Abraham is our father. Jesus saith unto them, If ye were Abraham’s children, ye would do the works of Abraham."], [40, "But now ye seek to kill me, a man that hath told you the truth, which I have heard of God: this did not Abraham."], [41, "Ye do the deeds of your father. Then said they to him, We be not born of fornication; we have one Father, even God."], [42, "Jesus said unto them, If God were your Father, ye would love me: for I proceeded forth and came from God; neither came I of myself, but he sent me."], [43, "Why do ye not understand my speech? even because ye cannot hear my word."], [44, "Ye are of your father the devil, and the lusts of your father ye will do. He was a murderer from the beginning, and abode not in the truth, because there is no truth in him. When he speaketh a lie, he speaketh of his own: for he is a liar, and the father of it."], [45, "And because I tell you the truth, ye believe me not."], [46, "Which of you convinceth me of sin? And if I say the truth, why do ye not believe me?"], [47, "He that is of God heareth God’s words: ye therefore hear them not, because ye are not of God."], [48, "Then answered the Jews, and said unto him, Say we not well that thou art a Samaritan, and hast a devil?"], [49, "Jesus answered, I have not a devil; but I honour my Father, and ye do dishonour me."], [50, "And I seek not mine own glory: there is one that seeketh and judgeth."], [51, "Verily, verily, I say unto you, If a man keep my saying, he shall never see death."], [52, "Then said the Jews unto him, Now we know that thou hast a devil. Abraham is dead, and the prophets; and thou sayest, If a man keep my saying, he shall never taste of death."], [53, "Art thou greater than our father Abraham, which is dead? and the prophets are dead: whom makest thou thyself?"], [54, "Jesus answered, If I honour myself, my honour is nothing: it is my Father that honoureth me; of whom ye say, that he is your God:"], [55, "Yet ye have not known him; but I know him: and if I should say, I know him not, I shall be a liar like unto you: but I know him, and keep his saying."], [56, "Your father Abraham rejoiced to see my day: and he saw it, and was glad."], [57, "Then said the Jews unto him, Thou art not yet fifty years old, and hast thou seen Abraham?"], [58, "Jesus said unto them, Verily, verily, I say unto you, Before Abraham was, I am."], [59, "Then took they up stones to cast at him: but Jesus hid himself, and went out of the temple, going through the midst of them, and so passed by."]], "Acts 4": [[1, "And as they spake unto the people, the priests, and the captain of the temple, and the Sadducees, came upon them,"], [2, "Being grieved that they taught the people, and preached through Jesus the resurrection from the dead."], [3, "And they laid hands on them, and put them in hold unto the next day: for it was now eventide."], [4, "Howbeit many of them which heard the word believed; and the number of the men was about five thousand."], [5, "And it came to pass on the morrow, that their rulers, and elders, and scribes,"], [6, "And Annas the high priest, and Caiaphas, and John, and Alexander, and as many as were of the kindred of the high priest, were gathered together at Jerusalem."], [7, "And when they had set them in the midst, they asked, By what power, or by what name, have ye done this?"], [8, "Then Peter, filled with the Holy Ghost, said unto them, Ye rulers of the people, and elders of Israel,"], [9, "If we this day be examined of the good deed done to the impotent man, by what means he is made whole;"], [10, "Be it known unto you all, and to all the people of Israel, that by the name of Jesus Christ of Nazareth, whom ye crucified, whom God raised from the dead, even by him doth this man stand here before you whole."], [11, "This is the stone which was set at nought of you builders, which is become the head of the corner."], [12, "Neither is there salvation in any other: for there is none other name under heaven given among men, whereby we must be saved."], [13, "Now when they saw the boldness of Peter and John, and perceived that they were unlearned and ignorant men, they marvelled; and they took knowledge of them, that they had been with Jesus."], [14, "And beholding the man which was healed standing with them, they could say nothing against it."], [15, "But when they had commanded them to go aside out of the council, they conferred among themselves,"], [16, "Saying, What shall we do to these men? for that indeed a notable miracle hath been done by them is manifest to all them that dwell in Jerusalem; and we cannot deny it."], [17, "But that it spread no further among the people, let us straitly threaten them, that they speak henceforth to no man in this name."], [18, "And they called them, and commanded them not to speak at all nor teach in the name of Jesus."], [19, "But Peter and John answered and said unto them, Whether it be right in the sight of God to hearken unto you more than unto God, judge ye."], [20, "For we cannot but speak the things which we have seen and heard."], [21, "So when they had further threatened them, they let them go, finding nothing how they might punish them, because of the people: for all men glorified God for that which was done."], [22, "For the man was above forty years old, on whom this miracle of healing was shewed."], [23, "And being let go, they went to their own company, and reported all that the chief priests and elders had said unto them."], [24, "And when they heard that, they lifted up their voice to God with one accord, and said, Lord, thou art God, which hast made heaven, and earth, and the sea, and all that in them is:"], [25, "Who by the mouth of thy servant David hast said, Why did the heathen rage, and the people imagine vain things?"], [26, "The kings of the earth stood up, and the rulers were gathered together against the Lord, and against his Christ."], [27, "For of a truth against thy holy child Jesus, whom thou hast anointed, both Herod, and Pontius Pilate, with the Gentiles, and the people of Israel, were gathered together,"], [28, "For to do whatsoever thy hand and thy counsel determined before to be done."], [29, "And now, Lord, behold their threatenings: and grant unto thy servants, that with all boldness they may speak thy word,"], [30, "By stretching forth thine hand to heal; and that signs and wonders may be done by the name of thy holy child Jesus."], [31, "And when they had prayed, the place was shaken where they were assembled together; and they were all filled with the Holy Ghost, and they spake the word of God with boldness."], [32, "And the multitude of them that believed were of one heart and of one soul: neither said any of them that ought of the things which he possessed was his own; but they had all things common."], [33, "And with great power gave the apostles witness of the resurrection of the Lord Jesus: and great grace was upon them all."], [34, "Neither was there any among them that lacked: for as many as were possessors of lands or houses sold them, and brought the prices of the things that were sold,"], [35, "And laid them down at the apostles’ feet: and distribution was made unto every man according as he had need."], [36, "And Joses, who by the apostles was surnamed Barnabas, (which is, being interpreted, The son of consolation,) a Levite, and of the country of Cyprus,"], [37, "Having land, sold it, and brought the money, and laid it at the apostles’ feet."]], "Deuteronomy 12": [[1, "These are the statutes and judgments, which ye shall observe to do in the land, which the LORD God of thy fathers giveth thee to possess it, all the days that ye live upon the earth."], [2, "Ye shall utterly destroy all the places, wherein the nations which ye shall possess served their gods, upon the high mountains, and upon the hills, and under every green tree:"], [3, "And ye shall overthrow their altars, and break their pillars, and burn their groves with fire; and ye shall hew down the graven images of their gods, and destroy the names of them out of that place."], [4, "Ye shall not do so unto the LORD your God."], [5, "But unto the place which the LORD your God shall choose out of all your tribes to put his name there, even unto his habitation shall ye seek, and thither thou shalt come:"], [6, "And thither ye shall bring your burnt offerings, and your sacrifices, and your tithes, and heave offerings of your hand, and your vows, and your freewill offerings, and the firstlings of your herds and of your flocks:"], [7, "And there ye shall eat before the LORD your God, and ye shall rejoice in all that ye put your hand unto, ye and your households, wherein the LORD thy God hath blessed thee."], [8, "Ye shall not do after all the things that we do here this day, every man whatsoever is right in his own eyes."], [9, "For ye are not as yet come to the rest and to the inheritance, which the LORD your God giveth you."], [10, "But when ye go over Jordan, and dwell in the land which the LORD your God giveth you to inherit, and when he giveth you rest from all your enemies round about, so that ye dwell in safety;"], [11, "Then there shall be a place which the LORD your God shall choose to cause his name to dwell there; thither shall ye bring all that I command you; your burnt offerings, and your sacrifices, your tithes, and the heave offering of your hand, and all your choice vows which ye vow unto the LORD:"], [12, "And ye shall rejoice before the LORD your God, ye, and your sons, and your daughters, and your menservants, and your maidservants, and the Levite that is within your gates; forasmuch as he hath no part nor inheritance with you."], [13, "Take heed to thyself that thou offer not thy burnt offerings in every place that thou seest:"], [14, "But in the place which the LORD shall choose in one of thy tribes, there thou shalt offer thy burnt offerings, and there thou shalt do all that I command thee."], [15, "Notwithstanding thou mayest kill and eat flesh in all thy gates, whatsoever thy soul lusteth after, according to the blessing of the LORD thy God which he hath given thee: the unclean and the clean may eat thereof, as of the roebuck, and as of the hart."], [16, "Only ye shall not eat the blood; ye shall pour it upon the earth as water."], [17, "Thou mayest not eat within thy gates the tithe of thy corn, or of thy wine, or of thy oil, or the firstlings of thy herds or of thy flock, nor any of thy vows which thou vowest, nor thy freewill offerings, or heave offering of thine hand:"], [18, "But thou must eat them before the LORD thy God in the place which the LORD thy God shall choose, thou, and thy son, and thy daughter, and thy manservant, and thy maidservant, and the Levite that is within thy gates: and thou shalt rejoice before the LORD thy God in all that thou puttest thine hands unto."], [19, "Take heed to thyself that thou forsake not the Levite as long as thou livest upon the earth."], [20, "When the LORD thy God shall enlarge thy border, as he hath promised thee, and thou shalt say, I will eat flesh, because thy soul longeth to eat flesh; thou mayest eat flesh, whatsoever thy soul lusteth after."], [21, "If the place which the LORD thy God hath chosen to put his name there be too far from thee, then thou shalt kill of thy herd and of thy flock, which the LORD hath given thee, as I have commanded thee, and thou shalt eat in thy gates whatsoever thy soul lusteth after."], [22, "Even as the roebuck and the hart is eaten, so thou shalt eat them: the unclean and the clean shall eat of them alike."], [23, "Only be sure that thou eat not the blood: for the blood is the life; and thou mayest not eat the life with the flesh."], [24, "Thou shalt not eat it; thou shalt pour it upon the earth as water."], [25, "Thou shalt not eat it; that it may go well with thee, and with thy children after thee, when thou shalt do that which is right in the sight of the LORD."], [26, "Only thy holy things which thou hast, and thy vows, thou shalt take, and go unto the place which the LORD shall choose:"], [27, "And thou shalt offer thy burnt offerings, the flesh and the blood, upon the altar of the LORD thy God: and the blood of thy sacrifices shall be poured out upon the altar of the LORD thy God, and thou shalt eat the flesh."], [28, "Observe and hear all these words which I command thee, that it may go well with thee, and with thy children after thee for ever, when thou doest that which is good and right in the sight of the LORD thy God."], [29, "When the LORD thy God shall cut off the nations from before thee, whither thou goest to possess them, and thou succeedest them, and dwellest in their land;"], [30, "Take heed to thyself that thou be not snared by following them, after that they be destroyed from before thee; and that thou enquire not after their gods, saying, How did these nations serve their gods? even so will I do likewise."], [31, "Thou shalt not do so unto the LORD thy God: for every abomination to the LORD, which he hateth, have they done unto their gods; for even their sons and their daughters they have burnt in the fire to their gods."], [32, "What thing soever I command you, observe to do it: thou shalt not add thereto, nor diminish from it."]], "Isaiah 53": [[1, "Who hath believed our report? and to whom is the arm of the LORD revealed?"], [2, "For he shall grow up before him as a tender plant, and as a root out of a dry ground: he hath no form nor comeliness; and when we shall see him, there is no beauty that we should desire him."], [3, "He is despised and rejected of men; a man of sorrows, and acquainted with grief: and we hid as it were our faces from him; he was despised, and we esteemed him not."], [4, "Surely he hath borne our griefs, and carried our sorrows: yet we did esteem him stricken, smitten of God, and afflicted."], [5, "But he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed."], [6, "All we like sheep have gone astray; we have turned every one to his own way; and the LORD hath laid on him the iniquity of us all."], [7, "He was oppressed, and he was afflicted, yet he opened not his mouth: he is brought as a lamb to the slaughter, and as a sheep before her shearers is dumb, so he openeth not his mouth."], [8, "He was taken from prison and from judgment: and who shall declare his generation? for he was cut off out of the land of the living: for the transgression of my people was he stricken."], [9, "And he made his grave with the wicked, and with the rich in his death; because he had done no violence, neither was any deceit in his mouth."], [10, "Yet it pleased the LORD to bruise him; he hath put him to grief: when thou shalt make his soul an offering for sin, he shall see his seed, he shall prolong his days, and the pleasure of the LORD shall prosper in his hand."], [11, "He shall see of the travail of his soul, and shall be satisfied: by his knowledge shall my righteous servant justify many; for he shall bear their iniquities."], [12, "Therefore will I divide him a portion with the great, and he shall divide the spoil with the strong; because he hath poured out his soul unto death: and he was numbered with the transgressors; and he bare the sin of many, and made intercession for the transgressors."]], "Genesis 22": [[1, "And it came to pass after these things, that God did tempt Abraham, and said unto him, Abraham: and he said, Behold, here I am."], [2, "And he said, Take now thy son, thine only son Isaac, whom thou lovest, and get thee into the land of Moriah; and offer him there for a burnt offering upon one of the mountains which I will tell thee of."], [3, "And Abraham rose up early in the morning, and saddled his ass, and took two of his young men with him, and Isaac his son, and clave the wood for the burnt offering, and rose up, and went unto the place of which God had told him."], [4, "Then on the third day Abraham lifted up his eyes, and saw the place afar off."], [5, "And Abraham said unto his young men, Abide ye here with the ass; and I and the lad will go yonder and worship, and come again to you."], [6, "And Abraham took the wood of the burnt offering, and laid it upon Isaac his son; and he took the fire in his hand, and a knife; and they went both of them together."], [7, "And Isaac spake unto Abraham his father, and said, My father: and he said, Here am I, my son. And he said, Behold the fire and the wood: but where is the lamb for a burnt offering?"], [8, "And Abraham said, My son, God will provide himself a lamb for a burnt offering: so they went both of them together."], [9, "And they came to the place which God had told him of; and Abraham built an altar there, and laid the wood in order, and bound Isaac his son, and laid him on the altar upon the wood."], [10, "And Abraham stretched forth his hand, and took the knife to slay his son."], [11, "And the angel of the LORD called unto him out of heaven, and said, Abraham, Abraham: and he said, Here am I."], [12, "And he said, Lay not thine hand upon the lad, neither do thou any thing unto him: for now I know that thou fearest God, seeing thou hast not withheld thy son, thine only son from me."], [13, "And Abraham lifted up his eyes, and looked, and behold behind him a ram caught in a thicket by his horns: and Abraham went and took the ram, and offered him up for a burnt offering in the stead of his son."], [14, "And Abraham called the name of that place Jehovahjireh: as it is said to this day, In the mount of the LORD it shall be seen."], [15, "And the angel of the LORD called unto Abraham out of heaven the second time,"], [16, "And said, By myself have I sworn, saith the LORD, for because thou hast done this thing, and hast not withheld thy son, thine only son:"], [17, "That in blessing I will bless thee, and in multiplying I will multiply thy seed as the stars of the heaven, and as the sand which is upon the sea shore; and thy seed shall possess the gate of his enemies;"], [18, "And in thy seed shall all the nations of the earth be blessed; because thou hast obeyed my voice."], [19, "So Abraham returned unto his young men, and they rose up and went together to Beersheba; and Abraham dwelt at Beersheba."], [20, "And it came to pass after these things, that it was told Abraham, saying, Behold, Milcah, she hath also born children unto thy brother Nahor;"], [21, "Huz his firstborn, and Buz his brother, and Kemuel the father of Aram,"], [22, "And Chesed, and Hazo, and Pildash, and Jidlaph, and Bethuel."], [23, "And Bethuel begat Rebekah: these eight Milcah did bear to Nahor, Abraham’s brother."], [24, "And his concubine, whose name was Reumah, she bare also Tebah, and Gaham, and Thahash, and Maachah."]], "1 Kings 8": [[1, "Then Solomon assembled the elders of Israel, and all the heads of the tribes, the chief of the fathers of the children of Israel, unto king Solomon in Jerusalem, that they might bring up the ark of the covenant of the LORD out of the city of David, which is Zion."], [2, "And all the men of Israel assembled themselves unto king Solomon at the feast in the month Ethanim, which is the seventh month."], [3, "And all the elders of Israel came, and the priests took up the ark."], [4, "And they brought up the ark of the LORD, and the tabernacle of the congregation, and all the holy vessels that were in the tabernacle, even those did the priests and the Levites bring up."], [5, "And king Solomon, and all the congregation of Israel, that were assembled unto him, were with him before the ark, sacrificing sheep and oxen, that could not be told nor numbered for multitude."], [6, "And the priests brought in the ark of the covenant of the LORD unto his place, into the oracle of the house, to the most holy place, even under the wings of the cherubims."], [7, "For the cherubims spread forth their two wings over the place of the ark, and the cherubims covered the ark and the staves thereof above."], [8, "And they drew out the staves, that the ends of the staves were seen out in the holy place before the oracle, and they were not seen without: and there they are unto this day."], [9, "There was nothing in the ark save the two tables of stone, which Moses put there at Horeb, when the LORD made a covenant with the children of Israel, when they came out of the land of Egypt."], [10, "And it came to pass, when the priests were come out of the holy place, that the cloud filled the house of the LORD,"], [11, "So that the priests could not stand to minister because of the cloud: for the glory of the LORD had filled the house of the LORD."], [12, "Then spake Solomon, The LORD said that he would dwell in the thick darkness."], [13, "I have surely built thee an house to dwell in, a settled place for thee to abide in for ever."], [14, "And the king turned his face about, and blessed all the congregation of Israel: (and all the congregation of Israel stood;)"], [15, "And he said, Blessed be the LORD God of Israel, which spake with his mouth unto David my father, and hath with his hand fulfilled it, saying,"], [16, "Since the day that I brought forth my people Israel out of Egypt, I chose no city out of all the tribes of Israel to build an house, that my name might be therein; but I chose David to be over my people Israel."], [17, "And it was in the heart of David my father to build an house for the name of the LORD God of Israel."], [18, "And the LORD said unto David my father, Whereas it was in thine heart to build an house unto my name, thou didst well that it was in thine heart."], [19, "Nevertheless thou shalt not build the house; but thy son that shall come forth out of thy loins, he shall build the house unto my name."], [20, "And the LORD hath performed his word that he spake, and I am risen up in the room of David my father, and sit on the throne of Israel, as the LORD promised, and have built an house for the name of the LORD God of Israel."], [21, "And I have set there a place for the ark, wherein is the covenant of the LORD, which he made with our fathers, when he brought them out of the land of Egypt."], [22, "And Solomon stood before the altar of the LORD in the presence of all the congregation of Israel, and spread forth his hands toward heaven:"], [23, "And he said, LORD God of Israel, there is no God like thee, in heaven above, or on earth beneath, who keepest covenant and mercy with thy servants that walk before thee with all their heart:"], [24, "Who hast kept with thy servant David my father that thou promisedst him: thou spakest also with thy mouth, and hast fulfilled it with thine hand, as it is this day."], [25, "Therefore now, LORD God of Israel, keep with thy servant David my father that thou promisedst him, saying, There shall not fail thee a man in my sight to sit on the throne of Israel; so that thy children take heed to their way, that they walk before me as thou hast walked before me."], [26, "And now, O God of Israel, let thy word, I pray thee, be verified, which thou spakest unto thy servant David my father."], [27, "But will God indeed dwell on the earth? behold, the heaven and heaven of heavens cannot contain thee; how much less this house that I have builded?"], [28, "Yet have thou respect unto the prayer of thy servant, and to his supplication, O LORD my God, to hearken unto the cry and to the prayer, which thy servant prayeth before thee to day:"], [29, "That thine eyes may be open toward this house night and day, even toward the place of which thou hast said, My name shall be there: that thou mayest hearken unto the prayer which thy servant shall make toward this place."], [30, "And hearken thou to the supplication of thy servant, and of thy people Israel, when they shall pray toward this place: and hear thou in heaven thy dwelling place: and when thou hearest, forgive."], [31, "If any man trespass against his neighbour, and an oath be laid upon him to cause him to swear, and the oath come before thine altar in this house:"], [32, "Then hear thou in heaven, and do, and judge thy servants, condemning the wicked, to bring his way upon his head; and justifying the righteous, to give him according to his righteousness."], [33, "When thy people Israel be smitten down before the enemy, because they have sinned against thee, and shall turn again to thee, and confess thy name, and pray, and make supplication unto thee in this house:"], [34, "Then hear thou in heaven, and forgive the sin of thy people Israel, and bring them again unto the land which thou gavest unto their fathers."], [35, "When heaven is shut up, and there is no rain, because they have sinned against thee; if they pray toward this place, and confess thy name, and turn from their sin, when thou afflictest them:"], [36, "Then hear thou in heaven, and forgive the sin of thy servants, and of thy people Israel, that thou teach them the good way wherein they should walk, and give rain upon thy land, which thou hast given to thy people for an inheritance."], [37, "If there be in the land famine, if there be pestilence, blasting, mildew, locust, or if there be caterpiller; if their enemy besiege them in the land of their cities; whatsoever plague, whatsoever sickness there be;"], [38, "What prayer and supplication soever be made by any man, or by all thy people Israel, which shall know every man the plague of his own heart, and spread forth his hands toward this house:"], [39, "Then hear thou in heaven thy dwelling place, and forgive, and do, and give to every man according to his ways, whose heart thou knowest; (for thou, even thou only, knowest the hearts of all the children of men;)"], [40, "That they may fear thee all the days that they live in the land which thou gavest unto our fathers."], [41, "Moreover concerning a stranger, that is not of thy people Israel, but cometh out of a far country for thy name’s sake;"], [42, "(For they shall hear of thy great name, and of thy strong hand, and of thy stretched out arm;) when he shall come and pray toward this house;"], [43, "Hear thou in heaven thy dwelling place, and do according to all that the stranger calleth to thee for: that all people of the earth may know thy name, to fear thee, as do thy people Israel; and that they may know that this house, which I have builded, is called by thy name."], [44, "If thy people go out to battle against their enemy, whithersoever thou shalt send them, and shall pray unto the LORD toward the city which thou hast chosen, and toward the house that I have built for thy name:"], [45, "Then hear thou in heaven their prayer and their supplication, and maintain their cause."], [46, "If they sin against thee, (for there is no man that sinneth not,) and thou be angry with them, and deliver them to the enemy, so that they carry them away captives unto the land of the enemy, far or near;"], [47, "Yet if they shall bethink themselves in the land whither they were carried captives, and repent, and make supplication unto thee in the land of them that carried them captives, saying, We have sinned, and have done perversely, we have committed wickedness;"], [48, "And so return unto thee with all their heart, and with all their soul, in the land of their enemies, which led them away captive, and pray unto thee toward their land, which thou gavest unto their fathers, the city which thou hast chosen, and the house which I have built for thy name:"], [49, "Then hear thou their prayer and their supplication in heaven thy dwelling place, and maintain their cause,"], [50, "And forgive thy people that have sinned against thee, and all their transgressions wherein they have transgressed against thee, and give them compassion before them who carried them captive, that they may have compassion on them:"], [51, "For they be thy people, and thine inheritance, which thou broughtest forth out of Egypt, from the midst of the furnace of iron:"], [52, "That thine eyes may be open unto the supplication of thy servant, and unto the supplication of thy people Israel, to hearken unto them in all that they call for unto thee."], [53, "For thou didst separate them from among all the people of the earth, to be thine inheritance, as thou spakest by the hand of Moses thy servant, when thou broughtest our fathers out of Egypt, O LORD God."], [54, "And it was so, that when Solomon had made an end of praying all this prayer and supplication unto the LORD, he arose from before the altar of the LORD, from kneeling on his knees with his hands spread up to heaven."], [55, "And he stood, and blessed all the congregation of Israel with a loud voice, saying,"], [56, "Blessed be the LORD, that hath given rest unto his people Israel, according to all that he promised: there hath not failed one word of all his good promise, which he promised by the hand of Moses his servant."], [57, "The LORD our God be with us, as he was with our fathers: let him not leave us, nor forsake us:"], [58, "That he may incline our hearts unto him, to walk in all his ways, and to keep his commandments, and his statutes, and his judgments, which he commanded our fathers."], [59, "And let these my words, wherewith I have made supplication before the LORD, be nigh unto the LORD our God day and night, that he maintain the cause of his servant, and the cause of his people Israel at all times, as the matter shall require:"], [60, "That all the people of the earth may know that the LORD is God, and that there is none else."], [61, "Let your heart therefore be perfect with the LORD our God, to walk in his statutes, and to keep his commandments, as at this day."], [62, "And the king, and all Israel with him, offered sacrifice before the LORD."], [63, "And Solomon offered a sacrifice of peace offerings, which he offered unto the LORD, two and twenty thousand oxen, and an hundred and twenty thousand sheep. So the king and all the children of Israel dedicated the house of the LORD."], [64, "The same day did the king hallow the middle of the court that was before the house of the LORD: for there he offered burnt offerings, and meat offerings, and the fat of the peace offerings: because the brasen altar that was before the LORD was too little to receive the burnt offerings, and meat offerings, and the fat of the peace offerings."], [65, "And at that time Solomon held a feast, and all Israel with him, a great congregation, from the entering in of Hamath unto the river of Egypt, before the LORD our God, seven days and seven days, even fourteen days."], [66, "On the eighth day he sent the people away: and they blessed the king, and went unto their tents joyful and glad of heart for all the goodness that the LORD had done for David his servant, and for Israel his people."]], "Isaiah 37": [[1, "And it came to pass, when king Hezekiah heard it, that he rent his clothes, and covered himself with sackcloth, and went into the house of the LORD."], [2, "And he sent Eliakim, who was over the household, and Shebna the scribe, and the elders of the priests covered with sackcloth, unto Isaiah the prophet the son of Amoz."], [3, "And they said unto him, Thus saith Hezekiah, This day is a day of trouble, and of rebuke, and of blasphemy: for the children are come to the birth, and there is not strength to bring forth."], [4, "It may be the LORD thy God will hear the words of Rabshakeh, whom the king of Assyria his master hath sent to reproach the living God, and will reprove the words which the LORD thy God hath heard: wherefore lift up thy prayer for the remnant that is left."], [5, "So the servants of king Hezekiah came to Isaiah."], [6, "And Isaiah said unto them, Thus shall ye say unto your master, Thus saith the LORD, Be not afraid of the words that thou hast heard, wherewith the servants of the king of Assyria have blasphemed me."], [7, "Behold, I will send a blast upon him, and he shall hear a rumour, and return to his own land; and I will cause him to fall by the sword in his own land."], [8, "So Rabshakeh returned, and found the king of Assyria warring against Libnah: for he had heard that he was departed from Lachish."], [9, "And he heard say concerning Tirhakah king of Ethiopia, He is come forth to make war with thee. And when he heard it, he sent messengers to Hezekiah, saying,"], [10, "Thus shall ye speak to Hezekiah king of Judah, saying, Let not thy God, in whom thou trustest, deceive thee, saying, Jerusalem shall not be given into the hand of the king of Assyria."], [11, "Behold, thou hast heard what the kings of Assyria have done to all lands by destroying them utterly; and shalt thou be delivered?"], [12, "Have the gods of the nations delivered them which my fathers have destroyed, as Gozan, and Haran, and Rezeph, and the children of Eden which were in Telassar?"], [13, "Where is the king of Hamath, and the king of Arphad, and the king of the city of Sepharvaim, Hena, and Ivah?"], [14, "And Hezekiah received the letter from the hand of the messengers, and read it: and Hezekiah went up unto the house of the LORD, and spread it before the LORD."], [15, "And Hezekiah prayed unto the LORD, saying,"], [16, "O LORD of hosts, God of Israel, that dwellest between the cherubims, thou art the God, even thou alone, of all the kingdoms of the earth: thou hast made heaven and earth."], [17, "Incline thine ear, O LORD, and hear; open thine eyes, O LORD, and see: and hear all the words of Sennacherib, which hath sent to reproach the living God."], [18, "Of a truth, LORD, the kings of Assyria have laid waste all the nations, and their countries,"], [19, "And have cast their gods into the fire: for they were no gods, but the work of men’s hands, wood and stone: therefore they have destroyed them."], [20, "Now therefore, O LORD our God, save us from his hand, that all the kingdoms of the earth may know that thou art the LORD, even thou only."], [21, "Then Isaiah the son of Amoz sent unto Hezekiah, saying, Thus saith the LORD God of Israel, Whereas thou hast prayed to me against Sennacherib king of Assyria:"], [22, "This is the word which the LORD hath spoken concerning him; The virgin, the daughter of Zion, hath despised thee, and laughed thee to scorn; the daughter of Jerusalem hath shaken her head at thee."], [23, "Whom hast thou reproached and blasphemed? and against whom hast thou exalted thy voice, and lifted up thine eyes on high? even against the Holy One of Israel."], [24, "By thy servants hast thou reproached the Lord, and hast said, By the multitude of my chariots am I come up to the height of the mountains, to the sides of Lebanon; and I will cut down the tall cedars thereof, and the choice fir trees thereof: and I will enter into the height of his border, and the forest of his Carmel."], [25, "I have digged, and drunk water; and with the sole of my feet have I dried up all the rivers of the besieged places."], [26, "Hast thou not heard long ago, how I have done it; and of ancient times, that I have formed it? now have I brought it to pass, that thou shouldest be to lay waste defenced cities into ruinous heaps."], [27, "Therefore their inhabitants were of small power, they were dismayed and confounded: they were as the grass of the field, and as the green herb, as the grass on the housetops, and as corn blasted before it be grown up."], [28, "But I know thy abode, and thy going out, and thy coming in, and thy rage against me."], [29, "Because thy rage against me, and thy tumult, is come up into mine ears, therefore will I put my hook in thy nose, and my bridle in thy lips, and I will turn thee back by the way by which thou camest."], [30, "And this shall be a sign unto thee, Ye shall eat this year such as groweth of itself; and the second year that which springeth of the same: and in the third year sow ye, and reap, and plant vineyards, and eat the fruit thereof."], [31, "And the remnant that is escaped of the house of Judah shall again take root downward, and bear fruit upward:"], [32, "For out of Jerusalem shall go forth a remnant, and they that escape out of mount Zion: the zeal of the LORD of hosts shall do this."], [33, "Therefore thus saith the LORD concerning the king of Assyria, He shall not come into this city, nor shoot an arrow there, nor come before it with shields, nor cast a bank against it."], [34, "By the way that he came, by the same shall he return, and shall not come into this city, saith the LORD."], [35, "For I will defend this city to save it for mine own sake, and for my servant David’s sake."], [36, "Then the angel of the LORD went forth, and smote in the camp of the Assyrians a hundred and fourscore and five thousand: and when they arose early in the morning, behold, they were all dead corpses."], [37, "So Sennacherib king of Assyria departed, and went and returned, and dwelt at Nineveh."], [38, "And it came to pass, as he was worshipping in the house of Nisroch his god, that Adrammelech and Sharezer his sons smote him with the sword; and they escaped into the land of Armenia: and Esarhaddon his son reigned in his stead."]], "Zechariah 9": [[1, "The burden of the word of the LORD in the land of Hadrach, and Damascus shall be the rest thereof: when the eyes of man, as of all the tribes of Israel, shall be toward the LORD."], [2, "And Hamath also shall border thereby; Tyrus, and Zidon, though it be very wise."], [3, "And Tyrus did build herself a strong hold, and heaped up silver as the dust, and fine gold as the mire of the streets."], [4, "Behold, the LORD will cast her out, and he will smite her power in the sea; and she shall be devoured with fire."], [5, "Ashkelon shall see it, and fear; Gaza also shall see it, and be very sorrowful, and Ekron; for her expectation shall be ashamed; and the king shall perish from Gaza, and Ashkelon shall not be inhabited."], [6, "And a bastard shall dwell in Ashdod, and I will cut off the pride of the Philistines."], [7, "And I will take away his blood out of his mouth, and his abominations from between his teeth: but he that remaineth, even he, shall be for our God, and he shall be as a governor in Judah, and Ekron as a Jebusite."], [8, "And I will encamp about mine house because of the army, because of him that passeth by, and because of him that returneth: and no oppressor shall pass through them any more: for now have I seen with mine eyes."], [9, "Rejoice greatly, O daughter of Zion; shout, O daughter of Jerusalem: behold, thy King cometh unto thee: he is just, and having salvation; lowly, and riding upon an ass, and upon a colt the foal of an ass."], [10, "And I will cut off the chariot from Ephraim, and the horse from Jerusalem, and the battle bow shall be cut off: and he shall speak peace unto the heathen: and his dominion shall be from sea even to sea, and from the river even to the ends of the earth."], [11, "As for thee also, by the blood of thy covenant I have sent forth thy prisoners out of the pit wherein is no water."], [12, "Turn you to the strong hold, ye prisoners of hope: even to day do I declare that I will render double unto thee;"], [13, "When I have bent Judah for me, filled the bow with Ephraim, and raised up thy sons, O Zion, against thy sons, O Greece, and made thee as the sword of a mighty man."], [14, "And the LORD shall be seen over them, and his arrow shall go forth as the lightning: and the LORD God shall blow the trumpet, and shall go with whirlwinds of the south."], [15, "The LORD of hosts shall defend them; and they shall devour, and subdue with sling stones; and they shall drink, and make a noise as through wine; and they shall be filled like bowls, and as the corners of the altar."], [16, "And the LORD their God shall save them in that day as the flock of his people: for they shall be as the stones of a crown, lifted up as an ensign upon his land."], [17, "For how great is his goodness, and how great is his beauty! corn shall make the young men cheerful, and new wine the maids."]], "Isaiah 9": [[1, "Nevertheless the dimness shall not be such as was in her vexation, when at the first he lightly afflicted the land of Zebulun and the land of Naphtali, and afterward did more grievously afflict her by the way of the sea, beyond Jordan, in Galilee of the nations."], [2, "The people that walked in darkness have seen a great light: they that dwell in the land of the shadow of death, upon them hath the light shined."], [3, "Thou hast multiplied the nation, and not increased the joy: they joy before thee according to the joy in harvest, and as men rejoice when they divide the spoil."], [4, "For thou hast broken the yoke of his burden, and the staff of his shoulder, the rod of his oppressor, as in the day of Midian."], [5, "For every battle of the warrior is with confused noise, and garments rolled in blood; but this shall be with burning and fuel of fire."], [6, "For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace."], [7, "Of the increase of his government and peace there shall be no end, upon the throne of David, and upon his kingdom, to order it, and to establish it with judgment and with justice from henceforth even for ever. The zeal of the LORD of hosts will perform this."], [8, "The Lord sent a word into Jacob, and it hath lighted upon Israel."], [9, "And all the people shall know, even Ephraim and the inhabitant of Samaria, that say in the pride and stoutness of heart,"], [10, "The bricks are fallen down, but we will build with hewn stones: the sycomores are cut down, but we will change them into cedars."], [11, "Therefore the LORD shall set up the adversaries of Rezin against him, and join his enemies together;"], [12, "The Syrians before, and the Philistines behind; and they shall devour Israel with open mouth. For all this his anger is not turned away, but his hand is stretched out still."], [13, "For the people turneth not unto him that smiteth them, neither do they seek the LORD of hosts."], [14, "Therefore the LORD will cut off from Israel head and tail, branch and rush, in one day."], [15, "The ancient and honourable, he is the head; and the prophet that teacheth lies, he is the tail."], [16, "For the leaders of this people cause them to err; and they that are led of them are destroyed."], [17, "Therefore the LORD shall have no joy in their young men, neither shall have mercy on their fatherless and widows: for every one is an hypocrite and an evildoer, and every mouth speaketh folly. For all this his anger is not turned away, but his hand is stretched out still."], [18, "For wickedness burneth as the fire: it shall devour the briers and thorns, and shall kindle in the thickets of the forest, and they shall mount up like the lifting up of smoke."], [19, "Through the wrath of the LORD of hosts is the land darkened, and the people shall be as the fuel of the fire: no man shall spare his brother."], [20, "And he shall snatch on the right hand, and be hungry; and he shall eat on the left hand, and they shall not be satisfied: they shall eat every man the flesh of his own arm:"], [21, "Manasseh, Ephraim; and Ephraim, Manasseh: and they together shall be against Judah. For all this his anger is not turned away, but his hand is stretched out still."]], "Luke 24": [[1, "Now upon the first day of the week, very early in the morning, they came unto the sepulchre, bringing the spices which they had prepared, and certain others with them."], [2, "And they found the stone rolled away from the sepulchre."], [3, "And they entered in, and found not the body of the Lord Jesus."], [4, "And it came to pass, as they were much perplexed thereabout, behold, two men stood by them in shining garments:"], [5, "And as they were afraid, and bowed down their faces to the earth, they said unto them, Why seek ye the living among the dead?"], [6, "He is not here, but is risen: remember how he spake unto you when he was yet in Galilee,"], [7, "Saying, The Son of man must be delivered into the hands of sinful men, and be crucified, and the third day rise again."], [8, "And they remembered his words,"], [9, "And returned from the sepulchre, and told all these things unto the eleven, and to all the rest."], [10, "It was Mary Magdalene, and Joanna, and Mary the mother of James, and other women that were with them, which told these things unto the apostles."], [11, "And their words seemed to them as idle tales, and they believed them not."], [12, "Then arose Peter, and ran unto the sepulchre; and stooping down, he beheld the linen clothes laid by themselves, and departed, wondering in himself at that which was come to pass."], [13, "And, behold, two of them went that same day to a village called Emmaus, which was from Jerusalem about threescore furlongs."], [14, "And they talked together of all these things which had happened."], [15, "And it came to pass, that, while they communed together and reasoned, Jesus himself drew near, and went with them."], [16, "But their eyes were holden that they should not know him."], [17, "And he said unto them, What manner of communications are these that ye have one to another, as ye walk, and are sad?"], [18, "And the one of them, whose name was Cleopas, answering said unto him, Art thou only a stranger in Jerusalem, and hast not known the things which are come to pass there in these days?"], [19, "And he said unto them, What things? And they said unto him, Concerning Jesus of Nazareth, which was a prophet mighty in deed and word before God and all the people:"], [20, "And how the chief priests and our rulers delivered him to be condemned to death, and have crucified him."], [21, "But we trusted that it had been he which should have redeemed Israel: and beside all this, to day is the third day since these things were done."], [22, "Yea, and certain women also of our company made us astonished, which were early at the sepulchre;"], [23, "And when they found not his body, they came, saying, that they had also seen a vision of angels, which said that he was alive."], [24, "And certain of them which were with us went to the sepulchre, and found it even so as the women had said: but him they saw not."], [25, "Then he said unto them, O fools, and slow of heart to believe all that the prophets have spoken:"], [26, "Ought not Christ to have suffered these things, and to enter into his glory?"], [27, "And beginning at Moses and all the prophets, he expounded unto them in all the scriptures the things concerning himself."], [28, "And they drew nigh unto the village, whither they went: and he made as though he would have gone further."], [29, "But they constrained him, saying, Abide with us: for it is toward evening, and the day is far spent. And he went in to tarry with them."], [30, "And it came to pass, as he sat at meat with them, he took bread, and blessed it, and brake, and gave to them."], [31, "And their eyes were opened, and they knew him; and he vanished out of their sight."], [32, "And they said one to another, Did not our heart burn within us, while he talked with us by the way, and while he opened to us the scriptures?"], [33, "And they rose up the same hour, and returned to Jerusalem, and found the eleven gathered together, and them that were with them,"], [34, "Saying, The Lord is risen indeed, and hath appeared to Simon."], [35, "And they told what things were done in the way, and how he was known of them in breaking of bread."], [36, "And as they thus spake, Jesus himself stood in the midst of them, and saith unto them, Peace be unto you."], [37, "But they were terrified and affrighted, and supposed that they had seen a spirit."], [38, "And he said unto them, Why are ye troubled? and why do thoughts arise in your hearts?"], [39, "Behold my hands and my feet, that it is I myself: handle me, and see; for a spirit hath not flesh and bones, as ye see me have."], [40, "And when he had thus spoken, he shewed them his hands and his feet."], [41, "And while they yet believed not for joy, and wondered, he said unto them, Have ye here any meat?"], [42, "And they gave him a piece of a broiled fish, and of an honeycomb."], [43, "And he took it, and did eat before them."], [44, "And he said unto them, These are the words which I spake unto you, while I was yet with you, that all things must be fulfilled, which were written in the law of Moses, and in the prophets, and in the psalms, concerning me."], [45, "Then opened he their understanding, that they might understand the scriptures,"], [46, "And said unto them, Thus it is written, and thus it behoved Christ to suffer, and to rise from the dead the third day:"], [47, "And that repentance and remission of sins should be preached in his name among all nations, beginning at Jerusalem."], [48, "And ye are witnesses of these things."], [49, "And, behold, I send the promise of my Father upon you: but tarry ye in the city of Jerusalem, until ye be endued with power from on high."], [50, "And he led them out as far as to Bethany, and he lifted up his hands, and blessed them."], [51, "And it came to pass, while he blessed them, he was parted from them, and carried up into heaven."], [52, "And they worshipped him, and returned to Jerusalem with great joy:"], [53, "And were continually in the temple, praising and blessing God. Amen."]], "Acts 10": [[1, "There was a certain man in Caesarea called Cornelius, a centurion of the band called the Italian band,"], [2, "A devout man, and one that feared God with all his house, which gave much alms to the people, and prayed to God alway."], [3, "He saw in a vision evidently about the ninth hour of the day an angel of God coming in to him, and saying unto him, Cornelius."], [4, "And when he looked on him, he was afraid, and said, What is it, Lord? And he said unto him, Thy prayers and thine alms are come up for a memorial before God."], [5, "And now send men to Joppa, and call for one Simon, whose surname is Peter:"], [6, "He lodgeth with one Simon a tanner, whose house is by the sea side: he shall tell thee what thou oughtest to do."], [7, "And when the angel which spake unto Cornelius was departed, he called two of his household servants, and a devout soldier of them that waited on him continually;"], [8, "And when he had declared all these things unto them, he sent them to Joppa."], [9, "On the morrow, as they went on their journey, and drew nigh unto the city, Peter went up upon the housetop to pray about the sixth hour:"], [10, "And he became very hungry, and would have eaten: but while they made ready, he fell into a trance,"], [11, "And saw heaven opened, and a certain vessel descending unto him, as it had been a great sheet knit at the four corners, and let down to the earth:"], [12, "Wherein were all manner of fourfooted beasts of the earth, and wild beasts, and creeping things, and fowls of the air."], [13, "And there came a voice to him, Rise, Peter; kill, and eat."], [14, "But Peter said, Not so, Lord; for I have never eaten any thing that is common or unclean."], [15, "And the voice spake unto him again the second time, What God hath cleansed, that call not thou common."], [16, "This was done thrice: and the vessel was received up again into heaven."], [17, "Now while Peter doubted in himself what this vision which he had seen should mean, behold, the men which were sent from Cornelius had made enquiry for Simon’s house, and stood before the gate,"], [18, "And called, and asked whether Simon, which was surnamed Peter, were lodged there."], [19, "While Peter thought on the vision, the Spirit said unto him, Behold, three men seek thee."], [20, "Arise therefore, and get thee down, and go with them, doubting nothing: for I have sent them."], [21, "Then Peter went down to the men which were sent unto him from Cornelius; and said, Behold, I am he whom ye seek: what is the cause wherefore ye are come?"], [22, "And they said, Cornelius the centurion, a just man, and one that feareth God, and of good report among all the nation of the Jews, was warned from God by an holy angel to send for thee into his house, and to hear words of thee."], [23, "Then called he them in, and lodged them. And on the morrow Peter went away with them, and certain brethren from Joppa accompanied him."], [24, "And the morrow after they entered into Caesarea. And Cornelius waited for them, and had called together his kinsmen and near friends."], [25, "And as Peter was coming in, Cornelius met him, and fell down at his feet, and worshipped him."], [26, "But Peter took him up, saying, Stand up; I myself also am a man."], [27, "And as he talked with him, he went in, and found many that were come together."], [28, "And he said unto them, Ye know how that it is an unlawful thing for a man that is a Jew to keep company, or come unto one of another nation; but God hath shewed me that I should not call any man common or unclean."], [29, "Therefore came I unto you without gainsaying, as soon as I was sent for: I ask therefore for what intent ye have sent for me?"], [30, "And Cornelius said, Four days ago I was fasting until this hour; and at the ninth hour I prayed in my house, and, behold, a man stood before me in bright clothing,"], [31, "And said, Cornelius, thy prayer is heard, and thine alms are had in remembrance in the sight of God."], [32, "Send therefore to Joppa, and call hither Simon, whose surname is Peter; he is lodged in the house of one Simon a tanner by the sea side: who, when he cometh, shall speak unto thee."], [33, "Immediately therefore I sent to thee; and thou hast well done that thou art come. Now therefore are we all here present before God, to hear all things that are commanded thee of God."], [34, "Then Peter opened his mouth, and said, Of a truth I perceive that God is no respecter of persons:"], [35, "But in every nation he that feareth him, and worketh righteousness, is accepted with him."], [36, "The word which God sent unto the children of Israel, preaching peace by Jesus Christ: (he is Lord of all:)"], [37, "That word, I say, ye know, which was published throughout all Judaea, and began from Galilee, after the baptism which John preached;"], [38, "How God anointed Jesus of Nazareth with the Holy Ghost and with power: who went about doing good, and healing all that were oppressed of the devil; for God was with him."], [39, "And we are witnesses of all things which he did both in the land of the Jews, and in Jerusalem; whom they slew and hanged on a tree:"], [40, "Him God raised up the third day, and shewed him openly;"], [41, "Not to all the people, but unto witnesses chosen before of God, even to us, who did eat and drink with him after he rose from the dead."], [42, "And he commanded us to preach unto the people, and to testify that it is he which was ordained of God to be the Judge of quick and dead."], [43, "To him give all the prophets witness, that through his name whosoever believeth in him shall receive remission of sins."], [44, "While Peter yet spake these words, the Holy Ghost fell on all them which heard the word."], [45, "And they of the circumcision which believed were astonished, as many as came with Peter, because that on the Gentiles also was poured out the gift of the Holy Ghost."], [46, "For they heard them speak with tongues, and magnify God. Then answered Peter,"], [47, "Can any man forbid water, that these should not be baptized, which have received the Holy Ghost as well as we?"], [48, "And he commanded them to be baptized in the name of the Lord. Then prayed they him to tarry certain days."]], "Hebrews 12": [[1, "Wherefore seeing we also are compassed about with so great a cloud of witnesses, let us lay aside every weight, and the sin which doth so easily beset us, and let us run with patience the race that is set before us,"], [2, "Looking unto Jesus the author and finisher of our faith; who for the joy that was set before him endured the cross, despising the shame, and is set down at the right hand of the throne of God."], [3, "For consider him that endured such contradiction of sinners against himself, lest ye be wearied and faint in your minds."], [4, "Ye have not yet resisted unto blood, striving against sin."], [5, "And ye have forgotten the exhortation which speaketh unto you as unto children, My son, despise not thou the chastening of the Lord, nor faint when thou art rebuked of him:"], [6, "For whom the Lord loveth he chasteneth, and scourgeth every son whom he receiveth."], [7, "If ye endure chastening, God dealeth with you as with sons; for what son is he whom the father chasteneth not?"], [8, "But if ye be without chastisement, whereof all are partakers, then are ye bastards, and not sons."], [9, "Furthermore we have had fathers of our flesh which corrected us, and we gave them reverence: shall we not much rather be in subjection unto the Father of spirits, and live?"], [10, "For they verily for a few days chastened us after their own pleasure; but he for our profit, that we might be partakers of his holiness."], [11, "Now no chastening for the present seemeth to be joyous, but grievous: nevertheless afterward it yieldeth the peaceable fruit of righteousness unto them which are exercised thereby."], [12, "Wherefore lift up the hands which hang down, and the feeble knees;"], [13, "And make straight paths for your feet, lest that which is lame be turned out of the way; but let it rather be healed."], [14, "Follow peace with all men, and holiness, without which no man shall see the Lord:"], [15, "Looking diligently lest any man fail of the grace of God; lest any root of bitterness springing up trouble you, and thereby many be defiled;"], [16, "Lest there be any fornicator, or profane person, as Esau, who for one morsel of meat sold his birthright."], [17, "For ye know how that afterward, when he would have inherited the blessing, he was rejected: for he found no place of repentance, though he sought it carefully with tears."], [18, "For ye are not come unto the mount that might be touched, and that burned with fire, nor unto blackness, and darkness, and tempest,"], [19, "And the sound of a trumpet, and the voice of words; which voice they that heard intreated that the word should not be spoken to them any more:"], [20, "(For they could not endure that which was commanded, And if so much as a beast touch the mountain, it shall be stoned, or thrust through with a dart:"], [21, "And so terrible was the sight, that Moses said, I exceedingly fear and quake:)"], [22, "But ye are come unto mount Sion, and unto the city of the living God, the heavenly Jerusalem, and to an innumerable company of angels,"], [23, "To the general assembly and church of the firstborn, which are written in heaven, and to God the Judge of all, and to the spirits of just men made perfect,"], [24, "And to Jesus the mediator of the new covenant, and to the blood of sprinkling, that speaketh better things than that of Abel."], [25, "See that ye refuse not him that speaketh. For if they escaped not who refused him that spake on earth, much more shall not we escape, if we turn away from him that speaketh from heaven:"], [26, "Whose voice then shook the earth: but now he hath promised, saying, Yet once more I shake not the earth only, but also heaven."], [27, "And this word, Yet once more, signifieth the removing of those things that are shaken, as of things that are made, that those things which cannot be shaken may remain."], [28, "Wherefore we receiving a kingdom which cannot be moved, let us have grace, whereby we may serve God acceptably with reverence and godly fear:"], [29, "For our God is a consuming fire."]]}};
+
+// Quotations from other writings (say: in the deck): their words open like a verse.
+const Q = {};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b && b.dataset.q) {
+    const q = Q[b.dataset.q];
+    verseTitle.textContent = q ? q.t : b.textContent.trim();
+    verseBody.innerHTML = q ? q.h : "<p>Not loaded.</p>";
+    verseDlg.showModal();
+    verseBody.scrollTop = 0;
+    return;
+  }
+  if (b) {
+    const keys = b.dataset.v;
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
