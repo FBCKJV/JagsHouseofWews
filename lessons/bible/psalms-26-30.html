@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Psalms 26–30: Judge Me, O Lord, and Joy in the Morning</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="Psalms 26-30 in the King James Bible: right judgment and the congregation, the LORD is my light and my salvation, the importunity of prayer and the destruction of the wicked, the voice of the LORD, and joy cometh in the morning, from the Psalms series studies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body .say-cite{font-size:.85rem;font-style:italic;color:var(--vellum-dim);border-top:1px solid var(--rule);padding-top:.6rem;margin-top:1rem}
+.ref.say{border-bottom-style:dashed}
+.ref.say::before{content:"\201C";margin-right:.15em}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Psalms 26–30" data-ctx="">
+  <div class="page title-page">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalms 26–30</h1>
+    <p class="sub">Judge me, O LORD • The LORD is my light • My rock • The voice of the LORD • Joy cometh in the morning</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 26:1">Psalm 26:1</button><button class="ref" data-v="Psalms 27:1">Psalm 27:1</button><button class="ref" data-v="Psalms 28:7">Psalm 28:7</button><button class="ref" data-v="Psalms 29:2">Psalm 29:2</button><button class="ref" data-v="Psalms 30:5">Psalm 30:5</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse. Press C for the whole chapter.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Psalm 26" data-title="Psalm 26" data-ctx="">
+  <div class="page title-page later">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalm 26</h1>
+    <p class="sub">Right judgment • In the congregations will I bless the LORD</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 26:1">Psalm 26:1</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Psalm 26" data-title="Judge not" data-ctx="Matthew 7:1-2">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 26:1</div>
+    <h2>Judge not</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>Judge not, that ye be not judged</mark>. For with what judgment ye judge, ye shall be judged: and with what measure ye mete, it shall be measured to you again.<cite>Matthew 7:1-2</cite></blockquote>
+    <p>Jesus' words are often twisted by others to mean a Christian should never judge another person, no matter how wicked they are or what sins they do. But, we know the warning is against hypocrisy, not right judgment.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Psalm 26" data-title="Judge me, O Lord" data-ctx="Psalms 26:1-2">
+  <div class="page">
+    <div class="kicker">Psalm 26 · Right judgment</div>
+    <h2>Judge me, O Lord</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>Judge me, O <span class="lord">Lord</span></mark>; for I have walked in mine integrity: I have trusted also in the <span class="lord">Lord</span>; therefore I shall not slide. <mark>Examine me, O <span class="lord">Lord</span>, and prove me</mark>; try my reins and my heart.<cite>Psalm 26:1-2</cite></blockquote>
+    <p><strong>Psalm 26</strong> gives us a picture of what Jesus is actually teaching, where David asks the Lord to judge him by his doings, according to his faith, in comparison to the wicked around him.</p>
+    <p>The understanding of proper judgement is key to good Christian living. It allows us to be separated, to be holy as God is holy, to put away the filth of the flesh and walk in the Spirit. To seek to be a disciplined servant of the Lord.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Psalm 26" data-title="I shall not slide" data-ctx="Psalms 26:1-2">
+  <div class="page">
+    <div class="kicker">Psalm 26 · Integrity</div>
+    <h2>I shall not slide</h2>
+    <p>We walk in integrity, and trust in the Lord alone, that we shall not slide. Firmly on His rock, not backsliding to live as the world does.</p>
+    <p>It is not an automatic transformation. We are sanctified by the Spirit by the inward man, the new man, but our flesh is still prone to lusts of the eyes and the pride of life and we can stumble and fall.</p>
+    <p>But if we seek the judgment of God, asking Him to try us and see that our heart is right, we are opening ourselves to correction and refinement, to better be used by God.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="Psalm 26" data-title="I have walked in thy truth" data-ctx="Psalms 26:3">
+  <div class="page">
+    <div class="kicker">Psalm 26 · Thy lovingkindness</div>
+    <h2>I have walked in thy truth</h2>
+    <blockquote class="big-verse">For thy lovingkindness is before mine eyes: and I have walked in thy truth.<cite>Psalm 26:3</cite></blockquote>
+    <p>Walking in His truth, keeping ourselves pure and humble, seeing others in the way God does, with grace and mercy and lovingkindness, we can make our case to the Lord, and compare ourselves to the wicked without the leaven of the Pharisees, hypocrisy.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="Psalm 26" data-title="I have not sat with vain persons" data-ctx="Psalms 26:4-5">
+  <div class="page">
+    <div class="kicker">Psalm 26 · Separation</div>
+    <h2>I have not sat with vain persons</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>I have not sat with vain persons, neither will I go in with dissemblers</mark>. I have hated the congregation of evil doers; and will not sit with the wicked.<cite>Psalm 26:4-5</cite></blockquote>
+    <p>David lists the things he has not done, to separate himself towards God.</p>
+    <p>He has not sat with vain persons, false believers. He has not had ecumenical fellowship with the dissemblers, the false prophets who teach lies. He has avoided the congregation of evil doers. The bitter fruit of the false religions of this world. He has not yoked with unbelievers.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="Psalm 26" data-title="So will I compass thine altar" data-ctx="Psalms 26:6">
+  <div class="page">
+    <div class="kicker">Psalm 26 · Innocency</div>
+    <h2>So will I compass thine altar</h2>
+    <blockquote class="big-verse">I will wash mine hands in innocency: <mark>so will I compass thine altar</mark>, O <span class="lord">Lord</span>:<cite>Psalm 26:6</cite></blockquote>
+    <p>Instead, knowing he is innocent of these things, and sanctified, he is able to come before the altar of the Lord. To gather with the assembly of God's people. To walk into church without the burden of unresolved sin, with a good conscience towards God.</p>
+    <p>He doesn't do this to be haughty, or to puff up himself in comparison to the wicked, but that he may proclaim the goodness of the Lord in the midst of the congregation, without hypocrisy.</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="Psalm 26" data-title="The habitation of thy house" data-ctx="Psalms 26:8">
+  <div class="page">
+    <div class="kicker">Psalm 26 · Thy house</div>
+    <h2>The habitation of thy house</h2>
+    <blockquote class="big-verse"><span class="lord">Lord</span>, <mark>I have loved the habitation of thy house</mark>, and the place where thine honour dwelleth.<cite>Psalm 26:8</cite></blockquote>
+    <p>Meekly seeking God's judgment in our lives that we may be a better testimony is a good thing. Judgment that leads to repentance and forgiveness of others, that we may love the habitation of His house, that we may know how to behave in the church, as a pillar and foundation of truth, is a good thing.</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Psalm 26" data-title="Gather not my soul with sinners" data-ctx="Psalms 26:9-11">
+  <div class="page">
+    <div class="kicker">Psalm 26 · Redeem me</div>
+    <h2>Gather not my soul with sinners</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>Gather not my soul with sinners</mark>, nor my life with bloody men: In whose hands is mischief, and their right hand is full of bribes. But as for me, I will walk in mine integrity: <mark>redeem me, and be merciful unto me</mark>.<cite>Psalm 26:9-11</cite></blockquote>
+    <p>Asking the Lord to remember us, that we aren't caught up in His judgment of the wicked, but rather walk in our integrity, waiting for His redemption out of His wrath, seeking His mercy in our obedience.</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Psalm 26" data-title="An even place" data-ctx="Psalms 26:12">
+  <div class="page">
+    <div class="kicker">Psalm 26 · In the congregations</div>
+    <h2>An even place</h2>
+    <blockquote class="big-verse">My foot standeth in an even place: in the congregations will I bless the <span class="lord">Lord</span>.<cite>Psalm 26:12</cite></blockquote>
+    <p>This should be our guiding principle. To rightly judge, beginning with ourselves that we may purge ourselves, be separated unto the Lord that we may boldly proclaim His mercy and bless the Lord in the congregation. Amen.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Psalm 26" data-title="That we go to church!" data-ctx="Psalms 26:12">
+  <div class="page">
+    <div class="kicker">Application • The assembly</div>
+    <h2>That we go to church!</h2>
+    <p>Fundamentally, <strong>Psalm 26</strong> is an encouragement to purify ourselves and avoid hypocrisy while recognizing the evil of men, that we may go into the assembly sanctified.</p>
+    <p>But this also presupposes that we are to go into the assembly. That we are not to forsake the assembly. That we go to church!</p>
+    <p>We have an obligation to bless the Lord among the brethren. To gather and sing praises towards Him. Because He has judged us, found us wanting, and yet while we were yet sinners, Christ died for us. That in God's lovingkindness, He made provisions of grace to redeem and reconcile us.</p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Psalm 26" data-title="Forsaking the assembly" data-ctx="Psalms 26:12">
+  <div class="page">
+    <div class="kicker">Application • The assembly</div>
+    <h2>Forsaking the assembly</h2>
+    <p>For this we should want to sing His praises. But often, if we don't allow God's judgment willingly, if we don't purify ourselves, if we gather with dissemblers, and allow our own hearts to mislead us, and justify ourselves despite our sin, we may find ourselves forsaking the assembly, not going in to the congregation, skipping church.</p>
+    <p>Our conscience may be pricked, and there will be preaching against sin. It is easier to backslide when you do. And the feedback loop compounds, until you are among the vain persons.</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Psalm 26" data-title="His mercies are new each morning" data-ctx="Psalms 26:12">
+  <div class="page">
+    <div class="kicker">Application • The assembly</div>
+    <h2>His mercies are new each morning</h2>
+    <p>If you don't willfully seek the judgment of God in your life, He will still judge you. And in a backslidden state, a Christian can be caught up with the bloody men, and lose their life. Not their eternal life, certainly, but cut short in this one.</p>
+    <p>Seeking to avoid the refiner's fire of God's judgment can result in far greater pain and loss in His chastening than in the embarrassment and humbling of ourselves when we get right and submit ourselves to His ways.</p>
+    <p>Be ready daily to submit to His judgment. His mercies are new each morning. It's never too late to get right while you're on this side of Heaven. Allow God to judge your walk, and stand in your integrity, that you may enter gleefully into the congregation.</p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="Psalm 26" data-title="The voice of thanksgiving" data-ctx="Psalms 26:7">
+  <div class="page">
+    <div class="kicker">Psalm 26 · Thy wondrous works</div>
+    <h2>The voice of thanksgiving</h2>
+    <blockquote class="big-verse">That I may publish with the voice of thanksgiving, and tell of all thy wondrous works.<cite>Psalm 26:7</cite></blockquote>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Psalm 27" data-title="Psalm 27" data-ctx="Psalms 26:7">
+  <div class="page title-page later">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalm 27</h1>
+    <p class="sub">The LORD is my light and my salvation • Seek ye my face</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 27:1">Psalm 27:1</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Psalm 27" data-title="Whom shall I fear?" data-ctx="Psalms 27:1|Luke 12:4-5">
+  <div class="page">
+    <div class="kicker">Psalm 27 · My light and my salvation</div>
+    <h2>Whom shall I fear?</h2>
+    <blockquote class="big-verse"><mark>The <span class="lord">Lord</span> is my light and my salvation</mark>; <mark>whom shall I fear?</mark> the <span class="lord">Lord</span> is the strength of my life; of whom shall I be afraid?<cite>Psalm 27:1</cite></blockquote>
+    <p><strong>Psalm 27</strong> continues the pattern of praise for the salvation found in the Lord, by faith.</p>
+    <p>The Lord is our light and salvation. Jesus is the way, the truth and the light. We who have trusted in Him, are kept by the power of God unto salvation. What do we have to fear from men?</p>
+    <blockquote class="scripture" style="font-style:italic">And I say unto you my friends, <mark>Be not afraid of them that kill the body</mark>, and after that have no more that they can do. But I will forewarn you whom ye shall fear: Fear him, which after he hath killed hath power to cast into hell; yea, I say unto you, Fear him.<cite>Luke 12:4-5</cite></blockquote>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Psalm 27" data-title="In this will I be confident" data-ctx="Psalms 27:2-3">
+  <div class="page">
+    <div class="kicker">Psalm 27 · Though war should rise</div>
+    <h2>In this will I be confident</h2>
+    <blockquote class="scripture" style="font-style:italic">When the wicked, even mine enemies and my foes, came upon me to eat up my flesh, they stumbled and fell. Though an host should encamp against me, my heart shall not fear: <mark>though war should rise against me, in this will I be confident</mark>.<cite>Psalm 27:2-3</cite></blockquote>
+    <p>The wicked who may seek your life cannot do anything but threaten you with Heaven. Whatever battle we face, we are already on the winning side. All in Christ have overcome this world. We can be confident in this, unto death.</p>
+    <p>And praise God we aren't in a time where we face constant war and battles. That our greatest fight is spiritual. And against our own flesh.</p>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Psalm 27" data-title="The mission field" data-ctx="Psalms 27:2-3">
+  <div class="page">
+    <div class="kicker">Application • Without fear</div>
+    <h2>The mission field</h2>
+    <p>But there are those in the mission field, in countries where you can be beaten, imprisoned and killed for the cause of Christ. Meek and humble men and women who do great things for the Lord, daily. Winning souls and spreading the word of God in the face of persecution, without fear.</p>
+    <p>Many Christians today won't even venture into safe suburban neighborhoods once a week to do the same. Often, out of fear.</p>
+    <p>The fear of being a peculiar person. Of being socially rejected for the audacity of preaching Jesus to strangers. Of the "danger" of someone mocking you, or shutting the door in your face.</p>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Psalm 27" data-title="Faith over fear" data-ctx="Psalms 27:2-3">
+  <div class="page">
+    <div class="kicker">Application • Without fear</div>
+    <h2>Faith over fear</h2>
+    <p>David believed, and it was sufficient to face legions of enemies. To face a giant with a sling. Missionaries and their converts face arrest and imprisonment, beatings and death.</p>
+    <p>American Christians wear "Faith Over Fear" graphic tees to the gym and think they are making a bold stand for Christ.</p>
+    <p>We should be boldly proclaiming the trust we have in a mighty God and the reward He has promised through the Son. <em>Though war should rise against me, in this will I be confident.</em></p>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Psalm 27" data-title="One thing have I desired" data-ctx="Psalms 27:4-6">
+  <div class="page">
+    <div class="kicker">Psalm 27 · The house of the Lord</div>
+    <h2>One thing have I desired</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>One thing have I desired of the <span class="lord">Lord</span></mark>, that will I seek after; that I may dwell in the house of the <span class="lord">Lord</span> all the days of my life, to behold the beauty of the <span class="lord">Lord</span>, and to enquire in his temple. For in the time of trouble he shall hide me in his pavilion: in the secret of his tabernacle shall he hide me; <mark>he shall set me up upon a rock</mark>. And now shall mine head be lifted up above mine enemies round about me: therefore will I offer in his tabernacle sacrifices of joy; I will sing, yea, I will sing praises unto the <span class="lord">Lord</span>.<cite>Psalm 27:4-6</cite></blockquote>
+    <p>Continuing Psalm 27, after establishing the faith on which he stands, and the confidence he has on the promises of God, David as psalmist cries out to the Lord for His mercy, to hear his prayer.</p>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Psalm 27" data-title="Hear, O Lord, when I cry" data-ctx="Psalms 27:7|Hebrews 11:6">
+  <div class="page">
+    <div class="kicker">Psalm 27 · Have mercy upon me</div>
+    <h2>Hear, O Lord, when I cry</h2>
+    <blockquote class="big-verse">Hear, O <span class="lord">Lord</span>, when I cry with my voice: have mercy also upon me, and answer me.<cite>Psalm 27:7</cite></blockquote>
+    <p>As these are meant to be sung or said, as model prayers or devotional worship, we are called to do the same. To call upon the mercy of the Lord. To bless His longsuffering and grace towards us, and petition the Lord with prayer.</p>
+    <blockquote class="big-verse">But without faith it is impossible to please him: for he that cometh to God must believe that he is, and that <mark>he is a rewarder of them that diligently seek him</mark>.<cite>Hebrews 11:6</cite></blockquote>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Psalm 27" data-title="Seek ye my face" data-ctx="Psalms 27:8|2 Chronicles 7:14">
+  <div class="page">
+    <div class="kicker">Psalm 27 · Thy face, Lord, will I seek</div>
+    <h2>Seek ye my face</h2>
+    <blockquote class="big-verse">When thou saidst, <mark>Seek ye my face</mark>; my heart said unto thee, Thy face, <span class="lord">Lord</span>, will I seek.<cite>Psalm 27:8</cite></blockquote>
+    <p>When we seek the Lord, it is obedience to His command to seek His face. To search for Him. As individuals and as a nation of believers.</p>
+    <blockquote class="big-verse">If my people, which are called by my name, shall humble themselves, and pray, <mark>and seek my face</mark>, and turn from their wicked ways; then will I hear from heaven, and will forgive their sin, and will heal their land.<cite>2 Chronicles 7:14</cite></blockquote>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="Psalm 27" data-title="Seek and ye shall find" data-ctx="Psalms 27:8|2 Chronicles 7:14">
+  <div class="page">
+    <div class="kicker">Psalm 27 · Thy face, Lord, will I seek</div>
+    <h2>Seek and ye shall find</h2>
+    <p><em>Seek and ye shall find</em>, the Bible says. Our God is merciful to hear our prayers and to reward those that in faith, have sought Him out. What a humbling and amazing thing to be considered worthy of attention by our Creator.</p>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="Psalm 27" data-title="O God of my salvation" data-ctx="Psalms 27:9">
+  <div class="page">
+    <div class="kicker">Psalm 27 · Leave me not</div>
+    <h2>O God of my salvation</h2>
+    <blockquote class="big-verse">Hide not thy face far from me; put not thy servant away in anger: thou hast been my help; <mark>leave me not, neither forsake me, O God of my salvation</mark>.<cite>Psalm 27:9</cite></blockquote>
+    <p>David continues, meekly asking for forgiveness if there are any transgressions that may have displeased the Lord. Asking for His favor, to not forsake us in times of trouble, yet having the understanding that our trouble may be due to our own unresolved sin. Either way, <em>O God of</em> our <em>salvation,</em> hear our prayers.</p>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="slide" data-section="Psalm 27" data-title="The Lord will take me up" data-ctx="Psalms 27:10">
+  <div class="page">
+    <div class="kicker">Psalm 27 · When my father and my mother forsake me</div>
+    <h2>The Lord will take me up</h2>
+    <blockquote class="big-verse">When my father and my mother forsake me, then the <span class="lord">Lord</span> will take me up.<cite>Psalm 27:10</cite></blockquote>
+    <p>In the very next breath, David affirms the steadfast faithfulness of the Lord, that even if our own parents forsake us, He remains true.</p>
+    <p>Expressing fear and doubt while recognizing the truth of the promises of God is a human thing, and we see this play out on our own minds, even as it does David's. We are a weak and needy people, and we need God involved in every aspect of our lives.</p>
+  </div>
+</section>
+
+<!-- 27 -->
+<section class="slide" data-section="Psalm 27" data-title="A way to escape" data-ctx="Psalms 27:11|1 Corinthians 10:13">
+  <div class="page">
+    <div class="kicker">Psalm 27 · Teach me thy way</div>
+    <h2>A way to escape</h2>
+    <blockquote class="big-verse">Teach me thy way, O <span class="lord">Lord</span>, and <mark>lead me in a plain path</mark>, because of mine enemies.<cite>Psalm 27:11</cite></blockquote>
+    <p>Remember this, and be open to His teaching. Be open to hearing His voice in scripture, recognizing the chastening in our life, seeing His mercy towards us, and wrath revealed from Heaven, and fearing Him, always.</p>
+    <p>He shows us the path. He gives us a way out of every temptation.</p>
+    <blockquote class="big-verse">There hath no temptation taken you but such as is common to man: but God is faithful, who will not suffer you to be tempted above that ye are able; but will with the temptation also <mark>make a way to escape</mark>, that ye may be able to bear it.<cite>1 Corinthians 10:13</cite></blockquote>
+  </div>
+</section>
+
+<!-- 28 -->
+<section class="slide" data-section="Psalm 27" data-title="False witnesses" data-ctx="Psalms 27:12">
+  <div class="page">
+    <div class="kicker">Psalm 27 · Mine enemies</div>
+    <h2>False witnesses</h2>
+    <blockquote class="big-verse">Deliver me not over unto the will of mine enemies: for false witnesses are risen up against me, and such as breathe out cruelty.<cite>Psalm 27:12</cite></blockquote>
+    <p>We may ask for His help to see the deliverance He has for us, even as our adversaries seek to destroy us with their lies and schemes.</p>
+  </div>
+</section>
+
+<!-- 29 -->
+<section class="slide" data-section="Psalm 27" data-title="I had fainted, unless I had believed" data-ctx="Psalms 27:13-14">
+  <div class="page">
+    <div class="kicker">Psalm 27 · Wait on the Lord</div>
+    <h2>I had fainted, unless I had believed</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>I had fainted, unless I had believed</mark> to see the goodness of the <span class="lord">Lord</span> in the land of the living. <mark>Wait on the <span class="lord">Lord</span>: be of good courage</mark>, and he shall strengthen thine heart: wait, I say, on the <span class="lord">Lord</span>.<cite>Psalm 27:13-14</cite></blockquote>
+    <p>The evidence of God's grace and mercy to His people gives us faith and strength to carry on. This is a key reason why it is important to praise Him in the congregation, to edify those going through the trials of life, to have hope. That all things work together for good. To wait, patiently for the Lord to move. To be of good courage, knowing what He has done for others and has done for us in the past. Knowing our present suffering leads to the glory we are partakers in, through Christ.</p>
+  </div>
+</section>
+
+<!-- 30 -->
+<section class="slide" data-section="Psalm 27" data-title="More than conquerors" data-ctx="Romans 8:35-37|1 Chronicles 16:11">
+  <div class="page">
+    <div class="kicker">Cross references • Psalm 27:13–14</div>
+    <h2>More than conquerors</h2>
+    <blockquote class="scripture" style="font-style:italic">Who shall separate us from the love of Christ? shall tribulation, or distress, or persecution, or famine, or nakedness, or peril, or sword? As it is written, For thy sake we are killed all the day long; we are accounted as sheep for the slaughter. Nay, in all these things <mark>we are more than conquerors through him that loved us</mark>.<cite>Romans 8:35-37</cite></blockquote>
+    <p class="center">Amen</p>
+    <blockquote class="big-verse">Seek the <span class="lord">Lord</span> and his strength, seek his face continually.<cite>1 Chronicles 16:11</cite></blockquote>
+  </div>
+</section>
+
+<!-- 31 -->
+<section class="slide" data-section="Psalm 27" data-title="Because they choose to" data-ctx="Romans 8:35-37|1 Chronicles 16:11">
+  <div class="page">
+    <div class="kicker">Application • Soul winning</div>
+    <h2>Because they choose to</h2>
+    <p>Last night after Wednesday service, a few of the brothers, myself and our Pastor were talking, and the subject of soul-winning came up. It was part of a broader theme of those who choose to reject 3-to-thrive, as Pastor said, because they wanted to. Who don't tithe or give, because they choose not to. They don't read their Bible, because they choose not to. People who never go door knocking and never share the gospel, because they want to do something else...And how they backslide and struggle with sin, because they choose to.</p>
+    <p>We are going to once again make these things a particular point of emphasis, especially among the men. It can be a struggle to get some Christians to choose God over family, let alone football and recreation and sitting on the couch watching TV.</p>
+  </div>
+</section>
+
+<!-- 32 -->
+<section class="slide" data-section="Psalm 28" data-title="Psalm 28" data-ctx="Romans 8:35-37|1 Chronicles 16:11">
+  <div class="page title-page later">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalm 28</h1>
+    <p class="sub">The LORD is my strength and my shield</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 28:1">Psalm 28:1</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 33 -->
+<section class="slide" data-section="Psalm 28" data-title="Unto thee will I cry" data-ctx="Psalms 28:1-2">
+  <div class="page">
+    <div class="kicker">Psalm 28 · My rock</div>
+    <h2>Unto thee will I cry</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>Unto thee will I cry, O <span class="lord">Lord</span> my rock</mark>; be not silent to me: lest, if thou be silent to me, I become like them that go down into the pit. Hear the voice of my supplications, when I cry unto thee, when I lift up my hands toward thy holy oracle.<cite>Psalm 28:1-2</cite></blockquote>
+    <p>The Lord is our rock and our salvation. To Him we cry in trouble.</p>
+    <p>Here in <strong>Psalm 28</strong>, David again shows the importunity of prayer, reminding God of what He means to us, and how His promises to deliver His children, and make us holy, also carry promises of the destruction of the wicked.</p>
+    <p>Reminding God of our understanding, reinforces the truth in our hearts and provides ready comfort. Because the world is filled with the wicked, and it is easy to become despondent over it.</p>
+  </div>
+</section>
+
+<!-- 34 -->
+<section class="slide" data-section="Psalm 28" data-title="Mischief is in their hearts" data-ctx="Psalms 28:3">
+  <div class="page">
+    <div class="kicker">Psalm 28 · The workers of iniquity</div>
+    <h2>Mischief is in their hearts</h2>
+    <blockquote class="big-verse">Draw me not away with the wicked, and with the workers of iniquity, <mark>which speak peace to their neighbours, but mischief is in their hearts</mark>.<cite>Psalm 28:3</cite></blockquote>
+    <p>We are given a constant stream of negativity, of liars and injustice, workers of iniquity, seemingly prospering. Even those that are caught and tried by the system are often given clemency and cover, to continue in their evil deeds.</p>
+    <p>We ask that God hear our voice, and to respond. To keep us separated from the wrath that is appointed to the workers of iniquity.</p>
+    <p>Those that speak peace but have mischief in their hearts are all around us. In the news and in our social media feeds. We have a constant black pilling from the world, and can get discouraged.</p>
+  </div>
+</section>
+
+<!-- 35 -->
+<section class="slide" data-section="Psalm 28" data-title="Render to them their desert" data-ctx="Psalms 28:4">
+  <div class="page">
+    <div class="kicker">Psalm 28 · Give them according to their deeds</div>
+    <h2>Render to them their desert</h2>
+    <blockquote class="big-verse">Give them according to their deeds, and according to the wickedness of their endeavours: give them after the work of their hands; <mark>render to them their desert</mark>.<cite>Psalm 28:4</cite></blockquote>
+    <p>We also see the world waxing worse and worse, and the repercussions of past sins being visited on our generation, and it can overwhelm some with fear of being caught up in the collapse that is always just around the corner.</p>
+    <p>But our perspective should be to entreat the Lord with supplication, that as He punishes the wicked, He protects His people. We should want them to receive recompense for their evil deeds, and trust He will protect us from His wrath.</p>
+  </div>
+</section>
+
+<!-- 36 -->
+<section class="slide" data-section="Psalm 28" data-title="He shall destroy them" data-ctx="Psalms 28:5">
+  <div class="page">
+    <div class="kicker">Psalm 28 · The works of the Lord</div>
+    <h2>He shall destroy them</h2>
+    <blockquote class="big-verse">Because they regard not the works of the <span class="lord">Lord</span>, nor the operation of his hands, he shall destroy them, and not build them up.<cite>Psalm 28:5</cite></blockquote>
+  </div>
+</section>
+
+<!-- 37 -->
+<section class="slide" data-section="Psalm 28" data-title="My strength and my shield" data-ctx="Psalms 28:6-8">
+  <div class="page">
+    <div class="kicker">Psalm 28 · The Lord hath heard</div>
+    <h2>My strength and my shield</h2>
+    <blockquote class="scripture" style="font-style:italic">Blessed be the <span class="lord">Lord</span>, because he hath heard the voice of my supplications. <mark>The <span class="lord">Lord</span> is my strength and my shield</mark>; my heart trusted in him, and I am helped: therefore my heart greatly rejoiceth; and with my song will I praise him. The <span class="lord">Lord</span> is their strength, and he is the saving strength of his anointed.<cite>Psalm 28:6-8</cite></blockquote>
+    <p>The Lord has heard us, and is our strength and shield, the rock of salvation. We should feel joy rather than fear, and praise Him openly for the destruction that comes upon the wicked.</p>
+    <p>Thy Kingdom come, O Lord. Even so, come quickly. Spare your anointed from your wrath. Save us out of our tribulation. Destroy the wicked.</p>
+  </div>
+</section>
+
+<!-- 38 -->
+<section class="slide" data-section="Psalm 28" data-title="Save thy people" data-ctx="Psalms 28:9">
+  <div class="page">
+    <div class="kicker">Psalm 28 · Thine inheritance</div>
+    <h2>Save thy people</h2>
+    <blockquote class="big-verse">Save thy people, and bless thine inheritance: feed them also, and lift them up for ever.<cite>Psalm 28:9</cite></blockquote>
+    <p class="center">Amen</p>
+  </div>
+</section>
+
+<!-- 39 -->
+<section class="slide" data-section="Psalm 29" data-title="Psalm 29" data-ctx="Psalms 28:9">
+  <div class="page title-page later">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalm 29</h1>
+    <p class="sub">The voice of the LORD</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 29:1">Psalm 29:1</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 40 -->
+<section class="slide" data-section="Psalm 29" data-title="The voice of the Lord" data-ctx="Psalms 29:1-4">
+  <div class="page">
+    <div class="kicker">Psalm 29 · His Word</div>
+    <h2>The voice of the Lord</h2>
+    <blockquote class="scripture" style="font-style:italic">Give unto the <span class="lord">Lord</span>, O ye mighty, give unto the <span class="lord">Lord</span> glory and strength. Give unto the <span class="lord">Lord</span> the glory due unto his name; worship the <span class="lord">Lord</span> in the beauty of holiness. The voice of the <span class="lord">Lord</span> is upon the waters: the God of glory thundereth: the <span class="lord">Lord</span> is upon many waters. <mark>The voice of the <span class="lord">Lord</span> is powerful</mark>; the voice of the <span class="lord">Lord</span> is full of majesty.<cite>Psalm 29:1-4</cite></blockquote>
+    <p>Pure worship of the Lord, His voice, His Word. Christ Jesus is the name, and through Him God spoke all creation into existence, spoke via the prophets all scripture, the inspiration by God of all things. His word settled in Heaven, forever.</p>
+  </div>
+</section>
+
+<!-- 41 -->
+<section class="slide" data-section="Psalm 29" data-title="The Lord sitteth King for ever" data-ctx="Psalms 29:5-10">
+  <div class="page">
+    <div class="kicker">Psalm 29 · The King</div>
+    <h2>The Lord sitteth King for ever</h2>
+    <blockquote class="scripture" style="font-style:italic">The voice of the <span class="lord">Lord</span> breaketh the cedars; yea, the <span class="lord">Lord</span> breaketh the cedars of Lebanon. He maketh them also to skip like a calf; Lebanon and Sirion like a young unicorn. The voice of the <span class="lord">Lord</span> divideth the flames of fire. The voice of the <span class="lord">Lord</span> shaketh the wilderness; the <span class="lord">Lord</span> shaketh the wilderness of Kadesh. The voice of the <span class="lord">Lord</span> maketh the hinds to calve, and discovereth the forests: and in his temple doth every one speak of his glory. The <span class="lord">Lord</span> sitteth upon the flood; yea, <mark>the <span class="lord">Lord</span> sitteth King for ever</mark>.<cite>Psalm 29:5-10</cite></blockquote>
+    <p>All glory is His, as all things are by Him. He sits as King, forever.</p>
+  </div>
+</section>
+
+<!-- 42 -->
+<section class="slide" data-section="Psalm 29" data-title="Peace" data-ctx="Psalms 29:11">
+  <div class="page">
+    <div class="kicker">Psalm 29 · Strength unto his people</div>
+    <h2>Peace</h2>
+    <blockquote class="big-verse">The <span class="lord">Lord</span> will give strength unto his people; the <span class="lord">Lord</span> will bless his people with peace.<cite>Psalm 29:11</cite></blockquote>
+    <p><em>Give unto the LORD the glory due unto his name; worship the LORD in the beauty of holiness</em>, because His Word alone is the cause of all creation, and everything therein. And knowing His power and majesty, rejoice that <em>The LORD will give strength unto his people; the LORD will bless his people with peace.</em></p>
+    <p class="center">Amen!</p>
+  </div>
+</section>
+
+<!-- 43 -->
+<section class="slide" data-section="Psalm 30" data-title="Psalm 30" data-ctx="Psalms 29:11">
+  <div class="page title-page later">
+    <div class="overline">The Book of Psalms</div>
+    <h1>Psalm 30</h1>
+    <p class="sub">Joy cometh in the morning</p>
+    <div class="refs center"><button class="ref" data-v="Psalms 30:1">Psalm 30:1</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+  </div>
+</section>
+
+<!-- 44 -->
+<section class="slide" data-section="Psalm 30" data-title="Thou hast lifted me up" data-ctx="Psalms 30:1-3">
+  <div class="page">
+    <div class="kicker">Psalm 30 · I will extol thee</div>
+    <h2>Thou hast lifted me up</h2>
+    <blockquote class="scripture" style="font-style:italic">I will extol thee, O <span class="lord">Lord</span>; for <mark>thou hast lifted me up</mark>, and hast not made my foes to rejoice over me. O <span class="lord">Lord</span> my God, I cried unto thee, and thou hast healed me. O <span class="lord">Lord</span>, <mark>thou hast brought up my soul from the grave</mark>: thou hast kept me alive, that I should not go down to the pit.<cite>Psalm 30:1-3</cite></blockquote>
+    <p>O LORD! In Psalm 30, David extols the Lord for His gift of salvation, and calls all in the congregation to do the same.</p>
+    <p>God has lifted us up, heard us when we called upon His name, and healed us from our sin. We are brought up from the grave and shall never perish. Our souls will not see Hell. We shall not go down to the pit.</p>
+  </div>
+</section>
+
+<!-- 45 -->
+<section class="slide" data-section="Psalm 30" data-title="At the remembrance of his holiness" data-ctx="Psalms 30:4|1 Corinthians 11:24">
+  <div class="page">
+    <div class="kicker">Psalm 30 · Sing unto the Lord</div>
+    <h2>At the remembrance of his holiness</h2>
+    <blockquote class="big-verse">Sing unto the <span class="lord">Lord</span>, O ye saints of his, and <mark>give thanks at the remembrance of his holiness</mark>.<cite>Psalm 30:4</cite></blockquote>
+    <p>Rejoice! This verse makes me think of the Lord's supper. The thanksgiving and remembrance of Jesus' holiness.</p>
+    <blockquote class="big-verse">And when he had given thanks, he brake it, and said, Take, eat: this is my body, which is broken for you: <mark>this do in remembrance of me</mark>.<cite>1 Corinthians 11:24</cite></blockquote>
+    <p>This communal act of thanksgiving and memorial - <em>For as often as ye eat this bread, and drink this cup, ye do shew the Lord's death till he come</em>. For this we should sing unto the Lord, extolling His mercy, forever.</p>
+  </div>
+</section>
+
+<!-- 46 -->
+<section class="slide" data-section="Psalm 30" data-title="In his favour is life" data-ctx="Psalms 30:5|Romans 6:23">
+  <div class="page">
+    <div class="kicker">Psalm 30 · His anger endureth but a moment</div>
+    <h2>In his favour is life</h2>
+    <blockquote class="big-verse">For his anger endureth but a moment; <mark>in his favour is life</mark>: weeping may endure for a night, but <mark>joy cometh in the morning</mark>.<cite>Psalm 30:5</cite></blockquote>
+    <p><em>For his anger endureth but a moment; in his favour is life</em>. The chastening of sons by the Lord is fleeting. But grace, the unmerited favor of God, is given to the world through His Son. And in His favor is life.</p>
+    <blockquote class="big-verse">For the wages of sin is death; but <mark>the gift of God is eternal life</mark> through Jesus Christ our Lord.<cite>Romans 6:23</cite></blockquote>
+    <p>What a wonderful promise. How can we not sing for joy and give Him glory?</p>
+  </div>
+</section>
+
+<!-- 47 -->
+<section class="slide" data-section="Psalm 30" data-title="I shall never be moved" data-ctx="Psalms 30:6-7">
+  <div class="page">
+    <div class="kicker">Psalm 30 · By thy favour</div>
+    <h2>I shall never be moved</h2>
+    <blockquote class="scripture" style="font-style:italic">And in my prosperity I said, <mark>I shall never be moved</mark>. <span class="lord">Lord</span>, by thy favour thou hast made my mountain to stand strong: thou didst hide thy face, and I was troubled.<cite>Psalm 30:6-7</cite></blockquote>
+    <p>The comfort we have in Christ, knowing that <em>weeping may endure for a night, but joy cometh in the morning</em>, knowing for certain that in our prosperity, in the gift of God, we shall not be moved. Our enemies shall not overcome us. We are made to stand on a sure foundation, the rock that is Christ. By His favor. By His grace.</p>
+    <p>We can trust that no matter what we face, even if we have angered God, that by turning to Him and crying unto Him, we have access to His grace through faith and the mediator of that faith, the man Christ Jesus.</p>
+  </div>
+</section>
+
+<!-- 48 -->
+<section class="slide" data-section="Psalm 30" data-title="Shall the dust praise thee?" data-ctx="Psalms 30:8-9">
+  <div class="page">
+    <div class="kicker">Psalm 30 · I cried to thee</div>
+    <h2>Shall the dust praise thee?</h2>
+    <blockquote class="scripture" style="font-style:italic">I cried to thee, O <span class="lord">Lord</span>; and unto the <span class="lord">Lord</span> I made supplication. What profit is there in my blood, when I go down to the pit? <mark>Shall the dust praise thee?</mark> shall it declare thy truth?<cite>Psalm 30:8-9</cite></blockquote>
+    <p>The psalmist calls on God, reminding Him of His grace and mercy, the favor with which He has blessed us. And one of the purposes of our salvation, our healing, our getting saved, is that we will live forever to sing His praise.</p>
+    <p>The resurrection is sure.</p>
+    <p>Some will say the context of the Psalm is thanksgiving for not being killed by David's enemies, and triumphantly giving credit to God, but ultimately it is a song extolling the grace of God that those who trust in Him shall never perish.</p>
+  </div>
+</section>
+
+<!-- 49 -->
+<section class="slide" data-section="Psalm 30" data-title="Lord, be thou my helper" data-ctx="Psalms 30:10">
+  <div class="page">
+    <div class="kicker">Psalm 30 · Have mercy upon me</div>
+    <h2>Lord, be thou my helper</h2>
+    <blockquote class="big-verse">Hear, O <span class="lord">Lord</span>, and have mercy upon me: <span class="lord">Lord</span>, be thou my helper.<cite>Psalm 30:10</cite></blockquote>
+    <p><em>Hear, O LORD, and have mercy upon me: LORD, be thou my helper.</em> This is our prayer of salvation. Lord have mercy on me, a sinner. Knowing that God, Who cannot lie, has promised that all who call upon His name shall not perish, but be saved.</p>
+  </div>
+</section>
+
+<!-- 50 -->
+<section class="slide" data-section="Psalm 30" data-title="Mourning into dancing" data-ctx="Psalms 30:11-12">
+  <div class="page">
+    <div class="kicker">Psalm 30 · To the end</div>
+    <h2>Mourning into dancing</h2>
+    <blockquote class="scripture" style="font-style:italic"><mark>Thou hast turned for me my mourning into dancing</mark>: thou hast put off my sackcloth, and girded me with gladness; <mark>To the end that my glory may sing praise to thee</mark>, and not be silent. O <span class="lord">Lord</span> my God, I will give thanks unto thee for ever.<cite>Psalm 30:11-12</cite></blockquote>
+    <p><em>Thou hast turned for me my mourning into dancing: thou hast put off my sackcloth, and girded me with gladness</em>...Jesus saves. Death has no sting for those in Christ. And while we may celebrate victory in this life, it is the victory of the cross that we should give thanks and praise, forever, because the purpose of God's sparing us, temporally or spiritually, is that we may sing His praise:</p>
+    <p><em>To the end</em>, that is, the purpose of His salvation, our singing praise to God. Ultimately, that is what it is all about. Recognizing the glory and grace of a perfect and holy God. Amen</p>
+  </div>
+</section>
+
+<!-- 51 -->
+<section class="slide" data-section="Psalm 30" data-title="Read on" data-ctx="Psalms 30:11-12">
+  <div class="page">
+    <div class="kicker">Psalms 26–30</div>
+    <h2>Read on</h2>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-psalms-21-25" target="_blank" rel="noopener">Psalms 21–25 ↗</a><a class="ref lesson-link" href="../../studies/#lesson-psalms-18-20" target="_blank" rel="noopener">Psalms 18–20 ↗</a></div>
+    <p class="sub center">The chapter studies</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#Psalms-26" target="_blank" rel="noopener">Psalm 26 ↗</a><a class="ref lesson-link" href="../../studies/#Psalms-27" target="_blank" rel="noopener">Psalm 27 ↗</a><a class="ref lesson-link" href="../../studies/#Psalms-28" target="_blank" rel="noopener">Psalm 28 ↗</a><a class="ref lesson-link" href="../../studies/#Psalms-29" target="_blank" rel="noopener">Psalm 29 ↗</a><a class="ref lesson-link" href="../../studies/#Psalms-30" target="_blank" rel="noopener">Psalm 30 ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "Psalms 26:1":[[1, "Judge me, O LORD; for I have walked in mine integrity: I have trusted also in the LORD; therefore I shall not slide."]],
+  "Psalms 27:1":[[1, "The LORD is my light and my salvation; whom shall I fear? the LORD is the strength of my life; of whom shall I be afraid?"]],
+  "Psalms 28:1":[[1, "Unto thee will I cry, O LORD my rock; be not silent to me: lest, if thou be silent to me, I become like them that go down into the pit."]],
+  "Psalms 28:7":[[7, "The LORD is my strength and my shield; my heart trusted in him, and I am helped: therefore my heart greatly rejoiceth; and with my song will I praise him."]],
+  "Psalms 29:1":[[1, "Give unto the LORD, O ye mighty, give unto the LORD glory and strength."]],
+  "Psalms 29:2":[[2, "Give unto the LORD the glory due unto his name; worship the LORD in the beauty of holiness."]],
+  "Psalms 30:1":[[1, "I will extol thee, O LORD; for thou hast lifted me up, and hast not made my foes to rejoice over me."]],
+  "Psalms 30:5":[[5, "For his anger endureth but a moment; in his favour is life: weeping may endure for a night, but joy cometh in the morning."]]
+};
+
+// The Chapter panel (key C): whole chapters, and each slide's verses in data-ctx. null when the deck has none.
+window.DECK_CTX = {"home": [], "ch": {"Matthew 7": [[1, "Judge not, that ye be not judged."], [2, "For with what judgment ye judge, ye shall be judged: and with what measure ye mete, it shall be measured to you again."], [3, "And why beholdest thou the mote that is in thy brother’s eye, but considerest not the beam that is in thine own eye?"], [4, "Or how wilt thou say to thy brother, Let me pull out the mote out of thine eye; and, behold, a beam is in thine own eye?"], [5, "Thou hypocrite, first cast out the beam out of thine own eye; and then shalt thou see clearly to cast out the mote out of thy brother’s eye."], [6, "Give not that which is holy unto the dogs, neither cast ye your pearls before swine, lest they trample them under their feet, and turn again and rend you."], [7, "Ask, and it shall be given you; seek, and ye shall find; knock, and it shall be opened unto you:"], [8, "For every one that asketh receiveth; and he that seeketh findeth; and to him that knocketh it shall be opened."], [9, "Or what man is there of you, whom if his son ask bread, will he give him a stone?"], [10, "Or if he ask a fish, will he give him a serpent?"], [11, "If ye then, being evil, know how to give good gifts unto your children, how much more shall your Father which is in heaven give good things to them that ask him?"], [12, "Therefore all things whatsoever ye would that men should do to you, do ye even so to them: for this is the law and the prophets."], [13, "Enter ye in at the strait gate: for wide is the gate, and broad is the way, that leadeth to destruction, and many there be which go in thereat:"], [14, "Because strait is the gate, and narrow is the way, which leadeth unto life, and few there be that find it."], [15, "Beware of false prophets, which come to you in sheep’s clothing, but inwardly they are ravening wolves."], [16, "Ye shall know them by their fruits. Do men gather grapes of thorns, or figs of thistles?"], [17, "Even so every good tree bringeth forth good fruit; but a corrupt tree bringeth forth evil fruit."], [18, "A good tree cannot bring forth evil fruit, neither can a corrupt tree bring forth good fruit."], [19, "Every tree that bringeth not forth good fruit is hewn down, and cast into the fire."], [20, "Wherefore by their fruits ye shall know them."], [21, "Not every one that saith unto me, Lord, Lord, shall enter into the kingdom of heaven; but he that doeth the will of my Father which is in heaven."], [22, "Many will say to me in that day, Lord, Lord, have we not prophesied in thy name? and in thy name have cast out devils? and in thy name done many wonderful works?"], [23, "And then will I profess unto them, I never knew you: depart from me, ye that work iniquity."], [24, "Therefore whosoever heareth these sayings of mine, and doeth them, I will liken him unto a wise man, which built his house upon a rock:"], [25, "And the rain descended, and the floods came, and the winds blew, and beat upon that house; and it fell not: for it was founded upon a rock."], [26, "And every one that heareth these sayings of mine, and doeth them not, shall be likened unto a foolish man, which built his house upon the sand:"], [27, "And the rain descended, and the floods came, and the winds blew, and beat upon that house; and it fell: and great was the fall of it."], [28, "And it came to pass, when Jesus had ended these sayings, the people were astonished at his doctrine:"], [29, "For he taught them as one having authority, and not as the scribes."]], "Psalms 26": [[1, "Judge me, O LORD; for I have walked in mine integrity: I have trusted also in the LORD; therefore I shall not slide."], [2, "Examine me, O LORD, and prove me; try my reins and my heart."], [3, "For thy lovingkindness is before mine eyes: and I have walked in thy truth."], [4, "I have not sat with vain persons, neither will I go in with dissemblers."], [5, "I have hated the congregation of evil doers; and will not sit with the wicked."], [6, "I will wash mine hands in innocency: so will I compass thine altar, O LORD:"], [7, "That I may publish with the voice of thanksgiving, and tell of all thy wondrous works."], [8, "LORD, I have loved the habitation of thy house, and the place where thine honour dwelleth."], [9, "Gather not my soul with sinners, nor my life with bloody men:"], [10, "In whose hands is mischief, and their right hand is full of bribes."], [11, "But as for me, I will walk in mine integrity: redeem me, and be merciful unto me."], [12, "My foot standeth in an even place: in the congregations will I bless the LORD."]], "Psalms 27": [[1, "The LORD is my light and my salvation; whom shall I fear? the LORD is the strength of my life; of whom shall I be afraid?"], [2, "When the wicked, even mine enemies and my foes, came upon me to eat up my flesh, they stumbled and fell."], [3, "Though an host should encamp against me, my heart shall not fear: though war should rise against me, in this will I be confident."], [4, "One thing have I desired of the LORD, that will I seek after; that I may dwell in the house of the LORD all the days of my life, to behold the beauty of the LORD, and to enquire in his temple."], [5, "For in the time of trouble he shall hide me in his pavilion: in the secret of his tabernacle shall he hide me; he shall set me up upon a rock."], [6, "And now shall mine head be lifted up above mine enemies round about me: therefore will I offer in his tabernacle sacrifices of joy; I will sing, yea, I will sing praises unto the LORD."], [7, "Hear, O LORD, when I cry with my voice: have mercy also upon me, and answer me."], [8, "When thou saidst, Seek ye my face; my heart said unto thee, Thy face, LORD, will I seek."], [9, "Hide not thy face far from me; put not thy servant away in anger: thou hast been my help; leave me not, neither forsake me, O God of my salvation."], [10, "When my father and my mother forsake me, then the LORD will take me up."], [11, "Teach me thy way, O LORD, and lead me in a plain path, because of mine enemies."], [12, "Deliver me not over unto the will of mine enemies: for false witnesses are risen up against me, and such as breathe out cruelty."], [13, "I had fainted, unless I had believed to see the goodness of the LORD in the land of the living."], [14, "Wait on the LORD: be of good courage, and he shall strengthen thine heart: wait, I say, on the LORD."]], "Luke 12": [[1, "In the mean time, when there were gathered together an innumerable multitude of people, insomuch that they trode one upon another, he began to say unto his disciples first of all, Beware ye of the leaven of the Pharisees, which is hypocrisy."], [2, "For there is nothing covered, that shall not be revealed; neither hid, that shall not be known."], [3, "Therefore whatsoever ye have spoken in darkness shall be heard in the light; and that which ye have spoken in the ear in closets shall be proclaimed upon the housetops."], [4, "And I say unto you my friends, Be not afraid of them that kill the body, and after that have no more that they can do."], [5, "But I will forewarn you whom ye shall fear: Fear him, which after he hath killed hath power to cast into hell; yea, I say unto you, Fear him."], [6, "Are not five sparrows sold for two farthings, and not one of them is forgotten before God?"], [7, "But even the very hairs of your head are all numbered. Fear not therefore: ye are of more value than many sparrows."], [8, "Also I say unto you, Whosoever shall confess me before men, him shall the Son of man also confess before the angels of God:"], [9, "But he that denieth me before men shall be denied before the angels of God."], [10, "And whosoever shall speak a word against the Son of man, it shall be forgiven him: but unto him that blasphemeth against the Holy Ghost it shall not be forgiven."], [11, "And when they bring you unto the synagogues, and unto magistrates, and powers, take ye no thought how or what thing ye shall answer, or what ye shall say:"], [12, "For the Holy Ghost shall teach you in the same hour what ye ought to say."], [13, "And one of the company said unto him, Master, speak to my brother, that he divide the inheritance with me."], [14, "And he said unto him, Man, who made me a judge or a divider over you?"], [15, "And he said unto them, Take heed, and beware of covetousness: for a man’s life consisteth not in the abundance of the things which he possesseth."], [16, "And he spake a parable unto them, saying, The ground of a certain rich man brought forth plentifully:"], [17, "And he thought within himself, saying, What shall I do, because I have no room where to bestow my fruits?"], [18, "And he said, This will I do: I will pull down my barns, and build greater; and there will I bestow all my fruits and my goods."], [19, "And I will say to my soul, Soul, thou hast much goods laid up for many years; take thine ease, eat, drink, and be merry."], [20, "But God said unto him, Thou fool, this night thy soul shall be required of thee: then whose shall those things be, which thou hast provided?"], [21, "So is he that layeth up treasure for himself, and is not rich toward God."], [22, "And he said unto his disciples, Therefore I say unto you, Take no thought for your life, what ye shall eat; neither for the body, what ye shall put on."], [23, "The life is more than meat, and the body is more than raiment."], [24, "Consider the ravens: for they neither sow nor reap; which neither have storehouse nor barn; and God feedeth them: how much more are ye better than the fowls?"], [25, "And which of you with taking thought can add to his stature one cubit?"], [26, "If ye then be not able to do that thing which is least, why take ye thought for the rest?"], [27, "Consider the lilies how they grow: they toil not, they spin not; and yet I say unto you, that Solomon in all his glory was not arrayed like one of these."], [28, "If then God so clothe the grass, which is to day in the field, and to morrow is cast into the oven; how much more will he clothe you, O ye of little faith?"], [29, "And seek not ye what ye shall eat, or what ye shall drink, neither be ye of doubtful mind."], [30, "For all these things do the nations of the world seek after: and your Father knoweth that ye have need of these things."], [31, "But rather seek ye the kingdom of God; and all these things shall be added unto you."], [32, "Fear not, little flock; for it is your Father’s good pleasure to give you the kingdom."], [33, "Sell that ye have, and give alms; provide yourselves bags which wax not old, a treasure in the heavens that faileth not, where no thief approacheth, neither moth corrupteth."], [34, "For where your treasure is, there will your heart be also."], [35, "Let your loins be girded about, and your lights burning;"], [36, "And ye yourselves like unto men that wait for their lord, when he will return from the wedding; that when he cometh and knocketh, they may open unto him immediately."], [37, "Blessed are those servants, whom the lord when he cometh shall find watching: verily I say unto you, that he shall gird himself, and make them to sit down to meat, and will come forth and serve them."], [38, "And if he shall come in the second watch, or come in the third watch, and find them so, blessed are those servants."], [39, "And this know, that if the goodman of the house had known what hour the thief would come, he would have watched, and not have suffered his house to be broken through."], [40, "Be ye therefore ready also: for the Son of man cometh at an hour when ye think not."], [41, "Then Peter said unto him, Lord, speakest thou this parable unto us, or even to all?"], [42, "And the Lord said, Who then is that faithful and wise steward, whom his lord shall make ruler over his household, to give them their portion of meat in due season?"], [43, "Blessed is that servant, whom his lord when he cometh shall find so doing."], [44, "Of a truth I say unto you, that he will make him ruler over all that he hath."], [45, "But and if that servant say in his heart, My lord delayeth his coming; and shall begin to beat the menservants and maidens, and to eat and drink, and to be drunken;"], [46, "The lord of that servant will come in a day when he looketh not for him, and at an hour when he is not aware, and will cut him in sunder, and will appoint him his portion with the unbelievers."], [47, "And that servant, which knew his lord’s will, and prepared not himself, neither did according to his will, shall be beaten with many stripes."], [48, "But he that knew not, and did commit things worthy of stripes, shall be beaten with few stripes. For unto whomsoever much is given, of him shall be much required: and to whom men have committed much, of him they will ask the more."], [49, "I am come to send fire on the earth; and what will I, if it be already kindled?"], [50, "But I have a baptism to be baptized with; and how am I straitened till it be accomplished!"], [51, "Suppose ye that I am come to give peace on earth? I tell you, Nay; but rather division:"], [52, "For from henceforth there shall be five in one house divided, three against two, and two against three."], [53, "The father shall be divided against the son, and the son against the father; the mother against the daughter, and the daughter against the mother; the mother in law against her daughter in law, and the daughter in law against her mother in law."], [54, "And he said also to the people, When ye see a cloud rise out of the west, straightway ye say, There cometh a shower; and so it is."], [55, "And when ye see the south wind blow, ye say, There will be heat; and it cometh to pass."], [56, "Ye hypocrites, ye can discern the face of the sky and of the earth; but how is it that ye do not discern this time?"], [57, "Yea, and why even of yourselves judge ye not what is right?"], [58, "When thou goest with thine adversary to the magistrate, as thou art in the way, give diligence that thou mayest be delivered from him; lest he hale thee to the judge, and the judge deliver thee to the officer, and the officer cast thee into prison."], [59, "I tell thee, thou shalt not depart thence, till thou hast paid the very last mite."]], "Hebrews 11": [[1, "Now faith is the substance of things hoped for, the evidence of things not seen."], [2, "For by it the elders obtained a good report."], [3, "Through faith we understand that the worlds were framed by the word of God, so that things which are seen were not made of things which do appear."], [4, "By faith Abel offered unto God a more excellent sacrifice than Cain, by which he obtained witness that he was righteous, God testifying of his gifts: and by it he being dead yet speaketh."], [5, "By faith Enoch was translated that he should not see death; and was not found, because God had translated him: for before his translation he had this testimony, that he pleased God."], [6, "But without faith it is impossible to please him: for he that cometh to God must believe that he is, and that he is a rewarder of them that diligently seek him."], [7, "By faith Noah, being warned of God of things not seen as yet, moved with fear, prepared an ark to the saving of his house; by the which he condemned the world, and became heir of the righteousness which is by faith."], [8, "By faith Abraham, when he was called to go out into a place which he should after receive for an inheritance, obeyed; and he went out, not knowing whither he went."], [9, "By faith he sojourned in the land of promise, as in a strange country, dwelling in tabernacles with Isaac and Jacob, the heirs with him of the same promise:"], [10, "For he looked for a city which hath foundations, whose builder and maker is God."], [11, "Through faith also Sara herself received strength to conceive seed, and was delivered of a child when she was past age, because she judged him faithful who had promised."], [12, "Therefore sprang there even of one, and him as good as dead, so many as the stars of the sky in multitude, and as the sand which is by the sea shore innumerable."], [13, "These all died in faith, not having received the promises, but having seen them afar off, and were persuaded of them, and embraced them, and confessed that they were strangers and pilgrims on the earth."], [14, "For they that say such things declare plainly that they seek a country."], [15, "And truly, if they had been mindful of that country from whence they came out, they might have had opportunity to have returned."], [16, "But now they desire a better country, that is, an heavenly: wherefore God is not ashamed to be called their God: for he hath prepared for them a city."], [17, "By faith Abraham, when he was tried, offered up Isaac: and he that had received the promises offered up his only begotten son,"], [18, "Of whom it was said, That in Isaac shall thy seed be called:"], [19, "Accounting that God was able to raise him up, even from the dead; from whence also he received him in a figure."], [20, "By faith Isaac blessed Jacob and Esau concerning things to come."], [21, "By faith Jacob, when he was a dying, blessed both the sons of Joseph; and worshipped, leaning upon the top of his staff."], [22, "By faith Joseph, when he died, made mention of the departing of the children of Israel; and gave commandment concerning his bones."], [23, "By faith Moses, when he was born, was hid three months of his parents, because they saw he was a proper child; and they were not afraid of the king’s commandment."], [24, "By faith Moses, when he was come to years, refused to be called the son of Pharaoh’s daughter;"], [25, "Choosing rather to suffer affliction with the people of God, than to enjoy the pleasures of sin for a season;"], [26, "Esteeming the reproach of Christ greater riches than the treasures in Egypt: for he had respect unto the recompence of the reward."], [27, "By faith he forsook Egypt, not fearing the wrath of the king: for he endured, as seeing him who is invisible."], [28, "Through faith he kept the passover, and the sprinkling of blood, lest he that destroyed the firstborn should touch them."], [29, "By faith they passed through the Red sea as by dry land: which the Egyptians assaying to do were drowned."], [30, "By faith the walls of Jericho fell down, after they were compassed about seven days."], [31, "By faith the harlot Rahab perished not with them that believed not, when she had received the spies with peace."], [32, "And what shall I more say? for the time would fail me to tell of Gedeon, and of Barak, and of Samson, and of Jephthae; of David also, and Samuel, and of the prophets:"], [33, "Who through faith subdued kingdoms, wrought righteousness, obtained promises, stopped the mouths of lions,"], [34, "Quenched the violence of fire, escaped the edge of the sword, out of weakness were made strong, waxed valiant in fight, turned to flight the armies of the aliens."], [35, "Women received their dead raised to life again: and others were tortured, not accepting deliverance; that they might obtain a better resurrection:"], [36, "And others had trial of cruel mockings and scourgings, yea, moreover of bonds and imprisonment:"], [37, "They were stoned, they were sawn asunder, were tempted, were slain with the sword: they wandered about in sheepskins and goatskins; being destitute, afflicted, tormented;"], [38, "(Of whom the world was not worthy:) they wandered in deserts, and in mountains, and in dens and caves of the earth."], [39, "And these all, having obtained a good report through faith, received not the promise:"], [40, "God having provided some better thing for us, that they without us should not be made perfect."]], "2 Chronicles 7": [[1, "Now when Solomon had made an end of praying, the fire came down from heaven, and consumed the burnt offering and the sacrifices; and the glory of the LORD filled the house."], [2, "And the priests could not enter into the house of the LORD, because the glory of the LORD had filled the LORD’s house."], [3, "And when all the children of Israel saw how the fire came down, and the glory of the LORD upon the house, they bowed themselves with their faces to the ground upon the pavement, and worshipped, and praised the LORD, saying, For he is good; for his mercy endureth for ever."], [4, "Then the king and all the people offered sacrifices before the LORD."], [5, "And king Solomon offered a sacrifice of twenty and two thousand oxen, and an hundred and twenty thousand sheep: so the king and all the people dedicated the house of God."], [6, "And the priests waited on their offices: the Levites also with instruments of musick of the LORD, which David the king had made to praise the LORD, because his mercy endureth for ever, when David praised by their ministry; and the priests sounded trumpets before them, and all Israel stood."], [7, "Moreover Solomon hallowed the middle of the court that was before the house of the LORD: for there he offered burnt offerings, and the fat of the peace offerings, because the brasen altar which Solomon had made was not able to receive the burnt offerings, and the meat offerings, and the fat."], [8, "Also at the same time Solomon kept the feast seven days, and all Israel with him, a very great congregation, from the entering in of Hamath unto the river of Egypt."], [9, "And in the eighth day they made a solemn assembly: for they kept the dedication of the altar seven days, and the feast seven days."], [10, "And on the three and twentieth day of the seventh month he sent the people away into their tents, glad and merry in heart for the goodness that the LORD had shewed unto David, and to Solomon, and to Israel his people."], [11, "Thus Solomon finished the house of the LORD, and the king’s house: and all that came into Solomon’s heart to make in the house of the LORD, and in his own house, he prosperously effected."], [12, "And the LORD appeared to Solomon by night, and said unto him, I have heard thy prayer, and have chosen this place to myself for an house of sacrifice."], [13, "If I shut up heaven that there be no rain, or if I command the locusts to devour the land, or if I send pestilence among my people;"], [14, "If my people, which are called by my name, shall humble themselves, and pray, and seek my face, and turn from their wicked ways; then will I hear from heaven, and will forgive their sin, and will heal their land."], [15, "Now mine eyes shall be open, and mine ears attent unto the prayer that is made in this place."], [16, "For now have I chosen and sanctified this house, that my name may be there for ever: and mine eyes and mine heart shall be there perpetually."], [17, "And as for thee, if thou wilt walk before me, as David thy father walked, and do according to all that I have commanded thee, and shalt observe my statutes and my judgments;"], [18, "Then will I stablish the throne of thy kingdom, according as I have covenanted with David thy father, saying, There shall not fail thee a man to be ruler in Israel."], [19, "But if ye turn away, and forsake my statutes and my commandments, which I have set before you, and shall go and serve other gods, and worship them;"], [20, "Then will I pluck them up by the roots out of my land which I have given them; and this house, which I have sanctified for my name, will I cast out of my sight, and will make it to be a proverb and a byword among all nations."], [21, "And this house, which is high, shall be an astonishment to every one that passeth by it; so that he shall say, Why hath the LORD done thus unto this land, and unto this house?"], [22, "And it shall be answered, Because they forsook the LORD God of their fathers, which brought them forth out of the land of Egypt, and laid hold on other gods, and worshipped them, and served them: therefore hath he brought all this evil upon them."]], "1 Corinthians 10": [[1, "Moreover, brethren, I would not that ye should be ignorant, how that all our fathers were under the cloud, and all passed through the sea;"], [2, "And were all baptized unto Moses in the cloud and in the sea;"], [3, "And did all eat the same spiritual meat;"], [4, "And did all drink the same spiritual drink: for they drank of that spiritual Rock that followed them: and that Rock was Christ."], [5, "But with many of them God was not well pleased: for they were overthrown in the wilderness."], [6, "Now these things were our examples, to the intent we should not lust after evil things, as they also lusted."], [7, "Neither be ye idolaters, as were some of them; as it is written, The people sat down to eat and drink, and rose up to play."], [8, "Neither let us commit fornication, as some of them committed, and fell in one day three and twenty thousand."], [9, "Neither let us tempt Christ, as some of them also tempted, and were destroyed of serpents."], [10, "Neither murmur ye, as some of them also murmured, and were destroyed of the destroyer."], [11, "Now all these things happened unto them for ensamples: and they are written for our admonition, upon whom the ends of the world are come."], [12, "Wherefore let him that thinketh he standeth take heed lest he fall."], [13, "There hath no temptation taken you but such as is common to man: but God is faithful, who will not suffer you to be tempted above that ye are able; but will with the temptation also make a way to escape, that ye may be able to bear it."], [14, "Wherefore, my dearly beloved, flee from idolatry."], [15, "I speak as to wise men; judge ye what I say."], [16, "The cup of blessing which we bless, is it not the communion of the blood of Christ? The bread which we break, is it not the communion of the body of Christ?"], [17, "For we being many are one bread, and one body: for we are all partakers of that one bread."], [18, "Behold Israel after the flesh: are not they which eat of the sacrifices partakers of the altar?"], [19, "What say I then? that the idol is any thing, or that which is offered in sacrifice to idols is any thing?"], [20, "But I say, that the things which the Gentiles sacrifice, they sacrifice to devils, and not to God: and I would not that ye should have fellowship with devils."], [21, "Ye cannot drink the cup of the Lord, and the cup of devils: ye cannot be partakers of the Lord’s table, and of the table of devils."], [22, "Do we provoke the Lord to jealousy? are we stronger than he?"], [23, "All things are lawful for me, but all things are not expedient: all things are lawful for me, but all things edify not."], [24, "Let no man seek his own, but every man another’s wealth."], [25, "Whatsoever is sold in the shambles, that eat, asking no question for conscience sake:"], [26, "For the earth is the Lord’s, and the fulness thereof."], [27, "If any of them that believe not bid you to a feast, and ye be disposed to go; whatsoever is set before you, eat, asking no question for conscience sake."], [28, "But if any man say unto you, This is offered in sacrifice unto idols, eat not for his sake that shewed it, and for conscience sake: for the earth is the Lord’s, and the fulness thereof:"], [29, "Conscience, I say, not thine own, but of the other: for why is my liberty judged of another man’s conscience?"], [30, "For if I by grace be a partaker, why am I evil spoken of for that for which I give thanks?"], [31, "Whether therefore ye eat, or drink, or whatsoever ye do, do all to the glory of God."], [32, "Give none offence, neither to the Jews, nor to the Gentiles, nor to the church of God:"], [33, "Even as I please all men in all things, not seeking mine own profit, but the profit of many, that they may be saved."]], "Romans 8": [[1, "There is therefore now no condemnation to them which are in Christ Jesus, who walk not after the flesh, but after the Spirit."], [2, "For the law of the Spirit of life in Christ Jesus hath made me free from the law of sin and death."], [3, "For what the law could not do, in that it was weak through the flesh, God sending his own Son in the likeness of sinful flesh, and for sin, condemned sin in the flesh:"], [4, "That the righteousness of the law might be fulfilled in us, who walk not after the flesh, but after the Spirit."], [5, "For they that are after the flesh do mind the things of the flesh; but they that are after the Spirit the things of the Spirit."], [6, "For to be carnally minded is death; but to be spiritually minded is life and peace."], [7, "Because the carnal mind is enmity against God: for it is not subject to the law of God, neither indeed can be."], [8, "So then they that are in the flesh cannot please God."], [9, "But ye are not in the flesh, but in the Spirit, if so be that the Spirit of God dwell in you. Now if any man have not the Spirit of Christ, he is none of his."], [10, "And if Christ be in you, the body is dead because of sin; but the Spirit is life because of righteousness."], [11, "But if the Spirit of him that raised up Jesus from the dead dwell in you, he that raised up Christ from the dead shall also quicken your mortal bodies by his Spirit that dwelleth in you."], [12, "Therefore, brethren, we are debtors, not to the flesh, to live after the flesh."], [13, "For if ye live after the flesh, ye shall die: but if ye through the Spirit do mortify the deeds of the body, ye shall live."], [14, "For as many as are led by the Spirit of God, they are the sons of God."], [15, "For ye have not received the spirit of bondage again to fear; but ye have received the Spirit of adoption, whereby we cry, Abba, Father."], [16, "The Spirit itself beareth witness with our spirit, that we are the children of God:"], [17, "And if children, then heirs; heirs of God, and joint-heirs with Christ; if so be that we suffer with him, that we may be also glorified together."], [18, "For I reckon that the sufferings of this present time are not worthy to be compared with the glory which shall be revealed in us."], [19, "For the earnest expectation of the creature waiteth for the manifestation of the sons of God."], [20, "For the creature was made subject to vanity, not willingly, but by reason of him who hath subjected the same in hope,"], [21, "Because the creature itself also shall be delivered from the bondage of corruption into the glorious liberty of the children of God."], [22, "For we know that the whole creation groaneth and travaileth in pain together until now."], [23, "And not only they, but ourselves also, which have the firstfruits of the Spirit, even we ourselves groan within ourselves, waiting for the adoption, to wit, the redemption of our body."], [24, "For we are saved by hope: but hope that is seen is not hope: for what a man seeth, why doth he yet hope for?"], [25, "But if we hope for that we see not, then do we with patience wait for it."], [26, "Likewise the Spirit also helpeth our infirmities: for we know not what we should pray for as we ought: but the Spirit itself maketh intercession for us with groanings which cannot be uttered."], [27, "And he that searcheth the hearts knoweth what is the mind of the Spirit, because he maketh intercession for the saints according to the will of God."], [28, "And we know that all things work together for good to them that love God, to them who are the called according to his purpose."], [29, "For whom he did foreknow, he also did predestinate to be conformed to the image of his Son, that he might be the firstborn among many brethren."], [30, "Moreover whom he did predestinate, them he also called: and whom he called, them he also justified: and whom he justified, them he also glorified."], [31, "What shall we then say to these things? If God be for us, who can be against us?"], [32, "He that spared not his own Son, but delivered him up for us all, how shall he not with him also freely give us all things?"], [33, "Who shall lay any thing to the charge of God’s elect? It is God that justifieth."], [34, "Who is he that condemneth? It is Christ that died, yea rather, that is risen again, who is even at the right hand of God, who also maketh intercession for us."], [35, "Who shall separate us from the love of Christ? shall tribulation, or distress, or persecution, or famine, or nakedness, or peril, or sword?"], [36, "As it is written, For thy sake we are killed all the day long; we are accounted as sheep for the slaughter."], [37, "Nay, in all these things we are more than conquerors through him that loved us."], [38, "For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come,"], [39, "Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord."]], "1 Chronicles 16": [[1, "So they brought the ark of God, and set it in the midst of the tent that David had pitched for it: and they offered burnt sacrifices and peace offerings before God."], [2, "And when David had made an end of offering the burnt offerings and the peace offerings, he blessed the people in the name of the LORD."], [3, "And he dealt to every one of Israel, both man and woman, to every one a loaf of bread, and a good piece of flesh, and a flagon of wine."], [4, "And he appointed certain of the Levites to minister before the ark of the LORD, and to record, and to thank and praise the LORD God of Israel:"], [5, "Asaph the chief, and next to him Zechariah, Jeiel, and Shemiramoth, and Jehiel, and Mattithiah, and Eliab, and Benaiah, and Obededom: and Jeiel with psalteries and with harps; but Asaph made a sound with cymbals;"], [6, "Benaiah also and Jahaziel the priests with trumpets continually before the ark of the covenant of God."], [7, "Then on that day David delivered first this psalm to thank the LORD into the hand of Asaph and his brethren."], [8, "Give thanks unto the LORD, call upon his name, make known his deeds among the people."], [9, "Sing unto him, sing psalms unto him, talk ye of all his wondrous works."], [10, "Glory ye in his holy name: let the heart of them rejoice that seek the LORD."], [11, "Seek the LORD and his strength, seek his face continually."], [12, "Remember his marvellous works that he hath done, his wonders, and the judgments of his mouth;"], [13, "O ye seed of Israel his servant, ye children of Jacob, his chosen ones."], [14, "He is the LORD our God; his judgments are in all the earth."], [15, "Be ye mindful always of his covenant; the word which he commanded to a thousand generations;"], [16, "Even of the covenant which he made with Abraham, and of his oath unto Isaac;"], [17, "And hath confirmed the same to Jacob for a law, and to Israel for an everlasting covenant,"], [18, "Saying, Unto thee will I give the land of Canaan, the lot of your inheritance;"], [19, "When ye were but few, even a few, and strangers in it."], [20, "And when they went from nation to nation, and from one kingdom to another people;"], [21, "He suffered no man to do them wrong: yea, he reproved kings for their sakes,"], [22, "Saying, Touch not mine anointed, and do my prophets no harm."], [23, "Sing unto the LORD, all the earth; shew forth from day to day his salvation."], [24, "Declare his glory among the heathen; his marvellous works among all nations."], [25, "For great is the LORD, and greatly to be praised: he also is to be feared above all gods."], [26, "For all the gods of the people are idols: but the LORD made the heavens."], [27, "Glory and honour are in his presence; strength and gladness are in his place."], [28, "Give unto the LORD, ye kindreds of the people, give unto the LORD glory and strength."], [29, "Give unto the LORD the glory due unto his name: bring an offering, and come before him: worship the LORD in the beauty of holiness."], [30, "Fear before him, all the earth: the world also shall be stable, that it be not moved."], [31, "Let the heavens be glad, and let the earth rejoice: and let men say among the nations, The LORD reigneth."], [32, "Let the sea roar, and the fulness thereof: let the fields rejoice, and all that is therein."], [33, "Then shall the trees of the wood sing out at the presence of the LORD, because he cometh to judge the earth."], [34, "O give thanks unto the LORD; for he is good; for his mercy endureth for ever."], [35, "And say ye, Save us, O God of our salvation, and gather us together, and deliver us from the heathen, that we may give thanks to thy holy name, and glory in thy praise."], [36, "Blessed be the LORD God of Israel for ever and ever. And all the people said, Amen, and praised the LORD."], [37, "So he left there before the ark of the covenant of the LORD Asaph and his brethren, to minister before the ark continually, as every day’s work required:"], [38, "And Obededom with their brethren, threescore and eight; Obededom also the son of Jeduthun and Hosah to be porters:"], [39, "And Zadok the priest, and his brethren the priests, before the tabernacle of the LORD in the high place that was at Gibeon,"], [40, "To offer burnt offerings unto the LORD upon the altar of the burnt offering continually morning and evening, and to do according to all that is written in the law of the LORD, which he commanded Israel;"], [41, "And with them Heman and Jeduthun, and the rest that were chosen, who were expressed by name, to give thanks to the LORD, because his mercy endureth for ever;"], [42, "And with them Heman and Jeduthun with trumpets and cymbals for those that should make a sound, and with musical instruments of God. And the sons of Jeduthun were porters."], [43, "And all the people departed every man to his house: and David returned to bless his house."]], "Psalms 28": [[1, "Unto thee will I cry, O LORD my rock; be not silent to me: lest, if thou be silent to me, I become like them that go down into the pit."], [2, "Hear the voice of my supplications, when I cry unto thee, when I lift up my hands toward thy holy oracle."], [3, "Draw me not away with the wicked, and with the workers of iniquity, which speak peace to their neighbours, but mischief is in their hearts."], [4, "Give them according to their deeds, and according to the wickedness of their endeavours: give them after the work of their hands; render to them their desert."], [5, "Because they regard not the works of the LORD, nor the operation of his hands, he shall destroy them, and not build them up."], [6, "Blessed be the LORD, because he hath heard the voice of my supplications."], [7, "The LORD is my strength and my shield; my heart trusted in him, and I am helped: therefore my heart greatly rejoiceth; and with my song will I praise him."], [8, "The LORD is their strength, and he is the saving strength of his anointed."], [9, "Save thy people, and bless thine inheritance: feed them also, and lift them up for ever."]], "Psalms 29": [[1, "Give unto the LORD, O ye mighty, give unto the LORD glory and strength."], [2, "Give unto the LORD the glory due unto his name; worship the LORD in the beauty of holiness."], [3, "The voice of the LORD is upon the waters: the God of glory thundereth: the LORD is upon many waters."], [4, "The voice of the LORD is powerful; the voice of the LORD is full of majesty."], [5, "The voice of the LORD breaketh the cedars; yea, the LORD breaketh the cedars of Lebanon."], [6, "He maketh them also to skip like a calf; Lebanon and Sirion like a young unicorn."], [7, "The voice of the LORD divideth the flames of fire."], [8, "The voice of the LORD shaketh the wilderness; the LORD shaketh the wilderness of Kadesh."], [9, "The voice of the LORD maketh the hinds to calve, and discovereth the forests: and in his temple doth every one speak of his glory."], [10, "The LORD sitteth upon the flood; yea, the LORD sitteth King for ever."], [11, "The LORD will give strength unto his people; the LORD will bless his people with peace."]], "Psalms 30": [[1, "I will extol thee, O LORD; for thou hast lifted me up, and hast not made my foes to rejoice over me."], [2, "O LORD my God, I cried unto thee, and thou hast healed me."], [3, "O LORD, thou hast brought up my soul from the grave: thou hast kept me alive, that I should not go down to the pit."], [4, "Sing unto the LORD, O ye saints of his, and give thanks at the remembrance of his holiness."], [5, "For his anger endureth but a moment; in his favour is life: weeping may endure for a night, but joy cometh in the morning."], [6, "And in my prosperity I said, I shall never be moved."], [7, "LORD, by thy favour thou hast made my mountain to stand strong: thou didst hide thy face, and I was troubled."], [8, "I cried to thee, O LORD; and unto the LORD I made supplication."], [9, "What profit is there in my blood, when I go down to the pit? Shall the dust praise thee? shall it declare thy truth?"], [10, "Hear, O LORD, and have mercy upon me: LORD, be thou my helper."], [11, "Thou hast turned for me my mourning into dancing: thou hast put off my sackcloth, and girded me with gladness;"], [12, "To the end that my glory may sing praise to thee, and not be silent. O LORD my God, I will give thanks unto thee for ever."]], "1 Corinthians 11": [[1, "Be ye followers of me, even as I also am of Christ."], [2, "Now I praise you, brethren, that ye remember me in all things, and keep the ordinances, as I delivered them to you."], [3, "But I would have you know, that the head of every man is Christ; and the head of the woman is the man; and the head of Christ is God."], [4, "Every man praying or prophesying, having his head covered, dishonoureth his head."], [5, "But every woman that prayeth or prophesieth with her head uncovered dishonoureth her head: for that is even all one as if she were shaven."], [6, "For if the woman be not covered, let her also be shorn: but if it be a shame for a woman to be shorn or shaven, let her be covered."], [7, "For a man indeed ought not to cover his head, forasmuch as he is the image and glory of God: but the woman is the glory of the man."], [8, "For the man is not of the woman; but the woman of the man."], [9, "Neither was the man created for the woman; but the woman for the man."], [10, "For this cause ought the woman to have power on her head because of the angels."], [11, "Nevertheless neither is the man without the woman, neither the woman without the man, in the Lord."], [12, "For as the woman is of the man, even so is the man also by the woman; but all things of God."], [13, "Judge in yourselves: is it comely that a woman pray unto God uncovered?"], [14, "Doth not even nature itself teach you, that, if a man have long hair, it is a shame unto him?"], [15, "But if a woman have long hair, it is a glory to her: for her hair is given her for a covering."], [16, "But if any man seem to be contentious, we have no such custom, neither the churches of God."], [17, "Now in this that I declare unto you I praise you not, that ye come together not for the better, but for the worse."], [18, "For first of all, when ye come together in the church, I hear that there be divisions among you; and I partly believe it."], [19, "For there must be also heresies among you, that they which are approved may be made manifest among you."], [20, "When ye come together therefore into one place, this is not to eat the Lord’s supper."], [21, "For in eating every one taketh before other his own supper: and one is hungry, and another is drunken."], [22, "What? have ye not houses to eat and to drink in? or despise ye the church of God, and shame them that have not? What shall I say to you? shall I praise you in this? I praise you not."], [23, "For I have received of the Lord that which also I delivered unto you, That the Lord Jesus the same night in which he was betrayed took bread:"], [24, "And when he had given thanks, he brake it, and said, Take, eat: this is my body, which is broken for you: this do in remembrance of me."], [25, "After the same manner also he took the cup, when he had supped, saying, This cup is the new testament in my blood: this do ye, as oft as ye drink it, in remembrance of me."], [26, "For as often as ye eat this bread, and drink this cup, ye do shew the Lord’s death till he come."], [27, "Wherefore whosoever shall eat this bread, and drink this cup of the Lord, unworthily, shall be guilty of the body and blood of the Lord."], [28, "But let a man examine himself, and so let him eat of that bread, and drink of that cup."], [29, "For he that eateth and drinketh unworthily, eateth and drinketh damnation to himself, not discerning the Lord’s body."], [30, "For this cause many are weak and sickly among you, and many sleep."], [31, "For if we would judge ourselves, we should not be judged."], [32, "But when we are judged, we are chastened of the Lord, that we should not be condemned with the world."], [33, "Wherefore, my brethren, when ye come together to eat, tarry one for another."], [34, "And if any man hunger, let him eat at home; that ye come not together unto condemnation. And the rest will I set in order when I come."]], "Romans 6": [[1, "What shall we say then? Shall we continue in sin, that grace may abound?"], [2, "God forbid. How shall we, that are dead to sin, live any longer therein?"], [3, "Know ye not, that so many of us as were baptized into Jesus Christ were baptized into his death?"], [4, "Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life."], [5, "For if we have been planted together in the likeness of his death, we shall be also in the likeness of his resurrection:"], [6, "Knowing this, that our old man is crucified with him, that the body of sin might be destroyed, that henceforth we should not serve sin."], [7, "For he that is dead is freed from sin."], [8, "Now if we be dead with Christ, we believe that we shall also live with him:"], [9, "Knowing that Christ being raised from the dead dieth no more; death hath no more dominion over him."], [10, "For in that he died, he died unto sin once: but in that he liveth, he liveth unto God."], [11, "Likewise reckon ye also yourselves to be dead indeed unto sin, but alive unto God through Jesus Christ our Lord."], [12, "Let not sin therefore reign in your mortal body, that ye should obey it in the lusts thereof."], [13, "Neither yield ye your members as instruments of unrighteousness unto sin: but yield yourselves unto God, as those that are alive from the dead, and your members as instruments of righteousness unto God."], [14, "For sin shall not have dominion over you: for ye are not under the law, but under grace."], [15, "What then? shall we sin, because we are not under the law, but under grace? God forbid."], [16, "Know ye not, that to whom ye yield yourselves servants to obey, his servants ye are to whom ye obey; whether of sin unto death, or of obedience unto righteousness?"], [17, "But God be thanked, that ye were the servants of sin, but ye have obeyed from the heart that form of doctrine which was delivered you."], [18, "Being then made free from sin, ye became the servants of righteousness."], [19, "I speak after the manner of men because of the infirmity of your flesh: for as ye have yielded your members servants to uncleanness and to iniquity unto iniquity; even so now yield your members servants to righteousness unto holiness."], [20, "For when ye were the servants of sin, ye were free from righteousness."], [21, "What fruit had ye then in those things whereof ye are now ashamed? for the end of those things is death."], [22, "But now being made free from sin, and become servants to God, ye have your fruit unto holiness, and the end everlasting life."], [23, "For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord."]]}};
+
+// Quotations from other writings (say: in the deck): their words open like a verse.
+const Q = {};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b && b.dataset.q) {
+    const q = Q[b.dataset.q];
+    verseTitle.textContent = q ? q.t : b.textContent.trim();
+    verseBody.innerHTML = q ? q.h : "<p>Not loaded.</p>";
+    verseDlg.showModal();
+    verseBody.scrollTop = 0;
+    return;
+  }
+  if (b) {
+    const keys = b.dataset.v;
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
