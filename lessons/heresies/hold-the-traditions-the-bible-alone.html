@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hold the Traditions? 2 Thessalonians 2 and the Bible Alone</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="A lesson answering the use of 2 Thessalonians 2:15 against the Bible alone: the chapter in its context, the traditions of men in Mark 7, the Bereans who searched the scriptures in Acts 17, another gospel accursed in Galatians 1, and how to answer a proof text with the whole word of God.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body .say-cite{font-size:.85rem;font-style:italic;color:var(--vellum-dim);border-top:1px solid var(--rule);padding-top:.6rem;margin-top:1rem}
+.ref.say{border-bottom-style:dashed}
+.ref.say::before{content:"\201C";margin-right:.15em}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Hold the Traditions?" data-ctx="">
+  <div class="page title-page">
+    <div class="overline">Answering error • Hold the Traditions? Part 1 of 2</div>
+    <h1>Hold the Traditions?</h1>
+    <p class="sub">2 Thessalonians 2 • The traditions of men • The Bereans • Another gospel</p>
+    <div class="refs center"><button class="ref" data-v="2 Thessalonians 2:15">2 Thessalonians 2:15</button><button class="ref" data-v="Mark 7:13">Mark 7:13</button><button class="ref" data-v="Acts 17:11">Acts 17:11</button><button class="ref" data-v="Galatians 1:8">Galatians 1:8</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="A proof text" data-title="The Complete Word of God" data-ctx="Proverbs 30:6">
+  <div class="page">
+    <div class="kicker">2 Thessalonians 2</div>
+    <h2>The Complete Word of God</h2>
+    <p>2 Thessalonians 2 doesn't "refute Sola scriptura," (a term I hate.. It's just the Bible is the complete word of God).</p>
+    <p>Up front, any argument made that ignores the clear teachings of scripture, OT and NT, that scripture is inspired, preserved and complete "whole word of God," and directly from Jesus against holding to extra-scriptural traditions over scripture itself, is already proven wrong.</p>
+    <blockquote class="big-verse"><mark>Add thou not unto his words</mark>, lest he reprove thee, and thou be found a liar.<cite>Proverbs 30:6</cite></blockquote>
+    <p>Many such cases.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="A proof text" data-title="Cherry Picking" data-ctx="2 Thessalonians 2:15">
+  <div class="page">
+    <div class="kicker">2 Thessalonians 2</div>
+    <h2>Cherry Picking</h2>
+    <p>People looking to defend heresy won't ever address the multiple instances of clear scripture that contradicts them, or explain with equally clear scripture how the first scripture is wrong.</p>
+    <p>What they do is cherry pick a single verse, out of context that if presented to unsaved people, ignorant of the Bible can maybe confuse them enough to see it their way.</p>
+    <p>2 Thessalonians 2:15 is a perfect example of this. Ignoring the context of the epistle, and specifically the chapter it's pulled from, they will argue this:</p>
+    <blockquote class="big-verse">Therefore, brethren, stand fast, and <mark>hold the traditions which ye have been taught</mark>, whether by word, or our epistle.<cite>2 Thessalonians 2:15</cite></blockquote>
+    <p>..trumps all scripture, and allows contrary teachings to scripture to supersede scripture.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="A proof text" data-title="A Foolish Argument" data-ctx="2 Thessalonians 2:15">
+  <div class="page">
+    <div class="kicker">2 Thessalonians 2</div>
+    <h2>A Foolish Argument</h2>
+    <p>One, it's a foolish argument even taken as is. Paul would never tell Thessalonians to "stand fast" to a tradition that was preached to them in person, if it contradicts the word and epistles he just told them to hold to. That is absurd. "Wink wink, you know that secret stuff we told you but didn't write down? Yeah that says it's ok to worship idols and baptized babies and have a universal church controlled by men? Vain repetitive prayers? Works to be saved? Yeah hold on to that." It's not even a rational argument using the logic of men. Especially given the scriptures and epistles directly contradict the vain traditions of men being defended. This "proof text" alone contradicts the point being argued.</p>
+    <p>But taken in its context, it isn't even saying what is being alleged by the heretics.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="In its context" data-title="The Day of Christ" data-ctx="2 Thessalonians 2:1-3">
+  <div class="page">
+    <div class="kicker">2 Thessalonians 2</div>
+    <h2>The Day of Christ</h2>
+    <blockquote class="scripture" style="font-style:italic">Now we beseech you, brethren, by the coming of our Lord Jesus Christ, and by our gathering together unto him, <mark>That ye be not soon shaken in mind</mark>, or be troubled, neither by spirit, nor by word, nor by letter as from us, as that the day of Christ is at hand. <mark>Let no man deceive you by any means</mark>: for that day shall not come, except there come a falling away first, and that man of sin be revealed, the son of perdition;<cite>2 Thessalonians 2:1-3</cite></blockquote>
+    <p>Paul is writing to the independent NT church in Thessalonica with a specific message regarding a specific topic; End times prophecy.</p>
+    <p>We don't have to guess at what mystery doctrines were being given by these "traditions" given the church by word and epistle. Paul tells us in the second verse.</p>
+    <p class="center"><button class="ref" data-v="2 Thessalonians 2:1-17">Read 2 Thessalonians 2</button></p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="In its context" data-title="Let No Man Deceive You" data-ctx="2 Thessalonians 2:1-3">
+  <div class="page">
+    <div class="kicker">2 Thessalonians 2</div>
+    <h2>Let No Man Deceive You</h2>
+    <p>Judaizers and heretics, even in these first days of NT Christianity, were spreading lies and false doctrine that contradicted the scriptures. Paul is writing to reassure them and warn against it:</p>
+    <p><em>Let no man deceive you by any means: for that day shall not come, except.</em>.. And he lists the order of events regarding the resurrection and coming of our Lord Jesus Christ.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="In its context" data-title="When I Was Yet with You" data-ctx="2 Thessalonians 2:5">
+  <div class="page">
+    <div class="kicker">2 Thessalonians 2</div>
+    <h2>When I Was Yet with You</h2>
+    <blockquote class="big-verse">Remember ye not, that, <mark>when I was yet with you, I told you these things</mark>?<cite>2 Thessalonians 2:5</cite></blockquote>
+    <p>Paul says "<em>Remember ye not, that, when I was yet with you, I told you these things?"</em> Reminding them of the in-person teaching he gave regarding this specific topic. Teachings that came from the Holy Ghost, through the gospel accounts of Christ's ministry and OT scriptures.</p>
+    <p>There were men trying to deceive them regarding the resurrection and return. He wrote to remind them of what was taught to them, giving us 2000yrs later the same instruction on the same doctrine.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="In its context" data-title="Stand Fast" data-ctx="2 Thessalonians 2:15">
+  <div class="page">
+    <div class="kicker">2 Thessalonians 2</div>
+    <h2>Stand Fast</h2>
+    <blockquote class="big-verse">Therefore, brethren, <mark>stand fast</mark>, and hold the traditions which ye have been taught, whether by word, or our epistle.<cite>2 Thessalonians 2:15</cite></blockquote>
+    <p><em>Therefore, brethren, stand fast, and hold the traditions which ye have been taught, whether by word, or our epistle.</em> Amen! Yes. Stand fast whether you learned this Biblical doctrine on the rapture and day of the Lord through preaching by an Apostle or evangelist gifted by the Holy Ghost, taken from scripture and the words of Christ, or by epistles. Amen!</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="In its context" data-title="Strong Delusion" data-ctx="2 Thessalonians 2:15">
+  <div class="page">
+    <div class="kicker">2 Thessalonians 2</div>
+    <h2>Strong Delusion</h2>
+    <p>All heretical doctrines and apologetics follow this pattern of stripping scripture of meaning, adding irrational argument to it, and ignoring the scriptures that contradicts their heresy. Just as I said.</p>
+    <p>What they will never do is post an entire chapter or book that surrounds their "proof text," and they won't ever attempt to square the differences with other scripture, just offer non sequitur citation and act as though it's an argument.</p>
+    <p>They may make an appeal to some 5th century "church fathers," but they won't ever use the whole word of God to defend their position. In fact, being unsaved and unable to understand scripture when shown, they act like robots in Westworld being shown a photo of modernity, "I don't see anything."</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="In its context" data-title="That They Should Believe a Lie" data-ctx="2 Thessalonians 2:10-12">
+  <div class="page">
+    <div class="kicker">2 Thessalonians 2</div>
+    <h2>That They Should Believe a Lie</h2>
+    <p>As Paul writes in <strong>2 Thessalonians 2</strong>, regarding Satan fooling unsaved people with false Gospels and doctrines:</p>
+    <blockquote class="scripture" style="font-style:italic">And with all deceivableness of unrighteousness in them that perish; <mark>because they received not the love of the truth</mark>, that they might be saved. And for this cause God shall send them <mark>strong delusion, that they should believe a lie</mark>: That they all might be damned who believed not the truth, but had pleasure in unrighteousness.<cite>2 Thessalonians 2:10-12</cite></blockquote>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Answering them" data-title="Not an Argument" data-ctx="2 Thessalonians 2:10-12">
+  <div class="page">
+    <div class="kicker">Application • Answering error</div>
+    <h2>Not an Argument</h2>
+    <p>Now it's important to note a few lessons for us, when we interact with unsaved people offering up false doctrines and using out of context scripture as "proof text."</p>
+    <p>This is a lesson it took me a while to learn, because we are trained in this era of social media to engage in an argument, to prove our side and own the other side. To enter into striving and debates about the law, answering foolish questions and other things that the scripture explicitly tells us not to do. It often leads to wrath, and wrath to sin. It's why the Bible tells us not to do it.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Answering them" data-title="Correct Them with Love" data-ctx="2 Thessalonians 2:10-12">
+  <div class="page">
+    <div class="kicker">Application • Answering error</div>
+    <h2>Correct Them with Love</h2>
+    <p>And getting into a back and forth volley of proof text scriptures with someone who's unsaved is unprofitable and vain. Rather we should correct them with love from the scripture they're misusing, showing how it doesn't mean what they say it means using the word of God.</p>
+    <p>Keeping in mind they may be under a strong delusion, spiritual blindness which is a supernatural thing God does to some. It's why they can't see what you show them that contradicts their predetermined ideas.</p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Answering them" data-title="A Zeal of God" data-ctx="Romans 10:2-4">
+  <div class="page">
+    <div class="kicker">Application • Answering error</div>
+    <h2>A Zeal of God</h2>
+    <p>Rather, like Paul says of the Jews, lamenting:</p>
+    <blockquote class="scripture" style="font-style:italic">For I bear them record that <mark>they have a zeal of God, but not according to knowledge</mark>. For they being ignorant of God’s righteousness, and going about to establish their own righteousness, have not submitted themselves unto the righteousness of God. For Christ is the end of the law for righteousness to every one that believeth.<cite>Romans 10:2-4</cite></blockquote>
+    <p>Many of these people are well meaning and have a zeal for God, even if it's in ignorance. We should pray that God opens their eyes and brings them understanding from his word, knowing that <em>faith cometh by hearing, and hearing by the word of God.</em> <button class="ref" data-v="Romans 10:17">Romans 10:17</button></p>
+    <p>(Note, faith doesn't come from vain traditions of men but by His word, scripture. The Bible)</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Answering them" data-title="Shake the Dust Off" data-ctx="2 Timothy 3:16-17">
+  <div class="page">
+    <div class="kicker">Application • Answering error</div>
+    <h2>Shake the Dust Off</h2>
+    <p>This is why I have the rules I have in my chat. It's not an invitation to an argument when somebody contradicts biblical fundamentalism to pull out an extra scriptural doctrine. We are to correct and rebuke them, and if they accept it we can go on. But if they cannot see it there is no point in continuing the discussion. Rather we should shake the dust off and move on.</p>
+    <blockquote class="scripture" style="font-style:italic"><mark>All scripture is given by inspiration of God</mark>, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness: That the man of God may be perfect, throughly furnished unto all good works.<cite>2 Timothy 3:16-17</cite></blockquote>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="The traditions of men" data-title="The Tradition of the Elders" data-ctx="Mark 7:5-7">
+  <div class="page">
+    <div class="kicker">Mark 7</div>
+    <h2>The Tradition of the Elders</h2>
+    <p>Biblical fundamentalism and the rejection of traditions of men, as taught by Jesus Christ.</p>
+    <blockquote class="scripture" style="font-style:italic">Then the Pharisees and scribes asked him, <mark>Why walk not thy disciples according to the tradition of the elders</mark>, but eat bread with unwashen hands? He answered and said unto them, Well hath Esaias prophesied of you hypocrites, as it is written, This people honoureth me with their lips, but their heart is far from me. Howbeit in vain do they worship me, <mark>teaching for doctrines the commandments of men</mark>.<cite>Mark 7:5-7</cite></blockquote>
+    <p class="center"><button class="ref" data-v="Mark 7:1-23">Read Mark 7:1–23</button></p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="The traditions of men" data-title="Making the Word of God of None Effect" data-ctx="Mark 7:8-9|Mark 7:13">
+  <div class="page">
+    <div class="kicker">Mark 7</div>
+    <h2>Making the Word of God of None Effect</h2>
+    <p>Key points of Jesus preaching in Mark 7:</p>
+    <blockquote class="scripture" style="font-style:italic">For laying aside the commandment of God, <mark>ye hold the tradition of men</mark>, as the washing of pots and cups: and many other such like things ye do. And he said unto them, Full well ye reject the commandment of God, that ye may keep your own tradition.<cite>Mark 7:8-9</cite></blockquote><blockquote class="scripture" style="font-style:italic"><mark>Making the word of God of none effect through your tradition</mark>, which ye have delivered: and many such like things do ye.<cite>Mark 7:13</cite></blockquote>
+    <p>Making the word of God, which is scripture, <em>of none effect through your tradition</em>.</p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="The traditions of men" data-title="Corban" data-ctx="Mark 7:10-12">
+  <div class="page">
+    <div class="kicker">Mark 7</div>
+    <h2>Corban</h2>
+    <blockquote class="scripture" style="font-style:italic">For Moses said, Honour thy father and thy mother; and, Whoso curseth father or mother, let him die the death: But ye say, If a man shall say to his father or mother, <mark>It is Corban</mark>, that is to say, a gift, by whatsoever thou mightest be profited by me; he shall be free. And ye suffer him no more to do ought for his father or his mother;<cite>Mark 7:10-12</cite></blockquote>
+    <p>He uses an example of the Jews tradition, allowing a son to dishonor their parents by declaring their wealth "Corban," or a gift to the temple while keeping and using the wealth for themselves. But this applies to ANY extra-scriptural doctrines and traditions that contradicts the word of God. Making God's word to none effect by their traditions.</p>
+    <p>There is your Biblical "Sola scriptura" doctrine (cringe Latin term for biblical fundamentalism) straight from Jesus Christ Himself.</p>
+    <p>Any tradition of man that contradicts scripture is heresy. Period.</p>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Out of the scriptures" data-title="Reasoned with Them out of the Scriptures" data-ctx="Acts 17:2-3">
+  <div class="page">
+    <div class="kicker">Acts 17</div>
+    <h2>Reasoned with Them out of the Scriptures</h2>
+    <p>The Book of Acts shows that the Apostles and those given the gift of the Holy Ghost, evangelists, who went out to preach the word of God and the Gospel, the Good news of Christ, taught the doctrine of Christ from scripture.</p>
+    <p><strong>Acts 17</strong> details this well:</p>
+    <blockquote class="scripture" style="font-style:italic">And Paul, as his manner was, went in unto them, and three sabbath days <mark>reasoned with them out of the scriptures</mark>, Opening and alleging, that Christ must needs have suffered, and risen again from the dead; and that this Jesus, whom I preach unto you, is Christ.<cite>Acts 17:2-3</cite></blockquote>
+    <p class="center"><button class="ref" data-v="Acts 17:1-17">Read Acts 17:1–17</button></p>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Out of the scriptures" data-title="More Noble" data-ctx="Acts 17:11">
+  <div class="page">
+    <div class="kicker">Acts 17</div>
+    <h2>More Noble</h2>
+    <blockquote class="big-verse">These were more noble than those in Thessalonica, in that they received the word with all readiness of mind, and <mark>searched the scriptures daily, whether those things were so</mark>.<cite>Acts 17:11</cite></blockquote>
+    <p>People who don't read the Bible and can't understand it if they do, will often make sweeping claims that their heretical ideas and false doctrines must be true based on some twisted logic of man. Claims that simply knowing the Bible easily refute.</p>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Out of the scriptures" data-title="No Secret Traditions" data-ctx="Proverbs 30:6">
+  <div class="page">
+    <div class="kicker">Acts 17</div>
+    <h2>No Secret Traditions</h2>
+    <p>They claim because the Gospel was preached orally that there were secret traditions given that were in conflict with clear teaching from scripture, when in fact what was preached was from scripture. Jesus is the fulfilment of the OT. The Law. The promise to Abraham. And scripture is how we know this is true. Just as Paul and the apostles used scripture to convert the Thessalonians here in Acts 17, and just as he wrote to them in epistles to stand fast to the teachings from scripture that he gave them in person in 2 Thessalonians 2.</p>
+    <p>He gave them no instruction or tradition that contradicted scripture or else how would they search <em>the scriptures daily, whether those things were so?</em></p>
+    <p>The proof text Catholics use to denigrate the word of God and justify their damnable heresies behind "tradition," is undone by simply reading the word.</p>
+    <blockquote class="big-verse">Add thou not unto his words, lest he reprove thee, and thou be found a liar.<cite>Proverbs 30:6</cite></blockquote>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Another gospel" data-title="Necessary for Salvation?" data-ctx="Proverbs 30:6">
+  <div class="page">
+    <div class="kicker">Galatians 1</div>
+    <h2>Necessary for Salvation?</h2>
+    <blockquote>The Church affirms that for believers the sacraments of the New Covenant are necessary for salvation.<cite>The Catholic catechism</cite></blockquote>
+    <p>This is blasphemy and damnable heresy.</p>
+    <p>It is blasphemy and damnable heresy because it directly contradicts the Bible. It is another gospel.</p>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Another gospel" data-title="Let Him Be Accursed" data-ctx="Galatians 1:8-9">
+  <div class="page">
+    <div class="kicker">Galatians 1</div>
+    <h2>Let Him Be Accursed</h2>
+    <blockquote class="scripture" style="font-style:italic">But though we, or an angel from heaven, preach any other gospel unto you than that which we have preached unto you, <mark>let him be accursed</mark>. As we said before, so say I now again, If any man preach any other gospel unto you than that ye have received, <mark>let him be accursed</mark>.<cite>Galatians 1:8-9</cite></blockquote>
+    <p>Notice, Paul writing to the Galatians in the Spirit, God inspired scripture, says this TWICE. For emphasis.</p>
+    <p>And what was it he preached to the Galatians?</p>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Another gospel" data-title="Not after Man" data-ctx="Galatians 1:11-12">
+  <div class="page">
+    <div class="kicker">Galatians 1</div>
+    <h2>Not after Man</h2>
+    <blockquote class="scripture" style="font-style:italic">But I certify you, brethren, that <mark>the gospel which was preached of me is not after man</mark>. For I neither received it of man, neither was I taught it, <mark>but by the revelation of Jesus Christ</mark>.<cite>Galatians 1:11-12</cite></blockquote>
+    <p class="center"><button class="ref" data-v="Galatians 1:10-24">Read Galatians 1:10–24</button></p>
+    <p>Don't miss this, Paul makes it emphatically clear he didn't learn any secret traditions of man from any Apostles. He wasn't told what to say by anyone else. He, knowing the scriptures and having by the grace of God the opportunity for salvation in Jesus, was given all to preach to the heathen.</p>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="Another gospel" data-title="Not by the Works of the Law" data-ctx="Galatians 2:16">
+  <div class="page">
+    <div class="kicker">Galatians 2</div>
+    <h2>Not by the Works of the Law</h2>
+    <p>He explains how, after 14 years the issue of Judaizers and the circumcision brought him to go to Jerusalem and talk to the local church there, run by James BTW, and they agreed to send letters out denouncing the judaizers adding works to salvation, and affirming the Gospel:</p>
+    <blockquote class="big-verse">Knowing that <mark>a man is not justified by the works of the law, but by the faith of Jesus Christ</mark>, even we have believed in Jesus Christ, that we might be justified by the faith of Christ, and not by the works of the law: for by the works of the law shall no flesh be justified.<cite>Galatians 2:16</cite></blockquote>
+    <p>This is the Gospel. And ANY MAN bringing any other Gospel, especially of works and rites for salvation, IS ACCURSED.</p>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="Another gospel" data-title="The Whole Word of God" data-ctx="Galatians 2:16">
+  <div class="page">
+    <div class="kicker">Application • The Bible alone</div>
+    <h2>The Whole Word of God</h2>
+    <p>So, according to scripture from which ALL doctrine is to be taken, so that a man of God can be perfect, complete, and throughly furnished unto all good works, the whole word of God, the Catholic Church that has added to the word, has given another Gospel, is accursed.</p>
+    <p>We don't need so-called saints, endorsed by an accursed institution like the pagan church of Rome, to explain doctrine to us. We don't need extra biblical instruction on vain traditions of man that contradicts clear scripture from the word of God. We don't need anything but the word of God and the Spirit that indwells all believers when they are born again in faith alone, filled with grace from the living God.</p>
+  </div>
+</section>
+
+<!-- 26 -->
+<section class="slide" data-section="Another gospel" data-title="He Shall Teach You All Things" data-ctx="John 14:26">
+  <div class="page">
+    <div class="kicker">Application • The Bible alone</div>
+    <h2>He Shall Teach You All Things</h2>
+    <p>We have the Holy Spirit, who IS God.</p>
+    <blockquote class="big-verse">But the Comforter, which is the Holy Ghost, whom the Father will send in my name, <mark>he shall teach you all things</mark>, and bring all things to your remembrance, whatsoever I have said unto you.<cite>John 14:26</cite></blockquote>
+  </div>
+</section>
+
+<!-- 27 -->
+<section class="slide" data-section="Another gospel" data-title="Read on" data-ctx="John 14:26">
+  <div class="page">
+    <div class="kicker">Answering error</div>
+    <h2>Read on</h2>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-hold-the-traditions-2-vain-traditions" target="_blank" rel="noopener">Part 2: Vain Traditions ↗</a><a class="ref lesson-link" href="../../studies/#lesson-fundamentalism-vs-vain-philosophy" target="_blank" rel="noopener">Fundamentalism versus Vain Philosophy ↗</a><a class="ref lesson-link" href="../../studies/#lesson-pulled-why-we-keep-the-kjv" target="_blank" rel="noopener">Why We Keep the King James Bible ↗</a><a class="ref lesson-link" href="../../studies/#lesson-genesis-19-sodom-and-gomorrah" target="_blank" rel="noopener">Genesis 19: Sodom and Gomorrah ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "2 Thessalonians 2:1-17":[[1, "Now we beseech you, brethren, by the coming of our Lord Jesus Christ, and by our gathering together unto him,"], [2, "That ye be not soon shaken in mind, or be troubled, neither by spirit, nor by word, nor by letter as from us, as that the day of Christ is at hand."], [3, "Let no man deceive you by any means: for that day shall not come, except there come a falling away first, and that man of sin be revealed, the son of perdition;"], [4, "Who opposeth and exalteth himself above all that is called God, or that is worshipped; so that he as God sitteth in the temple of God, shewing himself that he is God."], [5, "Remember ye not, that, when I was yet with you, I told you these things?"], [6, "And now ye know what withholdeth that he might be revealed in his time."], [7, "For the mystery of iniquity doth already work: only he who now letteth will let, until he be taken out of the way."], [8, "And then shall that Wicked be revealed, whom the Lord shall consume with the spirit of his mouth, and shall destroy with the brightness of his coming:"], [9, "Even him, whose coming is after the working of Satan with all power and signs and lying wonders,"], [10, "And with all deceivableness of unrighteousness in them that perish; because they received not the love of the truth, that they might be saved."], [11, "And for this cause God shall send them strong delusion, that they should believe a lie:"], [12, "That they all might be damned who believed not the truth, but had pleasure in unrighteousness."], [13, "But we are bound to give thanks alway to God for you, brethren beloved of the Lord, because God hath from the beginning chosen you to salvation through sanctification of the Spirit and belief of the truth:"], [14, "Whereunto he called you by our gospel, to the obtaining of the glory of our Lord Jesus Christ."], [15, "Therefore, brethren, stand fast, and hold the traditions which ye have been taught, whether by word, or our epistle."], [16, "Now our Lord Jesus Christ himself, and God, even our Father, which hath loved us, and hath given us everlasting consolation and good hope through grace,"], [17, "Comfort your hearts, and stablish you in every good word and work."]],
+  "2 Thessalonians 2:15":[[15, "Therefore, brethren, stand fast, and hold the traditions which ye have been taught, whether by word, or our epistle."]],
+  "Acts 17:1-17":[[1, "Now when they had passed through Amphipolis and Apollonia, they came to Thessalonica, where was a synagogue of the Jews:"], [2, "And Paul, as his manner was, went in unto them, and three sabbath days reasoned with them out of the scriptures,"], [3, "Opening and alleging, that Christ must needs have suffered, and risen again from the dead; and that this Jesus, whom I preach unto you, is Christ."], [4, "And some of them believed, and consorted with Paul and Silas; and of the devout Greeks a great multitude, and of the chief women not a few."], [5, "But the Jews which believed not, moved with envy, took unto them certain lewd fellows of the baser sort, and gathered a company, and set all the city on an uproar, and assaulted the house of Jason, and sought to bring them out to the people."], [6, "And when they found them not, they drew Jason and certain brethren unto the rulers of the city, crying, These that have turned the world upside down are come hither also;"], [7, "Whom Jason hath received: and these all do contrary to the decrees of Caesar, saying that there is another king, one Jesus."], [8, "And they troubled the people and the rulers of the city, when they heard these things."], [9, "And when they had taken security of Jason, and of the other, they let them go."], [10, "And the brethren immediately sent away Paul and Silas by night unto Berea: who coming thither went into the synagogue of the Jews."], [11, "These were more noble than those in Thessalonica, in that they received the word with all readiness of mind, and searched the scriptures daily, whether those things were so."], [12, "Therefore many of them believed; also of honourable women which were Greeks, and of men, not a few."], [13, "But when the Jews of Thessalonica had knowledge that the word of God was preached of Paul at Berea, they came thither also, and stirred up the people."], [14, "And then immediately the brethren sent away Paul to go as it were to the sea: but Silas and Timotheus abode there still."], [15, "And they that conducted Paul brought him unto Athens: and receiving a commandment unto Silas and Timotheus for to come to him with all speed, they departed."], [16, "Now while Paul waited for them at Athens, his spirit was stirred in him, when he saw the city wholly given to idolatry."], [17, "Therefore disputed he in the synagogue with the Jews, and with the devout persons, and in the market daily with them that met with him."]],
+  "Acts 17:11":[[11, "These were more noble than those in Thessalonica, in that they received the word with all readiness of mind, and searched the scriptures daily, whether those things were so."]],
+  "Galatians 1:10-24":[[10, "For do I now persuade men, or God? or do I seek to please men? for if I yet pleased men, I should not be the servant of Christ."], [11, "But I certify you, brethren, that the gospel which was preached of me is not after man."], [12, "For I neither received it of man, neither was I taught it, but by the revelation of Jesus Christ."], [13, "For ye have heard of my conversation in time past in the Jews’ religion, how that beyond measure I persecuted the church of God, and wasted it:"], [14, "And profited in the Jews’ religion above many my equals in mine own nation, being more exceedingly zealous of the traditions of my fathers."], [15, "But when it pleased God, who separated me from my mother’s womb, and called me by his grace,"], [16, "To reveal his Son in me, that I might preach him among the heathen; immediately I conferred not with flesh and blood:"], [17, "Neither went I up to Jerusalem to them which were apostles before me; but I went into Arabia, and returned again unto Damascus."], [18, "Then after three years I went up to Jerusalem to see Peter, and abode with him fifteen days."], [19, "But other of the apostles saw I none, save James the Lord’s brother."], [20, "Now the things which I write unto you, behold, before God, I lie not."], [21, "Afterwards I came into the regions of Syria and Cilicia;"], [22, "And was unknown by face unto the churches of Judaea which were in Christ:"], [23, "But they had heard only, That he which persecuted us in times past now preacheth the faith which once he destroyed."], [24, "And they glorified God in me."]],
+  "Galatians 1:8":[[8, "But though we, or an angel from heaven, preach any other gospel unto you than that which we have preached unto you, let him be accursed."]],
+  "Mark 7:1-23":[[1, "Then came together unto him the Pharisees, and certain of the scribes, which came from Jerusalem."], [2, "And when they saw some of his disciples eat bread with defiled, that is to say, with unwashen, hands, they found fault."], [3, "For the Pharisees, and all the Jews, except they wash their hands oft, eat not, holding the tradition of the elders."], [4, "And when they come from the market, except they wash, they eat not. And many other things there be, which they have received to hold, as the washing of cups, and pots, brasen vessels, and of tables."], [5, "Then the Pharisees and scribes asked him, Why walk not thy disciples according to the tradition of the elders, but eat bread with unwashen hands?"], [6, "He answered and said unto them, Well hath Esaias prophesied of you hypocrites, as it is written, This people honoureth me with their lips, but their heart is far from me."], [7, "Howbeit in vain do they worship me, teaching for doctrines the commandments of men."], [8, "For laying aside the commandment of God, ye hold the tradition of men, as the washing of pots and cups: and many other such like things ye do."], [9, "And he said unto them, Full well ye reject the commandment of God, that ye may keep your own tradition."], [10, "For Moses said, Honour thy father and thy mother; and, Whoso curseth father or mother, let him die the death:"], [11, "But ye say, If a man shall say to his father or mother, It is Corban, that is to say, a gift, by whatsoever thou mightest be profited by me; he shall be free."], [12, "And ye suffer him no more to do ought for his father or his mother;"], [13, "Making the word of God of none effect through your tradition, which ye have delivered: and many such like things do ye."], [14, "And when he had called all the people unto him, he said unto them, Hearken unto me every one of you, and understand:"], [15, "There is nothing from without a man, that entering into him can defile him: but the things which come out of him, those are they that defile the man."], [16, "If any man have ears to hear, let him hear."], [17, "And when he was entered into the house from the people, his disciples asked him concerning the parable."], [18, "And he saith unto them, Are ye so without understanding also? Do ye not perceive, that whatsoever thing from without entereth into the man, it cannot defile him;"], [19, "Because it entereth not into his heart, but into the belly, and goeth out into the draught, purging all meats?"], [20, "And he said, That which cometh out of the man, that defileth the man."], [21, "For from within, out of the heart of men, proceed evil thoughts, adulteries, fornications, murders,"], [22, "Thefts, covetousness, wickedness, deceit, lasciviousness, an evil eye, blasphemy, pride, foolishness:"], [23, "All these evil things come from within, and defile the man."]],
+  "Mark 7:13":[[13, "Making the word of God of none effect through your tradition, which ye have delivered: and many such like things do ye."]],
+  "Romans 10:17":[[17, "So then faith cometh by hearing, and hearing by the word of God."]]
+};
+
+// The Chapter panel (key C): whole chapters, and each slide's verses in data-ctx. null when the deck has none.
+window.DECK_CTX = {"home": [], "ch": {"Proverbs 30": [[1, "The words of Agur the son of Jakeh, even the prophecy: the man spake unto Ithiel, even unto Ithiel and Ucal,"], [2, "Surely I am more brutish than any man, and have not the understanding of a man."], [3, "I neither learned wisdom, nor have the knowledge of the holy."], [4, "Who hath ascended up into heaven, or descended? who hath gathered the wind in his fists? who hath bound the waters in a garment? who hath established all the ends of the earth? what is his name, and what is his son’s name, if thou canst tell?"], [5, "Every word of God is pure: he is a shield unto them that put their trust in him."], [6, "Add thou not unto his words, lest he reprove thee, and thou be found a liar."], [7, "Two things have I required of thee; deny me them not before I die:"], [8, "Remove far from me vanity and lies: give me neither poverty nor riches; feed me with food convenient for me:"], [9, "Lest I be full, and deny thee, and say, Who is the LORD? or lest I be poor, and steal, and take the name of my God in vain."], [10, "Accuse not a servant unto his master, lest he curse thee, and thou be found guilty."], [11, "There is a generation that curseth their father, and doth not bless their mother."], [12, "There is a generation that are pure in their own eyes, and yet is not washed from their filthiness."], [13, "There is a generation, O how lofty are their eyes! and their eyelids are lifted up."], [14, "There is a generation, whose teeth are as swords, and their jaw teeth as knives, to devour the poor from off the earth, and the needy from among men."], [15, "The horseleach hath two daughters, crying, Give, give. There are three things that are never satisfied, yea, four things say not, It is enough:"], [16, "The grave; and the barren womb; the earth that is not filled with water; and the fire that saith not, It is enough."], [17, "The eye that mocketh at his father, and despiseth to obey his mother, the ravens of the valley shall pick it out, and the young eagles shall eat it."], [18, "There be three things which are too wonderful for me, yea, four which I know not:"], [19, "The way of an eagle in the air; the way of a serpent upon a rock; the way of a ship in the midst of the sea; and the way of a man with a maid."], [20, "Such is the way of an adulterous woman; she eateth, and wipeth her mouth, and saith, I have done no wickedness."], [21, "For three things the earth is disquieted, and for four which it cannot bear:"], [22, "For a servant when he reigneth; and a fool when he is filled with meat;"], [23, "For an odious woman when she is married; and an handmaid that is heir to her mistress."], [24, "There be four things which are little upon the earth, but they are exceeding wise:"], [25, "The ants are a people not strong, yet they prepare their meat in the summer;"], [26, "The conies are but a feeble folk, yet make they their houses in the rocks;"], [27, "The locusts have no king, yet go they forth all of them by bands;"], [28, "The spider taketh hold with her hands, and is in kings’ palaces."], [29, "There be three things which go well, yea, four are comely in going:"], [30, "A lion which is strongest among beasts, and turneth not away for any;"], [31, "A greyhound; an he goat also; and a king, against whom there is no rising up."], [32, "If thou hast done foolishly in lifting up thyself, or if thou hast thought evil, lay thine hand upon thy mouth."], [33, "Surely the churning of milk bringeth forth butter, and the wringing of the nose bringeth forth blood: so the forcing of wrath bringeth forth strife."]], "2 Thessalonians 2": [[1, "Now we beseech you, brethren, by the coming of our Lord Jesus Christ, and by our gathering together unto him,"], [2, "That ye be not soon shaken in mind, or be troubled, neither by spirit, nor by word, nor by letter as from us, as that the day of Christ is at hand."], [3, "Let no man deceive you by any means: for that day shall not come, except there come a falling away first, and that man of sin be revealed, the son of perdition;"], [4, "Who opposeth and exalteth himself above all that is called God, or that is worshipped; so that he as God sitteth in the temple of God, shewing himself that he is God."], [5, "Remember ye not, that, when I was yet with you, I told you these things?"], [6, "And now ye know what withholdeth that he might be revealed in his time."], [7, "For the mystery of iniquity doth already work: only he who now letteth will let, until he be taken out of the way."], [8, "And then shall that Wicked be revealed, whom the Lord shall consume with the spirit of his mouth, and shall destroy with the brightness of his coming:"], [9, "Even him, whose coming is after the working of Satan with all power and signs and lying wonders,"], [10, "And with all deceivableness of unrighteousness in them that perish; because they received not the love of the truth, that they might be saved."], [11, "And for this cause God shall send them strong delusion, that they should believe a lie:"], [12, "That they all might be damned who believed not the truth, but had pleasure in unrighteousness."], [13, "But we are bound to give thanks alway to God for you, brethren beloved of the Lord, because God hath from the beginning chosen you to salvation through sanctification of the Spirit and belief of the truth:"], [14, "Whereunto he called you by our gospel, to the obtaining of the glory of our Lord Jesus Christ."], [15, "Therefore, brethren, stand fast, and hold the traditions which ye have been taught, whether by word, or our epistle."], [16, "Now our Lord Jesus Christ himself, and God, even our Father, which hath loved us, and hath given us everlasting consolation and good hope through grace,"], [17, "Comfort your hearts, and stablish you in every good word and work."]], "Romans 10": [[1, "Brethren, my heart’s desire and prayer to God for Israel is, that they might be saved."], [2, "For I bear them record that they have a zeal of God, but not according to knowledge."], [3, "For they being ignorant of God’s righteousness, and going about to establish their own righteousness, have not submitted themselves unto the righteousness of God."], [4, "For Christ is the end of the law for righteousness to every one that believeth."], [5, "For Moses describeth the righteousness which is of the law, That the man which doeth those things shall live by them."], [6, "But the righteousness which is of faith speaketh on this wise, Say not in thine heart, Who shall ascend into heaven? (that is, to bring Christ down from above:)"], [7, "Or, Who shall descend into the deep? (that is, to bring up Christ again from the dead.)"], [8, "But what saith it? The word is nigh thee, even in thy mouth, and in thy heart: that is, the word of faith, which we preach;"], [9, "That if thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God hath raised him from the dead, thou shalt be saved."], [10, "For with the heart man believeth unto righteousness; and with the mouth confession is made unto salvation."], [11, "For the scripture saith, Whosoever believeth on him shall not be ashamed."], [12, "For there is no difference between the Jew and the Greek: for the same Lord over all is rich unto all that call upon him."], [13, "For whosoever shall call upon the name of the Lord shall be saved."], [14, "How then shall they call on him in whom they have not believed? and how shall they believe in him of whom they have not heard? and how shall they hear without a preacher?"], [15, "And how shall they preach, except they be sent? as it is written, How beautiful are the feet of them that preach the gospel of peace, and bring glad tidings of good things!"], [16, "But they have not all obeyed the gospel. For Esaias saith, Lord, who hath believed our report?"], [17, "So then faith cometh by hearing, and hearing by the word of God."], [18, "But I say, Have they not heard? Yes verily, their sound went into all the earth, and their words unto the ends of the world."], [19, "But I say, Did not Israel know? First Moses saith, I will provoke you to jealousy by them that are no people, and by a foolish nation I will anger you."], [20, "But Esaias is very bold, and saith, I was found of them that sought me not; I was made manifest unto them that asked not after me."], [21, "But to Israel he saith, All day long I have stretched forth my hands unto a disobedient and gainsaying people."]], "2 Timothy 3": [[1, "This know also, that in the last days perilous times shall come."], [2, "For men shall be lovers of their own selves, covetous, boasters, proud, blasphemers, disobedient to parents, unthankful, unholy,"], [3, "Without natural affection, trucebreakers, false accusers, incontinent, fierce, despisers of those that are good,"], [4, "Traitors, heady, highminded, lovers of pleasures more than lovers of God;"], [5, "Having a form of godliness, but denying the power thereof: from such turn away."], [6, "For of this sort are they which creep into houses, and lead captive silly women laden with sins, led away with divers lusts,"], [7, "Ever learning, and never able to come to the knowledge of the truth."], [8, "Now as Jannes and Jambres withstood Moses, so do these also resist the truth: men of corrupt minds, reprobate concerning the faith."], [9, "But they shall proceed no further: for their folly shall be manifest unto all men, as theirs also was."], [10, "But thou hast fully known my doctrine, manner of life, purpose, faith, longsuffering, charity, patience,"], [11, "Persecutions, afflictions, which came unto me at Antioch, at Iconium, at Lystra; what persecutions I endured: but out of them all the Lord delivered me."], [12, "Yea, and all that will live godly in Christ Jesus shall suffer persecution."], [13, "But evil men and seducers shall wax worse and worse, deceiving, and being deceived."], [14, "But continue thou in the things which thou hast learned and hast been assured of, knowing of whom thou hast learned them;"], [15, "And that from a child thou hast known the holy scriptures, which are able to make thee wise unto salvation through faith which is in Christ Jesus."], [16, "All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness:"], [17, "That the man of God may be perfect, throughly furnished unto all good works."]], "Mark 7": [[1, "Then came together unto him the Pharisees, and certain of the scribes, which came from Jerusalem."], [2, "And when they saw some of his disciples eat bread with defiled, that is to say, with unwashen, hands, they found fault."], [3, "For the Pharisees, and all the Jews, except they wash their hands oft, eat not, holding the tradition of the elders."], [4, "And when they come from the market, except they wash, they eat not. And many other things there be, which they have received to hold, as the washing of cups, and pots, brasen vessels, and of tables."], [5, "Then the Pharisees and scribes asked him, Why walk not thy disciples according to the tradition of the elders, but eat bread with unwashen hands?"], [6, "He answered and said unto them, Well hath Esaias prophesied of you hypocrites, as it is written, This people honoureth me with their lips, but their heart is far from me."], [7, "Howbeit in vain do they worship me, teaching for doctrines the commandments of men."], [8, "For laying aside the commandment of God, ye hold the tradition of men, as the washing of pots and cups: and many other such like things ye do."], [9, "And he said unto them, Full well ye reject the commandment of God, that ye may keep your own tradition."], [10, "For Moses said, Honour thy father and thy mother; and, Whoso curseth father or mother, let him die the death:"], [11, "But ye say, If a man shall say to his father or mother, It is Corban, that is to say, a gift, by whatsoever thou mightest be profited by me; he shall be free."], [12, "And ye suffer him no more to do ought for his father or his mother;"], [13, "Making the word of God of none effect through your tradition, which ye have delivered: and many such like things do ye."], [14, "And when he had called all the people unto him, he said unto them, Hearken unto me every one of you, and understand:"], [15, "There is nothing from without a man, that entering into him can defile him: but the things which come out of him, those are they that defile the man."], [16, "If any man have ears to hear, let him hear."], [17, "And when he was entered into the house from the people, his disciples asked him concerning the parable."], [18, "And he saith unto them, Are ye so without understanding also? Do ye not perceive, that whatsoever thing from without entereth into the man, it cannot defile him;"], [19, "Because it entereth not into his heart, but into the belly, and goeth out into the draught, purging all meats?"], [20, "And he said, That which cometh out of the man, that defileth the man."], [21, "For from within, out of the heart of men, proceed evil thoughts, adulteries, fornications, murders,"], [22, "Thefts, covetousness, wickedness, deceit, lasciviousness, an evil eye, blasphemy, pride, foolishness:"], [23, "All these evil things come from within, and defile the man."], [24, "And from thence he arose, and went into the borders of Tyre and Sidon, and entered into an house, and would have no man know it: but he could not be hid."], [25, "For a certain woman, whose young daughter had an unclean spirit, heard of him, and came and fell at his feet:"], [26, "The woman was a Greek, a Syrophenician by nation; and she besought him that he would cast forth the devil out of her daughter."], [27, "But Jesus said unto her, Let the children first be filled: for it is not meet to take the children’s bread, and to cast it unto the dogs."], [28, "And she answered and said unto him, Yes, Lord: yet the dogs under the table eat of the children’s crumbs."], [29, "And he said unto her, For this saying go thy way; the devil is gone out of thy daughter."], [30, "And when she was come to her house, she found the devil gone out, and her daughter laid upon the bed."], [31, "And again, departing from the coasts of Tyre and Sidon, he came unto the sea of Galilee, through the midst of the coasts of Decapolis."], [32, "And they bring unto him one that was deaf, and had an impediment in his speech; and they beseech him to put his hand upon him."], [33, "And he took him aside from the multitude, and put his fingers into his ears, and he spit, and touched his tongue;"], [34, "And looking up to heaven, he sighed, and saith unto him, Ephphatha, that is, Be opened."], [35, "And straightway his ears were opened, and the string of his tongue was loosed, and he spake plain."], [36, "And he charged them that they should tell no man: but the more he charged them, so much the more a great deal they published it;"], [37, "And were beyond measure astonished, saying, He hath done all things well: he maketh both the deaf to hear, and the dumb to speak."]], "Acts 17": [[1, "Now when they had passed through Amphipolis and Apollonia, they came to Thessalonica, where was a synagogue of the Jews:"], [2, "And Paul, as his manner was, went in unto them, and three sabbath days reasoned with them out of the scriptures,"], [3, "Opening and alleging, that Christ must needs have suffered, and risen again from the dead; and that this Jesus, whom I preach unto you, is Christ."], [4, "And some of them believed, and consorted with Paul and Silas; and of the devout Greeks a great multitude, and of the chief women not a few."], [5, "But the Jews which believed not, moved with envy, took unto them certain lewd fellows of the baser sort, and gathered a company, and set all the city on an uproar, and assaulted the house of Jason, and sought to bring them out to the people."], [6, "And when they found them not, they drew Jason and certain brethren unto the rulers of the city, crying, These that have turned the world upside down are come hither also;"], [7, "Whom Jason hath received: and these all do contrary to the decrees of Caesar, saying that there is another king, one Jesus."], [8, "And they troubled the people and the rulers of the city, when they heard these things."], [9, "And when they had taken security of Jason, and of the other, they let them go."], [10, "And the brethren immediately sent away Paul and Silas by night unto Berea: who coming thither went into the synagogue of the Jews."], [11, "These were more noble than those in Thessalonica, in that they received the word with all readiness of mind, and searched the scriptures daily, whether those things were so."], [12, "Therefore many of them believed; also of honourable women which were Greeks, and of men, not a few."], [13, "But when the Jews of Thessalonica had knowledge that the word of God was preached of Paul at Berea, they came thither also, and stirred up the people."], [14, "And then immediately the brethren sent away Paul to go as it were to the sea: but Silas and Timotheus abode there still."], [15, "And they that conducted Paul brought him unto Athens: and receiving a commandment unto Silas and Timotheus for to come to him with all speed, they departed."], [16, "Now while Paul waited for them at Athens, his spirit was stirred in him, when he saw the city wholly given to idolatry."], [17, "Therefore disputed he in the synagogue with the Jews, and with the devout persons, and in the market daily with them that met with him."], [18, "Then certain philosophers of the Epicureans, and of the Stoicks, encountered him. And some said, What will this babbler say? other some, He seemeth to be a setter forth of strange gods: because he preached unto them Jesus, and the resurrection."], [19, "And they took him, and brought him unto Areopagus, saying, May we know what this new doctrine, whereof thou speakest, is?"], [20, "For thou bringest certain strange things to our ears: we would know therefore what these things mean."], [21, "(For all the Athenians and strangers which were there spent their time in nothing else, but either to tell, or to hear some new thing.)"], [22, "Then Paul stood in the midst of Mars’ hill, and said, Ye men of Athens, I perceive that in all things ye are too superstitious."], [23, "For as I passed by, and beheld your devotions, I found an altar with this inscription, TO THE UNKNOWN GOD. Whom therefore ye ignorantly worship, him declare I unto you."], [24, "God that made the world and all things therein, seeing that he is Lord of heaven and earth, dwelleth not in temples made with hands;"], [25, "Neither is worshipped with men’s hands, as though he needed any thing, seeing he giveth to all life, and breath, and all things;"], [26, "And hath made of one blood all nations of men for to dwell on all the face of the earth, and hath determined the times before appointed, and the bounds of their habitation;"], [27, "That they should seek the Lord, if haply they might feel after him, and find him, though he be not far from every one of us:"], [28, "For in him we live, and move, and have our being; as certain also of your own poets have said, For we are also his offspring."], [29, "Forasmuch then as we are the offspring of God, we ought not to think that the Godhead is like unto gold, or silver, or stone, graven by art and man’s device."], [30, "And the times of this ignorance God winked at; but now commandeth all men every where to repent:"], [31, "Because he hath appointed a day, in the which he will judge the world in righteousness by that man whom he hath ordained; whereof he hath given assurance unto all men, in that he hath raised him from the dead."], [32, "And when they heard of the resurrection of the dead, some mocked: and others said, We will hear thee again of this matter."], [33, "So Paul departed from among them."], [34, "Howbeit certain men clave unto him, and believed: among the which was Dionysius the Areopagite, and a woman named Damaris, and others with them."]], "Galatians 1": [[1, "Paul, an apostle, (not of men, neither by man, but by Jesus Christ, and God the Father, who raised him from the dead;)"], [2, "And all the brethren which are with me, unto the churches of Galatia:"], [3, "Grace be to you and peace from God the Father, and from our Lord Jesus Christ,"], [4, "Who gave himself for our sins, that he might deliver us from this present evil world, according to the will of God and our Father:"], [5, "To whom be glory for ever and ever. Amen."], [6, "I marvel that ye are so soon removed from him that called you into the grace of Christ unto another gospel:"], [7, "Which is not another; but there be some that trouble you, and would pervert the gospel of Christ."], [8, "But though we, or an angel from heaven, preach any other gospel unto you than that which we have preached unto you, let him be accursed."], [9, "As we said before, so say I now again, If any man preach any other gospel unto you than that ye have received, let him be accursed."], [10, "For do I now persuade men, or God? or do I seek to please men? for if I yet pleased men, I should not be the servant of Christ."], [11, "But I certify you, brethren, that the gospel which was preached of me is not after man."], [12, "For I neither received it of man, neither was I taught it, but by the revelation of Jesus Christ."], [13, "For ye have heard of my conversation in time past in the Jews’ religion, how that beyond measure I persecuted the church of God, and wasted it:"], [14, "And profited in the Jews’ religion above many my equals in mine own nation, being more exceedingly zealous of the traditions of my fathers."], [15, "But when it pleased God, who separated me from my mother’s womb, and called me by his grace,"], [16, "To reveal his Son in me, that I might preach him among the heathen; immediately I conferred not with flesh and blood:"], [17, "Neither went I up to Jerusalem to them which were apostles before me; but I went into Arabia, and returned again unto Damascus."], [18, "Then after three years I went up to Jerusalem to see Peter, and abode with him fifteen days."], [19, "But other of the apostles saw I none, save James the Lord’s brother."], [20, "Now the things which I write unto you, behold, before God, I lie not."], [21, "Afterwards I came into the regions of Syria and Cilicia;"], [22, "And was unknown by face unto the churches of Judaea which were in Christ:"], [23, "But they had heard only, That he which persecuted us in times past now preacheth the faith which once he destroyed."], [24, "And they glorified God in me."]], "Galatians 2": [[1, "Then fourteen years after I went up again to Jerusalem with Barnabas, and took Titus with me also."], [2, "And I went up by revelation, and communicated unto them that gospel which I preach among the Gentiles, but privately to them which were of reputation, lest by any means I should run, or had run, in vain."], [3, "But neither Titus, who was with me, being a Greek, was compelled to be circumcised:"], [4, "And that because of false brethren unawares brought in, who came in privily to spy out our liberty which we have in Christ Jesus, that they might bring us into bondage:"], [5, "To whom we gave place by subjection, no, not for an hour; that the truth of the gospel might continue with you."], [6, "But of these who seemed to be somewhat, (whatsoever they were, it maketh no matter to me: God accepteth no man’s person:) for they who seemed to be somewhat in conference added nothing to me:"], [7, "But contrariwise, when they saw that the gospel of the uncircumcision was committed unto me, as the gospel of the circumcision was unto Peter;"], [8, "(For he that wrought effectually in Peter to the apostleship of the circumcision, the same was mighty in me toward the Gentiles:)"], [9, "And when James, Cephas, and John, who seemed to be pillars, perceived the grace that was given unto me, they gave to me and Barnabas the right hands of fellowship; that we should go unto the heathen, and they unto the circumcision."], [10, "Only they would that we should remember the poor; the same which I also was forward to do."], [11, "But when Peter was come to Antioch, I withstood him to the face, because he was to be blamed."], [12, "For before that certain came from James, he did eat with the Gentiles: but when they were come, he withdrew and separated himself, fearing them which were of the circumcision."], [13, "And the other Jews dissembled likewise with him; insomuch that Barnabas also was carried away with their dissimulation."], [14, "But when I saw that they walked not uprightly according to the truth of the gospel, I said unto Peter before them all, If thou, being a Jew, livest after the manner of Gentiles, and not as do the Jews, why compellest thou the Gentiles to live as do the Jews?"], [15, "We who are Jews by nature, and not sinners of the Gentiles,"], [16, "Knowing that a man is not justified by the works of the law, but by the faith of Jesus Christ, even we have believed in Jesus Christ, that we might be justified by the faith of Christ, and not by the works of the law: for by the works of the law shall no flesh be justified."], [17, "But if, while we seek to be justified by Christ, we ourselves also are found sinners, is therefore Christ the minister of sin? God forbid."], [18, "For if I build again the things which I destroyed, I make myself a transgressor."], [19, "For I through the law am dead to the law, that I might live unto God."], [20, "I am crucified with Christ: nevertheless I live; yet not I, but Christ liveth in me: and the life which I now live in the flesh I live by the faith of the Son of God, who loved me, and gave himself for me."], [21, "I do not frustrate the grace of God: for if righteousness come by the law, then Christ is dead in vain."]], "John 14": [[1, "Let not your heart be troubled: ye believe in God, believe also in me."], [2, "In my Father’s house are many mansions: if it were not so, I would have told you. I go to prepare a place for you."], [3, "And if I go and prepare a place for you, I will come again, and receive you unto myself; that where I am, there ye may be also."], [4, "And whither I go ye know, and the way ye know."], [5, "Thomas saith unto him, Lord, we know not whither thou goest; and how can we know the way?"], [6, "Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me."], [7, "If ye had known me, ye should have known my Father also: and from henceforth ye know him, and have seen him."], [8, "Philip saith unto him, Lord, shew us the Father, and it sufficeth us."], [9, "Jesus saith unto him, Have I been so long time with you, and yet hast thou not known me, Philip? he that hath seen me hath seen the Father; and how sayest thou then, Shew us the Father?"], [10, "Believest thou not that I am in the Father, and the Father in me? the words that I speak unto you I speak not of myself: but the Father that dwelleth in me, he doeth the works."], [11, "Believe me that I am in the Father, and the Father in me: or else believe me for the very works’ sake."], [12, "Verily, verily, I say unto you, He that believeth on me, the works that I do shall he do also; and greater works than these shall he do; because I go unto my Father."], [13, "And whatsoever ye shall ask in my name, that will I do, that the Father may be glorified in the Son."], [14, "If ye shall ask any thing in my name, I will do it."], [15, "If ye love me, keep my commandments."], [16, "And I will pray the Father, and he shall give you another Comforter, that he may abide with you for ever;"], [17, "Even the Spirit of truth; whom the world cannot receive, because it seeth him not, neither knoweth him: but ye know him; for he dwelleth with you, and shall be in you."], [18, "I will not leave you comfortless: I will come to you."], [19, "Yet a little while, and the world seeth me no more; but ye see me: because I live, ye shall live also."], [20, "At that day ye shall know that I am in my Father, and ye in me, and I in you."], [21, "He that hath my commandments, and keepeth them, he it is that loveth me: and he that loveth me shall be loved of my Father, and I will love him, and will manifest myself to him."], [22, "Judas saith unto him, not Iscariot, Lord, how is it that thou wilt manifest thyself unto us, and not unto the world?"], [23, "Jesus answered and said unto him, If a man love me, he will keep my words: and my Father will love him, and we will come unto him, and make our abode with him."], [24, "He that loveth me not keepeth not my sayings: and the word which ye hear is not mine, but the Father’s which sent me."], [25, "These things have I spoken unto you, being yet present with you."], [26, "But the Comforter, which is the Holy Ghost, whom the Father will send in my name, he shall teach you all things, and bring all things to your remembrance, whatsoever I have said unto you."], [27, "Peace I leave with you, my peace I give unto you: not as the world giveth, give I unto you. Let not your heart be troubled, neither let it be afraid."], [28, "Ye have heard how I said unto you, I go away, and come again unto you. If ye loved me, ye would rejoice, because I said, I go unto the Father: for my Father is greater than I."], [29, "And now I have told you before it come to pass, that, when it is come to pass, ye might believe."], [30, "Hereafter I will not talk much with you: for the prince of this world cometh, and hath nothing in me."], [31, "But that the world may know that I love the Father; and as the Father gave me commandment, even so I do. Arise, let us go hence."]]}};
+
+// Quotations from other writings (say: in the deck): their words open like a verse.
+const Q = {};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b && b.dataset.q) {
+    const q = Q[b.dataset.q];
+    verseTitle.textContent = q ? q.t : b.textContent.trim();
+    verseBody.innerHTML = q ? q.h : "<p>Not loaded.</p>";
+    verseDlg.showModal();
+    verseBody.scrollTop = 0;
+    return;
+  }
+  if (b) {
+    const keys = b.dataset.v;
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Genesis 23 – The Death of Sarah</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="A verse-by-verse study of Genesis 23: Sarah dies at an hundred and seven and twenty years, mother Sarah and Mary, the cave of Machpelah, Sarah&#x27;s life as an allegory of faithful Israel, and the lesson of Galatians 4, do ye not hear the law?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body .say-cite{font-size:.85rem;font-style:italic;color:var(--vellum-dim);border-top:1px solid var(--rule);padding-top:.6rem;margin-top:1rem}
+.ref.say{border-bottom-style:dashed}
+.ref.say::before{content:"\201C";margin-right:.15em}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Genesis Chapter 23" data-ctx="">
+  <div class="page title-page">
+    <div class="overline">Young Adult Sunday School • Genesis Series</div>
+    <h1>Genesis 23: The Death of Sarah</h1>
+    <p class="sub">Mother Sarah • The Cave of Machpelah • An Allegory • Do Ye Not Hear the Law?</p>
+    <div class="refs center"><button class="ref" data-v="Genesis 23:1-20">Genesis 23:1-20</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="Sarah died" data-title="The Years of the Life of Sarah" data-ctx="Genesis 23:1-2">
+  <div class="page">
+    <div class="kicker">vv. 1–2</div>
+    <h2>The Years of the Life of Sarah</h2>
+    <p class="sub">Abraham Came to Mourn for Sarah</p>
+    <blockquote class="scripture" style="font-style:italic">And Sarah was <mark>an hundred and seven and twenty years old</mark>: these were the years of the life of Sarah. And Sarah died in Kirjatharba; the same is Hebron in the land of Canaan: and Abraham came to mourn for Sarah, and to weep for her.<cite>Genesis 23:1-2</cite></blockquote>
+    <p>Finally, Sarah having seen her son born of a miracle and come to be offered as a sacrifice, (I believe at 33 upon a hill in Jerusalem, spared by God, a picture of Jesus) she passes away a year later, at 127 years old and is honored, being given a place with the patriarchs, our being told of her end, chronicled by scripture. And in her faith, she was saved, and through her, all nations and kindreds were blessed.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="Sarah died" data-title="Through Faith Also Sara Herself" data-ctx="Hebrews 11:11-12|Hebrews 11:13">
+  <div class="page">
+    <div class="kicker">Cross references • Genesis 23:1</div>
+    <h2>Through Faith Also Sara Herself</h2>
+    <div class="vps"><div class="vp fig"><h3>Hebrews 11:11-12</h3><blockquote class="scripture" style="font-style:italic">Through faith also Sara herself received strength to conceive seed, and was delivered of a child when she was past age, because she judged him faithful who had promised. Therefore sprang there even of one, and him as good as dead, so many as the stars of the sky in multitude, and as the sand which is by the sea shore innumerable.<cite>Hebrews 11:11-12</cite></blockquote></div><div class="vp fig"><h3>Hebrews 11:13</h3><blockquote class="scripture" style="font-style:italic">These all died in faith, not having received the promises, but having seen them afar off, and were persuaded of them, and embraced them, and confessed that they were strangers and pilgrims on the earth.<cite>Hebrews 11:13</cite></blockquote></div></div>
+    <div class="callout"><p><button class="ref" data-v="Hebrews 11:11-16">Read Hebrews 11:11–16</button></p></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="Sarah died" data-title="Mother Sarah" data-ctx="Genesis 21:1-2|Luke 1:30-31">
+  <div class="page">
+    <div class="kicker">Cross references • Genesis 23:1, continued</div>
+    <h2>Mother Sarah</h2>
+    <p>Mother Sarah, as much as Mary, is blessed by God, given the honor of the seed, which is Jesus Christ. Announced by God, Himself. Brought to conceive by a miracle.</p>
+    <div class="vps"><div class="vp fig"><h3>Genesis 21:1-2</h3><blockquote class="scripture" style="font-style:italic">And the <span class="lord">Lord</span> visited Sarah as he had said, and the <span class="lord">Lord</span> did unto Sarah as he had spoken. For Sarah conceived, and bare Abraham a son in his old age, at the set time of which God had spoken to him.<cite>Genesis 21:1-2</cite></blockquote></div><div class="vp fig"><h3>Luke 1:30-31</h3><blockquote class="scripture" style="font-style:italic">And the angel said unto her, Fear not, Mary: for thou hast found favour with God. And, behold, thou shalt conceive in thy womb, and bring forth a son, and shalt call his name JESUS.<cite>Luke 1:30-31</cite></blockquote></div></div>
+    <div class="callout"><p><button class="ref" data-v="Luke 1:28-37">Read Luke 1:28–37</button></p></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="Sarah died" data-title="Bookends of Faith" data-ctx="Luke 1:72-73">
+  <div class="page">
+    <div class="kicker">Cross references • Genesis 23:1, continued</div>
+    <h2>Bookends of Faith</h2>
+    <div class="vps"><div class="vp fig"><h3>Luke 1:72-73</h3><blockquote class="scripture" style="font-style:italic">To perform the mercy promised to our fathers, and to remember his holy covenant; The oath which he sware to our father Abraham,<cite>Luke 1:72-73</cite></blockquote></div></div>
+    <div class="callout"><p>Like Sarah was visited by the Lord God and bore Isaac, so too was Israel visited by God in Christ Jesus, through Mary. Bookends of faith, a covenant fulfilled. <button class="ref" data-v="Luke 1:68-79">Read Luke 1:68–79</button></p></div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="The cave of Machpelah" data-title="A Stranger and a Sojourner" data-ctx="Genesis 23:3-6">
+  <div class="page">
+    <div class="kicker">vv. 3–6</div>
+    <h2>A Stranger and a Sojourner</h2>
+    <p class="sub">Thou Art a Mighty Prince among Us</p>
+    <blockquote class="scripture" style="font-style:italic">And Abraham stood up from before his dead, and spake unto the sons of Heth, saying, <mark>I am a stranger and a sojourner with you</mark>: give me a possession of a buryingplace with you, that I may bury my dead out of my sight. And the children of Heth answered Abraham, saying unto him, Hear us, my lord: thou art a mighty prince among us: in the choice of our sepulchres bury thy dead; none of us shall withhold from thee his sepulchre, but that thou mayest bury thy dead.<cite>Genesis 23:3-6</cite></blockquote>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="The cave of Machpelah" data-title="The Cave of Machpelah" data-ctx="Genesis 23:7-9">
+  <div class="page">
+    <div class="kicker">vv. 7–9</div>
+    <h2>The Cave of Machpelah</h2>
+    <p class="sub">For as Much Money as It Is Worth</p>
+    <blockquote class="scripture" style="font-style:italic">And Abraham stood up, and bowed himself to the people of the land, even to the children of Heth. And he communed with them, saying, If it be your mind that I should bury my dead out of my sight; hear me, and intreat for me to Ephron the son of Zohar, That he may give me <mark>the cave of Machpelah</mark>, which he hath, which is in the end of his field; for as much money as it is worth he shall give it me for a possession of a buryingplace amongst you.<cite>Genesis 23:7-9</cite></blockquote>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="The cave of Machpelah" data-title="Ephron the Hittite" data-ctx="Genesis 23:10-13">
+  <div class="page">
+    <div class="kicker">vv. 10–13</div>
+    <h2>Ephron the Hittite</h2>
+    <p class="sub">I Will Give Thee Money for the Field</p>
+    <blockquote class="scripture" style="font-style:italic">And Ephron dwelt among the children of Heth: and Ephron the Hittite answered Abraham in the audience of the children of Heth, even of all that went in at the gate of his city, saying, Nay, my lord, hear me: the field give I thee, and the cave that is therein, I give it thee; in the presence of the sons of my people give I it thee: bury thy dead. And Abraham bowed down himself before the people of the land. And he spake unto Ephron in the audience of the people of the land, saying, But if thou wilt give it, I pray thee, hear me: <mark>I will give thee money for the field</mark>; take it of me, and I will bury my dead there.<cite>Genesis 23:10-13</cite></blockquote>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="The cave of Machpelah" data-title="Four Hundred Shekels of Silver" data-ctx="Genesis 23:14-16">
+  <div class="page">
+    <div class="kicker">vv. 14–16</div>
+    <h2>Four Hundred Shekels of Silver</h2>
+    <p class="sub">Current Money with the Merchant</p>
+    <blockquote class="scripture" style="font-style:italic">And Ephron answered Abraham, saying unto him, My lord, hearken unto me: the land is worth <mark>four hundred shekels of silver</mark>; what is that betwixt me and thee? bury therefore thy dead. And Abraham hearkened unto Ephron; and Abraham weighed to Ephron the silver, which he had named in the audience of the sons of Heth, <mark>four hundred shekels of silver</mark>, current money with the merchant.<cite>Genesis 23:14-16</cite></blockquote>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="The cave of Machpelah" data-title="Made Sure unto Abraham" data-ctx="Genesis 23:17-20">
+  <div class="page">
+    <div class="kicker">vv. 17–20</div>
+    <h2>Made Sure unto Abraham</h2>
+    <p class="sub">Abraham Buried Sarah His Wife</p>
+    <blockquote class="scripture" style="font-style:italic">And the field of Ephron, which was in Machpelah, which was before Mamre, the field, and the cave which was therein, and all the trees that were in the field, that were in all the borders round about, were made sure Unto Abraham for a possession in the presence of the children of Heth, before all that went in at the gate of his city. And after this, <mark>Abraham buried Sarah his wife</mark> in the cave of the field of Machpelah before Mamre: the same is Hebron in the land of Canaan. And the field, and the cave that is therein, were made sure unto Abraham for a possession of a buryingplace by the sons of Heth.<cite>Genesis 23:17-20</cite></blockquote>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="An allegory" data-title="These Things Be an Allegory" data-ctx="Genesis 23:17-20">
+  <div class="page">
+    <div class="kicker">Application • The life of Sarah</div>
+    <h2>These Things Be an Allegory</h2>
+    <p class="sub">Faithful Believing Israel</p>
+    <p>Now, as the Bible in <strong>Galatians 4</strong> says, regarding the story of Sarah and Isaac, that these things be an allegory, the children of the promise in Sarah, the children after the bondage of the law, in Hagar. That the true seed of Abraham isn't after the flesh, as Ishmael was by the bondwoman Hagar, but by the miracle of God, Isaac, conceived in faith through Sarah.</p>
+    <p>The life story of Sarah represents Old Testament Israel, faithful believing Israel, who were saved through faith in the promise made to Abraham. An allegory, as the Bible says.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="An allegory" data-title="Barren, and into Egypt" data-ctx="Genesis 23:17-20">
+  <div class="page">
+    <div class="kicker">Application • The life of Sarah</div>
+    <h2>Barren, and into Egypt</h2>
+    <p class="sub">A Mixed Multitude</p>
+    <p>When we first meet Sarah, as a young wife to Abraham, we are told she was barren. Without hope of conception. She journeys to Canaan, the promised land.</p>
+    <p>Later, due to famine, she sojourns into Egypt, is captured by Pharaoh, and God for Sarah's sake visits plagues upon the Pharaoh's house until he relents and sends Sarah, Abraham, Lot and their cattle and belongings out from Egypt. Just as the Israelites spoiled Egypt, and went out with them, a mixed multitude.</p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="An allegory" data-title="My Wrong Be upon Thee" data-ctx="Genesis 16:5">
+  <div class="page">
+    <div class="kicker">Application • The life of Sarah</div>
+    <h2>My Wrong Be upon Thee</h2>
+    <p class="sub">Impatient with God's Promise</p>
+    <p>Sarah, despite her faith and love of God lapses in faith, and brings adultery to the bed of Abraham, with Hagar. Sarah's impatience with God's promise has her seek to find an heir after the flesh. Just as the Israelites lapsed in faith and brought the adultery of strange gods at times, and eventually sought an earthly king to rule them, frustrated at the timing of God.</p>
+    <p>And like Israel, which would at times repent and turn back to God, admitting their error, Sarah says to Abraham; <em>My wrong be upon thee: I have given my maid into thy bosom; and when she saw that she had conceived, I was despised in her eyes: the Lord judge between me and thee.</em> <button class="ref" data-v="Genesis 16:5">Genesis 16:5</button></p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="An allegory" data-title="The Heir after the Law" data-ctx="Genesis 16:5">
+  <div class="page">
+    <div class="kicker">Application • The life of Sarah</div>
+    <h2>The Heir after the Law</h2>
+    <p class="sub">Another Captivity</p>
+    <p>And Hagar, having fled from Sarah with Ishmael the heir after the law, representing Israel after the flesh, not of faith, was given another chance by God, so too were the Jews of Jesus earthly ministry, to receive the adoption by faith that they thought was theirs by law. And Sarah, believing Israel, gave them a home until the coming of Isaac.</p>
+    <p>We are told of another captivity, Sarah taken by a king, and freed not by plagues but by the fear of the Lord upon Abimelech, convicted of his error, just as Babylonian captivity was.</p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="An allegory" data-title="Cast Out the Bondwoman" data-ctx="Genesis 16:5">
+  <div class="page">
+    <div class="kicker">Application • The life of Sarah</div>
+    <h2>Cast Out the Bondwoman</h2>
+    <p class="sub">The Non-Believing Jews Were Cut Off</p>
+    <p>And when Isaac was born, Ishmael mocked the heir of the promise, and Sarah cast out the bondwoman and her son, though it grieved Abraham, the father. But God agrees with Sarah that son after the flesh, the heir according to the law be cast out, so that the son of faith may come in to his inheritance in full. Just as the non-believing Jews were cut off.</p>
+    <p>(God, in His mercy offers salvation to Hagar if she just believe. And a well of water giving her salvation, just as any seed of Abraham after the flesh can still repent towards Christ today)</p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="Do ye not hear the law?" data-title="The Righteous Anger of Paul" data-ctx="Genesis 16:5">
+  <div class="page">
+    <div class="kicker">Application • Galatians</div>
+    <h2>The Righteous Anger of Paul</h2>
+    <p class="sub">Another Gospel</p>
+    <p>And so with this better understanding of the allegory, of recognizing that the entire Old Testament is about Christ Jesus and salvation by faith alone in him, to redeem us, offered by God the father in love and grace, we can understand the righteous anger of Paul writing unto the Galatians.</p>
+    <p>The Church of the Galatians being swayed by judaizers into accepting another gospel, one of bondage to the law. Whereby they were being told that they must circumcise, keep the days and the months and the dietary laws in the carnal ordinances to be saved. Being dragged back to Hagar, the Bond woman and rejecting Sarah and the son of the promise. Of faith.</p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="Do ye not hear the law?" data-title="O Foolish Galatians" data-ctx="Galatians 3:1|Galatians 4:19-20">
+  <div class="page">
+    <div class="kicker">Cross references • Galatians 3–4</div>
+    <h2>O Foolish Galatians</h2>
+    <div class="vps"><div class="vp fig"><h3>Galatians 3:1</h3><blockquote class="scripture" style="font-style:italic">O foolish Galatians, who hath bewitched you, that ye should not obey the truth, before whose eyes Jesus Christ hath been evidently set forth, crucified among you?<cite>Galatians 3:1</cite></blockquote></div><div class="vp fig"><h3>Galatians 4:19-20</h3><blockquote class="scripture" style="font-style:italic">My little children, of whom I travail in birth again until Christ be formed in you, I desire to be present with you now, and to change my voice; for I stand in doubt of you.<cite>Galatians 4:19-20</cite></blockquote></div></div>
+    <div class="callout"><p>The Apostle is angry, he says he fears them. He says that he doubts their salvation, which he had labored with them and questions if it was in vain. Paul saying that only an unsaved person who didn't believe the gospel of Faith he presented them would be susceptible to the judaizers dragging them back under the law and away from the liberty of Christ.</p></div>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="Do ye not hear the law?" data-title="Do Ye Not Hear the Law?" data-ctx="Galatians 4:21-22|Galatians 4:23-24">
+  <div class="page">
+    <div class="kicker">Cross references • Galatians 4</div>
+    <h2>Do Ye Not Hear the Law?</h2>
+    <div class="vps"><div class="vp fig"><h3>Galatians 4:21-22</h3><blockquote class="scripture" style="font-style:italic">Tell me, ye that desire to be under the law, do ye not hear the law? For it is written, that Abraham had two sons, the one by a bondmaid, the other by a freewoman.<cite>Galatians 4:21-22</cite></blockquote></div><div class="vp fig"><h3>Galatians 4:23-24</h3><blockquote class="scripture" style="font-style:italic">But he who was of the bondwoman was born after the flesh; but he of the freewoman was by promise. Which things are an allegory: for these are the two covenants; the one from the mount Sinai, which gendereth to bondage, which is Agar.<cite>Galatians 4:23-24</cite></blockquote></div></div>
+    <div class="callout"><p>He says that he's willing to go through this again with them that they may come to Jesus. That they seeking to be brought back under the law, he says don't you even hear the law? And this is what prompts his use of Sarah and Hagar as an allegory. As a teaching moment taken from scripture that they may understand the difference between salvation by faith alone and the bondage of the law.</p></div>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Do ye not hear the law?" data-title="The Seed after Hagar" data-ctx="Galatians 4:21-22|Galatians 4:23-24">
+  <div class="page">
+    <div class="kicker">Application • Galatians</div>
+    <h2>The Seed after Hagar</h2>
+    <p class="sub">The Same Message</p>
+    <p>This is the same message we can give to those claiming Christ who have added works of the law to the salvation given in the simple Gospel of reconciliation and faith.</p>
+    <p>These judaizers and those bewitched by them will claim that, "Yes it's by faith alone but you have to do the works of the law to be saved. You have to adhere to our vain traditions. To our carnal ordinances. To our dietary restrictions. You don't expect to just be handed salvation? Do you?"</p>
+    <p>And so they bring people to be the seed after Hagar, not Sarah. And like Ishmael, they do not receive the inheritance which is given by faith in God's promise, not by heirs according to the law.</p>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Do ye not hear the law?" data-title="A Free Gift" data-ctx="Galatians 4:21-22|Galatians 4:23-24">
+  <div class="page">
+    <div class="kicker">Application • Galatians</div>
+    <h2>A Free Gift</h2>
+    <p class="sub">Hear the Law</p>
+    <p>Just as Sarah was barren from birth, and brought to old age, it took a miracle of God, visited upon her, to bring her the promise. Not by anything she did, for she was not capable, but in God all things are possible.</p>
+    <p>If you're trusting in your own works, if you're sewing your own fig leaves, if you're offering the fruit of your garden, instead of the firstling of the flock, if you're committing adultery with Hagar to produce your salvation, repent. Hear the law.</p>
+    <p>Salvation is given us by God, in His grace, through His Son, Jesus Christ, killed for our sins, a burnt offering, raised from the dead, that we may be redeemed in faith and sealed by the Holy Spirit unto the day of redemption. A free gift that once accepted cannot be lost. Eternal life. Heir to the Kingdom. Sons of God.</p>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Do ye not hear the law?" data-title="This Is the Lesson" data-ctx="Galatians 4:21-22|Galatians 4:23-24">
+  <div class="page">
+    <h2>This Is the Lesson</h2>
+    <p class="center">This is the lesson. <em>Do you not hear the law?</em></p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-genesis-22-god-will-provide-himself-a-lamb" target="_blank" rel="noopener">Genesis 22 ↗</a><a class="ref lesson-link" href="../../studies/#lesson-genesis-21-the-bondwoman-and-the-freewoman" target="_blank" rel="noopener">Genesis 21 ↗</a><a class="ref lesson-link" href="../../studies/#lesson-genesis-24-a-wife-for-isaac" target="_blank" rel="noopener">Genesis 24 ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "Genesis 16:5":[[5, "And Sarai said unto Abram, My wrong be upon thee: I have given my maid into thy bosom; and when she saw that she had conceived, I was despised in her eyes: the LORD judge between me and thee."]],
+  "Genesis 23:1-20":[[1, "And Sarah was an hundred and seven and twenty years old: these were the years of the life of Sarah."], [2, "And Sarah died in Kirjatharba; the same is Hebron in the land of Canaan: and Abraham came to mourn for Sarah, and to weep for her."], [3, "And Abraham stood up from before his dead, and spake unto the sons of Heth, saying,"], [4, "I am a stranger and a sojourner with you: give me a possession of a buryingplace with you, that I may bury my dead out of my sight."], [5, "And the children of Heth answered Abraham, saying unto him,"], [6, "Hear us, my lord: thou art a mighty prince among us: in the choice of our sepulchres bury thy dead; none of us shall withhold from thee his sepulchre, but that thou mayest bury thy dead."], [7, "And Abraham stood up, and bowed himself to the people of the land, even to the children of Heth."], [8, "And he communed with them, saying, If it be your mind that I should bury my dead out of my sight; hear me, and intreat for me to Ephron the son of Zohar,"], [9, "That he may give me the cave of Machpelah, which he hath, which is in the end of his field; for as much money as it is worth he shall give it me for a possession of a buryingplace amongst you."], [10, "And Ephron dwelt among the children of Heth: and Ephron the Hittite answered Abraham in the audience of the children of Heth, even of all that went in at the gate of his city, saying,"], [11, "Nay, my lord, hear me: the field give I thee, and the cave that is therein, I give it thee; in the presence of the sons of my people give I it thee: bury thy dead."], [12, "And Abraham bowed down himself before the people of the land."], [13, "And he spake unto Ephron in the audience of the people of the land, saying, But if thou wilt give it, I pray thee, hear me: I will give thee money for the field; take it of me, and I will bury my dead there."], [14, "And Ephron answered Abraham, saying unto him,"], [15, "My lord, hearken unto me: the land is worth four hundred shekels of silver; what is that betwixt me and thee? bury therefore thy dead."], [16, "And Abraham hearkened unto Ephron; and Abraham weighed to Ephron the silver, which he had named in the audience of the sons of Heth, four hundred shekels of silver, current money with the merchant."], [17, "And the field of Ephron, which was in Machpelah, which was before Mamre, the field, and the cave which was therein, and all the trees that were in the field, that were in all the borders round about, were made sure"], [18, "Unto Abraham for a possession in the presence of the children of Heth, before all that went in at the gate of his city."], [19, "And after this, Abraham buried Sarah his wife in the cave of the field of Machpelah before Mamre: the same is Hebron in the land of Canaan."], [20, "And the field, and the cave that is therein, were made sure unto Abraham for a possession of a buryingplace by the sons of Heth."]],
+  "Hebrews 11:11-16":[[11, "Through faith also Sara herself received strength to conceive seed, and was delivered of a child when she was past age, because she judged him faithful who had promised."], [12, "Therefore sprang there even of one, and him as good as dead, so many as the stars of the sky in multitude, and as the sand which is by the sea shore innumerable."], [13, "These all died in faith, not having received the promises, but having seen them afar off, and were persuaded of them, and embraced them, and confessed that they were strangers and pilgrims on the earth."], [14, "For they that say such things declare plainly that they seek a country."], [15, "And truly, if they had been mindful of that country from whence they came out, they might have had opportunity to have returned."], [16, "But now they desire a better country, that is, an heavenly: wherefore God is not ashamed to be called their God: for he hath prepared for them a city."]],
+  "Luke 1:28-37":[[28, "And the angel came in unto her, and said, Hail, thou that art highly favoured, the Lord is with thee: blessed art thou among women."], [29, "And when she saw him, she was troubled at his saying, and cast in her mind what manner of salutation this should be."], [30, "And the angel said unto her, Fear not, Mary: for thou hast found favour with God."], [31, "And, behold, thou shalt conceive in thy womb, and bring forth a son, and shalt call his name JESUS."], [32, "He shall be great, and shall be called the Son of the Highest: and the Lord God shall give unto him the throne of his father David:"], [33, "And he shall reign over the house of Jacob for ever; and of his kingdom there shall be no end."], [34, "Then said Mary unto the angel, How shall this be, seeing I know not a man?"], [35, "And the angel answered and said unto her, The Holy Ghost shall come upon thee, and the power of the Highest shall overshadow thee: therefore also that holy thing which shall be born of thee shall be called the Son of God."], [36, "And, behold, thy cousin Elisabeth, she hath also conceived a son in her old age: and this is the sixth month with her, who was called barren."], [37, "For with God nothing shall be impossible."]],
+  "Luke 1:68-79":[[68, "Blessed be the Lord God of Israel; for he hath visited and redeemed his people,"], [69, "And hath raised up an horn of salvation for us in the house of his servant David;"], [70, "As he spake by the mouth of his holy prophets, which have been since the world began:"], [71, "That we should be saved from our enemies, and from the hand of all that hate us;"], [72, "To perform the mercy promised to our fathers, and to remember his holy covenant;"], [73, "The oath which he sware to our father Abraham,"], [74, "That he would grant unto us, that we being delivered out of the hand of our enemies might serve him without fear,"], [75, "In holiness and righteousness before him, all the days of our life."], [76, "And thou, child, shalt be called the prophet of the Highest: for thou shalt go before the face of the Lord to prepare his ways;"], [77, "To give knowledge of salvation unto his people by the remission of their sins,"], [78, "Through the tender mercy of our God; whereby the dayspring from on high hath visited us,"], [79, "To give light to them that sit in darkness and in the shadow of death, to guide our feet into the way of peace."]]
+};
+
+// The Chapter panel (key C): whole chapters, and each slide's verses in data-ctx. null when the deck has none.
+window.DECK_CTX = {"home": ["Genesis 23"], "ch": {"Genesis 23": [[1, "And Sarah was an hundred and seven and twenty years old: these were the years of the life of Sarah."], [2, "And Sarah died in Kirjatharba; the same is Hebron in the land of Canaan: and Abraham came to mourn for Sarah, and to weep for her."], [3, "And Abraham stood up from before his dead, and spake unto the sons of Heth, saying,"], [4, "I am a stranger and a sojourner with you: give me a possession of a buryingplace with you, that I may bury my dead out of my sight."], [5, "And the children of Heth answered Abraham, saying unto him,"], [6, "Hear us, my lord: thou art a mighty prince among us: in the choice of our sepulchres bury thy dead; none of us shall withhold from thee his sepulchre, but that thou mayest bury thy dead."], [7, "And Abraham stood up, and bowed himself to the people of the land, even to the children of Heth."], [8, "And he communed with them, saying, If it be your mind that I should bury my dead out of my sight; hear me, and intreat for me to Ephron the son of Zohar,"], [9, "That he may give me the cave of Machpelah, which he hath, which is in the end of his field; for as much money as it is worth he shall give it me for a possession of a buryingplace amongst you."], [10, "And Ephron dwelt among the children of Heth: and Ephron the Hittite answered Abraham in the audience of the children of Heth, even of all that went in at the gate of his city, saying,"], [11, "Nay, my lord, hear me: the field give I thee, and the cave that is therein, I give it thee; in the presence of the sons of my people give I it thee: bury thy dead."], [12, "And Abraham bowed down himself before the people of the land."], [13, "And he spake unto Ephron in the audience of the people of the land, saying, But if thou wilt give it, I pray thee, hear me: I will give thee money for the field; take it of me, and I will bury my dead there."], [14, "And Ephron answered Abraham, saying unto him,"], [15, "My lord, hearken unto me: the land is worth four hundred shekels of silver; what is that betwixt me and thee? bury therefore thy dead."], [16, "And Abraham hearkened unto Ephron; and Abraham weighed to Ephron the silver, which he had named in the audience of the sons of Heth, four hundred shekels of silver, current money with the merchant."], [17, "And the field of Ephron, which was in Machpelah, which was before Mamre, the field, and the cave which was therein, and all the trees that were in the field, that were in all the borders round about, were made sure"], [18, "Unto Abraham for a possession in the presence of the children of Heth, before all that went in at the gate of his city."], [19, "And after this, Abraham buried Sarah his wife in the cave of the field of Machpelah before Mamre: the same is Hebron in the land of Canaan."], [20, "And the field, and the cave that is therein, were made sure unto Abraham for a possession of a buryingplace by the sons of Heth."]], "Hebrews 11": [[1, "Now faith is the substance of things hoped for, the evidence of things not seen."], [2, "For by it the elders obtained a good report."], [3, "Through faith we understand that the worlds were framed by the word of God, so that things which are seen were not made of things which do appear."], [4, "By faith Abel offered unto God a more excellent sacrifice than Cain, by which he obtained witness that he was righteous, God testifying of his gifts: and by it he being dead yet speaketh."], [5, "By faith Enoch was translated that he should not see death; and was not found, because God had translated him: for before his translation he had this testimony, that he pleased God."], [6, "But without faith it is impossible to please him: for he that cometh to God must believe that he is, and that he is a rewarder of them that diligently seek him."], [7, "By faith Noah, being warned of God of things not seen as yet, moved with fear, prepared an ark to the saving of his house; by the which he condemned the world, and became heir of the righteousness which is by faith."], [8, "By faith Abraham, when he was called to go out into a place which he should after receive for an inheritance, obeyed; and he went out, not knowing whither he went."], [9, "By faith he sojourned in the land of promise, as in a strange country, dwelling in tabernacles with Isaac and Jacob, the heirs with him of the same promise:"], [10, "For he looked for a city which hath foundations, whose builder and maker is God."], [11, "Through faith also Sara herself received strength to conceive seed, and was delivered of a child when she was past age, because she judged him faithful who had promised."], [12, "Therefore sprang there even of one, and him as good as dead, so many as the stars of the sky in multitude, and as the sand which is by the sea shore innumerable."], [13, "These all died in faith, not having received the promises, but having seen them afar off, and were persuaded of them, and embraced them, and confessed that they were strangers and pilgrims on the earth."], [14, "For they that say such things declare plainly that they seek a country."], [15, "And truly, if they had been mindful of that country from whence they came out, they might have had opportunity to have returned."], [16, "But now they desire a better country, that is, an heavenly: wherefore God is not ashamed to be called their God: for he hath prepared for them a city."], [17, "By faith Abraham, when he was tried, offered up Isaac: and he that had received the promises offered up his only begotten son,"], [18, "Of whom it was said, That in Isaac shall thy seed be called:"], [19, "Accounting that God was able to raise him up, even from the dead; from whence also he received him in a figure."], [20, "By faith Isaac blessed Jacob and Esau concerning things to come."], [21, "By faith Jacob, when he was a dying, blessed both the sons of Joseph; and worshipped, leaning upon the top of his staff."], [22, "By faith Joseph, when he died, made mention of the departing of the children of Israel; and gave commandment concerning his bones."], [23, "By faith Moses, when he was born, was hid three months of his parents, because they saw he was a proper child; and they were not afraid of the king’s commandment."], [24, "By faith Moses, when he was come to years, refused to be called the son of Pharaoh’s daughter;"], [25, "Choosing rather to suffer affliction with the people of God, than to enjoy the pleasures of sin for a season;"], [26, "Esteeming the reproach of Christ greater riches than the treasures in Egypt: for he had respect unto the recompence of the reward."], [27, "By faith he forsook Egypt, not fearing the wrath of the king: for he endured, as seeing him who is invisible."], [28, "Through faith he kept the passover, and the sprinkling of blood, lest he that destroyed the firstborn should touch them."], [29, "By faith they passed through the Red sea as by dry land: which the Egyptians assaying to do were drowned."], [30, "By faith the walls of Jericho fell down, after they were compassed about seven days."], [31, "By faith the harlot Rahab perished not with them that believed not, when she had received the spies with peace."], [32, "And what shall I more say? for the time would fail me to tell of Gedeon, and of Barak, and of Samson, and of Jephthae; of David also, and Samuel, and of the prophets:"], [33, "Who through faith subdued kingdoms, wrought righteousness, obtained promises, stopped the mouths of lions,"], [34, "Quenched the violence of fire, escaped the edge of the sword, out of weakness were made strong, waxed valiant in fight, turned to flight the armies of the aliens."], [35, "Women received their dead raised to life again: and others were tortured, not accepting deliverance; that they might obtain a better resurrection:"], [36, "And others had trial of cruel mockings and scourgings, yea, moreover of bonds and imprisonment:"], [37, "They were stoned, they were sawn asunder, were tempted, were slain with the sword: they wandered about in sheepskins and goatskins; being destitute, afflicted, tormented;"], [38, "(Of whom the world was not worthy:) they wandered in deserts, and in mountains, and in dens and caves of the earth."], [39, "And these all, having obtained a good report through faith, received not the promise:"], [40, "God having provided some better thing for us, that they without us should not be made perfect."]], "Genesis 21": [[1, "And the LORD visited Sarah as he had said, and the LORD did unto Sarah as he had spoken."], [2, "For Sarah conceived, and bare Abraham a son in his old age, at the set time of which God had spoken to him."], [3, "And Abraham called the name of his son that was born unto him, whom Sarah bare to him, Isaac."], [4, "And Abraham circumcised his son Isaac being eight days old, as God had commanded him."], [5, "And Abraham was an hundred years old, when his son Isaac was born unto him."], [6, "And Sarah said, God hath made me to laugh, so that all that hear will laugh with me."], [7, "And she said, Who would have said unto Abraham, that Sarah should have given children suck? for I have born him a son in his old age."], [8, "And the child grew, and was weaned: and Abraham made a great feast the same day that Isaac was weaned."], [9, "And Sarah saw the son of Hagar the Egyptian, which she had born unto Abraham, mocking."], [10, "Wherefore she said unto Abraham, Cast out this bondwoman and her son: for the son of this bondwoman shall not be heir with my son, even with Isaac."], [11, "And the thing was very grievous in Abraham’s sight because of his son."], [12, "And God said unto Abraham, Let it not be grievous in thy sight because of the lad, and because of thy bondwoman; in all that Sarah hath said unto thee, hearken unto her voice; for in Isaac shall thy seed be called."], [13, "And also of the son of the bondwoman will I make a nation, because he is thy seed."], [14, "And Abraham rose up early in the morning, and took bread, and a bottle of water, and gave it unto Hagar, putting it on her shoulder, and the child, and sent her away: and she departed, and wandered in the wilderness of Beersheba."], [15, "And the water was spent in the bottle, and she cast the child under one of the shrubs."], [16, "And she went, and sat her down over against him a good way off, as it were a bow shot: for she said, Let me not see the death of the child. And she sat over against him, and lift up her voice, and wept."], [17, "And God heard the voice of the lad; and the angel of God called to Hagar out of heaven, and said unto her, What aileth thee, Hagar? fear not; for God hath heard the voice of the lad where he is."], [18, "Arise, lift up the lad, and hold him in thine hand; for I will make him a great nation."], [19, "And God opened her eyes, and she saw a well of water; and she went, and filled the bottle with water, and gave the lad drink."], [20, "And God was with the lad; and he grew, and dwelt in the wilderness, and became an archer."], [21, "And he dwelt in the wilderness of Paran: and his mother took him a wife out of the land of Egypt."], [22, "And it came to pass at that time, that Abimelech and Phichol the chief captain of his host spake unto Abraham, saying, God is with thee in all that thou doest:"], [23, "Now therefore swear unto me here by God that thou wilt not deal falsely with me, nor with my son, nor with my son’s son: but according to the kindness that I have done unto thee, thou shalt do unto me, and to the land wherein thou hast sojourned."], [24, "And Abraham said, I will swear."], [25, "And Abraham reproved Abimelech because of a well of water, which Abimelech’s servants had violently taken away."], [26, "And Abimelech said, I wot not who hath done this thing: neither didst thou tell me, neither yet heard I of it, but to day."], [27, "And Abraham took sheep and oxen, and gave them unto Abimelech; and both of them made a covenant."], [28, "And Abraham set seven ewe lambs of the flock by themselves."], [29, "And Abimelech said unto Abraham, What mean these seven ewe lambs which thou hast set by themselves?"], [30, "And he said, For these seven ewe lambs shalt thou take of my hand, that they may be a witness unto me, that I have digged this well."], [31, "Wherefore he called that place Beersheba; because there they sware both of them."], [32, "Thus they made a covenant at Beersheba: then Abimelech rose up, and Phichol the chief captain of his host, and they returned into the land of the Philistines."], [33, "And Abraham planted a grove in Beersheba, and called there on the name of the LORD, the everlasting God."], [34, "And Abraham sojourned in the Philistines’ land many days."]], "Luke 1": [[1, "Forasmuch as many have taken in hand to set forth in order a declaration of those things which are most surely believed among us,"], [2, "Even as they delivered them unto us, which from the beginning were eyewitnesses, and ministers of the word;"], [3, "It seemed good to me also, having had perfect understanding of all things from the very first, to write unto thee in order, most excellent Theophilus,"], [4, "That thou mightest know the certainty of those things, wherein thou hast been instructed."], [5, "There was in the days of Herod, the king of Judaea, a certain priest named Zacharias, of the course of Abia: and his wife was of the daughters of Aaron, and her name was Elisabeth."], [6, "And they were both righteous before God, walking in all the commandments and ordinances of the Lord blameless."], [7, "And they had no child, because that Elisabeth was barren, and they both were now well stricken in years."], [8, "And it came to pass, that while he executed the priest’s office before God in the order of his course,"], [9, "According to the custom of the priest’s office, his lot was to burn incense when he went into the temple of the Lord."], [10, "And the whole multitude of the people were praying without at the time of incense."], [11, "And there appeared unto him an angel of the Lord standing on the right side of the altar of incense."], [12, "And when Zacharias saw him, he was troubled, and fear fell upon him."], [13, "But the angel said unto him, Fear not, Zacharias: for thy prayer is heard; and thy wife Elisabeth shall bear thee a son, and thou shalt call his name John."], [14, "And thou shalt have joy and gladness; and many shall rejoice at his birth."], [15, "For he shall be great in the sight of the Lord, and shall drink neither wine nor strong drink; and he shall be filled with the Holy Ghost, even from his mother’s womb."], [16, "And many of the children of Israel shall he turn to the Lord their God."], [17, "And he shall go before him in the spirit and power of Elias, to turn the hearts of the fathers to the children, and the disobedient to the wisdom of the just; to make ready a people prepared for the Lord."], [18, "And Zacharias said unto the angel, Whereby shall I know this? for I am an old man, and my wife well stricken in years."], [19, "And the angel answering said unto him, I am Gabriel, that stand in the presence of God; and am sent to speak unto thee, and to shew thee these glad tidings."], [20, "And, behold, thou shalt be dumb, and not able to speak, until the day that these things shall be performed, because thou believest not my words, which shall be fulfilled in their season."], [21, "And the people waited for Zacharias, and marvelled that he tarried so long in the temple."], [22, "And when he came out, he could not speak unto them: and they perceived that he had seen a vision in the temple: for he beckoned unto them, and remained speechless."], [23, "And it came to pass, that, as soon as the days of his ministration were accomplished, he departed to his own house."], [24, "And after those days his wife Elisabeth conceived, and hid herself five months, saying,"], [25, "Thus hath the Lord dealt with me in the days wherein he looked on me, to take away my reproach among men."], [26, "And in the sixth month the angel Gabriel was sent from God unto a city of Galilee, named Nazareth,"], [27, "To a virgin espoused to a man whose name was Joseph, of the house of David; and the virgin’s name was Mary."], [28, "And the angel came in unto her, and said, Hail, thou that art highly favoured, the Lord is with thee: blessed art thou among women."], [29, "And when she saw him, she was troubled at his saying, and cast in her mind what manner of salutation this should be."], [30, "And the angel said unto her, Fear not, Mary: for thou hast found favour with God."], [31, "And, behold, thou shalt conceive in thy womb, and bring forth a son, and shalt call his name JESUS."], [32, "He shall be great, and shall be called the Son of the Highest: and the Lord God shall give unto him the throne of his father David:"], [33, "And he shall reign over the house of Jacob for ever; and of his kingdom there shall be no end."], [34, "Then said Mary unto the angel, How shall this be, seeing I know not a man?"], [35, "And the angel answered and said unto her, The Holy Ghost shall come upon thee, and the power of the Highest shall overshadow thee: therefore also that holy thing which shall be born of thee shall be called the Son of God."], [36, "And, behold, thy cousin Elisabeth, she hath also conceived a son in her old age: and this is the sixth month with her, who was called barren."], [37, "For with God nothing shall be impossible."], [38, "And Mary said, Behold the handmaid of the Lord; be it unto me according to thy word. And the angel departed from her."], [39, "And Mary arose in those days, and went into the hill country with haste, into a city of Juda;"], [40, "And entered into the house of Zacharias, and saluted Elisabeth."], [41, "And it came to pass, that, when Elisabeth heard the salutation of Mary, the babe leaped in her womb; and Elisabeth was filled with the Holy Ghost:"], [42, "And she spake out with a loud voice, and said, Blessed art thou among women, and blessed is the fruit of thy womb."], [43, "And whence is this to me, that the mother of my Lord should come to me?"], [44, "For, lo, as soon as the voice of thy salutation sounded in mine ears, the babe leaped in my womb for joy."], [45, "And blessed is she that believed: for there shall be a performance of those things which were told her from the Lord."], [46, "And Mary said, My soul doth magnify the Lord,"], [47, "And my spirit hath rejoiced in God my Saviour."], [48, "For he hath regarded the low estate of his handmaiden: for, behold, from henceforth all generations shall call me blessed."], [49, "For he that is mighty hath done to me great things; and holy is his name."], [50, "And his mercy is on them that fear him from generation to generation."], [51, "He hath shewed strength with his arm; he hath scattered the proud in the imagination of their hearts."], [52, "He hath put down the mighty from their seats, and exalted them of low degree."], [53, "He hath filled the hungry with good things; and the rich he hath sent empty away."], [54, "He hath holpen his servant Israel, in remembrance of his mercy;"], [55, "As he spake to our fathers, to Abraham, and to his seed for ever."], [56, "And Mary abode with her about three months, and returned to her own house."], [57, "Now Elisabeth’s full time came that she should be delivered; and she brought forth a son."], [58, "And her neighbours and her cousins heard how the Lord had shewed great mercy upon her; and they rejoiced with her."], [59, "And it came to pass, that on the eighth day they came to circumcise the child; and they called him Zacharias, after the name of his father."], [60, "And his mother answered and said, Not so; but he shall be called John."], [61, "And they said unto her, There is none of thy kindred that is called by this name."], [62, "And they made signs to his father, how he would have him called."], [63, "And he asked for a writing table, and wrote, saying, His name is John. And they marvelled all."], [64, "And his mouth was opened immediately, and his tongue loosed, and he spake, and praised God."], [65, "And fear came on all that dwelt round about them: and all these sayings were noised abroad throughout all the hill country of Judaea."], [66, "And all they that heard them laid them up in their hearts, saying, What manner of child shall this be! And the hand of the Lord was with him."], [67, "And his father Zacharias was filled with the Holy Ghost, and prophesied, saying,"], [68, "Blessed be the Lord God of Israel; for he hath visited and redeemed his people,"], [69, "And hath raised up an horn of salvation for us in the house of his servant David;"], [70, "As he spake by the mouth of his holy prophets, which have been since the world began:"], [71, "That we should be saved from our enemies, and from the hand of all that hate us;"], [72, "To perform the mercy promised to our fathers, and to remember his holy covenant;"], [73, "The oath which he sware to our father Abraham,"], [74, "That he would grant unto us, that we being delivered out of the hand of our enemies might serve him without fear,"], [75, "In holiness and righteousness before him, all the days of our life."], [76, "And thou, child, shalt be called the prophet of the Highest: for thou shalt go before the face of the Lord to prepare his ways;"], [77, "To give knowledge of salvation unto his people by the remission of their sins,"], [78, "Through the tender mercy of our God; whereby the dayspring from on high hath visited us,"], [79, "To give light to them that sit in darkness and in the shadow of death, to guide our feet into the way of peace."], [80, "And the child grew, and waxed strong in spirit, and was in the deserts till the day of his shewing unto Israel."]], "Genesis 16": [[1, "Now Sarai Abram’s wife bare him no children: and she had an handmaid, an Egyptian, whose name was Hagar."], [2, "And Sarai said unto Abram, Behold now, the LORD hath restrained me from bearing: I pray thee, go in unto my maid; it may be that I may obtain children by her. And Abram hearkened to the voice of Sarai."], [3, "And Sarai Abram’s wife took Hagar her maid the Egyptian, after Abram had dwelt ten years in the land of Canaan, and gave her to her husband Abram to be his wife."], [4, "And he went in unto Hagar, and she conceived: and when she saw that she had conceived, her mistress was despised in her eyes."], [5, "And Sarai said unto Abram, My wrong be upon thee: I have given my maid into thy bosom; and when she saw that she had conceived, I was despised in her eyes: the LORD judge between me and thee."], [6, "But Abram said unto Sarai, Behold, thy maid is in thy hand; do to her as it pleaseth thee. And when Sarai dealt hardly with her, she fled from her face."], [7, "And the angel of the LORD found her by a fountain of water in the wilderness, by the fountain in the way to Shur."], [8, "And he said, Hagar, Sarai’s maid, whence camest thou? and whither wilt thou go? And she said, I flee from the face of my mistress Sarai."], [9, "And the angel of the LORD said unto her, Return to thy mistress, and submit thyself under her hands."], [10, "And the angel of the LORD said unto her, I will multiply thy seed exceedingly, that it shall not be numbered for multitude."], [11, "And the angel of the LORD said unto her, Behold, thou art with child, and shalt bear a son, and shalt call his name Ishmael; because the LORD hath heard thy affliction."], [12, "And he will be a wild man; his hand will be against every man, and every man’s hand against him; and he shall dwell in the presence of all his brethren."], [13, "And she called the name of the LORD that spake unto her, Thou God seest me: for she said, Have I also here looked after him that seeth me?"], [14, "Wherefore the well was called Beerlahairoi; behold, it is between Kadesh and Bered."], [15, "And Hagar bare Abram a son: and Abram called his son’s name, which Hagar bare, Ishmael."], [16, "And Abram was fourscore and six years old, when Hagar bare Ishmael to Abram."]], "Galatians 3": [[1, "O foolish Galatians, who hath bewitched you, that ye should not obey the truth, before whose eyes Jesus Christ hath been evidently set forth, crucified among you?"], [2, "This only would I learn of you, Received ye the Spirit by the works of the law, or by the hearing of faith?"], [3, "Are ye so foolish? having begun in the Spirit, are ye now made perfect by the flesh?"], [4, "Have ye suffered so many things in vain? if it be yet in vain."], [5, "He therefore that ministereth to you the Spirit, and worketh miracles among you, doeth he it by the works of the law, or by the hearing of faith?"], [6, "Even as Abraham believed God, and it was accounted to him for righteousness."], [7, "Know ye therefore that they which are of faith, the same are the children of Abraham."], [8, "And the scripture, foreseeing that God would justify the heathen through faith, preached before the gospel unto Abraham, saying, In thee shall all nations be blessed."], [9, "So then they which be of faith are blessed with faithful Abraham."], [10, "For as many as are of the works of the law are under the curse: for it is written, Cursed is every one that continueth not in all things which are written in the book of the law to do them."], [11, "But that no man is justified by the law in the sight of God, it is evident: for, The just shall live by faith."], [12, "And the law is not of faith: but, The man that doeth them shall live in them."], [13, "Christ hath redeemed us from the curse of the law, being made a curse for us: for it is written, Cursed is every one that hangeth on a tree:"], [14, "That the blessing of Abraham might come on the Gentiles through Jesus Christ; that we might receive the promise of the Spirit through faith."], [15, "Brethren, I speak after the manner of men; Though it be but a man’s covenant, yet if it be confirmed, no man disannulleth, or addeth thereto."], [16, "Now to Abraham and his seed were the promises made. He saith not, And to seeds, as of many; but as of one, And to thy seed, which is Christ."], [17, "And this I say, that the covenant, that was confirmed before of God in Christ, the law, which was four hundred and thirty years after, cannot disannul, that it should make the promise of none effect."], [18, "For if the inheritance be of the law, it is no more of promise: but God gave it to Abraham by promise."], [19, "Wherefore then serveth the law? It was added because of transgressions, till the seed should come to whom the promise was made; and it was ordained by angels in the hand of a mediator."], [20, "Now a mediator is not a mediator of one, but God is one."], [21, "Is the law then against the promises of God? God forbid: for if there had been a law given which could have given life, verily righteousness should have been by the law."], [22, "But the scripture hath concluded all under sin, that the promise by faith of Jesus Christ might be given to them that believe."], [23, "But before faith came, we were kept under the law, shut up unto the faith which should afterwards be revealed."], [24, "Wherefore the law was our schoolmaster to bring us unto Christ, that we might be justified by faith."], [25, "But after that faith is come, we are no longer under a schoolmaster."], [26, "For ye are all the children of God by faith in Christ Jesus."], [27, "For as many of you as have been baptized into Christ have put on Christ."], [28, "There is neither Jew nor Greek, there is neither bond nor free, there is neither male nor female: for ye are all one in Christ Jesus."], [29, "And if ye be Christ’s, then are ye Abraham’s seed, and heirs according to the promise."]], "Galatians 4": [[1, "Now I say, That the heir, as long as he is a child, differeth nothing from a servant, though he be lord of all;"], [2, "But is under tutors and governors until the time appointed of the father."], [3, "Even so we, when we were children, were in bondage under the elements of the world:"], [4, "But when the fulness of the time was come, God sent forth his Son, made of a woman, made under the law,"], [5, "To redeem them that were under the law, that we might receive the adoption of sons."], [6, "And because ye are sons, God hath sent forth the Spirit of his Son into your hearts, crying, Abba, Father."], [7, "Wherefore thou art no more a servant, but a son; and if a son, then an heir of God through Christ."], [8, "Howbeit then, when ye knew not God, ye did service unto them which by nature are no gods."], [9, "But now, after that ye have known God, or rather are known of God, how turn ye again to the weak and beggarly elements, whereunto ye desire again to be in bondage?"], [10, "Ye observe days, and months, and times, and years."], [11, "I am afraid of you, lest I have bestowed upon you labour in vain."], [12, "Brethren, I beseech you, be as I am; for I am as ye are: ye have not injured me at all."], [13, "Ye know how through infirmity of the flesh I preached the gospel unto you at the first."], [14, "And my temptation which was in my flesh ye despised not, nor rejected; but received me as an angel of God, even as Christ Jesus."], [15, "Where is then the blessedness ye spake of? for I bear you record, that, if it had been possible, ye would have plucked out your own eyes, and have given them to me."], [16, "Am I therefore become your enemy, because I tell you the truth?"], [17, "They zealously affect you, but not well; yea, they would exclude you, that ye might affect them."], [18, "But it is good to be zealously affected always in a good thing, and not only when I am present with you."], [19, "My little children, of whom I travail in birth again until Christ be formed in you,"], [20, "I desire to be present with you now, and to change my voice; for I stand in doubt of you."], [21, "Tell me, ye that desire to be under the law, do ye not hear the law?"], [22, "For it is written, that Abraham had two sons, the one by a bondmaid, the other by a freewoman."], [23, "But he who was of the bondwoman was born after the flesh; but he of the freewoman was by promise."], [24, "Which things are an allegory: for these are the two covenants; the one from the mount Sinai, which gendereth to bondage, which is Agar."], [25, "For this Agar is mount Sinai in Arabia, and answereth to Jerusalem which now is, and is in bondage with her children."], [26, "But Jerusalem which is above is free, which is the mother of us all."], [27, "For it is written, Rejoice, thou barren that bearest not; break forth and cry, thou that travailest not: for the desolate hath many more children than she which hath an husband."], [28, "Now we, brethren, as Isaac was, are the children of promise."], [29, "But as then he that was born after the flesh persecuted him that was born after the Spirit, even so it is now."], [30, "Nevertheless what saith the scripture? Cast out the bondwoman and her son: for the son of the bondwoman shall not be heir with the son of the freewoman."], [31, "So then, brethren, we are not children of the bondwoman, but of the free."]]}};
+
+// Quotations from other writings (say: in the deck): their words open like a verse.
+const Q = {};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b && b.dataset.q) {
+    const q = Q[b.dataset.q];
+    verseTitle.textContent = q ? q.t : b.textContent.trim();
+    verseBody.innerHTML = q ? q.h : "<p>Not loaded.</p>";
+    verseDlg.showModal();
+    verseBody.scrollTop = 0;
+    return;
+  }
+  if (b) {
+    const keys = b.dataset.v;
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>

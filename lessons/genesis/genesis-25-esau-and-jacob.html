@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Genesis 25 – Esau and Jacob</title>
+<script src="../deck-extras.js"></script>
+<meta name="description" content="A verse-by-verse study of Genesis 25: Abraham gives all that he had unto Isaac and is gathered to his people, Abraham&#x27;s seed which is Christ, the generations of Ishmael, Rebekah&#x27;s twins, the elder shall serve the younger, Esau sells his birthright, and spiritual Edom.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#130f0a;
+  --ink-2:#1d1710;
+  --vellum:#ecdfc2;
+  --vellum-dim:#b9a985;
+  --gold:#c9a24b;
+  --gold-bright:#e6c676;
+  --crimson:#9b2226;
+  --lapis:#5b7fbf;
+  --lapis-text:#a9c1ea;
+  --rule:rgba(201,162,75,.38);
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --initial:"Cinzel Decorative", "Cinzel", Georgia, serif;
+  --body:"Cormorant Garamond", "Garamond", "Georgia", serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:radial-gradient(ellipse at 50% 35%, #2a1f13 0%, var(--ink) 62%, #0a0805 100%);
+  color:var(--vellum);
+  font-family:var(--body);
+  font-size:clamp(1.12rem, 1.55vw, 1.5rem);
+  line-height:1.5;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px}
+
+/* ---------- Slides ---------- */
+.deck{position:fixed;inset:0}
+.slide{
+  position:absolute;inset:0;
+  display:none;flex-direction:column;
+  overflow-y:auto;overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top,0px) + 3vh) 4vw calc(env(safe-area-inset-bottom,0px) + 5.25rem);
+}
+.slide.active{display:flex;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+/* A centered, measured column keeps widescreen slides balanced */
+.page{
+  margin:auto;width:100%;max-width:980px;position:relative;
+  padding:clamp(1.4rem,3.2vw,3rem) clamp(1.2rem,3.6vw,3.4rem);
+  border:1px solid var(--rule);
+  outline:1px solid var(--rule);outline-offset:7px;
+  background:linear-gradient(180deg, rgba(39,30,20,.55), rgba(19,15,10,.35));
+}
+.page.wide{max-width:1240px}
+.page::before,.page::after{content:"";position:absolute;width:26px;height:26px;border:2px solid var(--gold)}
+.page::before{top:-9px;left:-9px;border-right:none;border-bottom:none}
+.page::after{bottom:-9px;right:-9px;border-left:none;border-top:none}
+
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--gold-bright);margin:0}
+h2{font-size:clamp(1.55rem,3vw,2.5rem);line-height:1.15;letter-spacing:.02em;margin-bottom:1.2rem;text-align:center}
+h2::after{content:"✦";display:block;font-size:.45em;color:var(--gold);margin-top:.45rem;letter-spacing:0}
+h3{font-size:clamp(1.02rem,1.55vw,1.3rem);letter-spacing:.03em;margin-bottom:.5rem}
+p{margin:0 0 .85rem}
+.sub{color:var(--vellum-dim);font-style:italic}
+.center{text-align:center}
+.rule{height:1px;background:var(--rule);border:0;margin:1.2rem 0}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.2rem;margin:.6rem 0;letter-spacing:.6em}
+
+.lead{display:flow-root}
+/* Illuminated initial */
+.lead::first-letter{
+  font-family:var(--initial);float:left;
+  font-size:3.4em;line-height:.85;
+  padding:.12em .14em .06em;margin:.06em .16em 0 0;
+  color:var(--gold-bright);background:var(--crimson);
+  border:2px solid var(--gold);
+}
+
+/* Scripture */
+blockquote{margin:0 0 1rem;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--crimson);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-family:var(--display);font-size:.7em;color:var(--gold);margin-top:.35rem;letter-spacing:.06em}
+.big-verse{font-size:1.3em;line-height:1.4}
+.lord{font-variant:small-caps;letter-spacing:.04em}
+.scripture{font-size:.98em;line-height:1.75}
+.scripture sup{font-family:var(--display);font-size:.55em;color:var(--gold);margin:0 .2em 0 .35em}
+mark.w{border-bottom:0}
+.kicker{font-family:var(--display);font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 .2rem}
+.vps{margin:.6rem 0 .4rem;clear:both}
+@media (min-width:980px){.vps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem}.vps .vp{margin:0}}
+.vp{margin:0 0 .8rem;padding:.7rem 1.1rem;border:1px solid var(--rule);border-left:4px solid var(--gold);background:rgba(19,15,10,.55)}
+.vp h3{margin:0 0 .25rem}
+.vp blockquote{margin:.2rem 0 .5rem;padding-left:0;border-left:0}
+.vp p:last-child{margin-bottom:0}
+.vp.lit{border-left-color:var(--crimson)}
+.vp.rev{border-left:6px double var(--gold);background:rgba(201,162,75,.10)}
+.par{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:.8rem 0;border:1px solid var(--rule)}
+.par>div{padding:.55rem .8rem;border-bottom:1px solid var(--rule);line-height:1.45}
+.par>div:nth-child(odd){border-right:1px solid var(--rule)}
+.par .h{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10)}
+.par .h small{display:block;font-family:inherit;font-size:.7em;color:var(--vellum-dim);letter-spacing:.04em}
+.par .ref{margin-right:.6rem}
+.par .same{color:var(--vellum-dim)}
+.par .add{font-style:italic;color:var(--vellum-dim)}
+.xr{list-style:none;margin:.8rem 0;padding:0}
+.xr li{padding:.55rem 0;border-top:1px solid var(--rule)}
+.xr li:last-child{border-bottom:1px solid var(--rule)}
+.xr li .ref{display:inline-block;margin-right:.9rem}
+.grp{padding:.55rem 0;border-top:1px solid var(--rule)}
+.grp h3{margin:0;color:var(--gold-bright)}
+.grp span{display:block;color:var(--vellum-dim);font-style:italic;margin:.1rem 0 .3rem}
+.grp .chips .ref{margin-right:.7rem}
+.tbl{clear:both;overflow-x:auto;margin:.8rem 0}
+.tbl table{border-collapse:collapse;width:100%}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;line-height:1.45}
+.tbl th{font-family:var(--display);color:var(--gold-bright);background:rgba(201,162,75,.10);font-weight:400}
+@media (max-width:520px){.tbl th,.tbl td{padding:.4rem .45rem;font-size:.92em}}
+.pic{margin:1rem 0;text-align:center}
+.pic img{max-width:100%;height:auto;border:1px solid var(--rule)}
+.title-page .pic{margin:.6rem 0 0}.title-page .pic img{max-height:30vh;width:auto}
+/* On a computer, TV or projector a picture never runs past the screen; tap it to see it full size */
+@media (min-width:700px) and (min-height:480px){.pic img{max-height:calc(100vh - 19rem);width:auto}}
+.pic img{cursor:zoom-in}
+/* A chart with numbered dots: each dot opens its verses; the key below lists the same */
+.pw{position:relative;display:inline-block;max-width:100%;line-height:0}
+.pw .spot{position:absolute;transform:translate(-50%,-50%);aspect-ratio:1;min-width:16px;padding:0;margin:0;border:2px solid var(--gold-bright);border-radius:50%;
+  background:transparent;color:transparent;font-size:0;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.45)}
+.pw .spot:hover,.pw .spot:focus-visible{background:rgba(230,198,118,.35);box-shadow:0 0 0 4px var(--gold-bright)}
+.spotkey{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 1.1rem;margin:.2rem 0 .6rem}
+.spotkey .ref{white-space:normal;text-align:left}
+@media (min-width:900px) and (min-aspect-ratio:4/3){
+  .chartwrap.side{display:grid;grid-template-columns:auto minmax(14rem,34%);align-items:center;gap:1.4rem}
+  .chartwrap.side .pic{margin:0}
+  .chartwrap.side .spotkey{flex-direction:column;align-items:flex-start;gap:.55rem;margin:0}}
+.spotkey .ref b{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;background:var(--crimson);color:#fff;font-size:.85em;margin-right:.25em}
+#picDlg{width:auto;max-width:98vw;max-height:98vh;padding:0;background:#000;border:0;outline:0}
+#picDlg img{display:block;max-width:98vw;max-height:98vh;width:auto;height:auto;cursor:zoom-out}
+.pic figcaption{font-size:.85em;color:var(--vellum-dim);font-style:italic;margin-top:.3rem}
+.take{margin:1.1rem 0 0;padding-top:.8rem;border-top:3px double var(--rule);font-style:italic;text-align:center}
+mark{background:none;color:var(--gold-bright);font-weight:600;border-bottom:2px solid var(--crimson);padding:0 .05em}
+
+/* Reference chips */
+.ref{
+  background:none;border:none;padding:0 .05em;margin:0;cursor:pointer;
+  font-family:var(--display);font-size:.72em;letter-spacing:.05em;
+  color:var(--gold);border-bottom:1px dotted var(--gold);white-space:nowrap;font-style:normal;
+}
+.ref.lesson-link{text-decoration:none;font-size:.8em;white-space:normal;display:inline-block;max-width:100%;text-align:left}
+.ref:hover{color:var(--gold-bright);border-bottom-style:solid}
+.refs{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:.4rem 0 1rem}
+.refs.center{justify-content:center}
+
+/* Layout helpers */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem)}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.cols,.cols-3{grid-template-columns:1fr}}
+
+.panel{padding:1rem 1.2rem;border:1px solid var(--rule);background:rgba(19,15,10,.55)}
+.panel.believers{border-left:4px solid var(--gold)}
+.panel.angels{border-left:4px solid var(--lapis)}
+.panel.angels h3{color:var(--lapis-text)}
+.panel.cain{border-left:4px solid var(--crimson)}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+
+ul.marks{list-style:none;padding:0;margin:0 0 1rem}
+ul.marks li{position:relative;padding-left:1.4rem;margin-bottom:.55rem}
+ul.marks li::before{content:"✦";position:absolute;left:0;top:.05em;color:var(--gold);font-size:.8em}
+.angels ul.marks li::before{color:var(--lapis)}
+
+.callout{margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:rgba(155,34,38,.16)}
+.callout p:last-child{margin-bottom:0}
+.callout.honest{border-color:var(--lapis);background:rgba(44,63,99,.25)}
+
+/* Two views, named */
+.view-name{font-family:var(--display);font-weight:600;letter-spacing:.03em}
+.view-name.b{color:var(--gold-bright)}
+.view-name.a{color:var(--lapis-text)}
+
+/* Title slide */
+.title-page{text-align:center;padding-top:clamp(2rem,6vh,4rem);padding-bottom:clamp(2rem,6vh,4rem)}
+.title-page .overline{font-family:var(--display);color:var(--gold);letter-spacing:.32em;font-size:.8em;margin-bottom:1rem}
+.title-page h1{font-family:var(--initial);font-size:clamp(2.4rem,min(8vw,10vh),6.2rem);line-height:1;color:var(--gold-bright);text-shadow:0 2px 0 #5a1013, 0 0 28px rgba(201,162,75,.25)}
+.title-page .sub{max-width:40ch;margin:1.2rem auto 1.4rem;font-size:1.15em}
+.hint{color:var(--vellum-dim);font-size:.8em;margin-top:1.6rem}
+
+/* Lineage */
+.lineage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.35rem .3rem;margin:1rem 0 1.2rem;font-family:var(--display);font-size:.88em}
+.lineage span{padding:.25rem .55rem;border:1px solid var(--rule);background:rgba(19,15,10,.6)}
+.lineage span.key{border-color:var(--gold);color:var(--gold-bright)}
+.lineage i{color:var(--gold);font-style:normal}
+
+/* Two-line comparison table */
+.duo{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+.duo th{font-family:var(--display);font-weight:600;font-size:.82em;letter-spacing:.06em;text-align:left;padding:.6rem .8rem;border-bottom:2px solid var(--rule)}
+.duo th.c{color:#e07a7d}.duo th.s{color:var(--gold-bright)}
+.duo td{vertical-align:top;padding:.75rem .8rem;border-bottom:1px solid var(--rule)}
+.duo td.name{font-family:var(--display);color:var(--gold);white-space:nowrap}
+
+/* Sequences */
+ol.order{list-style:none;counter-reset:step;padding:0;margin:.4rem 0 1rem;position:relative}
+ol.order::before{content:"";position:absolute;left:1.05rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--gold),var(--crimson))}
+ol.order li{counter-increment:step;position:relative;padding:0 0 .95rem 3.2rem}
+ol.order li::before{
+  content:counter(step,upper-roman);position:absolute;left:0;top:0;
+  width:2.15rem;height:2.15rem;display:grid;place-items:center;
+  font-family:var(--display);font-size:.7em;font-weight:700;
+  background:var(--ink);border:2px solid var(--gold);color:var(--gold-bright);border-radius:50%;
+}
+ol.order li strong{font-family:var(--display);font-weight:600;color:var(--gold-bright);font-size:.86em;letter-spacing:.03em;display:block}
+ol.order li.verdict::before{background:var(--crimson)}
+ol.order li.focus{background:rgba(155,34,38,.16);border:1px solid var(--gold);padding:.7rem .9rem .7rem 3.6rem;margin:0 0 .95rem -.4rem}
+ol.order li.focus::before{left:.4rem;top:.7rem}
+
+/* Tally */
+.gen6{display:grid;grid-template-columns:1fr 210px;gap:2rem}
+.tally{display:grid;gap:.9rem;align-content:start}
+.tally div{padding:1rem 1.1rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.tally .n{display:block;font-family:var(--initial);font-size:2.6em;line-height:1;color:var(--gold-bright)}
+.tally .none .n{color:var(--lapis)}
+.tally .lbl{font-family:var(--display);font-size:.72em;letter-spacing:.06em;color:var(--vellum-dim)}
+@media (max-width:820px){.gen6{grid-template-columns:1fr}.tally{grid-template-columns:1fr 1fr}}
+
+/* Proof-text chart */
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;font-size:.8em;color:var(--vellum-dim);margin-bottom:.8rem}
+.legend b{display:inline-block;width:.9rem;height:.9rem;vertical-align:-.1rem;margin-right:.4rem}
+.chart{width:100%;border-collapse:collapse;font-size:.78em;line-height:1.42}
+.chart th{position:sticky;top:0;z-index:1;background:var(--ink-2);font-family:var(--display);font-weight:600;font-size:.86em;letter-spacing:.05em;text-align:left;padding:.65rem .75rem;border-bottom:2px solid var(--gold)}
+.chart th.t{color:var(--vellum)}
+.chart th.angels{color:var(--lapis-text);border-bottom-color:var(--lapis)}
+.chart th.believers{color:var(--gold-bright)}
+.chart td{vertical-align:top;padding:.7rem .75rem;border-bottom:1px solid var(--rule)}
+.chart td.t{width:15%}
+.chart td.angels{width:32%;background:rgba(44,63,99,.18)}
+.chart td.believers{background:rgba(201,162,75,.06)}
+.chart td.t .ref{font-size:.95em;display:inline-block;margin-bottom:.25rem}
+.chart .ref{font-size:.85em}
+.tag{display:inline-block;font-family:var(--display);font-size:.62em;letter-spacing:.06em;padding:.12rem .4rem;border:1px solid var(--lapis);color:var(--lapis-text);margin-top:.2rem}
+.chart tr.strong td.t{box-shadow:inset 3px 0 0 var(--lapis)}
+@media (max-width:760px){
+  .chart,.chart thead,.chart tbody,.chart tr,.chart td{display:block;width:auto!important}
+  .chart thead{display:none}
+  .chart tr{border:1px solid var(--rule);margin-bottom:1rem}
+  .chart td{border-bottom:none}
+  .chart td.angels::before,.chart td.believers::before{display:block;font-family:var(--display);font-size:.78em;letter-spacing:.05em;margin-bottom:.25rem}
+  .chart td.angels::before{content:"Sons are angels";color:var(--lapis-text)}
+  .chart td.believers::before{content:"Sons are believers";color:var(--gold-bright)}
+}
+
+/* Footer */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  display:flex;align-items:center;gap:1rem;
+  padding:.55rem 4vw calc(env(safe-area-inset-bottom,0px) + .55rem);
+  background:linear-gradient(0deg, rgba(10,8,5,.97), rgba(10,8,5,.82));
+  border-top:1px solid var(--rule);
+  font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum-dim);
+}
+.bar .section{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.bar .progress{flex:2;height:2px;background:rgba(201,162,75,.18);position:relative}
+.bar .progress span{position:absolute;left:0;top:0;bottom:0;background:var(--gold);transition:width .3s}
+.bar .count{white-space:nowrap}
+.bar .nav{display:flex;gap:.4rem}
+.bar .nav button{background:var(--ink-2);border:1px solid var(--rule);cursor:pointer;padding:.4rem .75rem;font-family:var(--display);font-size:.72rem;letter-spacing:.06em;color:var(--vellum)}
+.bar .nav button:hover{border-color:var(--gold);color:var(--gold-bright)}
+@media (max-width:620px){.bar .progress{display:none}}
+
+/* Dialogs */
+dialog{border:1px solid var(--gold);outline:1px solid var(--rule);outline-offset:5px;background:var(--ink-2);color:var(--vellum);width:min(680px,92vw);max-height:84vh;padding:0}
+dialog::backdrop{background:rgba(5,4,2,.78)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ink-2)}
+.dlg-head h3{margin:0}
+.dlg-close{background:none;border:1px solid var(--rule);cursor:pointer;padding:.2rem .6rem;font-family:var(--display);font-size:.75rem}
+.dlg-body{padding:1rem 1.3rem 1.3rem;overflow-y:auto;max-height:calc(84vh - 4rem)}
+.dlg-body h4{font-family:var(--display);font-weight:600;color:var(--gold);font-size:.95rem;letter-spacing:.05em;margin:1rem 0 .4rem}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{font-size:1.15rem;line-height:1.6}
+.dlg-body .say-cite{font-size:.85rem;font-style:italic;color:var(--vellum-dim);border-top:1px solid var(--rule);padding-top:.6rem;margin-top:1rem}
+.ref.say{border-bottom-style:dashed}
+.ref.say::before{content:"\201C";margin-right:.15em}
+.dlg-body sup{font-family:var(--display);font-size:.6em;color:var(--gold);margin-right:.25em}
+.toc-list{list-style:none;padding:0;margin:0}
+.toc-list li{border-bottom:1px solid rgba(201,162,75,.15)}
+.toc-list .sec{font-family:var(--display);font-size:.68rem;letter-spacing:.08em;color:#e07a7d;padding:.8rem 0 .2rem;border:none}
+.toc-list button{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:.5rem .2rem;font-size:1.08rem}
+.toc-list button:hover,.toc-list button[aria-current="true"]{color:var(--gold-bright)}
+.toc-list button span{font-family:var(--display);font-size:.7rem;color:var(--gold);display:inline-block;width:2.2rem}
+
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}
+.dims div{padding:.9rem;border:1px solid var(--gold);text-align:center;background:rgba(19,15,10,.6)}
+.dims .n{display:block;font-family:var(--initial);font-size:2em;line-height:1.1;color:var(--gold-bright)}
+.dims .lbl{font-family:var(--display);font-size:.7em;letter-spacing:.06em;color:var(--vellum-dim)}
+.ifs .panel h3{font-size:1em}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:1rem 0}
+.timeline div{padding:.8rem;border:1px solid var(--rule);background:rgba(19,15,10,.6);text-align:center}
+.timeline .n{display:block;font-family:var(--display);font-weight:700;font-size:1.25em;color:var(--gold-bright)}
+.timeline .lbl{font-size:.85em}
+@media (max-width:820px){.timeline{grid-template-columns:1fr 1fr}.dims{grid-template-columns:1fr}}
+/* steps: a vertical timeline for eras and longer entries (date on the left, text beside it) */
+.steps{clear:both;margin:1rem 0;border-left:2px solid var(--rule);padding-left:1.1rem}
+.steps .st{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;margin:0 0 1rem}
+.steps .st::before{content:"";position:absolute;left:-1.55rem;top:.45em;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--ink)}
+.steps .when{font-family:var(--display);font-weight:700;color:var(--gold-bright);line-height:1.3}
+@media (max-width:820px){.steps .st{grid-template-columns:1fr;gap:.2rem}}
+/* title slides after the first carry a smaller heading */
+.title-page.later h1{font-size:clamp(2.1rem,5.2vw,4rem)}
+.title-page.long h1{font-size:clamp(2rem,min(5.4vw,7.5vh),4.4rem)}
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .bar{display:none}
+  .deck{position:static}
+  .slide{display:block!important;position:static;page-break-after:always;overflow:visible;padding:1cm}
+}
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide" data-section="Introduction" data-title="Genesis Chapter 25" data-ctx="">
+  <div class="page title-page">
+    <div class="overline">Young Adult Sunday School • Genesis Series</div>
+    <h1>Genesis 25: Esau and Jacob</h1>
+    <p class="sub">Abraham Gathered to His People • The Elder Shall Serve the Younger • The Birthright • Spiritual Edom</p>
+    <div class="refs center"><button class="ref" data-v="Genesis 25:1-34">Genesis 25:1-34</button></div>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="hint">Use the arrow keys or swipe to move. Tap any reference to read the verse.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-section="The death of Abraham" data-title="Keturah" data-ctx="Genesis 25:1-4">
+  <div class="page">
+    <div class="kicker">vv. 1–4</div>
+    <h2>Keturah</h2>
+    <p class="sub">Then Again Abraham Took a Wife</p>
+    <blockquote class="scripture" style="font-style:italic"><mark>Then again Abraham took a wife, and her name was Keturah</mark>. And she bare him Zimran, and Jokshan, and Medan, and Midian, and Ishbak, and Shuah. And Jokshan begat Sheba, and Dedan. And the sons of Dedan were Asshurim, and Letushim, and Leummim. And the sons of Midian; Ephah, and Epher, and Hanoch, and Abidah, and Eldaah. All these were the children of Keturah.<cite>Genesis 25:1-4</cite></blockquote>
+    <p>Abraham was 175 when he died. He was 137 when Sarah died, and here it says he remarried and had at least 6 sons with Keturah, and they begat many sons, but the physical inheritance and the spiritual blessing, given Abraham by God concerning Jesus, Abraham passes down to Isaac. The child of faith.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-section="The death of Abraham" data-title="All That He Had unto Isaac" data-ctx="Genesis 25:5-6">
+  <div class="page">
+    <div class="kicker">vv. 5–6</div>
+    <h2>All That He Had unto Isaac</h2>
+    <p class="sub">Gifts to the Sons of the Concubines</p>
+    <blockquote class="scripture" style="font-style:italic"><mark>And Abraham gave all that he had unto Isaac</mark>. But unto the sons of the concubines, which Abraham had, Abraham gave gifts, and sent them away from Isaac his son, while he yet lived, eastward, unto the east country.<cite>Genesis 25:5-6</cite></blockquote>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-section="The death of Abraham" data-title="Gathered to His People" data-ctx="Genesis 25:7-8">
+  <div class="page">
+    <div class="kicker">vv. 7–8</div>
+    <h2>Gathered to His People</h2>
+    <p class="sub">An Hundred Threescore and Fifteen Years</p>
+    <blockquote class="scripture" style="font-style:italic">And these are the days of the years of Abraham’s life which he lived, an hundred threescore and fifteen years. Then Abraham gave up the ghost, and died in a good old age, an old man, and full of years; <mark>and was gathered to his people</mark>.<cite>Genesis 25:7-8</cite></blockquote>
+    <p>Abraham died and was gathered to his people, in heaven. It couldn't be into his own "bosom" after all. But the patriarch is given an end of days and an account of his death, which the Bible uses to signify the humanity of the fathers and the prophets.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-section="The death of Abraham" data-title="The Cave of Machpelah" data-ctx="Genesis 25:9-11">
+  <div class="page">
+    <div class="kicker">vv. 9–11</div>
+    <h2>The Cave of Machpelah</h2>
+    <p class="sub">God Blessed His Son Isaac</p>
+    <blockquote class="scripture" style="font-style:italic">And <mark>his sons Isaac and Ishmael buried him</mark> in the cave of Machpelah, in the field of Ephron the son of Zohar the Hittite, which is before Mamre; The field which Abraham purchased of the sons of Heth: there was Abraham buried, and Sarah his wife. And it came to pass after the death of Abraham, that God blessed his son Isaac; and Isaac dwelt by the well Lahairoi.<cite>Genesis 25:9-11</cite></blockquote>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-section="The death of Abraham" data-title="Abraham Rejoiced to See My Day" data-ctx="John 8:56|John 8:58">
+  <div class="page">
+    <div class="kicker">Cross references • Genesis 25:8</div>
+    <h2>Abraham Rejoiced to See My Day</h2>
+    <div class="vps"><div class="vp fig"><h3>John 8:56</h3><blockquote class="scripture" style="font-style:italic">Your father Abraham rejoiced to see my day: and he saw it, and was glad.<cite>John 8:56</cite></blockquote></div><div class="vp fig"><h3>John 8:58</h3><blockquote class="scripture" style="font-style:italic">Jesus said unto them, Verily, verily, I say unto you, Before Abraham was, I am.<cite>John 8:58</cite></blockquote></div></div>
+    <div class="callout"><p>Christ Jesus comments on the faith of Abraham and his joy at the fulfillment of the promise made to him in <strong>John 8</strong>. And so it was that Abraham's seed was a blessing to the whole world, especially of those who believe.</p></div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-section="The death of Abraham" data-title="Abraham&#x27;s Seed" data-ctx="Galatians 3:26-27|Galatians 3:28-29">
+  <div class="page">
+    <div class="kicker">Cross references • Genesis 25:5</div>
+    <h2>Abraham's Seed</h2>
+    <div class="vps"><div class="vp fig"><h3>Galatians 3:26-27</h3><blockquote class="scripture" style="font-style:italic">For ye are all the children of God by faith in Christ Jesus. For as many of you as have been baptized into Christ have put on Christ.<cite>Galatians 3:26-27</cite></blockquote></div><div class="vp fig"><h3>Galatians 3:28-29</h3><blockquote class="scripture" style="font-style:italic">There is neither Jew nor Greek, there is neither bond nor free, there is neither male nor female: for ye are all one in Christ Jesus. And if ye be Christ’s, then are ye Abraham’s seed, and heirs according to the promise.<cite>Galatians 3:28-29</cite></blockquote></div></div>
+    <div class="callout"><p>Let this comfort you who believe, and drive to envy those of you still on the fence, trusting your own righteousness to provide your own salvation, bringing you to repent. Knowing Abraham trusted God and obtained the righteousness of Christ, and so too do we. For God is not slack concerning His promises. And we who are of Abraham's seed in Christ Jesus are joint heirs with Him. Rejoice!</p></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-section="The generations of Ishmael" data-title="Twelve Princes" data-ctx="Genesis 25:12-16">
+  <div class="page">
+    <div class="kicker">vv. 12–16</div>
+    <h2>Twelve Princes</h2>
+    <p class="sub">The Sons of Ishmael</p>
+    <blockquote class="scripture" style="font-style:italic">Now these are the generations of Ishmael, Abraham’s son, whom Hagar the Egyptian, Sarah’s handmaid, bare unto Abraham: And these are the names of the sons of Ishmael, by their names, according to their generations: the firstborn of Ishmael, Nebajoth; and Kedar, and Adbeel, and Mibsam, And Mishma, and Dumah, and Massa, Hadar, and Tema, Jetur, Naphish, and Kedemah: These are the sons of Ishmael, and these are their names, by their towns, and by their castles; <mark>twelve princes according to their nations</mark>.<cite>Genesis 25:12-16</cite></blockquote>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-section="The generations of Ishmael" data-title="In the Presence of All His Brethren" data-ctx="Genesis 25:17-18">
+  <div class="page">
+    <div class="kicker">vv. 17–18</div>
+    <h2>In the Presence of All His Brethren</h2>
+    <p class="sub">An Hundred and Thirty and Seven Years</p>
+    <blockquote class="scripture" style="font-style:italic">And these are the years of the life of Ishmael, an hundred and thirty and seven years: and he gave up the ghost and died; and was gathered unto his people. And they dwelt from Havilah unto Shur, that is before Egypt, as thou goest toward Assyria: and he died in the presence of all his brethren.<cite>Genesis 25:17-18</cite></blockquote>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-section="Two nations" data-title="Rebekah His Wife Conceived" data-ctx="Genesis 25:19-21">
+  <div class="page">
+    <div class="kicker">vv. 19–21</div>
+    <h2>Rebekah His Wife Conceived</h2>
+    <p class="sub">Because She Was Barren</p>
+    <blockquote class="scripture" style="font-style:italic">And these are the generations of Isaac, Abraham’s son: Abraham begat Isaac: And Isaac was forty years old when he took Rebekah to wife, the daughter of Bethuel the Syrian of Padanaram, the sister to Laban the Syrian. And Isaac intreated the <span class="lord">Lord</span> for his wife, <mark>because she was barren: and the <span class="lord">Lord</span> was intreated of him</mark>, and Rebekah his wife conceived.<cite>Genesis 25:19-21</cite></blockquote>
+    <p>Isaac, at 60 years old, finally becomes a father. In an echo of his own birth, Rebekah is as barren as Sarah was. Yet God intervenes, and the couple conceive twin boys.</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-section="Two nations" data-title="The Elder Shall Serve the Younger" data-ctx="Genesis 25:22-23">
+  <div class="page">
+    <div class="kicker">vv. 22–23</div>
+    <h2>The Elder Shall Serve the Younger</h2>
+    <p class="sub">Two Nations Are in Thy Womb</p>
+    <blockquote class="scripture" style="font-style:italic">And the children struggled together within her; and she said, If it be so, why am I thus? And she went to enquire of the <span class="lord">Lord</span>. And the <span class="lord">Lord</span> said unto her, <mark>Two nations are in thy womb</mark>, and two manner of people shall be separated from thy bowels; and the one people shall be stronger than the other people; and <mark>the elder shall serve the younger</mark>.<cite>Genesis 25:22-23</cite></blockquote>
+    <p>As God says to Rebekah, there are two nations striving within her. One shall be strong, and the elder will serve the younger.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-section="Two nations" data-title="Jacob Have I Loved" data-ctx="Malachi 1:2-3|Romans 9:11-13">
+  <div class="page">
+    <div class="kicker">Cross references • Genesis 25:23</div>
+    <h2>Jacob Have I Loved</h2>
+    <div class="vps"><div class="vp fig"><h3>Malachi 1:2-3</h3><blockquote class="scripture" style="font-style:italic">I have loved you, saith the <span class="lord">Lord</span>. Yet ye say, Wherein hast thou loved us? Was not Esau Jacob’s brother? saith the <span class="lord">Lord</span>: yet I loved Jacob, And I hated Esau, and laid his mountains and his heritage waste for the dragons of the wilderness.<cite>Malachi 1:2-3</cite></blockquote></div><div class="vp fig"><h3>Romans 9:11-13</h3><blockquote class="scripture" style="font-style:italic">(For the children being not yet born, neither having done any good or evil, that the purpose of God according to election might stand, not of works, but of him that calleth;) It was said unto her, The elder shall serve the younger. As it is written, Jacob have I loved, but Esau have I hated.<cite>Romans 9:11-13</cite></blockquote></div></div>
+    <div class="callout"><p>Now, the Bible says that God hated Esau, and Jacob He loved. This is referring to the nations that come from each, Jacob giving birth to the 12 patriarchs of Israel, Esau the nations of Edomites. Much is made of this distinction, but the fate of Edom is not necessarily reflected in the life of its patriarch, Esau. In the next chapter we will look more closely at that. <button class="ref" data-v="Romans 9:4-15">Read Romans 9:4–15</button></p></div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-section="Two nations" data-title="Esau and Jacob" data-ctx="Genesis 25:24-26">
+  <div class="page">
+    <div class="kicker">vv. 24–26</div>
+    <h2>Esau and Jacob</h2>
+    <p class="sub">His Hand Took Hold on Esau's Heel</p>
+    <blockquote class="scripture" style="font-style:italic">And when her days to be delivered were fulfilled, behold, there were twins in her womb. And the first came out red, all over like an hairy garment; and <mark>they called his name Esau</mark>. And after that came his brother out, and his hand took hold on Esau’s heel; and <mark>his name was called Jacob</mark>: and Isaac was threescore years old when she bare them.<cite>Genesis 25:24-26</cite></blockquote>
+    <p>Esau, the first born, hair red as the pottage he'd sell his birthright for. Red is the meaning of Edom. Jacob, second born, holding on to Esau's foot, as they are taken from their mother.</p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-section="Two nations" data-title="A Plain Man, Dwelling in Tents" data-ctx="Genesis 25:27-28">
+  <div class="page">
+    <div class="kicker">vv. 27–28</div>
+    <h2>A Plain Man, Dwelling in Tents</h2>
+    <p class="sub">A Cunning Hunter, a Man of the Field</p>
+    <blockquote class="scripture" style="font-style:italic">And the boys grew: and <mark>Esau was a cunning hunter</mark>, a man of the field; and <mark>Jacob was a plain man, dwelling in tents</mark>. And Isaac loved Esau, because he did eat of his venison: but Rebekah loved Jacob.<cite>Genesis 25:27-28</cite></blockquote>
+    <p>God wastes no time on irrelevant details. Isaac's life story is briefly skimmed over. Only the details of the inheritance and blessing matter to the story God is telling. Of the elder serving the younger. Of the law and of faith.</p>
+    <p>And so, we come to adult Esau and Jacob, men established as a hunter, and a man of the field, while the younger tends flocks, living in tents. No great hero and hunter, proficient with weapons like his elder brother, but a plain man.</p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-section="The birthright" data-title="That Same Red Pottage" data-ctx="Genesis 25:29-30">
+  <div class="page">
+    <div class="kicker">vv. 29–30</div>
+    <h2>That Same Red Pottage</h2>
+    <p class="sub">For I Am Faint</p>
+    <blockquote class="scripture" style="font-style:italic">And Jacob sod pottage: and Esau came from the field, and he was faint: And Esau said to Jacob, <mark>Feed me, I pray thee, with that same red pottage</mark>; for I am faint: <mark>therefore was his name called Edom</mark>.<cite>Genesis 25:29-30</cite></blockquote>
+    <p>Jacob makes a red pottage, a lentil soup. Esau, hungry and tired, saying "<em>Feed me, I pray thee, with that same red pottage; for I am faint</em>."</p>
+    <p>Most interpret this to just mean normal hunger. Not truly fainting or starving in a serious sense. Just ravenous from being out in the field hunting, and wanting to please his flesh by eating the pottage.</p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-section="The birthright" data-title="Esau Despised His Birthright" data-ctx="Genesis 25:31-34">
+  <div class="page">
+    <div class="kicker">vv. 31–34</div>
+    <h2>Esau Despised His Birthright</h2>
+    <p class="sub">Sell Me This Day Thy Birthright</p>
+    <blockquote class="scripture" style="font-style:italic">And Jacob said, <mark>Sell me this day thy birthright</mark>. And Esau said, Behold, I am at the point to die: and what profit shall this birthright do to me? And Jacob said, Swear to me this day; and he sware unto him: and he sold his birthright unto Jacob. Then Jacob gave Esau bread and pottage of lentiles; and he did eat and drink, and rose up, and went his way: <mark>thus Esau despised his birthright</mark>.<cite>Genesis 25:31-34</cite></blockquote>
+    <p>Jacob says he will feed his brother in exchange for his birthright. And despising his birthright, that is not caring about it, willing to trade it for a momentary satisfaction of the flesh, Esau agrees.</p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-section="The birthright" data-title="One Morsel of Meat" data-ctx="Hebrews 12:16-17">
+  <div class="page">
+    <div class="kicker">Cross references • Genesis 25:34</div>
+    <h2>One Morsel of Meat</h2>
+    <div class="vps"><div class="vp fig"><h3>Hebrews 12:16-17</h3><blockquote class="scripture" style="font-style:italic">Lest there be any fornicator, or profane person, as Esau, who for one morsel of meat sold his birthright. For ye know how that afterward, when he would have inherited the blessing, he was rejected: for he found no place of repentance, though he sought it carefully with tears.<cite>Hebrews 12:16-17</cite></blockquote></div></div>
+    <div class="callout"><p>Paul uses this illustration in <strong>Hebrews 12</strong> regarding fornicators among the believers, who have the inheritance but lose the blessings that come with the birthright we share in Christ Jesus for the same momentary satisfaction of the flesh. That later, though he repented of giving away his inheritance by law to his younger brother, having a change of heart too late, and losing the eventual blessings meant for him. <button class="ref" data-v="Hebrews 12:14-17">Read Hebrews 12:14–17</button></p></div>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-section="The birthright" data-title="Like Esau" data-ctx="Hebrews 12:16-17">
+  <div class="page">
+    <div class="kicker">Application • The birthright</div>
+    <h2>Like Esau</h2>
+    <p class="sub">A Grave Warning</p>
+    <p>Christians who live carnally, after the flesh, despising their birthright received through Christ, losing blessings of God for their own morsel of meat, a simple bowl of pottage, are like Esau. And while we still retain sonship, and gain a share in the kingdom, the blessings we lose here in this life and in the time to come are lost or diminished, regardless of how tearfully we may regret it when our flesh dies. It's a grave warning.</p>
+    <p>We know, having hindsight what a fool Esau, now Edom was. Yet how many times do we do the same, for much less than even a bowl of lentils?</p>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-section="Spiritual Edom" data-title="Faith over Flesh" data-ctx="Hebrews 12:16-17">
+  <div class="page">
+    <div class="kicker">Application • The elder and the younger</div>
+    <h2>Faith over Flesh</h2>
+    <p class="sub">A Pattern for the Salvation to Come</p>
+    <p>For now, the parallels to Cain and Abel, Sarah and Hagar, Isaac and Ishmael, Jews and Gentiles, even Jesus and Barabbas, the free will choices given to show that God favors faith over the law, spirit over the flesh, blesses them that trust His promises and do His will, giving them the inheritance for their faith, and the casting out of those who are after the flesh, even if by law they have a birthright claim.</p>
+    <p>The entire Old Testament serves as a pattern for the salvation to come offered in Christ. Both the choice to believe, placing faith above flesh, explaining the theology of the New Testament with examples from the Old. And continually we see the eldest by law passed over, to serve the younger, who by faith receives both the birthright and blessing.</p>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-section="Spiritual Edom" data-title="Not Replacement, Rejection" data-ctx="Hebrews 12:16-17">
+  <div class="page">
+    <div class="kicker">Application • Spiritual Edom</div>
+    <h2>Not Replacement, Rejection</h2>
+    <p class="sub">They Sold Their Birthright</p>
+    <p>When applied to the Jews and Gentiles, this is called "replacement theology," which is a misnomer. Like Esau, Jews sought an earthly kingdom from an earthly messiah, to satisfy their fleshly desires. They sold their birthright, despising their inheritance, by choosing to kill Christ. By rejecting the blessing that had carried them from Canaan to Egypt, back to the promised land. Through wars, invasions and captivity, they lost everything, for the younger, the Gentiles, to gain.</p>
+    <p>It's not replacement, it's rejection. Spiritual Edom. And like Edom after the flesh, they were made desolate by the Lord.</p>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-section="Spiritual Edom" data-title="Edom Shall Be a Desolation" data-ctx="Jeremiah 49:10|Jeremiah 49:17-18">
+  <div class="page">
+    <div class="kicker">Cross references • Genesis 25:30</div>
+    <h2>Edom Shall Be a Desolation</h2>
+    <div class="vps"><div class="vp fig"><h3>Jeremiah 49:10</h3><blockquote class="scripture" style="font-style:italic">But I have made Esau bare, I have uncovered his secret places, and he shall not be able to hide himself: his seed is spoiled, and his brethren, and his neighbours, and he is not.<cite>Jeremiah 49:10</cite></blockquote></div><div class="vp fig"><h3>Jeremiah 49:17-18</h3><blockquote class="scripture" style="font-style:italic">Also Edom shall be a desolation: every one that goeth by it shall be astonished, and shall hiss at all the plagues thereof. As in the overthrow of Sodom and Gomorrah and the neighbour cities thereof, saith the <span class="lord">Lord</span>, no man shall abide there, neither shall a son of man dwell in it.<cite>Jeremiah 49:17-18</cite></blockquote></div></div>
+    <div class="callout"><p><button class="ref" data-v="Jeremiah 49:10-18">Read Jeremiah 49:10–18</button></p></div>
+  </div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-section="Spiritual Edom" data-title="A Byword and a Parable" data-ctx="Jeremiah 49:10|Jeremiah 49:17-18">
+  <div class="page">
+    <div class="kicker">Application • Spiritual Edom</div>
+    <h2>A Byword and a Parable</h2>
+    <p class="sub">The Choice Is Made in Man's Heart</p>
+    <p>God didn't "replace" Esau with Jacob. Edom with Israel.</p>
+    <p>And the Jews who killed Jesus and the prophets and persecuted the Gentiles who received the inheritance in faith, are spiritually Edom. The wrath of God abides upon them to the uttermost. They are a byword and a parable. A warning.</p>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-section="Spiritual Edom" data-title="Older Brothers" data-ctx="Jeremiah 49:10|Jeremiah 49:17-18">
+  <div class="page">
+    <div class="kicker">Application • Spiritual Edom</div>
+    <h2>Older Brothers</h2>
+    <p class="sub">Less than a Bowl of Pottage</p>
+    <p>Modern, dispensationalist Christians who have elevated Jews to coequal status, even giving them honor as "older brothers," claiming that inheritance of the flesh, in the law means they retain the birthright and blessing they rejected when they reject Christ, are carnal and risk going the way of Edom themselves.</p>
+    <p>They so despise their birthright in Christ they are willing to give it up to Jews for a morsel. For less than a bowl of pottage.</p>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-section="Spiritual Edom" data-title="The Blessings Are Ours" data-ctx="Jeremiah 49:10|Jeremiah 49:17-18">
+  <div class="page">
+    <div class="kicker">Application • Spiritual Edom</div>
+    <h2>The Blessings Are Ours</h2>
+    <p class="sub">Too Late</p>
+    <p>They say the "church age" ends in failure. Taken up in a pre-trib rapture to make way for the Jews to receive the Kingdom that is ours in Jesus' name. They question the judgment of God and ignore these warnings found throughout the Bible, in exchange for...what? The false teachers get paid. Hagee and the televangelists and evangelical pastors who promote dispensationalism get filthy lucre, for sure. Vipers being rewarded in the flesh. But the flock, many who are believers, they get nothing of value but the brief and fleeting feeling of approval by a group of people who resent and hate them. "If I bless them I will be blessed!" If you are saved in Christ you've already been blessed! If you live in the spirit, doing the will of the Father, the blessings are ours, in abundance.</p>
+    <p>But for the meaningless approval of man, they sell it all to the wicked, spiritual Edomites.</p>
+    <p>And like Esau, they will see eventually that their choice robbed them of the blessings, and with tears they will repent, but it will be too late.</p>
+  </div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-section="Spiritual Edom" data-title="The Choice Is Made in Man&#x27;s Heart" data-ctx="Jeremiah 49:10|Jeremiah 49:17-18">
+  <div class="page">
+    <h2>The Choice Is Made in Man's Heart</h2>
+    <p class="center">The choice is made in man's heart.</p>
+    <div class="refs center"><a class="ref lesson-link" href="../../studies/#lesson-genesis-24-a-wife-for-isaac" target="_blank" rel="noopener">Genesis 24 ↗</a><a class="ref lesson-link" href="../../studies/#lesson-genesis-21-the-bondwoman-and-the-freewoman" target="_blank" rel="noopener">Genesis 21 ↗</a><a class="ref lesson-link" href="../../studies/#lesson-psalm-48" target="_blank" rel="noopener">Psalm 48 (Zion and the spirit of Esau) ↗</a></div>
+  </div>
+</section>
+
+</main>
+
+<nav class="bar" aria-label="Slide navigation">
+  <div class="section" id="barSection"></div>
+  <div class="progress"><span id="barProgress"></span></div>
+  <div class="count" id="barCount"></div>
+  <div class="nav">
+    <button id="prevBtn" aria-label="Previous slide">‹ Prev</button>
+    <button id="tocBtn">Contents</button>
+    <button id="nextBtn" aria-label="Next slide">Next ›</button>
+  </div>
+</nav>
+
+<dialog id="verseDlg" aria-labelledby="verseTitle">
+  <div class="dlg-head"><h3 id="verseTitle">Scripture</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body" id="verseBody"></div>
+</dialog>
+
+<dialog id="picDlg" aria-label="Picture, full size"><img alt=""></dialog>
+
+<dialog id="tocDlg" aria-labelledby="tocTitle">
+  <div class="dlg-head"><h3 id="tocTitle">Contents</h3><button class="dlg-close" data-close>Close</button></div>
+  <div class="dlg-body"><ul class="toc-list" id="tocList"></ul></div>
+</dialog>
+
+<script>
+const BOOKS = {};
+
+const V = {
+  "Genesis 25:1-34":[[1, "Then again Abraham took a wife, and her name was Keturah."], [2, "And she bare him Zimran, and Jokshan, and Medan, and Midian, and Ishbak, and Shuah."], [3, "And Jokshan begat Sheba, and Dedan. And the sons of Dedan were Asshurim, and Letushim, and Leummim."], [4, "And the sons of Midian; Ephah, and Epher, and Hanoch, and Abidah, and Eldaah. All these were the children of Keturah."], [5, "And Abraham gave all that he had unto Isaac."], [6, "But unto the sons of the concubines, which Abraham had, Abraham gave gifts, and sent them away from Isaac his son, while he yet lived, eastward, unto the east country."], [7, "And these are the days of the years of Abraham’s life which he lived, an hundred threescore and fifteen years."], [8, "Then Abraham gave up the ghost, and died in a good old age, an old man, and full of years; and was gathered to his people."], [9, "And his sons Isaac and Ishmael buried him in the cave of Machpelah, in the field of Ephron the son of Zohar the Hittite, which is before Mamre;"], [10, "The field which Abraham purchased of the sons of Heth: there was Abraham buried, and Sarah his wife."], [11, "And it came to pass after the death of Abraham, that God blessed his son Isaac; and Isaac dwelt by the well Lahairoi."], [12, "Now these are the generations of Ishmael, Abraham’s son, whom Hagar the Egyptian, Sarah’s handmaid, bare unto Abraham:"], [13, "And these are the names of the sons of Ishmael, by their names, according to their generations: the firstborn of Ishmael, Nebajoth; and Kedar, and Adbeel, and Mibsam,"], [14, "And Mishma, and Dumah, and Massa,"], [15, "Hadar, and Tema, Jetur, Naphish, and Kedemah:"], [16, "These are the sons of Ishmael, and these are their names, by their towns, and by their castles; twelve princes according to their nations."], [17, "And these are the years of the life of Ishmael, an hundred and thirty and seven years: and he gave up the ghost and died; and was gathered unto his people."], [18, "And they dwelt from Havilah unto Shur, that is before Egypt, as thou goest toward Assyria: and he died in the presence of all his brethren."], [19, "And these are the generations of Isaac, Abraham’s son: Abraham begat Isaac:"], [20, "And Isaac was forty years old when he took Rebekah to wife, the daughter of Bethuel the Syrian of Padanaram, the sister to Laban the Syrian."], [21, "And Isaac intreated the LORD for his wife, because she was barren: and the LORD was intreated of him, and Rebekah his wife conceived."], [22, "And the children struggled together within her; and she said, If it be so, why am I thus? And she went to enquire of the LORD."], [23, "And the LORD said unto her, Two nations are in thy womb, and two manner of people shall be separated from thy bowels; and the one people shall be stronger than the other people; and the elder shall serve the younger."], [24, "And when her days to be delivered were fulfilled, behold, there were twins in her womb."], [25, "And the first came out red, all over like an hairy garment; and they called his name Esau."], [26, "And after that came his brother out, and his hand took hold on Esau’s heel; and his name was called Jacob: and Isaac was threescore years old when she bare them."], [27, "And the boys grew: and Esau was a cunning hunter, a man of the field; and Jacob was a plain man, dwelling in tents."], [28, "And Isaac loved Esau, because he did eat of his venison: but Rebekah loved Jacob."], [29, "And Jacob sod pottage: and Esau came from the field, and he was faint:"], [30, "And Esau said to Jacob, Feed me, I pray thee, with that same red pottage; for I am faint: therefore was his name called Edom."], [31, "And Jacob said, Sell me this day thy birthright."], [32, "And Esau said, Behold, I am at the point to die: and what profit shall this birthright do to me?"], [33, "And Jacob said, Swear to me this day; and he sware unto him: and he sold his birthright unto Jacob."], [34, "Then Jacob gave Esau bread and pottage of lentiles; and he did eat and drink, and rose up, and went his way: thus Esau despised his birthright."]],
+  "Hebrews 12:14-17":[[14, "Follow peace with all men, and holiness, without which no man shall see the Lord:"], [15, "Looking diligently lest any man fail of the grace of God; lest any root of bitterness springing up trouble you, and thereby many be defiled;"], [16, "Lest there be any fornicator, or profane person, as Esau, who for one morsel of meat sold his birthright."], [17, "For ye know how that afterward, when he would have inherited the blessing, he was rejected: for he found no place of repentance, though he sought it carefully with tears."]],
+  "Jeremiah 49:10-18":[[10, "But I have made Esau bare, I have uncovered his secret places, and he shall not be able to hide himself: his seed is spoiled, and his brethren, and his neighbours, and he is not."], [11, "Leave thy fatherless children, I will preserve them alive; and let thy widows trust in me."], [12, "For thus saith the LORD; Behold, they whose judgment was not to drink of the cup have assuredly drunken; and art thou he that shall altogether go unpunished? thou shalt not go unpunished, but thou shalt surely drink of it."], [13, "For I have sworn by myself, saith the LORD, that Bozrah shall become a desolation, a reproach, a waste, and a curse; and all the cities thereof shall be perpetual wastes."], [14, "I have heard a rumour from the LORD, and an ambassador is sent unto the heathen, saying, Gather ye together, and come against her, and rise up to the battle."], [15, "For, lo, I will make thee small among the heathen, and despised among men."], [16, "Thy terribleness hath deceived thee, and the pride of thine heart, O thou that dwellest in the clefts of the rock, that holdest the height of the hill: though thou shouldest make thy nest as high as the eagle, I will bring thee down from thence, saith the LORD."], [17, "Also Edom shall be a desolation: every one that goeth by it shall be astonished, and shall hiss at all the plagues thereof."], [18, "As in the overthrow of Sodom and Gomorrah and the neighbour cities thereof, saith the LORD, no man shall abide there, neither shall a son of man dwell in it."]],
+  "Romans 9:4-15":[[4, "Who are Israelites; to whom pertaineth the adoption, and the glory, and the covenants, and the giving of the law, and the service of God, and the promises;"], [5, "Whose are the fathers, and of whom as concerning the flesh Christ came, who is over all, God blessed for ever. Amen."], [6, "Not as though the word of God hath taken none effect. For they are not all Israel, which are of Israel:"], [7, "Neither, because they are the seed of Abraham, are they all children: but, In Isaac shall thy seed be called."], [8, "That is, They which are the children of the flesh, these are not the children of God: but the children of the promise are counted for the seed."], [9, "For this is the word of promise, At this time will I come, and Sarah shall have a son."], [10, "And not only this; but when Rebecca also had conceived by one, even by our father Isaac;"], [11, "(For the children being not yet born, neither having done any good or evil, that the purpose of God according to election might stand, not of works, but of him that calleth;)"], [12, "It was said unto her, The elder shall serve the younger."], [13, "As it is written, Jacob have I loved, but Esau have I hated."], [14, "What shall we say then? Is there unrighteousness with God? God forbid."], [15, "For he saith to Moses, I will have mercy on whom I will have mercy, and I will have compassion on whom I will have compassion."]]
+};
+
+// The Chapter panel (key C): whole chapters, and each slide's verses in data-ctx. null when the deck has none.
+window.DECK_CTX = {"home": ["Genesis 25"], "ch": {"Genesis 25": [[1, "Then again Abraham took a wife, and her name was Keturah."], [2, "And she bare him Zimran, and Jokshan, and Medan, and Midian, and Ishbak, and Shuah."], [3, "And Jokshan begat Sheba, and Dedan. And the sons of Dedan were Asshurim, and Letushim, and Leummim."], [4, "And the sons of Midian; Ephah, and Epher, and Hanoch, and Abidah, and Eldaah. All these were the children of Keturah."], [5, "And Abraham gave all that he had unto Isaac."], [6, "But unto the sons of the concubines, which Abraham had, Abraham gave gifts, and sent them away from Isaac his son, while he yet lived, eastward, unto the east country."], [7, "And these are the days of the years of Abraham’s life which he lived, an hundred threescore and fifteen years."], [8, "Then Abraham gave up the ghost, and died in a good old age, an old man, and full of years; and was gathered to his people."], [9, "And his sons Isaac and Ishmael buried him in the cave of Machpelah, in the field of Ephron the son of Zohar the Hittite, which is before Mamre;"], [10, "The field which Abraham purchased of the sons of Heth: there was Abraham buried, and Sarah his wife."], [11, "And it came to pass after the death of Abraham, that God blessed his son Isaac; and Isaac dwelt by the well Lahairoi."], [12, "Now these are the generations of Ishmael, Abraham’s son, whom Hagar the Egyptian, Sarah’s handmaid, bare unto Abraham:"], [13, "And these are the names of the sons of Ishmael, by their names, according to their generations: the firstborn of Ishmael, Nebajoth; and Kedar, and Adbeel, and Mibsam,"], [14, "And Mishma, and Dumah, and Massa,"], [15, "Hadar, and Tema, Jetur, Naphish, and Kedemah:"], [16, "These are the sons of Ishmael, and these are their names, by their towns, and by their castles; twelve princes according to their nations."], [17, "And these are the years of the life of Ishmael, an hundred and thirty and seven years: and he gave up the ghost and died; and was gathered unto his people."], [18, "And they dwelt from Havilah unto Shur, that is before Egypt, as thou goest toward Assyria: and he died in the presence of all his brethren."], [19, "And these are the generations of Isaac, Abraham’s son: Abraham begat Isaac:"], [20, "And Isaac was forty years old when he took Rebekah to wife, the daughter of Bethuel the Syrian of Padanaram, the sister to Laban the Syrian."], [21, "And Isaac intreated the LORD for his wife, because she was barren: and the LORD was intreated of him, and Rebekah his wife conceived."], [22, "And the children struggled together within her; and she said, If it be so, why am I thus? And she went to enquire of the LORD."], [23, "And the LORD said unto her, Two nations are in thy womb, and two manner of people shall be separated from thy bowels; and the one people shall be stronger than the other people; and the elder shall serve the younger."], [24, "And when her days to be delivered were fulfilled, behold, there were twins in her womb."], [25, "And the first came out red, all over like an hairy garment; and they called his name Esau."], [26, "And after that came his brother out, and his hand took hold on Esau’s heel; and his name was called Jacob: and Isaac was threescore years old when she bare them."], [27, "And the boys grew: and Esau was a cunning hunter, a man of the field; and Jacob was a plain man, dwelling in tents."], [28, "And Isaac loved Esau, because he did eat of his venison: but Rebekah loved Jacob."], [29, "And Jacob sod pottage: and Esau came from the field, and he was faint:"], [30, "And Esau said to Jacob, Feed me, I pray thee, with that same red pottage; for I am faint: therefore was his name called Edom."], [31, "And Jacob said, Sell me this day thy birthright."], [32, "And Esau said, Behold, I am at the point to die: and what profit shall this birthright do to me?"], [33, "And Jacob said, Swear to me this day; and he sware unto him: and he sold his birthright unto Jacob."], [34, "Then Jacob gave Esau bread and pottage of lentiles; and he did eat and drink, and rose up, and went his way: thus Esau despised his birthright."]], "John 8": [[1, "Jesus went unto the mount of Olives."], [2, "And early in the morning he came again into the temple, and all the people came unto him; and he sat down, and taught them."], [3, "And the scribes and Pharisees brought unto him a woman taken in adultery; and when they had set her in the midst,"], [4, "They say unto him, Master, this woman was taken in adultery, in the very act."], [5, "Now Moses in the law commanded us, that such should be stoned: but what sayest thou?"], [6, "This they said, tempting him, that they might have to accuse him. But Jesus stooped down, and with his finger wrote on the ground, as though he heard them not."], [7, "So when they continued asking him, he lifted up himself, and said unto them, He that is without sin among you, let him first cast a stone at her."], [8, "And again he stooped down, and wrote on the ground."], [9, "And they which heard it, being convicted by their own conscience, went out one by one, beginning at the eldest, even unto the last: and Jesus was left alone, and the woman standing in the midst."], [10, "When Jesus had lifted up himself, and saw none but the woman, he said unto her, Woman, where are those thine accusers? hath no man condemned thee?"], [11, "She said, No man, Lord. And Jesus said unto her, Neither do I condemn thee: go, and sin no more."], [12, "Then spake Jesus again unto them, saying, I am the light of the world: he that followeth me shall not walk in darkness, but shall have the light of life."], [13, "The Pharisees therefore said unto him, Thou bearest record of thyself; thy record is not true."], [14, "Jesus answered and said unto them, Though I bear record of myself, yet my record is true: for I know whence I came, and whither I go; but ye cannot tell whence I come, and whither I go."], [15, "Ye judge after the flesh; I judge no man."], [16, "And yet if I judge, my judgment is true: for I am not alone, but I and the Father that sent me."], [17, "It is also written in your law, that the testimony of two men is true."], [18, "I am one that bear witness of myself, and the Father that sent me beareth witness of me."], [19, "Then said they unto him, Where is thy Father? Jesus answered, Ye neither know me, nor my Father: if ye had known me, ye should have known my Father also."], [20, "These words spake Jesus in the treasury, as he taught in the temple: and no man laid hands on him; for his hour was not yet come."], [21, "Then said Jesus again unto them, I go my way, and ye shall seek me, and shall die in your sins: whither I go, ye cannot come."], [22, "Then said the Jews, Will he kill himself? because he saith, Whither I go, ye cannot come."], [23, "And he said unto them, Ye are from beneath; I am from above: ye are of this world; I am not of this world."], [24, "I said therefore unto you, that ye shall die in your sins: for if ye believe not that I am he, ye shall die in your sins."], [25, "Then said they unto him, Who art thou? And Jesus saith unto them, Even the same that I said unto you from the beginning."], [26, "I have many things to say and to judge of you: but he that sent me is true; and I speak to the world those things which I have heard of him."], [27, "They understood not that he spake to them of the Father."], [28, "Then said Jesus unto them, When ye have lifted up the Son of man, then shall ye know that I am he, and that I do nothing of myself; but as my Father hath taught me, I speak these things."], [29, "And he that sent me is with me: the Father hath not left me alone; for I do always those things that please him."], [30, "As he spake these words, many believed on him."], [31, "Then said Jesus to those Jews which believed on him, If ye continue in my word, then are ye my disciples indeed;"], [32, "And ye shall know the truth, and the truth shall make you free."], [33, "They answered him, We be Abraham’s seed, and were never in bondage to any man: how sayest thou, Ye shall be made free?"], [34, "Jesus answered them, Verily, verily, I say unto you, Whosoever committeth sin is the servant of sin."], [35, "And the servant abideth not in the house for ever: but the Son abideth ever."], [36, "If the Son therefore shall make you free, ye shall be free indeed."], [37, "I know that ye are Abraham’s seed; but ye seek to kill me, because my word hath no place in you."], [38, "I speak that which I have seen with my Father: and ye do that which ye have seen with your father."], [39, "They answered and said unto him, Abraham is our father. Jesus saith unto them, If ye were Abraham’s children, ye would do the works of Abraham."], [40, "But now ye seek to kill me, a man that hath told you the truth, which I have heard of God: this did not Abraham."], [41, "Ye do the deeds of your father. Then said they to him, We be not born of fornication; we have one Father, even God."], [42, "Jesus said unto them, If God were your Father, ye would love me: for I proceeded forth and came from God; neither came I of myself, but he sent me."], [43, "Why do ye not understand my speech? even because ye cannot hear my word."], [44, "Ye are of your father the devil, and the lusts of your father ye will do. He was a murderer from the beginning, and abode not in the truth, because there is no truth in him. When he speaketh a lie, he speaketh of his own: for he is a liar, and the father of it."], [45, "And because I tell you the truth, ye believe me not."], [46, "Which of you convinceth me of sin? And if I say the truth, why do ye not believe me?"], [47, "He that is of God heareth God’s words: ye therefore hear them not, because ye are not of God."], [48, "Then answered the Jews, and said unto him, Say we not well that thou art a Samaritan, and hast a devil?"], [49, "Jesus answered, I have not a devil; but I honour my Father, and ye do dishonour me."], [50, "And I seek not mine own glory: there is one that seeketh and judgeth."], [51, "Verily, verily, I say unto you, If a man keep my saying, he shall never see death."], [52, "Then said the Jews unto him, Now we know that thou hast a devil. Abraham is dead, and the prophets; and thou sayest, If a man keep my saying, he shall never taste of death."], [53, "Art thou greater than our father Abraham, which is dead? and the prophets are dead: whom makest thou thyself?"], [54, "Jesus answered, If I honour myself, my honour is nothing: it is my Father that honoureth me; of whom ye say, that he is your God:"], [55, "Yet ye have not known him; but I know him: and if I should say, I know him not, I shall be a liar like unto you: but I know him, and keep his saying."], [56, "Your father Abraham rejoiced to see my day: and he saw it, and was glad."], [57, "Then said the Jews unto him, Thou art not yet fifty years old, and hast thou seen Abraham?"], [58, "Jesus said unto them, Verily, verily, I say unto you, Before Abraham was, I am."], [59, "Then took they up stones to cast at him: but Jesus hid himself, and went out of the temple, going through the midst of them, and so passed by."]], "Galatians 3": [[1, "O foolish Galatians, who hath bewitched you, that ye should not obey the truth, before whose eyes Jesus Christ hath been evidently set forth, crucified among you?"], [2, "This only would I learn of you, Received ye the Spirit by the works of the law, or by the hearing of faith?"], [3, "Are ye so foolish? having begun in the Spirit, are ye now made perfect by the flesh?"], [4, "Have ye suffered so many things in vain? if it be yet in vain."], [5, "He therefore that ministereth to you the Spirit, and worketh miracles among you, doeth he it by the works of the law, or by the hearing of faith?"], [6, "Even as Abraham believed God, and it was accounted to him for righteousness."], [7, "Know ye therefore that they which are of faith, the same are the children of Abraham."], [8, "And the scripture, foreseeing that God would justify the heathen through faith, preached before the gospel unto Abraham, saying, In thee shall all nations be blessed."], [9, "So then they which be of faith are blessed with faithful Abraham."], [10, "For as many as are of the works of the law are under the curse: for it is written, Cursed is every one that continueth not in all things which are written in the book of the law to do them."], [11, "But that no man is justified by the law in the sight of God, it is evident: for, The just shall live by faith."], [12, "And the law is not of faith: but, The man that doeth them shall live in them."], [13, "Christ hath redeemed us from the curse of the law, being made a curse for us: for it is written, Cursed is every one that hangeth on a tree:"], [14, "That the blessing of Abraham might come on the Gentiles through Jesus Christ; that we might receive the promise of the Spirit through faith."], [15, "Brethren, I speak after the manner of men; Though it be but a man’s covenant, yet if it be confirmed, no man disannulleth, or addeth thereto."], [16, "Now to Abraham and his seed were the promises made. He saith not, And to seeds, as of many; but as of one, And to thy seed, which is Christ."], [17, "And this I say, that the covenant, that was confirmed before of God in Christ, the law, which was four hundred and thirty years after, cannot disannul, that it should make the promise of none effect."], [18, "For if the inheritance be of the law, it is no more of promise: but God gave it to Abraham by promise."], [19, "Wherefore then serveth the law? It was added because of transgressions, till the seed should come to whom the promise was made; and it was ordained by angels in the hand of a mediator."], [20, "Now a mediator is not a mediator of one, but God is one."], [21, "Is the law then against the promises of God? God forbid: for if there had been a law given which could have given life, verily righteousness should have been by the law."], [22, "But the scripture hath concluded all under sin, that the promise by faith of Jesus Christ might be given to them that believe."], [23, "But before faith came, we were kept under the law, shut up unto the faith which should afterwards be revealed."], [24, "Wherefore the law was our schoolmaster to bring us unto Christ, that we might be justified by faith."], [25, "But after that faith is come, we are no longer under a schoolmaster."], [26, "For ye are all the children of God by faith in Christ Jesus."], [27, "For as many of you as have been baptized into Christ have put on Christ."], [28, "There is neither Jew nor Greek, there is neither bond nor free, there is neither male nor female: for ye are all one in Christ Jesus."], [29, "And if ye be Christ’s, then are ye Abraham’s seed, and heirs according to the promise."]], "Malachi 1": [[1, "The burden of the word of the LORD to Israel by Malachi."], [2, "I have loved you, saith the LORD. Yet ye say, Wherein hast thou loved us? Was not Esau Jacob’s brother? saith the LORD: yet I loved Jacob,"], [3, "And I hated Esau, and laid his mountains and his heritage waste for the dragons of the wilderness."], [4, "Whereas Edom saith, We are impoverished, but we will return and build the desolate places; thus saith the LORD of hosts, They shall build, but I will throw down; and they shall call them, The border of wickedness, and, The people against whom the LORD hath indignation for ever."], [5, "And your eyes shall see, and ye shall say, The LORD will be magnified from the border of Israel."], [6, "A son honoureth his father, and a servant his master: if then I be a father, where is mine honour? and if I be a master, where is my fear? saith the LORD of hosts unto you, O priests, that despise my name. And ye say, Wherein have we despised thy name?"], [7, "Ye offer polluted bread upon mine altar; and ye say, Wherein have we polluted thee? In that ye say, The table of the LORD is contemptible."], [8, "And if ye offer the blind for sacrifice, is it not evil? and if ye offer the lame and sick, is it not evil? offer it now unto thy governor; will he be pleased with thee, or accept thy person? saith the LORD of hosts."], [9, "And now, I pray you, beseech God that he will be gracious unto us: this hath been by your means: will he regard your persons? saith the LORD of hosts."], [10, "Who is there even among you that would shut the doors for nought? neither do ye kindle fire on mine altar for nought. I have no pleasure in you, saith the LORD of hosts, neither will I accept an offering at your hand."], [11, "For from the rising of the sun even unto the going down of the same my name shall be great among the Gentiles; and in every place incense shall be offered unto my name, and a pure offering: for my name shall be great among the heathen, saith the LORD of hosts."], [12, "But ye have profaned it, in that ye say, The table of the LORD is polluted; and the fruit thereof, even his meat, is contemptible."], [13, "Ye said also, Behold, what a weariness is it! and ye have snuffed at it, saith the LORD of hosts; and ye brought that which was torn, and the lame, and the sick; thus ye brought an offering: should I accept this of your hand? saith the LORD."], [14, "But cursed be the deceiver, which hath in his flock a male, and voweth, and sacrificeth unto the LORD a corrupt thing: for I am a great King, saith the LORD of hosts, and my name is dreadful among the heathen."]], "Romans 9": [[1, "I say the truth in Christ, I lie not, my conscience also bearing me witness in the Holy Ghost,"], [2, "That I have great heaviness and continual sorrow in my heart."], [3, "For I could wish that myself were accursed from Christ for my brethren, my kinsmen according to the flesh:"], [4, "Who are Israelites; to whom pertaineth the adoption, and the glory, and the covenants, and the giving of the law, and the service of God, and the promises;"], [5, "Whose are the fathers, and of whom as concerning the flesh Christ came, who is over all, God blessed for ever. Amen."], [6, "Not as though the word of God hath taken none effect. For they are not all Israel, which are of Israel:"], [7, "Neither, because they are the seed of Abraham, are they all children: but, In Isaac shall thy seed be called."], [8, "That is, They which are the children of the flesh, these are not the children of God: but the children of the promise are counted for the seed."], [9, "For this is the word of promise, At this time will I come, and Sarah shall have a son."], [10, "And not only this; but when Rebecca also had conceived by one, even by our father Isaac;"], [11, "(For the children being not yet born, neither having done any good or evil, that the purpose of God according to election might stand, not of works, but of him that calleth;)"], [12, "It was said unto her, The elder shall serve the younger."], [13, "As it is written, Jacob have I loved, but Esau have I hated."], [14, "What shall we say then? Is there unrighteousness with God? God forbid."], [15, "For he saith to Moses, I will have mercy on whom I will have mercy, and I will have compassion on whom I will have compassion."], [16, "So then it is not of him that willeth, nor of him that runneth, but of God that sheweth mercy."], [17, "For the scripture saith unto Pharaoh, Even for this same purpose have I raised thee up, that I might shew my power in thee, and that my name might be declared throughout all the earth."], [18, "Therefore hath he mercy on whom he will have mercy, and whom he will he hardeneth."], [19, "Thou wilt say then unto me, Why doth he yet find fault? For who hath resisted his will?"], [20, "Nay but, O man, who art thou that repliest against God? Shall the thing formed say to him that formed it, Why hast thou made me thus?"], [21, "Hath not the potter power over the clay, of the same lump to make one vessel unto honour, and another unto dishonour?"], [22, "What if God, willing to shew his wrath, and to make his power known, endured with much longsuffering the vessels of wrath fitted to destruction:"], [23, "And that he might make known the riches of his glory on the vessels of mercy, which he had afore prepared unto glory,"], [24, "Even us, whom he hath called, not of the Jews only, but also of the Gentiles?"], [25, "As he saith also in Osee, I will call them my people, which were not my people; and her beloved, which was not beloved."], [26, "And it shall come to pass, that in the place where it was said unto them, Ye are not my people; there shall they be called the children of the living God."], [27, "Esaias also crieth concerning Israel, Though the number of the children of Israel be as the sand of the sea, a remnant shall be saved:"], [28, "For he will finish the work, and cut it short in righteousness: because a short work will the Lord make upon the earth."], [29, "And as Esaias said before, Except the Lord of Sabaoth had left us a seed, we had been as Sodoma, and been made like unto Gomorrha."], [30, "What shall we say then? That the Gentiles, which followed not after righteousness, have attained to righteousness, even the righteousness which is of faith."], [31, "But Israel, which followed after the law of righteousness, hath not attained to the law of righteousness."], [32, "Wherefore? Because they sought it not by faith, but as it were by the works of the law. For they stumbled at that stumblingstone;"], [33, "As it is written, Behold, I lay in Sion a stumblingstone and rock of offence: and whosoever believeth on him shall not be ashamed."]], "Hebrews 12": [[1, "Wherefore seeing we also are compassed about with so great a cloud of witnesses, let us lay aside every weight, and the sin which doth so easily beset us, and let us run with patience the race that is set before us,"], [2, "Looking unto Jesus the author and finisher of our faith; who for the joy that was set before him endured the cross, despising the shame, and is set down at the right hand of the throne of God."], [3, "For consider him that endured such contradiction of sinners against himself, lest ye be wearied and faint in your minds."], [4, "Ye have not yet resisted unto blood, striving against sin."], [5, "And ye have forgotten the exhortation which speaketh unto you as unto children, My son, despise not thou the chastening of the Lord, nor faint when thou art rebuked of him:"], [6, "For whom the Lord loveth he chasteneth, and scourgeth every son whom he receiveth."], [7, "If ye endure chastening, God dealeth with you as with sons; for what son is he whom the father chasteneth not?"], [8, "But if ye be without chastisement, whereof all are partakers, then are ye bastards, and not sons."], [9, "Furthermore we have had fathers of our flesh which corrected us, and we gave them reverence: shall we not much rather be in subjection unto the Father of spirits, and live?"], [10, "For they verily for a few days chastened us after their own pleasure; but he for our profit, that we might be partakers of his holiness."], [11, "Now no chastening for the present seemeth to be joyous, but grievous: nevertheless afterward it yieldeth the peaceable fruit of righteousness unto them which are exercised thereby."], [12, "Wherefore lift up the hands which hang down, and the feeble knees;"], [13, "And make straight paths for your feet, lest that which is lame be turned out of the way; but let it rather be healed."], [14, "Follow peace with all men, and holiness, without which no man shall see the Lord:"], [15, "Looking diligently lest any man fail of the grace of God; lest any root of bitterness springing up trouble you, and thereby many be defiled;"], [16, "Lest there be any fornicator, or profane person, as Esau, who for one morsel of meat sold his birthright."], [17, "For ye know how that afterward, when he would have inherited the blessing, he was rejected: for he found no place of repentance, though he sought it carefully with tears."], [18, "For ye are not come unto the mount that might be touched, and that burned with fire, nor unto blackness, and darkness, and tempest,"], [19, "And the sound of a trumpet, and the voice of words; which voice they that heard intreated that the word should not be spoken to them any more:"], [20, "(For they could not endure that which was commanded, And if so much as a beast touch the mountain, it shall be stoned, or thrust through with a dart:"], [21, "And so terrible was the sight, that Moses said, I exceedingly fear and quake:)"], [22, "But ye are come unto mount Sion, and unto the city of the living God, the heavenly Jerusalem, and to an innumerable company of angels,"], [23, "To the general assembly and church of the firstborn, which are written in heaven, and to God the Judge of all, and to the spirits of just men made perfect,"], [24, "And to Jesus the mediator of the new covenant, and to the blood of sprinkling, that speaketh better things than that of Abel."], [25, "See that ye refuse not him that speaketh. For if they escaped not who refused him that spake on earth, much more shall not we escape, if we turn away from him that speaketh from heaven:"], [26, "Whose voice then shook the earth: but now he hath promised, saying, Yet once more I shake not the earth only, but also heaven."], [27, "And this word, Yet once more, signifieth the removing of those things that are shaken, as of things that are made, that those things which cannot be shaken may remain."], [28, "Wherefore we receiving a kingdom which cannot be moved, let us have grace, whereby we may serve God acceptably with reverence and godly fear:"], [29, "For our God is a consuming fire."]], "Jeremiah 49": [[1, "Concerning the Ammonites, thus saith the LORD; Hath Israel no sons? hath he no heir? why then doth their king inherit Gad, and his people dwell in his cities?"], [2, "Therefore, behold, the days come, saith the LORD, that I will cause an alarm of war to be heard in Rabbah of the Ammonites; and it shall be a desolate heap, and her daughters shall be burned with fire: then shall Israel be heir unto them that were his heirs, saith the LORD."], [3, "Howl, O Heshbon, for Ai is spoiled: cry, ye daughters of Rabbah, gird you with sackcloth; lament, and run to and fro by the hedges; for their king shall go into captivity, and his priests and his princes together."], [4, "Wherefore gloriest thou in the valleys, thy flowing valley, O backsliding daughter? that trusted in her treasures, saying, Who shall come unto me?"], [5, "Behold, I will bring a fear upon thee, saith the Lord GOD of hosts, from all those that be about thee; and ye shall be driven out every man right forth; and none shall gather up him that wandereth."], [6, "And afterward I will bring again the captivity of the children of Ammon, saith the LORD."], [7, "Concerning Edom, thus saith the LORD of hosts; Is wisdom no more in Teman? is counsel perished from the prudent? is their wisdom vanished?"], [8, "Flee ye, turn back, dwell deep, O inhabitants of Dedan; for I will bring the calamity of Esau upon him, the time that I will visit him."], [9, "If grapegatherers come to thee, would they not leave some gleaning grapes? if thieves by night, they will destroy till they have enough."], [10, "But I have made Esau bare, I have uncovered his secret places, and he shall not be able to hide himself: his seed is spoiled, and his brethren, and his neighbours, and he is not."], [11, "Leave thy fatherless children, I will preserve them alive; and let thy widows trust in me."], [12, "For thus saith the LORD; Behold, they whose judgment was not to drink of the cup have assuredly drunken; and art thou he that shall altogether go unpunished? thou shalt not go unpunished, but thou shalt surely drink of it."], [13, "For I have sworn by myself, saith the LORD, that Bozrah shall become a desolation, a reproach, a waste, and a curse; and all the cities thereof shall be perpetual wastes."], [14, "I have heard a rumour from the LORD, and an ambassador is sent unto the heathen, saying, Gather ye together, and come against her, and rise up to the battle."], [15, "For, lo, I will make thee small among the heathen, and despised among men."], [16, "Thy terribleness hath deceived thee, and the pride of thine heart, O thou that dwellest in the clefts of the rock, that holdest the height of the hill: though thou shouldest make thy nest as high as the eagle, I will bring thee down from thence, saith the LORD."], [17, "Also Edom shall be a desolation: every one that goeth by it shall be astonished, and shall hiss at all the plagues thereof."], [18, "As in the overthrow of Sodom and Gomorrah and the neighbour cities thereof, saith the LORD, no man shall abide there, neither shall a son of man dwell in it."], [19, "Behold, he shall come up like a lion from the swelling of Jordan against the habitation of the strong: but I will suddenly make him run away from her: and who is a chosen man, that I may appoint over her? for who is like me? and who will appoint me the time? and who is that shepherd that will stand before me?"], [20, "Therefore hear the counsel of the LORD, that he hath taken against Edom; and his purposes, that he hath purposed against the inhabitants of Teman: Surely the least of the flock shall draw them out: surely he shall make their habitations desolate with them."], [21, "The earth is moved at the noise of their fall, at the cry the noise thereof was heard in the Red sea."], [22, "Behold, he shall come up and fly as the eagle, and spread his wings over Bozrah: and at that day shall the heart of the mighty men of Edom be as the heart of a woman in her pangs."], [23, "Concerning Damascus. Hamath is confounded, and Arpad: for they have heard evil tidings: they are fainthearted; there is sorrow on the sea; it cannot be quiet."], [24, "Damascus is waxed feeble, and turneth herself to flee, and fear hath seized on her: anguish and sorrows have taken her, as a woman in travail."], [25, "How is the city of praise not left, the city of my joy!"], [26, "Therefore her young men shall fall in her streets, and all the men of war shall be cut off in that day, saith the LORD of hosts."], [27, "And I will kindle a fire in the wall of Damascus, and it shall consume the palaces of Benhadad."], [28, "Concerning Kedar, and concerning the kingdoms of Hazor, which Nebuchadrezzar king of Babylon shall smite, thus saith the LORD; Arise ye, go up to Kedar, and spoil the men of the east."], [29, "Their tents and their flocks shall they take away: they shall take to themselves their curtains, and all their vessels, and their camels; and they shall cry unto them, Fear is on every side."], [30, "Flee, get you far off, dwell deep, O ye inhabitants of Hazor, saith the LORD; for Nebuchadrezzar king of Babylon hath taken counsel against you, and hath conceived a purpose against you."], [31, "Arise, get you up unto the wealthy nation, that dwelleth without care, saith the LORD, which have neither gates nor bars, which dwell alone."], [32, "And their camels shall be a booty, and the multitude of their cattle a spoil: and I will scatter into all winds them that are in the utmost corners; and I will bring their calamity from all sides thereof, saith the LORD."], [33, "And Hazor shall be a dwelling for dragons, and a desolation for ever: there shall no man abide there, nor any son of man dwell in it."], [34, "The word of the LORD that came to Jeremiah the prophet against Elam in the beginning of the reign of Zedekiah king of Judah, saying,"], [35, "Thus saith the LORD of hosts; Behold, I will break the bow of Elam, the chief of their might."], [36, "And upon Elam will I bring the four winds from the four quarters of heaven, and will scatter them toward all those winds; and there shall be no nation whither the outcasts of Elam shall not come."], [37, "For I will cause Elam to be dismayed before their enemies, and before them that seek their life: and I will bring evil upon them, even my fierce anger, saith the LORD; and I will send the sword after them, till I have consumed them:"], [38, "And I will set my throne in Elam, and will destroy from thence the king and the princes, saith the LORD."], [39, "But it shall come to pass in the latter days, that I will bring again the captivity of Elam, saith the LORD."]]}};
+
+// Quotations from other writings (say: in the deck): their words open like a verse.
+const Q = {};
+
+function refTitle(key){
+  const i = key.lastIndexOf(" ");
+  const book = key.slice(0, i), cv = key.slice(i + 1);
+  if (book === "Jude") return "Jude " + cv.replace(/^1:/, "");
+  return (BOOKS[book] || book) + " " + cv;
+}
+function smallCaps(t){
+  return t.replace(/\bLORD\b/g, '<span class="lord">Lord</span>').replace(/\bGOD\b/g, '<span class="lord">God</span>');
+}
+
+/* ---------- Slides ---------- */
+const slides = Array.from(document.querySelectorAll(".slide"));
+const barSection = document.getElementById("barSection");
+const barCount = document.getElementById("barCount");
+const barProgress = document.getElementById("barProgress");
+let cur = 0;
+
+function go(n){
+  n = Math.max(0, Math.min(slides.length - 1, n));
+  slides[cur].classList.remove("active");
+  cur = n;
+  const s = slides[cur];
+  s.classList.add("active");
+  s.scrollTop = 0;
+  barSection.textContent = s.dataset.section || "";
+  barCount.textContent = (cur + 1) + " / " + slides.length;
+  barProgress.style.width = ((cur + 1) / slides.length * 100) + "%";
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch(e) {}
+}
+
+document.getElementById("prevBtn").addEventListener("click", () => go(cur - 1));
+document.getElementById("nextBtn").addEventListener("click", () => go(cur + 1));
+
+const verseDlg = document.getElementById("verseDlg");
+const tocDlg = document.getElementById("tocDlg");
+const picDlg = document.getElementById("picDlg");
+function anyOpen(){ return verseDlg.open || tocDlg.open || picDlg.open; }
+document.addEventListener("click", e => {
+  const im = e.target.closest(".pic img");
+  if (!im) return;
+  const big = picDlg.querySelector("img");
+  big.src = im.currentSrc || im.src; big.alt = im.alt;
+  picDlg.showModal();
+});
+picDlg.addEventListener("click", () => picDlg.close());
+
+document.addEventListener("keydown", e => {
+  if (anyOpen()) return;
+  if (["ArrowRight","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur + 1); }
+  else if (["ArrowLeft","PageUp"].includes(e.key)) { e.preventDefault(); go(cur - 1); }
+  else if (e.key === "Home") { go(0); }
+  else if (e.key === "End") { go(slides.length - 1); }
+});
+
+let tx = null, ty = null;
+const deck = document.getElementById("deck");
+deck.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+deck.addEventListener("touchend", e => {
+  if (tx === null || anyOpen()) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx < 0 ? 1 : -1));
+  tx = ty = null;
+}, {passive:true});
+
+/* ---------- Verse dialog ---------- */
+const verseBody = document.getElementById("verseBody");
+const verseTitle = document.getElementById("verseTitle");
+
+function openVerse(keys, label){
+  const list = keys.split("|");
+  verseTitle.textContent = label;
+  let html = "";
+  list.forEach(k => {
+    const data = V[k];
+    if (list.length > 1) html += "<h4>" + refTitle(k) + "</h4>";
+    if (!data) { html += "<p>Passage not loaded.</p>"; return; }
+    html += "<p>" + data.map(([n, t]) => smallCaps(t)).join(" ") + "</p>";
+  });
+  verseBody.innerHTML = html;
+  verseDlg.showModal();
+  verseBody.scrollTop = 0;
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".ref");
+  if (b && b.tagName === "A") return;   // a link to a lesson in the app, not a verse
+  if (b && b.dataset.q) {
+    const q = Q[b.dataset.q];
+    verseTitle.textContent = q ? q.t : b.textContent.trim();
+    verseBody.innerHTML = q ? q.h : "<p>Not loaded.</p>";
+    verseDlg.showModal();
+    verseBody.scrollTop = 0;
+    return;
+  }
+  if (b) {
+    const keys = b.dataset.v;
+    const label = b.dataset.label || (keys.includes("|") ? b.textContent.trim() : refTitle(keys));
+    openVerse(keys, label);
+    return;
+  }
+  if (e.target.matches("[data-close]")) e.target.closest("dialog").close();
+});
+[verseDlg, tocDlg].forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+/* ---------- Contents ---------- */
+const tocList = document.getElementById("tocList");
+(function buildToc(){
+  let html = "", lastSec = "";
+  slides.forEach((s, i) => {
+    if (s.dataset.section !== lastSec) {
+      lastSec = s.dataset.section;
+      html += '<li class="sec">' + lastSec + "</li>";
+    }
+    html += '<li><button data-go="' + i + '"><span>' + (i + 1) + "</span>" + s.dataset.title + "</button></li>";
+  });
+  tocList.innerHTML = html;
+})();
+document.getElementById("tocBtn").addEventListener("click", () => {
+  tocList.querySelectorAll("button").forEach(b => b.setAttribute("aria-current", String(Number(b.dataset.go) === cur)));
+  tocDlg.showModal();
+});
+tocList.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if (b) { tocDlg.close(); go(Number(b.dataset.go)); }
+});
+
+/* ---------- Start ---------- */
+const start = parseInt((location.hash || "").replace("#", ""), 10);
+go(Number.isFinite(start) ? start - 1 : 0);
+</script>
+</body>
+</html>
