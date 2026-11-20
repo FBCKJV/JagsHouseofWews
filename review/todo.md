@@ -44,7 +44,10 @@ earlier one-off studies, which the series will replace as the chapter's main stu
   add each new group of psalms the same way.
 - [x] **Psalm 8: two Christmas posts filed with it.** Left out of the deck, at the author's word (Nov 2026). Posts 15452 (Psalm 95:6-7) and 15454 (Matthew 1:18-25), from
   23 Dec 2024, show with the Psalm 8 study in the app.
-- [ ] **Genesis 19: a teaching filed with it.** Posts 7018-7035 (9 Dec 2022), on 2 Thessalonians 2, tradition and the
+- [x] **Genesis 19: a teaching filed with it.** Made its own lesson, "Hold the Traditions?" (Nov 2026). Posts 7018-7035 (9 Dec 2022), on 2 Thessalonians 2, tradition and the
   Bible alone, Mark 7, Acts 17 and Galatians 1, show with the Genesis 19 study but are not about it (left out of the
   Genesis 19 deck). Decide where they belong; they could be their own lesson.
-- [ ] **Genesis decks, next set:** 21 (a long study) and 22-25; 26 has no study yet.
+- [x] **Genesis decks 18-25** (Nov 2026). Next: 26 once its study is written (see above), then 27 on.
+- [ ] **Genesis 21: a teaching filed with it.** Posts 7076-7087 and 7096-7108 (12-13 Dec 2022), on the rosary, the
+  altered commandments (Exodus 20), Matthew 7, Acts 7, Romans 8:31-39 and eternal security, "spun out of a study on
+  Genesis" (7108); left out of the Genesis 21 deck. They could be their own lesson, like "Hold the Traditions?".
