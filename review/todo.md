@@ -48,6 +48,6 @@ earlier one-off studies, which the series will replace as the chapter's main stu
   Bible alone, Mark 7, Acts 17 and Galatians 1, show with the Genesis 19 study but are not about it (left out of the
   Genesis 19 deck). Decide where they belong; they could be their own lesson.
 - [x] **Genesis decks 18-25** (Nov 2026). Next: 26 once its study is written (see above), then 27 on.
-- [ ] **Genesis 21: a teaching filed with it.** Posts 7076-7087 and 7096-7108 (12-13 Dec 2022), on the rosary, the
+- [x] **Genesis 21: a teaching filed with it.** Made part 2 of "Hold the Traditions?", and both batches moved off the chapter pages into Doctrines (standalone teachings linked from Genesis 19 and 21) (Nov 2026). Posts 7076-7087 and 7096-7108 (12-13 Dec 2022), on the rosary, the
   altered commandments (Exodus 20), Matthew 7, Acts 7, Romans 8:31-39 and eternal security, "spun out of a study on
   Genesis" (7108); left out of the Genesis 21 deck. They could be their own lesson, like "Hold the Traditions?".
