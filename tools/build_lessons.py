@@ -110,6 +110,19 @@ def main():
                          'verses': x.get('verses', []),
                          **({'theme': x['theme']} if x.get('theme') else {})})
 
+    # links from slide decks to other lessons ([[lesson:id|…]] and read: lines) must name a lesson that exists
+    known = {l['id'] for l in lessons} | {m['from'] for m in cat.get('moved', [])}
+    for l in lessons:
+        for p in l['parts']:
+            if p['kind'] != 'page':
+                continue
+            path = os.path.join(ROOT, p['href'][3:])
+            if not os.path.isfile(path):
+                continue
+            for target in re.findall(r'href="[^"]*studies/#lesson-([^"]+)"', open(path, encoding='utf-8').read()):
+                if target not in known:
+                    problems.append(f'{p["href"][3:]}: links to a lesson that does not exist: {target}')
+
     order = {s['id']: i for i, s in enumerate(cat['shelves'])}
     lessons.sort(key=lambda l: (order.get(l['shelf'], 99), l['order'], l['title'].lower()))
     with open(OUT, 'w', encoding='utf-8') as f:

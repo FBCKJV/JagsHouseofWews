@@ -121,6 +121,31 @@ def verses(ref):
     return [(v, KJV[(book, ch, v)]) for v in range(a, b + 1)]
 
 
+def bars(s, maxsplit=-1):
+    """Split a line on "|", but not on the "|" inside a [[verse|label]] or [[lesson:id|label]] link."""
+    out, depth, cur, n = [], 0, [], 0
+    i = 0
+    while i < len(s):
+        if s.startswith('[[', i):
+            depth += 1; cur.append('[['); i += 2; continue
+        if s.startswith(']]', i) and depth:
+            depth -= 1; cur.append(']]'); i += 2; continue
+        c = s[i]
+        if c == '|' and not depth and (maxsplit < 0 or n < maxsplit):
+            out.append(''.join(cur)); cur = []; n += 1
+        else:
+            cur.append(c)
+        i += 1
+    out.append(''.join(cur))
+    return out
+
+
+def bar_part(s):
+    """Like bar_part(s), but a link's own "|" does not count."""
+    b = bars(s, 1)
+    return (b[0], '|', b[1]) if len(b) > 1 else (b[0], '', '')
+
+
 def chapter_of(text):
     """'Psalm 51' or 'John 3' -> ('Psalms', 51); the chapter a deck's "context:" line names."""
     m = re.match(r'^(.*?\S)\s+(\d+)$', text.strip())
@@ -145,16 +170,16 @@ def slide_context(items):
     main, loose = [], []
     for k, v in items:
         if k in ('scripture', 'big'):
-            main += [r for r in v.split('|')[0].split(';') if r.strip()]
+            main += [r for r in bars(v)[0].split(';') if r.strip()]
         elif k in ('fig', 'lit', 'rev'):
-            r = (v.split('|') + ['', ''])[1]
+            r = (bars(v) + ['', ''])[1]
             main += [x for x in r.split(';') if x.strip()]
         elif k == 'xr':
-            main.append(v.partition('|')[0])
+            main.append(bar_part(v)[0])
         elif k == 'group':
-            main += [x for x in (v.split('|') + ['', ''])[2].split(';') if x.strip()]
+            main += [x for x in (bars(v) + ['', ''])[2].split(';') if x.strip()]
         elif k == 'parallel':
-            for cell in v.split('|'):
+            for cell in bars(v):
                 main.append(cell.partition('·')[0])
         loose += VERSE_REF.findall(v)
     keys = []
@@ -197,28 +222,26 @@ def esc(s):
 
 
 def inline(s):
-    """Escape, then **bold**, *italic*, {Lord}, and [[verse]] buttons."""
-    out, last = [], 0
+    """Escape, then **bold**, *italic*, {Lord}, and [[verse]] buttons. Bold and italic may run across a link."""
+    links, last, out = [], 0, []
     for m in re.finditer(r'\[\[([^\]|]+)(?:\|([^\]]+))?\]\]', s):
-        out.append(fmt(esc(s[last:m.start()])))
+        out.append(s[last:m.start()]); out.append(f'\x00{len(links)}\x00'); links.append(m); last = m.end()
+    out.append(s[last:])
+    text = fmt(esc(''.join(out)))
+    def link_html(m):
         if m.group(1).startswith('lesson:'):
-            out.append(lesson_link(m.group(1)[7:].strip(), m.group(2)))
-            last = m.end(); continue
+            return lesson_link(m.group(1)[7:].strip(), m.group(2))
         if m.group(1).startswith('say:'):
             q = m.group(1)[4:].strip()
             if q not in SAYS:
                 raise SystemExit(f'No "say: {q}" is defined for [[{m.group(1)}]]')
             SAID.add(q)
-            out.append(f'<button class="ref say" data-q="{esc(q)}">{fmt(esc(m.group(2) or SAYS[q]["title"]))}</button>')
-            last = m.end(); continue
+            return f'<button class="ref say" data-q="{esc(q)}">{fmt(esc(m.group(2) or SAYS[q]["title"]))}</button>'
         if m.group(1).startswith('app:'):
-            out.append(lesson_link(m.group(1).strip(), m.group(2)))
-            last = m.end(); continue
+            return lesson_link(m.group(1).strip(), m.group(2))
         k = key_of(m.group(1)); USED[k] = verses(m.group(1))
-        out.append(f'<button class="ref" data-v="{esc(k)}">{esc(m.group(2) or label_of(m.group(1)))}</button>')
-        last = m.end()
-    out.append(fmt(esc(s[last:])))
-    return ''.join(out)
+        return f'<button class="ref" data-v="{esc(k)}">{esc(m.group(2) or label_of(m.group(1)))}</button>'
+    return re.sub('\x00(\\d+)\x00', lambda x: link_html(links[int(x.group(1))]), text)
 
 
 def lesson_link(lid, label=None):
@@ -257,7 +280,7 @@ def kjv_html(text, marks):
 def passage(arg, big):
     """A KJV block: the verse text with no verse numbers, then the reference. Several references
     separated by ";" make one block each."""
-    ref, _, rest = arg.partition('|')
+    ref, _, rest = bar_part(arg)
     marks = [x.strip() for x in rest.split(':', 1)[1].split(';')] if rest.strip().startswith('mark') else []
     refs = [r.strip() for r in ref.split(';') if r.strip()]
     alltext = ' '.join(t for r in refs for _, t in verses(r))
@@ -289,7 +312,7 @@ def build(src):
         if not line.strip() or line.lstrip().startswith('#'):
             continue
         if line.startswith('say:'):
-            bits = [x.strip() for x in line[4:].split('|')]
+            bits = [x.strip() for x in bars(line[4:])]
             say = {'title': bits[1], 'cite': bits[2] if len(bits) > 2 else '', 'poem': 'poem' in bits[3:], 'lines': []}
             SAYS[bits[0]] = say; continue
         if line.startswith('=== '):
@@ -356,7 +379,7 @@ def build(src):
             elif k == 'scripture': parts.append(passage(v, False))
             elif k == 'big': parts.append(passage(v, True))
             elif k == 'quote':
-                text, _, cite = v.partition('|')
+                text, _, cite = bar_part(v)
                 parts.append(f'<blockquote>{inline(text.strip())}<cite>{inline(cite.strip())}</cite></blockquote>')
             elif k == '-':
                 parts.append('<ul class="marks">' + ''.join(f'<li>{inline(x)}</li>' for x in group) + '</ul>')
@@ -364,7 +387,7 @@ def build(src):
                 cards = []
                 for kind, x in zip(kinds, group):
                     cls = 'panel cain' if kind == 'panel-warn' else 'panel believers'
-                    h, _, t = x.partition('|')
+                    h, _, t = bar_part(x)
                     cards.append(f'<div class="{cls}"><h3>{inline(h.strip())}</h3><p>{inline(t.strip())}</p></div>')
                 wrap = 'cols-3' if len(cards) == 3 else 'cols'
                 for n in range(0, len(cards), 3 if len(cards) == 3 else 2):
@@ -374,29 +397,29 @@ def build(src):
             elif k == 'stat':
                 parts.append('<div class="dims">' + ''.join(
                     f'<div><span class="n">{inline(a.strip())}</span><span class="lbl">{inline(b.strip())}</span></div>'
-                    for a, _, b in (x.partition('|') for x in group)) + '</div>')
+                    for a, _, b in (bar_part(x) for x in group)) + '</div>')
             elif k == 'step':
                 parts.append('<div class="steps">' + ''.join(
                     f'<div class="st"><span class="when">{inline(a.strip())}</span><div>{inline(b.strip())}</div></div>'
-                    for a, _, b in (x.partition('|') for x in group)) + '</div>')
+                    for a, _, b in (bar_part(x) for x in group)) + '</div>')
             elif k == 'tile':
                 parts.append('<div class="timeline">' + ''.join(
                     f'<div><span class="n">{inline(a.strip())}</span><span class="lbl">{inline(b.strip())}</span></div>'
-                    for a, _, b in (x.partition('|') for x in group)) + '</div>')
+                    for a, _, b in (bar_part(x) for x in group)) + '</div>')
             elif k == 'point':
                 parts.append('<div style="text-align:left;max-width:640px;margin:0 auto"><ol class="order">' + ''.join(
                     f'<li><strong>{inline(a.strip())}</strong>{inline(b.strip())}</li>'
-                    for a, _, b in (x.partition('|') for x in group)) + '</ol></div>')
+                    for a, _, b in (bar_part(x) for x in group)) + '</ol></div>')
             elif k in ('fig', 'lit', 'rev'):   # fig: Title | John 3:3; John 3:4 | words   (a verse card; refs and words optional)
                 cards = []
                 for kind, x in zip(kinds, group):
-                    h, r, t = (x.split('|') + ['', ''])[:3]
+                    h, r, t = (bars(x) + ['', ''])[:3]
                     inner = (verse_block(r.strip()) if r.strip() else '') + (f'<p>{inline(t.strip())}</p>' if t.strip() else '')
                     cards.append(f'<div class="vp {kind}"><h3>{inline(h.strip())}</h3>{inner}</div>')
                 parts.append('<div class="vps">' + ''.join(cards) + '</div>')
             elif k == 'parallel':   # parallel: John 3:15 · caption | John 3:16 · caption, then row: left | right lines
                 heads = []
-                for cell in v.split('|'):
+                for cell in bars(v):
                     r, _, cap = cell.partition('·')
                     try: head = inline(f'[[{r.strip()}]]')
                     except SystemExit: head = esc(r.strip())
@@ -406,7 +429,7 @@ def build(src):
                     rows.append(items[j2][1]); j2 += 1
                 cells = []
                 for rw in rows:
-                    l, _, r_ = rw.partition('|')
+                    l, _, r_ = bar_part(rw)
                     l, r_ = l.strip(), r_.strip()
                     same_ = l.lower().rstrip('.,;:') == r_.lower().rstrip('.,;:')
                     for c in (l, r_):
@@ -420,18 +443,18 @@ def build(src):
                 j2 = j + 1; trs = []
                 while j2 < len(items) and items[j2][0] == 'tr':
                     trs.append(items[j2][1]); j2 += 1
-                th = ''.join(f'<th>{inline(c.strip())}</th>' for c in v.split('|'))
-                tb = ''.join('<tr>' + ''.join(f'<td>{stems(inline(c.strip()))}</td>' for c in r.split('|')) + '</tr>' for r in trs)
+                th = ''.join(f'<th>{inline(c.strip())}</th>' for c in bars(v))
+                tb = ''.join('<tr>' + ''.join(f'<td>{stems(inline(c.strip()))}</td>' for c in bars(r)) + '</tr>' for r in trs)
                 parts.append(f'<div class="tbl"><table><thead><tr>{th}</tr></thead><tbody>{tb}</tbody></table></div>')
                 j = j2 - 1
             elif k == 'tr':
                 pass
             elif k == 'image':   # image: lessons/bible/pic.jpg | alt text | caption (optional); the file sits next to the deck
-                src_, alt, cap = (v.split('|') + ['', ''])[:3]
+                src_, alt, cap = (bars(v) + ['', ''])[:3]
                 parts.append(f'<figure class="pic"><img src="{esc(os.path.basename(src_.strip()))}" alt="{html.escape(alt.strip())}" loading="lazy">'
                              + (f'<figcaption>{inline(cap.strip())}</figcaption>' if cap.strip() else '') + '</figure>')
             elif k == 'spot':   # spot: n | x% | y% | size% | label | refs     a tappable numbered dot on the last picture
-                n_, x_, y_, d_, lab_, refs_ = [t.strip() for t in v.split('|', 5)]
+                n_, x_, y_, d_, lab_, refs_ = [t.strip() for t in bars(v, 5)]
                 keys = []
                 for r in refs_.split(';'):
                     kk = key_of(r.strip()); USED[kk] = verses(r.strip()); keys.append(kk)
@@ -453,17 +476,17 @@ def build(src):
             elif k == 'xr':   # xr: John 6:28-29 | the words      a list of references with a line each
                 parts.append('<ul class="xr">' + ''.join(
                     f'<li>{inline("[[" + a.strip() + "]]")}<span>{inline(b.strip())}</span></li>'
-                    for a, _, b in (x.partition('|') for x in group)) + '</ul>')
+                    for a, _, b in (bar_part(x) for x in group)) + '</ul>')
             elif k == 'group':   # group: Never | never thirst, never hunger | John 4:14; John 6:35
                 parts.append(''.join(
                     f'<div class="grp"><h3>{inline(a.strip())}</h3><span>{inline(b.strip())}</span><div class="chips">'
                     + ''.join(inline(f'[[{r.strip()}]]') for r in c.split(';') if r.strip()) + '</div></div>'
-                    for a, b, c in ((x.split('|') + ['', ''])[:3] for x in group)))
+                    for a, b, c in ((bars(x) + ['', ''])[:3] for x in group)))
             elif k == 'take':
                 parts.append(f'<p class="take">{inline(v)}</p>')
             elif k == 'read':   # a row of links to other lessons: read: lesson-id | label
                 parts.append('<div class="refs center">' + ''.join(
-                    lesson_link(a.strip(), b.strip()) for a, _, b in (x.partition('|') for x in group)) + '</div>')
+                    lesson_link(a.strip(), b.strip()) for a, _, b in (bar_part(x) for x in group)) + '</div>')
             elif k == 'refs':
                 parts.append('<div class="refs center">' + ''.join(
                     inline(f'[[{r.strip()}]]') for r in v.split(';') if r.strip()) + '</div>')
@@ -484,6 +507,13 @@ def build(src):
                     f'data-title="{html.escape(s["title"])}"{ctx_attr}>\n  <div class="{page}">\n    '
                     + '\n    '.join(parts) + '\n  </div>\n</section>\n')
 
+    # Raw markup left in a slide means a line was split or formatted wrongly: stop rather than publish it.
+    for n, b in enumerate(body, 1):
+        shown = html.unescape(re.sub(r'<[^>]+>', ' ', b))
+        for bad in ('[[', ']]', '**', '{Lord}', '{God}'):
+            if bad in shown:
+                at = shown.index(bad)
+                raise SystemExit(f'{src}: slide {n} shows raw "{bad}": …{shown[max(0, at - 50):at + 30].strip()}…')
     tpl = open(os.path.join(ROOT, 'tools', 'deck', 'template.html'), encoding='utf-8').read()
     vmap = '{\n' + ',\n'.join(f'  {json.dumps(k)}:' + json.dumps([[n, t] for n, t in v], ensure_ascii=False)
                               for k, v in sorted(USED.items())) + '\n}'
