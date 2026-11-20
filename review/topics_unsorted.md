@@ -1,6 +1,6 @@
 # Teachings not filed under a topic yet
 
-25 posts chain verses from several books to build a point but aren't in `review/topics.json` yet. Add each under `"posts"` with its topics, theme, title and summary (or `"teaching": false` to leave it out), then rerun `python3 tools/clean_studies.py`.
+26 posts chain verses from several books to build a point but aren't in `review/topics.json` yet. Add each under `"posts"` with its topics, theme, title and summary (or `"teaching": false` to leave it out), then rerun `python3 tools/clean_studies.py`.
 
 Regenerated on every run; don't edit it.
 
@@ -54,3 +54,5 @@ Regenerated on every run; don't edit it.
   > Psalm 60 presents an interesting perspective of events during the reign of King David. It was written to commemorate the time of war, when Joab strove
 - `added-drive-psalms-63` · 2026-11-16 · Psalms 63 · 2 Samuel 15:13–17, 2 Samuel 15:23, 2 Samuel 15:24–27, Matthew 16:24–26
   > Psalm 63 is given us as a Psalm written when David was in the wilderness of Judah, something that happened twice in his life. We have read of David's 
+- `added-drive-psalms-65` · 2026-11-20 · Psalms 65 · Romans 7:15–20, Romans 7:24–25, John 2:19–22, Revelation 21:3–5, 22–23
+  > David's Psalm of praise and glory to God contains doctrine and prophecy. Acknowledging the power of the Lord, the weakness of man, the need for salvat

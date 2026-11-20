@@ -3,6 +3,19 @@
 Things the author has said they want to do or have done. Add to this list when the author asks; check items off
 (and say when) as they are done. Nothing here is published in the app.
 
+## Where we left off (20 November 2026, v2.55)
+
+Taking a break here. Next time, in this order:
+
+- [ ] **Genesis 26**: the author writes the study (none was ever posted), then its deck; then decks for Genesis 27 on,
+  in the Genesis class pattern.
+- [ ] **New Psalms decks** as the daily studies come in (the decks run through Psalm 65; next group from Psalm 66).
+- [x] **Psalms 64 and 65** added from Telegram (18 and 20 Nov 2026), with Drive docs and the Psalms 64–65 deck (v2.56).
+- [ ] **Psalms 72 and 103**: decks from their older one-off studies, if wanted (offered, not yet asked for).
+- [ ] **Chapter panel on Romans**, last.
+- [x] **Raw link text on slides** fixed (Genesis 8 showed "[[lesson:genesis-9-…"); six decks rebuilt, and the
+  builder now stops on any slide that would show raw link code or asterisks (Nov 20, 2026, PR #137).
+
 ## Studies to write
 
 After the Psalms series is finished (about 100 days from November 2026), every chapter that still has no study.
@@ -38,9 +51,9 @@ earlier one-off studies, which the series will replace as the chapter's main stu
 - [x] **Chapter panel on John 6, John I Am, the five Job decks, and the Daniel decks** (Daniel 11, Daniel 8-12
   timeline, Daniel's 70th Week) (Nov 2026).
 - [ ] **Chapter panel on Romans**, last (a closed lesson plan, already taught).
-- [x] **Psalms decks from the series studies.** Every series study from Psalm 1 to Psalm 63 has slides (Nov 2026):
+- [x] **Psalms decks from the series studies.** Every series study from Psalm 1 to Psalm 65 has slides (Nov 2026):
   Psalms 1-5, 6-8, 9-10, 11-12, 13-15, 16-17, 18-20, 21-25, 26-30, 31-32, 33-35, 36-37, 38-40, 41-43, 44, 45, 46-47,
-  48, 49, 50, 51, 53-55, 58-60, 61-63, 22, and David's Flight (34, 52, 54, 56, 57, 59). As new daily studies come in,
+  48, 49, 50, 51, 53-55, 58-60, 61-63, 64-65, 22, and David's Flight (34, 52, 54, 56, 57, 59). As new daily studies come in,
   add each new group of psalms the same way.
 - [x] **Psalm 8: two Christmas posts filed with it.** Left out of the deck, at the author's word (Nov 2026). Posts 15452 (Psalm 95:6-7) and 15454 (Matthew 1:18-25), from
   23 Dec 2024, show with the Psalm 8 study in the app.
