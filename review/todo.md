@@ -3,6 +3,18 @@
 Things the author has said they want to do or have done. Add to this list when the author asks; check items off
 (and say when) as they are done. Nothing here is published in the app.
 
+## Where we left off (20 November 2026, v2.55)
+
+Taking a break here. Next time, in this order:
+
+- [ ] **Genesis 26**: the author writes the study (none was ever posted), then its deck; then decks for Genesis 27 on,
+  in the Genesis class pattern.
+- [ ] **New Psalms decks** as the daily studies come in (the decks run through Psalm 63; next group from Psalm 64).
+- [ ] **Psalms 72 and 103**: decks from their older one-off studies, if wanted (offered, not yet asked for).
+- [ ] **Chapter panel on Romans**, last.
+- [x] **Raw link text on slides** fixed (Genesis 8 showed "[[lesson:genesis-9-…"); six decks rebuilt, and the
+  builder now stops on any slide that would show raw link code or asterisks (Nov 20, 2026, PR #137).
+
 ## Studies to write
 
 After the Psalms series is finished (about 100 days from November 2026), every chapter that still has no study.
