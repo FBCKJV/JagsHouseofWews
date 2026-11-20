@@ -44,3 +44,7 @@ earlier one-off studies, which the series will replace as the chapter's main stu
   add each new group of psalms the same way.
 - [x] **Psalm 8: two Christmas posts filed with it.** Left out of the deck, at the author's word (Nov 2026). Posts 15452 (Psalm 95:6-7) and 15454 (Matthew 1:18-25), from
   23 Dec 2024, show with the Psalm 8 study in the app.
+- [ ] **Genesis 19: a teaching filed with it.** Posts 7018-7035 (9 Dec 2022), on 2 Thessalonians 2, tradition and the
+  Bible alone, Mark 7, Acts 17 and Galatians 1, show with the Genesis 19 study but are not about it (left out of the
+  Genesis 19 deck). Decide where they belong; they could be their own lesson.
+- [ ] **Genesis decks, next set:** 21 (a long study) and 22-25; 26 has no study yet.
