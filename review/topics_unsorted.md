@@ -1,6 +1,6 @@
 # Teachings not filed under a topic yet
 
-26 posts chain verses from several books to build a point but aren't in `review/topics.json` yet. Add each under `"posts"` with its topics, theme, title and summary (or `"teaching": false` to leave it out), then rerun `python3 tools/clean_studies.py`.
+27 posts chain verses from several books to build a point but aren't in `review/topics.json` yet. Add each under `"posts"` with its topics, theme, title and summary (or `"teaching": false` to leave it out), then rerun `python3 tools/clean_studies.py`.
 
 Regenerated on every run; don't edit it.
 
@@ -56,3 +56,5 @@ Regenerated on every run; don't edit it.
   > Psalm 63 is given us as a Psalm written when David was in the wilderness of Judah, something that happened twice in his life. We have read of David's 
 - `added-drive-psalms-65` · 2026-11-20 · Psalms 65 · Romans 7:15–20, Romans 7:24–25, John 2:19–22, Revelation 21:3–5, 22–23
   > David's Psalm of praise and glory to God contains doctrine and prophecy. Acknowledging the power of the Lord, the weakness of man, the need for salvat
+- `added-drive-psalms-66` · 2026-11-23 · Psalms 66 · Numbers 30:2, Ecclesiastes 5:4–5, Matthew 5:33–37, Deuteronomy 23:22
+  > A song or psalm of praise and worship unto God; Psalm 66 contains the adoration and blessings towards the Lord for His mighty and terrible works. Whil
