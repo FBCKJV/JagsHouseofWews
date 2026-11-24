@@ -11,7 +11,7 @@ Taking a break here. Next time, in this order:
   in the Genesis class pattern.
 - [ ] **New Psalms decks** as the daily studies come in (the decks run through Psalm 65; next group from Psalm 66).
 - [x] **Psalms 64 and 65** added from Telegram (18 and 20 Nov 2026), with Drive docs and the Psalms 64–65 deck (v2.56).
-- [x] **Psalm 66** added from Telegram (23 Nov 2026), with its Drive doc (v2.59). Its deck waits for the next group.
+- [x] **Psalms 66 and 67** added from Telegram (23 and 24 Nov 2026), with their Drive docs (v2.59, v2.60). Their deck waits for the next group.
 - [ ] **Psalms 72 and 103**: decks from their older one-off studies, if wanted (offered, not yet asked for).
 - [ ] **Chapter panel on Romans**, last.
 - [x] **Raw link text on slides** fixed (Genesis 8 showed "[[lesson:genesis-9-…"); six decks rebuilt, and the
